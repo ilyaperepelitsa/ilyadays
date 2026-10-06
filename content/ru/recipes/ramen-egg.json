@@ -1,0 +1,316 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Яйца прямо из холодильника в кипящую воду ровно на 6 минут: густой оранжевый желток, схватившийся белок.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "сколько нужно — ½ на миску рамена"
+  },
+  {
+   "kind": "time",
+   "text": "~20 мин"
+  }
+ ],
+ "description": "Яйца прямо из холодильника в кипящую воду ровно на 6 минут: густой оранжевый желток, схватившийся белок.",
+ "equipment_html": [
+  "Кастрюля — такая, чтобы вода покрывала яйца",
+  "Шумовка",
+  "Таймер",
+  "Миска с ледяной водой (предположение — см. заметки)"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Японская база"
+ },
+ "hero": {
+  "alt": "Яйцо для рамена (6 минут)",
+  "image": "illustrations/ramen-egg/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "½ на миску рамена, прямо из холодильника",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "столько, чтобы покрыть яйца",
+     "name_html": "Вода"
+    }
+   ],
+   "name": "Яйца"
+  }
+ ],
+ "intro_html": "Яйцо всмятку для <a href=\"ramen.html\">рамена</a>. Яйца опускают в воду, которая уже сильно кипит, поэтому 6 минут начинаются с того момента, как они в воде.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/ramen-egg/mise1.webp",
+   "items": [
+    "прямо из холодильника"
+   ],
+   "items_html": "прямо из холодильника",
+   "name": "Яйца",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/ramen-egg/mise2.webp",
+   "items": [
+    "приготовить до того, как сработает таймер"
+   ],
+   "items_html": "приготовить до того, как сработает таймер",
+   "name": "Ледяная вода",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Японская база:",
+ "next": {
+  "slug": "oyakodon",
+  "title": "Оякодон"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Предположение: холодная вода после 6 минут — скажите, если вы это пропускаете.</li><li>Она останавливает варку, чтобы желток остался густым.</li></ul>",
+   "title_html": "Предположение: холодная вода"
+  },
+  {
+   "html": "<ul class=\"do\"><li><a href=\"boiled-eggs.html\">Варёные яйца Дон</a> начинают в холодной воде и доходят на выключенном огне.</li><li>Эти опускают в уже кипящую воду, и они остаются на огне все 6 минут.</li></ul>",
+   "title_html": "Не то же самое, что варёные яйца"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "tamagoyaki",
+  "title": "Тамагояки"
+ },
+ "share_image": "share/ramen-egg.jpg",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Даси из шиитаке и комбу"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Даси из нибоси и бонито"
+  },
+  {
+   "slug": "furikake",
+   "title": "Фурикакэ"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Японские маринованные огурцы (суномоно)"
+  },
+  {
+   "slug": "radish-pickle",
+   "title": "Маринованный редис"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Тамагояки"
+  }
+ ],
+ "slug": "ramen-egg",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<p>Доведите кастрюлю воды до сильного кипения — воды столько, чтобы покрыть яйца.</p>",
+   "heat": {
+    "label": "сильный",
+    "off": false
+   },
+   "id": "step-1",
+   "images": {
+    "alt": "Вскипятить воду",
+    "how": [],
+    "illustration": "illustrations/ramen-egg/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~8 мин",
+   "title": "Вскипятить воду",
+   "uses_rows": [
+    {
+     "amount_html": "столько",
+     "name_html": "Вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Возьмите яйца прямо из холодильника.</li><li>Аккуратно опустите их на ложке в кипящую воду.</li><li>Варите ровно 6 минут — запустите таймер, как только они в воде.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Яйца в воду — ровно 6 минут",
+    "how": [
+     {
+      "caption": "Аккуратно опустите каждое яйцо на ложке в кипящую воду.",
+      "src": "illustrations/ramen-egg/2-how1.webp"
+     },
+     {
+      "caption": "Запустите таймер, как только они в воде — ровно 6 минут.",
+      "src": "illustrations/ramen-egg/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen-egg/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "6 мин",
+   "title": "Яйца в воду — ровно 6 минут",
+   "uses_rows": [
+    {
+     "amount_html": "½ на миску рамена",
+     "name_html": "Яйца"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Когда сработает таймер, переложите яйца в миску с ледяной водой (предположение — см. заметки).</li><li>Когда они остынут настолько, что их можно держать в руках, обстучите со всех сторон и почистите.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Остудить и почистить",
+    "how": [
+     {
+      "caption": "Когда сработает таймер, переложите яйца в ледяную воду.",
+      "src": "illustrations/ramen-egg/3-how1.webp"
+     },
+     {
+      "caption": "Когда остынут, обстучите со всех сторон и почистите.",
+      "src": "illustrations/ramen-egg/3-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen-egg/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Остудить и почистить",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разрежьте каждое яйцо пополам вдоль.</li><li>Внутри: густой, только-только схватившийся оранжевый желток и схватившийся белок.</li><li>В <a href=\"ramen.html\">рамен</a>: ½ на миску.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Разрезать пополам",
+    "how": [
+     {
+      "caption": "Разрежьте пополам вдоль острым ножом.",
+      "src": "illustrations/ramen-egg/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen-egg/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "title": "Разрезать пополам",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 20,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "pan",
+    "label": "Вода до сильного кипения",
+    "start": 0
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "pan",
+    "label": "Яйца в воду, 6 мин",
+    "start": 8
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "wait",
+    "label": "Ледяная вода",
+    "start": 14
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Почистить и разрезать",
+    "start": 17
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Яйцо для рамена (6 минут)",
+ "total": "~20 мин",
+ "vinegar_options": null,
+ "yields": "сколько нужно — ½ на миску рамена"
+}

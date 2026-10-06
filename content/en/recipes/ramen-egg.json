@@ -1,0 +1,316 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Eggs straight from the fridge into boiling water for exactly 6 minutes: jammy orange yolk, set white.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "as many as you need — ½ per bowl of ramen"
+  },
+  {
+   "kind": "time",
+   "text": "~20 min"
+  }
+ ],
+ "description": "Eggs straight from the fridge into boiling water for exactly 6 minutes: jammy orange yolk, set white.",
+ "equipment_html": [
+  "Pot — big enough for water to cover the eggs",
+  "Slotted spoon",
+  "Timer",
+  "Bowl of iced water (assumed — see notes)"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Japanese basics"
+ },
+ "hero": {
+  "alt": "Ramen egg (6-minute)",
+  "image": "illustrations/ramen-egg/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "½ per bowl of ramen, straight from the fridge",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "enough to cover the eggs",
+     "name_html": "Water"
+    }
+   ],
+   "name": "Eggs"
+  }
+ ],
+ "intro_html": "The soft-boiled egg for <a href=\"ramen.html\">ramen</a>. The eggs go into water that is already at a rolling boil, so the 6 minutes start the moment they’re in.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/ramen-egg/mise1.webp",
+   "items": [
+    "straight from the fridge"
+   ],
+   "items_html": "straight from the fridge",
+   "name": "Eggs",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/ramen-egg/mise2.webp",
+   "items": [
+    "ready before the timer ends"
+   ],
+   "items_html": "ready before the timer ends",
+   "name": "Iced water",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "More japanese basics:",
+ "next": {
+  "slug": "oyakodon",
+  "title": "Oyakodon"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Assumed: cold water after the 6 minutes — tell me if you skip it.</li><li>It stops the cooking so the yolk stays jammy.</li></ul>",
+   "title_html": "Assumed: the cold water"
+  },
+  {
+   "html": "<ul class=\"do\"><li><a href=\"boiled-eggs.html\">Dawn’s boiled eggs</a> start in cold water and finish off the heat.</li><li>These go into water that’s already boiling and stay on the heat for the full 6 minutes.</li></ul>",
+   "title_html": "Not the same as the boiled eggs"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "tamagoyaki",
+  "title": "Tamagoyaki"
+ },
+ "share_image": "share/ramen-egg.jpg",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Shiitake–kombu dashi"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Niboshi–bonito dashi"
+  },
+  {
+   "slug": "furikake",
+   "title": "Furikake"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Japanese cucumber pickle (sunomono)"
+  },
+  {
+   "slug": "radish-pickle",
+   "title": "Pickled radishes"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Tamagoyaki"
+  }
+ ],
+ "slug": "ramen-egg",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<p>Bring a pot of water to a rolling boil — enough water to cover the eggs.</p>",
+   "heat": {
+    "label": "high",
+    "off": false
+   },
+   "id": "step-1",
+   "images": {
+    "alt": "Boil the water",
+    "how": [],
+    "illustration": "illustrations/ramen-egg/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~8 min",
+   "title": "Boil the water",
+   "uses_rows": [
+    {
+     "amount_html": "enough to cover the eggs",
+     "name_html": "Water"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Take the eggs straight from the fridge.</li><li>Lower them gently on a spoon into the boiling water.</li><li>Cook exactly 6 minutes — set a timer as they go in.</li></ul>",
+   "heat": {
+    "label": "high",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Eggs in — exactly 6 minutes",
+    "how": [
+     {
+      "caption": "Lower each egg gently on a spoon into the boiling water.",
+      "src": "illustrations/ramen-egg/2-how1.webp"
+     },
+     {
+      "caption": "Start the timer as they go in — exactly 6 minutes.",
+      "src": "illustrations/ramen-egg/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen-egg/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "6 min",
+   "title": "Eggs in — exactly 6 minutes",
+   "uses_rows": [
+    {
+     "amount_html": "½ per bowl of ramen",
+     "name_html": "Eggs"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>When the timer goes, lift the eggs into the bowl of iced water (assumed — see notes).</li><li>Once they’re cool enough to handle, tap them all over and peel.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Cool and peel",
+    "how": [
+     {
+      "caption": "When the timer goes, lift the eggs into the iced water.",
+      "src": "illustrations/ramen-egg/3-how1.webp"
+     },
+     {
+      "caption": "Once cool, tap all over and peel.",
+      "src": "illustrations/ramen-egg/3-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen-egg/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "title": "Cool and peel",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut each egg in half lengthwise.</li><li>Inside: a jammy, just-set orange yolk and a set white.</li><li>Into the <a href=\"ramen.html\">ramen</a>: ½ per bowl.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Halve",
+    "how": [
+     {
+      "caption": "Halve lengthwise with a sharp knife.",
+      "src": "illustrations/ramen-egg/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen-egg/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "title": "Halve",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 20,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "pan",
+    "label": "Water to a rolling boil",
+    "start": 0
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "pan",
+    "label": "Eggs in, 6 min",
+    "start": 8
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "wait",
+    "label": "Iced water",
+    "start": 14
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "board",
+    "label": "Peel & halve",
+    "start": 17
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Ramen egg (6-minute)",
+ "total": "~20 min",
+ "vinegar_options": null,
+ "yields": "as many as you need — ½ per bowl of ramen"
+}
