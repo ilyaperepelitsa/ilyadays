@@ -25,6 +25,9 @@ if [[ "${1:-}" == "--push" ]]; then
   git add -A
   if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
   git commit -q -m "Publish $(date "+%Y-%m-%d %H:%M")"
-  git push -q origin main
+  # Push as the ilyaperepelitsa account even if another gh account is active (this repo belongs to it).
+  git -c credential.helper= \
+      -c credential.helper='!f() { echo username=ilyaperepelitsa; echo "password=$(gh auth token -h github.com -u ilyaperepelitsa)"; }; f' \
+      push -q origin main
   echo "pushed — Vercel deploys it in a minute or two"
 fi
