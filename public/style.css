@@ -26,3 +26,11 @@ main { max-width: 1080px; margin: 0 auto; padding: 8px 16px 48px; }
 .card p { margin: 0; color: var(--muted); }
 .card .go { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600; }
 footer { max-width: 1080px; margin: 0 auto; padding: 0 16px 32px; color: var(--muted); font-size: .9rem; }
+
+.hello h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 2.8rem); margin: 8px 0 6px; }
+.about { margin-top: 40px; max-width: 720px; }
+.about h2 { font-family: var(--serif); font-size: 1.6rem; margin: 0 0 8px; }
+.about h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.projects { padding-left: 1.1em; margin: 0; }
+.projects li { margin: 6px 0; }
+.projects a { color: var(--accent); font-weight: 600; }
