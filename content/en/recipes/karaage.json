@@ -1,0 +1,673 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Marinated thigh, tapioca crust with fork-made crumbs, double-fried at 180 °C.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "2 servings (500 g thighs)"
+  },
+  {
+   "kind": "time",
+   "text": "~1 h incl. 30 min marinating"
+  }
+ ],
+ "description": "Marinated thigh, tapioca crust with fork-made crumbs, double-fried at 180 °C.",
+ "equipment_html": [
+  "Sharp fork or skewer",
+  "Heavy pot for deep-frying + thermometer",
+  "Cutting board for the starch",
+  "Wire rack over a tray",
+  "Slotted spoon or spider"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Karaage",
+  "image": "illustrations/karaage/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "500 g, in 4–5 cm pieces",
+     "name_html": "Boneless chicken thighs, skin on"
+    }
+   ],
+   "name": "Chicken"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "2 tbsp",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Oyster sauce"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Brown sugar"
+    },
+    {
+     "amount_html": "10 g (2 tsp)",
+     "name_html": "Ginger, grated"
+    },
+    {
+     "amount_html": "2 cloves",
+     "name_html": "Garlic, grated"
+    },
+    {
+     "amount_html": "¼ tsp",
+     "name_html": "Ground pepper"
+    }
+   ],
+   "name": "Marinade"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Flour (into the chicken)"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Tapioca starch (into the chicken)"
+    },
+    {
+     "amount_html": "~80 g",
+     "name_html": "Tapioca starch (on the board)"
+    },
+    {
+     "amount_html": "1–2 tsp",
+     "name_html": "Water or leftover marinade (for crumbs)"
+    }
+   ],
+   "name": "Coating"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "enough for 3–4 cm depth",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "wedges",
+     "name_html": "Lemon"
+    },
+    {
+     "amount_html": "to dip",
+     "name_html": "Japanese mayo"
+    }
+   ],
+   "name": "To fry and serve"
+  }
+ ],
+ "intro_html": "Japanese fried chicken. Poking the thighs lets the soy–sake–mirin marinade in; tapioca starch (not flour) with little fork-made crumbs gives the craggy crunch; and <b>frying twice</b> — pale first, rest, then dark — makes it crisp without drying it out.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/karaage/mise1.webp",
+   "items": [
+    "poked, in pieces"
+   ],
+   "items_html": "poked, in pieces",
+   "name": "Chicken",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/karaage/mise2.webp",
+   "items": [
+    "soy",
+    "sake",
+    "mirin",
+    "oyster",
+    "sugar",
+    "ginger",
+    "garlic",
+    "pepper"
+   ],
+   "items_html": "soy · sake · mirin · oyster · sugar · ginger · garlic · pepper",
+   "name": "Marinade",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/karaage/mise3.webp",
+   "items": [
+    "1 tbsp each"
+   ],
+   "items_html": "1 tbsp each",
+   "name": "Flour + tapioca",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/karaage/mise4.webp",
+   "items": [
+    "tapioca + fork crumbs"
+   ],
+   "items_html": "tapioca + fork crumbs",
+   "name": "Starch board",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/karaage/mise5.webp",
+   "items": [
+    "for resting and draining"
+   ],
+   "items_html": "for resting and draining",
+   "name": "Rack",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 10",
+   "image": "illustrations/karaage/mise6.webp",
+   "items": [
+    "lemon",
+    "mayo"
+   ],
+   "items_html": "lemon · mayo",
+   "name": "To serve",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "japanese-curry",
+  "title": "Japanese curry from scratch"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Your notes mention pre-making round things with a fork.</li><li>Read here as: wetting a bit of the starch and forking it into small crumbs, which stick to the chicken and fry into extra-crunchy nubs.</li><li>Adjust if you did it differently.</li></ul>",
+   "title_html": "The “round bits”"
+  },
+  {
+   "html": "<ul class=\"do\"><li>You gave the ingredients, not quantities — these are starting points.</li><li>Taste the marinade: it should be salty-sweet and strongly gingery.</li></ul>",
+   "title_html": "Amounts"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Chicken is safe at <b>74 °C</b> in the centre.</li><li>The rest between fries finishes the inside; if unsure, cut the biggest piece open after the second fry.</li></ul>",
+   "title_html": "Is it cooked?"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Never fill the pot more than half full, keep a lid nearby, dry the pieces of excess marinade, and never put water on burning oil.</li><li>Let the oil cool completely before straining or discarding it.</li></ul>",
+   "title_html": "Oil safety"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "napa-shiitake-egg-bowl",
+  "title": "Napa cabbage & shiitake egg bowl"
+ },
+ "share_image": "share/karaage.jpg",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "karaage",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the deboned thighs into 4–5 cm pieces.</li><li><b>Poke them all over</b> with a sharp fork or skewer — both sides — so the marinade gets in.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Cut and poke",
+    "how": [
+     {
+      "caption": "Poke every piece all over with a sharp fork — both sides — so the marinade gets in.",
+      "src": "illustrations/karaage/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~8 min",
+   "title": "Cut and poke",
+   "uses_rows": [
+    {
+     "amount_html": "500 g",
+     "name_html": "Boneless chicken thighs, skin on"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Mix the marinade:<ul class=\"ing two-col\"><li>ginger, grated <span class=\"amt\">10 g (2 tsp)</span></li><li>garlic, grated <span class=\"amt\">2 cloves</span></li><li>mirin <span class=\"amt\">1 tbsp</span></li><li>soy sauce <span class=\"amt\">2 tbsp</span></li><li>sake <span class=\"amt\">1 tbsp</span></li><li>ground pepper <span class=\"amt\">¼ tsp</span></li><li>oyster sauce <span class=\"amt\">1 tsp</span></li><li>brown sugar <span class=\"amt\">1 tsp</span></li></ul></li><li>Toss the chicken in it and marinate in the fridge.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Marinate",
+    "how": [
+     {
+      "caption": "Mix the marinade, then toss the chicken in it.",
+      "src": "illustrations/karaage/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "30 min – overnight",
+   "title": "Marinate",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour off and discard the excess marinade.</li><li>Mix <b>1 tbsp flour and 1 tbsp tapioca starch</b> into the chicken until every piece has a tacky coat.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Pour off, then flour + starch",
+    "how": [
+     {
+      "caption": "Tilt the bowl and pour off the excess marinade, holding the chicken back.",
+      "src": "illustrations/karaage/3-how1.webp"
+     },
+     {
+      "caption": "Mix in 1 tbsp flour and 1 tbsp tapioca starch until every piece is tacky.",
+      "src": "illustrations/karaage/3-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "title": "Pour off, then flour + starch",
+   "uses_rows": [
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Flour (into the chicken)"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Tapioca starch (into the chicken)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spread the tapioca starch over a cutting board.</li><li>Make the little round bits: drizzle a teaspoon or two of water (or leftover marinade) over part of it and work it with a fork into small crumbs and pebbles.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Starch board and crumbs",
+    "how": [
+     {
+      "caption": "Drizzle a little water over part of the starch and work it with a fork into small crumbs.",
+      "src": "illustrations/karaage/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "title": "Starch board and crumbs",
+   "uses_rows": [
+    {
+     "amount_html": "~80 g",
+     "name_html": "Tapioca starch (on the board)"
+    },
+    {
+     "amount_html": "1–2 tsp",
+     "name_html": "Water or leftover marinade (for crumbs)"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Heat 3–4 cm of oil in a heavy pot to <b>180 °C</b>.</p>",
+   "heat": {
+    "label": "medium-high",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Heat the oil",
+    "how": [],
+    "illustration": "illustrations/karaage/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~10 min",
+   "title": "Heat the oil",
+   "uses_rows": [
+    {
+     "amount_html": "enough for 3–4 cm depth",
+     "name_html": "Neutral oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>While the oil heats, roll each piece in the starch and crumbs on the board, pressing so the bits stick.</p>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Roll in starch",
+    "how": [
+     {
+      "caption": "Roll each piece in the starch and press it onto the crumbs so they stick.",
+      "src": "illustrations/karaage/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~4 min",
+   "title": "Roll in starch",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lower in a batch without crowding.</li><li>Fry a couple of minutes until <b>light yellow / light orange</b>.</li></ul>",
+   "heat": {
+    "label": "180 °C oil",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "First fry — pale",
+    "how": [
+     {
+      "caption": "Lower the pieces in one at a time, away from you — don't crowd the pot.",
+      "src": "illustrations/karaage/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~2–3 min",
+   "title": "First fry — pale",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift onto a rack for a few minutes.</li><li>The heat inside keeps cooking the chicken while the oil comes back up to temperature.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Rest",
+    "how": [
+     {
+      "caption": "Lift them onto the rack with a spider and let them rest.",
+      "src": "illustrations/karaage/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 min",
+   "title": "Rest",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Back in the oil until <b>deeper golden and crisp</b>.</li><li>Drain on the rack.</li></ul>",
+   "heat": {
+    "label": "180 °C oil",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Second fry — dark and crisp",
+    "how": [],
+    "illustration": "illustrations/karaage/9.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min",
+   "title": "Second fry — dark and crisp",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Serve hot with lemon wedges and Japanese mayo.</p>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Serve",
+    "how": [],
+    "illustration": "illustrations/karaage/10.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Serve",
+   "uses_rows": [
+    {
+     "amount_html": "wedges",
+     "name_html": "Lemon"
+    },
+    {
+     "amount_html": "to dip",
+     "name_html": "Japanese mayo"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 60,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "One batch shown. Fry in batches that don’t crowd the pot — while one batch rests, the next does its first fry. Let the oil come back to 180 °C between batches.",
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "board",
+    "label": "Cut and poke the thighs",
+    "start": 0
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Mix marinade, toss chicken",
+    "start": 8
+   },
+   {
+    "dur": 30,
+    "dur_label": "30 min",
+    "kind": "wait",
+    "label": "Marinate (fridge)",
+    "start": 11
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Starch board + fork crumbs",
+    "start": 30
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "pan",
+    "label": "Heat oil to 180 °C",
+    "start": 38
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Pour off marinade, flour + starch in",
+    "start": 41
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "board",
+    "label": "Roll pieces in starch",
+    "start": 44
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "First fry — pale",
+    "start": 48
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "wait",
+    "label": "Rest on rack",
+    "start": 51
+   },
+   {
+    "dur": 1.5,
+    "dur_label": "1.5 min",
+    "kind": "pan",
+    "label": "Second fry — dark, crisp",
+    "start": 55
+   },
+   {
+    "dur": 1.5,
+    "dur_label": "1.5 min",
+    "kind": "bowl",
+    "label": "Drain, plate",
+    "start": 56.5
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Karaage",
+ "total": "~1 h incl. 30 min marinating",
+ "vinegar_options": null,
+ "yields": "2 servings (500 g thighs)"
+}

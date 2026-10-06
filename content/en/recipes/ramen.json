@@ -1,0 +1,1179 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Kombu–shiitake dashi taken through three bone stages, rolled chashu and a whole soy-seared octopus tentacle — a two-day project.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "~3 l broth · 8 bowls"
+  },
+  {
+   "kind": "time",
+   "text": "~2 days (broth 18–24 h), mostly hands-off"
+  }
+ ],
+ "description": "Kombu–shiitake dashi taken through three bone stages, rolled chashu and a whole soy-seared octopus tentacle — a two-day project.",
+ "equipment_html": [
+  "Stockpot, 10 l or bigger",
+  "Spider strainer",
+  "Fine sieve",
+  "Baking dish + kitchen string (chashu)",
+  "Small saucepan (tare)",
+  "Sous vide circulator + vacuum/zip bags",
+  "Frying pan or kitchen torch",
+  "Ramen bowls, warmed",
+  "For storing (optional): vacuum sealer, cheesecloth, silicone molds, aluminium foil"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Creamy white ramen (tonkotsu-style paitan)",
+  "image": "illustrations/ramen/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "~6 l — <a href=\"shiitake-kombu-dashi.html\">see recipe</a>",
+     "name_html": "Kombu-shiitake dashi"
+    },
+    {
+     "amount_html": "as needed",
+     "name_html": "Boiling water for topping up"
+    }
+   ],
+   "name": "Dashi (the start of the broth)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "enough to fill the pot about halfway",
+     "name_html": "Chicken bones (drumstick bones, backs)"
+    },
+    {
+     "amount_html": "1, halved",
+     "name_html": "Onion"
+    }
+   ],
+   "name": "Broth — stage 1"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1–2 knees",
+     "name_html": "Pork knee / knuckle (trotters)"
+    },
+    {
+     "amount_html": "30 g, sliced",
+     "name_html": "Ginger for the broth"
+    },
+    {
+     "amount_html": "1, halved",
+     "name_html": "Garlic head"
+    }
+   ],
+   "name": "Broth — stage 2"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "about as much as the chicken, or a bit more",
+     "name_html": "Beef neck bones"
+    }
+   ],
+   "name": "Broth — stage 3"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1–1.2 kg, one piece, rolled and tied",
+     "name_html": "Pork belly"
+    },
+    {
+     "amount_html": "200 ml",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "100 ml",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "100 ml",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "60 g",
+     "name_html": "Brown sugar"
+    },
+    {
+     "amount_html": "200 ml",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "4 cloves, smashed",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "20 g, sliced",
+     "name_html": "Ginger"
+    },
+    {
+     "amount_html": "a handful",
+     "name_html": "Spring onion greens"
+    }
+   ],
+   "name": "Chashu (rolled)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "~250 ml (2–3 tbsp per bowl)",
+     "name_html": "Chashu marinade, strained and reduced"
+    }
+   ],
+   "name": "Tare"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1 per bowl, kept whole",
+     "name_html": "Octopus tentacles (large octopus)"
+    },
+    {
+     "amount_html": "a little",
+     "name_html": "Oil for searing the octopus"
+    },
+    {
+     "amount_html": "a splash",
+     "name_html": "Soy sauce for searing the octopus"
+    }
+   ],
+   "name": "Octopus"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "120–140 g — homemade: <a href=\"alkaline-ramen-noodles.html\">alkaline ramen noodles</a> (baked baking soda)",
+     "name_html": "Fresh alkaline ramen noodles (thin)"
+    },
+    {
+     "amount_html": "350 ml",
+     "name_html": "Broth"
+    },
+    {
+     "amount_html": "2–3 tbsp",
+     "name_html": "Tare"
+    },
+    {
+     "amount_html": "2–3 slices",
+     "name_html": "Chashu"
+    },
+    {
+     "amount_html": "1 whole tentacle",
+     "name_html": "Octopus"
+    },
+    {
+     "amount_html": "sliced",
+     "name_html": "Spring onion"
+    },
+    {
+     "amount_html": "1 piece",
+     "name_html": "Nori"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Toasted sesame"
+    },
+    {
+     "amount_html": "½, optional",
+     "name_html": "Soft-boiled egg"
+    }
+   ],
+   "name": "Per bowl"
+  }
+ ],
+ "intro_html": "The creamy white one, modelled on Momofuku’s ramen. The broth starts as a pot of <a href=\"shiitake-kombu-dashi.html\">kombu–shiitake dashi</a>, then runs through <b>three bone stages in the same pot</b>: chicken with onion, then pork with ginger and garlic, then beef — 6–8 hours each, lifting every batch out with a spider before the next goes in: bring each stage up on medium heat, then let it go low for the hours. Chashu is pork belly rolled up skin side out, tied, marinated ~12 hours and roasted hot then low; a whole soy-seared octopus tentacle goes on top.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 17",
+   "image": "illustrations/ramen/mise1.webp",
+   "items": [
+    "strained, kept at a boil"
+   ],
+   "items_html": "strained, kept at a boil",
+   "name": "Broth",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 17",
+   "image": "illustrations/ramen/mise2.webp",
+   "items": [
+    "reduced marinade"
+   ],
+   "items_html": "reduced marinade",
+   "name": "Tare",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 15",
+   "image": "illustrations/ramen/mise3.webp",
+   "items": [
+    "sliced, seared"
+   ],
+   "items_html": "sliced, seared",
+   "name": "Chashu",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 15",
+   "image": "illustrations/ramen/mise4.webp",
+   "items": [
+    "whole tentacle, soy-seared"
+   ],
+   "items_html": "whole tentacle, soy-seared",
+   "name": "Octopus",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 18",
+   "image": "illustrations/ramen/mise5.webp",
+   "items": [
+    "fresh alkaline, loosened"
+   ],
+   "items_html": "fresh alkaline, loosened",
+   "name": "Noodles",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 19",
+   "image": "illustrations/ramen/mise6.webp",
+   "items": [
+    "spring onion",
+    "nori",
+    "sesame"
+   ],
+   "items_html": "spring onion · nori · sesame",
+   "name": "Toppings",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "alkaline-ramen-noodles",
+  "title": "Ramen noodles with baked baking soda"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Bones are by eye, the way you do it: chicken to about half the pot, 1–2 pork knees, beef about the same as the chicken or a bit more.</li><li>Dashi volume, marinade and per-bowl amounts are starting points (one whole octopus tentacle per bowl is assumed; the octopus sous vide at 77 °C for ~5 h is assumed too — confirm).</li><li>Adjust to what you did.</li></ul>",
+   "title_html": "Amounts"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Inspired by Momofuku’s ramen (David Chang): like theirs, the broth starts from kombu–shiitake dashi — but no bacon, and the bones go in three separate 6–8 h stages (chicken + onion, pork + ginger + garlic, beef).</li><li>The chashu oven (very hot to colour, then low until tender) follows their pork belly, which is a flat slab; a rolled belly is thicker, so the low stage may need longer — temperatures and times are assumed, confirm.</li></ul>",
+   "title_html": "Momofuku"
+  },
+  {
+   "html": "<ul class=\"do\"><li>If the broth stays thin and see-through, the boil wasn’t hard enough — crank it and reduce.</li><li>Knuckle/trotter is where most of the body comes from.</li></ul>",
+   "title_html": "Clear vs creamy"
+  },
+  {
+   "html": "<p>In the fridge, chashu, tare and octopus keep 4–5 days; for longer, see <i>Make ahead &amp; store</i>.</p>",
+   "title_html": "Keeping"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-broth",
+   "title": "Broth"
+  },
+  {
+   "id": "part-chashu",
+   "title": "Chashu"
+  },
+  {
+   "id": "part-tare",
+   "title": "Tare"
+  },
+  {
+   "id": "part-octopus",
+   "title": "Octopus"
+  },
+  {
+   "id": "part-noodles--assembly",
+   "title": "Noodles & assembly"
+  },
+  {
+   "id": "part-make-ahead--store",
+   "title": "Make ahead & store"
+  }
+ ],
+ "prev": {
+  "slug": "japanese-curry",
+  "title": "Japanese curry from scratch"
+ },
+ "share_image": "share/ramen.jpg",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "ramen",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Start with a big pot of <a href=\"shiitake-kombu-dashi.html\">kombu–shiitake dashi</a> — about 6 litres, in the stockpot the broth will cook in.</li><li>Everything after this cooks in that same liquid.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Make the dashi",
+    "how": [],
+    "illustration": "illustrations/ramen/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "~1 h",
+   "title": "Make the dashi",
+   "uses_rows": [
+    {
+     "amount_html": "~6 l — <a href=\"shiitake-kombu-dashi.html\">see recipe</a>",
+     "name_html": "Kombu-shiitake dashi"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Put all the bones in a pot, cover with cold water, bring to a boil and boil hard for 10–15 minutes.</li><li>Lots of grey scum comes up — that’s the point.</li><li>Drain everything into the sink.</li></ul>",
+   "heat": {
+    "label": "high",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Blanch the bones",
+    "how": [
+     {
+      "caption": "Cover all the bones with cold water, then bring it to a hard boil.",
+      "src": "illustrations/ramen/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "10–15 min",
+   "title": "Blanch the bones",
+   "uses_rows": [
+    {
+     "amount_html": "1–2 knees",
+     "name_html": "Pork knee / knuckle (trotters)"
+    },
+    {
+     "amount_html": "enough to fill the pot about halfway",
+     "name_html": "Chicken bones (drumstick bones, backs)"
+    },
+    {
+     "amount_html": "about as much as the chicken",
+     "name_html": "Beef neck bones"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Rinse the bones under cold water and scrub off dark bits, clotted blood and scum (the beef neck bones have the most).</li><li>This is what keeps the finished broth white rather than grey.</li><li>Keep the pork and beef bones in the fridge until their stage.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Scrub and rinse",
+    "how": [
+     {
+      "caption": "Scrub every bone under cold running water — dark bits, blood and scum off.",
+      "src": "illustrations/ramen/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "~15 min",
+   "title": "Scrub and rinse",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Into the dashi:<ul class=\"ing\"><li>chicken bones</li><li>onion <span class=\"amt\">1</span></li></ul></li><li>Bring it up on <b>medium heat</b>, then turn it <b>low</b> and let it simmer, lid ajar.</li><li>Top up with boiling water whenever the bones start to poke out; scrape the bottom now and then so nothing catches.</li></ul>",
+   "heat": {
+    "label": "medium, then low",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Stage 1 — chicken + onion, 6–8 hours",
+    "how": [
+     {
+      "caption": "Chicken bones and onion go into the dashi first.",
+      "src": "illustrations/ramen/4-how1.webp"
+     },
+     {
+      "caption": "Keep it at a low simmer; top up with boiling water when the bones poke out.",
+      "src": "illustrations/ramen/4-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "6–8 h",
+   "title": "Stage 1 — chicken + onion, 6–8 hours",
+   "uses_rows": [
+    {
+     "amount_html": "enough to fill the pot about halfway",
+     "name_html": "Chicken bones (drumstick bones, backs)"
+    },
+    {
+     "amount_html": "as needed",
+     "name_html": "Boiling water for topping up"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the chicken bones and onion out with the spider strainer — the broth stays in the pot.</li><li>Add:<ul class=\"ing\"><li>pork knee / knuckle (trotters) <span class=\"amt\">1–2 knees</span></li><li>ginger for the broth <span class=\"amt\">30 g</span></li><li>garlic head <span class=\"amt\">1</span></li></ul></li><li>Back up on medium, then low again, topping up as before. The broth turns cloudy and richer.</li></ul>",
+   "heat": {
+    "label": "medium, then low",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Stage 2 — pork + ginger + garlic, 6–8 hours",
+    "how": [
+     {
+      "caption": "After 6–8 hours, lift the chicken bones and onion out with the spider.",
+      "src": "illustrations/ramen/5-how1.webp"
+     },
+     {
+      "caption": "Pork knuckle, ginger and garlic go into the same broth.",
+      "src": "illustrations/ramen/5-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "6–8 h",
+   "title": "Stage 2 — pork + ginger + garlic, 6–8 hours",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the pork bones, ginger and garlic out with the spider.</li><li>Add:<ul class=\"ing\"><li>beef neck bones <span class=\"amt\">about as much as the chicken</span></li></ul></li><li>Medium to bring it up, then low again, topping up as needed — by the end it’s rich and cloudy.</li></ul>",
+   "heat": {
+    "label": "medium, then low",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Stage 3 — beef, 6–8 hours",
+    "how": [
+     {
+      "caption": "After 6–8 hours, lift the pork bones, ginger and garlic out.",
+      "src": "illustrations/ramen/6-how1.webp"
+     },
+     {
+      "caption": "Beef neck bones go in last.",
+      "src": "illustrations/ramen/6-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "6–8 h",
+   "title": "Stage 3 — beef, 6–8 hours",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the beef bones out with the spider, then pour the broth through a fine sieve.</li><li>You want about 3 litres of opaque, white broth that lightly coats a spoon; if it’s thin, boil it down hard.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Strain",
+    "how": [
+     {
+      "caption": "Lift the beef bones out, then pour the broth through a fine sieve.",
+      "src": "illustrations/ramen/7-how1.webp"
+     },
+     {
+      "caption": "It should coat a spoon. Thin? Boil it down hard.",
+      "src": "illustrations/ramen/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "~20 min",
+   "title": "Strain",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Mix until the sugar dissolves:<ul class=\"ing two-col\"><li>soy sauce <span class=\"amt\">200 ml</span></li><li>mirin <span class=\"amt\">100 ml</span></li><li>sake <span class=\"amt\">100 ml</span></li><li>brown sugar <span class=\"amt\">60 g</span></li><li>water <span class=\"amt\">200 ml</span></li></ul></li><li>Add:<ul class=\"ing\"><li>garlic <span class=\"amt\">4 cloves</span></li><li>ginger <span class=\"amt\">20 g</span></li><li>spring onion greens <span class=\"amt\">a handful</span></li></ul></li><li>Roll the belly up tightly from a long side, <b>skin side out</b>, and tie it with kitchen string every ~2 cm.</li><li>Put the roll in a snug dish, turn it in the marinade and leave it in the fridge for <b>about 12 hours</b>, turning a few times.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Roll, tie and marinate the belly",
+    "how": [
+     {
+      "caption": "Stir the marinade until the sugar is gone.",
+      "src": "illustrations/ramen/8-how1.webp"
+     },
+     {
+      "caption": "Roll the belly up tightly from a long side, skin side out, and tie it with string every 2 cm.",
+      "src": "illustrations/ramen/8-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Chashu",
+   "part_id": "part-chashu",
+   "time": "~12 h",
+   "title": "Roll, tie and marinate the belly",
+   "uses_rows": [
+    {
+     "amount_html": "1–1.2 kg",
+     "name_html": "Pork belly"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Seam side down in the dish with its marinade, uncovered, into a very hot oven.</li><li>After 30 minutes, baste it with the juices and give it another 30 minutes, until the outside is deeply browned.</li></ul>",
+   "heat": {
+    "label": "oven 230 °C",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Roast hot",
+    "how": [
+     {
+      "caption": "After 30 minutes, baste it with the juices, then 30 more.",
+      "src": "illustrations/ramen/9-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/9.webp",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Chashu",
+   "part_id": "part-chashu",
+   "time": "~1 h",
+   "title": "Roast hot",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Turn the oven down and keep roasting, basting now and then, until a skewer slides into the middle of the roll with no resistance.</p>",
+   "heat": {
+    "label": "oven 120 °C",
+    "off": false
+   },
+   "id": "step-10",
+   "images": {
+    "alt": "Then low until tender",
+    "how": [],
+    "illustration": "illustrations/ramen/10.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Chashu",
+   "part_id": "part-chashu",
+   "time": "1–1½ h",
+   "title": "Then low until tender",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the roll out (keep the liquid for tare).</li><li>Let it cool, then wrap it and refrigerate — overnight is best — until it’s cold and firm.</li><li>Firm pork slices cleanly.</li><li>Cut and pull off the string, then slice into rounds about 5 mm thick while it’s still cold.</li></ul>",
+   "heat": null,
+   "id": "step-11",
+   "images": {
+    "alt": "Chill until firm, untie, slice",
+    "how": [
+     {
+      "caption": "Cold from the fridge: cut and pull off the string.",
+      "src": "illustrations/ramen/11-how1.webp"
+     },
+     {
+      "caption": "Slice into 5 mm rounds, fingertips tucked.",
+      "src": "illustrations/ramen/11-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/11.webp",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Chashu",
+   "part_id": "part-chashu",
+   "time": "chill overnight",
+   "title": "Chill until firm, untie, slice",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li><i>Suggestion — your notes don’t mention a tare.</i></li><li>Strain the cooking liquid, skim the fat off (keep it: a spoon on top of the bowl is great) and simmer to reduce by about a third.</li><li>Taste: it should be very salty and sweet on its own — it seasons the plain broth.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "off": false
+   },
+   "id": "step-12",
+   "images": {
+    "alt": "Reduce the marinade into tare",
+    "how": [
+     {
+      "caption": "Skim the fat off the strained liquid, then reduce by a third.",
+      "src": "illustrations/ramen/12-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/12.webp",
+    "svg_fallback": null
+   },
+   "n": 12,
+   "part": "Tare",
+   "part_id": "part-tare",
+   "time": "~20 min",
+   "title": "Reduce the marinade into tare",
+   "uses_rows": [
+    {
+     "amount_html": "~250 ml",
+     "name_html": "Chashu marinade, strained and reduced"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Rinse the tentacles (if raw, rub with salt and rinse to remove slime).</li><li>Seal each whole tentacle in its own vacuum or zip bag, air pressed out, and cook it in the water bath at around <b>77 °C for about 5 h</b>.</li></ul>",
+   "heat": {
+    "label": "water bath 77 °C",
+    "off": false
+   },
+   "id": "step-13",
+   "images": {
+    "alt": "Sous vide the tentacle",
+    "how": [
+     {
+      "caption": "Raw tentacles: rub with salt, then rinse the slime off.",
+      "src": "illustrations/ramen/13-how1.webp"
+     },
+     {
+      "caption": "Seal each tentacle in its own bag and lower it into the 77 °C bath.",
+      "src": "illustrations/ramen/13-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/13.webp",
+    "svg_fallback": null
+   },
+   "n": 13,
+   "part": "Octopus",
+   "part_id": "part-octopus",
+   "time": "~5 h",
+   "title": "Sous vide the tentacle",
+   "uses_rows": [
+    {
+     "amount_html": "1 per bowl",
+     "name_html": "Octopus tentacles (large octopus)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the tentacles out of the bags and pat them dry.</li><li>Keep each tentacle <b>whole</b> — no slicing; it goes on the bowl in one piece.</li></ul>",
+   "heat": null,
+   "id": "step-14",
+   "images": {
+    "alt": "Pat dry — keep it whole",
+    "how": [
+     {
+      "caption": "Pat dry and keep it whole — it goes on the bowl in one piece.",
+      "src": "illustrations/ramen/14-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/14.webp",
+    "svg_fallback": null
+   },
+   "n": 14,
+   "part": "Octopus",
+   "part_id": "part-octopus",
+   "time": "~10 min",
+   "title": "Pat dry — keep it whole",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Right before serving, sear the chashu slices in a very hot dry pan for 30–60 seconds a side (or hit them with a torch) until caramelised at the edges.</li><li>Sear each whole tentacle in a hot pan with a little oil, then add a splash of soy sauce and turn it until it’s glazed and charred at the edges.</li></ul>",
+   "heat": {
+    "label": "high",
+    "off": false
+   },
+   "id": "step-15",
+   "images": {
+    "alt": "Sear chashu; sear the octopus with soy",
+    "how": [
+     {
+      "caption": "Sear the tentacle in a little oil, then add a splash of soy and turn until glazed and charred.",
+      "src": "illustrations/ramen/15-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/15.webp",
+    "svg_fallback": null
+   },
+   "n": 15,
+   "part": "Noodles & assembly",
+   "part_id": "part-noodles--assembly",
+   "time": "~3 min",
+   "title": "Sear chashu; sear the octopus with soy",
+   "uses_rows": [
+    {
+     "amount_html": "2–3 slices",
+     "name_html": "Chashu"
+    },
+    {
+     "amount_html": "1 whole tentacle",
+     "name_html": "Octopus"
+    },
+    {
+     "amount_html": "a little",
+     "name_html": "Oil for searing the octopus"
+    },
+    {
+     "amount_html": "a splash",
+     "name_html": "Soy sauce for searing the octopus"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Fill the bowls with boiling water while everything else comes together; tip it out just before building.</p>",
+   "heat": null,
+   "id": "step-16",
+   "images": {
+    "alt": "Warm the bowls",
+    "how": [
+     {
+      "caption": "Fill the bowls with boiling water; tip it out just before building.",
+      "src": "illustrations/ramen/16-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/16.webp",
+    "svg_fallback": null
+   },
+   "n": 16,
+   "part": "Noodles & assembly",
+   "part_id": "part-noodles--assembly",
+   "time": "2 min",
+   "title": "Warm the bowls",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>2–3 tablespoons of tare into each bowl, then 350 ml of <b>boiling</b> broth.</li><li>Whisk briefly to blend and froth it.</li></ul>",
+   "heat": null,
+   "id": "step-17",
+   "images": {
+    "alt": "Tare, then broth",
+    "how": [
+     {
+      "caption": "Tare in first, then 350 ml of boiling broth; whisk briefly.",
+      "src": "illustrations/ramen/17-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/17.webp",
+    "svg_fallback": null
+   },
+   "n": 17,
+   "part": "Noodles & assembly",
+   "part_id": "part-noodles--assembly",
+   "time": "1 min",
+   "title": "Tare, then broth",
+   "uses_rows": [
+    {
+     "amount_html": "2–3 tbsp",
+     "name_html": "Tare"
+    },
+    {
+     "amount_html": "350 ml",
+     "name_html": "Broth"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cook the fresh alkaline noodles (homemade: <a href=\"alkaline-ramen-noodles.html\">alkaline ramen noodles</a>, made with baked baking soda) in a big pot of boiling unsalted water — thin fresh noodles usually take 1–2 min.</li><li>Drain hard — any water dilutes the broth.</li></ul>",
+   "heat": {
+    "label": "high",
+    "off": false
+   },
+   "id": "step-18",
+   "images": {
+    "alt": "Cook the noodles",
+    "how": [
+     {
+      "caption": "Drain hard — shake out every drop of water.",
+      "src": "illustrations/ramen/18-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/18.webp",
+    "svg_fallback": null
+   },
+   "n": 18,
+   "part": "Noodles & assembly",
+   "part_id": "part-noodles--assembly",
+   "time": "1–2 min",
+   "title": "Cook the noodles",
+   "uses_rows": [
+    {
+     "amount_html": "120–140 g — homemade: <a href=\"alkaline-ramen-noodles.html\">alkaline ramen noodles</a> (baked baking soda)",
+     "name_html": "Fresh alkaline ramen noodles (thin)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Fold the noodles into the broth.</li><li>Top with:<ul class=\"ing two-col\"><li>chashu <span class=\"amt\">2–3 slices</span></li><li>octopus <span class=\"amt\">1 whole tentacle</span></li><li>spring onion <span class=\"amt\">sliced</span></li><li>nori <span class=\"amt\">1 piece</span></li><li>toasted sesame <span class=\"amt\">a pinch</span></li><li>soft-boiled egg <span class=\"amt\">½</span></li></ul></li><li>The tentacle goes on whole, in one piece. Eat straight away.</li></ul>",
+   "heat": null,
+   "id": "step-19",
+   "images": {
+    "alt": "Top and serve",
+    "how": [
+     {
+      "caption": "Fold the noodles into the broth, then lay the toppings on.",
+      "src": "illustrations/ramen/19-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/19.webp",
+    "svg_fallback": null
+   },
+   "n": 19,
+   "part": "Noodles & assembly",
+   "part_id": "part-noodles--assembly",
+   "time": null,
+   "title": "Top and serve",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Chashu:<ul class=\"ing\"><li>vacuum-seal the slices one by one, so you can take out exactly what you need</li></ul></li><li>Octopus:<ul class=\"ing\"><li>vacuum-seal the tentacles, still whole</li></ul></li><li>Broth:<ul class=\"ing\"><li>strain it through cheesecloth</li><li>cool it, then refrigerate for a night (~24 h) until it sets into a jelly</li><li>spoon or cut the jelly into silicone molds and freeze it into large cubes</li><li>pop the cubes out and wrap each one in aluminium foil — they store very well</li></ul></li></ul>",
+   "heat": null,
+   "id": "step-20",
+   "images": {
+    "alt": "Make ahead & store (optional)",
+    "how": [
+     {
+      "caption": "Chashu: vacuum-seal the slices one by one.",
+      "src": "illustrations/ramen/20-how1.webp"
+     },
+     {
+      "caption": "Broth: strain through cheesecloth, then cool and refrigerate overnight until it sets.",
+      "src": "illustrations/ramen/20-how2.webp"
+     },
+     {
+      "caption": "Spoon the set jelly into silicone molds and freeze into big cubes.",
+      "src": "illustrations/ramen/20-how3.webp"
+     },
+     {
+      "caption": "Pop the frozen cubes out and wrap each one in foil — they keep very well.",
+      "src": "illustrations/ramen/20-how4.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ramen/20.webp",
+    "svg_fallback": null
+   },
+   "n": 20,
+   "part": "Make ahead & store",
+   "part_id": "part-make-ahead--store",
+   "time": null,
+   "title": "Make ahead & store (optional)",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 1620,
+  "hours": true,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "oven",
+    "label": "Oven"
+   },
+   {
+    "kind": "bath",
+    "label": "Water bath"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   }
+  ],
+  "note_html": "<b>Day 1, morning:</b> roll, tie and marinate the chashu (~12 h) and make the dashi. The broth’s three 6–8 h stages run through the night; the chashu roasts in the evening and chills overnight until firm. <b>Day 2:</b> strain, slice, sear, build. Broth, chashu, tare and octopus all keep — see <i>Make ahead &amp; store</i> — so later bowls are just the last few bars.",
+  "tasks": [
+   {
+    "dur": 20,
+    "dur_label": "20 min",
+    "kind": "board",
+    "label": "Roll, tie, marinate chashu",
+    "start": 0
+   },
+   {
+    "dur": 60,
+    "dur_label": "1 h",
+    "kind": "pan",
+    "label": "Kombu–shiitake dashi",
+    "start": 0
+   },
+   {
+    "dur": 720,
+    "dur_label": "12 h",
+    "kind": "wait",
+    "label": "Chashu marinates (~12 h)",
+    "start": 20
+   },
+   {
+    "dur": 40,
+    "dur_label": "40 min",
+    "kind": "pan",
+    "label": "Blanch + scrub bones",
+    "start": 60
+   },
+   {
+    "dur": 420,
+    "dur_label": "7 h",
+    "kind": "wait",
+    "label": "Stage 1: chicken + onion",
+    "start": 100
+   },
+   {
+    "dur": 420,
+    "dur_label": "7 h",
+    "kind": "wait",
+    "label": "Stage 2: pork + ginger + garlic",
+    "start": 520
+   },
+   {
+    "dur": 140,
+    "dur_label": "2 h 20",
+    "kind": "oven",
+    "label": "Roast chashu hot, then low",
+    "start": 740
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 min",
+    "kind": "pan",
+    "label": "Reduce marinade → tare",
+    "start": 880
+   },
+   {
+    "dur": 600,
+    "dur_label": "10 h",
+    "kind": "wait",
+    "label": "Chashu chills until firm",
+    "start": 880
+   },
+   {
+    "dur": 420,
+    "dur_label": "7 h",
+    "kind": "wait",
+    "label": "Stage 3: beef",
+    "start": 940
+   },
+   {
+    "dur": 300,
+    "dur_label": "5 h",
+    "kind": "bath",
+    "label": "Sous vide octopus (~5 h)",
+    "start": 1000
+   },
+   {
+    "dur": 20,
+    "dur_label": "20 min",
+    "kind": "bowl",
+    "label": "Spider out, strain broth",
+    "start": 1360
+   },
+   {
+    "dur": 15,
+    "dur_label": "15 min",
+    "kind": "board",
+    "label": "Untie and slice chashu",
+    "start": 1480
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Pat octopus dry",
+    "start": 1490
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "pan",
+    "label": "Sear chashu; octopus with soy",
+    "start": 1495
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "bowl",
+    "label": "Warm bowls; tare + broth",
+    "start": 1500
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "Cook noodles",
+    "start": 1504
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "bowl",
+    "label": "Top and serve",
+    "start": 1507
+   }
+  ],
+  "tick_step": 180,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0:00"
+   },
+   {
+    "at": 180,
+    "label": "3:00"
+   },
+   {
+    "at": 360,
+    "label": "6:00"
+   },
+   {
+    "at": 540,
+    "label": "9:00"
+   },
+   {
+    "at": 720,
+    "label": "12:00"
+   },
+   {
+    "at": 900,
+    "label": "15:00"
+   },
+   {
+    "at": 1080,
+    "label": "18:00"
+   },
+   {
+    "at": 1260,
+    "label": "21:00"
+   },
+   {
+    "at": 1440,
+    "label": "24:00"
+   },
+   {
+    "at": 1620,
+    "label": "27:00"
+   }
+  ],
+  "unit": "h:mm"
+ },
+ "title": "Creamy white ramen (tonkotsu-style paitan)",
+ "total": "~2 days (broth 18–24 h), mostly hands-off",
+ "vinegar_options": null,
+ "yields": "~3 l broth · 8 bowls"
+}

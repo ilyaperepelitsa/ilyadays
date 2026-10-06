@@ -1,0 +1,576 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Грибы, бок-чой и кунжутный финиш — вариант, ближе всего к тому, что уже есть в шкафу.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 щедрая порция"
+  },
+  {
+   "kind": "time",
+   "text": "~25 мин"
+  }
+ ],
+ "description": "Грибы, бок-чой и кунжутный финиш — вариант, ближе всего к тому, что уже есть в шкафу.",
+ "equipment_html": [
+  "Большая сковорода или вок",
+  "Чистая тарелка для готовой курицы"
+ ],
+ "group": {
+  "id": "rice-noodles",
+  "name": "Рисовая лапша"
+ },
+ "hero": {
+  "alt": "Лапша с курицей, чесноком и имбирём",
+  "image": "illustrations/garlic-ginger-chicken-noodles/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "100 г",
+     "name_html": "Сухая широкая рисовая лапша"
+    },
+    {
+     "amount_html": "150 г, тонко нарезать",
+     "name_html": "Куриная грудка или бедро"
+    },
+    {
+     "amount_html": "100 г, нарезать",
+     "name_html": "Грибы"
+    },
+    {
+     "amount_html": "100 г, нарезать; стебли и листья отдельно",
+     "name_html": "Бок-чой"
+    },
+    {
+     "amount_html": "2 зубчика, мелко нарезать",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "8 г, натереть или мелко нарезать",
+     "name_html": "Имбирь"
+    },
+    {
+     "amount_html": "1 стебель, нарезать; белая часть и зелень отдельно",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "1 ст. л. (пополам)",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "½ ч. л., в конце",
+     "name_html": "Кунжутное масло"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "2¼ ч. л.",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "2¼ ч. л.",
+     "name_html": "Устричный соус"
+    },
+    {
+     "amount_html": "1½ ч. л.",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "1½ ч. л.",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Рисовый уксус"
+    },
+    {
+     "amount_html": "1½ ст. л.",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Чёрный или белый перец"
+    }
+   ],
+   "name": "Соус — смешать"
+  }
+ ],
+ "intro_html": "Вариант, ближе всего к тому, что у вас уже есть: грибы, зелень и кунжутный финиш. 100 г сухой рисовой лапши и 150 г сырой курицы.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise1.webp",
+   "items": [
+    "тонко нарезана"
+   ],
+   "items_html": "тонко нарезана",
+   "name": "Курица",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise2.webp",
+   "items": [
+    "нарезаны"
+   ],
+   "items_html": "нарезаны",
+   "name": "Грибы",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise3.webp",
+   "items": [
+    "нарезаны"
+   ],
+   "items_html": "нарезаны",
+   "name": "Стебли бок-чоя",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise4.webp",
+   "items": [
+    "чеснок",
+    "имбирь",
+    "белая часть лука"
+   ],
+   "items_html": "чеснок · имбирь · белая часть лука",
+   "name": "Ароматика",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise5.webp",
+   "items": [
+    "нарезаны"
+   ],
+   "items_html": "нарезаны",
+   "name": "Листья бок-чоя",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise6.webp",
+   "items": [
+    "лапша без воды; соус смешан"
+   ],
+   "items_html": "лапша без воды; соус смешан",
+   "name": "Лапша + соус",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/garlic-ginger-chicken-noodles/mise7.webp",
+   "items": [
+    "кунжутное масло",
+    "зелень лука"
+   ],
+   "items_html": "кунжутное масло · зелень лука",
+   "name": "В конце",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Рисовая лапша:",
+ "next": {
+  "slug": "chicken-pad-see-ew",
+  "title": "Пад си ю с курицей"
+ },
+ "notes": [
+  {
+   "html": "<p>Берите маленькие соцветия и коротко пропарьте их, прежде чем добавить вместе с грибами.</p>",
+   "title_html": "Брокколи вместо бок-чоя"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "kkakdugi",
+  "title": "Ккактуги (кимчи из кубиков редьки)"
+ },
+ "share_image": "share/garlic-ginger-chicken-noodles.jpg",
+ "siblings": [
+  {
+   "slug": "chicken-pad-see-ew",
+   "title": "Пад си ю с курицей"
+  },
+  {
+   "slug": "chicken-pad-thai",
+   "title": "Пад тай с курицей"
+  }
+ ],
+ "slug": "garlic-ginger-chicken-noodles",
+ "sources": [
+  {
+   "label": "RecipeTin Eats — chicken stir-fry with rice noodles",
+   "url": "https://www.recipetineats.com/chicken-stir-fry-with-rice-noodles/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Готовьте по <b>инструкции на упаковке для жарки в воке</b> и остановитесь, пока лапша ещё чуть упругая.</li><li><b>Хорошо слейте воду и сразу пускайте в дело</b> — дойдёт в соусе.</li><li>Не разваривайте её заранее и не мешайте в сковороде слишком энергично.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Сначала лапша",
+    "how": [
+     {
+      "caption": "Замочите или сварите лапшу по инструкции для жарки в воке — остановитесь, пока она ещё чуть упругая.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "по упаковке",
+   "title": "Сначала лапша",
+   "uses_rows": [
+    {
+     "amount_html": "100 г",
+     "name_html": "Сухая широкая рисовая лапша"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Тонко нарежьте курицу.</li><li>Нарежьте грибы.</li><li>Нарежьте бок-чой, <b>стебли и листья отдельно</b>.</li><li>Мелко нарежьте чеснок и имбирь; нарежьте зелёный лук, <b>белую часть и зелень отдельно</b>.</li><li>Смешайте соус в маленькой миске:<ul class=\"ing two-col\"><li>соевый соус <span class=\"amt\">2¼ ч. л.</span></li><li>устричный соус <span class=\"amt\">2¼ ч. л.</span></li><li>мирин <span class=\"amt\">1½ ч. л.</span></li><li>саке <span class=\"amt\">1½ ч. л.</span></li><li>рисовый уксус <span class=\"amt\">1 ч. л.</span></li><li>вода <span class=\"amt\">1½ ст. л.</span></li><li>чёрный или белый перец <span class=\"amt\">щепотка</span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Всё подготовить",
+    "how": [
+     {
+      "caption": "Нарежьте курицу тонкими полосками — кончики пальцев подогнуты.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~8 мин",
+   "title": "Всё подготовить",
+   "uses_rows": [
+    {
+     "amount_html": "150 г",
+     "name_html": "Куриная грудка или бедро"
+    },
+    {
+     "amount_html": "100 г",
+     "name_html": "Грибы"
+    },
+    {
+     "amount_html": "100 г",
+     "name_html": "Бок-чой"
+    },
+    {
+     "amount_html": "2 зубчика",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "8 г",
+     "name_html": "Имбирь"
+    },
+    {
+     "amount_html": "1 стебель",
+     "name_html": "Зелёный лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте <b>половину нейтрального масла</b> в большой сковороде на огне выше среднего.</li><li>Обжарьте курицу до румяности и готовности, затем переложите на чистую тарелку.</li></ul>",
+   "heat": {
+    "label": "выше среднего",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Приготовьте курицу",
+    "how": [
+     {
+      "caption": "Горячая сковорода, половина масла: распределите курицу, обжарьте, затем переверните.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 мин",
+   "title": "Приготовьте курицу",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Добавьте оставшееся масло и жарьте грибы до румяности, примерно 3–4 минуты.</p>",
+   "heat": {
+    "label": "выше среднего",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Обжарьте грибы",
+    "how": [
+     {
+      "caption": "Остальное масло, потом грибы — дайте им постоять, прежде чем мешать, чтобы подрумянились.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 мин",
+   "title": "Обжарьте грибы",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте <b>стебли</b> бок-чоя на 1–2 минуты, затем <b>чеснок, имбирь и белую часть лука</b> на 30 секунд.</li><li>Добавьте <b>листья</b> и дайте им опасть.</li></ul>",
+   "heat": {
+    "label": "выше среднего",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Стебли, потом ароматика, потом листья",
+    "how": [
+     {
+      "caption": "Сначала стебли, потом чеснок, имбирь и белая часть лука на 30 секунд, затем листья.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Стебли, потом ароматика, потом листья",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте лапшу, соус и курицу.</li><li><b>Аккуратно поднимайте и перемешивайте</b> примерно 1–2 минуты, пока лапша не станет мягкой и не покроется соусом.</li><li>Если она ещё тугая, а сковорода сохнет, подливайте воду по столовой ложке.</li></ul>",
+   "heat": {
+    "label": "выше среднего",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Лапша, соус и курица",
+    "how": [
+     {
+      "caption": "Добавьте лапшу, соус и курицу, затем аккуратно поднимайте и перемешивайте — не мешайте сильно.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "1–2 мин",
+   "title": "Лапша, соус и курица",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выключите огонь и добавьте <b>кунжутное масло и зелень лука</b>.</li><li>Последний этап — коротко, чтобы лапша меньше ломалась.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "off": true
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Без огня: финиш",
+    "how": [
+     {
+      "caption": "Огонь выключить: сбрызните кунжутным маслом и посыпьте зеленью лука.",
+      "src": "illustrations/garlic-ginger-chicken-noodles/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/garlic-ginger-chicken-noodles/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "15 с",
+   "title": "Без огня: финиш",
+   "uses_rows": [
+    {
+     "amount_html": "½ ч. л.",
+     "name_html": "Кунжутное масло"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 25,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   }
+  ],
+  "note_html": "Сдвиньте полосу лапши под свою упаковку: вода должна стечь прямо перед тем, как лапша пойдёт в сковороду.",
+  "tasks": [
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Нарезать курицу",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Нарезать грибы, бок-чой, ароматику",
+    "start": 3
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Смешать соус",
+    "start": 8
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Курица → тарелка",
+    "start": 9
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 мин",
+    "kind": "wait",
+    "label": "Замочить / сварить лапшу (по упаковке)",
+    "start": 11
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Обжарить грибы",
+    "start": 13
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Стебли → ароматика → листья",
+    "start": 17
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Слить лапшу",
+    "start": 18
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Лапша + соус + курица, перемешать",
+    "start": 20
+   },
+   {
+    "dur": 0.7,
+    "dur_label": "42 с",
+    "kind": "pan",
+    "label": "Огонь выкл.: кунжутное масло + зелень",
+    "start": 22
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Лапша с курицей, чесноком и имбирём",
+ "total": "~25 мин",
+ "vinegar_options": null,
+ "yields": "1 щедрая порция"
+}

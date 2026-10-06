@@ -1,0 +1,494 @@
+{
+ "before_ingredients_html": "<fieldset class=\"picker\" data-vinegar-picker><legend>Какой у вас уксус?</legend><label><input type=\"radio\" name=\"vinegar\" value=\"rice\" checked> Рисовый уксус (~4,5%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"kr7\"> Корейский сброженный уксус 양조식초 (~7%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"v9\"> Столовый уксус 9%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v6\"> Уксус 6%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v5\"> Белый / дистиллированный уксус 5%</label></fieldset>",
+ "blurb_html": "Хрустящий красный редис, который настаивается в большой банке сладко-уксусного рассола, — ленивый родственник маринованных огурцов.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 банка (~500 г редиса)"
+  },
+  {
+   "kind": "time",
+   "text": "~15 мин + от 6 ч до нескольких дней"
+  }
+ ],
+ "description": "Хрустящий красный редис, который настаивается в большой банке сладко-уксусного рассола, — ленивый родственник маринованных огурцов.",
+ "equipment_html": [
+  "Банка или контейнер на ~700 мл с крышкой",
+  "Маленький сотейник"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Японская база"
+ },
+ "hero": {
+  "alt": "Маринованный редис",
+  "image": "illustrations/radish-pickle/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "500 г (около 2 пучков)",
+     "name_html": "Красный редис"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Соль, чтобы вытянуть воду"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span data-v=\"amount\">150 мл</span>",
+     "name_html": "<span data-v=\"name\">Рисовый уксус</span>"
+    },
+    {
+     "amount_html": "150 мл<span data-v-show=\"water\"> + <span data-v=\"water\"></span></span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span data-v=\"sugar\">60 г (5 ст. л.)</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "2 ст. л., по желанию",
+     "name_html": "Мирин"
+    }
+   ],
+   "name": "Рассол (амадзу)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "совсем немного: примерно 1 полоска на 2–3 редиски",
+     "name_html": "Свежий имбирь, полоски овощечисткой"
+    },
+    {
+     "amount_html": "квадрат 5 см, по желанию",
+     "name_html": "Комбу"
+    },
+    {
+     "amount_html": "1 шт., по желанию",
+     "name_html": "Сушёный чили"
+    },
+    {
+     "amount_html": "полоска, по желанию",
+     "name_html": "Цедра юдзу или лимона"
+    }
+   ],
+   "name": "В банку"
+  }
+ ],
+ "intro_html": "В отличие от огурцов, которым достаётся немного маринада вроде заправки, редис <b>настаивается в большом количестве жидкости</b>: нарезать, коротко посолить и оставить полностью погружённым в сладко-уксусный рассол (амадзу) в холодильнике. Выберите свой уксус ниже — количества пересчитаются.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/radish-pickle/mise1.webp",
+   "items": [
+    "пополам или на четвертинки, посолен, обсушен"
+   ],
+   "items_html": "пополам или на четвертинки, посолен, обсушен",
+   "name": "Редис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/radish-pickle/mise2.webp",
+   "items": [
+    "подогрет, потом остужен"
+   ],
+   "items_html": "подогрет, потом остужен",
+   "name": "Рассол",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/radish-pickle/mise3.webp",
+   "items": [
+    "имбирь",
+    "комбу",
+    "чили"
+   ],
+   "items_html": "имбирь · комбу · чили",
+   "name": "Добавки в банку",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Японская база:",
+ "next": {
+  "slug": "tamagoyaki",
+  "title": "Тамагояки"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Те же вкусы, что у <a href=\"cucumber-sunomono.html\">маринованных огурцов</a>, в количестве, чтобы покрыть:<ul class=\"ing two-col\"><li>150 мл уксуса</li><li>75 мл мирина</li><li>50 г сахара</li><li>150 мл воды</li><li>1 ч. л. соли</li></ul></li><li>Слаще и мягче; если хотите проще, обойдитесь без комбу.</li></ul>",
+   "title_html": "Или маринад от огурцов"
+  },
+  {
+   "html": "<table class=\"mini\"><thead><tr><th>Что есть</th><th>Уксус</th><th>+ Вода</th><th>Сахар</th></tr></thead><tbody><tr><td>Рисовый уксус (~4,5%)</td><td>150 мл</td><td>—</td><td>60 г (5 ст. л.)</td></tr><tr><td>Корейский сброженный уксус 양조식초 (~7%)</td><td>95 мл</td><td>3½ ст. л. (54 мл)</td><td>70 г (6 ст. л.)</td></tr><tr><td>Столовый уксус 9%</td><td>75 мл</td><td>75 мл</td><td>70 г (6 ст. л.)</td></tr><tr><td>Уксус 6%</td><td>110 мл</td><td>2½ ст. л. (38 мл)</td><td>70 г (6 ст. л.)</td></tr><tr><td>Белый / дистиллированный уксус 5%</td><td>135 мл</td><td>1 ст. л. (15 мл)</td><td>70 г (6 ст. л.)</td></tr></tbody></table>Подогнано под кислотность рисового уксуса (~4,5%) для рассола. Нерисовые уксусы резче и менее округлые, поэтому сахара больше — пробуйте и поправляйте.",
+   "title_html": "Пересчёт уксуса (вместо 150 мл рисового уксуса)"
+  },
+  {
+   "html": "<ul class=\"do\"><li><b>양조식초</b> (сброженный уксус, ~6–7%) — это тот, что в строке «7%».</li><li><b>2배식초 / 3배식초</b> — двойной / тройной крепости: берите половину / треть от количества для 7% и доливайте остальное водой.</li><li><b>빙초산</b> — ледяная уксусная кислота (~99%): никогда не используйте её как есть.</li></ul>",
+   "title_html": "Как читать этикетки корейского уксуса"
+  },
+  {
+   "html": "<p>Это отправная точка для кисло-сладкого рассола амадзу — в следующий раз подберите сахар по вкусу.</p>",
+   "title_html": "Количества"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Имбиря — лишь намёк: срежьте тонко овощечисткой.</li><li>Комбу добавляет немного пикантной глубины.</li><li>Кладите оба или обойдитесь без комбу.</li></ul>",
+   "title_html": "Имбирь или комбу?"
+  },
+  {
+   "html": "<p>Красная кожица за день-два окрашивает рассол и белую мякоть в розовый — это нормально.</p>",
+   "title_html": "Розовый рассол"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "cucumber-sunomono",
+  "title": "Японские маринованные огурцы (суномоно)"
+ },
+ "share_image": "share/radish-pickle.jpg",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Даси из шиитаке и комбу"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Даси из нибоси и бонито"
+  },
+  {
+   "slug": "furikake",
+   "title": "Фурикакэ"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Японские маринованные огурцы (суномоно)"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Тамагояки"
+  }
+ ],
+ "slug": "radish-pickle",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Срежьте ботву и кончики корешков.</li><li><b>Разрежьте</b> редис пополам, а крупный — <b>на четвертинки</b>, чтобы куски были примерно одного размера.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Почистить и нарезать",
+    "how": [
+     {
+      "caption": "Срежьте ботву и кончики корешков.",
+      "src": "illustrations/radish-pickle/1-how1.webp"
+     },
+     {
+      "caption": "Разрежьте пополам — крупные на четвертинки, — чтобы куски были примерно одного размера.",
+      "src": "illustrations/radish-pickle/1-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~6 мин",
+   "title": "Почистить и нарезать",
+   "uses_rows": [
+    {
+     "amount_html": "500 г",
+     "name_html": "Красный редис"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Перемешайте нарезанный редис с 1 ч. л. соли и оставьте на 20–30 минут — он пустит сок.</li><li>Смойте соль и сок холодной водой и хорошо обсушите. Так редис останется хрустящим и лучше впитает рассол.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Посолить, затем промыть",
+    "how": [
+     {
+      "caption": "Через 20–30 минут смойте соль и сок холодной водой, затем дайте стечь.",
+      "src": "illustrations/radish-pickle/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "20–30 мин",
+   "title": "Посолить, затем промыть",
+   "uses_rows": [
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Соль, чтобы вытянуть воду"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Подогрейте, только чтобы растворился сахар (мирин — если используете):<ul class=\"ing two-col\"><li><span data-v=\"name_lc\">рисовый уксус</span> <span class=\"amt\"><span data-v=\"amount\">150 мл</span></span></li><li>вода <span class=\"amt\">150 мл<span data-v-show=\"water\"> + <span data-v=\"water\"></span></span></span></li><li>сахар <span class=\"amt\"><span data-v=\"sugar\">60 г (5 ст. л.)</span></span></li><li>соль <span class=\"amt\">1 ч. л.</span></li><li>мирин <span class=\"amt\">2 ст. л.</span></li></ul></li><li>Не кипятите. Дайте остыть.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Приготовить рассол",
+    "how": [],
+    "illustration": "illustrations/radish-pickle/3.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~4 мин + остывание",
+   "title": "Приготовить рассол",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Плотно уложите редис в банку.</li><li>Добавьте между ним:<ul class=\"ing\"><li>свежий имбирь, несколько полосок овощечисткой</li><li>комбу <span class=\"amt\">квадрат 5 см</span></li><li>сушёный чили <span class=\"amt\">1 шт.</span></li><li>цедра юдзу или лимона <span class=\"amt\">полоска</span></li></ul></li><li>Залейте остывшим рассолом, чтобы всё было <b>полностью покрыто</b>.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "В банку",
+    "how": [
+     {
+      "caption": "Плотно уложите редис в банку, добавьте комбу и чили, затем залейте остывшим рассолом, чтобы всё было покрыто.",
+      "src": "illustrations/radish-pickle/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "В банку",
+   "uses_rows": [
+    {
+     "amount_html": "совсем немного: примерно 1 полоска на 2–3 редиски",
+     "name_html": "Свежий имбирь, полоски овощечисткой"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Крышку закрыть — и в холодильник.</li><li>Можно есть часов через 6, лучше всего через 2–3 дня.</li><li>Хранится около 2 недель; доставайте кусочки только чистыми палочками.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Подождать",
+    "how": [],
+    "illustration": "illustrations/radish-pickle/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "6 ч – 2 недели",
+   "title": "Подождать",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Подавайте охлаждённым как гарнир к рису, вместе с <a href=\"karaage.html\">караагэ</a> или в бенто.</p>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Подача",
+    "how": [
+     {
+      "caption": "Доставайте кусочки только чистыми палочками.",
+      "src": "illustrations/radish-pickle/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Подача",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 60,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": "Последняя полоса тянется дальше: есть можно через ~6 часов, лучше всего через 2–3 дня.",
+  "tasks": [
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "board",
+    "label": "Почистить + нарезать редис",
+    "start": 0
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 мин",
+    "kind": "wait",
+    "label": "Посолить и оставить",
+    "start": 6
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Подогреть рассол, растворить",
+    "start": 8
+   },
+   {
+    "dur": 18,
+    "dur_label": "18 мин",
+    "kind": "wait",
+    "label": "Рассол остывает",
+    "start": 12
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "bowl",
+    "label": "Промыть, в банку, залить рассолом",
+    "start": 31
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 мин",
+    "kind": "wait",
+    "label": "Холодильник (6 ч → дни)",
+    "start": 35
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Маринованный редис",
+ "total": "~15 мин + от 6 ч до нескольких дней",
+ "vinegar_options": {
+  "kr7": {
+   "amount": "95 мл",
+   "label": "Корейский сброженный уксус 양조식초 (~7%)",
+   "name": "Корейский сброженный уксус (~7%)",
+   "name_lc": "корейский сброженный уксус",
+   "sugar": "70 г (6 ст. л.)",
+   "water": "3½ ст. л. (54 мл)"
+  },
+  "rice": {
+   "amount": "150 мл",
+   "label": "Рисовый уксус (~4,5%)",
+   "name": "Рисовый уксус",
+   "name_lc": "рисовый уксус",
+   "sugar": "60 г (5 ст. л.)",
+   "water": ""
+  },
+  "v5": {
+   "amount": "135 мл",
+   "label": "Белый / дистиллированный уксус 5%",
+   "name": "Белый уксус (5%)",
+   "name_lc": "белый уксус",
+   "sugar": "70 г (6 ст. л.)",
+   "water": "1 ст. л. (15 мл)"
+  },
+  "v6": {
+   "amount": "110 мл",
+   "label": "Уксус 6%",
+   "name": "Уксус (6%)",
+   "name_lc": "6-процентный уксус",
+   "sugar": "70 г (6 ст. л.)",
+   "water": "2½ ст. л. (38 мл)"
+  },
+  "v9": {
+   "amount": "75 мл",
+   "label": "Столовый уксус 9%",
+   "name": "Столовый уксус (9%)",
+   "name_lc": "9-процентный уксус",
+   "sugar": "70 г (6 ст. л.)",
+   "water": "75 мл"
+  }
+ },
+ "yields": "1 банка (~500 г редиса)"
+}

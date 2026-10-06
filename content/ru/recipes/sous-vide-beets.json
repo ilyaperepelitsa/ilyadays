@@ -1,0 +1,400 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Нежные четвертинки с насыщенным свекольным вкусом при 85 °C — вкус не выкипает, духовка не нужна.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "партия 500 г · 3–4 гарнира"
+  },
+  {
+   "kind": "time",
+   "text": "~2–3 ч, в основном без участия"
+  }
+ ],
+ "description": "Нежные четвертинки с насыщенным свекольным вкусом при 85 °C — вкус не выкипает, духовка не нужна.",
+ "equipment_html": [
+  "Погружной циркулятор + ёмкость",
+  "Вакууматор + вакуумные пакеты",
+  "Зажим и что-то тяжёлое, чтобы пакет был под водой",
+  "Перчатки для чистки (свекольный сок красит)"
+ ],
+ "group": {
+  "id": "sous-vide",
+  "name": "Су-вид"
+ },
+ "hero": {
+  "alt": "Свёкла су-вид",
+  "image": "illustrations/sous-vide-beets/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "500 г (~3 средних)",
+     "name_html": "Красная свёкла"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Оливковое масло"
+    },
+    {
+     "amount_html": "½ ч. л.",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Уксус (красный винный, бальзамический или рисовый)"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "2 веточки",
+     "name_html": "Тимьян"
+    },
+    {
+     "amount_html": "1 зубчик, ломтиками",
+     "name_html": "Чеснок"
+    }
+   ],
+   "name": "По желанию, в пакет"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "раскрошить",
+     "name_html": "Фета или козий сыр"
+    },
+    {
+     "amount_html": "обжаренные",
+     "name_html": "Грецкие орехи"
+    },
+    {
+     "amount_html": "нарезать",
+     "name_html": "Укроп"
+    },
+    {
+     "amount_html": "в конце",
+     "name_html": "Хлопьевидная соль + оливковое масло"
+    }
+   ],
+   "name": "Для подачи (на выбор)"
+  }
+ ],
+ "intro_html": "Овощам нужна гораздо более горячая баня, чем мясу: при <b>85 °C</b> пектин, который держит свёклу твёрдой, разрушается, и она становится нежной, сохраняя весь вкус и цвет в пакете. Сделайте партию, охладите и ешьте всю неделю.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/sous-vide-beets/mise1.webp",
+   "items": [
+    "очищена, на четвертинки"
+   ],
+   "items_html": "очищена, на четвертинки",
+   "name": "Свёкла",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/sous-vide-beets/mise2.webp",
+   "items": [
+    "масло",
+    "соль",
+    "уксус",
+    "тимьян",
+    "чеснок"
+   ],
+   "items_html": "масло · соль · уксус · тимьян · чеснок",
+   "name": "Приправа в пакет",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/sous-vide-beets/mise3.webp",
+   "items": [
+    "для охлаждения после"
+   ],
+   "items_html": "для охлаждения после",
+   "name": "Ледяная баня",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Су-вид:",
+ "next": {
+  "slug": "shiitake-kombu-dashi",
+  "title": "Даси из шиитаке и комбу"
+ },
+ "notes": [
+  {
+   "html": "<p>Время для четвертинок — отправная точка; доверяйте проверке сжатием.</p>",
+   "title_html": "Время готовки"
+  },
+  {
+   "html": "<p>Время для всего остального — на странице <a href=\"sous-vide.html\">таблицы су-вид</a>.</p>",
+   "title_html": "Таблица су-вид"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": null,
+ "share_image": "share/sous-vide-beets.jpg",
+ "siblings": [],
+ "slug": "sous-vide-beets",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Поставьте циркулятор на <b>85 °C</b>.</li><li>Подготовьте всё, пока греется.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Разогреть баню",
+    "how": [],
+    "illustration": "illustrations/sous-vide-beets/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "15–30 мин",
+   "title": "Разогреть баню",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Наденьте перчатки.</li><li>Очистите овощечисткой и разрежьте каждую свёклу <b>на четвертинки</b>.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Очистить и разрезать на четвертинки",
+    "how": [
+     {
+      "caption": "В перчатках: очистите овощечисткой.",
+      "src": "illustrations/sous-vide-beets/2-how1.webp"
+     },
+     {
+      "caption": "Разрежьте каждую свёклу на четвертинки — кончики пальцев подогнуты.",
+      "src": "illustrations/sous-vide-beets/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/sous-vide-beets/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~15 мин",
+   "title": "Очистить и разрезать на четвертинки",
+   "uses_rows": [
+    {
+     "amount_html": "500 г (~3 средних)",
+     "name_html": "Красная свёкла"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Сложите свёклу в пакет <b>в один слой</b> вместе с (тимьян и чеснок — по желанию):<ul class=\"ing two-col\"><li>оливковое масло <span class=\"amt\">1 ст. л.</span></li><li>соль <span class=\"amt\">½ ч. л.</span></li><li>уксус (красный винный, бальзамический или рисовый) <span class=\"amt\">1 ч. л.</span></li><li>тимьян <span class=\"amt\">2 веточки</span></li><li>чеснок <span class=\"amt\">1 зубчик</span></li></ul></li><li>Запаяйте вакууматором.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Приправить и запаять",
+    "how": [
+     {
+      "caption": "Запаяйте вакууматором.",
+      "src": "illustrations/sous-vide-beets/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/sous-vide-beets/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Приправить и запаять",
+   "uses_rows": []
+  },
+  {
+   "body_html": "Закрепите пакет зажимом у стенки и придавите — овощи всплывают, а пакет может раздуться при готовке. <table class=\"mini\"><thead><tr><th>Нарезка</th><th>Время при 85 °C</th></tr></thead><tbody><tr><td>Четвертинки, средняя свёкла</td><td>около 2 ч</td></tr><tr><td>Четвертинки, крупная свёкла</td><td>2–2½ ч</td></tr></tbody></table><b>Проверка:</b> сожмите кусочек через пакет полотенцем — он должен поддаваться, как варёная картошка. Ещё твёрдая? Ещё 30 минут. Небольшой перебор не страшен — она просто станет мягче.",
+   "heat": {
+    "label": "баня 85 °C",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Готовить",
+    "how": [
+     {
+      "caption": "Проверка: сожмите кусочек через пакет полотенцем — он должен поддаваться, как варёная картошка.",
+      "src": "illustrations/sous-vide-beets/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/sous-vide-beets/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~2 ч",
+   "title": "Готовить",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Для хранения опустите запаянный пакет в ледяную воду на 15–20 минут, затем уберите в холодильник не вскрывая и используйте в течение 5 дней.</p>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Охладить или подать тёплой",
+    "how": [],
+    "illustration": "illustrations/sous-vide-beets/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "15–20 мин",
+   "title": "Охладить или подать тёплой",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Тёплой, с:<ul class=\"ing\"><li>сливочным маслом</li><li>хлопьевидной солью</li></ul></li><li>Или холодной, с:<ul class=\"ing two-col\"><li>раскрошенной фетой или козьим сыром</li><li>грецкие орехи <span class=\"amt\">обжаренные</span></li><li>укроп <span class=\"amt\">нарезать</span></li><li>каплей уксуса</li><li>оливковое масло</li></ul></li><li>Хороша и с заправкой от <a href=\"cucumber-sunomono.html\">маринованных огурцов</a>.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Подача",
+    "how": [],
+    "illustration": "illustrations/sous-vide-beets/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Подача",
+   "uses_rows": [
+    {
+     "amount_html": "раскрошить",
+     "name_html": "Фета или козий сыр"
+    },
+    {
+     "amount_html": "в конце",
+     "name_html": "Хлопьевидная соль + оливковое масло"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 180,
+  "hours": true,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bath",
+    "label": "Водяная баня"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 15,
+    "dur_label": "15 мин",
+    "kind": "board",
+    "label": "Очистить + на четвертинки (перчатки)",
+    "start": 0
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 мин",
+    "kind": "bath",
+    "label": "Нагреть баню до 85 °C",
+    "start": 0
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 мин",
+    "kind": "bowl",
+    "label": "Приправить + запаять",
+    "start": 15
+   },
+   {
+    "dur": 120,
+    "dur_label": "2 ч",
+    "kind": "wait",
+    "label": "Четвертинки готовить ~2 ч",
+    "start": 25
+   },
+   {
+    "dur": 18,
+    "dur_label": "18 мин",
+    "kind": "bowl",
+    "label": "Ледяная баня",
+    "start": 145
+   }
+  ],
+  "tick_step": 30,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0:00"
+   },
+   {
+    "at": 30,
+    "label": "0:30"
+   },
+   {
+    "at": 60,
+    "label": "1:00"
+   },
+   {
+    "at": 90,
+    "label": "1:30"
+   },
+   {
+    "at": 120,
+    "label": "2:00"
+   },
+   {
+    "at": 150,
+    "label": "2:30"
+   },
+   {
+    "at": 180,
+    "label": "3:00"
+   }
+  ],
+  "unit": "ч:мм"
+ },
+ "title": "Свёкла су-вид",
+ "total": "~2–3 ч, в основном без участия",
+ "vinegar_options": null,
+ "yields": "партия 500 г · 3–4 гарнира"
+}

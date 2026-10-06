@@ -1,0 +1,547 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Овощной оякодон: пекинская капуста и замоченные шиитаке, тушённые в даси из шиитаке и схваченные нежным яйцом.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 миска"
+  },
+  {
+   "kind": "time",
+   "text": "~15 мин (+ рис)"
+  }
+ ],
+ "description": "Овощной оякодон: пекинская капуста и замоченные шиитаке, тушённые в даси из шиитаке и схваченные нежным яйцом.",
+ "equipment_html": [
+  "Маленькая сковорода 18–20 см, <b>с крышкой</b>",
+  "Донбури или глубокая миска"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Миска с пекинской капустой, шиитаке и яйцом",
+  "image": "illustrations/napa-shiitake-egg-bowl/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "150 г (3–4 листа); черешки нарезать по 1 см, листья порубить, держать отдельно",
+     "name_html": "Пекинская капуста"
+    },
+    {
+     "amount_html": "3 шт., нарезать (из даси или замочить сушёные на 30 мин)",
+     "name_html": "Замоченные шиитаке"
+    },
+    {
+     "amount_html": "2",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "1 миска (~200 г)",
+     "name_html": "Варёный круглозёрный рис"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "80 мл",
+     "name_html": "<a href=\"shiitake-kombu-dashi.html\">Даси из шиитаке и комбу</a>"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Сахар"
+    }
+   ],
+   "name": "Соус для томления"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "немного, нарезать",
+     "name_html": "Зелень зелёного лука"
+    },
+    {
+     "amount_html": "по желанию",
+     "name_html": "Сититогараси"
+    }
+   ],
+   "name": "Для подачи"
+  }
+ ],
+ "intro_html": "Собирается точно как <a href=\"oyakodon.html\">оякодон</a>, только вместо курицы — <b>пекинская капуста</b> и <b>замоченные шиитаке</b>, оставшиеся от <a href=\"shiitake-kombu-dashi.html\">даси из шиитаке и комбу</a>, и тушится в том же даси. Черешки капусты идут первыми; листьям нужна всего минута.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/napa-shiitake-egg-bowl/mise1.webp",
+   "items": [
+    "даси",
+    "соя",
+    "мирин",
+    "саке",
+    "сахар"
+   ],
+   "items_html": "даси · соя · мирин · саке · сахар",
+   "name": "Соус",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/napa-shiitake-egg-bowl/mise2.webp",
+   "items": [],
+   "items_html": "",
+   "name": "Черешки + шиитаке",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/napa-shiitake-egg-bowl/mise3.webp",
+   "items": [
+    "порублены"
+   ],
+   "items_html": "порублены",
+   "name": "Листья капусты",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаги 6–7",
+   "image": "illustrations/napa-shiitake-egg-bowl/mise4.webp",
+   "items": [
+    "слегка взбиты"
+   ],
+   "items_html": "слегка взбиты",
+   "name": "Яйца",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/napa-shiitake-egg-bowl/mise5.webp",
+   "items": [],
+   "items_html": "",
+   "name": "Рис + зелень",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "karaage",
+  "title": "Караагэ"
+ },
+ "notes": [
+  {
+   "html": "<p>С даси из шиитаке и комбу блюдо полностью вегетарианское (яйца — единственный животный продукт).</p>",
+   "title_html": "Вегетарианское"
+  },
+  {
+   "html": "<p>В ваших заметках не было количеств — здесь пропорции оякодона, где 150 г капусты заменяют 150 г курицы.</p>",
+   "title_html": "Количества"
+  },
+  {
+   "html": "<p>Вода + ¼ ч. л. порошка даси или просто вода от замачивания шиитаке.</p>",
+   "title_html": "Нет домашнего даси?"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "oyakodon",
+  "title": "Оякодон"
+ },
+ "share_image": "share/napa-shiitake-egg-bowl.jpg",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "napa-shiitake-egg-bowl",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<p>Миска горячего риса должна быть готова до того, как вы возьмётесь за сковороду, — яйцо ждать не будет.</p>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Сначала рис",
+    "how": [],
+    "illustration": "illustrations/napa-shiitake-egg-bowl/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~за 45 мин",
+   "title": "Сначала рис",
+   "uses_rows": [
+    {
+     "amount_html": "1 миска (~200 г)",
+     "name_html": "Варёный круглозёрный рис"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Отделите черешки капусты от листьев.</li><li>Черешки нарежьте поперёк примерно по 1 см, листья порубите.</li><li>Отожмите замоченные шиитаке, срежьте ножки и нарежьте шляпки.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Нарезать",
+    "how": [
+     {
+      "caption": "Сделайте V-образный надрез по обе стороны толстой белой жилки, чтобы отделить черешок от листа.",
+      "src": "illustrations/napa-shiitake-egg-bowl/2-how1.webp"
+     },
+     {
+      "caption": "Отожмите замоченные шиитаке, срежьте ножки и нарежьте шляпки.",
+      "src": "illustrations/napa-shiitake-egg-bowl/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/napa-shiitake-egg-bowl/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Нарезать",
+   "uses_rows": [
+    {
+     "amount_html": "150 г (3–4 листа); черешки нарезать по 1 см",
+     "name_html": "Пекинская капуста"
+    },
+    {
+     "amount_html": "3 шт.",
+     "name_html": "Замоченные шиитаке"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Смешайте соус:<ul class=\"ing two-col\"><li>даси из шиитаке и комбу <span class=\"amt\">80 мл</span></li><li>соевый соус <span class=\"amt\">1 ст. л.</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>саке <span class=\"amt\">1 ст. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Взбейте яйца <b>слегка</b> — несколько движений, с прожилками белка и желтка.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Соус и яйца",
+    "how": [
+     {
+      "caption": "Взбейте слегка — несколько быстрых движений, разрезая белки. Остановитесь, пока видны прожилки.",
+      "src": "illustrations/napa-shiitake-egg-bowl/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/napa-shiitake-egg-bowl/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "title": "Соус и яйца",
+   "uses_rows": [
+    {
+     "amount_html": "2",
+     "name_html": "Яйца"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Соус в маленькую сковороду вместе с черешками капусты и шиитаке.</li><li>Томите, пока черешки не станут полупрозрачными.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Томить черешки и шиитаке",
+    "how": [
+     {
+      "caption": "Доведите соус до кипения, затем добавьте черешки и шиитаке.",
+      "src": "illustrations/napa-shiitake-egg-bowl/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/napa-shiitake-egg-bowl/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 мин",
+   "title": "Томить черешки и шиитаке",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте листья, накройте и готовьте, пока они только не опадут.</li><li>Капуста пускает воду — если в сковороде очень мокро, поварите минуту без крышки, чтобы уварить, прежде чем добавлять яйцо.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Листья, под крышку",
+    "how": [
+     {
+      "caption": "Сверху выложите листья и накройте — им нужна всего минута-две.",
+      "src": "illustrations/napa-shiitake-egg-bowl/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/napa-shiitake-egg-bowl/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "1–2 мин",
+   "title": "Листья, под крышку",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Полейте овощи примерно двумя третями яйца по кругу.</li><li>Накройте, пока края не схватятся, а сверху ещё жидкое.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Влейте ⅔ яйца",
+    "how": [],
+    "illustration": "illustrations/napa-shiitake-egg-bowl/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "30–60 с",
+   "title": "Влейте ⅔ яйца",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Влейте оставшееся яйцо, 10–15 секунд, выключите огонь и подержите под крышкой 30 секунд — глянцевое и едва схватившееся.</p>",
+   "heat": {
+    "label": "огонь выключен",
+    "off": true
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Остальное — и огонь выключить",
+    "how": [
+     {
+      "caption": "Последнюю треть влейте в середину — затем огонь выключить, крышку закрыть.",
+      "src": "illustrations/napa-shiitake-egg-bowl/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/napa-shiitake-egg-bowl/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~45 с",
+   "title": "Остальное — и огонь выключить",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Наклоните сковороду и сдвиньте всё вместе с бульоном на рис.</li><li>Сверху — зелень лука и сититогараси.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Выложите на рис",
+    "how": [
+     {
+      "caption": "Наклоните сковороду над рисом и выложите всё одним движением, вместе с бульоном.",
+      "src": "illustrations/napa-shiitake-egg-bowl/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/napa-shiitake-egg-bowl/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Выложите на рис",
+   "uses_rows": [
+    {
+     "amount_html": "немного",
+     "name_html": "Зелень зелёного лука"
+    },
+    {
+     "amount_html": "по желанию",
+     "name_html": "Сититогараси"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 50,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Если рис уже сварен, а шиитаке замочены, выйдет около 15 минут.",
+  "tasks": [
+   {
+    "dur": 45,
+    "dur_label": "45 мин",
+    "kind": "wait",
+    "label": "Сварить рис (первым делом; или разогреть)",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Нарезать капусту + шиитаке",
+    "start": 30
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Смешать соус, взбить яйца",
+    "start": 35
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Томить черешки + шиитаке",
+    "start": 37
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Листья, под крышку",
+    "start": 41
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Влить ⅔ яйца, накрыть",
+    "start": 43
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Влить ⅓ яйца, выключить огонь, подождать",
+    "start": 44
+   },
+   {
+    "dur": 0.8,
+    "dur_label": "48 с",
+    "kind": "bowl",
+    "label": "Выложить на рис",
+    "start": 45
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Миска с пекинской капустой, шиитаке и яйцом",
+ "total": "~15 мин (+ рис)",
+ "vinegar_options": null,
+ "yields": "1 миска"
+}

@@ -1,0 +1,708 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Chicken marinated in kombu-dashi and soy, simmered with ginger and onion, set with softly cooked egg over rice.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 bowl"
+  },
+  {
+   "kind": "time",
+   "text": "~35 min (+ rice)"
+  }
+ ],
+ "description": "Chicken marinated in kombu-dashi and soy, simmered with ginger and onion, set with softly cooked egg over rice.",
+ "equipment_html": [
+  "Small frying pan, 18–20 cm, <b>with a lid</b> (a small pan keeps the egg in a thick layer)",
+  "Donburi or deep bowl"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Oyakodon",
+  "image": "illustrations/oyakodon/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "150 g (about 1–2 fillets), 2–3 cm pieces (breast works; cook 1–2 min less)",
+     "name_html": "Chicken thigh fillets"
+    },
+    {
+     "amount_html": "½ small (~60 g), ends cut off, sliced lengthwise ~5 mm",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "a 2 cm piece (~8 g), finely chopped",
+     "name_html": "Ginger"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "2",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "1 bowl (~200 g cooked, from ~80 g raw)",
+     "name_html": "Cooked short-grain rice"
+    }
+   ],
+   "name": "Main"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "80 ml (or 80 ml water + ¼ tsp dashi powder)",
+     "name_html": "<a href=\"niboshi-bonito-dashi.html\">Dashi</a>"
+    },
+    {
+     "amount_html": "a 5 cm square",
+     "name_html": "Kombu"
+    },
+    {
+     "amount_html": "4 tbsp",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Sugar"
+    }
+   ],
+   "name": "Sauce / chicken marinade"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "a few, sliced",
+     "name_html": "Spring onion greens or mitsuba"
+    },
+    {
+     "amount_html": "optional",
+     "name_html": "Shichimi togarashi"
+    }
+   ],
+   "name": "To serve"
+  }
+ ],
+ "intro_html": "“Parent-and-child” rice bowl. The chicken sits in the sauce — <b>kombu, dashi, soy, mirin, sake and sugar</b> — while finely chopped ginger and onion soften in the pan with a pinch of salt. Then the chicken goes in with all of its marinade, gets bound with <b>barely set egg</b> poured in two stages, and slides over hot rice.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 7",
+   "image": "illustrations/oyakodon/mise1.webp",
+   "items": [
+    "dashi",
+    "kombu",
+    "soy",
+    "mirin",
+    "sake",
+    "sugar"
+   ],
+   "items_html": "dashi · kombu · soy · mirin · sake · sugar",
+   "name": "Chicken in marinade",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/oyakodon/mise2.webp",
+   "items": [
+    "finely chopped"
+   ],
+   "items_html": "finely chopped",
+   "name": "Ginger",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/oyakodon/mise3.webp",
+   "items": [
+    "sliced lengthwise",
+    "pinch of salt"
+   ],
+   "items_html": "sliced lengthwise · pinch of salt",
+   "name": "Onion",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Steps 8–9",
+   "image": "illustrations/oyakodon/mise4.webp",
+   "items": [
+    "loosely beaten"
+   ],
+   "items_html": "loosely beaten",
+   "name": "Eggs",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 10",
+   "image": "illustrations/oyakodon/mise5.webp",
+   "items": [
+    "hot rice",
+    "spring onion"
+   ],
+   "items_html": "hot rice · spring onion",
+   "name": "Rice + garnish",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "napa-shiitake-egg-bowl",
+  "title": "Napa cabbage & shiitake egg bowl"
+ },
+ "notes": [
+  {
+   "html": "<p>The method is yours; these details are my guesses — adjust and tell me: <b>1 tsp oil</b> for the ginger; marinating <b>15–30 min</b>; the <b>kombu goes into the pan</b> with the marinade and comes out before the egg; the pan cools <b>~5 min</b> off the heat before the chicken goes in.</p>",
+   "title_html": "Filled in from your description"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Cook the breast in the bath first (<a href=\"sous-vide.html#chicken-breast\">63 °C, 60–75 min for ~2 cm</a>), then slice it.</li><li>Skip marinating: after the ginger and onion (step 5), pour in the sauce, bring it to a simmer and add the cooked chicken for just <b>1 minute</b> — no longer, or it tightens — then go straight to the egg.</li></ul>",
+   "title_html": "Sous vide chicken shortcut"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Homemade is best — see <a href=\"niboshi-bonito-dashi.html\">niboshi–bonito dashi</a>.</li><li>Water plus ¼ tsp dashi powder is the quick version; the kombu in the marinade adds depth either way.</li></ul>",
+   "title_html": "Dashi"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The eggs end up only just set.</li><li>If anyone eating should avoid undercooked egg, keep the lid on with the heat low for another minute or two until fully set.</li></ul>",
+   "title_html": "Soft eggs"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "tamagoyaki",
+  "title": "Tamagoyaki"
+ },
+ "share_image": "share/oyakodon.jpg",
+ "siblings": [
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "oyakodon",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Have a bowl of hot rice ready before you start the pan — the egg won’t wait.</li><li>Start the rice cooker about 45 minutes ahead, or reheat leftover rice until steaming.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Rice first",
+    "how": [
+     {
+      "caption": "Scoop the hot rice in loosely with a damp paddle — don't press it down.",
+      "src": "illustrations/oyakodon/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~45 min ahead",
+   "title": "Rice first",
+   "uses_rows": [
+    {
+     "amount_html": "1 bowl",
+     "name_html": "Cooked short-grain rice"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Trim the thigh fillets of any excess fat and cut them into 2–3 cm pieces.</li><li>In a bowl, stir until the sugar dissolves:<ul class=\"ing two-col\"><li>dashi <span class=\"amt\">80 ml</span></li><li>soy sauce <span class=\"amt\">4 tbsp</span></li><li>mirin <span class=\"amt\">1 tbsp</span></li><li>sake <span class=\"amt\">1 tbsp</span></li><li>sugar <span class=\"amt\">1 tsp</span></li></ul></li><li>Drop in the kombu, then the chicken.</li><li>Leave it 15–30 minutes (in the fridge if longer).</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Marinate the chicken",
+    "how": [
+     {
+      "caption": "Trim off excess fat, then cut the thigh into 2–3 cm pieces.",
+      "src": "illustrations/oyakodon/2-how1.webp"
+     },
+     {
+      "caption": "Stir soy, mirin, sake and sugar into the dashi until the sugar dissolves; add the kombu, then the chicken.",
+      "src": "illustrations/oyakodon/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min + 15–30 min",
+   "title": "Marinate the chicken",
+   "uses_rows": [
+    {
+     "amount_html": "150 g",
+     "name_html": "Chicken thigh fillets"
+    },
+    {
+     "amount_html": "a 5 cm square",
+     "name_html": "Kombu"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Onion: cut off both ends (root and tip), halve it through the cut ends and peel.</li><li>Lay each half flat and slice it <b>lengthwise — perpendicular to the cut ends</b>, along the lines — about 5 mm thick. Slicing across the lines gives rings that fall apart; lengthwise slices hold their shape in the pan.</li><li>Ginger: peel, cut into thin matchsticks, then across into <b>tiny cubes</b>.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Onion and ginger",
+    "how": [
+     {
+      "caption": "Onion: cut off both ends — root and tip — then halve it through the cut ends and peel.",
+      "src": "illustrations/oyakodon/3-how1.webp"
+     },
+     {
+      "caption": "Slice lengthwise — perpendicular to the cut ends, along the lines — about 5 mm.",
+      "src": "illustrations/oyakodon/3-how2.webp"
+     },
+     {
+      "caption": "Ginger: peel with a spoon edge, slice thin, cut into matchsticks, then across into tiny cubes.",
+      "src": "illustrations/oyakodon/3-how3.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "title": "Onion and ginger",
+   "uses_rows": [
+    {
+     "amount_html": "½ small (~60 g)",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "a 2 cm piece (~8 g)",
+     "name_html": "Ginger"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Crack the eggs into a bowl and beat <b>loosely — 4–5 strokes with chopsticks</b>, cutting through the whites.</li><li>You want streaks of white and yolk, not a uniform yellow.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Beat the eggs",
+    "how": [
+     {
+      "caption": "Beat loosely — 4–5 quick strokes, cutting through the whites. Stop while streaks remain.",
+      "src": "illustrations/oyakodon/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min",
+   "title": "Beat the eggs",
+   "uses_rows": [
+    {
+     "amount_html": "2",
+     "name_html": "Eggs"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Small pan, the oil, medium-low heat.</li><li>Drop in the ginger for ~30 seconds until fragrant, then add the onion and a pinch of salt.</li><li>Stir until the onion is <b>a bit soft</b> — 2–3 minutes, no colour.</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Ginger, then onion",
+    "how": [
+     {
+      "caption": "Ginger first, ~30 seconds in the oil until fragrant.",
+      "src": "illustrations/oyakodon/5-how1.webp"
+     },
+     {
+      "caption": "Then the onion and a pinch of salt; stir until a bit soft.",
+      "src": "illustrations/oyakodon/5-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "title": "Ginger, then onion",
+   "uses_rows": [
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "a 2 cm piece (~8 g)",
+     "name_html": "Ginger"
+    },
+    {
+     "amount_html": "½ small (~60 g)",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Take the pan off the heat and let it cool for a few minutes while the chicken finishes marinating.</p>",
+   "heat": {
+    "label": "heat off",
+    "off": true
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Let it cool down",
+    "how": [],
+    "illustration": "illustrations/oyakodon/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "title": "Let it cool down",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Back on medium.</li><li>Tip in the chicken <b>with all of its marinade</b> (kombu too), spread it in a single layer.</li><li>Bring to a simmer, cover, and simmer, turning once, until cooked through with no pink inside.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Chicken in, with all the marinade",
+    "how": [
+     {
+      "caption": "Back on medium: tip in the chicken with all of its marinade, kombu too.",
+      "src": "illustrations/oyakodon/7-how1.webp"
+     },
+     {
+      "caption": "Halfway through, turn each piece once — the cooked side is opaque white.",
+      "src": "illustrations/oyakodon/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "5–6 min",
+   "title": "Chicken in, with all the marinade",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Fish out the kombu.</li><li>Drizzle <b>about two-thirds</b> of the egg in a circle over the chicken and onion.</li><li>Cover and cook until the egg at the edges is set but the top is still runny.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Pour ⅔ of the egg",
+    "how": [],
+    "illustration": "illustrations/oyakodon/8.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "30–60 s",
+   "title": "Pour ⅔ of the egg",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour the remaining egg, cook 10–15 seconds, then <b>turn off the heat</b> and cover for 30 seconds.</li><li>The egg should be glossy and just set.</li><li>Cook a little longer covered if you prefer it firm.</li></ul>",
+   "heat": {
+    "label": "heat off",
+    "off": true
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Pour the rest, heat off",
+    "how": [
+     {
+      "caption": "Pour the last third into the middle, where the egg is thinnest — then heat off, lid on.",
+      "src": "illustrations/oyakodon/9-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/9.webp",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": null,
+   "part_id": null,
+   "time": "~45 s",
+   "title": "Pour the rest, heat off",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Tilt the pan and slide everything, broth included, over the rice.</li><li>Top with spring onion greens or mitsuba and a shake of shichimi.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Slide onto the rice",
+    "how": [
+     {
+      "caption": "Tilt the pan over the rice and slide everything out in one go, broth included.",
+      "src": "illustrations/oyakodon/10-how1.webp"
+     },
+     {
+      "caption": "Finish with sliced spring onion and a light shake of shichimi.",
+      "src": "illustrations/oyakodon/10-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/10.webp",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Slide onto the rice",
+   "uses_rows": [
+    {
+     "amount_html": "a few",
+     "name_html": "Spring onion greens or mitsuba"
+    },
+    {
+     "amount_html": "optional",
+     "name_html": "Shichimi togarashi"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 45,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "If your rice is already cooked, skip the first bar — about 35 minutes, most of it the chicken marinating.",
+  "tasks": [
+   {
+    "dur": 45,
+    "dur_label": "45 min",
+    "kind": "wait",
+    "label": "Cook rice (start first; or reheat)",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Cut chicken, mix marinade",
+    "start": 10
+   },
+   {
+    "dur": 21,
+    "dur_label": "21 min",
+    "kind": "wait",
+    "label": "Chicken marinates",
+    "start": 15
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Slice onion + ginger",
+    "start": 20
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "bowl",
+    "label": "Beat eggs",
+    "start": 25
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "Ginger, onion + salt",
+    "start": 27
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "wait",
+    "label": "Pan cools down",
+    "start": 30
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "pan",
+    "label": "Chicken + marinade, covered",
+    "start": 36
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Pour ⅔ egg, cover",
+    "start": 42
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Pour ⅓ egg, heat off, rest",
+    "start": 43
+   },
+   {
+    "dur": 0.8,
+    "dur_label": "48 s",
+    "kind": "bowl",
+    "label": "Slide onto rice, garnish",
+    "start": 44
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 35,
+    "label": "35"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 45,
+    "label": "45"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Oyakodon",
+ "total": "~35 min (+ rice)",
+ "vinegar_options": null,
+ "yields": "1 bowl"
+}

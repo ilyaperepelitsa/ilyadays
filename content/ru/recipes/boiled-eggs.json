@@ -1,0 +1,247 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Яйца в холодную воду, довести до кипения, выключить огонь, запустить таймер: 6–8 минут всмятку, 9+ вкрутую.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "сколько хотите"
+  },
+  {
+   "kind": "time",
+   "text": "~15–20 мин"
+  }
+ ],
+ "description": "Яйца в холодную воду, довести до кипения, выключить огонь, запустить таймер: 6–8 минут всмятку, 9+ вкрутую.",
+ "equipment_html": [
+  "Маленькая кастрюля — с тонкими стенками реагирует быстрее",
+  "Таймер"
+ ],
+ "group": {
+  "id": "from-friends-prdp-net",
+  "name": "От друзей (prdp.net)"
+ },
+ "hero": {
+  "alt": "Варёные яйца",
+  "image": "illustrations/boiled-eggs/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "сколько нужно",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "чтобы покрыть яйца",
+     "name_html": "Вода"
+    }
+   ],
+   "name": "Яйца"
+  }
+ ],
+ "intro_html": "Яйца доходят в горячей воде после того, как конфорка выключена, поэтому время легко повторить. Кастрюля с тонкими стенками быстрее реагирует на нагрев, так что с ней проще.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/boiled-eggs/mise1.webp",
+   "items": [
+    "прямо из холодильника"
+   ],
+   "items_html": "прямо из холодильника",
+   "name": "Яйца",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — От друзей (prdp.net):",
+ "next": {
+  "slug": "coconut-chickpeas",
+  "title": "Нут в кокосовом молоке от Шивама"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>По рецепту Дон на <a href=\"https://prdp.net/recipe-folder/boiled-eggs\">prdp.net</a>, пересказано здесь.</li><li>Эти яйца идут в <a href=\"baka-with-eggs.html\">баку с яйцами</a>.</li></ul>",
+   "title_html": "Авторство"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "baka-with-eggs",
+  "title": "Бака с яйцами"
+ },
+ "share_image": "share/boiled-eggs.jpg",
+ "siblings": [
+  {
+   "slug": "baka-with-eggs",
+   "title": "Бака с яйцами"
+  },
+  {
+   "slug": "coconut-chickpeas",
+   "title": "Нут в кокосовом молоке от Шивама"
+  },
+  {
+   "slug": "vegan-crunch-wrap-supreme",
+   "title": "Веганский кранч-врап суприм"
+  }
+ ],
+ "slug": "boiled-eggs",
+ "sources": [
+  {
+   "label": "prdp.net — boiled-eggs",
+   "url": "https://prdp.net/recipe-folder/boiled-eggs"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Налейте в кастрюлю столько воды, чтобы она покрывала яйца.</li><li>Опустите яйца.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Яйца в воду",
+    "how": [
+     {
+      "caption": "Положите яйца в воду.",
+      "src": "illustrations/boiled-eggs/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/boiled-eggs/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "title": "Яйца в воду",
+   "uses_rows": [
+    {
+     "amount_html": "сколько нужно",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "чтобы покрыть яйца",
+     "name_html": "Вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Нагревайте, пока вода не закипит.</p>",
+   "heat": {
+    "label": "сильный",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Доведите до кипения",
+    "how": [],
+    "illustration": "illustrations/boiled-eggs/2.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~8 мин",
+   "title": "Доведите до кипения",
+   "uses_rows": []
+  },
+  {
+   "body_html": "Как только закипит, выключите конфорку и поставьте таймер:<table class=\"mini\"><thead><tr><th>Время</th><th>Результат</th></tr></thead><tbody><tr><td>6–8 мин</td><td>всмятку (мягкий желток)</td></tr><tr><td>9+ мин</td><td>вкрутую (твёрдый желток)</td></tr></tbody></table>",
+   "heat": {
+    "label": "огонь выключен",
+    "off": true
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Огонь выключить, запустить таймер",
+    "how": [
+     {
+      "caption": "Как только закипит: огонь выключить, таймер включить.",
+      "src": "illustrations/boiled-eggs/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/boiled-eggs/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "6–9+ мин",
+   "title": "Огонь выключить, запустить таймер",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 20,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Яйца + вода в кастрюле",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "pan",
+    "label": "Доведите до кипения",
+    "start": 2
+   },
+   {
+    "dur": 9,
+    "dur_label": "9 мин",
+    "kind": "wait",
+    "label": "Огонь выключить, таймер (6–9+ мин)",
+    "start": 10
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Варёные яйца",
+ "total": "~15–20 мин",
+ "vinegar_options": null,
+ "yields": "сколько хотите"
+}

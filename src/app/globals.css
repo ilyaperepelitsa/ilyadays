@@ -1,0 +1,13 @@
+/* Layers, lowest priority first. Tailwind 4 without preflight: its reset would undo the recipe stylesheet, which
+   brings its own base styles, so only the theme variables and utilities are loaded. The site's own CSS sits in
+   `recipes`, last, so it keeps priority over utilities exactly as the static site had it; the embedded Istanbul
+   app's CSS is unlayered, so it always wins inside the app. */
+@layer theme, base, components, utilities, recipes;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+/* Scan only our own code — not the vendored Istanbul bundle or exported content, whose class names would
+   otherwise turn into stray utilities. */
+@source "../";
+
+@import "../styles/food.css" layer(recipes);
+@import "../styles/site.css" layer(recipes);

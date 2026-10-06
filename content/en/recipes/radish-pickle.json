@@ -1,0 +1,494 @@
+{
+ "before_ingredients_html": "<fieldset class=\"picker\" data-vinegar-picker><legend>Which vinegar do you have?</legend><label><input type=\"radio\" name=\"vinegar\" value=\"rice\" checked> Rice vinegar (~4.5%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"kr7\"> Korean brewed vinegar 양조식초 (~7%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"v9\"> Table vinegar 9%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v6\"> Vinegar 6%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v5\"> White / distilled vinegar 5%</label></fieldset>",
+ "blurb_html": "Crunchy red radishes left to soak in a big jar of sweet-vinegar brine — the hands-off cousin of the cucumber pickle.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 jar (~500 g radishes)"
+  },
+  {
+   "kind": "time",
+   "text": "~15 min + 6 h to days"
+  }
+ ],
+ "description": "Crunchy red radishes left to soak in a big jar of sweet-vinegar brine — the hands-off cousin of the cucumber pickle.",
+ "equipment_html": [
+  "Jar or container that holds ~700 ml, with a lid",
+  "Small saucepan"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Japanese basics"
+ },
+ "hero": {
+  "alt": "Pickled radishes",
+  "image": "illustrations/radish-pickle/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "500 g (about 2 bunches)",
+     "name_html": "Red radishes"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Salt, for drawing out water"
+    }
+   ],
+   "name": "Main"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span data-v=\"amount\">150 ml</span>",
+     "name_html": "<span data-v=\"name\">Rice vinegar</span>"
+    },
+    {
+     "amount_html": "150 ml<span data-v-show=\"water\"> + <span data-v=\"water\"></span></span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span data-v=\"sugar\">60 g (5 tbsp)</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "2 tbsp, optional",
+     "name_html": "Mirin"
+    }
+   ],
+   "name": "Brine (amazu)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "very little: about 1 strip per 2–3 radishes",
+     "name_html": "Fresh ginger, peeler strips"
+    },
+    {
+     "amount_html": "a 5 cm square, optional",
+     "name_html": "Kombu"
+    },
+    {
+     "amount_html": "1, optional",
+     "name_html": "Dried chilli"
+    },
+    {
+     "amount_html": "a strip, optional",
+     "name_html": "Yuzu or lemon peel"
+    }
+   ],
+   "name": "In the jar"
+  }
+ ],
+ "intro_html": "Unlike the cucumbers, which get a small dressing-style marinade, the radishes <b>soak in a large amount of liquid</b>: cut, salt briefly, then leave it fully submerged in a sweet-vinegar brine (amazu) in the fridge. Pick your vinegar below and the amounts update.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/radish-pickle/mise1.webp",
+   "items": [
+    "halved or quartered, salted, patted dry"
+   ],
+   "items_html": "halved or quartered, salted, patted dry",
+   "name": "Radishes",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/radish-pickle/mise2.webp",
+   "items": [
+    "warmed, then cooled"
+   ],
+   "items_html": "warmed, then cooled",
+   "name": "Brine",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 4",
+   "image": "illustrations/radish-pickle/mise3.webp",
+   "items": [
+    "ginger",
+    "kombu",
+    "chilli"
+   ],
+   "items_html": "ginger · kombu · chilli",
+   "name": "Jar extras",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More japanese basics:",
+ "next": {
+  "slug": "tamagoyaki",
+  "title": "Tamagoyaki"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Same flavours as the <a href=\"cucumber-sunomono.html\">cucumber pickle</a>, scaled up to cover:<ul class=\"ing two-col\"><li>150 ml vinegar</li><li>75 ml mirin</li><li>50 g sugar</li><li>150 ml water</li><li>1 tsp salt</li></ul></li><li>Sweeter and rounder; skip the kombu if you like it plainer.</li></ul>",
+   "title_html": "Or use the cucumber marinade"
+  },
+  {
+   "html": "<table class=\"mini\"><thead><tr><th>You have</th><th>Vinegar</th><th>+ Water</th><th>Sugar</th></tr></thead><tbody><tr><td>Rice vinegar (~4.5%)</td><td>150 ml</td><td>—</td><td>60 g (5 tbsp)</td></tr><tr><td>Korean brewed vinegar 양조식초 (~7%)</td><td>95 ml</td><td>3½ tbsp (54 ml)</td><td>70 g (6 tbsp)</td></tr><tr><td>Table vinegar 9%</td><td>75 ml</td><td>75 ml</td><td>70 g (6 tbsp)</td></tr><tr><td>Vinegar 6%</td><td>110 ml</td><td>2½ tbsp (38 ml)</td><td>70 g (6 tbsp)</td></tr><tr><td>White / distilled vinegar 5%</td><td>135 ml</td><td>1 tbsp (15 ml)</td><td>70 g (6 tbsp)</td></tr></tbody></table>Matched to rice vinegar’s ~4.5% acidity for the brine. Non-rice vinegars are sharper and less rounded, hence the extra sugar — taste and adjust.",
+   "title_html": "Vinegar conversions (in place of 150 ml rice vinegar)"
+  },
+  {
+   "html": "<ul class=\"do\"><li><b>양조식초</b> (brewed vinegar, ~6–7%) is the one the 7% row means.</li><li><b>2배식초 / 3배식초</b> are double / triple strength — use half / a third of the 7% amount and make up the rest with water.</li><li><b>빙초산</b> is glacial acetic acid (~99%): never use it as-is.</li></ul>",
+   "title_html": "Reading Korean vinegar labels"
+  },
+  {
+   "html": "<p>These are starting points for a sweet-sour amazu brine — adjust the sugar to taste on the next batch.</p>",
+   "title_html": "Amounts"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Just a hint of ginger — shave it thin with a vegetable peeler.</li><li>Kombu adds a little savoury depth.</li><li>Use both, or leave the kombu out.</li></ul>",
+   "title_html": "Ginger or kombu?"
+  },
+  {
+   "html": "<p>The red skins colour the brine and the white flesh pink over a day or two — that’s normal.</p>",
+   "title_html": "Pink brine"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "cucumber-sunomono",
+  "title": "Japanese cucumber pickle (sunomono)"
+ },
+ "share_image": "share/radish-pickle.jpg",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Shiitake–kombu dashi"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Niboshi–bonito dashi"
+  },
+  {
+   "slug": "furikake",
+   "title": "Furikake"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Japanese cucumber pickle (sunomono)"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Tamagoyaki"
+  }
+ ],
+ "slug": "radish-pickle",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Cut off the leaves and the root tips.</li><li><b>Halve</b> the radishes, or <b>quarter</b> the big ones, so the pieces are about the same size.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Trim and cut",
+    "how": [
+     {
+      "caption": "Cut off the leaves and the root tips.",
+      "src": "illustrations/radish-pickle/1-how1.webp"
+     },
+     {
+      "caption": "Halve them — quarter the big ones — so the pieces are about the same size.",
+      "src": "illustrations/radish-pickle/1-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~6 min",
+   "title": "Trim and cut",
+   "uses_rows": [
+    {
+     "amount_html": "500 g",
+     "name_html": "Red radishes"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Toss the cut radishes with 1 tsp salt and leave 20–30 minutes — they give off juice.</li><li>Rinse off the salt and the juice under cold water and drain well. They’ll stay crunchy and take up the brine better.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Salt, then rinse",
+    "how": [
+     {
+      "caption": "After 20–30 minutes, rinse off the salt and the juice under cold water, then drain.",
+      "src": "illustrations/radish-pickle/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "20–30 min",
+   "title": "Salt, then rinse",
+   "uses_rows": [
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Salt, for drawing out water"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Warm just until the sugar dissolves (mirin only if using):<ul class=\"ing two-col\"><li><span data-v=\"name_lc\">rice vinegar</span> <span class=\"amt\"><span data-v=\"amount\">150 ml</span></span></li><li>water <span class=\"amt\">150 ml<span data-v-show=\"water\"> + <span data-v=\"water\"></span></span></span></li><li>sugar <span class=\"amt\"><span data-v=\"sugar\">60 g (5 tbsp)</span></span></li><li>salt <span class=\"amt\">1 tsp</span></li><li>mirin <span class=\"amt\">2 tbsp</span></li></ul></li><li>Don’t boil it. Let it cool.</li></ul>",
+   "heat": {
+    "label": "low",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Make the brine",
+    "how": [],
+    "illustration": "illustrations/radish-pickle/3.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~4 min + cooling",
+   "title": "Make the brine",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pack the radishes into the jar.</li><li>Tuck in:<ul class=\"ing\"><li>fresh ginger, a few peeler strips</li><li>kombu <span class=\"amt\">a 5 cm square</span></li><li>dried chilli <span class=\"amt\">1</span></li><li>yuzu or lemon peel <span class=\"amt\">a strip</span></li></ul></li><li>Pour over the cooled brine until everything is <b>fully submerged</b>.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Into the jar",
+    "how": [
+     {
+      "caption": "Pack the radishes into the jar, tuck in the kombu and chilli, then pour over the cooled brine until everything is submerged.",
+      "src": "illustrations/radish-pickle/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "title": "Into the jar",
+   "uses_rows": [
+    {
+     "amount_html": "very little: about 1 strip per 2–3 radishes",
+     "name_html": "Fresh ginger, peeler strips"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lid on, into the fridge.</li><li>Good after about 6 hours, best after 2–3 days.</li><li>Keeps about 2 weeks; always lift pieces out with clean chopsticks.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Wait",
+    "how": [],
+    "illustration": "illustrations/radish-pickle/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "6 h – 2 weeks",
+   "title": "Wait",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Serve chilled as a side with rice, alongside <a href=\"karaage.html\">karaage</a> or in a bento.</p>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Serve",
+    "how": [
+     {
+      "caption": "Always lift pieces out with clean chopsticks.",
+      "src": "illustrations/radish-pickle/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/radish-pickle/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Serve",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 60,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   }
+  ],
+  "note_html": "The last bar keeps going: edible after ~6 hours, best after 2–3 days.",
+  "tasks": [
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "board",
+    "label": "Trim + cut radishes",
+    "start": 0
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 min",
+    "kind": "wait",
+    "label": "Salt and rest",
+    "start": 6
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "pan",
+    "label": "Warm brine to dissolve",
+    "start": 8
+   },
+   {
+    "dur": 18,
+    "dur_label": "18 min",
+    "kind": "wait",
+    "label": "Brine cools",
+    "start": 12
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "bowl",
+    "label": "Rinse, jar, pour brine",
+    "start": 31
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 min",
+    "kind": "wait",
+    "label": "Fridge (6 h → days)",
+    "start": 35
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Pickled radishes",
+ "total": "~15 min + 6 h to days",
+ "vinegar_options": {
+  "kr7": {
+   "amount": "95 ml",
+   "label": "Korean brewed vinegar 양조식초 (~7%)",
+   "name": "Korean brewed vinegar (~7%)",
+   "name_lc": "Korean brewed vinegar",
+   "sugar": "70 g (6 tbsp)",
+   "water": "3½ tbsp (54 ml)"
+  },
+  "rice": {
+   "amount": "150 ml",
+   "label": "Rice vinegar (~4.5%)",
+   "name": "Rice vinegar",
+   "name_lc": "rice vinegar",
+   "sugar": "60 g (5 tbsp)",
+   "water": ""
+  },
+  "v5": {
+   "amount": "135 ml",
+   "label": "White / distilled vinegar 5%",
+   "name": "White vinegar (5%)",
+   "name_lc": "the white vinegar",
+   "sugar": "70 g (6 tbsp)",
+   "water": "1 tbsp (15 ml)"
+  },
+  "v6": {
+   "amount": "110 ml",
+   "label": "Vinegar 6%",
+   "name": "Vinegar (6%)",
+   "name_lc": "the 6% vinegar",
+   "sugar": "70 g (6 tbsp)",
+   "water": "2½ tbsp (38 ml)"
+  },
+  "v9": {
+   "amount": "75 ml",
+   "label": "Table vinegar 9%",
+   "name": "Table vinegar (9%)",
+   "name_lc": "the 9% vinegar",
+   "sugar": "70 g (6 tbsp)",
+   "water": "75 ml"
+  }
+ },
+ "yields": "1 jar (~500 g radishes)"
+}

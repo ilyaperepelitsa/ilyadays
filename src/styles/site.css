@@ -1,0 +1,69 @@
+/* Site shell, home and travel. Builds on the recipe stylesheet (food.css: tokens, header, chips, notes) and uses
+   class names it doesn't (.tile, .about, .trip-*) so the recipe pages look exactly as before. */
+
+.site-header .brand-group { display: flex; align-items: center; }
+.site-header nav a[aria-current="page"] { color: var(--accent); }
+.site-header .nav-section { font-weight: 600; }
+.header-end { margin-left: auto; display: flex; align-items: center; gap: 14px; }
+.header-end .lang { margin-left: 0; }
+.auth-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--muted); font: 500 .8rem var(--sans); cursor: pointer;
+}
+.auth-link:hover { color: var(--accent); border-color: var(--accent); }
+@media (max-width: 640px) {
+  .header-end { order: 1; gap: 10px; }
+}
+
+/* ---------- home */
+.hello h1 { margin: 8px 0 6px; }
+.hello .lede { max-width: 720px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px; margin-top: 8px; }
+/* Lists that grow one card at a time (trips): keep cards card-sized instead of stretching one across the page. */
+.tiles-fill { grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr)); }
+.tile {
+  display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 16px;
+  background: var(--surface); color: var(--ink); text-decoration: none; box-shadow: var(--shadow);
+  transition: transform .15s ease;
+}
+.tile:hover { transform: translateY(-2px); }
+.tile img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.tile-body { padding: 16px 18px 18px; }
+.tile-body h2 { margin: 0 0 4px; font-size: 1.5rem; }
+.tile-body p { margin: 0; color: var(--muted); }
+.tile-go { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600; }
+.about { margin-top: 44px; max-width: 720px; }
+.about h2 { font-size: 1.6rem; margin: 0 0 8px; }
+.about h3 {
+  margin: 22px 0 6px; font: 600 .85rem var(--sans); color: var(--muted);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.projects { padding-left: 1.1em; margin: 0; }
+.projects li { margin: 6px 0; }
+.projects a { font-weight: 600; }
+
+/* ---------- travel / Istanbul */
+.trip-page { max-width: none; padding: 0; }
+.trip-note {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+  margin: 0; padding: 8px max(16px, calc((100vw - 1180px) / 2));
+  background: var(--surface-2); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .88rem;
+}
+.trip-note.editing { background: var(--accent-soft); color: var(--ink); }
+.trip-mount { height: calc(100dvh - var(--header-h, 57px) - var(--note-h, 0px)); min-height: 520px; }
+.trip-mount:empty::before, .trip-status {
+  display: block; padding: 40px 16px; text-align: center; color: var(--muted);
+}
+.trip-mount:empty::before { content: attr(data-loading); }
+@media (max-width: 860px) { .trip-mount { height: auto; min-height: 70vh; } }
+
+/* ---------- 404 */
+.missing { max-width: 640px; padding: 48px 0; }
+
+/* The recipe stylesheet styles bare elements (main, h1–h3, p, a) and a few generic class names the Istanbul app
+   also uses. Inside the app, undo those so only the app's own CSS applies. */
+.cdays-root :is(main, h1, h2, h3, h4, p, a, small, .brand, .chip, .chips, .eyebrow, .ghost, .has-photo, .lang, .lede,
+  .note, .on, .part, .photo) {
+  all: revert-layer;
+}

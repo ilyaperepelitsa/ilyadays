@@ -1,0 +1,621 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Cookbook napa cabbage kimchi with your additions: knife-chopped baby anchovies and sakura shrimp, and pear juice.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "4 servings · 1 large jar"
+  },
+  {
+   "kind": "time",
+   "text": "~15 h (12 h salting) + 5–7 days in the fridge"
+  }
+ ],
+ "description": "Cookbook napa cabbage kimchi with your additions: knife-chopped baby anchovies and sakura shrimp, and pear juice.",
+ "equipment_html": [
+  "Large bowl that fits half a cabbage",
+  "Heavy plate or board to press (or a plastic bag filled with water)",
+  "Colander",
+  "Chef's knife and board",
+  "Ceramic grater (or a fine metal one)",
+  "Cheesecloth",
+  "Gloves — gochugaru stains and burns",
+  "Airtight jar"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Korean"
+ },
+ "hero": {
+  "alt": "Napa cabbage kimchi",
+  "image": "illustrations/kimchi/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "1 head (~2.5 kg)",
+     "name_html": "Napa cabbage"
+    },
+    {
+     "amount_html": "1 cup (200 ml)",
+     "name_html": "Coarse salt, for the brine"
+    },
+    {
+     "amount_html": "2 l",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "1 cup (200 ml)",
+     "name_html": "Coarse salt, between the leaves"
+    }
+   ],
+   "name": "Cabbage"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "200 g",
+     "name_html": "Daikon"
+    },
+    {
+     "amount_html": "50 g",
+     "name_html": "Green onions"
+    }
+   ],
+   "name": "Vegetables"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1 cup (200 ml)",
+     "name_html": "Gochugaru (Korean chilli powder)"
+    },
+    {
+     "amount_html": "100 ml (or fish sauce)",
+     "name_html": "Salted anchovy sauce"
+    },
+    {
+     "amount_html": "3 tbsp (or fish sauce)",
+     "name_html": "Salted shrimp sauce"
+    },
+    {
+     "amount_html": "4 tbsp",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "100 ml",
+     "name_html": "Kelp (kombu) stock"
+    },
+    {
+     "amount_html": "2 tbsp, crushed or grated",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "1 tbsp (grated ginger, squeezed)",
+     "name_html": "Ginger juice"
+    }
+   ],
+   "name": "Filling"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "a small handful (~10 g) — enough to taste a little, not fishy",
+     "name_html": "Dried baby anchovies"
+    },
+    {
+     "amount_html": "a small handful (~5–10 g) — the same idea",
+     "name_html": "Dried sakura shrimp"
+    },
+    {
+     "amount_html": "½ (~150 g), grated and squeezed for its juice",
+     "name_html": "Asian pear"
+    }
+   ],
+   "name": "Filling — your additions"
+  }
+ ],
+ "intro_html": "A Korean cookbook recipe: the cabbage is brined, salted for 12 hours under a weight, rinsed, then filled leaf by leaf <b>from the middle out</b> with a gochugaru filling and wrapped in its own outer leaves. <b>Your additions</b> go into the filling: dried baby anchovies and sakura shrimp chopped with a knife, and pear juice squeezed through cheesecloth.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/kimchi/mise1.webp",
+   "items": [
+    "rinsed, drained 1 h"
+   ],
+   "items_html": "rinsed, drained 1 h",
+   "name": "Salted cabbage halves",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/kimchi/mise2.webp",
+   "items": [
+    "kept from step 1, for wrapping"
+   ],
+   "items_html": "kept from step 1, for wrapping",
+   "name": "Outer leaves",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/kimchi/mise3.webp",
+   "items": [
+    "0.3 cm matchsticks",
+    "3 cm lengths"
+   ],
+   "items_html": "0.3 cm matchsticks · 3 cm lengths",
+   "name": "Daikon + green onion",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/kimchi/mise4.webp",
+   "items": [
+    "chopped anchovies",
+    "chopped shrimp",
+    "pear juice"
+   ],
+   "items_html": "chopped anchovies · chopped shrimp · pear juice",
+   "name": "Your additions",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/kimchi/mise5.webp",
+   "items": [],
+   "items_html": "",
+   "name": "Garlic + ginger juice",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/kimchi/mise6.webp",
+   "items": [
+    "1 cup"
+   ],
+   "items_html": "1 cup",
+   "name": "Gochugaru",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/kimchi/mise7.webp",
+   "items": [
+    "anchovy sauce",
+    "shrimp sauce",
+    "kelp stock",
+    "sugar"
+   ],
+   "items_html": "anchovy sauce · shrimp sauce · kelp stock · sugar",
+   "name": "Sauces + sugar",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "More korean:",
+ "next": {
+  "slug": "kkakdugi",
+  "title": "Kkakdugi (radish cube kimchi)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Based on the recipe in <i>Easy Korean Cooking</i> (cookbook), with your additions: dried baby anchovies, sakura shrimp and pear juice.</li><li>The amounts of your additions are a starting guess — adjust them next batch.</li></ul>",
+   "title_html": "Source"
+  },
+  {
+   "html": "<p>If you can’t get salted anchovy or salted shrimp sauce, fish sauce stands in for either — but the Korean versions are worth hunting down.</p>",
+   "title_html": "Fish sauce instead of the Korean sauces"
+  },
+  {
+   "html": "<p>Use coarse salt for both the brine and the leaves — fine table salt is saltier by volume and lands unevenly.</p>",
+   "title_html": "Coarse salt"
+  },
+  {
+   "html": "<p>Kombu stock — see <a href=\"shiitake-kombu-dashi.html\">shiitake-kombu dashi</a>.</p>",
+   "title_html": "Kelp stock"
+  },
+  {
+   "html": "<p>See also <a href=\"kkakdugi.html\">kkakdugi</a>.</p>",
+   "title_html": "Radish kimchi"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "ginger-scallion-noodles",
+  "title": "Ginger scallion noodles (gentler)"
+ },
+ "share_image": "share/kimchi.jpg",
+ "siblings": [
+  {
+   "slug": "kkakdugi",
+   "title": "Kkakdugi (radish cube kimchi)"
+  }
+ ],
+ "slug": "kimchi",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Stir 1 cup of <b>coarse salt</b> into <b>2 l of water</b> in a bowl big enough to hold half a cabbage.</li><li>Peel off the outer leaves and <b>keep them</b> — they wrap the kimchi in step 6.</li><li>Cut the cabbage in half lengthwise and dunk the halves in the brine.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Brine and halve",
+    "how": [
+     {
+      "caption": "Peel off the outer leaves and keep them — they wrap the kimchi at the end.",
+      "src": "illustrations/kimchi/1-how1.webp"
+     },
+     {
+      "caption": "Cut the cabbage in half lengthwise.",
+      "src": "illustrations/kimchi/1-how2.webp"
+     },
+     {
+      "caption": "Dunk the halves in the brine.",
+      "src": "illustrations/kimchi/1-how3.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kimchi/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~15 min",
+   "title": "Brine and halve",
+   "uses_rows": [
+    {
+     "amount_html": "1 head (~2.5 kg)",
+     "name_html": "Napa cabbage"
+    },
+    {
+     "amount_html": "1 cup (200 ml)",
+     "name_html": "Coarse salt, for the brine"
+    },
+    {
+     "amount_html": "2 l",
+     "name_html": "Water"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Take the halves out and work the second cup of <b>coarse salt</b> in between the leaves, mostly onto the thick white stems.</li><li>Leave them <b>cut faces up</b> for <b>7 hours</b> (12 in winter), then flip them <b>face down</b> for <b>5 hours</b> more.</li><li>Keep weight on them throughout — a heavy plate or board, or a bag of water — so the salt gets in evenly.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Salt and press",
+    "how": [
+     {
+      "caption": "Lift the leaves and sprinkle coarse salt between them, mostly on the thick white stems.",
+      "src": "illustrations/kimchi/2-how1.webp"
+     },
+     {
+      "caption": "Press them under a heavy plate — 7 hours cut-side up, then 5 hours cut-side down.",
+      "src": "illustrations/kimchi/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kimchi/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "12 h (17 h in winter)",
+   "title": "Salt and press",
+   "uses_rows": [
+    {
+     "amount_html": "1 cup (200 ml)",
+     "name_html": "Coarse salt, between the leaves"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wash the salt off under cold water, opening the leaves so it reaches inside.</li><li>Stand the halves in a colander and let them drip for about <b>an hour</b>.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Rinse and drain",
+    "how": [
+     {
+      "caption": "Rinse thoroughly in cold water, opening the leaves.",
+      "src": "illustrations/kimchi/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kimchi/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~1 h",
+   "title": "Rinse and drain",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Slice the <b>daikon</b> into thin 0.3 cm matchsticks; cut the <b>green onions</b> into 3 cm pieces.</li><li>Your additions — chop finely with a knife:<ul class=\"ing\"><li>dried baby anchovies <span class=\"amt\">a small handful (~10 g) — enough to taste a little</span></li><li>dried sakura shrimp <span class=\"amt\">a small handful (~5–10 g) — the same idea</span></li></ul></li><li>Crush or grate the <b>garlic</b> — a ceramic grater is best, a fine metal one works too.</li><li>Grate the ginger and squeeze it through cheesecloth for the <b>ginger juice</b>.</li><li>Grate the <b>Asian pear</b>, put it in cheesecloth and squeeze out the juice — the juice is what you want.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Prepare the filling",
+    "how": [
+     {
+      "caption": "Daikon: slice into thin 3 mm planks.",
+      "src": "illustrations/kimchi/4-how1.webp"
+     },
+     {
+      "caption": "Stack a few planks and cut them into 0.3 cm matchsticks.",
+      "src": "illustrations/kimchi/4-how2.webp"
+     },
+     {
+      "caption": "Green onions: line them up and cut into 3 cm lengths.",
+      "src": "illustrations/kimchi/4-how3.webp"
+     },
+     {
+      "caption": "Your additions: chop the dried anchovies and shrimp finely with a knife.",
+      "src": "illustrations/kimchi/4-how4.webp"
+     },
+     {
+      "caption": "Grate the garlic and ginger on a ceramic grater, rubbing in small circles.",
+      "src": "illustrations/kimchi/4-how5.webp"
+     },
+     {
+      "caption": "Squeeze the grated pear (and ginger) through cheesecloth — the juice is what you want.",
+      "src": "illustrations/kimchi/4-how6.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kimchi/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~25 min",
+   "title": "Prepare the filling",
+   "uses_rows": [
+    {
+     "amount_html": "200 g",
+     "name_html": "Daikon"
+    },
+    {
+     "amount_html": "50 g",
+     "name_html": "Green onions"
+    },
+    {
+     "amount_html": "2 tbsp",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Ginger juice"
+    },
+    {
+     "amount_html": "½ (~150 g)",
+     "name_html": "Asian pear"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Gloves on. Mix everything from step 4 with:<ul class=\"ing two-col\"><li>gochugaru (Korean chilli powder) <span class=\"amt\">1 cup (200 ml)</span></li><li>salted anchovy sauce <span class=\"amt\">100 ml</span></li><li>salted shrimp sauce <span class=\"amt\">3 tbsp</span></li><li>sugar <span class=\"amt\">4 tbsp</span></li><li>kelp (kombu) stock <span class=\"amt\">100 ml</span></li></ul></li><li>Let it stand about <b>30 minutes</b> so the flavours come together.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Mix the filling",
+    "how": [
+     {
+      "caption": "Gloves on: mix the gochugaru, sauces, sugar and stock with everything from step 4.",
+      "src": "illustrations/kimchi/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kimchi/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min + 30 min",
+   "title": "Mix the filling",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li><b>Start at the middle:</b> lift the innermost leaf next to the core and smear filling over it right down to the core.</li><li>Lay it back, lift the next leaf out from the middle and repeat — work <b>outward</b> until every leaf is coated.</li><li>Fold the outer leaves you saved around each half like a parcel, so none of the filling escapes.</li><li>Press the parcels into an airtight jar and give them <b>5–7 days</b> in the fridge before eating.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Fill, wrap and pack",
+    "how": [
+     {
+      "caption": "Start at the middle: lift the innermost leaf and smear filling down to the core.",
+      "src": "illustrations/kimchi/6-how1.webp"
+     },
+     {
+      "caption": "Lay it back, lift the next leaf out from the middle, repeat.",
+      "src": "illustrations/kimchi/6-how2.webp"
+     },
+     {
+      "caption": "Work outward until the outer leaves are done.",
+      "src": "illustrations/kimchi/6-how3.webp"
+     },
+     {
+      "caption": "Wrap each half in the outer leaves you kept.",
+      "src": "illustrations/kimchi/6-how4.webp"
+     },
+     {
+      "caption": "Pack tightly into an airtight jar, then 5–7 days in the fridge.",
+      "src": "illustrations/kimchi/6-how5.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kimchi/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~40 min, then 5–7 days",
+   "title": "Fill, wrap and pack",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 960,
+  "hours": true,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   }
+  ],
+  "note_html": "In winter the first salting is 12 h instead of 7 h. Then 5–7 days in the fridge before serving.",
+  "tasks": [
+   {
+    "dur": 15,
+    "dur_label": "15 min",
+    "kind": "bowl",
+    "label": "Brine, outer leaves off, halve",
+    "start": 0
+   },
+   {
+    "dur": 15,
+    "dur_label": "15 min",
+    "kind": "board",
+    "label": "Salt between the leaves",
+    "start": 15
+   },
+   {
+    "dur": 420,
+    "dur_label": "7 h",
+    "kind": "wait",
+    "label": "Pressed, cut-side up (7 h)",
+    "start": 30
+   },
+   {
+    "dur": 300,
+    "dur_label": "5 h",
+    "kind": "wait",
+    "label": "Pressed, cut-side down (5 h)",
+    "start": 450
+   },
+   {
+    "dur": 15,
+    "dur_label": "15 min",
+    "kind": "bowl",
+    "label": "Rinse in cold water",
+    "start": 750
+   },
+   {
+    "dur": 60,
+    "dur_label": "1 h",
+    "kind": "wait",
+    "label": "Drain in a colander (1 h)",
+    "start": 765
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 min",
+    "kind": "board",
+    "label": "Cut daikon + onion, prep additions",
+    "start": 770
+   },
+   {
+    "dur": 30,
+    "dur_label": "30 min",
+    "kind": "bowl",
+    "label": "Mix the filling, rest 30 min",
+    "start": 795
+   },
+   {
+    "dur": 30,
+    "dur_label": "30 min",
+    "kind": "board",
+    "label": "Fill from the middle out, wrap",
+    "start": 825
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "bowl",
+    "label": "Pack the jar",
+    "start": 855
+   }
+  ],
+  "tick_step": 120,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0:00"
+   },
+   {
+    "at": 120,
+    "label": "2:00"
+   },
+   {
+    "at": 240,
+    "label": "4:00"
+   },
+   {
+    "at": 360,
+    "label": "6:00"
+   },
+   {
+    "at": 480,
+    "label": "8:00"
+   },
+   {
+    "at": 600,
+    "label": "10:00"
+   },
+   {
+    "at": 720,
+    "label": "12:00"
+   },
+   {
+    "at": 840,
+    "label": "14:00"
+   },
+   {
+    "at": 960,
+    "label": "16:00"
+   }
+  ],
+  "unit": "h:mm"
+ },
+ "title": "Napa cabbage kimchi",
+ "total": "~15 h (12 h salting) + 5–7 days in the fridge",
+ "vinegar_options": null,
+ "yields": "4 servings · 1 large jar"
+}

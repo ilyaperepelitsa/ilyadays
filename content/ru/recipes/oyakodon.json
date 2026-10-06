@@ -1,0 +1,708 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Курица в маринаде из комбу-даси и сои, тушённая с имбирём и луком и схваченная нежным яйцом, на рисе.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 миска"
+  },
+  {
+   "kind": "time",
+   "text": "~35 мин (+ рис)"
+  }
+ ],
+ "description": "Курица в маринаде из комбу-даси и сои, тушённая с имбирём и луком и схваченная нежным яйцом, на рисе.",
+ "equipment_html": [
+  "Маленькая сковорода 18–20 см, <b>с крышкой</b> (в маленькой сковороде яйцо лежит толстым слоем)",
+  "Донбури или глубокая миска"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Оякодон",
+  "image": "illustrations/oyakodon/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "150 г (1–2 филе), кусочки 2–3 см (подойдёт и грудка; готовьте на 1–2 мин меньше)",
+     "name_html": "Филе куриного бедра"
+    },
+    {
+     "amount_html": "½ небольшой луковицы (~60 г), концы срезать, нарезать вдоль ~5 мм",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "кусочек 2 см (~8 г), мелко нарезать",
+     "name_html": "Имбирь"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "2",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "1 миска (~200 г готового, из ~80 г сухого)",
+     "name_html": "Варёный круглозёрный рис"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "80 мл (или 80 мл воды + ¼ ч. л. порошка даси)",
+     "name_html": "<a href=\"niboshi-bonito-dashi.html\">Даси</a>"
+    },
+    {
+     "amount_html": "квадрат 5 см",
+     "name_html": "Комбу"
+    },
+    {
+     "amount_html": "4 ст. л.",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Сахар"
+    }
+   ],
+   "name": "Соус / маринад для курицы"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "немного, нарезать",
+     "name_html": "Зелень зелёного лука или мицуба"
+    },
+    {
+     "amount_html": "по желанию",
+     "name_html": "Сититогараси"
+    }
+   ],
+   "name": "Для подачи"
+  }
+ ],
+ "intro_html": "Миска риса «родитель и ребёнок». Курица лежит в соусе — <b>комбу, даси, соевый соус, мирин, саке и сахар</b>, — а мелко нарезанные имбирь и лук размягчаются в сковороде со щепоткой соли. Потом курица идёт туда со всем маринадом, её связывают <b>едва схватившимся яйцом</b> в два приёма, и всё это соскальзывает на горячий рис.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/oyakodon/mise1.webp",
+   "items": [
+    "даси",
+    "комбу",
+    "соевый соус",
+    "мирин",
+    "саке",
+    "сахар"
+   ],
+   "items_html": "даси · комбу · соевый соус · мирин · саке · сахар",
+   "name": "Курица в маринаде",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/oyakodon/mise2.webp",
+   "items": [
+    "мелко нарезан"
+   ],
+   "items_html": "мелко нарезан",
+   "name": "Имбирь",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/oyakodon/mise3.webp",
+   "items": [
+    "нарезан вдоль",
+    "щепотка соли"
+   ],
+   "items_html": "нарезан вдоль · щепотка соли",
+   "name": "Лук",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаги 8–9",
+   "image": "illustrations/oyakodon/mise4.webp",
+   "items": [
+    "слегка взбиты"
+   ],
+   "items_html": "слегка взбиты",
+   "name": "Яйца",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 10",
+   "image": "illustrations/oyakodon/mise5.webp",
+   "items": [
+    "горячий рис",
+    "зелёный лук"
+   ],
+   "items_html": "горячий рис · зелёный лук",
+   "name": "Рис + зелень",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "napa-shiitake-egg-bowl",
+  "title": "Миска с пекинской капустой, шиитаке и яйцом"
+ },
+ "notes": [
+  {
+   "html": "<p>Метод ваш; эти детали — мои догадки, поправьте: <b>1 ч. л. масла</b> для имбиря; маринад <b>15–30 мин</b>; <b>комбу идёт в сковороду</b> вместе с маринадом и вынимается перед яйцом; сковорода остывает <b>~5 мин</b> без огня, прежде чем положить курицу.</p>",
+   "title_html": "Что я додумал по вашему описанию"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Сначала приготовьте грудку в бане (<a href=\"sous-vide.html#chicken-breast\">63 °C, 60–75 мин при толщине ~2 см</a>), затем нарежьте.</li><li>Мариновать не нужно: после имбиря и лука (шаг 5) влейте соус, доведите до кипения и положите готовую курицу всего на <b>1 минуту</b> — не дольше, иначе она станет жёсткой, — и сразу переходите к яйцу.</li></ul>",
+   "title_html": "Короткий путь: курица су-вид"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Домашний лучше всего — см.</li><li><a href=\"niboshi-bonito-dashi.html\">даси из нибоси и бонито</a>.</li><li>Вода с ¼ ч. л. порошка даси — быстрый вариант; комбу в маринаде в любом случае добавит глубины.</li></ul>",
+   "title_html": "Даси"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Яйца получаются едва схватившимися.</li><li>Если кому-то из едоков нельзя недоготовленные яйца, подержите под крышкой на слабом огне ещё минуту-две, пока не схватятся полностью.</li></ul>",
+   "title_html": "Нежные яйца"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "tamagoyaki",
+  "title": "Тамагояки"
+ },
+ "share_image": "share/oyakodon.jpg",
+ "siblings": [
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "oyakodon",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Миска горячего риса должна быть готова до того, как вы возьмётесь за сковороду — яйцо ждать не будет.</li><li>Запустите рисоварку примерно за 45 минут или разогрейте вчерашний рис до пара.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Сначала рис",
+    "how": [
+     {
+      "caption": "Накладывайте горячий рис рыхло, влажной лопаткой — не утрамбовывайте.",
+      "src": "illustrations/oyakodon/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~за 45 мин",
+   "title": "Сначала рис",
+   "uses_rows": [
+    {
+     "amount_html": "1 миска",
+     "name_html": "Варёный круглозёрный рис"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Срежьте с филе лишний жир и нарежьте кусочками 2–3 см.</li><li>В миске размешайте, пока сахар не растворится:<ul class=\"ing two-col\"><li>даси <span class=\"amt\">80 мл</span></li><li>соевый соус <span class=\"amt\">4 ст. л.</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>саке <span class=\"amt\">1 ст. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Положите комбу, затем курицу.</li><li>Оставьте на 15–30 минут (если дольше — в холодильнике).</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Замаринуйте курицу",
+    "how": [
+     {
+      "caption": "Срежьте лишний жир, затем нарежьте бедро кусочками 2–3 см.",
+      "src": "illustrations/oyakodon/2-how1.webp"
+     },
+     {
+      "caption": "Размешайте сою, мирин, саке и сахар в даси, пока сахар не растворится; добавьте комбу, затем курицу.",
+      "src": "illustrations/oyakodon/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин + 15–30 мин",
+   "title": "Замаринуйте курицу",
+   "uses_rows": [
+    {
+     "amount_html": "150 г (1–2 филе)",
+     "name_html": "Филе куриного бедра"
+    },
+    {
+     "amount_html": "квадрат 5 см",
+     "name_html": "Комбу"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Лук: срежьте оба конца (корень и верхушку), разрежьте пополам через срезы и очистите.</li><li>Положите каждую половинку плоской стороной вниз и режьте <b>вдоль — перпендикулярно срезанным концам</b>, по линиям, толщиной около 5 мм. Если резать поперёк линий, получатся кольца, которые разваливаются; продольные ломтики держат форму в сковороде.</li><li>Имбирь: очистите, нарежьте тонкой соломкой, затем поперёк — <b>мелкими кубиками</b>.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Лук и имбирь",
+    "how": [
+     {
+      "caption": "Лук: срежьте оба конца — корень и верхушку, — затем разрежьте пополам через срезы и очистите.",
+      "src": "illustrations/oyakodon/3-how1.webp"
+     },
+     {
+      "caption": "Режьте вдоль — перпендикулярно срезанным концам, по линиям — примерно по 5 мм.",
+      "src": "illustrations/oyakodon/3-how2.webp"
+     },
+     {
+      "caption": "Имбирь: очистите краем ложки, тонко нарежьте, затем соломкой и поперёк — мелкими кубиками.",
+      "src": "illustrations/oyakodon/3-how3.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Лук и имбирь",
+   "uses_rows": [
+    {
+     "amount_html": "½ небольшой луковицы (~60 г)",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "кусочек 2 см (~8 г)",
+     "name_html": "Имбирь"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разбейте яйца в миску и взбейте <b>слегка — 4–5 движений палочками</b>, разрезая белки.</li><li>Нужны прожилки белка и желтка, а не однородная жёлтая масса.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Взбейте яйца",
+    "how": [
+     {
+      "caption": "Взбейте слегка — 4–5 быстрых движений, разрезая белки. Остановитесь, пока видны прожилки.",
+      "src": "illustrations/oyakodon/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "title": "Взбейте яйца",
+   "uses_rows": [
+    {
+     "amount_html": "2",
+     "name_html": "Яйца"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Маленькая сковорода, масло, огонь ниже среднего.</li><li>Бросьте имбирь секунд на 30, пока не запахнет, затем добавьте лук и щепотку соли.</li><li>Помешивайте, пока лук <b>чуть не размякнет</b> — 2–3 минуты, без цвета.</li></ul>",
+   "heat": {
+    "label": "ниже среднего",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Имбирь, потом лук",
+    "how": [
+     {
+      "caption": "Сначала имбирь, ~30 секунд в масле, пока не запахнет.",
+      "src": "illustrations/oyakodon/5-how1.webp"
+     },
+     {
+      "caption": "Потом лук и щепотка соли; помешивайте, пока не станет чуть мягким.",
+      "src": "illustrations/oyakodon/5-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Имбирь, потом лук",
+   "uses_rows": [
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "кусочек 2 см (~8 г)",
+     "name_html": "Имбирь"
+    },
+    {
+     "amount_html": "½ небольшой луковицы (~60 г)",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Соль"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Снимите сковороду с огня и дайте ей остыть несколько минут, пока курица домаринуется.</p>",
+   "heat": {
+    "label": "огонь выключен",
+    "off": true
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Дайте остыть",
+    "how": [],
+    "illustration": "illustrations/oyakodon/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Дайте остыть",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снова средний огонь.</li><li>Выложите курицу <b>со всем маринадом</b> (и комбу тоже), распределите в один слой.</li><li>Доведите до кипения, накройте крышкой и томите, один раз перевернув, пока курица не приготовится и внутри не останется розового.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Курица — со всем маринадом",
+    "how": [
+     {
+      "caption": "Снова на средний огонь: выложите курицу со всем маринадом, вместе с комбу.",
+      "src": "illustrations/oyakodon/7-how1.webp"
+     },
+     {
+      "caption": "На полпути переверните каждый кусочек — готовая сторона непрозрачно-белая.",
+      "src": "illustrations/oyakodon/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "5–6 мин",
+   "title": "Курица — со всем маринадом",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выньте комбу. Полейте курицу и лук <b>примерно двумя третями</b> яйца по кругу.</li><li>Накройте и готовьте, пока яйцо по краям не схватится, а сверху ещё жидкое.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Влейте ⅔ яйца",
+    "how": [],
+    "illustration": "illustrations/oyakodon/8.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "30–60 с",
+   "title": "Влейте ⅔ яйца",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Влейте оставшееся яйцо, 10–15 секунд, затем <b>выключите огонь</b> и подержите под крышкой 30 секунд.</li><li>Яйцо должно быть глянцевым и едва схватившимся.</li><li>Если любите плотнее — подержите под крышкой подольше.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "off": true
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Остальное — и огонь выключить",
+    "how": [
+     {
+      "caption": "Последнюю треть влейте в середину, где яйца меньше всего, — затем выключите огонь и накройте.",
+      "src": "illustrations/oyakodon/9-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/9.webp",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": null,
+   "part_id": null,
+   "time": "~45 с",
+   "title": "Остальное — и огонь выключить",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Наклоните сковороду и сдвиньте всё вместе с бульоном на рис.</li><li>Сверху — зелень лука или мицуба и немного сититогараси.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Выложите на рис",
+    "how": [
+     {
+      "caption": "Наклоните сковороду над рисом и выложите всё одним движением, вместе с бульоном.",
+      "src": "illustrations/oyakodon/10-how1.webp"
+     },
+     {
+      "caption": "Сверху — нарезанный зелёный лук и чуть-чуть сититогараси.",
+      "src": "illustrations/oyakodon/10-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/oyakodon/10.webp",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Выложите на рис",
+   "uses_rows": [
+    {
+     "amount_html": "немного",
+     "name_html": "Зелень зелёного лука или мицуба"
+    },
+    {
+     "amount_html": "по желанию",
+     "name_html": "Сититогараси"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 45,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Если рис уже готов, первую полосу пропустите — выйдет около 35 минут, большая часть из них — курица маринуется.",
+  "tasks": [
+   {
+    "dur": 45,
+    "dur_label": "45 мин",
+    "kind": "wait",
+    "label": "Сварить рис (первым делом; или разогреть)",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Нарезать курицу, смешать маринад",
+    "start": 10
+   },
+   {
+    "dur": 21,
+    "dur_label": "21 мин",
+    "kind": "wait",
+    "label": "Курица маринуется",
+    "start": 15
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Нарезать лук и имбирь",
+    "start": 20
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Взбить яйца",
+    "start": 25
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Имбирь, лук + соль",
+    "start": 27
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "wait",
+    "label": "Сковорода остывает",
+    "start": 30
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "pan",
+    "label": "Курица + маринад, под крышкой",
+    "start": 36
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Влить ⅔ яйца, накрыть",
+    "start": 42
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Влить ⅓ яйца, выключить огонь, подождать",
+    "start": 43
+   },
+   {
+    "dur": 0.8,
+    "dur_label": "48 с",
+    "kind": "bowl",
+    "label": "Выложить на рис, посыпать зеленью",
+    "start": 44
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 35,
+    "label": "35"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 45,
+    "label": "45"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Оякодон",
+ "total": "~35 мин (+ рис)",
+ "vinegar_options": null,
+ "yields": "1 миска"
+}

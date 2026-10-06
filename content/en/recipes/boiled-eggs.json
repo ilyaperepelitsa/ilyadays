@@ -1,0 +1,247 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Eggs into cold water, bring it to a boil, heat off, timer on: 6–8 minutes soft, 9+ hard.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "as many as you like"
+  },
+  {
+   "kind": "time",
+   "text": "~15–20 min"
+  }
+ ],
+ "description": "Eggs into cold water, bring it to a boil, heat off, timer on: 6–8 minutes soft, 9+ hard.",
+ "equipment_html": [
+  "Small sauce pot — a thin-walled one responds faster",
+  "Timer"
+ ],
+ "group": {
+  "id": "from-friends-prdp-net",
+  "name": "From friends (prdp.net)"
+ },
+ "hero": {
+  "alt": "Boiled eggs",
+  "image": "illustrations/boiled-eggs/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "as many as you need",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "enough to submerge the eggs",
+     "name_html": "Water"
+    }
+   ],
+   "name": "Eggs"
+  }
+ ],
+ "intro_html": "The eggs finish cooking in hot water after the burner goes off, which makes the timing easy to repeat. A thin-walled pot reacts faster to the heat, so it’s the easier one to use.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/boiled-eggs/mise1.webp",
+   "items": [
+    "straight from the fridge"
+   ],
+   "items_html": "straight from the fridge",
+   "name": "Eggs",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "More from friends (prdp.net):",
+ "next": {
+  "slug": "coconut-chickpeas",
+  "title": "Shivam’s coconut chickpeas"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>From Dawn’s recipe on <a href=\"https://prdp.net/recipe-folder/boiled-eggs\">prdp.net</a>, rewritten here.</li><li>These go into the <a href=\"baka-with-eggs.html\">baka with eggs</a>.</li></ul>",
+   "title_html": "Credit"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "baka-with-eggs",
+  "title": "Baka with eggs"
+ },
+ "share_image": "share/boiled-eggs.jpg",
+ "siblings": [
+  {
+   "slug": "baka-with-eggs",
+   "title": "Baka with eggs"
+  },
+  {
+   "slug": "coconut-chickpeas",
+   "title": "Shivam’s coconut chickpeas"
+  },
+  {
+   "slug": "vegan-crunch-wrap-supreme",
+   "title": "Vegan crunch wrap supreme"
+  }
+ ],
+ "slug": "boiled-eggs",
+ "sources": [
+  {
+   "label": "prdp.net — boiled-eggs",
+   "url": "https://prdp.net/recipe-folder/boiled-eggs"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Fill the pot with water deep enough to cover the eggs.</li><li>Lower the eggs in.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Eggs into water",
+    "how": [
+     {
+      "caption": "Put the eggs into the water.",
+      "src": "illustrations/boiled-eggs/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/boiled-eggs/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "title": "Eggs into water",
+   "uses_rows": [
+    {
+     "amount_html": "as many as you need",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "enough to submerge the eggs",
+     "name_html": "Water"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Heat until the water boils.</p>",
+   "heat": {
+    "label": "high",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Bring to a boil",
+    "how": [],
+    "illustration": "illustrations/boiled-eggs/2.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~8 min",
+   "title": "Bring to a boil",
+   "uses_rows": []
+  },
+  {
+   "body_html": "As soon as it boils, switch the burner off and set the timer:<table class=\"mini\"><thead><tr><th>Time</th><th>Result</th></tr></thead><tbody><tr><td>6–8 min</td><td>soft boiled (soft yolks)</td></tr><tr><td>9+ min</td><td>hard boiled (hard yolks)</td></tr></tbody></table>",
+   "heat": {
+    "label": "heat off",
+    "off": true
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Heat off, start the timer",
+    "how": [
+     {
+      "caption": "As soon as it boils: heat off, timer on.",
+      "src": "illustrations/boiled-eggs/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/boiled-eggs/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "6–9+ min",
+   "title": "Heat off, start the timer",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 20,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Eggs + water in the pot",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "pan",
+    "label": "Bring to a boil",
+    "start": 2
+   },
+   {
+    "dur": 9,
+    "dur_label": "9 min",
+    "kind": "wait",
+    "label": "Heat off, timer (6–9+ min)",
+    "start": 10
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Boiled eggs",
+ "total": "~15–20 min",
+ "vinegar_options": null,
+ "yields": "as many as you like"
+}

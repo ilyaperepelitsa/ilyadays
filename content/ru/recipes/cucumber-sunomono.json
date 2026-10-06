@@ -1,0 +1,552 @@
+{
+ "before_ingredients_html": "<fieldset class=\"picker\" data-vinegar-picker><legend>Какой у вас уксус?</legend><label><input type=\"radio\" name=\"vinegar\" value=\"rice\" checked> Рисовый уксус (~4,5%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"kr7\"> Корейский сброженный уксус 양조식초 (~7%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"v9\"> Столовый уксус 9%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v6\"> Уксус 6%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v5\"> Белый / дистиллированный уксус 5%</label></fieldset>",
+ "blurb_html": "Посоленный, промытый и отжатый огурец с имбирём и чесноком в маринаде из уксуса, мирина и сахара.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "2 порции закуски"
+  },
+  {
+   "kind": "time",
+   "text": "~20 мин + маринование"
+  }
+ ],
+ "description": "Посоленный, промытый и отжатый огурец с имбирём и чесноком в маринаде из уксуса, мирина и сахара.",
+ "equipment_html": [],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Японская база"
+ },
+ "hero": {
+  "alt": "Японские маринованные огурцы (суномоно)",
+  "image": "illustrations/cucumber-sunomono/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "250 г (1 обычный или 2–3 маленьких японских / персидских)",
+     "name_html": "Огурец"
+    },
+    {
+     "amount_html": "½ ч. л.",
+     "name_html": "Мелкая соль, чтобы вытянуть воду"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Имбирь, натёртый"
+    },
+    {
+     "amount_html": "1 небольшой зубчик",
+     "name_html": "Чеснок, натёртый"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Рисовый уксус (первая порция)"
+    }
+   ],
+   "name": "Первая заправка"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span data-v=\"amount\">2 ст. л. (30 мл)</span>",
+     "name_html": "<span data-v=\"name\">Рисовый уксус</span>"
+    },
+    {
+     "amount_html": "<span data-v=\"water\">—</span>",
+     "name_html": "<span data-v-row=\"water\">Вода</span>"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "<span data-v=\"sugar\">2 ч. л.</span>",
+     "name_html": "Сахар"
+    }
+   ],
+   "name": "Маринад"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "½–1 ч. л.",
+     "name_html": "Светлый соевый соус (усукути)"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Обжаренный кунжут"
+    }
+   ],
+   "name": "В конце"
+  }
+ ],
+ "intro_html": "Хрустящие, кисло-сладкие. Соль вытягивает воду; промывка убирает соль обратно, чтобы вкус задавал маринад. Сначала имбирь, чеснок и немного рисового уксуса, потом маринад из уксуса, мирина и сахара, а светлый соевый соус и кунжут — в самом конце. Нет рисового уксуса для маринада? Выберите свой уксус ниже — количества пересчитаются.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/cucumber-sunomono/mise1.webp",
+   "items": [
+    "нарезан, посолен, промыт, отжат"
+   ],
+   "items_html": "нарезан, посолен, промыт, отжат",
+   "name": "Огурец",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/cucumber-sunomono/mise2.webp",
+   "items": [
+    "натёрты, + рисовый уксус"
+   ],
+   "items_html": "натёрты, + рисовый уксус",
+   "name": "Имбирь + чеснок",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/cucumber-sunomono/mise3.webp",
+   "items": [
+    "уксус",
+    "мирин",
+    "сахар"
+   ],
+   "items_html": "уксус · мирин · сахар",
+   "name": "Маринад",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/cucumber-sunomono/mise4.webp",
+   "items": [
+    "светлая соя",
+    "кунжут"
+   ],
+   "items_html": "светлая соя · кунжут",
+   "name": "Финиш",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Японская база:",
+ "next": {
+  "slug": "radish-pickle",
+  "title": "Маринованный редис"
+ },
+ "notes": [
+  {
+   "html": "<table class=\"mini\"><thead><tr><th>Что есть</th><th>Уксус</th><th>+ Вода</th><th>Сахар</th></tr></thead><tbody><tr><td>Рисовый уксус (~4,5%)</td><td>2 ст. л. (30 мл)</td><td>—</td><td>2 ч. л.</td></tr><tr><td>Корейский сброженный уксус 양조식초 (~7%)</td><td>1¼ ст. л. (19 мл)</td><td>2 ч. л. (11 мл)</td><td>2½ ч. л.</td></tr><tr><td>Столовый уксус 9%</td><td>1 ст. л. (15 мл)</td><td>1 ст. л. (15 мл)</td><td>2½ ч. л.</td></tr><tr><td>Уксус 6%</td><td>1½ ст. л. (22 мл)</td><td>1½ ч. л. (8 мл)</td><td>2½ ч. л.</td></tr><tr><td>Белый / дистиллированный уксус 5%</td><td>1¾ ст. л. (27 мл)</td><td>½ ч. л. (3 мл)</td><td>2½ ч. л.</td></tr></tbody></table>Подогнано под кислотность рисового уксуса (~4,5%) для маринада. Нерисовые уксусы резче и менее округлые, поэтому сахара больше — пробуйте и поправляйте.",
+   "title_html": "Пересчёт уксуса (вместо 2 ст. л. рисового уксуса в маринаде)"
+  },
+  {
+   "html": "<ul class=\"do\"><li><b>양조식초</b> (сброженный уксус, ~6–7%) — это тот, что в строке «7%».</li><li><b>2배식초 / 3배식초</b> — двойной / тройной крепости: берите половину / треть от количества для 7% и доливайте остальное водой.</li><li><b>빙초산</b> — ледяная уксусная кислота (~99%): никогда не используйте её как есть.</li></ul>",
+   "title_html": "Как читать этикетки корейского уксуса"
+  },
+  {
+   "html": "<ul class=\"do\"><li>В нём уже есть сахар и соль.</li><li>Берите 2 ст. л. прямо в маринад, мирин оставьте, сахар не добавляйте.</li></ul>",
+   "title_html": "Приправленный рисовый уксус (для суши)?"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Усукути (светлый) соевый соус солонее, но светлее обычного — он солит, не затемняя огурец.</li><li>Обычный тоже подойдёт; возьмите чуть меньше.</li></ul>",
+   "title_html": "Светлая соя"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Пикль с замачиванием — см.</li><li><a href=\"radish-pickle.html\">маринованный редис</a>.</li></ul>",
+   "title_html": "И редис"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "furikake",
+  "title": "Фурикакэ"
+ },
+ "share_image": "share/cucumber-sunomono.jpg",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Даси из шиитаке и комбу"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Даси из нибоси и бонито"
+  },
+  {
+   "slug": "furikake",
+   "title": "Фурикакэ"
+  },
+  {
+   "slug": "radish-pickle",
+   "title": "Маринованный редис"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Тамагояки"
+  }
+ ],
+ "slug": "cucumber-sunomono",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Нарежьте огурец толщиной около <b>2 мм</b> (с мандолиной это быстро).</li><li>Можно сначала снять несколько полосок кожуры — красиво, но не обязательно.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Тонко нарезать",
+    "how": [
+     {
+      "caption": "Нарежьте тонко, около 2 мм, — кончики пальцев подогнуты.",
+      "src": "illustrations/cucumber-sunomono/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/cucumber-sunomono/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Тонко нарезать",
+   "uses_rows": [
+    {
+     "amount_html": "250 г",
+     "name_html": "Огурец"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Перемешайте с ½ ч. л. соли и оставьте на 10 минут, чтобы вытянуть воду.</p>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Посолить и оставить",
+    "how": [
+     {
+      "caption": "Перемешайте с солью и оставьте на 10 минут.",
+      "src": "illustrations/cucumber-sunomono/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/cucumber-sunomono/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "10 мин",
+   "title": "Посолить и оставить",
+   "uses_rows": [
+    {
+     "amount_html": "½ ч. л.",
+     "name_html": "Мелкая соль, чтобы вытянуть воду"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Смойте соль холодной водой, затем <b>крепко отожмите</b> горстями — так огурцы остаются хрустящими и не разбавляют маринад.</p>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Промыть и отжать",
+    "how": [
+     {
+      "caption": "Промойте, затем крепко отожмите горстями.",
+      "src": "illustrations/cucumber-sunomono/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/cucumber-sunomono/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "title": "Промыть и отжать",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Добавьте натёртые имбирь и чеснок и 1 ст. л. рисового уксуса. Перемешайте.</p>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Имбирь, чеснок, рисовый уксус",
+    "how": [
+     {
+      "caption": "Мелко натрите имбирь и чеснок прямо на огурцы.",
+      "src": "illustrations/cucumber-sunomono/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/cucumber-sunomono/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "title": "Имбирь, чеснок, рисовый уксус",
+   "uses_rows": [
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Имбирь, натёртый"
+    },
+    {
+     "amount_html": "1 небольшой зубчик",
+     "name_html": "Чеснок, натёртый"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Рисовый уксус (первая порция)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Размешайте, пока сахар не растворится:<ul class=\"ing\"><li><span data-v=\"name_lc\">рисовый уксус</span><span data-v-show=\"water\"> + вода</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>сахар <span class=\"amt\"><span data-v=\"sugar\">2 ч. л.</span></span></li></ul></li><li>Залейте огурцы и перемешайте.</li><li>По желанию: сначала прогрейте мирин с сахаром в микроволновке 20–30 секунд, чтобы растворить сахар и выпарить спирт из мирина; остудите перед тем, как добавлять.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Маринад",
+    "how": [
+     {
+      "caption": "Размешайте, пока сахар не растворится, затем залейте и перемешайте.",
+      "src": "illustrations/cucumber-sunomono/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/cucumber-sunomono/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "title": "Маринад",
+   "uses_rows": [
+    {
+     "amount_html": "<span data-v=\"amount\">2 ст. л. (30 мл)</span>",
+     "name_html": "<span data-v=\"name\">Рисовый уксус</span>"
+    },
+    {
+     "amount_html": "<span data-v=\"water\">—</span>",
+     "name_html": "<span data-v-row=\"water\">Вода</span>"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Охладите от <b>10 минут</b> (самые хрустящие) до <b>1 часа</b>.</li><li><b>Светлый соевый соус и кунжут</b> добавьте в конце, прямо перед подачей.</li><li>Хранится 2–3 дня в холодильнике, постепенно размягчаясь.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Настоять, потом соя и кунжут",
+    "how": [
+     {
+      "caption": "Прямо перед подачей: немного светлого соевого соуса и кунжут.",
+      "src": "illustrations/cucumber-sunomono/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/cucumber-sunomono/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "10 мин – 1 ч",
+   "title": "Настоять, потом соя и кунжут",
+   "uses_rows": [
+    {
+     "amount_html": "½–1 ч. л.",
+     "name_html": "Светлый соевый соус (усукути)"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Обжаренный кунжут"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 40,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": "Маринуйте от 10 минут (самые хрустящие) до часа.",
+  "tasks": [
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Нарезать огурец",
+    "start": 0
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "wait",
+    "label": "Посолить и оставить",
+    "start": 3
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "bowl",
+    "label": "Натереть имбирь + чеснок, смешать маринад",
+    "start": 5
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Промыть, отжать",
+    "start": 13
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Имбирь, чеснок, рисовый уксус",
+    "start": 15
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Залить маринадом",
+    "start": 16
+   },
+   {
+    "dur": 20,
+    "dur_label": "20 мин",
+    "kind": "wait",
+    "label": "Мариновать в холодильнике",
+    "start": 17
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Светлая соя + кунжут",
+    "start": 37
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 35,
+    "label": "35"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Японские маринованные огурцы (суномоно)",
+ "total": "~20 мин + маринование",
+ "vinegar_options": {
+  "kr7": {
+   "amount": "1¼ ст. л. (19 мл)",
+   "label": "Корейский сброженный уксус 양조식초 (~7%)",
+   "name": "Корейский сброженный уксус (~7%)",
+   "name_lc": "корейский сброженный уксус",
+   "sugar": "2½ ч. л.",
+   "water": "2 ч. л. (11 мл)"
+  },
+  "rice": {
+   "amount": "2 ст. л. (30 мл)",
+   "label": "Рисовый уксус (~4,5%)",
+   "name": "Рисовый уксус",
+   "name_lc": "рисовый уксус",
+   "sugar": "2 ч. л.",
+   "water": ""
+  },
+  "v5": {
+   "amount": "1¾ ст. л. (27 мл)",
+   "label": "Белый / дистиллированный уксус 5%",
+   "name": "Белый уксус (5%)",
+   "name_lc": "белый уксус",
+   "sugar": "2½ ч. л.",
+   "water": "½ ч. л. (3 мл)"
+  },
+  "v6": {
+   "amount": "1½ ст. л. (22 мл)",
+   "label": "Уксус 6%",
+   "name": "Уксус (6%)",
+   "name_lc": "6-процентный уксус",
+   "sugar": "2½ ч. л.",
+   "water": "1½ ч. л. (8 мл)"
+  },
+  "v9": {
+   "amount": "1 ст. л. (15 мл)",
+   "label": "Столовый уксус 9%",
+   "name": "Столовый уксус (9%)",
+   "name_lc": "9-процентный уксус",
+   "sugar": "2½ ч. л.",
+   "water": "1 ст. л. (15 мл)"
+  }
+ },
+ "yields": "2 порции закуски"
+}

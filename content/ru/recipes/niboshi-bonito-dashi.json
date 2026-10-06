@@ -1,0 +1,420 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Золотистое, насыщенное рыбное даси: почищенные сушёные анчоусы томятся, а хлопья бонито завариваются в конце.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "1 литр"
+  },
+  {
+   "kind": "time",
+   "text": "~1 ч (с замачиванием 30 мин)"
+  }
+ ],
+ "description": "Золотистое, насыщенное рыбное даси: почищенные сушёные анчоусы томятся, а хлопья бонито завариваются в конце.",
+ "equipment_html": [
+  "Кастрюля",
+  "Мелкое сито (или выстеленное бумажным полотенцем)",
+  "Ложка или половник для пены"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Японская база"
+ },
+ "hero": {
+  "alt": "Даси из нибоси и бонито",
+  "image": "illustrations/niboshi-bonito-dashi/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "1 л",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "20 г (около 15–20 рыбок)",
+     "name_html": "Нибоси (крупные сушёные анчоусы)"
+    },
+    {
+     "amount_html": "15–20 г — см. примечание",
+     "name_html": "Кацуобуси (хлопья бонито)"
+    },
+    {
+     "amount_html": "5–10 г, по желанию",
+     "name_html": "Комбу"
+    }
+   ],
+   "name": "Даси"
+  }
+ ],
+ "intro_html": "Готовится из <b>крупных нибоси</b> (сушёных анчоусов), а не из крошечных мальков — без голов и внутренностей, чтобы даси оставался сладковатым, а не горьким. <b>Кацуобуси</b> (хлопья бонито), заваренные в конце, скругляют вкус. Это даси для <a href=\"oyakodon.html\">оякодона</a> и <a href=\"tamagoyaki.html\">тамагояки</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/niboshi-bonito-dashi/mise1.webp",
+   "items": [
+    "без голов и внутренностей"
+   ],
+   "items_html": "без голов и внутренностей",
+   "name": "Нибоси",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/niboshi-bonito-dashi/mise2.webp",
+   "items": [
+    "по желанию"
+   ],
+   "items_html": "по желанию",
+   "name": "Комбу",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/niboshi-bonito-dashi/mise3.webp",
+   "items": [
+    "большая горсть"
+   ],
+   "items_html": "большая горсть",
+   "name": "Кацуобуси",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Японская база:",
+ "next": {
+  "slug": "furikake",
+  "title": "Фурикакэ"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Вы не были уверены, клали ли бонито.</li><li>Нибоси плюс кацуобуси — стандартное сочетание; для чистого даси из нибоси пропустите шаг 5 — выйдет легче и с более выраженным анчоусом.</li></ul>",
+   "title_html": "С бонито или без?"
+  },
+  {
+   "html": "<p>20 г нибоси и 15–20 г кацуобуси на литр — отправная точка, а не ваши проверенные количества.</p>",
+   "title_html": "Количества"
+  },
+  {
+   "html": "<p>В холодильнике 3–4 дня или заморозить в формочках для льда.</p>",
+   "title_html": "Хранение"
+  },
+  {
+   "html": "<p>См. <a href=\"shiitake-kombu-dashi.html\">даси из шиитаке и комбу</a>.</p>",
+   "title_html": "Веганское даси"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "shiitake-kombu-dashi",
+  "title": "Даси из шиитаке и комбу"
+ },
+ "share_image": "share/niboshi-bonito-dashi.jpg",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Даси из шиитаке и комбу"
+  },
+  {
+   "slug": "furikake",
+   "title": "Фурикакэ"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Японские маринованные огурцы (суномоно)"
+  },
+  {
+   "slug": "radish-pickle",
+   "title": "Маринованный редис"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Тамагояки"
+  }
+ ],
+ "slug": "niboshi-bonito-dashi",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Отломите каждой рыбке голову, вскройте брюшко ногтем и вытащите тёмные внутренности.</li><li>И то, и другое делает даси горьким.</li><li>Мелкие нибоси можно класть целиком; для крупных этот шаг важен.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Почистить нибоси",
+    "how": [
+     {
+      "caption": "Отломите каждой рыбке голову.",
+      "src": "illustrations/niboshi-bonito-dashi/1-how1.webp"
+     },
+     {
+      "caption": "Вскройте брюшко ногтем и вытащите тёмные внутренности — от них даси горчит.",
+      "src": "illustrations/niboshi-bonito-dashi/1-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/niboshi-bonito-dashi/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~8 мин",
+   "title": "Почистить нибоси",
+   "uses_rows": [
+    {
+     "amount_html": "20 г",
+     "name_html": "Нибоси (крупные сушёные анчоусы)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Положите почищенные нибоси (и комбу, если используете) в кастрюлю с 1 литром холодной воды.</li><li>Замочите минимум на 30 минут или на ночь в холодильнике.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Замочить",
+    "how": [],
+    "illustration": "illustrations/niboshi-bonito-dashi/2.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "30 мин+",
+   "title": "Замочить",
+   "uses_rows": [
+    {
+     "amount_html": "1 л",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "5–10 г",
+     "name_html": "Комбу"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Медленно нагревайте на огне ниже среднего.</li><li>Если клали комбу, выньте его, как только появятся мелкие пузырьки, — до кипения.</li></ul>",
+   "heat": {
+    "label": "ниже среднего",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Медленно нагреть, вынуть комбу",
+    "how": [
+     {
+      "caption": "Когда появятся мелкие пузырьки, выньте комбу — до кипения.",
+      "src": "illustrations/niboshi-bonito-dashi/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/niboshi-bonito-dashi/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~10 мин",
+   "title": "Медленно нагреть, вынуть комбу",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Дайте нибоси тихо покипеть 5–10 минут, снимая пену.</p>",
+   "heat": {
+    "label": "слабый",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Томить и снимать пену",
+    "how": [
+     {
+      "caption": "Снимайте пену, пока томится.",
+      "src": "illustrations/niboshi-bonito-dashi/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/niboshi-bonito-dashi/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "5–10 мин",
+   "title": "Томить и снимать пену",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Выключите огонь, всыпьте кацуобуси и оставьте примерно на 2 минуты, пока хлопья не опустятся на дно.</p>",
+   "heat": {
+    "label": "огонь выключен",
+    "off": true
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Заварить бонито",
+    "how": [],
+    "illustration": "illustrations/niboshi-bonito-dashi/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "title": "Заварить бонито",
+   "uses_rows": [
+    {
+     "amount_html": "15–20 г — см. примечание",
+     "name_html": "Кацуобуси (хлопья бонито)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Процедите через мелкое сито.</li><li><b>Не отжимайте хлопья</b>: от этого даси мутнеет и пахнет рыбой.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Процедить — не отжимать",
+    "how": [
+     {
+      "caption": "Процедите через выстеленное сито и дайте стечь — не отжимайте хлопья.",
+      "src": "illustrations/niboshi-bonito-dashi/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/niboshi-bonito-dashi/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "title": "Процедить — не отжимать",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 70,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": "Если замочить на ночь в холодильнике вместо 30 минут, даси получится круглее.",
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "board",
+    "label": "Почистить нибоси",
+    "start": 0
+   },
+   {
+    "dur": 30,
+    "dur_label": "30 мин",
+    "kind": "wait",
+    "label": "Замочить в холодной воде",
+    "start": 8
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "pan",
+    "label": "Медленный нагрев; вынуть комбу",
+    "start": 38
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "pan",
+    "label": "Томить, снимать пену",
+    "start": 48
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "wait",
+    "label": "Огонь выкл.: заварить бонито",
+    "start": 56
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Процедить",
+    "start": 58
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Даси из нибоси и бонито",
+ "total": "~1 ч (с замачиванием 30 мин)",
+ "vinegar_options": null,
+ "yields": "1 литр"
+}

@@ -1,0 +1,673 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Маринованное бедро, корочка из тапиоки с крошкой, сделанной вилкой, двойная обжарка при 180 °C.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "2 порции (500 г бёдер)"
+  },
+  {
+   "kind": "time",
+   "text": "~1 ч, включая 30 мин маринования"
+  }
+ ],
+ "description": "Маринованное бедро, корочка из тапиоки с крошкой, сделанной вилкой, двойная обжарка при 180 °C.",
+ "equipment_html": [
+  "Острая вилка или шпажка",
+  "Толстостенная кастрюля для фритюра + термометр",
+  "Разделочная доска для крахмала",
+  "Решётка над подносом",
+  "Шумовка или паук"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Караагэ",
+  "image": "illustrations/karaage/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "500 г, кусками 4–5 см",
+     "name_html": "Куриные бёдра без кости, с кожей"
+    }
+   ],
+   "name": "Курица"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "2 ст. л.",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Устричный соус"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Коричневый сахар"
+    },
+    {
+     "amount_html": "10 г (2 ч. л.)",
+     "name_html": "Имбирь, натёртый"
+    },
+    {
+     "amount_html": "2 зубчика",
+     "name_html": "Чеснок, натёртый"
+    },
+    {
+     "amount_html": "¼ ч. л.",
+     "name_html": "Молотый перец"
+    }
+   ],
+   "name": "Маринад"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Мука (в курицу)"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Тапиоковый крахмал (в курицу)"
+    },
+    {
+     "amount_html": "~80 г",
+     "name_html": "Тапиоковый крахмал (на доску)"
+    },
+    {
+     "amount_html": "1–2 ч. л.",
+     "name_html": "Вода или остаток маринада (для крошки)"
+    }
+   ],
+   "name": "Панировка"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "слоем 3–4 см",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "дольками",
+     "name_html": "Лимон"
+    },
+    {
+     "amount_html": "для макания",
+     "name_html": "Японский майонез"
+    }
+   ],
+   "name": "Для жарки и подачи"
+  }
+ ],
+ "intro_html": "Японская жареная курица. Наколотые бёдра впитывают маринад из сои, саке и мирина; тапиоковый крахмал (а не мука) с мелкой крошкой, сделанной вилкой, даёт бугристый хруст; а <b>двойная обжарка</b> — сначала светлая, отдых, потом тёмная — делает корочку хрустящей, не пересушивая мясо.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/karaage/mise1.webp",
+   "items": [
+    "наколота, кусками"
+   ],
+   "items_html": "наколота, кусками",
+   "name": "Курица",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/karaage/mise2.webp",
+   "items": [
+    "соя",
+    "саке",
+    "мирин",
+    "устричный",
+    "сахар",
+    "имбирь",
+    "чеснок",
+    "перец"
+   ],
+   "items_html": "соя · саке · мирин · устричный · сахар · имбирь · чеснок · перец",
+   "name": "Маринад",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/karaage/mise3.webp",
+   "items": [
+    "по 1 ст. л."
+   ],
+   "items_html": "по 1 ст. л.",
+   "name": "Мука + тапиока",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/karaage/mise4.webp",
+   "items": [
+    "тапиока + крошка вилкой"
+   ],
+   "items_html": "тапиока + крошка вилкой",
+   "name": "Доска с крахмалом",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/karaage/mise5.webp",
+   "items": [
+    "для отдыха и стекания"
+   ],
+   "items_html": "для отдыха и стекания",
+   "name": "Решётка",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 10",
+   "image": "illustrations/karaage/mise6.webp",
+   "items": [
+    "лимон",
+    "майонез"
+   ],
+   "items_html": "лимон · майонез",
+   "name": "Для подачи",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "japanese-curry",
+  "title": "Японское карри с нуля"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>В ваших заметках упоминаются круглые штучки, заранее сделанные вилкой.</li><li>Здесь это понято так: часть крахмала смачивается и растирается вилкой в мелкую крошку, которая прилипает к курице и обжаривается в особо хрустящие бугорки.</li><li>Поправьте, если делали иначе.</li></ul>",
+   "title_html": "«Круглые штучки»"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Вы указали продукты, но не количества — это отправная точка.</li><li>Попробуйте маринад: он должен быть солёно-сладким и с ярким имбирём.</li></ul>",
+   "title_html": "Количества"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Курица безопасна при <b>74 °C</b> в центре.</li><li>Отдых между обжарками доводит середину; если сомневаетесь, разрежьте самый большой кусок после второй обжарки.</li></ul>",
+   "title_html": "Готова ли курица?"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Не заполняйте кастрюлю больше чем наполовину, держите рядом крышку, стряхивайте с кусков лишний маринад и никогда не лейте воду на горящее масло.</li><li>Дайте маслу полностью остыть, прежде чем процеживать или выбрасывать.</li></ul>",
+   "title_html": "Безопасность с маслом"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "napa-shiitake-egg-bowl",
+  "title": "Миска с пекинской капустой, шиитаке и яйцом"
+ },
+ "share_image": "share/karaage.jpg",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "karaage",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Нарежьте бёдра без кости кусками 4–5 см.</li><li><b>Наколите их повсюду</b> острой вилкой или шпажкой — с обеих сторон, — чтобы маринад проник внутрь.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Нарезать и наколоть",
+    "how": [
+     {
+      "caption": "Наколите каждый кусок острой вилкой повсюду — с обеих сторон, — чтобы маринад проник внутрь.",
+      "src": "illustrations/karaage/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~8 мин",
+   "title": "Нарезать и наколоть",
+   "uses_rows": [
+    {
+     "amount_html": "500 г",
+     "name_html": "Куриные бёдра без кости, с кожей"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Смешайте маринад:<ul class=\"ing two-col\"><li>имбирь, натёртый <span class=\"amt\">10 г (2 ч. л.)</span></li><li>чеснок, натёртый <span class=\"amt\">2 зубчика</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>соевый соус <span class=\"amt\">2 ст. л.</span></li><li>саке <span class=\"amt\">1 ст. л.</span></li><li>молотый перец <span class=\"amt\">¼ ч. л.</span></li><li>устричный соус <span class=\"amt\">1 ч. л.</span></li><li>коричневый сахар <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Перемешайте в нём курицу и маринуйте в холодильнике.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Замариновать",
+    "how": [
+     {
+      "caption": "Смешайте маринад, затем перемешайте в нём курицу.",
+      "src": "illustrations/karaage/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "от 30 мин до ночи",
+   "title": "Замариновать",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Слейте и выбросьте лишний маринад.</li><li>Вмешайте в курицу <b>1 ст. л. муки и 1 ст. л. тапиокового крахмала</b>, пока каждый кусок не покроется липкой плёнкой.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Слить, затем мука + крахмал",
+    "how": [
+     {
+      "caption": "Наклоните миску и слейте лишний маринад, придерживая курицу.",
+      "src": "illustrations/karaage/3-how1.webp"
+     },
+     {
+      "caption": "Вмешайте 1 ст. л. муки и 1 ст. л. тапиокового крахмала, пока каждый кусок не станет липким.",
+      "src": "illustrations/karaage/3-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Слить, затем мука + крахмал",
+   "uses_rows": [
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Мука (в курицу)"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Тапиоковый крахмал (в курицу)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Рассыпьте тапиоковый крахмал по разделочной доске.</li><li>Сделайте круглые комочки: сбрызните часть крахмала чайной ложкой-двумя воды (или остатком маринада) и вилкой разотрите в мелкую крошку и комочки.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Доска с крахмалом и крошка",
+    "how": [
+     {
+      "caption": "Сбрызните часть крахмала водой и разотрите вилкой в мелкую крошку.",
+      "src": "illustrations/karaage/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Доска с крахмалом и крошка",
+   "uses_rows": [
+    {
+     "amount_html": "~80 г",
+     "name_html": "Тапиоковый крахмал (на доску)"
+    },
+    {
+     "amount_html": "1–2 ч. л.",
+     "name_html": "Вода или остаток маринада (для крошки)"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Разогрейте слой масла 3–4 см в толстостенной кастрюле до <b>180 °C</b>.</p>",
+   "heat": {
+    "label": "выше среднего",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Разогрейте масло",
+    "how": [],
+    "illustration": "illustrations/karaage/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~10 мин",
+   "title": "Разогрейте масло",
+   "uses_rows": [
+    {
+     "amount_html": "слоем 3–4 см",
+     "name_html": "Нейтральное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Пока масло греется, обваляйте каждый кусок в крахмале и крошке на доске, прижимая, чтобы комочки прилипли.</p>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Обвалять в крахмале",
+    "how": [
+     {
+      "caption": "Обваляйте каждый кусок в крахмале и прижмите к крошке, чтобы она прилипла.",
+      "src": "illustrations/karaage/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~4 мин",
+   "title": "Обвалять в крахмале",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Опустите партию, не перегружая кастрюлю.</li><li>Жарьте пару минут до <b>светло-жёлтого / светло-оранжевого</b> цвета.</li></ul>",
+   "heat": {
+    "label": "масло 180 °C",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Первая обжарка — светлая",
+    "how": [
+     {
+      "caption": "Опускайте куски по одному, от себя, — не перегружайте кастрюлю.",
+      "src": "illustrations/karaage/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~2–3 мин",
+   "title": "Первая обжарка — светлая",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Переложите на решётку на несколько минут.</li><li>Жар внутри продолжает готовить курицу, а масло тем временем снова набирает температуру.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Отдых",
+    "how": [
+     {
+      "caption": "Выньте их пауком на решётку и дайте отдохнуть.",
+      "src": "illustrations/karaage/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/karaage/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 мин",
+   "title": "Отдых",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Обратно в масло, пока не станет <b>насыщенно-золотистой и хрустящей</b>.</li><li>Дайте стечь на решётке.</li></ul>",
+   "heat": {
+    "label": "масло 180 °C",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Вторая обжарка — тёмная и хрустящая",
+    "how": [],
+    "illustration": "illustrations/karaage/9.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "title": "Вторая обжарка — тёмная и хрустящая",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Подавайте горячей с дольками лимона и японским майонезом.</p>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Подача",
+    "how": [],
+    "illustration": "illustrations/karaage/10.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Подача",
+   "uses_rows": [
+    {
+     "amount_html": "дольками",
+     "name_html": "Лимон"
+    },
+    {
+     "amount_html": "для макания",
+     "name_html": "Японский майонез"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 60,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Показана одна партия. Жарьте партиями, не перегружая кастрюлю: пока одна отдыхает, следующая проходит первую обжарку. Между партиями возвращайте масло к 180 °C.",
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "board",
+    "label": "Нарезать и наколоть бёдра",
+    "start": 0
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Смешать маринад, перемешать курицу",
+    "start": 8
+   },
+   {
+    "dur": 30,
+    "dur_label": "30 мин",
+    "kind": "wait",
+    "label": "Маринование (холодильник)",
+    "start": 11
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Доска с крахмалом + крошка",
+    "start": 30
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "pan",
+    "label": "Масло до 180 °C",
+    "start": 38
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Слить маринад, мука + крахмал",
+    "start": 41
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "board",
+    "label": "Обвалять куски в крахмале",
+    "start": 44
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Первая обжарка — светлая",
+    "start": 48
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "wait",
+    "label": "Отдых на решётке",
+    "start": 51
+   },
+   {
+    "dur": 1.5,
+    "dur_label": "1.5 мин",
+    "kind": "pan",
+    "label": "Вторая обжарка — тёмная, хрустящая",
+    "start": 55
+   },
+   {
+    "dur": 1.5,
+    "dur_label": "1.5 мин",
+    "kind": "bowl",
+    "label": "Дать стечь, на тарелку",
+    "start": 56.5
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Караагэ",
+ "total": "~1 ч, включая 30 мин маринования",
+ "vinegar_options": null,
+ "yields": "2 порции (500 г бёдер)"
+}

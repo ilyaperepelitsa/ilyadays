@@ -1,0 +1,493 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Лапша Momofuku с холодным соусом, только мягче: вдвое меньше имбиря, больше лука и горячее масло, чтобы снять жгучесть.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "4 миски (около 1½ стакана соуса)"
+  },
+  {
+   "kind": "time",
+   "text": "~30 мин"
+  }
+ ],
+ "description": "Лапша Momofuku с холодным соусом, только мягче: вдвое меньше имбиря, больше лука и горячее масло, чтобы снять жгучесть.",
+ "equipment_html": [
+  "Шеф-нож и доска",
+  "Жаропрочная миска (больше, чем кажется, — масло вспенивается)",
+  "Маленький сотейник",
+  "Большая кастрюля",
+  "Шумовка-паук или дуршлаг"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Лапша с имбирём и зелёным луком (помягче)",
+  "image": "illustrations/ginger-scallion-noodles/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "3 стакана тонко нарезанного (около 2 пучков)",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "¼ стакана мелко нарубленного (кусок около 5 см)",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "½ стакана",
+     "name_html": "Нейтральное масло (виноградное)"
+    },
+    {
+     "amount_html": "2 ч. л.",
+     "name_html": "Светлый соевый соус (усукути)"
+    },
+    {
+     "amount_html": "¾ ч. л.",
+     "name_html": "Хересный уксус"
+    },
+    {
+     "amount_html": "1 ч. л.",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "½ ч. л.",
+     "name_html": "Кунжутное масло"
+    },
+    {
+     "amount_html": "½ ч. л., по вкусу",
+     "name_html": "Соль"
+    }
+   ],
+   "name": "Соус"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "4 порции (~520 г свежей)",
+     "name_html": "Лапша для рамена"
+    }
+   ],
+   "name": "Лапша"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "несколько ломтиков",
+     "name_html": "Маринованный огурец"
+    },
+    {
+     "amount_html": "1 лист, порвать",
+     "name_html": "Обжаренная нори"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Ещё нарезанного зелёного лука"
+    }
+   ],
+   "name": "Топпинги (по желанию — пара на выбор)"
+  }
+ ],
+ "intro_html": "Имбирно-луковый соус Momofuku — это просто зелёный лук, имбирь, масло и немного приправ, смешанные сырыми, — и имбиря у них столько, что он <b>жгучий и резкий</b>. Эта версия сохраняет идею, но мягче: <b>вдвое меньше имбиря</b>, чуть <b>больше лука и масла</b>, масло <b>льётся горячим</b>, чтобы смягчить сырой имбирь, а щепотка сахара и капля кунжутного масла скругляют вкус. Лучше всего с <a href=\"alkaline-ramen-noodles.html\">лапшой для рамена на запечённой соде</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/ginger-scallion-noodles/mise1.webp",
+   "items": [
+    "тонко нарезан"
+   ],
+   "items_html": "тонко нарезан",
+   "name": "Зелёный лук",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/ginger-scallion-noodles/mise2.webp",
+   "items": [
+    "мелко нарублен — ¼ стакана"
+   ],
+   "items_html": "мелко нарублен — ¼ стакана",
+   "name": "Имбирь",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/ginger-scallion-noodles/mise3.webp",
+   "items": [
+    "соя",
+    "уксус",
+    "сахар",
+    "кунжутное масло",
+    "соль"
+   ],
+   "items_html": "соя · уксус · сахар · кунжутное масло · соль",
+   "name": "Приправы",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/ginger-scallion-noodles/mise4.webp",
+   "items": [
+    "огурец",
+    "нори",
+    "зелёный лук"
+   ],
+   "items_html": "огурец · нори · зелёный лук",
+   "name": "Топпинги",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "kimchi",
+  "title": "Кимчи из пекинской капусты"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Оригинал Momofuku, смешанный сырым:<ul class=\"ing two-col\"><li>2½ стакана нарезанного зелёного лука</li><li>½ стакана нарубленного имбиря</li><li>⅓ стакана виноградного масла</li><li>1½ ч. л. усукути</li><li>¾ ч. л. хересного уксуса</li><li>¾ ч. л. кошерной соли</li></ul></li><li>Эта версия:<ul class=\"ing two-col\"><li>имбиря вдвое меньше — ¼ стакана, нарублен мельче</li><li>лука — до 3 стаканов</li><li>масла — до ½ стакана, льётся горячим</li><li>соевого соуса — до 2 ч. л., соли — до ½ ч. л.</li><li>добавлено: 1 ч. л. сахара и ½ ч. л. кунжутного масла</li></ul></li></ul>",
+   "title_html": "Оригинал и эта версия"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Сократите имбирь до 2 ст. л.</li><li>Бланшируйте нарубленный имбирь в кипятке 30 секунд и слейте воду, прежде чем заливать горячим маслом.</li><li>Дайте соусу постоять час перед использованием — он продолжает смягчаться.</li><li>Добавьте больше лука, а не приправ.</li></ul>",
+   "title_html": "Если всё ещё слишком остро"
+  },
+  {
+   "html": "<ul class=\"do\"><li>В Momofuku эту лапшу подают с быстрыми пиклями, обжаренной цветной капустой, ростками бамбука и нори.</li><li>В роли пикля хорошо подойдут <a href=\"cucumber-sunomono.html\">маринованные огурцы</a>.</li></ul>",
+   "title_html": "Топпинги"
+  },
+  {
+   "html": "<p>По мотивам лапши с имбирём и зелёным луком Momofuku (Дэвид Чанг и Питер Михан, <i>Momofuku</i>, 2009), мягче и своими словами.</p>",
+   "title_html": "По мотивам"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "alkaline-ramen-noodles",
+  "title": "Лапша для рамена на запечённой соде"
+ },
+ "share_image": "share/ginger-scallion-noodles.jpg",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  }
+ ],
+ "slug": "ginger-scallion-noodles",
+ "sources": [
+  {
+   "label": "Washington Post — ginger scallion sauce (from Momofuku)",
+   "url": "https://www.washingtonpost.com/recipes/ginger-scallion-sauce/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Белую и светло-зелёную части нарежьте <b>тонко</b> (немного тёмной зелени — не страшно) — около 3 стаканов.</li><li>Сложите в жаропрочную миску.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Нарежьте зелёный лук",
+    "how": [
+     {
+      "caption": "Тонко нарежьте лук — белую и светло-зелёную части.",
+      "src": "illustrations/ginger-scallion-noodles/1-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ginger-scallion-noodles/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Нарежьте зелёный лук",
+   "uses_rows": [
+    {
+     "amount_html": "3 стакана тонко нарезанного",
+     "name_html": "Зелёный лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Очистите краем ложки, тонко нарежьте, затем соломкой, а потом <b>мелко нарубите</b> — чем мельче, тем меньше жжёт.</li><li>Отмерьте <b>¼ стакана</b>, не больше, и добавьте к луку.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Нарубите имбирь — меньше, чем кажется",
+    "how": [
+     {
+      "caption": "Мелко нарубите имбирь — и берите только ¼ стакана.",
+      "src": "illustrations/ginger-scallion-noodles/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ginger-scallion-noodles/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Нарубите имбирь — меньше, чем кажется",
+   "uses_rows": [
+    {
+     "amount_html": "¼ стакана мелко нарубленного",
+     "name_html": "Свежий имбирь"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Нагрейте масло в маленьком сотейнике, пока оно не <b>задрожит</b> (около 170 °C — брошенный кусочек лука бурно шипит).</li><li>Залейте им лук и имбирь. Всё зашипит и вспенится — так уходит жгучесть сырого имбиря.</li><li>Перемешайте один раз.</li></ul>",
+   "heat": {
+    "label": "выше среднего",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Залейте горячим маслом",
+    "how": [
+     {
+      "caption": "Нагрейте масло, пока не задрожит, и залейте — оно зашипит и снимет резкость имбиря.",
+      "src": "illustrations/ginger-scallion-noodles/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ginger-scallion-noodles/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~4 мин",
+   "title": "Залейте горячим маслом",
+   "uses_rows": [
+    {
+     "amount_html": "½ стакана",
+     "name_html": "Нейтральное масло (виноградное)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Вмешайте:<ul class=\"ing two-col\"><li>светлый соевый соус (усукути) <span class=\"amt\">2 ч. л.</span></li><li>хересный уксус <span class=\"amt\">¾ ч. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li><li>кунжутное масло <span class=\"amt\">½ ч. л.</span></li><li>соль <span class=\"amt\">½ ч. л.</span></li></ul></li><li>Оставьте на <b>15–20 минут</b>, чтобы вкусы устоялись, затем попробуйте и поправьте соль.</li><li>Хранится 2 дня в холодильнике; перед использованием перемешайте.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Приправить и дать постоять",
+    "how": [
+     {
+      "caption": "Вмешайте сою, уксус, сахар, кунжутное масло и соль; оставьте на 15–20 минут.",
+      "src": "illustrations/ginger-scallion-noodles/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ginger-scallion-noodles/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "15–20 мин",
+   "title": "Приправить и дать постоять",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Сварите лапшу (домашнюю — 1½–2 минуты, магазинную — по упаковке), хорошо слейте и стряхните воду.</p>",
+   "heat": {
+    "label": "сильный",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Сварите лапшу",
+    "how": [],
+    "illustration": "illustrations/ginger-scallion-noodles/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Сварите лапшу",
+   "uses_rows": [
+    {
+     "amount_html": "4 порции",
+     "name_html": "Лапша для рамена"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Перемешайте каждую миску горячей лапши с <b>5–6 ст. л.</b> соуса, чтобы покрылась каждая лапшинка.</li><li>Сверху — пара из этого:<ul class=\"ing\"><li>маринованный огурец <span class=\"amt\">несколько ломтиков</span></li><li>обжаренная нори <span class=\"amt\">1 лист</span></li><li>ещё нарезанного зелёного лука <span class=\"amt\">щепотка</span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Перемешать и украсить",
+    "how": [
+     {
+      "caption": "Перемешайте горячую лапшу с 5–6 ст. л. соуса.",
+      "src": "illustrations/ginger-scallion-noodles/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/ginger-scallion-noodles/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "title": "Перемешать и украсить",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Нарезать лук",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Нарубить имбирь",
+    "start": 5
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Нагреть масло, залить",
+    "start": 10
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Приправить",
+    "start": 14
+   },
+   {
+    "dur": 15,
+    "dur_label": "15 мин",
+    "kind": "wait",
+    "label": "Соус настаивается",
+    "start": 15
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Сварить лапшу",
+    "start": 25
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Перемешать + топпинги",
+    "start": 28
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Лапша с имбирём и зелёным луком (помягче)",
+ "total": "~30 мин",
+ "vinegar_options": null,
+ "yields": "4 миски (около 1½ стакана соуса)"
+}

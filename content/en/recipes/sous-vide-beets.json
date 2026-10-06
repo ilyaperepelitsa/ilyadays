@@ -1,0 +1,400 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Tender, intensely beet-y quarters at 85 °C — no boiling away the flavour, no oven.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "500 g batch · 3–4 sides"
+  },
+  {
+   "kind": "time",
+   "text": "~2–3 h, mostly hands-off"
+  }
+ ],
+ "description": "Tender, intensely beet-y quarters at 85 °C — no boiling away the flavour, no oven.",
+ "equipment_html": [
+  "Immersion circulator + container",
+  "Vacuum sealer + vacuum bags",
+  "Clip and something heavy to keep the bag under",
+  "Gloves for peeling (beet juice stains)"
+ ],
+ "group": {
+  "id": "sous-vide",
+  "name": "Sous vide"
+ },
+ "hero": {
+  "alt": "Sous vide beets",
+  "image": "illustrations/sous-vide-beets/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "500 g (~3 medium)",
+     "name_html": "Red beets"
+    },
+    {
+     "amount_html": "1 tbsp",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "½ tsp",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "1 tsp",
+     "name_html": "Vinegar (red wine, balsamic or rice)"
+    }
+   ],
+   "name": "Main"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "2 sprigs",
+     "name_html": "Thyme"
+    },
+    {
+     "amount_html": "1 clove, sliced",
+     "name_html": "Garlic"
+    }
+   ],
+   "name": "Optional, in the bag"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "crumbled",
+     "name_html": "Feta or goat cheese"
+    },
+    {
+     "amount_html": "toasted",
+     "name_html": "Walnuts"
+    },
+    {
+     "amount_html": "chopped",
+     "name_html": "Dill"
+    },
+    {
+     "amount_html": "to finish",
+     "name_html": "Flaky salt + olive oil"
+    }
+   ],
+   "name": "To serve (pick some)"
+  }
+ ],
+ "intro_html": "Vegetables need a much hotter bath than meat: at <b>85 °C</b> the pectin that holds beets firm breaks down, so they turn tender while keeping all their flavour and colour in the bag. Make a batch, chill it, and use it all week.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/sous-vide-beets/mise1.webp",
+   "items": [
+    "peeled, quartered"
+   ],
+   "items_html": "peeled, quartered",
+   "name": "Beets",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 3",
+   "image": "illustrations/sous-vide-beets/mise2.webp",
+   "items": [
+    "oil",
+    "salt",
+    "vinegar",
+    "thyme",
+    "garlic"
+   ],
+   "items_html": "oil · salt · vinegar · thyme · garlic",
+   "name": "Bag seasoning",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/sous-vide-beets/mise3.webp",
+   "items": [
+    "for chilling after"
+   ],
+   "items_html": "for chilling after",
+   "name": "Ice bath",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "More sous vide:",
+ "next": {
+  "slug": "shiitake-kombu-dashi",
+  "title": "Shiitake–kombu dashi"
+ },
+ "notes": [
+  {
+   "html": "<p>The quarter times are a starting point — trust the squeeze test.</p>",
+   "title_html": "Cook times"
+  },
+  {
+   "html": "<p>All the other bath times are on the <a href=\"sous-vide.html\">sous vide quick tables</a> page.</p>",
+   "title_html": "Sous vide table"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": null,
+ "share_image": "share/sous-vide-beets.jpg",
+ "siblings": [],
+ "slug": "sous-vide-beets",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Set the circulator to <b>85 °C</b>.</li><li>Prep while it heats.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Preheat the bath",
+    "how": [],
+    "illustration": "illustrations/sous-vide-beets/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "15–30 min",
+   "title": "Preheat the bath",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Wear gloves. Peel with a vegetable peeler and cut each beet into <b>quarters</b>.</p>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Peel and quarter",
+    "how": [
+     {
+      "caption": "Gloves on: peel with a vegetable peeler.",
+      "src": "illustrations/sous-vide-beets/2-how1.webp"
+     },
+     {
+      "caption": "Cut each beet into quarters — fingertips tucked.",
+      "src": "illustrations/sous-vide-beets/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/sous-vide-beets/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~15 min",
+   "title": "Peel and quarter",
+   "uses_rows": [
+    {
+     "amount_html": "500 g (~3 medium)",
+     "name_html": "Red beets"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Bag the beets in a <b>single layer</b> with (thyme and garlic optional):<ul class=\"ing two-col\"><li>olive oil <span class=\"amt\">1 tbsp</span></li><li>salt <span class=\"amt\">½ tsp</span></li><li>vinegar (red wine, balsamic or rice) <span class=\"amt\">1 tsp</span></li><li>thyme <span class=\"amt\">2 sprigs</span></li><li>garlic <span class=\"amt\">1 clove</span></li></ul></li><li>Seal with the vacuum sealer.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Season and vacuum seal",
+    "how": [
+     {
+      "caption": "Seal with the vacuum sealer.",
+      "src": "illustrations/sous-vide-beets/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/sous-vide-beets/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "title": "Season and vacuum seal",
+   "uses_rows": []
+  },
+  {
+   "body_html": "Clip the bag to the side and weigh it down — vegetables float, and the bag can puff up as it cooks. <table class=\"mini\"><thead><tr><th>Cut</th><th>Time at 85 °C</th></tr></thead><tbody><tr><td>Quarters, medium beets</td><td>about 2 h</td></tr><tr><td>Quarters, large beets</td><td>2–2½ h</td></tr></tbody></table><b>Check:</b> squeeze a piece through the bag with a towel — it should give like a cooked potato. Still firm? Another 30 minutes. A little over is fine; they just get softer.",
+   "heat": {
+    "label": "85 °C bath",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Cook",
+    "how": [
+     {
+      "caption": "Check: squeeze a piece through the bag with a towel — it should give like a cooked potato.",
+      "src": "illustrations/sous-vide-beets/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/sous-vide-beets/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~2 h",
+   "title": "Cook",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>To store, drop the sealed bag into ice water for 15–20 minutes, then refrigerate unopened and use within 5 days.</p>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Chill or serve warm",
+    "how": [],
+    "illustration": "illustrations/sous-vide-beets/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "15–20 min",
+   "title": "Chill or serve warm",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Warm, with:<ul class=\"ing\"><li>butter</li><li>flaky salt</li></ul></li><li>Or cold, with:<ul class=\"ing two-col\"><li>crumbled feta or goat cheese</li><li>walnuts <span class=\"amt\">toasted</span></li><li>dill <span class=\"amt\">chopped</span></li><li>a splash of vinegar</li><li>olive oil</li></ul></li><li>They also go well tossed with the <a href=\"cucumber-sunomono.html\">cucumber pickle</a> dressing.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Serve",
+    "how": [],
+    "illustration": "illustrations/sous-vide-beets/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "title": "Serve",
+   "uses_rows": [
+    {
+     "amount_html": "crumbled",
+     "name_html": "Feta or goat cheese"
+    },
+    {
+     "amount_html": "to finish",
+     "name_html": "Flaky salt + olive oil"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 180,
+  "hours": true,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "bath",
+    "label": "Water bath"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 15,
+    "dur_label": "15 min",
+    "kind": "board",
+    "label": "Peel + quarter (gloves)",
+    "start": 0
+   },
+   {
+    "dur": 25,
+    "dur_label": "25 min",
+    "kind": "bath",
+    "label": "Heat bath to 85 °C",
+    "start": 0
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 min",
+    "kind": "bowl",
+    "label": "Season + vacuum seal",
+    "start": 15
+   },
+   {
+    "dur": 120,
+    "dur_label": "2 h",
+    "kind": "wait",
+    "label": "Cook quarters ~2 h",
+    "start": 25
+   },
+   {
+    "dur": 18,
+    "dur_label": "18 min",
+    "kind": "bowl",
+    "label": "Ice bath",
+    "start": 145
+   }
+  ],
+  "tick_step": 30,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0:00"
+   },
+   {
+    "at": 30,
+    "label": "0:30"
+   },
+   {
+    "at": 60,
+    "label": "1:00"
+   },
+   {
+    "at": 90,
+    "label": "1:30"
+   },
+   {
+    "at": 120,
+    "label": "2:00"
+   },
+   {
+    "at": 150,
+    "label": "2:30"
+   },
+   {
+    "at": 180,
+    "label": "3:00"
+   }
+  ],
+  "unit": "h:mm"
+ },
+ "title": "Sous vide beets",
+ "total": "~2–3 h, mostly hands-off",
+ "vinegar_options": null,
+ "yields": "500 g batch · 3–4 sides"
+}

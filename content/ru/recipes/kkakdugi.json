@@ -1,0 +1,464 @@
+{
+ "before_ingredients_html": null,
+ "blurb_html": "Хрустящие кубики редьки 3 см, вымоченные в солёной воде, затем приправленные молотым перцем, корейскими соусами, грушевым и имбирным соком.",
+ "chips": [
+  {
+   "kind": "",
+   "text": "4 порции"
+  },
+  {
+   "kind": "time",
+   "text": "~30 мин работы + 5 ч вымачивания + 5–7 дней в холодильнике"
+  }
+ ],
+ "description": "Хрустящие кубики редьки 3 см, вымоченные в солёной воде, затем приправленные молотым перцем, корейскими соусами, грушевым и имбирным соком.",
+ "equipment_html": [
+  "Большая миска для рассола",
+  "Дуршлаг",
+  "Шеф-нож + разделочная доска",
+  "Керамическая тёрка (лучше) или мелкая металлическая",
+  "Марля",
+  "Миска для смешивания",
+  "Одноразовые перчатки для перемешивания",
+  "Герметичный контейнер"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Корейская кухня"
+ },
+ "hero": {
+  "alt": "Ккактуги (кимчи из кубиков редьки)",
+  "image": "illustrations/kkakdugi/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "1 кг",
+     "name_html": "Корейская редька (му) или дайкон"
+    },
+    {
+     "amount_html": "100 г",
+     "name_html": "Зелёный лук (или шнитт-лук)"
+    }
+   ],
+   "name": "Редька"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "600 мл",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "50 мл",
+     "name_html": "Крупная (кошерная) соль"
+    },
+    {
+     "amount_html": "3 ст. л.",
+     "name_html": "Сахар"
+    }
+   ],
+   "name": "Рассол"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "5 ст. л.",
+     "name_html": "Корейский молотый перец (кочхукару)"
+    },
+    {
+     "amount_html": "4 ст. л.",
+     "name_html": "Солёный анчоусный соус (или рыбный)"
+    },
+    {
+     "amount_html": "4 ст. л.",
+     "name_html": "Бульон из ламинарии (комбу)"
+    },
+    {
+     "amount_html": "4 ст. л. (натёртая груша, отжатая через марлю)",
+     "name_html": "Грушевый сок"
+    },
+    {
+     "amount_html": "2 ст. л.",
+     "name_html": "Раздавленный чеснок"
+    },
+    {
+     "amount_html": "1 ст. л.",
+     "name_html": "Солёный креветочный соус, порубленный (или рыбный)"
+    },
+    {
+     "amount_html": "2 ч. л. (натёртый имбирь, отжатый через марлю)",
+     "name_html": "Имбирный сок"
+    }
+   ],
+   "name": "Начинка"
+  }
+ ],
+ "intro_html": "Кубики редьки долго вымачиваются в подслащённой солёной воде, затем их перемешивают с красной перечной пастой. По-вашему: <b>крупная соль</b>, чеснок, имбирь и груша, натёртые на <b>керамической тёрке</b>, а грушевый и имбирный сок отжаты через <b>марлю</b>. См. также <a href=\"kimchi.html\">кимчи из капусты</a>.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/kkakdugi/mise1.webp",
+   "items": [
+    "вода",
+    "крупная соль",
+    "сахар"
+   ],
+   "items_html": "вода · крупная соль · сахар",
+   "name": "Рассол",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/kkakdugi/mise2.webp",
+   "items": [
+    "3 см, вымочены и обсушены"
+   ],
+   "items_html": "3 см, вымочены и обсушены",
+   "name": "Кубики редьки",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/kkakdugi/mise3.webp",
+   "items": [
+    "куски по 2 см"
+   ],
+   "items_html": "куски по 2 см",
+   "name": "Зелёный лук",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/kkakdugi/mise4.webp",
+   "items": [
+    "молотый перец",
+    "соусы",
+    "бульон",
+    "соки",
+    "чеснок"
+   ],
+   "items_html": "молотый перец · соусы · бульон · соки · чеснок",
+   "name": "Начинка",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Корейская кухня:",
+ "next": {
+  "slug": "garlic-ginger-chicken-noodles",
+  "title": "Лапша с курицей, чесноком и имбирём"
+ },
+ "notes": [
+  {
+   "html": "<p>По рецепту из книги <i>Easy Korean Cooking</i>, вашими методами (крупная соль, керамическая тёрка, марля для соков).</p>",
+   "title_html": "Источник"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Осенняя и зимняя редька сладкая и мягкая.</li><li>Редька других сезонов может горчить — добавьте чуть больше сахара для баланса.</li></ul>",
+   "title_html": "Какая редька"
+  },
+  {
+   "html": "<p>Рыбный соус может заменить любой из них, но корейские соусы вкуснее, и их стоит поискать.</p>",
+   "title_html": "Солёный анчоусный и креветочный соус"
+  },
+  {
+   "html": "<p>Простой бульон из комбу — см. страницу <a href=\"shiitake-kombu-dashi.html\">даси из комбу</a> или просто замочите кусок комбу в воде.</p>",
+   "title_html": "Бульон из ламинарии"
+  },
+  {
+   "html": "<p>Кимчи лучше всего хранится в холодном холодильнике, около 5 °C.</p>",
+   "title_html": "Хранение"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "kimchi",
+  "title": "Кимчи из пекинской капусты"
+ },
+ "share_image": "share/kkakdugi.jpg",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Кимчи из пекинской капусты"
+  }
+ ],
+ "slug": "kkakdugi",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Размешайте, пока соль и сахар не растворятся:<ul class=\"ing\"><li>вода <span class=\"amt\">600 мл</span></li><li>крупная (кошерная) соль <span class=\"amt\">50 мл</span></li><li>сахар <span class=\"amt\">3 ст. л.</span></li></ul></li><li>Очистите редьку и нарежьте <b>кубиками 3 см</b>.</li><li>Оставьте кубики в рассоле примерно на <b>5 часов</b>, затем откиньте на дуршлаг.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Нарезать и замочить редьку",
+    "how": [
+     {
+      "caption": "Очистите редьку и нарежьте пластами толщиной 3 см.",
+      "src": "illustrations/kkakdugi/1-how1.webp"
+     },
+     {
+      "caption": "Нарежьте пласты брусками 3 см, затем поперёк — кубиками 3 см.",
+      "src": "illustrations/kkakdugi/1-how2.webp"
+     },
+     {
+      "caption": "Вымачивайте кубики в рассоле около 5 часов.",
+      "src": "illustrations/kkakdugi/1-how3.webp"
+     },
+     {
+      "caption": "Затем откиньте на дуршлаг.",
+      "src": "illustrations/kkakdugi/1-how4.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kkakdugi/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~15 мин + 5 ч",
+   "title": "Нарезать и замочить редьку",
+   "uses_rows": [
+    {
+     "amount_html": "1 кг",
+     "name_html": "Корейская редька (му) или дайкон"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Нарежьте зелёный лук короткими кусками по <b>2 см</b>.</p>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Нарезать зелёный лук",
+    "how": [
+     {
+      "caption": "Нарежьте зелёный лук длиной около 2 см.",
+      "src": "illustrations/kkakdugi/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kkakdugi/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "title": "Нарезать зелёный лук",
+   "uses_rows": [
+    {
+     "amount_html": "100 г",
+     "name_html": "Зелёный лук (или шнитт-лук)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Натрите чеснок, имбирь и грушу на керамической тёрке (или мелкой металлической).</li><li>Отожмите натёртую грушу и имбирь через марлю — нужен именно сок.</li><li>Смешайте в густую красную пасту:<ul class=\"ing two-col\"><li>раздавленный чеснок <span class=\"amt\">2 ст. л.</span></li><li>имбирный сок <span class=\"amt\">2 ч. л.</span></li><li>солёный анчоусный соус (или рыбный) <span class=\"amt\">4 ст. л.</span></li><li>Корейский молотый перец (кочхукару) <span class=\"amt\">5 ст. л.</span></li><li>грушевый сок <span class=\"amt\">4 ст. л.</span></li><li>солёный креветочный соус, порубленный (или рыбный) <span class=\"amt\">1 ст. л.</span></li><li>бульон из ламинарии (комбу) <span class=\"amt\">4 ст. л.</span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Приготовить начинку",
+    "how": [
+     {
+      "caption": "Натрите чеснок, имбирь и грушу на керамической тёрке.",
+      "src": "illustrations/kkakdugi/3-how1.webp"
+     },
+     {
+      "caption": "Отожмите натёртую грушу и имбирь через марлю — нужен именно сок.",
+      "src": "illustrations/kkakdugi/3-how2.webp"
+     },
+     {
+      "caption": "Смешайте молотый перец, соусы, бульон из ламинарии, соки и чеснок в густую красную пасту.",
+      "src": "illustrations/kkakdugi/3-how3.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kkakdugi/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~12 мин",
+   "title": "Приготовить начинку",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите обсушенные кубики в пасту вместе с зелёным луком и перемешайте, пока каждый кубик не станет красным со всех сторон.</li><li>В перчатках удобнее — перец красит.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Перемешать",
+    "how": [
+     {
+      "caption": "Перемешайте обсушенные кубики с начинкой и зелёным луком — в перчатках.",
+      "src": "illustrations/kkakdugi/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kkakdugi/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "title": "Перемешать",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Плотно уложите в контейнер с крышкой и дайте ферментироваться в холодильнике <b>5–7 дней</b>, прежде чем есть.</li><li>Идеальная температура холодильника для кимчи — около <b>5 °C</b>.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "В холодильник",
+    "how": [
+     {
+      "caption": "Плотно уложите в герметичный контейнер и уберите в холодильник на 5–7 дней перед подачей.",
+      "src": "illustrations/kkakdugi/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kkakdugi/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "5–7 дней",
+   "title": "В холодильник",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 80,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   }
+  ],
+  "note_html": "Полоса вымачивания — это около 5 часов; полоса холодильника тянется 5–7 дней.",
+  "tasks": [
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Приготовить рассол",
+    "start": 0
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "board",
+    "label": "Нарезать редьку кубиками",
+    "start": 3
+   },
+   {
+    "dur": 40,
+    "dur_label": "40 мин",
+    "kind": "wait",
+    "label": "Вымачивать в рассоле (~5 ч)",
+    "start": 13
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "board",
+    "label": "Нарезать зелёный лук",
+    "start": 20
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 мин",
+    "kind": "bowl",
+    "label": "Натереть + отжать, сделать начинку",
+    "start": 25
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "bowl",
+    "label": "Слить, перемешать",
+    "start": 53
+   },
+   {
+    "dur": 20,
+    "dur_label": "20 мин",
+    "kind": "wait",
+    "label": "Холодильник (5–7 дней)",
+    "start": 59
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   },
+   {
+    "at": 80,
+    "label": "80"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Ккактуги (кимчи из кубиков редьки)",
+ "total": "~30 мин работы + 5 ч вымачивания + 5–7 дней в холодильнике",
+ "vinegar_options": null,
+ "yields": "4 порции"
+}
