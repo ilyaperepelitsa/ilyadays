@@ -3,6 +3,7 @@ import type { Recipe, Step, Timeline } from "@/lib/content";
 import { foodHref, getSvgDefs, getUi, media } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt, Illo, Svg, SvgDefs } from "./parts";
+import { BatchCalc } from "./BatchCalc";
 import { VinegarPicker } from "./VinegarPicker";
 
 type T = (key: string) => string;
@@ -261,6 +262,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
               {r.parts.map((p) => (
                 <a key={p.id} href={`#${p.id}`}>{p.title}</a>
               ))}
+              {r.batch && <a href="#batch">{r.batch.text.title}</a>}
             </nav>
           </div>
           <figure className="hero-art">
@@ -273,6 +275,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
             <Mise r={r} t={t} />
             {r.timeline && <TimelineChart tl={r.timeline} t={t} />}
             <Steps r={r} t={t} />
+            {r.batch && r.vinegar_options && <BatchCalc batch={r.batch} options={r.vinegar_options} />}
             <NotesAndSources r={r} t={t} />
             {r.siblings.length > 0 && (
               <nav className="more">

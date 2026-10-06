@@ -1,4 +1,68 @@
 {
+ "batch": {
+  "jars_ml": [
+   250,
+   500,
+   750,
+   1000
+  ],
+  "kinds": {
+   "kr7": {
+    "sugar_g": 10,
+    "use_ml": 51,
+    "vinegar_ml": 19.29,
+    "water_ml": 10.71
+   },
+   "rice": {
+    "sugar_g": 8,
+    "use_ml": 50,
+    "vinegar_ml": 30.0,
+    "water_ml": 0.0
+   },
+   "v5": {
+    "sugar_g": 10,
+    "use_ml": 51,
+    "vinegar_ml": 27.0,
+    "water_ml": 3.0
+   },
+   "v6": {
+    "sugar_g": 10,
+    "use_ml": 51,
+    "vinegar_ml": 22.5,
+    "water_ml": 7.5
+   },
+   "v9": {
+    "sugar_g": 10,
+    "use_ml": 51,
+    "vinegar_ml": 15.0,
+    "water_ml": 15.0
+   }
+  },
+  "mirin_ml": 15,
+  "text": {
+   "by_jar": "By jar size",
+   "by_recipes": "By number of recipes",
+   "g": "g",
+   "jar": "Jar size",
+   "jar_makes": "A full jar is enough for about {n} recipes.",
+   "lede": "Mix the marinade ahead and keep it in a jar in the fridge, then pour out what one batch of cucumbers needs. It uses the vinegar picked in the ingredients.",
+   "less": "Fewer",
+   "mirin": "Mirin",
+   "ml": "ml",
+   "more": "More",
+   "other": "Other, ml",
+   "recipes": "Recipes",
+   "recipes_make": "Makes about {ml} of mix.",
+   "store": "Stir until the sugar dissolves (or warm the mirin and sugar first, then cool), and keep it in a clean closed jar in the fridge.",
+   "sugar": "Sugar",
+   "tbsp": "tbsp",
+   "title": "Make a big batch",
+   "tsp": "tsp",
+   "use": "Use {use} of the mix per recipe of cucumbers.",
+   "vinegar": "Vinegar",
+   "water": "Water"
+  }
+ },
  "before_ingredients_html": "<fieldset class=\"picker\" data-vinegar-picker><legend>Which vinegar do you have?</legend><label><input type=\"radio\" name=\"vinegar\" value=\"rice\" checked> Rice vinegar (~4.5%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"kr7\"> Korean brewed vinegar 양조식초 (~7%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"v9\"> Table vinegar 9%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v6\"> Vinegar 6%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v5\"> White / distilled vinegar 5%</label></fieldset>",
  "blurb_html": "Salted, rinsed and squeezed cucumber with ginger and garlic, in a vinegar–mirin–sugar marinade.",
  "chips": [
@@ -325,7 +389,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Stir until the sugar dissolves:<ul class=\"ing\"><li><span data-v=\"name_lc\">rice vinegar</span><span data-v-show=\"water\"> + water</span></li><li>mirin <span class=\"amt\">1 tbsp (15 ml) — half the vinegar</span></li><li>sugar <span class=\"amt\"><span data-v=\"sugar\">8 g (2 tsp)</span></span></li></ul></li><li>Pour it over the cucumbers and toss.</li><li>Optional: microwave the mirin and sugar together for 20–30 seconds first to dissolve the sugar and cook off the mirin’s alcohol; let it cool before adding.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Stir until the sugar dissolves:<ul class=\"ing\"><li><span data-v=\"name_lc\">rice vinegar</span><span data-v-show=\"water\"> + water</span></li><li>mirin <span class=\"amt\">1 tbsp (15 ml) — half the vinegar</span></li><li>sugar <span class=\"amt\"><span data-v=\"sugar\">8 g (2 tsp)</span></span></li></ul></li><li>Pour it over the cucumbers and toss.</li><li>Optional: microwave the mirin and sugar together for 20–30 seconds first to dissolve the sugar and cook off the mirin’s alcohol; let it cool before adding.</li><li>Keeping a jar of the mix in the fridge? See <a href=\"#batch\">Make a big batch</a> for the amounts.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -517,7 +581,9 @@
    "name": "Korean brewed vinegar (~7%)",
    "name_lc": "Korean brewed vinegar",
    "sugar": "10 g (2½ tsp)",
-   "water": "2 tsp (11 ml)"
+   "vinegar_ml": 19.29,
+   "water": "2 tsp (11 ml)",
+   "water_ml": 10.71
   },
   "rice": {
    "amount": "2 tbsp (30 ml)",
@@ -525,7 +591,9 @@
    "name": "Rice vinegar",
    "name_lc": "rice vinegar",
    "sugar": "8 g (2 tsp)",
-   "water": ""
+   "vinegar_ml": 30.0,
+   "water": "",
+   "water_ml": 0.0
   },
   "v5": {
    "amount": "1¾ tbsp (27 ml)",
@@ -533,7 +601,9 @@
    "name": "White vinegar (5%)",
    "name_lc": "the white vinegar",
    "sugar": "10 g (2½ tsp)",
-   "water": "½ tsp (3 ml)"
+   "vinegar_ml": 27.0,
+   "water": "½ tsp (3 ml)",
+   "water_ml": 3.0
   },
   "v6": {
    "amount": "1½ tbsp (22 ml)",
@@ -541,7 +611,9 @@
    "name": "Vinegar (6%)",
    "name_lc": "the 6% vinegar",
    "sugar": "10 g (2½ tsp)",
-   "water": "1½ tsp (8 ml)"
+   "vinegar_ml": 22.5,
+   "water": "1½ tsp (8 ml)",
+   "water_ml": 7.5
   },
   "v9": {
    "amount": "1 tbsp (15 ml)",
@@ -549,7 +621,9 @@
    "name": "Table vinegar (9%)",
    "name_lc": "the 9% vinegar",
    "sugar": "10 g (2½ tsp)",
-   "water": "1 tbsp (15 ml)"
+   "vinegar_ml": 15.0,
+   "water": "1 tbsp (15 ml)",
+   "water_ml": 15.0
   }
  },
  "yields": "2 side servings"

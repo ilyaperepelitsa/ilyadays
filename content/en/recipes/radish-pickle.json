@@ -1,4 +1,5 @@
 {
+ "batch": null,
  "before_ingredients_html": "<fieldset class=\"picker\" data-vinegar-picker><legend>Which vinegar do you have?</legend><label><input type=\"radio\" name=\"vinegar\" value=\"rice\" checked> Rice vinegar (~4.5%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"kr7\"> Korean brewed vinegar 양조식초 (~7%)</label><label><input type=\"radio\" name=\"vinegar\" value=\"v9\"> Table vinegar 9%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v6\"> Vinegar 6%</label><label><input type=\"radio\" name=\"vinegar\" value=\"v5\"> White / distilled vinegar 5%</label></fieldset>",
  "blurb_html": "Crunchy red radishes left to soak in a big jar of sweet-vinegar brine — the hands-off cousin of the cucumber pickle.",
  "chips": [
@@ -459,7 +460,9 @@
    "name": "Korean brewed vinegar (~7%)",
    "name_lc": "Korean brewed vinegar",
    "sugar": "70 g (6 tbsp)",
-   "water": "3½ tbsp (54 ml)"
+   "vinegar_ml": 96.43,
+   "water": "3½ tbsp (54 ml)",
+   "water_ml": 53.57
   },
   "rice": {
    "amount": "150 ml",
@@ -467,7 +470,9 @@
    "name": "Rice vinegar",
    "name_lc": "rice vinegar",
    "sugar": "60 g (5 tbsp)",
-   "water": ""
+   "vinegar_ml": 150.0,
+   "water": "",
+   "water_ml": 0.0
   },
   "v5": {
    "amount": "135 ml",
@@ -475,7 +480,9 @@
    "name": "White vinegar (5%)",
    "name_lc": "the white vinegar",
    "sugar": "70 g (6 tbsp)",
-   "water": "1 tbsp (15 ml)"
+   "vinegar_ml": 135.0,
+   "water": "1 tbsp (15 ml)",
+   "water_ml": 15.0
   },
   "v6": {
    "amount": "110 ml",
@@ -483,7 +490,9 @@
    "name": "Vinegar (6%)",
    "name_lc": "the 6% vinegar",
    "sugar": "70 g (6 tbsp)",
-   "water": "2½ tbsp (38 ml)"
+   "vinegar_ml": 112.5,
+   "water": "2½ tbsp (38 ml)",
+   "water_ml": 37.5
   },
   "v9": {
    "amount": "75 ml",
@@ -491,7 +500,9 @@
    "name": "Table vinegar (9%)",
    "name_lc": "the 9% vinegar",
    "sugar": "70 g (6 tbsp)",
-   "water": "75 ml"
+   "vinegar_ml": 75.0,
+   "water": "75 ml",
+   "water_ml": 75.0
   }
  },
  "yields": "1 jar (~500 g radishes)"

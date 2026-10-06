@@ -79,6 +79,14 @@ export type Step = {
 
 export type VinegarOption = { amount: string; label: string; name: string; name_lc: string; sugar: string; water: string };
 
+/** Batch calculator for a vinegar mix: one recipe's worth per vinegar (see recipes/src/vinegar.py batch()). */
+export type Batch = {
+  mirin_ml: number;
+  jars_ml: number[];
+  kinds: Record<string, { vinegar_ml: number; water_ml: number; sugar_g: number; use_ml: number }>;
+  text: Record<string, string>;
+};
+
 export type Recipe = {
   slug: string;
   title: string;
@@ -95,6 +103,7 @@ export type Recipe = {
   ingredients: { name: string; items: { name_html: string; amount_html: string }[] }[];
   equipment_html: string[];
   vinegar_options: Record<string, VinegarOption> | null;
+  batch: Batch | null;
   mise: Mise[];
   timeline: Timeline | null;
   parts: { id: string; title: string }[];
