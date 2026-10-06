@@ -10,14 +10,13 @@ export const localPath = (lang: Lang, path: string) =>
   lang === "ru" ? (path === "/" ? "/ru" : `/ru${path}`) : path;
 
 /** localStorage key for the chosen language — shared with the embedded Istanbul app. */
-export const LANG_KEY = "lang";
+export const LANG_KEY = "site-lang";
 
-// Runs first in <head>, before anything paints: if the reader picked the other language, go to the same page in
-// that language. On a first visit the choice is Russian if the browser prefers it — or if the link itself was a
-// /ru one (so shared Russian links, and crawlers, stay on Russian). No cookies — the choice is in localStorage.
-export const LANG_SCRIPT = `(function(){try{var L=${JSON.stringify(LANG_KEY)},p=location.pathname,isRu=p==='/ru'||p.indexOf('/ru/')===0,cur=isRu?'ru':'en',s=localStorage.getItem(L);
-if(s!=='en'&&s!=='ru'){var n=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();s=isRu||/(^|,)ru/.test(n)?'ru':'en';localStorage.setItem(L,s);}
-if(s!==cur){var rest=isRu?(p.slice(3)||'/'):p;var t=s==='ru'?('/ru'+(rest==='/'?'':rest)):rest;location.replace(t+location.search+location.hash);}}catch(e){}})();`;
+// Runs first in <head>, before anything paints: if the reader explicitly picked the other language (EN · RU switch),
+// go to the same page in that language. Without a choice nothing happens — English is the default, and a /ru link
+// stays Russian. The choice is written only by the switch. No cookies — it lives in localStorage.
+export const LANG_SCRIPT = `(function(){try{var s=localStorage.getItem(${JSON.stringify("site-lang")}),p=location.pathname,isRu=p==='/ru'||p.indexOf('/ru/')===0,cur=isRu?'ru':'en';
+if((s==='en'||s==='ru')&&s!==cur){var rest=isRu?(p.slice(3)||'/'):p;var t=s==='ru'?('/ru'+(rest==='/'?'':rest)):rest;location.replace(t+location.search+location.hash);}}catch(e){}})();`;
 
 const STRINGS = {
   en: {

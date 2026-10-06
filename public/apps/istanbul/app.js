@@ -135,21 +135,17 @@ function createTrip(el, options, env) {
   }
 
   // ------------------------------------------------------------------ language (EN · RU)
-  // The choice is kept in localStorage "lang" (the same key as the rest of ilyadays.com). No cookies, anywhere.
+  // An explicit choice is kept in localStorage "site-lang" (the same key as the rest of ilyadays.com), written only
+  // when the reader presses EN/RU. No cookies, anywhere.
+  const LANG_KEY = "site-lang";
   const I18N = TRIP.i18n || { en: { ui: {} } };
   const LANGS = ["en", "ru"];
   function detectLang() {
+    // English unless the reader picked Russian (switch, ?lang=ru, or the host page). No browser-language guessing.
     let q = LANGS.includes(options.lang) ? options.lang : null, stored = null;
     if (!q) try { q = new URLSearchParams(location.search).get("lang"); } catch (e) { /* sandboxed viewer */ }
-    try { stored = localStorage.getItem("lang"); } catch (e) { /* storage blocked */ }
-    let l = LANGS.includes(q) ? q : LANGS.includes(stored) ? stored : null;
-    if (!l) {
-      const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
-      const first = prefs.map((x) => String(x).toLowerCase()).find((x) => x.startsWith("ru") || x.startsWith("en"));
-      l = first && first.startsWith("ru") ? "ru" : "en";
-    }
-    if (l !== stored) { try { localStorage.setItem("lang", l); } catch (e) { /* ignore */ } }
-    return l;
+    try { stored = localStorage.getItem(LANG_KEY); } catch (e) { /* storage blocked */ }
+    return LANGS.includes(q) ? q : LANGS.includes(stored) ? stored : "en";
   }
   let LANG = detectLang();
   const LOCALE = () => (LANG === "ru" ? "ru-RU" : undefined);
@@ -370,7 +366,8 @@ function createTrip(el, options, env) {
       async load() {
         const out = {};
         try { for (const k of PERSIST_KEYS) { const raw = localStorage.getItem(LS_PREFIX + k); if (raw != null) out[k] = JSON.parse(raw); } } catch (e) { /* blocked or malformed */ }
-        if (!Object.keys(out).length) Object.assign(out, pick(readOld(), PERSIST_KEYS));
+        const old = pick(readOld(), PERSIST_KEYS); // migration: keys not yet saved in the new format
+        for (const k of PERSIST_KEYS) if (out[k] == null && old[k] != null) out[k] = old[k];
         return out;
       },
       async save(key, value) {
@@ -471,9 +468,11 @@ function createTrip(el, options, env) {
   const dayById = (id) => TRIP.plans.scenarios.flatMap((s) => s.days).find((d) => d.id === id);
   /** The owner's unsaved edit of a day; visitors (read-only) always see the active saved version. */
   const draftOf = (ds) => (EDITABLE ? ds.draft : null);
-  function dayState(id) {
-    if (!S.days[id]) S.days[id] = { versions: [], active: 0, draft: null };
-    return S.days[id];
+  /** Reading a day never creates an entry (so merely viewing writes nothing); writers pass forWrite. */
+  const EMPTY_DAY = Object.freeze({ versions: Object.freeze([]), active: 0, draft: null });
+  function dayState(id, forWrite) {
+    if (S.days[id]) return S.days[id];
+    return forWrite ? (S.days[id] = { versions: [], active: 0, draft: null }) : EMPTY_DAY;
   }
   function baseVersion(day) {
     return { n: 0, label: "Original plan", mode: "plan", created: 0, start: day.start, stops: day.stops.map((s) => ({ ...s })) };
@@ -721,7 +720,7 @@ function createTrip(el, options, env) {
     save(); renderAll();
   }
   function ensureDraft(day) {
-    const ds = dayState(day.id);
+    const ds = dayState(day.id, true);
     if (!ds.draft) ds.draft = { stops: activeVersion(day).stops.map((s) => ({ ...s })), start: dayStart(day), from: ds.active };
     return ds.draft;
   }
@@ -743,7 +742,7 @@ function createTrip(el, options, env) {
     toast(t("toast.added", { name: pName(p), n: dayIndex(day) + 1 }));
   }
   function editDraft(day, fn) { if (!EDITABLE) return; const d = ensureDraft(day); fn(d.stops); save(); renderAll(); }
-  function discardDraft(day) { if (!EDITABLE) return; dayState(day.id).draft = null; save(); renderAll(); }
+  function discardDraft(day) { if (!EDITABLE) return; dayState(day.id, true).draft = null; save(); renderAll(); }
 
   function lastVisitedIdx(stops) {
     let bi = -1, bt = -1;
@@ -832,7 +831,7 @@ function createTrip(el, options, env) {
     } else if (mode === "smart") {
       newRest = opts.stops; label = "Smart · " + (S.ai.model || "model");
     }
-    const ds = dayState(day.id);
+    const ds = dayState(day.id, true);
     const n = Math.max(0, ...ds.versions.map((v) => v.n)) + 1;
     const v = { n, label, mode, created: Date.now(), start: dayStart(day), stops: [...visited, ...newRest].map((s) => ({ ...s })), summary: opts.summary || "" };
     ds.versions.push(v);
@@ -1339,7 +1338,7 @@ function createTrip(el, options, env) {
   function setLang(l, fromUser) {
     if (!LANGS.includes(l) || l === LANG) return;
     LANG = l;
-    try { localStorage.setItem("lang", l); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(LANG_KEY, l); } catch (e) { /* ignore */ }
     applyStatic();
     if (started) { map.closePopup(); renderLabels(); renderAll(); }
     if (fromUser && typeof options.onLangChange === "function") options.onLangChange(l);

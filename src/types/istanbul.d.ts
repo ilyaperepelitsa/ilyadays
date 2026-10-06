@@ -47,7 +47,7 @@ export interface TripStorage {
 }
 
 export interface MountOptions {
-  /** Initial language. Default: ?lang= in the URL, then localStorage "lang", then navigator.languages. */
+  /** Initial language. Default: ?lang= in the URL, then localStorage "site-lang" (set only by the EN/RU switch), then English. */
   lang?: Lang;
   /** Default: window.claude db (inside claude.ai) else localStorage keys "cdays:<key>". */
   storage?: TripStorage;
