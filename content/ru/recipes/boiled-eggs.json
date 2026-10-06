@@ -4,10 +4,12 @@
  "blurb_html": "Яйца в холодную воду, довести до кипения, выключить огонь, запустить таймер: 6–8 минут всмятку, 9+ вкрутую.",
  "chips": [
   {
+   "html": "<span>сколько хотите</span>",
    "kind": "",
    "text": "сколько хотите"
   },
   {
+   "html": "~15–20 мин",
    "kind": "time",
    "text": "~15–20 мин"
   }
@@ -73,6 +75,30 @@
   "slug": "baka-with-eggs",
   "title": "Бака с яйцами"
  },
+ "scale": {
+  "mode": "none",
+  "scalable": false,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/boiled-eggs.jpg",
  "siblings": [
   {
@@ -117,6 +143,7 @@
    "part": null,
    "part_id": null,
    "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
    "title": "Яйца в воду",
    "uses_rows": [
     {
@@ -133,6 +160,7 @@
    "body_html": "<p>Нагревайте, пока вода не закипит.</p>",
    "heat": {
     "label": "сильный",
+    "label_html": "<span>сильный</span>",
     "off": false
    },
    "id": "step-2",
@@ -148,6 +176,7 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Доведите до кипения",
    "uses_rows": []
   },
@@ -155,6 +184,7 @@
    "body_html": "Как только закипит, выключите конфорку и поставьте таймер:<table class=\"mini\"><thead><tr><th>Время</th><th>Результат</th></tr></thead><tbody><tr><td>6–8 мин</td><td>всмятку (мягкий желток)</td></tr><tr><td>9+ мин</td><td>вкрутую (твёрдый желток)</td></tr></tbody></table>",
    "heat": {
     "label": "огонь выключен",
+    "label_html": "огонь выключен",
     "off": true
    },
    "id": "step-3",
@@ -175,6 +205,7 @@
    "part": null,
    "part_id": null,
    "time": "6–9+ мин",
+   "time_html": "<span>6–9+ мин</span>",
    "title": "Огонь выключить, запустить таймер",
    "uses_rows": []
   }
@@ -199,6 +230,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Яйца + вода в кастрюле",
+    "label_html": "Яйца + вода в кастрюле",
     "start": 0
    },
    {
@@ -206,6 +238,7 @@
     "dur_label": "8 мин",
     "kind": "pan",
     "label": "Доведите до кипения",
+    "label_html": "Доведите до кипения",
     "start": 2
    },
    {
@@ -213,6 +246,7 @@
     "dur_label": "9 мин",
     "kind": "wait",
     "label": "Огонь выключить, таймер (6–9+ мин)",
+    "label_html": "Огонь выключить, таймер (6–9+ мин)",
     "start": 10
    }
   ],

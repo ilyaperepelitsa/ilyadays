@@ -4,17 +4,19 @@
  "blurb_html": "Овощной оякодон: пекинская капуста и замоченные шиитаке, тушённые в даси из шиитаке и схваченные нежным яйцом.",
  "chips": [
   {
+   "html": "<span>1 миска</span>",
    "kind": "",
    "text": "1 миска"
   },
   {
+   "html": "~15 мин (+ рис)",
    "kind": "time",
    "text": "~15 мин (+ рис)"
   }
  ],
  "description": "Овощной оякодон: пекинская капуста и замоченные шиитаке, тушённые в даси из шиитаке и схваченные нежным яйцом.",
  "equipment_html": [
-  "Маленькая сковорода 18–20 см, <b>с крышкой</b>",
+  "Маленькая сковорода <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 см</span>, <b>с крышкой</b>",
   "Донбури или глубокая миска"
  ],
  "group": {
@@ -30,19 +32,19 @@
   {
    "items": [
     {
-     "amount_html": "150 г (3–4 листа); черешки нарезать по 1 см, листья порубить, держать отдельно",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"лист|листа|листов\" data-n=\"3\">3–4 листа</span>); черешки нарезать по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>, листья порубить, держать отдельно",
      "name_html": "Пекинская капуста"
     },
     {
-     "amount_html": "3 шт., нарезать (из даси или замочить сушёные на 30 мин)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> шт., нарезать (из даси или замочить сушёные на 30 мин)",
      "name_html": "Замоченные шиитаке"
     },
     {
-     "amount_html": "2",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
      "name_html": "Яйца"
     },
     {
-     "amount_html": "1 миска (~200 г)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"миска|миски|мисок\" data-n=\"1\">1 миска</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>)",
      "name_html": "Варёный круглозёрный рис"
     }
    ],
@@ -51,23 +53,23 @@
   {
    "items": [
     {
-     "amount_html": "80 мл",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 мл</span>",
      "name_html": "<a href=\"shiitake-kombu-dashi.html\">Даси из шиитаке и комбу</a>"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Саке"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Сахар"
     }
    ],
@@ -161,11 +163,11 @@
    "title_html": "Вегетарианское"
   },
   {
-   "html": "<p>В ваших заметках не было количеств — здесь пропорции оякодона, где 150 г капусты заменяют 150 г курицы.</p>",
+   "html": "<p>В ваших заметках не было количеств — здесь пропорции оякодона, где <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> капусты заменяют <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> курицы.</p>",
    "title_html": "Количества"
   },
   {
-   "html": "<p>Вода + ¼ ч. л. порошка даси или просто вода от замачивания шиитаке.</p>",
+   "html": "<p>Вода + <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\" data-s=\"0\">¼ ч. л.</span> порошка даси или просто вода от замачивания шиитаке.</p>",
    "title_html": "Нет домашнего даси?"
   }
  ],
@@ -174,6 +176,30 @@
  "prev": {
   "slug": "oyakodon",
   "title": "Оякодон"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/napa-shiitake-egg-bowl.jpg",
  "siblings": [
@@ -221,16 +247,17 @@
    "part": null,
    "part_id": null,
    "time": "~за 45 мин",
+   "time_html": "<span>~за 45 мин</span>",
    "title": "Сначала рис",
    "uses_rows": [
     {
-     "amount_html": "1 миска (~200 г)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"миска|миски|мисок\" data-n=\"1\">1 миска</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>)",
      "name_html": "Варёный круглозёрный рис"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Отделите черешки капусты от листьев.</li><li>Черешки нарежьте поперёк примерно по 1 см, листья порубите.</li><li>Отожмите замоченные шиитаке, срежьте ножки и нарежьте шляпки.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Отделите черешки капусты от листьев.</li><li>Черешки нарежьте поперёк примерно по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>, листья порубите.</li><li>Отожмите замоченные шиитаке, срежьте ножки и нарежьте шляпки.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -254,20 +281,21 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Нарезать",
    "uses_rows": [
     {
-     "amount_html": "150 г (3–4 листа); черешки нарезать по 1 см",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"лист|листа|листов\" data-n=\"3\">3–4 листа</span>); черешки нарезать по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>",
      "name_html": "Пекинская капуста"
     },
     {
-     "amount_html": "3 шт.",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> шт.",
      "name_html": "Замоченные шиитаке"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Смешайте соус:<ul class=\"ing two-col\"><li>даси из шиитаке и комбу <span class=\"amt\">80 мл</span></li><li>соевый соус <span class=\"amt\">1 ст. л.</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>саке <span class=\"amt\">1 ст. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Взбейте яйца <b>слегка</b> — несколько движений, с прожилками белка и желтка.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смешайте соус:<ul class=\"ing two-col\"><li>даси из шиитаке и комбу <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 мл</span></span></li><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Взбейте яйца <b>слегка</b> — несколько движений, с прожилками белка и желтка.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -287,10 +315,11 @@
    "part": null,
    "part_id": null,
    "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
    "title": "Соус и яйца",
    "uses_rows": [
     {
-     "amount_html": "2",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
      "name_html": "Яйца"
     }
    ]
@@ -299,6 +328,7 @@
    "body_html": "<ul class=\"do\"><li>Соус в маленькую сковороду вместе с черешками капусты и шиитаке.</li><li>Томите, пока черешки не станут полупрозрачными.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-4",
@@ -319,6 +349,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 мин",
+   "time_html": "<span>3–4 мин</span>",
    "title": "Томить черешки и шиитаке",
    "uses_rows": []
   },
@@ -326,6 +357,7 @@
    "body_html": "<ul class=\"do\"><li>Добавьте листья, накройте и готовьте, пока они только не опадут.</li><li>Капуста пускает воду — если в сковороде очень мокро, поварите минуту без крышки, чтобы уварить, прежде чем добавлять яйцо.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-5",
@@ -346,6 +378,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 мин",
+   "time_html": "<span>1–2 мин</span>",
    "title": "Листья, под крышку",
    "uses_rows": []
   },
@@ -353,6 +386,7 @@
    "body_html": "<ul class=\"do\"><li>Полейте овощи примерно двумя третями яйца по кругу.</li><li>Накройте, пока края не схватятся, а сверху ещё жидкое.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-6",
@@ -368,6 +402,7 @@
    "part": null,
    "part_id": null,
    "time": "30–60 с",
+   "time_html": "<span>30–60 с</span>",
    "title": "Влейте ⅔ яйца",
    "uses_rows": []
   },
@@ -375,6 +410,7 @@
    "body_html": "<p>Влейте оставшееся яйцо, 10–15 секунд, выключите огонь и подержите под крышкой 30 секунд — глянцевое и едва схватившееся.</p>",
    "heat": {
     "label": "огонь выключен",
+    "label_html": "огонь выключен",
     "off": true
    },
    "id": "step-7",
@@ -395,6 +431,7 @@
    "part": null,
    "part_id": null,
    "time": "~45 с",
+   "time_html": "<span>~45 с</span>",
    "title": "Остальное — и огонь выключить",
    "uses_rows": []
   },
@@ -419,6 +456,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Выложите на рис",
    "uses_rows": [
     {
@@ -460,6 +498,7 @@
     "dur_label": "45 мин",
     "kind": "wait",
     "label": "Сварить рис (первым делом; или разогреть)",
+    "label_html": "Сварить рис (первым делом; или разогреть)",
     "start": 0
    },
    {
@@ -467,6 +506,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Нарезать капусту + шиитаке",
+    "label_html": "Нарезать капусту + шиитаке",
     "start": 30
    },
    {
@@ -474,6 +514,7 @@
     "dur_label": "2 мин",
     "kind": "bowl",
     "label": "Смешать соус, взбить яйца",
+    "label_html": "Смешать соус, взбить яйца",
     "start": 35
    },
    {
@@ -481,6 +522,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Томить черешки + шиитаке",
+    "label_html": "Томить черешки + шиитаке",
     "start": 37
    },
    {
@@ -488,6 +530,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Листья, под крышку",
+    "label_html": "Листья, под крышку",
     "start": 41
    },
    {
@@ -495,6 +538,7 @@
     "dur_label": "1 мин",
     "kind": "pan",
     "label": "Влить ⅔ яйца, накрыть",
+    "label_html": "Влить ⅔ яйца, накрыть",
     "start": 43
    },
    {
@@ -502,6 +546,7 @@
     "dur_label": "1 мин",
     "kind": "pan",
     "label": "Влить ⅓ яйца, выключить огонь, подождать",
+    "label_html": "Влить ⅓ яйца, выключить огонь, подождать",
     "start": 44
    },
    {
@@ -509,6 +554,7 @@
     "dur_label": "48 с",
     "kind": "bowl",
     "label": "Выложить на рис",
+    "label_html": "Выложить на рис",
     "start": 45
    }
   ],

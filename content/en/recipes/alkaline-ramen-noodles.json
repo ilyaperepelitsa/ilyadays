@@ -4,10 +4,12 @@
  "blurb_html": "Springy, chewy alkaline noodles from plain flour — baking soda baked into a stronger alkali, the Momofuku way.",
  "chips": [
   {
+   "html": "<span>~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-s=\"0\">600 g</span> fresh noodles (4–5 portions)</span>",
    "kind": "",
    "text": "~600 g fresh noodles (4–5 portions)"
   },
   {
+   "html": "~3 h (mostly resting) + 1 h to bake the soda, once",
    "kind": "time",
    "text": "~3 h (mostly resting) + 1 h to bake the soda, once"
   }
@@ -35,7 +37,7 @@
   {
    "items": [
     {
-     "amount_html": "60 g (about 4 tbsp) — enough for 3 batches",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span><span class=\"qalt\"> (about <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\" data-alt=\"1\">4 tbsp</span>)</span> — enough for 3 batches",
      "name_html": "Baking soda"
     }
    ],
@@ -44,23 +46,23 @@
   {
    "items": [
     {
-     "amount_html": "200 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
      "name_html": "Bread flour"
     },
     {
-     "amount_html": "200 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
      "name_html": "All-purpose flour"
     },
     {
-     "amount_html": "12 g (4 tsp)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"4\" data-alt=\"1\">4 tsp</span>)</span>",
      "name_html": "Baked baking soda"
     },
     {
-     "amount_html": "100 ml",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 ml</span>",
      "name_html": "Warm water"
     },
     {
-     "amount_html": "100 ml",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 ml</span>",
      "name_html": "Cold water"
     }
    ],
@@ -69,7 +71,7 @@
   {
    "items": [
     {
-     "amount_html": "2–3 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 tbsp</span>",
      "name_html": "Cornstarch or potato starch"
     }
    ],
@@ -83,9 +85,9 @@
    "goes_in": "Step 2",
    "image": "illustrations/alkaline-ramen-noodles/mise1.webp",
    "items": [
-    "from the jar, 12 g"
+    "from the jar, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 g</span>"
    ],
-   "items_html": "from the jar, 12 g",
+   "items_html": "from the jar, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 g</span>",
    "name": "Baked baking soda",
    "svg_fallback": null,
    "vessel": "cup"
@@ -136,7 +138,7 @@
    "title_html": "Why bake baking soda?"
   },
   {
-   "html": "<ul class=\"do\"><li>These are starting points from the Momofuku / Lucky Peach recipe (400 g flour, 12 g baked soda, 200 ml water).</li><li>The dough is stiff on purpose; if it really won’t come together after the first rest, add water a teaspoon at a time.</li><li>The magazine version used all-purpose flour only — the bread flour here adds chew.</li></ul>",
+   "html": "<ul class=\"do\"><li>These are starting points from the Momofuku / Lucky Peach recipe (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\" data-s=\"0\">400 g</span> flour, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\" data-s=\"0\">12 g</span> baked soda, <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-s=\"0\">200 ml</span> water).</li><li>The dough is stiff on purpose; if it really won’t come together after the first rest, add water a teaspoon at a time.</li><li>The magazine version used all-purpose flour only — the bread flour here adds chew.</li></ul>",
    "title_html": "Amounts"
   },
   {
@@ -149,6 +151,30 @@
  "prev": {
   "slug": "ramen",
   "title": "Creamy white ramen (tonkotsu-style paitan)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
  },
  "share_image": "share/alkaline-ramen-noodles.jpg",
  "siblings": [
@@ -190,7 +216,7 @@
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Line a tray with foil and spread the baking soda out in a <b>thin, even layer</b>.</li><li>Bake at <b>120 °C (250 °F) for 1 hour</b>. It loses about a third of its weight as it turns into sodium carbonate.</li><li>Let it cool, tip it into a glass jar, close it and <b>label it</b>. It’s a much stronger alkali than baking soda now — handle it with gloves, keep it away from eyes and don’t taste it.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Line a tray with foil and spread the baking soda out in a <b>thin, even layer</b>.</li><li>Bake at <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"120\" data-s=\"0\">120 °C</span> (250 °F) for 1 hour</b>. It loses about a third of its weight as it turns into sodium carbonate.</li><li>Let it cool, tip it into a glass jar, close it and <b>label it</b>. It’s a much stronger alkali than baking soda now — handle it with gloves, keep it away from eyes and don’t taste it.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -210,16 +236,17 @@
    "part": null,
    "part_id": null,
    "time": "1 h (once)",
+   "time_html": "<span>1 h (once)</span>",
    "title": "Bake the baking soda",
    "uses_rows": [
     {
-     "amount_html": "60 g (about 4 tbsp) — enough for 3 batches",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span><span class=\"qalt\"> (about <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\" data-alt=\"1\">4 tbsp</span>)</span> — enough for 3 batches",
      "name_html": "Baking soda"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Wearing gloves, stir until fully dissolved:<ul class=\"ing\"><li>baked baking soda <span class=\"amt\">12 g (4 tsp)</span></li><li>warm water <span class=\"amt\">100 ml</span></li></ul></li><li>Then add:<ul class=\"ing\"><li>cold water <span class=\"amt\">100 ml</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Wearing gloves, stir until fully dissolved:<ul class=\"ing\"><li>baked baking soda <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"4\" data-alt=\"1\">4 tsp</span>)</span></span></li><li>warm water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 ml</span></span></li></ul></li><li>Then add:<ul class=\"ing\"><li>cold water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 ml</span></span></li></ul></li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -239,11 +266,12 @@
    "part": null,
    "part_id": null,
    "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
    "title": "Make the alkaline water",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Put in a large bowl:<ul class=\"ing\"><li>bread flour <span class=\"amt\">200 g</span></li><li>all-purpose flour <span class=\"amt\">200 g</span></li></ul></li><li>Pour in the alkaline water while stirring with chopsticks, then work it together with your hands.</li><li>It will look <b>too dry and crumbly</b> — that’s right; it comes together while kneading and resting.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Put in a large bowl:<ul class=\"ing\"><li>bread flour <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span></span></li><li>all-purpose flour <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span></span></li></ul></li><li>Pour in the alkaline water while stirring with chopsticks, then work it together with your hands.</li><li>It will look <b>too dry and crumbly</b> — that’s right; it comes together while kneading and resting.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -263,6 +291,7 @@
    "part": null,
    "part_id": null,
    "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
    "title": "Mix the dough",
    "uses_rows": []
   },
@@ -287,11 +316,12 @@
    "part": null,
    "part_id": null,
    "time": "~1 h 30 min",
+   "time_html": "<span>~1 h 30 min</span>",
    "title": "Knead, rest, knead",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Cut the dough into 4 pieces and flatten each one with your palm.</li><li>Run each through the pasta machine on the <b>widest setting</b>, fold in half and run it again — 3–4 times until it’s smooth.</li><li>Then step down to the <b>third-thickest setting</b> (about 1.5 mm), dusting with starch so it doesn’t stick.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Cut the dough into 4 pieces and flatten each one with your palm.</li><li>Run each through the pasta machine on the <b>widest setting</b>, fold in half and run it again — 3–4 times until it’s smooth.</li><li>Then step down to the <b>third-thickest setting</b> (about <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1.5\" data-s=\"0\">1.5 mm</span>), dusting with starch so it doesn’t stick.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -315,16 +345,17 @@
    "part": null,
    "part_id": null,
    "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
    "title": "Sheet it",
    "uses_rows": [
     {
-     "amount_html": "2–3 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 tbsp</span>",
      "name_html": "Cornstarch or potato starch"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Run the sheets through the <b>thin cutter</b>, pulling the noodles out from underneath rather than pushing them.</li><li>Toss with a little starch and shape into loose <b>nests of about 130 g</b>.</li><li>Cook now, keep in a bag in the fridge 2–3 days, or freeze the nests and cook them from frozen.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Run the sheets through the <b>thin cutter</b>, pulling the noodles out from underneath rather than pushing them.</li><li>Toss with a little starch and shape into loose <b>nests of about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"130\" data-s=\"0\">130 g</span></b>.</li><li>Cook now, keep in a bag in the fridge 2–3 days, or freeze the nests and cook them from frozen.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
@@ -348,6 +379,7 @@
    "part": null,
    "part_id": null,
    "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
    "title": "Cut and portion",
    "uses_rows": []
   },
@@ -355,6 +387,7 @@
    "body_html": "<ul class=\"do\"><li>Boil in plenty of unsalted water for <b>1½–2 minutes</b> — taste one: springy and cooked through.</li><li>Lift out with a strainer, shake off the water well, and straight into the bowl.</li></ul>",
    "heat": {
     "label": "high",
+    "label_html": "<span>high</span>",
     "off": false
    },
    "id": "step-7",
@@ -375,6 +408,7 @@
    "part": null,
    "part_id": null,
    "time": "2 min",
+   "time_html": "<span>2 min</span>",
    "title": "Cook",
    "uses_rows": []
   }
@@ -407,6 +441,7 @@
     "dur_label": "1 h",
     "kind": "wait",
     "label": "Bake the baking soda (once)",
+    "label_html": "Bake the baking soda (once)",
     "start": 0
    },
    {
@@ -414,6 +449,7 @@
     "dur_label": "3 min",
     "kind": "bowl",
     "label": "Alkaline water",
+    "label_html": "Alkaline water",
     "start": 60
    },
    {
@@ -421,6 +457,7 @@
     "dur_label": "7 min",
     "kind": "bowl",
     "label": "Mix + knead",
+    "label_html": "Mix + knead",
     "start": 63
    },
    {
@@ -428,6 +465,7 @@
     "dur_label": "20 min",
     "kind": "wait",
     "label": "Rest",
+    "label_html": "Rest",
     "start": 70
    },
    {
@@ -435,6 +473,7 @@
     "dur_label": "5 min",
     "kind": "board",
     "label": "Knead again",
+    "label_html": "Knead again",
     "start": 90
    },
    {
@@ -442,6 +481,7 @@
     "dur_label": "1 h",
     "kind": "wait",
     "label": "Rest (fridge)",
+    "label_html": "Rest (fridge)",
     "start": 95
    },
    {
@@ -449,6 +489,7 @@
     "dur_label": "20 min",
     "kind": "board",
     "label": "Sheet + cut",
+    "label_html": "Sheet + cut",
     "start": 155
    },
    {
@@ -456,6 +497,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Boil",
+    "label_html": "Boil",
     "start": 175
    }
   ],

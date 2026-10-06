@@ -4,10 +4,12 @@
  "blurb_html": "Упругая, жевательная щелочная лапша из обычной муки — сода, запечённая в более сильную щёлочь, по методу Momofuku.",
  "chips": [
   {
+   "html": "<span>~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-s=\"0\">600 г</span> свежей лапши (4–5 порций)</span>",
    "kind": "",
    "text": "~600 г свежей лапши (4–5 порций)"
   },
   {
+   "html": "~3 ч (в основном отдых) + 1 ч на запекание соды, один раз",
    "kind": "time",
    "text": "~3 ч (в основном отдых) + 1 ч на запекание соды, один раз"
   }
@@ -35,7 +37,7 @@
   {
    "items": [
     {
-     "amount_html": "60 г (около 4 ст. л.) — хватит на 3 замеса",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span><span class=\"qalt\"> (около <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\" data-alt=\"1\">4 ст. л.</span>)</span> — хватит на 3 замеса",
      "name_html": "Пищевая сода"
     }
    ],
@@ -44,23 +46,23 @@
   {
    "items": [
     {
-     "amount_html": "200 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
      "name_html": "Хлебопекарная мука"
     },
     {
-     "amount_html": "200 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
      "name_html": "Мука общего назначения"
     },
     {
-     "amount_html": "12 г (4 ч. л.)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"4\" data-alt=\"1\">4 ч. л.</span>)</span>",
      "name_html": "Запечённая сода"
     },
     {
-     "amount_html": "100 мл",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span>",
      "name_html": "Тёплая вода"
     },
     {
-     "amount_html": "100 мл",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span>",
      "name_html": "Холодная вода"
     }
    ],
@@ -69,7 +71,7 @@
   {
    "items": [
     {
-     "amount_html": "2–3 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 ст. л.</span>",
      "name_html": "Кукурузный или картофельный крахмал"
     }
    ],
@@ -83,9 +85,9 @@
    "goes_in": "Шаг 2",
    "image": "illustrations/alkaline-ramen-noodles/mise1.webp",
    "items": [
-    "из банки, 12 г"
+    "из банки, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 г</span>"
    ],
-   "items_html": "из банки, 12 г",
+   "items_html": "из банки, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 г</span>",
    "name": "Запечённая сода",
    "svg_fallback": null,
    "vessel": "cup"
@@ -136,7 +138,7 @@
    "title_html": "Зачем запекать соду?"
   },
   {
-   "html": "<ul class=\"do\"><li>Это стартовые пропорции из рецепта Momofuku / Lucky Peach (400 г муки, 12 г запечённой соды, 200 мл воды).</li><li>Тесто тугое специально; если после первого отдыха оно совсем не собирается, добавляйте воду по чайной ложке.</li><li>В журнальной версии была только мука общего назначения — хлебопекарная здесь добавляет жевательности.</li></ul>",
+   "html": "<ul class=\"do\"><li>Это стартовые пропорции из рецепта Momofuku / Lucky Peach (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\" data-s=\"0\">400 г</span> муки, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\" data-s=\"0\">12 г</span> запечённой соды, <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-s=\"0\">200 мл</span> воды).</li><li>Тесто тугое специально; если после первого отдыха оно совсем не собирается, добавляйте воду по чайной ложке.</li><li>В журнальной версии была только мука общего назначения — хлебопекарная здесь добавляет жевательности.</li></ul>",
    "title_html": "Количества"
   },
   {
@@ -149,6 +151,30 @@
  "prev": {
   "slug": "ramen",
   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/alkaline-ramen-noodles.jpg",
  "siblings": [
@@ -190,7 +216,7 @@
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Застелите противень фольгой и распределите соду <b>тонким ровным слоем</b>.</li><li>Запекайте при <b>120 °C 1 час</b>. Она теряет примерно треть веса, превращаясь в карбонат натрия.</li><li>Остудите, пересыпьте в стеклянную банку, закройте и <b>подпишите</b>. Теперь это гораздо более сильная щёлочь, чем пищевая сода, — работайте в перчатках, берегите глаза и не пробуйте на вкус.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Застелите противень фольгой и распределите соду <b>тонким ровным слоем</b>.</li><li>Запекайте при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"120\" data-s=\"0\">120 °C</span> 1 час</b>. Она теряет примерно треть веса, превращаясь в карбонат натрия.</li><li>Остудите, пересыпьте в стеклянную банку, закройте и <b>подпишите</b>. Теперь это гораздо более сильная щёлочь, чем пищевая сода, — работайте в перчатках, берегите глаза и не пробуйте на вкус.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -210,16 +236,17 @@
    "part": null,
    "part_id": null,
    "time": "1 ч (один раз)",
+   "time_html": "<span>1 ч (один раз)</span>",
    "title": "Запеките соду",
    "uses_rows": [
     {
-     "amount_html": "60 г — хватит на 3 замеса",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span> — хватит на 3 замеса",
      "name_html": "Пищевая сода"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>В перчатках размешайте до полного растворения:<ul class=\"ing\"><li>запечённая сода <span class=\"amt\">12 г (4 ч. л.)</span></li><li>тёплая вода <span class=\"amt\">100 мл</span></li></ul></li><li>Затем добавьте:<ul class=\"ing\"><li>холодная вода <span class=\"amt\">100 мл</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>В перчатках размешайте до полного растворения:<ul class=\"ing\"><li>запечённая сода <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\">12 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"4\" data-alt=\"1\">4 ч. л.</span>)</span></span></li><li>тёплая вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span></span></li></ul></li><li>Затем добавьте:<ul class=\"ing\"><li>холодная вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span></span></li></ul></li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -239,11 +266,12 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Приготовьте щелочную воду",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>В большую миску:<ul class=\"ing\"><li>хлебопекарная мука <span class=\"amt\">200 г</span></li><li>мука общего назначения <span class=\"amt\">200 г</span></li></ul></li><li>Влейте щелочную воду, помешивая палочками, затем соберите тесто руками.</li><li>Оно будет выглядеть <b>слишком сухим и рассыпчатым</b> — так и надо; при вымешивании и отдыхе оно соберётся.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>В большую миску:<ul class=\"ing\"><li>хлебопекарная мука <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span></span></li><li>мука общего назначения <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span></span></li></ul></li><li>Влейте щелочную воду, помешивая палочками, затем соберите тесто руками.</li><li>Оно будет выглядеть <b>слишком сухим и рассыпчатым</b> — так и надо; при вымешивании и отдыхе оно соберётся.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -263,6 +291,7 @@
    "part": null,
    "part_id": null,
    "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
    "title": "Замесите тесто",
    "uses_rows": []
   },
@@ -287,11 +316,12 @@
    "part": null,
    "part_id": null,
    "time": "~1 ч 30 мин",
+   "time_html": "<span>~1 ч 30 мин</span>",
    "title": "Месить, отдых, месить",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Разделите тесто на 4 части и приплюсните каждую ладонью.</li><li>Пропустите каждую через тестораскатку на <b>самой широкой настройке</b>, сложите пополам и пропустите снова — 3–4 раза, пока не станет гладким.</li><li>Затем перейдите на <b>третью по толщине настройку</b> (около 1,5 мм), подпыливая крахмалом, чтобы не липло.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Разделите тесто на 4 части и приплюсните каждую ладонью.</li><li>Пропустите каждую через тестораскатку на <b>самой широкой настройке</b>, сложите пополам и пропустите снова — 3–4 раза, пока не станет гладким.</li><li>Затем перейдите на <b>третью по толщине настройку</b> (около <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1.5\" data-s=\"0\">1,5 мм</span>), подпыливая крахмалом, чтобы не липло.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -315,16 +345,17 @@
    "part": null,
    "part_id": null,
    "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
    "title": "Раскатайте",
    "uses_rows": [
     {
-     "amount_html": "2–3 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 ст. л.</span>",
      "name_html": "Кукурузный или картофельный крахмал"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Пропустите пласты через <b>тонкий нож</b>, вытягивая лапшу снизу, а не проталкивая её.</li><li>Обваляйте в небольшом количестве крахмала и сформируйте рыхлые <b>гнёзда примерно по 130 г</b>.</li><li>Варите сразу, храните в пакете в холодильнике 2–3 дня или заморозьте гнёзда и варите прямо из морозилки.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Пропустите пласты через <b>тонкий нож</b>, вытягивая лапшу снизу, а не проталкивая её.</li><li>Обваляйте в небольшом количестве крахмала и сформируйте рыхлые <b>гнёзда примерно по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"130\" data-s=\"0\">130 г</span></b>.</li><li>Варите сразу, храните в пакете в холодильнике 2–3 дня или заморозьте гнёзда и варите прямо из морозилки.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
@@ -348,6 +379,7 @@
    "part": null,
    "part_id": null,
    "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
    "title": "Нарежьте и разделите на порции",
    "uses_rows": []
   },
@@ -355,6 +387,7 @@
    "body_html": "<ul class=\"do\"><li>Варите в большом количестве несолёной воды <b>1½–2 минуты</b> — попробуйте одну: упругая и проварена насквозь.</li><li>Выньте шумовкой, хорошо стряхните воду — и сразу в миску.</li></ul>",
    "heat": {
     "label": "сильный",
+    "label_html": "<span>сильный</span>",
     "off": false
    },
    "id": "step-7",
@@ -375,6 +408,7 @@
    "part": null,
    "part_id": null,
    "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
    "title": "Варка",
    "uses_rows": []
   }
@@ -407,6 +441,7 @@
     "dur_label": "1 ч",
     "kind": "wait",
     "label": "Запечь соду (один раз)",
+    "label_html": "Запечь соду (один раз)",
     "start": 0
    },
    {
@@ -414,6 +449,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Щелочная вода",
+    "label_html": "Щелочная вода",
     "start": 60
    },
    {
@@ -421,6 +457,7 @@
     "dur_label": "7 мин",
     "kind": "bowl",
     "label": "Замес + вымешивание",
+    "label_html": "Замес + вымешивание",
     "start": 63
    },
    {
@@ -428,6 +465,7 @@
     "dur_label": "20 мин",
     "kind": "wait",
     "label": "Отдых",
+    "label_html": "Отдых",
     "start": 70
    },
    {
@@ -435,6 +473,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Снова вымесить",
+    "label_html": "Снова вымесить",
     "start": 90
    },
    {
@@ -442,6 +481,7 @@
     "dur_label": "1 ч",
     "kind": "wait",
     "label": "Отдых (холодильник)",
+    "label_html": "Отдых (холодильник)",
     "start": 95
    },
    {
@@ -449,6 +489,7 @@
     "dur_label": "20 мин",
     "kind": "board",
     "label": "Раскатать + нарезать",
+    "label_html": "Раскатать + нарезать",
     "start": 155
    },
    {
@@ -456,6 +497,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Варка",
+    "label_html": "Варка",
     "start": 175
    }
   ],

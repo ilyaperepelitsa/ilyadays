@@ -4,10 +4,12 @@
  "blurb_html": "Хрустящая приправа для риса: мальки анчоуса, креветки сакура, бонито и кунжут, а ярко-зелёная нори вмешивается последней.",
  "chips": [
   {
+   "html": "<span>1 маленькая банка (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\" data-s=\"0\">80 г</span>)</span>",
    "kind": "",
    "text": "1 маленькая банка (~80 г)"
   },
   {
+   "html": "~25 мин (вместе с остыванием)",
    "kind": "time",
    "text": "~25 мин (вместе с остыванием)"
   }
@@ -32,19 +34,19 @@
   {
    "items": [
     {
-     "amount_html": "20 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
      "name_html": "Тиримэн-дзяко (мальки анчоуса)"
     },
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Сушёные креветки сакура"
     },
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Кацуобуси (хлопья бонито)"
     },
     {
-     "amount_html": "3 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
      "name_html": "Кунжут"
     }
    ],
@@ -53,15 +55,15 @@
   {
    "items": [
     {
-     "amount_html": "2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "1 ч. л. — по желанию, см. примечание",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> — по желанию, см. примечание",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "½ ч. л. — по желанию, см. примечание",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> — по желанию, см. примечание",
      "name_html": "Рисовый уксус"
     }
    ],
@@ -70,7 +72,7 @@
   {
    "items": [
     {
-     "amount_html": "2 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
      "name_html": "Хлопья зелёной нори (необжаренные)"
     }
    ],
@@ -152,6 +154,30 @@
   "slug": "niboshi-bonito-dashi",
   "title": "Даси из нибоси и бонито"
  },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/furikake.jpg",
  "siblings": [
   {
@@ -198,38 +224,39 @@
    "part": null,
    "part_id": null,
    "time": "3 мин",
+   "time_html": "<span>3 мин</span>",
    "title": "Отвесить",
    "uses_rows": [
     {
-     "amount_html": "20 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
      "name_html": "Тиримэн-дзяко (мальки анчоуса)"
     },
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Сушёные креветки сакура"
     },
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Кацуобуси (хлопья бонито)"
     },
     {
-     "amount_html": "3 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
      "name_html": "Кунжут"
     },
     {
-     "amount_html": "2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "1 ч. л. — по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> — по желанию",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "½ ч. л. — по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> — по желанию",
      "name_html": "Рисовый уксус"
     },
     {
-     "amount_html": "2 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
      "name_html": "Хлопья зелёной нори (необжаренные)"
     }
    ]
@@ -238,6 +265,7 @@
    "body_html": "<ul class=\"do\"><li>Сухая сковорода, <b>слабый огонь</b>, без масла. Обжаривайте <b>по одному продукту</b> и сразу перекладывайте каждый на тарелку, как только готов:<ul class=\"ing\"><li>мальки анчоуса — до сухости, аромата и хруста (3–4 мин)</li><li>креветки сакура — до аромата (1–2 мин)</li><li>кунжут — пока не начнёт золотиться и пахнуть орехом (~2 мин)</li><li>хлопья бонито, раскрошенные, — около 1 минуты</li></ul></li><li>Каждый продукт жарится со своей скоростью, поэтому они идут по отдельности.</li></ul>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-2",
@@ -262,30 +290,32 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Обжарьте каждое по отдельности",
    "uses_rows": [
     {
-     "amount_html": "20 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
      "name_html": "Тиримэн-дзяко (мальки анчоуса)"
     },
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Сушёные креветки сакура"
     },
     {
-     "amount_html": "3 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
      "name_html": "Кунжут"
     },
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Кацуобуси (хлопья бонито)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Влейте в пустую горячую сковороду (мирин и уксус — если используете):<ul class=\"ing\"><li>соевый соус <span class=\"amt\">2 ч. л.</span></li><li>мирин <span class=\"amt\">1 ч. л. — по желанию</span></li><li>рисовый уксус <span class=\"amt\">½ ч. л. — по желанию</span></li></ul></li><li>Дайте ему побулькать буквально секунду.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Влейте в пустую горячую сковороду (мирин и уксус — если используете):<ul class=\"ing\"><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> — по желанию</span></li><li>рисовый уксус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> — по желанию</span></li></ul></li><li>Дайте ему побулькать буквально секунду.</li></ul>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-3",
@@ -306,6 +336,7 @@
    "part": null,
    "part_id": null,
    "time": "секунды",
+   "time_html": "<span>секунды</span>",
    "title": "Соус — и вскипятить на секунду",
    "uses_rows": []
   },
@@ -313,6 +344,7 @@
    "body_html": "<ul class=\"do\"><li>Сразу же верните все обжаренные продукты в сковороду и мешайте, пока всё не покроется соусом.</li><li>На этом этапе смесь <b>чуть влажная и блестящая</b> — так и должно быть.</li></ul>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-4",
@@ -333,6 +365,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 мин",
+   "time_html": "<span>1–2 мин</span>",
    "title": "Всё обратно",
    "uses_rows": []
   },
@@ -352,6 +385,7 @@
    "part": null,
    "part_id": null,
    "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
    "title": "Полностью остудить",
    "uses_rows": []
   },
@@ -376,10 +410,11 @@
    "part": null,
    "part_id": null,
    "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
    "title": "Нори — в конце",
    "uses_rows": [
     {
-     "amount_html": "2 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
      "name_html": "Хлопья зелёной нори (необжаренные)"
     }
    ]
@@ -400,6 +435,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "В банку",
    "uses_rows": []
   }
@@ -432,6 +468,7 @@
     "dur_label": "3 мин",
     "kind": "board",
     "label": "Всё отвесить",
+    "label_html": "Всё отвесить",
     "start": 0
    },
    {
@@ -439,6 +476,7 @@
     "dur_label": "8 мин",
     "kind": "pan",
     "label": "Обжарьте каждое по отдельности",
+    "label_html": "Обжарьте каждое по отдельности",
     "start": 3
    },
    {
@@ -446,6 +484,7 @@
     "dur_label": "1 мин",
     "kind": "pan",
     "label": "Соус — и вскипятить на секунду",
+    "label_html": "Соус — и вскипятить на секунду",
     "start": 11
    },
    {
@@ -453,6 +492,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Всё обратно, мешать досуха",
+    "label_html": "Всё обратно, мешать досуха",
     "start": 12
    },
    {
@@ -460,6 +500,7 @@
     "dur_label": "10 мин",
     "kind": "wait",
     "label": "Остудить на тарелке",
+    "label_html": "Остудить на тарелке",
     "start": 14
    },
    {
@@ -467,6 +508,7 @@
     "dur_label": "2 мин",
     "kind": "bowl",
     "label": "Нори, в банку",
+    "label_html": "Нори, в банку",
     "start": 24
    }
   ],

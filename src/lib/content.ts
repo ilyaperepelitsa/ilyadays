@@ -6,7 +6,7 @@ import { type Lang, prefix } from "./i18n";
 
 const ROOT = path.join(process.cwd(), "content");
 
-export type Chip = { text: string; kind: "" | "time" };
+export type Chip = { text: string; html?: string; kind: "" | "time" };
 export type Hero = { image: string | null; svg_fallback: string | null; alt: string };
 export type Note = { title_html: string; html: string };
 
@@ -47,7 +47,7 @@ export type Mise = {
 };
 
 export type Timeline = {
-  tasks: { label: string; start: number; dur: number; dur_label: string; kind: string }[];
+  tasks: { label: string; label_html: string; start: number; dur: number; dur_label: string; kind: string }[];
   end: number;
   tick_step: number;
   hours: boolean;
@@ -63,8 +63,9 @@ export type Step = {
   title: string;
   part: string | null;
   part_id: string | null;
-  heat: { label: string; off: boolean } | null;
+  heat: { label: string; label_html: string; off: boolean } | null;
   time: string;
+  time_html: string | null;
   body_html: string;
   uses_rows: { name_html: string; amount_html: string }[];
   images: {
@@ -87,6 +88,15 @@ export type Batch = {
   text: Record<string, string>;
 };
 
+/** The portions control (recipes/src/quantities.py scale_info): people, batches, or none (nothing scales). */
+export type Scale = {
+  mode: "people" | "batch" | "none";
+  serves: number;
+  scalable: boolean;
+  size: string;
+  text: Record<string, string>;
+};
+
 export type Recipe = {
   slug: string;
   title: string;
@@ -104,6 +114,7 @@ export type Recipe = {
   equipment_html: string[];
   vinegar_options: Record<string, VinegarOption> | null;
   batch: Batch | null;
+  scale: Scale;
   mise: Mise[];
   timeline: Timeline | null;
   parts: { id: string; title: string }[];

@@ -4,10 +4,12 @@
  "blurb_html": "Eggs straight from the fridge into boiling water for exactly 6 minutes: jammy orange yolk, set white.",
  "chips": [
   {
+   "html": "<span>as many as you need — ½ per bowl of ramen</span>",
    "kind": "",
    "text": "as many as you need — ½ per bowl of ramen"
   },
   {
+   "html": "~20 min",
    "kind": "time",
    "text": "~20 min"
   }
@@ -91,6 +93,30 @@
   "slug": "tamagoyaki",
   "title": "Tamagoyaki"
  },
+ "scale": {
+  "mode": "none",
+  "scalable": false,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
  "share_image": "share/ramen-egg.jpg",
  "siblings": [
   {
@@ -125,6 +151,7 @@
    "body_html": "<p>Bring a pot of water to a rolling boil — enough water to cover the eggs.</p>",
    "heat": {
     "label": "high",
+    "label_html": "<span>high</span>",
     "off": false
    },
    "id": "step-1",
@@ -140,6 +167,7 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Boil the water",
    "uses_rows": [
     {
@@ -152,6 +180,7 @@
    "body_html": "<ul class=\"do\"><li>Take the eggs straight from the fridge.</li><li>Lower them gently on a spoon into the boiling water.</li><li>Cook exactly 6 minutes — set a timer as they go in.</li></ul>",
    "heat": {
     "label": "high",
+    "label_html": "<span>high</span>",
     "off": false
    },
    "id": "step-2",
@@ -176,6 +205,7 @@
    "part": null,
    "part_id": null,
    "time": "6 min",
+   "time_html": "<span>6 min</span>",
    "title": "Eggs in — exactly 6 minutes",
    "uses_rows": [
     {
@@ -209,6 +239,7 @@
    "part": null,
    "part_id": null,
    "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
    "title": "Cool and peel",
    "uses_rows": []
   },
@@ -233,6 +264,7 @@
    "part": null,
    "part_id": null,
    "time": "1 min",
+   "time_html": "<span>1 min</span>",
    "title": "Halve",
    "uses_rows": []
   }
@@ -261,6 +293,7 @@
     "dur_label": "8 min",
     "kind": "pan",
     "label": "Water to a rolling boil",
+    "label_html": "Water to a rolling boil",
     "start": 0
    },
    {
@@ -268,6 +301,7 @@
     "dur_label": "6 min",
     "kind": "pan",
     "label": "Eggs in, 6 min",
+    "label_html": "Eggs in, 6 min",
     "start": 8
    },
    {
@@ -275,6 +309,7 @@
     "dur_label": "3 min",
     "kind": "wait",
     "label": "Iced water",
+    "label_html": "Iced water",
     "start": 14
    },
    {
@@ -282,6 +317,7 @@
     "dur_label": "3 min",
     "kind": "board",
     "label": "Peel & halve",
+    "label_html": "Peel &amp; halve",
     "start": 17
    }
   ],

@@ -3,6 +3,10 @@
 // [data-v] / [data-v-row] / [data-v-show] spans come from the exported HTML; the choice is kept in localStorage.
 import { useEffect } from "react";
 import type { VinegarOption } from "@/lib/content";
+import { REFRESH_EVENT } from "@/lib/units.js";
+
+// amount / water / sugar arrive as HTML with quantity spans (recipes/src/quantities.py); the rest is plain text
+const MARKED = new Set(["amount", "water", "sugar"]);
 
 export function VinegarPicker({ options }: { options: Record<string, VinegarOption> }) {
   useEffect(() => {
@@ -12,7 +16,10 @@ export function VinegarPicker({ options }: { options: Record<string, VinegarOpti
       const v = options[key] as Record<string, string> | undefined;
       if (!v) return;
       document.querySelectorAll<HTMLElement>("[data-v]").forEach((el) => {
-        el.textContent = v[el.dataset.v ?? ""] || "—";
+        const field = el.dataset.v ?? "";
+        const val = v[field] || "—";
+        if (MARKED.has(field)) el.innerHTML = val;
+        else el.textContent = val;
       });
       document.querySelectorAll<HTMLElement>("[data-v-row]").forEach((el) => {
         const li = el.closest("li");
@@ -26,6 +33,7 @@ export function VinegarPicker({ options }: { options: Record<string, VinegarOpti
       } catch {
         /* storage blocked */
       }
+      window.dispatchEvent(new Event(REFRESH_EVENT)); // re-apply portions / units to the new spans
     };
     const onChange = (e: Event) => apply((e.target as HTMLInputElement).value);
     picker.addEventListener("change", onChange);

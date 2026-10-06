@@ -4,10 +4,12 @@
  "blurb_html": "Crunchy rice seasoning: baby anchovies, sakura shrimp, bonito and sesame, with bright green nori stirred in last.",
  "chips": [
   {
+   "html": "<span>1 small jar (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\" data-s=\"0\">80 g</span>)</span>",
    "kind": "",
    "text": "1 small jar (~80 g)"
   },
   {
+   "html": "~25 min (incl. cooling)",
    "kind": "time",
    "text": "~25 min (incl. cooling)"
   }
@@ -32,19 +34,19 @@
   {
    "items": [
     {
-     "amount_html": "20 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
      "name_html": "Chirimen jako (baby anchovies)"
     },
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Dried sakura shrimp"
     },
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Katsuobushi (bonito flakes)"
     },
     {
-     "amount_html": "3 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
      "name_html": "Sesame seeds"
     }
    ],
@@ -53,15 +55,15 @@
   {
    "items": [
     {
-     "amount_html": "2 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
      "name_html": "Soy sauce"
     },
     {
-     "amount_html": "1 tsp — optional, see note",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span> — optional, see note",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "½ tsp — optional, see note",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span> — optional, see note",
      "name_html": "Rice vinegar"
     }
    ],
@@ -70,7 +72,7 @@
   {
    "items": [
     {
-     "amount_html": "2 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
      "name_html": "Green nori flakes (untoasted)"
     }
    ],
@@ -152,6 +154,30 @@
   "slug": "niboshi-bonito-dashi",
   "title": "Niboshi–bonito dashi"
  },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "one batch",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
  "share_image": "share/furikake.jpg",
  "siblings": [
   {
@@ -198,38 +224,39 @@
    "part": null,
    "part_id": null,
    "time": "3 min",
+   "time_html": "<span>3 min</span>",
    "title": "Weigh out",
    "uses_rows": [
     {
-     "amount_html": "20 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
      "name_html": "Chirimen jako (baby anchovies)"
     },
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Dried sakura shrimp"
     },
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Katsuobushi (bonito flakes)"
     },
     {
-     "amount_html": "3 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
      "name_html": "Sesame seeds"
     },
     {
-     "amount_html": "2 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
      "name_html": "Soy sauce"
     },
     {
-     "amount_html": "1 tsp — optional",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span> — optional",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "½ tsp — optional",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span> — optional",
      "name_html": "Rice vinegar"
     },
     {
-     "amount_html": "2 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
      "name_html": "Green nori flakes (untoasted)"
     }
    ]
@@ -238,6 +265,7 @@
    "body_html": "<ul class=\"do\"><li>Dry pan, <b>low heat</b>, no oil. Toast <b>one ingredient at a time</b> and tip each onto a plate as soon as it’s done:<ul class=\"ing\"><li>baby anchovies — until dry, fragrant and crisp (3–4 min)</li><li>sakura shrimp — until fragrant (1–2 min)</li><li>sesame — until it starts to colour and smells nutty (~2 min)</li><li>bonito flakes, crumbled — about 1 minute</li></ul></li><li>Each one cooks at its own speed, which is why they go in separately.</li></ul>",
    "heat": {
     "label": "low",
+    "label_html": "<span>low</span>",
     "off": false
    },
    "id": "step-2",
@@ -262,30 +290,32 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Toast each one separately",
    "uses_rows": [
     {
-     "amount_html": "20 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
      "name_html": "Chirimen jako (baby anchovies)"
     },
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Dried sakura shrimp"
     },
     {
-     "amount_html": "3 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
      "name_html": "Sesame seeds"
     },
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Katsuobushi (bonito flakes)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Pour into the empty hot pan (mirin and vinegar only if using):<ul class=\"ing\"><li>soy sauce <span class=\"amt\">2 tsp</span></li><li>mirin <span class=\"amt\">1 tsp — optional</span></li><li>rice vinegar <span class=\"amt\">½ tsp — optional</span></li></ul></li><li>Let it bubble for just a second.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Pour into the empty hot pan (mirin and vinegar only if using):<ul class=\"ing\"><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span> — optional</span></li><li>rice vinegar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span> — optional</span></li></ul></li><li>Let it bubble for just a second.</li></ul>",
    "heat": {
     "label": "low",
+    "label_html": "<span>low</span>",
     "off": false
    },
    "id": "step-3",
@@ -306,6 +336,7 @@
    "part": null,
    "part_id": null,
    "time": "seconds",
+   "time_html": "<span>seconds</span>",
    "title": "Sauce in, boil a second",
    "uses_rows": []
   },
@@ -313,6 +344,7 @@
    "body_html": "<ul class=\"do\"><li>Straight away, tip all the toasted ingredients back into the pan and stir until everything is coated.</li><li>It stays <b>a little wet and glossy</b> at this point — that’s how it should look.</li></ul>",
    "heat": {
     "label": "low",
+    "label_html": "<span>low</span>",
     "off": false
    },
    "id": "step-4",
@@ -333,6 +365,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 min",
+   "time_html": "<span>1–2 min</span>",
    "title": "Everything back in",
    "uses_rows": []
   },
@@ -352,6 +385,7 @@
    "part": null,
    "part_id": null,
    "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
    "title": "Cool completely",
    "uses_rows": []
   },
@@ -376,10 +410,11 @@
    "part": null,
    "part_id": null,
    "time": "1 min",
+   "time_html": "<span>1 min</span>",
    "title": "Nori in at the end",
    "uses_rows": [
     {
-     "amount_html": "2 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
      "name_html": "Green nori flakes (untoasted)"
     }
    ]
@@ -400,6 +435,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Jar it",
    "uses_rows": []
   }
@@ -432,6 +468,7 @@
     "dur_label": "3 min",
     "kind": "board",
     "label": "Weigh everything out",
+    "label_html": "Weigh everything out",
     "start": 0
    },
    {
@@ -439,6 +476,7 @@
     "dur_label": "8 min",
     "kind": "pan",
     "label": "Toast each one separately",
+    "label_html": "Toast each one separately",
     "start": 3
    },
    {
@@ -446,6 +484,7 @@
     "dur_label": "1 min",
     "kind": "pan",
     "label": "Sauce in, boil a second",
+    "label_html": "Sauce in, boil a second",
     "start": 11
    },
    {
@@ -453,6 +492,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Everything back in, stir dry",
+    "label_html": "Everything back in, stir dry",
     "start": 12
    },
    {
@@ -460,6 +500,7 @@
     "dur_label": "10 min",
     "kind": "wait",
     "label": "Cool on a plate",
+    "label_html": "Cool on a plate",
     "start": 14
    },
    {
@@ -467,6 +508,7 @@
     "dur_label": "2 min",
     "kind": "bowl",
     "label": "Nori in, jar",
+    "label_html": "Nori in, jar",
     "start": 24
    }
   ],

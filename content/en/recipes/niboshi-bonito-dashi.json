@@ -4,10 +4,12 @@
  "blurb_html": "Golden, savoury fish dashi: cleaned dried anchovies simmered, bonito flakes steeped at the end.",
  "chips": [
   {
+   "html": "<span><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 litre</span></span>",
    "kind": "",
    "text": "1 litre"
   },
   {
+   "html": "~1 h (incl. 30 min soak)",
    "kind": "time",
    "text": "~1 h (incl. 30 min soak)"
   }
@@ -31,19 +33,19 @@
   {
    "items": [
     {
-     "amount_html": "1 l",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 l</span>",
      "name_html": "Water"
     },
     {
-     "amount_html": "20 g (about 15–20 fish)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span> (about <span class=\"q\" data-k=\"count\" data-a=\"15\" data-b=\"20\" data-f=\"fish|fish\" data-n=\"5\">15–20 fish</span>)",
      "name_html": "Niboshi (larger dried anchovies)"
     },
     {
-     "amount_html": "15–20 g — see note",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\">15–20 g</span> — see note",
      "name_html": "Katsuobushi (bonito flakes)"
     },
     {
-     "amount_html": "5–10 g, optional",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-b=\"10\">5–10 g</span>, optional",
      "name_html": "Kombu"
     }
    ],
@@ -100,7 +102,7 @@
    "title_html": "Bonito or not?"
   },
   {
-   "html": "<p>20 g niboshi and 15–20 g katsuobushi per litre are starting points, not your measured amounts.</p>",
+   "html": "<p><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\" data-s=\"0\">20 g</span> niboshi and <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 g</span> katsuobushi per litre are starting points, not your measured amounts.</p>",
    "title_html": "Amounts"
   },
   {
@@ -117,6 +119,30 @@
  "prev": {
   "slug": "shiitake-kombu-dashi",
   "title": "Shiitake–kombu dashi"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "one batch",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
  },
  "share_image": "share/niboshi-bonito-dashi.jpg",
  "siblings": [
@@ -173,16 +199,17 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Clean the niboshi",
    "uses_rows": [
     {
-     "amount_html": "20 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
      "name_html": "Niboshi (larger dried anchovies)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Put the cleaned niboshi (and the kombu, if using) in a saucepan with 1 litre of cold water.</li><li>Soak at least 30 minutes, or overnight in the fridge.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Put the cleaned niboshi (and the kombu, if using) in a saucepan with <span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 litre</span> of cold water.</li><li>Soak at least 30 minutes, or overnight in the fridge.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -197,14 +224,15 @@
    "part": null,
    "part_id": null,
    "time": "30 min+",
+   "time_html": "<span>30 min+</span>",
    "title": "Soak",
    "uses_rows": [
     {
-     "amount_html": "1 l",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 l</span>",
      "name_html": "Water"
     },
     {
-     "amount_html": "5–10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-b=\"10\">5–10 g</span>",
      "name_html": "Kombu"
     }
    ]
@@ -213,6 +241,7 @@
    "body_html": "<ul class=\"do\"><li>Bring up to temperature slowly over medium-low heat.</li><li>If you used kombu, lift it out as soon as small bubbles appear — before it boils.</li></ul>",
    "heat": {
     "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
     "off": false
    },
    "id": "step-3",
@@ -233,6 +262,7 @@
    "part": null,
    "part_id": null,
    "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
    "title": "Heat slowly, kombu out",
    "uses_rows": []
   },
@@ -240,6 +270,7 @@
    "body_html": "<p>Let the niboshi simmer gently for 5–10 minutes, skimming off any foam.</p>",
    "heat": {
     "label": "low",
+    "label_html": "<span>low</span>",
     "off": false
    },
    "id": "step-4",
@@ -260,6 +291,7 @@
    "part": null,
    "part_id": null,
    "time": "5–10 min",
+   "time_html": "<span>5–10 min</span>",
    "title": "Simmer and skim",
    "uses_rows": []
   },
@@ -267,6 +299,7 @@
    "body_html": "<p>Turn off the heat, scatter in the katsuobushi and leave it for about 2 minutes, until the flakes sink.</p>",
    "heat": {
     "label": "heat off",
+    "label_html": "heat off",
     "off": true
    },
    "id": "step-5",
@@ -282,10 +315,11 @@
    "part": null,
    "part_id": null,
    "time": "2 min",
+   "time_html": "<span>2 min</span>",
    "title": "Steep the bonito",
    "uses_rows": [
     {
-     "amount_html": "15–20 g — see note",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\">15–20 g</span> — see note",
      "name_html": "Katsuobushi (bonito flakes)"
     }
    ]
@@ -311,6 +345,7 @@
    "part": null,
    "part_id": null,
    "time": "2 min",
+   "time_html": "<span>2 min</span>",
    "title": "Strain — don’t squeeze",
    "uses_rows": []
   }
@@ -343,6 +378,7 @@
     "dur_label": "8 min",
     "kind": "board",
     "label": "Clean the niboshi",
+    "label_html": "Clean the niboshi",
     "start": 0
    },
    {
@@ -350,6 +386,7 @@
     "dur_label": "30 min",
     "kind": "wait",
     "label": "Soak in cold water",
+    "label_html": "Soak in cold water",
     "start": 8
    },
    {
@@ -357,6 +394,7 @@
     "dur_label": "10 min",
     "kind": "pan",
     "label": "Slow heat; kombu out",
+    "label_html": "Slow heat; kombu out",
     "start": 38
    },
    {
@@ -364,6 +402,7 @@
     "dur_label": "8 min",
     "kind": "pan",
     "label": "Simmer, skim",
+    "label_html": "Simmer, skim",
     "start": 48
    },
    {
@@ -371,6 +410,7 @@
     "dur_label": "2 min",
     "kind": "wait",
     "label": "Heat off: steep bonito",
+    "label_html": "Heat off: steep bonito",
     "start": 56
    },
    {
@@ -378,6 +418,7 @@
     "dur_label": "3 min",
     "kind": "bowl",
     "label": "Strain",
+    "label_html": "Strain",
     "start": 58
    }
   ],

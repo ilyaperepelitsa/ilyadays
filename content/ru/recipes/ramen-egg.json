@@ -4,10 +4,12 @@
  "blurb_html": "Яйца прямо из холодильника в кипящую воду ровно на 6 минут: густой оранжевый желток, схватившийся белок.",
  "chips": [
   {
+   "html": "<span>сколько нужно — ½ на миску рамена</span>",
    "kind": "",
    "text": "сколько нужно — ½ на миску рамена"
   },
   {
+   "html": "~20 мин",
    "kind": "time",
    "text": "~20 мин"
   }
@@ -91,6 +93,30 @@
   "slug": "tamagoyaki",
   "title": "Тамагояки"
  },
+ "scale": {
+  "mode": "none",
+  "scalable": false,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/ramen-egg.jpg",
  "siblings": [
   {
@@ -125,6 +151,7 @@
    "body_html": "<p>Доведите кастрюлю воды до сильного кипения — воды столько, чтобы покрыть яйца.</p>",
    "heat": {
     "label": "сильный",
+    "label_html": "<span>сильный</span>",
     "off": false
    },
    "id": "step-1",
@@ -140,6 +167,7 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Вскипятить воду",
    "uses_rows": [
     {
@@ -152,6 +180,7 @@
    "body_html": "<ul class=\"do\"><li>Возьмите яйца прямо из холодильника.</li><li>Аккуратно опустите их на ложке в кипящую воду.</li><li>Варите ровно 6 минут — запустите таймер, как только они в воде.</li></ul>",
    "heat": {
     "label": "сильный",
+    "label_html": "<span>сильный</span>",
     "off": false
    },
    "id": "step-2",
@@ -176,6 +205,7 @@
    "part": null,
    "part_id": null,
    "time": "6 мин",
+   "time_html": "<span>6 мин</span>",
    "title": "Яйца в воду — ровно 6 минут",
    "uses_rows": [
     {
@@ -209,6 +239,7 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Остудить и почистить",
    "uses_rows": []
   },
@@ -233,6 +264,7 @@
    "part": null,
    "part_id": null,
    "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
    "title": "Разрезать пополам",
    "uses_rows": []
   }
@@ -261,6 +293,7 @@
     "dur_label": "8 мин",
     "kind": "pan",
     "label": "Вода до сильного кипения",
+    "label_html": "Вода до сильного кипения",
     "start": 0
    },
    {
@@ -268,6 +301,7 @@
     "dur_label": "6 мин",
     "kind": "pan",
     "label": "Яйца в воду, 6 мин",
+    "label_html": "Яйца в воду, 6 мин",
     "start": 8
    },
    {
@@ -275,6 +309,7 @@
     "dur_label": "3 мин",
     "kind": "wait",
     "label": "Ледяная вода",
+    "label_html": "Ледяная вода",
     "start": 14
    },
    {
@@ -282,6 +317,7 @@
     "dur_label": "3 мин",
     "kind": "board",
     "label": "Почистить и разрезать",
+    "label_html": "Почистить и разрезать",
     "start": 17
    }
   ],

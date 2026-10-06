@@ -4,10 +4,12 @@
  "blurb_html": "Marinated thigh, tapioca crust with fork-made crumbs, double-fried at 180 °C.",
  "chips": [
   {
+   "html": "<span>2 servings (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 g</span> thighs)</span>",
    "kind": "",
    "text": "2 servings (500 g thighs)"
   },
   {
+   "html": "~1 h incl. 30 min marinating",
    "kind": "time",
    "text": "~1 h incl. 30 min marinating"
   }
@@ -33,7 +35,7 @@
   {
    "items": [
     {
-     "amount_html": "500 g, in 4–5 cm pieces",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 g</span>, in <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-b=\"5\" data-s=\"0\">4–5 cm</span> pieces",
      "name_html": "Boneless chicken thighs, skin on"
     }
    ],
@@ -42,35 +44,35 @@
   {
    "items": [
     {
-     "amount_html": "2 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
      "name_html": "Soy sauce"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Sake"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Oyster sauce"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Brown sugar"
     },
     {
-     "amount_html": "10 g (2 tsp)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 tsp</span>)</span>",
      "name_html": "Ginger, grated"
     },
     {
-     "amount_html": "2 cloves",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
      "name_html": "Garlic, grated"
     },
     {
-     "amount_html": "¼ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
      "name_html": "Ground pepper"
     }
    ],
@@ -79,19 +81,19 @@
   {
    "items": [
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Flour (into the chicken)"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Tapioca starch (into the chicken)"
     },
     {
-     "amount_html": "~80 g",
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
      "name_html": "Tapioca starch (on the board)"
     },
     {
-     "amount_html": "1–2 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>",
      "name_html": "Water or leftover marinade (for crumbs)"
     }
    ],
@@ -100,7 +102,7 @@
   {
    "items": [
     {
-     "amount_html": "enough for 3–4 cm depth",
+     "amount_html": "enough for <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-b=\"4\" data-s=\"0\">3–4 cm</span> depth",
      "name_html": "Neutral oil"
     },
     {
@@ -153,9 +155,9 @@
    "goes_in": "Step 3",
    "image": "illustrations/karaage/mise3.webp",
    "items": [
-    "1 tbsp each"
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> each"
    ],
-   "items_html": "1 tbsp each",
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> each",
    "name": "Flour + tapioca",
    "svg_fallback": null,
    "vessel": "cup"
@@ -213,7 +215,7 @@
    "title_html": "Amounts"
   },
   {
-   "html": "<ul class=\"do\"><li>Chicken is safe at <b>74 °C</b> in the centre.</li><li>The rest between fries finishes the inside; if unsure, cut the biggest piece open after the second fry.</li></ul>",
+   "html": "<ul class=\"do\"><li>Chicken is safe at <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"74\" data-s=\"0\">74 °C</span></b> in the centre.</li><li>The rest between fries finishes the inside; if unsure, cut the biggest piece open after the second fry.</li></ul>",
    "title_html": "Is it cooked?"
   },
   {
@@ -226,6 +228,30 @@
  "prev": {
   "slug": "napa-shiitake-egg-bowl",
   "title": "Napa cabbage & shiitake egg bowl"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
  },
  "share_image": "share/karaage.jpg",
  "siblings": [
@@ -258,7 +284,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Cut the deboned thighs into 4–5 cm pieces.</li><li><b>Poke them all over</b> with a sharp fork or skewer — both sides — so the marinade gets in.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Cut the deboned thighs into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-b=\"5\" data-s=\"0\">4–5 cm</span> pieces.</li><li><b>Poke them all over</b> with a sharp fork or skewer — both sides — so the marinade gets in.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -278,16 +304,17 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Cut and poke",
    "uses_rows": [
     {
-     "amount_html": "500 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 g</span>",
      "name_html": "Boneless chicken thighs, skin on"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Mix the marinade:<ul class=\"ing two-col\"><li>ginger, grated <span class=\"amt\">10 g (2 tsp)</span></li><li>garlic, grated <span class=\"amt\">2 cloves</span></li><li>mirin <span class=\"amt\">1 tbsp</span></li><li>soy sauce <span class=\"amt\">2 tbsp</span></li><li>sake <span class=\"amt\">1 tbsp</span></li><li>ground pepper <span class=\"amt\">¼ tsp</span></li><li>oyster sauce <span class=\"amt\">1 tsp</span></li><li>brown sugar <span class=\"amt\">1 tsp</span></li></ul></li><li>Toss the chicken in it and marinate in the fridge.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Mix the marinade:<ul class=\"ing two-col\"><li>ginger, grated <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 tsp</span>)</span></span></li><li>garlic, grated <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>ground pepper <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span></span></li><li>oyster sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>brown sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Toss the chicken in it and marinate in the fridge.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -307,11 +334,12 @@
    "part": null,
    "part_id": null,
    "time": "30 min – overnight",
+   "time_html": "<span>30 min – overnight</span>",
    "title": "Marinate",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Pour off and discard the excess marinade.</li><li>Mix <b>1 tbsp flour and 1 tbsp tapioca starch</b> into the chicken until every piece has a tacky coat.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Pour off and discard the excess marinade.</li><li>Mix <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> flour and <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> tapioca starch</b> into the chicken until every piece has a tacky coat.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -335,14 +363,15 @@
    "part": null,
    "part_id": null,
    "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
    "title": "Pour off, then flour + starch",
    "uses_rows": [
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Flour (into the chicken)"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Tapioca starch (into the chicken)"
     }
    ]
@@ -368,22 +397,24 @@
    "part": null,
    "part_id": null,
    "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
    "title": "Starch board and crumbs",
    "uses_rows": [
     {
-     "amount_html": "~80 g",
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
      "name_html": "Tapioca starch (on the board)"
     },
     {
-     "amount_html": "1–2 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>",
      "name_html": "Water or leftover marinade (for crumbs)"
     }
    ]
   },
   {
-   "body_html": "<p>Heat 3–4 cm of oil in a heavy pot to <b>180 °C</b>.</p>",
+   "body_html": "<p>Heat <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-b=\"4\" data-s=\"0\">3–4 cm</span> of oil in a heavy pot to <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></b>.</p>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-5",
@@ -399,10 +430,11 @@
    "part": null,
    "part_id": null,
    "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
    "title": "Heat the oil",
    "uses_rows": [
     {
-     "amount_html": "enough for 3–4 cm depth",
+     "amount_html": "enough for <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-b=\"4\" data-s=\"0\">3–4 cm</span> depth",
      "name_html": "Neutral oil"
     }
    ]
@@ -428,6 +460,7 @@
    "part": null,
    "part_id": null,
    "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
    "title": "Roll in starch",
    "uses_rows": []
   },
@@ -435,6 +468,7 @@
    "body_html": "<ul class=\"do\"><li>Lower in a batch without crowding.</li><li>Fry a couple of minutes until <b>light yellow / light orange</b>.</li></ul>",
    "heat": {
     "label": "180 °C oil",
+    "label_html": "<span><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span> oil</span>",
     "off": false
    },
    "id": "step-7",
@@ -455,6 +489,7 @@
    "part": null,
    "part_id": null,
    "time": "~2–3 min",
+   "time_html": "<span>~2–3 min</span>",
    "title": "First fry — pale",
    "uses_rows": []
   },
@@ -479,6 +514,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 min",
+   "time_html": "<span>3–4 min</span>",
    "title": "Rest",
    "uses_rows": []
   },
@@ -486,6 +522,7 @@
    "body_html": "<ul class=\"do\"><li>Back in the oil until <b>deeper golden and crisp</b>.</li><li>Drain on the rack.</li></ul>",
    "heat": {
     "label": "180 °C oil",
+    "label_html": "<span><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span> oil</span>",
     "off": false
    },
    "id": "step-9",
@@ -501,6 +538,7 @@
    "part": null,
    "part_id": null,
    "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
    "title": "Second fry — dark and crisp",
    "uses_rows": []
   },
@@ -520,6 +558,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Serve",
    "uses_rows": [
     {
@@ -561,6 +600,7 @@
     "dur_label": "8 min",
     "kind": "board",
     "label": "Cut and poke the thighs",
+    "label_html": "Cut and poke the thighs",
     "start": 0
    },
    {
@@ -568,6 +608,7 @@
     "dur_label": "3 min",
     "kind": "bowl",
     "label": "Mix marinade, toss chicken",
+    "label_html": "Mix marinade, toss chicken",
     "start": 8
    },
    {
@@ -575,6 +616,7 @@
     "dur_label": "30 min",
     "kind": "wait",
     "label": "Marinate (fridge)",
+    "label_html": "Marinate (fridge)",
     "start": 11
    },
    {
@@ -582,6 +624,7 @@
     "dur_label": "5 min",
     "kind": "board",
     "label": "Starch board + fork crumbs",
+    "label_html": "Starch board + fork crumbs",
     "start": 30
    },
    {
@@ -589,6 +632,7 @@
     "dur_label": "10 min",
     "kind": "pan",
     "label": "Heat oil to 180 °C",
+    "label_html": "Heat oil to <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span>",
     "start": 38
    },
    {
@@ -596,6 +640,7 @@
     "dur_label": "3 min",
     "kind": "bowl",
     "label": "Pour off marinade, flour + starch in",
+    "label_html": "Pour off marinade, flour + starch in",
     "start": 41
    },
    {
@@ -603,6 +648,7 @@
     "dur_label": "4 min",
     "kind": "board",
     "label": "Roll pieces in starch",
+    "label_html": "Roll pieces in starch",
     "start": 44
    },
    {
@@ -610,6 +656,7 @@
     "dur_label": "3 min",
     "kind": "pan",
     "label": "First fry — pale",
+    "label_html": "First fry — pale",
     "start": 48
    },
    {
@@ -617,6 +664,7 @@
     "dur_label": "4 min",
     "kind": "wait",
     "label": "Rest on rack",
+    "label_html": "Rest on rack",
     "start": 51
    },
    {
@@ -624,6 +672,7 @@
     "dur_label": "1.5 min",
     "kind": "pan",
     "label": "Second fry — dark, crisp",
+    "label_html": "Second fry — dark, crisp",
     "start": 55
    },
    {
@@ -631,6 +680,7 @@
     "dur_label": "1.5 min",
     "kind": "bowl",
     "label": "Drain, plate",
+    "label_html": "Drain, plate",
     "start": 56.5
    }
   ],

@@ -4,17 +4,19 @@
  "blurb_html": "Курица в маринаде из комбу-даси и сои, тушённая с имбирём и луком и схваченная нежным яйцом, на рисе.",
  "chips": [
   {
+   "html": "<span>1 миска</span>",
    "kind": "",
    "text": "1 миска"
   },
   {
+   "html": "~35 мин (+ рис)",
    "kind": "time",
    "text": "~35 мин (+ рис)"
   }
  ],
  "description": "Курица в маринаде из комбу-даси и сои, тушённая с имбирём и луком и схваченная нежным яйцом, на рисе.",
  "equipment_html": [
-  "Маленькая сковорода 18–20 см, <b>с крышкой</b> (в маленькой сковороде яйцо лежит толстым слоем)",
+  "Маленькая сковорода <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 см</span>, <b>с крышкой</b> (в маленькой сковороде яйцо лежит толстым слоем)",
   "Донбури или глубокая миска"
  ],
  "group": {
@@ -30,15 +32,15 @@
   {
    "items": [
     {
-     "amount_html": "150 г (1–2 филе), кусочки 2–3 см (подойдёт и грудка; готовьте на 1–2 мин меньше)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-n=\"3\">1–2</span> филе), кусочки <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 см</span> (подойдёт и грудка; готовьте на 1–2 мин меньше)",
      "name_html": "Филе куриного бедра"
     },
     {
-     "amount_html": "½ небольшой луковицы (~60 г), концы срезать, нарезать вдоль ~5 мм",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"небольшая луковица|небольшие луковицы|небольших луковиц|небольшой луковицы\" data-n=\"1\">½ небольшой луковицы</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>), концы срезать, нарезать вдоль ~<span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span>",
      "name_html": "Лук"
     },
     {
-     "amount_html": "кусочек 2 см (~8 г), мелко нарезать",
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 г</span>), мелко нарезать",
      "name_html": "Имбирь"
     },
     {
@@ -46,15 +48,15 @@
      "name_html": "Соль"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Нейтральное масло"
     },
     {
-     "amount_html": "2",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
      "name_html": "Яйца"
     },
     {
-     "amount_html": "1 миска (~200 г готового, из ~80 г сухого)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"миска|миски|мисок\" data-n=\"1\">1 миска</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span> готового, из ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span> сухого)",
      "name_html": "Варёный круглозёрный рис"
     }
    ],
@@ -63,27 +65,27 @@
   {
    "items": [
     {
-     "amount_html": "80 мл (или 80 мл воды + ¼ ч. л. порошка даси)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 мл</span> (или <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 мл</span> воды + <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span> порошка даси)",
      "name_html": "<a href=\"niboshi-bonito-dashi.html\">Даси</a>"
     },
     {
-     "amount_html": "квадрат 5 см",
+     "amount_html": "квадрат <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>",
      "name_html": "Комбу"
     },
     {
-     "amount_html": "4 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Саке"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Сахар"
     }
    ],
@@ -180,15 +182,15 @@
  },
  "notes": [
   {
-   "html": "<p>Метод ваш; эти детали — мои догадки, поправьте: <b>1 ч. л. масла</b> для имбиря; маринад <b>15–30 мин</b>; <b>комбу идёт в сковороду</b> вместе с маринадом и вынимается перед яйцом; сковорода остывает <b>~5 мин</b> без огня, прежде чем положить курицу.</p>",
+   "html": "<p>Метод ваш; эти детали — мои догадки, поправьте: <b><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> масла</b> для имбиря; маринад <b>15–30 мин</b>; <b>комбу идёт в сковороду</b> вместе с маринадом и вынимается перед яйцом; сковорода остывает <b>~5 мин</b> без огня, прежде чем положить курицу.</p>",
    "title_html": "Что я додумал по вашему описанию"
   },
   {
-   "html": "<ul class=\"do\"><li>Сначала приготовьте грудку в бане (<a href=\"sous-vide.html#chicken-breast\">63 °C, 60–75 мин при толщине ~2 см</a>), затем нарежьте.</li><li>Мариновать не нужно: после имбиря и лука (шаг 5) влейте соус, доведите до кипения и положите готовую курицу всего на <b>1 минуту</b> — не дольше, иначе она станет жёсткой, — и сразу переходите к яйцу.</li></ul>",
+   "html": "<ul class=\"do\"><li>Сначала приготовьте грудку в бане (<a href=\"sous-vide.html#chicken-breast\"><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span>, 60–75 мин при толщине ~<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span></a>), затем нарежьте.</li><li>Мариновать не нужно: после имбиря и лука (шаг 5) влейте соус, доведите до кипения и положите готовую курицу всего на <b>1 минуту</b> — не дольше, иначе она станет жёсткой, — и сразу переходите к яйцу.</li></ul>",
    "title_html": "Короткий путь: курица су-вид"
   },
   {
-   "html": "<ul class=\"do\"><li>Домашний лучше всего — см.</li><li><a href=\"niboshi-bonito-dashi.html\">даси из нибоси и бонито</a>.</li><li>Вода с ¼ ч. л. порошка даси — быстрый вариант; комбу в маринаде в любом случае добавит глубины.</li></ul>",
+   "html": "<ul class=\"do\"><li>Домашний лучше всего — см.</li><li><a href=\"niboshi-bonito-dashi.html\">даси из нибоси и бонито</a>.</li><li>Вода с <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\" data-s=\"0\">¼ ч. л.</span> порошка даси — быстрый вариант; комбу в маринаде в любом случае добавит глубины.</li></ul>",
    "title_html": "Даси"
   },
   {
@@ -201,6 +203,30 @@
  "prev": {
   "slug": "ramen-egg",
   "title": "Яйцо для рамена (6 минут)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/oyakodon.jpg",
  "siblings": [
@@ -253,16 +279,17 @@
    "part": null,
    "part_id": null,
    "time": "~за 45 мин",
+   "time_html": "<span>~за 45 мин</span>",
    "title": "Сначала рис",
    "uses_rows": [
     {
-     "amount_html": "1 миска",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"миска|миски|мисок\" data-n=\"1\">1 миска</span>",
      "name_html": "Варёный круглозёрный рис"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Срежьте с филе лишний жир и нарежьте кусочками 2–3 см.</li><li>В миске размешайте, пока сахар не растворится:<ul class=\"ing two-col\"><li>даси <span class=\"amt\">80 мл</span></li><li>соевый соус <span class=\"amt\">4 ст. л.</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>саке <span class=\"amt\">1 ст. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Положите комбу, затем курицу.</li><li>Оставьте на 15–30 минут (если дольше — в холодильнике).</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Срежьте с филе лишний жир и нарежьте кусочками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 см</span>.</li><li>В миске размешайте, пока сахар не растворится:<ul class=\"ing two-col\"><li>даси <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 мл</span></span></li><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Положите комбу, затем курицу.</li><li>Оставьте на 15–30 минут (если дольше — в холодильнике).</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -286,20 +313,21 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин + 15–30 мин",
+   "time_html": "<span>~5 мин + 15–30 мин</span>",
    "title": "Замаринуйте курицу",
    "uses_rows": [
     {
-     "amount_html": "150 г (1–2 филе)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-n=\"3\">1–2</span> филе)",
      "name_html": "Филе куриного бедра"
     },
     {
-     "amount_html": "квадрат 5 см",
+     "amount_html": "квадрат <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>",
      "name_html": "Комбу"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Лук: срежьте оба конца (корень и верхушку), разрежьте пополам через срезы и очистите.</li><li>Положите каждую половинку плоской стороной вниз и режьте <b>вдоль — перпендикулярно срезанным концам</b>, по линиям, толщиной около 5 мм. Если резать поперёк линий, получатся кольца, которые разваливаются; продольные ломтики держат форму в сковороде.</li><li>Имбирь: очистите, нарежьте тонкой соломкой, затем поперёк — <b>мелкими кубиками</b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Лук: срежьте оба конца (корень и верхушку), разрежьте пополам через срезы и очистите.</li><li>Положите каждую половинку плоской стороной вниз и режьте <b>вдоль — перпендикулярно срезанным концам</b>, по линиям, толщиной около <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span>. Если резать поперёк линий, получатся кольца, которые разваливаются; продольные ломтики держат форму в сковороде.</li><li>Имбирь: очистите, нарежьте тонкой соломкой, затем поперёк — <b>мелкими кубиками</b>.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -327,14 +355,15 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Лук и имбирь",
    "uses_rows": [
     {
-     "amount_html": "½ небольшой луковицы (~60 г)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"небольшая луковица|небольшие луковицы|небольших луковиц|небольшой луковицы\" data-n=\"1\">½ небольшой луковицы</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>)",
      "name_html": "Лук"
     },
     {
-     "amount_html": "кусочек 2 см (~8 г)",
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 г</span>)",
      "name_html": "Имбирь"
     }
    ]
@@ -360,10 +389,11 @@
    "part": null,
    "part_id": null,
    "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
    "title": "Взбейте яйца",
    "uses_rows": [
     {
-     "amount_html": "2",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
      "name_html": "Яйца"
     }
    ]
@@ -372,6 +402,7 @@
    "body_html": "<ul class=\"do\"><li>Маленькая сковорода, масло, огонь ниже среднего.</li><li>Бросьте имбирь секунд на 30, пока не запахнет, затем добавьте лук и щепотку соли.</li><li>Помешивайте, пока лук <b>чуть не размякнет</b> — 2–3 минуты, без цвета.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-5",
@@ -396,18 +427,19 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Имбирь, потом лук",
    "uses_rows": [
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Нейтральное масло"
     },
     {
-     "amount_html": "кусочек 2 см (~8 г)",
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 г</span>)",
      "name_html": "Имбирь"
     },
     {
-     "amount_html": "½ небольшой луковицы (~60 г)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"небольшая луковица|небольшие луковицы|небольших луковиц|небольшой луковицы\" data-n=\"1\">½ небольшой луковицы</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>)",
      "name_html": "Лук"
     },
     {
@@ -420,6 +452,7 @@
    "body_html": "<p>Снимите сковороду с огня и дайте ей остыть несколько минут, пока курица домаринуется.</p>",
    "heat": {
     "label": "огонь выключен",
+    "label_html": "огонь выключен",
     "off": true
    },
    "id": "step-6",
@@ -435,6 +468,7 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Дайте остыть",
    "uses_rows": []
   },
@@ -442,6 +476,7 @@
    "body_html": "<ul class=\"do\"><li>Снова средний огонь.</li><li>Выложите курицу <b>со всем маринадом</b> (и комбу тоже), распределите в один слой.</li><li>Доведите до кипения, накройте крышкой и томите, один раз перевернув, пока курица не приготовится и внутри не останется розового.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-7",
@@ -466,6 +501,7 @@
    "part": null,
    "part_id": null,
    "time": "5–6 мин",
+   "time_html": "<span>5–6 мин</span>",
    "title": "Курица — со всем маринадом",
    "uses_rows": []
   },
@@ -473,6 +509,7 @@
    "body_html": "<ul class=\"do\"><li>Выньте комбу. Полейте курицу и лук <b>примерно двумя третями</b> яйца по кругу.</li><li>Накройте и готовьте, пока яйцо по краям не схватится, а сверху ещё жидкое.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-8",
@@ -488,6 +525,7 @@
    "part": null,
    "part_id": null,
    "time": "30–60 с",
+   "time_html": "<span>30–60 с</span>",
    "title": "Влейте ⅔ яйца",
    "uses_rows": []
   },
@@ -495,6 +533,7 @@
    "body_html": "<ul class=\"do\"><li>Влейте оставшееся яйцо, 10–15 секунд, затем <b>выключите огонь</b> и подержите под крышкой 30 секунд.</li><li>Яйцо должно быть глянцевым и едва схватившимся.</li><li>Если любите плотнее — подержите под крышкой подольше.</li></ul>",
    "heat": {
     "label": "огонь выключен",
+    "label_html": "огонь выключен",
     "off": true
    },
    "id": "step-9",
@@ -515,6 +554,7 @@
    "part": null,
    "part_id": null,
    "time": "~45 с",
+   "time_html": "<span>~45 с</span>",
    "title": "Остальное — и огонь выключить",
    "uses_rows": []
   },
@@ -543,6 +583,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Выложите на рис",
    "uses_rows": [
     {
@@ -584,6 +625,7 @@
     "dur_label": "45 мин",
     "kind": "wait",
     "label": "Сварить рис (первым делом; или разогреть)",
+    "label_html": "Сварить рис (первым делом; или разогреть)",
     "start": 0
    },
    {
@@ -591,6 +633,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Нарезать курицу, смешать маринад",
+    "label_html": "Нарезать курицу, смешать маринад",
     "start": 10
    },
    {
@@ -598,6 +641,7 @@
     "dur_label": "21 мин",
     "kind": "wait",
     "label": "Курица маринуется",
+    "label_html": "Курица маринуется",
     "start": 15
    },
    {
@@ -605,6 +649,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Нарезать лук и имбирь",
+    "label_html": "Нарезать лук и имбирь",
     "start": 20
    },
    {
@@ -612,6 +657,7 @@
     "dur_label": "1 мин",
     "kind": "bowl",
     "label": "Взбить яйца",
+    "label_html": "Взбить яйца",
     "start": 25
    },
    {
@@ -619,6 +665,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Имбирь, лук + соль",
+    "label_html": "Имбирь, лук + соль",
     "start": 27
    },
    {
@@ -626,6 +673,7 @@
     "dur_label": "6 мин",
     "kind": "wait",
     "label": "Сковорода остывает",
+    "label_html": "Сковорода остывает",
     "start": 30
    },
    {
@@ -633,6 +681,7 @@
     "dur_label": "6 мин",
     "kind": "pan",
     "label": "Курица + маринад, под крышкой",
+    "label_html": "Курица + маринад, под крышкой",
     "start": 36
    },
    {
@@ -640,6 +689,7 @@
     "dur_label": "1 мин",
     "kind": "pan",
     "label": "Влить ⅔ яйца, накрыть",
+    "label_html": "Влить ⅔ яйца, накрыть",
     "start": 42
    },
    {
@@ -647,6 +697,7 @@
     "dur_label": "1 мин",
     "kind": "pan",
     "label": "Влить ⅓ яйца, выключить огонь, подождать",
+    "label_html": "Влить ⅓ яйца, выключить огонь, подождать",
     "start": 43
    },
    {
@@ -654,6 +705,7 @@
     "dur_label": "48 с",
     "kind": "bowl",
     "label": "Выложить на рис, посыпать зеленью",
+    "label_html": "Выложить на рис, посыпать зеленью",
     "start": 44
    }
   ],

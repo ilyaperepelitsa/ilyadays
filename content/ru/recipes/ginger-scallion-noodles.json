@@ -4,10 +4,12 @@
  "blurb_html": "Лапша Momofuku с холодным соусом, только мягче: вдвое меньше имбиря, больше лука и горячее масло, чтобы снять жгучесть.",
  "chips": [
   {
+   "html": "<span>4 миски (около <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-s=\"0\">1½ стакана</span> соуса)</span>",
    "kind": "",
    "text": "4 миски (около 1½ стакана соуса)"
   },
   {
+   "html": "~30 мин",
    "kind": "time",
    "text": "~30 мин"
   }
@@ -33,35 +35,35 @@
   {
    "items": [
     {
-     "amount_html": "3 стакана тонко нарезанного (около 2 пучков)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 стакана</span> тонко нарезанного (около <span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> пучков)",
      "name_html": "Зелёный лук"
     },
     {
-     "amount_html": "¼ стакана мелко нарубленного (кусок около 5 см)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\">¼ стакана</span> мелко нарубленного (кусок около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>)",
      "name_html": "Свежий имбирь"
     },
     {
-     "amount_html": "½ стакана",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span>",
      "name_html": "Нейтральное масло (виноградное)"
     },
     {
-     "amount_html": "2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
      "name_html": "Светлый соевый соус (усукути)"
     },
     {
-     "amount_html": "¾ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.75\">¾ ч. л.</span>",
      "name_html": "Хересный уксус"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Сахар"
     },
     {
-     "amount_html": "½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
      "name_html": "Кунжутное масло"
     },
     {
-     "amount_html": "½ ч. л., по вкусу",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>, по вкусу",
      "name_html": "Соль"
     }
    ],
@@ -70,7 +72,7 @@
   {
    "items": [
     {
-     "amount_html": "4 порции (~520 г свежей)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"порция|порции|порций\" data-n=\"1\">4 порции</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"520\">520 г</span> свежей)",
      "name_html": "Лапша для рамена"
     }
    ],
@@ -83,7 +85,7 @@
      "name_html": "Маринованный огурец"
     },
     {
-     "amount_html": "1 лист, порвать",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>, порвать",
      "name_html": "Обжаренная нори"
     },
     {
@@ -113,9 +115,9 @@
    "goes_in": "Шаг 2",
    "image": "illustrations/ginger-scallion-noodles/mise2.webp",
    "items": [
-    "мелко нарублен — ¼ стакана"
+    "мелко нарублен — <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\">¼ стакана</span>"
    ],
-   "items_html": "мелко нарублен — ¼ стакана",
+   "items_html": "мелко нарублен — <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\">¼ стакана</span>",
    "name": "Имбирь",
    "svg_fallback": null,
    "vessel": "cup"
@@ -158,11 +160,11 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>Оригинал Momofuku, смешанный сырым:<ul class=\"ing two-col\"><li>2½ стакана нарезанного зелёного лука</li><li>½ стакана нарубленного имбиря</li><li>⅓ стакана виноградного масла</li><li>1½ ч. л. усукути</li><li>¾ ч. л. хересного уксуса</li><li>¾ ч. л. кошерной соли</li></ul></li><li>Эта версия:<ul class=\"ing two-col\"><li>имбиря вдвое меньше — ¼ стакана, нарублен мельче</li><li>лука — до 3 стаканов</li><li>масла — до ½ стакана, льётся горячим</li><li>соевого соуса — до 2 ч. л., соли — до ½ ч. л.</li><li>добавлено: 1 ч. л. сахара и ½ ч. л. кунжутного масла</li></ul></li></ul>",
+   "html": "<ul class=\"do\"><li>Оригинал Momofuku, смешанный сырым:<ul class=\"ing two-col\"><li><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.5\" data-s=\"0\">2½ стакана</span> нарезанного зелёного лука</li><li><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ стакана</span> нарубленного имбиря</li><li><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\" data-s=\"0\">⅓ стакана</span> виноградного масла</li><li><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\" data-s=\"0\">1½ ч. л.</span> усукути</li><li><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.75\" data-s=\"0\">¾ ч. л.</span> хересного уксуса</li><li><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.75\" data-s=\"0\">¾ ч. л.</span> кошерной соли</li></ul></li><li>Эта версия:<ul class=\"ing two-col\"><li>имбиря вдвое меньше — <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-s=\"0\">¼ стакана</span>, нарублен мельче</li><li>лука — до <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-s=\"0\">3 стаканов</span></li><li>масла — до <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ стакана</span>, льётся горячим</li><li>соевого соуса — до <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-s=\"0\">2 ч. л.</span>, соли — до <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ ч. л.</span></li><li>добавлено: <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> сахара и <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ ч. л.</span> кунжутного масла</li></ul></li></ul>",
    "title_html": "Оригинал и эта версия"
   },
   {
-   "html": "<ul class=\"do\"><li>Сократите имбирь до 2 ст. л.</li><li>Бланшируйте нарубленный имбирь в кипятке 30 секунд и слейте воду, прежде чем заливать горячим маслом.</li><li>Дайте соусу постоять час перед использованием — он продолжает смягчаться.</li><li>Добавьте больше лука, а не приправ.</li></ul>",
+   "html": "<ul class=\"do\"><li>Сократите имбирь до <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 ст. л.</span></li><li>Бланшируйте нарубленный имбирь в кипятке 30 секунд и слейте воду, прежде чем заливать горячим маслом.</li><li>Дайте соусу постоять час перед использованием — он продолжает смягчаться.</li><li>Добавьте больше лука, а не приправ.</li></ul>",
    "title_html": "Если всё ещё слишком остро"
   },
   {
@@ -179,6 +181,30 @@
  "prev": {
   "slug": "alkaline-ramen-noodles",
   "title": "Лапша для рамена на запечённой соде"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/ginger-scallion-noodles.jpg",
  "siblings": [
@@ -216,7 +242,7 @@
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Белую и светло-зелёную части нарежьте <b>тонко</b> (немного тёмной зелени — не страшно) — около 3 стаканов.</li><li>Сложите в жаропрочную миску.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Белую и светло-зелёную части нарежьте <b>тонко</b> (немного тёмной зелени — не страшно) — около <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-s=\"0\">3 стаканов</span>.</li><li>Сложите в жаропрочную миску.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -236,16 +262,17 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Нарежьте зелёный лук",
    "uses_rows": [
     {
-     "amount_html": "3 стакана тонко нарезанного",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 стакана</span> тонко нарезанного",
      "name_html": "Зелёный лук"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Очистите краем ложки, тонко нарежьте, затем соломкой, а потом <b>мелко нарубите</b> — чем мельче, тем меньше жжёт.</li><li>Отмерьте <b>¼ стакана</b>, не больше, и добавьте к луку.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Очистите краем ложки, тонко нарежьте, затем соломкой, а потом <b>мелко нарубите</b> — чем мельче, тем меньше жжёт.</li><li>Отмерьте <b><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-s=\"0\">¼ стакана</span></b>, не больше, и добавьте к луку.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -265,18 +292,20 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Нарубите имбирь — меньше, чем кажется",
    "uses_rows": [
     {
-     "amount_html": "¼ стакана мелко нарубленного",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\">¼ стакана</span> мелко нарубленного",
      "name_html": "Свежий имбирь"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Нагрейте масло в маленьком сотейнике, пока оно не <b>задрожит</b> (около 170 °C — брошенный кусочек лука бурно шипит).</li><li>Залейте им лук и имбирь. Всё зашипит и вспенится — так уходит жгучесть сырого имбиря.</li><li>Перемешайте один раз.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нагрейте масло в маленьком сотейнике, пока оно не <b>задрожит</b> (около <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"170\" data-s=\"0\">170 °C</span> — брошенный кусочек лука бурно шипит).</li><li>Залейте им лук и имбирь. Всё зашипит и вспенится — так уходит жгучесть сырого имбиря.</li><li>Перемешайте один раз.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-3",
@@ -297,16 +326,17 @@
    "part": null,
    "part_id": null,
    "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
    "title": "Залейте горячим маслом",
    "uses_rows": [
     {
-     "amount_html": "½ стакана",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span>",
      "name_html": "Нейтральное масло (виноградное)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Вмешайте:<ul class=\"ing two-col\"><li>светлый соевый соус (усукути) <span class=\"amt\">2 ч. л.</span></li><li>хересный уксус <span class=\"amt\">¾ ч. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li><li>кунжутное масло <span class=\"amt\">½ ч. л.</span></li><li>соль <span class=\"amt\">½ ч. л.</span></li></ul></li><li>Оставьте на <b>15–20 минут</b>, чтобы вкусы устоялись, затем попробуйте и поправьте соль.</li><li>Хранится 2 дня в холодильнике; перед использованием перемешайте.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Вмешайте:<ul class=\"ing two-col\"><li>светлый соевый соус (усукути) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li><li>хересный уксус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.75\">¾ ч. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>кунжутное масло <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>соль <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li></ul></li><li>Оставьте на <b>15–20 минут</b>, чтобы вкусы устоялись, затем попробуйте и поправьте соль.</li><li>Хранится 2 дня в холодильнике; перед использованием перемешайте.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -326,6 +356,7 @@
    "part": null,
    "part_id": null,
    "time": "15–20 мин",
+   "time_html": "<span>15–20 мин</span>",
    "title": "Приправить и дать постоять",
    "uses_rows": []
   },
@@ -333,6 +364,7 @@
    "body_html": "<p>Сварите лапшу (домашнюю — 1½–2 минуты, магазинную — по упаковке), хорошо слейте и стряхните воду.</p>",
    "heat": {
     "label": "сильный",
+    "label_html": "<span>сильный</span>",
     "off": false
    },
    "id": "step-5",
@@ -348,16 +380,17 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Сварите лапшу",
    "uses_rows": [
     {
-     "amount_html": "4 порции",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"порция|порции|порций\" data-n=\"1\">4 порции</span>",
      "name_html": "Лапша для рамена"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Перемешайте каждую миску горячей лапши с <b>5–6 ст. л.</b> соуса, чтобы покрылась каждая лапшинка.</li><li>Сверху — пара из этого:<ul class=\"ing\"><li>маринованный огурец <span class=\"amt\">несколько ломтиков</span></li><li>обжаренная нори <span class=\"amt\">1 лист</span></li><li>ещё нарезанного зелёного лука <span class=\"amt\">щепотка</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Перемешайте каждую миску горячей лапши с <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-b=\"6\" data-s=\"0\">5–6 ст. л.</span></b> соуса, чтобы покрылась каждая лапшинка.</li><li>Сверху — пара из этого:<ul class=\"ing\"><li>маринованный огурец <span class=\"amt\">несколько ломтиков</span></li><li>обжаренная нори <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span></span></li><li>ещё нарезанного зелёного лука <span class=\"amt\">щепотка</span></li></ul></li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
@@ -377,6 +410,7 @@
    "part": null,
    "part_id": null,
    "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
    "title": "Перемешать и украсить",
    "uses_rows": []
   }
@@ -409,6 +443,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Нарезать лук",
+    "label_html": "Нарезать лук",
     "start": 0
    },
    {
@@ -416,6 +451,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Нарубить имбирь",
+    "label_html": "Нарубить имбирь",
     "start": 5
    },
    {
@@ -423,6 +459,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Нагреть масло, залить",
+    "label_html": "Нагреть масло, залить",
     "start": 10
    },
    {
@@ -430,6 +467,7 @@
     "dur_label": "1 мин",
     "kind": "bowl",
     "label": "Приправить",
+    "label_html": "Приправить",
     "start": 14
    },
    {
@@ -437,6 +475,7 @@
     "dur_label": "15 мин",
     "kind": "wait",
     "label": "Соус настаивается",
+    "label_html": "Соус настаивается",
     "start": 15
    },
    {
@@ -444,6 +483,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Сварить лапшу",
+    "label_html": "Сварить лапшу",
     "start": 25
    },
    {
@@ -451,6 +491,7 @@
     "dur_label": "2 мин",
     "kind": "bowl",
     "label": "Перемешать + топпинги",
+    "label_html": "Перемешать + топпинги",
     "start": 28
    }
   ],

@@ -4,6 +4,8 @@
 // "vinegar", shared with VinegarPicker); the calculator's own inputs live in localStorage too. Never a cookie.
 import { useCallback, useState, useSyncExternalStore } from "react";
 import type { Batch, VinegarOption } from "@/lib/content";
+import type { Lang } from "@/lib/i18n";
+import { formatQ, UNITS_EVENT, UNITS_KEY } from "@/lib/units.js";
 
 const KEY = "calc:cucumber-mix";
 const VINEGAR_KEY = "vinegar";
@@ -25,10 +27,12 @@ function subscribe(onChange: () => void) {
   // VinegarPicker stores the choice in its own change listener, which may run after this one: read it a tick later.
   const onPick = () => setTimeout(onChange, 0);
   window.addEventListener(EVENT, onChange);
+  window.addEventListener(UNITS_EVENT, onChange); // metric / US switched in the ingredients panel
   window.addEventListener("storage", onChange);
   picker?.addEventListener("change", onPick);
   return () => {
     window.removeEventListener(EVENT, onChange);
+    window.removeEventListener(UNITS_EVENT, onChange);
     window.removeEventListener("storage", onChange);
     picker?.removeEventListener("change", onPick);
   };
@@ -62,6 +66,11 @@ function volume(ml: number, u: Record<string, string>) {
   return `${ml > 100 ? Math.round(ml / 5) * 5 : Math.round(ml)} ${u.ml}`;
 }
 
+/** US units (the metric / US switch at the top of the ingredients): cups and spoons, sugar in ounces. */
+const usVolume = (ml: number, lang: Lang) =>
+  ml < 1 ? "—" : formatQ({ k: "vol", u: "ml", a: ml, o: "" }, { factor: 1, units: "us", lang }).text;
+const usMass = (g: number, lang: Lang) => formatQ({ k: "mass", u: "g", a: g, o: "" }, { factor: 1, units: "us", lang }).text;
+
 /** A number box that lets you clear it and type freely; only whole numbers in range are passed on. */
 function NumberField(props: { value: number; min: number; max: number; step?: number; label?: string; onValue: (v: number) => void }) {
   const { value, min, max, step, label, onValue } = props;
@@ -85,8 +94,11 @@ function NumberField(props: { value: number; min: number; max: number; step?: nu
   );
 }
 
-export function BatchCalc({ batch, options }: { batch: Batch; options: Record<string, VinegarOption> }) {
+export function BatchCalc({ batch, options, lang }: { batch: Batch; options: Record<string, VinegarOption>; lang: Lang }) {
   const u = batch.text;
+  const us = useSyncExternalStore(subscribe, () => read(UNITS_KEY), () => null) === "us";
+  const vol = (ml: number) => (us ? usVolume(ml, lang) : volume(ml, u));
+  const mass = (g: number) => (us ? usMass(g, lang) : `${Math.round(g)} ${u.g}`);
   const saved = parse(useSyncExternalStore(subscribe, () => read(KEY), () => null));
   const storedVinegar = useSyncExternalStore(subscribe, () => read(VINEGAR_KEY), () => null);
   const vinegar = storedVinegar && batch.kinds[storedVinegar] ? storedVinegar : "rice";
@@ -198,28 +210,26 @@ export function BatchCalc({ batch, options }: { batch: Batch; options: Record<st
         <ul className="batch-out" aria-live="polite">
           <li>
             <span className="ing-name">{options[vinegar]?.name ?? u.vinegar}</span>
-            <span className="ing-amt">{volume(n * k.vinegar_ml, u)}</span>
+            <span className="ing-amt">{vol(n * k.vinegar_ml)}</span>
           </li>
           <li className={k.water_ml < 0.5 ? "batch-none" : undefined}>
             <span className="ing-name">{u.water}</span>
-            <span className="ing-amt">{k.water_ml < 0.5 ? "—" : volume(n * k.water_ml, u)}</span>
+            <span className="ing-amt">{k.water_ml < 0.5 ? "—" : vol(n * k.water_ml)}</span>
           </li>
           <li>
             <span className="ing-name">{u.mirin}</span>
-            <span className="ing-amt">{volume(n * batch.mirin_ml, u)}</span>
+            <span className="ing-amt">{vol(n * batch.mirin_ml)}</span>
           </li>
           <li>
             <span className="ing-name">{u.sugar}</span>
-            <span className="ing-amt">
-              {Math.round(n * k.sugar_g)} {u.g}
-            </span>
+            <span className="ing-amt">{mass(n * k.sugar_g)}</span>
           </li>
         </ul>
         <p className="batch-use">
-          {fill(u.use, { use: volume(k.use_ml, u) })}{" "}
+          {fill(u.use, { use: vol(k.use_ml) })}{" "}
           {saved.mode === "jar"
             ? fill(u.jar_makes, { n: Math.floor(n) })
-            : fill(u.recipes_make, { ml: volume(total, u) })}
+            : fill(u.recipes_make, { ml: vol(total) })}
         </p>
         <p className="batch-store">{u.store}</p>
       </div>

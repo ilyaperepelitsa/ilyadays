@@ -4,10 +4,12 @@
  "blurb_html": "Filipino beef stew: browned beef braised low with tomatoes, onion and a whole head of garlic, finished with fish sauce and boiled eggs.",
  "chips": [
   {
+   "html": "<span>~4 servings</span>",
    "kind": "",
    "text": "~4 servings"
   },
   {
+   "html": "~3–3½ h, mostly hands-off",
    "kind": "time",
    "text": "~3–3½ h, mostly hands-off"
   }
@@ -31,23 +33,23 @@
   {
    "items": [
     {
-     "amount_html": "2 lb (~900 g), cubed",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"2\">2 lb</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\" data-alt=\"1\">900 g</span>)</span>, cubed",
      "name_html": "Stewing beef"
     },
     {
-     "amount_html": "4, quartered",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>, quartered",
      "name_html": "Roma tomatoes"
     },
     {
-     "amount_html": "1 medium, diced",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> medium, diced",
      "name_html": "Yellow onion"
     },
     {
-     "amount_html": "1 head, roughly diced",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"head|heads\" data-n=\"1\">1 head</span>, roughly diced",
      "name_html": "Garlic"
     },
     {
-     "amount_html": "2–3 tsp, optional",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 tsp</span>, optional",
      "name_html": "Fish sauce"
     },
     {
@@ -55,7 +57,7 @@
      "name_html": "Salt & pepper"
     },
     {
-     "amount_html": "4, peeled — see <a href=\"boiled-eggs.html\">boiled eggs</a>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>, peeled — see <a href=\"boiled-eggs.html\">boiled eggs</a>",
      "name_html": "Boiled eggs"
     }
    ],
@@ -133,6 +135,30 @@
   "slug": "chicken-pad-thai",
   "title": "Chicken Pad Thai"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
  "share_image": "share/baka-with-eggs.jpg",
  "siblings": [
   {
@@ -160,6 +186,7 @@
    "body_html": "<ul class=\"do\"><li>Salt and pepper the beef.</li><li>Sear it over heat high enough that brown bits glue themselves to the bottom of the pot — that <b>fond</b> is where the flavour comes from.</li></ul>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-1",
@@ -180,10 +207,11 @@
    "part": null,
    "part_id": null,
    "time": "~15 min",
+   "time_html": "<span>~15 min</span>",
    "title": "Brown the beef",
    "uses_rows": [
     {
-     "amount_html": "2 lb (~900 g)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"2\">2 lb</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\" data-alt=\"1\">900 g</span>)</span>",
      "name_html": "Stewing beef"
     },
     {
@@ -193,9 +221,10 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Lift the beef out and pour off part of the fat.</li><li>Tip into the hot pot to deglaze it:<ul class=\"ing\"><li>roma tomatoes <span class=\"amt\">4</span></li><li>yellow onion <span class=\"amt\">1 medium</span></li><li>garlic <span class=\"amt\">1 head</span></li></ul></li><li>When the vegetables have given up their juices, return the beef and stir it through for about a minute.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Lift the beef out and pour off part of the fat.</li><li>Tip into the hot pot to deglaze it:<ul class=\"ing\"><li>roma tomatoes <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span></span></li><li>yellow onion <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> medium</span></li><li>garlic <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"head|heads\" data-n=\"1\">1 head</span></span></li></ul></li><li>When the vegetables have given up their juices, return the beef and stir it through for about a minute.</li></ul>",
    "heat": {
     "label": "medium",
+    "label_html": "<span>medium</span>",
     "off": false
    },
    "id": "step-2",
@@ -220,6 +249,7 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Deglaze with the vegetables",
    "uses_rows": []
   },
@@ -227,6 +257,7 @@
    "body_html": "<ul class=\"do\"><li>Lid on, heat <b>low</b>, for <b>2–3 hours</b>.</li><li>Look in and stir every 15–30 minutes — more often if stews are new to you — making sure there’s still liquid and nothing is catching on the bottom.</li></ul>",
    "heat": {
     "label": "low",
+    "label_html": "<span>low</span>",
     "off": false
    },
    "id": "step-3",
@@ -247,6 +278,7 @@
    "part": null,
    "part_id": null,
    "time": "2–3 h",
+   "time_html": "<span>2–3 h</span>",
    "title": "Stew low, covered",
    "uses_rows": []
   },
@@ -254,6 +286,7 @@
    "body_html": "<ul class=\"do\"><li>Take the lid off and let it cook down until the sauce is as thick as you like.</li><li>Stir in the fish sauce.</li></ul>",
    "heat": {
     "label": "medium",
+    "label_html": "<span>medium</span>",
     "off": false
    },
    "id": "step-4",
@@ -274,10 +307,11 @@
    "part": null,
    "part_id": null,
    "time": "~15 min",
+   "time_html": "<span>~15 min</span>",
    "title": "Reduce and season",
    "uses_rows": [
     {
-     "amount_html": "2–3 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 tsp</span>",
      "name_html": "Fish sauce"
     }
    ]
@@ -303,10 +337,11 @@
    "part": null,
    "part_id": null,
    "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
    "title": "Eggs in",
    "uses_rows": [
     {
-     "amount_html": "4, peeled — see <a href=\"boiled-eggs.html\">boiled eggs</a>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>, peeled — see <a href=\"boiled-eggs.html\">boiled eggs</a>",
      "name_html": "Boiled eggs"
     }
    ]
@@ -327,6 +362,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Serve or store",
    "uses_rows": [
     {
@@ -356,6 +392,7 @@
     "dur_label": "15 min",
     "kind": "pan",
     "label": "Season + brown the beef",
+    "label_html": "Season + brown the beef",
     "start": 0
    },
    {
@@ -363,6 +400,7 @@
     "dur_label": "8 min",
     "kind": "pan",
     "label": "Deglaze with vegetables",
+    "label_html": "Deglaze with vegetables",
     "start": 15
    },
    {
@@ -370,6 +408,7 @@
     "dur_label": "1 h",
     "kind": "wait",
     "label": "Stew low, covered (2–3 h)",
+    "label_html": "Stew low, covered (2–3 h)",
     "start": 23
    },
    {
@@ -377,6 +416,7 @@
     "dur_label": "15 min",
     "kind": "pan",
     "label": "Reduce, fish sauce",
+    "label_html": "Reduce, fish sauce",
     "start": 83
    },
    {
@@ -384,6 +424,7 @@
     "dur_label": "3 min",
     "kind": "pan",
     "label": "Eggs in",
+    "label_html": "Eggs in",
     "start": 98
    }
   ],

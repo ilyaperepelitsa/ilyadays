@@ -4,10 +4,12 @@
  "blurb_html": "Soy-rich, lightly sweet noodles with egg and greens — browned in the pan.",
  "chips": [
   {
+   "html": "<span>1 generous serving</span>",
    "kind": "",
    "text": "1 generous serving"
   },
   {
+   "html": "~20 min",
    "kind": "time",
    "text": "~20 min"
   }
@@ -30,27 +32,27 @@
   {
    "items": [
     {
-     "amount_html": "100 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
      "name_html": "Dried flat rice noodles"
     },
     {
-     "amount_html": "150 g, thinly sliced",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, thinly sliced",
      "name_html": "Chicken"
     },
     {
-     "amount_html": "125 g, chopped; stems and leaves separated",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"125\">125 g</span>, chopped; stems and leaves separated",
      "name_html": "Chinese broccoli or bok choy"
     },
     {
-     "amount_html": "1",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
      "name_html": "Egg"
     },
     {
-     "amount_html": "2 cloves, finely chopped",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>, finely chopped",
      "name_html": "Garlic"
     },
     {
-     "amount_html": "1½ tbsp (½ + 1)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span> (½ + 1)",
      "name_html": "Neutral cooking oil"
     }
    ],
@@ -59,23 +61,23 @@
   {
    "items": [
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Oyster sauce"
     },
     {
-     "amount_html": "1½ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span>",
      "name_html": "Regular soy sauce"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Dark soy sauce"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Rice vinegar"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Sugar"
     }
    ],
@@ -160,6 +162,30 @@
   "slug": "garlic-ginger-chicken-noodles",
   "title": "Garlic–ginger chicken noodles"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
  "share_image": "share/chicken-pad-see-ew.jpg",
  "siblings": [
   {
@@ -200,16 +226,17 @@
    "part": null,
    "part_id": null,
    "time": "per packet",
+   "time_html": "<span>per packet</span>",
    "title": "Noodles first",
    "uses_rows": [
     {
-     "amount_html": "100 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
      "name_html": "Dried flat rice noodles"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Slice the chicken thinly.</li><li>Slice the greens’ <b>stems thinly</b> and keep the leaves separate.</li><li>Chop the garlic and crack the egg into a cup.</li><li>Mix the sauce:<ul class=\"ing two-col\"><li>oyster sauce <span class=\"amt\">1 tbsp</span></li><li>regular soy sauce <span class=\"amt\">1½ tsp</span></li><li>dark soy sauce <span class=\"amt\">1 tsp</span></li><li>rice vinegar <span class=\"amt\">1 tsp</span></li><li>sugar <span class=\"amt\">1 tsp</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Slice the chicken thinly.</li><li>Slice the greens’ <b>stems thinly</b> and keep the leaves separate.</li><li>Chop the garlic and crack the egg into a cup.</li><li>Mix the sauce:<ul class=\"ing two-col\"><li>oyster sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>regular soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span></span></li><li>dark soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>rice vinegar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -229,22 +256,23 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Prep everything",
    "uses_rows": [
     {
-     "amount_html": "150 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
      "name_html": "Chicken"
     },
     {
-     "amount_html": "125 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"125\">125 g</span>",
      "name_html": "Chinese broccoli or bok choy"
     },
     {
-     "amount_html": "2 cloves",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
      "name_html": "Garlic"
     },
     {
-     "amount_html": "1",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
      "name_html": "Egg"
     }
    ]
@@ -253,6 +281,7 @@
    "body_html": "<ul class=\"do\"><li>Heat <b>½ tablespoon oil</b> over medium-high heat.</li><li>Cook the chicken until nearly done.</li><li>Add the thinly sliced stems, then garlic and leaves; cook until the chicken is cooked through and greens are tender.</li></ul>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-3",
@@ -273,6 +302,7 @@
    "part": null,
    "part_id": null,
    "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
    "title": "Chicken and greens",
    "uses_rows": []
   },
@@ -280,6 +310,7 @@
    "body_html": "<p>Push everything aside, scramble the egg in the cleared space, then <b>transfer everything to a plate</b>.</p>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-4",
@@ -300,6 +331,7 @@
    "part": null,
    "part_id": null,
    "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
    "title": "Egg",
    "uses_rows": []
   },
@@ -307,6 +339,7 @@
    "body_html": "<ul class=\"do\"><li>Add the <b>remaining 1 tablespoon oil</b>, the noodles and the sauce.</li><li><b>Spread out, leave briefly to brown</b>, then gently turn.</li><li>Cook for roughly 1–2 minutes.</li></ul>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-5",
@@ -331,6 +364,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 min",
+   "time_html": "<span>1–2 min</span>",
    "title": "Brown the noodles",
    "uses_rows": []
   },
@@ -338,6 +372,7 @@
    "body_html": "<p>Return the chicken mixture, toss briefly and serve.</p>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-6",
@@ -358,6 +393,7 @@
    "part": null,
    "part_id": null,
    "time": "~30 s",
+   "time_html": "<span>~30 s</span>",
    "title": "Toss and serve",
    "uses_rows": []
   }
@@ -390,6 +426,7 @@
     "dur_label": "3 min",
     "kind": "board",
     "label": "Slice chicken",
+    "label_html": "Slice chicken",
     "start": 0
    },
    {
@@ -397,6 +434,7 @@
     "dur_label": "4 min",
     "kind": "board",
     "label": "Slice stems, chop leaves + garlic",
+    "label_html": "Slice stems, chop leaves + garlic",
     "start": 3
    },
    {
@@ -404,6 +442,7 @@
     "dur_label": "7 min",
     "kind": "wait",
     "label": "Soak / boil noodles (packet time)",
+    "label_html": "Soak / boil noodles (packet time)",
     "start": 6
    },
    {
@@ -411,6 +450,7 @@
     "dur_label": "1.5 min",
     "kind": "bowl",
     "label": "Mix sauce, crack egg",
+    "label_html": "Mix sauce, crack egg",
     "start": 7
    },
    {
@@ -418,6 +458,7 @@
     "dur_label": "2.5 min",
     "kind": "pan",
     "label": "Chicken until nearly done",
+    "label_html": "Chicken until nearly done",
     "start": 9
    },
    {
@@ -425,6 +466,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Stems, garlic, leaves",
+    "label_html": "Stems, garlic, leaves",
     "start": 11.5
    },
    {
@@ -432,6 +474,7 @@
     "dur_label": "1 min",
     "kind": "bowl",
     "label": "Drain noodles",
+    "label_html": "Drain noodles",
     "start": 13
    },
    {
@@ -439,6 +482,7 @@
     "dur_label": "1.5 min",
     "kind": "pan",
     "label": "Scramble egg → everything to plate",
+    "label_html": "Scramble egg → everything to plate",
     "start": 13.5
    },
    {
@@ -446,6 +490,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Brown noodles in sauce",
+    "label_html": "Brown noodles in sauce",
     "start": 15
    },
    {
@@ -453,6 +498,7 @@
     "dur_label": "1 min",
     "kind": "pan",
     "label": "Return chicken mix, toss",
+    "label_html": "Return chicken mix, toss",
     "start": 17
    }
   ],

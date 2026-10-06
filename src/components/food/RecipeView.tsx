@@ -4,14 +4,16 @@ import { foodHref, getSvgDefs, getUi, media } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt, Illo, Svg, SvgDefs } from "./parts";
 import { BatchCalc } from "./BatchCalc";
+import { Portions } from "./Portions";
 import { VinegarPicker } from "./VinegarPicker";
 
 type T = (key: string) => string;
 
-function Ingredients({ r, t }: { r: Recipe; t: T }) {
+function Ingredients({ r, t, lang }: { r: Recipe; t: T; lang: Lang }) {
   return (
     <aside className="ingredients-panel" id="ingredients">
       <h2>{t("Ingredients")}</h2>
+      <Portions scale={r.scale} slug={r.slug} lang={lang} />
       {r.before_ingredients_html && <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: r.before_ingredients_html }} />}
       {r.ingredients.map((g, i) => (
         <Fragment key={i}>
@@ -93,7 +95,7 @@ function TimelineChart({ tl, t }: { tl: Timeline; t: T }) {
           return (
             <div className="tl-row" key={i}>
               <div className="tl-label">
-                {task.label} <em>{task.dur_label}</em>
+                <Html html={task.label_html} /> <em>{task.dur_label}</em>
               </div>
               <div className="tl-track">
                 <div
@@ -151,8 +153,8 @@ function StepCard({ s, t }: { s: Step; t: T }) {
           {s.title}
         </h3>
         <div className="chips">
-          {s.heat && <span className={`chip ${s.heat.off ? "heat-off" : "heat"}`}>{s.heat.label}</span>}
-          {s.time && <span className="chip time">{s.time}</span>}
+          {s.heat && <Html className={`chip ${s.heat.off ? "heat-off" : "heat"}`} html={s.heat.label_html} />}
+          {s.time_html && <Html className="chip time" html={s.time_html} />}
         </div>
         {s.uses_rows.length > 0 && (
           <div className="uses">
@@ -251,7 +253,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
             <Html as="p" className="lede" html={r.intro_html} />
             <div className="meta">
               {r.chips.map((c, i) => (
-                <span key={i} className={c.kind ? `chip ${c.kind}` : "chip"}>{c.text}</span>
+                <Html key={i} className={c.kind ? `chip ${c.kind}` : "chip"} html={c.html ?? c.text} />
               ))}
             </div>
             <nav className="jump">
@@ -270,12 +272,12 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
           </figure>
         </div>
         <div className="recipe-body">
-          <Ingredients r={r} t={t} />
+          <Ingredients r={r} t={t} lang={lang} />
           <div className="recipe-main">
             <Mise r={r} t={t} />
             {r.timeline && <TimelineChart tl={r.timeline} t={t} />}
             <Steps r={r} t={t} />
-            {r.batch && r.vinegar_options && <BatchCalc batch={r.batch} options={r.vinegar_options} />}
+            {r.batch && r.vinegar_options && <BatchCalc batch={r.batch} options={r.vinegar_options} lang={lang} />}
             <NotesAndSources r={r} t={t} />
             {r.siblings.length > 0 && (
               <nav className="more">

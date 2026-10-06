@@ -67,10 +67,12 @@
  "blurb_html": "Salted, rinsed and squeezed cucumber with ginger and garlic, in a vinegar–mirin–sugar marinade.",
  "chips": [
   {
+   "html": "<span>2 side servings</span>",
    "kind": "",
    "text": "2 side servings"
   },
   {
+   "html": "~20 min + marinating",
    "kind": "time",
    "text": "~20 min + marinating"
   }
@@ -90,11 +92,11 @@
   {
    "items": [
     {
-     "amount_html": "250 g (1 regular, or 2–3 small Japanese / Persian)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> regular, or <span class=\"q\" data-k=\"count\" data-a=\"2\" data-b=\"3\" data-n=\"3\">2–3</span> small Japanese / Persian)",
      "name_html": "Cucumber"
     },
     {
-     "amount_html": "½ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
      "name_html": "Fine salt, for drawing out water"
     }
    ],
@@ -103,15 +105,15 @@
   {
    "items": [
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Ginger, grated"
     },
     {
-     "amount_html": "1 small clove",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 small clove</span>",
      "name_html": "Garlic, grated"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Rice vinegar (first splash)"
     }
    ],
@@ -120,7 +122,7 @@
   {
    "items": [
     {
-     "amount_html": "<span data-v=\"amount\">2 tbsp (30 ml)</span>",
+     "amount_html": "<span data-v=\"amount\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"30\" data-alt=\"1\">30 ml</span>)</span></span>",
      "name_html": "<span data-v=\"name\">Rice vinegar</span>"
     },
     {
@@ -128,11 +130,11 @@
      "name_html": "<span data-v-row=\"water\">Water</span>"
     },
     {
-     "amount_html": "1 tbsp (15 ml) — half the vinegar, 2 : 1",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-alt=\"1\">15 ml</span>)</span> — half the vinegar, 2 : 1",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "<span data-v=\"sugar\">8 g (2 tsp)</span>",
+     "amount_html": "<span data-v=\"sugar\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 tsp</span>)</span></span>",
      "name_html": "Sugar"
     }
    ],
@@ -141,11 +143,11 @@
   {
    "items": [
     {
-     "amount_html": "½–1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"1\">½–1 tsp</span>",
      "name_html": "Light soy sauce (usukuchi)"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Toasted sesame seeds"
     }
    ],
@@ -213,7 +215,7 @@
  },
  "notes": [
   {
-   "html": "<table class=\"mini\"><thead><tr><th>You have</th><th>Vinegar</th><th>+ Water</th><th>Sugar</th></tr></thead><tbody><tr><td>Rice vinegar (~4.5%)</td><td>2 tbsp (30 ml)</td><td>—</td><td>8 g (2 tsp)</td></tr><tr><td>Korean brewed vinegar 양조식초 (~7%)</td><td>1¼ tbsp (19 ml)</td><td>2 tsp (11 ml)</td><td>10 g (2½ tsp)</td></tr><tr><td>Table vinegar 9%</td><td>1 tbsp (15 ml)</td><td>1 tbsp (15 ml)</td><td>10 g (2½ tsp)</td></tr><tr><td>Vinegar 6%</td><td>1½ tbsp (22 ml)</td><td>1½ tsp (8 ml)</td><td>10 g (2½ tsp)</td></tr><tr><td>White / distilled vinegar 5%</td><td>1¾ tbsp (27 ml)</td><td>½ tsp (3 ml)</td><td>10 g (2½ tsp)</td></tr></tbody></table>Matched to rice vinegar’s ~4.5% acidity for the marinade. Non-rice vinegars are sharper and less rounded, hence the extra sugar — taste and adjust.",
+   "html": "<table class=\"mini\"><thead><tr><th>You have</th><th>Vinegar</th><th>+ Water</th><th>Sugar</th></tr></thead><tbody><tr><td>Rice vinegar (~4.5%)</td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"30\" data-s=\"0\" data-alt=\"1\">30 ml</span>)</span></td><td>—</td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\" data-s=\"0\">8 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-s=\"0\" data-alt=\"1\">2 tsp</span>)</span></td></tr><tr><td>Korean brewed vinegar 양조식초 (~7%)</td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.25\" data-s=\"0\">1¼ tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"19\" data-s=\"0\" data-alt=\"1\">19 ml</span>)</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-s=\"0\">2 tsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"11\" data-s=\"0\" data-alt=\"1\">11 ml</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\" data-s=\"0\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-s=\"0\" data-alt=\"1\">2½ tsp</span>)</span></td></tr><tr><td>Table vinegar 9%</td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-s=\"0\" data-alt=\"1\">15 ml</span>)</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-s=\"0\" data-alt=\"1\">15 ml</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\" data-s=\"0\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-s=\"0\" data-alt=\"1\">2½ tsp</span>)</span></td></tr><tr><td>Vinegar 6%</td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\" data-s=\"0\">1½ tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"22\" data-s=\"0\" data-alt=\"1\">22 ml</span>)</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\" data-s=\"0\">1½ tsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"8\" data-s=\"0\" data-alt=\"1\">8 ml</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\" data-s=\"0\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-s=\"0\" data-alt=\"1\">2½ tsp</span>)</span></td></tr><tr><td>White / distilled vinegar 5%</td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.75\" data-s=\"0\">1¾ tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"27\" data-s=\"0\" data-alt=\"1\">27 ml</span>)</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ tsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"3\" data-s=\"0\" data-alt=\"1\">3 ml</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\" data-s=\"0\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-s=\"0\" data-alt=\"1\">2½ tsp</span>)</span></td></tr></tbody></table>Matched to rice vinegar’s ~4.5% acidity for the marinade. Non-rice vinegars are sharper and less rounded, hence the extra sugar — taste and adjust.",
    "title_html": "Vinegar conversions (in place of the marinade’s 2 tbsp rice vinegar)"
   },
   {
@@ -221,7 +223,7 @@
    "title_html": "Reading Korean vinegar labels"
   },
   {
-   "html": "<ul class=\"do\"><li>It already contains sugar and salt.</li><li>Use 2 tbsp straight in the marinade, keep the mirin, and skip the sugar.</li></ul>",
+   "html": "<ul class=\"do\"><li>It already contains sugar and salt.</li><li>Use <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 tbsp</span> straight in the marinade, keep the mirin, and skip the sugar.</li></ul>",
    "title_html": "Seasoned rice vinegar (sushi vinegar)?"
   },
   {
@@ -238,6 +240,30 @@
  "prev": {
   "slug": "furikake",
   "title": "Furikake"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
  },
  "share_image": "share/cucumber-sunomono.jpg",
  "siblings": [
@@ -270,7 +296,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Slice the cucumber about <b>2 mm</b> thick (a mandoline makes this quick).</li><li>Peeling a few stripes off first looks nice but is optional.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Slice the cucumber about <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 mm</span></b> thick (a mandoline makes this quick).</li><li>Peeling a few stripes off first looks nice but is optional.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -290,16 +316,17 @@
    "part": null,
    "part_id": null,
    "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
    "title": "Slice thin",
    "uses_rows": [
     {
-     "amount_html": "250 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>",
      "name_html": "Cucumber"
     }
    ]
   },
   {
-   "body_html": "<p>Toss with ½ tsp salt and leave 10 minutes to pull the water out.</p>",
+   "body_html": "<p>Toss with <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ tsp</span> salt and leave 10 minutes to pull the water out.</p>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -319,10 +346,11 @@
    "part": null,
    "part_id": null,
    "time": "10 min",
+   "time_html": "<span>10 min</span>",
    "title": "Salt and rest",
    "uses_rows": [
     {
-     "amount_html": "½ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
      "name_html": "Fine salt, for drawing out water"
     }
    ]
@@ -348,11 +376,12 @@
    "part": null,
    "part_id": null,
    "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
    "title": "Rinse and squeeze",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Add the grated ginger and garlic and the 1 tbsp rice vinegar. Mix it up.</p>",
+   "body_html": "<p>Add the grated ginger and garlic and the <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> rice vinegar. Mix it up.</p>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -372,24 +401,25 @@
    "part": null,
    "part_id": null,
    "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
    "title": "Ginger, garlic, rice vinegar",
    "uses_rows": [
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Ginger, grated"
     },
     {
-     "amount_html": "1 small clove",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 small clove</span>",
      "name_html": "Garlic, grated"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Rice vinegar (first splash)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Stir until the sugar dissolves:<ul class=\"ing\"><li><span data-v=\"name_lc\">rice vinegar</span><span data-v-show=\"water\"> + water</span></li><li>mirin <span class=\"amt\">1 tbsp (15 ml) — half the vinegar</span></li><li>sugar <span class=\"amt\"><span data-v=\"sugar\">8 g (2 tsp)</span></span></li></ul></li><li>Pour it over the cucumbers and toss.</li><li>Optional: microwave the mirin and sugar together for 20–30 seconds first to dissolve the sugar and cook off the mirin’s alcohol; let it cool before adding.</li><li>Keeping a jar of the mix in the fridge? See <a href=\"#batch\">Make a big batch</a> for the amounts.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Stir until the sugar dissolves:<ul class=\"ing\"><li><span data-v=\"name_lc\">rice vinegar</span><span data-v-show=\"water\"> + water</span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-alt=\"1\">15 ml</span>)</span> — half the vinegar</span></li><li>sugar <span class=\"amt\"><span data-v=\"sugar\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 tsp</span>)</span></span></span></li></ul></li><li>Pour it over the cucumbers and toss.</li><li>Optional: microwave the mirin and sugar together for 20–30 seconds first to dissolve the sugar and cook off the mirin’s alcohol; let it cool before adding.</li><li>Keeping a jar of the mix in the fridge? See <a href=\"#batch\">Make a big batch</a> for the amounts.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -409,10 +439,11 @@
    "part": null,
    "part_id": null,
    "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
    "title": "The marinade",
    "uses_rows": [
     {
-     "amount_html": "<span data-v=\"amount\">2 tbsp (30 ml)</span>",
+     "amount_html": "<span data-v=\"amount\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"30\" data-alt=\"1\">30 ml</span>)</span></span>",
      "name_html": "<span data-v=\"name\">Rice vinegar</span>"
     },
     {
@@ -442,14 +473,15 @@
    "part": null,
    "part_id": null,
    "time": "10 min – 1 h",
+   "time_html": "<span>10 min – 1 h</span>",
    "title": "Rest, then soy and sesame",
    "uses_rows": [
     {
-     "amount_html": "½–1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"1\">½–1 tsp</span>",
      "name_html": "Light soy sauce (usukuchi)"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Toasted sesame seeds"
     }
    ]
@@ -479,6 +511,7 @@
     "dur_label": "3 min",
     "kind": "board",
     "label": "Slice cucumber",
+    "label_html": "Slice cucumber",
     "start": 0
    },
    {
@@ -486,6 +519,7 @@
     "dur_label": "10 min",
     "kind": "wait",
     "label": "Salt and rest",
+    "label_html": "Salt and rest",
     "start": 3
    },
    {
@@ -493,6 +527,7 @@
     "dur_label": "4 min",
     "kind": "bowl",
     "label": "Grate ginger + garlic, mix marinade",
+    "label_html": "Grate ginger + garlic, mix marinade",
     "start": 5
    },
    {
@@ -500,6 +535,7 @@
     "dur_label": "2 min",
     "kind": "bowl",
     "label": "Rinse, squeeze",
+    "label_html": "Rinse, squeeze",
     "start": 13
    },
    {
@@ -507,6 +543,7 @@
     "dur_label": "1 min",
     "kind": "bowl",
     "label": "Ginger, garlic, rice vinegar",
+    "label_html": "Ginger, garlic, rice vinegar",
     "start": 15
    },
    {
@@ -514,6 +551,7 @@
     "dur_label": "1 min",
     "kind": "bowl",
     "label": "Marinade in",
+    "label_html": "Marinade in",
     "start": 16
    },
    {
@@ -521,6 +559,7 @@
     "dur_label": "20 min",
     "kind": "wait",
     "label": "Marinate in the fridge",
+    "label_html": "Marinate in the fridge",
     "start": 17
    },
    {
@@ -528,6 +567,7 @@
     "dur_label": "1 min",
     "kind": "bowl",
     "label": "Light soy + sesame",
+    "label_html": "Light soy + sesame",
     "start": 37
    }
   ],
@@ -576,53 +616,53 @@
  "total": "~20 min + marinating",
  "vinegar_options": {
   "kr7": {
-   "amount": "1¼ tbsp (19 ml)",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.25\">1¼ tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"19\" data-alt=\"1\">19 ml</span>)</span>",
    "label": "Korean brewed vinegar 양조식초 (~7%)",
    "name": "Korean brewed vinegar (~7%)",
    "name_lc": "Korean brewed vinegar",
-   "sugar": "10 g (2½ tsp)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-alt=\"1\">2½ tsp</span>)</span>",
    "vinegar_ml": 19.29,
-   "water": "2 tsp (11 ml)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"11\" data-alt=\"1\">11 ml</span>)</span>",
    "water_ml": 10.71
   },
   "rice": {
-   "amount": "2 tbsp (30 ml)",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"30\" data-alt=\"1\">30 ml</span>)</span>",
    "label": "Rice vinegar (~4.5%)",
    "name": "Rice vinegar",
    "name_lc": "rice vinegar",
-   "sugar": "8 g (2 tsp)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 tsp</span>)</span>",
    "vinegar_ml": 30.0,
    "water": "",
    "water_ml": 0.0
   },
   "v5": {
-   "amount": "1¾ tbsp (27 ml)",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.75\">1¾ tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"27\" data-alt=\"1\">27 ml</span>)</span>",
    "label": "White / distilled vinegar 5%",
    "name": "White vinegar (5%)",
    "name_lc": "the white vinegar",
-   "sugar": "10 g (2½ tsp)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-alt=\"1\">2½ tsp</span>)</span>",
    "vinegar_ml": 27.0,
-   "water": "½ tsp (3 ml)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"3\" data-alt=\"1\">3 ml</span>)</span>",
    "water_ml": 3.0
   },
   "v6": {
-   "amount": "1½ tbsp (22 ml)",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"22\" data-alt=\"1\">22 ml</span>)</span>",
    "label": "Vinegar 6%",
    "name": "Vinegar (6%)",
    "name_lc": "the 6% vinegar",
-   "sugar": "10 g (2½ tsp)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-alt=\"1\">2½ tsp</span>)</span>",
    "vinegar_ml": 22.5,
-   "water": "1½ tsp (8 ml)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"8\" data-alt=\"1\">8 ml</span>)</span>",
    "water_ml": 7.5
   },
   "v9": {
-   "amount": "1 tbsp (15 ml)",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-alt=\"1\">15 ml</span>)</span>",
    "label": "Table vinegar 9%",
    "name": "Table vinegar (9%)",
    "name_lc": "the 9% vinegar",
-   "sugar": "10 g (2½ tsp)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\" data-alt=\"1\">2½ tsp</span>)</span>",
    "vinegar_ml": 15.0,
-   "water": "1 tbsp (15 ml)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-alt=\"1\">15 ml</span>)</span>",
    "water_ml": 15.0
   }
  },

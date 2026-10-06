@@ -4,10 +4,12 @@
  "blurb_html": "Sweet rolled omelet with sake, mirin and brown sugar — and a green swirl of nori flakes inside.",
  "chips": [
   {
+   "html": "<span>1 roll · 2 sides</span>",
    "kind": "",
    "text": "1 roll · 2 sides"
   },
   {
+   "html": "~15 min",
    "kind": "time",
    "text": "~15 min"
   }
@@ -32,19 +34,19 @@
   {
    "items": [
     {
-     "amount_html": "3",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
      "name_html": "Eggs"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Sake"
     },
     {
-     "amount_html": "2 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
      "name_html": "Brown sugar"
     },
     {
@@ -52,7 +54,7 @@
      "name_html": "Salt"
     },
     {
-     "amount_html": "1–2 tbsp, optional",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 tbsp</span>, optional",
      "name_html": "<a href=\"niboshi-bonito-dashi.html\">Dashi</a>"
     }
    ],
@@ -61,7 +63,7 @@
   {
    "items": [
     {
-     "amount_html": "1–2 tsp, for the middle layer",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>, for the middle layer",
      "name_html": "Green nori flakes"
     },
     {
@@ -134,6 +136,30 @@
   "slug": "radish-pickle",
   "title": "Pickled radishes"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
  "share_image": "share/tamagoyaki.jpg",
  "siblings": [
   {
@@ -165,7 +191,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Beat the eggs with the seasonings until the sugar dissolves:<ul class=\"ing two-col\"><li>mirin <span class=\"amt\">1 tbsp</span></li><li>sake <span class=\"amt\">1 tsp</span></li><li>brown sugar <span class=\"amt\">2 tsp</span></li><li>salt <span class=\"amt\">a pinch</span></li><li>dashi <span class=\"amt\">1–2 tbsp</span></li></ul></li><li>Cut through the whites with chopsticks rather than whipping — you don’t want foam.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Beat the eggs with the seasonings until the sugar dissolves:<ul class=\"ing two-col\"><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>brown sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span></span></li><li>salt <span class=\"amt\">a pinch</span></li><li>dashi <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 tbsp</span></span></li></ul></li><li>Cut through the whites with chopsticks rather than whipping — you don’t want foam.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -185,10 +211,11 @@
    "part": null,
    "part_id": null,
    "time": "3 min",
+   "time_html": "<span>3 min</span>",
    "title": "Mix",
    "uses_rows": [
     {
-     "amount_html": "3",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
      "name_html": "Eggs"
     }
    ]
@@ -197,6 +224,7 @@
    "body_html": "<ul class=\"do\"><li>Heat the pan on medium-low and wipe a thin film of oil over it with a folded paper towel.</li><li>A drop of egg should sizzle gently, not spit.</li></ul>",
    "heat": {
     "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
     "off": false
    },
    "id": "step-2",
@@ -212,6 +240,7 @@
    "part": null,
    "part_id": null,
    "time": "2 min",
+   "time_html": "<span>2 min</span>",
    "title": "Heat and oil the pan",
    "uses_rows": [
     {
@@ -224,6 +253,7 @@
    "body_html": "<ul class=\"do\"><li>Pour in about a quarter of the egg and tilt to cover the pan.</li><li>Pop any big bubbles.</li><li>When the bottom is set but the top is still a little wet, roll it from the far end towards you.</li></ul>",
    "heat": {
     "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
     "off": false
    },
    "id": "step-3",
@@ -248,6 +278,7 @@
    "part": null,
    "part_id": null,
    "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
    "title": "First layer",
    "uses_rows": []
   },
@@ -255,6 +286,7 @@
    "body_html": "<p>Push the roll back to the far end and wipe oil over the empty part of the pan.</p>",
    "heat": {
     "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
     "off": false
    },
    "id": "step-4",
@@ -275,6 +307,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Push back and re-oil",
    "uses_rows": []
   },
@@ -282,6 +315,7 @@
    "body_html": "<ul class=\"do\"><li>Pour in the next quarter and lift the roll so egg runs underneath it.</li><li>Sprinkle the <b>nori flakes</b> over this layer, then roll towards you again.</li></ul>",
    "heat": {
     "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
     "off": false
    },
    "id": "step-5",
@@ -306,10 +340,11 @@
    "part": null,
    "part_id": null,
    "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
    "title": "Second layer, with nori",
    "uses_rows": [
     {
-     "amount_html": "1–2 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>",
      "name_html": "Green nori flakes"
     }
    ]
@@ -318,6 +353,7 @@
    "body_html": "<ul class=\"do\"><li>Push, oil and pour with the rest of the egg — usually one or two more layers.</li><li>Each time, <b>lift the roll so the new egg runs underneath it</b> before rolling — that’s what glues the layers together.</li></ul>",
    "heat": {
     "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
     "off": false
    },
    "id": "step-6",
@@ -338,6 +374,7 @@
    "part": null,
    "part_id": null,
    "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
    "title": "Repeat",
    "uses_rows": []
   },
@@ -362,11 +399,12 @@
    "part": null,
    "part_id": null,
    "time": "5 min",
+   "time_html": "<span>5 min</span>",
    "title": "Shape and rest",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Cut into 2 cm slices — the nori shows as a green swirl.</p>",
+   "body_html": "<p>Cut into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> slices — the nori shows as a green swirl.</p>",
    "heat": null,
    "id": "step-8",
    "images": {
@@ -386,6 +424,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Slice",
    "uses_rows": []
   }
@@ -418,6 +457,7 @@
     "dur_label": "3 min",
     "kind": "bowl",
     "label": "Beat eggs with seasonings",
+    "label_html": "Beat eggs with seasonings",
     "start": 0
    },
    {
@@ -425,6 +465,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Heat + oil the pan",
+    "label_html": "Heat + oil the pan",
     "start": 3
    },
    {
@@ -432,6 +473,7 @@
     "dur_label": "1.5 min",
     "kind": "pan",
     "label": "Layer 1: pour, roll",
+    "label_html": "Layer 1: pour, roll",
     "start": 5
    },
    {
@@ -439,6 +481,7 @@
     "dur_label": "30 s",
     "kind": "pan",
     "label": "Push, re-oil",
+    "label_html": "Push, re-oil",
     "start": 6.5
    },
    {
@@ -446,6 +489,7 @@
     "dur_label": "1.5 min",
     "kind": "pan",
     "label": "Layer 2 + nori: pour, roll",
+    "label_html": "Layer 2 + nori: pour, roll",
     "start": 7
    },
    {
@@ -453,6 +497,7 @@
     "dur_label": "3 min",
     "kind": "pan",
     "label": "Layers 3–4",
+    "label_html": "Layers 3–4",
     "start": 8.5
    },
    {
@@ -460,6 +505,7 @@
     "dur_label": "5 min",
     "kind": "wait",
     "label": "Shape in a mat, rest",
+    "label_html": "Shape in a mat, rest",
     "start": 11.5
    },
    {
@@ -467,6 +513,7 @@
     "dur_label": "1 min",
     "kind": "board",
     "label": "Slice",
+    "label_html": "Slice",
     "start": 16.5
    }
   ],

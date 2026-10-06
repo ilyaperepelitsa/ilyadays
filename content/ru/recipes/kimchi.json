@@ -4,10 +4,12 @@
  "blurb_html": "Кимчи из пекинской капусты по книжному рецепту с вашими добавками: рубленые ножом мальки анчоуса и креветки сакура, и грушевый сок.",
  "chips": [
   {
+   "html": "<span>4 порции · 1 большая банка</span>",
    "kind": "",
    "text": "4 порции · 1 большая банка"
   },
   {
+   "html": "~15 ч (12 ч засолки) + 5–7 дней в холодильнике",
    "kind": "time",
    "text": "~15 ч (12 ч засолки) + 5–7 дней в холодильнике"
   }
@@ -36,19 +38,19 @@
   {
    "items": [
     {
-     "amount_html": "1 кочан (~2,5 кг)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"кочан|кочана|кочанов\" data-n=\"1\">1 кочан</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"2.5\">2,5 кг</span>)",
      "name_html": "Пекинская капуста"
     },
     {
-     "amount_html": "1 стакан (200 мл)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-alt=\"1\">200 мл</span>)</span>",
      "name_html": "Крупная соль, для рассола"
     },
     {
-     "amount_html": "2 л",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"2\">2 л</span>",
      "name_html": "Вода"
     },
     {
-     "amount_html": "1 стакан (200 мл)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-alt=\"1\">200 мл</span>)</span>",
      "name_html": "Крупная соль, между листьями"
     }
    ],
@@ -57,11 +59,11 @@
   {
    "items": [
     {
-     "amount_html": "200 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
      "name_html": "Дайкон"
     },
     {
-     "amount_html": "50 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 г</span>",
      "name_html": "Зелёный лук"
     }
    ],
@@ -70,31 +72,31 @@
   {
    "items": [
     {
-     "amount_html": "1 стакан (200 мл)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-alt=\"1\">200 мл</span>)</span>",
      "name_html": "Кочхукару (корейский молотый перец)"
     },
     {
-     "amount_html": "100 мл (или рыбный соус)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span> (или рыбный соус)",
      "name_html": "Солёный анчоусный соус"
     },
     {
-     "amount_html": "3 ст. л. (или рыбный соус)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span> (или рыбный соус)",
      "name_html": "Солёный креветочный соус"
     },
     {
-     "amount_html": "4 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Сахар"
     },
     {
-     "amount_html": "100 мл",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span>",
      "name_html": "Бульон из ламинарии (комбу)"
     },
     {
-     "amount_html": "2 ст. л., раздавить или натереть",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, раздавить или натереть",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "1 ст. л. (натёртый имбирь, отжатый)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> (натёртый имбирь, отжатый)",
      "name_html": "Имбирный сок"
     }
    ],
@@ -103,15 +105,15 @@
   {
    "items": [
     {
-     "amount_html": "небольшая горсть (~10 г) — чтобы чуть чувствовалось, но не пахло рыбой",
+     "amount_html": "небольшая горсть (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>) — чтобы чуть чувствовалось, но не пахло рыбой",
      "name_html": "Сушёные мальки анчоуса"
     },
     {
-     "amount_html": "небольшая горсть (~5–10 г) — та же идея",
+     "amount_html": "небольшая горсть (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-b=\"10\">5–10 г</span>) — та же идея",
      "name_html": "Сушёные креветки сакура"
     },
     {
-     "amount_html": "½ (~150 г), натереть и отжать сок",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>), натереть и отжать сок",
      "name_html": "Азиатская груша (наси)"
     }
    ],
@@ -149,10 +151,10 @@
    "goes_in": "Шаг 5",
    "image": "illustrations/kimchi/mise3.webp",
    "items": [
-    "соломка 0,3 см",
-    "куски 3 см"
+    "соломка <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"0.3\" data-s=\"0\">0,3 см</span>",
+    "куски <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>"
    ],
-   "items_html": "соломка 0,3 см · куски 3 см",
+   "items_html": "соломка <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"0.3\" data-s=\"0\">0,3 см</span> · куски <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>",
    "name": "Дайкон + зелёный лук",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -186,9 +188,9 @@
    "goes_in": "Шаг 5",
    "image": "illustrations/kimchi/mise6.webp",
    "items": [
-    "1 стакан"
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>"
    ],
-   "items_html": "1 стакан",
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>",
    "name": "Кочхукару",
    "svg_fallback": null,
    "vessel": "cup"
@@ -242,6 +244,30 @@
   "slug": "ginger-scallion-noodles",
   "title": "Лапша с имбирём и зелёным луком (помягче)"
  },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/kimchi.jpg",
  "siblings": [
   {
@@ -253,7 +279,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Размешайте 1 стакан <b>крупной соли</b> в <b>2 л воды</b> в миске, куда влезет половина кочана.</li><li>Снимите внешние листья и <b>сохраните их</b> — в шаге 6 в них заворачивается кимчи.</li><li>Разрежьте кочан вдоль пополам и окуните половинки в рассол.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Размешайте <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-s=\"0\">1 стакан</span> <b>крупной соли</b> в <b><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"2\" data-s=\"0\">2 л</span> воды</b> в миске, куда влезет половина кочана.</li><li>Снимите внешние листья и <b>сохраните их</b> — в шаге 6 в них заворачивается кимчи.</li><li>Разрежьте кочан вдоль пополам и окуните половинки в рассол.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -281,18 +307,19 @@
    "part": null,
    "part_id": null,
    "time": "~15 мин",
+   "time_html": "<span>~15 мин</span>",
    "title": "Рассол и разрезать",
    "uses_rows": [
     {
-     "amount_html": "1 кочан (~2,5 кг)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"кочан|кочана|кочанов\" data-n=\"1\">1 кочан</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"2.5\">2,5 кг</span>)",
      "name_html": "Пекинская капуста"
     },
     {
-     "amount_html": "1 стакан (200 мл)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-alt=\"1\">200 мл</span>)</span>",
      "name_html": "Крупная соль, для рассола"
     },
     {
-     "amount_html": "2 л",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"2\">2 л</span>",
      "name_html": "Вода"
     }
    ]
@@ -322,10 +349,11 @@
    "part": null,
    "part_id": null,
    "time": "12 ч (зимой 17 ч)",
+   "time_html": "<span>12 ч (зимой 17 ч)</span>",
    "title": "Посолить и придавить",
    "uses_rows": [
     {
-     "amount_html": "1 стакан (200 мл)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-alt=\"1\">200 мл</span>)</span>",
      "name_html": "Крупная соль, между листьями"
     }
    ]
@@ -351,11 +379,12 @@
    "part": null,
    "part_id": null,
    "time": "~1 ч",
+   "time_html": "<span>~1 ч</span>",
    "title": "Промыть и дать стечь",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Нарежьте <b>дайкон</b> тонкой соломкой 0,3 см; <b>зелёный лук</b> — кусками по 3 см.</li><li>Ваши добавки — мелко порубить ножом:<ul class=\"ing\"><li>сушёные мальки анчоуса <span class=\"amt\">небольшая горсть (~10 г) — чтобы чуть чувствовалось</span></li><li>сушёные креветки сакура <span class=\"amt\">небольшая горсть (~5–10 г) — та же идея</span></li></ul></li><li>Раздавите или натрите <b>чеснок</b> — лучше всего керамической тёркой, подойдёт и мелкая металлическая.</li><li>Натрите имбирь и отожмите через марлю — это <b>имбирный сок</b>.</li><li>Натрите <b>азиатскую грушу</b>, положите в марлю и отожмите сок — нужен именно сок.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нарежьте <b>дайкон</b> тонкой соломкой <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"0.3\" data-s=\"0\">0,3 см</span>; <b>зелёный лук</b> — кусками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>.</li><li>Ваши добавки — мелко порубить ножом:<ul class=\"ing\"><li>сушёные мальки анчоуса <span class=\"amt\">небольшая горсть (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>) — чтобы чуть чувствовалось</span></li><li>сушёные креветки сакура <span class=\"amt\">небольшая горсть (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-b=\"10\">5–10 г</span>) — та же идея</span></li></ul></li><li>Раздавите или натрите <b>чеснок</b> — лучше всего керамической тёркой, подойдёт и мелкая металлическая.</li><li>Натрите имбирь и отожмите через марлю — это <b>имбирный сок</b>.</li><li>Натрите <b>азиатскую грушу</b>, положите в марлю и отожмите сок — нужен именно сок.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -395,32 +424,33 @@
    "part": null,
    "part_id": null,
    "time": "~25 мин",
+   "time_html": "<span>~25 мин</span>",
    "title": "Подготовьте начинку",
    "uses_rows": [
     {
-     "amount_html": "200 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
      "name_html": "Дайкон"
     },
     {
-     "amount_html": "50 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 г</span>",
      "name_html": "Зелёный лук"
     },
     {
-     "amount_html": "2 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Имбирный сок"
     },
     {
-     "amount_html": "½ (~150 г)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>)",
      "name_html": "Азиатская груша (наси)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Наденьте перчатки. Смешайте всё из шага 4 с:<ul class=\"ing two-col\"><li>кочхукару (корейский молотый перец) <span class=\"amt\">1 стакан (200 мл)</span></li><li>солёный анчоусный соус <span class=\"amt\">100 мл</span></li><li>солёный креветочный соус <span class=\"amt\">3 ст. л.</span></li><li>сахар <span class=\"amt\">4 ст. л.</span></li><li>бульон из ламинарии (комбу) <span class=\"amt\">100 мл</span></li></ul></li><li>Дайте постоять около <b>30 минут</b>, чтобы вкусы соединились.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Наденьте перчатки. Смешайте всё из шага 4 с:<ul class=\"ing two-col\"><li>кочхукару (корейский молотый перец) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\" data-alt=\"1\">200 мл</span>)</span></span></li><li>солёный анчоусный соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span></span></li><li>солёный креветочный соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>бульон из ламинарии (комбу) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 мл</span></span></li></ul></li><li>Дайте постоять около <b>30 минут</b>, чтобы вкусы соединились.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -440,6 +470,7 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин + 30 мин",
+   "time_html": "<span>~5 мин + 30 мин</span>",
    "title": "Смешайте начинку",
    "uses_rows": []
   },
@@ -480,6 +511,7 @@
    "part": null,
    "part_id": null,
    "time": "~40 мин, потом 5–7 дней",
+   "time_html": "<span>~40 мин, потом 5–7 дней</span>",
    "title": "Начинить, завернуть и уложить",
    "uses_rows": []
   }
@@ -508,6 +540,7 @@
     "dur_label": "15 мин",
     "kind": "bowl",
     "label": "Рассол, снять внешние листья, разрезать",
+    "label_html": "Рассол, снять внешние листья, разрезать",
     "start": 0
    },
    {
@@ -515,6 +548,7 @@
     "dur_label": "15 мин",
     "kind": "board",
     "label": "Соль между листьями",
+    "label_html": "Соль между листьями",
     "start": 15
    },
    {
@@ -522,6 +556,7 @@
     "dur_label": "7 ч",
     "kind": "wait",
     "label": "Под грузом, срезом вверх (7 ч)",
+    "label_html": "Под грузом, срезом вверх (7 ч)",
     "start": 30
    },
    {
@@ -529,6 +564,7 @@
     "dur_label": "5 ч",
     "kind": "wait",
     "label": "Под грузом, срезом вниз (5 ч)",
+    "label_html": "Под грузом, срезом вниз (5 ч)",
     "start": 450
    },
    {
@@ -536,6 +572,7 @@
     "dur_label": "15 мин",
     "kind": "bowl",
     "label": "Промыть холодной водой",
+    "label_html": "Промыть холодной водой",
     "start": 750
    },
    {
@@ -543,6 +580,7 @@
     "dur_label": "1 ч",
     "kind": "wait",
     "label": "Дать стечь в дуршлаге (1 ч)",
+    "label_html": "Дать стечь в дуршлаге (1 ч)",
     "start": 765
    },
    {
@@ -550,6 +588,7 @@
     "dur_label": "25 мин",
     "kind": "board",
     "label": "Нарезать дайкон + лук, подготовить добавки",
+    "label_html": "Нарезать дайкон + лук, подготовить добавки",
     "start": 770
    },
    {
@@ -557,6 +596,7 @@
     "dur_label": "30 мин",
     "kind": "bowl",
     "label": "Смешать начинку, 30 мин",
+    "label_html": "Смешать начинку, 30 мин",
     "start": 795
    },
    {
@@ -564,6 +604,7 @@
     "dur_label": "30 мин",
     "kind": "board",
     "label": "Начинять от середины наружу, завернуть",
+    "label_html": "Начинять от середины наружу, завернуть",
     "start": 825
    },
    {
@@ -571,6 +612,7 @@
     "dur_label": "10 мин",
     "kind": "bowl",
     "label": "Уложить в банку",
+    "label_html": "Уложить в банку",
     "start": 855
    }
   ],

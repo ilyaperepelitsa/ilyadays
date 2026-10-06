@@ -170,6 +170,25 @@ svg.art { display: block; width: 100%; height: auto; border-radius: 14px; }
 .picker label:has(input:checked) { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 .picker input { accent-color: var(--accent); }
 
+/* portions + units (static/units.js) */
+.portions { display: grid; gap: 8px; margin: 0 0 14px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+.portions button, .portions input { font: inherit; color: inherit; }
+.portions-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: .9rem; font-weight: 600; }
+.portions-label { flex-basis: 100%; font-size: .8rem; font-weight: 600; color: var(--muted); }
+.portions .stepper { display: inline-flex; align-items: stretch; gap: 4px; }
+.portions .stepper button { width: 40px; min-height: 40px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface); cursor: pointer; font-size: 1.2rem; line-height: 1; padding: 0; }
+.portions .stepper input { width: 2.8em; min-height: 40px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); text-align: center; font-size: 1rem; font-weight: 700; font-variant-numeric: tabular-nums; padding: 0 4px; -moz-appearance: textfield; }
+.portions .stepper input::-webkit-inner-spin-button, .portions .stepper input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.portions .seg { display: flex; flex-wrap: wrap; gap: 4px; }
+.portions .seg button { flex: 1 1 auto; min-height: 36px; padding: 5px 10px; border-radius: 9px; border: 1.5px solid var(--line); background: var(--surface); cursor: pointer; font-size: .84rem; font-weight: 600; color: var(--muted); }
+.portions .seg button[aria-pressed=true] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.portions button:focus-visible, .portions input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.portions button:disabled, .portions input:disabled { opacity: .45; cursor: default; }
+.portions-note { margin: 0; font-size: .82rem; color: var(--muted); line-height: 1.4; }
+.portions-note[data-note=big] { color: var(--accent); }
+.portions.scaled + * .ing-amt, .portions.scaled ~ .ingredients .ing-amt { color: var(--ink); }
+span.q { white-space: nowrap; }
+
 /* batch calculator (vinegar mix) */
 .batch-lede { color: var(--muted); margin: 0 0 12px; }
 .batch-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 16px 18px; display: grid; gap: 14px; max-width: 640px; }
@@ -364,7 +383,9 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 
 /* ---------- print: one clean page per recipe-ish */
 @media print {
-  .site-header, .site-footer, .jump, .more, .picker, .original { display: none !important; }
+  .site-header, .site-footer, .jump, .more, .picker, .original, .portions .seg, .portions button, .portions-note { display: none !important; }
+  .portions { border: 0; padding: 0; }
+  .portions .stepper input { border: 0; width: auto; min-height: 0; padding: 0; }
   body { background: #fff; font-size: 12pt; }
   .step, .tl, .ingredients-panel, .mise > li, .card, .note { box-shadow: none; break-inside: avoid; }
   .recipe-body { grid-template-columns: 1fr; }

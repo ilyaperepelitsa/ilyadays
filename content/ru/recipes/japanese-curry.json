@@ -4,10 +4,12 @@
  "blurb_html": "Говядина в йогурте (или белые грибы), домашний ру, куриный бульон и томатный соус — большой проект на много порций.",
  "chips": [
   {
+   "html": "<span>~8 порций (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"8\" data-s=\"0\">8 стаканов</span> риса)</span>",
    "kind": "",
    "text": "~8 порций (8 стаканов риса)"
   },
   {
+   "html": "~4 ч + ночь (~1 ч, если всё заготовлено)",
    "kind": "time",
    "text": "~4 ч + ночь (~1 ч, если всё заготовлено)"
   }
@@ -15,9 +17,9 @@
  "description": "Говядина в йогурте (или белые грибы), домашний ру, куриный бульон и томатный соус — большой проект на много порций.",
  "equipment_html": [
   "Большая кастрюля (для бульона и сборки)",
-  "Средняя кастрюля 5–6 л или большая сковорода (томатный соус)",
+  "Средняя кастрюля <span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"5\" data-b=\"6\" data-s=\"0\">5–6 л</span> или большая сковорода (томатный соус)",
   "Маленький сотейник (ру; растворение ру)",
-  "Форма 20 × 20 см + пергамент",
+  "Форма <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-b=\"20\" data-x=\"1\" data-s=\"0\">20 × 20 см</span> + пергамент",
   "Форма для запекания говядины",
   "Мелкое сито",
   "Тёрка (яблоко)"
@@ -35,23 +37,23 @@
   {
    "items": [
     {
-     "amount_html": "1 кг, куски толщиной 2 см (я брал шею / лопатку)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>, куски толщиной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> (я брал шею / лопатку)",
      "name_html": "Говядина"
     },
     {
-     "amount_html": "4",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
      "name_html": "Зубчики чеснока"
     },
     {
-     "amount_html": "½ ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ ст. л.</span>",
      "name_html": "Свежий имбирь, натёртый"
     },
     {
-     "amount_html": "2½ стакана",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.5\">2½ стакана</span>",
      "name_html": "Греческий йогурт или сметана"
     },
     {
-     "amount_html": "¾ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.75\">¾ ч. л.</span>",
      "name_html": "Куркума"
     }
    ],
@@ -60,7 +62,7 @@
   {
    "items": [
     {
-     "amount_html": "½ кг",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"0.5\">½ кг</span>",
      "name_html": "Белые грибы"
     },
     {
@@ -73,19 +75,19 @@
   {
    "items": [
     {
-     "amount_html": "1 кг",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
      "name_html": "Куриные кости"
     },
     {
-     "amount_html": "4",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
      "name_html": "Куриные крылья"
     },
     {
-     "amount_html": "1 шт. (на четвертинки)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (на четвертинки)",
      "name_html": "Лук"
     },
     {
-     "amount_html": "1–2 моркови (крупными кусками)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-f=\"морковь|моркови|морковей\" data-n=\"3\">1–2 моркови</span> (крупными кусками)",
      "name_html": "Морковь крупными кусками"
     },
     {
@@ -98,55 +100,55 @@
   {
    "items": [
     {
-     "amount_html": "1 стакан + 2 ст. л. (242 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span> + <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"242\" data-alt=\"1\">242 г</span>)</span>",
      "name_html": "Несолёное сливочное масло"
     },
     {
-     "amount_html": "1 стакан (120 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\" data-alt=\"1\">120 г</span>)</span>",
      "name_html": "Мука"
     },
     {
-     "amount_html": "½ стакана (58 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"58\" data-alt=\"1\">58 г</span>)</span>",
      "name_html": "Порошок карри"
     },
     {
-     "amount_html": "½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
      "name_html": "Кайенский перец"
     },
     {
-     "amount_html": "½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
      "name_html": "Кардамон"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Фенхель"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Молотая куркума"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Чеснок сушёный молотый"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Копчёная паприка"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Кориандр"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Молотая зира"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Молотый мускатный орех"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Корица"
     }
    ],
@@ -155,31 +157,31 @@
   {
    "items": [
     {
-     "amount_html": "2½ ст. л. (37 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\">2½ ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"37\" data-alt=\"1\">37 г</span>)</span>",
      "name_html": "Растительное масло"
     },
     {
-     "amount_html": "1 крупная луковица, нарезать очень тонко",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"крупная луковица|крупные луковицы|крупных луковиц|крупной луковицы\" data-n=\"1\">1 крупная луковица</span>, нарезать очень тонко",
      "name_html": "Репчатый лук"
     },
     {
-     "amount_html": "5 зубчиков, мелко нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"5\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">5 зубчиков</span>, мелко нарезать",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "кусочек 2,5 см, натереть",
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2,5 см</span>, натереть",
      "name_html": "Имбирь"
     },
     {
-     "amount_html": "4 крупных",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> крупных",
      "name_html": "Помидоры"
     },
     {
-     "amount_html": "2 ст. л. (33 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"33\" data-alt=\"1\">33 г</span>)</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "½ банки",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"банка|банки|банок\" data-n=\"1\">½ банки</span>",
      "name_html": "Консервированный томатный соус"
     }
    ],
@@ -188,27 +190,27 @@
   {
    "items": [
     {
-     "amount_html": "5 стаканов (1,2 л)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"5\">5 стаканов</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1.2\" data-alt=\"1\">1,2 л</span>)</span>",
      "name_html": "Куриный бульон"
     },
     {
-     "amount_html": "1 крупное, натереть на крупной тёрке",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> крупное, натереть на крупной тёрке",
      "name_html": "Зелёное яблоко"
     },
     {
-     "amount_html": "2 крупных, нарезать рангири",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> крупных, нарезать рангири",
      "name_html": "Морковь"
     },
     {
-     "amount_html": "3 шт., очистить и разрезать на четвертинки",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> шт., очистить и разрезать на четвертинки",
      "name_html": "Картофель"
     },
     {
-     "amount_html": "226 г (примерно половина партии)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"226\">226 г</span> (примерно половина партии)",
      "name_html": "Ру для карри"
     },
     {
-     "amount_html": "8 стаканов (1560 г), для подачи",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"8\">8 стаканов</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1560\" data-alt=\"1\">1560 г</span>)</span>, для подачи",
      "name_html": "Варёный круглозёрный рис"
     },
     {
@@ -238,9 +240,9 @@
    "goes_in": "Шаг 19",
    "image": "illustrations/japanese-curry/mise2.webp",
    "items": [
-    "процежен, ~1 л"
+    "процежен, ~<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span>"
    ],
-   "items_html": "процежен, ~1 л",
+   "items_html": "процежен, ~<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span>",
    "name": "Куриный бульон",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -285,9 +287,9 @@
    "goes_in": "Шаг 21",
    "image": "illustrations/japanese-curry/mise6.webp",
    "items": [
-    "226 г квадратиков"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"226\">226 г</span> квадратиков"
    ],
-   "items_html": "226 г квадратиков",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"226\">226 г</span> квадратиков",
    "name": "Ру для карри",
    "svg_fallback": null,
    "vessel": "cup"
@@ -328,7 +330,7 @@
    "title_html": "Заготовки"
   },
   {
-   "html": "<ul><li>Бульона выходит ~1 л, а для сборки нужно 5 стаканов (1,2 л): долейте водой — экономно, см. выше.</li><li>В оригинале ½ банки томатного соуса указана и в бульоне, но используется она только в шагах томатного соуса, поэтому указана там.</li><li>Партия ру — ~430 г; в сборку идёт 226 г, так что примерно половина остаётся на заморозку.</li><li>«Средняя температура» духовки понята как ~180 °C.</li></ul>",
+   "html": "<ul><li>Бульона выходит ~<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 л</span>, а для сборки нужно <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"5\" data-s=\"0\">5 стаканов</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1.2\" data-s=\"0\" data-alt=\"1\">1,2 л</span>)</span>: долейте водой — экономно, см. выше.</li><li>В оригинале ½ банки томатного соуса указана и в бульоне, но используется она только в шагах томатного соуса, поэтому указана там.</li><li>Партия ру — ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"430\" data-s=\"0\">430 г</span>; в сборку идёт <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"226\" data-s=\"0\">226 г</span>, так что примерно половина остаётся на заморозку.</li><li>«Средняя температура» духовки понята как ~<span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span>.</li></ul>",
    "title_html": "Добавлено при записи"
   }
  ],
@@ -366,6 +368,30 @@
   "slug": "karaage",
   "title": "Караагэ"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 8,
+  "size": "8",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/japanese-curry.jpg",
  "siblings": [
   {
@@ -397,7 +423,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Замаринуйте говядину в:<ul class=\"ing\"><li>Свежий имбирь, натёртый <span class=\"amt\">½ ст. л.</span></li><li>Зубчики чеснока <span class=\"amt\">4</span></li><li>Куркума <span class=\"amt\">¾ ч. л.</span></li><li>Греческий йогурт или сметана <span class=\"amt\">2½ стакана</span></li></ul></li><li><b>За ночь</b> мясо станет нежнее и вкуснее после готовки.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Замаринуйте говядину в:<ul class=\"ing\"><li>Свежий имбирь, натёртый <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ ст. л.</span></span></li><li>Зубчики чеснока <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span></span></li><li>Куркума <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.75\">¾ ч. л.</span></span></li><li>Греческий йогурт или сметана <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.5\">2½ стакана</span></span></li></ul></li><li><b>За ночь</b> мясо станет нежнее и вкуснее после готовки.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -421,10 +447,11 @@
    "part": "Говядина — накануне",
    "part_id": "part-говядина--накануне",
    "time": "на ночь",
+   "time_html": "<span>на ночь</span>",
    "title": "Замаринуйте говядину",
    "uses_rows": [
     {
-     "amount_html": "1 кг",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
      "name_html": "Говядина"
     }
    ]
@@ -433,6 +460,7 @@
    "body_html": "<p>Запекайте мясо 1 час при средней температуре.</p>",
    "heat": {
     "label": "духовка, средняя (~180 °C)",
+    "label_html": "<span>духовка, средняя (~<span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span>)</span>",
     "off": false
    },
    "id": "step-2",
@@ -453,13 +481,15 @@
    "part": "Говядина — накануне",
    "part_id": "part-говядина--накануне",
    "time": "1 ч",
+   "time_html": "<span>1 ч</span>",
    "title": "Запечь",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Возьмите ½ кг белых грибов.</li><li>Выложите на сковороду и обжарьте на небольшом количестве оливкового и сливочного масла до золотистого цвета.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Возьмите <span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"0.5\" data-s=\"0\">½ кг</span> белых грибов.</li><li>Выложите на сковороду и обжарьте на небольшом количестве оливкового и сливочного масла до золотистого цвета.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-3",
@@ -480,10 +510,11 @@
    "part": "Или: белые грибы вместо говядины",
    "part_id": "part-или-белые-грибы-вместо-говядины",
    "time": "до золотистого",
+   "time_html": "<span>до золотистого</span>",
    "title": "Белые грибы вместо говядины",
    "uses_rows": [
     {
-     "amount_html": "½ кг",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"0.5\">½ кг</span>",
      "name_html": "Белые грибы"
     },
     {
@@ -493,7 +524,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>В большую кастрюлю:<ul class=\"ing\"><li>Куриные кости <span class=\"amt\">1 кг</span></li><li>Куриные крылья <span class=\"amt\">4</span></li><li>Лук <span class=\"amt\">1 шт.</span></li><li>Морковь крупными кусками <span class=\"amt\">1–2 моркови</span></li></ul></li><li>Залейте водой, чтобы покрыла.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>В большую кастрюлю:<ul class=\"ing\"><li>Куриные кости <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span></span></li><li>Куриные крылья <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span></span></li><li>Лук <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт.</span></li><li>Морковь крупными кусками <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-f=\"морковь|моркови|морковей\" data-n=\"3\">1–2 моркови</span></span></li></ul></li><li>Залейте водой, чтобы покрыла.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -513,6 +544,7 @@
    "part": "Куриный бульон",
    "part_id": "part-куриный-бульон",
    "time": null,
+   "time_html": null,
    "title": "Всё в кастрюлю",
    "uses_rows": [
     {
@@ -525,6 +557,7 @@
    "body_html": "<p>Варите на среднем огне в большой кастрюле 1 час.</p>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-5",
@@ -540,11 +573,12 @@
    "part": "Куриный бульон",
    "part_id": "part-куриный-бульон",
    "time": "1 ч",
+   "time_html": "<span>1 ч</span>",
    "title": "Варить 1 час",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Процедите, оставив только жидкость.</li><li>Должен получиться примерно нужный <b>1 литр</b>.</li><li>Если больше — храните в холодильнике в плотно закрытой банке на потом.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Процедите, оставив только жидкость.</li><li>Должен получиться примерно нужный <b><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 литр</span></b>.</li><li>Если больше — храните в холодильнике в плотно закрытой банке на потом.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
@@ -564,11 +598,12 @@
    "part": "Куриный бульон",
    "part_id": "part-куриный-бульон",
    "time": null,
+   "time_html": null,
    "title": "Процедить",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Застелите форму 20 × 20 см пергаментом так, чтобы он немного свисал по краям.</li><li>Если долго хранить не будете, подойдёт стеклянный стакан.</li><li>Ещё один простой вариант — силиконовые формочки для льда.</li><li><b>Не используйте пластиковые контейнеры</b> — я сломал большой, пытаясь достать ру: в холодильнике он становится очень твёрдым.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Застелите форму <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-b=\"20\" data-x=\"1\" data-s=\"0\">20 × 20 см</span> пергаментом так, чтобы он немного свисал по краям.</li><li>Если долго хранить не будете, подойдёт стеклянный стакан.</li><li>Ещё один простой вариант — силиконовые формочки для льда.</li><li><b>Не используйте пластиковые контейнеры</b> — я сломал большой, пытаясь достать ру: в холодильнике он становится очень твёрдым.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
@@ -588,6 +623,7 @@
    "part": "Ру для карри",
    "part_id": "part-ру-для-карри",
    "time": null,
+   "time_html": null,
    "title": "Застелите форму",
    "uses_rows": []
   },
@@ -595,6 +631,7 @@
    "body_html": "<p>В маленьком сотейнике растопите сливочное масло на среднем огне полностью.</p>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-8",
@@ -610,10 +647,11 @@
    "part": "Ру для карри",
    "part_id": "part-ру-для-карри",
    "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
    "title": "Растопите масло",
    "uses_rows": [
     {
-     "amount_html": "1 стакан + 2 ст. л. (242 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span> + <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"242\" data-alt=\"1\">242 г</span>)</span>",
      "name_html": "Несолёное сливочное масло"
     }
    ]
@@ -622,6 +660,7 @@
    "body_html": "<p>Вмешайте муку и, <b>постоянно помешивая</b>, жарьте около 5 минут до золотисто-коричневого цвета.</p>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-9",
@@ -642,18 +681,20 @@
    "part": "Ру для карри",
    "part_id": "part-ру-для-карри",
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Прожарьте муку",
    "uses_rows": [
     {
-     "amount_html": "1 стакан (120 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\" data-alt=\"1\">120 г</span>)</span>",
      "name_html": "Мука"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Вмешайте все специи:<ul class=\"ing two-col\"><li>Порошок карри <span class=\"amt\">½ стакана (58 г)</span></li><li>Кайенский перец <span class=\"amt\">½ ч. л.</span></li><li>Кардамон <span class=\"amt\">½ ч. л.</span></li><li>Фенхель <span class=\"amt\">1 ч. л.</span></li><li>Молотая куркума <span class=\"amt\">1 ч. л.</span></li><li>Чеснок сушёный молотый <span class=\"amt\">1 ч. л.</span></li><li>Копчёная паприка <span class=\"amt\">1 ч. л.</span></li><li>Кориандр <span class=\"amt\">1 ч. л.</span></li><li>Молотая зира <span class=\"amt\">1 ч. л.</span></li><li>Молотый мускатный орех <span class=\"amt\">1 ч. л.</span></li><li>Корица <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Помешивайте ещё около 30 секунд, пока не появится аромат.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Вмешайте все специи:<ul class=\"ing two-col\"><li>Порошок карри <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"58\" data-alt=\"1\">58 г</span>)</span></span></li><li>Кайенский перец <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>Кардамон <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>Фенхель <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Молотая куркума <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Чеснок сушёный молотый <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Копчёная паприка <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Кориандр <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Молотая зира <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Молотый мускатный орех <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>Корица <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Помешивайте ещё около 30 секунд, пока не появится аромат.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-10",
@@ -674,6 +715,7 @@
    "part": "Ру для карри",
    "part_id": "part-ру-для-карри",
    "time": "~30 с",
+   "time_html": "<span>~30 с</span>",
    "title": "Специи",
    "uses_rows": []
   },
@@ -698,11 +740,12 @@
    "part": "Ру для карри",
    "part_id": "part-ру-для-карри",
    "time": "на ночь",
+   "time_html": "<span>на ночь</span>",
    "title": "Вылить и охладить",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Вытащите ру из формы за края пергамента.</li><li>Нарежьте квадратиками 2,5 см и храните в герметичном контейнере в холодильнике до использования.</li><li>Или заморозьте.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Вытащите ру из формы за края пергамента.</li><li>Нарежьте квадратиками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2,5 см</span> и храните в герметичном контейнере в холодильнике до использования.</li><li>Или заморозьте.</li></ul>",
    "heat": null,
    "id": "step-12",
    "images": {
@@ -726,6 +769,7 @@
    "part": "Ру для карри",
    "part_id": "part-ру-для-карри",
    "time": null,
+   "time_html": null,
    "title": "Нарезать квадратиками",
    "uses_rows": []
   },
@@ -754,10 +798,11 @@
    "part": "Томатный соус",
    "part_id": "part-томатный-соус",
    "time": "~1 мин в воде",
+   "time_html": "<span>~1 мин в воде</span>",
    "title": "Бланшируйте и очистите помидоры",
    "uses_rows": [
     {
-     "amount_html": "4 крупных",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> крупных",
      "name_html": "Помидоры"
     }
    ]
@@ -787,13 +832,15 @@
    "part": "Томатный соус",
    "part_id": "part-томатный-соус",
    "time": null,
+   "time_html": null,
    "title": "Удалить семена и нарезать",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>На огне выше среднего покройте дно средней кастрюли (5–6 л) или большой сковороды маслом.</li><li>Добавьте лук — нарезанный <b>очень</b> тонко, как на мишленовской кухне, — и жарьте, часто помешивая, 4–5 минут, до мягкости и золотистого цвета.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>На огне выше среднего покройте дно средней кастрюли (<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"5\" data-b=\"6\" data-s=\"0\">5–6 л</span>) или большой сковороды маслом.</li><li>Добавьте лук — нарезанный <b>очень</b> тонко, как на мишленовской кухне, — и жарьте, часто помешивая, 4–5 минут, до мягкости и золотистого цвета.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-15",
@@ -818,14 +865,15 @@
    "part": "Томатный соус",
    "part_id": "part-томатный-соус",
    "time": "4–5 мин",
+   "time_html": "<span>4–5 мин</span>",
    "title": "Обжарьте лук",
    "uses_rows": [
     {
-     "amount_html": "2½ ст. л. (37 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\">2½ ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"37\" data-alt=\"1\">37 г</span>)</span>",
      "name_html": "Растительное масло"
     },
     {
-     "amount_html": "1 крупная луковица",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"крупная луковица|крупные луковицы|крупных луковиц|крупной луковицы\" data-n=\"1\">1 крупная луковица</span>",
      "name_html": "Репчатый лук"
     }
    ]
@@ -834,6 +882,7 @@
    "body_html": "<ul class=\"do\"><li>Убавьте огонь до среднего и добавьте чеснок и имбирь.</li><li>Перемешайте. Добавьте соевый соус и снова перемешайте, чтобы всё равномерно соединилось.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-16",
@@ -854,18 +903,19 @@
    "part": "Томатный соус",
    "part_id": "part-томатный-соус",
    "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
    "title": "Чеснок, имбирь, потом соя",
    "uses_rows": [
     {
-     "amount_html": "5 зубчиков",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"5\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">5 зубчиков</span>",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "кусочек 2,5 см",
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2,5 см</span>",
      "name_html": "Имбирь"
     },
     {
-     "amount_html": "2 ст. л. (33 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"33\" data-alt=\"1\">33 г</span>)</span>",
      "name_html": "Соевый соус"
     }
    ]
@@ -874,6 +924,7 @@
    "body_html": "<ul class=\"do\"><li>Переложите луково-имбирную смесь в большую кастрюлю к помидорам.</li><li>Добавьте ½ банки томатного соуса.</li><li>Готовьте на среднем огне до полной готовности и консистенции томатного соуса.</li><li><b>Постоянно помешивайте</b> — он любит пригорать ко дну.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-17",
@@ -898,10 +949,11 @@
    "part": "Томатный соус",
    "part_id": "part-томатный-соус",
    "time": "~25 мин",
+   "time_html": "<span>~25 мин</span>",
    "title": "Уварите с помидорами",
    "uses_rows": [
     {
-     "amount_html": "½ банки",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"банка|банки|банок\" data-n=\"1\">½ банки</span>",
      "name_html": "Консервированный томатный соус"
     }
    ]
@@ -910,6 +962,7 @@
    "body_html": "<ul class=\"do\"><li>Доведите до кипения большую кастрюлю, <b>на ⅓ заполненную водой</b>.</li><li>Положите морковь и картофель и варите почти до мягкости (обычно пару минут).</li><li><i>Нарезка рангири:</i> срежьте морковь наискосок, поверните на четверть оборота и снова срежьте наискосок.</li></ul>",
    "heat": {
     "label": "сильный",
+    "label_html": "<span>сильный</span>",
     "off": false
    },
    "id": "step-18",
@@ -934,14 +987,15 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": "несколько мин",
+   "time_html": "<span>несколько мин</span>",
    "title": "Отварите морковь и картофель",
    "uses_rows": [
     {
-     "amount_html": "2 крупных",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> крупных",
      "name_html": "Морковь"
     },
     {
-     "amount_html": "3 шт.",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> шт.",
      "name_html": "Картофель"
     }
    ]
@@ -950,6 +1004,7 @@
    "body_html": "<p>Влейте куриный бульон и доведите до слабого кипения.</p>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-19",
@@ -970,10 +1025,11 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Влейте бульон",
    "uses_rows": [
     {
-     "amount_html": "5 стаканов (1,2 л)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"5\">5 стаканов</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1.2\" data-alt=\"1\">1,2 л</span>)</span>",
      "name_html": "Куриный бульон"
     }
    ]
@@ -982,6 +1038,7 @@
    "body_html": "<ul class=\"do\"><li>Добавьте томатный соус.</li><li>Добавьте натёртое яблоко.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-20",
@@ -1006,10 +1063,11 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": null,
+   "time_html": null,
    "title": "Томатный соус, потом яблоко",
    "uses_rows": [
     {
-     "amount_html": "1 крупное",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> крупное",
      "name_html": "Зелёное яблоко"
     }
    ]
@@ -1018,6 +1076,7 @@
    "body_html": "<ul class=\"do\"><li>Добавьте ру для карри.</li><li>Лучше так: зачерпните немного жидкости в маленький сотейник и растворите ру там — без комочков.</li><li>В маленьком сотейнике проще контролировать; в большой полной кастрюле комочки трудно найти.</li><li>Затем вылейте обратно.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-21",
@@ -1042,10 +1101,11 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Растворите ру",
    "uses_rows": [
     {
-     "amount_html": "226 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"226\">226 г</span>",
      "name_html": "Ру для карри"
     }
    ]
@@ -1071,6 +1131,7 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": null,
+   "time_html": null,
    "title": "Мясо или грибы",
    "uses_rows": []
   },
@@ -1078,6 +1139,7 @@
    "body_html": "<ul class=\"do\"><li>Готовьте на огне ниже среднего полчаса.</li><li><b>Не переставайте помешивать</b>, иначе может пригореть.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-23",
@@ -1098,6 +1160,7 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": "30 мин",
+   "time_html": "<span>30 мин</span>",
    "title": "Томить 30 минут",
    "uses_rows": []
   },
@@ -1122,6 +1185,7 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": "3 приёма",
+   "time_html": "<span>3 приёма</span>",
    "title": "Солить в три приёма",
    "uses_rows": [
     {
@@ -1151,10 +1215,11 @@
    "part": "Финальная сборка",
    "part_id": "part-финальная-сборка",
    "time": null,
+   "time_html": null,
    "title": "Подача",
    "uses_rows": [
     {
-     "amount_html": "8 стаканов (1560 г)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"8\">8 стаканов</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1560\" data-alt=\"1\">1560 г</span>)</span>",
      "name_html": "Варёный круглозёрный рис"
     }
    ]
@@ -1192,6 +1257,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Говядину в духовку",
+    "label_html": "Говядину в духовку",
     "start": 0
    },
    {
@@ -1199,6 +1265,7 @@
     "dur_label": "6 мин",
     "kind": "bowl",
     "label": "Бульон: кости, крылья, лук, морковь в кастрюлю",
+    "label_html": "Бульон: кости, крылья, лук, морковь в кастрюлю",
     "start": 0
    },
    {
@@ -1206,6 +1273,7 @@
     "dur_label": "1 ч",
     "kind": "oven",
     "label": "Запекать говядину, 1 ч",
+    "label_html": "Запекать говядину, 1 ч",
     "start": 3
    },
    {
@@ -1213,6 +1281,7 @@
     "dur_label": "20 мин",
     "kind": "board",
     "label": "Бланшировать, очистить, удалить семена, нарезать помидоры",
+    "label_html": "Бланшировать, очистить, удалить семена, нарезать помидоры",
     "start": 6
    },
    {
@@ -1220,6 +1289,7 @@
     "dur_label": "1 ч",
     "kind": "wait",
     "label": "Бульон варится, 1 ч",
+    "label_html": "Бульон варится, 1 ч",
     "start": 6
    },
    {
@@ -1227,6 +1297,7 @@
     "dur_label": "7 мин",
     "kind": "pan",
     "label": "Обжарить лук; чеснок, имбирь, соя",
+    "label_html": "Обжарить лук; чеснок, имбирь, соя",
     "start": 26
    },
    {
@@ -1234,6 +1305,7 @@
     "dur_label": "27 мин",
     "kind": "pan",
     "label": "Томатный соус уваривается — мешать",
+    "label_html": "Томатный соус уваривается — мешать",
     "start": 33
    },
    {
@@ -1241,6 +1313,7 @@
     "dur_label": "10 мин",
     "kind": "board",
     "label": "Нарезать морковь + картофель, натереть яблоко",
+    "label_html": "Нарезать морковь + картофель, натереть яблоко",
     "start": 55
    },
    {
@@ -1248,6 +1321,7 @@
     "dur_label": "45 мин",
     "kind": "wait",
     "label": "Сварить рис",
+    "label_html": "Сварить рис",
     "start": 62
    },
    {
@@ -1255,6 +1329,7 @@
     "dur_label": "4 мин",
     "kind": "bowl",
     "label": "Процедить бульон",
+    "label_html": "Процедить бульон",
     "start": 66
    },
    {
@@ -1262,6 +1337,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Отварить морковь + картофель",
+    "label_html": "Отварить морковь + картофель",
     "start": 70
    },
    {
@@ -1269,6 +1345,7 @@
     "dur_label": "5 мин",
     "kind": "pan",
     "label": "Бульон, томатный соус, яблоко",
+    "label_html": "Бульон, томатный соус, яблоко",
     "start": 74
    },
    {
@@ -1276,6 +1353,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Растворить ру в небольшом количестве жидкости",
+    "label_html": "Растворить ру в небольшом количестве жидкости",
     "start": 79
    },
    {
@@ -1283,6 +1361,7 @@
     "dur_label": "30 мин",
     "kind": "pan",
     "label": "Говядина, томить 30 мин — мешать",
+    "label_html": "Говядина, томить 30 мин — мешать",
     "start": 82
    },
    {
@@ -1290,6 +1369,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Солить в 3 приёма",
+    "label_html": "Солить в 3 приёма",
     "start": 112
    },
    {
@@ -1297,6 +1377,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Подача",
+    "label_html": "Подача",
     "start": 116
    }
   ],

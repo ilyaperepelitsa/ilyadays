@@ -4,17 +4,19 @@
  "blurb_html": "Веганское даси: комбу и сушёные шиитаке, заваренные холодным способом за ночь. Замоченные шиитаке идут в миску с яйцом.",
  "chips": [
   {
+   "html": "<span><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 литр</span></span>",
    "kind": "",
    "text": "1 литр"
   },
   {
+   "html": "5 мин + ночь (или ~45 мин горячим способом)",
    "kind": "time",
    "text": "5 мин + ночь (или ~45 мин горячим способом)"
   }
  ],
  "description": "Веганское даси: комбу и сушёные шиитаке, заваренные холодным способом за ночь. Замоченные шиитаке идут в миску с яйцом.",
  "equipment_html": [
-  "Банка или кувшин от 1 л (холодное заваривание)",
+  "Банка или кувшин от <span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 л</span> (холодное заваривание)",
   "Кастрюля (быстрый вариант)",
   "Мелкое сито"
  ],
@@ -31,15 +33,15 @@
   {
    "items": [
     {
-     "amount_html": "1 л",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span>",
      "name_html": "Вода"
     },
     {
-     "amount_html": "10 г (кусок примерно 10 × 10 см)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span> (кусок примерно <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"10\" data-b=\"10\" data-x=\"1\" data-s=\"0\">10 × 10 см</span>)",
      "name_html": "Комбу"
     },
     {
-     "amount_html": "4–5 шт. (около 15 г)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span> шт. (около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>)",
      "name_html": "Сушёные шиитаке"
     }
    ],
@@ -65,9 +67,9 @@
    "goes_in": "Шаг 2",
    "image": "illustrations/shiitake-kombu-dashi/mise2.webp",
    "items": [
-    "4–5"
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span>"
    ],
-   "items_html": "4–5",
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span>",
    "name": "Сушёные шиитаке",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -77,9 +79,9 @@
    "goes_in": "Шаг 2",
    "image": "illustrations/shiitake-kombu-dashi/mise3.webp",
    "items": [
-    "1 литр"
+    "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 литр</span>"
    ],
-   "items_html": "1 литр",
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 литр</span>",
    "name": "Холодная вода",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -96,7 +98,7 @@
    "title_html": "Хранение"
   },
   {
-   "html": "<ul class=\"do\"><li>10 г комбу + 4–5 шиитаке на литр — стандартная отправная точка.</li><li>Для более крепкого даси добавьте ещё один-два гриба.</li></ul>",
+   "html": "<ul class=\"do\"><li><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\" data-s=\"0\">10 г</span> комбу + 4–5 шиитаке на литр — стандартная отправная точка.</li><li>Для более крепкого даси добавьте ещё один-два гриба.</li></ul>",
    "title_html": "Количества"
   },
   {
@@ -118,6 +120,30 @@
  "prev": {
   "slug": "sous-vide-beets",
   "title": "Свёкла су-вид"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/shiitake-kombu-dashi.jpg",
  "siblings": [
@@ -170,16 +196,17 @@
    "part": "Холодное заваривание (на ночь)",
    "part_id": "part-холодное-заваривание-на-ночь",
    "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
    "title": "Протереть комбу",
    "uses_rows": [
     {
-     "amount_html": "10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
      "name_html": "Комбу"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>В банку, всё холодное:<ul class=\"ing\"><li>комбу <span class=\"amt\">10 г</span></li><li>сушёные шиитаке <span class=\"amt\">4–5 шт. (около 15 г)</span></li><li>вода <span class=\"amt\">1 л</span></li></ul></li><li>Закройте крышкой и уберите в холодильник на <b>8–24 часа</b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>В банку, всё холодное:<ul class=\"ing\"><li>комбу <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span></span></li><li>сушёные шиитаке <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span> шт. (около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>)</span></li><li>вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span></span></li></ul></li><li>Закройте крышкой и уберите в холодильник на <b>8–24 часа</b>.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -194,6 +221,7 @@
    "part": "Холодное заваривание (на ночь)",
    "part_id": "part-холодное-заваривание-на-ночь",
    "time": "8–24 ч",
+   "time_html": "<span>8–24 ч</span>",
    "title": "Замочить на ночь",
    "uses_rows": []
   },
@@ -218,6 +246,7 @@
    "part": "Холодное заваривание (на ночь)",
    "part_id": "part-холодное-заваривание-на-ночь",
    "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
    "title": "Процедить",
    "uses_rows": []
   },
@@ -242,11 +271,12 @@
    "part": "Холодное заваривание (на ночь)",
    "part_id": "part-холодное-заваривание-на-ночь",
    "time": null,
+   "time_html": null,
    "title": "Шиитаке не выбрасывать",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>В кастрюлю, всё холодное:<ul class=\"ing\"><li>комбу <span class=\"amt\">10 г</span></li><li>сушёные шиитаке <span class=\"amt\">4–5 шт. (около 15 г)</span></li><li>вода <span class=\"amt\">1 л</span></li></ul></li><li>Замочите минимум на 30 минут (дольше — лучше).</li></ul>",
+   "body_html": "<ul class=\"do\"><li>В кастрюлю, всё холодное:<ul class=\"ing\"><li>комбу <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span></span></li><li>сушёные шиитаке <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span> шт. (около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>)</span></li><li>вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span></span></li></ul></li><li>Замочите минимум на 30 минут (дольше — лучше).</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -261,13 +291,15 @@
    "part": "Быстрый вариант (в тот же день)",
    "part_id": "part-быстрый-вариант-в-тот-же-день",
    "time": "30 мин",
+   "time_html": "<span>30 мин</span>",
    "title": "Быстрый вариант: замочить на 30 минут",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Нагревайте на слабом огне.</li><li>Когда у края появятся мелкие пузырьки (около 60–70 °C, ~10–15 минут), выньте комбу — проваренный комбу становится склизким и горьким.</li><li>Поварите шиитаке ещё несколько минут, затем процедите, как в шаге 3.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нагревайте на слабом огне.</li><li>Когда у края появятся мелкие пузырьки (около <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-b=\"70\" data-s=\"0\">60–70 °C</span>, ~10–15 минут), выньте комбу — проваренный комбу становится склизким и горьким.</li><li>Поварите шиитаке ещё несколько минут, затем процедите, как в шаге 3.</li></ul>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-6",
@@ -288,6 +320,7 @@
    "part": "Быстрый вариант (в тот же день)",
    "part_id": "part-быстрый-вариант-в-тот-же-день",
    "time": "10–15 мин",
+   "time_html": "<span>10–15 мин</span>",
    "title": "Нагреть мягко, вынуть комбу до кипения",
    "uses_rows": []
   }
@@ -316,6 +349,7 @@
     "dur_label": "2 мин",
     "kind": "board",
     "label": "Протереть комбу",
+    "label_html": "Протереть комбу",
     "start": 0
    },
    {
@@ -323,6 +357,7 @@
     "dur_label": "2 мин",
     "kind": "bowl",
     "label": "Всё в банку",
+    "label_html": "Всё в банку",
     "start": 2
    },
    {
@@ -330,6 +365,7 @@
     "dur_label": "8 ч",
     "kind": "wait",
     "label": "Холодное заваривание в холодильнике",
+    "label_html": "Холодное заваривание в холодильнике",
     "start": 4
    },
    {
@@ -337,6 +373,7 @@
     "dur_label": "5 мин",
     "kind": "bowl",
     "label": "Процедить, отжать шиитаке",
+    "label_html": "Процедить, отжать шиитаке",
     "start": 484
    }
   ],

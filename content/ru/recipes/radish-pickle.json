@@ -4,17 +4,19 @@
  "blurb_html": "Хрустящий красный редис, который настаивается в большой банке сладко-уксусного рассола, — ленивый родственник маринованных огурцов.",
  "chips": [
   {
+   "html": "<span>1 банка (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> редиса)</span>",
    "kind": "",
    "text": "1 банка (~500 г редиса)"
   },
   {
+   "html": "~15 мин + от 6 ч до нескольких дней",
    "kind": "time",
    "text": "~15 мин + от 6 ч до нескольких дней"
   }
  ],
  "description": "Хрустящий красный редис, который настаивается в большой банке сладко-уксусного рассола, — ленивый родственник маринованных огурцов.",
  "equipment_html": [
-  "Банка или контейнер на ~700 мл с крышкой",
+  "Банка или контейнер на ~<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"700\" data-s=\"0\">700 мл</span> с крышкой",
   "Маленький сотейник"
  ],
  "group": {
@@ -30,11 +32,11 @@
   {
    "items": [
     {
-     "amount_html": "500 г (около 2 пучков)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span> (около <span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> пучков)",
      "name_html": "Красный редис"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Соль, чтобы вытянуть воду"
     }
    ],
@@ -43,23 +45,23 @@
   {
    "items": [
     {
-     "amount_html": "<span data-v=\"amount\">150 мл</span>",
+     "amount_html": "<span data-v=\"amount\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\">150 мл</span></span>",
      "name_html": "<span data-v=\"name\">Рисовый уксус</span>"
     },
     {
-     "amount_html": "150 мл<span data-v-show=\"water\"> + <span data-v=\"water\"></span></span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\">150 мл</span><span data-v-show=\"water\"> + <span data-v=\"water\"></span></span>",
      "name_html": "Вода"
     },
     {
-     "amount_html": "<span data-v=\"sugar\">60 г (5 ст. л.)</span>",
+     "amount_html": "<span data-v=\"sugar\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-alt=\"1\">5 ст. л.</span>)</span></span>",
      "name_html": "Сахар"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Соль"
     },
     {
-     "amount_html": "2 ст. л., по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, по желанию",
      "name_html": "Мирин"
     }
    ],
@@ -72,11 +74,11 @@
      "name_html": "Свежий имбирь, полоски овощечисткой"
     },
     {
-     "amount_html": "квадрат 5 см, по желанию",
+     "amount_html": "квадрат <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>, по желанию",
      "name_html": "Комбу"
     },
     {
-     "amount_html": "1 шт., по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт., по желанию",
      "name_html": "Сушёный чили"
     },
     {
@@ -135,11 +137,11 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>Те же вкусы, что у <a href=\"cucumber-sunomono.html\">маринованных огурцов</a>, в количестве, чтобы покрыть:<ul class=\"ing two-col\"><li>150 мл уксуса</li><li>75 мл мирина</li><li>50 г сахара</li><li>150 мл воды</li><li>1 ч. л. соли</li></ul></li><li>Слаще и мягче; если хотите проще, обойдитесь без комбу.</li></ul>",
+   "html": "<ul class=\"do\"><li>Те же вкусы, что у <a href=\"cucumber-sunomono.html\">маринованных огурцов</a>, в количестве, чтобы покрыть:<ul class=\"ing two-col\"><li><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\" data-s=\"0\">150 мл</span> уксуса</li><li><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\" data-s=\"0\">75 мл</span> мирина</li><li><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> сахара</li><li><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\" data-s=\"0\">150 мл</span> воды</li><li><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> соли</li></ul></li><li>Слаще и мягче; если хотите проще, обойдитесь без комбу.</li></ul>",
    "title_html": "Или маринад от огурцов"
   },
   {
-   "html": "<table class=\"mini\"><thead><tr><th>Что есть</th><th>Уксус</th><th>+ Вода</th><th>Сахар</th></tr></thead><tbody><tr><td>Рисовый уксус (~4,5%)</td><td>150 мл</td><td>—</td><td>60 г (5 ст. л.)</td></tr><tr><td>Корейский сброженный уксус 양조식초 (~7%)</td><td>95 мл</td><td>3½ ст. л. (54 мл)</td><td>70 г (6 ст. л.)</td></tr><tr><td>Столовый уксус 9%</td><td>75 мл</td><td>75 мл</td><td>70 г (6 ст. л.)</td></tr><tr><td>Уксус 6%</td><td>110 мл</td><td>2½ ст. л. (38 мл)</td><td>70 г (6 ст. л.)</td></tr><tr><td>Белый / дистиллированный уксус 5%</td><td>135 мл</td><td>1 ст. л. (15 мл)</td><td>70 г (6 ст. л.)</td></tr></tbody></table>Подогнано под кислотность рисового уксуса (~4,5%) для рассола. Нерисовые уксусы резче и менее округлые, поэтому сахара больше — пробуйте и поправляйте.",
+   "html": "<table class=\"mini\"><thead><tr><th>Что есть</th><th>Уксус</th><th>+ Вода</th><th>Сахар</th></tr></thead><tbody><tr><td>Рисовый уксус (~4,5%)</td><td><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\" data-s=\"0\">150 мл</span></td><td>—</td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\" data-s=\"0\">60 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-s=\"0\" data-alt=\"1\">5 ст. л.</span>)</span></td></tr><tr><td>Корейский сброженный уксус 양조식초 (~7%)</td><td><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"95\" data-s=\"0\">95 мл</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3.5\" data-s=\"0\">3½ ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"54\" data-s=\"0\" data-alt=\"1\">54 мл</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\" data-s=\"0\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-s=\"0\" data-alt=\"1\">6 ст. л.</span>)</span></td></tr><tr><td>Столовый уксус 9%</td><td><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\" data-s=\"0\">75 мл</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\" data-s=\"0\">75 мл</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\" data-s=\"0\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-s=\"0\" data-alt=\"1\">6 ст. л.</span>)</span></td></tr><tr><td>Уксус 6%</td><td><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"110\" data-s=\"0\">110 мл</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\" data-s=\"0\">2½ ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"38\" data-s=\"0\" data-alt=\"1\">38 мл</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\" data-s=\"0\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-s=\"0\" data-alt=\"1\">6 ст. л.</span>)</span></td></tr><tr><td>Белый / дистиллированный уксус 5%</td><td><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"135\" data-s=\"0\">135 мл</span></td><td><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-s=\"0\" data-alt=\"1\">15 мл</span>)</span></td><td><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\" data-s=\"0\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-s=\"0\" data-alt=\"1\">6 ст. л.</span>)</span></td></tr></tbody></table>Подогнано под кислотность рисового уксуса (~4,5%) для рассола. Нерисовые уксусы резче и менее округлые, поэтому сахара больше — пробуйте и поправляйте.",
    "title_html": "Пересчёт уксуса (вместо 150 мл рисового уксуса)"
   },
   {
@@ -164,6 +166,30 @@
  "prev": {
   "slug": "cucumber-sunomono",
   "title": "Японские маринованные огурцы (суномоно)"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/radish-pickle.jpg",
  "siblings": [
@@ -220,16 +246,17 @@
    "part": null,
    "part_id": null,
    "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
    "title": "Почистить и нарезать",
    "uses_rows": [
     {
-     "amount_html": "500 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
      "name_html": "Красный редис"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Перемешайте нарезанный редис с 1 ч. л. соли и оставьте на 20–30 минут — он пустит сок.</li><li>Смойте соль и сок холодной водой и хорошо обсушите. Так редис останется хрустящим и лучше впитает рассол.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Перемешайте нарезанный редис с <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> соли и оставьте на 20–30 минут — он пустит сок.</li><li>Смойте соль и сок холодной водой и хорошо обсушите. Так редис останется хрустящим и лучше впитает рассол.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -249,18 +276,20 @@
    "part": null,
    "part_id": null,
    "time": "20–30 мин",
+   "time_html": "<span>20–30 мин</span>",
    "title": "Посолить, затем промыть",
    "uses_rows": [
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Соль, чтобы вытянуть воду"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Подогрейте, только чтобы растворился сахар (мирин — если используете):<ul class=\"ing two-col\"><li><span data-v=\"name_lc\">рисовый уксус</span> <span class=\"amt\"><span data-v=\"amount\">150 мл</span></span></li><li>вода <span class=\"amt\">150 мл<span data-v-show=\"water\"> + <span data-v=\"water\"></span></span></span></li><li>сахар <span class=\"amt\"><span data-v=\"sugar\">60 г (5 ст. л.)</span></span></li><li>соль <span class=\"amt\">1 ч. л.</span></li><li>мирин <span class=\"amt\">2 ст. л.</span></li></ul></li><li>Не кипятите. Дайте остыть.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Подогрейте, только чтобы растворился сахар (мирин — если используете):<ul class=\"ing two-col\"><li><span data-v=\"name_lc\">рисовый уксус</span> <span class=\"amt\"><span data-v=\"amount\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\">150 мл</span></span></span></li><li>вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\">150 мл</span><span data-v-show=\"water\"> + <span data-v=\"water\"></span></span></span></li><li>сахар <span class=\"amt\"><span data-v=\"sugar\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-alt=\"1\">5 ст. л.</span>)</span></span></span></li><li>соль <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li></ul></li><li>Не кипятите. Дайте остыть.</li></ul>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-3",
@@ -276,11 +305,12 @@
    "part": null,
    "part_id": null,
    "time": "~4 мин + остывание",
+   "time_html": "<span>~4 мин + остывание</span>",
    "title": "Приготовить рассол",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Плотно уложите редис в банку.</li><li>Добавьте между ним:<ul class=\"ing\"><li>свежий имбирь, несколько полосок овощечисткой</li><li>комбу <span class=\"amt\">квадрат 5 см</span></li><li>сушёный чили <span class=\"amt\">1 шт.</span></li><li>цедра юдзу или лимона <span class=\"amt\">полоска</span></li></ul></li><li>Залейте остывшим рассолом, чтобы всё было <b>полностью покрыто</b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Плотно уложите редис в банку.</li><li>Добавьте между ним:<ul class=\"ing\"><li>свежий имбирь, несколько полосок овощечисткой</li><li>комбу <span class=\"amt\">квадрат <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span></span></li><li>сушёный чили <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт.</span></li><li>цедра юдзу или лимона <span class=\"amt\">полоска</span></li></ul></li><li>Залейте остывшим рассолом, чтобы всё было <b>полностью покрыто</b>.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -300,6 +330,7 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "В банку",
    "uses_rows": [
     {
@@ -324,6 +355,7 @@
    "part": null,
    "part_id": null,
    "time": "6 ч – 2 недели",
+   "time_html": "<span>6 ч – 2 недели</span>",
    "title": "Подождать",
    "uses_rows": []
   },
@@ -348,6 +380,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Подача",
    "uses_rows": []
   }
@@ -380,6 +413,7 @@
     "dur_label": "6 мин",
     "kind": "board",
     "label": "Почистить + нарезать редис",
+    "label_html": "Почистить + нарезать редис",
     "start": 0
    },
    {
@@ -387,6 +421,7 @@
     "dur_label": "25 мин",
     "kind": "wait",
     "label": "Посолить и оставить",
+    "label_html": "Посолить и оставить",
     "start": 6
    },
    {
@@ -394,6 +429,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Подогреть рассол, растворить",
+    "label_html": "Подогреть рассол, растворить",
     "start": 8
    },
    {
@@ -401,6 +437,7 @@
     "dur_label": "18 мин",
     "kind": "wait",
     "label": "Рассол остывает",
+    "label_html": "Рассол остывает",
     "start": 12
    },
    {
@@ -408,6 +445,7 @@
     "dur_label": "4 мин",
     "kind": "bowl",
     "label": "Промыть, в банку, залить рассолом",
+    "label_html": "Промыть, в банку, залить рассолом",
     "start": 31
    },
    {
@@ -415,6 +453,7 @@
     "dur_label": "25 мин",
     "kind": "wait",
     "label": "Холодильник (6 ч → дни)",
+    "label_html": "Холодильник (6 ч → дни)",
     "start": 35
    }
   ],
@@ -455,53 +494,53 @@
  "total": "~15 мин + от 6 ч до нескольких дней",
  "vinegar_options": {
   "kr7": {
-   "amount": "95 мл",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"95\">95 мл</span>",
    "label": "Корейский сброженный уксус 양조식초 (~7%)",
    "name": "Корейский сброженный уксус (~7%)",
    "name_lc": "корейский сброженный уксус",
-   "sugar": "70 г (6 ст. л.)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-alt=\"1\">6 ст. л.</span>)</span>",
    "vinegar_ml": 96.43,
-   "water": "3½ ст. л. (54 мл)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3.5\">3½ ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"54\" data-alt=\"1\">54 мл</span>)</span>",
    "water_ml": 53.57
   },
   "rice": {
-   "amount": "150 мл",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"150\">150 мл</span>",
    "label": "Рисовый уксус (~4,5%)",
    "name": "Рисовый уксус",
    "name_lc": "рисовый уксус",
-   "sugar": "60 г (5 ст. л.)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-alt=\"1\">5 ст. л.</span>)</span>",
    "vinegar_ml": 150.0,
    "water": "",
    "water_ml": 0.0
   },
   "v5": {
-   "amount": "135 мл",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"135\">135 мл</span>",
    "label": "Белый / дистиллированный уксус 5%",
    "name": "Белый уксус (5%)",
    "name_lc": "белый уксус",
-   "sugar": "70 г (6 ст. л.)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-alt=\"1\">6 ст. л.</span>)</span>",
    "vinegar_ml": 135.0,
-   "water": "1 ст. л. (15 мл)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\" data-alt=\"1\">15 мл</span>)</span>",
    "water_ml": 15.0
   },
   "v6": {
-   "amount": "110 мл",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"110\">110 мл</span>",
    "label": "Уксус 6%",
    "name": "Уксус (6%)",
    "name_lc": "6-процентный уксус",
-   "sugar": "70 г (6 ст. л.)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-alt=\"1\">6 ст. л.</span>)</span>",
    "vinegar_ml": 112.5,
-   "water": "2½ ст. л. (38 мл)",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\">2½ ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"38\" data-alt=\"1\">38 мл</span>)</span>",
    "water_ml": 37.5
   },
   "v9": {
-   "amount": "75 мл",
+   "amount": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\">75 мл</span>",
    "label": "Столовый уксус 9%",
    "name": "Столовый уксус (9%)",
    "name_lc": "9-процентный уксус",
-   "sugar": "70 г (6 ст. л.)",
+   "sugar": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\" data-alt=\"1\">6 ст. л.</span>)</span>",
    "vinegar_ml": 75.0,
-   "water": "75 мл",
+   "water": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\">75 мл</span>",
    "water_ml": 75.0
   }
  },

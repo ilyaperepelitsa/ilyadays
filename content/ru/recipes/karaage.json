@@ -4,10 +4,12 @@
  "blurb_html": "Маринованное бедро, корочка из тапиоки с крошкой, сделанной вилкой, двойная обжарка при 180 °C.",
  "chips": [
   {
+   "html": "<span>2 порции (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> бёдер)</span>",
    "kind": "",
    "text": "2 порции (500 г бёдер)"
   },
   {
+   "html": "~1 ч, включая 30 мин маринования",
    "kind": "time",
    "text": "~1 ч, включая 30 мин маринования"
   }
@@ -33,7 +35,7 @@
   {
    "items": [
     {
-     "amount_html": "500 г, кусками 4–5 см",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>, кусками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-b=\"5\" data-s=\"0\">4–5 см</span>",
      "name_html": "Куриные бёдра без кости, с кожей"
     }
    ],
@@ -42,35 +44,35 @@
   {
    "items": [
     {
-     "amount_html": "2 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Саке"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Устричный соус"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Коричневый сахар"
     },
     {
-     "amount_html": "10 г (2 ч. л.)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 ч. л.</span>)</span>",
      "name_html": "Имбирь, натёртый"
     },
     {
-     "amount_html": "2 зубчика",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
      "name_html": "Чеснок, натёртый"
     },
     {
-     "amount_html": "¼ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
      "name_html": "Молотый перец"
     }
    ],
@@ -79,19 +81,19 @@
   {
    "items": [
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Мука (в курицу)"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Тапиоковый крахмал (в курицу)"
     },
     {
-     "amount_html": "~80 г",
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
      "name_html": "Тапиоковый крахмал (на доску)"
     },
     {
-     "amount_html": "1–2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 ч. л.</span>",
      "name_html": "Вода или остаток маринада (для крошки)"
     }
    ],
@@ -100,7 +102,7 @@
   {
    "items": [
     {
-     "amount_html": "слоем 3–4 см",
+     "amount_html": "слоем <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-b=\"4\" data-s=\"0\">3–4 см</span>",
      "name_html": "Нейтральное масло"
     },
     {
@@ -153,9 +155,9 @@
    "goes_in": "Шаг 3",
    "image": "illustrations/karaage/mise3.webp",
    "items": [
-    "по 1 ст. л."
+    "по <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>"
    ],
-   "items_html": "по 1 ст. л.",
+   "items_html": "по <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
    "name": "Мука + тапиока",
    "svg_fallback": null,
    "vessel": "cup"
@@ -213,7 +215,7 @@
    "title_html": "Количества"
   },
   {
-   "html": "<ul class=\"do\"><li>Курица безопасна при <b>74 °C</b> в центре.</li><li>Отдых между обжарками доводит середину; если сомневаетесь, разрежьте самый большой кусок после второй обжарки.</li></ul>",
+   "html": "<ul class=\"do\"><li>Курица безопасна при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"74\" data-s=\"0\">74 °C</span></b> в центре.</li><li>Отдых между обжарками доводит середину; если сомневаетесь, разрежьте самый большой кусок после второй обжарки.</li></ul>",
    "title_html": "Готова ли курица?"
   },
   {
@@ -226,6 +228,30 @@
  "prev": {
   "slug": "napa-shiitake-egg-bowl",
   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/karaage.jpg",
  "siblings": [
@@ -258,7 +284,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Нарежьте бёдра без кости кусками 4–5 см.</li><li><b>Наколите их повсюду</b> острой вилкой или шпажкой — с обеих сторон, — чтобы маринад проник внутрь.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нарежьте бёдра без кости кусками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-b=\"5\" data-s=\"0\">4–5 см</span>.</li><li><b>Наколите их повсюду</b> острой вилкой или шпажкой — с обеих сторон, — чтобы маринад проник внутрь.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -278,16 +304,17 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Нарезать и наколоть",
    "uses_rows": [
     {
-     "amount_html": "500 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
      "name_html": "Куриные бёдра без кости, с кожей"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Смешайте маринад:<ul class=\"ing two-col\"><li>имбирь, натёртый <span class=\"amt\">10 г (2 ч. л.)</span></li><li>чеснок, натёртый <span class=\"amt\">2 зубчика</span></li><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>соевый соус <span class=\"amt\">2 ст. л.</span></li><li>саке <span class=\"amt\">1 ст. л.</span></li><li>молотый перец <span class=\"amt\">¼ ч. л.</span></li><li>устричный соус <span class=\"amt\">1 ч. л.</span></li><li>коричневый сахар <span class=\"amt\">1 ч. л.</span></li></ul></li><li>Перемешайте в нём курицу и маринуйте в холодильнике.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смешайте маринад:<ul class=\"ing two-col\"><li>имбирь, натёртый <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-alt=\"1\">2 ч. л.</span>)</span></span></li><li>чеснок, натёртый <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>молотый перец <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span></span></li><li>устричный соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>коричневый сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Перемешайте в нём курицу и маринуйте в холодильнике.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -307,11 +334,12 @@
    "part": null,
    "part_id": null,
    "time": "от 30 мин до ночи",
+   "time_html": "<span>от 30 мин до ночи</span>",
    "title": "Замариновать",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Слейте и выбросьте лишний маринад.</li><li>Вмешайте в курицу <b>1 ст. л. муки и 1 ст. л. тапиокового крахмала</b>, пока каждый кусок не покроется липкой плёнкой.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Слейте и выбросьте лишний маринад.</li><li>Вмешайте в курицу <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> муки и <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> тапиокового крахмала</b>, пока каждый кусок не покроется липкой плёнкой.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -335,14 +363,15 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Слить, затем мука + крахмал",
    "uses_rows": [
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Мука (в курицу)"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Тапиоковый крахмал (в курицу)"
     }
    ]
@@ -368,22 +397,24 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Доска с крахмалом и крошка",
    "uses_rows": [
     {
-     "amount_html": "~80 г",
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
      "name_html": "Тапиоковый крахмал (на доску)"
     },
     {
-     "amount_html": "1–2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 ч. л.</span>",
      "name_html": "Вода или остаток маринада (для крошки)"
     }
    ]
   },
   {
-   "body_html": "<p>Разогрейте слой масла 3–4 см в толстостенной кастрюле до <b>180 °C</b>.</p>",
+   "body_html": "<p>Разогрейте слой масла <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-b=\"4\" data-s=\"0\">3–4 см</span> в толстостенной кастрюле до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></b>.</p>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-5",
@@ -399,10 +430,11 @@
    "part": null,
    "part_id": null,
    "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
    "title": "Разогрейте масло",
    "uses_rows": [
     {
-     "amount_html": "слоем 3–4 см",
+     "amount_html": "слоем <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-b=\"4\" data-s=\"0\">3–4 см</span>",
      "name_html": "Нейтральное масло"
     }
    ]
@@ -428,6 +460,7 @@
    "part": null,
    "part_id": null,
    "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
    "title": "Обвалять в крахмале",
    "uses_rows": []
   },
@@ -435,6 +468,7 @@
    "body_html": "<ul class=\"do\"><li>Опустите партию, не перегружая кастрюлю.</li><li>Жарьте пару минут до <b>светло-жёлтого / светло-оранжевого</b> цвета.</li></ul>",
    "heat": {
     "label": "масло 180 °C",
+    "label_html": "<span>масло <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></span>",
     "off": false
    },
    "id": "step-7",
@@ -455,6 +489,7 @@
    "part": null,
    "part_id": null,
    "time": "~2–3 мин",
+   "time_html": "<span>~2–3 мин</span>",
    "title": "Первая обжарка — светлая",
    "uses_rows": []
   },
@@ -479,6 +514,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 мин",
+   "time_html": "<span>3–4 мин</span>",
    "title": "Отдых",
    "uses_rows": []
   },
@@ -486,6 +522,7 @@
    "body_html": "<ul class=\"do\"><li>Обратно в масло, пока не станет <b>насыщенно-золотистой и хрустящей</b>.</li><li>Дайте стечь на решётке.</li></ul>",
    "heat": {
     "label": "масло 180 °C",
+    "label_html": "<span>масло <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></span>",
     "off": false
    },
    "id": "step-9",
@@ -501,6 +538,7 @@
    "part": null,
    "part_id": null,
    "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
    "title": "Вторая обжарка — тёмная и хрустящая",
    "uses_rows": []
   },
@@ -520,6 +558,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Подача",
    "uses_rows": [
     {
@@ -561,6 +600,7 @@
     "dur_label": "8 мин",
     "kind": "board",
     "label": "Нарезать и наколоть бёдра",
+    "label_html": "Нарезать и наколоть бёдра",
     "start": 0
    },
    {
@@ -568,6 +608,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Смешать маринад, перемешать курицу",
+    "label_html": "Смешать маринад, перемешать курицу",
     "start": 8
    },
    {
@@ -575,6 +616,7 @@
     "dur_label": "30 мин",
     "kind": "wait",
     "label": "Маринование (холодильник)",
+    "label_html": "Маринование (холодильник)",
     "start": 11
    },
    {
@@ -582,6 +624,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Доска с крахмалом + крошка",
+    "label_html": "Доска с крахмалом + крошка",
     "start": 30
    },
    {
@@ -589,6 +632,7 @@
     "dur_label": "10 мин",
     "kind": "pan",
     "label": "Масло до 180 °C",
+    "label_html": "Масло до <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span>",
     "start": 38
    },
    {
@@ -596,6 +640,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Слить маринад, мука + крахмал",
+    "label_html": "Слить маринад, мука + крахмал",
     "start": 41
    },
    {
@@ -603,6 +648,7 @@
     "dur_label": "4 мин",
     "kind": "board",
     "label": "Обвалять куски в крахмале",
+    "label_html": "Обвалять куски в крахмале",
     "start": 44
    },
    {
@@ -610,6 +656,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Первая обжарка — светлая",
+    "label_html": "Первая обжарка — светлая",
     "start": 48
    },
    {
@@ -617,6 +664,7 @@
     "dur_label": "4 мин",
     "kind": "wait",
     "label": "Отдых на решётке",
+    "label_html": "Отдых на решётке",
     "start": 51
    },
    {
@@ -624,6 +672,7 @@
     "dur_label": "1.5 мин",
     "kind": "pan",
     "label": "Вторая обжарка — тёмная, хрустящая",
+    "label_html": "Вторая обжарка — тёмная, хрустящая",
     "start": 55
    },
    {
@@ -631,6 +680,7 @@
     "dur_label": "1.5 мин",
     "kind": "bowl",
     "label": "Дать стечь, на тарелку",
+    "label_html": "Дать стечь, на тарелку",
     "start": 56.5
    }
   ],

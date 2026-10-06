@@ -4,10 +4,12 @@
  "blurb_html": "Mushrooms, bok choy and a sesame finish — the version closest to what’s already in the cupboard.",
  "chips": [
   {
+   "html": "<span>1 generous serving</span>",
    "kind": "",
    "text": "1 generous serving"
   },
   {
+   "html": "~25 min",
    "kind": "time",
    "text": "~25 min"
   }
@@ -30,39 +32,39 @@
   {
    "items": [
     {
-     "amount_html": "100 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
      "name_html": "Dried flat rice noodles"
     },
     {
-     "amount_html": "150 g, thinly sliced",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, thinly sliced",
      "name_html": "Chicken breast or thigh"
     },
     {
-     "amount_html": "100 g, sliced",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>, sliced",
      "name_html": "Mushrooms"
     },
     {
-     "amount_html": "100 g, chopped; stems and leaves separated",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>, chopped; stems and leaves separated",
      "name_html": "Bok choy"
     },
     {
-     "amount_html": "2 cloves, finely chopped",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>, finely chopped",
      "name_html": "Garlic"
     },
     {
-     "amount_html": "8 g, grated or finely chopped",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 g</span>, grated or finely chopped",
      "name_html": "Ginger"
     },
     {
-     "amount_html": "1, sliced; whites and greens separated",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>, sliced; whites and greens separated",
      "name_html": "Spring onion"
     },
     {
-     "amount_html": "1 tbsp (split in half)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> (split in half)",
      "name_html": "Neutral cooking oil"
     },
     {
-     "amount_html": "½ tsp, for finishing",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>, for finishing",
      "name_html": "Toasted sesame oil"
     }
    ],
@@ -71,27 +73,27 @@
   {
    "items": [
     {
-     "amount_html": "2¼ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ tsp</span>",
      "name_html": "Soy sauce"
     },
     {
-     "amount_html": "2¼ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ tsp</span>",
      "name_html": "Oyster sauce"
     },
     {
-     "amount_html": "1½ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span>",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "1½ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span>",
      "name_html": "Sake"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Rice vinegar"
     },
     {
-     "amount_html": "1½ tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
      "name_html": "Water"
     },
     {
@@ -102,7 +104,7 @@
    "name": "Sauce — mix together"
   }
  ],
- "intro_html": "The version closest to your existing ingredients, with mushrooms, greens and a sesame finish. Uses 100 g dried rice noodles and 150 g raw chicken.",
+ "intro_html": "The version closest to your existing ingredients, with mushrooms, greens and a sesame finish. Uses <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> dried rice noodles and <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> raw chicken.",
  "mise": [
   {
    "as_list": false,
@@ -209,6 +211,30 @@
   "slug": "kkakdugi",
   "title": "Kkakdugi (radish cube kimchi)"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
  "share_image": "share/garlic-ginger-chicken-noodles.jpg",
  "siblings": [
   {
@@ -249,16 +275,17 @@
    "part": null,
    "part_id": null,
    "time": "per packet",
+   "time_html": "<span>per packet</span>",
    "title": "Noodles first",
    "uses_rows": [
     {
-     "amount_html": "100 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
      "name_html": "Dried flat rice noodles"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Slice the chicken thinly.</li><li>Slice the mushrooms.</li><li>Chop the bok choy, keeping <b>stems and leaves separate</b>.</li><li>Finely chop garlic and ginger; slice the spring onion, keeping <b>whites and greens separate</b>.</li><li>Mix the sauce in a small bowl:<ul class=\"ing two-col\"><li>soy sauce <span class=\"amt\">2¼ tsp</span></li><li>oyster sauce <span class=\"amt\">2¼ tsp</span></li><li>mirin <span class=\"amt\">1½ tsp</span></li><li>sake <span class=\"amt\">1½ tsp</span></li><li>rice vinegar <span class=\"amt\">1 tsp</span></li><li>water <span class=\"amt\">1½ tbsp</span></li><li>black or white pepper <span class=\"amt\">a pinch</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Slice the chicken thinly.</li><li>Slice the mushrooms.</li><li>Chop the bok choy, keeping <b>stems and leaves separate</b>.</li><li>Finely chop garlic and ginger; slice the spring onion, keeping <b>whites and greens separate</b>.</li><li>Mix the sauce in a small bowl:<ul class=\"ing two-col\"><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ tsp</span></span></li><li>oyster sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ tsp</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span></span></li><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span></span></li><li>rice vinegar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span></span></li><li>black or white pepper <span class=\"amt\">a pinch</span></li></ul></li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -278,30 +305,31 @@
    "part": null,
    "part_id": null,
    "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
    "title": "Prep everything",
    "uses_rows": [
     {
-     "amount_html": "150 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
      "name_html": "Chicken breast or thigh"
     },
     {
-     "amount_html": "100 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
      "name_html": "Mushrooms"
     },
     {
-     "amount_html": "100 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
      "name_html": "Bok choy"
     },
     {
-     "amount_html": "2 cloves",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
      "name_html": "Garlic"
     },
     {
-     "amount_html": "8 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 g</span>",
      "name_html": "Ginger"
     },
     {
-     "amount_html": "1",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
      "name_html": "Spring onion"
     }
    ]
@@ -310,6 +338,7 @@
    "body_html": "<ul class=\"do\"><li>Heat <b>half the neutral oil</b> in a large frying pan over medium-high heat.</li><li>Brown the chicken and cook through, then transfer to a clean plate.</li></ul>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-3",
@@ -330,6 +359,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 min",
+   "time_html": "<span>3–4 min</span>",
    "title": "Cook the chicken",
    "uses_rows": []
   },
@@ -337,6 +367,7 @@
    "body_html": "<p>Add the remaining oil and fry the mushrooms until browned, roughly 3–4 minutes.</p>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-4",
@@ -357,6 +388,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 min",
+   "time_html": "<span>3–4 min</span>",
    "title": "Brown the mushrooms",
    "uses_rows": []
   },
@@ -364,6 +396,7 @@
    "body_html": "<ul class=\"do\"><li>Add bok choy <b>stems</b> for 1–2 minutes, followed by <b>garlic, ginger and spring onion whites</b> for 30 seconds.</li><li>Add the <b>leaves</b> and let them wilt.</li></ul>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-5",
@@ -384,6 +417,7 @@
    "part": null,
    "part_id": null,
    "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
    "title": "Stems, then aromatics, then leaves",
    "uses_rows": []
   },
@@ -391,6 +425,7 @@
    "body_html": "<ul class=\"do\"><li>Add the noodles, sauce and chicken.</li><li><b>Gently lift and fold</b> for roughly 1–2 minutes, until the noodles are tender and coated.</li><li>Add water a tablespoon at a time if they remain firm but the pan is drying out.</li></ul>",
    "heat": {
     "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-6",
@@ -411,6 +446,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 min",
+   "time_html": "<span>1–2 min</span>",
    "title": "Noodles, sauce and chicken",
    "uses_rows": []
   },
@@ -418,6 +454,7 @@
    "body_html": "<ul class=\"do\"><li>Turn off the heat and add the <b>sesame oil and spring onion greens</b>.</li><li>Keep this final stage brief to minimise noodle breakage.</li></ul>",
    "heat": {
     "label": "heat off",
+    "label_html": "heat off",
     "off": true
    },
    "id": "step-7",
@@ -438,10 +475,11 @@
    "part": null,
    "part_id": null,
    "time": "15 s",
+   "time_html": "<span>15 s</span>",
    "title": "Off the heat: finish",
    "uses_rows": [
     {
-     "amount_html": "½ tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
      "name_html": "Toasted sesame oil"
     }
    ]
@@ -475,6 +513,7 @@
     "dur_label": "3 min",
     "kind": "board",
     "label": "Slice chicken",
+    "label_html": "Slice chicken",
     "start": 0
    },
    {
@@ -482,6 +521,7 @@
     "dur_label": "5 min",
     "kind": "board",
     "label": "Slice mushrooms, bok choy, aromatics",
+    "label_html": "Slice mushrooms, bok choy, aromatics",
     "start": 3
    },
    {
@@ -489,6 +529,7 @@
     "dur_label": "1 min",
     "kind": "bowl",
     "label": "Mix sauce",
+    "label_html": "Mix sauce",
     "start": 8
    },
    {
@@ -496,6 +537,7 @@
     "dur_label": "4 min",
     "kind": "pan",
     "label": "Cook chicken → plate",
+    "label_html": "Cook chicken → plate",
     "start": 9
    },
    {
@@ -503,6 +545,7 @@
     "dur_label": "7 min",
     "kind": "wait",
     "label": "Soak / boil noodles (packet time)",
+    "label_html": "Soak / boil noodles (packet time)",
     "start": 11
    },
    {
@@ -510,6 +553,7 @@
     "dur_label": "4 min",
     "kind": "pan",
     "label": "Brown mushrooms",
+    "label_html": "Brown mushrooms",
     "start": 13
    },
    {
@@ -517,6 +561,7 @@
     "dur_label": "3 min",
     "kind": "pan",
     "label": "Stems → aromatics → leaves",
+    "label_html": "Stems → aromatics → leaves",
     "start": 17
    },
    {
@@ -524,6 +569,7 @@
     "dur_label": "1 min",
     "kind": "bowl",
     "label": "Drain noodles",
+    "label_html": "Drain noodles",
     "start": 18
    },
    {
@@ -531,6 +577,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Noodles + sauce + chicken, fold",
+    "label_html": "Noodles + sauce + chicken, fold",
     "start": 20
    },
    {
@@ -538,6 +585,7 @@
     "dur_label": "42 s",
     "kind": "pan",
     "label": "Heat off: sesame oil + greens",
+    "label_html": "Heat off: sesame oil + greens",
     "start": 22
    }
   ],

@@ -4,10 +4,12 @@
  "blurb_html": "Золотистое, насыщенное рыбное даси: почищенные сушёные анчоусы томятся, а хлопья бонито завариваются в конце.",
  "chips": [
   {
+   "html": "<span><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 литр</span></span>",
    "kind": "",
    "text": "1 литр"
   },
   {
+   "html": "~1 ч (с замачиванием 30 мин)",
    "kind": "time",
    "text": "~1 ч (с замачиванием 30 мин)"
   }
@@ -31,19 +33,19 @@
   {
    "items": [
     {
-     "amount_html": "1 л",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span>",
      "name_html": "Вода"
     },
     {
-     "amount_html": "20 г (около 15–20 рыбок)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span> (около <span class=\"q\" data-k=\"count\" data-a=\"15\" data-b=\"20\" data-n=\"5\">15–20</span> рыбок)",
      "name_html": "Нибоси (крупные сушёные анчоусы)"
     },
     {
-     "amount_html": "15–20 г — см. примечание",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\">15–20 г</span> — см. примечание",
      "name_html": "Кацуобуси (хлопья бонито)"
     },
     {
-     "amount_html": "5–10 г, по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-b=\"10\">5–10 г</span>, по желанию",
      "name_html": "Комбу"
     }
    ],
@@ -100,7 +102,7 @@
    "title_html": "С бонито или без?"
   },
   {
-   "html": "<p>20 г нибоси и 15–20 г кацуобуси на литр — отправная точка, а не ваши проверенные количества.</p>",
+   "html": "<p><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\" data-s=\"0\">20 г</span> нибоси и <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 г</span> кацуобуси на литр — отправная точка, а не ваши проверенные количества.</p>",
    "title_html": "Количества"
   },
   {
@@ -117,6 +119,30 @@
  "prev": {
   "slug": "shiitake-kombu-dashi",
   "title": "Даси из шиитаке и комбу"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/niboshi-bonito-dashi.jpg",
  "siblings": [
@@ -173,10 +199,11 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Почистить нибоси",
    "uses_rows": [
     {
-     "amount_html": "20 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
      "name_html": "Нибоси (крупные сушёные анчоусы)"
     }
    ]
@@ -197,14 +224,15 @@
    "part": null,
    "part_id": null,
    "time": "30 мин+",
+   "time_html": "<span>30 мин+</span>",
    "title": "Замочить",
    "uses_rows": [
     {
-     "amount_html": "1 л",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span>",
      "name_html": "Вода"
     },
     {
-     "amount_html": "5–10 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-b=\"10\">5–10 г</span>",
      "name_html": "Комбу"
     }
    ]
@@ -213,6 +241,7 @@
    "body_html": "<ul class=\"do\"><li>Медленно нагревайте на огне ниже среднего.</li><li>Если клали комбу, выньте его, как только появятся мелкие пузырьки, — до кипения.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-3",
@@ -233,6 +262,7 @@
    "part": null,
    "part_id": null,
    "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
    "title": "Медленно нагреть, вынуть комбу",
    "uses_rows": []
   },
@@ -240,6 +270,7 @@
    "body_html": "<p>Дайте нибоси тихо покипеть 5–10 минут, снимая пену.</p>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-4",
@@ -260,6 +291,7 @@
    "part": null,
    "part_id": null,
    "time": "5–10 мин",
+   "time_html": "<span>5–10 мин</span>",
    "title": "Томить и снимать пену",
    "uses_rows": []
   },
@@ -267,6 +299,7 @@
    "body_html": "<p>Выключите огонь, всыпьте кацуобуси и оставьте примерно на 2 минуты, пока хлопья не опустятся на дно.</p>",
    "heat": {
     "label": "огонь выключен",
+    "label_html": "огонь выключен",
     "off": true
    },
    "id": "step-5",
@@ -282,10 +315,11 @@
    "part": null,
    "part_id": null,
    "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
    "title": "Заварить бонито",
    "uses_rows": [
     {
-     "amount_html": "15–20 г — см. примечание",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\">15–20 г</span> — см. примечание",
      "name_html": "Кацуобуси (хлопья бонито)"
     }
    ]
@@ -311,6 +345,7 @@
    "part": null,
    "part_id": null,
    "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
    "title": "Процедить — не отжимать",
    "uses_rows": []
   }
@@ -343,6 +378,7 @@
     "dur_label": "8 мин",
     "kind": "board",
     "label": "Почистить нибоси",
+    "label_html": "Почистить нибоси",
     "start": 0
    },
    {
@@ -350,6 +386,7 @@
     "dur_label": "30 мин",
     "kind": "wait",
     "label": "Замочить в холодной воде",
+    "label_html": "Замочить в холодной воде",
     "start": 8
    },
    {
@@ -357,6 +394,7 @@
     "dur_label": "10 мин",
     "kind": "pan",
     "label": "Медленный нагрев; вынуть комбу",
+    "label_html": "Медленный нагрев; вынуть комбу",
     "start": 38
    },
    {
@@ -364,6 +402,7 @@
     "dur_label": "8 мин",
     "kind": "pan",
     "label": "Томить, снимать пену",
+    "label_html": "Томить, снимать пену",
     "start": 48
    },
    {
@@ -371,6 +410,7 @@
     "dur_label": "2 мин",
     "kind": "wait",
     "label": "Огонь выкл.: заварить бонито",
+    "label_html": "Огонь выкл.: заварить бонито",
     "start": 56
    },
    {
@@ -378,6 +418,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Процедить",
+    "label_html": "Процедить",
     "start": 58
    }
   ],

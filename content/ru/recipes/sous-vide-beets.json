@@ -4,10 +4,12 @@
  "blurb_html": "Нежные четвертинки с насыщенным свекольным вкусом при 85 °C — вкус не выкипает, духовка не нужна.",
  "chips": [
   {
+   "html": "<span>партия <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> · 3–4 гарнира</span>",
    "kind": "",
    "text": "партия 500 г · 3–4 гарнира"
   },
   {
+   "html": "~2–3 ч, в основном без участия",
    "kind": "time",
    "text": "~2–3 ч, в основном без участия"
   }
@@ -32,19 +34,19 @@
   {
    "items": [
     {
-     "amount_html": "500 г (~3 средних)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span> (~<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> средних)",
      "name_html": "Красная свёкла"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Оливковое масло"
     },
     {
-     "amount_html": "½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
      "name_html": "Соль"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Уксус (красный винный, бальзамический или рисовый)"
     }
    ],
@@ -53,11 +55,11 @@
   {
    "items": [
     {
-     "amount_html": "2 веточки",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"веточка|веточки|веточек\" data-n=\"1\">2 веточки</span>",
      "name_html": "Тимьян"
     },
     {
-     "amount_html": "1 зубчик, ломтиками",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">1 зубчик</span>, ломтиками",
      "name_html": "Чеснок"
     }
    ],
@@ -85,7 +87,7 @@
    "name": "Для подачи (на выбор)"
   }
  ],
- "intro_html": "Овощам нужна гораздо более горячая баня, чем мясу: при <b>85 °C</b> пектин, который держит свёклу твёрдой, разрушается, и она становится нежной, сохраняя весь вкус и цвет в пакете. Сделайте партию, охладите и ешьте всю неделю.",
+ "intro_html": "Овощам нужна гораздо более горячая баня, чем мясу: при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"85\" data-s=\"0\">85 °C</span></b> пектин, который держит свёклу твёрдой, разрушается, и она становится нежной, сохраняя весь вкус и цвет в пакете. Сделайте партию, охладите и ешьте всю неделю.",
  "mise": [
   {
    "as_list": false,
@@ -146,13 +148,37 @@
  "original": null,
  "parts": [],
  "prev": null,
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/sous-vide-beets.jpg",
  "siblings": [],
  "slug": "sous-vide-beets",
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Поставьте циркулятор на <b>85 °C</b>.</li><li>Подготовьте всё, пока греется.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Поставьте циркулятор на <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"85\" data-s=\"0\">85 °C</span></b>.</li><li>Подготовьте всё, пока греется.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -167,6 +193,7 @@
    "part": null,
    "part_id": null,
    "time": "15–30 мин",
+   "time_html": "<span>15–30 мин</span>",
    "title": "Разогреть баню",
    "uses_rows": []
   },
@@ -195,16 +222,17 @@
    "part": null,
    "part_id": null,
    "time": "~15 мин",
+   "time_html": "<span>~15 мин</span>",
    "title": "Очистить и разрезать на четвертинки",
    "uses_rows": [
     {
-     "amount_html": "500 г (~3 средних)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span> (~<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> средних)",
      "name_html": "Красная свёкла"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Сложите свёклу в пакет <b>в один слой</b> вместе с (тимьян и чеснок — по желанию):<ul class=\"ing two-col\"><li>оливковое масло <span class=\"amt\">1 ст. л.</span></li><li>соль <span class=\"amt\">½ ч. л.</span></li><li>уксус (красный винный, бальзамический или рисовый) <span class=\"amt\">1 ч. л.</span></li><li>тимьян <span class=\"amt\">2 веточки</span></li><li>чеснок <span class=\"amt\">1 зубчик</span></li></ul></li><li>Запаяйте вакууматором.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Сложите свёклу в пакет <b>в один слой</b> вместе с (тимьян и чеснок — по желанию):<ul class=\"ing two-col\"><li>оливковое масло <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>соль <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>уксус (красный винный, бальзамический или рисовый) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>тимьян <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"веточка|веточки|веточек\" data-n=\"1\">2 веточки</span></span></li><li>чеснок <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">1 зубчик</span></span></li></ul></li><li>Запаяйте вакууматором.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -224,13 +252,15 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Приправить и запаять",
    "uses_rows": []
   },
   {
-   "body_html": "Закрепите пакет зажимом у стенки и придавите — овощи всплывают, а пакет может раздуться при готовке. <table class=\"mini\"><thead><tr><th>Нарезка</th><th>Время при 85 °C</th></tr></thead><tbody><tr><td>Четвертинки, средняя свёкла</td><td>около 2 ч</td></tr><tr><td>Четвертинки, крупная свёкла</td><td>2–2½ ч</td></tr></tbody></table><b>Проверка:</b> сожмите кусочек через пакет полотенцем — он должен поддаваться, как варёная картошка. Ещё твёрдая? Ещё 30 минут. Небольшой перебор не страшен — она просто станет мягче.",
+   "body_html": "Закрепите пакет зажимом у стенки и придавите — овощи всплывают, а пакет может раздуться при готовке. <table class=\"mini\"><thead><tr><th>Нарезка</th><th>Время при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"85\" data-s=\"0\">85 °C</span></th></tr></thead><tbody><tr><td>Четвертинки, средняя свёкла</td><td>около 2 ч</td></tr><tr><td>Четвертинки, крупная свёкла</td><td>2–2½ ч</td></tr></tbody></table><b>Проверка:</b> сожмите кусочек через пакет полотенцем — он должен поддаваться, как варёная картошка. Ещё твёрдая? Ещё 30 минут. Небольшой перебор не страшен — она просто станет мягче.",
    "heat": {
     "label": "баня 85 °C",
+    "label_html": "<span>баня <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"85\" data-s=\"0\">85 °C</span></span>",
     "off": false
    },
    "id": "step-4",
@@ -251,6 +281,7 @@
    "part": null,
    "part_id": null,
    "time": "~2 ч",
+   "time_html": "<span>~2 ч</span>",
    "title": "Готовить",
    "uses_rows": []
   },
@@ -270,6 +301,7 @@
    "part": null,
    "part_id": null,
    "time": "15–20 мин",
+   "time_html": "<span>15–20 мин</span>",
    "title": "Охладить или подать тёплой",
    "uses_rows": []
   },
@@ -289,6 +321,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Подача",
    "uses_rows": [
     {
@@ -330,6 +363,7 @@
     "dur_label": "15 мин",
     "kind": "board",
     "label": "Очистить + на четвертинки (перчатки)",
+    "label_html": "Очистить + на четвертинки (перчатки)",
     "start": 0
    },
    {
@@ -337,6 +371,7 @@
     "dur_label": "25 мин",
     "kind": "bath",
     "label": "Нагреть баню до 85 °C",
+    "label_html": "Нагреть баню до <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"85\" data-s=\"0\">85 °C</span>",
     "start": 0
    },
    {
@@ -344,6 +379,7 @@
     "dur_label": "7 мин",
     "kind": "bowl",
     "label": "Приправить + запаять",
+    "label_html": "Приправить + запаять",
     "start": 15
    },
    {
@@ -351,6 +387,7 @@
     "dur_label": "2 ч",
     "kind": "wait",
     "label": "Четвертинки готовить ~2 ч",
+    "label_html": "Четвертинки готовить ~2 ч",
     "start": 25
    },
    {
@@ -358,6 +395,7 @@
     "dur_label": "18 мин",
     "kind": "bowl",
     "label": "Ледяная баня",
+    "label_html": "Ледяная баня",
     "start": 145
    }
   ],

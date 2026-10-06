@@ -6,7 +6,7 @@
 #
 # Sources (siblings of this repo):
 #   ../recipes        recipes + pictures → content/{en,ru}, content/svg-defs.svg, public/media; style.css → src/styles/food.css;
-#                     the site icon → public/icons
+#                     static/units.js (portions + units, shared with the local site) → src/lib/units.js; the site icon → public/icons
 #   ../istanbul_trip  dist/app.js + app.css → public/apps/istanbul; dist/app.d.ts → src/types/istanbul.d.ts
 #   art/covers        home-page covers → public/covers (1200 px webp) and 1200×630 link previews → public/share
 set -euo pipefail
@@ -19,6 +19,7 @@ rm -rf content public/media
 python3 "$RECIPES/export_json.py" --out content --images-out public/media
 mkdir -p src/styles public/icons
 cp "$RECIPES/static/style.css" src/styles/food.css
+cp "$RECIPES/static/units.js" src/lib/units.js
 cp "$RECIPES"/static/icons/*.png public/icons/
 
 # Istanbul trip app (embeddable build).

@@ -4,17 +4,19 @@
  "blurb_html": "The vegetable oyakodon: napa cabbage and soaked shiitake simmered in shiitake dashi, set with soft egg.",
  "chips": [
   {
+   "html": "<span>1 bowl</span>",
    "kind": "",
    "text": "1 bowl"
   },
   {
+   "html": "~15 min (+ rice)",
    "kind": "time",
    "text": "~15 min (+ rice)"
   }
  ],
  "description": "The vegetable oyakodon: napa cabbage and soaked shiitake simmered in shiitake dashi, set with soft egg.",
  "equipment_html": [
-  "Small frying pan, 18–20 cm, <b>with a lid</b>",
+  "Small frying pan, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 cm</span>, <b>with a lid</b>",
   "Donburi or deep bowl"
  ],
  "group": {
@@ -30,19 +32,19 @@
   {
    "items": [
     {
-     "amount_html": "150 g (3–4 leaves); stems sliced 1 cm, leaves chopped, kept separate",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"leaf|leaves\" data-n=\"3\">3–4 leaves</span>); stems sliced <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span>, leaves chopped, kept separate",
      "name_html": "Napa cabbage"
     },
     {
-     "amount_html": "3, sliced (from the dashi, or soak dried ones 30 min)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>, sliced (from the dashi, or soak dried ones 30 min)",
      "name_html": "Soaked shiitake"
     },
     {
-     "amount_html": "2",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
      "name_html": "Eggs"
     },
     {
-     "amount_html": "1 bowl (~200 g)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"bowl|bowls\" data-n=\"1\">1 bowl</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>)",
      "name_html": "Cooked short-grain rice"
     }
    ],
@@ -51,23 +53,23 @@
   {
    "items": [
     {
-     "amount_html": "80 ml",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 ml</span>",
      "name_html": "<a href=\"shiitake-kombu-dashi.html\">Shiitake–kombu dashi</a>"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Soy sauce"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Mirin"
     },
     {
-     "amount_html": "1 tbsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Sake"
     },
     {
-     "amount_html": "1 tsp",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Sugar"
     }
    ],
@@ -161,11 +163,11 @@
    "title_html": "Vegetarian"
   },
   {
-   "html": "<p>Your notes didn’t include quantities — these mirror the oyakodon proportions, with 150 g napa standing in for the 150 g chicken.</p>",
+   "html": "<p>Your notes didn’t include quantities — these mirror the oyakodon proportions, with <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> napa standing in for the <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> chicken.</p>",
    "title_html": "Amounts"
   },
   {
-   "html": "<p>Water + ¼ tsp dashi powder, or the soaking water from the shiitake on its own.</p>",
+   "html": "<p>Water + <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\" data-s=\"0\">¼ tsp</span> dashi powder, or the soaking water from the shiitake on its own.</p>",
    "title_html": "No homemade dashi?"
   }
  ],
@@ -174,6 +176,30 @@
  "prev": {
   "slug": "oyakodon",
   "title": "Oyakodon"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
  },
  "share_image": "share/napa-shiitake-egg-bowl.jpg",
  "siblings": [
@@ -221,16 +247,17 @@
    "part": null,
    "part_id": null,
    "time": "~45 min ahead",
+   "time_html": "<span>~45 min ahead</span>",
    "title": "Rice first",
    "uses_rows": [
     {
-     "amount_html": "1 bowl (~200 g)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"bowl|bowls\" data-n=\"1\">1 bowl</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>)",
      "name_html": "Cooked short-grain rice"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Separate the napa stems from the leaves.</li><li>Slice the stems about 1 cm across and chop the leaves.</li><li>Squeeze the soaked shiitake, cut off the stems and slice the caps.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Separate the napa stems from the leaves.</li><li>Slice the stems about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> across and chop the leaves.</li><li>Squeeze the soaked shiitake, cut off the stems and slice the caps.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -254,20 +281,21 @@
    "part": null,
    "part_id": null,
    "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
    "title": "Cut",
    "uses_rows": [
     {
-     "amount_html": "150 g (3–4 leaves); stems sliced 1 cm",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"leaf|leaves\" data-n=\"3\">3–4 leaves</span>); stems sliced <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span>",
      "name_html": "Napa cabbage"
     },
     {
-     "amount_html": "3",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
      "name_html": "Soaked shiitake"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Mix the sauce:<ul class=\"ing two-col\"><li>shiitake–kombu dashi <span class=\"amt\">80 ml</span></li><li>soy sauce <span class=\"amt\">1 tbsp</span></li><li>mirin <span class=\"amt\">1 tbsp</span></li><li>sake <span class=\"amt\">1 tbsp</span></li><li>sugar <span class=\"amt\">1 tsp</span></li></ul></li><li>Beat the eggs <b>loosely</b> — a few strokes, streaks of white and yolk.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Mix the sauce:<ul class=\"ing two-col\"><li>shiitake–kombu dashi <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 ml</span></span></li><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Beat the eggs <b>loosely</b> — a few strokes, streaks of white and yolk.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -287,10 +315,11 @@
    "part": null,
    "part_id": null,
    "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
    "title": "Sauce and eggs",
    "uses_rows": [
     {
-     "amount_html": "2",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
      "name_html": "Eggs"
     }
    ]
@@ -299,6 +328,7 @@
    "body_html": "<ul class=\"do\"><li>Sauce into the small pan with the napa stems and shiitake.</li><li>Simmer until the stems turn translucent.</li></ul>",
    "heat": {
     "label": "medium",
+    "label_html": "<span>medium</span>",
     "off": false
    },
    "id": "step-4",
@@ -319,6 +349,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 min",
+   "time_html": "<span>3–4 min</span>",
    "title": "Simmer stems and shiitake",
    "uses_rows": []
   },
@@ -326,6 +357,7 @@
    "body_html": "<ul class=\"do\"><li>Add the leaves, cover and cook until just wilted.</li><li>Napa gives off water — if the pan looks very wet, simmer uncovered for a minute to reduce before the egg.</li></ul>",
    "heat": {
     "label": "medium",
+    "label_html": "<span>medium</span>",
     "off": false
    },
    "id": "step-5",
@@ -346,6 +378,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 min",
+   "time_html": "<span>1–2 min</span>",
    "title": "Leaves in, lid on",
    "uses_rows": []
   },
@@ -353,6 +386,7 @@
    "body_html": "<ul class=\"do\"><li>Drizzle about two-thirds of the egg in a circle over the vegetables.</li><li>Cover until the edges set but the top is still runny.</li></ul>",
    "heat": {
     "label": "medium",
+    "label_html": "<span>medium</span>",
     "off": false
    },
    "id": "step-6",
@@ -368,6 +402,7 @@
    "part": null,
    "part_id": null,
    "time": "30–60 s",
+   "time_html": "<span>30–60 s</span>",
    "title": "Pour ⅔ of the egg",
    "uses_rows": []
   },
@@ -375,6 +410,7 @@
    "body_html": "<p>Pour the remaining egg, cook 10–15 seconds, turn off the heat and cover for 30 seconds — glossy and just set.</p>",
    "heat": {
     "label": "heat off",
+    "label_html": "heat off",
     "off": true
    },
    "id": "step-7",
@@ -395,6 +431,7 @@
    "part": null,
    "part_id": null,
    "time": "~45 s",
+   "time_html": "<span>~45 s</span>",
    "title": "Pour the rest, heat off",
    "uses_rows": []
   },
@@ -419,6 +456,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Slide onto the rice",
    "uses_rows": [
     {
@@ -460,6 +498,7 @@
     "dur_label": "45 min",
     "kind": "wait",
     "label": "Cook rice (start first; or reheat)",
+    "label_html": "Cook rice (start first; or reheat)",
     "start": 0
    },
    {
@@ -467,6 +506,7 @@
     "dur_label": "5 min",
     "kind": "board",
     "label": "Cut napa + shiitake",
+    "label_html": "Cut napa + shiitake",
     "start": 30
    },
    {
@@ -474,6 +514,7 @@
     "dur_label": "2 min",
     "kind": "bowl",
     "label": "Mix sauce, beat eggs",
+    "label_html": "Mix sauce, beat eggs",
     "start": 35
    },
    {
@@ -481,6 +522,7 @@
     "dur_label": "4 min",
     "kind": "pan",
     "label": "Simmer stems + shiitake",
+    "label_html": "Simmer stems + shiitake",
     "start": 37
    },
    {
@@ -488,6 +530,7 @@
     "dur_label": "2 min",
     "kind": "pan",
     "label": "Leaves in, lid on",
+    "label_html": "Leaves in, lid on",
     "start": 41
    },
    {
@@ -495,6 +538,7 @@
     "dur_label": "1 min",
     "kind": "pan",
     "label": "Pour ⅔ egg, cover",
+    "label_html": "Pour ⅔ egg, cover",
     "start": 43
    },
    {
@@ -502,6 +546,7 @@
     "dur_label": "1 min",
     "kind": "pan",
     "label": "Pour ⅓ egg, heat off, rest",
+    "label_html": "Pour ⅓ egg, heat off, rest",
     "start": 44
    },
    {
@@ -509,6 +554,7 @@
     "dur_label": "48 s",
     "kind": "bowl",
     "label": "Slide onto rice",
+    "label_html": "Slide onto rice",
     "start": 45
    }
   ],

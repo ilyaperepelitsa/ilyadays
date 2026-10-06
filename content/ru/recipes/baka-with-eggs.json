@@ -4,10 +4,12 @@
  "blurb_html": "Филиппинское рагу из говядины: обжаренная говядина, долго тушённая с помидорами, луком и целой головкой чеснока, с рыбным соусом и варёными яйцами.",
  "chips": [
   {
+   "html": "<span>~4 порции</span>",
    "kind": "",
    "text": "~4 порции"
   },
   {
+   "html": "~3–3½ ч, в основном без участия",
    "kind": "time",
    "text": "~3–3½ ч, в основном без участия"
   }
@@ -31,23 +33,23 @@
   {
    "items": [
     {
-     "amount_html": "900 г, кубиками",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\">900 г</span>, кубиками",
      "name_html": "Говядина для тушения"
     },
     {
-     "amount_html": "4 шт., на четвертинки",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт., на четвертинки",
      "name_html": "Помидоры сливовидные (рома)"
     },
     {
-     "amount_html": "1 средняя луковица, кубиками",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"средняя луковица|средние луковицы|средних луковиц|средней луковицы\" data-n=\"1\">1 средняя луковица</span>, кубиками",
      "name_html": "Репчатый лук"
     },
     {
-     "amount_html": "1 головка, крупно нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"головка|головки|головок\" data-n=\"1\">1 головка</span>, крупно нарезать",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "2–3 ч. л., по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 ч. л.</span>, по желанию",
      "name_html": "Рыбный соус"
     },
     {
@@ -55,7 +57,7 @@
      "name_html": "Соль и перец"
     },
     {
-     "amount_html": "4 шт., очищенные — см. <a href=\"boiled-eggs.html\">варёные яйца</a>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт., очищенные — см. <a href=\"boiled-eggs.html\">варёные яйца</a>",
      "name_html": "Варёные яйца"
     }
    ],
@@ -133,6 +135,30 @@
   "slug": "chicken-pad-thai",
   "title": "Пад тай с курицей"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/baka-with-eggs.jpg",
  "siblings": [
   {
@@ -160,6 +186,7 @@
    "body_html": "<ul class=\"do\"><li>Посолите и поперчите говядину.</li><li>Обжаривайте на таком сильном огне, чтобы ко дну кастрюли прилипали коричневые частицы, — этот <b>фон</b> и даёт вкус.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-1",
@@ -180,10 +207,11 @@
    "part": null,
    "part_id": null,
    "time": "~15 мин",
+   "time_html": "<span>~15 мин</span>",
    "title": "Обжарьте говядину",
    "uses_rows": [
     {
-     "amount_html": "900 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\">900 г</span>",
      "name_html": "Говядина для тушения"
     },
     {
@@ -193,9 +221,10 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Выньте говядину и слейте часть жира.</li><li>Выложите в горячую кастрюлю, чтобы деглазировать её:<ul class=\"ing\"><li>помидоры сливовидные (рома) <span class=\"amt\">4 шт.</span></li><li>репчатый лук <span class=\"amt\">1 средняя луковица</span></li><li>чеснок <span class=\"amt\">1 головка</span></li></ul></li><li>Когда овощи пустят сок, верните говядину и перемешайте примерно минуту.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Выньте говядину и слейте часть жира.</li><li>Выложите в горячую кастрюлю, чтобы деглазировать её:<ul class=\"ing\"><li>помидоры сливовидные (рома) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт.</span></li><li>репчатый лук <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"средняя луковица|средние луковицы|средних луковиц|средней луковицы\" data-n=\"1\">1 средняя луковица</span></span></li><li>чеснок <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"головка|головки|головок\" data-n=\"1\">1 головка</span></span></li></ul></li><li>Когда овощи пустят сок, верните говядину и перемешайте примерно минуту.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-2",
@@ -220,6 +249,7 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Деглазируйте овощами",
    "uses_rows": []
   },
@@ -227,6 +257,7 @@
    "body_html": "<ul class=\"do\"><li>Под крышкой, на <b>слабом</b> огне, <b>2–3 часа</b>.</li><li>Заглядывайте и помешивайте каждые 15–30 минут — чаще, если тушите впервые, — следите, чтобы жидкость оставалась и ничего не пригорало ко дну.</li></ul>",
    "heat": {
     "label": "слабый",
+    "label_html": "<span>слабый</span>",
     "off": false
    },
    "id": "step-3",
@@ -247,6 +278,7 @@
    "part": null,
    "part_id": null,
    "time": "2–3 ч",
+   "time_html": "<span>2–3 ч</span>",
    "title": "Тушите на слабом огне под крышкой",
    "uses_rows": []
   },
@@ -254,6 +286,7 @@
    "body_html": "<ul class=\"do\"><li>Снимите крышку и уваривайте, пока соус не загустеет как вам нравится.</li><li>Вмешайте рыбный соус.</li></ul>",
    "heat": {
     "label": "средний",
+    "label_html": "<span>средний</span>",
     "off": false
    },
    "id": "step-4",
@@ -274,10 +307,11 @@
    "part": null,
    "part_id": null,
    "time": "~15 мин",
+   "time_html": "<span>~15 мин</span>",
    "title": "Уварите и приправьте",
    "uses_rows": [
     {
-     "amount_html": "2–3 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 ч. л.</span>",
      "name_html": "Рыбный соус"
     }
    ]
@@ -303,10 +337,11 @@
    "part": null,
    "part_id": null,
    "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
    "title": "Добавьте яйца",
    "uses_rows": [
     {
-     "amount_html": "4 шт., очищенные — см. <a href=\"boiled-eggs.html\">варёные яйца</a>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт., очищенные — см. <a href=\"boiled-eggs.html\">варёные яйца</a>",
      "name_html": "Варёные яйца"
     }
    ]
@@ -327,6 +362,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Подать или убрать",
    "uses_rows": [
     {
@@ -356,6 +392,7 @@
     "dur_label": "15 мин",
     "kind": "pan",
     "label": "Приправить и обжарить говядину",
+    "label_html": "Приправить и обжарить говядину",
     "start": 0
    },
    {
@@ -363,6 +400,7 @@
     "dur_label": "8 мин",
     "kind": "pan",
     "label": "Деглазировать овощами",
+    "label_html": "Деглазировать овощами",
     "start": 15
    },
    {
@@ -370,6 +408,7 @@
     "dur_label": "1 ч",
     "kind": "wait",
     "label": "Тушить на слабом огне под крышкой (2–3 ч)",
+    "label_html": "Тушить на слабом огне под крышкой (2–3 ч)",
     "start": 23
    },
    {
@@ -377,6 +416,7 @@
     "dur_label": "15 мин",
     "kind": "pan",
     "label": "Уварить, рыбный соус",
+    "label_html": "Уварить, рыбный соус",
     "start": 83
    },
    {
@@ -384,6 +424,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Добавьте яйца",
+    "label_html": "Добавьте яйца",
     "start": 98
    }
   ],

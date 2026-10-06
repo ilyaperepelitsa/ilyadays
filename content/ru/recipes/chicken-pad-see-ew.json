@@ -4,10 +4,12 @@
  "blurb_html": "Насыщенная соевая, слегка сладкая лапша с яйцом и зеленью — подрумяненная в сковороде.",
  "chips": [
   {
+   "html": "<span>1 щедрая порция</span>",
    "kind": "",
    "text": "1 щедрая порция"
   },
   {
+   "html": "~20 мин",
    "kind": "time",
    "text": "~20 мин"
   }
@@ -30,27 +32,27 @@
   {
    "items": [
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Сухая широкая рисовая лапша"
     },
     {
-     "amount_html": "150 г, тонко нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, тонко нарезать",
      "name_html": "Курица"
     },
     {
-     "amount_html": "125 г, нарезать; стебли и листья отдельно",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"125\">125 г</span>, нарезать; стебли и листья отдельно",
      "name_html": "Китайская брокколи или бок-чой"
     },
     {
-     "amount_html": "1",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
      "name_html": "Яйцо"
     },
     {
-     "amount_html": "2 зубчика, мелко нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>, мелко нарезать",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "1½ ст. л. (½ + 1)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span> (½ + 1)",
      "name_html": "Нейтральное масло"
     }
    ],
@@ -59,23 +61,23 @@
   {
    "items": [
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Устричный соус"
     },
     {
-     "amount_html": "1½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span>",
      "name_html": "Обычный соевый соус"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Тёмный соевый соус"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Рисовый уксус"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Сахар"
     }
    ],
@@ -160,6 +162,30 @@
   "slug": "garlic-ginger-chicken-noodles",
   "title": "Лапша с курицей, чесноком и имбирём"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/chicken-pad-see-ew.jpg",
  "siblings": [
   {
@@ -200,16 +226,17 @@
    "part": null,
    "part_id": null,
    "time": "по упаковке",
+   "time_html": "<span>по упаковке</span>",
    "title": "Сначала лапша",
    "uses_rows": [
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Сухая широкая рисовая лапша"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Тонко нарежьте курицу.</li><li>Нарежьте <b>стебли тонко</b>, листья держите отдельно.</li><li>Нарежьте чеснок и разбейте яйцо в чашку.</li><li>Смешайте соус:<ul class=\"ing two-col\"><li>устричный соус <span class=\"amt\">1 ст. л.</span></li><li>обычный соевый соус <span class=\"amt\">1½ ч. л.</span></li><li>тёмный соевый соус <span class=\"amt\">1 ч. л.</span></li><li>рисовый уксус <span class=\"amt\">1 ч. л.</span></li><li>сахар <span class=\"amt\">1 ч. л.</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Тонко нарежьте курицу.</li><li>Нарежьте <b>стебли тонко</b>, листья держите отдельно.</li><li>Нарежьте чеснок и разбейте яйцо в чашку.</li><li>Смешайте соус:<ul class=\"ing two-col\"><li>устричный соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>обычный соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span></span></li><li>тёмный соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>рисовый уксус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -229,30 +256,32 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Всё подготовить",
    "uses_rows": [
     {
-     "amount_html": "150 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
      "name_html": "Курица"
     },
     {
-     "amount_html": "125 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"125\">125 г</span>",
      "name_html": "Китайская брокколи или бок-чой"
     },
     {
-     "amount_html": "2 зубчика",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "1",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
      "name_html": "Яйцо"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Разогрейте <b>½ ст. л. масла</b> на огне выше среднего.</li><li>Жарьте курицу почти до готовности.</li><li>Добавьте тонко нарезанные стебли, затем чеснок и листья; готовьте, пока курица не дойдёт, а зелень не станет мягкой.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Разогрейте <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\" data-s=\"0\">½ ст. л.</span> масла</b> на огне выше среднего.</li><li>Жарьте курицу почти до готовности.</li><li>Добавьте тонко нарезанные стебли, затем чеснок и листья; готовьте, пока курица не дойдёт, а зелень не станет мягкой.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-3",
@@ -273,6 +302,7 @@
    "part": null,
    "part_id": null,
    "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
    "title": "Курица и зелень",
    "uses_rows": []
   },
@@ -280,6 +310,7 @@
    "body_html": "<p>Сдвиньте всё в сторону, пожарьте яичницу-болтунью на освободившемся месте, затем <b>переложите всё на тарелку</b>.</p>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-4",
@@ -300,13 +331,15 @@
    "part": null,
    "part_id": null,
    "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
    "title": "Яйцо",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Добавьте <b>оставшуюся 1 ст. л. масла</b>, лапшу и соус.</li><li><b>Распределите и оставьте ненадолго подрумяниться</b>, затем аккуратно переверните.</li><li>Готовьте примерно 1–2 минуты.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Добавьте <b>оставшуюся <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> масла</b>, лапшу и соус.</li><li><b>Распределите и оставьте ненадолго подрумяниться</b>, затем аккуратно переверните.</li><li>Готовьте примерно 1–2 минуты.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-5",
@@ -331,6 +364,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 мин",
+   "time_html": "<span>1–2 мин</span>",
    "title": "Подрумяньте лапшу",
    "uses_rows": []
   },
@@ -338,6 +372,7 @@
    "body_html": "<p>Верните курицу с овощами, быстро перемешайте и подавайте.</p>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-6",
@@ -358,6 +393,7 @@
    "part": null,
    "part_id": null,
    "time": "~30 с",
+   "time_html": "<span>~30 с</span>",
    "title": "Перемешать и подать",
    "uses_rows": []
   }
@@ -390,6 +426,7 @@
     "dur_label": "3 мин",
     "kind": "board",
     "label": "Нарезать курицу",
+    "label_html": "Нарезать курицу",
     "start": 0
    },
    {
@@ -397,6 +434,7 @@
     "dur_label": "4 мин",
     "kind": "board",
     "label": "Нарезать стебли, листья + чеснок",
+    "label_html": "Нарезать стебли, листья + чеснок",
     "start": 3
    },
    {
@@ -404,6 +442,7 @@
     "dur_label": "7 мин",
     "kind": "wait",
     "label": "Замочить / сварить лапшу (по упаковке)",
+    "label_html": "Замочить / сварить лапшу (по упаковке)",
     "start": 6
    },
    {
@@ -411,6 +450,7 @@
     "dur_label": "1.5 мин",
     "kind": "bowl",
     "label": "Смешать соус, разбить яйцо",
+    "label_html": "Смешать соус, разбить яйцо",
     "start": 7
    },
    {
@@ -418,6 +458,7 @@
     "dur_label": "2.5 мин",
     "kind": "pan",
     "label": "Курица почти до готовности",
+    "label_html": "Курица почти до готовности",
     "start": 9
    },
    {
@@ -425,6 +466,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Стебли, чеснок, листья",
+    "label_html": "Стебли, чеснок, листья",
     "start": 11.5
    },
    {
@@ -432,6 +474,7 @@
     "dur_label": "1 мин",
     "kind": "bowl",
     "label": "Слить лапшу",
+    "label_html": "Слить лапшу",
     "start": 13
    },
    {
@@ -439,6 +482,7 @@
     "dur_label": "1.5 мин",
     "kind": "pan",
     "label": "Болтунья → всё на тарелку",
+    "label_html": "Болтунья → всё на тарелку",
     "start": 13.5
    },
    {
@@ -446,6 +490,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Подрумянить лапшу в соусе",
+    "label_html": "Подрумянить лапшу в соусе",
     "start": 15
    },
    {
@@ -453,6 +498,7 @@
     "dur_label": "1 мин",
     "kind": "pan",
     "label": "Вернуть курицу, перемешать",
+    "label_html": "Вернуть курицу, перемешать",
     "start": 17
    }
   ],

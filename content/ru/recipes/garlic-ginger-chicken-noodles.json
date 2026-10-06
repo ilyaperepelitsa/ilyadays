@@ -4,10 +4,12 @@
  "blurb_html": "Грибы, бок-чой и кунжутный финиш — вариант, ближе всего к тому, что уже есть в шкафу.",
  "chips": [
   {
+   "html": "<span>1 щедрая порция</span>",
    "kind": "",
    "text": "1 щедрая порция"
   },
   {
+   "html": "~25 мин",
    "kind": "time",
    "text": "~25 мин"
   }
@@ -30,39 +32,39 @@
   {
    "items": [
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Сухая широкая рисовая лапша"
     },
     {
-     "amount_html": "150 г, тонко нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, тонко нарезать",
      "name_html": "Куриная грудка или бедро"
     },
     {
-     "amount_html": "100 г, нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>, нарезать",
      "name_html": "Грибы"
     },
     {
-     "amount_html": "100 г, нарезать; стебли и листья отдельно",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>, нарезать; стебли и листья отдельно",
      "name_html": "Бок-чой"
     },
     {
-     "amount_html": "2 зубчика, мелко нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>, мелко нарезать",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "8 г, натереть или мелко нарезать",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 г</span>, натереть или мелко нарезать",
      "name_html": "Имбирь"
     },
     {
-     "amount_html": "1 стебель, нарезать; белая часть и зелень отдельно",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">1 стебель</span>, нарезать; белая часть и зелень отдельно",
      "name_html": "Зелёный лук"
     },
     {
-     "amount_html": "1 ст. л. (пополам)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> (пополам)",
      "name_html": "Нейтральное масло"
     },
     {
-     "amount_html": "½ ч. л., в конце",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>, в конце",
      "name_html": "Кунжутное масло"
     }
    ],
@@ -71,27 +73,27 @@
   {
    "items": [
     {
-     "amount_html": "2¼ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ ч. л.</span>",
      "name_html": "Соевый соус"
     },
     {
-     "amount_html": "2¼ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ ч. л.</span>",
      "name_html": "Устричный соус"
     },
     {
-     "amount_html": "1½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span>",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "1½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span>",
      "name_html": "Саке"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Рисовый уксус"
     },
     {
-     "amount_html": "1½ ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
      "name_html": "Вода"
     },
     {
@@ -102,7 +104,7 @@
    "name": "Соус — смешать"
   }
  ],
- "intro_html": "Вариант, ближе всего к тому, что у вас уже есть: грибы, зелень и кунжутный финиш. 100 г сухой рисовой лапши и 150 г сырой курицы.",
+ "intro_html": "Вариант, ближе всего к тому, что у вас уже есть: грибы, зелень и кунжутный финиш. <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> сухой рисовой лапши и <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> сырой курицы.",
  "mise": [
   {
    "as_list": false,
@@ -209,6 +211,30 @@
   "slug": "kkakdugi",
   "title": "Ккактуги (кимчи из кубиков редьки)"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/garlic-ginger-chicken-noodles.jpg",
  "siblings": [
   {
@@ -249,16 +275,17 @@
    "part": null,
    "part_id": null,
    "time": "по упаковке",
+   "time_html": "<span>по упаковке</span>",
    "title": "Сначала лапша",
    "uses_rows": [
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Сухая широкая рисовая лапша"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Тонко нарежьте курицу.</li><li>Нарежьте грибы.</li><li>Нарежьте бок-чой, <b>стебли и листья отдельно</b>.</li><li>Мелко нарежьте чеснок и имбирь; нарежьте зелёный лук, <b>белую часть и зелень отдельно</b>.</li><li>Смешайте соус в маленькой миске:<ul class=\"ing two-col\"><li>соевый соус <span class=\"amt\">2¼ ч. л.</span></li><li>устричный соус <span class=\"amt\">2¼ ч. л.</span></li><li>мирин <span class=\"amt\">1½ ч. л.</span></li><li>саке <span class=\"amt\">1½ ч. л.</span></li><li>рисовый уксус <span class=\"amt\">1 ч. л.</span></li><li>вода <span class=\"amt\">1½ ст. л.</span></li><li>чёрный или белый перец <span class=\"amt\">щепотка</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Тонко нарежьте курицу.</li><li>Нарежьте грибы.</li><li>Нарежьте бок-чой, <b>стебли и листья отдельно</b>.</li><li>Мелко нарежьте чеснок и имбирь; нарежьте зелёный лук, <b>белую часть и зелень отдельно</b>.</li><li>Смешайте соус в маленькой миске:<ul class=\"ing two-col\"><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ ч. л.</span></span></li><li>устричный соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.25\">2¼ ч. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span></span></li><li>рисовый уксус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span></span></li><li>чёрный или белый перец <span class=\"amt\">щепотка</span></li></ul></li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -278,30 +305,31 @@
    "part": null,
    "part_id": null,
    "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
    "title": "Всё подготовить",
    "uses_rows": [
     {
-     "amount_html": "150 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
      "name_html": "Куриная грудка или бедро"
     },
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Грибы"
     },
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Бок-чой"
     },
     {
-     "amount_html": "2 зубчика",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
      "name_html": "Чеснок"
     },
     {
-     "amount_html": "8 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"8\">8 г</span>",
      "name_html": "Имбирь"
     },
     {
-     "amount_html": "1 стебель",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">1 стебель</span>",
      "name_html": "Зелёный лук"
     }
    ]
@@ -310,6 +338,7 @@
    "body_html": "<ul class=\"do\"><li>Разогрейте <b>половину нейтрального масла</b> в большой сковороде на огне выше среднего.</li><li>Обжарьте курицу до румяности и готовности, затем переложите на чистую тарелку.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-3",
@@ -330,6 +359,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 мин",
+   "time_html": "<span>3–4 мин</span>",
    "title": "Приготовьте курицу",
    "uses_rows": []
   },
@@ -337,6 +367,7 @@
    "body_html": "<p>Добавьте оставшееся масло и жарьте грибы до румяности, примерно 3–4 минуты.</p>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-4",
@@ -357,6 +388,7 @@
    "part": null,
    "part_id": null,
    "time": "3–4 мин",
+   "time_html": "<span>3–4 мин</span>",
    "title": "Обжарьте грибы",
    "uses_rows": []
   },
@@ -364,6 +396,7 @@
    "body_html": "<ul class=\"do\"><li>Добавьте <b>стебли</b> бок-чоя на 1–2 минуты, затем <b>чеснок, имбирь и белую часть лука</b> на 30 секунд.</li><li>Добавьте <b>листья</b> и дайте им опасть.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-5",
@@ -384,6 +417,7 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Стебли, потом ароматика, потом листья",
    "uses_rows": []
   },
@@ -391,6 +425,7 @@
    "body_html": "<ul class=\"do\"><li>Добавьте лапшу, соус и курицу.</li><li><b>Аккуратно поднимайте и перемешивайте</b> примерно 1–2 минуты, пока лапша не станет мягкой и не покроется соусом.</li><li>Если она ещё тугая, а сковорода сохнет, подливайте воду по столовой ложке.</li></ul>",
    "heat": {
     "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-6",
@@ -411,6 +446,7 @@
    "part": null,
    "part_id": null,
    "time": "1–2 мин",
+   "time_html": "<span>1–2 мин</span>",
    "title": "Лапша, соус и курица",
    "uses_rows": []
   },
@@ -418,6 +454,7 @@
    "body_html": "<ul class=\"do\"><li>Выключите огонь и добавьте <b>кунжутное масло и зелень лука</b>.</li><li>Последний этап — коротко, чтобы лапша меньше ломалась.</li></ul>",
    "heat": {
     "label": "огонь выключен",
+    "label_html": "огонь выключен",
     "off": true
    },
    "id": "step-7",
@@ -438,10 +475,11 @@
    "part": null,
    "part_id": null,
    "time": "15 с",
+   "time_html": "<span>15 с</span>",
    "title": "Без огня: финиш",
    "uses_rows": [
     {
-     "amount_html": "½ ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
      "name_html": "Кунжутное масло"
     }
    ]
@@ -475,6 +513,7 @@
     "dur_label": "3 мин",
     "kind": "board",
     "label": "Нарезать курицу",
+    "label_html": "Нарезать курицу",
     "start": 0
    },
    {
@@ -482,6 +521,7 @@
     "dur_label": "5 мин",
     "kind": "board",
     "label": "Нарезать грибы, бок-чой, ароматику",
+    "label_html": "Нарезать грибы, бок-чой, ароматику",
     "start": 3
    },
    {
@@ -489,6 +529,7 @@
     "dur_label": "1 мин",
     "kind": "bowl",
     "label": "Смешать соус",
+    "label_html": "Смешать соус",
     "start": 8
    },
    {
@@ -496,6 +537,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Курица → тарелка",
+    "label_html": "Курица → тарелка",
     "start": 9
    },
    {
@@ -503,6 +545,7 @@
     "dur_label": "7 мин",
     "kind": "wait",
     "label": "Замочить / сварить лапшу (по упаковке)",
+    "label_html": "Замочить / сварить лапшу (по упаковке)",
     "start": 11
    },
    {
@@ -510,6 +553,7 @@
     "dur_label": "4 мин",
     "kind": "pan",
     "label": "Обжарить грибы",
+    "label_html": "Обжарить грибы",
     "start": 13
    },
    {
@@ -517,6 +561,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Стебли → ароматика → листья",
+    "label_html": "Стебли → ароматика → листья",
     "start": 17
    },
    {
@@ -524,6 +569,7 @@
     "dur_label": "1 мин",
     "kind": "bowl",
     "label": "Слить лапшу",
+    "label_html": "Слить лапшу",
     "start": 18
    },
    {
@@ -531,6 +577,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Лапша + соус + курица, перемешать",
+    "label_html": "Лапша + соус + курица, перемешать",
     "start": 20
    },
    {
@@ -538,6 +585,7 @@
     "dur_label": "42 с",
     "kind": "pan",
     "label": "Огонь выкл.: кунжутное масло + зелень",
+    "label_html": "Огонь выкл.: кунжутное масло + зелень",
     "start": 22
    }
   ],

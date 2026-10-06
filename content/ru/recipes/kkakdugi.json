@@ -4,10 +4,12 @@
  "blurb_html": "Хрустящие кубики редьки 3 см, вымоченные в солёной воде, затем приправленные молотым перцем, корейскими соусами, грушевым и имбирным соком.",
  "chips": [
   {
+   "html": "<span>4 порции</span>",
    "kind": "",
    "text": "4 порции"
   },
   {
+   "html": "~30 мин работы + 5 ч вымачивания + 5–7 дней в холодильнике",
    "kind": "time",
    "text": "~30 мин работы + 5 ч вымачивания + 5–7 дней в холодильнике"
   }
@@ -36,11 +38,11 @@
   {
    "items": [
     {
-     "amount_html": "1 кг",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
      "name_html": "Корейская редька (му) или дайкон"
     },
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Зелёный лук (или шнитт-лук)"
     }
    ],
@@ -49,15 +51,15 @@
   {
    "items": [
     {
-     "amount_html": "600 мл",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\">600 мл</span>",
      "name_html": "Вода"
     },
     {
-     "amount_html": "50 мл",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"50\">50 мл</span>",
      "name_html": "Крупная (кошерная) соль"
     },
     {
-     "amount_html": "3 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
      "name_html": "Сахар"
     }
    ],
@@ -66,31 +68,31 @@
   {
    "items": [
     {
-     "amount_html": "5 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\">5 ст. л.</span>",
      "name_html": "Корейский молотый перец (кочхукару)"
     },
     {
-     "amount_html": "4 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Солёный анчоусный соус (или рыбный)"
     },
     {
-     "amount_html": "4 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Бульон из ламинарии (комбу)"
     },
     {
-     "amount_html": "4 ст. л. (натёртая груша, отжатая через марлю)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span> (натёртая груша, отжатая через марлю)",
      "name_html": "Грушевый сок"
     },
     {
-     "amount_html": "2 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
      "name_html": "Раздавленный чеснок"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Солёный креветочный соус, порубленный (или рыбный)"
     },
     {
-     "amount_html": "2 ч. л. (натёртый имбирь, отжатый через марлю)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span> (натёртый имбирь, отжатый через марлю)",
      "name_html": "Имбирный сок"
     }
    ],
@@ -118,9 +120,9 @@
    "goes_in": "Шаг 4",
    "image": "illustrations/kkakdugi/mise2.webp",
    "items": [
-    "3 см, вымочены и обсушены"
+    "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>, вымочены и обсушены"
    ],
-   "items_html": "3 см, вымочены и обсушены",
+   "items_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>, вымочены и обсушены",
    "name": "Кубики редьки",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -130,9 +132,9 @@
    "goes_in": "Шаг 4",
    "image": "illustrations/kkakdugi/mise3.webp",
    "items": [
-    "куски по 2 см"
+    "куски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>"
    ],
-   "items_html": "куски по 2 см",
+   "items_html": "куски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>",
    "name": "Зелёный лук",
    "svg_fallback": null,
    "vessel": "plate"
@@ -177,7 +179,7 @@
    "title_html": "Бульон из ламинарии"
   },
   {
-   "html": "<p>Кимчи лучше всего хранится в холодном холодильнике, около 5 °C.</p>",
+   "html": "<p>Кимчи лучше всего хранится в холодном холодильнике, около <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"5\" data-s=\"0\">5 °C</span>.</p>",
    "title_html": "Хранение"
   }
  ],
@@ -186,6 +188,30 @@
  "prev": {
   "slug": "kimchi",
   "title": "Кимчи из пекинской капусты"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
  },
  "share_image": "share/kkakdugi.jpg",
  "siblings": [
@@ -198,7 +224,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Размешайте, пока соль и сахар не растворятся:<ul class=\"ing\"><li>вода <span class=\"amt\">600 мл</span></li><li>крупная (кошерная) соль <span class=\"amt\">50 мл</span></li><li>сахар <span class=\"amt\">3 ст. л.</span></li></ul></li><li>Очистите редьку и нарежьте <b>кубиками 3 см</b>.</li><li>Оставьте кубики в рассоле примерно на <b>5 часов</b>, затем откиньте на дуршлаг.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Размешайте, пока соль и сахар не растворятся:<ul class=\"ing\"><li>вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\">600 мл</span></span></li><li>крупная (кошерная) соль <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"50\">50 мл</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span></span></li></ul></li><li>Очистите редьку и нарежьте <b>кубиками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span></b>.</li><li>Оставьте кубики в рассоле примерно на <b>5 часов</b>, затем откиньте на дуршлаг.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -230,16 +256,17 @@
    "part": null,
    "part_id": null,
    "time": "~15 мин + 5 ч",
+   "time_html": "<span>~15 мин + 5 ч</span>",
    "title": "Нарезать и замочить редьку",
    "uses_rows": [
     {
-     "amount_html": "1 кг",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
      "name_html": "Корейская редька (му) или дайкон"
     }
    ]
   },
   {
-   "body_html": "<p>Нарежьте зелёный лук короткими кусками по <b>2 см</b>.</p>",
+   "body_html": "<p>Нарежьте зелёный лук короткими кусками по <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span></b>.</p>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -259,16 +286,17 @@
    "part": null,
    "part_id": null,
    "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Нарезать зелёный лук",
    "uses_rows": [
     {
-     "amount_html": "100 г",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
      "name_html": "Зелёный лук (или шнитт-лук)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Натрите чеснок, имбирь и грушу на керамической тёрке (или мелкой металлической).</li><li>Отожмите натёртую грушу и имбирь через марлю — нужен именно сок.</li><li>Смешайте в густую красную пасту:<ul class=\"ing two-col\"><li>раздавленный чеснок <span class=\"amt\">2 ст. л.</span></li><li>имбирный сок <span class=\"amt\">2 ч. л.</span></li><li>солёный анчоусный соус (или рыбный) <span class=\"amt\">4 ст. л.</span></li><li>Корейский молотый перец (кочхукару) <span class=\"amt\">5 ст. л.</span></li><li>грушевый сок <span class=\"amt\">4 ст. л.</span></li><li>солёный креветочный соус, порубленный (или рыбный) <span class=\"amt\">1 ст. л.</span></li><li>бульон из ламинарии (комбу) <span class=\"amt\">4 ст. л.</span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Натрите чеснок, имбирь и грушу на керамической тёрке (или мелкой металлической).</li><li>Отожмите натёртую грушу и имбирь через марлю — нужен именно сок.</li><li>Смешайте в густую красную пасту:<ul class=\"ing two-col\"><li>раздавленный чеснок <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>имбирный сок <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li><li>солёный анчоусный соус (или рыбный) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>Корейский молотый перец (кочхукару) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\">5 ст. л.</span></span></li><li>грушевый сок <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>солёный креветочный соус, порубленный (или рыбный) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>бульон из ламинарии (комбу) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li></ul></li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -296,6 +324,7 @@
    "part": null,
    "part_id": null,
    "time": "~12 мин",
+   "time_html": "<span>~12 мин</span>",
    "title": "Приготовить начинку",
    "uses_rows": []
   },
@@ -320,11 +349,12 @@
    "part": null,
    "part_id": null,
    "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
    "title": "Перемешать",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Плотно уложите в контейнер с крышкой и дайте ферментироваться в холодильнике <b>5–7 дней</b>, прежде чем есть.</li><li>Идеальная температура холодильника для кимчи — около <b>5 °C</b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Плотно уложите в контейнер с крышкой и дайте ферментироваться в холодильнике <b>5–7 дней</b>, прежде чем есть.</li><li>Идеальная температура холодильника для кимчи — около <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"5\" data-s=\"0\">5 °C</span></b>.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -344,6 +374,7 @@
    "part": null,
    "part_id": null,
    "time": "5–7 дней",
+   "time_html": "<span>5–7 дней</span>",
    "title": "В холодильник",
    "uses_rows": []
   }
@@ -372,6 +403,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Приготовить рассол",
+    "label_html": "Приготовить рассол",
     "start": 0
    },
    {
@@ -379,6 +411,7 @@
     "dur_label": "10 мин",
     "kind": "board",
     "label": "Нарезать редьку кубиками",
+    "label_html": "Нарезать редьку кубиками",
     "start": 3
    },
    {
@@ -386,6 +419,7 @@
     "dur_label": "40 мин",
     "kind": "wait",
     "label": "Вымачивать в рассоле (~5 ч)",
+    "label_html": "Вымачивать в рассоле (~5 ч)",
     "start": 13
    },
    {
@@ -393,6 +427,7 @@
     "dur_label": "4 мин",
     "kind": "board",
     "label": "Нарезать зелёный лук",
+    "label_html": "Нарезать зелёный лук",
     "start": 20
    },
    {
@@ -400,6 +435,7 @@
     "dur_label": "12 мин",
     "kind": "bowl",
     "label": "Натереть + отжать, сделать начинку",
+    "label_html": "Натереть + отжать, сделать начинку",
     "start": 25
    },
    {
@@ -407,6 +443,7 @@
     "dur_label": "6 мин",
     "kind": "bowl",
     "label": "Слить, перемешать",
+    "label_html": "Слить, перемешать",
     "start": 53
    },
    {
@@ -414,6 +451,7 @@
     "dur_label": "20 мин",
     "kind": "wait",
     "label": "Холодильник (5–7 дней)",
+    "label_html": "Холодильник (5–7 дней)",
     "start": 59
    }
   ],

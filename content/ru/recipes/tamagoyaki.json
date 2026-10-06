@@ -4,10 +4,12 @@
  "blurb_html": "Сладкий японский омлет-рулет с саке, мирином и коричневым сахаром — и зелёной спиралью из хлопьев нори внутри.",
  "chips": [
   {
+   "html": "<span>1 рулет · 2 порции закуски</span>",
    "kind": "",
    "text": "1 рулет · 2 порции закуски"
   },
   {
+   "html": "~15 мин",
    "kind": "time",
    "text": "~15 мин"
   }
@@ -32,19 +34,19 @@
   {
    "items": [
     {
-     "amount_html": "3",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
      "name_html": "Яйца"
     },
     {
-     "amount_html": "1 ст. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Мирин"
     },
     {
-     "amount_html": "1 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Саке"
     },
     {
-     "amount_html": "2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
      "name_html": "Коричневый сахар"
     },
     {
@@ -52,7 +54,7 @@
      "name_html": "Соль"
     },
     {
-     "amount_html": "1–2 ст. л., по желанию",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 ст. л.</span>, по желанию",
      "name_html": "<a href=\"niboshi-bonito-dashi.html\">Даси</a>"
     }
    ],
@@ -61,7 +63,7 @@
   {
    "items": [
     {
-     "amount_html": "1–2 ч. л., для среднего слоя",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 ч. л.</span>, для среднего слоя",
      "name_html": "Хлопья зелёной нори"
     },
     {
@@ -134,6 +136,30 @@
   "slug": "radish-pickle",
   "title": "Маринованный редис"
  },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
  "share_image": "share/tamagoyaki.jpg",
  "siblings": [
   {
@@ -165,7 +191,7 @@
  "sources": [],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Взбейте яйца с приправами, пока сахар не растворится:<ul class=\"ing two-col\"><li>мирин <span class=\"amt\">1 ст. л.</span></li><li>саке <span class=\"amt\">1 ч. л.</span></li><li>коричневый сахар <span class=\"amt\">2 ч. л.</span></li><li>соль <span class=\"amt\">щепотка</span></li><li>даси <span class=\"amt\">1–2 ст. л.</span></li></ul></li><li>Разрезайте белки палочками, а не взбивайте — пена не нужна.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Взбейте яйца с приправами, пока сахар не растворится:<ul class=\"ing two-col\"><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>коричневый сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li><li>соль <span class=\"amt\">щепотка</span></li><li>даси <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 ст. л.</span></span></li></ul></li><li>Разрезайте белки палочками, а не взбивайте — пена не нужна.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -185,10 +211,11 @@
    "part": null,
    "part_id": null,
    "time": "3 мин",
+   "time_html": "<span>3 мин</span>",
    "title": "Смешать",
    "uses_rows": [
     {
-     "amount_html": "3",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
      "name_html": "Яйца"
     }
    ]
@@ -197,6 +224,7 @@
    "body_html": "<ul class=\"do\"><li>Разогрейте сковороду на огне ниже среднего и протрите тонким слоем масла сложенным бумажным полотенцем.</li><li>Капля яйца должна мягко шипеть, а не плеваться.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-2",
@@ -212,6 +240,7 @@
    "part": null,
    "part_id": null,
    "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
    "title": "Разогреть и смазать сковороду",
    "uses_rows": [
     {
@@ -224,6 +253,7 @@
    "body_html": "<ul class=\"do\"><li>Влейте примерно четверть яйца и наклоните сковороду, чтобы покрыть дно.</li><li>Проколите крупные пузыри.</li><li>Когда низ схватится, а верх ещё чуть влажный, сверните от дальнего края к себе.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-3",
@@ -248,6 +278,7 @@
    "part": null,
    "part_id": null,
    "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
    "title": "Первый слой",
    "uses_rows": []
   },
@@ -255,6 +286,7 @@
    "body_html": "<p>Отодвиньте рулет обратно к дальнему краю и смажьте маслом освободившуюся часть сковороды.</p>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-4",
@@ -275,6 +307,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Отодвинуть и смазать",
    "uses_rows": []
   },
@@ -282,6 +315,7 @@
    "body_html": "<ul class=\"do\"><li>Влейте следующую четверть и приподнимите рулет, чтобы яйцо затекло под него.</li><li>Посыпьте этот слой <b>хлопьями нори</b> и снова сверните к себе.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-5",
@@ -306,10 +340,11 @@
    "part": null,
    "part_id": null,
    "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
    "title": "Второй слой, с нори",
    "uses_rows": [
     {
-     "amount_html": "1–2 ч. л.",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 ч. л.</span>",
      "name_html": "Хлопья зелёной нори"
     }
    ]
@@ -318,6 +353,7 @@
    "body_html": "<ul class=\"do\"><li>Отодвиньте, смажьте и влейте оставшееся яйцо — обычно ещё один-два слоя.</li><li>Каждый раз <b>приподнимайте рулет, чтобы новое яйцо затекало под него</b>, прежде чем сворачивать, — так слои склеиваются.</li></ul>",
    "heat": {
     "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
     "off": false
    },
    "id": "step-6",
@@ -338,6 +374,7 @@
    "part": null,
    "part_id": null,
    "time": "2–3 мин",
+   "time_html": "<span>2–3 мин</span>",
    "title": "Повторить",
    "uses_rows": []
   },
@@ -362,11 +399,12 @@
    "part": null,
    "part_id": null,
    "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
    "title": "Сформовать и дать постоять",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Нарежьте ломтиками по 2 см — нори видна зелёной спиралью.</p>",
+   "body_html": "<p>Нарежьте ломтиками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> — нори видна зелёной спиралью.</p>",
    "heat": null,
    "id": "step-8",
    "images": {
@@ -386,6 +424,7 @@
    "part": null,
    "part_id": null,
    "time": null,
+   "time_html": null,
    "title": "Нарезать",
    "uses_rows": []
   }
@@ -418,6 +457,7 @@
     "dur_label": "3 мин",
     "kind": "bowl",
     "label": "Взбить яйца с приправами",
+    "label_html": "Взбить яйца с приправами",
     "start": 0
    },
    {
@@ -425,6 +465,7 @@
     "dur_label": "2 мин",
     "kind": "pan",
     "label": "Разогреть + смазать сковороду",
+    "label_html": "Разогреть + смазать сковороду",
     "start": 3
    },
    {
@@ -432,6 +473,7 @@
     "dur_label": "1.5 мин",
     "kind": "pan",
     "label": "Слой 1: влить, свернуть",
+    "label_html": "Слой 1: влить, свернуть",
     "start": 5
    },
    {
@@ -439,6 +481,7 @@
     "dur_label": "30 с",
     "kind": "pan",
     "label": "Отодвинуть, смазать",
+    "label_html": "Отодвинуть, смазать",
     "start": 6.5
    },
    {
@@ -446,6 +489,7 @@
     "dur_label": "1.5 мин",
     "kind": "pan",
     "label": "Слой 2 + нори: влить, свернуть",
+    "label_html": "Слой 2 + нори: влить, свернуть",
     "start": 7
    },
    {
@@ -453,6 +497,7 @@
     "dur_label": "3 мин",
     "kind": "pan",
     "label": "Слои 3–4",
+    "label_html": "Слои 3–4",
     "start": 8.5
    },
    {
@@ -460,6 +505,7 @@
     "dur_label": "5 мин",
     "kind": "wait",
     "label": "Сформовать в коврике, отдых",
+    "label_html": "Сформовать в коврике, отдых",
     "start": 11.5
    },
    {
@@ -467,6 +513,7 @@
     "dur_label": "1 мин",
     "kind": "board",
     "label": "Нарезать",
+    "label_html": "Нарезать",
     "start": 16.5
    }
   ],

@@ -4,17 +4,19 @@
  "blurb_html": "Vegan dashi: kombu and dried shiitake cold-brewed overnight. The soaked shiitake go into the egg bowl.",
  "chips": [
   {
+   "html": "<span><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 litre</span></span>",
    "kind": "",
    "text": "1 litre"
   },
   {
+   "html": "5 min + overnight (or ~45 min hot)",
    "kind": "time",
    "text": "5 min + overnight (or ~45 min hot)"
   }
  ],
  "description": "Vegan dashi: kombu and dried shiitake cold-brewed overnight. The soaked shiitake go into the egg bowl.",
  "equipment_html": [
-  "Jar or jug, 1 l+ (cold brew)",
+  "Jar or jug, <span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\" data-s=\"0\">1 l</span>+ (cold brew)",
   "Saucepan (quick version)",
   "Fine sieve"
  ],
@@ -31,15 +33,15 @@
   {
    "items": [
     {
-     "amount_html": "1 l",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 l</span>",
      "name_html": "Water"
     },
     {
-     "amount_html": "10 g (a piece about 10 × 10 cm)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span> (a piece about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"10\" data-b=\"10\" data-x=\"1\" data-s=\"0\">10 × 10 cm</span>)",
      "name_html": "Kombu"
     },
     {
-     "amount_html": "4–5 (about 15 g)",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>)",
      "name_html": "Dried shiitake"
     }
    ],
@@ -65,9 +67,9 @@
    "goes_in": "Step 2",
    "image": "illustrations/shiitake-kombu-dashi/mise2.webp",
    "items": [
-    "4–5"
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span>"
    ],
-   "items_html": "4–5",
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span>",
    "name": "Dried shiitake",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -77,9 +79,9 @@
    "goes_in": "Step 2",
    "image": "illustrations/shiitake-kombu-dashi/mise3.webp",
    "items": [
-    "1 litre"
+    "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 litre</span>"
    ],
-   "items_html": "1 litre",
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 litre</span>",
    "name": "Cold water",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -96,7 +98,7 @@
    "title_html": "Storage"
   },
   {
-   "html": "<ul class=\"do\"><li>10 g kombu + 4–5 shiitake per litre is a standard starting point.</li><li>For a stronger dashi, add another shiitake or two.</li></ul>",
+   "html": "<ul class=\"do\"><li><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\" data-s=\"0\">10 g</span> kombu + 4–5 shiitake per litre is a standard starting point.</li><li>For a stronger dashi, add another shiitake or two.</li></ul>",
    "title_html": "Amounts"
   },
   {
@@ -118,6 +120,30 @@
  "prev": {
   "slug": "sous-vide-beets",
   "title": "Sous vide beets"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "one batch",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
  },
  "share_image": "share/shiitake-kombu-dashi.jpg",
  "siblings": [
@@ -170,16 +196,17 @@
    "part": "Cold brew (overnight)",
    "part_id": "part-cold-brew-overnight",
    "time": "1 min",
+   "time_html": "<span>1 min</span>",
    "title": "Wipe the kombu",
    "uses_rows": [
     {
-     "amount_html": "10 g",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
      "name_html": "Kombu"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Into a jar, everything cold:<ul class=\"ing\"><li>kombu <span class=\"amt\">10 g</span></li><li>dried shiitake <span class=\"amt\">4–5 (about 15 g)</span></li><li>water <span class=\"amt\">1 l</span></li></ul></li><li>Lid on, into the fridge for <b>8–24 hours</b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Into a jar, everything cold:<ul class=\"ing\"><li>kombu <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span></span></li><li>dried shiitake <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>)</span></li><li>water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 l</span></span></li></ul></li><li>Lid on, into the fridge for <b>8–24 hours</b>.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
@@ -194,6 +221,7 @@
    "part": "Cold brew (overnight)",
    "part_id": "part-cold-brew-overnight",
    "time": "8–24 h",
+   "time_html": "<span>8–24 h</span>",
    "title": "Soak overnight",
    "uses_rows": []
   },
@@ -218,6 +246,7 @@
    "part": "Cold brew (overnight)",
    "part_id": "part-cold-brew-overnight",
    "time": "5 min",
+   "time_html": "<span>5 min</span>",
    "title": "Strain",
    "uses_rows": []
   },
@@ -242,11 +271,12 @@
    "part": "Cold brew (overnight)",
    "part_id": "part-cold-brew-overnight",
    "time": null,
+   "time_html": null,
    "title": "Keep the shiitake",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Into a saucepan, everything cold:<ul class=\"ing\"><li>kombu <span class=\"amt\">10 g</span></li><li>dried shiitake <span class=\"amt\">4–5 (about 15 g)</span></li><li>water <span class=\"amt\">1 l</span></li></ul></li><li>Soak for at least 30 minutes (longer is better).</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Into a saucepan, everything cold:<ul class=\"ing\"><li>kombu <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span></span></li><li>dried shiitake <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"5\" data-n=\"3\">4–5</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>)</span></li><li>water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 l</span></span></li></ul></li><li>Soak for at least 30 minutes (longer is better).</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -261,13 +291,15 @@
    "part": "Quick version (same day)",
    "part_id": "part-quick-version-same-day",
    "time": "30 min",
+   "time_html": "<span>30 min</span>",
    "title": "Quick version: soak 30 minutes",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Heat on low. When tiny bubbles appear at the edge (around 60–70 °C, ~10–15 minutes), take the kombu out — boiled kombu turns slimy and bitter.</li><li>Simmer the shiitake a few more minutes, then strain as in step 3.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Heat on low. When tiny bubbles appear at the edge (around <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-b=\"70\" data-s=\"0\">60–70 °C</span>, ~10–15 minutes), take the kombu out — boiled kombu turns slimy and bitter.</li><li>Simmer the shiitake a few more minutes, then strain as in step 3.</li></ul>",
    "heat": {
     "label": "low",
+    "label_html": "<span>low</span>",
     "off": false
    },
    "id": "step-6",
@@ -288,6 +320,7 @@
    "part": "Quick version (same day)",
    "part_id": "part-quick-version-same-day",
    "time": "10–15 min",
+   "time_html": "<span>10–15 min</span>",
    "title": "Heat gently, kombu out before it boils",
    "uses_rows": []
   }
@@ -316,6 +349,7 @@
     "dur_label": "2 min",
     "kind": "board",
     "label": "Wipe kombu",
+    "label_html": "Wipe kombu",
     "start": 0
    },
    {
@@ -323,6 +357,7 @@
     "dur_label": "2 min",
     "kind": "bowl",
     "label": "Everything into the jar",
+    "label_html": "Everything into the jar",
     "start": 2
    },
    {
@@ -330,6 +365,7 @@
     "dur_label": "8 h",
     "kind": "wait",
     "label": "Cold brew in the fridge",
+    "label_html": "Cold brew in the fridge",
     "start": 4
    },
    {
@@ -337,6 +373,7 @@
     "dur_label": "5 min",
     "kind": "bowl",
     "label": "Strain, squeeze shiitake",
+    "label_html": "Strain, squeeze shiitake",
     "start": 484
    }
   ],
