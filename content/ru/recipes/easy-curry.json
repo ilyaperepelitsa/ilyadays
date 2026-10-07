@@ -1,0 +1,610 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Карри из коробки на будний вечер: говядина, лук, морковь и картофель томятся 15 минут, потом в них растворяют покупной блок ру.",
+ "chips": [
+  {
+   "html": "<span>6 порций (½ коробки)</span>",
+   "kind": "",
+   "text": "6 порций (½ коробки)"
+  },
+  {
+   "html": "~35 мин",
+   "kind": "time",
+   "text": "~35 мин"
+  }
+ ],
+ "description": "Карри из коробки на будний вечер: говядина, лук, морковь и картофель томятся 15 минут, потом в них растворяют покупной блок ру.",
+ "equipment_html": [
+  "Большая кастрюля с крышкой",
+  "Поварской нож + разделочная доска",
+  "Деревянная ложка"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Быстрое японское карри (ру Golden Curry)",
+  "image": "illustrations/easy-curry/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"450\">450 г</span>, кусочками на один укус",
+     "name_html": "Говядина"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"450\">450 г</span> (около <span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> крупных), нарезанный",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"125\">125 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> средняя), нарезка рангири",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> средний), крупными кусками",
+     "name_html": "Картофель"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Растительное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"660\">660 мл</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> коробки (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> лоток, ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\">110 г</span>)",
+     "name_html": "Ру S&amp;B Golden Curry"
+    }
+   ],
+   "name": "Карри"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "1 миска на человека",
+     "name_html": "Варёный круглозёрный рис"
+    }
+   ],
+   "name": "Для подачи"
+  }
+ ],
+ "intro_html": "Быстрая версия <a href=\"japanese-curry.html\">японского карри с нуля</a>: без домашнего ру, бульона и томатного соуса — всё это делает блок <b>S&amp;B Golden Curry</b>. Способ и количества — с самой коробки, на половину упаковки (один из двух лотков), это 6 порций.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/easy-curry/mise1.webp",
+   "items": [
+    "кусочками на один укус"
+   ],
+   "items_html": "кусочками на один укус",
+   "name": "Говядина",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/easy-curry/mise2.webp",
+   "items": [
+    "нарезанный"
+   ],
+   "items_html": "нарезанный",
+   "name": "Лук",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/easy-curry/mise3.webp",
+   "items": [
+    "морковь рангири",
+    "куски картофеля"
+   ],
+   "items_html": "морковь рангири · куски картофеля",
+   "name": "Морковь + картофель",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/easy-curry/mise4.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> коробки, разломать на кусочки"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> коробки, разломать на кусочки",
+   "name": "Ру для карри",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/easy-curry/mise5.webp",
+   "items": [
+    "только что сваренный"
+   ],
+   "items_html": "только что сваренный",
+   "name": "Рис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "ramen",
+  "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Так написано на коробке: блок ру, брошенный в кипящую кастрюлю, может пойти комками.</li><li>Без огня он тает ровно, а потом карри томится и густеет.</li></ul>",
+   "title_html": "Почему для ру огонь выключают"
+  },
+  {
+   "html": "<p>Коробка предлагает говядину, курицу, баранину или креветки — любое из них в том же количестве.</p>",
+   "title_html": "Другое мясо"
+  },
+  {
+   "html": "<p>Golden Curry бывает мягким, средней остроты и острым — выбирайте коробку по вкусу.</p>",
+   "title_html": "Острота"
+  },
+  {
+   "html": "<p>Удвойте всё (по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\" data-s=\"0\">900 г</span> говядины и лука, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 г</span> моркови, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\" data-s=\"0\">300 г</span> картофеля, <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 ст. л.</span> масла) и возьмите <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"1200\" data-s=\"0\">1200 мл</span> воды — получится 12 порций.</p>",
+   "title_html": "Целая коробка"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Хотите длинную версию со своим ру, куриным бульоном и томатным соусом?</li><li>Смотрите <a href=\"japanese-curry.html\">японское карри с нуля</a>.</li></ul>",
+   "title_html": "С нуля"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "japanese-curry",
+  "title": "Японское карри с нуля"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 6,
+  "size": "6",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/easy-curry.jpg",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Онигири: форма, начинки, гриль"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "easy-curry",
+ "sources": [
+  {
+   "label": "S&amp;B Golden Curry — инструкция с коробки",
+   "url": "https://psinfoodservice.com/en/product/2665058-s-b-curry-sauce-mix-hot-220g"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Нарежьте лук.</li><li>Нарежьте морковь рангири: наискосок, поверните на четверть оборота, снова наискосок.</li><li>Очистите картофель и нарежьте крупными кусками.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Нарежьте овощи",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Нарежьте лук тонко, вдоль.",
+      "src": "illustrations/easy-curry/1-how1.webp"
+     },
+     {
+      "caption": "Рангири: срежьте морковь наискосок, поверните на четверть оборота, снова срежьте наискосок.",
+      "src": "illustrations/easy-curry/1-how2.webp"
+     },
+     {
+      "caption": "Очистите картофель и нарежьте крупными кусками.",
+      "src": "illustrations/easy-curry/1-how3.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Нарежьте овощи",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"450\">450 г</span>",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"125\">125 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> средняя)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> средний)",
+     "name_html": "Картофель"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Нарежьте говядину кусочками на один укус.</p>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Нарежьте говядину",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Нарежьте говядину кусочками на один укус.",
+      "src": "illustrations/easy-curry/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Нарежьте говядину",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"450\">450 г</span>",
+     "name_html": "Говядина"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте масло в большой кастрюле на среднем огне.</li><li>Обжаривайте говядину с овощами, помешивая, около 5 минут.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Обжарка",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Обжаривайте говядину с овощами в масле около 5 минут.",
+      "src": "illustrations/easy-curry/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Обжарка",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Растительное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Влейте воду и доведите до кипения.</li><li>Убавьте огонь, накройте и томите, пока всё не станет мягким, около 15 минут.</li></ul>",
+   "heat": {
+    "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Вода — и томить до мягкости",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Влейте воду, доведите до кипения, затем накройте и томите.",
+      "src": "illustrations/easy-curry/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~15 мин",
+   "time_html": "<span>~15 мин</span>",
+   "title": "Вода — и томить до мягкости",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"660\">660 мл</span>",
+     "name_html": "Вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li><b>Выключите</b> огонь.</li><li>Разломайте ру на кусочки, добавьте в кастрюлю и мешайте, пока полностью не растает.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "label_html": "огонь выключен",
+    "off": true
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Огонь выкл. — ру в кастрюлю",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Выключите огонь, разломайте блок ру на кусочки и опустите в кастрюлю.",
+      "src": "illustrations/easy-curry/5-how1.webp"
+     },
+     {
+      "caption": "Мешайте, пока не растает каждый кусочек.",
+      "src": "illustrations/easy-curry/5-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Огонь выкл. — ру в кастрюлю",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> коробки",
+     "name_html": "Ру S&amp;B Golden Curry"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Снова включите слабый огонь и томите около 5 минут, постоянно помешивая, пока карри не загустеет.</p>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Томить, помешивая",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Снова на слабый огонь: томите 5 минут, постоянно помешивая, до густоты.",
+      "src": "illustrations/easy-curry/6-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Томить, помешивая",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Подавайте горячим с рисом.</p>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Подача",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Рис — с одной стороны глубокой тарелки, карри — с другой.",
+      "src": "illustrations/easy-curry/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/easy-curry/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Подача",
+   "uses_rows": [
+    {
+     "amount_html": "1 миска на человека",
+     "name_html": "Варёный круглозёрный рис"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 40,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "board",
+    "label": "Нарежьте овощи",
+    "label_html": "Нарежьте овощи",
+    "start": 0
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Нарежьте говядину",
+    "label_html": "Нарежьте говядину",
+    "start": 6
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "pan",
+    "label": "Обжарить говядину + овощи",
+    "label_html": "Обжарить говядину + овощи",
+    "start": 9
+   },
+   {
+    "dur": 17,
+    "dur_label": "17 мин",
+    "kind": "pan",
+    "label": "Вода, томить под крышкой",
+    "label_html": "Вода, томить под крышкой",
+    "start": 14
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Огонь выкл., ру, перемешать",
+    "label_html": "Огонь выкл., ру, перемешать",
+    "start": 31
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "pan",
+    "label": "Томить, помешивая",
+    "label_html": "Томить, помешивая",
+    "start": 33
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Подать с рисом",
+    "label_html": "Подать с рисом",
+    "start": 38
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 35,
+    "label": "35"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Быстрое японское карри (ру Golden Curry)",
+ "total": "~35 мин",
+ "vinegar_options": null,
+ "yields": "6 порций (½ коробки)"
+}

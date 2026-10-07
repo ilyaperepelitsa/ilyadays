@@ -13,7 +13,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | --- | --- | --- |
 | `/` | `/ru` | Home: hello, Food / Travel, about me |
 | `/food` | `/ru/food` | Recipe index |
-| `/food/<slug>` | `/ru/food/<slug>` | A recipe (23 of them) |
+| `/food/<slug>` | `/ru/food/<slug>` | A recipe |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Sous vide tables + PDF |
 | `/travel` | `/ru/travel` | Trips |
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
@@ -53,12 +53,15 @@ supabase/migrations/    SQL for the trip_state table (run by hand in Supabase)
 The recipes and the Istanbul app are edited in their own repos (`../recipes`, `../istanbul_trip`).
 `npm run sync` (`scripts/sync-content.sh`) pulls them in:
 
-1. It runs `python3 ../recipes/export_json.py --out content --images-out public/media`.
+1. It generates any missing recipe illustrations: `python3 ../recipes/imagegen/auto.py` (needs `OPENAI_API_KEY`;
+   `SKIP_IMAGES=1 npm run sync` skips it). A new recipe always gets its pictures this way — from its hand-written
+   spec in `../recipes/imagegen/recipes/`, or from a drafted one if it has none.
+2. It runs `python3 ../recipes/export_json.py --out content --images-out public/media`.
    - This writes `content/{en,ru}/…json` and `content/svg-defs.svg`.
    - It copies every referenced picture.
-2. It copies the recipe stylesheet and the site icons.
-3. It copies `../istanbul_trip/dist/app.{js,css,d.ts}`.
-4. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.
+3. It copies the recipe stylesheet and the site icons.
+4. It copies `../istanbul_trip/dist/app.{js,css,d.ts}`.
+5. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.
 
 Commit the result. Vercel builds only from this repo and never sees the sibling repos.
 

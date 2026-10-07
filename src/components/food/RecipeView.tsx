@@ -146,6 +146,12 @@ function StepCard({ s, t }: { s: Step; t: T }) {
         ) : im.svg_fallback ? (
           <Svg svg={im.svg_fallback} />
         ) : null}
+        {im.diagram && (
+          <details className="diagram" open>
+            <summary>{t("Diagram")}</summary>
+            <Svg svg={im.diagram} />
+          </details>
+        )}
       </figure>
       <div className="step-text">
         <h3>
@@ -239,7 +245,7 @@ function NotesAndSources({ r, t }: { r: Recipe; t: T }) {
 
 export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
   const t = getUi(lang);
-  const hasSvg = !!r.hero.svg_fallback || r.mise.some((m) => m.svg_fallback) || r.steps.some((s) => s.images.svg_fallback);
+  const hasSvg = !!r.hero.svg_fallback || r.mise.some((m) => m.svg_fallback) || r.steps.some((s) => s.images.svg_fallback || s.images.diagram);
   return (
     <>
       {hasSvg && <SvgDefs svg={getSvgDefs()} />}

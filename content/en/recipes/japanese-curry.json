@@ -221,7 +221,7 @@
    "name": "Final assembly"
   }
  ],
- "intro_html": "Five parts: <b>beef</b> (or porcini), <b>chicken stock</b>, <b>curry roux</b>, <b>tomato sauce</b>, then the <b>final assembly</b>. Beef comes first because it marinates overnight; the roux also chills overnight. Stock, roux and tomato sauce all freeze — once they’re stocked, the final curry takes about an hour.",
+ "intro_html": "Five parts: <b>beef</b> (or porcini), <b>chicken stock</b>, <b>curry roux</b>, <b>tomato sauce</b>, then the <b>final assembly</b>. Beef comes first because it marinates overnight; the roux also chills overnight. Stock, roux and tomato sauce all freeze — once they’re stocked, the final curry takes about an hour. Short on time? The <a href=\"easy-curry.html\">easy version</a> uses a store-bought Golden Curry block and takes 35 minutes.",
  "mise": [
   {
    "as_list": false,
@@ -309,8 +309,8 @@
  ],
  "more_label": "More japanese:",
  "next": {
-  "slug": "ramen",
-  "title": "Creamy white ramen (tonkotsu-style paitan)"
+  "slug": "easy-curry",
+  "title": "Easy Japanese curry (Golden Curry roux)"
  },
  "notes": [
   {
@@ -403,8 +403,16 @@
    "title": "Napa cabbage & shiitake egg bowl"
   },
   {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape, the fillings, the grill"
+  },
+  {
    "slug": "karaage",
    "title": "Karaage"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
   },
   {
    "slug": "ramen",
@@ -428,6 +436,7 @@
    "id": "step-1",
    "images": {
     "alt": "Marinate the beef",
+    "diagram": null,
     "how": [
      {
       "caption": "Stir the grated ginger, garlic and turmeric into the yogurt.",
@@ -466,6 +475,7 @@
    "id": "step-2",
    "images": {
     "alt": "Roast",
+    "diagram": null,
     "how": [
      {
       "caption": "Spread the pieces in a baking dish and roast for 1 hour at medium heat (~180 °C).",
@@ -495,6 +505,7 @@
    "id": "step-3",
    "images": {
     "alt": "Porcini instead of beef",
+    "diagram": null,
     "how": [
      {
       "caption": "Fry the porcini in a little olive oil and butter, turning, until golden.",
@@ -529,6 +540,7 @@
    "id": "step-4",
    "images": {
     "alt": "Everything into the pot",
+    "diagram": null,
     "how": [
      {
       "caption": "Bones, wings, quartered onion and big carrot chunks into the pot — then just cover with cold water.",
@@ -563,6 +575,7 @@
    "id": "step-5",
    "images": {
     "alt": "Simmer 1 hour",
+    "diagram": null,
     "how": [],
     "illustration": "illustrations/japanese-curry/5.webp",
     "photo": null,
@@ -583,6 +596,7 @@
    "id": "step-6",
    "images": {
     "alt": "Strain",
+    "diagram": null,
     "how": [
      {
       "caption": "Pour through a fine sieve, keeping only the liquid.",
@@ -608,6 +622,7 @@
    "id": "step-7",
    "images": {
     "alt": "Line the pan",
+    "diagram": null,
     "how": [
      {
       "caption": "Line the pan with parchment, letting it overhang the sides a little.",
@@ -637,6 +652,7 @@
    "id": "step-8",
    "images": {
     "alt": "Melt the butter",
+    "diagram": null,
     "how": [],
     "illustration": "illustrations/japanese-curry/8.webp",
     "photo": null,
@@ -666,6 +682,7 @@
    "id": "step-9",
    "images": {
     "alt": "Cook the flour",
+    "diagram": null,
     "how": [
      {
       "caption": "Stir in the flour and keep stirring for about 5 minutes, until golden brown.",
@@ -700,6 +717,7 @@
    "id": "step-10",
    "images": {
     "alt": "Spices",
+    "diagram": null,
     "how": [
      {
       "caption": "Tip in all the spices and keep stirring about 30 seconds, until fragrant.",
@@ -725,6 +743,7 @@
    "id": "step-11",
    "images": {
     "alt": "Pour and chill",
+    "diagram": null,
     "how": [
      {
       "caption": "Pour into the lined pan and spread it in one even layer.",
@@ -750,6 +769,7 @@
    "id": "step-12",
    "images": {
     "alt": "Cut into squares",
+    "diagram": null,
     "how": [
      {
       "caption": "Lift the set roux out of the pan by the parchment edges.",
@@ -779,6 +799,7 @@
    "id": "step-13",
    "images": {
     "alt": "Blanch and peel the tomatoes",
+    "diagram": null,
     "how": [
      {
       "caption": "Score a shallow cross in the skin of each tomato.",
@@ -813,6 +834,7 @@
    "id": "step-14",
    "images": {
     "alt": "Seed and dice",
+    "diagram": null,
     "how": [
      {
       "caption": "Halve, then scoop out all the seeds and juice.",
@@ -846,6 +868,7 @@
    "id": "step-15",
    "images": {
     "alt": "Fry the onion",
+    "diagram": null,
     "how": [
      {
       "caption": "Slice the onion very thinly.",
@@ -888,6 +911,7 @@
    "id": "step-16",
    "images": {
     "alt": "Garlic, ginger, then soy",
+    "diagram": null,
     "how": [
      {
       "caption": "Heat down to medium: garlic and ginger in, stir, then the soy sauce.",
@@ -930,6 +954,7 @@
    "id": "step-17",
    "images": {
     "alt": "Cook down with the tomatoes",
+    "diagram": null,
     "how": [
      {
       "caption": "Tip the onion mixture into the big pot with the diced tomatoes; add ½ can of tomato sauce.",
@@ -968,6 +993,7 @@
    "id": "step-18",
    "images": {
     "alt": "Boil the carrots and potatoes",
+    "diagram": null,
     "how": [
      {
       "caption": "Rangiri: cut the carrot on an angle, roll it a quarter turn, cut on an angle again.",
@@ -1010,6 +1036,7 @@
    "id": "step-19",
    "images": {
     "alt": "Add the stock",
+    "diagram": null,
     "how": [
      {
       "caption": "Pour the chicken stock over and bring to a gentle boil.",
@@ -1044,6 +1071,7 @@
    "id": "step-20",
    "images": {
     "alt": "Tomato sauce, then apple",
+    "diagram": null,
     "how": [
      {
       "caption": "Grate the apple coarsely.",
@@ -1082,6 +1110,7 @@
    "id": "step-21",
    "images": {
     "alt": "Dissolve the roux",
+    "diagram": null,
     "how": [
      {
       "caption": "Ladle some of the pot's liquid into a small saucepan and add the roux squares.",
@@ -1116,6 +1145,7 @@
    "id": "step-22",
    "images": {
     "alt": "Meat or mushrooms in",
+    "diagram": null,
     "how": [
      {
       "caption": "Add the roasted beef (or the fried porcini).",
@@ -1145,6 +1175,7 @@
    "id": "step-23",
    "images": {
     "alt": "Simmer 30 minutes",
+    "diagram": null,
     "how": [
      {
       "caption": "Simmer on medium-low for 30 minutes — keep stirring so it doesn't catch.",
@@ -1170,6 +1201,7 @@
    "id": "step-24",
    "images": {
     "alt": "Salt in three stages",
+    "diagram": null,
     "how": [
      {
       "caption": "Salt in three small rounds, stirring well and tasting each time.",
@@ -1200,6 +1232,7 @@
    "id": "step-25",
    "images": {
     "alt": "Serve",
+    "diagram": null,
     "how": [
      {
       "caption": "Rice on one side of a deep plate, curry ladled onto the other.",

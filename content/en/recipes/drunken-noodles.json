@@ -1,0 +1,641 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Wide rice noodles with chicken, garlic, bird’s eye chilli and a big handful of Thai basil — hot, fast and spicy, no tamarind.",
+ "chips": [
+  {
+   "html": "<span>2 servings (2–3 with sides)</span>",
+   "kind": "",
+   "text": "2 servings (2–3 with sides)"
+  },
+  {
+   "html": "~20 min",
+   "kind": "time",
+   "text": "~20 min"
+  }
+ ],
+ "description": "Wide rice noodles with chicken, garlic, bird’s eye chilli and a big handful of Thai basil — hot, fast and spicy, no tamarind.",
+ "equipment_html": [
+  "Wok or large heavy-based frying pan",
+  "Small bowl for the sauce",
+  "Bowl or colander for the noodles"
+ ],
+ "group": {
+  "id": "rice-noodles",
+  "name": "Rice noodles"
+ },
+ "hero": {
+  "alt": "Drunken noodles (pad kee mao)",
+  "image": "illustrations/drunken-noodles/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Dried wide rice noodles"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Oil (peanut, vegetable or canola)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"clove|cloves\" data-n=\"1\">3 large cloves</span>, minced",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, deseeded, very finely chopped",
+     "name_html": "Bird’s eye or Thai chillies"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>, sliced",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>, bite-size pieces",
+     "name_html": "Chicken thigh (or breast)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Fish sauce (or soy sauce)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, cut into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span> pieces",
+     "name_html": "Green onions"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 cup</span>",
+     "name_html": "Thai basil or holy basil leaves"
+    }
+   ],
+   "name": "Main"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Oyster sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Light soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Dark soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Water"
+    }
+   ],
+   "name": "Sauce — mix together"
+  }
+ ],
+ "intro_html": "Thai street food, said to be best with an ice-cold beer. The cooking takes about six minutes: garlic and chilli, onion, chicken, then the noodles and sauce, and the basil goes in <b>off the heat</b>. For a milder, sesame-and-ginger plate, see <a href=\"garlic-ginger-chicken-noodles.html\">garlic–ginger chicken noodles</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/drunken-noodles/mise1.webp",
+   "items": [
+    "prepared per the packet, drained"
+   ],
+   "items_html": "prepared per the packet, drained",
+   "name": "Noodles",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 6",
+   "image": "illustrations/drunken-noodles/mise2.webp",
+   "items": [
+    "oyster",
+    "light soy",
+    "dark soy",
+    "sugar",
+    "water"
+   ],
+   "items_html": "oyster · light soy · dark soy · sugar · water",
+   "name": "Sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/drunken-noodles/mise3.webp",
+   "items": [
+    "minced",
+    "deseeded, very finely chopped"
+   ],
+   "items_html": "minced · deseeded, very finely chopped",
+   "name": "Garlic + chilli",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/drunken-noodles/mise4.webp",
+   "items": [
+    "sliced"
+   ],
+   "items_html": "sliced",
+   "name": "Onion",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/drunken-noodles/mise5.webp",
+   "items": [
+    "bite-size pieces"
+   ],
+   "items_html": "bite-size pieces",
+   "name": "Chicken",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/drunken-noodles/mise6.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span> pieces",
+    "a cup of leaves"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span> pieces · a cup of leaves",
+   "name": "Green onions + basil",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More rice noodles:",
+ "next": {
+  "slug": "singapore-noodles",
+  "title": "Singapore noodles"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Traditionally holy basil; most restaurants outside Thailand use Thai basil, which tastes like regular basil with a hint of aniseed.</li><li>Regular basil works too.</li></ul>",
+   "title_html": "Basil"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Two bird’s eye chillies give a good buzz without blowing your head off.</li><li>Adjust to taste, or add a dollop of chilli paste with the chicken instead.</li></ul>",
+   "title_html": "Chilli"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Light and dark soy can both be swapped for all-purpose soy, or the dark for more light.</li><li>Never use all dark soy — far too strong.</li></ul>",
+   "title_html": "Soy sauce"
+  },
+  {
+   "html": "<p>For hot buckwheat noodles, see <a href=\"curry-soba.html\">curry soba</a> or <a href=\"kake-soba.html\">hot soba noodle soup</a>.</p>",
+   "title_html": "Soba instead?"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "chicken-pad-thai",
+  "title": "Chicken Pad Thai"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/drunken-noodles.jpg",
+ "siblings": [
+  {
+   "slug": "garlic-ginger-chicken-noodles",
+   "title": "Garlic–ginger chicken noodles"
+  },
+  {
+   "slug": "chicken-pad-see-ew",
+   "title": "Chicken Pad See Ew"
+  },
+  {
+   "slug": "chicken-pad-thai",
+   "title": "Chicken Pad Thai"
+  },
+  {
+   "slug": "singapore-noodles",
+   "title": "Singapore noodles"
+  }
+ ],
+ "slug": "drunken-noodles",
+ "sources": [
+  {
+   "label": "RecipeTin Eats — Drunken Noodles (Pad Kee Mao)",
+   "url": "https://www.recipetineats.com/pad-kee-mao-thai-drunken-noodles/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Prepare the noodles per the packet directions and drain.</li><li>RecipeTin uses ones labelled “Pad Thai” rice noodles; thinner ones work if you can’t find wide.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Noodles",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/drunken-noodles/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "per packet",
+   "time_html": "<span>per packet</span>",
+   "title": "Noodles",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Dried wide rice noodles"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Mince the garlic; deseed and very finely chop the chillies.</li><li>Slice the onion; cut the chicken into bite-size pieces and the green onions into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span> lengths.</li><li>Mix the sauce in a small bowl:<ul class=\"ing two-col\"><li>oyster sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span></span></li><li>light soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span></span></li><li>dark soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span></span></li><li>sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span></span></li><li>water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Prep and mix the sauce",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Deseed the chillies, then chop them very finely.",
+      "src": "illustrations/drunken-noodles/2-how1.webp"
+     },
+     {
+      "caption": "Cut the chicken into bite-size pieces.",
+      "src": "illustrations/drunken-noodles/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
+   "title": "Prep and mix the sauce",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the oil in a wok over high heat.</li><li>Add the garlic and chilli and cook for 10 seconds — don’t lean over the pan, the chilli fumes make you cough.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Garlic and chilli",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Garlic and chilli into the hot oil — 10 seconds.",
+      "src": "illustrations/drunken-noodles/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "10 s",
+   "time_html": "<span>10 s</span>",
+   "title": "Garlic and chilli",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Oil (peanut, vegetable or canola)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"clove|cloves\" data-n=\"1\">3 large cloves</span>",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Bird’s eye or Thai chillies"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Add the onion and cook for 1 minute.</p>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Onion",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/drunken-noodles/4.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Onion",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Onion"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Add the chicken and fish sauce and stir-fry until the chicken is cooked, about 2 minutes.</p>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Chicken and fish sauce",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Chicken and fish sauce in; stir-fry about 2 minutes.",
+      "src": "illustrations/drunken-noodles/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Chicken and fish sauce",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Chicken thigh (or breast)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Fish sauce (or soy sauce)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Add the green onion, noodles and sauce.</li><li>Toss for about 1 minute, until the sauce reduces and coats the noodles.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Noodles and sauce",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Green onion, noodles and sauce — toss until the sauce coats every noodle.",
+      "src": "illustrations/drunken-noodles/6-how1.webp"
+     },
+     {
+      "caption": "Lift and toss for about a minute until glossy brown.",
+      "src": "illustrations/drunken-noodles/6-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Noodles and sauce",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Green onions"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Take the wok off the heat and immediately add the basil.</li><li>Toss until it’s just wilted and serve straight away.</li></ul>",
+   "heat": {
+    "label": "heat off",
+    "label_html": "heat off",
+    "off": true
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Off the heat: basil",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Off the heat, basil in, toss until just wilted.",
+      "src": "illustrations/drunken-noodles/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~30 s",
+   "time_html": "<span>~30 s</span>",
+   "title": "Off the heat: basil",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 cup</span>",
+     "name_html": "Thai basil or holy basil leaves"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 18,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "Everything has to be chopped and next to the stove before the oil goes in — the cooking is about six minutes on high heat.",
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "board",
+    "label": "Chop garlic, chilli, onion, chicken",
+    "label_html": "Chop garlic, chilli, onion, chicken",
+    "start": 0
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "wait",
+    "label": "Noodles per packet",
+    "label_html": "Noodles per packet",
+    "start": 0
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "bowl",
+    "label": "Mix sauce",
+    "label_html": "Mix sauce",
+    "start": 8
+   },
+   {
+    "dur": 0.5,
+    "dur_label": "30 s",
+    "kind": "pan",
+    "label": "Garlic + chilli 10 s",
+    "label_html": "Garlic + chilli 10 s",
+    "start": 12
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Onion",
+    "label_html": "Onion",
+    "start": 12.5
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Chicken + fish sauce",
+    "label_html": "Chicken + fish sauce",
+    "start": 13.5
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Green onion, noodles, sauce",
+    "label_html": "Green onion, noodles, sauce",
+    "start": 15.5
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Heat off: basil, serve",
+    "label_html": "Heat off: basil, serve",
+    "start": 16.5
+   }
+  ],
+  "tick_step": 2,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 2,
+    "label": "2"
+   },
+   {
+    "at": 4,
+    "label": "4"
+   },
+   {
+    "at": 6,
+    "label": "6"
+   },
+   {
+    "at": 8,
+    "label": "8"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 12,
+    "label": "12"
+   },
+   {
+    "at": 14,
+    "label": "14"
+   },
+   {
+    "at": 16,
+    "label": "16"
+   },
+   {
+    "at": 18,
+    "label": "18"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Drunken noodles (pad kee mao)",
+ "total": "~20 min",
+ "vinegar_options": null,
+ "yields": "2 servings (2–3 with sides)"
+}

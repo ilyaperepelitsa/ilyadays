@@ -1,0 +1,658 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Hot soba in a thick dashi-curry broth with pork and onion — two cubes of curry roux melted into the stock.",
+ "chips": [
+  {
+   "html": "<span>2 bowls</span>",
+   "kind": "",
+   "text": "2 bowls"
+  },
+  {
+   "html": "~30 min",
+   "kind": "time",
+   "text": "~30 min"
+  }
+ ],
+ "description": "Hot soba in a thick dashi-curry broth with pork and onion — two cubes of curry roux melted into the stock.",
+ "equipment_html": [
+  "Medium pot or Dutch oven",
+  "Ladle",
+  "Fine-mesh skimmer",
+  "Large pot for the soba",
+  "Colander"
+ ],
+ "group": {
+  "id": "soba",
+  "name": "Soba"
+ },
+ "hero": {
+  "alt": "Curry soba (curry nanban)",
+  "image": "illustrations/curry-soba/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 g</span>), thinly sliced",
+     "name_html": "Yellow onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"170\">170 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"6\" data-alt=\"1\">6 oz</span>)</span>, bite-size pieces",
+     "name_html": "Thinly sliced pork loin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 cups</span>)</span>",
+     "name_html": "Dashi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> cubes",
+     "name_html": "Japanese curry roux (e.g. Golden Curry)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Soy sauce"
+    }
+   ],
+   "name": "Curry broth"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Dried soba"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, thinly sliced",
+     "name_html": "Green onions"
+    }
+   ],
+   "name": "Noodles and topping"
+  }
+ ],
+ "intro_html": "A soba-shop favourite: dashi turned into a glossy curry broth with <b>two cubes of Japanese curry roux</b>, pork and onion, poured over hot soba. The broth is Just One Cookbook’s curry udon; here it goes over soba. Same box of roux as the <a href=\"easy-curry.html\">easy Golden Curry</a>. For a clear broth, see <a href=\"kake-soba.html\">hot soba noodle soup</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/curry-soba/mise1.webp",
+   "items": [
+    "thinly sliced"
+   ],
+   "items_html": "thinly sliced",
+   "name": "Onion",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/curry-soba/mise2.webp",
+   "items": [
+    "thin slices, bite-size"
+   ],
+   "items_html": "thin slices, bite-size",
+   "name": "Pork",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/curry-soba/mise3.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+   "name": "Sake",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/curry-soba/mise4.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 cups</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 cups</span>",
+   "name": "Dashi",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/curry-soba/mise5.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> cubes, broken off the block"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> cubes, broken off the block",
+   "name": "Curry roux",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/curry-soba/mise6.webp",
+   "items": [
+    "dried, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> per bowl"
+   ],
+   "items_html": "dried, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> per bowl",
+   "name": "Soba",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/curry-soba/mise7.webp",
+   "items": [
+    "thinly sliced"
+   ],
+   "items_html": "thinly sliced",
+   "name": "Green onions",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More soba:",
+ "next": {
+  "slug": "kake-soba",
+  "title": "Hot soba noodle soup (kake soba)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Just One Cookbook’s recipe is curry udon; the broth is hers unchanged.</li><li>Putting it on soba (and the soba method, from her hot soba noodle soup) is this page’s swap.</li></ul>",
+   "title_html": "Udon → soba"
+  },
+  {
+   "html": "<ul class=\"do\"><li>At soba shops, curry with leek or green onion on soba is “curry nanban”.</li><li>For more of the nanban leek, add <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> diagonally sliced Japanese leek (naganegi) with the onion — Sudachi’s curry udon does — untested here.</li></ul>",
+   "title_html": "Curry nanban"
+  },
+  {
+   "html": "<p>Sudachi makes the broth without roux: <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"500\" data-s=\"0\">500 ml</span> dashi, <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 tbsp</span> soy, <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 tbsp</span> mirin, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> sugar, thickened with <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 tbsp</span> Japanese curry powder mixed into <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> potato starch and <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-s=\"0\">5 tbsp</span> cold water, simmered 10 minutes.</p>",
+   "title_html": "No roux?"
+  },
+  {
+   "html": "<p>JOC: any protein instead of the pork — thin chicken thigh pieces work.</p>",
+   "title_html": "Other protein"
+  },
+  {
+   "html": "<p>The broth keeps 3 days in the fridge and a month frozen; cook noodles fresh.</p>",
+   "title_html": "Leftovers"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "bibim-naengmyeon",
+  "title": "Bibim-naengmyeon (spicy cold buckwheat noodles)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/curry-soba.jpg",
+ "siblings": [
+  {
+   "slug": "tori-nanban-soba",
+   "title": "Tori nanban soba (chicken & leek soba)"
+  },
+  {
+   "slug": "zaru-soba",
+   "title": "Zaru soba (cold soba, dipping sauce)"
+  },
+  {
+   "slug": "bibim-naengmyeon",
+   "title": "Bibim-naengmyeon (spicy cold buckwheat noodles)"
+  },
+  {
+   "slug": "kake-soba",
+   "title": "Hot soba noodle soup (kake soba)"
+  }
+ ],
+ "slug": "curry-soba",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Curry Udon",
+   "url": "https://www.justonecookbook.com/curry-udon/"
+  },
+  {
+   "label": "Just One Cookbook — Soba Noodle Soup (soba method)",
+   "url": "https://www.justonecookbook.com/soba-noodle-soup/"
+  },
+  {
+   "label": "Sudachi — Japanese Curry Udon (roux-free broth)",
+   "url": "https://sudachirecipes.com/curry-udon/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Break 2 cubes off the curry roux block (wrap the rest; it keeps 1–3 months in the fridge or freezer).</li><li>Make or warm the dashi — any method; see <a href=\"shiitake-kombu-dashi.html\">shiitake–kombu</a> or <a href=\"niboshi-bonito-dashi.html\">niboshi–bonito dashi</a>.</li><li>Thinly slice the onion and the green onions (the green onions are the garnish).</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Get ready",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Break two cubes off the roux block.",
+      "src": "illustrations/curry-soba/1-how1.webp"
+     },
+     {
+      "caption": "Slice the onion lengthwise into thin petals.",
+      "src": "illustrations/curry-soba/1-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
+   "title": "Get ready",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> cubes",
+     "name_html": "Japanese curry roux (e.g. Golden Curry)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 cups</span>)</span>",
+     "name_html": "Dashi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Green onions"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat a medium pot over medium heat, add the oil, then the onion.</li><li>Sauté for 2–3 minutes.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Sauté the onion",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/curry-soba/2.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
+   "title": "Sauté the onion",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 g</span>)",
+     "name_html": "Yellow onion"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Add the pork and cook until it’s barely pink, then add the sake.</p>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Pork and sake",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pork in until barely pink, then the sake.",
+      "src": "illustrations/curry-soba/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Pork and sake",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"170\">170 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"6\" data-alt=\"1\">6 oz</span>)</span>",
+     "name_html": "Thinly sliced pork loin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour in the dashi, cover and turn the heat to medium-low for 5 minutes.</li><li>Skim off the scum and fat with a fine-mesh skimmer, then simmer 5 more minutes.</li><li>Meanwhile, put a large pot of water on for the soba.</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Dashi in, simmer and skim",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Dashi in; after 5 minutes skim off the scum and fat.",
+      "src": "illustrations/curry-soba/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "10 min",
+   "time_html": "<span>10 min</span>",
+   "title": "Dashi in, simmer and skim",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Turn the heat to the lowest setting or off — melting roux sinks and can scorch.</li><li>Put a cube in a ladleful of the hot stock, dissolve it completely with chopsticks or a spoon, then release it into the pot. Repeat with the second cube.</li></ul>",
+   "heat": {
+    "label": "heat off",
+    "label_html": "heat off",
+    "off": true
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Melt in the roux",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Heat off. One cube at a time: dissolve it in a ladle of stock, then release it.",
+      "src": "illustrations/curry-soba/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Melt in the roux",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Turn the heat back to low, add the soy sauce and stir.</li><li>Once it bubbles, turn off the heat and cover.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Soy, then keep warm",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/curry-soba/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Soy, then keep warm",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Soy sauce"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Boil the soba for <b>30 seconds less</b> than the packet says (no salt in the water).</li><li>Drain and rinse under cold running water, rubbing with your hand to wash off the starch.</li><li>Re-warm: a quick rinse under hot running water, or 5–8 seconds back in boiling water. Drain well.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Cook the soba",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cook 30 seconds under the packet time, then rinse cold, rubbing off the starch.",
+      "src": "illustrations/curry-soba/7-how1.webp"
+     },
+     {
+      "caption": "Re-warm for 5–8 seconds in boiling water, then drain well.",
+      "src": "illustrations/curry-soba/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Cook the soba",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Dried soba"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Divide the soba between two bowls, pour the curry broth over and top with the green onions.</p>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Serve",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Soba in the bowls, curry broth over, green onions on top.",
+      "src": "illustrations/curry-soba/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Serve",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   }
+  ],
+  "note_html": "Put the soba water on while the broth simmers; the noodles should be ready just as the roux has melted in.",
+  "tasks": [
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "board",
+    "label": "Break roux, slice onion + green onions",
+    "label_html": "Break roux, slice onion + green onions",
+    "start": 0
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "Onion",
+    "label_html": "Onion",
+    "start": 4
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Pork, sake",
+    "label_html": "Pork, sake",
+    "start": 7
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "pan",
+    "label": "Dashi in, simmer + skim",
+    "label_html": "Dashi in, simmer + skim",
+    "start": 9
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "wait",
+    "label": "Soba water to the boil",
+    "label_html": "Soba water to the boil",
+    "start": 12
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "pan",
+    "label": "Dissolve the roux, soy",
+    "label_html": "Dissolve the roux, soy",
+    "start": 19
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "pan",
+    "label": "Cook, rinse, re-warm soba",
+    "label_html": "Cook, rinse, re-warm soba",
+    "start": 20
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "bowl",
+    "label": "Bowls, broth over",
+    "label_html": "Bowls, broth over",
+    "start": 26
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Curry soba (curry nanban)",
+ "total": "~30 min",
+ "vinegar_options": null,
+ "yields": "2 bowls"
+}

@@ -1,0 +1,749 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Соба в горячем прозрачном бульоне из комбу и бонито, с креветкой темпура, камабоко, комацуной и зелёным луком.",
+ "chips": [
+  {
+   "html": "<span>2 миски</span>",
+   "kind": "",
+   "text": "2 миски"
+  },
+  {
+   "html": "~45 мин (+ 30 мин замачивания комбу)",
+   "kind": "time",
+   "text": "~45 мин (+ 30 мин замачивания комбу)"
+  }
+ ],
+ "description": "Соба в горячем прозрачном бульоне из комбу и бонито, с креветкой темпура, камабоко, комацуной и зелёным луком.",
+ "equipment_html": [
+  "2 сотейника",
+  "Мелкое сито + бумажное полотенце",
+  "Противень",
+  "2 большие кастрюли (одна для варки собы, другая для прогрева — по желанию)",
+  "Дуршлаг"
+ ],
+ "group": {
+  "id": "soba",
+  "name": "Соба"
+ },
+ "hero": {
+  "alt": "Горячий суп с собой (какэ соба)",
+  "image": "illustrations/kake-soba/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 стакана</span>)</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"кусок|куска|кусков\" data-n=\"1\">1 кусок</span>, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"10\" data-b=\"10\" data-x=\"1\" data-s=\"0\">10 × 10 см</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>)",
+     "name_html": "Комбу"
+    },
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-alt=\"1\">1 стакан</span>)</span>",
+     "name_html": "Кацуобуси (хлопья бонито)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> (или <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> мелкой соли)",
+     "name_html": "Кошерная соль Diamond Crystal"
+    }
+   ],
+   "name": "Бульон с нуля"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"560\">560 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.3333\" data-alt=\"1\">2⅓ стакана</span>)</span>",
+     "name_html": "Вода (быстрый бульон)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\" data-alt=\"1\">⅓ стакана</span>)</span>",
+     "name_html": "Мэнцую (концентрированная основа для супа с лапшой)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Мирин (быстрый бульон)"
+    }
+   ],
+   "name": "Или: быстрый бульон на мэнцую"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Сухая соба"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> штуки",
+     "name_html": "Замороженная креветка темпура"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"ломтик|ломтика|ломтиков\" data-n=\"1\">4 ломтика</span>",
+     "name_html": "Камабоко (рыбный пирожок)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Зелёный лук (или белая часть токийского нэги)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"2\" data-alt=\"1\">2 oz</span>)</span>, небольшой пучок",
+     "name_html": "Комацуна (или шпинат)"
+    },
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Сититогараси"
+    }
+   ],
+   "name": "Лапша и топпинги"
+  }
+ ],
+ "intro_html": "Повседневная горячая соба: прозрачный бульон даси, приправленный саке, мирином, соевым соусом и солью, заливается на собу, которую сварили, промыли и снова прогрели. Топпинги — от JOC: запечённая замороженная креветка темпура, камабоко, комацуна и зелёный лук. Гуще и острее — <a href=\"curry-soba.html\">соба с карри</a>; с курицей и луком-пореем — <a href=\"tori-nanban-soba.html\">тори нанбан соба</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/kake-soba/mise1.webp",
+   "items": [
+    "замачивается ≥30 мин"
+   ],
+   "items_html": "замачивается ≥30 мин",
+   "name": "Комбу в воде",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/kake-soba/mise2.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>",
+   "name": "Кацуобуси",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/kake-soba/mise3.webp",
+   "items": [
+    "саке",
+    "мирин",
+    "соевый соус",
+    "соль"
+   ],
+   "items_html": "саке · мирин · соевый соус · соль",
+   "name": "Приправы",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/kake-soba/mise4.webp",
+   "items": [
+    "замороженные, 2 штуки"
+   ],
+   "items_html": "замороженные, 2 штуки",
+   "name": "Креветки темпура",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/kake-soba/mise5.webp",
+   "items": [
+    "камабоко",
+    "зелёный лук",
+    "комацуна"
+   ],
+   "items_html": "камабоко · зелёный лук · комацуна",
+   "name": "Топпинги",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 9",
+   "image": "illustrations/kake-soba/mise6.webp",
+   "items": [
+    "сухая, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> на миску"
+   ],
+   "items_html": "сухая, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> на миску",
+   "name": "Соба",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Соба:",
+ "next": {
+  "slug": "chicken-malai-tikka",
+  "title": "Курица малай тикка"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Вместо шагов 1–5: доведите до лёгкого кипения <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"560\" data-s=\"0\">560 мл</span> воды, <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\" data-s=\"0\">80 мл</span> мэнцую и <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> мирина, затем накройте крышкой и выключите огонь.</li><li>Это разведение JOC 1 : 7 — сверьтесь с пропорцией на вашей бутылке для горячей собы (какэцую).</li></ul>",
+   "title_html": "Быстрый бульон на мэнцую"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Основой подойдёт любое хорошее даси: <a href=\"shiitake-kombu-dashi.html\">из шиитаке и комбу</a> (вегетарианское) или <a href=\"niboshi-bonito-dashi.html\">из нибоси и бонито</a>.</li><li>Возьмите <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\" data-s=\"0\">720 мл</span> и приправьте, как в шаге 5.</li></ul>",
+   "title_html": "Другое даси"
+  },
+  {
+   "html": "<p>Кошерная соль Diamond Crystal лёгкая и хлопьями; <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ ч. л.</span> мелкой соли примерно так же солона (это пересчёт, не JOC).</p>",
+   "title_html": "Соль"
+  },
+  {
+   "html": "<p>Не выбрасывайте — из них получается <a href=\"furikake.html\">фурикакэ</a>.</p>",
+   "title_html": "Отработанные комбу и бонито"
+  },
+  {
+   "html": "<p>Остановитесь на даси из комбу (без бонито) и не кладите темпуру и камабоко.</p>",
+   "title_html": "Вегетарианский вариант"
+  },
+  {
+   "html": "<p>Храните бульон, лапшу и топпинги отдельно, до 2 дней в холодильнике.</p>",
+   "title_html": "Остатки"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-бульон",
+   "title": "Бульон"
+  },
+  {
+   "id": "part-топпинги",
+   "title": "Топпинги"
+  },
+  {
+   "id": "part-сборка",
+   "title": "Сборка"
+  }
+ ],
+ "prev": {
+  "slug": "curry-soba",
+  "title": "Соба с карри (карри нанбан)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/kake-soba.jpg",
+ "siblings": [
+  {
+   "slug": "tori-nanban-soba",
+   "title": "Тори нанбан соба (соба с курицей и луком-пореем)"
+  },
+  {
+   "slug": "zaru-soba",
+   "title": "Дзару соба (холодная соба с соусом для макания)"
+  },
+  {
+   "slug": "bibim-naengmyeon",
+   "title": "Пибим-нэнмён (острая холодная гречневая лапша)"
+  },
+  {
+   "slug": "curry-soba",
+   "title": "Соба с карри (карри нанбан)"
+  }
+ ],
+ "slug": "kake-soba",
+ "sources": [
+  {
+   "label": "Just One Cookbook — суп с собой",
+   "url": "https://www.justonecookbook.com/soba-noodle-soup/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<p>Замочите комбу в воде минимум на 30 минут — если есть время, на ночь.</p>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Замочите комбу",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/kake-soba/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Бульон",
+   "part_id": "part-бульон",
+   "time": "30 мин +",
+   "time_html": "<span>30 мин +</span>",
+   "title": "Замочите комбу",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 стакана</span>)</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"кусок|куска|кусков\" data-n=\"1\">1 кусок</span>",
+     "name_html": "Комбу"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Доведите воду с комбу до кипения в сотейнике.</li><li>Перед самым кипением выньте комбу (сохраните — см. заметки).</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Нагреть; вынуть комбу до кипения",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Перед самым кипением выньте комбу.",
+      "src": "illustrations/kake-soba/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Бульон",
+   "part_id": "part-бульон",
+   "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
+   "title": "Нагреть; вынуть комбу до кипения",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте кацуобуси, варите 30 секунд, затем выключите огонь.</li><li>Дайте хлопьям осесть и настояться около 10 минут.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "label_html": "огонь выключен",
+    "off": true
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Бонито: 30 секунд, затем настоять",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Хлопья бонито, 30 секунд, огонь выкл. — дайте им осесть.",
+      "src": "illustrations/kake-soba/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Бульон",
+   "part_id": "part-бульон",
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Бонито: 30 секунд, затем настоять",
+   "uses_rows": [
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-alt=\"1\">1 стакан</span>)</span>",
+     "name_html": "Кацуобуси (хлопья бонито)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Процедите через мелкое сито, застеленное бумажным полотенцем, в другой сотейник.</li><li>Скрутите и отожмите полотенце, чтобы выжать остатки даси.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Процедите",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Процедите через сито с бумажным полотенцем, затем скрутите и отожмите полотенце.",
+      "src": "illustrations/kake-soba/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Бульон",
+   "part_id": "part-бульон",
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Процедите",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте в даси:<ul class=\"ing\"><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>Кошерная соль Diamond Crystal <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Доведите до лёгкого кипения, накройте крышкой и держите горячим.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Приправьте",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/kake-soba/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Бульон",
+   "part_id": "part-бульон",
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Приправьте",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Запекайте замороженные креветки темпура при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"200\" data-s=\"0\">200 °C</span> 20 минут, перевернув на середине, — или как написано на упаковке.</p>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Запеките креветки темпура",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/kake-soba/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Топпинги",
+   "part_id": "part-топпинги",
+   "time": "20 мин",
+   "time_html": "<span>20 мин</span>",
+   "title": "Запеките креветки темпура",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> штуки",
+     "name_html": "Замороженная креветка темпура"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Подведите нож под камабоко, чтобы снять его с деревянной дощечки, затем нарежьте ломтиками по <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"6\" data-s=\"0\">6 мм</span>.</li><li>Тонко нарежьте зелёный лук; комацуну — кусками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Нарежьте топпинги",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Снимите камабоко с дощечки, затем нарежьте ломтиками по 6 мм.",
+      "src": "illustrations/kake-soba/7-how1.webp"
+     },
+     {
+      "caption": "Комацуну — кусками по 5 см.",
+      "src": "illustrations/kake-soba/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Топпинги",
+   "part_id": "part-топпинги",
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Нарежьте топпинги",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"ломтик|ломтика|ломтиков\" data-n=\"1\">4 ломтика</span>",
+     "name_html": "Камабоко (рыбный пирожок)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Зелёный лук (или белая часть токийского нэги)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"2\" data-alt=\"1\">2 oz</span>)</span>",
+     "name_html": "Комацуна (или шпинат)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Варите комацуну в подсоленной воде: сначала стебли, листья чуть позже.</li><li>Когда станет мягкой, переложите в ледяную воду, чтобы остановить готовку, затем хорошо отожмите.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Бланшируйте комацуну",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Сначала стебли в кипяток, листья чуть позже.",
+      "src": "illustrations/kake-soba/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Топпинги",
+   "part_id": "part-топпинги",
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Бланшируйте комацуну",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Доведите до кипения две большие кастрюли воды — одну для варки, другую для прогрева (вторая по желанию). Без соли.</li><li>Варите собу на <b>30 секунд меньше</b>, чем указано на упаковке.</li><li>Откиньте и промойте под холодной проточной водой, перетирая рукой, чтобы смыть крахмал.</li><li>Прогрейте: 5–8 секунд во второй кастрюле с кипятком — или, по совету JOC, быстро ополосните горячей проточной водой. Хорошо дайте стечь и разложите по мискам.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Сварите собу",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Варите на 30 секунд меньше времени на упаковке, затем промойте холодной водой, смывая крахмал.",
+      "src": "illustrations/kake-soba/9-how1.webp"
+     },
+     {
+      "caption": "Прогрейте 5–8 секунд во второй кастрюле с кипятком.",
+      "src": "illustrations/kake-soba/9-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/9.webp",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Сборка",
+   "part_id": "part-сборка",
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Сварите собу",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Сухая соба"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Залейте лапшу обжигающе горячим бульоном и выложите топпинги.</li><li>Сверху сититогараси, если любите остро.</li><li>Подавайте сразу.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Сборка",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Залейте лапшу обжигающе горячим бульоном.",
+      "src": "illustrations/kake-soba/10-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/10.webp",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Сборка",
+   "part_id": "part-сборка",
+   "time": null,
+   "time_html": null,
+   "title": "Сборка",
+   "uses_rows": [
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Сититогараси"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 70,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": "С готовым мэнцую пропустите первые четыре строки: быстрый бульон нужно только довести до лёгкого кипения.",
+  "tasks": [
+   {
+    "dur": 30,
+    "dur_label": "30 мин",
+    "kind": "wait",
+    "label": "Замочить комбу",
+    "label_html": "Замочить комбу",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "pan",
+    "label": "Нагреть, вынуть комбу",
+    "label_html": "Нагреть, вынуть комбу",
+    "start": 30
+   },
+   {
+    "dur": 11,
+    "dur_label": "11 мин",
+    "kind": "wait",
+    "label": "Бонито, настоять 10 мин",
+    "label_html": "Бонито, настоять 10 мин",
+    "start": 38
+   },
+   {
+    "dur": 20,
+    "dur_label": "20 мин",
+    "kind": "wait",
+    "label": "Темпура в духовку",
+    "label_html": "Темпура в духовку",
+    "start": 38
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "board",
+    "label": "Нарезать топпинги",
+    "label_html": "Нарезать топпинги",
+    "start": 40
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Бланшировать комацуну",
+    "label_html": "Бланшировать комацуну",
+    "start": 46
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "bowl",
+    "label": "Процедить, приправить",
+    "label_html": "Процедить, приправить",
+    "start": 49
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "pan",
+    "label": "Сварить, промыть, прогреть собу",
+    "label_html": "Сварить, промыть, прогреть собу",
+    "start": 53
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Сборка",
+    "label_html": "Сборка",
+    "start": 59
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Горячий суп с собой (какэ соба)",
+ "total": "~45 мин (+ 30 мин замачивания комбу)",
+ "vinegar_options": null,
+ "yields": "2 миски"
+}

@@ -1,0 +1,641 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Широкая рисовая лапша с курицей, чесноком, перцем «птичий глаз» и большой горстью тайского базилика — горячо, быстро и остро, без тамаринда.",
+ "chips": [
+  {
+   "html": "<span>2 порции (2–3 с гарнирами)</span>",
+   "kind": "",
+   "text": "2 порции (2–3 с гарнирами)"
+  },
+  {
+   "html": "~20 мин",
+   "kind": "time",
+   "text": "~20 мин"
+  }
+ ],
+ "description": "Широкая рисовая лапша с курицей, чесноком, перцем «птичий глаз» и большой горстью тайского базилика — горячо, быстро и остро, без тамаринда.",
+ "equipment_html": [
+  "Вок или большая сковорода с толстым дном",
+  "Маленькая миска для соуса",
+  "Миска или дуршлаг для лапши"
+ ],
+ "group": {
+  "id": "rice-noodles",
+  "name": "Рисовая лапша"
+ },
+ "hero": {
+  "alt": "Пьяная лапша (пад кхи мао)",
+  "image": "illustrations/drunken-noodles/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 унц.</span>)</span>",
+     "name_html": "Сухая широкая рисовая лапша"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Масло (арахисовое, растительное или рапсовое)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> крупных зубчика, мелко нарубить",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, без семян, очень мелко нарубить",
+     "name_html": "Перец «птичий глаз» или тайский чили"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>, нарезать",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 унц.</span>)</span>, кусочками на один укус",
+     "name_html": "Куриное бедро (или грудка)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Рыбный соус (или соевый)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">2 стебля</span>, отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>",
+     "name_html": "Листья тайского (святого) базилика"
+    }
+   ],
+   "name": "Основное"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "name_html": "Устричный соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
+     "name_html": "Светлый соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
+     "name_html": "Тёмный соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Вода"
+    }
+   ],
+   "name": "Соус — смешать"
+  }
+ ],
+ "intro_html": "Тайская уличная еда; говорят, лучше всего с ледяным пивом. Готовка занимает около шести минут: чеснок и чили, лук, курица, потом лапша и соус, а базилик идёт <b>уже без огня</b>. Для более мягкой тарелки с кунжутом и имбирём смотрите <a href=\"garlic-ginger-chicken-noodles.html\">лапшу с курицей, чесноком и имбирём</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/drunken-noodles/mise1.webp",
+   "items": [
+    "приготовить по упаковке, откинуть"
+   ],
+   "items_html": "приготовить по упаковке, откинуть",
+   "name": "Лапша",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/drunken-noodles/mise2.webp",
+   "items": [
+    "устричный",
+    "светлый соевый",
+    "тёмный соевый",
+    "сахар",
+    "вода"
+   ],
+   "items_html": "устричный · светлый соевый · тёмный соевый · сахар · вода",
+   "name": "Соус",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/drunken-noodles/mise3.webp",
+   "items": [
+    "нарубить",
+    "без семян, очень мелко"
+   ],
+   "items_html": "нарубить · без семян, очень мелко",
+   "name": "Чеснок + чили",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/drunken-noodles/mise4.webp",
+   "items": [
+    "нарезать"
+   ],
+   "items_html": "нарезать",
+   "name": "Лук",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/drunken-noodles/mise5.webp",
+   "items": [
+    "кусочками на один укус"
+   ],
+   "items_html": "кусочками на один укус",
+   "name": "Курица",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/drunken-noodles/mise6.webp",
+   "items": [
+    "отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>",
+    "стакан листьев"
+   ],
+   "items_html": "отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span> · стакан листьев",
+   "name": "Зелёный лук + базилик",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Рисовая лапша:",
+ "next": {
+  "slug": "singapore-noodles",
+  "title": "Сингапурская лапша"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Традиционно — святой базилик; большинство ресторанов за пределами Таиланда берут тайский базилик, который похож на обычный с лёгкой ноткой аниса.</li><li>Обычный базилик тоже подойдёт.</li></ul>",
+   "title_html": "Базилик"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Два перца «птичий глаз» дают приятную остроту, но не сносят голову.</li><li>Подстройте по вкусу или вместо них добавьте ложку пасты чили вместе с курицей.</li></ul>",
+   "title_html": "Чили"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Светлый и тёмный соевый соус можно заменить обычным, а тёмный — светлым.</li><li>Никогда не берите только тёмный — слишком крепко.</li></ul>",
+   "title_html": "Соевый соус"
+  },
+  {
+   "html": "<p>Горячая гречневая лапша — в рецептах <a href=\"curry-soba.html\">соба с карри</a> и <a href=\"kake-soba.html\">горячий суп с собой</a>.</p>",
+   "title_html": "Лучше соба?"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "chicken-pad-thai",
+  "title": "Пад тай с курицей"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/drunken-noodles.jpg",
+ "siblings": [
+  {
+   "slug": "garlic-ginger-chicken-noodles",
+   "title": "Лапша с курицей, чесноком и имбирём"
+  },
+  {
+   "slug": "chicken-pad-see-ew",
+   "title": "Пад си ю с курицей"
+  },
+  {
+   "slug": "chicken-pad-thai",
+   "title": "Пад тай с курицей"
+  },
+  {
+   "slug": "singapore-noodles",
+   "title": "Сингапурская лапша"
+  }
+ ],
+ "slug": "drunken-noodles",
+ "sources": [
+  {
+   "label": "RecipeTin Eats — пьяная лапша (пад кхи мао)",
+   "url": "https://www.recipetineats.com/pad-kee-mao-thai-drunken-noodles/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Приготовьте лапшу по инструкции на упаковке и откиньте.</li><li>RecipeTin берёт лапшу с надписью «Pad Thai»; если широкой нет, подойдёт и тоньше.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Лапша",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/drunken-noodles/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "по упаковке",
+   "time_html": "<span>по упаковке</span>",
+   "title": "Лапша",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 унц.</span>)</span>",
+     "name_html": "Сухая широкая рисовая лапша"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Мелко нарубите чеснок; удалите у перца семена и очень мелко его нарубите.</li><li>Нарежьте лук; курицу — кусочками на один укус, зелёный лук — отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>.</li><li>Смешайте соус в маленькой миске:<ul class=\"ing two-col\"><li>устричный соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span></span></li><li>светлый соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span></span></li><li>тёмный соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li><li>вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Подготовка и соус",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Удалите у перца семена, затем очень мелко его нарубите.",
+      "src": "illustrations/drunken-noodles/2-how1.webp"
+     },
+     {
+      "caption": "Нарежьте курицу кусочками на один укус.",
+      "src": "illustrations/drunken-noodles/2-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
+   "title": "Подготовка и соус",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте масло в воке на сильном огне.</li><li>Добавьте чеснок и чили и жарьте 10 секунд — не наклоняйтесь над сковородой, от паров чили кашляешь.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Чеснок и чили",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Чеснок и чили — в горячее масло, 10 секунд.",
+      "src": "illustrations/drunken-noodles/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "10 с",
+   "time_html": "<span>10 с</span>",
+   "title": "Чеснок и чили",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Масло (арахисовое, растительное или рапсовое)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> крупных зубчика",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Перец «птичий глаз» или тайский чили"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Добавьте лук и жарьте 1 минуту.</p>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Лук",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/drunken-noodles/4.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Лук",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Добавьте курицу и рыбный соус и жарьте, помешивая, пока курица не приготовится, около 2 минут.</p>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Курица и рыбный соус",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Курицу и рыбный соус — в вок; жарьте, помешивая, около 2 минут.",
+      "src": "illustrations/drunken-noodles/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Курица и рыбный соус",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 унц.</span>)</span>",
+     "name_html": "Куриное бедро (или грудка)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Рыбный соус (или соевый)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте зелёный лук, лапшу и соус.</li><li>Перемешивайте около 1 минуты, пока соус не уварится и не покроет лапшу.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Лапша и соус",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Зелёный лук, лапша и соус — перемешивайте, пока соус не покроет каждую лапшинку.",
+      "src": "illustrations/drunken-noodles/6-how1.webp"
+     },
+     {
+      "caption": "Поднимайте и перемешивайте около минуты, пока лапша не станет глянцево-коричневой.",
+      "src": "illustrations/drunken-noodles/6-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/6.webp",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
+   "title": "Лапша и соус",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">2 стебля</span>",
+     "name_html": "Зелёный лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите вок с огня и сразу добавьте базилик.</li><li>Перемешайте, пока он только не завянет, и сразу подавайте.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "label_html": "огонь выключен",
+    "off": true
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Без огня: базилик",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Без огня — базилик; перемешайте, пока он только не завянет.",
+      "src": "illustrations/drunken-noodles/7-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/drunken-noodles/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~30 с",
+   "time_html": "<span>~30 с</span>",
+   "title": "Без огня: базилик",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>",
+     "name_html": "Листья тайского (святого) базилика"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 18,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Всё должно быть нарезано и стоять у плиты до того, как масло попадёт в вок, — готовка занимает около шести минут на сильном огне.",
+  "tasks": [
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "board",
+    "label": "Нарубить чеснок, чили, лук, курицу",
+    "label_html": "Нарубить чеснок, чили, лук, курицу",
+    "start": 0
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "wait",
+    "label": "Лапша по упаковке",
+    "label_html": "Лапша по упаковке",
+    "start": 0
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Смешать соус",
+    "label_html": "Смешать соус",
+    "start": 8
+   },
+   {
+    "dur": 0.5,
+    "dur_label": "30 с",
+    "kind": "pan",
+    "label": "Чеснок + чили 10 с",
+    "label_html": "Чеснок + чили 10 с",
+    "start": 12
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Лук",
+    "label_html": "Лук",
+    "start": 12.5
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Курица + рыбный соус",
+    "label_html": "Курица + рыбный соус",
+    "start": 13.5
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Зелёный лук, лапша, соус",
+    "label_html": "Зелёный лук, лапша, соус",
+    "start": 15.5
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Огонь выкл.: базилик, подать",
+    "label_html": "Огонь выкл.: базилик, подать",
+    "start": 16.5
+   }
+  ],
+  "tick_step": 2,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 2,
+    "label": "2"
+   },
+   {
+    "at": 4,
+    "label": "4"
+   },
+   {
+    "at": 6,
+    "label": "6"
+   },
+   {
+    "at": 8,
+    "label": "8"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 12,
+    "label": "12"
+   },
+   {
+    "at": 14,
+    "label": "14"
+   },
+   {
+    "at": 16,
+    "label": "16"
+   },
+   {
+    "at": 18,
+    "label": "18"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Пьяная лапша (пад кхи мао)",
+ "total": "~20 мин",
+ "vinegar_options": null,
+ "yields": "2 порции (2–3 с гарнирами)"
+}

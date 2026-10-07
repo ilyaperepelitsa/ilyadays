@@ -1,0 +1,689 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Thin rice vermicelli tossed with curry powder, soy and Shaoxing wine, with shrimp, chicken, a rolled omelette and red capsicum.",
+ "chips": [
+  {
+   "html": "<span>2 servings</span>",
+   "kind": "",
+   "text": "2 servings"
+  },
+  {
+   "html": "~30 min",
+   "kind": "time",
+   "text": "~30 min"
+  }
+ ],
+ "description": "Thin rice vermicelli tossed with curry powder, soy and Shaoxing wine, with shrimp, chicken, a rolled omelette and red capsicum.",
+ "equipment_html": [
+  "Wok or heavy-based frying pan",
+  "Large heatproof bowl for soaking",
+  "Small bowl for the sauce",
+  "Plate for the cooked shrimp and chicken"
+ ],
+ "group": {
+  "id": "rice-noodles",
+  "name": "Rice noodles"
+ },
+ "hero": {
+  "alt": "Singapore noodles",
+  "image": "illustrations/singapore-noodles/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span> (all-purpose or light, not dark)",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Chinese cooking wine (Shaoxing)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\">2½ tsp</span> (hot or ordinary)",
+     "name_html": "Curry powder"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span> (black is fine)",
+     "name_html": "White pepper"
+    }
+   ],
+   "name": "Sauce — mix together"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"3\" data-alt=\"1\">3 oz</span>)</span>",
+     "name_html": "Dried rice vermicelli"
+    }
+   ],
+   "name": "Noodles"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>, divided",
+     "name_html": "Peanut oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-b=\"10\" data-n=\"4\">8–10</span> medium",
+     "name_html": "Raw shrimp, shelled and deveined"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ lb</span>)</span>",
+     "name_html": "Chicken thigh, diced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, beaten",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> medium, thinly sliced",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"clove|cloves\" data-n=\"1\">4 cloves</span>, minced",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>, freshly grated",
+     "name_html": "Ginger"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 cup</span>, thinly sliced",
+     "name_html": "Red capsicum (bell pepper)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>, thinly sliced (optional)",
+     "name_html": "Hot green chilli"
+    }
+   ],
+   "name": "Stir-fry"
+  }
+ ],
+ "intro_html": "A Cantonese takeaway classic (not actually from Singapore): thin rice vermicelli turned golden with <b>curry powder</b>, with shrimp, strips of omelette, red capsicum and — here — chicken in place of RecipeTin’s char siu. It doesn’t look like many noodles; they almost double as they soak. For wide, spicy, basil-heavy noodles, see <a href=\"drunken-noodles.html\">drunken noodles</a>.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 8",
+   "image": "illustrations/singapore-noodles/mise1.webp",
+   "items": [
+    "soy",
+    "Shaoxing",
+    "curry powder",
+    "sugar",
+    "white pepper"
+   ],
+   "items_html": "soy · Shaoxing · curry powder · sugar · white pepper",
+   "name": "Sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/singapore-noodles/mise2.webp",
+   "items": [
+    "soaked, drained"
+   ],
+   "items_html": "soaked, drained",
+   "name": "Noodles",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/singapore-noodles/mise3.webp",
+   "items": [
+    "shelled, deveined"
+   ],
+   "items_html": "shelled, deveined",
+   "name": "Shrimp",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/singapore-noodles/mise4.webp",
+   "items": [
+    "diced"
+   ],
+   "items_html": "diced",
+   "name": "Chicken",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/singapore-noodles/mise5.webp",
+   "items": [
+    "beaten"
+   ],
+   "items_html": "beaten",
+   "name": "Eggs",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 6",
+   "image": "illustrations/singapore-noodles/mise6.webp",
+   "items": [
+    "garlic",
+    "ginger",
+    "onion"
+   ],
+   "items_html": "garlic · ginger · onion",
+   "name": "Aromatics",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/singapore-noodles/mise7.webp",
+   "items": [
+    "thin strips",
+    "sliced"
+   ],
+   "items_html": "thin strips · sliced",
+   "name": "Capsicum + chilli",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More rice noodles:",
+ "next": {
+  "slug": "tori-nanban-soba",
+  "title": "Tori nanban soba (chicken & leek soba)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>RecipeTin’s recipe uses <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 g</span> thinly sliced Chinese barbecue pork (char siu), added ready-cooked at the end.</li><li>Her notes suggest diced chicken (or bacon, ham or pork) as a substitute; cooking it separately for 3–4 minutes after the shrimp is this page’s step, not hers.</li><li>With char siu, skip step 4 and add the sliced pork with the shrimp.</li></ul>",
+   "title_html": "Chicken instead of char siu"
+  },
+  {
+   "html": "<p>Raw shrimp hang straight; perfectly cooked ones curl into a “C”; overcooked ones curl tight into an “O”.</p>",
+   "title_html": "Is the shrimp cooked?"
+  },
+  {
+   "html": "<p>Any generic curry powder; hot if you like the spice.</p>",
+   "title_html": "Curry powder"
+  },
+  {
+   "html": "<p>Swap for dry sherry, cooking sake or mirin — or chicken broth if you don’t cook with alcohol.</p>",
+   "title_html": "Shaoxing wine"
+  },
+  {
+   "html": "<p>RecipeTin lists “<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-s=\"0\">1 cup</span> red capsicum” without a cut; thin strips (matching the onion) are assumed here.</p>",
+   "title_html": "Capsicum cut"
+  },
+  {
+   "html": "<p>For hot buckwheat noodles, see <a href=\"curry-soba.html\">curry soba</a> — the curry flavour travels well.</p>",
+   "title_html": "Soba instead?"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "drunken-noodles",
+  "title": "Drunken noodles (pad kee mao)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/singapore-noodles.jpg",
+ "siblings": [
+  {
+   "slug": "garlic-ginger-chicken-noodles",
+   "title": "Garlic–ginger chicken noodles"
+  },
+  {
+   "slug": "chicken-pad-see-ew",
+   "title": "Chicken Pad See Ew"
+  },
+  {
+   "slug": "chicken-pad-thai",
+   "title": "Chicken Pad Thai"
+  },
+  {
+   "slug": "drunken-noodles",
+   "title": "Drunken noodles (pad kee mao)"
+  }
+ ],
+ "slug": "singapore-noodles",
+ "sources": [
+  {
+   "label": "RecipeTin Eats — Singapore Noodles",
+   "url": "https://www.recipetineats.com/singapore-noodles/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Combine in a small bowl:<ul class=\"ing two-col\"><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>Chinese cooking wine (Shaoxing) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>curry powder <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\">2½ tsp</span></span></li><li>sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>white pepper <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Mix the sauce",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
+   "title": "Mix the sauce",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Put the vermicelli in a large bowl of just-boiled water and soak as per the packet.</li><li>Drain and set aside.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Soak the noodles",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Soak the vermicelli in just-boiled water as the packet says, then drain.",
+      "src": "illustrations/singapore-noodles/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "per packet",
+   "time_html": "<span>per packet</span>",
+   "title": "Soak the noodles",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"3\" data-alt=\"1\">3 oz</span>)</span>",
+     "name_html": "Dried rice vermicelli"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> of the oil in the wok over medium heat.</li><li>Cook the shrimp until just done — about 2½ to 3 minutes, when they curl into a loose “C”.</li><li>Remove to a plate.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Shrimp",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cook the shrimp until they curl into a loose “C” — about 2½–3 minutes.",
+      "src": "illustrations/singapore-noodles/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "2½–3 min",
+   "time_html": "<span>2½–3 min</span>",
+   "title": "Shrimp",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-b=\"10\" data-n=\"4\">8–10</span> medium",
+     "name_html": "Raw shrimp, shelled and deveined"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Same wok, same heat: cook the diced chicken until cooked through, about 3–4 minutes, adding a splash of oil if the wok is dry.</li><li>Add to the shrimp plate.</li><li>(This step replaces RecipeTin’s ready-cooked char siu — see notes.)</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Chicken",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/4.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 min",
+   "time_html": "<span>3–4 min</span>",
+   "title": "Chicken",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ lb</span>)</span>",
+     "name_html": "Chicken thigh, diced"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour in the beaten egg and swirl it into a thin omelette.</li><li>Once set, roll it up with a spatula, lift it out and slice it while still rolled.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Thin omelette",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pour in the egg and swirl it into a thin omelette.",
+      "src": "illustrations/singapore-noodles/5-how1.webp"
+     },
+     {
+      "caption": "Once set, roll it up, lift it out and slice it rolled.",
+      "src": "illustrations/singapore-noodles/5-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Thin omelette",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Eggs"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Add the remaining <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> oil, then the garlic, ginger and onion.</li><li>Cook for 2 minutes, until the onion is slightly softened.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Garlic, ginger and onion",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
+   "title": "Garlic, ginger and onion",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"clove|cloves\" data-n=\"1\">4 cloves</span>",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Ginger"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> medium",
+     "name_html": "Onion"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Add the capsicum and cook for 1 minute.</p>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Capsicum",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/7.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Capsicum",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 cup</span>",
+     "name_html": "Red capsicum (bell pepper)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Add the noodles and the sauce and give it a few tosses.</li><li>Add the omelette strips, chicken, shrimp and the green chilli if using.</li><li>Toss until the sauce coats every noodle and everything is hot, 1–2 minutes. Serve straight away.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Noodles, sauce, everything back",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Noodles and sauce first, a few tosses — then everything else back in.",
+      "src": "illustrations/singapore-noodles/8-how1.webp"
+     },
+     {
+      "caption": "Toss until every strand is coated and everything is hot.",
+      "src": "illustrations/singapore-noodles/8-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "1–2 min",
+   "time_html": "<span>1–2 min</span>",
+   "title": "Noodles, sauce, everything back",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Hot green chilli"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "Shrimp, chicken and egg are cooked one after another in the same wok and set aside; the noodles only meet them at the end.",
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "bowl",
+    "label": "Mix sauce",
+    "label_html": "Mix sauce",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "wait",
+    "label": "Soak noodles (packet time)",
+    "label_html": "Soak noodles (packet time)",
+    "start": 2
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "board",
+    "label": "Slice, dice, mince",
+    "label_html": "Slice, dice, mince",
+    "start": 2
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "Shrimp → plate",
+    "label_html": "Shrimp → plate",
+    "start": 12
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "pan",
+    "label": "Chicken → plate",
+    "label_html": "Chicken → plate",
+    "start": 15
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "Omelette, roll, slice",
+    "label_html": "Omelette, roll, slice",
+    "start": 19
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Garlic, ginger, onion",
+    "label_html": "Garlic, ginger, onion",
+    "start": 22
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Capsicum",
+    "label_html": "Capsicum",
+    "start": 24
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Noodles, sauce, everything back",
+    "label_html": "Noodles, sauce, everything back",
+    "start": 25
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Singapore noodles",
+ "total": "~30 min",
+ "vinegar_options": null,
+ "yields": "2 servings"
+}

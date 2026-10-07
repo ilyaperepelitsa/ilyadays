@@ -1,0 +1,658 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Горячая соба в густом бульоне из даси и карри со свининой и луком — два кубика ру, растворённых в бульоне.",
+ "chips": [
+  {
+   "html": "<span>2 миски</span>",
+   "kind": "",
+   "text": "2 миски"
+  },
+  {
+   "html": "~30 мин",
+   "kind": "time",
+   "text": "~30 мин"
+  }
+ ],
+ "description": "Горячая соба в густом бульоне из даси и карри со свининой и луком — два кубика ру, растворённых в бульоне.",
+ "equipment_html": [
+  "Средняя кастрюля или жаровня",
+  "Половник",
+  "Мелкая шумовка",
+  "Большая кастрюля для собы",
+  "Дуршлаг"
+ ],
+ "group": {
+  "id": "soba",
+  "name": "Соба"
+ },
+ "hero": {
+  "alt": "Соба с карри (карри нанбан)",
+  "image": "illustrations/curry-soba/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 г</span>), тонко нарезанный",
+     "name_html": "Репчатый лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"170\">170 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"6\" data-alt=\"1\">6 oz</span>)</span>, кусочками на один укус",
+     "name_html": "Тонко нарезанная свиная корейка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 стакана</span>)</span>",
+     "name_html": "Даси"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> кубика",
+     "name_html": "Японский ру для карри (например, Golden Curry)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Соевый соус"
+    }
+   ],
+   "name": "Бульон с карри"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Сухая соба"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">2 стебля</span>, тонко нарезанные",
+     "name_html": "Зелёный лук"
+    }
+   ],
+   "name": "Лапша и топпинг"
+  }
+ ],
+ "intro_html": "Любимое блюдо соба-лавок: даси превращается в глянцевый бульон с карри благодаря <b>двум кубикам японского ру для карри</b>, со свининой и луком, и заливается на горячую собу. Бульон — из карри-удона Just One Cookbook; здесь им заливают собу. Та же коробка ру, что и для <a href=\"easy-curry.html\">быстрого карри Golden Curry</a>. Прозрачный бульон — в <a href=\"kake-soba.html\">горячем супе с собой</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/curry-soba/mise1.webp",
+   "items": [
+    "тонко нарезанный"
+   ],
+   "items_html": "тонко нарезанный",
+   "name": "Лук",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/curry-soba/mise2.webp",
+   "items": [
+    "тонкие ломтики, на один укус"
+   ],
+   "items_html": "тонкие ломтики, на один укус",
+   "name": "Свинина",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/curry-soba/mise3.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+   "name": "Саке",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/curry-soba/mise4.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 стакана</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 стакана</span>",
+   "name": "Даси",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/curry-soba/mise5.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> кубика, отломанные от блока"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> кубика, отломанные от блока",
+   "name": "Ру для карри",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/curry-soba/mise6.webp",
+   "items": [
+    "сухая, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> на миску"
+   ],
+   "items_html": "сухая, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> на миску",
+   "name": "Соба",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/curry-soba/mise7.webp",
+   "items": [
+    "тонко нарезанный"
+   ],
+   "items_html": "тонко нарезанный",
+   "name": "Зелёный лук",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Соба:",
+ "next": {
+  "slug": "kake-soba",
+  "title": "Горячий суп с собой (какэ соба)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>В Just One Cookbook это карри-удон; бульон — её, без изменений.</li><li>Подать его с собой (и способ варки собы, из её горячего супа с собой) — замена этой страницы.</li></ul>",
+   "title_html": "Удон → соба"
+  },
+  {
+   "html": "<ul class=\"do\"><li>В соба-лавках карри с луком-пореем или зелёным луком на собе называют «карри нанбан».</li><li>Чтобы лука-порея было больше, добавьте вместе с репчатым луком <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> японского лука-порея (наганэги), нарезанного наискосок, — так делает Sudachi в своём карри-удоне; здесь не проверено.</li></ul>",
+   "title_html": "Карри нанбан"
+  },
+  {
+   "html": "<p>Sudachi делает бульон без ру: <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"500\" data-s=\"0\">500 мл</span> даси, <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 ст. л.</span> соевого соуса, <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 ст. л.</span> мирина, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> сахара, загущая <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 ст. л.</span> японского порошка карри, размешанными с <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> картофельного крахмала и <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\" data-s=\"0\">5 ст. л.</span> холодной воды; томить 10 минут.</p>",
+   "title_html": "Нет ру?"
+  },
+  {
+   "html": "<p>JOC: вместо свинины подойдёт любой белок — например, тонкие кусочки куриного бедра.</p>",
+   "title_html": "Другой белок"
+  },
+  {
+   "html": "<p>Бульон хранится 3 дня в холодильнике и месяц в морозилке; лапшу варите свежей.</p>",
+   "title_html": "Остатки"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "bibim-naengmyeon",
+  "title": "Пибим-нэнмён (острая холодная гречневая лапша)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/curry-soba.jpg",
+ "siblings": [
+  {
+   "slug": "tori-nanban-soba",
+   "title": "Тори нанбан соба (соба с курицей и луком-пореем)"
+  },
+  {
+   "slug": "zaru-soba",
+   "title": "Дзару соба (холодная соба с соусом для макания)"
+  },
+  {
+   "slug": "bibim-naengmyeon",
+   "title": "Пибим-нэнмён (острая холодная гречневая лапша)"
+  },
+  {
+   "slug": "kake-soba",
+   "title": "Горячий суп с собой (какэ соба)"
+  }
+ ],
+ "slug": "curry-soba",
+ "sources": [
+  {
+   "label": "Just One Cookbook — карри-удон",
+   "url": "https://www.justonecookbook.com/curry-udon/"
+  },
+  {
+   "label": "Just One Cookbook — суп с собой (способ варки собы)",
+   "url": "https://www.justonecookbook.com/soba-noodle-soup/"
+  },
+  {
+   "label": "Sudachi — японский карри-удон (бульон без ру)",
+   "url": "https://sudachirecipes.com/curry-udon/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Отломите 2 кубика от блока ру (остальное заверните — хранится 1–3 месяца в холодильнике или морозилке).</li><li>Сделайте или подогрейте даси — любым способом; см. <a href=\"shiitake-kombu-dashi.html\">даси из шиитаке и комбу</a> или <a href=\"niboshi-bonito-dashi.html\">даси из нибоси и бонито</a>.</li><li>Тонко нарежьте репчатый и зелёный лук (зелёный лук — для подачи).</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Подготовка",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Отломите два кубика от блока ру.",
+      "src": "illustrations/curry-soba/1-how1.webp"
+     },
+     {
+      "caption": "Нарежьте лук вдоль тонкими лепестками.",
+      "src": "illustrations/curry-soba/1-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/1.webp",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
+   "title": "Подготовка",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> кубика",
+     "name_html": "Японский ру для карри (например, Golden Curry)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 стакана</span>)</span>",
+     "name_html": "Даси"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">2 стебля</span>",
+     "name_html": "Зелёный лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте среднюю кастрюлю на среднем огне, влейте масло, затем добавьте лук.</li><li>Обжаривайте 2–3 минуты.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Обжарьте лук",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/curry-soba/2.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "2–3 мин",
+   "time_html": "<span>2–3 мин</span>",
+   "title": "Обжарьте лук",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 г</span>)",
+     "name_html": "Репчатый лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Добавьте свинину и готовьте, пока она почти не перестанет быть розовой, затем влейте саке.</p>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Свинина и саке",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Свинину — пока почти не перестанет быть розовой, затем саке.",
+      "src": "illustrations/curry-soba/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Свинина и саке",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"170\">170 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"6\" data-alt=\"1\">6 oz</span>)</span>",
+     "name_html": "Тонко нарезанная свиная корейка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Саке"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Влейте даси, накройте крышкой и убавьте огонь до ниже среднего на 5 минут.</li><li>Снимите пену и жир мелкой шумовкой, затем томите ещё 5 минут.</li><li>Тем временем поставьте большую кастрюлю воды для собы.</li></ul>",
+   "heat": {
+    "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Даси, томление и пена",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Влейте даси; через 5 минут снимите пену и жир.",
+      "src": "illustrations/curry-soba/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "10 мин",
+   "time_html": "<span>10 мин</span>",
+   "title": "Даси, томление и пена",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Убавьте огонь до минимума или выключите — тающий ру оседает на дно и может пригореть.</li><li>Положите кубик в половник горячего бульона, полностью растворите палочками или ложкой и вылейте в кастрюлю. Повторите со вторым кубиком.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "label_html": "огонь выключен",
+    "off": true
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Растворите ру",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Огонь выкл. По одному кубику: растворите в половнике бульона, затем вылейте в кастрюлю.",
+      "src": "illustrations/curry-soba/5-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Растворите ру",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снова включите слабый огонь, добавьте соевый соус и перемешайте.</li><li>Как только забулькает, выключите огонь и накройте крышкой.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Соевый соус и подогрев",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/curry-soba/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
+   "title": "Соевый соус и подогрев",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Соевый соус"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Варите собу на <b>30 секунд меньше</b>, чем указано на упаковке (воду не солить).</li><li>Откиньте и промойте под холодной проточной водой, перетирая рукой, чтобы смыть крахмал.</li><li>Прогрейте: быстро ополосните горячей проточной водой или опустите на 5–8 секунд обратно в кипяток. Хорошо дайте стечь.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Сварите собу",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Варите на 30 секунд меньше времени на упаковке, затем промойте холодной водой, смывая крахмал.",
+      "src": "illustrations/curry-soba/7-how1.webp"
+     },
+     {
+      "caption": "Прогрейте 5–8 секунд в кипятке, затем хорошо дайте стечь.",
+      "src": "illustrations/curry-soba/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Сварите собу",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Сухая соба"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Разложите собу по двум мискам, залейте бульоном с карри и посыпьте зелёным луком.</p>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Подача",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Соба в миски, сверху бульон с карри, затем зелёный лук.",
+      "src": "illustrations/curry-soba/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/curry-soba/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Подача",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": "Ставьте воду для собы, пока томится бульон: лапша должна быть готова как раз тогда, когда растворится ру.",
+  "tasks": [
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "board",
+    "label": "Отломить ру, нарезать лук",
+    "label_html": "Отломить ру, нарезать лук",
+    "start": 0
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Лук",
+    "label_html": "Лук",
+    "start": 4
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Свинина, саке",
+    "label_html": "Свинина, саке",
+    "start": 7
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "pan",
+    "label": "Даси, томить + снять пену",
+    "label_html": "Даси, томить + снять пену",
+    "start": 9
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "wait",
+    "label": "Вода для собы на огонь",
+    "label_html": "Вода для собы на огонь",
+    "start": 12
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Растворить ру, соевый соус",
+    "label_html": "Растворить ру, соевый соус",
+    "start": 19
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "pan",
+    "label": "Сварить, промыть, прогреть собу",
+    "label_html": "Сварить, промыть, прогреть собу",
+    "start": 20
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Миски, залить бульоном",
+    "label_html": "Миски, залить бульоном",
+    "start": 26
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Соба с карри (карри нанбан)",
+ "total": "~30 мин",
+ "vinegar_options": null,
+ "yields": "2 миски"
+}

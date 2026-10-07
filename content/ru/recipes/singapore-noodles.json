@@ -1,0 +1,689 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Тонкая рисовая вермишель с порошком карри, соевым соусом и вином шаосин, с креветками, курицей, омлетом-рулетом и красным сладким перцем.",
+ "chips": [
+  {
+   "html": "<span>2 порции</span>",
+   "kind": "",
+   "text": "2 порции"
+  },
+  {
+   "html": "~30 мин",
+   "kind": "time",
+   "text": "~30 мин"
+  }
+ ],
+ "description": "Тонкая рисовая вермишель с порошком карри, соевым соусом и вином шаосин, с креветками, курицей, омлетом-рулетом и красным сладким перцем.",
+ "equipment_html": [
+  "Вок или сковорода с толстым дном",
+  "Большая жаропрочная миска для замачивания",
+  "Маленькая миска для соуса",
+  "Тарелка для готовых креветок и курицы"
+ ],
+ "group": {
+  "id": "rice-noodles",
+  "name": "Рисовая лапша"
+ },
+ "hero": {
+  "alt": "Сингапурская лапша",
+  "image": "illustrations/singapore-noodles/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span> (обычный или светлый, не тёмный)",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Китайское кулинарное вино (шаосин)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\">2½ ч. л.</span> (острый или обычный)",
+     "name_html": "Порошок карри"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> (можно чёрный)",
+     "name_html": "Белый перец"
+    }
+   ],
+   "name": "Соус — смешать"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"3\" data-alt=\"1\">3 унц.</span>)</span>",
+     "name_html": "Сухая рисовая вермишель"
+    }
+   ],
+   "name": "Лапша"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, в два приёма",
+     "name_html": "Арахисовое масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-b=\"10\" data-n=\"4\">8–10</span> средних",
+     "name_html": "Сырые креветки, очищенные, без кишечной вены"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ фунта</span>)</span>",
+     "name_html": "Куриное бедро, кубиками"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, взбить",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"средняя луковица|средние луковицы|средних луковиц|средней луковицы\" data-n=\"1\">½ средней луковицы</span>, тонко нарезать",
+     "name_html": "Лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">4 зубчика</span>, мелко нарубить",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>, свеженатёртый",
+     "name_html": "Имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>, тонко нарезать",
+     "name_html": "Красный сладкий перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>, тонко нарезать (по желанию)",
+     "name_html": "Острый зелёный перец чили"
+    }
+   ],
+   "name": "Обжарка"
+  }
+ ],
+ "intro_html": "Классика кантонской еды навынос (на самом деле не из Сингапура): тонкая рисовая вермишель, ставшая золотистой от <b>порошка карри</b>, с креветками, полосками омлета, красным сладким перцем и — здесь — курицей вместо чар сиу из рецепта RecipeTin. Лапши кажется мало, но при замачивании она почти удваивается. Для широкой, острой лапши с базиликом смотрите <a href=\"drunken-noodles.html\">пьяную лапшу</a>.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/singapore-noodles/mise1.webp",
+   "items": [
+    "соевый",
+    "шаосин",
+    "порошок карри",
+    "сахар",
+    "белый перец"
+   ],
+   "items_html": "соевый · шаосин · порошок карри · сахар · белый перец",
+   "name": "Соус",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/singapore-noodles/mise2.webp",
+   "items": [
+    "замочить, откинуть"
+   ],
+   "items_html": "замочить, откинуть",
+   "name": "Лапша",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/singapore-noodles/mise3.webp",
+   "items": [
+    "очищенные, без вены"
+   ],
+   "items_html": "очищенные, без вены",
+   "name": "Креветки",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/singapore-noodles/mise4.webp",
+   "items": [
+    "кубиками"
+   ],
+   "items_html": "кубиками",
+   "name": "Курица",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/singapore-noodles/mise5.webp",
+   "items": [
+    "взбитые"
+   ],
+   "items_html": "взбитые",
+   "name": "Яйца",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/singapore-noodles/mise6.webp",
+   "items": [
+    "чеснок",
+    "имбирь",
+    "лук"
+   ],
+   "items_html": "чеснок · имбирь · лук",
+   "name": "Ароматика",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/singapore-noodles/mise7.webp",
+   "items": [
+    "тонкими полосками",
+    "нарезать"
+   ],
+   "items_html": "тонкими полосками · нарезать",
+   "name": "Сладкий перец + чили",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Рисовая лапша:",
+ "next": {
+  "slug": "tori-nanban-soba",
+  "title": "Тори нанбан соба (соба с курицей и луком-пореем)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>В рецепте RecipeTin — <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 г</span> тонко нарезанной китайской свинины барбекю (чар сиу), которую добавляют готовой в конце.</li><li>В заметках она предлагает заменить её курицей кубиками (или беконом, ветчиной, свининой); отдельная обжарка курицы 3–4 минуты после креветок — шаг этой страницы, не её.</li><li>С чар сиу пропустите шаг 4 и добавьте нарезанную свинину вместе с креветками.</li></ul>",
+   "title_html": "Курица вместо чар сиу"
+  },
+  {
+   "html": "<p>Сырые креветки прямые; идеально приготовленные сворачиваются в «C»; пережаренные — туго, в «O».</p>",
+   "title_html": "Готовы ли креветки?"
+  },
+  {
+   "html": "<p>Любой обычный порошок карри; острый — если любите остроту.</p>",
+   "title_html": "Порошок карри"
+  },
+  {
+   "html": "<p>Замените сухим хересом, кулинарным саке или мирином — или куриным бульоном, если не готовите с алкоголем.</p>",
+   "title_html": "Вино шаосин"
+  },
+  {
+   "html": "<p>У RecipeTin указан «<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-s=\"0\">1 стакан</span> красного сладкого перца» без нарезки; здесь предполагаются тонкие полоски (как лук).</p>",
+   "title_html": "Нарезка сладкого перца"
+  },
+  {
+   "html": "<p>Горячая гречневая лапша — в рецепте <a href=\"curry-soba.html\">соба с карри</a>: вкус карри отлично подходит.</p>",
+   "title_html": "Лучше соба?"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "drunken-noodles",
+  "title": "Пьяная лапша (пад кхи мао)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/singapore-noodles.jpg",
+ "siblings": [
+  {
+   "slug": "garlic-ginger-chicken-noodles",
+   "title": "Лапша с курицей, чесноком и имбирём"
+  },
+  {
+   "slug": "chicken-pad-see-ew",
+   "title": "Пад си ю с курицей"
+  },
+  {
+   "slug": "chicken-pad-thai",
+   "title": "Пад тай с курицей"
+  },
+  {
+   "slug": "drunken-noodles",
+   "title": "Пьяная лапша (пад кхи мао)"
+  }
+ ],
+ "slug": "singapore-noodles",
+ "sources": [
+  {
+   "label": "RecipeTin Eats — сингапурская лапша",
+   "url": "https://www.recipetineats.com/singapore-noodles/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Соедините в маленькой миске:<ul class=\"ing two-col\"><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>Китайское кулинарное вино (шаосин) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>порошок карри <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2.5\">2½ ч. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>белый перец <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> (можно чёрный)</span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Смешайте соус",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Смешайте соус",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Залейте вермишель в большой миске только что вскипевшей водой и замочите по инструкции на упаковке.</li><li>Откиньте и отставьте.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Замочите лапшу",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Замочите вермишель в только что вскипевшей воде, как написано на упаковке, затем откиньте.",
+      "src": "illustrations/singapore-noodles/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "по упаковке",
+   "time_html": "<span>по упаковке</span>",
+   "title": "Замочите лапшу",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"3\" data-alt=\"1\">3 унц.</span>)</span>",
+     "name_html": "Сухая рисовая вермишель"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> масла в воке на среднем огне.</li><li>Жарьте креветки до готовности — 2½–3 минуты, пока они не свернутся в свободную «C».</li><li>Переложите на тарелку.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Креветки",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Жарьте креветки, пока они не свернутся в свободную «C», — 2½–3 минуты.",
+      "src": "illustrations/singapore-noodles/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "2½–3 мин",
+   "time_html": "<span>2½–3 мин</span>",
+   "title": "Креветки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-b=\"10\" data-n=\"4\">8–10</span> средних",
+     "name_html": "Сырые креветки, очищенные, без кишечной вены"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Тот же вок, тот же огонь: жарьте курицу кубиками до готовности, 3–4 минуты, подлив немного масла, если вок сухой.</li><li>Переложите к креветкам.</li><li>(Этот шаг заменяет готовый чар сиу у RecipeTin — см. заметки.)</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Курица",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/4.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 мин",
+   "time_html": "<span>3–4 мин</span>",
+   "title": "Курица",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ фунта</span>)</span>",
+     "name_html": "Куриное бедро, кубиками"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Влейте взбитое яйцо и покачайте вок, чтобы получился тонкий омлет.</li><li>Когда схватится, сверните его лопаткой в рулет, выньте и нарежьте, не разворачивая.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Тонкий омлет",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Влейте яйцо и покачайте вок, чтобы получился тонкий омлет.",
+      "src": "illustrations/singapore-noodles/5-how1.webp"
+     },
+     {
+      "caption": "Когда схватится, сверните в рулет, выньте и нарежьте, не разворачивая.",
+      "src": "illustrations/singapore-noodles/5-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/5.webp",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Тонкий омлет",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Яйца"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте оставшуюся <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> масла, затем чеснок, имбирь и лук.</li><li>Жарьте 2 минуты, пока лук слегка не размягчится.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Чеснок, имбирь и лук",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Чеснок, имбирь и лук",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">4 зубчика</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"средняя луковица|средние луковицы|средних луковиц|средней луковицы\" data-n=\"1\">½ средней луковицы</span>",
+     "name_html": "Лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Добавьте сладкий перец и жарьте 1 минуту.</p>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Сладкий перец",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/singapore-noodles/7.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Сладкий перец",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 стакан</span>",
+     "name_html": "Красный сладкий перец"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Добавьте лапшу и соус и несколько раз перемешайте.</li><li>Добавьте полоски омлета, курицу, креветки и зелёный чили, если берёте.</li><li>Перемешивайте, пока соус не покроет каждую лапшинку и всё не прогреется, 1–2 минуты. Сразу подавайте.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Лапша, соус, всё обратно",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Сначала лапша и соус, несколько раз перемешать — потом всё остальное обратно.",
+      "src": "illustrations/singapore-noodles/8-how1.webp"
+     },
+     {
+      "caption": "Перемешивайте, пока каждая лапшинка не покроется соусом и всё не прогреется.",
+      "src": "illustrations/singapore-noodles/8-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/singapore-noodles/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "1–2 мин",
+   "time_html": "<span>1–2 мин</span>",
+   "title": "Лапша, соус, всё обратно",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Острый зелёный перец чили"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Креветки, курица и яйцо жарятся по очереди в одном воке и откладываются; с лапшой они встречаются только в конце.",
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Смешать соус",
+    "label_html": "Смешать соус",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "wait",
+    "label": "Замочить лапшу (время по упаковке)",
+    "label_html": "Замочить лапшу (время по упаковке)",
+    "start": 2
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "board",
+    "label": "Нарезать, нарубить",
+    "label_html": "Нарезать, нарубить",
+    "start": 2
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Креветки → на тарелку",
+    "label_html": "Креветки → на тарелку",
+    "start": 12
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Курица → на тарелку",
+    "label_html": "Курица → на тарелку",
+    "start": 15
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Омлет: свернуть, нарезать",
+    "label_html": "Омлет: свернуть, нарезать",
+    "start": 19
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Чеснок, имбирь, лук",
+    "label_html": "Чеснок, имбирь, лук",
+    "start": 22
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Сладкий перец",
+    "label_html": "Сладкий перец",
+    "start": 24
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Лапша, соус, всё обратно",
+    "label_html": "Лапша, соус, всё обратно",
+    "start": 25
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Сингапурская лапша",
+ "total": "~30 мин",
+ "vinegar_options": null,
+ "yields": "2 порции"
+}

@@ -1,0 +1,749 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Soba in a hot, clear kombu–bonito broth, topped with shrimp tempura, kamaboko, komatsuna and green onion.",
+ "chips": [
+  {
+   "html": "<span>2 bowls</span>",
+   "kind": "",
+   "text": "2 bowls"
+  },
+  {
+   "html": "~45 min (+ 30 min kombu soak)",
+   "kind": "time",
+   "text": "~45 min (+ 30 min kombu soak)"
+  }
+ ],
+ "description": "Soba in a hot, clear kombu–bonito broth, topped with shrimp tempura, kamaboko, komatsuna and green onion.",
+ "equipment_html": [
+  "2 saucepans",
+  "Fine-mesh sieve + paper towel",
+  "Baking tray",
+  "2 large pots (one for cooking the soba, one for re-warming — optional)",
+  "Colander"
+ ],
+ "group": {
+  "id": "soba",
+  "name": "Soba"
+ },
+ "hero": {
+  "alt": "Hot soba noodle soup (kake soba)",
+  "image": "illustrations/kake-soba/hero.webp",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 cups</span>)</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"piece|pieces\" data-n=\"1\">1 piece</span>, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"10\" data-b=\"10\" data-x=\"1\" data-s=\"0\">10 × 10 cm</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>)",
+     "name_html": "Kombu"
+    },
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-alt=\"1\">1 cup</span>)</span>",
+     "name_html": "Katsuobushi (bonito flakes)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span> (or <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span> fine salt)",
+     "name_html": "Diamond Crystal kosher salt"
+    }
+   ],
+   "name": "Broth from scratch"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"560\">560 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.3333\" data-alt=\"1\">2⅓ cups</span>)</span>",
+     "name_html": "Water (quick broth)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\">80 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\" data-alt=\"1\">⅓ cup</span>)</span>",
+     "name_html": "Mentsuyu (concentrated noodle soup base)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (quick broth)"
+    }
+   ],
+   "name": "Or: quick broth with mentsuyu"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Dried soba"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"piece|pieces\" data-n=\"1\">2 pieces</span>",
+     "name_html": "Frozen shrimp tempura"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"slice|slices\" data-n=\"1\">4 slices</span>",
+     "name_html": "Kamaboko (fish cake)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Green onion (or the white of Tokyo negi)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"2\" data-alt=\"1\">2 oz</span>)</span>, a small bunch",
+     "name_html": "Komatsuna (or spinach)"
+    },
+    {
+     "amount_html": "to taste",
+     "name_html": "Shichimi togarashi"
+    }
+   ],
+   "name": "Noodles and toppings"
+  }
+ ],
+ "intro_html": "The everyday hot soba: a clear dashi broth seasoned with sake, mirin, soy and salt, poured over soba that has been cooked, rinsed and warmed again. Toppings are JOC’s: baked frozen shrimp tempura, kamaboko, komatsuna and green onion. For a thicker, spicier bowl see <a href=\"curry-soba.html\">curry soba</a>; with chicken and leek, <a href=\"tori-nanban-soba.html\">tori nanban soba</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/kake-soba/mise1.webp",
+   "items": [
+    "soaking ≥30 min"
+   ],
+   "items_html": "soaking ≥30 min",
+   "name": "Kombu in water",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/kake-soba/mise2.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 cup</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\">1 cup</span>",
+   "name": "Katsuobushi",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/kake-soba/mise3.webp",
+   "items": [
+    "sake",
+    "mirin",
+    "soy",
+    "salt"
+   ],
+   "items_html": "sake · mirin · soy · salt",
+   "name": "Seasoning",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/kake-soba/mise4.webp",
+   "items": [
+    "frozen, 2 pieces"
+   ],
+   "items_html": "frozen, 2 pieces",
+   "name": "Shrimp tempura",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 7",
+   "image": "illustrations/kake-soba/mise5.webp",
+   "items": [
+    "kamaboko",
+    "green onion",
+    "komatsuna"
+   ],
+   "items_html": "kamaboko · green onion · komatsuna",
+   "name": "Toppings",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 9",
+   "image": "illustrations/kake-soba/mise6.webp",
+   "items": [
+    "dried, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> per bowl"
+   ],
+   "items_html": "dried, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> per bowl",
+   "name": "Soba",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More soba:",
+ "next": {
+  "slug": "chicken-malai-tikka",
+  "title": "Chicken malai tikka"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Instead of steps 1–5: simmer <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"560\" data-s=\"0\">560 ml</span> water, <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\" data-s=\"0\">80 ml</span> mentsuyu and <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> mirin, then cover and turn off the heat.</li><li>That’s JOC’s 1 : 7 dilution — check your bottle’s ratio for hot soba (kaketsuyu).</li></ul>",
+   "title_html": "Quick broth with mentsuyu"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Any good dashi works as the base: <a href=\"shiitake-kombu-dashi.html\">shiitake–kombu</a> (vegetarian) or <a href=\"niboshi-bonito-dashi.html\">niboshi–bonito</a>.</li><li>Use <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\" data-s=\"0\">720 ml</span> and season as in step 5.</li></ul>",
+   "title_html": "Other dashi"
+  },
+  {
+   "html": "<p>Diamond Crystal kosher salt is light and flaky; <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ tsp</span> fine salt is roughly the same saltiness (a conversion, not JOC’s).</p>",
+   "title_html": "Salt"
+  },
+  {
+   "html": "<p>Don’t throw them out — they make <a href=\"furikake.html\">furikake</a>.</p>",
+   "title_html": "Spent kombu and bonito"
+  },
+  {
+   "html": "<p>Stop at the kombu dashi (skip the bonito), and skip the tempura and kamaboko.</p>",
+   "title_html": "Vegetarian"
+  },
+  {
+   "html": "<p>Keep broth, noodles and toppings separately, up to 2 days in the fridge.</p>",
+   "title_html": "Leftovers"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-broth",
+   "title": "Broth"
+  },
+  {
+   "id": "part-toppings",
+   "title": "Toppings"
+  },
+  {
+   "id": "part-assemble",
+   "title": "Assemble"
+  }
+ ],
+ "prev": {
+  "slug": "curry-soba",
+  "title": "Curry soba (curry nanban)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/kake-soba.jpg",
+ "siblings": [
+  {
+   "slug": "tori-nanban-soba",
+   "title": "Tori nanban soba (chicken & leek soba)"
+  },
+  {
+   "slug": "zaru-soba",
+   "title": "Zaru soba (cold soba, dipping sauce)"
+  },
+  {
+   "slug": "bibim-naengmyeon",
+   "title": "Bibim-naengmyeon (spicy cold buckwheat noodles)"
+  },
+  {
+   "slug": "curry-soba",
+   "title": "Curry soba (curry nanban)"
+  }
+ ],
+ "slug": "kake-soba",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Soba Noodle Soup",
+   "url": "https://www.justonecookbook.com/soba-noodle-soup/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<p>Soak the kombu in the water for at least 30 minutes — overnight if you have time.</p>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Soak the kombu",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/kake-soba/1.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "30 min +",
+   "time_html": "<span>30 min +</span>",
+   "title": "Soak the kombu",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"720\">720 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-alt=\"1\">3 cups</span>)</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"piece|pieces\" data-n=\"1\">1 piece</span>",
+     "name_html": "Kombu"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Bring the water and kombu to a boil in a saucepan.</li><li>Just before it boils, lift the kombu out (save it — see notes).</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Heat; kombu out before the boil",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Just before it boils, lift the kombu out.",
+      "src": "illustrations/kake-soba/2-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/2.webp",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
+   "title": "Heat; kombu out before the boil",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Add the katsuobushi, simmer for 30 seconds, then turn off the heat.</li><li>Let the flakes sink and steep for about 10 minutes.</li></ul>",
+   "heat": {
+    "label": "heat off",
+    "label_html": "heat off",
+    "off": true
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Bonito: 30 seconds, then steep",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Bonito flakes in, 30 seconds, heat off — let them sink.",
+      "src": "illustrations/kake-soba/3-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Bonito: 30 seconds, then steep",
+   "uses_rows": [
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1\" data-alt=\"1\">1 cup</span>)</span>",
+     "name_html": "Katsuobushi (bonito flakes)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Strain through a fine-mesh sieve lined with a paper towel into another saucepan.</li><li>Twist and squeeze the towel to get the last of the dashi out.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Strain",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Strain through a paper-towel-lined sieve, then twist and squeeze the towel.",
+      "src": "illustrations/kake-soba/4-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/4.webp",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
+   "title": "Strain",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Add to the dashi:<ul class=\"ing\"><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>Diamond Crystal kosher salt <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Bring to a simmer, cover and keep hot.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Season",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/kake-soba/5.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Broth",
+   "part_id": "part-broth",
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Season",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<p>Bake the frozen shrimp tempura at <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"200\" data-s=\"0\">200 °C</span>, turning halfway, for 20 minutes — or as the package says.</p>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Bake the shrimp tempura",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/kake-soba/6.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Toppings",
+   "part_id": "part-toppings",
+   "time": "20 min",
+   "time_html": "<span>20 min</span>",
+   "title": "Bake the shrimp tempura",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"piece|pieces\" data-n=\"1\">2 pieces</span>",
+     "name_html": "Frozen shrimp tempura"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Slide a knife under the kamaboko to free it from its wooden board, then cut <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"6\" data-s=\"0\">6 mm</span> slices.</li><li>Thinly slice the green onion; cut the komatsuna into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span> pieces.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Slice the toppings",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Free the kamaboko from its board, then cut 6 mm slices.",
+      "src": "illustrations/kake-soba/7-how1.webp"
+     },
+     {
+      "caption": "Komatsuna into 5 cm pieces.",
+      "src": "illustrations/kake-soba/7-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/7.webp",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Toppings",
+   "part_id": "part-toppings",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Slice the toppings",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"slice|slices\" data-n=\"1\">4 slices</span>",
+     "name_html": "Kamaboko (fish cake)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Green onion (or the white of Tokyo negi)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"2\" data-alt=\"1\">2 oz</span>)</span>",
+     "name_html": "Komatsuna (or spinach)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Boil the komatsuna in salted water: the stems first, the leaves a little later.</li><li>When tender, lift into iced water to stop the cooking, then drain well.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Blanch the komatsuna",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stems in the boiling water first, leaves a little later.",
+      "src": "illustrations/kake-soba/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Toppings",
+   "part_id": "part-toppings",
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Blanch the komatsuna",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Bring two large pots of water to a boil — one to cook, one to re-warm (the second is optional). No salt.</li><li>Cook the soba <b>30 seconds less</b> than the packet time.</li><li>Drain and rinse under cold running water, rubbing with your hand to wash off the starch.</li><li>Re-warm: 5–8 seconds in the second pot of boiling water — or JOC’s shortcut, a quick rinse under hot running water. Drain well and divide between the bowls.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Cook the soba",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cook 30 seconds under the packet time, then rinse cold, rubbing off the starch.",
+      "src": "illustrations/kake-soba/9-how1.webp"
+     },
+     {
+      "caption": "Re-warm for 5–8 seconds in the second pot of boiling water.",
+      "src": "illustrations/kake-soba/9-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/9.webp",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Assemble",
+   "part_id": "part-assemble",
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Cook the soba",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"7\" data-alt=\"1\">7 oz</span>)</span>",
+     "name_html": "Dried soba"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour the piping-hot broth over the noodles and add the toppings.</li><li>Shichimi on top if you like it spicy.</li><li>Serve straight away.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Assemble",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pour the piping-hot broth over the noodles.",
+      "src": "illustrations/kake-soba/10-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/kake-soba/10.webp",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Assemble",
+   "part_id": "part-assemble",
+   "time": null,
+   "time_html": null,
+   "title": "Assemble",
+   "uses_rows": [
+    {
+     "amount_html": "to taste",
+     "name_html": "Shichimi togarashi"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 70,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   }
+  ],
+  "note_html": "With bottled mentsuyu, skip the first four rows: the quick broth just needs to come to a simmer.",
+  "tasks": [
+   {
+    "dur": 30,
+    "dur_label": "30 min",
+    "kind": "wait",
+    "label": "Soak kombu",
+    "label_html": "Soak kombu",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "pan",
+    "label": "Heat, kombu out",
+    "label_html": "Heat, kombu out",
+    "start": 30
+   },
+   {
+    "dur": 11,
+    "dur_label": "11 min",
+    "kind": "wait",
+    "label": "Bonito in, steep 10 min",
+    "label_html": "Bonito in, steep 10 min",
+    "start": 38
+   },
+   {
+    "dur": 20,
+    "dur_label": "20 min",
+    "kind": "wait",
+    "label": "Tempura in the oven",
+    "label_html": "Tempura in the oven",
+    "start": 38
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "board",
+    "label": "Slice toppings",
+    "label_html": "Slice toppings",
+    "start": 40
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "pan",
+    "label": "Blanch komatsuna",
+    "label_html": "Blanch komatsuna",
+    "start": 46
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "bowl",
+    "label": "Strain, season",
+    "label_html": "Strain, season",
+    "start": 49
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "pan",
+    "label": "Cook, rinse, re-warm soba",
+    "label_html": "Cook, rinse, re-warm soba",
+    "start": 53
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Assemble",
+    "label_html": "Assemble",
+    "start": 59
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Hot soba noodle soup (kake soba)",
+ "total": "~45 min (+ 30 min kombu soak)",
+ "vinegar_options": null,
+ "yields": "2 bowls"
+}

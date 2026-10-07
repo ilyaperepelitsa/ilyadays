@@ -5,7 +5,7 @@
 #   npm run sync            (= bash scripts/sync-content.sh)
 #
 # Sources (siblings of this repo):
-#   ../recipes        recipes + pictures → content/{en,ru}, content/svg-defs.svg, public/media; style.css → src/styles/food.css;
+#   ../recipes        missing illustrations generated (imagegen/auto.py), then recipes + pictures → content/{en,ru}, content/svg-defs.svg, public/media; style.css → src/styles/food.css;
 #                     static/units.js (portions + units, shared with the local site) → src/lib/units.js; the site icon → public/icons
 #   ../istanbul_trip  dist/app.js + app.css → public/apps/istanbul; dist/app.d.ts → src/types/istanbul.d.ts
 #   art/covers        home-page covers → public/covers (1200 px webp) and 1200×630 link previews → public/share
@@ -13,6 +13,13 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 RECIPES="${RECIPES_DIR:-../recipes}"
 TRIP="${ISTANBUL_DIR:-../istanbul_trip}"
+
+# Pictures first: every recipe gets its generated illustrations automatically — missing ones are made now, and a new
+# recipe without an image spec gets a drafted one (../recipes/imagegen/auto.py). Costs nothing when nothing is missing.
+# SKIP_IMAGES=1 npm run sync skips this (offline).
+if [[ "${SKIP_IMAGES:-}" != 1 ]]; then
+  python3 "$RECIPES/imagegen/auto.py" --look clean
+fi
 
 # Recipes: JSON for both languages + every picture they reference.
 rm -rf content public/media

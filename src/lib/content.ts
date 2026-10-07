@@ -78,6 +78,8 @@ export type Step = {
     result: string | null;
     illustration: string | null;
     svg_fallback: string | null;
+    /** Kept under the generated pictures on recipes with Recipe.diagrams (hand positions etc.). */
+    diagram?: string | null;
     alt: string;
   };
 };
