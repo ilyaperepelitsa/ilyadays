@@ -146,6 +146,8 @@ export type SousVide = {
     cols: { label_html: string; numeric: boolean }[];
     rows: string[][];
     after_html: string[];
+    /** Generated picture of the table's food, finished (imagegen/recipes/sous_vide.py). */
+    image?: string | null;
   }[];
   pdf: { src: string; title: string; subtitle: string; open: string; download: string; fallback: string };
   hero: Hero;

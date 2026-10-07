@@ -1,7 +1,7 @@
 import type { SousVide } from "@/lib/content";
 import { foodHref, getSvgDefs, media } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
-import { Html, HeroArt, SvgDefs } from "./parts";
+import { Html, HeroArt, Illo, SvgDefs } from "./parts";
 
 function plain(html: string) {
   return html.replace(/<[^>]+>/g, "").trim();
@@ -34,6 +34,11 @@ export function SousVideView({ lang, sv }: { lang: Lang; sv: SousVide }) {
         {sv.tables.map((t) => (
           <section className="block sv" id={t.id} key={t.id}>
             <h2>{t.title}</h2>
+            {t.image && (
+              <figure className="sv-art">
+                <Illo src={t.image} alt={t.title} />
+              </figure>
+            )}
             <div className="table-wrap">
               <table className="stack">
                 <thead>

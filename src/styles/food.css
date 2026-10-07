@@ -349,6 +349,8 @@ table.stack th { text-align: left; font-size: .75rem; text-transform: uppercase;
 table.stack td { padding: 9px 12px; border-top: 1px solid var(--line); vertical-align: top; }
 table.stack td.num { white-space: nowrap; font-weight: 700; font-variant-numeric: tabular-nums; }
 table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 40%, transparent); }
+.sv-art { margin: 4px 0 14px; }
+.sv-art img { display: block; width: 100%; max-width: 520px; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; }
 .sv-after { margin-top: 10px; font-size: .93rem; color: var(--muted); }
 .sv-after b { color: var(--ink); }
 .sv-after p { margin: 0 0 4px; }
