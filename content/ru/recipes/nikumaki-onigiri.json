@@ -1,0 +1,692 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Рисовые бочонки в тонкой свиной грудинке, обжаренные до хруста и обвалянные в липкой чесночно-соевой глазури — снаружи сочно, внутри мягкий рис.",
+ "chips": [
+  {
+   "html": "<span>6 рисовых шариков</span>",
+   "kind": "",
+   "text": "6 рисовых шариков"
+  },
+  {
+   "html": "~25 мин (при готовом рисе)",
+   "kind": "time",
+   "text": "~25 мин (при готовом рисе)"
+  }
+ ],
+ "description": "Рисовые бочонки в тонкой свиной грудинке, обжаренные до хруста и обвалянные в липкой чесночно-соевой глазури — снаружи сочно, внутри мягкий рис.",
+ "equipment_html": [
+  "Большая сковорода",
+  "Кухонные ножницы",
+  "Тарелка (для крахмала)",
+  "Маленькая миска",
+  "Бумажные полотенца",
+  "Палочки или щипцы"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Никумаки-онигири (рисовые шарики в свинине)",
+  "image": "illustrations/nikumaki-onigiri/hero.webp?v=4c2969cf7a",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> (по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 г</span> на шарик), тёплый",
+     "name_html": "Готовый японский короткозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"9\" data-n=\"1\">9</span> длинных ломтиков (~<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"30\" data-s=\"0\">30 см</span>, около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"180\">180 г</span>)",
+     "name_html": "Свиная грудинка, тонко нарезанная"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Кукурузный крахмал (или картофельный)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ ст. л.</span>",
+     "name_html": "Кунжутное масло"
+    }
+   ],
+   "name": "Рисовые шарики"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Имбирь, натёртый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Чеснок, натёртый"
+    }
+   ],
+   "name": "Глазурь"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренный белый кунжут (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span>",
+     "name_html": "Листья шисо (по желанию)"
+    }
+   ],
+   "name": "В конце"
+  }
+ ],
+ "intro_html": "Онигири с мясом <b>снаружи</b>: маленькие рисовые бочонки в тончайшей <b>свиной грудинке</b>, обвалянные в крахмале, обжаренные в кунжутном масле до золотистого хруста, затем обвалянные в глазури из соевого соуса, саке и мирина с чесноком и имбирём до блеска. Началось как еда персонала в лавке онигири в Миядзаки в конце 1990-х и разошлось по стране. Рис как для <a href=\"onigiri.html\">онигири</a> — простой короткозёрный, ещё тёплый. Два — на обед, один — перекус.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/nikumaki-onigiri/mise1.webp?v=0e1efe2152",
+   "items": [
+    "тёплый, короткозёрный"
+   ],
+   "items_html": "тёплый, короткозёрный",
+   "name": "Рис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/nikumaki-onigiri/mise2.webp?v=b9279940ec",
+   "items": [
+    "длинные тончайшие ломтики"
+   ],
+   "items_html": "длинные тончайшие ломтики",
+   "name": "Свиная грудинка",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/nikumaki-onigiri/mise3.webp?v=cc5b988f07",
+   "items": [
+    "на тарелке"
+   ],
+   "items_html": "на тарелке",
+   "name": "Кукурузный крахмал",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/nikumaki-onigiri/mise4.webp?v=91336157d3",
+   "items": [
+    "соя",
+    "саке",
+    "мирин",
+    "сахар",
+    "имбирь",
+    "чеснок"
+   ],
+   "items_html": "соя · саке · мирин · сахар · имбирь · чеснок",
+   "name": "Глазурь",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/nikumaki-onigiri/mise5.webp?v=e03a50a3e6",
+   "items": [
+    "обжаренные"
+   ],
+   "items_html": "обжаренные",
+   "name": "Кунжутное масло",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/nikumaki-onigiri/mise6.webp?v=dcf84be3ee",
+   "items": [
+    "кунжут",
+    "шисо (по желанию)"
+   ],
+   "items_html": "кунжут · шисо (по желанию)",
+   "name": "В конце",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "tenmusu",
+  "title": "Тэнмусу (онигири с креветкой в темпуре)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Тонкий слой делает мясо хрустящим на сковороде и ловит глазурь, которую ещё и загущает.</li><li>Картофельный крахмал работает так же.</li></ul>",
+   "title_html": "Зачем крахмал"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Грудинка как для шабу-шабу (около <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 мм</span>), чем длиннее — тем лучше: оборачивается не рвясь и хрустит, а не жуётся.</li><li>Толстые ломтики не держатся закрытыми.</li></ul>",
+   "title_html": "Тонкие длинные ломтики"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Лучше всего горячими.</li><li>Разогрев делает мясо жёстким, а рис твёрдым; в бэнто держите холодными с хладоэлементом и ешьте в тот же день.</li></ul>",
+   "title_html": "Ешьте сразу"
+  },
+  {
+   "html": "<p>Japanese Cooking 101 делает их с тончайшей говядиной, без крахмала, с чуть соли в рисе и более мягким соусом (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\" data-s=\"0\">1½ ст. л.</span> сои, по <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> саке, мирина и воды, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> сахара на 4–5 шариков).</p>",
+   "title_html": "С говядиной"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Вдавите кубик сыра <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span> — чеддер или моцарелла — в середину каждого бочонка перед обёрткой: растает при жарке.</li><li>Популярный вариант в Японии, не из исходного рецепта.</li></ul>",
+   "title_html": "Начинка внутри (этого сайта)"
+  },
+  {
+   "html": "<p>Швом вниз сначала, время жарки и глазирования, вес мяса и порция по два на человека — отправные точки этого сайта; метод и все количества — Sudachi.</p>",
+   "title_html": "Что добавлено к источнику"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "yaki-onigiri",
+  "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/nikumaki-onigiri.jpg?v=6cb2ce9c9c",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Онигири: форма и начинки"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Тэнмусу (онигири с креветкой в темпуре)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Быстрое японское карри (ру Golden Curry)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "nikumaki-onigiri",
+ "sources": [
+  {
+   "label": "Sudachi Recipes (Yuto Omura) — Рисовые шарики в свинине (никумаки-онигири)",
+   "url": "https://sudachirecipes.com/nikumaki-onigiri/"
+  },
+  {
+   "label": "Japanese Cooking 101 — Никумаки-онигири (вариант с говядиной)",
+   "url": "https://japanesecooking101.com/nikumaki-onigiri-recipe/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Разделите тёплый рис на шесть порций по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span>.</li><li>Намочите руки и слепите из каждой маленький <b>бочонок</b> (тавара), около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"6\" data-b=\"7\" data-s=\"0\">6–7 см</span> длиной.</li><li>Обжимайте достаточно плотно, чтобы держался, но не мните рис.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Слепите рисовые бочонки",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Намочите руки и слепите из 50 г риса маленький бочонок.",
+      "src": "illustrations/nikumaki-onigiri/1-how1.webp?v=f810abcc9d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/1.webp?v=741000835a",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Слепите рисовые бочонки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Готовый японский короткозёрный рис"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Положите ломтик грудинки на доску и поставьте на него бочонок вдоль ломтика.</li><li>Оберните ломтик <b>вдоль</b> бочонка — под ним, вверх через один торец, по верху, через другой торец и обратно. Рис ещё виден на двух длинных сторонах.</li><li>Отрежьте лишнее ножницами и оставьте на следующий шаг.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Оберните вдоль",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Поставьте бочонок на ломтик и проведите ломтик вверх через верхний торец и вниз с другой стороны.",
+      "src": "illustrations/nikumaki-onigiri/2-how1.webp?v=a2a8c90abb"
+     },
+     {
+      "caption": "Отрежьте лишнее ножницами.",
+      "src": "illustrations/nikumaki-onigiri/2-how2.webp?v=f52fea0e54"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/2.webp?v=c5c9683b45",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
+   "title": "Оберните вдоль",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"9\" data-n=\"1\">9</span> длинных ломтиков",
+     "name_html": "Свиная грудинка, тонко нарезанная"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Оберните обрезок плюс половину ломтика <b>поперёк</b>, вокруг середины, пока рис нигде не виден.</li><li>На каждый шарик около 1½ ломтика. Обтяните мясо плотно — любая щель выпустит рис на сковороде.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Оберните поперёк середины",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Оберните обрезком и половиной ломтика середину, пока рис не скроется.",
+      "src": "illustrations/nikumaki-onigiri/3-how1.webp?v=1c16e73ac5"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/3.webp?v=5d080c2074",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Оберните поперёк середины",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Рассыпьте крахмал на тарелке.</li><li>Обваляйте каждый обёрнутый шарик тонким ровным слоем, стряхните лишнее — мясо станет хрустящим, а глазурь потом загустеет.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Обваляйте в крахмале",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Обваляйте каждый шарик в крахмале, стряхните лишнее.",
+      "src": "illustrations/nikumaki-onigiri/4-how1.webp?v=6b194ce3a3"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/4.webp?v=125148195c",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
+   "title": "Обваляйте в крахмале",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Кукурузный крахмал (или картофельный)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Смешайте в маленькой миске:<ul class=\"ing two-col\"><li>соевый соус</li><li>саке</li><li>мирин</li><li>сахар</li><li>имбирь, натёртый</li><li>чеснок, натёртый</li></ul></li><li>Или смешайте, пока шарики жарятся.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Смешайте глазурь",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Смешайте глазурь.",
+      "src": "illustrations/nikumaki-onigiri/5-how1.webp?v=46a6ccde6e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/5.webp?v=625e4ac2f2",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Смешайте глазурь",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте кунжутное масло на большой сковороде на <b>среднем</b> огне.</li><li>Выложите шарики <b>швом вниз</b> — так запечатывается обёртка.</li><li>Жарьте, переворачивая примерно каждую минуту, пока не станут золотистыми и хрустящими со всех сторон и мясо не прожарится, около 6–8 минут.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Жарьте до хруста",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Сначала швом вниз — запечатывает обёртку.",
+      "src": "illustrations/nikumaki-onigiri/6-how1.webp?v=38f82009d2"
+     },
+     {
+      "caption": "Переворачивайте примерно каждую минуту до золотистого хруста со всех сторон.",
+      "src": "illustrations/nikumaki-onigiri/6-how2.webp?v=62f29ee862"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/6.webp?v=2e120e81d7",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~6–8 мин",
+   "time_html": "<span>~6–8 мин</span>",
+   "title": "Жарьте до хруста",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ ст. л.</span>",
+     "name_html": "Кунжутное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Вытрите жир со сковороды бумажным полотенцем.</li><li>Усильте огонь до <b>сильного</b> и влейте глазурь.</li><li>Катайте шарики, пока соус не уварится до густой липкой глазури, покрывающей их целиком, 1–2 минуты. Если густеет слишком быстро — убавьте огонь: быстро подгорает.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Глазурь",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вытрите жир со сковороды бумажным полотенцем.",
+      "src": "illustrations/nikumaki-onigiri/7-how1.webp?v=dcbd09b093"
+     },
+     {
+      "caption": "Сильный огонь, влейте глазурь и катайте, пока не станет густой и липкой.",
+      "src": "illustrations/nikumaki-onigiri/7-how2.webp?v=ff9d66c97a"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/7.webp?v=1119117d19",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Глазурь",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите с огня, посыпьте кунжутом.</li><li>По желанию оберните каждый шарик листом шисо — свежо и удобнее держать.</li><li>Ешьте горячими, пока мясо ещё хрустит.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Завершите и подайте",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Оберните один листом шисо.",
+      "src": "illustrations/nikumaki-onigiri/8-how1.webp?v=d6a05ab482"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/8.webp?v=90ac1fdda3",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
+   "title": "Завершите и подайте",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренный белый кунжут (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span>",
+     "name_html": "Листья шисо (по желанию)"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 25,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "bowl",
+    "label": "Слепите бочонки",
+    "label_html": "Слепите бочонки",
+    "start": 0
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "board",
+    "label": "Оберните вдоль",
+    "label_html": "Оберните вдоль",
+    "start": 5
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Оберните поперёк середины",
+    "label_html": "Оберните поперёк середины",
+    "start": 9
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Обваляйте в крахмале",
+    "label_html": "Обваляйте в крахмале",
+    "start": 12
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Смешайте глазурь",
+    "label_html": "Смешайте глазурь",
+    "start": 13
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 мин",
+    "kind": "pan",
+    "label": "Жарьте до хруста",
+    "label_html": "Жарьте до хруста",
+    "start": 15
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Глазурь",
+    "label_html": "Глазурь",
+    "start": 22
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "bowl",
+    "label": "Кунжут, шисо, подача",
+    "label_html": "Кунжут, шисо, подача",
+    "start": 24
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Никумаки-онигири (рисовые шарики в свинине)",
+ "total": "~25 мин (при готовом рисе)",
+ "vinegar_options": null,
+ "yields": "6 рисовых шариков"
+}

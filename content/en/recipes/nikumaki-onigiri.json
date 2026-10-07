@@ -1,0 +1,692 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Rice barrels wrapped in thin pork belly, fried crisp and rolled in a sticky garlic-soy glaze — juicy outside, soft rice inside.",
+ "chips": [
+  {
+   "html": "<span>6 rice balls</span>",
+   "kind": "",
+   "text": "6 rice balls"
+  },
+  {
+   "html": "~25 min (with rice cooked)",
+   "kind": "time",
+   "text": "~25 min (with rice cooked)"
+  }
+ ],
+ "description": "Rice barrels wrapped in thin pork belly, fried crisp and rolled in a sticky garlic-soy glaze — juicy outside, soft rice inside.",
+ "equipment_html": [
+  "Large frying pan",
+  "Kitchen scissors",
+  "Plate (for the cornstarch)",
+  "Small bowl",
+  "Kitchen paper",
+  "Chopsticks or tongs"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Nikumaki onigiri (pork-wrapped rice balls)",
+  "image": "illustrations/nikumaki-onigiri/hero.webp?v=4c2969cf7a",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> per ball), warm",
+     "name_html": "Cooked Japanese short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"9\" data-n=\"1\">9</span> long slices (~<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"30\" data-s=\"0\">30 cm</span>, about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"180\">180 g</span>)",
+     "name_html": "Pork belly, thinly sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Cornstarch (or potato starch)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span>",
+     "name_html": "Toasted sesame oil"
+    }
+   ],
+   "name": "Rice balls"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Ginger, grated"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Garlic, grated"
+    }
+   ],
+   "name": "Glaze"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted white sesame seeds (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span>",
+     "name_html": "Shiso leaves (optional)"
+    }
+   ],
+   "name": "To finish"
+  }
+ ],
+ "intro_html": "The onigiri with the meat on the <b>outside</b>: little barrels of rice wrapped in paper-thin <b>pork belly</b>, dusted with cornstarch, fried in sesame oil until the pork is golden and crisp, then rolled in a soy, sake and mirin glaze with garlic and ginger until they shine. It started as a staff meal at an onigiri shop in Miyazaki in the late 1990s and went national. Cook the rice as for <a href=\"onigiri.html\">onigiri</a> — plain short-grain rice, still warm. Two each makes a meal, one a snack.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/nikumaki-onigiri/mise1.webp?v=0e1efe2152",
+   "items": [
+    "warm, short-grain"
+   ],
+   "items_html": "warm, short-grain",
+   "name": "Rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/nikumaki-onigiri/mise2.webp?v=b9279940ec",
+   "items": [
+    "long, paper-thin slices"
+   ],
+   "items_html": "long, paper-thin slices",
+   "name": "Pork belly",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/nikumaki-onigiri/mise3.webp?v=cc5b988f07",
+   "items": [
+    "on a plate"
+   ],
+   "items_html": "on a plate",
+   "name": "Cornstarch",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/nikumaki-onigiri/mise4.webp?v=91336157d3",
+   "items": [
+    "soy",
+    "sake",
+    "mirin",
+    "sugar",
+    "ginger",
+    "garlic"
+   ],
+   "items_html": "soy · sake · mirin · sugar · ginger · garlic",
+   "name": "Glaze",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/nikumaki-onigiri/mise5.webp?v=e03a50a3e6",
+   "items": [
+    "toasted"
+   ],
+   "items_html": "toasted",
+   "name": "Sesame oil",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/nikumaki-onigiri/mise6.webp?v=dcf84be3ee",
+   "items": [
+    "sesame",
+    "shiso (optional)"
+   ],
+   "items_html": "sesame · shiso (optional)",
+   "name": "To finish",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "tenmusu",
+  "title": "Tenmusu (shrimp tempura onigiri)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>A thin coat crisps the pork in the pan and catches the glaze, which it also thickens.</li><li>Potato starch works the same.</li></ul>",
+   "title_html": "Why cornstarch"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Shabu-shabu-thin pork belly (about <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 mm</span>), the longer the better — it wraps without tearing and crisps instead of chewing.</li><li>Thicker slices won't stay closed.</li></ul>",
+   "title_html": "Thin, long slices"
+  },
+  {
+   "html": "<ul class=\"do\"><li>They're best hot.</li><li>Reheating makes the pork tough and the rice hard; in a bento, keep them cold with an ice pack and eat the same day.</li></ul>",
+   "title_html": "Eat them straight away"
+  },
+  {
+   "html": "<p>Japanese Cooking 101 makes them with paper-thin beef, no starch, a little salt in the rice and a milder sauce (<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\" data-s=\"0\">1½ tbsp</span> soy, <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> each of sake, mirin and water, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> sugar for 4–5 balls).</p>",
+   "title_html": "With beef"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Press a <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> cube of cheese — cheddar or mozzarella — into the middle of each barrel before wrapping: it melts while they fry.</li><li>A popular version in Japan, not in the source recipe.</li></ul>",
+   "title_html": "Fun inside (this site's)"
+  },
+  {
+   "html": "<p>Seam side down first, the frying and glazing times, the pork weight and the two-per-person portion are this site's starting points; the method and every amount are Sudachi's.</p>",
+   "title_html": "Assumed: what's added to the source"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "yaki-onigiri",
+  "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/nikumaki-onigiri.jpg?v=6cb2ce9c9c",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Tenmusu (shrimp tempura onigiri)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "nikumaki-onigiri",
+ "sources": [
+  {
+   "label": "Sudachi Recipes (Yuto Omura) — Pork-wrapped rice balls (nikumaki onigiri)",
+   "url": "https://sudachirecipes.com/nikumaki-onigiri/"
+  },
+  {
+   "label": "Japanese Cooking 101 — Nikumaki onigiri (the beef version)",
+   "url": "https://japanesecooking101.com/nikumaki-onigiri-recipe/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Divide the warm rice into six <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> portions.</li><li>Wet your hands and shape each into a little <b>barrel</b> (tawara), about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"6\" data-b=\"7\" data-s=\"0\">6–7 cm</span> long.</li><li>Press firmly enough that it holds together, but don't crush the rice.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Shape the rice barrels",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wet your hands and shape 50 g of rice into a little barrel.",
+      "src": "illustrations/nikumaki-onigiri/1-how1.webp?v=f810abcc9d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/1.webp?v=741000835a",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Shape the rice barrels",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Cooked Japanese short-grain rice"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lay a slice of pork belly on the board and set a barrel on it, pointing the same way as the slice.</li><li>Wrap the slice <b>lengthways</b> around the barrel — under it, up over one end, along the top, over the other end and back to the start. Rice still shows on the two long sides.</li><li>Snip off the excess with scissors and keep it for the next step.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Wrap lengthways",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stand the barrel on the slice and take the slice up over the top end, and down the other side.",
+      "src": "illustrations/nikumaki-onigiri/2-how1.webp?v=a2a8c90abb"
+     },
+     {
+      "caption": "Snip off the excess with scissors.",
+      "src": "illustrations/nikumaki-onigiri/2-how2.webp?v=f52fea0e54"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/2.webp?v=c5c9683b45",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
+   "title": "Wrap lengthways",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"9\" data-n=\"1\">9</span> long slices",
+     "name_html": "Pork belly, thinly sliced"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wrap the trimmed piece plus half a slice the <b>other way</b>, round the middle, until no rice shows anywhere.</li><li>Each ball takes about 1½ slices. Pull the pork snug — any gap lets the rice fall out in the pan.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Wrap round the middle",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wrap the trimmed piece and half a slice round the middle until no rice shows.",
+      "src": "illustrations/nikumaki-onigiri/3-how1.webp?v=1c16e73ac5"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/3.webp?v=5d080c2074",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Wrap round the middle",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spread the cornstarch on a plate.</li><li>Roll each wrapped ball in it for a thin, even coat, then tap off the excess — it makes the pork crisp and thickens the glaze later.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Dust with cornstarch",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Roll each ball in the cornstarch, then tap off the excess.",
+      "src": "illustrations/nikumaki-onigiri/4-how1.webp?v=6b194ce3a3"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/4.webp?v=125148195c",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Dust with cornstarch",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Cornstarch (or potato starch)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Stir together in a small bowl:<ul class=\"ing two-col\"><li>soy sauce</li><li>sake</li><li>mirin</li><li>sugar</li><li>ginger, grated</li><li>garlic, grated</li></ul></li><li>Or mix it while the balls fry.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Mix the glaze",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stir the glaze together.",
+      "src": "illustrations/nikumaki-onigiri/5-how1.webp?v=46a6ccde6e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/5.webp?v=625e4ac2f2",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Mix the glaze",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the sesame oil in a large frying pan over <b>medium</b> heat.</li><li>Put the balls in with the <b>seam side down</b> — it seals the wrap.</li><li>Fry, turning every minute or so, until golden and crisp on every side and the pork is cooked through, about 6–8 minutes.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Fry until crisp",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Seam side down first — it seals the wrap.",
+      "src": "illustrations/nikumaki-onigiri/6-how1.webp?v=38f82009d2"
+     },
+     {
+      "caption": "Turn every minute or so until golden and crisp on every side.",
+      "src": "illustrations/nikumaki-onigiri/6-how2.webp?v=62f29ee862"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/6.webp?v=2e120e81d7",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~6–8 min",
+   "time_html": "<span>~6–8 min</span>",
+   "title": "Fry until crisp",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span>",
+     "name_html": "Toasted sesame oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wipe the fat out of the pan with kitchen paper.</li><li>Turn the heat to <b>high</b> and pour in the glaze.</li><li>Keep rolling the balls until the sauce boils down to a thick, sticky glaze that coats them all over, 1–2 minutes. If it thickens too fast, turn the heat down — it burns quickly.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Glaze",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wipe the fat out of the pan with kitchen paper.",
+      "src": "illustrations/nikumaki-onigiri/7-how1.webp?v=dcbd09b093"
+     },
+     {
+      "caption": "High heat, pour in the glaze and keep rolling until it's thick and sticky.",
+      "src": "illustrations/nikumaki-onigiri/7-how2.webp?v=ff9d66c97a"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/7.webp?v=1119117d19",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Glaze",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Off the heat, sprinkle with sesame seeds.</li><li>Wrap each ball in a shiso leaf if you like — fresh, and easier to hold.</li><li>Eat them hot, while the pork is still crisp.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Finish and serve",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wrap one in a shiso leaf.",
+      "src": "illustrations/nikumaki-onigiri/8-how1.webp?v=d6a05ab482"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nikumaki-onigiri/8.webp?v=90ac1fdda3",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Finish and serve",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted white sesame seeds (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span>",
+     "name_html": "Shiso leaves (optional)"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 25,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "bowl",
+    "label": "Shape the barrels",
+    "label_html": "Shape the barrels",
+    "start": 0
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "board",
+    "label": "Wrap lengthways",
+    "label_html": "Wrap lengthways",
+    "start": 5
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "board",
+    "label": "Wrap round the middle",
+    "label_html": "Wrap round the middle",
+    "start": 9
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "bowl",
+    "label": "Dust with cornstarch",
+    "label_html": "Dust with cornstarch",
+    "start": 12
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "bowl",
+    "label": "Mix the glaze",
+    "label_html": "Mix the glaze",
+    "start": 13
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 min",
+    "kind": "pan",
+    "label": "Fry until crisp",
+    "label_html": "Fry until crisp",
+    "start": 15
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Glaze",
+    "label_html": "Glaze",
+    "start": 22
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "bowl",
+    "label": "Sesame, shiso, serve",
+    "label_html": "Sesame, shiso, serve",
+    "start": 24
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Nikumaki onigiri (pork-wrapped rice balls)",
+ "total": "~25 min (with rice cooked)",
+ "vinegar_options": null,
+ "yields": "6 rice balls"
+}

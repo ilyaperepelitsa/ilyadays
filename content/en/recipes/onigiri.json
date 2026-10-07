@@ -1,20 +1,20 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Salted rice triangles by hand or in a mold, classic and loud fillings, a whole-egg bakudan wrapped all over in nori, and soy-glazed yaki onigiri.",
+ "blurb_html": "Salted rice triangles by hand or in a mold, with classic and loud fillings — the base for every onigiri on this site.",
  "chips": [
   {
-   "html": "<span>9 onigiri by hand (13 with a mold), or 4 bakudan + 3 onigiri</span>",
+   "html": "<span>9 onigiri by hand (13 with a mold)</span>",
    "kind": "",
-   "text": "9 onigiri by hand (13 with a mold), or 4 bakudan + 3 onigiri"
+   "text": "9 onigiri by hand (13 with a mold)"
   },
   {
-   "html": "~1½ h (+ a few h for the bakudan eggs)",
+   "html": "~1½ h",
    "kind": "time",
-   "text": "~1½ h (+ a few h for the bakudan eggs)"
+   "text": "~1½ h"
   }
  ],
- "description": "Salted rice triangles by hand or in a mold, classic and loud fillings, a whole-egg bakudan wrapped all over in nori, and soy-glazed yaki onigiri.",
+ "description": "Salted rice triangles by hand or in a mold, with classic and loud fillings — the base for every onigiri on this site.",
  "equipment_html": [
   "Rice cooker or heavy pot",
   "Large bowl or sushi tub to cool the rice",
@@ -22,9 +22,6 @@
   "Small bowl of water for your hands",
   "Plastic wrap",
   "Onigiri mold — triangle, with lid and push-out button (optional)",
-  "Zip bag for the eggs",
-  "Frying pan, parchment and 2 silicone spatulas (yaki onigiri)",
-  "Pastry brush",
   "Kitchen scissors"
  ],
  "group": {
@@ -32,8 +29,8 @@
   "name": "Japanese"
  },
  "hero": {
-  "alt": "Onigiri: the shape, the fillings, the grill",
-  "image": "illustrations/onigiri/hero.webp?v=235e53851a",
+  "alt": "Onigiri: the shape and the fillings",
+  "image": "illustrations/onigiri/hero.webp?v=f5fc5c19fd",
   "svg_fallback": null
  },
  "ingredients": [
@@ -98,10 +95,6 @@
      "name_html": "Sriracha (spicy tuna-mayo)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"piece|pieces\" data-n=\"3\">3–4 pieces</span>, cut small",
-     "name_html": "Karaage, leftover"
-    },
-    {
      "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
      "name_html": "Kimchi, chopped and squeezed"
     },
@@ -115,32 +108,7 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
-     "name_html": "Eggs"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
-     "name_html": "Soy sauce (egg marinade)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
-     "name_html": "Sake"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Mirin"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Sugar"
-    }
-   ],
-   "name": "Bakudan eggs (start a few hours ahead)"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span>, cut in thirds — plus 1 whole sheet per bakudan",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span>, cut in thirds",
      "name_html": "Nori"
     },
     {
@@ -149,26 +117,13 @@
     }
    ],
    "name": "To finish"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Soy sauce (glaze)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Toasted sesame oil"
-    }
-   ],
-   "name": "Yaki onigiri glaze"
   }
  ],
- "intro_html": "Japanese rice balls. The rice is <b>plain</b> short-grain rice, seasoned only by the salt on your hands — not <a href=\"sushi-rice.html\">sushi rice</a>, which is vinegared and too soft and sharp for this. Shape them <b>by hand</b> (left hand underneath, right hand the roof) or <b>with a mold</b>; fill them with the classics or something louder; hide a whole marinated egg in a <b>bakudan</b> (“bomb”); or grill them into <b>yaki onigiri</b>.",
+ "intro_html": "Japanese rice balls. The rice is <b>plain</b> short-grain rice, seasoned only by the salt on your hands — not <a href=\"sushi-rice.html\">sushi rice</a>, which is vinegared and too soft and sharp for this. Shape them <b>by hand</b> (left hand underneath, right hand the roof) or <b>with a mold</b>; fill them with the classics or something louder. The juicier ones have their own pages: <a href=\"yaki-onigiri.html\">yaki onigiri</a> (a crisp soy-glazed crust), <a href=\"nikumaki-onigiri.html\">nikumaki onigiri</a> (wrapped in glazed pork belly), <a href=\"tenmusu.html\">tenmusu</a> (shrimp tempura inside), <a href=\"onigirazu.html\">onigirazu</a> (the rice sandwich), <a href=\"spam-musubi.html\">spam musubi</a>, <a href=\"baby-octopus-onigiri.html\">baby octopus onigiri</a> (a glazed octopus on octopus rice) and <a href=\"salmon-onigiri.html\">salmon onigiri</a>.",
  "mise": [
   {
    "as_list": false,
-   "goes_in": "Step 5",
+   "goes_in": "Step 4",
    "image": "illustrations/onigiri/mise1.webp?v=d2fdb9e0ca",
    "items": [
     "freshly cooked, warm"
@@ -180,7 +135,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Step 5",
+   "goes_in": "Step 4",
    "image": "illustrations/onigiri/mise2.webp?v=c21cd0e1d9",
    "items": [
     "bowl of water",
@@ -193,7 +148,7 @@
   },
   {
    "as_list": true,
-   "goes_in": "Step 6",
+   "goes_in": "Step 5",
    "image": "illustrations/onigiri/mise3.webp?v=2505e97df2",
    "items": [
     "salmon",
@@ -207,63 +162,36 @@
    "vessel": "plate"
   },
   {
-   "as_list": true,
-   "goes_in": "Step 6",
-   "image": "illustrations/onigiri/mise4.webp?v=223ff014ea",
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/onigiri/mise4.webp?v=5d0e852cb8",
    "items": [
     "spicy tuna-mayo",
-    "karaage",
     "kimchi + cheese"
    ],
-   "items_html": "spicy tuna-mayo · karaage · kimchi + cheese",
+   "items_html": "spicy tuna-mayo · kimchi + cheese",
    "name": "Loud fillings",
    "svg_fallback": null,
    "vessel": "plate"
   },
   {
    "as_list": false,
-   "goes_in": "Step 11",
-   "image": "illustrations/onigiri/mise5.webp?v=541987c7cc",
-   "items": [
-    "peeled, in the soy marinade"
-   ],
-   "items_html": "peeled, in the soy marinade",
-   "name": "Marinated eggs",
-   "svg_fallback": null,
-   "vessel": "bowl"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Step 12",
-   "image": "illustrations/onigiri/mise6.webp?v=cec215bf41",
+   "goes_in": "Step 10",
+   "image": "illustrations/onigiri/mise5.webp?v=cec215bf41",
    "items": [
     "nori in thirds",
-    "whole sheets",
     "furikake"
    ],
-   "items_html": "nori in thirds · whole sheets · furikake",
+   "items_html": "nori in thirds · furikake",
    "name": "Nori + furikake",
    "svg_fallback": null,
    "vessel": "plate"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Step 14",
-   "image": "illustrations/onigiri/mise7.webp?v=2ff1d85691",
-   "items": [
-    "soy",
-    "sesame oil"
-   ],
-   "items_html": "soy · sesame oil",
-   "name": "Glaze",
-   "svg_fallback": null,
-   "vessel": "cup"
   }
  ],
  "more_label": "More japanese:",
  "next": {
-  "slug": "karaage",
-  "title": "Karaage"
+  "slug": "yaki-onigiri",
+  "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
  },
  "notes": [
   {
@@ -275,19 +203,11 @@
    "title_html": "Mold sizes"
   },
   {
-   "html": "<ul class=\"do\"><li>Japanese Cooking 101’s ajitama onigiri: eggs boiled 7–8 minutes, marinated, then shaped in rice seasoned with their marinade.</li><li>Making it a round ball wrapped all over in nori is what makes it a bakudan (“bomb”).</li><li>Each one takes about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> of rice — the 3-cup pot makes 4 bakudan and 3 regular onigiri.</li></ul>",
-   "title_html": "Bakudan"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Spicy tuna-mayo, karaage and kimchi + cheese are this site’s picks (JOC suggests leftover karaage).</li><li>The sriracha amount is a starting point — taste it.</li></ul>",
+   "html": "<ul class=\"do\"><li>Spicy tuna-mayo and kimchi + cheese are this site’s picks.</li><li>The sriracha amount is a starting point — taste it.</li></ul>",
    "title_html": "The loud fillings"
   },
   {
-   "html": "<p>Just One Cookbook also seasons the rice itself with soy, sugar, sesame oil and salt before shaping, and suggests unagi or teriyaki sauce as glazes.</p>",
-   "title_html": "Yaki onigiri, other glazes"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Rice hardens in the fridge.</li><li>Wrap each onigiri in plastic and then a thick towel to keep it cool but not cold, or freeze yaki onigiri individually for up to a month.</li></ul>",
+   "html": "<ul class=\"do\"><li>Rice hardens in the fridge.</li><li>Wrap each onigiri in plastic and then a thick towel to keep it cool but not cold.</li></ul>",
    "title_html": "Keeping them"
   }
  ],
@@ -310,16 +230,8 @@
    "title": "Shape with a mold"
   },
   {
-   "id": "part-bakudan",
-   "title": "Bakudan"
-  },
-  {
    "id": "part-finish",
    "title": "Finish"
-  },
-  {
-   "id": "part-yaki-onigiri",
-   "title": "Yaki onigiri"
   }
  ],
  "prev": {
@@ -350,7 +262,7 @@
    "person": "person"
   }
  },
- "share_image": "share/onigiri.jpg?v=618ded7439",
+ "share_image": "share/onigiri.jpg?v=153bd13557",
  "siblings": [
   {
    "slug": "oyakodon",
@@ -359,6 +271,34 @@
   {
    "slug": "napa-shiitake-egg-bowl",
    "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Tenmusu (shrimp tempura onigiri)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
   },
   {
    "slug": "karaage",
@@ -390,18 +330,6 @@
   {
    "label": "Just One Cookbook — Onigiri (Japanese rice balls)",
    "url": "https://www.justonecookbook.com/onigiri-rice-balls/"
-  },
-  {
-   "label": "Just One Cookbook — Yaki onigiri (grilled rice balls)",
-   "url": "https://www.justonecookbook.com/yaki-onigiri-grilled-rice-ball/"
-  },
-  {
-   "label": "Japanese Cooking 101 — Ajitama onigiri (ramen egg rice balls)",
-   "url": "https://japanesecooking101.com/ajitama-onigiri-ramen-egg-rice-balls/"
-  },
-  {
-   "label": "Hiroko’s Recipes — Bakudan onigiri, the nori-wrapped “bomb”",
-   "url": "https://www.hirokoliston.com/nori-wrapped-rice-ball-sandwich/"
   }
  ],
  "steps": [
@@ -440,71 +368,24 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Boil the eggs 7–8 minutes from the fridge, then straight into cold water and peel. Firmer than the <a href=\"ramen-egg.html\">6-minute ramen egg</a>, so they hold up to being pressed in rice.</li><li>Boil the soy sauce, sake, mirin and sugar for a minute and let it cool.</li><li>Eggs and marinade into a zip bag, fridge for a few hours to overnight. <b>Save the marinade</b> — it seasons the bakudan rice.</li></ul>",
-   "heat": null,
-   "id": "step-2",
-   "images": {
-    "alt": "Marinate the bakudan eggs (ahead)",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Peel the cooled eggs, then into a zip bag with the marinade, air pressed out.",
-      "src": "illustrations/onigiri/2-how1.webp?v=ad4627dfda"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/2.webp?v=e595928d90",
-    "svg_fallback": null
-   },
-   "n": 2,
-   "part": "Fillings",
-   "part_id": "part-fillings",
-   "time": "15 min + a few h",
-   "time_html": "<span>15 min + a few h</span>",
-   "title": "Marinate the bakudan eggs (ahead)",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
-     "name_html": "Eggs"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
-     "name_html": "Soy sauce (egg marinade)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
-     "name_html": "Sake"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Mirin"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Sugar"
-    }
-   ]
-  },
-  {
    "body_html": "<ul class=\"do\"><li>While the rice cooks:<ul class=\"ing\"><li><b>Salted salmon:</b> salt both sides, broil or bake at <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"218\" data-s=\"0\">218 °C</span> for 10–20 minutes until well done and flaky, then flake it</li><li><b>Okaka:</b> katsuobushi moistened (not drenched) with the soy sauce</li><li><b>Tuna-mayo:</b> drained tuna + mayo + soy sauce</li><li><b>Umeboshi:</b> pits out, flesh on a plate</li></ul></li></ul>",
    "heat": null,
-   "id": "step-3",
+   "id": "step-2",
    "images": {
     "alt": "Classic fillings",
     "diagram": null,
     "how": [
      {
       "caption": "Okaka: moisten the bonito flakes with soy — damp, not drenched.",
-      "src": "illustrations/onigiri/3-how1.webp?v=5a2c2b70a6"
+      "src": "illustrations/onigiri/2-how1.webp?v=5a2c2b70a6"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/3.webp?v=e559d81536",
+    "result": "illustrations/onigiri/2.webp?v=e559d81536",
     "svg_fallback": null
    },
-   "n": 3,
+   "n": 2,
    "part": "Fillings",
    "part_id": "part-fillings",
    "time": "~25 min",
@@ -546,32 +427,28 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Same <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> per onigiri:<ul class=\"ing\"><li><b>Spicy tuna-mayo:</b> half the tuna-mayo with sriracha stirred in (the <a href=\"tuna-mango-roll.html\">roll’s spicy mayo</a> works too)</li><li><b>Karaage:</b> leftover <a href=\"karaage.html\">karaage</a>, cut into small pieces</li><li><b>Kimchi + cheese:</b> chopped <a href=\"kimchi.html\">kimchi</a>, squeezed dry, with a few cheese cubes</li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Same <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> per onigiri:<ul class=\"ing\"><li><b>Spicy tuna-mayo:</b> half the tuna-mayo with sriracha stirred in (the <a href=\"tuna-mango-roll.html\">roll’s spicy mayo</a> works too)</li><li><b>Kimchi + cheese:</b> chopped <a href=\"kimchi.html\">kimchi</a>, squeezed dry, with a few cheese cubes</li></ul></li></ul>",
    "heat": null,
-   "id": "step-4",
+   "id": "step-3",
    "images": {
     "alt": "Loud fillings",
     "diagram": null,
     "how": [],
-    "illustration": "illustrations/onigiri/4.webp?v=57811c280e",
+    "illustration": "illustrations/onigiri/3.webp?v=87203aa257",
     "photo": null,
     "result": null,
     "svg_fallback": null
    },
-   "n": 4,
+   "n": 3,
    "part": "Fillings",
    "part_id": "part-fillings",
-   "time": "~6 min",
-   "time_html": "<span>~6 min</span>",
+   "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
    "title": "Loud fillings",
    "uses_rows": [
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>",
      "name_html": "Sriracha (spicy tuna-mayo)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"piece|pieces\" data-n=\"3\">3–4 pieces</span>",
-     "name_html": "Karaage, leftover"
     },
     {
      "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
@@ -586,26 +463,26 @@
   {
    "body_html": "<ul class=\"do\"><li>Let the rice cool just until you can hold it — it must still be warm to stick.</li><li>Wet both palms with a little water.</li><li>Dip 2–3 fingers in kosher salt and rub it over both palms (table salt: half as much).</li></ul>",
    "heat": null,
-   "id": "step-5",
+   "id": "step-4",
    "images": {
     "alt": "Wet and salt your hands",
     "diagram": null,
     "how": [
      {
       "caption": "Wet both palms, then dip 2–3 fingers in kosher salt…",
-      "src": "illustrations/onigiri/5-how1.webp?v=522ee31760"
+      "src": "illustrations/onigiri/4-how1.webp?v=522ee31760"
      },
      {
       "caption": "…and rub the salt over both palms.",
-      "src": "illustrations/onigiri/5-how2.webp?v=8ecc676131"
+      "src": "illustrations/onigiri/4-how2.webp?v=8ecc676131"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/5.webp?v=6e4c345ccc",
+    "result": "illustrations/onigiri/4.webp?v=57811c280e",
     "svg_fallback": null
    },
-   "n": 5,
+   "n": 4,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "~5 min",
@@ -621,26 +498,26 @@
   {
    "body_html": "<ul class=\"do\"><li>Scoop ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> warm rice onto your LEFT palm — the left hand always stays underneath.</li><li>Press a small well in the middle and put in <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> of one filling.</li><li>Cover with another ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> of rice and press it gently round the filling into a ball.</li></ul>",
    "heat": null,
-   "id": "step-6",
+   "id": "step-5",
    "images": {
     "alt": "Rice, filling, close",
     "diagram": null,
     "how": [
      {
       "caption": "About 50 g of warm rice on your left palm; press a small well into the middle.",
-      "src": "illustrations/onigiri/6-how1.webp?v=a2447717ab"
+      "src": "illustrations/onigiri/5-how1.webp?v=522ee31760"
      },
      {
       "caption": "1–2 tsp of filling in the well, then cover with more rice.",
-      "src": "illustrations/onigiri/6-how2.webp?v=c3e8771711"
+      "src": "illustrations/onigiri/5-how2.webp?v=c3e8771711"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/6.webp?v=ab5c2f4b21",
+    "result": "illustrations/onigiri/5.webp?v=ab5c2f4b21",
     "svg_fallback": null
    },
-   "n": 6,
+   "n": 5,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "1 min each",
@@ -651,26 +528,26 @@
   {
    "body_html": "<ul class=\"do\"><li>RIGHT hand on top, fingers together and bent into a roof — it makes the corner.</li><li>LEFT hand underneath in a “C” — fingers and heel gently flatten the two sides.</li><li>Press lightly, then roll the corner you just made <b>towards you</b> — a third of a turn.</li><li>Three corners, then 2–3 more rounds. Lay it on each face and press once to flatten.</li><li>Firm enough to hold together, but airy inside — don’t squeeze.</li></ul>",
    "heat": null,
-   "id": "step-7",
+   "id": "step-6",
    "images": {
     "alt": "Press the triangle",
     "diagram": null,
     "how": [
      {
       "caption": "Right hand on top, fingers together and bent like a roof; left hand underneath in a “C”, pressing the sides.",
-      "src": "illustrations/onigiri/7-how1.webp?v=f09f821ccb"
+      "src": "illustrations/onigiri/6-how1.webp?v=f09f821ccb"
      },
      {
       "caption": "Press lightly, then roll the corner you just made towards you — a third of a turn — and press again.",
-      "src": "illustrations/onigiri/7-how2.webp?v=5c94e8c191"
+      "src": "illustrations/onigiri/6-how2.webp?v=5c94e8c191"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/7.webp?v=bddbbe9acb",
+    "result": "illustrations/onigiri/6.webp?v=bddbbe9acb",
     "svg_fallback": null
    },
-   "n": 7,
+   "n": 6,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "~1 min each",
@@ -681,22 +558,22 @@
   {
    "body_html": "<ul class=\"do\"><li>Line a small bowl with plastic wrap and sprinkle in a little salt.</li><li>Rice in, a well, the filling, more rice on top, a little more salt.</li><li>Gather and twist the wrap shut, then press the same triangle through it. Good for lunchboxes — nobody’s hands touch the rice.</li></ul>",
    "heat": null,
-   "id": "step-8",
+   "id": "step-7",
    "images": {
     "alt": "Or: through plastic wrap",
     "diagram": null,
     "how": [
      {
       "caption": "Rice and filling on plastic wrap in a bowl; gather and twist it shut, then press the triangle.",
-      "src": "illustrations/onigiri/8-how1.webp?v=7bfd4fb88d"
+      "src": "illustrations/onigiri/7-how1.webp?v=f09f821ccb"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/8.webp?v=44a93107e2",
+    "result": "illustrations/onigiri/7.webp?v=44a93107e2",
     "svg_fallback": null
    },
-   "n": 8,
+   "n": 7,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "~1 min each",
@@ -707,17 +584,47 @@
   {
    "body_html": "<ul class=\"do\"><li>Dip the mold and its lid in water, shake off the excess, and sprinkle salt inside.</li><li>Fill it halfway with warm rice, pushing it into the corners.</li><li>A spoonful of filling in the middle, then rice to the brim and a little salt on top.</li></ul>",
    "heat": null,
-   "id": "step-9",
+   "id": "step-8",
    "images": {
     "alt": "Fill the mold",
     "diagram": null,
     "how": [
      {
       "caption": "Fill the wet mold halfway, pushing the rice into the corners.",
-      "src": "illustrations/onigiri/9-how1.webp?v=c42ae1f5d0"
+      "src": "illustrations/onigiri/8-how1.webp?v=c42ae1f5d0"
      },
      {
       "caption": "Filling in the middle, then rice to the brim.",
+      "src": "illustrations/onigiri/8-how2.webp?v=ae64c7a07c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri/8.webp?v=f3441ab996",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Shape with a mold",
+   "part_id": "part-shape-with-a-mold",
+   "time": "~1 min each",
+   "time_html": "<span>~1 min each</span>",
+   "title": "Fill the mold",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lid on and push down firmly — you should feel a slight resistance. No resistance? Add a little rice.</li><li>Lid off, flip the mold over the tray and push the button to pop the onigiri out.</li><li>Wet your fingers before touching it. A mold makes smaller, denser onigiri (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 g</span> each, 13 from the pot); a lighter push keeps them fluffier.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Press and push out",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Lid on and press down firmly — stop when you feel resistance.",
+      "src": "illustrations/onigiri/9-how1.webp?v=3811fd7ac5"
+     },
+     {
+      "caption": "Flip it over and push the button to pop the onigiri out.",
       "src": "illustrations/onigiri/9-how2.webp?v=ae64c7a07c"
      }
     ],
@@ -729,99 +636,34 @@
    "n": 9,
    "part": "Shape with a mold",
    "part_id": "part-shape-with-a-mold",
-   "time": "~1 min each",
-   "time_html": "<span>~1 min each</span>",
-   "title": "Fill the mold",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Lid on and push down firmly — you should feel a slight resistance. No resistance? Add a little rice.</li><li>Lid off, flip the mold over the tray and push the button to pop the onigiri out.</li><li>Wet your fingers before touching it. A mold makes smaller, denser onigiri (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 g</span> each, 13 from the pot); a lighter push keeps them fluffier.</li></ul>",
-   "heat": null,
-   "id": "step-10",
-   "images": {
-    "alt": "Press and push out",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Lid on and press down firmly — stop when you feel resistance.",
-      "src": "illustrations/onigiri/10-how1.webp?v=3811fd7ac5"
-     },
-     {
-      "caption": "Flip it over and push the button to pop the onigiri out.",
-      "src": "illustrations/onigiri/10-how2.webp?v=d686c3937e"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/10.webp?v=d2b1350720",
-    "svg_fallback": null
-   },
-   "n": 10,
-   "part": "Shape with a mold",
-   "part_id": "part-shape-with-a-mold",
    "time": "~30 s each",
    "time_html": "<span>~30 s each</span>",
    "title": "Press and push out",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Take the eggs out of the marinade and stir <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-s=\"0\">¼ cup</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\" data-s=\"0\" data-alt=\"1\">60 ml</span>)</span> of it into ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-s=\"0\">600 g</span> of the warm rice.</li><li>~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> of that rice in your left palm, a well in the middle, one whole egg in it.</li><li>Cover with more rice and shape it round, the egg in the centre.</li><li>Wrap it all over in a whole nori sheet — the black ball is the bomb.</li></ul>",
-   "heat": null,
-   "id": "step-11",
-   "images": {
-    "alt": "Bakudan — the bomb",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "About 150 g of seasoned rice in your palm, a whole marinated egg in the middle.",
-      "src": "illustrations/onigiri/11-how1.webp?v=900b28fd22"
-     },
-     {
-      "caption": "Cover it, shape a round ball, then wrap it all over in a whole sheet of nori.",
-      "src": "illustrations/onigiri/11-how2.webp?v=98f12e8c0a"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/11.webp?v=b4dcf86574",
-    "svg_fallback": null
-   },
-   "n": 11,
-   "part": "Bakudan",
-   "part_id": "part-bakudan",
-   "time": "~2 min each",
-   "time_html": "<span>~2 min each</span>",
-   "title": "Bakudan — the bomb",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span>",
-     "name_html": "Nori"
-    }
-   ]
-  },
-  {
    "body_html": "<ul class=\"do\"><li>Wrap a third of a nori sheet round the bottom of each onigiri — <b>right before eating</b> for crisp nori, or now for soft nori that sticks.</li><li>Or skip the nori: coat the three faces in <a href=\"furikake.html\">furikake</a> with wet fingers.</li><li>A little of the filling on the tip tells you what’s inside. Eat warm or at room temperature, within about 6 hours.</li></ul>",
    "heat": null,
-   "id": "step-12",
+   "id": "step-10",
    "images": {
     "alt": "Nori, furikake, a dab on top",
     "diagram": null,
     "how": [
      {
       "caption": "Wrap a third of a nori sheet round the bottom just before eating — the nori stays crisp.",
-      "src": "illustrations/onigiri/12-how1.webp?v=9ed82e4594"
+      "src": "illustrations/onigiri/10-how1.webp?v=9ed82e4594"
      },
      {
       "caption": "Or coat the faces in furikake with damp fingers.",
-      "src": "illustrations/onigiri/12-how2.webp?v=8ae726eff4"
+      "src": "illustrations/onigiri/10-how2.webp?v=8ae726eff4"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/12.webp?v=6e4b65b2e6",
+    "result": "illustrations/onigiri/10.webp?v=6e4b65b2e6",
     "svg_fallback": null
    },
-   "n": 12,
+   "n": 10,
    "part": "Finish",
    "part_id": "part-finish",
    "time": "~4 min",
@@ -833,79 +675,10 @@
      "name_html": "Furikake"
     }
    ]
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Press plain onigiri a bit firmer than usual so they don’t break in the pan.</li><li>Parchment in a frying pan, onigiri on it, medium-low heat.</li><li>Leave each side until crisp and lightly browned before turning (two spatulas) — handling them too early breaks them.</li></ul>",
-   "heat": {
-    "label": "medium-low",
-    "label_html": "<span>medium-low</span>",
-    "off": false
-   },
-   "id": "step-13",
-   "images": {
-    "alt": "Yaki onigiri: grill",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Turn each one only when its side is crisp, with two spatulas.",
-      "src": "illustrations/onigiri/13-how1.webp?v=ac77925766"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/13.webp?v=bd733dc5c1",
-    "svg_fallback": null
-   },
-   "n": 13,
-   "part": "Yaki onigiri",
-   "part_id": "part-yaki-onigiri",
-   "time": "~10 min",
-   "time_html": "<span>~10 min</span>",
-   "title": "Yaki onigiri: grill",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Heat to low. Brush one side with the soy sauce and sesame oil, turn it onto the pan, brush the other.</li><li>A minute more per side — the glaze burns fast.</li></ul>",
-   "heat": {
-    "label": "low",
-    "label_html": "<span>low</span>",
-    "off": false
-   },
-   "id": "step-14",
-   "images": {
-    "alt": "Yaki onigiri: glaze",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Low heat: brush on the soy glaze, turn it onto the pan, brush the other side.",
-      "src": "illustrations/onigiri/14-how1.webp?v=9d714bbea9"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/14.webp?v=1da419b47a",
-    "svg_fallback": null
-   },
-   "n": 14,
-   "part": "Yaki onigiri",
-   "part_id": "part-yaki-onigiri",
-   "time": "~3 min",
-   "time_html": "<span>~3 min</span>",
-   "title": "Yaki onigiri: glaze",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Soy sauce (glaze)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Toasted sesame oil"
-    }
-   ]
   }
  ],
  "timeline": {
-  "end": 120,
+  "end": 105,
   "hours": true,
   "legend": [
    {
@@ -925,7 +698,7 @@
     "label": "Hands-off"
    }
   ],
-  "note_html": "The bakudan eggs need a few hours to overnight in the marinade — start them the day before if you can. Keep the rice and the shaped onigiri covered with a damp towel so they don’t dry out.",
+  "note_html": "Keep the rice and the shaped onigiri covered with a damp towel so they don’t dry out.",
   "tasks": [
    {
     "dur": 60,
@@ -952,8 +725,8 @@
     "start": 35
    },
    {
-    "dur": 6,
-    "dur_label": "6 min",
+    "dur": 4,
+    "dur_label": "4 min",
     "kind": "board",
     "label": "Loud fillings",
     "label_html": "Loud fillings",
@@ -976,28 +749,12 @@
     "start": 65
    },
    {
-    "dur": 10,
-    "dur_label": "10 min",
-    "kind": "bowl",
-    "label": "Bakudan",
-    "label_html": "Bakudan",
-    "start": 75
-   },
-   {
     "dur": 4,
     "dur_label": "4 min",
     "kind": "bowl",
     "label": "Nori, furikake",
     "label_html": "Nori, furikake",
     "start": 90
-   },
-   {
-    "dur": 15,
-    "dur_label": "15 min",
-    "kind": "pan",
-    "label": "Grill + glaze (yaki)",
-    "label_html": "Grill + glaze (yaki)",
-    "start": 94
    }
   ],
   "tick_step": 15,
@@ -1033,16 +790,12 @@
    {
     "at": 105,
     "label": "1:45"
-   },
-   {
-    "at": 120,
-    "label": "2:00"
    }
   ],
   "unit": "h:mm"
  },
- "title": "Onigiri: the shape, the fillings, the grill",
- "total": "~1½ h (+ a few h for the bakudan eggs)",
+ "title": "Onigiri: the shape and the fillings",
+ "total": "~1½ h",
  "vinegar_options": null,
- "yields": "9 onigiri by hand (13 with a mold), or 4 bakudan + 3 onigiri"
+ "yields": "9 onigiri by hand (13 with a mold)"
 }

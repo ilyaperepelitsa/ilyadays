@@ -1,0 +1,695 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Hawaii's onigiri: a teriyaki-glazed slice of Spam on a pressed block of rice and furikake, belted with nori — salty, sweet, juicy, and fun to make with a mold or the Spam can itself.",
+ "chips": [
+  {
+   "html": "<span>8 musubi</span>",
+   "kind": "",
+   "text": "8 musubi"
+  },
+  {
+   "html": "~25 min with the rice cooked",
+   "kind": "time",
+   "text": "~25 min with the rice cooked"
+  }
+ ],
+ "description": "Hawaii's onigiri: a teriyaki-glazed slice of Spam on a pressed block of rice and furikake, belted with nori — salty, sweet, juicy, and fun to make with a mold or the Spam can itself.",
+ "equipment_html": [
+  "Musubi mold (press) — or the clean Spam can + plastic wrap",
+  "Large frying pan",
+  "Chef's knife + cutting board",
+  "Small bowl (sauce)",
+  "Rice paddle + a small bowl of water",
+  "Small frying pan for the egg layer (optional)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Spam musubi",
+  "image": "illustrations/spam-musubi/hero.webp?v=0339e570a2",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1.3\">1.3 kg</span> (from <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\">3 cups</span> / ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\">600 g</span> uncooked)",
+     "name_html": "Cooked short-grain rice, warm"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"can|cans\" data-n=\"1\">1 can</span>, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"340\">340 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"12\" data-alt=\"1\">12 oz</span>)</span>, low-sodium if you can",
+     "name_html": "Spam (canned luncheon meat)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 sheets</span>, each cut into 4 strips (~<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span> wide)",
+     "name_html": "Nori"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
+     "name_html": "Furikake"
+    }
+   ],
+   "name": "Musubi"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Brown sugar"
+    }
+   ],
+   "name": "Teriyaki sauce"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt"
+    }
+   ],
+   "name": "Egg layer (optional)"
+  }
+ ],
+ "intro_html": "Hawaii's favourite onigiri: Spam seared until caramelised, glazed in a quick teriyaki sauce, and pressed onto a block of warm rice with furikake, then wrapped in a strip of nori like a belt. A musubi mold makes it easy; the <b>empty Spam can</b>, lined with plastic wrap, works too. For the rice and more fillings see <a href=\"onigiri.html\">onigiri</a>.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 1",
+   "image": "illustrations/spam-musubi/mise1.webp?v=6b23a59124",
+   "items": [
+    "soy",
+    "mirin",
+    "sake",
+    "brown sugar"
+   ],
+   "items_html": "soy · mirin · sake · brown sugar",
+   "name": "Teriyaki sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/spam-musubi/mise2.webp?v=d80b336a00",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"can|cans\" data-n=\"1\">1 can</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"can|cans\" data-n=\"1\">1 can</span>",
+   "name": "Spam",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/spam-musubi/mise3.webp?v=0787550d2b",
+   "items": [
+    "beaten with sugar + salt"
+   ],
+   "items_html": "beaten with sugar + salt",
+   "name": "Eggs (optional)",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/spam-musubi/mise4.webp?v=8aeddb37ba",
+   "items": [
+    "freshly cooked, warm"
+   ],
+   "items_html": "freshly cooked, warm",
+   "name": "Rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/spam-musubi/mise5.webp?v=ebfbdec74e",
+   "items": [
+    "nori strips",
+    "furikake"
+   ],
+   "items_html": "nori strips · furikake",
+   "name": "Nori + furikake",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "karaage",
+  "title": "Karaage"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>The Spam can is exactly the right shape.</li><li>Wash it, line it with plastic wrap so the rice lifts out, and mind the edges if it was opened with a can opener.</li></ul>",
+   "title_html": "Can as the mold"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Mirin and sugar caramelise fast.</li><li>As soon as the sauce turns thick and shiny, get the slices out of the pan.</li></ul>",
+   "title_html": "Don't burn the glaze"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Best the same day, at room temperature.</li><li>Wrapped tightly in plastic wrap they keep a few hours; the fridge hardens the rice.</li></ul>",
+   "title_html": "Keeping"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The egg layer (Spam-and-egg musubi, a common Hawaii version) is this site's addition.</li><li>The oil and the narrow nori strips (a belt with the Spam showing at both ends) follow Christie at Home; The Heirloom Pantry uses half sheets that wrap the whole block.</li></ul>",
+   "title_html": "Added here"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "onigirazu",
+  "title": "Onigirazu (ginger pork rice sandwich)"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "one batch",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/spam-musubi.jpg?v=530a8d8efc",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Tenmusu (shrimp tempura onigiri)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "spam-musubi",
+ "sources": [
+  {
+   "label": "The Heirloom Pantry — How to make teriyaki spam musubi",
+   "url": "https://theheirloompantry.co/how-to-make-teriyaki-spam-musubi/"
+  },
+  {
+   "label": "Christie at Home — Quick & easy spam musubi (the can as the mold)",
+   "url": "https://christieathome.com/blog/spam-musubi/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<p>Whisk the soy sauce, mirin, sake and brown sugar in a small bowl until the sugar dissolves.</p>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Teriyaki sauce",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Whisk soy, mirin, sake and brown sugar until the sugar dissolves.",
+      "src": "illustrations/spam-musubi/1-how1.webp?v=3b6db2ddce"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/1.webp?v=0fc21fcee8",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
+   "title": "Teriyaki sauce",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Brown sugar"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Tip the Spam out of the can. <b>Keep the can</b> if you have no mold — wash it, it's your mold.</li><li>Cut the block into <b>8 even slices</b>, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> thick, each the shape of the can's top.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Slice the Spam",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cut the block into 8 even slices, about 1 cm thick.",
+      "src": "illustrations/spam-musubi/2-how1.webp?v=bc1212061e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/2.webp?v=2171af18b1",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "3 min",
+   "time_html": "<span>3 min</span>",
+   "title": "Slice the Spam",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"can|cans\" data-n=\"1\">1 can</span>",
+     "name_html": "Spam (canned luncheon meat)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Beat the eggs with the sugar and salt.</li><li>Cook as one thin omelette in a lightly oiled small pan over medium-low heat, without browning; flip once.</li><li>Cut it into 8 pieces the size of a Spam slice (fold it to stack two layers if it's thin).</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Egg layer (optional)",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cook the beaten egg as one thin omelette, without browning; flip once.",
+      "src": "illustrations/spam-musubi/3-how1.webp?v=598c2a6a02"
+     },
+     {
+      "caption": "Cut it into 8 pieces the size of a slice.",
+      "src": "illustrations/spam-musubi/3-how2.webp?v=938eec22c1"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/3.webp?v=53b2581331",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Egg layer (optional)",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the oil in a large frying pan over <b>medium-high</b> heat.</li><li>Lay the slices in one layer and sear 3–5 minutes in all, flipping halfway, until caramelised and golden-brown on both sides.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Sear the Spam",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Sear in one layer, 3–5 minutes in all, flipping halfway.",
+      "src": "illustrations/spam-musubi/4-how1.webp?v=99f0c27e5b"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/4.webp?v=9d67b3d5b4",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3–5 min",
+   "time_html": "<span>3–5 min</span>",
+   "title": "Sear the Spam",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Neutral oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour the sauce over the Spam and cook 1–2 minutes, flipping once, until it bubbles down to a thick, shiny glaze that coats the slices.</li><li>Take them out straight away onto a plate, with a little of the glaze — left in the hot pan, the sugar burns.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Glaze",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pour in the sauce; cook 1–2 minutes, flipping once, until it's a thick shiny glaze.",
+      "src": "illustrations/spam-musubi/5-how1.webp?v=519962f1ab"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/5.webp?v=673c6f019f",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "1–2 min",
+   "time_html": "<span>1–2 min</span>",
+   "title": "Glaze",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lay a strip of nori <b>shiny side down</b> on the board and set the mold across its middle.</li><li>Wet the rice paddle and fill the mold evenly with warm rice, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> (¾ in) deep — roughly ⅛ of the rice.</li><li><b>No mold:</b> line the clean can with plastic wrap, pack the rice in the bottom, press it flat, lift it out by the wrap and unwrap it onto the nori.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Rice into the mold",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Nori strip shiny side down, mold across its middle, warm rice in about 2 cm deep.",
+      "src": "illustrations/spam-musubi/6-how1.webp?v=aa2027507e"
+     },
+     {
+      "caption": "No mold: pack the rice into the clean can lined with plastic wrap, then lift it out by the wrap.",
+      "src": "illustrations/spam-musubi/6-how2.webp?v=2f28ca2831"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/6.webp?v=fd735561e2",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min each",
+   "time_html": "<span>~1 min each</span>",
+   "title": "Rice into the mold",
+   "uses_rows": [
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1.3\">1.3 kg</span>",
+     "name_html": "Cooked short-grain rice, warm"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 sheets</span>",
+     "name_html": "Nori"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Sprinkle furikake over the rice; add a piece of egg if you made it; top with a glazed Spam slice, carrying a little glaze.</li><li>Press down firmly with the mold's lid to pack the rice into a block.</li><li>Keep pressing the lid down with one hand and lift the mold's frame off with the other.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Layer and press",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Furikake over the rice.",
+      "src": "illustrations/spam-musubi/7-how1.webp?v=48eca3fd98"
+     },
+     {
+      "caption": "Egg if you made it, then a glazed slice, carrying a little glaze.",
+      "src": "illustrations/spam-musubi/7-how2.webp?v=37820ba0be"
+     },
+     {
+      "caption": "Press down with the lid, then hold the lid down and lift the frame off.",
+      "src": "illustrations/spam-musubi/7-how3.webp?v=d9b93cb6e9"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/7.webp?v=53d3adf63a",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min each",
+   "time_html": "<span>~1 min each</span>",
+   "title": "Layer and press",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
+     "name_html": "Furikake"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Fold one end of the nori strip up over the Spam, then the other, snug, like a belt round the middle.</li><li>Dab a little water on the overlap to seal it and set it seam side down.</li><li>Repeat for all 8. Eat warm or at room temperature; cut in half with a wet knife if you like.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Wrap in nori",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Fold one end of the nori over the top, then the other — snug, like a belt.",
+      "src": "illustrations/spam-musubi/8-how1.webp?v=abe92fc043"
+     },
+     {
+      "caption": "Dab water on the overlap to seal; seam side down.",
+      "src": "illustrations/spam-musubi/8-how2.webp?v=cd3acb17c6"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/spam-musubi/8.webp?v=3a65fac134",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~1 min each",
+   "time_html": "<span>~1 min each</span>",
+   "title": "Wrap in nori",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "Cook the rice first and keep it warm — warm rice presses into a block that holds; cold rice crumbles.",
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "bowl",
+    "label": "Teriyaki sauce",
+    "label_html": "Teriyaki sauce",
+    "start": 0
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "board",
+    "label": "Slice the Spam",
+    "label_html": "Slice the Spam",
+    "start": 2
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "pan",
+    "label": "Egg layer (optional)",
+    "label_html": "Egg layer (optional)",
+    "start": 5
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "pan",
+    "label": "Sear the Spam",
+    "label_html": "Sear the Spam",
+    "start": 10
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Glaze",
+    "label_html": "Glaze",
+    "start": 15
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "board",
+    "label": "Mold, layer, press, wrap ×8",
+    "label_html": "Mold, layer, press, wrap ×8",
+    "start": 17
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Spam musubi",
+ "total": "~25 min with the rice cooked",
+ "vinegar_options": null,
+ "yields": "8 musubi"
+}

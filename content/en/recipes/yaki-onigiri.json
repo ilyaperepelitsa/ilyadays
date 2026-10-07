@@ -1,0 +1,714 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Rice seasoned with soy and sesame oil, pressed into firm triangles, pan-grilled until the outside is a crisp brown crust and lacquered with a soy glaze — plus miso and butter versions.",
+ "chips": [
+  {
+   "html": "<span>9 yaki onigiri</span>",
+   "kind": "",
+   "text": "9 yaki onigiri"
+  },
+  {
+   "html": "~30 min with the rice cooked",
+   "kind": "time",
+   "text": "~30 min with the rice cooked"
+  }
+ ],
+ "description": "Rice seasoned with soy and sesame oil, pressed into firm triangles, pan-grilled until the outside is a crisp brown crust and lacquered with a soy glaze — plus miso and butter versions.",
+ "equipment_html": [
+  "Rice cooker or heavy pot with a lid",
+  "Large bowl + rice paddle",
+  "Onigiri mold (optional)",
+  "Large frying pan + parchment paper",
+  "Two silicone spatulas",
+  "Pastry brush"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Yaki onigiri (grilled, soy-glazed rice balls)",
+  "image": "illustrations/yaki-onigiri/hero.webp?v=22aeabe950",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.25\">2¼ cups</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"450\">450 g</span>, 3 rice-cooker cups)",
+     "name_html": "Japanese short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.5\">2½ cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\" data-alt=\"1\">600 ml</span>)</span>",
+     "name_html": "Water (rice)"
+    }
+   ],
+   "name": "Rice"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce (rice)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Toasted sesame oil (rice)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Kosher salt"
+    }
+   ],
+   "name": "Rice seasoning"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Soy sauce (glaze)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted sesame oil (glaze)"
+    }
+   ],
+   "name": "Soy glaze"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Miso"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar (miso glaze)"
+    }
+   ],
+   "name": "Miso glaze (optional)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\" data-s=\"0\">½ tbsp</span> per onigiri",
+     "name_html": "Butter"
+    }
+   ],
+   "name": "Butter finish (optional)"
+  }
+ ],
+ "intro_html": "The onigiri you grill: the rice is seasoned with soy sauce, sugar and sesame oil before shaping, the triangles are pressed firmer than usual, then pan-grilled on parchment until every side is a <b>crisp, deep golden-brown crust</b> — and brushed with soy at the end so it lacquers in the pan. Crunchy outside, soft and steaming inside. For the shaping itself (by hand or with a mold), see <a href=\"onigiri.html\">onigiri</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/yaki-onigiri/mise1.webp?v=5a2e584f5c",
+   "items": [
+    "freshly cooked, hot"
+   ],
+   "items_html": "freshly cooked, hot",
+   "name": "Rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/yaki-onigiri/mise2.webp?v=7b089d5a9f",
+   "items": [
+    "soy",
+    "sugar",
+    "sesame oil",
+    "salt"
+   ],
+   "items_html": "soy · sugar · sesame oil · salt",
+   "name": "Rice seasoning",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/yaki-onigiri/mise3.webp?v=a0e5cb7ed9",
+   "items": [
+    "soy",
+    "sesame oil"
+   ],
+   "items_html": "soy · sesame oil",
+   "name": "Soy glaze",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 6",
+   "image": "illustrations/yaki-onigiri/mise4.webp?v=41c2aeec8d",
+   "items": [
+    "miso",
+    "mirin",
+    "sugar (optional)"
+   ],
+   "items_html": "miso · mirin · sugar (optional)",
+   "name": "Miso glaze",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/yaki-onigiri/mise5.webp?v=73454091a4",
+   "items": [
+    "in <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span> pats (optional)"
+   ],
+   "items_html": "in <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span> pats (optional)",
+   "name": "Butter",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "nikumaki-onigiri",
+  "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Soy, sugar and sesame oil in the rice brown faster and deeper than plain rice, so the crust gets real colour at medium-low heat — and every bite is seasoned, not just the outside.</li><li>(This is Just One Cookbook’s method.)</li></ul>",
+   "title_html": "Why season the rice"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Rice sticks and tears on a bare pan; on parchment the crust forms and lifts off cleanly.</li><li>A good non-stick pan works without it.</li></ul>",
+   "title_html": "Why parchment"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Just One Cookbook suggests unagi or teriyaki sauce instead of soy.</li><li>Over charcoal or under a broiler works too — watch it closely.</li></ul>",
+   "title_html": "Other glazes"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The miso glaze is Just One Cookbook’s miso yaki onigiri (she brushes it on plain salted rice).</li><li>The butter on top is Chopstick Chronicles’ soy-butter version.</li><li>Putting both on one page, and the butter on JOC’s seasoned rice, is this site’s choice.</li></ul>",
+   "title_html": "Variations: where they’re from"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Rice hardens in the fridge.</li><li>If you must, wrap them and then a thick towel, up to 2 days; let them come back to room temperature and reheat in a pan.</li></ul>",
+   "title_html": "Fridge"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-rice",
+   "title": "Rice"
+  },
+  {
+   "id": "part-shape",
+   "title": "Shape"
+  },
+  {
+   "id": "part-grill",
+   "title": "Grill"
+  },
+  {
+   "id": "part-variations",
+   "title": "Variations"
+  },
+  {
+   "id": "part-serve",
+   "title": "Serve"
+  }
+ ],
+ "prev": {
+  "slug": "onigiri",
+  "title": "Onigiri: the shape and the fillings"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/yaki-onigiri.jpg?v=a413ddbd8d",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Tenmusu (shrimp tempura onigiri)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "yaki-onigiri",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Yaki onigiri (grilled rice balls)",
+   "url": "https://www.justonecookbook.com/yaki-onigiri-grilled-rice-ball/"
+  },
+  {
+   "label": "Just One Cookbook — Miso yaki onigiri",
+   "url": "https://www.justonecookbook.com/miso-yaki-onigiri/"
+  },
+  {
+   "label": "Chopstick Chronicles — Yaki onigiri (miso-butter and soy-butter)",
+   "url": "https://www.chopstickchronicles.com/yaki-onigiri/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Soak the rice 20–30 minutes, then cook it with the water in a rice cooker or a heavy pot — see <a href=\"onigiri.html\">onigiri</a> for the pot method.</li><li>This makes about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"990\" data-s=\"0\">990 g</span> of cooked rice: nine <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> onigiri.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Cook the rice",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/yaki-onigiri/1.webp?v=080049e1a1",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Rice",
+   "part_id": "part-rice",
+   "time": "~1 h with soaking",
+   "time_html": "<span>~1 h with soaking</span>",
+   "title": "Cook the rice",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.25\">2¼ cups</span>",
+     "name_html": "Japanese short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2.5\">2½ cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\" data-alt=\"1\">600 ml</span>)</span>",
+     "name_html": "Water (rice)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Stir the soy sauce and sugar together and microwave 30–60 seconds until hot; whisk until the sugar dissolves. Stir in the sesame oil and salt.</li><li>Hot rice into a large bowl, pour the seasoning over and fold it through with the rice paddle in a <b>slicing motion</b> — don’t mash.</li><li>Making some <b>miso</b> ones? Set aside <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> of plain rice for each before you season — the miso glaze goes on plain rice.</li><li>Let it cool just until you can hold it; it must still be warm to shape.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Season the rice",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Soy and sugar, microwaved hot and whisked; then the sesame oil and salt.",
+      "src": "illustrations/yaki-onigiri/2-how1.webp?v=0beef8a686"
+     },
+     {
+      "caption": "Fold it through the hot rice with a slicing motion — don't mash.",
+      "src": "illustrations/yaki-onigiri/2-how2.webp?v=c132e1783b"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/2.webp?v=694a88f4e9",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Rice",
+   "part_id": "part-rice",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Season the rice",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce (rice)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Toasted sesame oil (rice)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Kosher salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Shape nine triangles of about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span>, by hand or in a wet mold (fill to the top edge, lid on, push down until you feel resistance, flip out onto parchment) — see <a href=\"onigiri.html\">onigiri</a>.</li><li>Then press each one again with wet hands, <b>firmer than a normal onigiri</b>: left hand underneath squeezing the sides, right hand a “mountain” on top; press, roll the corner toward you, repeat for all three corners, then 2–3 more times. Loose ones fall apart in the pan.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Shape firm triangles",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Shape 110 g triangles by hand or in a wet mold.",
+      "src": "illustrations/yaki-onigiri/3-how1.webp?v=d7647b24c1"
+     },
+     {
+      "caption": "Then press each one again, firmer than usual: right hand a roof on top, left hand squeezing the sides.",
+      "src": "illustrations/yaki-onigiri/3-how2.webp?v=68f55a6a33"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/3.webp?v=65e98c1c6e",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Shape",
+   "part_id": "part-shape",
+   "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
+   "title": "Shape firm triangles",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Line a large frying pan with parchment and set the onigiri on it, a little apart. Medium-low heat.</li><li>Leave each side alone until it’s <b>crisp and browned</b> before you turn it — two silicone spatulas, one side at a time. Moving them early breaks them.</li><li>Turn them onto every side, including the edges, until the whole outside is a crisp golden-brown crust.</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Grill until crisp",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Leave each side until it's crisp and browned, then turn it with two spatulas.",
+      "src": "illustrations/yaki-onigiri/4-how1.webp?v=c1e9ffe6f2"
+     },
+     {
+      "caption": "Stand them on their edges too, until the whole outside is crisp.",
+      "src": "illustrations/yaki-onigiri/4-how2.webp?v=84b3383c92"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/4.webp?v=a8eb3d4feb",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Grill",
+   "part_id": "part-grill",
+   "time": "~12 min",
+   "time_html": "<span>~12 min</span>",
+   "title": "Grill until crisp",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Stir the soy sauce and sesame oil together. Turn the heat to low (or off).</li><li>Brush one side, turn it glaze-side down onto the parchment, brush the top. A minute or so per side until it lacquers and darkens — it burns fast once the glaze is on.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Soy glaze",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Heat low: brush the top with the soy glaze.",
+      "src": "illustrations/yaki-onigiri/5-how1.webp?v=2583f5bc57"
+     },
+     {
+      "caption": "Turn it glaze-side down onto the parchment, then brush the other side.",
+      "src": "illustrations/yaki-onigiri/5-how2.webp?v=03ace1c293"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/5.webp?v=759a32c8b8",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Grill",
+   "part_id": "part-grill",
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Soy glaze",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Soy sauce (glaze)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted sesame oil (glaze)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Mix the miso, mirin and sugar. Grill the plain-rice triangles the same way (a little oil brushed on the parchment helps), until both sides are browned.</li><li>Heat to low, spread miso on top, flip and cook that side <b>10–15 seconds</b>; spread the other side, flip, 10–15 seconds. Miso burns very fast.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Or: miso glaze",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Spread miso over the top, flip and cook it 10–15 seconds — it burns fast.",
+      "src": "illustrations/yaki-onigiri/6-how1.webp?v=6c539ee0a7"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/6.webp?v=55d22b5a81",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Variations",
+   "part_id": "part-variations",
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Or: miso glaze",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Miso"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar (miso glaze)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Straight off the pan, put <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\" data-s=\"0\">½ tbsp</span> butter on each hot soy-glazed onigiri and let it melt into the crust.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Or: butter on top",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "A pat of butter on each one, straight from the pan.",
+      "src": "illustrations/yaki-onigiri/7-how1.webp?v=1ff862799c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/7.webp?v=3affdb17bd",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Variations",
+   "part_id": "part-variations",
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Or: butter on top",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\" data-s=\"0\">½ tbsp</span> per onigiri",
+     "name_html": "Butter"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Best straight from the pan, while the crust still crackles and the inside steams.</li><li>To keep: wrap each one in plastic and freeze for up to a month; reheat in a frying pan or the microwave.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Eat hot",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Break one open: crackling crust outside, soft steaming rice inside.",
+      "src": "illustrations/yaki-onigiri/8-how1.webp?v=dcc99c3fb4"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/yaki-onigiri/8.webp?v=ee31d38f44",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Serve",
+   "part_id": "part-serve",
+   "time": null,
+   "time_html": null,
+   "title": "Eat hot",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 30,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "Cook the rice first (soak 20–30 min, then cook) — it has to be hot or warm to shape. The grill is most of the time: don’t rush it, the crust is the point.",
+  "tasks": [
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "bowl",
+    "label": "Season the rice, let it cool a little",
+    "label_html": "Season the rice, let it cool a little",
+    "start": 0
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "bowl",
+    "label": "Shape 9 firm triangles",
+    "label_html": "Shape 9 firm triangles",
+    "start": 6
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 min",
+    "kind": "pan",
+    "label": "Grill on parchment",
+    "label_html": "Grill on parchment",
+    "start": 14
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "pan",
+    "label": "Glaze (soy or miso)",
+    "label_html": "Glaze (soy or miso)",
+    "start": 26
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "bowl",
+    "label": "Butter, serve",
+    "label_html": "Butter, serve",
+    "start": 29
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Yaki onigiri (grilled, soy-glazed rice balls)",
+ "total": "~30 min with the rice cooked",
+ "vinegar_options": null,
+ "yields": "9 yaki onigiri"
+}

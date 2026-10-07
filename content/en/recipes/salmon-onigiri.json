@@ -1,0 +1,774 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Juicy grilled salted salmon flaked through the rice with shiso, shio kombu and sesame, pressed into triangles and crowned with a spoonful of glossy ikura.",
+ "chips": [
+  {
+   "html": "<span>6 onigiri</span>",
+   "kind": "",
+   "text": "6 onigiri"
+  },
+  {
+   "html": "~1½ h (mostly the rice)",
+   "kind": "time",
+   "text": "~1½ h (mostly the rice)"
+  }
+ ],
+ "description": "Juicy grilled salted salmon flaked through the rice with shiso, shio kombu and sesame, pressed into triangles and crowned with a spoonful of glossy ikura.",
+ "equipment_html": [
+  "Rice cooker or heavy pot",
+  "Small tray + paper towels (salting)",
+  "Fish grill, grill pan or frying pan",
+  "Cutting board + knife",
+  "Large bowl or tray to mix the rice",
+  "Rice paddle",
+  "Small bowl of water for your hands",
+  "Small spoon (ikura)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Salmon onigiri with ikura",
+  "image": "illustrations/salmon-onigiri/hero.webp?v=428f7599e4",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"1.5\" data-n=\"2\">1½</span> rice-cooker cups)",
+     "name_html": "Japanese short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>",
+     "name_html": "Water (rice)"
+    }
+   ],
+   "name": "Rice"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"fillet|fillets\" data-n=\"1\">1 fillet</span>)",
+     "name_html": "Salmon fillet, skin on"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Kosher salt (salmon)"
+    }
+   ],
+   "name": "Salmon"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"5\" data-n=\"1\">5</span>",
+     "name_html": "Shiso leaves"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
+     "name_html": "Myoga ginger (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Shio kombu (salted kelp strips)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Toasted white sesame seeds"
+    }
+   ],
+   "name": "Mix-ins"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Kosher salt (for your hands)"
+    },
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Ikura (salmon roe)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"sheet|sheets\" data-n=\"1\">1 sheet</span>, cut into 6 strips",
+     "name_html": "Nori (optional)"
+    }
+   ],
+   "name": "To shape and top"
+  }
+ ],
+ "intro_html": "The salmon goes <b>all through</b> the rice instead of hiding in the middle: salted, grilled until just flaking and still juicy, then folded into hot rice with shiso, a little shio kombu and sesame — every bite pink and green. Each triangle gets a spoonful of <b>ikura</b> on top that pops when you bite. Shaping basics (wet hands, salt, the triangle press) are on the <a href=\"onigiri.html\">onigiri page</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/salmon-onigiri/mise1.webp?v=bf1baa4c71",
+   "items": [
+    "freshly cooked, hot"
+   ],
+   "items_html": "freshly cooked, hot",
+   "name": "Rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/salmon-onigiri/mise2.webp?v=21d700c61c",
+   "items": [
+    "skin-on fillet",
+    "sake",
+    "salt"
+   ],
+   "items_html": "skin-on fillet · sake · salt",
+   "name": "Salmon",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/salmon-onigiri/mise3.webp?v=729a353324",
+   "items": [
+    "shiso",
+    "myoga"
+   ],
+   "items_html": "shiso · myoga",
+   "name": "Herbs",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/salmon-onigiri/mise4.webp?v=eec1a07f17",
+   "items": [
+    "salted kelp strips",
+    "toasted sesame"
+   ],
+   "items_html": "salted kelp strips · toasted sesame",
+   "name": "Shio kombu + sesame",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/salmon-onigiri/mise5.webp?v=5857b93afa",
+   "items": [
+    "bowl of water",
+    "kosher salt"
+   ],
+   "items_html": "bowl of water · kosher salt",
+   "name": "Hand station",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/salmon-onigiri/mise6.webp?v=d7a1cdddd8",
+   "items": [
+    "salmon roe, cold"
+   ],
+   "items_html": "salmon roe, cold",
+   "name": "Ikura",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/salmon-onigiri/mise7.webp?v=023acf0b29",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"strip|strips\" data-n=\"1\">6 strips</span> (optional)"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"strip|strips\" data-n=\"1\">6 strips</span> (optional)",
+   "name": "Nori",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "baby-octopus-onigiri",
+  "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+ },
+ "notes": [
+  {
+   "html": "<p>Folded through the rice, the salmon is in every bite and the onigiri is pink and green all the way through — and there's no dry corner of plain rice before you reach the middle.</p>",
+   "title_html": "Why mixed through, not a filling"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Traditional salted salmon is cooked well done and dry, so it keeps in a lunch box.</li><li>For eating the same day, take it off as soon as it flakes — the flakes stay juicy in the rice.</li></ul>",
+   "title_html": "Juicy salmon"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Salmon flakes from a Japanese grocery (shake flakes in a jar) work in place of grilling your own.</li><li>Ikura is sold in small trays, often frozen; thaw it in the fridge.</li></ul>",
+   "title_html": "Store-bought shortcuts"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Shio kombu and the salt on your hands both salt the rice — taste a bit of the mixed rice before shaping and go lighter on your hands if it's already well seasoned.</li><li>Table salt: half the amount.</li></ul>",
+   "title_html": "Salt"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The mixed rice (salmon, shiso, myoga, shio kombu, sesame), its amounts and the shaping are Just One Cookbook's salmon and shio kombu onigiri.</li><li>The sake and salt on the fish and the fish grill are her shiozake, but shortened: she cures it 2 days and cooks it well done; here it's salted 20–30 minutes and taken off while still moist.</li><li>The <b>ikura on top</b>, the <b>chopped crisp skin</b> in the rice and the <b>nori strip</b> are this site's additions.</li></ul>",
+   "title_html": "Assumed: what's the source and what's mine"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-rice-and-salmon",
+   "title": "Rice and salmon"
+  },
+  {
+   "id": "part-mix-and-shape",
+   "title": "Mix and shape"
+  }
+ ],
+ "prev": {
+  "slug": "tenmusu",
+  "title": "Tenmusu (shrimp tempura onigiri)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/salmon-onigiri.jpg?v=d2ba3c6830",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Tenmusu (shrimp tempura onigiri)"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "salmon-onigiri",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Salmon and shio kombu onigiri",
+   "url": "https://www.justonecookbook.com/salmon-and-shio-kombu-onigiri/"
+  },
+  {
+   "label": "Just One Cookbook — Japanese salted salmon (shiozake)",
+   "url": "https://www.justonecookbook.com/how-to-cook-salmon-salted-salmon/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Wash the rice, soak it 20–30 minutes in the water, then cook it (rice cooker or pot) — the method is on the <a href=\"onigiri.html\">onigiri page</a>.</li><li>Plain rice — no vinegar, no sugar. You need it <b>hot</b> for mixing.</li></ul>",
+   "heat": {
+    "label": "per your rice cooker",
+    "label_html": "<span>per your rice cooker</span>",
+    "off": false
+   },
+   "id": "step-1",
+   "images": {
+    "alt": "Cook the rice",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/salmon-onigiri/1.webp?v=f3d3758e66",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Rice and salmon",
+   "part_id": "part-rice-and-salmon",
+   "time": "~1 h incl. soaking",
+   "time_html": "<span>~1 h incl. soaking</span>",
+   "title": "Cook the rice",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span>",
+     "name_html": "Japanese short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>",
+     "name_html": "Water (rice)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Sprinkle the sake over the salmon, turn it to coat and leave it 10 minutes. Pat dry with a paper towel.</li><li>Sprinkle the salt over the skin and both sides.</li><li>On a paper towel, skin side up, in the fridge for 20–30 minutes. Pat it dry again.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Salt the salmon",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Sake over, 10 minutes, then pat dry.",
+      "src": "illustrations/salmon-onigiri/2-how1.webp?v=bf0d68e3ef"
+     },
+     {
+      "caption": "Salt the skin and both sides.",
+      "src": "illustrations/salmon-onigiri/2-how2.webp?v=a7d2047d0c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/2.webp?v=85b1646fac",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Rice and salmon",
+   "part_id": "part-rice-and-salmon",
+   "time": "~40 min, mostly waiting",
+   "time_html": "<span>~40 min, mostly waiting</span>",
+   "title": "Salt the salmon",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"fillet|fillets\" data-n=\"1\">1 fillet</span>)",
+     "name_html": "Salmon fillet, skin on"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sake"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Kosher salt (salmon)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat a fish grill (or a grill pan or frying pan) over <b>medium</b> heat.</li><li>Skin side down first, about 4 minutes, until the skin is crisp and golden.</li><li>Turn and cook about 4 minutes more, until the flesh is just opaque and flakes apart but still <b>moist</b> in the middle. Don’t take it to dry.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Grill — stop while it's juicy",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Skin side down first, until the skin is crisp.",
+      "src": "illustrations/salmon-onigiri/3-how1.webp?v=010c959e9c"
+     },
+     {
+      "caption": "Turn it; take it off while it's still moist.",
+      "src": "illustrations/salmon-onigiri/3-how2.webp?v=b8c0a3a0dc"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/3.webp?v=7ff9b38c6f",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Rice and salmon",
+   "part_id": "part-rice-and-salmon",
+   "time": "~8–10 min",
+   "time_html": "<span>~8–10 min</span>",
+   "title": "Grill — stop while it's juicy",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Let it cool a minute, then peel off the skin.</li><li>Flake the flesh with chopsticks or a fork into <b>big, juicy flakes</b>, picking out any bones.</li><li>Chop the crisp skin into small bits — it goes into the rice for crunch.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Flake it, chop the skin",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Peel off the skin, then flake the flesh into big, juicy flakes.",
+      "src": "illustrations/salmon-onigiri/4-how1.webp?v=bea03fbaa9"
+     },
+     {
+      "caption": "Chop the crisp skin into small bits.",
+      "src": "illustrations/salmon-onigiri/4-how2.webp?v=5a054b7804"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/4.webp?v=d34f3fea89",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Rice and salmon",
+   "part_id": "part-rice-and-salmon",
+   "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
+   "title": "Flake it, chop the skin",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the stems off the shiso, stack and roll the leaves from the stem end, slice into thin strips and loosen them.</li><li>Halve the myoga lengthwise and slice thinly (skip it if you can't find it).</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Shiso and myoga",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stack the shiso, roll from the stem end, slice into thin strips.",
+      "src": "illustrations/salmon-onigiri/5-how1.webp?v=e933087dc8"
+     },
+     {
+      "caption": "Halve the myoga lengthwise, slice it thinly.",
+      "src": "illustrations/salmon-onigiri/5-how2.webp?v=06175f7ea4"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/5.webp?v=496fdc2cad",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Mix and shape",
+   "part_id": "part-mix-and-shape",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Shiso and myoga",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"5\" data-n=\"1\">5</span>",
+     "name_html": "Shiso leaves"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
+     "name_html": "Myoga ginger (optional)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Tip the hot rice into a large bowl or tray so there's room to mix.</li><li>Scatter over it:<ul class=\"ing two-col\"><li>shiso</li><li>myoga</li><li>shio kombu (salted kelp strips) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span></span></li><li>toasted white sesame seeds <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span></span></li><li>the salmon flakes and chopped skin</li></ul></li><li>Fold with the rice paddle in <b>slicing</b> strokes until everything is evenly through — don't mash the grains. Let it cool a few minutes, until you can hold it.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Mix into the hot rice",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Scatter everything over the hot rice.",
+      "src": "illustrations/salmon-onigiri/6-how1.webp?v=b8ae4bd631"
+     },
+     {
+      "caption": "Fold with the paddle in slicing strokes — don't mash.",
+      "src": "illustrations/salmon-onigiri/6-how2.webp?v=8126cc642e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/6.webp?v=f6198b3e6c",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Mix and shape",
+   "part_id": "part-mix-and-shape",
+   "time": "~3 min + 5 min cooling",
+   "time_html": "<span>~3 min + 5 min cooling</span>",
+   "title": "Mix into the hot rice",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wet your palms, dip 2–3 fingertips in the salt and rub it over both palms.</li><li>Take about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\" data-alt=\"1\">½ cup</span>)</span> of the warm salmon rice in your left palm.</li><li>Press the triangle: right hand bent into a “mountain” on top, left hand cupping, turning a third each time — light, so it stays airy (see the <a href=\"onigiri.html\">onigiri page</a>).</li><li>Press a shallow dent into the top with a fingertip. Re-wet and re-salt your hands for each one.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Shape the triangles",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wet palms, salt on the fingertips, rub it over both palms.",
+      "src": "illustrations/salmon-onigiri/7-how1.webp?v=0478909a59"
+     },
+     {
+      "caption": "Right hand bent into a mountain on top, left hand cupping underneath — press lightly and turn.",
+      "src": "illustrations/salmon-onigiri/7-how2.webp?v=30f6e175ee"
+     },
+     {
+      "caption": "A shallow dent in the top for the ikura.",
+      "src": "illustrations/salmon-onigiri/7-how3.webp?v=68cdcac95e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/7.webp?v=c3d9dff9ac",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Mix and shape",
+   "part_id": "part-mix-and-shape",
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Shape the triangles",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Kosher salt (for your hands)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spoon about 2 heaped teaspoons of cold ikura into each dent.</li><li>Wrap a nori strip round the bottom if you like, so you can hold it.</li><li>Eat warm or at room temperature, within a few hours.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Ikura on top",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "A heaped spoonful of ikura into each dent.",
+      "src": "illustrations/salmon-onigiri/8-how1.webp?v=a89e1063cf"
+     },
+     {
+      "caption": "A nori strip round the bottom to hold it by.",
+      "src": "illustrations/salmon-onigiri/8-how2.webp?v=36fda09e86"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/8.webp?v=181344f13f",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Mix and shape",
+   "part_id": "part-mix-and-shape",
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Ikura on top",
+   "uses_rows": [
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Ikura (salmon roe)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"sheet|sheets\" data-n=\"1\">1 sheet</span>",
+     "name_html": "Nori (optional)"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 90,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   }
+  ],
+  "note_html": "Salt the salmon while the rice soaks; the fish is ready about when the rice is.",
+  "tasks": [
+   {
+    "dur": 60,
+    "dur_label": "1 h",
+    "kind": "pan",
+    "label": "Wash, soak, cook rice",
+    "label_html": "Wash, soak, cook rice",
+    "start": 0
+   },
+   {
+    "dur": 35,
+    "dur_label": "35 min",
+    "kind": "wait",
+    "label": "Salt the salmon",
+    "label_html": "Salt the salmon",
+    "start": 10
+   },
+   {
+    "dur": 9,
+    "dur_label": "9 min",
+    "kind": "pan",
+    "label": "Grill the salmon",
+    "label_html": "Grill the salmon",
+    "start": 45
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Shiso + myoga",
+    "label_html": "Shiso + myoga",
+    "start": 46
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "board",
+    "label": "Flake, chop the skin",
+    "label_html": "Flake, chop the skin",
+    "start": 54
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Mix into the hot rice",
+    "label_html": "Mix into the hot rice",
+    "start": 60
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "wait",
+    "label": "Cool a little",
+    "label_html": "Cool a little",
+    "start": 63
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "bowl",
+    "label": "Shape",
+    "label_html": "Shape",
+    "start": 68
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Ikura + nori",
+    "label_html": "Ikura + nori",
+    "start": 78
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   },
+   {
+    "at": 80,
+    "label": "80"
+   },
+   {
+    "at": 90,
+    "label": "90"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Salmon onigiri with ikura",
+ "total": "~1½ h (mostly the rice)",
+ "vinegar_options": null,
+ "yields": "6 onigiri"
+}

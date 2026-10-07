@@ -1,0 +1,774 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Сочный жареный солёный лосось, смешанный с рисом, шисо, сио-комбу и кунжутом, слепленный треугольниками и увенчанный ложкой блестящей икры.",
+ "chips": [
+  {
+   "html": "<span>6 онигири</span>",
+   "kind": "",
+   "text": "6 онигири"
+  },
+  {
+   "html": "~1½ ч (в основном рис)",
+   "kind": "time",
+   "text": "~1½ ч (в основном рис)"
+  }
+ ],
+ "description": "Сочный жареный солёный лосось, смешанный с рисом, шисо, сио-комбу и кунжутом, слепленный треугольниками и увенчанный ложкой блестящей икры.",
+ "equipment_html": [
+  "Рисоварка или тяжёлая кастрюля",
+  "Небольшой поднос + бумажные полотенца (соление)",
+  "Рыбный гриль, гриль-сковорода или сковорода",
+  "Доска + нож",
+  "Большая миска или противень для смешивания риса",
+  "Лопатка для риса",
+  "Маленькая миска с водой для рук",
+  "Маленькая ложка (для икры)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Лососевые онигири с икрой",
+  "image": "illustrations/salmon-onigiri/hero.webp?v=428f7599e4",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1.5\" data-n=\"2\">1½</span> мерных стакана рисоварки)",
+     "name_html": "Японский короткозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span>",
+     "name_html": "Вода (для риса)"
+    }
+   ],
+   "name": "Рис"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> филе)",
+     "name_html": "Филе лосося с кожей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Крупная соль (для лосося)"
+    }
+   ],
+   "name": "Лосось"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"5\" data-n=\"1\">5</span>",
+     "name_html": "Листья шисо"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
+     "name_html": "Мёга (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
+     "name_html": "Сио-комбу (солёные полоски ламинарии)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Обжаренный белый кунжут"
+    }
+   ],
+   "name": "Добавки в рис"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Крупная (кошерная) соль (для рук)"
+    },
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Икура (икра лосося)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>, нарезанный на 6 полосок",
+     "name_html": "Нори (по желанию)"
+    }
+   ],
+   "name": "Для лепки и сверху"
+  }
+ ],
+ "intro_html": "Лосось идёт <b>по всему</b> рису, а не прячется в середине: посоленный, обжаренный до лёгкого расслоения и ещё сочный, затем смешанный с горячим рисом, шисо, чуть сио-комбу и кунжутом — каждый кусок розовый и зелёный. На каждый треугольник — ложка <b>икры</b> сверху, которая лопается при укусе. Основы лепки (влажные руки, соль, пресс треугольника) — на странице <a href=\"onigiri.html\">онигири</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/salmon-onigiri/mise1.webp?v=bf1baa4c71",
+   "items": [
+    "только что сваренный, горячий"
+   ],
+   "items_html": "только что сваренный, горячий",
+   "name": "Рис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/salmon-onigiri/mise2.webp?v=21d700c61c",
+   "items": [
+    "филе с кожей",
+    "саке",
+    "соль"
+   ],
+   "items_html": "филе с кожей · саке · соль",
+   "name": "Лосось",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/salmon-onigiri/mise3.webp?v=729a353324",
+   "items": [
+    "шисо",
+    "мёга"
+   ],
+   "items_html": "шисо · мёга",
+   "name": "Зелень",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/salmon-onigiri/mise4.webp?v=eec1a07f17",
+   "items": [
+    "солёные полоски ламинарии",
+    "обжаренный кунжут"
+   ],
+   "items_html": "солёные полоски ламинарии · обжаренный кунжут",
+   "name": "Сио-комбу + кунжут",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/salmon-onigiri/mise5.webp?v=5857b93afa",
+   "items": [
+    "миска с водой",
+    "крупная соль"
+   ],
+   "items_html": "миска с водой · крупная соль",
+   "name": "Рабочее место",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/salmon-onigiri/mise6.webp?v=d7a1cdddd8",
+   "items": [
+    "икра лосося, холодная"
+   ],
+   "items_html": "икра лосося, холодная",
+   "name": "Икура",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/salmon-onigiri/mise7.webp?v=023acf0b29",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"полоска|полоски|полосок\" data-n=\"1\">6 полосок</span> (по желанию)"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"полоска|полоски|полосок\" data-n=\"1\">6 полосок</span> (по желанию)",
+   "name": "Нори",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "baby-octopus-onigiri",
+  "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+ },
+ "notes": [
+  {
+   "html": "<p>Смешанный с рисом, лосось в каждом куске, онигири розовый и зелёный насквозь — и нет сухого угла простого риса, пока не дойдёте до середины.</p>",
+   "title_html": "Почему смешан с рисом, а не начинка"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Традиционный солёный лосось готовят до полной готовности и сухости — так он держится в бэнто.</li><li>Для еды в тот же день снимайте, как только начинает расслаиваться — хлопья остаются сочными в рисе.</li></ul>",
+   "title_html": "Сочный лосось"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Хлопья лосося из японского магазина (в банке) заменяют свою жарку.</li><li>Икру продают маленькими лотками, часто замороженную; разморозьте в холодильнике.</li></ul>",
+   "title_html": "Готовые сокращения"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Сио-комбу и соль на руках оба солят рис — попробуйте смешанный рис перед лепкой и меньше соли на руках, если уже достаточно.</li><li>Мелкая соль: половина количества.</li></ul>",
+   "title_html": "Соль"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Смешанный рис (лосось, шисо, мёга, сио-комбу, кунжут), количества и лепка — из salmon and shio kombu onigiri Just One Cookbook.</li><li>Саке и соль на рыбе и рыбный гриль — её сиодзакэ, но короче: она вялит 2 дня и жарит до полной готовности; здесь солят 20–30 минут и снимают влажным.</li><li><b>Икура сверху</b>, <b>нарезанная хрустящая кожа</b> в рисе и <b>полоска нори</b> — добавления этого сайта.</li></ul>",
+   "title_html": "Допущения: что из источника, а что моё"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-рис-и-лосось",
+   "title": "Рис и лосось"
+  },
+  {
+   "id": "part-смешать-и-слепить",
+   "title": "Смешать и слепить"
+  }
+ ],
+ "prev": {
+  "slug": "tenmusu",
+  "title": "Тэнмусу (онигири с креветкой в темпуре)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/salmon-onigiri.jpg?v=d2ba3c6830",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Онигири: форма и начинки"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Тэнмусу (онигири с креветкой в темпуре)"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Быстрое японское карри (ру Golden Curry)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "salmon-onigiri",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Онигири с лососем и сио-комбу",
+   "url": "https://www.justonecookbook.com/salmon-and-shio-kombu-onigiri/"
+  },
+  {
+   "label": "Just One Cookbook — Японский солёный лосось (сиодзакэ)",
+   "url": "https://www.justonecookbook.com/how-to-cook-salmon-salted-salmon/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Промойте рис, замочите 20–30 минут в воде, затем сварите (рисоварка или кастрюля) — способ на странице <a href=\"onigiri.html\">онигири</a>.</li><li>Простой рис — без уксуса и сахара. Для смешивания нужен <b>горячий</b>.</li></ul>",
+   "heat": {
+    "label": "по программе рисоварки",
+    "label_html": "<span>по программе рисоварки</span>",
+    "off": false
+   },
+   "id": "step-1",
+   "images": {
+    "alt": "Сварите рис",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/salmon-onigiri/1.webp?v=f3d3758e66",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Рис и лосось",
+   "part_id": "part-рис-и-лосось",
+   "time": "~1 ч, включая замачивание",
+   "time_html": "<span>~1 ч, включая замачивание</span>",
+   "title": "Сварите рис",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span>",
+     "name_html": "Японский короткозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span>",
+     "name_html": "Вода (для риса)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Полейте лосось саке, переверните, чтобы покрыть, оставьте на 10 минут. Промокните бумажным полотенцем.</li><li>Посыпьте солью кожу и обе стороны.</li><li>На бумажном полотенце, кожей вверх, в холодильник на 20–30 минут. Снова промокните.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Посолите лосось",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Саке сверху, 10 минут, затем промокнуть.",
+      "src": "illustrations/salmon-onigiri/2-how1.webp?v=bf0d68e3ef"
+     },
+     {
+      "caption": "Посолите кожу и обе стороны.",
+      "src": "illustrations/salmon-onigiri/2-how2.webp?v=a7d2047d0c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/2.webp?v=85b1646fac",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Рис и лосось",
+   "part_id": "part-рис-и-лосось",
+   "time": "~40 мин, в основном ожидание",
+   "time_html": "<span>~40 мин, в основном ожидание</span>",
+   "title": "Посолите лосось",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> филе)",
+     "name_html": "Филе лосося с кожей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Саке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Крупная соль (для лосося)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте рыбный гриль (или гриль-сковороду или сковороду) на <b>среднем</b> огне.</li><li>Сначала кожей вниз, около 4 минут, пока кожа не станет хрустящей и золотистой.</li><li>Переверните и жарьте ещё около 4 минут, пока мясо не станет матовым и не начнёт расслаиваться, но в середине ещё <b>сочным</b>. Не доводите до сухости.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Жарьте — снимите, пока сочный",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Сначала кожей вниз, пока кожа не станет хрустящей.",
+      "src": "illustrations/salmon-onigiri/3-how1.webp?v=010c959e9c"
+     },
+     {
+      "caption": "Переверните; снимите, пока ещё влажный.",
+      "src": "illustrations/salmon-onigiri/3-how2.webp?v=b8c0a3a0dc"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/3.webp?v=7ff9b38c6f",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Рис и лосось",
+   "part_id": "part-рис-и-лосось",
+   "time": "~8–10 мин",
+   "time_html": "<span>~8–10 мин</span>",
+   "title": "Жарьте — снимите, пока сочный",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Остудите минуту, затем снимите кожу.</li><li>Разберите мясо палочками или вилкой на <b>крупные сочные хлопья</b>, выберите кости.</li><li>Нарежьте хрустящую кожу мелкими кусочками — в рис для хруста.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Разберите на хлопья, нарежьте кожу",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Снимите кожу, затем разберите мясо на крупные сочные хлопья.",
+      "src": "illustrations/salmon-onigiri/4-how1.webp?v=bea03fbaa9"
+     },
+     {
+      "caption": "Нарежьте хрустящую кожу мелкими кусочками.",
+      "src": "illustrations/salmon-onigiri/4-how2.webp?v=5a054b7804"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/4.webp?v=d34f3fea89",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Рис и лосось",
+   "part_id": "part-рис-и-лосось",
+   "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
+   "title": "Разберите на хлопья, нарежьте кожу",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Отрежьте стебли шисо, сложите листья стопкой, сверните от стебля, нарежьте тонкой соломкой и распушите.</li><li>Разрежьте мёгу вдоль пополам и тонко нарежьте (пропустите, если не найдёте).</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Шисо и мёга",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Сложите шисо, сверните от стебля, нарежьте тонкой соломкой.",
+      "src": "illustrations/salmon-onigiri/5-how1.webp?v=e933087dc8"
+     },
+     {
+      "caption": "Разрежьте мёгу вдоль, тонко нарежьте.",
+      "src": "illustrations/salmon-onigiri/5-how2.webp?v=06175f7ea4"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/5.webp?v=496fdc2cad",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Смешать и слепить",
+   "part_id": "part-смешать-и-слепить",
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Шисо и мёга",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"5\" data-n=\"1\">5</span>",
+     "name_html": "Листья шисо"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span>",
+     "name_html": "Мёга (по желанию)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите горячий рис в большую миску или противень, чтобы было место мешать.</li><li>Разбросайте сверху:<ul class=\"ing two-col\"><li>шисо</li><li>мёга</li><li>сио-комбу (солёные полоски ламинарии) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span></span></li><li>обжаренный белый кунжут <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li><li>хлопья лосося и нарезанную кожу</li></ul></li><li>Перемешайте лопаткой <b>режущими</b> движениями, пока всё не распределится равномерно — не мните зёрна. Дайте остыть несколько минут, пока можно будет держать.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Вмешайте в горячий рис",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Разбросайте всё по горячему рису.",
+      "src": "illustrations/salmon-onigiri/6-how1.webp?v=b8ae4bd631"
+     },
+     {
+      "caption": "Перемешайте лопаткой режущими движениями — не мните.",
+      "src": "illustrations/salmon-onigiri/6-how2.webp?v=8126cc642e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/6.webp?v=f6198b3e6c",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Смешать и слепить",
+   "part_id": "part-смешать-и-слепить",
+   "time": "~3 мин + 5 мин остывания",
+   "time_html": "<span>~3 мин + 5 мин остывания</span>",
+   "title": "Вмешайте в горячий рис",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Намочите ладони, обмакните 2–3 кончика пальцев в соль и разотрите по обеим ладоням.</li><li>Возьмите около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\" data-alt=\"1\">½ стакана</span>)</span> тёплого лососевого риса в левую ладонь.</li><li>Пресс треугольника: правая рука «горой» сверху, левая чашечкой, поворачивая на треть каждый раз — легко, чтобы остался воздушным (см. <a href=\"onigiri.html\">онигири</a>).</li><li>Надавите пальцем неглубокую ямку сверху. Для каждого снова смачивайте и солите руки.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Слепите треугольники",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Влажные ладони, соль на кончиках пальцев, разотрите по обеим ладоням.",
+      "src": "illustrations/salmon-onigiri/7-how1.webp?v=0478909a59"
+     },
+     {
+      "caption": "Правая рука горой сверху, левая чашечкой снизу — слегка нажмите и поверните.",
+      "src": "illustrations/salmon-onigiri/7-how2.webp?v=30f6e175ee"
+     },
+     {
+      "caption": "Неглубокая ямка сверху для икры.",
+      "src": "illustrations/salmon-onigiri/7-how3.webp?v=68cdcac95e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/7.webp?v=c3d9dff9ac",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Смешать и слепить",
+   "part_id": "part-смешать-и-слепить",
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Слепите треугольники",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Крупная (кошерная) соль (для рук)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите около 2 чайных ложек с горкой холодной икры в каждую ямку.</li><li>По желанию оберните полоской нори низ, чтобы удобно держать.</li><li>Ешьте тёплыми или комнатной температуры, в течение нескольких часов.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Икура сверху",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Ложка с горкой икры в каждую ямку.",
+      "src": "illustrations/salmon-onigiri/8-how1.webp?v=a89e1063cf"
+     },
+     {
+      "caption": "Полоска нори вокруг низа, чтобы держать.",
+      "src": "illustrations/salmon-onigiri/8-how2.webp?v=36fda09e86"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/salmon-onigiri/8.webp?v=181344f13f",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Смешать и слепить",
+   "part_id": "part-смешать-и-слепить",
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Икура сверху",
+   "uses_rows": [
+    {
+     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Икура (икра лосося)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>",
+     "name_html": "Нори (по желанию)"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 90,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": "Солите лосось, пока рис замачивается; рыба будет готова примерно вместе с рисом.",
+  "tasks": [
+   {
+    "dur": 60,
+    "dur_label": "1 ч",
+    "kind": "pan",
+    "label": "Промыть, замочить, сварить рис",
+    "label_html": "Промыть, замочить, сварить рис",
+    "start": 0
+   },
+   {
+    "dur": 35,
+    "dur_label": "35 мин",
+    "kind": "wait",
+    "label": "Посолите лосось",
+    "label_html": "Посолите лосось",
+    "start": 10
+   },
+   {
+    "dur": 9,
+    "dur_label": "9 мин",
+    "kind": "pan",
+    "label": "Обжарьте лосось",
+    "label_html": "Обжарьте лосось",
+    "start": 45
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Шисо + мёга",
+    "label_html": "Шисо + мёга",
+    "start": 46
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "board",
+    "label": "Хлопья, нарезать кожу",
+    "label_html": "Хлопья, нарезать кожу",
+    "start": 54
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Вмешайте в горячий рис",
+    "label_html": "Вмешайте в горячий рис",
+    "start": 60
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "wait",
+    "label": "Чуть остудить",
+    "label_html": "Чуть остудить",
+    "start": 63
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "bowl",
+    "label": "Формовка",
+    "label_html": "Формовка",
+    "start": 68
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Икура + нори",
+    "label_html": "Икура + нори",
+    "start": 78
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   },
+   {
+    "at": 80,
+    "label": "80"
+   },
+   {
+    "at": 90,
+    "label": "90"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Лососевые онигири с икрой",
+ "total": "~1½ ч (в основном рис)",
+ "vinegar_options": null,
+ "yields": "6 онигири"
+}

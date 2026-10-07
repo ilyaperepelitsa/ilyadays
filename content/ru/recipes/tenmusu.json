@@ -1,0 +1,879 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Хрустящая креветка в темпуре, обмакнутая в сладко-солёную мэнцую и спрятанная в маленький рисовый треугольник, красный хвост торчит сверху, обёрнутый «кимоно» из нори.",
+ "chips": [
+  {
+   "html": "<span>12 тэнмусу</span>",
+   "kind": "",
+   "text": "12 тэнмусу"
+  },
+  {
+   "html": "~1 ч",
+   "kind": "time",
+   "text": "~1 ч"
+  }
+ ],
+ "description": "Хрустящая креветка в темпуре, обмакнутая в сладко-солёную мэнцую и спрятанная в маленький рисовый треугольник, красный хвост торчит сверху, обёрнутый «кимоно» из нори.",
+ "equipment_html": [
+  "Рисоварка или тяжёлая кастрюля с крышкой",
+  "Маленькая глубокая кастрюля для жарки (чтобы <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\" data-s=\"0\">2 стакана</span> масла давали глубину)",
+  "Термометр для фритюра (или палочка)",
+  "Мелкое сито (просеять муку)",
+  "Деревянная шпажка",
+  "Решётка или тарелка с бумажным полотенцем",
+  "Лопатка для риса",
+  "Кухонные ножницы (для нори)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Тэнмусу (онигири с креветкой в темпуре)",
+  "image": "illustrations/tenmusu/hero.webp?v=aeb202f4b9",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\" data-alt=\"1\">300 г</span>)</span>",
+     "name_html": "Японский круглозёрный белый рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.6667\">1⅔ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\" data-alt=\"1\">400 мл</span>)</span>",
+     "name_html": "Вода (для риса)"
+    }
+   ],
+   "name": "Рис"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "name_html": "Креветки среднего размера, в панцире"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Картофельный или кукурузный крахмал (для очистки креветок)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\">2 стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"480\" data-alt=\"1\">480 мл</span>)</span>",
+     "name_html": "Нейтральное масло (для фритюра)"
+    }
+   ],
+   "name": "Креветки"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span>",
+     "name_html": "Мука для выпечки (мягкая)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Картофельный или кукурузный крахмал (для кляра)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\">⅓ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\" data-alt=\"1\">80 мл</span>)</span>",
+     "name_html": "Ледяная вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Рисовый уксус (без приправ)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ ст. л.</span>",
+     "name_html": "Саке"
+    }
+   ],
+   "name": "Кляр для темпуры"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Мэнцую (концентрированная основа для супа с лапшой)"
+    },
+    {
+     "amount_html": "небольшая миска",
+     "name_html": "Вода (для рук)"
+    },
+    {
+     "amount_html": "немного, для рук",
+     "name_html": "Кошерная соль Diamond Crystal"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span>",
+     "name_html": "Нори"
+    }
+   ],
+   "name": "Обмакнуть и слепить"
+  }
+ ],
+ "intro_html": "Любимый рисовый шарик Нагои: <b>целая креветка в темпуре</b>, обмакнутая в мэнцую, чтобы хрустящий густой кляр впитал соус, спрятанная в маленький солёный рисовый треугольник с <b>красным хвостом, торчащим сверху</b>. Полоска нори крест-накрест спереди, как воротник кимоно. Они маленькие — на два-три укуса — едят горстями. Рецепт Just One Cookbook; основы риса и лепки — на <a href=\"onigiri.html\">онигири</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/tenmusu/mise1.webp?v=522a403dae",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ стакана</span>, варится"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ стакана</span>, варится",
+   "name": "Рис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/tenmusu/mise2.webp?v=9f3f4b8d19",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span> средних, в панцире"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span> средних, в панцире",
+   "name": "Креветки",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/tenmusu/mise3.webp?v=037f48426a",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>, для очистки"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>, для очистки",
+   "name": "Крахмал",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/tenmusu/mise4.webp?v=0e44cf08d3",
+   "items": [
+    "мягкая мука",
+    "крахмал",
+    "ледяная вода",
+    "уксус",
+    "саке"
+   ],
+   "items_html": "мягкая мука · крахмал · ледяная вода · уксус · саке",
+   "name": "Кляр",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/tenmusu/mise5.webp?v=23862a313f",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+   "name": "Мэнцую",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/tenmusu/mise6.webp?v=493077cd77",
+   "items": [
+    "маленькая миска",
+    "щепотка"
+   ],
+   "items_html": "маленькая миска · щепотка",
+   "name": "Вода для рук + соль",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 11",
+   "image": "illustrations/tenmusu/mise7.webp?v=30e1e05286",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span> → 12 полосок"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span> → 12 полосок",
+   "name": "Нори",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "salmon-onigiri",
+  "title": "Лососевые онигири с икрой"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>JOC снимает и хвосты и кладёт креветку хвостом вниз («можно показать хвост сверху, если хотите»).</li><li>Мы оставляем хвосты, чтобы красный торчал сверху — как продают в Нагое, и в этом вся прелесть.</li><li>Без хвостов работает так же.</li></ul>",
+   "title_html": "Хвосты на месте и вверх (наше изменение)"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Подгоняйте рис под креветку: мельче креветка — мельче шарик.</li><li>Очень крупных можно разрезать пополам (тогда без хвостов).</li></ul>",
+   "title_html": "Размер креветок"
+  },
+  {
+   "html": "<ul class=\"do\"><li>JOC: для настоящих тэнмусу нет альтернативы фритюру.</li><li>Густой кляр — суть: он впитывает мэнцую, оттуда и вкус.</li></ul>",
+   "title_html": "Без сокращений на жарке"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Застелите маленькую миску плёнкой, положите рис и щепотку соли, сделайте лунку, положите темпуру, стяните плёнку вокруг и слепите треугольник через плёнку.</li><li>Разверните, затем нори.</li></ul>",
+   "title_html": "Без касания риса"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Не едите сразу?</li><li>Держите полоски нори в герметичном пакете и оберните прямо перед едой.</li></ul>",
+   "title_html": "Хрустящее нори"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Родилось в 1930-х в Сэндзю, ресторане темпуры в Цу (Миэ): хозяйка делала рисовые шарики с креветкой в темпуре как быстрый обед для мужа.</li><li>В Нагою пришло в 1980-м и стало одним из фирменных блюд.</li></ul>",
+   "title_html": "Откуда это"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-рис",
+   "title": "Рис"
+  },
+  {
+   "id": "part-креветки-темпура",
+   "title": "Креветки темпура"
+  },
+  {
+   "id": "part-тэнмусу",
+   "title": "Тэнмусу"
+  }
+ ],
+ "prev": {
+  "slug": "nikumaki-onigiri",
+  "title": "Никумаки-онигири (рисовые шарики в свинине)"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/tenmusu.jpg?v=b51ab3e7f4",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Онигири: форма и начинки"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Быстрое японское карри (ру Golden Curry)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "tenmusu",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Тэнмусу (рисовый шарик с креветкой в темпуре)",
+   "url": "https://www.justonecookbook.com/tenmusu/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Сварите рис в воде — рисоварка или кастрюля (см. <a href=\"onigiri.html\">онигири</a>). <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-s=\"0\">1½ стакана</span> сухого риса дают около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"660\" data-s=\"0\">660 г</span> готового: 12 тэнмусу.</li><li>Пока варится, сделайте темпуру (шаги 2–7).</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Сварите рис",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/tenmusu/1.webp?v=f9a75efc38",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Рис",
+   "part_id": "part-рис",
+   "time": "~45 мин",
+   "time_html": "<span>~45 мин</span>",
+   "title": "Сварите рис",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\" data-alt=\"1\">300 г</span>)</span>",
+     "name_html": "Японский круглозёрный белый рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.6667\">1⅔ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\" data-alt=\"1\">400 мл</span>)</span>",
+     "name_html": "Вода (для риса)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите панцирь — удобнее с третьего сегмента — но <b>хвост оставьте</b> (см. заметки).</li><li>Проведите шпажкой под тёмной кишкой вдоль спины и выньте.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Очистите и удалите кишку у креветок",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Снимите панцирь, начиная с третьего сегмента — хвост оставьте.",
+      "src": "illustrations/tenmusu/2-how1.webp?v=6d0566e0d0"
+     },
+     {
+      "caption": "Выньте кишку шпажкой.",
+      "src": "illustrations/tenmusu/2-how2.webp?v=368f9dd3cc"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/2.webp?v=9ba19991a0",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Креветки темпура",
+   "part_id": "part-креветки-темпура",
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Очистите и удалите кишку у креветок",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "name_html": "Креветки среднего размера, в панцире"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Креветки в миске с крахмалом и чуть воды; потрите руками — обычный японский приём, от которого они становятся пухлее.</li><li>Слейте серую воду, пару раз промойте холодной проточной, откиньте и <b>обсушите</b> бумажными полотенцами.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Натрите крахмалом, промойте, обсушите",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Потрите креветки крахмалом и чуть водой, затем промойте.",
+      "src": "illustrations/tenmusu/3-how1.webp?v=03b2178593"
+     },
+     {
+      "caption": "Хорошо обсушите.",
+      "src": "illustrations/tenmusu/3-how2.webp?v=8464759494"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/3.webp?v=35547dff00",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Креветки темпура",
+   "part_id": "part-креветки-темпура",
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Натрите крахмалом, промойте, обсушите",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Картофельный или кукурузный крахмал (для очистки креветок)"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Разогрейте масло до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"170\" data-b=\"180\" data-s=\"0\">170–180 °C</span></b> в маленькой глубокой кастрюле — достаточно маленькой, чтобы <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\" data-s=\"0\">2 стакана</span> давали глубину для жарки.</p>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Разогрейте масло",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/tenmusu/4.webp?v=e42004207b",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Креветки темпура",
+   "part_id": "part-креветки-темпура",
+   "time": "~8 мин",
+   "time_html": "<span>~8 мин</span>",
+   "title": "Разогрейте масло",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\">2 стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"480\" data-alt=\"1\">480 мл</span>)</span>",
+     "name_html": "Нейтральное масло (для фритюра)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Просейте муку и крахмал через мелкое сито в миску — кляр станет легче и хрустящее.</li><li>Добавьте:<ul class=\"ing\"><li>ледяная вода <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\">⅓ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\" data-alt=\"1\">80 мл</span>)</span></span></li><li>рисовый уксус (без приправ) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ ст. л.</span></span></li></ul></li><li>Смешайте лишь кратко: комки нормальны. Должен быть <b>густым, как кляр для оладий</b> — густой кляр потом больше впитывает соус. Слишком густой? По <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> ледяной воды. Держите холодным.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Сделайте кляр",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Просейте муку и крахмал.",
+      "src": "illustrations/tenmusu/5-how1.webp?v=fae45742fb"
+     },
+     {
+      "caption": "Добавьте ледяную воду, уксус и саке; смешайте лишь кратко — комки нормальны.",
+      "src": "illustrations/tenmusu/5-how2.webp?v=17e681c492"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/5.webp?v=5a83474553",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Креветки темпура",
+   "part_id": "part-креветки-темпура",
+   "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
+   "title": "Сделайте кляр",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span>",
+     "name_html": "Мука для выпечки (мягкая)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Картофельный или кукурузный крахмал (для кляра)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Проверьте масло: палочка, опущенная в него, должна дать кольцо мелких пузырьков.</li><li>Держите креветку за хвост, обмакните в кляр (хвост остаётся голым) и опустите. Жарьте до золотистого, <b>около 2 минут</b>. По несколько — не забивайте кастрюлю.</li><li>Откиньте на решётку. Между партиями снимайте крошки с масла, пока не подгорели.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Жарьте",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Держите за хвост, обмакните в кляр — хвост остаётся голым.",
+      "src": "illustrations/tenmusu/6-how1.webp?v=e43853a0ff"
+     },
+     {
+      "caption": "Жарьте около 2 минут до золотистого. По несколько.",
+      "src": "illustrations/tenmusu/6-how2.webp?v=b677026065"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/6.webp?v=6f9074201e",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Креветки темпура",
+   "part_id": "part-креветки-темпура",
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Жарьте",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Налейте мэнцую в маленькую миску.</li><li>Обмакните <b>обе стороны</b> каждой темпуры и верните на решётку.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Обмакните в мэнцую",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Обмакните обе стороны в мэнцую.",
+      "src": "illustrations/tenmusu/7-how1.webp?v=7cc0d2f293"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/7.webp?v=da0bc241b9",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Креветки темпура",
+   "part_id": "part-креветки-темпура",
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Обмакните в мэнцую",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Мэнцую (концентрированная основа для супа с лапшой)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите горячий рис в большую миску чуть остыть: <b>тёплый</b>, достаточно прохладный, чтобы держать.</li><li>Поставьте маленькую миску воды и немного соли. Намочите руки и разотрите щепотку соли по ладоням — для вкуса и чтобы шарики держались.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Тёплый рис, влажные солёные руки",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Намочите руки и разотрите щепотку соли по ладоням.",
+      "src": "illustrations/tenmusu/8-how1.webp?v=b04afc08cd"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/8.webp?v=6aa1cf4689",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Тэнмусу",
+   "part_id": "part-тэнмусу",
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Тёплый рис, влажные солёные руки",
+   "uses_rows": [
+    {
+     "amount_html": "небольшая миска",
+     "name_html": "Вода (для рук)"
+    },
+    {
+     "amount_html": "немного",
+     "name_html": "Кошерная соль Diamond Crystal"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Положите примерно одну лопатку риса (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"55\" data-s=\"0\">55 г</span>) в левую ладонь.</li><li>Сделайте маленькую лунку посередине и положите туда одну темпуру <b>хвостом вверх</b>, чтобы хвост торчал сверху.</li><li>Один быстрый лёгкий обжим, чтобы собралось — как снежок.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Рис, лунка, креветка",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Одна лопатка риса в ладонь, лунка посередине.",
+      "src": "illustrations/tenmusu/9-how1.webp?v=6e9732690c"
+     },
+     {
+      "caption": "Темпура хвостом вверх; один лёгкий обжим, как снежок.",
+      "src": "illustrations/tenmusu/9-how2.webp?v=a13e58df2f"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/9.webp?v=0ae5d5c2ec",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Тэнмусу",
+   "part_id": "part-тэнмусу",
+   "time": "~1 мин каждый",
+   "time_html": "<span>~1 мин каждый</span>",
+   "title": "Рис, лунка, креветка",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Согните правую руку «крышей» сверху и слегка нажимайте пальцами и основанием ладони, поворачивая шарик для трёх углов — хвост выходит из верхнего угла.</li><li>Никогда не сжимайте сильно: должно держаться, а не быть утрамбованным.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Слепите треугольник",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Правая рука — крыша сверху; слегка нажмите, поверните, три угла.",
+      "src": "illustrations/tenmusu/10-how1.webp?v=b3cb41826c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/10.webp?v=3812f4d099",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Тэнмусу",
+   "part_id": "part-тэнмусу",
+   "time": null,
+   "time_html": null,
+   "title": "Слепите треугольник",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разрежьте каждый лист нори на 4 полоски (12 полосок).</li><li>Положите полоску <b>шершавой стороной вверх</b> (блестящая окажется снаружи) и поставьте тэнмусу на середину.</li><li>Загните оба конца вверх и к центру переда, чтобы пересеклись как воротник кимоно — V-вырез под хвостом.</li></ul>",
+   "heat": null,
+   "id": "step-11",
+   "images": {
+    "alt": "Оберните нори-кимоно",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Разрежьте каждый лист нори на 4 полоски.",
+      "src": "illustrations/tenmusu/11-how1.webp?v=a6b6a7be57"
+     },
+     {
+      "caption": "Шершавой стороной вверх, тэнмусу посередине; загните оба конца через перед, как воротник кимоно.",
+      "src": "illustrations/tenmusu/11-how2.webp?v=a9ec049bfb"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/11.webp?v=7a43ef88a9",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Тэнмусу",
+   "part_id": "part-тэнмусу",
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Оберните нори-кимоно",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span>",
+     "name_html": "Нори"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Ешьте сразу или в течение нескольких часов — в плёнке, затем в толстом кухонном полотенце.</li><li>Не в холодильник: рис твердеет.</li></ul>",
+   "heat": null,
+   "id": "step-12",
+   "images": {
+    "alt": "Подача",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/tenmusu/12.webp?v=f378829a1a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 12,
+   "part": "Тэнмусу",
+   "part_id": "part-тэнмусу",
+   "time": null,
+   "time_html": null,
+   "title": "Подача",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 70,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Темпуру делают, пока варится рис. Лепите, пока рис ещё тёплый — достаточно прохладный, чтобы держать, никогда не холодный из холодильника.",
+  "tasks": [
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "board",
+    "label": "Очистить + удалить кишку",
+    "label_html": "Очистить + удалить кишку",
+    "start": 0
+   },
+   {
+    "dur": 45,
+    "dur_label": "45 мин",
+    "kind": "wait",
+    "label": "Сварите рис",
+    "label_html": "Сварите рис",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "bowl",
+    "label": "Натереть крахмалом, промыть, обсушить",
+    "label_html": "Натереть крахмалом, промыть, обсушить",
+    "start": 10
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "pan",
+    "label": "Разогрейте масло",
+    "label_html": "Разогрейте масло",
+    "start": 15
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "bowl",
+    "label": "Смешать кляр",
+    "label_html": "Смешать кляр",
+    "start": 18
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "pan",
+    "label": "Жарить темпуру",
+    "label_html": "Жарить темпуру",
+    "start": 23
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Обмакните в мэнцую",
+    "label_html": "Обмакните в мэнцую",
+    "start": 33
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "wait",
+    "label": "Рис остывает до тёплого",
+    "label_html": "Рис остывает до тёплого",
+    "start": 45
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 мин",
+    "kind": "bowl",
+    "label": "Слепить 12 тэнмусу",
+    "label_html": "Слепить 12 тэнмусу",
+    "start": 50
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 мин",
+    "kind": "board",
+    "label": "Нори-кимоно",
+    "label_html": "Нори-кимоно",
+    "start": 52
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Тэнмусу (онигири с креветкой в темпуре)",
+ "total": "~1 ч",
+ "vinegar_options": null,
+ "yields": "12 тэнмусу"
+}

@@ -1,0 +1,823 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Nori folded around two thin layers of rice and a thick, saucy filling of ginger pork, lettuce and Kewpie, then cut in half to show the layers.",
+ "chips": [
+  {
+   "html": "<span>4 onigirazu (8 halves)</span>",
+   "kind": "",
+   "text": "4 onigirazu (8 halves)"
+  },
+  {
+   "html": "~50 min (with the rice cooked)",
+   "kind": "time",
+   "text": "~50 min (with the rice cooked)"
+  }
+ ],
+ "description": "Nori folded around two thin layers of rice and a thick, saucy filling of ginger pork, lettuce and Kewpie, then cut in half to show the layers.",
+ "equipment_html": [
+  "Grater",
+  "Large frying pan",
+  "Plastic wrap",
+  "Sharp knife",
+  "Onigirazu mold (optional)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Onigirazu (ginger pork rice sandwich)",
+  "image": "illustrations/onigirazu/hero.webp?v=6f10c640d0",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Sake (sauce)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span> piece",
+     "name_html": "Fresh ginger"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Onion"
+    }
+   ],
+   "name": "Ginger sauce"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"340\">340 g</span>",
+     "name_html": "Thinly sliced pork loin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake (pork)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Plain flour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 tbsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "to taste",
+     "name_html": "Black pepper (optional)"
+    }
+   ],
+   "name": "Ginger pork (shogayaki)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"sheet|sheets\" data-n=\"1\">4 sheets</span>",
+     "name_html": "Nori"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"4\">4 cups</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-alt=\"1\">600 g</span>)</span>",
+     "name_html": "Cooked Japanese short-grain rice, warm"
+    },
+    {
+     "amount_html": "a pinch per layer",
+     "name_html": "Kosher salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"leaf|leaves\" data-n=\"1\">4 leaves</span>",
+     "name_html": "Lettuce"
+    },
+    {
+     "amount_html": "a drizzle each",
+     "name_html": "Japanese mayo (Kewpie)"
+    }
+   ],
+   "name": "Onigirazu"
+  }
+ ],
+ "intro_html": "An <b>onigirazu</b> (“un-squeezed rice ball”) is the lazy cousin of <a href=\"onigiri.html\">onigiri</a>: no shaping at all. Rice, filling and rice are stacked on a sheet of nori, the four corners fold in like an envelope, and one cut through the middle shows the layers. This is Just One Cookbook’s <b>ginger pork</b> build — her shogayaki, a crisp lettuce leaf and a drizzle of Kewpie — so every bite is juicy, sweet-salty and gingery. Make the pork first; the rice should be warm when you build.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 1",
+   "image": "illustrations/onigirazu/mise1.webp?v=b245c0baf4",
+   "items": [
+    "soy",
+    "mirin",
+    "sake",
+    "sugar",
+    "ginger",
+    "onion"
+   ],
+   "items_html": "soy · mirin · sake · sugar · ginger · onion",
+   "name": "Ginger sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/onigirazu/mise2.webp?v=a98c21f5c0",
+   "items": [
+    "thin loin slices"
+   ],
+   "items_html": "thin loin slices",
+   "name": "Pork",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/onigirazu/mise3.webp?v=d72e536a3d",
+   "items": [
+    "the rest, thinly sliced"
+   ],
+   "items_html": "the rest, thinly sliced",
+   "name": "Onion",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/onigirazu/mise4.webp?v=855b860d22",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"sheet|sheets\" data-n=\"1\">4 whole sheets</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"sheet|sheets\" data-n=\"1\">4 whole sheets</span>",
+   "name": "Nori",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/onigirazu/mise5.webp?v=ad57347f7a",
+   "items": [
+    "warm, salted as you build"
+   ],
+   "items_html": "warm, salted as you build",
+   "name": "Rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/onigirazu/mise6.webp?v=b1480c6b94",
+   "items": [
+    "one leaf each"
+   ],
+   "items_html": "one leaf each",
+   "name": "Lettuce + Kewpie",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "spam-musubi",
+  "title": "Spam musubi"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li><b>Chicken katsu</b>: shredded cabbage, a katsu, Dijon mustard and tonkatsu sauce.</li><li><b>Teriyaki salmon</b>, <b>bulgogi</b> and <b>Spam with egg</b> work the same way.</li><li>Any juicy cooked meat does: keep the filling flat-ish and thick in the middle, with something crisp (lettuce, cabbage) next to the sauce.</li></ul>",
+   "title_html": "Other fillings (Just One Cookbook)"
+  },
+  {
+   "html": "<ul class=\"do\"><li>A mold (about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"9\" data-s=\"0\">9 cm</span> square) gives tidy edges.</li><li>Without one, just spread and stack carefully — the fold and the plastic wrap hold it together.</li></ul>",
+   "title_html": "Mold or no mold"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Wrapped in plastic and then a thick kitchen towel, it keeps in the fridge overnight; the towel stops the rice going hard.</li><li>Take it out 30–60 minutes before eating.</li><li>Same day is best.</li></ul>",
+   "title_html": "Making it ahead"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The batch of four, the ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 g</span> of rice per layer, the lettuce-and-pork amounts per sandwich and cooling the pork to just warm before building (hot filling steams the nori soft) are this site’s.</li><li>The build, the fold and the shogayaki are Just One Cookbook’s.</li></ul>",
+   "title_html": "This site’s additions"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-ginger-pork",
+   "title": "Ginger pork"
+  },
+  {
+   "id": "part-build-one-onigirazu",
+   "title": "Build (one onigirazu)"
+  },
+  {
+   "id": "part-serve",
+   "title": "Serve"
+  }
+ ],
+ "prev": {
+  "slug": "baby-octopus-onigiri",
+  "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/onigirazu.jpg?v=ee6abf88a6",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Tenmusu (shrimp tempura onigiri)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "onigirazu",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Ginger pork onigirazu",
+   "url": "https://www.justonecookbook.com/ginger-pork-onigirazu/"
+  },
+  {
+   "label": "Just One Cookbook — Ginger pork (shogayaki)",
+   "url": "https://www.justonecookbook.com/ginger-pork-shogayaki/"
+  },
+  {
+   "label": "Just One Cookbook — Chicken katsu onigirazu",
+   "url": "https://www.justonecookbook.com/chicken-katsu-onigirazu/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Stir together in a small bowl:<ul class=\"ing\"><li>soy sauce <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>sake (sauce) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>sugar <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Peel the ginger and grate it, keeping the juice. Squeeze out <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> ginger juice</b>: half goes into the sauce, half is for the pork.</li><li>Add <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 tsp</span> of the squeezed grated ginger to the sauce, to taste.</li><li>Grate <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span></b> of the onion with its juice into the sauce. Keep the rest of the onion.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Ginger sauce",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Grate the peeled ginger, keeping the juice.",
+      "src": "illustrations/onigirazu/1-how1.webp?v=adb96d6fbd"
+     },
+     {
+      "caption": "Squeeze out 1 tbsp juice — half into the sauce, half for the pork.",
+      "src": "illustrations/onigirazu/1-how2.webp?v=6e869ea490"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/1.webp?v=ac1fe59be3",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Ginger pork",
+   "part_id": "part-ginger-pork",
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Ginger sauce",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span> piece",
+     "name_html": "Fresh ginger"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Onion"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Slice the rest of the onion thinly.</li><li>If the pork slices are thicker than <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"3\" data-s=\"0\">3 mm</span>, make a few small cuts through the white strip between meat and fat, so they stay flat.</li><li>Sprinkle the pork with the other half of the ginger juice and the sake. Leave 5 minutes.</li><li>Just before cooking, dust the slices lightly with the flour (skip it for paper-thin slices).</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Pork and onion",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Thicker than 3 mm? A few small cuts through the fat strip.",
+      "src": "illustrations/onigirazu/2-how1.webp?v=751258e7b5"
+     },
+     {
+      "caption": "Ginger juice and sake over the pork, then a light dusting of flour.",
+      "src": "illustrations/onigirazu/2-how2.webp?v=57c65c4653"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/2.webp?v=ca7a94c1b1",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Ginger pork",
+   "part_id": "part-ginger-pork",
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Pork and onion",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"340\">340 g</span>",
+     "name_html": "Thinly sliced pork loin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake (pork)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Plain flour"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the oil in a large frying pan over <b>medium-high</b> heat.</li><li>Lay the pork in a single layer and turn each slice once the underside is golden. Work in batches — a crowded pan steams the meat.</li><li>As soon as it is no longer pink, move it to a plate. It finishes in the sauce.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Sear the pork",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Turn each slice once the underside is golden.",
+      "src": "illustrations/onigirazu/3-how1.webp?v=f187d7eedf"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/3.webp?v=a231f9c6bf",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Ginger pork",
+   "part_id": "part-ginger-pork",
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Sear the pork",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 tbsp</span>",
+     "name_html": "Neutral oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>A little more oil if needed, then the sliced onion: cook on medium until golden and tender, 6–8 min.</li><li>Pork back in. Stir the sauce once more and pour it over.</li><li>Simmer, spooning the sauce over the pork, about 2 minutes until it thickens and coats. Pepper if you like.</li><li>Let it cool on a plate until just warm, about 5 minutes.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Onion, then the sauce",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pork back in, sauce over, spoon it over for about 2 minutes.",
+      "src": "illustrations/onigirazu/4-how1.webp?v=d8f22265ba"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/4.webp?v=cc4da1f350",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Ginger pork",
+   "part_id": "part-ginger-pork",
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Onion, then the sauce",
+   "uses_rows": [
+    {
+     "amount_html": "to taste",
+     "name_html": "Black pepper (optional)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lay a sheet of plastic wrap on the counter.</li><li>One nori sheet on it, <b>shiny side down</b>, turned so a corner points up — a diamond.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Nori on plastic wrap",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Nori on the wrap, shiny side down, a corner pointing up.",
+      "src": "illustrations/onigirazu/5-how1.webp?v=b1a221d56a"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/5.webp?v=e7a8c4fde4",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Build (one onigirazu)",
+   "part_id": "part-build-one-onigirazu",
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Nori on plastic wrap",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"sheet|sheets\" data-n=\"1\">4 sheets</span>",
+     "name_html": "Nori"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spread <b><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ cup</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\" data-alt=\"1\">75 g</span>)</span></b> warm rice in a thin, even <b>square</b> in the middle of the nori, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"9\" data-s=\"0\">9 cm</span> a side. Leave the four corners of nori bare.</li><li>Sprinkle with a pinch of salt.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "First rice layer",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Spread the rice thin, into a square in the middle.",
+      "src": "illustrations/onigirazu/6-how1.webp?v=a0c44f0408"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/6.webp?v=82e7ad852d",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Build (one onigirazu)",
+   "part_id": "part-build-one-onigirazu",
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "First rice layer",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"4\">4 cups</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-alt=\"1\">600 g</span>)</span>",
+     "name_html": "Cooked Japanese short-grain rice, warm"
+    },
+    {
+     "amount_html": "a pinch per layer",
+     "name_html": "Kosher salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>A lettuce leaf on the rice, folded to fit the square.</li><li>A drizzle of Kewpie over the lettuce.</li><li>A quarter of the ginger pork and its onion on top, folded and <b>piled high in the middle</b> — think about where you’ll cut, so the filling shows.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Fillings",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Lettuce, a drizzle of Kewpie, then the pork, piled high in the middle.",
+      "src": "illustrations/onigirazu/7-how1.webp?v=3e2ab3c630"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/7.webp?v=37f428316e",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Build (one onigirazu)",
+   "part_id": "part-build-one-onigirazu",
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Fillings",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"leaf|leaves\" data-n=\"1\">4 leaves</span>",
+     "name_html": "Lettuce"
+    },
+    {
+     "amount_html": "a drizzle each",
+     "name_html": "Japanese mayo (Kewpie)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Another <b><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ cup</span></b> rice over the filling, spread into the same square.</li><li>With a mold: wet its lid, press down gently, then lift the frame off while holding the lid down.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Top rice layer",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Rice on top, spread into the same square.",
+      "src": "illustrations/onigirazu/8-how1.webp?v=79d367d500"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/8.webp?v=f55b9cf8bf",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Build (one onigirazu)",
+   "part_id": "part-build-one-onigirazu",
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Top rice layer",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Bring the <b>left and right corners</b> into the middle, folding gently but tightly around the stack.</li><li>Then the <b>bottom and top corners</b>, the same way. Tuck any loose rice in.</li><li>If it’s square, mark the cut direction — a grain of rice on top, in line with the filling.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Fold the nori",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Left and right corners in first, gently but tightly.",
+      "src": "illustrations/onigirazu/9-how1.webp?v=68a3fcefbb"
+     },
+     {
+      "caption": "Then the bottom and top corners. Tuck the rice in.",
+      "src": "illustrations/onigirazu/9-how2.webp?v=36ab5af2b8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/9.webp?v=4a948190a7",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Build (one onigirazu)",
+   "part_id": "part-build-one-onigirazu",
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Fold the nori",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wrap it tightly in its plastic wrap.</li><li>Rest <b>seam side down</b> for 5 minutes while you build the others — the nori softens and seals.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Wrap and rest",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wrap it tightly in its plastic wrap; rest seam side down.",
+      "src": "illustrations/onigirazu/10-how1.webp?v=2cc8681bb8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/10.webp?v=c36ff2c2fa",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Build (one onigirazu)",
+   "part_id": "part-build-one-onigirazu",
+   "time": "5 min",
+   "time_html": "<span>5 min</span>",
+   "title": "Wrap and rest",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Run a sharp knife under cold water.</li><li>Cut straight through the middle, wrap and all, along your mark, so the layers show.</li><li>Serve cut side up; peel back the wrap as you eat.</li></ul>",
+   "heat": null,
+   "id": "step-11",
+   "images": {
+    "alt": "Cut in half",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "A wet knife, one straight cut through the middle, wrap and all.",
+      "src": "illustrations/onigirazu/11-how1.webp?v=ed48894848"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/11.webp?v=6b34fa5fe3",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Serve",
+   "part_id": "part-serve",
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Cut in half",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 50,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   }
+  ],
+  "note_html": "Cook the rice first so it’s ready and warm. While the pork cools you can lay out the wrap and nori.",
+  "tasks": [
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "bowl",
+    "label": "Ginger sauce",
+    "label_html": "Ginger sauce",
+    "start": 0
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "board",
+    "label": "Slice onion, marinate pork",
+    "label_html": "Slice onion, marinate pork",
+    "start": 6
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "pan",
+    "label": "Sear the pork",
+    "label_html": "Sear the pork",
+    "start": 12
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "pan",
+    "label": "Onion, then the sauce",
+    "label_html": "Onion, then the sauce",
+    "start": 18
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "wait",
+    "label": "Cool the filling",
+    "label_html": "Cool the filling",
+    "start": 28
+   },
+   {
+    "dur": 14,
+    "dur_label": "14 min",
+    "kind": "board",
+    "label": "Build 4 onigirazu",
+    "label_html": "Build 4 onigirazu",
+    "start": 28
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "wait",
+    "label": "Rest in the wrap",
+    "label_html": "Rest in the wrap",
+    "start": 42
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "board",
+    "label": "Cut and serve",
+    "label_html": "Cut and serve",
+    "start": 47
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Onigirazu (ginger pork rice sandwich)",
+ "total": "~50 min (with the rice cooked)",
+ "vinegar_options": null,
+ "yields": "4 onigirazu (8 halves)"
+}

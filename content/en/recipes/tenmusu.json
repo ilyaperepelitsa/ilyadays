@@ -1,0 +1,879 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Crisp shrimp tempura dipped in sweet-salty mentsuyu and tucked into a little rice triangle, its red tail poking out of the top, wrapped in a nori “kimono”.",
+ "chips": [
+  {
+   "html": "<span>12 tenmusu</span>",
+   "kind": "",
+   "text": "12 tenmusu"
+  },
+  {
+   "html": "~1 h",
+   "kind": "time",
+   "text": "~1 h"
+  }
+ ],
+ "description": "Crisp shrimp tempura dipped in sweet-salty mentsuyu and tucked into a little rice triangle, its red tail poking out of the top, wrapped in a nori “kimono”.",
+ "equipment_html": [
+  "Rice cooker or heavy pot with a lid",
+  "Small deep pot for frying (keeps <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\" data-s=\"0\">2 cups</span> of oil deep enough)",
+  "Deep-fry thermometer (or a chopstick)",
+  "Fine-mesh strainer (to sift the flour)",
+  "Wooden skewer",
+  "Wire rack or paper-towel-lined plate",
+  "Rice paddle",
+  "Kitchen scissors (for the nori)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Tenmusu (shrimp tempura onigiri)",
+  "image": "illustrations/tenmusu/hero.webp?v=aeb202f4b9",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\" data-alt=\"1\">300 g</span>)</span>",
+     "name_html": "Japanese short-grain white rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.6667\">1⅔ cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\" data-alt=\"1\">400 ml</span>)</span>",
+     "name_html": "Water (for the rice)"
+    }
+   ],
+   "name": "Rice"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "name_html": "Medium shrimp, shell on"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Potato starch or cornstarch (to clean the shrimp)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\">2 cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"480\" data-alt=\"1\">480 ml</span>)</span>",
+     "name_html": "Neutral oil (for deep-frying)"
+    }
+   ],
+   "name": "Shrimp"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ cup</span>",
+     "name_html": "Cake flour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Potato starch or cornstarch (batter)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\">⅓ cup</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\" data-alt=\"1\">80 ml</span>)</span>",
+     "name_html": "Ice water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Rice vinegar (unseasoned)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span>",
+     "name_html": "Sake"
+    }
+   ],
+   "name": "Tempura batter"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Mentsuyu (concentrated noodle soup base)"
+    },
+    {
+     "amount_html": "a small bowl",
+     "name_html": "Water (for your hands)"
+    },
+    {
+     "amount_html": "a little, for your hands",
+     "name_html": "Diamond Crystal kosher salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span>",
+     "name_html": "Nori"
+    }
+   ],
+   "name": "Dip and shape"
+  }
+ ],
+ "intro_html": "Nagoya’s favourite rice ball: a <b>whole shrimp tempura</b>, dipped in mentsuyu so the crisp, thick batter soaks up the sauce, hidden inside a small salted rice triangle with its <b>red tail sticking out of the top</b>. A strip of nori crosses over the front like the collar of a kimono. They’re small — two or three bites each — so you eat them by the handful. This is Just One Cookbook’s recipe; for the rice and shaping basics see <a href=\"onigiri.html\">onigiri</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/tenmusu/mise1.webp?v=522a403dae",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ cups</span>, cooking"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ cups</span>, cooking",
+   "name": "Rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/tenmusu/mise2.webp?v=9f3f4b8d19",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span> medium, shell on"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span> medium, shell on",
+   "name": "Shrimp",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/tenmusu/mise3.webp?v=037f48426a",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>, for cleaning"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>, for cleaning",
+   "name": "Starch",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/tenmusu/mise4.webp?v=0e44cf08d3",
+   "items": [
+    "cake flour",
+    "starch",
+    "ice water",
+    "vinegar",
+    "sake"
+   ],
+   "items_html": "cake flour · starch · ice water · vinegar · sake",
+   "name": "Batter",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 7",
+   "image": "illustrations/tenmusu/mise5.webp?v=23862a313f",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+   "name": "Mentsuyu",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/tenmusu/mise6.webp?v=493077cd77",
+   "items": [
+    "small bowl",
+    "a pinch"
+   ],
+   "items_html": "small bowl · a pinch",
+   "name": "Hand water + salt",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 11",
+   "image": "illustrations/tenmusu/mise7.webp?v=30e1e05286",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span> → 12 strips"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span> → 12 strips",
+   "name": "Nori",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "salmon-onigiri",
+  "title": "Salmon onigiri with ikura"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>JOC peels the tails off too and tucks the shrimp in tail down (“you can show the tail side up if you like”).</li><li>We keep the tails on so the red tail pokes out of the top — the way Nagoya shops sell them, and the fun part.</li><li>Peeled tails-off works exactly the same.</li></ul>",
+   "title_html": "Tails on and up (our change)"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Match the rice to the shrimp: smaller shrimp, smaller rice balls.</li><li>Very big shrimp can be cut in half (tails off, then).</li></ul>",
+   "title_html": "Shrimp size"
+  },
+  {
+   "html": "<ul class=\"do\"><li>JOC: there’s no alternative to deep-frying for real tenmusu.</li><li>The thick batter is the point — it drinks up the mentsuyu and that’s where the flavour comes from.</li></ul>",
+   "title_html": "No shortcut on the frying"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Line a small bowl with plastic wrap, add rice and a sprinkle of salt, make the well, add the tempura, pull the wrap up around it and shape the triangle through the wrap.</li><li>Unwrap, then add the nori.</li></ul>",
+   "title_html": "Without touching the rice"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Not eating them right away?</li><li>Keep the nori strips in an airtight bag and wrap them on just before eating.</li></ul>",
+   "title_html": "Crisp nori"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Born in the 1930s at Senju, a tempura restaurant in Tsu (Mie): the owner made rice balls with shrimp tempura as a quick lunch for her husband.</li><li>It reached Nagoya in 1980 and became one of its signature foods.</li></ul>",
+   "title_html": "Where it’s from"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-rice",
+   "title": "Rice"
+  },
+  {
+   "id": "part-shrimp-tempura",
+   "title": "Shrimp tempura"
+  },
+  {
+   "id": "part-tenmusu",
+   "title": "Tenmusu"
+  }
+ ],
+ "prev": {
+  "slug": "nikumaki-onigiri",
+  "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "one batch",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/tenmusu.jpg?v=b51ab3e7f4",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "tenmusu",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Tenmusu (shrimp tempura rice ball)",
+   "url": "https://www.justonecookbook.com/tenmusu/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Cook the rice in the water — rice cooker or pot (see <a href=\"onigiri.html\">onigiri</a>). <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-s=\"0\">1½ cups</span> of uncooked rice makes about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"660\" data-s=\"0\">660 g</span> of cooked rice: 12 tenmusu.</li><li>While it cooks, make the tempura (steps 2–7).</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Cook the rice",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/tenmusu/1.webp?v=f9a75efc38",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Rice",
+   "part_id": "part-rice",
+   "time": "~45 min",
+   "time_html": "<span>~45 min</span>",
+   "title": "Cook the rice",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\">1½ cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\" data-alt=\"1\">300 g</span>)</span>",
+     "name_html": "Japanese short-grain white rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.6667\">1⅔ cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\" data-alt=\"1\">400 ml</span>)</span>",
+     "name_html": "Water (for the rice)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Peel off the shells — easiest starting from the third segment — but <b>leave the tail on</b> (see notes).</li><li>Run a skewer under the dark vein along the back and lift it out.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Peel and devein the shrimp",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Peel the shell off, starting at the third segment — leave the tail on.",
+      "src": "illustrations/tenmusu/2-how1.webp?v=6d0566e0d0"
+     },
+     {
+      "caption": "Lift the vein out with a skewer.",
+      "src": "illustrations/tenmusu/2-how2.webp?v=368f9dd3cc"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/2.webp?v=9ba19991a0",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Shrimp tempura",
+   "part_id": "part-shrimp-tempura",
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Peel and devein the shrimp",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "name_html": "Medium shrimp, shell on"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Shrimp in a bowl with the starch and a little water; rub them with your hands — a common Japanese trick that makes them plumper.</li><li>Pour off the grey water, rinse a couple of times under cold running water, drain and pat <b>dry</b> with paper towels.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Rub with starch, rinse, dry",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Rub the shrimp with the starch and a little water, then rinse.",
+      "src": "illustrations/tenmusu/3-how1.webp?v=03b2178593"
+     },
+     {
+      "caption": "Pat them very dry.",
+      "src": "illustrations/tenmusu/3-how2.webp?v=8464759494"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/3.webp?v=35547dff00",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Shrimp tempura",
+   "part_id": "part-shrimp-tempura",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Rub with starch, rinse, dry",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Potato starch or cornstarch (to clean the shrimp)"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Heat the oil to <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"170\" data-b=\"180\" data-s=\"0\">170–180 °C</span></b> in a small, deep pot — small enough that <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\" data-s=\"0\">2 cups</span> are deep enough to fry in.</p>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Heat the oil",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/tenmusu/4.webp?v=e42004207b",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Shrimp tempura",
+   "part_id": "part-shrimp-tempura",
+   "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
+   "title": "Heat the oil",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"2\">2 cups</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"480\" data-alt=\"1\">480 ml</span>)</span>",
+     "name_html": "Neutral oil (for deep-frying)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Sift the cake flour and starch through a fine-mesh strainer into a bowl — it makes the batter lighter and crisper.</li><li>Add:<ul class=\"ing\"><li>ice water <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.3333\">⅓ cup</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"80\" data-alt=\"1\">80 ml</span>)</span></span></li><li>rice vinegar (unseasoned) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span></span></li></ul></li><li>Mix only briefly: lumps are fine. It should be <b>thick, like fritter batter</b> — thick batter soaks up more sauce later. Too thick? <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> ice water at a time. Keep it cold.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Make the batter",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Sift the cake flour and starch.",
+      "src": "illustrations/tenmusu/5-how1.webp?v=fae45742fb"
+     },
+     {
+      "caption": "Add ice water, vinegar and sake; mix only briefly — lumps are fine.",
+      "src": "illustrations/tenmusu/5-how2.webp?v=17e681c492"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/5.webp?v=5a83474553",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Shrimp tempura",
+   "part_id": "part-shrimp-tempura",
+   "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
+   "title": "Make the batter",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ cup</span>",
+     "name_html": "Cake flour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Potato starch or cornstarch (batter)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Check the oil: a chopstick dipped in it should get a ring of small bubbles.</li><li>Hold a shrimp by the tail, coat it in batter (the tail stays bare) and lower it in. Fry until golden, <b>about 2 minutes</b>. A few at a time — don’t crowd the pot.</li><li>Drain on a wire rack. Skim the loose crumbs out of the oil between batches before they burn.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Fry",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Hold it by the tail, coat it in batter — the tail stays bare.",
+      "src": "illustrations/tenmusu/6-how1.webp?v=e43853a0ff"
+     },
+     {
+      "caption": "Fry about 2 minutes, until golden. A few at a time.",
+      "src": "illustrations/tenmusu/6-how2.webp?v=b677026065"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/6.webp?v=6f9074201e",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Shrimp tempura",
+   "part_id": "part-shrimp-tempura",
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Fry",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour the mentsuyu into a small bowl.</li><li>Dip <b>both sides</b> of each tempura in it and put it back on the rack.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Dip in mentsuyu",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Dip both sides in the mentsuyu.",
+      "src": "illustrations/tenmusu/7-how1.webp?v=7cc0d2f293"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/7.webp?v=da0bc241b9",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Shrimp tempura",
+   "part_id": "part-shrimp-tempura",
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Dip in mentsuyu",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Mentsuyu (concentrated noodle soup base)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Turn the hot rice into a large bowl to cool a little: <b>warm</b>, cool enough to hold.</li><li>Set out a small bowl of water and a little salt. Wet your hands and rub a pinch of salt over your palms — for flavour, and it helps the rice balls keep.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Warm rice, wet and salted hands",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wet your hands and rub a pinch of salt over your palms.",
+      "src": "illustrations/tenmusu/8-how1.webp?v=b04afc08cd"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/8.webp?v=6aa1cf4689",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Tenmusu",
+   "part_id": "part-tenmusu",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Warm rice, wet and salted hands",
+   "uses_rows": [
+    {
+     "amount_html": "a small bowl",
+     "name_html": "Water (for your hands)"
+    },
+    {
+     "amount_html": "a little",
+     "name_html": "Diamond Crystal kosher salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Scoop about one rice paddle of rice (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"55\" data-s=\"0\">55 g</span>) into your left palm.</li><li>Press a small well into the middle and lay one tempura in it, <b>tail up</b>, so the tail will stick out of the top.</li><li>Give it one quick, gentle squeeze to bring it together — like making a snowball.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Rice, well, shrimp",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "One paddle of rice in your palm, a well in the middle.",
+      "src": "illustrations/tenmusu/9-how1.webp?v=6e9732690c"
+     },
+     {
+      "caption": "The tempura goes in tail up; one gentle squeeze, like a snowball.",
+      "src": "illustrations/tenmusu/9-how2.webp?v=a13e58df2f"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/9.webp?v=0ae5d5c2ec",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Tenmusu",
+   "part_id": "part-tenmusu",
+   "time": "~1 min each",
+   "time_html": "<span>~1 min each</span>",
+   "title": "Rice, well, shrimp",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Bend your right hand into a “roof” over the top and press gently with the fingers and the heel of the hand, turning the ball to make three corners — the tail comes out of the top corner.</li><li>Never squeeze hard: it should hold together, not be packed.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Shape the triangle",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Right hand makes a roof over the top; press gently, turn, three corners.",
+      "src": "illustrations/tenmusu/10-how1.webp?v=b3cb41826c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/10.webp?v=3812f4d099",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Tenmusu",
+   "part_id": "part-tenmusu",
+   "time": null,
+   "time_html": null,
+   "title": "Shape the triangle",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut each nori sheet into 4 strips (12 strips).</li><li>Lay a strip <b>rough side up</b> (the shiny side ends up outside) and set a tenmusu on its middle.</li><li>Fold both ends up and in toward the centre of the front so they cross like a kimono collar — a V-neck under the tail.</li></ul>",
+   "heat": null,
+   "id": "step-11",
+   "images": {
+    "alt": "Wrap in a nori kimono",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cut each nori sheet into 4 strips.",
+      "src": "illustrations/tenmusu/11-how1.webp?v=a6b6a7be57"
+     },
+     {
+      "caption": "Rough side up, tenmusu in the middle; fold both ends up across the front like a kimono collar.",
+      "src": "illustrations/tenmusu/11-how2.webp?v=a9ec049bfb"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/tenmusu/11.webp?v=7a43ef88a9",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Tenmusu",
+   "part_id": "part-tenmusu",
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Wrap in a nori kimono",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span>",
+     "name_html": "Nori"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Eat right away, or within a few hours — wrapped in plastic and then a thick kitchen towel.</li><li>Don’t refrigerate: the rice turns hard.</li></ul>",
+   "heat": null,
+   "id": "step-12",
+   "images": {
+    "alt": "Serve",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/tenmusu/12.webp?v=f378829a1a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 12,
+   "part": "Tenmusu",
+   "part_id": "part-tenmusu",
+   "time": null,
+   "time_html": null,
+   "title": "Serve",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 70,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": "The tempura is made while the rice cooks. Shape while the rice is still warm — cool enough to hold, never cold from the fridge.",
+  "tasks": [
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "board",
+    "label": "Peel + devein shrimp",
+    "label_html": "Peel + devein shrimp",
+    "start": 0
+   },
+   {
+    "dur": 45,
+    "dur_label": "45 min",
+    "kind": "wait",
+    "label": "Cook the rice",
+    "label_html": "Cook the rice",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "bowl",
+    "label": "Starch rub, rinse, dry",
+    "label_html": "Starch rub, rinse, dry",
+    "start": 10
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "pan",
+    "label": "Heat the oil",
+    "label_html": "Heat the oil",
+    "start": 15
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "bowl",
+    "label": "Mix the batter",
+    "label_html": "Mix the batter",
+    "start": 18
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "pan",
+    "label": "Fry the tempura",
+    "label_html": "Fry the tempura",
+    "start": 23
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Dip in mentsuyu",
+    "label_html": "Dip in mentsuyu",
+    "start": 33
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "wait",
+    "label": "Rice cools to warm",
+    "label_html": "Rice cools to warm",
+    "start": 45
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 min",
+    "kind": "bowl",
+    "label": "Shape 12 tenmusu",
+    "label_html": "Shape 12 tenmusu",
+    "start": 50
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 min",
+    "kind": "board",
+    "label": "Nori kimono",
+    "label_html": "Nori kimono",
+    "start": 52
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Tenmusu (shrimp tempura onigiri)",
+ "total": "~1 h",
+ "vinegar_options": null,
+ "yields": "12 tenmusu"
+}

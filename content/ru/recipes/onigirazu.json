@@ -1,0 +1,823 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Нори, сложенное вокруг двух тонких слоёв риса и густой сочной начинки из свинины с имбирём, салата и Kewpie, затем разрезанное пополам, чтобы показать слои.",
+ "chips": [
+  {
+   "html": "<span>4 онигирадзу (8 половинок)</span>",
+   "kind": "",
+   "text": "4 онигирадзу (8 половинок)"
+  },
+  {
+   "html": "~50 мин (при готовом рисе)",
+   "kind": "time",
+   "text": "~50 мин (при готовом рисе)"
+  }
+ ],
+ "description": "Нори, сложенное вокруг двух тонких слоёв риса и густой сочной начинки из свинины с имбирём, салата и Kewpie, затем разрезанное пополам, чтобы показать слои.",
+ "equipment_html": [
+  "Тёрка",
+  "Большая сковорода",
+  "Пищевая плёнка",
+  "Острый нож",
+  "Форма для онигирадзу (по желанию)"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Онигирадзу (рисовый сэндвич со свининой с имбирём)",
+  "image": "illustrations/onigirazu/hero.webp?v=6f10c640d0",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Мирин"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Саке (соус)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Лук"
+    }
+   ],
+   "name": "Имбирный соус"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"340\">340 г</span>",
+     "name_html": "Тонко нарезанная свиная корейка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Саке (для свинины)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Пшеничная мука"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Чёрный перец (по желанию)"
+    }
+   ],
+   "name": "Свинина с имбирём (сёгаяки)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"лист|листа|листов\" data-n=\"1\">4 листа</span>",
+     "name_html": "Нори"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"4\">4 стакана</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-alt=\"1\">600 г</span>)</span>",
+     "name_html": "Готовый японский короткозёрный рис, тёплый"
+    },
+    {
+     "amount_html": "щепотка на слой",
+     "name_html": "Крупная (кошерная) соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"лист|листа|листов\" data-n=\"1\">4 листа</span>",
+     "name_html": "Салат"
+    },
+    {
+     "amount_html": "по капле на каждый",
+     "name_html": "Японский майонез (Kewpie)"
+    }
+   ],
+   "name": "Онигирадзу"
+  }
+ ],
+ "intro_html": "<b>Онигирадзу</b> («невыжатый рисовый шарик») — ленивый родственник <a href=\"onigiri.html\">онигири</a>: без лепки. Рис, начинка и рис стопкой на листе нори, четыре угла складываются конвертом, один разрез через середину показывает слои. Сборка Just One Cookbook со <b>свининой с имбирём</b> — её сёгаяки, хрустящий лист салата и капля Kewpie — каждый кусок сочный, сладко-солёный и имбирный. Сначала свинина; рис при сборке должен быть тёплым.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/onigirazu/mise1.webp?v=b245c0baf4",
+   "items": [
+    "соя",
+    "мирин",
+    "саке",
+    "сахар",
+    "имбирь",
+    "лук"
+   ],
+   "items_html": "соя · мирин · саке · сахар · имбирь · лук",
+   "name": "Имбирный соус",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/onigirazu/mise2.webp?v=a98c21f5c0",
+   "items": [
+    "тонкие ломтики корейки"
+   ],
+   "items_html": "тонкие ломтики корейки",
+   "name": "Свинина",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/onigirazu/mise3.webp?v=d72e536a3d",
+   "items": [
+    "остальное, тонко нарезанное"
+   ],
+   "items_html": "остальное, тонко нарезанное",
+   "name": "Лук",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/onigirazu/mise4.webp?v=855b860d22",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> целых листа"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> целых листа",
+   "name": "Нори",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/onigirazu/mise5.webp?v=ad57347f7a",
+   "items": [
+    "тёплый, солёный при сборке"
+   ],
+   "items_html": "тёплый, солёный при сборке",
+   "name": "Рис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/onigirazu/mise6.webp?v=b1480c6b94",
+   "items": [
+    "по одному листу"
+   ],
+   "items_html": "по одному листу",
+   "name": "Салат + Kewpie",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "spam-musubi",
+  "title": "Спам-мусуби"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li><b>Куриный кацу</b>: шинкованная капуста, кацу, дижонская горчица и соус тонкоцу.</li><li><b>Лосось терияки</b>, <b>пульгоги</b> и <b>спам с яйцом</b> — так же.</li><li>Подойдёт любое сочное готовое мясо: начинку держите относительно плоской и густой посередине, с чем-то хрустящим (салат, капуста) рядом с соусом.</li></ul>",
+   "title_html": "Другие начинки (Just One Cookbook)"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Форма (около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"9\" data-s=\"0\">9 см</span> квадрат) даёт ровные края.</li><li>Без неё просто аккуратно разложите и сложите — сгиб и плёнка держат.</li></ul>",
+   "title_html": "С формой или без"
+  },
+  {
+   "html": "<ul class=\"do\"><li>В плёнке и толстом кухонном полотенце держится в холодильнике ночь; полотенце не даёт рису затвердеть.</li><li>Достаньте за 30–60 минут до еды.</li><li>Лучше в тот же день.</li></ul>",
+   "title_html": "Заранее"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Партия из четырёх, ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 г</span> риса на слой, количества салата и свинины на сэндвич и остывание свинины до чуть тёплой перед сборкой (горячая начинка распаривает нори) — этого сайта.</li><li>Сборка, сгиб и сёгаяки — Just One Cookbook.</li></ul>",
+   "title_html": "Добавления этого сайта"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-свинина-с-имбирём",
+   "title": "Свинина с имбирём"
+  },
+  {
+   "id": "part-сборка-один-онигирадзу",
+   "title": "Сборка (один онигирадзу)"
+  },
+  {
+   "id": "part-подача",
+   "title": "Подача"
+  }
+ ],
+ "prev": {
+  "slug": "baby-octopus-onigiri",
+  "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/onigirazu.jpg?v=ee6abf88a6",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Онигири: форма и начинки"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Тэнмусу (онигири с креветкой в темпуре)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Быстрое японское карри (ру Golden Curry)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "onigirazu",
+ "sources": [
+  {
+   "label": "Just One Cookbook — Онигирадзу со свининой с имбирём",
+   "url": "https://www.justonecookbook.com/ginger-pork-onigirazu/"
+  },
+  {
+   "label": "Just One Cookbook — Свинина с имбирём (сёгаяки)",
+   "url": "https://www.justonecookbook.com/ginger-pork-shogayaki/"
+  },
+  {
+   "label": "Just One Cookbook — Онигирадзу с куриным кацу",
+   "url": "https://www.justonecookbook.com/chicken-katsu-onigirazu/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Смешайте в маленькой миске:<ul class=\"ing\"><li>соевый соус <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>саке (соус) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>сахар <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Очистите имбирь и натрите, сохраняя сок. Выжмите <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> имбирного сока</b>: половина в соус, половина для свинины.</li><li>Добавьте в соус <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 ч. л.</span> отжатого тёртого имбиря по вкусу.</li><li>Натрите <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span></b> лука с соком в соус. Остальной лук оставьте.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Имбирный соус",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Натрите очищенный имбирь, сохраняя сок.",
+      "src": "illustrations/onigirazu/1-how1.webp?v=adb96d6fbd"
+     },
+     {
+      "caption": "Выжмите 1 ст. л. сока — половина в соус, половина для свинины.",
+      "src": "illustrations/onigirazu/1-how2.webp?v=6e869ea490"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/1.webp?v=ac1fe59be3",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Свинина с имбирём",
+   "part_id": "part-свинина-с-имбирём",
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Имбирный соус",
+   "uses_rows": [
+    {
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Остальной лук нарежьте тонко.</li><li>Если ломтики толще <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"3\" data-s=\"0\">3 мм</span>, сделайте несколько надрезов через белую полоску между мясом и жиром, чтобы лежали плоско.</li><li>Полейте свинину второй половиной имбирного сока и саке. Оставьте 5 минут.</li><li>Перед жаркой слегка обваляйте ломтики в муке (для тончайших пропустите).</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Свинина и лук",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Толще 3 мм? Несколько надрезов через жировую полоску.",
+      "src": "illustrations/onigirazu/2-how1.webp?v=751258e7b5"
+     },
+     {
+      "caption": "Имбирный сок и саке на свинину, затем лёгкая обвалка в муке.",
+      "src": "illustrations/onigirazu/2-how2.webp?v=57c65c4653"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/2.webp?v=ca7a94c1b1",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Свинина с имбирём",
+   "part_id": "part-свинина-с-имбирём",
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Свинина и лук",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"340\">340 г</span>",
+     "name_html": "Тонко нарезанная свиная корейка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Саке (для свинины)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Пшеничная мука"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте масло на большой сковороде на <b>средне-сильном</b> огне.</li><li>Выложите свинину в один слой и переворачивайте каждый ломтик, когда низ золотистый. Партиями — в тесной сковороде мясо парится.</li><li>Как только розовый цвет уйдёт, переложите на тарелку. Дойдёт в соусе.</li></ul>",
+   "heat": {
+    "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Обжарьте свинину",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Переворачивайте каждый ломтик, когда низ золотистый.",
+      "src": "illustrations/onigirazu/3-how1.webp?v=f187d7eedf"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/3.webp?v=a231f9c6bf",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Свинина с имбирём",
+   "part_id": "part-свинина-с-имбирём",
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Обжарьте свинину",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\">1–2 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Ещё чуть масла при необходимости, затем нарезанный лук: на среднем огне до золотистого и мягкого, 6–8 мин.</li><li>Свинину обратно. Ещё раз размешайте соус и полейте.</li><li>Томите, поливая свинину соусом, около 2 минут, пока не загустеет и не покроет. Перец по желанию.</li><li>Остудите на тарелке до чуть тёплого, около 5 минут.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Лук, затем соус",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Свинину обратно, соус сверху, поливайте около 2 минут.",
+      "src": "illustrations/onigirazu/4-how1.webp?v=d8f22265ba"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/4.webp?v=cc4da1f350",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Свинина с имбирём",
+   "part_id": "part-свинина-с-имбирём",
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Лук, затем соус",
+   "uses_rows": [
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Чёрный перец (по желанию)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Расстелите лист плёнки на столе.</li><li>На него один лист нори <b>блестящей стороной вниз</b>, углом вверх — ромбом.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Нори на плёнке",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Нори на плёнке, блестящей стороной вниз, углом вверх.",
+      "src": "illustrations/onigirazu/5-how1.webp?v=b1a221d56a"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/5.webp?v=e7a8c4fde4",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "Сборка (один онигирадзу)",
+   "part_id": "part-сборка-один-онигирадзу",
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Нори на плёнке",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"лист|листа|листов\" data-n=\"1\">4 листа</span>",
+     "name_html": "Нори"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разложите <b><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ стакана</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\" data-alt=\"1\">75 г</span>)</span></b> тёплого риса тонким ровным <b>квадратом</b> посередине нори, около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"9\" data-s=\"0\">9 см</span> сторона. Четыре угла нори оставьте голыми.</li><li>Посыпьте щепоткой соли.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Первый слой риса",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Разложите рис тонко квадратом посередине.",
+      "src": "illustrations/onigirazu/6-how1.webp?v=a0c44f0408"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/6.webp?v=82e7ad852d",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": "Сборка (один онигирадзу)",
+   "part_id": "part-сборка-один-онигирадзу",
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Первый слой риса",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"4\">4 стакана</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-alt=\"1\">600 г</span>)</span>",
+     "name_html": "Готовый японский короткозёрный рис, тёплый"
+    },
+    {
+     "amount_html": "щепотка на слой",
+     "name_html": "Крупная (кошерная) соль"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Лист салата на рис, сложенный под квадрат.</li><li>Капля Kewpie по салату.</li><li>Четверть свинины с имбирём и луком сверху, сложенная и <b>высокой горкой посередине</b> — думайте, где режете, чтобы начинка была видна.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Начинки",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Салат, капля Kewpie, затем свинина высокой горкой посередине.",
+      "src": "illustrations/onigirazu/7-how1.webp?v=3e2ab3c630"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/7.webp?v=37f428316e",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": "Сборка (один онигирадзу)",
+   "part_id": "part-сборка-один-онигирадзу",
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Начинки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"лист|листа|листов\" data-n=\"1\">4 листа</span>",
+     "name_html": "Салат"
+    },
+    {
+     "amount_html": "по капле на каждый",
+     "name_html": "Японский майонез (Kewpie)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Ещё <b><span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ стакана</span></b> риса на начинку, разровняйте тем же квадратом.</li><li>С формой: смочите крышку, слегка нажмите, затем снимите рамку, держа крышку.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Верхний слой риса",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Рис сверху, тем же квадратом.",
+      "src": "illustrations/onigirazu/8-how1.webp?v=79d367d500"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/8.webp?v=f55b9cf8bf",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Сборка (один онигирадзу)",
+   "part_id": "part-сборка-один-онигирадзу",
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Верхний слой риса",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Загните <b>левый и правый углы</b> к середине, аккуратно, но плотно вокруг стопки.</li><li>Затем <b>нижний и верхний</b> так же. Заправьте вылезший рис.</li><li>Если квадратный — отметьте направление разреза: зёрнышко риса сверху, вдоль начинки.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Сложите нори",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Сначала левый и правый углы, аккуратно, но плотно.",
+      "src": "illustrations/onigirazu/9-how1.webp?v=68a3fcefbb"
+     },
+     {
+      "caption": "Затем нижний и верхний. Заправьте рис.",
+      "src": "illustrations/onigirazu/9-how2.webp?v=36ab5af2b8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/9.webp?v=4a948190a7",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": "Сборка (один онигирадзу)",
+   "part_id": "part-сборка-один-онигирадзу",
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Сложите нори",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Плотно заверните в свою плёнку.</li><li>Отдохните <b>швом вниз</b> 5 минут, пока собираете остальные — нори размягчается и склеивается.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Завернуть и отдохнуть",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Плотно заверните в плёнку; отдых швом вниз.",
+      "src": "illustrations/onigirazu/10-how1.webp?v=2cc8681bb8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/10.webp?v=c36ff2c2fa",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Сборка (один онигирадзу)",
+   "part_id": "part-сборка-один-онигирадзу",
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Завернуть и отдохнуть",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Ополосните острый нож холодной водой.</li><li>Режьте прямо через середину, вместе с плёнкой, по отметке, чтобы слои были видны.</li><li>Подавайте срезом вверх; снимайте плёнку по мере еды.</li></ul>",
+   "heat": null,
+   "id": "step-11",
+   "images": {
+    "alt": "Разрежьте пополам",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Мокрый нож, один прямой разрез через середину, вместе с плёнкой.",
+      "src": "illustrations/onigirazu/11-how1.webp?v=ed48894848"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigirazu/11.webp?v=6b34fa5fe3",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Подача",
+   "part_id": "part-подача",
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Разрежьте пополам",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 50,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   }
+  ],
+  "note_html": "Сначала сварите рис, чтобы был готов и тёплый. Пока свинина остывает, можно разложить плёнку и нори.",
+  "tasks": [
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "bowl",
+    "label": "Имбирный соус",
+    "label_html": "Имбирный соус",
+    "start": 0
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "board",
+    "label": "Нарезать лук, замариновать свинину",
+    "label_html": "Нарезать лук, замариновать свинину",
+    "start": 6
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "pan",
+    "label": "Обжарьте свинину",
+    "label_html": "Обжарьте свинину",
+    "start": 12
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "pan",
+    "label": "Лук, затем соус",
+    "label_html": "Лук, затем соус",
+    "start": 18
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "wait",
+    "label": "Остудить начинку",
+    "label_html": "Остудить начинку",
+    "start": 28
+   },
+   {
+    "dur": 14,
+    "dur_label": "14 мин",
+    "kind": "board",
+    "label": "Собрать 4 онигирадзу",
+    "label_html": "Собрать 4 онигирадзу",
+    "start": 28
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "wait",
+    "label": "Отдых в плёнке",
+    "label_html": "Отдых в плёнке",
+    "start": 42
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Нарезка и подача",
+    "label_html": "Нарезка и подача",
+    "start": 47
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)",
+ "total": "~50 мин (при готовом рисе)",
+ "vinegar_options": null,
+ "yields": "4 онигирадзу (8 половинок)"
+}

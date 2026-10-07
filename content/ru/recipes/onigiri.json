@@ -1,20 +1,20 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Треугольники из солёного риса руками или в форме, классические и яркие начинки, бакудан с целым яйцом, обёрнутый нори целиком, и яки-онигири в соевой глазури.",
+ "blurb_html": "Солёные рисовые треугольники руками или в форме, с классическими и яркими начинками — основа для всех онигири на этом сайте.",
  "chips": [
   {
-   "html": "<span>9 онигири руками (13 в форме) или 4 бакудана + 3 онигири</span>",
+   "html": "<span>9 онигири руками (13 с формой)</span>",
    "kind": "",
-   "text": "9 онигири руками (13 в форме) или 4 бакудана + 3 онигири"
+   "text": "9 онигири руками (13 с формой)"
   },
   {
-   "html": "~1½ ч (+ несколько часов на яйца для бакудана)",
+   "html": "~1½ ч",
    "kind": "time",
-   "text": "~1½ ч (+ несколько часов на яйца для бакудана)"
+   "text": "~1½ ч"
   }
  ],
- "description": "Треугольники из солёного риса руками или в форме, классические и яркие начинки, бакудан с целым яйцом, обёрнутый нори целиком, и яки-онигири в соевой глазури.",
+ "description": "Солёные рисовые треугольники руками или в форме, с классическими и яркими начинками — основа для всех онигири на этом сайте.",
  "equipment_html": [
   "Рисоварка или тяжёлая кастрюля",
   "Большая миска или кадка для суши, чтобы остудить рис",
@@ -22,9 +22,6 @@
   "Маленькая миска с водой для рук",
   "Пищевая плёнка",
   "Форма для онигири — треугольная, с крышкой и кнопкой-выталкивателем (по желанию)",
-  "Пакет с застёжкой для яиц",
-  "Сковорода, пергамент и 2 силиконовые лопатки (яки-онигири)",
-  "Кисточка",
   "Кухонные ножницы"
  ],
  "group": {
@@ -32,8 +29,8 @@
   "name": "Японская кухня"
  },
  "hero": {
-  "alt": "Онигири: форма, начинки, гриль",
-  "image": "illustrations/onigiri/hero.webp?v=235e53851a",
+  "alt": "Онигири: форма и начинки",
+  "image": "illustrations/onigiri/hero.webp?v=f5fc5c19fd",
   "svg_fallback": null
  },
  "ingredients": [
@@ -98,10 +95,6 @@
      "name_html": "Шрирача (острый тунец с майонезом)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"кусок|куска|кусков\" data-n=\"3\">3–4 куска</span>, мелко нарезать",
-     "name_html": "Караагэ, оставшееся"
-    },
-    {
      "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
      "name_html": "Кимчи, нарезанное и отжатое"
     },
@@ -115,32 +108,7 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
-     "name_html": "Яйца"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
-     "name_html": "Соевый соус (маринад для яиц)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
-     "name_html": "Саке"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
-     "name_html": "Мирин"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Сахар"
-    }
-   ],
-   "name": "Яйца для бакудана (начните за несколько часов)"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span>, разрезанные на трети, — плюс 1 целый лист на каждый бакудан",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span>, разрезанные на трети",
      "name_html": "Нори"
     },
     {
@@ -149,26 +117,13 @@
     }
    ],
    "name": "В конце"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Соевый соус (глазурь)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Обжаренное кунжутное масло"
-    }
-   ],
-   "name": "Глазурь для яки-онигири"
   }
  ],
- "intro_html": "Японские рисовые шарики. Рис — <b>простой</b> короткозёрный, приправленный только солью с ваших рук, — не <a href=\"sushi-rice.html\">рис для суши</a>: он с уксусом, слишком мягкий и кислый для этого. Формуйте <b>руками</b> (левая рука снизу, правая — «крыша») или <b>в форме</b>; начиняйте классикой или чем-то поярче; спрячьте целое маринованное яйцо в <b>бакудан</b> («бомбу»); или обжарьте их в <b>яки-онигири</b>.",
+ "intro_html": "Японские рисовые шарики. Рис — <b>простой</b> короткозёрный, приправленный только солью на руках — не <a href=\"sushi-rice.html\">суши-рис</a>, который с уксусом и для этого слишком мягкий и кислый. Лепите <b>руками</b> (левая рука снизу, правая — «крыша») или <b>формой</b>; начиняйте классикой или чем-то поярче. У более сочных есть свои страницы: <a href=\"yaki-onigiri.html\">яки-онигири</a> (хрустящая корочка с соевой глазурью), <a href=\"nikumaki-onigiri.html\">никумаки-онигири</a> (в глазированной свиной грудинке), <a href=\"tenmusu.html\">тэнмусу</a> (креветка в темпуре внутри), <a href=\"onigirazu.html\">онигирадзу</a> (рисовый сэндвич), <a href=\"spam-musubi.html\">спам-мусуби</a>, <a href=\"baby-octopus-onigiri.html\">онигири с детёнышем осьминога</a> (глазированный осьминог на рисе с осьминогом) и <a href=\"salmon-onigiri.html\">лососевые онигири</a>.",
  "mise": [
   {
    "as_list": false,
-   "goes_in": "Шаг 5",
+   "goes_in": "Шаг 4",
    "image": "illustrations/onigiri/mise1.webp?v=d2fdb9e0ca",
    "items": [
     "только что сваренный, тёплый"
@@ -180,7 +135,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 5",
+   "goes_in": "Шаг 4",
    "image": "illustrations/onigiri/mise2.webp?v=c21cd0e1d9",
    "items": [
     "миска с водой",
@@ -193,7 +148,7 @@
   },
   {
    "as_list": true,
-   "goes_in": "Шаг 6",
+   "goes_in": "Шаг 5",
    "image": "illustrations/onigiri/mise3.webp?v=2505e97df2",
    "items": [
     "лосось",
@@ -207,63 +162,36 @@
    "vessel": "plate"
   },
   {
-   "as_list": true,
-   "goes_in": "Шаг 6",
-   "image": "illustrations/onigiri/mise4.webp?v=223ff014ea",
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/onigiri/mise4.webp?v=5d0e852cb8",
    "items": [
     "острый тунец с майонезом",
-    "караагэ",
     "кимчи + сыр"
    ],
-   "items_html": "острый тунец с майонезом · караагэ · кимчи + сыр",
+   "items_html": "острый тунец с майонезом · кимчи + сыр",
    "name": "Яркие начинки",
    "svg_fallback": null,
    "vessel": "plate"
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 11",
-   "image": "illustrations/onigiri/mise5.webp?v=541987c7cc",
+   "goes_in": "Шаг 10",
+   "image": "illustrations/onigiri/mise5.webp?v=cec215bf41",
    "items": [
-    "очищенные, в соевом маринаде"
-   ],
-   "items_html": "очищенные, в соевом маринаде",
-   "name": "Маринованные яйца",
-   "svg_fallback": null,
-   "vessel": "bowl"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Шаг 12",
-   "image": "illustrations/onigiri/mise6.webp?v=cec215bf41",
-   "items": [
-    "нори третями",
-    "целые листы",
+    "нори на трети",
     "фурикакэ"
    ],
-   "items_html": "нори третями · целые листы · фурикакэ",
+   "items_html": "нори на трети · фурикакэ",
    "name": "Нори + фурикакэ",
    "svg_fallback": null,
    "vessel": "plate"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Шаг 14",
-   "image": "illustrations/onigiri/mise7.webp?v=2ff1d85691",
-   "items": [
-    "соевый соус",
-    "кунжутное масло"
-   ],
-   "items_html": "соевый соус · кунжутное масло",
-   "name": "Глазурь",
-   "svg_fallback": null,
-   "vessel": "cup"
   }
  ],
  "more_label": "Ещё — Японская кухня:",
  "next": {
-  "slug": "karaage",
-  "title": "Караагэ"
+  "slug": "yaki-onigiri",
+  "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
  },
  "notes": [
   {
@@ -275,19 +203,11 @@
    "title_html": "Размеры форм"
   },
   {
-   "html": "<ul class=\"do\"><li>Аджитама-онигири от Japanese Cooking 101: яйца варят 7–8 минут, маринуют, а затем формуют в рисе, заправленном их маринадом.</li><li>Круглый шар, целиком обёрнутый нори, — это и есть бакудан («бомба»).</li><li>На каждый уходит около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> риса — из кастрюли на <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"3\" data-s=\"0\">3 стакана</span> выйдет 4 бакудана и 3 обычных онигири.</li></ul>",
-   "title_html": "Бакудан"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Острый тунец с майонезом, караагэ и кимчи + сыр — выбор этого сайта (JOC советует оставшееся караагэ).</li><li>Количество шрирачи — отправная точка, пробуйте.</li></ul>",
+   "html": "<ul class=\"do\"><li>Острый тунец с майонезом и кимчи + сыр — выбор этого сайта.</li><li>Количество шрирачи — отправная точка: попробуйте.</li></ul>",
    "title_html": "Яркие начинки"
   },
   {
-   "html": "<p>Just One Cookbook ещё заправляет сам рис соевым соусом, сахаром, кунжутным маслом и солью перед формовкой и предлагает в качестве глазури соус унаги или терияки.</p>",
-   "title_html": "Яки-онигири: другие глазури"
-  },
-  {
-   "html": "<ul class=\"do\"><li>В холодильнике рис твердеет.</li><li>Заверните каждый онигири в плёнку, а потом в толстое полотенце — так он будет прохладным, но не холодным; яки-онигири можно заморозить поштучно до месяца.</li></ul>",
+   "html": "<ul class=\"do\"><li>В холодильнике рис твердеет.</li><li>Заверните каждый онигири в плёнку, затем в толстое полотенце — чтобы было прохладно, но не холодно.</li></ul>",
    "title_html": "Хранение"
   }
  ],
@@ -310,16 +230,8 @@
    "title": "Формовка в форме"
   },
   {
-   "id": "part-бакудан",
-   "title": "Бакудан"
-  },
-  {
    "id": "part-подача",
    "title": "Подача"
-  },
-  {
-   "id": "part-яки-онигири",
-   "title": "Яки-онигири"
   }
  ],
  "prev": {
@@ -350,7 +262,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/onigiri.jpg?v=618ded7439",
+ "share_image": "share/onigiri.jpg?v=153bd13557",
  "siblings": [
   {
    "slug": "oyakodon",
@@ -359,6 +271,34 @@
   {
    "slug": "napa-shiitake-egg-bowl",
    "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)"
+  },
+  {
+   "slug": "tenmusu",
+   "title": "Тэнмусу (онигири с креветкой в темпуре)"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
   },
   {
    "slug": "karaage",
@@ -390,18 +330,6 @@
   {
    "label": "Just One Cookbook — онигири (японские рисовые шарики)",
    "url": "https://www.justonecookbook.com/onigiri-rice-balls/"
-  },
-  {
-   "label": "Just One Cookbook — яки-онигири (жареные рисовые шарики)",
-   "url": "https://www.justonecookbook.com/yaki-onigiri-grilled-rice-ball/"
-  },
-  {
-   "label": "Japanese Cooking 101 — аджитама-онигири (рисовые шарики с яйцом для рамена)",
-   "url": "https://japanesecooking101.com/ajitama-onigiri-ramen-egg-rice-balls/"
-  },
-  {
-   "label": "Hiroko’s Recipes — бакудан-онигири, «бомба» в нори",
-   "url": "https://www.hirokoliston.com/nori-wrapped-rice-ball-sandwich/"
   }
  ],
  "steps": [
@@ -440,71 +368,24 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Варите яйца прямо из холодильника 7–8 минут, затем сразу в холодную воду и очистите. Они плотнее, чем <a href=\"ramen-egg.html\">яйцо для рамена за 6 минут</a>, — выдержат, когда их обжимают рисом.</li><li>Прокипятите соевый соус, саке, мирин и сахар минуту и остудите.</li><li>Яйца и маринад — в пакет с застёжкой, в холодильник на несколько часов или на ночь. <b>Маринад сохраните</b> — им заправляют рис для бакудана.</li></ul>",
-   "heat": null,
-   "id": "step-2",
-   "images": {
-    "alt": "Замаринуйте яйца для бакудана (заранее)",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Очистите остывшие яйца и положите в пакет с маринадом, выпустив воздух.",
-      "src": "illustrations/onigiri/2-how1.webp?v=ad4627dfda"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/2.webp?v=e595928d90",
-    "svg_fallback": null
-   },
-   "n": 2,
-   "part": "Начинки",
-   "part_id": "part-начинки",
-   "time": "15 мин + несколько ч",
-   "time_html": "<span>15 мин + несколько ч</span>",
-   "title": "Замаринуйте яйца для бакудана (заранее)",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
-     "name_html": "Яйца"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
-     "name_html": "Соевый соус (маринад для яиц)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
-     "name_html": "Саке"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
-     "name_html": "Мирин"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Сахар"
-    }
-   ]
-  },
-  {
    "body_html": "<ul class=\"do\"><li>Пока варится рис:<ul class=\"ing\"><li><b>Солёный лосось:</b> посолите с обеих сторон, запекайте под грилем или в духовке при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"218\" data-s=\"0\">218 °C</span> 10–20 минут до полной готовности и рассыпчатости, затем разберите на хлопья</li><li><b>Окака:</b> кацуобуси, смоченные (не залитые) соевым соусом</li><li><b>Тунец с майонезом:</b> тунец без жидкости + майонез + соевый соус</li><li><b>Умэбоси:</b> косточки вынуть, мякоть — на тарелку</li></ul></li></ul>",
    "heat": null,
-   "id": "step-3",
+   "id": "step-2",
    "images": {
     "alt": "Классические начинки",
     "diagram": null,
     "how": [
      {
       "caption": "Окака: смочите хлопья бонито соевым соусом — влажные, но не залитые.",
-      "src": "illustrations/onigiri/3-how1.webp?v=5a2c2b70a6"
+      "src": "illustrations/onigiri/2-how1.webp?v=5a2c2b70a6"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/3.webp?v=e559d81536",
+    "result": "illustrations/onigiri/2.webp?v=e559d81536",
     "svg_fallback": null
    },
-   "n": 3,
+   "n": 2,
    "part": "Начинки",
    "part_id": "part-начинки",
    "time": "~25 мин",
@@ -546,32 +427,28 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Те же <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 ч. л.</span> на онигири:<ul class=\"ing\"><li><b>Острый тунец с майонезом:</b> в половину тунца с майонезом вмешайте шрирачу (подойдёт и <a href=\"tuna-mango-roll.html\">острый майонез из ролла</a>)</li><li><b>Караагэ:</b> оставшееся <a href=\"karaage.html\">караагэ</a>, мелко нарезанное</li><li><b>Кимчи + сыр:</b> нарезанное <a href=\"kimchi.html\">кимчи</a>, хорошо отжатое, и несколько кубиков сыра</li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Те же <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 ч. л.</span> на онигири:<ul class=\"ing\"><li><b>Острый тунец с майонезом:</b> в половину тунца с майонезом вмешайте шрирачу (подойдёт и <a href=\"tuna-mango-roll.html\">острый майонез из ролла</a>)</li><li><b>Кимчи + сыр:</b> нарезанное <a href=\"kimchi.html\">кимчи</a>, хорошо отжатое, и несколько кубиков сыра</li></ul></li></ul>",
    "heat": null,
-   "id": "step-4",
+   "id": "step-3",
    "images": {
     "alt": "Яркие начинки",
     "diagram": null,
     "how": [],
-    "illustration": "illustrations/onigiri/4.webp?v=57811c280e",
+    "illustration": "illustrations/onigiri/3.webp?v=87203aa257",
     "photo": null,
     "result": null,
     "svg_fallback": null
    },
-   "n": 4,
+   "n": 3,
    "part": "Начинки",
    "part_id": "part-начинки",
-   "time": "~6 мин",
-   "time_html": "<span>~6 мин</span>",
+   "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
    "title": "Яркие начинки",
    "uses_rows": [
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 ч. л.</span>",
      "name_html": "Шрирача (острый тунец с майонезом)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-b=\"4\" data-f=\"кусок|куска|кусков\" data-n=\"3\">3–4 куска</span>",
-     "name_html": "Караагэ, оставшееся"
     },
     {
      "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
@@ -586,26 +463,26 @@
   {
    "body_html": "<ul class=\"do\"><li>Дайте рису остыть ровно настолько, чтобы его можно было держать, — он должен быть ещё тёплым, иначе не слепится.</li><li>Смочите обе ладони небольшим количеством воды.</li><li>Обмакните 2–3 пальца в крупную соль и разотрите её по обеим ладоням (мелкой соли — вдвое меньше).</li></ul>",
    "heat": null,
-   "id": "step-5",
+   "id": "step-4",
    "images": {
     "alt": "Намочите и посолите руки",
     "diagram": null,
     "how": [
      {
       "caption": "Смочите обе ладони, затем обмакните 2–3 пальца в крупную соль…",
-      "src": "illustrations/onigiri/5-how1.webp?v=522ee31760"
+      "src": "illustrations/onigiri/4-how1.webp?v=522ee31760"
      },
      {
       "caption": "…и разотрите соль по обеим ладоням.",
-      "src": "illustrations/onigiri/5-how2.webp?v=8ecc676131"
+      "src": "illustrations/onigiri/4-how2.webp?v=8ecc676131"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/5.webp?v=6e4c345ccc",
+    "result": "illustrations/onigiri/4.webp?v=57811c280e",
     "svg_fallback": null
    },
-   "n": 5,
+   "n": 4,
    "part": "Формовка руками",
    "part_id": "part-формовка-руками",
    "time": "~5 мин",
@@ -621,26 +498,26 @@
   {
    "body_html": "<ul class=\"do\"><li>Положите ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> тёплого риса на ЛЕВУЮ ладонь — левая рука всегда снизу.</li><li>Сделайте в середине небольшую ямку и положите <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 ч. л.</span> одной начинки.</li><li>Накройте ещё ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> риса и мягко обожмите вокруг начинки в шарик.</li></ul>",
    "heat": null,
-   "id": "step-6",
+   "id": "step-5",
    "images": {
     "alt": "Рис, начинка, закрыть",
     "diagram": null,
     "how": [
      {
       "caption": "Около 50 г тёплого риса на левую ладонь; сделайте в середине небольшую ямку.",
-      "src": "illustrations/onigiri/6-how1.webp?v=a2447717ab"
+      "src": "illustrations/onigiri/5-how1.webp?v=522ee31760"
      },
      {
       "caption": "1–2 ч. л. начинки в ямку, затем накройте ещё рисом.",
-      "src": "illustrations/onigiri/6-how2.webp?v=c3e8771711"
+      "src": "illustrations/onigiri/5-how2.webp?v=c3e8771711"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/6.webp?v=ab5c2f4b21",
+    "result": "illustrations/onigiri/5.webp?v=ab5c2f4b21",
     "svg_fallback": null
    },
-   "n": 6,
+   "n": 5,
    "part": "Формовка руками",
    "part_id": "part-формовка-руками",
    "time": "1 мин на штуку",
@@ -651,26 +528,26 @@
   {
    "body_html": "<ul class=\"do\"><li>ПРАВАЯ рука сверху: пальцы вместе, согнуты «крышей» — она делает угол.</li><li>ЛЕВАЯ рука снизу буквой «С» — пальцы и основание ладони мягко выравнивают две стороны.</li><li>Легко прижмите, затем перекатите только что сделанный угол <b>к себе</b> — на треть оборота.</li><li>Три угла, потом ещё 2–3 круга. Положите на каждую грань и прижмите один раз, чтобы выровнять.</li><li>Достаточно плотно, чтобы держался, но воздушно внутри — не сжимайте.</li></ul>",
    "heat": null,
-   "id": "step-7",
+   "id": "step-6",
    "images": {
     "alt": "Сформуйте треугольник",
     "diagram": null,
     "how": [
      {
       "caption": "Правая рука сверху, пальцы вместе и согнуты «крышей»; левая снизу буквой «С» прижимает бока.",
-      "src": "illustrations/onigiri/7-how1.webp?v=f09f821ccb"
+      "src": "illustrations/onigiri/6-how1.webp?v=f09f821ccb"
      },
      {
       "caption": "Легко прижмите, затем перекатите только что сделанный угол к себе — на треть оборота — и прижмите снова.",
-      "src": "illustrations/onigiri/7-how2.webp?v=5c94e8c191"
+      "src": "illustrations/onigiri/6-how2.webp?v=5c94e8c191"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/7.webp?v=bddbbe9acb",
+    "result": "illustrations/onigiri/6.webp?v=bddbbe9acb",
     "svg_fallback": null
    },
-   "n": 7,
+   "n": 6,
    "part": "Формовка руками",
    "part_id": "part-формовка-руками",
    "time": "~1 мин на штуку",
@@ -681,22 +558,22 @@
   {
    "body_html": "<ul class=\"do\"><li>Застелите маленькую миску пищевой плёнкой и посыпьте немного соли.</li><li>Рис, ямка, начинка, сверху ещё рис и щепотка соли.</li><li>Соберите плёнку и закрутите, затем сформуйте тот же треугольник через неё. Удобно для ланчбокса — рис никто не трогает руками.</li></ul>",
    "heat": null,
-   "id": "step-8",
+   "id": "step-7",
    "images": {
     "alt": "Или: через пищевую плёнку",
     "diagram": null,
     "how": [
      {
       "caption": "Рис с начинкой на плёнке в миске; соберите и закрутите плёнку, затем сформуйте треугольник.",
-      "src": "illustrations/onigiri/8-how1.webp?v=7bfd4fb88d"
+      "src": "illustrations/onigiri/7-how1.webp?v=f09f821ccb"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/8.webp?v=44a93107e2",
+    "result": "illustrations/onigiri/7.webp?v=44a93107e2",
     "svg_fallback": null
    },
-   "n": 8,
+   "n": 7,
    "part": "Формовка руками",
    "part_id": "part-формовка-руками",
    "time": "~1 мин на штуку",
@@ -707,17 +584,47 @@
   {
    "body_html": "<ul class=\"do\"><li>Окуните форму и крышку в воду, стряхните лишнее и посолите внутри.</li><li>Наполните наполовину тёплым рисом, прижимая его в углы.</li><li>Ложку начинки в середину, затем рис до краёв и немного соли сверху.</li></ul>",
    "heat": null,
-   "id": "step-9",
+   "id": "step-8",
    "images": {
     "alt": "Наполните форму",
     "diagram": null,
     "how": [
      {
       "caption": "Наполните влажную форму наполовину, прижимая рис в углы.",
-      "src": "illustrations/onigiri/9-how1.webp?v=c42ae1f5d0"
+      "src": "illustrations/onigiri/8-how1.webp?v=c42ae1f5d0"
      },
      {
       "caption": "Начинку в середину, затем рис до краёв.",
+      "src": "illustrations/onigiri/8-how2.webp?v=ae64c7a07c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri/8.webp?v=f3441ab996",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Формовка в форме",
+   "part_id": "part-формовка-в-форме",
+   "time": "~1 мин на штуку",
+   "time_html": "<span>~1 мин на штуку</span>",
+   "title": "Наполните форму",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Наденьте крышку и твёрдо надавите — должно чувствоваться лёгкое сопротивление. Нет сопротивления? Добавьте немного риса.</li><li>Снимите крышку, переверните форму над подносом и нажмите кнопку — онигири выскочит.</li><li>Перед тем как трогать, смочите пальцы. В форме онигири получаются меньше и плотнее (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 г</span>, 13 из кастрюли); если давить легче, они пышнее.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Прижмите и вытолкните",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Наденьте крышку и твёрдо надавите — остановитесь, когда почувствуете сопротивление.",
+      "src": "illustrations/onigiri/9-how1.webp?v=3811fd7ac5"
+     },
+     {
+      "caption": "Переверните и нажмите кнопку — онигири выскочит.",
       "src": "illustrations/onigiri/9-how2.webp?v=ae64c7a07c"
      }
     ],
@@ -729,99 +636,34 @@
    "n": 9,
    "part": "Формовка в форме",
    "part_id": "part-формовка-в-форме",
-   "time": "~1 мин на штуку",
-   "time_html": "<span>~1 мин на штуку</span>",
-   "title": "Наполните форму",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Наденьте крышку и твёрдо надавите — должно чувствоваться лёгкое сопротивление. Нет сопротивления? Добавьте немного риса.</li><li>Снимите крышку, переверните форму над подносом и нажмите кнопку — онигири выскочит.</li><li>Перед тем как трогать, смочите пальцы. В форме онигири получаются меньше и плотнее (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 г</span>, 13 из кастрюли); если давить легче, они пышнее.</li></ul>",
-   "heat": null,
-   "id": "step-10",
-   "images": {
-    "alt": "Прижмите и вытолкните",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Наденьте крышку и твёрдо надавите — остановитесь, когда почувствуете сопротивление.",
-      "src": "illustrations/onigiri/10-how1.webp?v=3811fd7ac5"
-     },
-     {
-      "caption": "Переверните и нажмите кнопку — онигири выскочит.",
-      "src": "illustrations/onigiri/10-how2.webp?v=d686c3937e"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/10.webp?v=d2b1350720",
-    "svg_fallback": null
-   },
-   "n": 10,
-   "part": "Формовка в форме",
-   "part_id": "part-формовка-в-форме",
    "time": "~30 с на штуку",
    "time_html": "<span>~30 с на штуку</span>",
    "title": "Прижмите и вытолкните",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Выньте яйца из маринада и вмешайте <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-s=\"0\">¼ стакана</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\" data-s=\"0\" data-alt=\"1\">60 мл</span>)</span> маринада в ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"600\" data-s=\"0\">600 г</span> тёплого риса.</li><li>~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> этого риса на левую ладонь, ямка в середине, в неё — целое яйцо.</li><li>Накройте рисом и сформуйте шар, яйцо — в центре.</li><li>Оберните целиком листом нори — чёрный шар и есть «бомба».</li></ul>",
-   "heat": null,
-   "id": "step-11",
-   "images": {
-    "alt": "Бакудан — «бомба»",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Около 150 г заправленного риса на ладонь, в середину — целое маринованное яйцо.",
-      "src": "illustrations/onigiri/11-how1.webp?v=900b28fd22"
-     },
-     {
-      "caption": "Накройте рисом, сформуйте шар и оберните целиком листом нори.",
-      "src": "illustrations/onigiri/11-how2.webp?v=98f12e8c0a"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/11.webp?v=b4dcf86574",
-    "svg_fallback": null
-   },
-   "n": 11,
-   "part": "Бакудан",
-   "part_id": "part-бакудан",
-   "time": "~2 мин на штуку",
-   "time_html": "<span>~2 мин на штуку</span>",
-   "title": "Бакудан — «бомба»",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"лист|листа|листов\" data-n=\"1\">3 листа</span>",
-     "name_html": "Нори"
-    }
-   ]
-  },
-  {
    "body_html": "<ul class=\"do\"><li>Оберните низ каждого онигири третью листа нори — <b>прямо перед едой</b>, чтобы нори хрустел, или сразу, если нравится мягкий, прилипший.</li><li>Или без нори: обсыпьте три грани <a href=\"furikake.html\">фурикакэ</a> влажными пальцами.</li><li>Немного начинки на верхушке подскажет, что внутри. Ешьте тёплыми или комнатной температуры, в течение примерно 6 часов.</li></ul>",
    "heat": null,
-   "id": "step-12",
+   "id": "step-10",
    "images": {
     "alt": "Нори, фурикакэ, метка сверху",
     "diagram": null,
     "how": [
      {
       "caption": "Оберните низ третью листа нори прямо перед едой — нори останется хрустящим.",
-      "src": "illustrations/onigiri/12-how1.webp?v=9ed82e4594"
+      "src": "illustrations/onigiri/10-how1.webp?v=9ed82e4594"
      },
      {
       "caption": "Или обсыпьте грани фурикакэ влажными пальцами.",
-      "src": "illustrations/onigiri/12-how2.webp?v=8ae726eff4"
+      "src": "illustrations/onigiri/10-how2.webp?v=8ae726eff4"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/12.webp?v=6e4b65b2e6",
+    "result": "illustrations/onigiri/10.webp?v=6e4b65b2e6",
     "svg_fallback": null
    },
-   "n": 12,
+   "n": 10,
    "part": "Подача",
    "part_id": "part-подача",
    "time": "~4 мин",
@@ -833,79 +675,10 @@
      "name_html": "Фурикакэ"
     }
    ]
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Обожмите простые онигири чуть плотнее обычного, чтобы не развалились на сковороде.</li><li>Пергамент на сковороду, на него онигири, огонь ниже среднего.</li><li>Не трогайте каждую сторону, пока она не станет хрустящей и слегка румяной, затем переверните (двумя лопатками) — если трогать раньше, они развалятся.</li></ul>",
-   "heat": {
-    "label": "ниже среднего",
-    "label_html": "<span>ниже среднего</span>",
-    "off": false
-   },
-   "id": "step-13",
-   "images": {
-    "alt": "Яки-онигири: обжарка",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Переворачивайте каждый, только когда сторона стала хрустящей, двумя лопатками.",
-      "src": "illustrations/onigiri/13-how1.webp?v=ac77925766"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/13.webp?v=bd733dc5c1",
-    "svg_fallback": null
-   },
-   "n": 13,
-   "part": "Яки-онигири",
-   "part_id": "part-яки-онигири",
-   "time": "~10 мин",
-   "time_html": "<span>~10 мин</span>",
-   "title": "Яки-онигири: обжарка",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Убавьте огонь до слабого. Смажьте одну сторону соевым соусом с кунжутным маслом, переверните её на сковороду, смажьте другую.</li><li>Ещё минуту с каждой стороны — глазурь быстро пригорает.</li></ul>",
-   "heat": {
-    "label": "слабый",
-    "label_html": "<span>слабый</span>",
-    "off": false
-   },
-   "id": "step-14",
-   "images": {
-    "alt": "Яки-онигири: глазурь",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Слабый огонь: смажьте соевой глазурью, переверните на сковороду, смажьте другую сторону.",
-      "src": "illustrations/onigiri/14-how1.webp?v=9d714bbea9"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/14.webp?v=1da419b47a",
-    "svg_fallback": null
-   },
-   "n": 14,
-   "part": "Яки-онигири",
-   "part_id": "part-яки-онигири",
-   "time": "~3 мин",
-   "time_html": "<span>~3 мин</span>",
-   "title": "Яки-онигири: глазурь",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Соевый соус (глазурь)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Обжаренное кунжутное масло"
-    }
-   ]
   }
  ],
  "timeline": {
-  "end": 120,
+  "end": 105,
   "hours": true,
   "legend": [
    {
@@ -925,7 +698,7 @@
     "label": "Без участия"
    }
   ],
-  "note_html": "Яйцам для бакудана нужно от нескольких часов до ночи в маринаде — по возможности начните накануне. Держите рис и готовые онигири под влажным полотенцем, чтобы не подсохли.",
+  "note_html": "Накрывайте рис и готовые онигири влажным полотенцем, чтобы не подсыхали.",
   "tasks": [
    {
     "dur": 60,
@@ -952,8 +725,8 @@
     "start": 35
    },
    {
-    "dur": 6,
-    "dur_label": "6 мин",
+    "dur": 4,
+    "dur_label": "4 мин",
     "kind": "board",
     "label": "Яркие начинки",
     "label_html": "Яркие начинки",
@@ -976,28 +749,12 @@
     "start": 65
    },
    {
-    "dur": 10,
-    "dur_label": "10 мин",
-    "kind": "bowl",
-    "label": "Бакудан",
-    "label_html": "Бакудан",
-    "start": 75
-   },
-   {
     "dur": 4,
     "dur_label": "4 мин",
     "kind": "bowl",
     "label": "Нори, фурикакэ",
     "label_html": "Нори, фурикакэ",
     "start": 90
-   },
-   {
-    "dur": 15,
-    "dur_label": "15 мин",
-    "kind": "pan",
-    "label": "Обжарка + глазурь (яки)",
-    "label_html": "Обжарка + глазурь (яки)",
-    "start": 94
    }
   ],
   "tick_step": 15,
@@ -1033,16 +790,12 @@
    {
     "at": 105,
     "label": "1:45"
-   },
-   {
-    "at": 120,
-    "label": "2:00"
    }
   ],
   "unit": "ч:мм"
  },
- "title": "Онигири: форма, начинки, гриль",
- "total": "~1½ ч (+ несколько часов на яйца для бакудана)",
+ "title": "Онигири: форма и начинки",
+ "total": "~1½ ч",
  "vinegar_options": null,
- "yields": "9 онигири руками (13 в форме) или 4 бакудана + 3 онигири"
+ "yields": "9 онигири руками (13 с формой)"
 }
