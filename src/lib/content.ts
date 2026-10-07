@@ -23,6 +23,8 @@ export type RecipeSummary = {
   chips: Chip[];
   hero: Hero;
   share_image: string;
+  /** When it went up ("2026-10-07 12:00"), from ../recipes content.ADDED. */
+  added: string | null;
 };
 
 export type FoodIndex = {
@@ -32,6 +34,8 @@ export type FoodIndex = {
   share_image: string;
   footer: string;
   groups: { id: string; name: string; items: string[]; notes: Note[] }[];
+  /** Newest slugs first (the home page's "Recently added"). */
+  recent: string[];
   recipes: RecipeSummary[];
 };
 

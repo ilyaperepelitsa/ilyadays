@@ -3,7 +3,7 @@ import { foodHref, getSvgDefs } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt, SvgDefs } from "./parts";
 
-function Card({ lang, r }: { lang: Lang; r: RecipeSummary }) {
+export function Card({ lang, r, badge }: { lang: Lang; r: RecipeSummary; badge?: string }) {
   return (
     <a className="card" href={foodHref(lang, r.slug)}>
       <div className="card-art">
@@ -13,6 +13,7 @@ function Card({ lang, r }: { lang: Lang; r: RecipeSummary }) {
         <h3>{r.title}</h3>
         <Html as="p" html={r.blurb_html} />
         <div className="meta">
+          {badge && <span className="chip added">{badge}</span>}
           {r.chips.map((c, i) => (
             <span key={i} className={c.kind ? `chip ${c.kind}` : "chip"}>{c.text}</span>
           ))}

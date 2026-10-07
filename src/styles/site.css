@@ -33,6 +33,11 @@
 .tile-body h2 { margin: 0 0 4px; font-size: 1.5rem; }
 .tile-body p { margin: 0; color: var(--muted); }
 .tile-go { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600; }
+.recent { margin-top: 44px; }
+.recent-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.recent-head h2 { font-size: 1.6rem; margin: 0; }
+.recent-head a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.chip.added { background: var(--accent-soft); color: var(--ink); }
 .about { margin-top: 44px; max-width: 720px; }
 .about h2 { font-size: 1.6rem; margin: 0 0 8px; }
 .about h3 {
