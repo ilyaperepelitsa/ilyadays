@@ -1,34 +1,36 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Chicken in a thick, mild marinade of cream, yogurt, cheese and ground cashews and almonds, grilled in a very hot oven and brushed with butter.",
+ "blurb_html": "Charred malai tikka — chicken marinated in cream, cheese and ground nuts — simmered in a mild, creamy pale-yellow cashew gravy, like a gentle butter chicken.",
  "chips": [
   {
-   "html": "<span>3–4 as a starter (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 g</span> chicken)</span>",
+   "html": "<span>4 servings (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 g</span> chicken)</span>",
    "kind": "",
-   "text": "3–4 as a starter (250 g chicken)"
+   "text": "4 servings (500 g chicken)"
   },
   {
-   "html": "~4½ h incl. 4 h marinating",
+   "html": "~4¾ h incl. 4 h marinating",
    "kind": "time",
-   "text": "~4½ h incl. 4 h marinating"
+   "text": "~4¾ h incl. 4 h marinating"
   }
  ],
- "description": "Chicken in a thick, mild marinade of cream, yogurt, cheese and ground cashews and almonds, grilled in a very hot oven and brushed with butter.",
+ "description": "Charred malai tikka — chicken marinated in cream, cheese and ground nuts — simmered in a mild, creamy pale-yellow cashew gravy, like a gentle butter chicken.",
  "equipment_html": [
   "Small blender or spice grinder",
   "Mixing bowl",
   "Skewers (metal, or wooden soaked 1 h)",
   "Baking tray (with a rack if you have one)",
   "Oven with a broiler / grill setting",
-  "Pastry brush"
+  "Frying pan (for the onions)",
+  "Blender for the gravy base",
+  "Wide pan with a lid (for the gravy)"
  ],
  "group": {
   "id": "indian",
   "name": "Indian"
  },
  "hero": {
-  "alt": "Chicken malai tikka",
+  "alt": "Chicken malai tikka masala (creamy yellow gravy)",
   "image": "illustrations/chicken-malai-tikka/hero.webp",
   "svg_fallback": null
  },
@@ -36,7 +38,7 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ lb</span>)</span>, cubed",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"1.1\" data-alt=\"1\">1.1 lb</span>)</span>, in <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-b=\"4\" data-s=\"0\">2.5–4 cm</span> cubes",
      "name_html": "Boneless chicken (thigh or breast)"
     }
    ],
@@ -45,72 +47,162 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"24\" data-n=\"2\">24</span>",
      "name_html": "Almonds"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-n=\"1\">8</span>",
-     "name_html": "Cashews"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"16\" data-n=\"2\">16</span>",
+     "name_html": "Cashews (tikka)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
      "name_html": "Greek yogurt (or hung curd)"
     }
    ],
-   "name": "Nut paste"
+   "name": "Nut paste (tikka)"
   },
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
      "name_html": "Fresh cream"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
      "name_html": "Cheese (optional — cream cheese, cheddar or mozzarella)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.5\">1–1½ tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 tbsp</span>",
      "name_html": "Lemon juice"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span> (or <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2.5 cm</span> ginger + 3–4 garlic cloves)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Ginger garlic paste"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span> (or <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span> green chilli paste)",
-     "name_html": "Ground black pepper"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span> (or <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span> green chilli paste)",
+     "name_html": "Ground black pepper (tikka)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
      "name_html": "Coriander leaves, chopped"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
-     "name_html": "Salt"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Salt (tikka)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Oil"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Oil (tikka)"
     }
    ],
-   "name": "Marinade"
+   "name": "Marinade (tikka)"
   },
   {
    "items": [
     {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span>, soaked in <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ cup</span> hot water",
+     "name_html": "Cashews (gravy)"
+    },
+    {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Butter, melted"
+     "name_html": "Oil (for the onions)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-b=\"3\" data-n=\"3\">2–3</span>",
+     "name_html": "Green cardamoms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-alt=\"1\">1½ cups</span>)</span>",
+     "name_html": "Onions, sliced (not red or purple)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> piece",
+     "name_html": "Ginger, peeled and sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> large",
+     "name_html": "Garlic cloves, sliced"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-alt=\"1\">½ cup</span>)</span>",
-     "name_html": "Mint chutney"
+     "name_html": "Full-fat milk (or heavy cream)"
+    }
+   ],
+   "name": "Gravy base"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.25\">1–1¼ tbsp</span>",
+     "name_html": "Ghee"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-n=\"3\">1–2</span>",
+     "name_html": "Green chillies, slit (optional for heat)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Black cardamom (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span>",
+     "name_html": "Cinnamon stick (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Cloves (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> strands",
+     "name_html": "Mace (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"360\" data-b=\"480\">360–480 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-b=\"2\" data-alt=\"1\">1½–2 cups</span>)</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"1\">½–1 tsp</span>",
+     "name_html": "Garam masala (no chilli in it)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.125\" data-b=\"0.25\">⅛–¼ tsp</span>",
+     "name_html": "Nutmeg, grated"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"0.75\">½–¾ tsp</span>",
+     "name_html": "Salt (gravy)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Kasuri methi (dried fenugreek leaves)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Black pepper (gravy, optional)"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Turmeric (optional — for the yellow colour)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ cup</span>)</span>",
+     "name_html": "Heavy cream (optional, to finish)"
+    }
+   ],
+   "name": "Gravy"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "to serve alongside",
+     "name_html": "Naan, tandoori roti or basmati rice"
     }
    ],
    "name": "To serve"
   }
  ],
- "intro_html": "Malai means cream. This is Swasthi’s reshmi (malai) kabab: creamy, mild and not strongly spiced, with a little char from a very hot oven. The marinade is thickened with <b>ground almonds and cashews</b>, the way she makes it when she has no almond meal. It’s served with mint chutney. Double everything for a main course.",
+ "intro_html": "Malai means cream. Two of Swasthi’s recipes put together: her <b>malai (reshmi) kabab</b> for the tikka — chicken in cream, yogurt, cheese and ground almonds and cashews, charred in a very hot oven — and her <b>malai chicken gravy</b>: onion, ginger and garlic sautéed pale, ground with cashews and milk and simmered with whole spices. Mild, creamy and gently spiced, like a butter chicken without the tomato. The gravy is naturally ivory; a pinch of turmeric makes it the yellow you remember (optional — see notes). Make the gravy while the tikka marinates or grills.",
  "mise": [
   {
    "as_list": false,
@@ -170,17 +262,78 @@
    "vessel": "plate"
   },
   {
-   "as_list": false,
-   "goes_in": "Step 8",
+   "as_list": true,
+   "goes_in": "Step 9",
    "image": "illustrations/chicken-malai-tikka/mise5.webp",
    "items": [
-    "melted butter",
-    "mint chutney"
+    "sliced onion",
+    "ginger",
+    "garlic",
+    "green cardamom"
    ],
-   "items_html": "melted butter · mint chutney",
+   "items_html": "sliced onion · ginger · garlic · green cardamom",
+   "name": "Gravy aromatics",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 10",
+   "image": "illustrations/chicken-malai-tikka/mise6.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span> cashews",
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ cup</span> milk"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span> cashews · <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ cup</span> milk",
+   "name": "Soaked cashews + milk",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 11",
+   "image": "illustrations/chicken-malai-tikka/mise7.webp",
+   "items": [
+    "green chilli",
+    "black cardamom",
+    "cinnamon",
+    "cloves",
+    "mace"
+   ],
+   "items_html": "green chilli · black cardamom · cinnamon · cloves · mace",
+   "name": "Whole spices",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 13",
+   "image": "illustrations/chicken-malai-tikka/mise8.webp",
+   "items": [
+    "garam masala",
+    "nutmeg",
+    "salt",
+    "kasuri methi",
+    "pepper",
+    "turmeric"
+   ],
+   "items_html": "garam masala · nutmeg · salt · kasuri methi · pepper · turmeric",
+   "name": "Finishing spices",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 14",
+   "image": "illustrations/chicken-malai-tikka/mise9.webp",
+   "items": [
+    "naan or basmati rice",
+    "cream"
+   ],
+   "items_html": "naan or basmati rice · cream",
    "name": "To serve",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   }
  ],
  "more_label": "More indian:",
@@ -190,20 +343,20 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>Swasthi’s card calls for <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 tbsp</span> almond meal; the 12 almonds + 8 cashews ground with the yogurt is her own alternative, used here because you remember it with cashews.</li><li><b>Assumed, untested:</b> all cashews — about 20 — should work the same and taste a little sweeter and creamier.</li></ul>",
-   "title_html": "Cashews and almonds"
+   "html": "<ul class=\"do\"><li>Swasthi’s malai chicken marinates plain chicken in spiced yogurt and pan-fries it before it goes into the gravy.</li><li>Here her <b>malai tikka</b> takes its place — grilled, charred and creamy — the way restaurants serve malai tikka masala.</li><li>The tikka amounts are her <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 g</span> kabab card <b>doubled</b> to match the gravy’s <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 g</span>, and only the half of her ghee that tempers the spices is used (the other half fried her chicken).</li></ul>",
+   "title_html": "Two recipes put together"
   },
   {
-   "html": "<ul class=\"do\"><li>Swasthi’s malai tikka comes out pale, creamy-white with char spots.</li><li>If the one you remember was yellow, add a pinch of turmeric or a few saffron strands soaked in a teaspoon of warm milk to the marinade.</li><li>That’s an addition, not part of her recipe.</li></ul>",
+   "html": "<ul class=\"do\"><li>Both of Swasthi’s recipes come out ivory-white.</li><li>For the yellow you remember, add a pinch of turmeric to the gravy with the other spices (or a few saffron strands soaked in a teaspoon of warm milk).</li><li>That’s an addition, not part of her recipes.</li><li>Keep the onions pale and use garam masala without chilli, or the gravy turns brown or orange.</li></ul>",
    "title_html": "Yellow colour (optional)"
   },
   {
-   "html": "<ul class=\"do\"><li>Swasthi notes that restaurants often add cardamom and nutmeg powder (she leaves them out), and that <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> green chilli paste instead of the pepper makes it spicy.</li><li>Sinfully Spicy suggests <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> crushed kasuri methi (dried fenugreek leaves) for a Punjabi touch.</li></ul>",
-   "title_html": "More spice, more aroma"
+   "html": "<ul class=\"do\"><li>Swasthi’s kabab card calls for almond meal; ground almonds and cashews with the yogurt is her own alternative.</li><li><b>Untested:</b> all cashews (about 40) should work the same and taste a little sweeter.</li></ul>",
+   "title_html": "Cashews and almonds in the tikka"
   },
   {
    "html": "<ul class=\"do\"><li>From Sinfully Spicy’s malai tikka.</li><li><b>Air fryer:</b> <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"200\" data-s=\"0\">200 °C</span> for 16–18 min.</li><li><b>Pan:</b> heat a cast-iron or grill pan over medium-high (not smoking), brush with ghee or butter, cook in one layer 3–4 min, brushing with ghee, then flip and cook until lightly charred.</li></ul>",
-   "title_html": "Pan or air fryer"
+   "title_html": "Pan or air fryer for the tikka"
   },
   {
    "html": "<ul class=\"do\"><li>Chicken is safe at <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"74\" data-s=\"0\">74 °C</span></b> in the centre.</li><li>Cut the biggest piece open if unsure.</li></ul>",
@@ -211,7 +364,16 @@
   }
  ],
  "original": null,
- "parts": [],
+ "parts": [
+  {
+   "id": "part-malai-tikka",
+   "title": "Malai tikka"
+  },
+  {
+   "id": "part-creamy-gravy",
+   "title": "Creamy gravy"
+  }
+ ],
  "prev": {
   "slug": "kake-soba",
   "title": "Hot soba noodle soup (kake soba)"
@@ -219,8 +381,8 @@
  "scale": {
   "mode": "people",
   "scalable": true,
-  "serves": 3,
-  "size": "3",
+  "serves": 4,
+  "size": "4",
   "text": {
    "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
    "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
@@ -245,8 +407,12 @@
  "slug": "chicken-malai-tikka",
  "sources": [
   {
-   "label": "Swasthi’s Recipes (Indian Healthy Recipes) — Reshmi kabab / chicken malai kabab",
+   "label": "Swasthi’s Recipes (Indian Healthy Recipes) — Reshmi kabab / chicken malai kabab (the tikka)",
    "url": "https://www.indianhealthyrecipes.com/murgh-malai-kabab-reshmi-kabab/"
+  },
+  {
+   "label": "Swasthi’s Recipes (Indian Healthy Recipes) — Malai chicken, creamy white chicken curry (the gravy)",
+   "url": "https://www.indianhealthyrecipes.com/malai-chicken-recipe/"
   },
   {
    "label": "Sinfully Spicy — Chicken malai tikka (pan and air-fryer times)",
@@ -273,14 +439,14 @@
     "svg_fallback": null
    },
    "n": 1,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "~5 min",
    "time_html": "<span>~5 min</span>",
    "title": "Cube and pat dry",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ lb</span>)</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"1.1\" data-alt=\"1\">1.1 lb</span>)</span>",
      "name_html": "Boneless chicken (thigh or breast)"
     }
    ]
@@ -304,28 +470,28 @@
     "svg_fallback": null
    },
    "n": 2,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "~5 min",
    "time_html": "<span>~5 min</span>",
    "title": "Grind the nut paste",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"24\" data-n=\"2\">24</span>",
      "name_html": "Almonds"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-n=\"1\">8</span>",
-     "name_html": "Cashews"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"16\" data-n=\"2\">16</span>",
+     "name_html": "Cashews (tikka)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
      "name_html": "Greek yogurt (or hung curd)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Stir into the nut paste:<ul class=\"ing two-col\"><li>fresh cream <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>cheese (optional — cream cheese, cheddar or mozzarella) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>lemon juice <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.5\">1–1½ tbsp</span></span></li><li>ginger garlic paste <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ tsp</span></span></li><li>ground black pepper <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>coriander leaves, chopped <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>salt <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>oil <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Taste and add more salt or pepper if you like. It should be thick.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Stir into the nut paste:<ul class=\"ing two-col\"><li>fresh cream <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span></span></li><li>cheese (optional — cream cheese, cheddar or mozzarella) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span></span></li><li>lemon juice <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 tbsp</span></span></li><li>ginger garlic paste <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>ground black pepper (tikka) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>coriander leaves, chopped <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span></span></li><li>salt (tikka) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>oil (tikka) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span></span></li></ul></li><li>Taste and add more salt or pepper if you like. It should be thick.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -343,8 +509,8 @@
     "svg_fallback": null
    },
    "n": 3,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "~3 min",
    "time_html": "<span>~3 min</span>",
    "title": "Mix the marinade",
@@ -369,8 +535,8 @@
     "svg_fallback": null
    },
    "n": 4,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "4 h – overnight",
    "time_html": "<span>4 h – overnight</span>",
    "title": "Marinate",
@@ -399,8 +565,8 @@
     "svg_fallback": null
    },
    "n": 5,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "15 min",
    "time_html": "<span>15 min</span>",
    "title": "Heat the oven, thread the skewers",
@@ -424,15 +590,15 @@
     "svg_fallback": null
    },
    "n": 6,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "15 min",
    "time_html": "<span>15 min</span>",
    "title": "Grill",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Turn the skewers and grill another 7–8 minutes. Check after 22–23 minutes in total so they don’t burn.</li><li>For the last 2 minutes, switch to broil for a little char.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Turn the skewers and grill another 7–8 minutes. Check after 22–23 minutes in total so they don’t burn.</li><li>For the last 2 minutes, switch to broil for a little char. Slide the tikka off the skewers.</li></ul>",
    "heat": {
     "label": "240 °C oven → broil",
     "label_html": "<span><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"240\" data-s=\"0\">240 °C</span> oven → broil</span>",
@@ -454,45 +620,274 @@
     "svg_fallback": null
    },
    "n": 7,
-   "part": null,
-   "part_id": null,
+   "part": "Malai tikka",
+   "part_id": "part-malai-tikka",
    "time": "7–8 min",
    "time_html": "<span>7–8 min</span>",
    "title": "Turn, then char",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Brush the hot tikkas with melted butter and serve with mint chutney.</p>",
+   "body_html": "<p>Soak the cashews for the gravy in <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ cup</span> hot water until you grind them.</p>",
    "heat": null,
    "id": "step-8",
    "images": {
-    "alt": "Butter and serve",
+    "alt": "Soak the cashews",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/chicken-malai-tikka/8.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": "10+ min",
+   "time_html": "<span>10+ min</span>",
+   "title": "Soak the cashews",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span>",
+     "name_html": "Cashews (gravy)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the oil in a pan. Add the green cardamoms, onions, ginger and garlic.</li><li>Sauté until <b>transparent</b>, 4–5 minutes. <b>Don’t brown them</b> — browned onions turn the gravy dark.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Sauté the aromatics — pale",
     "diagram": null,
     "how": [
      {
-      "caption": "Brush the hot tikkas with melted butter.",
-      "src": "illustrations/chicken-malai-tikka/8-how1.webp"
+      "caption": "Sauté the onions, ginger, garlic and cardamom until transparent — don't brown them.",
+      "src": "illustrations/chicken-malai-tikka/9-how1.webp"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/chicken-malai-tikka/8.webp",
+    "result": "illustrations/chicken-malai-tikka/9.webp",
     "svg_fallback": null
    },
-   "n": 8,
-   "part": null,
-   "part_id": null,
-   "time": "2 min",
-   "time_html": "<span>2 min</span>",
-   "title": "Butter and serve",
+   "n": 9,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": "4–5 min",
+   "time_html": "<span>4–5 min</span>",
+   "title": "Sauté the aromatics — pale",
    "uses_rows": [
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Butter, melted"
+     "name_html": "Oil (for the onions)"
     },
     {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-b=\"3\" data-n=\"3\">2–3</span>",
+     "name_html": "Green cardamoms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-alt=\"1\">1½ cups</span>)</span>",
+     "name_html": "Onions, sliced (not red or purple)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> piece",
+     "name_html": "Ginger, peeled and sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> large",
+     "name_html": "Garlic cloves, sliced"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Let the onion mixture cool, then grind it with the soaked cashews and the milk to a smooth purée (in two batches if your blender is small).</p>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Grind the gravy base",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cool, then grind with the soaked cashews and the milk to a smooth purée.",
+      "src": "illustrations/chicken-malai-tikka/10-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/10.webp",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": "~5 min + cooling",
+   "time_html": "<span>~5 min + cooling</span>",
+   "title": "Grind the gravy base",
+   "uses_rows": [
+    {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-alt=\"1\">½ cup</span>)</span>",
-     "name_html": "Mint chutney"
+     "name_html": "Full-fat milk (or heavy cream)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the ghee in a wide pan over <b>low</b> heat.</li><li>Add the green chillies and whichever whole spices you use — black cardamom, cinnamon, cloves, mace.</li><li>Careful, they can splutter.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-11",
+   "images": {
+    "alt": "Temper the ghee",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Heat the ghee on low; add the green chillies and the whole spices.",
+      "src": "illustrations/chicken-malai-tikka/11-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/11.webp",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": "~1 min",
+   "time_html": "<span>~1 min</span>",
+   "title": "Temper the ghee",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.25\">1–1¼ tbsp</span>",
+     "name_html": "Ghee"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-n=\"3\">1–2</span>",
+     "name_html": "Green chillies, slit (optional for heat)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Black cardamom (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span>",
+     "name_html": "Cinnamon stick (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Cloves (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> strands",
+     "name_html": "Mace (optional)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour in the purée and the water. Bring to a gentle boil over medium heat.</li><li>Cover and cook until thick with specks of oil on top, about 12–13 minutes, stirring every 5 minutes.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-12",
+   "images": {
+    "alt": "Simmer the gravy",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pour in the purée and the water, then simmer covered until thick.",
+      "src": "illustrations/chicken-malai-tikka/12-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/12.webp",
+    "svg_fallback": null
+   },
+   "n": 12,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": "12–13 min",
+   "time_html": "<span>12–13 min</span>",
+   "title": "Simmer the gravy",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"360\" data-b=\"480\">360–480 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-b=\"2\" data-alt=\"1\">1½–2 cups</span>)</span>",
+     "name_html": "Water"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Stir into the thick gravy:<ul class=\"ing two-col\"><li>garam masala (no chilli in it) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"1\">½–1 tsp</span></span></li><li>nutmeg, grated <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.125\" data-b=\"0.25\">⅛–¼ tsp</span></span></li><li>salt (gravy) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"0.75\">½–¾ tsp</span></span></li><li>kasuri methi (dried fenugreek leaves) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>black pepper (gravy, optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>turmeric (optional — for the yellow colour) <span class=\"amt\">a pinch</span></li></ul></li><li>Add the grilled tikka, cover and cook 2–3 minutes. Taste; add salt, pepper or garam masala if needed.</li><li>Stir in the cream if you like it richer.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-13",
+   "images": {
+    "alt": "Season, then the tikka",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stir in the spices, then add the grilled tikka for 2–3 minutes.",
+      "src": "illustrations/chicken-malai-tikka/13-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/13.webp",
+    "svg_fallback": null
+   },
+   "n": 13,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
+   "title": "Season, then the tikka",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ cup</span>)</span>",
+     "name_html": "Heavy cream (optional, to finish)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Serve hot with naan, tandoori roti or basmati rice.</li><li>A squeeze of lemon is good too.</li></ul>",
+   "heat": null,
+   "id": "step-14",
+   "images": {
+    "alt": "Serve",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Serve hot with naan or rice; a swirl of cream if you like.",
+      "src": "illustrations/chicken-malai-tikka/14-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/14.webp",
+    "svg_fallback": null
+   },
+   "n": 14,
+   "part": "Creamy gravy",
+   "part_id": "part-creamy-gravy",
+   "time": null,
+   "time_html": null,
+   "title": "Serve",
+   "uses_rows": [
+    {
+     "amount_html": "to serve alongside",
+     "name_html": "Naan, tandoori roti or basmati rice"
     }
    ]
   }
@@ -514,11 +909,15 @@
     "label": "Hands-off"
    },
    {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
     "kind": "oven",
     "label": "Oven"
    }
   ],
-  "note_html": "Marinating overnight makes them softer. Soak wooden skewers for an hour while the chicken marinates.",
+  "note_html": "Marinating overnight makes the tikka softer. The gravy simmers while the tikka grills, so both are ready together; soak wooden skewers for an hour while the chicken marinates.",
   "tasks": [
    {
     "dur": 5,
@@ -545,12 +944,36 @@
     "start": 10
    },
    {
-    "dur": 240,
-    "dur_label": "4 h",
+    "dur": 225,
+    "dur_label": "3 h 45",
     "kind": "wait",
     "label": "Marinate (fridge)",
     "label_html": "Marinate (fridge)",
     "start": 15
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "wait",
+    "label": "Soak the cashews",
+    "label_html": "Soak the cashews",
+    "start": 215
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "pan",
+    "label": "Sauté onion, ginger, garlic",
+    "label_html": "Sauté onion, ginger, garlic",
+    "start": 220
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 min",
+    "kind": "bowl",
+    "label": "Cool, grind the gravy base",
+    "label_html": "Cool, grind the gravy base",
+    "start": 226
    },
    {
     "dur": 15,
@@ -577,6 +1000,22 @@
     "start": 255
    },
    {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "pan",
+    "label": "Temper ghee + whole spices",
+    "label_html": "Temper ghee + whole spices",
+    "start": 257
+   },
+   {
+    "dur": 13,
+    "dur_label": "13 min",
+    "kind": "pan",
+    "label": "Simmer the gravy",
+    "label_html": "Simmer the gravy",
+    "start": 259
+   },
+   {
     "dur": 8,
     "dur_label": "8 min",
     "kind": "oven",
@@ -585,12 +1024,20 @@
     "start": 270
    },
    {
-    "dur": 3,
-    "dur_label": "3 min",
-    "kind": "bowl",
-    "label": "Brush butter, serve",
-    "label_html": "Brush butter, serve",
+    "dur": 4,
+    "dur_label": "4 min",
+    "kind": "pan",
+    "label": "Season, tikka in, 2–3 min",
+    "label_html": "Season, tikka in, 2–3 min",
     "start": 278
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "bowl",
+    "label": "Serve",
+    "label_html": "Serve",
+    "start": 282
    }
   ],
   "tick_step": 60,
@@ -622,8 +1069,8 @@
   ],
   "unit": "h:mm"
  },
- "title": "Chicken malai tikka",
- "total": "~4½ h incl. 4 h marinating",
+ "title": "Chicken malai tikka masala (creamy yellow gravy)",
+ "total": "~4¾ h incl. 4 h marinating",
  "vinegar_options": null,
- "yields": "3–4 as a starter (250 g chicken)"
+ "yields": "4 servings (500 g chicken)"
 }

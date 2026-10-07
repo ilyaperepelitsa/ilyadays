@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Inside-out roll: sashimi tuna tossed with sriracha and sesame oil, a strip of mango, sesame rice outside, spicy mayo on top.",
+ "blurb_html": "Regular roll, nori outside: long strips of sashimi tuna and long slices of mango with a line of spicy mayo inside, a dot more on top.",
  "chips": [
   {
    "html": "<span>2 rolls · 16 pieces · 2 servings</span>",
@@ -9,26 +9,25 @@
    "text": "2 rolls · 16 pieces · 2 servings"
   },
   {
-   "html": "~35 min with the rice made",
+   "html": "~30 min with the rice made",
    "kind": "time",
-   "text": "~35 min with the rice made"
+   "text": "~30 min with the rice made"
   }
  ],
- "description": "Inside-out roll: sashimi tuna tossed with sriracha and sesame oil, a strip of mango, sesame rice outside, spicy mayo on top.",
+ "description": "Regular roll, nori outside: long strips of sashimi tuna and long slices of mango with a line of spicy mayo inside, a dot more on top.",
  "equipment_html": [
   "Bamboo rolling mat (makisu)",
-  "Plastic wrap",
-  "Very sharp knife",
+  "Sashimi knife or a long, very sharp knife",
   "Damp cloth",
   "Small bowl for tezu",
-  "Mixing bowls"
+  "Small piping bag or zip bag (for the mayo)"
  ],
  "group": {
   "id": "sushi",
   "name": "Sushi"
  },
  "hero": {
-  "alt": "Spicy tuna & mango roll",
+  "alt": "Tuna & mango roll with spicy mayo",
   "image": "illustrations/tuna-mango-roll/hero.webp",
   "svg_fallback": null
  },
@@ -36,46 +35,20 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 g</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> per roll)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"320\">320 g</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 g</span> per roll)",
      "name_html": "<a href=\"sushi-rice.html\">Sushi rice</a>"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Toasted white sesame seeds"
-    }
-   ],
-   "name": "Rice"
-  },
-  {
-   "items": [
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 whole sheets</span>",
+     "name_html": "Nori"
+    },
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"115\">115 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"4\" data-alt=\"1\">4 oz</span>)</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, in one block",
      "name_html": "Sashimi-grade tuna"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"3\">3 tsp</span>",
-     "name_html": "Sriracha"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
-     "name_html": "Toasted sesame oil"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>, thinly sliced (keep a few for the top)",
-     "name_html": "Green onions"
-    }
-   ],
-   "name": "Spicy tuna"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>, in <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> sticks",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> mango",
      "name_html": "Mango, ripe but firm"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"sheet|sheets\" data-n=\"1\">1 sheet</span>, cut in half crosswise",
-     "name_html": "Nori"
     }
    ],
    "name": "Roll"
@@ -88,7 +61,7 @@
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Sriracha (for the mayo)"
+     "name_html": "Sriracha"
     },
     {
      "amount_html": "a splash",
@@ -109,47 +82,53 @@
     }
    ],
    "name": "Tezu"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "to taste",
+     "name_html": "Soy sauce and pickled ginger (gari)"
+    }
+   ],
+   "name": "To serve"
   }
  ],
- "intro_html": "An inside-out roll (uramaki): the rice is on the outside, so the nori goes on the mat <b>rough side up</b>, gets covered edge to edge with rice, then is flipped over before the filling goes on. Just One Cookbook's spicy tuna roll with a strip of mango added for sweetness. Start with <a href=\"sushi-rice.html\">sushi rice</a> at room temperature.",
+ "intro_html": "A regular roll: nori on the outside, rice inside it, and in the middle <b>long strips</b> of tuna laid end to end with <b>long slices</b> of mango — nothing cubed or minced. It's rolled the way Just One Cookbook rolls her maki, but on a whole sheet of nori so there's room for both fillings and a line of her spicy mayo. Start with <a href=\"sushi-rice.html\">sushi rice</a> at room temperature.",
  "mise": [
   {
    "as_list": true,
-   "goes_in": "Step 11",
+   "goes_in": "Step 6",
    "image": "illustrations/tuna-mango-roll/mise1.webp",
    "items": [
     "mayo",
     "sriracha",
-    "lime"
+    "lime, in a piping bag"
    ],
-   "items_html": "mayo · sriracha · lime",
+   "items_html": "mayo · sriracha · lime, in a piping bag",
    "name": "Spicy mayo",
    "svg_fallback": null,
    "vessel": "cup"
   },
   {
-   "as_list": true,
-   "goes_in": "Step 7",
+   "as_list": false,
+   "goes_in": "Step 6",
    "image": "illustrations/tuna-mango-roll/mise2.webp",
    "items": [
-    "tuna",
-    "sriracha",
-    "sesame oil",
-    "scallions"
+    "long <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> strips"
    ],
-   "items_html": "tuna · sriracha · sesame oil · scallions",
-   "name": "Spicy tuna",
+   "items_html": "long <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> strips",
+   "name": "Tuna",
    "svg_fallback": null,
-   "vessel": "bowl"
+   "vessel": "plate"
   },
   {
    "as_list": false,
-   "goes_in": "Step 7",
+   "goes_in": "Step 6",
    "image": "illustrations/tuna-mango-roll/mise3.webp",
    "items": [
-    "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> sticks"
+    "long slices"
    ],
-   "items_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> sticks",
+   "items_html": "long slices",
    "name": "Mango",
    "svg_fallback": null,
    "vessel": "plate"
@@ -159,9 +138,9 @@
    "goes_in": "Step 4",
    "image": "illustrations/tuna-mango-roll/mise4.webp",
    "items": [
-    "half sheets"
+    "whole sheets"
    ],
-   "items_html": "half sheets",
+   "items_html": "whole sheets",
    "name": "Nori",
    "svg_fallback": null,
    "vessel": "plate"
@@ -171,10 +150,10 @@
    "goes_in": "Step 5",
    "image": "illustrations/tuna-mango-roll/mise5.webp",
    "items": [
-    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> per roll"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 g</span> per roll"
    ],
-   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> per roll",
-   "name": "Sushi rice + sesame",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 g</span> per roll",
+   "name": "Sushi rice",
    "svg_fallback": null,
    "vessel": "bowl"
   },
@@ -199,15 +178,23 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>The <b>mango</b> (about ¼ of a mango per two rolls — my guess, adjust to your taste) and cutting into 8 instead of 6.</li><li>JOC cuts each roll in half, then each half in 3.</li></ul>",
-   "title_html": "Added to JOC's recipe"
+   "html": "<ul class=\"do\"><li>JOC's tuna roll (tekka maki) is a thin roll: half a sheet of nori, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\" data-s=\"0\">80 g</span> of rice, one filling.</li><li>Tuna, mango and mayo need more room, so this doubles it — a whole sheet and <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 g</span> of rice — for a medium roll (chumaki).</li><li>For a thin roll, go back to half a sheet with one tuna strip and one mango slice.</li></ul>",
+   "title_html": "Why a whole sheet"
   },
   {
-   "html": "<ul class=\"do\"><li>For nori on the outside: nori shiny side down, spread the rice leaving a <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 cm</span> strip bare along the far edge, put the filling on the rice and roll — the bare strip seals the roll.</li><li>No plastic wrap needed.</li></ul>",
-   "title_html": "Regular roll instead"
+   "html": "<ul class=\"do\"><li>A thin line inside, along the filling, so every piece gets some; a small dot on top for the look.</li><li>Too much inside makes the filling slide out — keep the line thin.</li></ul>",
+   "title_html": "Mayo inside and on top"
   },
   {
-   "html": "<ul class=\"do\"><li>Roll tighter and keep pressure on the mat as you go.</li><li>Too much filling also splits the roll — keep the row thin.</li></ul>",
+   "html": "<ul class=\"do\"><li>Strips and slices that run the full length of the roll show up in every piece as a clean square of tuna and a stripe of mango.</li><li>Short gaps between strips are fine.</li></ul>",
+   "title_html": "Long, not cubed"
+  },
+  {
+   "html": "<p>The mango, the mayo inside, the whole sheet (she uses half for tuna) and cutting into 8 (she cuts a thin roll into 6).</p>",
+   "title_html": "What's added to JOC"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Too much rice or filling, or rice spread over the bare strip.</li><li>Keep the rice airy, the filling to one neat row, and press gently.</li></ul>",
    "title_html": "Falls apart?"
   },
   {
@@ -219,7 +206,7 @@
  "parts": [],
  "prev": {
   "slug": "nigiri",
-  "title": "Nigiri: shaping by hand"
+  "title": "Nigiri: the named shaping techniques"
  },
  "scale": {
   "mode": "people",
@@ -253,7 +240,7 @@
   },
   {
    "slug": "nigiri",
-   "title": "Nigiri: shaping by hand"
+   "title": "Nigiri: the named shaping techniques"
   },
   {
    "slug": "shrimp-poke-bowl",
@@ -263,8 +250,8 @@
  "slug": "tuna-mango-roll",
  "sources": [
   {
-   "label": "Just One Cookbook — Spicy tuna roll",
-   "url": "https://www.justonecookbook.com/spicy-tuna-roll/"
+   "label": "Just One Cookbook — Sushi rolls (maki sushi, hosomaki)",
+   "url": "https://www.justonecookbook.com/sushi-rolls/"
   },
   {
    "label": "Just One Cookbook — Spicy mayo",
@@ -273,7 +260,7 @@
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Stir together:<ul class=\"ing\"><li>japanese mayonnaise (kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ cup</span>)</span></span></li><li>sriracha (for the mayo) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>lime juice <span class=\"amt\">a splash</span></li></ul></li><li>Set aside for the top.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Stir together:<ul class=\"ing\"><li>japanese mayonnaise (kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 ml</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ cup</span>)</span></span></li><li>sriracha <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>lime juice <span class=\"amt\">a splash</span></li></ul></li><li>Spoon it into a small piping bag (or a zip bag with a tiny corner cut off) — it pipes a thin line inside the roll and a dot on top.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -283,6 +270,10 @@
      {
       "caption": "Stir the mayo, sriracha and lime together.",
       "src": "illustrations/tuna-mango-roll/1-how1.webp"
+     },
+     {
+      "caption": "Spoon it into a small piping bag.",
+      "src": "illustrations/tuna-mango-roll/1-how2.webp"
      }
     ],
     "illustration": null,
@@ -299,19 +290,19 @@
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Cut the tuna into <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> cubes (or mince it).</li><li>Toss in a bowl with:<ul class=\"ing\"><li>sriracha <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"3\">3 tsp</span></span></li><li>toasted sesame oil <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>green onions <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span></span></li></ul></li><li>Keep a few scallion rounds back for the top.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Cut the block into slabs about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> thick, then each slab into strips <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> wide — as long as the block allows.</li><li>Each cut is one long pull of the knife from heel to tip; don't saw.</li><li>You need enough strips to lie end to end across the nori (about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-s=\"0\">20 cm</span> per roll).</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
-    "alt": "Spicy tuna",
+    "alt": "Tuna into long strips",
     "diagram": null,
     "how": [
      {
-      "caption": "Cut the tuna into 5 mm cubes.",
+      "caption": "Cut the block into slabs about 1 cm thick.",
       "src": "illustrations/tuna-mango-roll/2-how1.webp"
      },
      {
-      "caption": "Toss with sriracha, sesame oil and scallions.",
+      "caption": "Cut each slab into long 1 cm strips — one long pull of the knife from heel to tip, no sawing.",
       "src": "illustrations/tuna-mango-roll/2-how2.webp"
      }
     ],
@@ -323,27 +314,31 @@
    "n": 2,
    "part": null,
    "part_id": null,
-   "time": "~8 min",
-   "time_html": "<span>~8 min</span>",
-   "title": "Spicy tuna",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Tuna into long strips",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"115\">115 g</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"4\" data-alt=\"1\">4 oz</span>)</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
      "name_html": "Sashimi-grade tuna"
     }
    ]
   },
   {
-   "body_html": "<p>Peel the mango and cut it into sticks about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> thick, as long as you can.</p>",
+   "body_html": "<p>Peel the mango, cut the two cheeks off the stone, and slice each cheek lengthwise into long slices about <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"7\" data-s=\"0\">7 mm</span> thick.</p>",
    "heat": null,
    "id": "step-3",
    "images": {
-    "alt": "Mango sticks",
+    "alt": "Mango into long slices",
     "diagram": null,
     "how": [
      {
-      "caption": "Cut the mango into long 1 cm sticks.",
+      "caption": "Peel the mango and cut the two cheeks off the stone.",
       "src": "illustrations/tuna-mango-roll/3-how1.webp"
+     },
+     {
+      "caption": "Slice each cheek lengthwise into long slices about 7 mm thick.",
+      "src": "illustrations/tuna-mango-roll/3-how2.webp"
      }
     ],
     "illustration": null,
@@ -356,16 +351,16 @@
    "part_id": null,
    "time": "~4 min",
    "time_html": "<span>~4 min</span>",
-   "title": "Mango sticks",
+   "title": "Mango into long slices",
    "uses_rows": [
     {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> mango",
      "name_html": "Mango, ripe but firm"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Bamboo mat with the slats running sideways, a sheet of plastic wrap on top.</li><li>Half a sheet of nori on the plastic, <b>shiny side down</b> — rough side up.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Bamboo mat with the slats running sideways.</li><li>A whole sheet of nori on it, <b>shiny side down</b>, long side along the near edge of the mat, with 3–4 slats showing nearest you.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -373,7 +368,7 @@
     "diagram": null,
     "how": [
      {
-      "caption": "Nori rough side up on plastic wrap over the mat.",
+      "caption": "Whole nori, shiny side down, long side along the near edge, 3–4 slats showing.",
       "src": "illustrations/tuna-mango-roll/4-how1.webp"
      }
     ],
@@ -390,13 +385,13 @@
    "title": "Set up the mat",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"sheet|sheets\" data-n=\"1\">1 sheet</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 whole sheets</span>",
      "name_html": "Nori"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Mix the tezu and wet your fingers in it.</li><li>Spread <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> of rice evenly over the <b>whole</b> nori, right to the edges — it ends up outside.</li><li>Sprinkle with <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> sesame seeds.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Mix the tezu and wet your fingers in it.</li><li>Put <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 g</span> of rice on the nori, left of centre, and spread it to the right and out to the edges with your fingertips.</li><li>Keep an inch (<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2.5 cm</span>) of nori <b>bare along the far edge</b> — it seals the roll.</li><li>Spread, don't press: the rice should stay airy.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -404,11 +399,11 @@
     "diagram": null,
     "how": [
      {
-      "caption": "Wet fingers, then spread the rice right to the edges.",
+      "caption": "Wet your fingers in the tezu.",
       "src": "illustrations/tuna-mango-roll/5-how1.webp"
      },
      {
-      "caption": "Sprinkle with sesame seeds.",
+      "caption": "Rice on left of centre, spread it right and out — an inch bare along the far edge.",
       "src": "illustrations/tuna-mango-roll/5-how2.webp"
      }
     ],
@@ -433,26 +428,30 @@
      "name_html": "Rice vinegar (tezu)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 g</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"320\">320 g</span>",
      "name_html": "<a href=\"sushi-rice.html\">Sushi rice</a>"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Toasted white sesame seeds"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Turn the sheet over so the rice is face down on the plastic.</li><li>Line the nori up with the near edge of the mat.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Lay tuna strips end to end across the middle of the rice, so they reach both ends — add a short piece at the end if one is too short.</li><li>Lay mango slices right beside them, end to end.</li><li>Pipe a thin line of spicy mayo along the filling.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
-    "alt": "Flip it",
+    "alt": "Fill",
     "diagram": null,
     "how": [
      {
-      "caption": "Flip it so the rice faces down; line the nori up with the near edge.",
+      "caption": "Tuna strips end to end across the middle of the rice.",
       "src": "illustrations/tuna-mango-roll/6-how1.webp"
+     },
+     {
+      "caption": "Mango slices right beside them, end to end.",
+      "src": "illustrations/tuna-mango-roll/6-how2.webp"
+     },
+     {
+      "caption": "Pipe a thin line of spicy mayo along the filling.",
+      "src": "illustrations/tuna-mango-roll/6-how3.webp"
      }
     ],
     "illustration": null,
@@ -463,22 +462,26 @@
    "n": 6,
    "part": null,
    "part_id": null,
-   "time": "10 s",
-   "time_html": "<span>10 s</span>",
-   "title": "Flip it",
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Fill",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Lay half the tuna mixture in a thin row along the near edge of the nori, with a strip of mango right next to it.</p>",
+   "body_html": "<ul class=\"do\"><li>Hold the filling down with your fingertips.</li><li>Lift the near edge of the mat with your thumbs and, in one movement, roll the nori and rice over the filling so the near edge lands right on the far edge of the rice.</li><li>The inch of bare nori is still showing.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
-    "alt": "Filling along the near edge",
+    "alt": "Roll over the filling",
     "diagram": null,
     "how": [
      {
-      "caption": "Tuna in a thin row along the near edge, mango right beside it.",
+      "caption": "Fingertips hold the filling down; thumbs lift the near edge of the mat.",
       "src": "illustrations/tuna-mango-roll/7-how1.webp"
+     },
+     {
+      "caption": "In one movement, roll over the filling so the near edge lands on the far edge of the rice.",
+      "src": "illustrations/tuna-mango-roll/7-how2.webp"
      }
     ],
     "illustration": null,
@@ -489,26 +492,22 @@
    "n": 7,
    "part": null,
    "part_id": null,
-   "time": "1 min",
-   "time_html": "<span>1 min</span>",
-   "title": "Filling along the near edge",
+   "time": "20 s",
+   "time_html": "<span>20 s</span>",
+   "title": "Roll over the filling",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Hold the filling in place with your fingers.</li><li>Lift the near edge of the mat with your thumbs and roll the nori quickly and tightly over the filling.</li><li>Tuck the edge in, then pull the far end of the mat towards you to keep gentle pressure.</li></ul>",
+   "body_html": "<p>Leave the mat over the roll and gently shape and tighten it with your fingers from outside the mat — round, or with square sides.</p>",
    "heat": null,
    "id": "step-8",
    "images": {
-    "alt": "Lift and tuck",
+    "alt": "Tighten through the mat",
     "diagram": null,
     "how": [
      {
-      "caption": "Fingers hold the filling; thumbs lift the near edge of the mat.",
+      "caption": "Leave the mat on and shape the roll with your fingers from outside it.",
       "src": "illustrations/tuna-mango-roll/8-how1.webp"
-     },
-     {
-      "caption": "Roll over the filling and tuck the edge in tight.",
-      "src": "illustrations/tuna-mango-roll/8-how2.webp"
      }
     ],
     "illustration": null,
@@ -519,21 +518,21 @@
    "n": 8,
    "part": null,
    "part_id": null,
-   "time": "20 s",
-   "time_html": "<span>20 s</span>",
-   "title": "Lift and tuck",
+   "time": "10 s",
+   "time_html": "<span>10 s</span>",
+   "title": "Tighten through the mat",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Lift the edge of the mat (and plastic) out of the way and keep rolling forwards into a tight cylinder, with steady, gentle pressure.</p>",
+   "body_html": "<ul class=\"do\"><li>Lift the mat and turn the roll once so the bare strip wraps over and seals it.</li><li>Squeeze gently through the mat once more. Leave it seam side down and make the second roll.</li></ul>",
    "heat": null,
    "id": "step-9",
    "images": {
-    "alt": "Roll forwards",
+    "alt": "Seal",
     "diagram": null,
     "how": [
      {
-      "caption": "Lift the mat edge out of the way and keep rolling forwards.",
+      "caption": "Lift the mat and turn the roll once so the bare strip seals it.",
       "src": "illustrations/tuna-mango-roll/9-how1.webp"
      }
     ],
@@ -547,20 +546,24 @@
    "part_id": null,
    "time": "20 s",
    "time_html": "<span>20 s</span>",
-   "title": "Roll forwards",
+   "title": "Seal",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Lay the mat over the roll and squeeze gently along its length to set the shape.</li><li>Make the second roll the same way.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Wet the knife on a damp cloth.</li><li>Cut the roll in half, each half in half, then each piece in half again — 8 pieces.</li><li>Push the knife forward, then pull it back through the roll; wet it again between cuts.</li></ul>",
    "heat": null,
    "id": "step-10",
    "images": {
-    "alt": "Squeeze to set",
+    "alt": "Cut into 8",
     "diagram": null,
     "how": [
      {
-      "caption": "Mat over the roll: squeeze gently along its length.",
+      "caption": "Wet the knife on a damp cloth.",
       "src": "illustrations/tuna-mango-roll/10-how1.webp"
+     },
+     {
+      "caption": "Push forward, then pull back — half, then quarters, then eighths.",
+      "src": "illustrations/tuna-mango-roll/10-how2.webp"
      }
     ],
     "illustration": null,
@@ -571,26 +574,22 @@
    "n": 10,
    "part": null,
    "part_id": null,
-   "time": "10 s",
-   "time_html": "<span>10 s</span>",
-   "title": "Squeeze to set",
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Cut into 8",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Wipe a very sharp knife with a damp cloth.</li><li>Cut the roll in half, each half in half, then each piece in half again — 8 pieces.</li><li>Wipe the blade every cut or two. Cutting through the plastic wrap keeps the rice off your fingers.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>A small dot of spicy mayo on each piece.</li><li>Soy sauce and gari on the side; best eaten the same day.</li></ul>",
    "heat": null,
    "id": "step-11",
    "images": {
-    "alt": "Cut into 8",
+    "alt": "Serve",
     "diagram": null,
     "how": [
      {
-      "caption": "Wipe the knife with a damp cloth before cutting.",
+      "caption": "A small dot of spicy mayo on each piece.",
       "src": "illustrations/tuna-mango-roll/11-how1.webp"
-     },
-     {
-      "caption": "Half, then quarters, then eighths.",
-      "src": "illustrations/tuna-mango-roll/11-how2.webp"
      }
     ],
     "illustration": null,
@@ -601,40 +600,19 @@
    "n": 11,
    "part": null,
    "part_id": null,
-   "time": "~2 min",
-   "time_html": "<span>~2 min</span>",
-   "title": "Cut into 8",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>A dollop of spicy mayo on each piece and the saved scallions on top.</li><li>Best eaten the same day.</li></ul>",
-   "heat": null,
-   "id": "step-12",
-   "images": {
-    "alt": "Top and serve",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "A dollop of spicy mayo on each piece, scallions on top.",
-      "src": "illustrations/tuna-mango-roll/12-how1.webp"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/tuna-mango-roll/12.webp",
-    "svg_fallback": null
-   },
-   "n": 12,
-   "part": null,
-   "part_id": null,
    "time": null,
    "time_html": null,
-   "title": "Top and serve",
-   "uses_rows": []
+   "title": "Serve",
+   "uses_rows": [
+    {
+     "amount_html": "to taste",
+     "name_html": "Soy sauce and pickled ginger (gari)"
+    }
+   ]
   }
  ],
  "timeline": {
-  "end": 35,
+  "end": 30,
   "hours": false,
   "legend": [
    {
@@ -657,44 +635,44 @@
     "start": 0
    },
    {
-    "dur": 8,
-    "dur_label": "8 min",
+    "dur": 5,
+    "dur_label": "5 min",
     "kind": "board",
-    "label": "Dice and season the tuna",
-    "label_html": "Dice and season the tuna",
+    "label": "Tuna into long strips",
+    "label_html": "Tuna into long strips",
     "start": 2
    },
    {
     "dur": 4,
     "dur_label": "4 min",
     "kind": "board",
-    "label": "Mango sticks",
-    "label_html": "Mango sticks",
-    "start": 10
+    "label": "Mango into long slices",
+    "label_html": "Mango into long slices",
+    "start": 7
    },
    {
-    "dur": 7,
-    "dur_label": "7 min",
+    "dur": 6,
+    "dur_label": "6 min",
     "kind": "board",
-    "label": "Roll 1: rice, flip, fill, roll",
-    "label_html": "Roll 1: rice, flip, fill, roll",
-    "start": 14
+    "label": "Roll 1: rice, fill, roll",
+    "label_html": "Roll 1: rice, fill, roll",
+    "start": 11
    },
    {
-    "dur": 7,
-    "dur_label": "7 min",
+    "dur": 6,
+    "dur_label": "6 min",
     "kind": "board",
     "label": "Roll 2",
     "label_html": "Roll 2",
-    "start": 21
+    "start": 17
    },
    {
     "dur": 5,
     "dur_label": "5 min",
     "kind": "board",
-    "label": "Cut, top, serve",
-    "label_html": "Cut, top, serve",
-    "start": 28
+    "label": "Cut and serve",
+    "label_html": "Cut and serve",
+    "start": 23
    }
   ],
   "tick_step": 5,
@@ -726,16 +704,12 @@
    {
     "at": 30,
     "label": "30"
-   },
-   {
-    "at": 35,
-    "label": "35"
    }
   ],
   "unit": "minutes"
  },
- "title": "Spicy tuna & mango roll",
- "total": "~35 min with the rice made",
+ "title": "Tuna & mango roll with spicy mayo",
+ "total": "~30 min with the rice made",
  "vinegar_options": null,
  "yields": "2 rolls · 16 pieces · 2 servings"
 }

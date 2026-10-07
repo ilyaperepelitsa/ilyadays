@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Ролл наизнанку: тунец для сашими со шрирачей и кунжутным маслом, полоска манго, рис с кунжутом снаружи, острый майонез сверху.",
+ "blurb_html": "Обычный ролл, нори снаружи: длинные бруски тунца для сашими и длинные ломтики манго с полоской острого майонеза внутри и капелькой сверху.",
  "chips": [
   {
    "html": "<span>2 ролла · 16 кусков · 2 порции</span>",
@@ -9,26 +9,25 @@
    "text": "2 ролла · 16 кусков · 2 порции"
   },
   {
-   "html": "~35 мин, если рис готов",
+   "html": "~30 мин, если рис готов",
    "kind": "time",
-   "text": "~35 мин, если рис готов"
+   "text": "~30 мин, если рис готов"
   }
  ],
- "description": "Ролл наизнанку: тунец для сашими со шрирачей и кунжутным маслом, полоска манго, рис с кунжутом снаружи, острый майонез сверху.",
+ "description": "Обычный ролл, нори снаружи: длинные бруски тунца для сашими и длинные ломтики манго с полоской острого майонеза внутри и капелькой сверху.",
  "equipment_html": [
   "Бамбуковый коврик (макису)",
-  "Пищевая плёнка",
-  "Очень острый нож",
+  "Нож для сашими или длинный очень острый нож",
   "Влажная ткань",
   "Маленькая миска для тэдзу",
-  "Миски для смешивания"
+  "Маленький кондитерский мешок или зип-пакет (для майонеза)"
  ],
  "group": {
   "id": "sushi",
   "name": "Суши"
  },
  "hero": {
-  "alt": "Ролл с острым тунцом и манго",
+  "alt": "Ролл с тунцом и манго и острым майонезом",
   "image": "illustrations/tuna-mango-roll/hero.webp",
   "svg_fallback": null
  },
@@ -36,46 +35,20 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 г</span> (по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\">110 г</span> на ролл)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"320\">320 г</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 г</span> на ролл)",
      "name_html": "<a href=\"sushi-rice.html\">Рис для суши</a>"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
-     "name_html": "Обжаренный белый кунжут"
-    }
-   ],
-   "name": "Рис"
-  },
-  {
-   "items": [
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> целых листа",
+     "name_html": "Нори"
+    },
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"115\">115 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"4\" data-alt=\"1\">4 унц.</span>)</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, одним куском",
      "name_html": "Тунец для сашими"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"3\">3 ч. л.</span>",
-     "name_html": "Шрирача"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
-     "name_html": "Обжаренное кунжутное масло"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">2 стебля</span>, тонко нарезанных (немного оставьте сверху)",
-     "name_html": "Зелёный лук"
-    }
-   ],
-   "name": "Острый тунец"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>, брусочками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> манго",
      "name_html": "Манго, спелое, но плотное"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>, разрезанный пополам поперёк",
-     "name_html": "Нори"
     }
    ],
    "name": "Ролл"
@@ -88,7 +61,7 @@
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Шрирача (для майонеза)"
+     "name_html": "Шрирача"
     },
     {
      "amount_html": "немного",
@@ -109,47 +82,53 @@
     }
    ],
    "name": "Тэдзу"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Соевый соус и маринованный имбирь (гари)"
+    }
+   ],
+   "name": "Для подачи"
   }
  ],
- "intro_html": "Ролл наизнанку (урамаки): рис снаружи, поэтому нори кладут на коврик <b>шершавой стороной вверх</b>, покрывают рисом от края до края и переворачивают, прежде чем выложить начинку. Ролл с острым тунцом от Just One Cookbook, плюс полоска манго для сладости. Начните с <a href=\"sushi-rice.html\">риса для суши</a> комнатной температуры.",
+ "intro_html": "Обычный ролл: нори снаружи, внутри рис, а в середине <b>длинные бруски</b> тунца, выложенные встык, и <b>длинные ломтики</b> манго — ничего не нарезано кубиками и не рублено. Сворачивается так, как маки сворачивает Just One Cookbook, но на целом листе нори, чтобы хватило места для обеих начинок и полоски её острого майонеза. Начните с <a href=\"sushi-rice.html\">риса для суши</a> комнатной температуры.",
  "mise": [
   {
    "as_list": true,
-   "goes_in": "Шаг 11",
+   "goes_in": "Шаг 6",
    "image": "illustrations/tuna-mango-roll/mise1.webp",
    "items": [
     "майонез",
     "шрирача",
-    "лайм"
+    "лайм, в кондитерском мешке"
    ],
-   "items_html": "майонез · шрирача · лайм",
+   "items_html": "майонез · шрирача · лайм, в кондитерском мешке",
    "name": "Острый майонез",
    "svg_fallback": null,
    "vessel": "cup"
   },
   {
-   "as_list": true,
-   "goes_in": "Шаг 7",
+   "as_list": false,
+   "goes_in": "Шаг 6",
    "image": "illustrations/tuna-mango-roll/mise2.webp",
    "items": [
-    "тунец",
-    "шрирача",
-    "кунжутное масло",
-    "зелёный лук"
+    "длинные бруски <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>"
    ],
-   "items_html": "тунец · шрирача · кунжутное масло · зелёный лук",
-   "name": "Острый тунец",
+   "items_html": "длинные бруски <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>",
+   "name": "Тунец",
    "svg_fallback": null,
-   "vessel": "bowl"
+   "vessel": "plate"
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 7",
+   "goes_in": "Шаг 6",
    "image": "illustrations/tuna-mango-roll/mise3.webp",
    "items": [
-    "брусочки <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>"
+    "длинные ломтики"
    ],
-   "items_html": "брусочки <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>",
+   "items_html": "длинные ломтики",
    "name": "Манго",
    "svg_fallback": null,
    "vessel": "plate"
@@ -159,9 +138,9 @@
    "goes_in": "Шаг 4",
    "image": "illustrations/tuna-mango-roll/mise4.webp",
    "items": [
-    "половинки листов"
+    "целые листы"
    ],
-   "items_html": "половинки листов",
+   "items_html": "целые листы",
    "name": "Нори",
    "svg_fallback": null,
    "vessel": "plate"
@@ -171,10 +150,10 @@
    "goes_in": "Шаг 5",
    "image": "illustrations/tuna-mango-roll/mise5.webp",
    "items": [
-    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\">110 г</span> на ролл"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 г</span> на ролл"
    ],
-   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\">110 г</span> на ролл",
-   "name": "Рис для суши + кунжут",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\">160 г</span> на ролл",
+   "name": "Рис для суши",
    "svg_fallback": null,
    "vessel": "bowl"
   },
@@ -199,15 +178,23 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li><b>Манго</b> (примерно ¼ плода на два ролла — моя прикидка, подстройте по вкусу) и нарезка на 8 вместо 6.</li><li>JOC режет каждый ролл пополам, а каждую половину на 3.</li></ul>",
-   "title_html": "Добавлено к рецепту JOC"
+   "html": "<ul class=\"do\"><li>Ролл с тунцом у JOC (тэкка-маки) — тонкий: половина листа нори, <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\" data-s=\"0\">80 г</span> риса, одна начинка.</li><li>Тунцу, манго и майонезу нужно больше места, поэтому здесь всё удвоено — целый лист и <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 г</span> риса — получается средний ролл (тюмаки).</li><li>Для тонкого ролла вернитесь к половине листа с одним бруском тунца и одним ломтиком манго.</li></ul>",
+   "title_html": "Почему целый лист"
   },
   {
-   "html": "<ul class=\"do\"><li>Чтобы нори было снаружи: нори глянцевой стороной вниз, рис распределите, оставив свободную полоску <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 см</span> вдоль дальнего края, выложите начинку на рис и скатайте — свободная полоска заклеит ролл.</li><li>Плёнка не нужна.</li></ul>",
-   "title_html": "Обычный ролл"
+   "html": "<ul class=\"do\"><li>Тонкая полоска внутри, вдоль начинки, — чтобы досталось каждому кусочку; маленькая капелька сверху — для вида.</li><li>Если внутри слишком много, начинка выскальзывает — держите полоску тонкой.</li></ul>",
+   "title_html": "Майонез внутри и сверху"
   },
   {
-   "html": "<ul class=\"do\"><li>Скатывайте плотнее и держите давление на коврик по ходу.</li><li>Слишком много начинки тоже рвёт ролл — полоска должна быть тонкой.</li></ul>",
+   "html": "<ul class=\"do\"><li>Бруски и ломтики во всю длину ролла видны в каждом кусочке как ровный квадратик тунца и полоска манго.</li><li>Небольшие зазоры между брусками — не страшно.</li></ul>",
+   "title_html": "Длинными, а не кубиками"
+  },
+  {
+   "html": "<p>Манго, майонез внутри, целый лист (для тунца она берёт половину) и нарезка на 8 (тонкий ролл она режет на 6).</p>",
+   "title_html": "Что добавлено к JOC"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Слишком много риса или начинки, или рис заходит на свободную полоску.</li><li>Держите рис воздушным, начинку — одним аккуратным рядом и прижимайте мягко.</li></ul>",
    "title_html": "Разваливается?"
   },
   {
@@ -219,7 +206,7 @@
  "parts": [],
  "prev": {
   "slug": "nigiri",
-  "title": "Нигири: формовка руками"
+  "title": "Нигири: именные техники формовки"
  },
  "scale": {
   "mode": "people",
@@ -253,7 +240,7 @@
   },
   {
    "slug": "nigiri",
-   "title": "Нигири: формовка руками"
+   "title": "Нигири: именные техники формовки"
   },
   {
    "slug": "shrimp-poke-bowl",
@@ -263,8 +250,8 @@
  "slug": "tuna-mango-roll",
  "sources": [
   {
-   "label": "Just One Cookbook — ролл с острым тунцом",
-   "url": "https://www.justonecookbook.com/spicy-tuna-roll/"
+   "label": "Just One Cookbook — роллы (маки-суши, хосомаки)",
+   "url": "https://www.justonecookbook.com/sushi-rolls/"
   },
   {
    "label": "Just One Cookbook — острый майонез",
@@ -273,7 +260,7 @@
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Смешайте:<ul class=\"ing\"><li>японский майонез (Kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ стакана</span>)</span></span></li><li>шрирача (для майонеза) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>сок лайма <span class=\"amt\">немного</span></li></ul></li><li>Отложите — это для верха.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смешайте:<ul class=\"ing\"><li>японский майонез (Kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ стакана</span>)</span></span></li><li>шрирача <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>сок лайма <span class=\"amt\">немного</span></li></ul></li><li>Переложите его в маленький кондитерский мешок (или в зип-пакет с крошечным срезанным уголком) — им удобно выдавить тонкую полоску внутрь ролла и капельку сверху.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
@@ -283,6 +270,10 @@
      {
       "caption": "Смешайте майонез, шрирачу и сок лайма.",
       "src": "illustrations/tuna-mango-roll/1-how1.webp"
+     },
+     {
+      "caption": "Переложите его в маленький кондитерский мешок.",
+      "src": "illustrations/tuna-mango-roll/1-how2.webp"
      }
     ],
     "illustration": null,
@@ -299,19 +290,19 @@
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Нарежьте тунца кубиками <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span> (или порубите).</li><li>Перемешайте в миске с:<ul class=\"ing\"><li>шрирача <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"3\">3 ч. л.</span></span></li><li>обжаренное кунжутное масло <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>зелёный лук <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">2 стебля</span></span></li></ul></li><li>Немного колечек лука оставьте для верха.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нарежьте кусок на пласты толщиной около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>, а каждый пласт — на бруски шириной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>, такой длины, какую позволяет кусок.</li><li>Каждый разрез — одно длинное движение ножом от пятки к кончику; не пилите.</li><li>Брусков нужно столько, чтобы они легли встык поперёк нори (около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-s=\"0\">20 см</span> на ролл).</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
-    "alt": "Острый тунец",
+    "alt": "Тунец длинными брусками",
     "diagram": null,
     "how": [
      {
-      "caption": "Нарежьте тунец кубиками по 5 мм.",
+      "caption": "Нарежьте кусок на пласты толщиной около 1 см.",
       "src": "illustrations/tuna-mango-roll/2-how1.webp"
      },
      {
-      "caption": "Перемешайте со шрирачей, кунжутным маслом и зелёным луком.",
+      "caption": "Нарежьте каждый пласт на длинные бруски по 1 см — одно длинное движение ножом от пятки к кончику, не пилите.",
       "src": "illustrations/tuna-mango-roll/2-how2.webp"
      }
     ],
@@ -323,27 +314,31 @@
    "n": 2,
    "part": null,
    "part_id": null,
-   "time": "~8 мин",
-   "time_html": "<span>~8 мин</span>",
-   "title": "Острый тунец",
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Тунец длинными брусками",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"115\">115 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"4\" data-alt=\"1\">4 унц.</span>)</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
      "name_html": "Тунец для сашими"
     }
    ]
   },
   {
-   "body_html": "<p>Очистите манго и нарежьте брусочками около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span> толщиной, как можно длиннее.</p>",
+   "body_html": "<p>Очистите манго, срежьте две «щёчки» с косточки и нарежьте каждую вдоль длинными ломтиками толщиной около <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"7\" data-s=\"0\">7 мм</span>.</p>",
    "heat": null,
    "id": "step-3",
    "images": {
-    "alt": "Брусочки манго",
+    "alt": "Манго длинными ломтиками",
     "diagram": null,
     "how": [
      {
-      "caption": "Нарежьте манго длинными брусочками по 1 см.",
+      "caption": "Очистите манго и срежьте две «щёчки» с косточки.",
       "src": "illustrations/tuna-mango-roll/3-how1.webp"
+     },
+     {
+      "caption": "Нарежьте каждую щёчку вдоль длинными ломтиками толщиной около 7 мм.",
+      "src": "illustrations/tuna-mango-roll/3-how2.webp"
      }
     ],
     "illustration": null,
@@ -356,16 +351,16 @@
    "part_id": null,
    "time": "~4 мин",
    "time_html": "<span>~4 мин</span>",
-   "title": "Брусочки манго",
+   "title": "Манго длинными ломтиками",
    "uses_rows": [
     {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> манго",
      "name_html": "Манго, спелое, но плотное"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Бамбуковый коврик планками поперёк, сверху — пищевая плёнка.</li><li>Половина листа нори на плёнку, <b>глянцевой стороной вниз</b> — шершавой вверх.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Бамбуковый коврик, планки идут поперёк.</li><li>На него — целый лист нори <b>блестящей стороной вниз</b>, длинной стороной вдоль ближнего края коврика, так чтобы ближе к вам оставались видны 3–4 планки.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -373,7 +368,7 @@
     "diagram": null,
     "how": [
      {
-      "caption": "Нори шершавой стороной вверх на плёнке поверх коврика.",
+      "caption": "Целый лист нори, блестящей стороной вниз, длинной стороной к ближнему краю, видны 3–4 планки.",
       "src": "illustrations/tuna-mango-roll/4-how1.webp"
      }
     ],
@@ -390,13 +385,13 @@
    "title": "Подготовьте коврик",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> целых листа",
      "name_html": "Нори"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Смешайте тэдзу и смочите в нём пальцы.</li><li>Распределите <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 г</span> риса ровно по <b>всему</b> листу нори, до самых краёв — он окажется снаружи.</li><li>Посыпьте <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> кунжута.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смешайте тэдзу и смочите в нём пальцы.</li><li>Положите <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"160\" data-s=\"0\">160 г</span> риса на нори левее центра и пальцами распределите его вправо и к краям.</li><li>Оставьте полосу нори шириной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2,5 см</span> <b>свободной вдоль дальнего края</b> — ею ролл заклеивается.</li><li>Распределяйте, а не прижимайте: рис должен оставаться воздушным.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
@@ -404,11 +399,11 @@
     "diagram": null,
     "how": [
      {
-      "caption": "Смочите пальцы и распределите рис до самых краёв.",
+      "caption": "Смочите пальцы в тэдзу.",
       "src": "illustrations/tuna-mango-roll/5-how1.webp"
      },
      {
-      "caption": "Посыпьте кунжутом.",
+      "caption": "Рис левее центра, распределите вправо и к краям — у дальнего края 2,5 см свободны.",
       "src": "illustrations/tuna-mango-roll/5-how2.webp"
      }
     ],
@@ -433,26 +428,30 @@
      "name_html": "Рисовый уксус (тэдзу)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 г</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"320\">320 г</span>",
      "name_html": "<a href=\"sushi-rice.html\">Рис для суши</a>"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
-     "name_html": "Обжаренный белый кунжут"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Переверните лист рисом вниз на плёнку.</li><li>Выровняйте нори по ближнему краю коврика.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Выложите бруски тунца встык поперёк середины риса, чтобы они доходили до обоих концов — если брусок короток, доложите в конце кусочек.</li><li>Сразу рядом с ними, тоже встык, выложите ломтики манго.</li><li>Выдавите вдоль начинки тонкую полоску острого майонеза.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
-    "alt": "Переверните",
+    "alt": "Начинка",
     "diagram": null,
     "how": [
      {
-      "caption": "Переверните рисом вниз; выровняйте нори по ближнему краю.",
+      "caption": "Бруски тунца встык поперёк середины риса.",
       "src": "illustrations/tuna-mango-roll/6-how1.webp"
+     },
+     {
+      "caption": "Ломтики манго сразу рядом, встык.",
+      "src": "illustrations/tuna-mango-roll/6-how2.webp"
+     },
+     {
+      "caption": "Выдавите вдоль начинки тонкую полоску острого майонеза.",
+      "src": "illustrations/tuna-mango-roll/6-how3.webp"
      }
     ],
     "illustration": null,
@@ -463,22 +462,26 @@
    "n": 6,
    "part": null,
    "part_id": null,
-   "time": "10 с",
-   "time_html": "<span>10 с</span>",
-   "title": "Переверните",
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Начинка",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Выложите половину тунца тонкой полоской вдоль ближнего края нори, а рядом — полоску манго.</p>",
+   "body_html": "<ul class=\"do\"><li>Придерживайте начинку кончиками пальцев.</li><li>Большими пальцами приподнимите ближний край коврика и одним движением накройте начинку нори с рисом так, чтобы ближний край лёг точно на дальний край риса.</li><li>Свободная полоска нори всё ещё видна.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
-    "alt": "Начинка у ближнего края",
+    "alt": "Заверните начинку",
     "diagram": null,
     "how": [
      {
-      "caption": "Тунец тонкой полосой вдоль ближнего края, манго рядом.",
+      "caption": "Кончики пальцев держат начинку; большие пальцы поднимают ближний край коврика.",
       "src": "illustrations/tuna-mango-roll/7-how1.webp"
+     },
+     {
+      "caption": "Одним движением заверните начинку так, чтобы ближний край лёг на дальний край риса.",
+      "src": "illustrations/tuna-mango-roll/7-how2.webp"
      }
     ],
     "illustration": null,
@@ -489,26 +492,22 @@
    "n": 7,
    "part": null,
    "part_id": null,
-   "time": "1 мин",
-   "time_html": "<span>1 мин</span>",
-   "title": "Начинка у ближнего края",
+   "time": "20 с",
+   "time_html": "<span>20 с</span>",
+   "title": "Заверните начинку",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Придерживайте начинку пальцами.</li><li>Поднимите ближний край коврика большими пальцами и быстро и плотно накатите нори на начинку.</li><li>Подверните край, затем потяните дальний конец коврика к себе, сохраняя лёгкое давление.</li></ul>",
+   "body_html": "<p>Оставьте коврик на ролле и пальцами через коврик аккуратно придайте ему форму и подожмите — круглую или с квадратными гранями.</p>",
    "heat": null,
    "id": "step-8",
    "images": {
-    "alt": "Поднимите и подверните",
+    "alt": "Подожмите через коврик",
     "diagram": null,
     "how": [
      {
-      "caption": "Пальцы держат начинку; большие пальцы поднимают ближний край коврика.",
+      "caption": "Не снимайте коврик и формуйте ролл пальцами через него.",
       "src": "illustrations/tuna-mango-roll/8-how1.webp"
-     },
-     {
-      "caption": "Накатите на начинку и плотно подверните край.",
-      "src": "illustrations/tuna-mango-roll/8-how2.webp"
      }
     ],
     "illustration": null,
@@ -519,21 +518,21 @@
    "n": 8,
    "part": null,
    "part_id": null,
-   "time": "20 с",
-   "time_html": "<span>20 с</span>",
-   "title": "Поднимите и подверните",
+   "time": "10 с",
+   "time_html": "<span>10 с</span>",
+   "title": "Подожмите через коврик",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Отведите край коврика (и плёнки) в сторону и продолжайте катить вперёд в плотный цилиндр, ровно и мягко надавливая.</p>",
+   "body_html": "<ul class=\"do\"><li>Поднимите коврик и прокатите ролл ещё раз, чтобы свободная полоска обернулась и заклеила его.</li><li>Ещё раз слегка сожмите через коврик. Оставьте ролл швом вниз и сделайте второй.</li></ul>",
    "heat": null,
    "id": "step-9",
    "images": {
-    "alt": "Катите вперёд",
+    "alt": "Заклейте",
     "diagram": null,
     "how": [
      {
-      "caption": "Отведите край коврика и продолжайте катать вперёд.",
+      "caption": "Поднимите коврик и прокатите ролл ещё раз, чтобы свободная полоска его заклеила.",
       "src": "illustrations/tuna-mango-roll/9-how1.webp"
      }
     ],
@@ -547,20 +546,24 @@
    "part_id": null,
    "time": "20 с",
    "time_html": "<span>20 с</span>",
-   "title": "Катите вперёд",
+   "title": "Заклейте",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Накройте ролл ковриком и мягко сожмите по всей длине, чтобы закрепить форму.</li><li>Второй ролл сделайте так же.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смочите нож о влажное полотенце.</li><li>Разрежьте ролл пополам, каждую половину пополам и каждый кусок ещё пополам — 8 кусков.</li><li>Толкните нож вперёд, затем протяните назад через ролл; между разрезами снова смачивайте его.</li></ul>",
    "heat": null,
    "id": "step-10",
    "images": {
-    "alt": "Сожмите для формы",
+    "alt": "Нарежьте на 8",
     "diagram": null,
     "how": [
      {
-      "caption": "Коврик поверх ролла: мягко сожмите по всей длине.",
+      "caption": "Смочите нож о влажное полотенце.",
       "src": "illustrations/tuna-mango-roll/10-how1.webp"
+     },
+     {
+      "caption": "Вперёд, затем назад — пополам, потом на четверти, потом на восьмые.",
+      "src": "illustrations/tuna-mango-roll/10-how2.webp"
      }
     ],
     "illustration": null,
@@ -571,26 +574,22 @@
    "n": 10,
    "part": null,
    "part_id": null,
-   "time": "10 с",
-   "time_html": "<span>10 с</span>",
-   "title": "Сожмите для формы",
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Нарежьте на 8",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Протрите очень острый нож влажной тканью.</li><li>Разрежьте ролл пополам, каждую половину пополам и каждый кусок ещё пополам — 8 кусков.</li><li>Протирайте лезвие через каждые один-два разреза. Если резать прямо через плёнку, рис не липнет к пальцам.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>На каждый кусочек — капелька острого майонеза.</li><li>Соевый соус и гари рядом; лучше съесть в тот же день.</li></ul>",
    "heat": null,
    "id": "step-11",
    "images": {
-    "alt": "Нарежьте на 8",
+    "alt": "Подача",
     "diagram": null,
     "how": [
      {
-      "caption": "Перед каждым резом протирайте нож влажной тканью.",
+      "caption": "Капелька острого майонеза на каждый кусочек.",
       "src": "illustrations/tuna-mango-roll/11-how1.webp"
-     },
-     {
-      "caption": "Пополам, потом на четвертинки, потом на восьмушки.",
-      "src": "illustrations/tuna-mango-roll/11-how2.webp"
      }
     ],
     "illustration": null,
@@ -601,40 +600,19 @@
    "n": 11,
    "part": null,
    "part_id": null,
-   "time": "~2 мин",
-   "time_html": "<span>~2 мин</span>",
-   "title": "Нарежьте на 8",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>На каждый кусок — капля острого майонеза и отложенный зелёный лук.</li><li>Лучше съесть в тот же день.</li></ul>",
-   "heat": null,
-   "id": "step-12",
-   "images": {
-    "alt": "Украсьте и подавайте",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "На каждый кусочек — немного острого майонеза, сверху зелёный лук.",
-      "src": "illustrations/tuna-mango-roll/12-how1.webp"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/tuna-mango-roll/12.webp",
-    "svg_fallback": null
-   },
-   "n": 12,
-   "part": null,
-   "part_id": null,
    "time": null,
    "time_html": null,
-   "title": "Украсьте и подавайте",
-   "uses_rows": []
+   "title": "Подача",
+   "uses_rows": [
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Соевый соус и маринованный имбирь (гари)"
+    }
+   ]
   }
  ],
  "timeline": {
-  "end": 35,
+  "end": 30,
   "hours": false,
   "legend": [
    {
@@ -657,44 +635,44 @@
     "start": 0
    },
    {
-    "dur": 8,
-    "dur_label": "8 мин",
+    "dur": 5,
+    "dur_label": "5 мин",
     "kind": "board",
-    "label": "Нарезать и заправить тунца",
-    "label_html": "Нарезать и заправить тунца",
+    "label": "Тунец длинными брусками",
+    "label_html": "Тунец длинными брусками",
     "start": 2
    },
    {
     "dur": 4,
     "dur_label": "4 мин",
     "kind": "board",
-    "label": "Брусочки манго",
-    "label_html": "Брусочки манго",
-    "start": 10
+    "label": "Манго длинными ломтиками",
+    "label_html": "Манго длинными ломтиками",
+    "start": 7
    },
    {
-    "dur": 7,
-    "dur_label": "7 мин",
+    "dur": 6,
+    "dur_label": "6 мин",
     "kind": "board",
-    "label": "Ролл 1: рис, перевернуть, начинка, скатать",
-    "label_html": "Ролл 1: рис, перевернуть, начинка, скатать",
-    "start": 14
+    "label": "Ролл 1: рис, начинка, сворачивание",
+    "label_html": "Ролл 1: рис, начинка, сворачивание",
+    "start": 11
    },
    {
-    "dur": 7,
-    "dur_label": "7 мин",
+    "dur": 6,
+    "dur_label": "6 мин",
     "kind": "board",
     "label": "Ролл 2",
     "label_html": "Ролл 2",
-    "start": 21
+    "start": 17
    },
    {
     "dur": 5,
     "dur_label": "5 мин",
     "kind": "board",
-    "label": "Нарезать, украсить, подать",
-    "label_html": "Нарезать, украсить, подать",
-    "start": 28
+    "label": "Нарезка и подача",
+    "label_html": "Нарезка и подача",
+    "start": 23
    }
   ],
   "tick_step": 5,
@@ -726,16 +704,12 @@
    {
     "at": 30,
     "label": "30"
-   },
-   {
-    "at": 35,
-    "label": "35"
    }
   ],
   "unit": "минуты"
  },
- "title": "Ролл с острым тунцом и манго",
- "total": "~35 мин, если рис готов",
+ "title": "Ролл с тунцом и манго и острым майонезом",
+ "total": "~30 мин, если рис готов",
  "vinegar_options": null,
  "yields": "2 ролла · 16 кусков · 2 порции"
 }

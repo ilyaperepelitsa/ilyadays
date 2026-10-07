@@ -1,34 +1,36 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Курица в густом мягком маринаде из сливок, йогурта, сыра и молотых кашью и миндаля, запечённая в очень горячей духовке и смазанная сливочным маслом.",
+ "blurb_html": "Подрумяненная малай тикка — курица, маринованная в сливках, сыре и молотых орехах, — томлённая в мягком сливочном светло-жёлтом соусе из кешью, как нежная курица в масле.",
  "chips": [
   {
-   "html": "<span>3–4 порции как закуска (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 г</span> курицы)</span>",
+   "html": "<span>4 порции (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> курицы)</span>",
    "kind": "",
-   "text": "3–4 порции как закуска (250 г курицы)"
+   "text": "4 порции (500 г курицы)"
   },
   {
-   "html": "~4½ ч, включая 4 ч маринования",
+   "html": "~4¾ ч, включая 4 ч маринования",
    "kind": "time",
-   "text": "~4½ ч, включая 4 ч маринования"
+   "text": "~4¾ ч, включая 4 ч маринования"
   }
  ],
- "description": "Курица в густом мягком маринаде из сливок, йогурта, сыра и молотых кашью и миндаля, запечённая в очень горячей духовке и смазанная сливочным маслом.",
+ "description": "Подрумяненная малай тикка — курица, маринованная в сливках, сыре и молотых орехах, — томлённая в мягком сливочном светло-жёлтом соусе из кешью, как нежная курица в масле.",
  "equipment_html": [
   "Маленький блендер или кофемолка для специй",
   "Миска",
   "Шпажки (металлические или деревянные, замоченные на 1 ч)",
   "Противень (с решёткой, если есть)",
   "Духовка с грилем",
-  "Кисточка"
+  "Сковорода (для лука)",
+  "Блендер для основы соуса",
+  "Широкая сковорода с крышкой (для соуса)"
  ],
  "group": {
   "id": "indian",
   "name": "Индийская кухня"
  },
  "hero": {
-  "alt": "Курица малай тикка",
+  "alt": "Малай тикка масала из курицы (сливочный жёлтый соус)",
   "image": "illustrations/chicken-malai-tikka/hero.webp",
   "svg_fallback": null
  },
@@ -36,7 +38,7 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ фунта</span>)</span>, кубиками",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>, кубиками <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-b=\"4\" data-s=\"0\">2,5–4 см</span>",
      "name_html": "Курица без костей (бедро или грудка)"
     }
    ],
@@ -45,72 +47,162 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"24\" data-n=\"2\">24</span>",
      "name_html": "Миндаль"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-n=\"1\">8</span>",
-     "name_html": "Кашью"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"16\" data-n=\"2\">16</span>",
+     "name_html": "Кешью (тикка)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Греческий йогурт (или откинутый йогурт)"
     }
    ],
-   "name": "Ореховая паста"
+   "name": "Ореховая паста (тикка)"
   },
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Сливки"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Сыр (по желанию — сливочный, чеддер или моцарелла)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.5\">1–1½ ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 ст. л.</span>",
      "name_html": "Лимонный сок"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span> (или <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-s=\"0\">2,5 см</span> имбиря + 3–4 зубчика чеснока)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Имбирно-чесночная паста"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span> (или <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> пасты из зелёного чили)",
-     "name_html": "Молотый чёрный перец"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> (или <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span> пасты из зелёного чили)",
+     "name_html": "Молотый чёрный перец (тикка)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Листья кинзы, рубленые"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
-     "name_html": "Соль"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Соль (тикка)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Масло"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Масло (тикка)"
     }
    ],
-   "name": "Маринад"
+   "name": "Маринад (тикка)"
   },
   {
    "items": [
     {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span> шт., замоченных в <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span> горячей воды",
+     "name_html": "Кешью (соус)"
+    },
+    {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Сливочное масло, растопленное"
+     "name_html": "Масло (для лука)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-b=\"3\" data-n=\"3\">2–3</span>",
+     "name_html": "Зелёный кардамон"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-alt=\"1\">1½ стакана</span>)</span>",
+     "name_html": "Лук, нарезанный (не красный и не фиолетовый)"
+    },
+    {
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>",
+     "name_html": "Имбирь, очищенный и нарезанный"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> крупных",
+     "name_html": "Зубчики чеснока, нарезанные"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-alt=\"1\">½ стакана</span>)</span>",
-     "name_html": "Мятный чатни"
+     "name_html": "Цельное молоко (или жирные сливки)"
+    }
+   ],
+   "name": "Основа соуса"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.25\">1–1¼ ст. л.</span>",
+     "name_html": "Топлёное масло (гхи)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-n=\"3\">1–2</span>",
+     "name_html": "Зелёный чили, надрезанный (по желанию, для остроты)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Чёрный кардамон (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>",
+     "name_html": "Палочка корицы (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Гвоздика (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> нити",
+     "name_html": "Мацис (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"360\" data-b=\"480\">360–480 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-b=\"2\" data-alt=\"1\">1½–2 стакана</span>)</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"1\">½–1 ч. л.</span>",
+     "name_html": "Гарам масала (без чили)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.125\" data-b=\"0.25\">⅛–¼ ч. л.</span>",
+     "name_html": "Мускатный орех, тёртый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"0.75\">½–¾ ч. л.</span>",
+     "name_html": "Соль (соус)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Касури мети (сушёные листья пажитника)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Чёрный перец (соус, по желанию)"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Куркума (по желанию — для жёлтого цвета)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ стакана</span>)</span>",
+     "name_html": "Жирные сливки (по желанию, в конце)"
+    }
+   ],
+   "name": "Соус"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "для подачи",
+     "name_html": "Наан, тандури роти или рис басмати"
     }
    ],
    "name": "Для подачи"
   }
  ],
- "intro_html": "Малай значит «сливки». Это решми (малай) кебаб от Swasthi: сливочный, мягкий, не острый, с лёгкими подпалинами от очень горячей духовки. Маринад загущён <b>молотым миндалём и кашью</b> — так она делает, когда нет миндальной муки. Подаётся с мятным чатни. На основное блюдо удвойте всё.",
+ "intro_html": "Малай значит «сливки». Два рецепта Свасти вместе: её <b>малай (решми) кебаб</b> для тикки — курица в сливках, йогурте, сыре и молотых миндале и кешью, подрумяненная в очень горячей духовке, — и её <b>соус для малай-курицы</b>: лук, имбирь и чеснок, обжаренные до светлого цвета, смолотые с кешью и молоком и томлённые с цельными специями. Мягко, сливочно и деликатно пряно, как курица в масле без томатов. Соус от природы цвета слоновой кости; щепотка куркумы делает его тем жёлтым, который вы помните (по желанию — см. примечания). Готовьте соус, пока тикка маринуется или запекается.",
  "mise": [
   {
    "as_list": false,
@@ -170,17 +262,78 @@
    "vessel": "plate"
   },
   {
-   "as_list": false,
-   "goes_in": "Шаг 8",
+   "as_list": true,
+   "goes_in": "Шаг 9",
    "image": "illustrations/chicken-malai-tikka/mise5.webp",
    "items": [
-    "растопленное сливочное масло",
-    "мятный чатни"
+    "нарезанный лук",
+    "имбирь",
+    "чеснок",
+    "зелёный кардамон"
    ],
-   "items_html": "растопленное сливочное масло · мятный чатни",
+   "items_html": "нарезанный лук · имбирь · чеснок · зелёный кардамон",
+   "name": "Ароматика для соуса",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 10",
+   "image": "illustrations/chicken-malai-tikka/mise6.webp",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span> кешью",
+    "<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span> молока"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span> кешью · <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\">½ стакана</span> молока",
+   "name": "Замоченные кешью + молоко",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 11",
+   "image": "illustrations/chicken-malai-tikka/mise7.webp",
+   "items": [
+    "зелёный чили",
+    "чёрный кардамон",
+    "корица",
+    "гвоздика",
+    "мацис"
+   ],
+   "items_html": "зелёный чили · чёрный кардамон · корица · гвоздика · мацис",
+   "name": "Цельные специи",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 13",
+   "image": "illustrations/chicken-malai-tikka/mise8.webp",
+   "items": [
+    "гарам масала",
+    "мускатный орех",
+    "соль",
+    "касури мети",
+    "перец",
+    "куркума"
+   ],
+   "items_html": "гарам масала · мускатный орех · соль · касури мети · перец · куркума",
+   "name": "Специи для завершения",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 14",
+   "image": "illustrations/chicken-malai-tikka/mise9.webp",
+   "items": [
+    "наан или рис басмати",
+    "сливки"
+   ],
+   "items_html": "наан или рис басмати · сливки",
    "name": "Для подачи",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   }
  ],
  "more_label": "Ещё — Индийская кухня:",
@@ -190,20 +343,20 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>В рецепте Swasthi — <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 ст. л.</span> миндальной муки; 12 миндалин + 8 кашью, смолотые с йогуртом, — её же альтернатива, взятая здесь, потому что вы помните это блюдо с кашью.</li><li><b>Допущение, не проверено:</b> только кашью — около 20 — должны сработать так же, вкус чуть слаще и сливочнее.</li></ul>",
-   "title_html": "Кашью и миндаль"
+   "html": "<ul class=\"do\"><li>В малай-курице Свасти обычная курица маринуется в пряном йогурте и обжаривается на сковороде, прежде чем пойти в соус.</li><li>Здесь её место занимает <b>малай тикка</b> — запечённая, подрумяненная и сливочная, — так, как малай тикка масалу подают в ресторанах.</li><li>Количества для тикки — её карточка кебаба на <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\" data-s=\"0\">250 г</span>, <b>удвоенная</b> под <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> соуса, и используется только та половина её гхи, на которой прогреваются специи (на другой половине она жарила курицу).</li></ul>",
+   "title_html": "Два рецепта вместе"
   },
   {
-   "html": "<ul class=\"do\"><li>Малай тикка у Swasthi получается бледной, сливочно-белой с подпалинами.</li><li>Если та, что вы помните, была жёлтой, добавьте в маринад щепотку куркумы или несколько нитей шафрана, замоченных в чайной ложке тёплого молока.</li><li>Это добавка, в её рецепте этого нет.</li></ul>",
+   "html": "<ul class=\"do\"><li>Оба рецепта Свасти получаются цвета слоновой кости.</li><li>Для того жёлтого, который вы помните, добавьте в соус щепотку куркумы вместе с остальными специями (или несколько нитей шафрана, замоченных в чайной ложке тёплого молока).</li><li>Это добавление, а не часть её рецептов.</li><li>Обжаривайте лук до светлого цвета и берите гарам масалу без чили, иначе соус станет коричневым или оранжевым.</li></ul>",
    "title_html": "Жёлтый цвет (по желанию)"
   },
   {
-   "html": "<ul class=\"do\"><li>Swasthi пишет, что в ресторанах часто добавляют молотый кардамон и мускатный орех (она их не кладёт), а <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> пасты из зелёного чили вместо перца делает блюдо острым.</li><li>Sinfully Spicy советует <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> растёртого касури мети (сушёных листьев пажитника) для пенджабского оттенка.</li></ul>",
-   "title_html": "Больше специй, больше аромата"
+   "html": "<ul class=\"do\"><li>В карточке кебаба Свасти указана миндальная мука; молотые миндаль и кешью с йогуртом — её собственная альтернатива.</li><li><b>Не проверено:</b> одни кешью (около 40 шт.) должны сработать так же и дать чуть более сладкий вкус.</li></ul>",
+   "title_html": "Кешью и миндаль в тикке"
   },
   {
    "html": "<ul class=\"do\"><li>Из малай тикка Sinfully Spicy.</li><li><b>Аэрогриль:</b> <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"200\" data-s=\"0\">200 °C</span>, 16–18 мин.</li><li><b>Сковорода:</b> разогрейте чугунную или гриль-сковороду на огне выше среднего (не до дыма), смажьте гхи или сливочным маслом, жарьте в один слой 3–4 мин, смазывая гхи, затем переверните и жарьте до лёгких подпалин.</li></ul>",
-   "title_html": "На сковороде или в аэрогриле"
+   "title_html": "Сковорода или аэрогриль для тикки"
   },
   {
    "html": "<ul class=\"do\"><li>Курица безопасна при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"74\" data-s=\"0\">74 °C</span></b> в центре.</li><li>Если сомневаетесь, разрежьте самый большой кусок.</li></ul>",
@@ -211,7 +364,16 @@
   }
  ],
  "original": null,
- "parts": [],
+ "parts": [
+  {
+   "id": "part-малай-тикка",
+   "title": "Малай тикка"
+  },
+  {
+   "id": "part-сливочный-соус",
+   "title": "Сливочный соус"
+  }
+ ],
  "prev": {
   "slug": "kake-soba",
   "title": "Горячий суп с собой (какэ соба)"
@@ -219,8 +381,8 @@
  "scale": {
   "mode": "people",
   "scalable": true,
-  "serves": 3,
-  "size": "3",
+  "serves": 4,
+  "size": "4",
   "text": {
    "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
    "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
@@ -245,8 +407,12 @@
  "slug": "chicken-malai-tikka",
  "sources": [
   {
-   "label": "Swasthi’s Recipes (Indian Healthy Recipes) — решми кебаб / курица малай кебаб",
+   "label": "Swasthi’s Recipes (Indian Healthy Recipes) — решми кебаб / малай кебаб из курицы (тикка)",
    "url": "https://www.indianhealthyrecipes.com/murgh-malai-kabab-reshmi-kabab/"
+  },
+  {
+   "label": "Swasthi’s Recipes (Indian Healthy Recipes) — малай-курица, сливочное белое карри из курицы (соус)",
+   "url": "https://www.indianhealthyrecipes.com/malai-chicken-recipe/"
   },
   {
    "label": "Sinfully Spicy — курица малай тикка (время на сковороде и в аэрогриле)",
@@ -273,14 +439,14 @@
     "svg_fallback": null
    },
    "n": 1,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "~5 мин",
    "time_html": "<span>~5 мин</span>",
    "title": "Нарежьте и обсушите",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"0.5\" data-alt=\"1\">½ фунта</span>)</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
      "name_html": "Курица без костей (бедро или грудка)"
     }
    ]
@@ -304,28 +470,28 @@
     "svg_fallback": null
    },
    "n": 2,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "~5 мин",
    "time_html": "<span>~5 мин</span>",
    "title": "Смелите ореховую пасту",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"24\" data-n=\"2\">24</span>",
      "name_html": "Миндаль"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-n=\"1\">8</span>",
-     "name_html": "Кашью"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"16\" data-n=\"2\">16</span>",
+     "name_html": "Кешью (тикка)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Греческий йогурт (или откинутый йогурт)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Вмешайте в ореховую пасту:<ul class=\"ing two-col\"><li>сливки <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>сыр (по желанию — сливочный, чеддер или моцарелла) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>лимонный сок <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.5\">1–1½ ст. л.</span></span></li><li>имбирно-чесночная паста <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1.5\">1½ ч. л.</span></span></li><li>молотый чёрный перец <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>листья кинзы, рубленые <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>соль <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>масло <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Попробуйте и при желании добавьте соли или перца. Маринад должен быть густым.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Вмешайте в ореховую пасту:<ul class=\"ing two-col\"><li>сливки <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>сыр (по желанию — сливочный, чеддер или моцарелла) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>лимонный сок <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-b=\"3\">2–3 ст. л.</span></span></li><li>имбирно-чесночная паста <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>молотый чёрный перец (тикка) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>листья кинзы, рубленые <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>соль (тикка) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>масло (тикка) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span></span></li></ul></li><li>Попробуйте и при желании добавьте соли или перца. Маринад должен быть густым.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -343,8 +509,8 @@
     "svg_fallback": null
    },
    "n": 3,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "~3 мин",
    "time_html": "<span>~3 мин</span>",
    "title": "Смешайте маринад",
@@ -369,8 +535,8 @@
     "svg_fallback": null
    },
    "n": 4,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "4 ч – ночь",
    "time_html": "<span>4 ч – ночь</span>",
    "title": "Маринуйте",
@@ -399,8 +565,8 @@
     "svg_fallback": null
    },
    "n": 5,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "15 мин",
    "time_html": "<span>15 мин</span>",
    "title": "Разогрейте духовку, нанижите шпажки",
@@ -424,15 +590,15 @@
     "svg_fallback": null
    },
    "n": 6,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "15 мин",
    "time_html": "<span>15 мин</span>",
    "title": "Запекайте",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Переверните шпажки и запекайте ещё 7–8 минут. Проверьте через 22–23 минуты в сумме, чтобы не подгорели.</li><li>Последние 2 минуты включите гриль, чтобы появились подпалины.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Переверните шпажки и запекайте ещё 7–8 минут. Проверьте через 22–23 минуты в сумме, чтобы не подгорели.</li><li>Последние 2 минуты включите гриль, чтобы слегка подрумянить. Снимите тикку со шпажек.</li></ul>",
    "heat": {
     "label": "духовка 240 °C → гриль",
     "label_html": "<span>духовка <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"240\" data-s=\"0\">240 °C</span> → гриль</span>",
@@ -454,45 +620,274 @@
     "svg_fallback": null
    },
    "n": 7,
-   "part": null,
-   "part_id": null,
+   "part": "Малай тикка",
+   "part_id": "part-малай-тикка",
    "time": "7–8 мин",
    "time_html": "<span>7–8 мин</span>",
    "title": "Переверните и подрумяньте",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Смажьте горячие тикка растопленным сливочным маслом и подавайте с мятным чатни.</p>",
+   "body_html": "<p>Замочите кешью для соуса в <span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-s=\"0\">½ стакана</span> горячей воды до помола.</p>",
    "heat": null,
    "id": "step-8",
    "images": {
-    "alt": "Масло и подача",
+    "alt": "Замочите кешью",
+    "diagram": null,
+    "how": [],
+    "illustration": "illustrations/chicken-malai-tikka/8.webp",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": "10+ мин",
+   "time_html": "<span>10+ мин</span>",
+   "title": "Замочите кешью",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"15\" data-n=\"2\">15</span> шт.",
+     "name_html": "Кешью (соус)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте масло в сковороде. Добавьте зелёный кардамон, лук, имбирь и чеснок.</li><li>Обжаривайте до <b>прозрачности</b>, 4–5 минут. <b>Не румяньте</b> — подрумяненный лук делает соус тёмным.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Обжарьте ароматику — светлой",
     "diagram": null,
     "how": [
      {
-      "caption": "Смажьте горячие тикки растопленным сливочным маслом.",
-      "src": "illustrations/chicken-malai-tikka/8-how1.webp"
+      "caption": "Обжарьте лук, имбирь, чеснок и кардамон до прозрачности — не румяньте.",
+      "src": "illustrations/chicken-malai-tikka/9-how1.webp"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/chicken-malai-tikka/8.webp",
+    "result": "illustrations/chicken-malai-tikka/9.webp",
     "svg_fallback": null
    },
-   "n": 8,
-   "part": null,
-   "part_id": null,
-   "time": "2 мин",
-   "time_html": "<span>2 мин</span>",
-   "title": "Масло и подача",
+   "n": 9,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": "4–5 мин",
+   "time_html": "<span>4–5 мин</span>",
+   "title": "Обжарьте ароматику — светлой",
    "uses_rows": [
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Сливочное масло, растопленное"
+     "name_html": "Масло (для лука)"
     },
     {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-b=\"3\" data-n=\"3\">2–3</span>",
+     "name_html": "Зелёный кардамон"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-alt=\"1\">1½ стакана</span>)</span>",
+     "name_html": "Лук, нарезанный (не красный и не фиолетовый)"
+    },
+    {
+     "amount_html": "кусочек <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>",
+     "name_html": "Имбирь, очищенный и нарезанный"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> крупных",
+     "name_html": "Зубчики чеснока, нарезанные"
+    }
+   ]
+  },
+  {
+   "body_html": "<p>Остудите луковую смесь, затем смелите её с замоченными кешью и молоком в гладкое пюре (в два захода, если блендер маленький).</p>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Смелите основу соуса",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Остудите, затем смелите с замоченными кешью и молоком в гладкое пюре.",
+      "src": "illustrations/chicken-malai-tikka/10-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/10.webp",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": "~5 мин + остывание",
+   "time_html": "<span>~5 мин + остывание</span>",
+   "title": "Смелите основу соуса",
+   "uses_rows": [
+    {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.5\" data-alt=\"1\">½ стакана</span>)</span>",
-     "name_html": "Мятный чатни"
+     "name_html": "Цельное молоко (или жирные сливки)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте гхи в широкой сковороде на <b>слабом</b> огне.</li><li>Добавьте зелёный чили и те цельные специи, что используете, — чёрный кардамон, корицу, гвоздику, мацис.</li><li>Осторожно, они могут брызгаться.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-11",
+   "images": {
+    "alt": "Прогрейте специи в гхи",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Разогрейте гхи на слабом огне; добавьте зелёный чили и цельные специи.",
+      "src": "illustrations/chicken-malai-tikka/11-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/11.webp",
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": "~1 мин",
+   "time_html": "<span>~1 мин</span>",
+   "title": "Прогрейте специи в гхи",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"1.25\">1–1¼ ст. л.</span>",
+     "name_html": "Топлёное масло (гхи)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-n=\"3\">1–2</span>",
+     "name_html": "Зелёный чили, надрезанный (по желанию, для остроты)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Чёрный кардамон (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>",
+     "name_html": "Палочка корицы (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Гвоздика (по желанию)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> нити",
+     "name_html": "Мацис (по желанию)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Влейте пюре и воду. Доведите до слабого кипения на среднем огне.</li><li>Накройте и готовьте, пока соус не загустеет и сверху не появятся капельки масла, около 12–13 минут, помешивая каждые 5 минут.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-12",
+   "images": {
+    "alt": "Потомите соус",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Влейте пюре и воду, затем томите под крышкой до загустения.",
+      "src": "illustrations/chicken-malai-tikka/12-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/12.webp",
+    "svg_fallback": null
+   },
+   "n": 12,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": "12–13 мин",
+   "time_html": "<span>12–13 мин</span>",
+   "title": "Потомите соус",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"360\" data-b=\"480\">360–480 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"1.5\" data-b=\"2\" data-alt=\"1\">1½–2 стакана</span>)</span>",
+     "name_html": "Вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Вмешайте в загустевший соус:<ul class=\"ing two-col\"><li>гарам масала (без чили) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"1\">½–1 ч. л.</span></span></li><li>мускатный орех, тёртый <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.125\" data-b=\"0.25\">⅛–¼ ч. л.</span></span></li><li>соль (соус) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-b=\"0.75\">½–¾ ч. л.</span></span></li><li>касури мети (сушёные листья пажитника) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>чёрный перец (соус, по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>куркума (по желанию — для жёлтого цвета) <span class=\"amt\">щепотка</span></li></ul></li><li>Добавьте запечённую тикку, накройте и готовьте 2–3 минуты. Попробуйте; при необходимости добавьте соли, перца или гарам масалы.</li><li>Вмешайте сливки, если хотите насыщеннее.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-13",
+   "images": {
+    "alt": "Приправьте, затем тикка",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вмешайте специи, затем добавьте запечённую тикку на 2–3 минуты.",
+      "src": "illustrations/chicken-malai-tikka/13-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/13.webp",
+    "svg_fallback": null
+   },
+   "n": 13,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": "2–3 мин",
+   "time_html": "<span>2–3 мин</span>",
+   "title": "Приправьте, затем тикка",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"60\">60 мл</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"cup\" data-a=\"0.25\" data-alt=\"1\">¼ стакана</span>)</span>",
+     "name_html": "Жирные сливки (по желанию, в конце)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Подавайте горячим с нааном, тандури роти или рисом басмати.</li><li>Немного лимонного сока тоже хорошо.</li></ul>",
+   "heat": null,
+   "id": "step-14",
+   "images": {
+    "alt": "Подача",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Подавайте горячим с нааном или рисом; по желанию — немного сливок сверху.",
+      "src": "illustrations/chicken-malai-tikka/14-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/chicken-malai-tikka/14.webp",
+    "svg_fallback": null
+   },
+   "n": 14,
+   "part": "Сливочный соус",
+   "part_id": "part-сливочный-соус",
+   "time": null,
+   "time_html": null,
+   "title": "Подача",
+   "uses_rows": [
+    {
+     "amount_html": "для подачи",
+     "name_html": "Наан, тандури роти или рис басмати"
     }
    ]
   }
@@ -514,11 +909,15 @@
     "label": "Без участия"
    },
    {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
     "kind": "oven",
     "label": "Духовка"
    }
   ],
-  "note_html": "Если мариновать ночь, получится нежнее. Деревянные шпажки замочите на час, пока курица маринуется.",
+  "note_html": "Маринование на ночь делает тикку мягче. Соус томится, пока тикка запекается, поэтому всё готово одновременно; замочите деревянные шпажки на час, пока курица маринуется.",
   "tasks": [
    {
     "dur": 5,
@@ -545,12 +944,36 @@
     "start": 10
    },
    {
-    "dur": 240,
-    "dur_label": "4 ч",
+    "dur": 225,
+    "dur_label": "3 ч 45",
     "kind": "wait",
     "label": "Маринование (холодильник)",
     "label_html": "Маринование (холодильник)",
     "start": 15
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "wait",
+    "label": "Замочите кешью",
+    "label_html": "Замочите кешью",
+    "start": 215
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "pan",
+    "label": "Обжарьте лук, имбирь, чеснок",
+    "label_html": "Обжарьте лук, имбирь, чеснок",
+    "start": 220
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 мин",
+    "kind": "bowl",
+    "label": "Остудите, смелите основу соуса",
+    "label_html": "Остудите, смелите основу соуса",
+    "start": 226
    },
    {
     "dur": 15,
@@ -577,6 +1000,22 @@
     "start": 255
    },
    {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Прогрейте гхи + цельные специи",
+    "label_html": "Прогрейте гхи + цельные специи",
+    "start": 257
+   },
+   {
+    "dur": 13,
+    "dur_label": "13 мин",
+    "kind": "pan",
+    "label": "Потомите соус",
+    "label_html": "Потомите соус",
+    "start": 259
+   },
+   {
     "dur": 8,
     "dur_label": "8 мин",
     "kind": "oven",
@@ -585,12 +1024,20 @@
     "start": 270
    },
    {
-    "dur": 3,
-    "dur_label": "3 мин",
-    "kind": "bowl",
-    "label": "Смазать маслом, подать",
-    "label_html": "Смазать маслом, подать",
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "pan",
+    "label": "Приправьте, тикка в соус, 2–3 мин",
+    "label_html": "Приправьте, тикка в соус, 2–3 мин",
     "start": 278
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Подача",
+    "label_html": "Подача",
+    "start": 282
    }
   ],
   "tick_step": 60,
@@ -622,8 +1069,8 @@
   ],
   "unit": "ч:мм"
  },
- "title": "Курица малай тикка",
- "total": "~4½ ч, включая 4 ч маринования",
+ "title": "Малай тикка масала из курицы (сливочный жёлтый соус)",
+ "total": "~4¾ ч, включая 4 ч маринования",
  "vinegar_options": null,
- "yields": "3–4 порции как закуска (250 г курицы)"
+ "yields": "4 порции (500 г курицы)"
 }

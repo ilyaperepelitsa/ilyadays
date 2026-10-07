@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Крупные креветки, сваренные со старта в холодной воде, чтобы остались розовыми и сочными, в заправке из сои и кунжута — на рисе для суши с острым майонезом и маринованным имбирём.",
+ "blurb_html": "Крупные креветки, разрезанные пополам и обжаренные с каплей соевого соуса, перемешанные с мелко нарубленным маринованным имбирём и острым майонезом до розово-кораллового цвета, на рисе для суши.",
  "chips": [
   {
    "html": "<span>2 миски</span>",
@@ -9,18 +9,18 @@
    "text": "2 миски"
   },
   {
-   "html": "~45 мин (если рис для суши готов заранее)",
+   "html": "~25 мин (если рис для суши готов заранее)",
    "kind": "time",
-   "text": "~45 мин (если рис для суши готов заранее)"
+   "text": "~25 мин (если рис для суши готов заранее)"
   }
  ],
- "description": "Крупные креветки, сваренные со старта в холодной воде, чтобы остались розовыми и сочными, в заправке из сои и кунжута — на рисе для суши с острым майонезом и маринованным имбирём.",
+ "description": "Крупные креветки, разрезанные пополам и обжаренные с каплей соевого соуса, перемешанные с мелко нарубленным маринованным имбирём и острым майонезом до розово-кораллового цвета, на рисе для суши.",
  "equipment_html": [
-  "Кастрюля + термощуп (полезен, но не обязателен)",
-  "Миска ледяной воды",
-  "Шумовка",
-  "Маленькие миски для майонеза и заправки",
-  "Сковорода (только для вариантов на сковороде)"
+  "Поварской нож + разделочная доска",
+  "Большая сковорода (проще всего антипригарная)",
+  "Тарелка для остывания",
+  "Миска для смешивания",
+  "Силиконовая лопатка или ложка"
  ],
  "group": {
   "id": "sushi",
@@ -36,23 +36,11 @@
    "items": [
     {
      "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"10\" data-b=\"12\" data-n=\"5\">10–12</span> крупных креветок)",
-     "name_html": "Крупные сырые креветки, очищенные, без кишечной вены"
+     "name_html": "Крупные сырые креветки, очищенные, без кишечной вены и хвостов"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Крупная (кошерная) соль (сухой посол)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
-     "name_html": "Пищевая сода"
-    },
-    {
-     "amount_html": "столько, чтобы покрыть креветки на <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>",
-     "name_html": "Вода для варки"
-    },
-    {
-     "amount_html": "миска",
-     "name_html": "Ледяная вода"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Нейтральное масло"
     }
    ],
    "name": "Креветки"
@@ -61,32 +49,24 @@
    "items": [
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Соевый соус (заправка)"
+     "name_html": "Соевый соус"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Обжаренное кунжутное масло (заправка)"
+     "name_html": "Мирин (по желанию, или щепотка сахара)"
     }
    ],
-   "name": "Заправка"
+   "name": "Соевая глазурь"
   },
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span>",
      "name_html": "Японский майонез (Kewpie)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 ч. л.</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Шрирача"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
-     "name_html": "Обжаренное кунжутное масло (в майонез, по желанию)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Сок лайма (по желанию)"
     }
    ],
    "name": "Острый майонез"
@@ -94,12 +74,12 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"миска|миски|мисок\" data-n=\"1\">2 миски</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> готового)",
-     "name_html": "Рис для суши"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\" data-alt=\"1\">20 г</span>)</span>",
+     "name_html": "Маринованный имбирь (гари), покупной"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
-     "name_html": "Маринованный имбирь (гари), покупной"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"миска|миски|мисок\" data-n=\"1\">2 миски</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> готового)",
+     "name_html": "Рис для суши"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
@@ -111,79 +91,27 @@
     }
    ],
    "name": "Миска"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">1 зубчик</span>",
-     "name_html": "Чеснок, натёртый"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Имбирь, натёртый"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
-     "name_html": "Соевый соус (чеснок–имбирь)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Нейтральное масло"
-    }
-   ],
-   "name": "Или: чеснок–имбирь, на сковороде (вместо варки и заправки)"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
-     "name_html": "Соевый соус (соя + кунжут)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Обжаренное кунжутное масло (соя + кунжут)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Нейтральное масло (соя + кунжут)"
-    }
-   ],
-   "name": "Или: соя + кунжут, на сковороде (вместо варки и заправки)"
   }
  ],
- "intro_html": "Сама миска: крупные креветки, острый майонез и покупной маринованный имбирь на <a href=\"sushi-rice.html\">рисе для суши</a>. Креветки сначала солят всухую, потом <b>ставят вариться в холодной воде</b> и вынимают, как только они порозовеют. Мягкий нагрев оставляет их розовыми, пухлыми и сочными. Больше нравятся маринованные и обжаренные на сковороде? Ниже два варианта: чеснок–имбирь или соя + кунжутное масло.",
+ "intro_html": "Боул: крупные креветки, <b>разрезанные вдоль пополам</b>, обжаренные на горячей сковороде и глазированные каплей соевого соуса. Смешайте их с мелко нарубленным покупным маринованным имбирём и острым майонезом, пока всё не станет ровного, нежного <b>розово-кораллового</b> цвета. Выложите на <a href=\"sushi-rice.html\">рис для суши</a>.",
  "mise": [
   {
    "as_list": false,
    "goes_in": "Шаг 1",
    "image": "illustrations/shrimp-poke-bowl/mise1.webp",
    "items": [
-    "очищенные, обсушенные, соль + сода"
+    "Kewpie",
+    "шрирача"
    ],
-   "items_html": "очищенные, обсушенные, соль + сода",
-   "name": "Креветки",
-   "svg_fallback": null,
-   "vessel": "bowl"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Шаг 2",
-   "image": "illustrations/shrimp-poke-bowl/mise2.webp",
-   "items": [
-    "майонез",
-    "шрирача",
-    "кунжутное масло",
-    "лайм"
-   ],
-   "items_html": "майонез · шрирача · кунжутное масло · лайм",
-   "name": "Острый майонез",
+   "items_html": "Kewpie · шрирача",
+   "name": "Майонез + шрирача",
    "svg_fallback": null,
    "vessel": "cup"
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 3",
-   "image": "illustrations/shrimp-poke-bowl/mise3.webp",
+   "goes_in": "Шаг 2",
+   "image": "illustrations/shrimp-poke-bowl/mise2.webp",
    "items": [
     "готов заранее, тёплый"
    ],
@@ -194,39 +122,50 @@
   },
   {
    "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/shrimp-poke-bowl/mise3.webp",
+   "items": [
+    "очищенные, без вены и хвостов"
+   ],
+   "items_html": "очищенные, без вены и хвостов",
+   "name": "Креветки",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
    "goes_in": "Шаг 5",
    "image": "illustrations/shrimp-poke-bowl/mise4.webp",
    "items": [
-    "приготовьте до того, как креветки порозовеют"
+    "соевый соус",
+    "мирин"
    ],
-   "items_html": "приготовьте до того, как креветки порозовеют",
-   "name": "Ледяная вода",
+   "items_html": "соевый соус · мирин",
+   "name": "Соевая глазурь",
    "svg_fallback": null,
-   "vessel": "bowl"
+   "vessel": "cup"
   },
   {
    "as_list": false,
    "goes_in": "Шаг 6",
    "image": "illustrations/shrimp-poke-bowl/mise5.webp",
    "items": [
-    "соя",
-    "кунжутное масло"
+    "покупной гари"
    ],
-   "items_html": "соя · кунжутное масло",
-   "name": "Заправка",
+   "items_html": "покупной гари",
+   "name": "Маринованный имбирь",
    "svg_fallback": null,
-   "vessel": "cup"
+   "vessel": "plate"
   },
   {
-   "as_list": true,
-   "goes_in": "Шаг 7",
+   "as_list": false,
+   "goes_in": "Шаг 8",
    "image": "illustrations/shrimp-poke-bowl/mise6.webp",
    "items": [
-    "маринованный имбирь",
     "зелёный лук",
-    "кунжут"
+    "кунжут (по желанию)"
    ],
-   "items_html": "маринованный имбирь · зелёный лук · кунжут",
+   "items_html": "зелёный лук · кунжут (по желанию)",
    "name": "Топпинги",
    "svg_fallback": null,
    "vessel": "plate"
@@ -239,31 +178,31 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>Креветки становятся резиновыми, как только переварятся.</li><li>Если ставить их в холодной воде и нагревать вместе с ней, они не обгоняют воду: доходят ровно до <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span>, остаются розовыми насквозь и пухлыми.</li><li>Без термометра вынимайте их, как только последнее серое пятно порозовеет.</li></ul>",
-   "title_html": "Почему со старта в холодной воде"
+   "html": "<ul class=\"do\"><li>Разрезанная по спинке крупная креветка даёт две тонкие половинки, которые при жарке сворачиваются в кусочки на один укус.</li><li>Они обжариваются примерно за полторы минуты, так что снаружи успевают зарумяниться, пока внутри не пересушились.</li><li>Срез набирает больше соевой глазури и майонеза, а половинки перемешиваются равномерно, а не лежат целыми креветками в лужице соуса.</li></ul>",
+   "title_html": "Зачем резать вдоль пополам"
   },
   {
-   "html": "<ul class=\"do\"><li>Пропустите сухой посол, варку и заправку.</li><li>Обсушите сырые креветки и перемешайте с натёртым чесноком, имбирём и соевым соусом из списка «чеснок–имбирь»; маринуйте 10–15 минут.</li><li>Разогрейте масло на сковороде на <b>среднем</b> огне, выложите креветки в один слой и жарьте около 1–1½ минуты с каждой стороны, только до розового цвета.</li><li>Средний огонь вместо сильного не даёт чесноку подгореть, а креветкам — побуреть.</li></ul>",
-   "title_html": "Или: чеснок–имбирь, на сковороде"
-  },
-  {
-   "html": "<p>Так же, как вариант чеснок–имбирь, но со списком «соя + кунжут»: маринуйте 10–15 минут в соевом соусе и кунжутном масле, затем жарьте на нейтральном масле на среднем огне около 1–1½ минуты с каждой стороны.</p>",
-   "title_html": "Или: соя + кунжут, на сковороде"
+   "html": "<ul class=\"do\"><li>Капля соевого соуса — а не липкий соус — и быстрая обжарка сохраняют креветки розовыми, а не коричневыми.</li><li>Белый Kewpie с примерно четвертью красной шрирачи даёт бледный коралло-розовый; вместе с розовыми креветками и розовым имбирём весь боул получается одного нежного розового цвета.</li><li>Больше шрирачи — и он станет оранжевым.</li></ul>",
+   "title_html": "Чтобы было розовым"
   },
   {
    "html": "<ul class=\"do\"><li>Около 4 : 1 майонеза к шрираче — от мягкой до средней остроты; 3 : 1 — острее.</li><li>Это тот же соус, что и в <a href=\"tuna-mango-roll.html\">остром ролле с тунцом и манго</a>.</li></ul>",
    "title_html": "Пропорция острого майонеза"
   },
   {
-   "html": "<ul class=\"do\"><li>Миска — ваша. Способ варки — старт в холодной воде, техника, которую приписывают Serious Eats; сухой посол уменьшен из рецепта ThermoWorks на <span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"2\" data-s=\"0\">2 фунта</span>.</li><li>Количества для заправки, маринада и острого майонеза — отправная точка этого сайта.</li><li>Подстраивайте по вкусу.</li></ul>",
-   "title_html": "Допущение: количества"
+   "html": "<ul class=\"do\"><li>От горячих креветок майонез становится маслянистым и жидким.</li><li>Пяти минут на тарелке в один слой достаточно.</li></ul>",
+   "title_html": "Остудите перед смешиванием"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Боул и нарезка — ваши.</li><li>Жарка — по Omnivore’s Cookbook, глазированные соевым соусом креветки на сковороде (горячая сковорода, креветки обжариваются с двух сторон, соус в конце, пока не обволочёт), урезанная до одного соевого соуса с небольшим количеством мирина — без мёда и чеснока, чтобы остались розовыми.</li><li>Время для половинок, остывание и все количества — отправные точки этого сайта.</li><li>Регулируйте по вкусу.</li></ul>",
+   "title_html": "Допущения: что из источника, а что моё"
   }
  ],
  "original": null,
  "parts": [],
  "prev": {
   "slug": "tuna-mango-roll",
-  "title": "Ролл с острым тунцом и манго"
+  "title": "Ролл с тунцом и манго и острым майонезом"
  },
  "scale": {
   "mode": "people",
@@ -297,35 +236,31 @@
   },
   {
    "slug": "nigiri",
-   "title": "Нигири: формовка руками"
+   "title": "Нигири: именные техники формовки"
   },
   {
    "slug": "tuna-mango-roll",
-   "title": "Ролл с острым тунцом и манго"
+   "title": "Ролл с тунцом и манго и острым майонезом"
   }
  ],
  "slug": "shrimp-poke-bowl",
  "sources": [
   {
-   "label": "ThermoWorks — идеально сваренные креветки для коктейля (старт в холодной воде, температуры)",
-   "url": "https://blog.thermoworks.com/perfectly-cooked-shrimp-cocktail/"
-  },
-  {
-   "label": "Serious Eats — креветочный коктейль (старт в холодной воде)",
-   "url": "https://www.seriouseats.com/shrimp-cocktail-recipe"
+   "label": "Omnivore’s Cookbook — креветки в медово-чесночном соусе (техника обжарки с соевой глазурью)",
+   "url": "https://omnivorescookbook.com/honey-garlic-shrimp/"
   }
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Обсушите креветки бумажными полотенцами.</li><li>Перемешайте с солью и содой и уберите в холодильник на 15–30 минут. Соль приправляет, а сода делает креветки упругими.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смешайте в миске для смешивания:<ul class=\"ing\"><li>японский майонез (Kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 ст. л.</span></span></li><li>шрирача <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li></ul></li><li>Должен получиться бледный розово-коралловый цвет. Попробуйте; добавьте немного шрирачи, если хотите острее. Возьмите миску побольше — потом в ней будете смешивать креветки.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
-    "alt": "Сухой посол креветок",
+    "alt": "Острый майонез",
     "diagram": null,
     "how": [
      {
-      "caption": "Обсушите креветки, затем перемешайте с солью и содой.",
+      "caption": "Смешайте майонез со шрирачей до бледного розово-кораллового.",
       "src": "illustrations/shrimp-poke-bowl/1-how1.webp"
      }
     ],
@@ -337,64 +272,25 @@
    "n": 1,
    "part": null,
    "part_id": null,
-   "time": "15–30 мин",
-   "time_html": "<span>15–30 мин</span>",
-   "title": "Сухой посол креветок",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
-     "name_html": "Крупные сырые креветки, очищенные, без кишечной вены"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Крупная (кошерная) соль (сухой посол)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
-     "name_html": "Пищевая сода"
-    }
-   ]
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Смешайте:<ul class=\"ing\"><li>японский майонез (Kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span></span></li><li>шрирача <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 ч. л.</span></span></li><li>обжаренное кунжутное масло (в майонез, по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span></span></li><li>сок лайма (по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li><li>Попробуйте и добавьте шрирачи, если хотите острее.</li></ul>",
-   "heat": null,
-   "id": "step-2",
-   "images": {
-    "alt": "Острый майонез",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Смешайте майонез, шрирачу, кунжутное масло и сок лайма.",
-      "src": "illustrations/shrimp-poke-bowl/2-how1.webp"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/shrimp-poke-bowl/2.webp",
-    "svg_fallback": null
-   },
-   "n": 2,
-   "part": null,
-   "part_id": null,
-   "time": "3 мин",
-   "time_html": "<span>3 мин</span>",
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
    "title": "Острый майонез",
    "uses_rows": []
   },
   {
    "body_html": "<p>Разложите <a href=\"sushi-rice.html\">рис для суши</a> по двум мискам — тёплым, как тело, или комнатной температуры, но не горячим.</p>",
    "heat": null,
-   "id": "step-3",
+   "id": "step-2",
    "images": {
     "alt": "Рис в миски",
     "diagram": null,
     "how": [],
-    "illustration": "illustrations/shrimp-poke-bowl/3.webp",
+    "illustration": "illustrations/shrimp-poke-bowl/2.webp",
     "photo": null,
     "result": null,
     "svg_fallback": null
    },
-   "n": 3,
+   "n": 2,
    "part": null,
    "part_id": null,
    "time": "3 мин",
@@ -408,19 +304,54 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Сложите посоленные креветки в кастрюлю и залейте холодной водой примерно на <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span> выше.</li><li>Нагревайте на среднем огне, время от времени помешивая, чтобы ни одна не лежала на горячем дне.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Положите креветку на доску боком, спинкой к ножу.</li><li>Придерживайте её подогнутыми кончиками пальцев и разрежьте вдоль спинки, по линии, где была вена, насквозь, на <b>две длинные половинки</b>.</li><li>Повторите с остальными, затем тщательно обсушите половинки бумажными полотенцами — сухие половинки обжариваются, а не тушатся.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Разрежьте креветки вдоль пополам",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Хват «коготь», затем разрез вдоль спинки насквозь на две длинные половинки.",
+      "src": "illustrations/shrimp-poke-bowl/3-how1.webp"
+     },
+     {
+      "caption": "Тщательно обсушите половинки.",
+      "src": "illustrations/shrimp-poke-bowl/3-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/shrimp-poke-bowl/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~6 мин",
+   "time_html": "<span>~6 мин</span>",
+   "title": "Разрежьте креветки вдоль пополам",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+     "name_html": "Крупные сырые креветки, очищенные, без кишечной вены и хвостов"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте масло на сковороде на огне <b>выше среднего</b>, пока оно не начнёт переливаться.</li><li>Выложите половинки в один слой срезом вниз. Обжаривайте около 1 минуты, пока края не порозовеют.</li><li>Переверните и готовьте ещё около 30 секунд, пока они не станут розовыми и непрозрачными. Не перегружайте сковороду — при необходимости в два захода.</li></ul>",
    "heat": {
-    "label": "средний",
-    "label_html": "<span>средний</span>",
+    "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-4",
    "images": {
-    "alt": "Креветки — в холодную воду",
+    "alt": "Обжарка",
     "diagram": null,
     "how": [
      {
-      "caption": "Залейте холодной водой примерно на 3 см выше и нагревайте на среднем огне, иногда помешивая.",
+      "caption": "Обжарьте около 1 минуты, переверните, ещё около 30 секунд.",
       "src": "illustrations/shrimp-poke-bowl/4-how1.webp"
      }
     ],
@@ -432,30 +363,30 @@
    "n": 4,
    "part": null,
    "part_id": null,
-   "time": "~8–10 мин",
-   "time_html": "<span>~8–10 мин</span>",
-   "title": "Креветки — в холодную воду",
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Обжарка",
    "uses_rows": [
     {
-     "amount_html": "столько",
-     "name_html": "Вода для варки"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Нейтральное масло"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Когда вода нагреется (около <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"70\" data-s=\"0\">70 °C</span> — парит, но до кипения далеко), креветки станут <b>розовыми и непрозрачными</b>. Они готовы при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span> в самой толстой части.</li><li>Сразу переложите их в ледяную воду на минуту, затем откиньте и обсушите.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Влейте соевый соус и мирин (или добавьте сахар).</li><li>Перемешивайте 20–30 секунд, пока соус не выкипит и не обволочёт креветки. Сковорода должна стать почти сухой.</li><li>Переложите их на тарелку и разложите остывать примерно на 5 минут.</li></ul>",
    "heat": {
-    "label": "средний",
-    "label_html": "<span>средний</span>",
+    "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-5",
    "images": {
-    "alt": "Выньте, как только порозовеют",
+    "alt": "Соевая глазурь",
     "diagram": null,
     "how": [
      {
-      "caption": "Как только креветки порозовеют и станут непрозрачными, переложите их в ледяную воду.",
+      "caption": "Влейте соевый соус и перемешивайте 20–30 секунд, пока он не обволочёт их.",
       "src": "illustrations/shrimp-poke-bowl/5-how1.webp"
      }
     ],
@@ -467,26 +398,30 @@
    "n": 5,
    "part": null,
    "part_id": null,
-   "time": "~2 мин",
-   "time_html": "<span>~2 мин</span>",
-   "title": "Выньте, как только порозовеют",
+   "time": "~30 с + 5 мин остывания",
+   "time_html": "<span>~30 с + 5 мин остывания</span>",
+   "title": "Соевая глазурь",
    "uses_rows": [
     {
-     "amount_html": "миска",
-     "name_html": "Ледяная вода"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Мирин (по желанию, или щепотка сахара)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Перемешайте креветки с:<ul class=\"ing\"><li>соевый соус (заправка) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>обжаренное кунжутное масло (заправка) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li></ul>",
+   "body_html": "<p>Пока креветки остывают, мелко нарубите маринованный имбирь — на кусочки размером с рисовое зёрнышко.</p>",
    "heat": null,
    "id": "step-6",
    "images": {
-    "alt": "Заправка",
+    "alt": "Мелко нарубите имбирь",
     "diagram": null,
     "how": [
      {
-      "caption": "Перемешайте с соевым соусом и кунжутным маслом.",
+      "caption": "Мелко нарубите маринованный имбирь.",
       "src": "illustrations/shrimp-poke-bowl/6-how1.webp"
      }
     ],
@@ -498,22 +433,31 @@
    "n": 6,
    "part": null,
    "part_id": null,
-   "time": "1 мин",
-   "time_html": "<span>1 мин</span>",
-   "title": "Заправка",
-   "uses_rows": []
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Мелко нарубите имбирь",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\" data-alt=\"1\">20 г</span>)</span>",
+     "name_html": "Маринованный имбирь (гари), покупной"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Креветки — на рис. Полейте острым майонезом.</li><li>Добавьте:<ul class=\"ing\"><li>маринованный имбирь (гари), покупной <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span></span></li><li>зелёный лук, тонко нарезанный (по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span></span></li><li>обжаренный кунжут (по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Добавьте к острому майонезу остывшие креветки и нарубленный имбирь.</li><li><b>Тщательно</b> перемешайте, пока каждая половинка не покроется соусом, а вся смесь не станет ровного розово-кораллового цвета — без белых разводов майонеза и голых креветок.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
-    "alt": "Сборка",
+    "alt": "Перемешайте до розово-кораллового",
     "diagram": null,
     "how": [
      {
-      "caption": "Креветки на рис, сверху полейте острым майонезом.",
+      "caption": "Добавьте к острому майонезу остывшие креветки и нарубленный имбирь.",
       "src": "illustrations/shrimp-poke-bowl/7-how1.webp"
+     },
+     {
+      "caption": "Тщательно перемешайте, пока вся смесь не станет ровного розово-кораллового цвета.",
+      "src": "illustrations/shrimp-poke-bowl/7-how2.webp"
      }
     ],
     "illustration": null,
@@ -524,46 +468,68 @@
    "n": 7,
    "part": null,
    "part_id": null,
-   "time": "~4 мин",
-   "time_html": "<span>~4 мин</span>",
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Перемешайте до розово-кораллового",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите розовую креветочную смесь на рис.</li><li>Сверху, по желанию:<ul class=\"ing\"><li>зелёный лук, тонко нарезанный (по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span></span></li><li>обжаренный кунжут (по желанию) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Сборка",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Выложите розовую смесь на рис.",
+      "src": "illustrations/shrimp-poke-bowl/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/shrimp-poke-bowl/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
    "title": "Сборка",
    "uses_rows": []
   }
  ],
  "timeline": {
-  "end": 40,
+  "end": 25,
   "hours": false,
   "legend": [
-   {
-    "kind": "wait",
-    "label": "Без участия"
-   },
    {
     "kind": "bowl",
     "label": "Миска / стол"
    },
    {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
     "kind": "pan",
     "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
    }
   ],
   "note_html": "Сначала сделайте рис для суши — с замачиванием и остыванием до температуры тела он занимает около часа (см. страницу риса для суши).",
   "tasks": [
    {
-    "dur": 20,
-    "dur_label": "20 мин",
-    "kind": "wait",
-    "label": "Сухой посол креветок (холодильник)",
-    "label_html": "Сухой посол креветок (холодильник)",
-    "start": 0
-   },
-   {
-    "dur": 3,
-    "dur_label": "3 мин",
+    "dur": 2,
+    "dur_label": "2 мин",
     "kind": "bowl",
     "label": "Острый майонез",
     "label_html": "Острый майонез",
-    "start": 2
+    "start": 0
    },
    {
     "dur": 3,
@@ -571,39 +537,63 @@
     "kind": "bowl",
     "label": "Рис в миски",
     "label_html": "Рис в миски",
+    "start": 2
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "board",
+    "label": "Разрезать креветки, обсушить",
+    "label_html": "Разрезать креветки, обсушить",
     "start": 5
    },
    {
-    "dur": 10,
-    "dur_label": "10 мин",
+    "dur": 3,
+    "dur_label": "3 мин",
     "kind": "pan",
-    "label": "Креветки в холодной воде, мягкий нагрев",
-    "label_html": "Креветки в холодной воде, мягкий нагрев",
+    "label": "Обжарить половинки",
+    "label_html": "Обжарить половинки",
+    "start": 11
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "pan",
+    "label": "Соевая глазурь",
+    "label_html": "Соевая глазурь",
+    "start": 14
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "board",
+    "label": "Нарубить имбирь",
+    "label_html": "Нарубить имбирь",
+    "start": 15
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "wait",
+    "label": "Остудить на тарелке",
+    "label_html": "Остудить на тарелке",
+    "start": 15
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "bowl",
+    "label": "Перемешайте до розово-кораллового",
+    "label_html": "Перемешайте до розово-кораллового",
     "start": 20
    },
    {
     "dur": 3,
     "dur_label": "3 мин",
     "kind": "bowl",
-    "label": "Ледяная вода, откинуть, обсушить",
-    "label_html": "Ледяная вода, откинуть, обсушить",
-    "start": 30
-   },
-   {
-    "dur": 2,
-    "dur_label": "2 мин",
-    "kind": "bowl",
-    "label": "Заправить креветки",
-    "label_html": "Заправить креветки",
-    "start": 33
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 мин",
-    "kind": "bowl",
     "label": "Сборка",
     "label_html": "Сборка",
-    "start": 35
+    "start": 22
    }
   ],
   "tick_step": 5,
@@ -631,24 +621,12 @@
    {
     "at": 25,
     "label": "25"
-   },
-   {
-    "at": 30,
-    "label": "30"
-   },
-   {
-    "at": 35,
-    "label": "35"
-   },
-   {
-    "at": 40,
-    "label": "40"
    }
   ],
   "unit": "минуты"
  },
  "title": "Поке с креветками",
- "total": "~45 мин (если рис для суши готов заранее)",
+ "total": "~25 мин (если рис для суши готов заранее)",
  "vinegar_options": null,
  "yields": "2 миски"
 }

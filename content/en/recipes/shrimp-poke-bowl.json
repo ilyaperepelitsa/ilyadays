@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Big shrimp poached from cold so they stay pink and juicy, dressed in soy and sesame, over sushi rice with spicy mayo and pickled ginger.",
+ "blurb_html": "Big shrimp cut in half and pan-fried with a splash of soy, mixed with finely chopped pickled ginger and spicy mayo until the whole thing is pink-coral, over sushi rice.",
  "chips": [
   {
    "html": "<span>2 bowls</span>",
@@ -9,18 +9,18 @@
    "text": "2 bowls"
   },
   {
-   "html": "~45 min (with sushi rice made ahead)",
+   "html": "~25 min (with sushi rice made ahead)",
    "kind": "time",
-   "text": "~45 min (with sushi rice made ahead)"
+   "text": "~25 min (with sushi rice made ahead)"
   }
  ],
- "description": "Big shrimp poached from cold so they stay pink and juicy, dressed in soy and sesame, over sushi rice with spicy mayo and pickled ginger.",
+ "description": "Big shrimp cut in half and pan-fried with a splash of soy, mixed with finely chopped pickled ginger and spicy mayo until the whole thing is pink-coral, over sushi rice.",
  "equipment_html": [
-  "Pot + instant-read thermometer (helpful, not essential)",
-  "Bowl of iced water",
-  "Slotted spoon",
-  "Small bowls for the mayo and dressing",
-  "Frying pan (only for the pan-cooked versions)"
+  "Chef's knife + cutting board",
+  "Large frying pan (non-stick is easiest)",
+  "Plate for cooling",
+  "Mixing bowl",
+  "Rubber spatula or spoon"
  ],
  "group": {
   "id": "sushi",
@@ -36,23 +36,11 @@
    "items": [
     {
      "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span> (<span class=\"q\" data-k=\"count\" data-a=\"10\" data-b=\"12\" data-f=\"shrimp|shrimp\" data-n=\"5\">10–12 big shrimp</span>)",
-     "name_html": "Large raw shrimp, peeled and deveined"
+     "name_html": "Large raw shrimp, peeled and deveined, tails off"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Kosher salt (dry brine)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
-     "name_html": "Baking soda"
-    },
-    {
-     "amount_html": "enough to cover the shrimp by <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span>",
-     "name_html": "Water for poaching"
-    },
-    {
-     "amount_html": "a bowl",
-     "name_html": "Iced water"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Neutral oil"
     }
    ],
    "name": "Shrimp"
@@ -61,32 +49,24 @@
    "items": [
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Soy sauce (dressing)"
+     "name_html": "Soy sauce"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Toasted sesame oil (dressing)"
+     "name_html": "Mirin (optional, or a pinch of sugar)"
     }
    ],
-   "name": "Dressing"
+   "name": "Soy glaze"
   },
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span>",
      "name_html": "Japanese mayo (Kewpie)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 tsp</span>",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Sriracha"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
-     "name_html": "Toasted sesame oil (mayo, optional)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Lime juice (optional)"
     }
    ],
    "name": "Spicy mayo"
@@ -94,12 +74,12 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"bowl|bowls\" data-n=\"1\">2 bowls</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> cooked)",
-     "name_html": "Sushi rice"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\" data-alt=\"1\">20 g</span>)</span>",
+     "name_html": "Pickled ginger (gari), store-bought"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Pickled ginger (gari), store-bought"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"bowl|bowls\" data-n=\"1\">2 bowls</span> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> cooked)",
+     "name_html": "Sushi rice"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
@@ -111,79 +91,27 @@
     }
    ],
    "name": "Bowl"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 clove</span>",
-     "name_html": "Garlic, grated"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Ginger, grated"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
-     "name_html": "Soy sauce (garlic–ginger)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Neutral oil"
-    }
-   ],
-   "name": "Or: garlic–ginger, pan-cooked (instead of poaching + dressing)"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
-     "name_html": "Soy sauce (soy + sesame)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Toasted sesame oil (soy + sesame)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Neutral oil (soy + sesame)"
-    }
-   ],
-   "name": "Or: soy + sesame, pan-cooked (instead of poaching + dressing)"
   }
  ],
- "intro_html": "The bowl: big shrimp, spicy mayo and store-bought pickled ginger on <a href=\"sushi-rice.html\">sushi rice</a>. The shrimp are dry-brined, then <b>started in cold water</b> and lifted out the moment they turn pink. That gentle heat keeps them pink, plump and juicy. Prefer them pan-cooked in a marinade? Two versions are below: garlic–ginger, or soy + sesame oil.",
+ "intro_html": "The bowl: big shrimp, <b>cut in half lengthwise</b>, seared in a hot pan and glazed with a splash of soy sauce. Mix them with finely chopped store-bought pickled ginger and spicy mayo until the whole thing is one even, cool <b>pink-coral</b>. Spoon it over <a href=\"sushi-rice.html\">sushi rice</a>.",
  "mise": [
   {
    "as_list": false,
    "goes_in": "Step 1",
    "image": "illustrations/shrimp-poke-bowl/mise1.webp",
    "items": [
-    "peeled, patted dry, salt + baking soda"
+    "Kewpie",
+    "sriracha"
    ],
-   "items_html": "peeled, patted dry, salt + baking soda",
-   "name": "Shrimp",
-   "svg_fallback": null,
-   "vessel": "bowl"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Step 2",
-   "image": "illustrations/shrimp-poke-bowl/mise2.webp",
-   "items": [
-    "mayo",
-    "sriracha",
-    "sesame oil",
-    "lime"
-   ],
-   "items_html": "mayo · sriracha · sesame oil · lime",
-   "name": "Spicy mayo",
+   "items_html": "Kewpie · sriracha",
+   "name": "Mayo + sriracha",
    "svg_fallback": null,
    "vessel": "cup"
   },
   {
    "as_list": false,
-   "goes_in": "Step 3",
-   "image": "illustrations/shrimp-poke-bowl/mise3.webp",
+   "goes_in": "Step 2",
+   "image": "illustrations/shrimp-poke-bowl/mise2.webp",
    "items": [
     "made ahead, body-warm"
    ],
@@ -194,39 +122,50 @@
   },
   {
    "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/shrimp-poke-bowl/mise3.webp",
+   "items": [
+    "peeled, deveined, tails off"
+   ],
+   "items_html": "peeled, deveined, tails off",
+   "name": "Shrimp",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
    "goes_in": "Step 5",
    "image": "illustrations/shrimp-poke-bowl/mise4.webp",
    "items": [
-    "ready before the shrimp turn pink"
+    "soy",
+    "mirin"
    ],
-   "items_html": "ready before the shrimp turn pink",
-   "name": "Iced water",
+   "items_html": "soy · mirin",
+   "name": "Soy glaze",
    "svg_fallback": null,
-   "vessel": "bowl"
+   "vessel": "cup"
   },
   {
    "as_list": false,
    "goes_in": "Step 6",
    "image": "illustrations/shrimp-poke-bowl/mise5.webp",
    "items": [
-    "soy",
-    "sesame oil"
+    "store-bought gari"
    ],
-   "items_html": "soy · sesame oil",
-   "name": "Dressing",
+   "items_html": "store-bought gari",
+   "name": "Pickled ginger",
    "svg_fallback": null,
-   "vessel": "cup"
+   "vessel": "plate"
   },
   {
-   "as_list": true,
-   "goes_in": "Step 7",
+   "as_list": false,
+   "goes_in": "Step 8",
    "image": "illustrations/shrimp-poke-bowl/mise6.webp",
    "items": [
-    "pickled ginger",
     "green onion",
-    "sesame"
+    "sesame (optional)"
    ],
-   "items_html": "pickled ginger · green onion · sesame",
+   "items_html": "green onion · sesame (optional)",
    "name": "Toppings",
    "svg_fallback": null,
    "vessel": "plate"
@@ -239,31 +178,31 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>Shrimp go rubbery the moment they overcook.</li><li>Started in cold water and heated with it, they can’t get ahead of the water: they finish evenly at <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span>, stay pink all the way through and stay plump.</li><li>Without a thermometer, pull them as soon as the last grey patch turns pink.</li></ul>",
-   "title_html": "Why poach from cold"
+   "html": "<ul class=\"do\"><li>Split down the back, each big shrimp gives two slim halves that curl as they cook into bite-size pieces.</li><li>They sear in about a minute and a half, so the outside takes colour before the inside overcooks.</li><li>The cut face picks up more soy glaze and more mayo, and the halves mix evenly instead of whole shrimp sitting in a puddle of sauce.</li></ul>",
+   "title_html": "Why cut them in half lengthwise"
   },
   {
-   "html": "<ul class=\"do\"><li>Skip the dry brine, poaching and dressing.</li><li>Pat the raw shrimp dry and toss with the grated garlic, ginger and soy sauce from the garlic–ginger list; marinate 10–15 minutes.</li><li>Heat the oil in a frying pan over <b>medium</b> heat, lay the shrimp in one layer and cook about 1–1½ minutes a side, just until pink.</li><li>Medium rather than high keeps the garlic from burning and the shrimp pink rather than brown.</li></ul>",
-   "title_html": "Or: garlic–ginger, pan-cooked"
-  },
-  {
-   "html": "<p>Same as the garlic–ginger version with the soy + sesame list: marinate 10–15 minutes in the soy sauce and sesame oil, then cook in the neutral oil over medium heat, about 1–1½ minutes a side.</p>",
-   "title_html": "Or: soy + sesame, pan-cooked"
+   "html": "<ul class=\"do\"><li>A splash of soy — not a sticky sauce — and a quick sear keep the shrimp pink rather than brown.</li><li>White Kewpie with about a quarter as much red sriracha is pale coral-pink; with pink shrimp and pink ginger folded through, the whole bowl comes out one cool pink.</li><li>More sriracha turns it orange.</li></ul>",
+   "title_html": "Keeping it pink"
   },
   {
    "html": "<ul class=\"do\"><li>About 4 : 1 mayo to sriracha is mild-medium; go to 3 : 1 for more heat.</li><li>It’s the same sauce as on the <a href=\"tuna-mango-roll.html\">spicy tuna & mango roll</a>.</li></ul>",
    "title_html": "Spicy mayo ratio"
   },
   {
-   "html": "<ul class=\"do\"><li>The bowl is yours.</li><li>The poaching method follows the cold-start technique credited to Serious Eats; the dry brine is scaled down from ThermoWorks’ <span class=\"q\" data-k=\"mass\" data-u=\"lb\" data-a=\"2\" data-s=\"0\">2 lb</span> recipe.</li><li>The dressing, marinade and spicy-mayo amounts are this site’s starting points.</li><li>Adjust to taste.</li></ul>",
-   "title_html": "Assumed: the amounts"
+   "html": "<ul class=\"do\"><li>Hot shrimp make the mayo oily and runny.</li><li>Five minutes spread out on a plate is enough.</li></ul>",
+   "title_html": "Cool before mixing"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The bowl and the cut are yours.</li><li>The frying is Omnivore’s Cookbook’s soy-glazed pan-fry (hot pan, shrimp seared on both sides, sauce in at the end until it coats), cut down to soy alone with a little mirin — no honey or garlic, to keep it pink.</li><li>The timings for halves, the cooling and all the amounts are this site’s starting points.</li><li>Adjust to taste.</li></ul>",
+   "title_html": "Assumed: what's the source and what's mine"
   }
  ],
  "original": null,
  "parts": [],
  "prev": {
   "slug": "tuna-mango-roll",
-  "title": "Spicy tuna & mango roll"
+  "title": "Tuna & mango roll with spicy mayo"
  },
  "scale": {
   "mode": "people",
@@ -297,35 +236,31 @@
   },
   {
    "slug": "nigiri",
-   "title": "Nigiri: shaping by hand"
+   "title": "Nigiri: the named shaping techniques"
   },
   {
    "slug": "tuna-mango-roll",
-   "title": "Spicy tuna & mango roll"
+   "title": "Tuna & mango roll with spicy mayo"
   }
  ],
  "slug": "shrimp-poke-bowl",
  "sources": [
   {
-   "label": "ThermoWorks — Perfectly-cooked shrimp cocktail (cold-start poach, temperatures)",
-   "url": "https://blog.thermoworks.com/perfectly-cooked-shrimp-cocktail/"
-  },
-  {
-   "label": "Serious Eats — Shrimp cocktail (the cold-start method)",
-   "url": "https://www.seriouseats.com/shrimp-cocktail-recipe"
+   "label": "Omnivore’s Cookbook — Honey garlic shrimp (the soy-glazed pan-fry technique)",
+   "url": "https://omnivorescookbook.com/honey-garlic-shrimp/"
   }
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Pat the shrimp dry with paper towels.</li><li>Toss with the salt and baking soda and refrigerate 15–30 minutes. The salt seasons them; the baking soda gives them a snappier bite.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Stir together in the mixing bowl:<ul class=\"ing\"><li>japanese mayo (kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"4\">4 tbsp</span></span></li><li>sriracha <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li></ul></li><li>It should be a pale pink-coral. Taste; add a little more sriracha if you want it hotter. Use a bowl big enough to mix the shrimp in later.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
-    "alt": "Dry-brine the shrimp",
+    "alt": "Spicy mayo",
     "diagram": null,
     "how": [
      {
-      "caption": "Pat the shrimp dry, then toss with the salt and baking soda.",
+      "caption": "Stir the mayo and sriracha together until pale pink-coral.",
       "src": "illustrations/shrimp-poke-bowl/1-how1.webp"
      }
     ],
@@ -337,64 +272,25 @@
    "n": 1,
    "part": null,
    "part_id": null,
-   "time": "15–30 min",
-   "time_html": "<span>15–30 min</span>",
-   "title": "Dry-brine the shrimp",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
-     "name_html": "Large raw shrimp, peeled and deveined"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Kosher salt (dry brine)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
-     "name_html": "Baking soda"
-    }
-   ]
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Stir together:<ul class=\"ing\"><li>japanese mayo (kewpie) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span></span></li><li>sriracha <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\" data-b=\"3\">2–3 tsp</span></span></li><li>toasted sesame oil (mayo, optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span></span></li><li>lime juice (optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Taste and add more sriracha if you want it hotter.</li></ul>",
-   "heat": null,
-   "id": "step-2",
-   "images": {
-    "alt": "Spicy mayo",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Stir the mayo, sriracha, sesame oil and lime together.",
-      "src": "illustrations/shrimp-poke-bowl/2-how1.webp"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/shrimp-poke-bowl/2.webp",
-    "svg_fallback": null
-   },
-   "n": 2,
-   "part": null,
-   "part_id": null,
-   "time": "3 min",
-   "time_html": "<span>3 min</span>",
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
    "title": "Spicy mayo",
    "uses_rows": []
   },
   {
    "body_html": "<p>Divide the <a href=\"sushi-rice.html\">sushi rice</a> between two bowls — body-warm or room temperature, not hot.</p>",
    "heat": null,
-   "id": "step-3",
+   "id": "step-2",
    "images": {
     "alt": "Rice into the bowls",
     "diagram": null,
     "how": [],
-    "illustration": "illustrations/shrimp-poke-bowl/3.webp",
+    "illustration": "illustrations/shrimp-poke-bowl/2.webp",
     "photo": null,
     "result": null,
     "svg_fallback": null
    },
-   "n": 3,
+   "n": 2,
    "part": null,
    "part_id": null,
    "time": "3 min",
@@ -408,19 +304,54 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Put the brined shrimp in a pot and cover with cold water by about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span>.</li><li>Heat over medium, stirring now and then so none sit on the hot bottom.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Lay a shrimp on its side on the board, back toward the knife.</li><li>Hold it with your fingertips curled under, and cut along the back, through the line where the vein was, all the way through, into <b>two long halves</b>.</li><li>Repeat with the rest, then pat the halves very dry with paper towels — dry halves sear instead of steaming.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Cut the shrimp in half lengthwise",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Claw grip, then cut along the back, all the way through, into two long halves.",
+      "src": "illustrations/shrimp-poke-bowl/3-how1.webp"
+     },
+     {
+      "caption": "Pat the halves very dry.",
+      "src": "illustrations/shrimp-poke-bowl/3-how2.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/shrimp-poke-bowl/3.webp",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Cut the shrimp in half lengthwise",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+     "name_html": "Large raw shrimp, peeled and deveined, tails off"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the oil in the frying pan over <b>medium-high</b> heat until it shimmers.</li><li>Lay the halves in one layer, cut side down. Sear about 1 minute, until the edges turn pink.</li><li>Flip and cook about 30 seconds more, until just pink and opaque. Don’t crowd the pan — two batches if needed.</li></ul>",
    "heat": {
-    "label": "medium",
-    "label_html": "<span>medium</span>",
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-4",
    "images": {
-    "alt": "Start the shrimp in cold water",
+    "alt": "Sear",
     "diagram": null,
     "how": [
      {
-      "caption": "Cover with cold water by about 3 cm, then heat over medium, stirring now and then.",
+      "caption": "Sear about 1 minute, flip, about 30 seconds more.",
       "src": "illustrations/shrimp-poke-bowl/4-how1.webp"
      }
     ],
@@ -432,30 +363,30 @@
    "n": 4,
    "part": null,
    "part_id": null,
-   "time": "~8–10 min",
-   "time_html": "<span>~8–10 min</span>",
-   "title": "Start the shrimp in cold water",
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Sear",
    "uses_rows": [
     {
-     "amount_html": "enough to cover the shrimp by <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span>",
-     "name_html": "Water for poaching"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Neutral oil"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>As the water gets hot (about <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"70\" data-s=\"0\">70 °C</span> — steaming, far from boiling), the shrimp turn <b>pink and opaque</b>. They’re done at <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span> in the thickest part.</li><li>Lift them straight into the iced water for a minute, then drain and pat dry.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Splash in the soy sauce and the mirin (or sugar).</li><li>Toss for 20–30 seconds, until the soy has bubbled down and coats the shrimp. The pan should be almost dry.</li><li>Tip them onto a plate and spread out to cool for about 5 minutes.</li></ul>",
    "heat": {
-    "label": "medium",
-    "label_html": "<span>medium</span>",
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-5",
    "images": {
-    "alt": "Lift them out the moment they turn pink",
+    "alt": "Soy glaze",
     "diagram": null,
     "how": [
      {
-      "caption": "The moment they turn pink and opaque, lift them into the iced water.",
+      "caption": "Splash in the soy and toss 20–30 seconds, until it coats them.",
       "src": "illustrations/shrimp-poke-bowl/5-how1.webp"
      }
     ],
@@ -467,26 +398,30 @@
    "n": 5,
    "part": null,
    "part_id": null,
-   "time": "~2 min",
-   "time_html": "<span>~2 min</span>",
-   "title": "Lift them out the moment they turn pink",
+   "time": "~30 s + 5 min cooling",
+   "time_html": "<span>~30 s + 5 min cooling</span>",
+   "title": "Soy glaze",
    "uses_rows": [
     {
-     "amount_html": "a bowl",
-     "name_html": "Iced water"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Mirin (optional, or a pinch of sugar)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Toss the shrimp with:<ul class=\"ing\"><li>soy sauce (dressing) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>toasted sesame oil (dressing) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li></ul>",
+   "body_html": "<p>While the shrimp cool, chop the pickled ginger finely, into small bits the size of a grain of rice.</p>",
    "heat": null,
    "id": "step-6",
    "images": {
-    "alt": "Dress",
+    "alt": "Chop the ginger finely",
     "diagram": null,
     "how": [
      {
-      "caption": "Toss with the soy sauce and sesame oil.",
+      "caption": "Chop the pickled ginger finely.",
       "src": "illustrations/shrimp-poke-bowl/6-how1.webp"
      }
     ],
@@ -498,22 +433,31 @@
    "n": 6,
    "part": null,
    "part_id": null,
-   "time": "1 min",
-   "time_html": "<span>1 min</span>",
-   "title": "Dress",
-   "uses_rows": []
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Chop the ginger finely",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\" data-alt=\"1\">20 g</span>)</span>",
+     "name_html": "Pickled ginger (gari), store-bought"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Shrimp on the rice. Drizzle with spicy mayo.</li><li>Add:<ul class=\"ing\"><li>pickled ginger (gari), store-bought <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span></span></li><li>green onion, thinly sliced (optional) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span></span></li><li>toasted sesame seeds (optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Add the cooled shrimp and the chopped ginger to the spicy mayo.</li><li>Fold <b>thoroughly</b> until every half is coated and the whole mix is one even pink-coral — no white streaks of mayo, no bare shrimp.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
-    "alt": "Assemble",
+    "alt": "Mix until pink-coral",
     "diagram": null,
     "how": [
      {
-      "caption": "Shrimp on the rice, then drizzle the spicy mayo.",
+      "caption": "Add the cooled shrimp and the chopped ginger to the spicy mayo.",
       "src": "illustrations/shrimp-poke-bowl/7-how1.webp"
+     },
+     {
+      "caption": "Fold thoroughly until the whole mix is one even pink-coral.",
+      "src": "illustrations/shrimp-poke-bowl/7-how2.webp"
      }
     ],
     "illustration": null,
@@ -524,46 +468,68 @@
    "n": 7,
    "part": null,
    "part_id": null,
-   "time": "~4 min",
-   "time_html": "<span>~4 min</span>",
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Mix until pink-coral",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spoon the pink shrimp mix over the rice.</li><li>Top with, if you like:<ul class=\"ing\"><li>green onion, thinly sliced (optional) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span></span></li><li>toasted sesame seeds (optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Assemble",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Spoon the pink mix over the rice.",
+      "src": "illustrations/shrimp-poke-bowl/8-how1.webp"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/shrimp-poke-bowl/8.webp",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
    "title": "Assemble",
    "uses_rows": []
   }
  ],
  "timeline": {
-  "end": 40,
+  "end": 25,
   "hours": false,
   "legend": [
-   {
-    "kind": "wait",
-    "label": "Hands-off"
-   },
    {
     "kind": "bowl",
     "label": "Bowl / counter"
    },
    {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
     "kind": "pan",
     "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
    }
   ],
   "note_html": "Make the sushi rice first — it needs about an hour including soaking and cooling to body temperature (see the sushi rice page).",
   "tasks": [
    {
-    "dur": 20,
-    "dur_label": "20 min",
-    "kind": "wait",
-    "label": "Dry-brine the shrimp (fridge)",
-    "label_html": "Dry-brine the shrimp (fridge)",
-    "start": 0
-   },
-   {
-    "dur": 3,
-    "dur_label": "3 min",
+    "dur": 2,
+    "dur_label": "2 min",
     "kind": "bowl",
     "label": "Spicy mayo",
     "label_html": "Spicy mayo",
-    "start": 2
+    "start": 0
    },
    {
     "dur": 3,
@@ -571,39 +537,63 @@
     "kind": "bowl",
     "label": "Rice into bowls",
     "label_html": "Rice into bowls",
+    "start": 2
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 min",
+    "kind": "board",
+    "label": "Halve the shrimp, pat dry",
+    "label_html": "Halve the shrimp, pat dry",
     "start": 5
    },
    {
-    "dur": 10,
-    "dur_label": "10 min",
+    "dur": 3,
+    "dur_label": "3 min",
     "kind": "pan",
-    "label": "Shrimp in cold water, heat gently",
-    "label_html": "Shrimp in cold water, heat gently",
+    "label": "Sear the halves",
+    "label_html": "Sear the halves",
+    "start": 11
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "pan",
+    "label": "Soy glaze",
+    "label_html": "Soy glaze",
+    "start": 14
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "board",
+    "label": "Chop the ginger",
+    "label_html": "Chop the ginger",
+    "start": 15
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "wait",
+    "label": "Cool on a plate",
+    "label_html": "Cool on a plate",
+    "start": 15
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "bowl",
+    "label": "Mix until pink-coral",
+    "label_html": "Mix until pink-coral",
     "start": 20
    },
    {
     "dur": 3,
     "dur_label": "3 min",
     "kind": "bowl",
-    "label": "Iced water, drain, pat dry",
-    "label_html": "Iced water, drain, pat dry",
-    "start": 30
-   },
-   {
-    "dur": 2,
-    "dur_label": "2 min",
-    "kind": "bowl",
-    "label": "Dress the shrimp",
-    "label_html": "Dress the shrimp",
-    "start": 33
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 min",
-    "kind": "bowl",
     "label": "Assemble",
     "label_html": "Assemble",
-    "start": 35
+    "start": 22
    }
   ],
   "tick_step": 5,
@@ -631,24 +621,12 @@
    {
     "at": 25,
     "label": "25"
-   },
-   {
-    "at": 30,
-    "label": "30"
-   },
-   {
-    "at": 35,
-    "label": "35"
-   },
-   {
-    "at": 40,
-    "label": "40"
    }
   ],
   "unit": "minutes"
  },
  "title": "Shrimp poke bowl",
- "total": "~45 min (with sushi rice made ahead)",
+ "total": "~25 min (with sushi rice made ahead)",
  "vinegar_options": null,
  "yields": "2 bowls"
 }
