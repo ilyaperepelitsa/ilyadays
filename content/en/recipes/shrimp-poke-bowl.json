@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Big shrimp cut in half crosswise and pan-fried with a splash of soy, mixed with finely chopped pickled ginger and spicy mayo until the whole thing is pink-coral, over sushi rice.",
+ "blurb_html": "Big shrimp cut in half crosswise and pan-fried with a splash of soy, mixed with finely chopped pickled ginger and spicy mayo until the whole thing is pink-coral, over sushi rice, with a spoon of red caviar in the center.",
  "chips": [
   {
    "html": "<span>2 bowls</span>",
@@ -14,7 +14,7 @@
    "text": "~25 min (with sushi rice made ahead)"
   }
  ],
- "description": "Big shrimp cut in half crosswise and pan-fried with a splash of soy, mixed with finely chopped pickled ginger and spicy mayo until the whole thing is pink-coral, over sushi rice.",
+ "description": "Big shrimp cut in half crosswise and pan-fried with a splash of soy, mixed with finely chopped pickled ginger and spicy mayo until the whole thing is pink-coral, over sushi rice, with a spoon of red caviar in the center.",
  "equipment_html": [
   "Chef's knife + cutting board",
   "Large frying pan (non-stick is easiest)",
@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Shrimp poke bowl",
-  "image": "illustrations/shrimp-poke-bowl/hero.webp?v=680ff116ed",
+  "image": "illustrations/shrimp-poke-bowl/hero.webp?v=77b97c3d29",
   "svg_fallback": null
  },
  "ingredients": [
@@ -88,12 +88,16 @@
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
      "name_html": "Toasted sesame seeds (optional)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\" data-alt=\"1\">40 g</span>)</span>, cold",
+     "name_html": "Ikura (salmon roe)"
     }
    ],
    "name": "Bowl"
   }
  ],
- "intro_html": "The bowl: big shrimp, <b>cut in half crosswise</b> into two shorter pieces, seared in a hot pan and glazed with a splash of soy sauce. Mix them with finely chopped store-bought pickled ginger and spicy mayo until the whole thing is one even, cool <b>pink-coral</b>. Spoon it over <a href=\"sushi-rice.html\">sushi rice</a>.",
+ "intro_html": "The bowl: big shrimp, <b>cut in half crosswise</b> into two shorter pieces, seared in a hot pan and glazed with a splash of soy sauce. Mix them with finely chopped store-bought pickled ginger and spicy mayo until the whole thing is one even, cool <b>pink-coral</b>. Spoon it over <a href=\"sushi-rice.html\">sushi rice</a>, then a spoon of cold <b>ikura</b> in the center.",
  "mise": [
   {
    "as_list": false,
@@ -169,6 +173,18 @@
    "name": "Toppings",
    "svg_fallback": null,
    "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/shrimp-poke-bowl/mise7.webp?v=d6b984a6dc",
+   "items": [
+    "salmon roe, cold"
+   ],
+   "items_html": "salmon roe, cold",
+   "name": "Ikura",
+   "svg_fallback": null,
+   "vessel": "cup"
   }
  ],
  "more_label": "More sushi:",
@@ -194,7 +210,11 @@
    "title_html": "Cool before mixing"
   },
   {
-   "html": "<ul class=\"do\"><li>The bowl and the cut are yours.</li><li>The frying is Omnivore’s Cookbook’s soy-glazed pan-fry (hot pan, shrimp seared on both sides, sauce in at the end until it coats), cut down to soy alone with a little mirin — no honey or garlic, to keep it pink.</li><li>The timings, the cooling and all the amounts are this site’s starting points.</li><li>Adjust to taste.</li></ul>",
+   "html": "<ul class=\"do\"><li>A spoon of cold ikura sits on top, in the middle of the bowl.</li><li>Folding it into the spicy mayo mashes the pearls and turns the mix orange.</li></ul>",
+   "title_html": "Ikura in the center"
+  },
+  {
+   "html": "<ul class=\"do\"><li>The bowl and the cut are yours.</li><li>The frying is Omnivore’s Cookbook’s soy-glazed pan-fry (hot pan, shrimp seared on both sides, sauce in at the end until it coats), cut down to soy alone with a little mirin — no honey or garlic, to keep it pink.</li><li>The ikura in the center, the timings, the cooling and all the amounts are this site’s starting points.</li><li>Adjust to taste.</li></ul>",
    "title_html": "Assumed: what's the source and what's mine"
   }
  ],
@@ -228,7 +248,7 @@
    "person": "person"
   }
  },
- "share_image": "share/shrimp-poke-bowl.jpg?v=272d124e22",
+ "share_image": "share/shrimp-poke-bowl.jpg?v=32deb43c89",
  "siblings": [
   {
    "slug": "sushi-rice",
@@ -474,7 +494,7 @@
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Spoon the pink shrimp mix over the rice.</li><li>Top with, if you like:<ul class=\"ing\"><li>green onion, thinly sliced (optional) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span></span></li><li>toasted sesame seeds (optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Spoon the pink shrimp mix over the rice.</li><li>Top with, if you like:<ul class=\"ing\"><li>green onion, thinly sliced (optional) <span class=\"amt\"><span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span></span></li><li>toasted sesame seeds (optional) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li></ul></li><li>Spoon the cold ikura into the <b>center</b> of the bowl — a little heap of whole pearls on top of the mix, not folded into the mayo.</li></ul>",
    "heat": null,
    "id": "step-8",
    "images": {
@@ -483,12 +503,16 @@
     "how": [
      {
       "caption": "Spoon the pink mix over the rice.",
-      "src": "illustrations/shrimp-poke-bowl/8-how1.webp?v=e46fc244c9"
+      "src": "illustrations/shrimp-poke-bowl/8-how1.webp?v=fad58b2068"
+     },
+     {
+      "caption": "A spoon of cold ikura in the center.",
+      "src": "illustrations/shrimp-poke-bowl/8-how2.webp?v=b5ce54d211"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/shrimp-poke-bowl/8.webp?v=e76d6ccf1b",
+    "result": "illustrations/shrimp-poke-bowl/8.webp?v=dc201e0eac",
     "svg_fallback": null
    },
    "n": 8,
@@ -497,7 +521,12 @@
    "time": "~3 min",
    "time_html": "<span>~3 min</span>",
    "title": "Assemble",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span><span class=\"qalt\"> (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\" data-alt=\"1\">40 g</span>)</span>",
+     "name_html": "Ikura (salmon roe)"
+    }
+   ]
   }
  ],
  "timeline": {
