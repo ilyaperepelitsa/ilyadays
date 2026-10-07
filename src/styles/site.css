@@ -61,7 +61,9 @@
   display: block; padding: 40px 16px; text-align: center; color: var(--muted);
 }
 .trip-mount:empty::before { content: attr(data-loading); }
-@media (max-width: 860px) { .trip-mount { height: auto; min-height: 70vh; } }
+@media (max-width: 860px) {
+  .trip-mount { height: calc(100dvh - var(--header-h, 57px) - var(--note-h, 0px)); min-height: 0; }
+}
 
 /* ---------- 404 */
 .missing { max-width: 640px; padding: 48px 0; }

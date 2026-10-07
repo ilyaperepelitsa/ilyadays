@@ -53,7 +53,7 @@ export interface MountOptions {
   storage?: TripStorage;
   /** false = visitor mode: shows the owner's ticks and chosen versions; nothing that changes saved data. Default true. */
   editable?: boolean;
-  /** Fired when the user clicks EN/RU in the app (not for setLang()). The app also writes localStorage "lang". */
+  /** Fired when the user clicks EN/RU in the app (not for setLang()). The app also writes localStorage "site-lang". */
   onLangChange?(lang: Lang): void;
   /** If given, read-only mode shows a "Sign in" button that calls it. */
   onSignIn?(): void;
