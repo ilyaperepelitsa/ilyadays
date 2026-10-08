@@ -37,6 +37,11 @@ export const travelMeta = (lang: Lang): Metadata => {
   return pageMetadata({ lang, path: "/travel", title: t.travelTitle, description: t.travelDescription, image: "/share/travel.jpg" });
 };
 
+export const makeTripMeta = (lang: Lang): Metadata => {
+  const t = strings(lang);
+  return pageMetadata({ lang, path: "/travel/new", title: t.makeTripTitle, description: t.makeTripDescription, image: "/share/travel.jpg" });
+};
+
 export const istanbulMeta = (lang: Lang): Metadata => {
   const t = strings(lang);
   return pageMetadata({

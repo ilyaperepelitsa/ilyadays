@@ -1,0 +1,377 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Оранжевый чеддер, масло снаружи и слабый огонь, чтобы середина расплавилась раньше, чем потемнеет хлеб.",
+ "chips": [
+  {
+   "html": "<span>1 сэндвич</span>",
+   "kind": "",
+   "text": "1 сэндвич"
+  },
+  {
+   "html": "~12 мин",
+   "kind": "time",
+   "text": "~12 мин"
+  }
+ ],
+ "description": "Оранжевый чеддер, масло снаружи и слабый огонь, чтобы середина расплавилась раньше, чем потемнеет хлеб.",
+ "equipment_html": [
+  "Сковорода с крышкой",
+  "Лопатка",
+  "Нож для масла"
+ ],
+ "group": {
+  "id": "cheese",
+  "name": "Сыр"
+ },
+ "hero": {
+  "alt": "Грильд-чиз",
+  "image": "illustrations/grilled-cheese/hero.webp?v=c5c53f5860",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"ломтик|ломтика|ломтиков\" data-n=\"1\">2 ломтика</span>, толщиной около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>",
+     "name_html": "Хлеб для сэндвичей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 г</span>, ломтиками или крупно натёртый",
+     "name_html": "Оранжевый чеддер"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Масло, мягкое"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Соль"
+    }
+   ],
+   "name": "Сэндвич"
+  }
+ ],
+ "intro_html": "Хлеб для сэндвичей, оранжевый чеддер и мягкое масло. Огонь ниже среднего, первую сторону под крышкой: сыр оседает, пока корочка ещё только золотится. Тот же оранжевый чеддер даёт жёлто-оранжевый цвет <a href=\"mac-and-cheese.html\">макаронам с сыром</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/grilled-cheese/mise1.webp?v=7ad5d8f622",
+   "items": [
+    "маслом с одной стороны"
+   ],
+   "items_html": "маслом с одной стороны",
+   "name": "Хлеб",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/grilled-cheese/mise2.webp?v=5e439d91e4",
+   "items": [
+    "ломтиками или крупно натёртый"
+   ],
+   "items_html": "ломтиками или крупно натёртый",
+   "name": "Чеддер",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/grilled-cheese/mise3.webp?v=c1c95a2df9",
+   "items": [
+    "мягкое"
+   ],
+   "items_html": "мягкое",
+   "name": "Масло",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Сыр:",
+ "next": {
+  "slug": "mac-and-cheese",
+  "title": "Макароны с сыром"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>На огне выше среднего хлеб подрумянивается раньше, чем плавится чеддер.</li><li>Если корочка обгоняет сыр, убавьте огонь и снова накройте.</li></ul>",
+   "title_html": "Огонь"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Цвет даёт оранжевый чеддер.</li><li>Белый чеддер жарится так же и выходит бледным.</li></ul>",
+   "title_html": "Чеддер"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Обычный формовой хлеб, около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span> толщиной.</li><li>Слишком тонкие ломтики сохнут, а крупная пористая мякоть выпускает сыр.</li></ul>",
+   "title_html": "Хлеб"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "chicken-malai-tikka",
+  "title": "Малай тикка масала из курицы (сливочный жёлтый соус)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/grilled-cheese.jpg?v=313b09114c",
+ "siblings": [
+  {
+   "slug": "mac-and-cheese",
+   "title": "Макароны с сыром"
+  }
+ ],
+ "slug": "grilled-cheese",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Намажьте мягкое масло от края до края на <b>одну сторону</b> каждого ломтика.</li><li>Эта сторона ляжет на сковороду.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Масло снаружи",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Намажьте мягкое масло от края до края на одну сторону каждого ломтика.",
+      "src": "illustrations/grilled-cheese/1-how1.webp?v=208ccfdbbf"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/1.webp?v=2b6fe9be8e",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Масло снаружи",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"ломтик|ломтика|ломтиков\" data-n=\"1\">2 ломтика</span>",
+     "name_html": "Хлеб для сэндвичей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Масло, мягкое"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Положите чеддер ровным слоем на сухую сторону ломтика и добавьте щепотку соли.</li><li>Закройте сэндвич. Масло — <b>снаружи</b>.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Собрать",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Чеддер ровным слоем на сухую сторону; закройте так, чтобы масло было снаружи.",
+      "src": "illustrations/grilled-cheese/2-how1.webp?v=0666197c15"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/2.webp?v=99bd045bec",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Собрать",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 г</span>",
+     "name_html": "Оранжевый чеддер"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Соль"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Поставьте сковороду на <b>огонь ниже среднего</b> и положите сэндвич.</li><li>Накройте. Готовьте около 3–4 минут, пока низ не станет густо-золотистым, а сыр по краю не начнёт оседать.</li><li>Снимите крышку, переверните один раз и жарьте вторую сторону 2–3 минуты без крышки, пока она не станет такой же.</li></ul>",
+   "heat": {
+    "label": "ниже среднего",
+    "label_html": "<span>ниже среднего</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Жарить и перевернуть",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Накройте сковороду. Готовьте, пока низ не станет густо-золотистым, а сыр по краю не осядет.",
+      "src": "illustrations/grilled-cheese/3-how1.webp?v=d8cd149c5d"
+     },
+     {
+      "caption": "Крышку снять, один раз перевернуть.",
+      "src": "illustrations/grilled-cheese/3-how2.webp?v=9e54924ea3"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/3.webp?v=393671b6c2",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "6–7 мин",
+   "time_html": "<span>6–7 мин</span>",
+   "title": "Жарить и перевернуть",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Переложите на доску и подождите <b>1 минуту</b>, чтобы сыр чуть схватился и сэндвич можно было разрезать.</li><li>Разрежьте пополам.</li><li>Середина должна быть расплавленной и жёлто-оранжевой, а не бледным ломтиком, который ещё держит форму.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Дать постоять и разрезать",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Минуту подождать, затем разрезать пополам.",
+      "src": "illustrations/grilled-cheese/4-how1.webp?v=37269c23a9"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/4.webp?v=d9c2ecc87f",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Дать постоять и разрезать",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 12,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "board",
+    "label": "Масло снаружи",
+    "label_html": "Масло снаружи",
+    "start": 0
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "board",
+    "label": "Нарезать или натереть чеддер",
+    "label_html": "Нарезать или натереть чеддер",
+    "start": 0
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "board",
+    "label": "Закрыть сэндвич",
+    "label_html": "Закрыть сэндвич",
+    "start": 2
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 мин",
+    "kind": "pan",
+    "label": "Жарить под крышкой, затем перевернуть",
+    "label_html": "Жарить под крышкой, затем перевернуть",
+    "start": 3
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 мин",
+    "kind": "board",
+    "label": "Постоять и разрезать",
+    "label_html": "Постоять и разрезать",
+    "start": 10
+   }
+  ],
+  "tick_step": 2,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 2,
+    "label": "2"
+   },
+   {
+    "at": 4,
+    "label": "4"
+   },
+   {
+    "at": 6,
+    "label": "6"
+   },
+   {
+    "at": 8,
+    "label": "8"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 12,
+    "label": "12"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Грильд-чиз",
+ "total": "~12 мин",
+ "vinegar_options": null,
+ "yields": "1 сэндвич"
+}

@@ -16,6 +16,8 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/food/<slug>` | `/ru/food/<slug>` | A recipe |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Sous vide tables + PDF |
 | `/travel` | `/ru/travel` | Trips |
+| `/travel/new` | `/ru/travel/new` | Template for a new city: days, pace, meals, themes. A model fills the plan; Wikipedia and Commons add links and pictures. Saved in this browser |
+| `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it |
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
 
 - Every content page is static (SSG). Each page has a canonical URL, EN/RU alternates, and a 1200×630 link-preview card (Open Graph + Twitter).
@@ -23,6 +25,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
   - `/food/<slug>.html`, `/food/index.html`
   - `/food/share/*.jpg`, `/food/illustrations/*`
 - The EN · RU switch stores the choice in `localStorage["lang"]`. The Istanbul app uses the same key.
+- `/travel/new` asks for a city, how many days, hours, sights, food breaks, linger or rapid pace, and whether days share a place. A preference note covers food and shops (secret bars, cafés, modern or traditional local food). Places to pass through are one per line and are not pinned to a day: one route walks through each. Each day has a short title and a longer description, in English and Russian. Suggest themes fills those first. Generate then asks for the stops, the visit notes, and names a Wikipedia article and a Commons search. Pictures come from those APIs. The model does not return image URLs. The key stays in `localStorage["cdays-ai-key"]` (the same key as the Istanbul re-plan) and saved trips stay in `localStorage["ilyadays-trips-v1"]`. Neither is sent to this site.
 - A tiny script in `<head>` sends the reader to the same page in their language before the page paints.
   - On a first visit it picks Russian if the browser prefers Russian or the link was a `/ru` link.
 
@@ -35,7 +38,7 @@ src/app/global-not-found.tsx, manifest.ts, robots.ts, sitemap.ts
 src/views/              page bodies shared by both languages + per-page metadata (meta.ts)
 src/components/food/    recipe markup — mirrors ../recipes/build.py so food.css renders it exactly as before
 src/components/site/    header, EN·RU switch, Google sign-in, page memory (scroll + ticks), root shell
-src/components/travel/  mounts the Istanbul app
+src/components/travel/  Istanbul app, plus the trip template (form, reader, saved list)
 src/lib/                content loader, i18n, metadata, Supabase client, trip storage adapter
 src/styles/food.css     copy of ../recipes/static/style.css (synced — don't edit here)
 src/styles/site.css     home / travel / shell styles
@@ -92,6 +95,7 @@ npm install
 npm run sync            # pull recipes, pictures, the Istanbul app, covers
 npm run dev             # http://localhost:3000
 npm run build && npm run start
+npm test               # trip template: brief, prompts, notes, pictures, storage
 npm run lint && npm run typecheck
 npm run check:cookies   # after a build; add -- --live with `npm run start` running
 ```

@@ -111,6 +111,15 @@
    "notes": []
   },
   {
+   "id": "cheese",
+   "items": [
+    "grilled-cheese",
+    "mac-and-cheese"
+   ],
+   "name": "Cheese",
+   "notes": []
+  },
+  {
    "id": "from-friends-prdp-net",
    "items": [
     "baka-with-eggs",
@@ -124,6 +133,9 @@
  ],
  "lede_html": "Japanese basics and big projects, sushi, Korean kimchi and fried chicken, weeknight rice noodles and soba, Indian chicken tikka and a sous vide reference — each with step-by-step pictures, mise-en-place order and a prep timeline.",
  "recent": [
+  "grilled-cheese",
+  "mac-and-cheese",
+  "nigiri",
   "shrimp-karaage-onigiri",
   "baby-octopus-onigiri",
   "nikumaki-onigiri",
@@ -132,10 +144,7 @@
   "onigirazu",
   "spam-musubi",
   "drunken-noodles",
-  "singapore-noodles",
-  "curry-soba",
-  "kake-soba",
-  "shrimp-poke-bowl"
+  "singapore-noodles"
  ],
  "recipes": [
   {
@@ -917,8 +926,8 @@
    "yields": "1 batch · ~660 g, 3–4 servings (2 rice-cooker cups raw)"
   },
   {
-   "added": "2026-10-07 14:00",
-   "blurb_html": "How sushi chefs shape nigiri, move by move: kote-gaeshi (the standard), tate-gaeshi (for slippery toppings) and hon-te-gaeshi (the old way) — which hand, which fingers, which way it turns.",
+   "added": "2026-10-08 13:10",
+   "blurb_html": "Seven hand moves for one piece of nigiri: where the fish sits, the thumb dimple, the kote-gaeshi flip, then which fingers lock the sides and press the top.",
    "chips": [
     {
      "html": "<span>16 pieces · 2 servings</span>",
@@ -931,18 +940,18 @@
      "text": "~40 min with the rice made"
     }
    ],
-   "description": "How sushi chefs shape nigiri, move by move: kote-gaeshi (the standard), tate-gaeshi (for slippery toppings) and hon-te-gaeshi (the old way) — which hand, which fingers, which way it turns.",
+   "description": "Seven hand moves for one piece of nigiri: where the fish sits, the thumb dimple, the kote-gaeshi flip, then which fingers lock the sides and press the top.",
    "group": "Sushi",
    "group_id": "sushi",
    "hero": {
-    "alt": "Nigiri: the named shaping techniques",
-    "image": "illustrations/nigiri/hero.webp?v=eafff11be3",
+    "alt": "Nigiri: seven shaping moves",
+    "image": "illustrations/nigiri/hero.webp?v=76f0164fc7",
     "svg_fallback": null
    },
    "kind": "recipe",
-   "share_image": "share/nigiri.jpg?v=1c4b67b4f2",
+   "share_image": "share/nigiri.jpg?v=2cf72a8ef7",
    "slug": "nigiri",
-   "title": "Nigiri: the named shaping techniques",
+   "title": "Nigiri: seven shaping moves",
    "total": "~40 min with the rice made",
    "yields": "16 pieces · 2 servings"
   },
@@ -1425,6 +1434,66 @@
    "title": "Chicken malai tikka masala (creamy yellow gravy)",
    "total": "~4¾ h incl. 4 h marinating",
    "yields": "4 servings (500 g chicken)"
+  },
+  {
+   "added": "2026-10-09 00:20",
+   "blurb_html": "Orange cheddar, butter on the outside, and a low pan so the middle melts before the bread burns.",
+   "chips": [
+    {
+     "html": "<span>1 sandwich</span>",
+     "kind": "",
+     "text": "1 sandwich"
+    },
+    {
+     "html": "~12 min",
+     "kind": "time",
+     "text": "~12 min"
+    }
+   ],
+   "description": "Orange cheddar, butter on the outside, and a low pan so the middle melts before the bread burns.",
+   "group": "Cheese",
+   "group_id": "cheese",
+   "hero": {
+    "alt": "Grilled cheese",
+    "image": "illustrations/grilled-cheese/hero.webp?v=c5c53f5860",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/grilled-cheese.jpg?v=313b09114c",
+   "slug": "grilled-cheese",
+   "title": "Grilled cheese",
+   "total": "~12 min",
+   "yields": "1 sandwich"
+  },
+  {
+   "added": "2026-10-09 00:20",
+   "blurb_html": "A pale roux, warm milk, then orange cheddar and paprika off the heat — yellow-orange, not a pale cream.",
+   "chips": [
+    {
+     "html": "<span>2 generous bowls</span>",
+     "kind": "",
+     "text": "2 generous bowls"
+    },
+    {
+     "html": "~25 min",
+     "kind": "time",
+     "text": "~25 min"
+    }
+   ],
+   "description": "A pale roux, warm milk, then orange cheddar and paprika off the heat — yellow-orange, not a pale cream.",
+   "group": "Cheese",
+   "group_id": "cheese",
+   "hero": {
+    "alt": "Mac and cheese",
+    "image": "illustrations/mac-and-cheese/hero.webp?v=a376915deb",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/mac-and-cheese.jpg?v=4b4ffedd97",
+   "slug": "mac-and-cheese",
+   "title": "Mac and cheese",
+   "total": "~25 min",
+   "yields": "2 generous bowls"
   },
   {
    "added": "2026-10-06 18:03",

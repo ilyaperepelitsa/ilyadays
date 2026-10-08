@@ -1,27 +1,9 @@
-import type { FoodIndex, RecipeSummary } from "@/lib/content";
-import { foodHref, getSvgDefs } from "@/lib/content";
+import type { FoodIndex } from "@/lib/content";
+import { getSvgDefs } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
-import { Html, HeroArt, SvgDefs } from "./parts";
-
-export function Card({ lang, r, badge }: { lang: Lang; r: RecipeSummary; badge?: string }) {
-  return (
-    <a className="card" href={foodHref(lang, r.slug)}>
-      <div className="card-art">
-        <HeroArt hero={r.hero} />
-      </div>
-      <div className="card-text">
-        <h3>{r.title}</h3>
-        <Html as="p" html={r.blurb_html} />
-        <div className="meta">
-          {badge && <span className="chip added">{badge}</span>}
-          {r.chips.map((c, i) => (
-            <span key={i} className={c.kind ? `chip ${c.kind}` : "chip"}>{c.text}</span>
-          ))}
-        </div>
-      </div>
-    </a>
-  );
-}
+import { Card } from "./Card";
+import { Html, SvgDefs } from "./parts";
+import { RecentlyAdded } from "./RecentlyAdded";
 
 export function FoodIndexView({ lang, index }: { lang: Lang; index: FoodIndex }) {
   const bySlug = new Map(index.recipes.map((r) => [r.slug, r]));
@@ -33,6 +15,7 @@ export function FoodIndexView({ lang, index }: { lang: Lang; index: FoodIndex })
         <h1>{index.title}</h1>
         <Html as="p" className="lede" html={index.lede_html} />
       </div>
+      <RecentlyAdded lang={lang} />
       {index.groups.map((g) => (
         <section className="group" id={g.id} key={g.id}>
           <h2>{g.name}</h2>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { type Lang, localPath, strings } from "@/lib/i18n";
 import { SiteFooter, SiteHeader } from "@/components/site/SiteHeader";
 import { AuthProvider } from "@/components/site/AuthProvider";
+import { SavedTrips } from "@/components/travel/SavedTrips";
 
 export function TravelView({ lang }: { lang: Lang }) {
   const t = strings(lang);
@@ -23,7 +24,15 @@ export function TravelView({ lang }: { lang: Lang }) {
               <span className="tile-go">{t.istanbulGo}</span>
             </div>
           </Link>
+          <Link className="tile tile-plain" href={localPath(lang, "/travel/new")}>
+            <div className="tile-body">
+              <h2>{t.makeTripTitle}</h2>
+              <p>{t.makeTripCard}</p>
+              <span className="tile-go">{t.makeTripGo}</span>
+            </div>
+          </Link>
         </div>
+        <SavedTrips lang={lang} />
       </main>
       <SiteFooter>
         <Link href={localPath(lang, "/")}>{t.backHome}</Link>

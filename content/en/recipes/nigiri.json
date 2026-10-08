@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "How sushi chefs shape nigiri, move by move: kote-gaeshi (the standard), tate-gaeshi (for slippery toppings) and hon-te-gaeshi (the old way) — which hand, which fingers, which way it turns.",
+ "blurb_html": "Seven hand moves for one piece of nigiri: where the fish sits, the thumb dimple, the kote-gaeshi flip, then which fingers lock the sides and press the top.",
  "chips": [
   {
    "html": "<span>16 pieces · 2 servings</span>",
@@ -14,7 +14,7 @@
    "text": "~40 min with the rice made"
   }
  ],
- "description": "How sushi chefs shape nigiri, move by move: kote-gaeshi (the standard), tate-gaeshi (for slippery toppings) and hon-te-gaeshi (the old way) — which hand, which fingers, which way it turns.",
+ "description": "Seven hand moves for one piece of nigiri: where the fish sits, the thumb dimple, the kote-gaeshi flip, then which fingers lock the sides and press the top.",
  "equipment_html": [
   "Very sharp long knife (yanagiba or a sharp chef's knife)",
   "Cutting board",
@@ -27,8 +27,8 @@
   "name": "Sushi"
  },
  "hero": {
-  "alt": "Nigiri: the named shaping techniques",
-  "image": "illustrations/nigiri/hero.webp?v=eafff11be3",
+  "alt": "Nigiri: seven shaping moves",
+  "image": "illustrations/nigiri/hero.webp?v=76f0164fc7",
   "svg_fallback": null
  },
  "ingredients": [
@@ -81,11 +81,11 @@
    "name": "To serve"
   }
  ],
- "intro_html": "Nigiri is shaped with a fixed sequence of hand moves, and the sequences have names: <b>te-gaeshi</b>, “hand turns”. All of them start the same way (steps 1–8), then differ in how the piece is turned over. <b>Kote-gaeshi</b> is the one to learn first. Written for a right-handed cook: the <b>left hand</b> holds the fish and the piece, the <b>right hand</b> brings the rice and does most of the pressing. Start with <a href=\"sushi-rice.html\">sushi rice</a> at about body temperature, and practise a few rice-only pieces.",
+ "intro_html": "One piece, seven moves, always in this order. The rice stays airy in the middle and firmer at the edge: a dimple traps the air, and the later locks only firm the sides. Written for a right-handed cook. The <b>left hand</b> holds the fish and the piece. The <b>right hand</b> brings the rice and does the locks and the press. The flip in this sequence is <b>kote-gaeshi</b> — forward over the left fingertips, so the fish ends on top. Start with <a href=\"sushi-rice.html\">sushi rice</a> at about body temperature, and practise a few rice-only pieces before you use fish.",
  "mise": [
   {
    "as_list": false,
-   "goes_in": "Step 4",
+   "goes_in": "Step 3",
    "image": "illustrations/nigiri/mise1.webp?v=dfd6e00807",
    "items": [
     "body temperature, under a damp towel"
@@ -97,7 +97,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Step 3",
+   "goes_in": "Step 2",
    "image": "illustrations/nigiri/mise2.webp?v=ef873355c8",
    "items": [
     "sliced, 16 pieces"
@@ -109,7 +109,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Step 5",
+   "goes_in": "Step 3",
    "image": "illustrations/nigiri/mise3.webp?v=9c01e1d23e",
    "items": [
     "a small mound"
@@ -134,7 +134,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Step 23",
+   "goes_in": "Step 10",
    "image": "illustrations/nigiri/mise5.webp?v=c2897508ab",
    "items": [
     "soy",
@@ -153,27 +153,27 @@
  },
  "notes": [
   {
-   "html": "<div class=\"table-wrap\"><table class=\"stack\"><thead><tr><th>Technique</th><th>Moves (by source)</th><th>Difficulty</th><th>Used for</th></tr></thead><tbody><tr><td data-label=\"Technique\"><b>小手返し kote-gaeshi</b> — “small-hand turn”</td><td data-label=\"Moves (by source)\">one roll-over + 4 squeezes (Ginza Watari); 2 shaping moves (Tencho); 9 photo stages (Yoshino-zushi)</td><td data-label=\"Difficulty\">easiest</td><td data-label=\"Used for\">the standard today — most chefs, and where beginners start</td></tr><tr><td data-label=\"Technique\"><b>縦返し tate-gaeshi</b> — “vertical turn”</td><td data-label=\"Moves (by source)\">hand-over flip + 4 edges (Ginza Watari); no formal count</td><td data-label=\"Difficulty\">medium</td><td data-label=\"Used for\">toppings that slide off the rice — tamago, octopus, boiled shrimp</td></tr><tr><td data-label=\"Technique\"><b>本手返し hon-te-gaeshi</b> — “main-hand turn”</td><td data-label=\"Moves (by source)\">8 stages (Niizu); shaping “repeated 4 times” (Yoshino-zushi); ~5 after the basic shape (Ginza Watari)</td><td data-label=\"Difficulty\">hardest</td><td data-label=\"Used for\">the oldest (Meiji era); a few traditional shops</td></tr></tbody></table></div><p>The counts differ because sources split the same motion differently — some count prep and the wasabi, some only the presses, some count one round where others count two. Two more names exist, <i>itte-gaeshi</i> and <i>yokote-gaeshi</i>, but no source describes them step by step, so they’re not shown.</p>",
-   "title_html": "The techniques at a glance"
+   "html": "<ul class=\"do\"><li>A short shaping list often says “flip it using one of the four styles” and then continues with a side lock, a top press, a half-turn and a second seal.</li><li>That lock only makes sense once the fish is already up, so the flip has to land the fish on top.</li><li><b>Kote-gaeshi</b> is that flip: forward over the fingertips, around the long side.</li><li>Tate-gaeshi and hon-te-gaeshi are other turns, used for toppings that slide or in a few older shops.</li><li>Itte-gaeshi and yokote-gaeshi are names with no published step-by-step, so drawing them would be a guess.</li><li>This page teaches the seven moves, and only kote-gaeshi.</li></ul>",
+   "title_html": "One sequence, not four flips"
   },
   {
-   "html": "<ul class=\"do\"><li><b>Which fingers pinch the sides</b> in kote-gaeshi: right thumb and middle (Ginza Watari, Tencho, Sushi University), right index and thumb (Niizu), or the left thumb with the right thumb and middle (Yoshino-zushi); Zojirushi shapes the sides with the left hand and only rests the right fingers on top.</li><li><b>Roll direction</b>: most say forward over the fingertips; one says towards you, and some chefs roll the other way or flip with the left hand alone.</li><li><b>Tate-gaeshi</b>: two sources describe standing the topping upright on the rice instead of the vertical flip.</li><li>The page follows the majority each time.</li></ul>",
-   "title_html": "Where the sources disagree"
+   "html": "<ul class=\"do\"><li><b>Side lock:</b> right thumb and middle finger, index lifted (Ginza Watari, Tencho, Sushi University).</li><li>Some shops use the index and thumb instead (Niizu), or the left thumb as well (Yoshino-zushi).</li><li><b>Top press:</b> the right index pushes down a little into the cupped left hand.</li><li>Several sources instead rest the right fingers on top and lift the left hand into them; that seats the fish less clearly, so it is not the move here.</li><li><b>Roll direction:</b> forward, away from you, over the fingertips.</li><li>One source says toward you.</li><li>The axis — around the long side — is the usual reading; no source states it in so many words.</li></ul>",
+   "title_html": "Where this sequence chooses"
   },
   {
-   "html": "<p>The kote-gaeshi roll's axis (step 10), how the piece turns in the tate-gaeshi flip (step 17) and how the wrists roll in hon-te-gaeshi (step 19) aren't described in any source read; the pictures show the most likely reading.</p>",
-   "title_html": "Inferred, not stated"
+   "html": "<ul class=\"do\"><li>Don't flatten and smear the rice with the thumb before the dimple, and don't square the short ends while the fish is still underneath.</li><li>Both pack the center or pre-shape a rectangle the later locks are meant to make.</li><li>The only touch on the rice before the flip is the center dimple.</li></ul>",
+   "title_html": "What not to do before the flip"
   },
   {
    "html": "<ul class=\"do\"><li>About <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 g</span> of rice per piece (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-s=\"0\">15 g</span> for a small one).</li><li>Before the Taisho era pieces were 2–4 times this size.</li></ul>",
    "title_html": "Rice size"
   },
   {
-   "html": "<ul class=\"do\"><li>Few movements, light pressure: the rice should hold on the way to the soy and come apart in the mouth.</li><li>Every extra press packs it denser.</li></ul>",
+   "html": "<ul class=\"do\"><li>Airy center, firm edge.</li><li>The dimple is the air; the two side locks are the edge.</li><li>Few movements, light pressure: the rice should hold on the way to the soy and come apart in the mouth.</li><li>Every extra press packs it denser.</li></ul>",
    "title_html": "Pressure"
   },
   {
-   "html": "<p>Swap every hand: fish and piece in the right hand, rice and pressing with the left; turns go counter-clockwise.</p>",
+   "html": "<ul class=\"do\"><li>Swap every hand: fish and piece in the right hand, rice and pressing with the left.</li><li>The half-turn goes counter-clockwise.</li></ul>",
    "title_html": "Left-handed?"
   },
   {
@@ -184,20 +184,12 @@
  "original": null,
  "parts": [
   {
-   "id": "part-before-you-shape-all-techniques",
-   "title": "Before you shape (all techniques)"
+   "id": "part-before-you-shape",
+   "title": "Before you shape"
   },
   {
-   "id": "part-kote-gaeshi--the-standard",
-   "title": "Kote-gaeshi — the standard"
-  },
-  {
-   "id": "part-tate-gaeshi--for-slippery-toppings",
-   "title": "Tate-gaeshi — for slippery toppings"
-  },
-  {
-   "id": "part-hon-te-gaeshi--the-old-way",
-   "title": "Hon-te-gaeshi — the old way"
+   "id": "part-the-seven-moves",
+   "title": "The seven moves"
   },
   {
    "id": "part-serve",
@@ -232,7 +224,7 @@
    "person": "person"
   }
  },
- "share_image": "share/nigiri.jpg?v=1c4b67b4f2",
+ "share_image": "share/nigiri.jpg?v=2cf72a8ef7",
  "siblings": [
   {
    "slug": "sushi-rice",
@@ -310,8 +302,8 @@
     "svg_fallback": null
    },
    "n": 1,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
+   "part": "Before you shape",
+   "part_id": "part-before-you-shape",
    "time": "5 s",
    "time_html": "<span>5 s</span>",
    "title": "Tezu: wet the hands",
@@ -345,8 +337,8 @@
     "svg_fallback": null
    },
    "n": 2,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
+   "part": "Before you shape",
+   "part_id": "part-before-you-shape",
    "time": "~10 min",
    "time_html": "<span>~10 min</span>",
    "title": "Slice the fish",
@@ -358,77 +350,38 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Lay a slice across the <b>inner side of the left fingers</b>, one end near the finger roots — not in the middle of the palm.</li><li>The neat cut face goes <b>down</b>, against the fingers; the side that will get the wasabi faces up.</li><li>The rice will sit over the second and third joints of the fingers.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Lay the slice across the <b>inner side of the left fingers</b>, one end at the finger roots — not in the palm. The neat cut face goes <b>down</b>, against the fingers.</li><li>With the <b>right index finger</b>, put a pea of wasabi on the middle of the fish.</li><li>Take <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 g</span> of rice in the <b>right fingertips</b> and round it loosely. <b>Do not squeeze.</b> A tight ball has no air left for the dimple, and it cracks when the sides are locked later.</li><li>Set that rice on the fish. Cup the left fingers a little so the fish rises up to meet it.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
-    "alt": "Fish onto the left fingers",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/3.webp?v=1d34df5f32",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 3,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
-   "time": "2 s",
-   "time_html": "<span>2 s</span>",
-   "title": "Fish onto the left fingers",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>With the <b>right fingertips</b>, take about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 g</span> of rice from the tub.</li><li>Round it loosely into an oblong in the cupped right fingers — <b>no squeezing</b>.</li></ul>",
-   "heat": null,
-   "id": "step-4",
-   "images": {
-    "alt": "Take the rice (shari)",
+    "alt": "Form and cusp",
     "diagram": null,
     "how": [
      {
-      "caption": "Take the rice with the fingertips; round it loosely, don't squeeze.",
-      "src": "illustrations/nigiri/4-how1.webp?v=752adf42ca"
+      "caption": "The slice lies across the finger roots, cut face down.",
+      "src": "illustrations/nigiri/3-how1.webp?v=793ea770e8"
+     },
+     {
+      "caption": "A loose 18–20 g oblong in the right fingertips, not squeezed.",
+      "src": "illustrations/nigiri/3-how2.webp?v=854bdb2321"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/nigiri/4.webp?v=82daf362cb",
+    "result": "illustrations/nigiri/3.webp?v=2f39ae70bb",
     "svg_fallback": null
    },
-   "n": 4,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
-   "time": "3 s",
-   "time_html": "<span>3 s</span>",
-   "title": "Take the rice (shari)",
+   "n": 3,
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
+   "time": "5 s",
+   "time_html": "<span>5 s</span>",
+   "title": "Form and cusp",
    "uses_rows": [
     {
      "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"18\" data-b=\"20\" data-s=\"0\">18–20 g</span> each)",
      "name_html": "<a href=\"sushi-rice.html\">Sushi rice</a>"
-    }
-   ]
-  },
-  {
-   "body_html": "<p>Still cradling the rice with the other right fingers, dab a pea of wasabi on the middle of the fish with the <b>right index finger</b>.</p>",
-   "heat": null,
-   "id": "step-5",
-   "images": {
-    "alt": "Wasabi",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/5.webp?v=78086726e2",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 5,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
-   "time": "2 s",
-   "time_html": "<span>2 s</span>",
-   "title": "Wasabi",
-   "uses_rows": [
+    },
     {
      "amount_html": "a pea-sized dab per piece",
      "name_html": "Wasabi"
@@ -436,434 +389,203 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Set the rice on the fish. The left hand cups a little so the fish bends up to the rice.</li><li>The <b>left thumb</b>, raised slightly, flattens and spreads the rice over the fish.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Take the right hand off the rice.</li><li>The <b>left thumb</b> only, straight down into the <b>exact center</b> of the rice — halfway between the two ends, not along a side. A hollow about the size of the thumb tip.</li><li>That hollow is the air pocket. Don't smear the rice toward the ends first: spreading it packs the center this dimple is there to keep open.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "The indentation",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "The left thumb aims at the center, not the side.",
+      "src": "illustrations/nigiri/4-how1.webp?v=5f402d87f0"
+     },
+     {
+      "caption": "The thumb tip is in the hollow; rice is visible all around it.",
+      "src": "illustrations/nigiri/4-how2.webp?v=fa752f5306"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nigiri/4.webp?v=fa752f5306",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
+   "time": "1 s",
+   "time_html": "<span>1 s</span>",
+   "title": "The indentation",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>This sequence uses <b>kote-gaeshi</b>. Curl the <b>left fingertips</b> up around the piece. It is still fish down, rice up.</li><li>Open and straighten those fingers. The piece rolls <b>forward over the fingertips</b>, around its long side, and lands <b>fish up</b> on the left fingers.</li><li>The <b>right index finger and thumb</b> catch it and set it back across the fingers, in the same crease at the finger roots.</li><li>Other turns exist — tate-gaeshi, hon-te-gaeshi — and two further names have no published step-by-step. They are not this sequence, so they are not drawn here.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "The flip",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Curl the left fingertips up. Fish is still underneath.",
+      "src": "illustrations/nigiri/5-how1.webp?v=e76e1e1b73"
+     },
+     {
+      "caption": "It rolls forward over the fingertips, touching them the whole way.",
+      "src": "illustrations/nigiri/5-how2.webp?v=50cdb5095b"
+     },
+     {
+      "caption": "It lands fish up. Index and thumb are on the long sides.",
+      "src": "illustrations/nigiri/5-how3.webp?v=d8ceff9b8f"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/nigiri/5.webp?v=0e4a1d3689",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
+   "time": "1 s",
+   "time_html": "<span>1 s</span>",
+   "title": "The flip",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Fish is up. The <b>right thumb</b> and the <b>right middle finger</b> — the longest finger — squeeze the two long flanks inward until those edges are straight.</li><li>The <b>right index finger stays lifted</b> and does not touch the piece.</li><li>The left hand only cradles. Don't crush the center: the dimple is still the air inside.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
-    "alt": "Rice onto the fish",
+    "alt": "Side lock",
     "diagram": null,
     "how": [
      {
-      "caption": "The left thumb spreads the rice over the fish.",
-      "src": "illustrations/nigiri/6-how1.webp?v=4f7f447fed"
+      "caption": "Index points up. Thumb and the longest finger squeeze the flanks.",
+      "src": "illustrations/nigiri/6-how1.webp?v=7d57dba4b6"
+     },
+     {
+      "caption": "From the short end: two pads on the flanks, index in the air.",
+      "src": "illustrations/nigiri/6-how2.webp?v=3ae8468a71"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/nigiri/6.webp?v=a53ef02a17",
+    "result": "illustrations/nigiri/6.webp?v=447459c53a",
     "svg_fallback": null
    },
    "n": 6,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
-   "time": "2 s",
-   "time_html": "<span>2 s</span>",
-   "title": "Rice onto the fish",
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
+   "time": "1 s",
+   "time_html": "<span>1 s</span>",
+   "title": "Side lock",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>The <b>left thumb</b> pushes a small hollow into the middle of the rice, <b>straight down</b>.</li><li>It keeps air inside so the rice falls apart in the mouth: firm outside, airy inside.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>The <b>right index fingertip</b> taps the center of the fish and presses it lightly down into the curl of the left hand.</li><li>The left fingers stay curled. This is one finger pressing, not two fingers resting on top like a lid.</li><li>Light pressure. You are seating the fish, not packing the rice.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
-    "alt": "The thumb dent",
+    "alt": "Top press",
     "diagram": null,
     "how": [
      {
-      "caption": "The thumb dent: straight down into the middle.",
-      "src": "illustrations/nigiri/7-how1.webp?v=167bdda951"
+      "caption": "Only the index fingertip is on the fish.",
+      "src": "illustrations/nigiri/7-how1.webp?v=4fd62c02e7"
+     },
+     {
+      "caption": "The left fingers stay curled under the press.",
+      "src": "illustrations/nigiri/7-how2.webp?v=0ef5a4253d"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/nigiri/7.webp?v=1f2fe447cd",
+    "result": "illustrations/nigiri/7.webp?v=c8707c4903",
     "svg_fallback": null
    },
    "n": 7,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
    "time": "1 s",
    "time_html": "<span>1 s</span>",
-   "title": "The thumb dent",
+   "title": "Top press",
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>The <b>right index finger and thumb</b> press the two short ends of the rice.</li><li>Then they press the long sides lightly — a rough rectangle.</li><li>Fish still underneath, rice on top, lying across the left fingers.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>The <b>right thumb and index finger</b> pick the piece up by its long sides.</li><li>Spin it <b>180° horizontally, clockwise</b> as you look down, and set it back in the same crease at the base of the left fingers. The two ends have swapped.</li><li>It does not go into the middle of the palm, and it does not balance on the fingertips.</li></ul>",
    "heat": null,
    "id": "step-8",
    "images": {
-    "alt": "Basic shape",
+    "alt": "The 180° rotate",
     "diagram": null,
     "how": [
      {
-      "caption": "Right thumb and index press the two short ends.",
-      "src": "illustrations/nigiri/8-how1.webp?v=dc66f8553b"
+      "caption": "Picked up by the long sides, still across the fingers.",
+      "src": "illustrations/nigiri/8-how1.webp?v=5bb3f77b5a"
+     },
+     {
+      "caption": "Spun halfway: the long axis now points along the fingers.",
+      "src": "illustrations/nigiri/8-how2.webp?v=752f08f807"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/nigiri/8.webp?v=6263f1232f",
+    "result": "illustrations/nigiri/8.webp?v=e1389b1a73",
     "svg_fallback": null
    },
    "n": 8,
-   "part": "Before you shape (all techniques)",
-   "part_id": "part-before-you-shape-all-techniques",
-   "time": "2 s",
-   "time_html": "<span>2 s</span>",
-   "title": "Basic shape",
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
+   "time": "1 s",
+   "time_html": "<span>1 s</span>",
+   "title": "The 180° rotate",
    "uses_rows": []
   },
   {
-   "body_html": "<p>Curl the <b>left fingertips</b> up around the piece (still fish down, rice up); the right hand hovers lightly over the top.</p>",
+   "body_html": "<ul class=\"do\"><li>Side lock again: <b>right thumb and middle finger</b> on the long flanks, index lifted.</li><li>Top press again: <b>right index fingertip</b>, light, into the curl of the left hand.</li><li>That is the seal. Don't add another wrap around the middle — every extra press packs the rice.</li><li>From the side it looks like a boat: fish draped over the top, bottom rounded.</li></ul>",
    "heat": null,
    "id": "step-9",
    "images": {
-    "alt": "Enclose",
+    "alt": "Final seal",
     "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/9.webp?v=efb4d543eb",
+    "how": [
+     {
+      "caption": "The second side lock, same two fingers.",
+      "src": "illustrations/nigiri/9-how1.webp?v=dcc005d7de"
+     },
+     {
+      "caption": "The second top press. Then stop.",
+      "src": "illustrations/nigiri/9-how2.webp?v=85ce7efde1"
+     }
+    ],
+    "illustration": null,
     "photo": null,
-    "result": null,
+    "result": "illustrations/nigiri/9.webp?v=dcc005d7de",
     "svg_fallback": null
    },
    "n": 9,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Enclose",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Open and straighten the <b>left fingers</b>: the piece rolls forward over the fingertips, away from you, and turns over — it ends <b>fish up</b>, back on the left fingers.</li><li>The <b>right index finger and thumb</b> catch it and guide it back down.</li><li>It rolls around its long side (inferred from where the next presses land — no source states the axis).</li></ul>",
-   "heat": null,
-   "id": "step-10",
-   "images": {
-    "alt": "Roll it over",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Left fingers open: the piece rolls forward over the fingertips.",
-      "src": "illustrations/nigiri/10-how1.webp?v=00076e8838"
-     },
-     {
-      "caption": "The right index and thumb catch it — fish up.",
-      "src": "illustrations/nigiri/10-how2.webp?v=33b6153505"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/10.webp?v=dd6ba6da45",
-    "svg_fallback": null
-   },
-   "n": 10,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Roll it over",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<p>The <b>right thumb and middle finger</b> pinch the two long sides inward, wrapping the fish around the rice; the left hand cradles the piece.</p>",
-   "heat": null,
-   "id": "step-11",
-   "images": {
-    "alt": "Squeeze the sides",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Right thumb and middle finger pinch the long sides.",
-      "src": "illustrations/nigiri/11-how1.webp?v=f89770ce81"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/11.webp?v=680fa57636",
-    "svg_fallback": null
-   },
-   "n": 11,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Squeeze the sides",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>The <b>left thumb</b> presses the near short end square.</li><li>At the same time the <b>right index and middle fingers</b> rest on top of the fish like a lid — resting, not pushing down. The pressure comes from the left hand lifting into them.</li></ul>",
-   "heat": null,
-   "id": "step-12",
-   "images": {
-    "alt": "Square the end, cap the top",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Left thumb squares the end; right fingers rest on top like a lid.",
-      "src": "illustrations/nigiri/12-how1.webp?v=ec1793e717"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/12.webp?v=e9c76dac0e",
-    "svg_fallback": null
-   },
-   "n": 12,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Square the end, cap the top",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<p>The <b>right index finger and thumb</b> pick the piece up by its sides and turn it <b>180° clockwise</b> (seen from above) on the left fingers, so the two ends swap.</p>",
-   "heat": null,
-   "id": "step-13",
-   "images": {
-    "alt": "Half-turn",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Turn it 180° clockwise on the left fingers.",
-      "src": "illustrations/nigiri/13-how1.webp?v=f513a887a8"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/13.webp?v=c0c48992f0",
-    "svg_fallback": null
-   },
-   "n": 13,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Half-turn",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<p>Squeeze the long sides again (they loosen when the end is pressed), then press the other short end with the left thumb, the right fingertips only resting on top.</p>",
-   "heat": null,
-   "id": "step-14",
-   "images": {
-    "alt": "Repeat",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/14.webp?v=88e3a91061",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 14,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
+   "part": "The seven moves",
+   "part_id": "part-the-seven-moves",
    "time": "2 s",
    "time_html": "<span>2 s</span>",
-   "title": "Repeat",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>The <b>right thumb and index finger</b> wrap the fish snugly over the rice at its middle.</li><li>Lift the piece by its sides with the right hand onto the plate. From the side it looks like a boat: the fish draped over, the bottom rounded.</li></ul>",
-   "heat": null,
-   "id": "step-15",
-   "images": {
-    "alt": "Finish",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/15.webp?v=5cc581e701",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 15,
-   "part": "Kote-gaeshi — the standard",
-   "part_id": "part-kote-gaeshi--the-standard",
-   "time": "2 s",
-   "time_html": "<span>2 s</span>",
-   "title": "Finish",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>After the basic shape (step 8), open the <b>right thumb and index finger</b> to the width of the piece.</li><li>Take hold of it by the edges where the fish meets the rice. Which pair of edges isn't stated in the sources.</li></ul>",
-   "heat": null,
-   "id": "step-16",
-   "images": {
-    "alt": "Right hand to the edges",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/16.webp?v=80d5ba4695",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 16,
-   "part": "Tate-gaeshi — for slippery toppings",
-   "part_id": "part-tate-gaeshi--for-slippery-toppings",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Right hand to the edges",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>The <b>left hand turns over</b>, back of the hand up, laying the piece into the right hand.</li><li>The piece now stands <b>upright, fish up</b>, held between the right thumb and index finger — the “vertical” in the name. The topping is barely touched, which is the point.</li><li>Exactly how the piece itself rotates isn't described by any source.</li></ul>",
-   "heat": null,
-   "id": "step-17",
-   "images": {
-    "alt": "The hand-over flip",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Tate-gaeshi: the left hand turns over into the right.",
-      "src": "illustrations/nigiri/17-how1.webp?v=6a5f1e68b6"
-     },
-     {
-      "caption": "The piece stands upright, fish up, in the right hand.",
-      "src": "illustrations/nigiri/17-how2.webp?v=8322eb3cc9"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/17.webp?v=6cd3e13e9f",
-    "svg_fallback": null
-   },
-   "n": 17,
-   "part": "Tate-gaeshi — for slippery toppings",
-   "part_id": "part-tate-gaeshi--for-slippery-toppings",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "The hand-over flip",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<p>Set it back on the left fingers as it is, fish up, and squeeze all four edges as in kote-gaeshi (steps 11–14).</p>",
-   "heat": null,
-   "id": "step-18",
-   "images": {
-    "alt": "Back to the left hand, four edges",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/18.webp?v=75c72441b3",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 18,
-   "part": "Tate-gaeshi — for slippery toppings",
-   "part_id": "part-tate-gaeshi--for-slippery-toppings",
-   "time": "3 s",
-   "time_html": "<span>3 s</span>",
-   "title": "Back to the left hand, four edges",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>After the rice is on and flattened (step 6), the <b>right index finger</b> presses one short end.</li><li>The <b>right index and middle fingers</b> then take the piece onto the right hand, that end at the fingertips — the signature double turn.</li><li>How each wrist rolls isn't stated; the picture shows the left palm turning down over the right palm turning up (inferred).</li></ul>",
-   "heat": null,
-   "id": "step-19",
-   "images": {
-    "alt": "Both hands turn over together",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Hon-te-gaeshi: both hands turn over together.",
-      "src": "illustrations/nigiri/19-how1.webp?v=37a3403e76"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/19.webp?v=92723a6479",
-    "svg_fallback": null
-   },
-   "n": 19,
-   "part": "Hon-te-gaeshi — the old way",
-   "part_id": "part-hon-te-gaeshi--the-old-way",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Both hands turn over together",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>The <b>left hand</b> covers the piece from above and takes it back: the hands swap top and bottom.</li><li>The piece lies on the left palm again, <b>rice up</b>, the end you pressed now at the little-finger side.</li></ul>",
-   "heat": null,
-   "id": "step-20",
-   "images": {
-    "alt": "Cover and swap",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "The left hand covers it and takes it back — rice up.",
-      "src": "illustrations/nigiri/20-how1.webp?v=eadc0de811"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/nigiri/20.webp?v=3c13afcdfa",
-    "svg_fallback": null
-   },
-   "n": 20,
-   "part": "Hon-te-gaeshi — the old way",
-   "part_id": "part-hon-te-gaeshi--the-old-way",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Cover and swap",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<p>Roll it forward over the left fingertips so the fish comes up (the kote-gaeshi roll), then press the long sides with the <b>right index finger and thumb</b>.</p>",
-   "heat": null,
-   "id": "step-21",
-   "images": {
-    "alt": "Roll forward, press the sides",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/21.webp?v=201cb1ab8a",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 21,
-   "part": "Hon-te-gaeshi — the old way",
-   "part_id": "part-hon-te-gaeshi--the-old-way",
-   "time": "1 s",
-   "time_html": "<span>1 s</span>",
-   "title": "Roll forward, press the sides",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>The <b>right index finger and thumb</b> turn the piece 180° clockwise; squeeze the sides again.</li><li>A second clockwise half-turn, then close the whole hand lightly around it and a last gentle squeeze of the sides.</li></ul>",
-   "heat": null,
-   "id": "step-22",
-   "images": {
-    "alt": "Half-turns and finish",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/nigiri/22.webp?v=7f8bcdf79c",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 22,
-   "part": "Hon-te-gaeshi — the old way",
-   "part_id": "part-hon-te-gaeshi--the-old-way",
-   "time": "2 s",
-   "time_html": "<span>2 s</span>",
-   "title": "Half-turns and finish",
+   "title": "Final seal",
    "uses_rows": []
   },
   {
    "body_html": "<ul class=\"do\"><li>Fish draped over the top with a little overhang, a rounded boat-shaped bottom, one bite.</li><li>Serve straight away with soy sauce and ginger. Dip the <b>fish</b> side, not the rice.</li></ul>",
    "heat": null,
-   "id": "step-23",
+   "id": "step-10",
    "images": {
     "alt": "Serve",
     "diagram": null,
     "how": [],
-    "illustration": "illustrations/nigiri/23.webp?v=2394e465a9",
+    "illustration": "illustrations/nigiri/10.webp?v=4e2a31a22d",
     "photo": null,
     "result": null,
     "svg_fallback": null
    },
-   "n": 23,
+   "n": 10,
    "part": "Serve",
    "part_id": "part-serve",
    "time": null,
@@ -970,7 +692,7 @@
   ],
   "unit": "minutes"
  },
- "title": "Nigiri: the named shaping techniques",
+ "title": "Nigiri: seven shaping moves",
  "total": "~40 min with the rice made",
  "vinegar_options": null,
  "yields": "16 pieces · 2 servings"

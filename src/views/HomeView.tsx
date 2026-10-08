@@ -1,37 +1,7 @@
 import Link from "next/link";
 import { type Lang, localPath, strings } from "@/lib/i18n";
-import { type RecipeSummary, getFoodIndex, getSvgDefs } from "@/lib/content";
 import { SiteFooter, SiteHeader } from "@/components/site/SiteHeader";
-import { Card } from "@/components/food/FoodIndexView";
-import { SvgDefs } from "@/components/food/parts";
-
-/** "2026-10-07 12:00" → "Oct 7" / "7 окт." (UTC, so the build machine's zone doesn't shift the day). */
-const addedLabel = (lang: Lang, added: string) =>
-  new Intl.DateTimeFormat(lang, { month: "short", day: "numeric", timeZone: "UTC" }).format(
-    new Date(`${added.slice(0, 10)}T00:00:00Z`),
-  );
-
-function RecentlyAdded({ lang }: { lang: Lang }) {
-  const t = strings(lang);
-  const index = getFoodIndex(lang);
-  const bySlug = new Map(index.recipes.map((r) => [r.slug, r]));
-  const recent = index.recent.map((s) => bySlug.get(s)).filter((r): r is RecipeSummary => !!r);
-  if (!recent.length) return null;
-  return (
-    <section className="recent" aria-labelledby="recent-title">
-      {recent.some((r) => !r.hero.image && r.hero.svg_fallback) && <SvgDefs svg={getSvgDefs()} />}
-      <div className="recent-head">
-        <h2 id="recent-title">{t.recentTitle}</h2>
-        <Link href={localPath(lang, "/food")}>{t.recentAll}</Link>
-      </div>
-      <div className="cards">
-        {recent.map((r) => (
-          <Card key={r.slug} lang={lang} r={r} badge={r.added ? addedLabel(lang, r.added) : undefined} />
-        ))}
-      </div>
-    </section>
-  );
-}
+import { RecentlyAdded } from "@/components/food/RecentlyAdded";
 
 export function HomeView({ lang }: { lang: Lang }) {
   const t = strings(lang);
@@ -63,7 +33,7 @@ export function HomeView({ lang }: { lang: Lang }) {
             </div>
           </Link>
         </div>
-        <RecentlyAdded lang={lang} />
+        <RecentlyAdded lang={lang} linked />
         <section className="about" id="about">
           <h2>{t.aboutTitle}</h2>
           <p>{t.aboutText}</p>

@@ -1,0 +1,560 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Светлое ру, тёплое молоко, затем оранжевый чеддер и паприка без огня — жёлто-оранжевый, не бледный крем.",
+ "chips": [
+  {
+   "html": "<span>2 щедрые порции</span>",
+   "kind": "",
+   "text": "2 щедрые порции"
+  },
+  {
+   "html": "~25 мин",
+   "kind": "time",
+   "text": "~25 мин"
+  }
+ ],
+ "description": "Светлое ру, тёплое молоко, затем оранжевый чеддер и паприка без огня — жёлто-оранжевый, не бледный крем.",
+ "equipment_html": [
+  "Сотейник",
+  "Венчик",
+  "Кастрюля для пасты",
+  "Тёрка",
+  "Дуршлаг"
+ ],
+ "group": {
+  "id": "cheese",
+  "name": "Сыр"
+ },
+ "hero": {
+  "alt": "Макароны с сыром",
+  "image": "illustrations/mac-and-cheese/hero.webp?v=a376915deb",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Макароны-рожки"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Соль для воды"
+    }
+   ],
+   "name": "Паста"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
+     "name_html": "Пшеничная мука"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\">400 мл</span>, тёплое",
+     "name_html": "Цельное молоко"
+    }
+   ],
+   "name": "Ру и молоко"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 г</span>, крупно натёртый",
+     "name_html": "Оранжевый чеддер"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Сладкая паприка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Дижонская горчица"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Чёрный перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Соль в конце"
+    }
+   ],
+   "name": "Цвет"
+  }
+ ],
+ "intro_html": "Белое ру и тёплое молоко дают тело соуса. Цвет приходит, когда огонь уже выключен: оранжевый чеддер, сладкая паприка и немного дижона. Останавливайте ру, пока оно светло-золотистое. Подрумяненное ру, белый чеддер или много лишнего молока делают соус бежевым или кремовым, а не жёлто-оранжевым. Тот же чеддер, что в <a href=\"grilled-cheese.html\">грильд-чизе</a>.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/mac-and-cheese/mise1.webp?v=857aa874c3",
+   "items": [
+    "крупно натёртый"
+   ],
+   "items_html": "крупно натёртый",
+   "name": "Чеддер",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/mac-and-cheese/mise2.webp?v=a895fecf5b",
+   "items": [
+    "подогретое"
+   ],
+   "items_html": "подогретое",
+   "name": "Молоко",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/mac-and-cheese/mise3.webp?v=f723eb759b",
+   "items": [
+    "для ру"
+   ],
+   "items_html": "для ру",
+   "name": "Масло и мука",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/mac-and-cheese/mise4.webp?v=3628110f48",
+   "items": [
+    "цвет и яркость"
+   ],
+   "items_html": "цвет и яркость",
+   "name": "Паприка и дижон",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/mac-and-cheese/mise5.webp?v=9b37648c2e",
+   "items": [
+    "слитые, чуть недоваренные"
+   ],
+   "items_html": "слитые, чуть недоваренные",
+   "name": "Паста",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Сыр:",
+ "next": {
+  "slug": "baka-with-eggs",
+  "title": "Бака с яйцами"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Белый чеддер, тёмное ру или если разбавить соус большим количеством молока или воды от пасты.</li><li>Цвет даёт оранжевый чеддер; паприка сдвигает его к оранжевому без тёмного ру.</li></ul>",
+   "title_html": "Почему бледнеет"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Сладкая паприка, вмешанная без огня.</li><li>Копчёная темнее и её легко переложить; только несколько крупинок сверху, не вместо сладкой.</li></ul>",
+   "title_html": "Паприка"
+  },
+  {
+   "html": "<p>Половина чайной ложки на это количество соуса — для яркости, не для вкуса горчицы.</p>",
+   "title_html": "Дижон"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Чеддер, который расслоился на кипении, становится крупитчатым, а выступившее масло выглядит тусклым.</li><li>Если схватился, глоток тёплого молока без огня возвращает его.</li></ul>",
+   "title_html": "Сыр без огня"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "grilled-cheese",
+  "title": "Грильд-чиз"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/mac-and-cheese.jpg?v=4b4ffedd97",
+ "siblings": [
+  {
+   "slug": "grilled-cheese",
+   "title": "Грильд-чиз"
+  }
+ ],
+ "slug": "mac-and-cheese",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Крупно натрите оранжевый чеддер.</li><li>Подогрейте молоко в другой кастрюле или в микроволновке, пока оно не станет горячим на ощупь, но не кипящим.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Натереть сыр и подогреть молоко",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Крупно натрите оранжевый чеддер.",
+      "src": "illustrations/mac-and-cheese/1-how1.webp?v=7d640d4a53"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mac-and-cheese/1.webp?v=0a9b81f62f",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "4 мин",
+   "time_html": "<span>4 мин</span>",
+   "title": "Натереть сыр и подогреть молоко",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 г</span>",
+     "name_html": "Оранжевый чеддер"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\">400 мл</span>",
+     "name_html": "Цельное молоко"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Доведите воду до сильного кипения, посолите и варите рожки, пока они не станут <b>чуть недоваренными</b> — дойдут в соусе.</li><li>Слейте и оставьте глоток воды от пасты.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Сварить рожки",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Посолите кипящую воду и варите рожки, пока они не станут чуть недоваренными.",
+      "src": "illustrations/mac-and-cheese/2-how1.webp?v=822f08581b"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mac-and-cheese/2.webp?v=8e56f831ba",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "по упаковке",
+   "time_html": "<span>по упаковке</span>",
+   "title": "Сварить рожки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Макароны-рожки"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Соль для воды"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Растопите масло в сотейнике на <b>среднем</b> огне.</li><li>Вмешайте муку венчиком и готовьте <b>1–2 минуты</b>, пока не запахнет песочным печеньем и масса не останется светло-золотистой.</li><li>Если начнёт темнеть — снимайте. Тёмное ру даёт бежевый соус.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Светлое ру",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вмешайте муку в масло и готовьте 1–2 минуты, светло-золотистым, без подрумянивания.",
+      "src": "illustrations/mac-and-cheese/3-how1.webp?v=7fcf5a158e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mac-and-cheese/3.webp?v=c5ea3a359a",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Светлое ру",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
+     "name_html": "Пшеничная мука"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Вмешивайте тёплое молоко понемногу, каждый раз разглаживая, прежде чем лить дальше.</li><li>Поварите 3–4 минуты, помешивая венчиком, пока соус не будет покрывать обратную сторону ложки.</li><li>Пока он ещё бледный. Оранжевый цвет — на следующем шаге.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Влить молоко",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вмешивайте тёплое молоко понемногу.",
+      "src": "illustrations/mac-and-cheese/4-how1.webp?v=9f64ec0ed8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mac-and-cheese/4.webp?v=f31b368c50",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "4 мин",
+   "time_html": "<span>4 мин</span>",
+   "title": "Влить молоко",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите сотейник <b>с огня</b>.</li><li>Вмешайте чеддер горстями, пока он не расплавится в глянец.</li><li>Вмешайте сладкую паприку, дижон и перец, затем соль в конце.</li><li>Соус должен быть <b>жёлто-оранжевым</b>. Если он всё ещё кремового цвета, добавьте ещё <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ ч. л.</span> паприки. Больше не кипятите: кипячёный чеддер становится крупитчатым и маслянистым.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "label_html": "огонь выключен",
+    "off": true
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Чеддер, паприка, дижон",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Без огня: чеддер горстями, затем паприка и дижон, пока соус не станет жёлто-оранжевым.",
+      "src": "illustrations/mac-and-cheese/5-how1.webp?v=d3947bd9df"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mac-and-cheese/5.webp?v=0aa0d580c1",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Чеддер, паприка, дижон",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"220\">220 г</span>",
+     "name_html": "Оранжевый чеддер"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Сладкая паприка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Дижонская горчица"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Чёрный перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Соль в конце"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите слитые рожки в соус и перемешайте, чтобы каждая покрылась им.</li><li>Если густеет, разбавьте <b>глотком</b> воды от пасты, не половником: много воды смывает цвет.</li><li>Подавайте сразу. Это соус со сковороды, не запеканка.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Вмешать пасту",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вмешайте слитые рожки в соус.",
+      "src": "illustrations/mac-and-cheese/6-how1.webp?v=c9b260165b"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mac-and-cheese/6.webp?v=1c962b480c",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "1 мин",
+   "time_html": "<span>1 мин</span>",
+   "title": "Вмешать пасту",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Макароны-рожки"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 25,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   }
+  ],
+  "note_html": "Начинайте ру, когда пасте останется несколько минут, чтобы соус и рожки были готовы вместе.",
+  "tasks": [
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "wait",
+    "label": "Подогреть молоко",
+    "label_html": "Подогреть молоко",
+    "start": 0
+   },
+   {
+    "dur": 4,
+    "dur_label": "4 мин",
+    "kind": "board",
+    "label": "Натереть чеддер",
+    "label_html": "Натереть чеддер",
+    "start": 0
+   },
+   {
+    "dur": 6,
+    "dur_label": "6 мин",
+    "kind": "wait",
+    "label": "Вскипятить воду",
+    "label_html": "Вскипятить воду",
+    "start": 2
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 мин",
+    "kind": "wait",
+    "label": "Сварить рожки",
+    "label_html": "Сварить рожки",
+    "start": 8
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "pan",
+    "label": "Светлое ру",
+    "label_html": "Светлое ру",
+    "start": 12
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "pan",
+    "label": "Вмешать молоко",
+    "label_html": "Вмешать молоко",
+    "start": 15
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Сыр, паприка, дижон — без огня",
+    "label_html": "Сыр, паприка, дижон — без огня",
+    "start": 20
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "pan",
+    "label": "Вмешать пасту",
+    "label_html": "Вмешать пасту",
+    "start": 22
+   }
+  ],
+  "tick_step": 5,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 5,
+    "label": "5"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 15,
+    "label": "15"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 25,
+    "label": "25"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Макароны с сыром",
+ "total": "~25 мин",
+ "vinegar_options": null,
+ "yields": "2 щедрые порции"
+}

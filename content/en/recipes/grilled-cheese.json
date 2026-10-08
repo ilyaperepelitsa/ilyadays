@@ -1,0 +1,377 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Orange cheddar, butter on the outside, and a low pan so the middle melts before the bread burns.",
+ "chips": [
+  {
+   "html": "<span>1 sandwich</span>",
+   "kind": "",
+   "text": "1 sandwich"
+  },
+  {
+   "html": "~12 min",
+   "kind": "time",
+   "text": "~12 min"
+  }
+ ],
+ "description": "Orange cheddar, butter on the outside, and a low pan so the middle melts before the bread burns.",
+ "equipment_html": [
+  "Frying pan with a lid",
+  "Spatula",
+  "Butter knife"
+ ],
+ "group": {
+  "id": "cheese",
+  "name": "Cheese"
+ },
+ "hero": {
+  "alt": "Grilled cheese",
+  "image": "illustrations/grilled-cheese/hero.webp?v=c5c53f5860",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"slice|slices\" data-n=\"1\">2 slices</span>, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> thick",
+     "name_html": "Sandwich bread"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 g</span>, sliced or coarsely grated",
+     "name_html": "Orange cheddar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>",
+     "name_html": "Butter, soft"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt"
+    }
+   ],
+   "name": "Sandwich"
+  }
+ ],
+ "intro_html": "Sandwich bread, orange cheddar and soft butter. The heat stays at medium-low with a lid on the first side, so the cheese slumps while the crust is still only golden. The same orange cheddar is what makes <a href=\"mac-and-cheese.html\">the mac and cheese</a> yellow-orange.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/grilled-cheese/mise1.webp?v=7ad5d8f622",
+   "items": [
+    "buttered on one side"
+   ],
+   "items_html": "buttered on one side",
+   "name": "Bread",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/grilled-cheese/mise2.webp?v=5e439d91e4",
+   "items": [
+    "sliced or coarsely grated"
+   ],
+   "items_html": "sliced or coarsely grated",
+   "name": "Cheddar",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/grilled-cheese/mise3.webp?v=c1c95a2df9",
+   "items": [
+    "soft"
+   ],
+   "items_html": "soft",
+   "name": "Butter",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More cheese:",
+ "next": {
+  "slug": "mac-and-cheese",
+  "title": "Mac and cheese"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Medium-high browns the bread before the cheddar melts.</li><li>If the crust is racing ahead, drop the heat and put the lid back on.</li></ul>",
+   "title_html": "Heat"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Orange cheddar is the colour.</li><li>White cheddar grills the same and comes out pale.</li></ul>",
+   "title_html": "Cheddar"
+  },
+  {
+   "html": "<ul class=\"do\"><li>A plain sandwich loaf, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> thick.</li><li>Very thin slices dry out; a rustic open crumb leaks cheese.</li></ul>",
+   "title_html": "Bread"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "chicken-malai-tikka",
+  "title": "Chicken malai tikka masala (creamy yellow gravy)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/grilled-cheese.jpg?v=313b09114c",
+ "siblings": [
+  {
+   "slug": "mac-and-cheese",
+   "title": "Mac and cheese"
+  }
+ ],
+ "slug": "grilled-cheese",
+ "sources": [],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Spread the soft butter from edge to edge on <b>one side</b> of each slice.</li><li>That side faces the pan.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Butter the outsides",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Spread soft butter from edge to edge on one side of each slice.",
+      "src": "illustrations/grilled-cheese/1-how1.webp?v=208ccfdbbf"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/1.webp?v=2b6fe9be8e",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Butter the outsides",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"slice|slices\" data-n=\"1\">2 slices</span>",
+     "name_html": "Sandwich bread"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>",
+     "name_html": "Butter, soft"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lay the cheddar in one even layer on the dry side of a slice, and add the pinch of salt.</li><li>Close the sandwich. Butter is on the <b>outside</b>.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Build it",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cheddar in one even layer on the dry side; close it so the butter is outside.",
+      "src": "illustrations/grilled-cheese/2-how1.webp?v=0666197c15"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/2.webp?v=99bd045bec",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Build it",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"70\">70 g</span>",
+     "name_html": "Orange cheddar"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Set a frying pan over <b>medium-low</b> heat and lay the sandwich in.</li><li>Cover it. Cook about 3–4 minutes, until the underside is deep golden and the cheese at the edge has started to slump.</li><li>Take the lid off, flip once, and cook the second side 2–3 minutes, uncovered, until it matches.</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Grill, then flip",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cover the pan. Cook until the underside is deep golden and the cheese at the edge slumps.",
+      "src": "illustrations/grilled-cheese/3-how1.webp?v=d8cd149c5d"
+     },
+     {
+      "caption": "Lid off, flip once.",
+      "src": "illustrations/grilled-cheese/3-how2.webp?v=9e54924ea3"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/3.webp?v=393671b6c2",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "6–7 min",
+   "time_html": "<span>6–7 min</span>",
+   "title": "Grill, then flip",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Move it to a board and wait <b>1 minute</b>, so the cheese sets just enough to cut.</li><li>Halve it. The middle should be molten and yellow-orange, not a pale slice still holding its shape.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Rest, then cut",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Wait a minute, then cut it in half.",
+      "src": "illustrations/grilled-cheese/4-how1.webp?v=37269c23a9"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/grilled-cheese/4.webp?v=d9c2ecc87f",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "1 min",
+   "time_html": "<span>1 min</span>",
+   "title": "Rest, then cut",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 12,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "board",
+    "label": "Butter the outsides",
+    "label_html": "Butter the outsides",
+    "start": 0
+   },
+   {
+    "dur": 2,
+    "dur_label": "2 min",
+    "kind": "board",
+    "label": "Slice or grate the cheddar",
+    "label_html": "Slice or grate the cheddar",
+    "start": 0
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "board",
+    "label": "Close the sandwich",
+    "label_html": "Close the sandwich",
+    "start": 2
+   },
+   {
+    "dur": 7,
+    "dur_label": "7 min",
+    "kind": "pan",
+    "label": "Grill, lid on, then flip",
+    "label_html": "Grill, lid on, then flip",
+    "start": 3
+   },
+   {
+    "dur": 1,
+    "dur_label": "1 min",
+    "kind": "board",
+    "label": "Rest and cut",
+    "label_html": "Rest and cut",
+    "start": 10
+   }
+  ],
+  "tick_step": 2,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 2,
+    "label": "2"
+   },
+   {
+    "at": 4,
+    "label": "4"
+   },
+   {
+    "at": 6,
+    "label": "6"
+   },
+   {
+    "at": 8,
+    "label": "8"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 12,
+    "label": "12"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Grilled cheese",
+ "total": "~12 min",
+ "vinegar_options": null,
+ "yields": "1 sandwich"
+}

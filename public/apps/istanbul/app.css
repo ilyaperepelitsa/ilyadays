@@ -827,12 +827,16 @@
 .cdays-root .pl-thumb img{ display: block; width: 100%; height: 100%; object-fit: cover; }
 .cdays-root .photo-note{ margin-top: 10px; }
 .cdays-root .visit{ list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 5px; }
-.cdays-root .visit li{ display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; margin: 0; font-size: 0.84rem; line-height: 1.35; }
+.cdays-root .visit li{ display: block; margin: 0; font-size: 0.84rem; line-height: 1.45; }
 .cdays-root .visit b{
-  flex: 0 0 auto; font-weight: 700; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+  display: inline; margin-right: 6px; vertical-align: baseline; white-space: nowrap;
+  font-weight: 700; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--vk, var(--ink-2)); background: color-mix(in srgb, var(--vk, var(--ink-2)) 16%, transparent);
   border-radius: 999px; padding: 1px 7px;
 }
+.cdays-root .visit a{ color: inherit; text-underline-offset: 2px; }
+.cdays-root .visit-shot{ display: block; width: 96px; margin-top: 4px; line-height: 0; text-decoration: none; }
+.cdays-root .visit-shot img{ display: block; width: 96px; height: 72px; object-fit: cover; border-radius: 6px; background: var(--surface-2); }
 .cdays-root .visit-access{ --vk: var(--c-mosque); }
 .cdays-root .visit-hours{ --vk: var(--c-modern); }
 .cdays-root .visit-days{ --vk: var(--c-gems); }
@@ -841,6 +845,7 @@
 .cdays-root .visit-literature{ --vk: var(--gold); }
 .cdays-root .visit-film{ --vk: var(--c-byz); }
 .cdays-root .visit-keeps{ --vk: var(--c-church); }
+.cdays-root .visit-wiki{ --vk: var(--c-modern); }
 .cdays-root .ro-note{ display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--ink-2); }
 .cdays-root .ro-note[hidden]{ display: none !important; }
 .cdays-root .sync[data-state="saved"]::before{ content: "● "; color: var(--c-gems); }
