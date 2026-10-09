@@ -2,7 +2,10 @@
 // scripts/sync-content.sh). Server-only: every page that uses it is statically generated.
 import fs from "node:fs";
 import path from "node:path";
-import { type Lang, prefix } from "./i18n";
+import { type Lang } from "./i18n";
+import { foodHref, media } from "./paths";
+
+export { foodHref, media };
 
 const ROOT = path.join(process.cwd(), "content");
 
@@ -155,12 +158,6 @@ export type SousVide = {
 };
 
 /** A picture path from the export (relative to the images root) → its public URL. */
-export const media = (p: string) => `/media/${p}`;
-
-/** Recipe-site URL of a slug in a language ("index" → the food index). */
-export const foodHref = (lang: Lang, slug = "index") =>
-  `${prefix(lang)}/food${slug === "index" ? "" : `/${slug}`}`;
-
 // Links inside the exported HTML still point at the old static files ("oyakodon.html#step-3", "sous-vide.html",
 // "index.html#korean"); point them at this app's routes in the page's language.
 const LOCAL_LINK = /href="([a-z0-9-]+)\.html(#[^"]*)?"/g;

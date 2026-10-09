@@ -12,7 +12,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | English | Russian | What |
 | --- | --- | --- |
 | `/` | `/ru` | Home: hello, Food / Travel, about me |
-| `/food` | `/ru/food` | Recipe index |
+| `/food` | `/ru/food` | Recipe index. The search box matches titles and ingredient names (`bok choi` finds bok choy) |
 | `/food/<slug>` | `/ru/food/<slug>` | A recipe |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Sous vide tables + PDF |
 | `/travel` | `/ru/travel` | Trips |
@@ -21,6 +21,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
 
 - Every content page is static (SSG). Each page has a canonical URL, EN/RU alternates, and a 1200×630 link-preview card (Open Graph + Twitter).
+- **Save on this phone**, in the footer, stores the pages and pictures in this browser (about the size of `public/media`). After that the recipes open with no connection. On an iPhone, add the site to the Home Screen, open that icon, and tap Save there — that copy is separate from Safari. Making a new trip still needs the network. The list is `public/offline-catalog.json`, written by `scripts/write-offline-catalog.mjs` at the start of `npm run build`.
 - The old static-site URLs answer with a 301 to the new routes (see `next.config.ts`):
   - `/food/<slug>.html`, `/food/index.html`
   - `/food/share/*.jpg`, `/food/illustrations/*`

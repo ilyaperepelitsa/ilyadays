@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { OfflineSave } from "./OfflineSave";
 import { type Lang, localPath, strings } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
 import { AuthButton } from "./AuthButton";
@@ -59,5 +60,10 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
 }
 
 export function SiteFooter({ children }: { children?: React.ReactNode }) {
-  return <footer className="site-footer">{children ?? "ilyadays.com"}</footer>;
+  return (
+    <footer className="site-footer">
+      <OfflineSave />
+      {children ?? "ilyadays.com"}
+    </footer>
+  );
 }

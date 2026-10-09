@@ -47,6 +47,42 @@
 .projects { padding-left: 1.1em; margin: 0; }
 .projects li { margin: 6px 0; }
 .projects a { font-weight: 600; }
+.offline-save { display: grid; justify-items: center; gap: 6px; max-width: 460px; margin: 0 auto 22px; }
+.offline-save button {
+  font: 600 .9rem var(--sans); color: var(--accent); background: transparent;
+  border: 1.5px solid var(--accent); border-radius: 999px; padding: 8px 16px; cursor: pointer;
+}
+.offline-save button:disabled { opacity: .65; cursor: progress; }
+.offline-save p { margin: 0; line-height: 1.4; }
+.offline-bar { display: block; width: min(280px, 80%); height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.offline-bar > span { display: block; height: 100%; background: var(--accent); }
+.recipe-search { display: grid; gap: 6px; max-width: 520px; margin: 0 0 28px; font-weight: 600; }
+.recipe-search span { font: 600 .8rem var(--sans); color: var(--muted); }
+.recipe-search input {
+  width: 100%; box-sizing: border-box; font: 400 1rem var(--sans); color: inherit;
+  background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px;
+}
+.recipe-search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.recipe-search input::placeholder { color: var(--muted); opacity: .72; }
+.ingredient-filters { margin: -12px 0 26px; }
+.ingredient-filters > span { display: block; margin: 0 0 8px; font: 600 .8rem var(--sans); color: var(--muted); }
+.ingredient-bubbles {
+  display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 10px;
+  scrollbar-width: thin;
+}
+.ingredient-bubbles button {
+  flex: none; display: inline-flex; align-items: center; gap: 6px;
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 6px 8px 6px 12px; cursor: pointer;
+  font: 600 .85rem var(--sans);
+}
+.ingredient-bubbles button:hover { border-color: var(--accent); }
+.ingredient-bubbles button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.ingredient-bubbles .count {
+  min-width: 1.5em; padding: 1px 6px; border-radius: 999px; text-align: center;
+  background: var(--surface-2); color: var(--muted); font-size: .75rem;
+}
+.ingredient-bubbles button[aria-pressed="true"] .count { background: #fff; color: var(--accent); }
 
 /* ---------- travel / Istanbul */
 .trip-page { max-width: none; padding: 0; }

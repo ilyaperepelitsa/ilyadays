@@ -1,7 +1,7 @@
 // Recipe-site building blocks. The markup mirrors recipes/build.py one to one, so food.css (a copy of
 // recipes/static/style.css) renders these pages exactly like the original static site.
 import type { Hero } from "@/lib/content";
-import { media } from "@/lib/content";
+import { media } from "@/lib/paths";
 
 type Tag = "span" | "div" | "p" | "b" | "h3" | "small" | "em" | "li";
 

@@ -1,5 +1,5 @@
 import type { RecipeSummary } from "@/lib/content";
-import { foodHref } from "@/lib/content";
+import { foodHref } from "@/lib/paths";
 import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt } from "./parts";
 

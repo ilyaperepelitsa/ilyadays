@@ -41,6 +41,9 @@ const nextConfig: NextConfig = {
     const media = [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }];
     return [
       { source: "/(.*)", headers: security },
+      { source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-cache" }] },
+      { source: "/offline-catalog.json", headers: [{ key: "Cache-Control", value: "no-cache" }] },
+      { source: "/offline-assets.js", headers: [{ key: "Cache-Control", value: "no-cache" }] },
       { source: "/media/:path*", headers: media },
       { source: "/covers/:path*", headers: media },
       { source: "/share/:path*", headers: media },
