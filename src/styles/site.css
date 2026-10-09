@@ -56,7 +56,23 @@
 .offline-save p { margin: 0; line-height: 1.4; }
 .offline-bar { display: block; width: min(280px, 80%); height: 4px; border-radius: 999px; background: var(--line); overflow: hidden; }
 .offline-bar > span { display: block; height: 100%; background: var(--accent); }
-.recipe-search { display: grid; gap: 6px; max-width: 520px; margin: 0 0 28px; font-weight: 600; }
+.search-tools { display: grid; gap: 14px; margin: 0 0 28px; }
+.search-disclosure { display: flex; flex-wrap: wrap; gap: 8px; }
+.search-disclosure button {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1.5px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 8px 14px; cursor: pointer; font: 600 .9rem var(--sans);
+}
+.search-disclosure button:hover { border-color: var(--accent); }
+.search-disclosure button[aria-expanded="true"],
+.search-disclosure button[data-active] { border-color: var(--accent); color: var(--accent); }
+.search-disclosure button[aria-expanded="true"] { background: var(--accent); color: #fff; }
+.search-disclosure .count {
+  min-width: 1.5em; padding: 1px 6px; border-radius: 999px; text-align: center;
+  background: var(--accent-soft); color: var(--accent); font-size: .75rem;
+}
+.search-disclosure button[aria-expanded="true"] .count { background: #fff; color: var(--accent); }
+.recipe-search { display: grid; gap: 6px; max-width: 520px; margin: 0; font-weight: 600; }
 .recipe-search span { font: 600 .8rem var(--sans); color: var(--muted); }
 .recipe-search input {
   width: 100%; box-sizing: border-box; font: 400 1rem var(--sans); color: inherit;
@@ -64,7 +80,7 @@
 }
 .recipe-search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .recipe-search input::placeholder { color: var(--muted); opacity: .72; }
-.ingredient-filters { margin: -12px 0 26px; display: grid; gap: 14px; }
+.ingredient-filters { margin: 0; display: grid; gap: 14px; }
 .ingredient-section { display: grid; gap: 8px; }
 .ingredient-section h3 {
   margin: 0; font: 600 .75rem var(--sans); color: var(--muted);
