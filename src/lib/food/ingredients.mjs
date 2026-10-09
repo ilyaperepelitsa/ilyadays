@@ -2,6 +2,18 @@
 
 import { matchesQuery, normalize, stripHtml } from "./search.mjs";
 
+/** First matching rule wins. Sauces come before rice so rice vinegar stays a sauce. */
+const SECTION_RULES = [
+  ["sauces", ["soy", "соев", "oyster", "устрич", "fish-sauce", "рыбн", "mayo", "маионез", "sriracha", "шрирача", "vinegar", "уксус", "mirin", "мирин", "sake", "саке", "dashi", "даси", "kombu", "комбу", "kelp", "ламинар", "anchovy", "анчоус", "shrimp-sauce", "креветочн", "wasabi", "васаби", "katsuobushi", "кацуобус"]],
+  ["proteins", ["egg", "яиц", "beef", "говядин", "chicken", "кури", "pork", "свин", "salmon", "лосос", "ikura", "икур", "cheddar", "чеддер", "cheese", "сыр", "shrimp", "кревет"]],
+  ["greens", ["green-onion", "spring-onion", "зелен", "cilantro", "кинз", "shiso", "шисо", "nori", "нори", "cabbage", "капуст"]],
+  ["vegetables", ["carrot", "морков", "potato", "картоф", "tomato", "помидор"]],
+  ["aromatics", ["garlic", "чеснок", "ginger", "имбир", "onion", "лук"]],
+  ["rice", ["rice", "рис", "soba", "соба", "noodle", "лапш"]],
+];
+
+export const INGREDIENT_SECTIONS = ["proteins", "greens", "vegetables", "aromatics", "sauces", "rice", "pantry"];
+
 const PANTRY = new Set([
   "water",
   "cold-water",
@@ -134,4 +146,31 @@ function countWith(recipes, query, chosen, id) {
  */
 export function matchesIngredients(recipe, selected) {
   return selected.every((id) => hasIngredient(recipe, id));
+}
+
+/**
+ * Which row a bubble belongs on. Anything unnamed lands in the pantry.
+ *
+ * @param {string} id
+ * @returns {"proteins" | "greens" | "vegetables" | "aromatics" | "sauces" | "rice" | "pantry"}
+ */
+export function ingredientSection(id) {
+  for (const [section, keys] of SECTION_RULES) {
+    if (keys.some((key) => id.includes(key))) return section;
+  }
+  return "pantry";
+}
+
+/**
+ * Facets split into sections, empty sections omitted. Order inside a section stays as given.
+ *
+ * @template {{ id: string }} T
+ * @param {T[]} facets
+ * @returns {{ section: string, facets: T[] }[]}
+ */
+export function groupFacets(facets) {
+  return INGREDIENT_SECTIONS.map((section) => ({
+    section,
+    facets: facets.filter((facet) => ingredientSection(facet.id) === section),
+  })).filter((group) => group.facets.length);
 }

@@ -80,7 +80,7 @@ export function RecipeSearch({
           enterKeyHint="search"
         />
       </label>
-      <IngredientBubbles label={t.ingredientFilters} facets={facets} onToggle={onToggle} />
+      <IngredientBubbles labels={t} facets={facets} onToggle={onToggle} />
       <FilteredIndex
         lang={lang}
         recipes={filtering ? visible : recipes}

@@ -12,7 +12,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | English | Russian | What |
 | --- | --- | --- |
 | `/` | `/ru` | Home: hello, Food / Travel, about me |
-| `/food` | `/ru/food` | Recipe index. The search box matches titles and ingredient names (`bok choi` finds bok choy) |
+| `/food` | `/ru/food` | Recipe index. The search box matches titles and ingredient names (`bok choi` finds bok choy). Ingredient bubbles wrap in sections and filter the list |
 | `/food/<slug>` | `/ru/food/<slug>` | A recipe |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Sous vide tables + PDF |
 | `/travel` | `/ru/travel` | Trips |

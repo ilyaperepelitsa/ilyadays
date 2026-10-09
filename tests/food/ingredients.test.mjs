@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { describe, it } from "node:test";
-import { ingredientFacets, ingredientName, matchesIngredients, recipeIngredients } from "../../src/lib/food/ingredients.mjs";
+import { groupFacets, ingredientFacets, ingredientName, ingredientSection, matchesIngredients, recipeIngredients } from "../../src/lib/food/ingredients.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../..");
 
@@ -66,6 +66,22 @@ describe("ingredient bubbles", () => {
     assert.equal(ikura.count, 1);
     assert.equal(matchesIngredients(recipes[0], ["ikura", "soy-sauce"]), true);
     assert.equal(matchesIngredients(recipes[1], ["ikura"]), false);
+  });
+
+  it("puts proteins, greens and aromatics in their own sections", () => {
+    assert.equal(ingredientSection("chicken-thigh"), "proteins");
+    assert.equal(ingredientSection("яица"), "proteins");
+    assert.equal(ingredientSection("японскии-маионез"), "sauces");
+    assert.equal(ingredientSection("green-onions"), "greens");
+    assert.equal(ingredientSection("зеленыи-лук"), "greens");
+    assert.equal(ingredientSection("garlic"), "aromatics");
+    assert.equal(ingredientSection("имбирь"), "aromatics");
+    assert.equal(ingredientSection("soy-sauce"), "sauces");
+    assert.equal(ingredientSection("рисовыи-уксус"), "sauces");
+    assert.equal(ingredientSection("cooked-short-grain-rice"), "rice");
+    assert.equal(ingredientSection("neutral-oil"), "pantry");
+    const groups = groupFacets([{ id: "garlic" }, { id: "chicken" }, { id: "oil" }]);
+    assert.deepEqual(groups.map((group) => group.section), ["proteins", "aromatics", "pantry"]);
   });
 
   it("lists soy sauce on the real index and leaves water off", () => {
