@@ -20,7 +20,8 @@
     "cucumber-sunomono",
     "radish-pickle",
     "tamagoyaki",
-    "ramen-egg"
+    "ramen-egg",
+    "natto"
    ],
    "name": "Японская база",
    "notes": []
@@ -57,6 +58,15 @@
     "shrimp-poke-bowl"
    ],
    "name": "Суши",
+   "notes": []
+  },
+  {
+   "id": "japanese-sweets",
+   "items": [
+    "anko",
+    "strawberry-daifuku"
+   ],
+   "name": "Японские сладости",
    "notes": []
   },
   {
@@ -133,6 +143,9 @@
  ],
  "lede_html": "Японская база и большие проекты, суши, корейское кимчи и жареная курица, быстрая рисовая лапша и соба, индийская курица тикка и справочник по су-виду — везде пошаговые картинки, порядок мизанпласа и план подготовки.",
  "recent": [
+  "strawberry-daifuku",
+  "anko",
+  "natto",
   "grilled-cheese",
   "mac-and-cheese",
   "nigiri",
@@ -141,10 +154,7 @@
   "nikumaki-onigiri",
   "salmon-onigiri",
   "yaki-onigiri",
-  "onigirazu",
-  "spam-musubi",
-  "drunken-noodles",
-  "singapore-noodles"
+  "onigirazu"
  ],
  "recipes": [
   {
@@ -414,6 +424,36 @@
    "title": "Яйцо для рамена (6 минут)",
    "total": "~20 мин",
    "yields": "сколько нужно — ½ на миску рамена"
+  },
+  {
+   "added": "2026-10-10 03:40",
+   "blurb_html": "Соевые бобы, приготовленные на пару до мягкости, засеянные спорами натто горячими и сутки выдержанные при 38–41°C над ванной су-вид.",
+   "chips": [
+    {
+     "html": "<span>около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"700\" data-s=\"0\">700 г</span>, 14 порций</span>",
+     "kind": "",
+     "text": "около 700 г, 14 порций"
+    },
+    {
+     "html": "~2 дня, из них 1 ч работы",
+     "kind": "time",
+     "text": "~2 дня, из них 1 ч работы"
+    }
+   ],
+   "description": "Соевые бобы, приготовленные на пару до мягкости, засеянные спорами натто горячими и сутки выдержанные при 38–41°C над ванной су-вид.",
+   "group": "Японская база",
+   "group_id": "japanese-basics",
+   "hero": {
+    "alt": "Натто в ванне су-вид",
+    "image": "illustrations/natto/hero.webp?v=467c7e5596",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/natto.jpg?v=b9765150e0",
+   "slug": "natto",
+   "title": "Натто в ванне су-вид",
+   "total": "~2 дня, из них 1 ч работы",
+   "yields": "около 700 г, 14 порций"
   },
   {
    "added": "2026-10-05 20:25",
@@ -1014,6 +1054,66 @@
    "title": "Поке с креветками",
    "total": "~25 мин (если рис для суши готов заранее)",
    "yields": "2 миски"
+  },
+  {
+   "added": "2026-10-10 03:41",
+   "blurb_html": "Адзуки, сваренные до мягкости и уваренные с сахаром в блестящую пасту с целыми бобами для дайфуку.",
+   "chips": [
+    {
+     "html": "<span>около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"550\" data-s=\"0\">550 г</span></span>",
+     "kind": "",
+     "text": "около 550 г"
+    },
+    {
+     "html": "~2 ч, в основном варка",
+     "kind": "time",
+     "text": "~2 ч, в основном варка"
+    }
+   ],
+   "description": "Адзуки, сваренные до мягкости и уваренные с сахаром в блестящую пасту с целыми бобами для дайфуку.",
+   "group": "Японские сладости",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Анко: сладкая паста из красной фасоли (цубуан)",
+    "image": "illustrations/anko/hero.webp?v=9b69cb95e4",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/anko.jpg?v=c40a87f6e7",
+   "slug": "anko",
+   "title": "Анко: сладкая паста из красной фасоли (цубуан)",
+   "total": "~2 ч, в основном варка",
+   "yields": "около 550 г"
+  },
+  {
+   "added": "2026-10-10 03:42",
+   "blurb_html": "Целая клубника в сладкой пасте из красной фасоли, обёрнутая мягким тягучим моти из микроволновки.",
+   "chips": [
+    {
+     "html": "<span>6 штук</span>",
+     "kind": "",
+     "text": "6 штук"
+    },
+    {
+     "html": "~40 мин, если анко готова",
+     "kind": "time",
+     "text": "~40 мин, если анко готова"
+    }
+   ],
+   "description": "Целая клубника в сладкой пасте из красной фасоли, обёрнутая мягким тягучим моти из микроволновки.",
+   "group": "Японские сладости",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Клубничные дайфуку (итиго дайфуку)",
+    "image": "illustrations/strawberry-daifuku/hero.webp?v=f07e91a88e",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/strawberry-daifuku.jpg?v=a77fbbc8a3",
+   "slug": "strawberry-daifuku",
+   "title": "Клубничные дайфуку (итиго дайфуку)",
+   "total": "~40 мин, если анко готова",
+   "yields": "6 штук"
   },
   {
    "added": "2026-10-06 16:05",

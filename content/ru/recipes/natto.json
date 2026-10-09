@@ -1,0 +1,541 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Соевые бобы, приготовленные на пару до мягкости, засеянные спорами натто горячими и сутки выдержанные при 38–41°C над ванной су-вид.",
+ "chips": [
+  {
+   "html": "<span>около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"700\" data-s=\"0\">700 г</span>, 14 порций</span>",
+   "kind": "",
+   "text": "около 700 г, 14 порций"
+  },
+  {
+   "html": "~2 дня, из них 1 ч работы",
+   "kind": "time",
+   "text": "~2 дня, из них 1 ч работы"
+  }
+ ],
+ "description": "Соевые бобы, приготовленные на пару до мягкости, засеянные спорами натто горячими и сутки выдержанные при 38–41°C над ванной су-вид.",
+ "equipment_html": [
+  "Циркулятор су-вид и его пластиковая ванна с крышкой или плёнкой",
+  "2 тяжёлых стакана",
+  "Стеклянная форма для запекания, около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-b=\"25\" data-x=\"1\" data-s=\"0\">20 × 25 см</span>",
+  "Скороварка с решёткой-пароваркой или большая кастрюля",
+  "Термометр со щупом",
+  "Пищевая плёнка и фольга",
+  "Маленькие контейнеры с крышками"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Японская база"
+ },
+ "hero": {
+  "alt": "Натто в ванне су-вид",
+  "image": "illustrations/natto/hero.webp?v=467c7e5596",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Сухие соевые бобы"
+    },
+    {
+     "amount_html": "для замачивания и пара",
+     "name_html": "Вода"
+    }
+   ],
+   "name": "Бобы"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> мерная ложечка из пакета (см. пакет)",
+     "name_html": "Порошок спор натто"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Кипячёная вода"
+    }
+   ],
+   "name": "Закваска"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Соевый соус или соус-тарэ к натто"
+    },
+    {
+     "amount_html": "чуть-чуть, по желанию",
+     "name_html": "Горчица караси"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>, нарезанный",
+     "name_html": "Зелёный лук"
+    }
+   ],
+   "name": "К подаче, на 50 г"
+  }
+ ],
+ "intro_html": "Натто — соевые бобы, сброженные <i>Bacillus subtilis</i> var. <i>natto</i>, — это споры у вас в пакете. Бобы нужно сварить очень мягкими, засеять, пока они горячие, а потом около суток держать в тепле, влаге и с доступом воздуха. Тепло держит циркулятор су-вид. Поставьте в ванну два перевёрнутых стакана, поставьте на них стеклянную форму, чтобы вода грела её снизу, но не попадала внутрь, и накройте всю ванну. Потом сутки в холодильнике: там натто набирает тягучесть и вкус. Мелкие соевые бобы «для натто» дают классический результат; из обычных получается более крупное и плотное натто.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/natto/mise1.webp?v=acc03c12a8",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> сухих, промыты"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> сухих, промыты",
+   "name": "Соевые бобы",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/natto/mise2.webp?v=7a39f00f18",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> ложечка в <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> кипячёной воды"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> ложечка в <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> кипячёной воды",
+   "name": "Споры",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 7",
+   "image": "illustrations/natto/mise3.webp?v=ff618d3026",
+   "items": [
+    "соус",
+    "караси",
+    "зелёный лук"
+   ],
+   "items_html": "соус · караси · зелёный лук",
+   "name": "К подаче",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Японская база:",
+ "next": {
+  "slug": "oyakodon",
+  "title": "Оякодон"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>В воде форма прогревалась бы равномерно, но туда могла бы попасть вода.</li><li>На стаканах, когда ванна накрыта, форму греет снизу вода и тёплый влажный воздух.</li><li>Поэтому важен щуп в бобах, а не настройка ванны.</li><li>Пока бактерии не начнут сами выделять тепло (примерно через 12 часов), бобы на градус-два холоднее ванны.</li></ul>",
+   "title_html": "Зачем стаканы"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Ниже примерно <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"37\" data-s=\"0\">37°C</span> нитей почти нет.</li><li>Выше примерно <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"45\" data-s=\"0\">45°C</span> натто горчит и сильно пахнет аммиаком.</li><li>Цель — <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"38\" data-b=\"41\" data-s=\"0\">38–41°C</span> в бобах.</li></ul>",
+   "title_html": "Температура"
+  },
+  {
+   "html": "<p>Ложка хорошего натто, вмешанная в горячие бобы вместе с <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> кипячёной воды, тоже работает как закваска.</p>",
+   "title_html": "Следующая партия без порошка"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "ramen-egg",
+  "title": "Яйцо для рамена (6 минут)"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "одну партию",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/natto.jpg?v=b9765150e0",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Даси из шиитаке и комбу"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Даси из нибоси и бонито"
+  },
+  {
+   "slug": "furikake",
+   "title": "Фурикакэ"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Японские маринованные огурцы (суномоно)"
+  },
+  {
+   "slug": "radish-pickle",
+   "title": "Маринованный редис"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Тамагояки"
+  },
+  {
+   "slug": "ramen-egg",
+   "title": "Яйцо для рамена (6 минут)"
+  }
+ ],
+ "slug": "natto",
+ "sources": [
+  {
+   "label": "Takahashi Nattomoto — инструкция (Natural Import)",
+   "url": "https://naturalimport.com/natto_spores"
+  },
+  {
+   "label": "Serious Eats — натто",
+   "url": "https://www.seriouseats.com/natto-japanese-fermented-soybeans-recipe-7376348"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Промойте бобы и залейте <b>тройным объёмом</b> холодной воды.</li><li>Замачивайте <b>12–18 часов</b>. Бобы увеличатся примерно вдвое, а боб легко разделится на две плоские половинки без сухой серединки.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Замочить на ночь",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "После замачивания боб делится на две плоские половинки без сухой серединки.",
+      "src": "illustrations/natto/1-how1.webp?v=4802182d1d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/1.webp?v=01cb59c55f",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "12–18 ч",
+   "time_html": "<span>12–18 ч</span>",
+   "title": "Замочить на ночь",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Сухие соевые бобы"
+    },
+    {
+     "amount_html": "для замачивания и пара",
+     "name_html": "Вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Слейте воду. <b>Скороварка:</b> бобы на решётке-пароварке над примерно <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> воды, <b>40 минут</b> на высоком давлении, затем пусть давление сбросится само.</li><li><b>Без скороварки:</b> варите в большом количестве воды <b>3–5 часов</b>, подливая, чтобы бобы оставались под водой.</li><li>Проверьте один: он должен раздавливаться почти без усилия между <b>большим и безымянным пальцами</b>, как варёный каштан. Из более твёрдых бобов получается слабое, сухое натто.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Приготовить на пару до полной мягкости",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Он должен раздавливаться почти без усилия большим и безымянным пальцами.",
+      "src": "illustrations/natto/2-how1.webp?v=f3b27ceee3"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/2.webp?v=bd3b103bdf",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "40 мин – 5 ч",
+   "time_html": "<span>40 мин – 5 ч</span>",
+   "title": "Приготовить на пару до полной мягкости",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Тем временем ошпарьте кипятком стеклянную форму, ложку и контейнеры. Бактерии натто вытесняют большинство других микробов, но пусть начнут с чистого.</li><li>Размешайте <b>одну ложечку порошка спор</b> в <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> только что вскипевшей воды</b>. Крошечной ложечки Nattomoto (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"0.1\" data-s=\"0\">0,1 г</span>) хватает на <span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\" data-s=\"0\">1 кг</span> сухих бобов, так что здесь одной ложечки с запасом. Если на вашем пакете написано иначе, следуйте пакету.</li><li>Хорошо слейте бобы и, пока они ещё <b>горячие, с паром</b>, полейте водой со спорами и аккуратно перемешайте, чтобы покрыть каждый боб. Споры жар переживают, другие микробы — нет.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Споры — пока горячие",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вода со спорами на бобы, пока они горячие, с паром; мешайте аккуратно.",
+      "src": "illustrations/natto/3-how1.webp?v=07c81184fe"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/3.webp?v=8e311559f8",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Споры — пока горячие",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> мерная ложечка из пакета (см. пакет)",
+     "name_html": "Порошок спор натто"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Кипячёная вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разложите бобы в форме ровным слоем не толще <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span></b>. В более толстом слое середина перегревается и начинает дурно пахнуть.</li><li>Положите плёнку прямо на бобы и проткните шпажкой <b>10–15 дырочек</b>. Бактериям нужен воздух, а плёнка не даёт верху подсохнуть.</li><li>Неплотно накройте форму листом фольги, чтобы конденсат с крышки ванны не капал внутрь.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Разложить и накрыть с дырочками",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Плёнку прямо на бобы; 10–15 дырочек шпажкой.",
+      "src": "illustrations/natto/4-how1.webp?v=a9914c65fe"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/4.webp?v=27053d9e0b",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Разложить и накрыть с дырочками",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Поставьте в ванну два тяжёлых <b>перевёрнутых стакана</b> и налейте воды чуть ниже их верха, но выше отметки минимума циркулятора. Поставьте циркулятор на <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"41\" data-s=\"0\">41°C</span></b>.</li><li>Поставьте форму на стаканы. Вода может касаться её дна, но должна быть намного ниже края, и форма не должна опираться на циркулятор.</li><li>Накройте всю ванну крышкой или плёнкой, чтобы воздух над водой оставался тёплым и влажным.</li><li>Через час проткните плёнку щупом термометра в середину бобов. Цель — <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"38\" data-b=\"41\" data-s=\"0\">38–41°C</span></b>. Если ниже, поднимите температуру ванны на градус-два или долейте воды, чтобы форма глубже в ней стояла.</li><li>Оставьте на <b>22–24 часа</b>. Один раз проверьте уровень воды и долейте тёплой.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Держать 38–41°C в ванне су-вид",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Два перевёрнутых стакана в ванне; вода чуть ниже их верха.",
+      "src": "illustrations/natto/5-how1.webp?v=9bdab88b05"
+     },
+     {
+      "caption": "Форма на стаканы, затем накрыть всю ванну.",
+      "src": "illustrations/natto/5-how2.webp?v=253fc18d8f"
+     },
+     {
+      "caption": "Через час щуп в середину бобов: 38–41°C.",
+      "src": "illustrations/natto/5-how3.webp?v=d9b3e17173"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/5.webp?v=2138e4f634",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "22–24 ч",
+   "time_html": "<span>22–24 ч</span>",
+   "title": "Держать 38–41°C в ванне су-вид",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите фольгу и плёнку. На бобах должен быть тонкий <b>белый налёт</b>, сами они чуть темнее. Пахнут землисто, немного аммиаком.</li><li>Помешайте несколько бобов палочкой. За ней должны тянуться тонкие липкие <b>нити</b>.</li><li>Нитей пока нет? Накройте и дайте ещё несколько часов. Розовая, чёрная или пушистая цветная плесень или гнилой запах — выбрасывайте всё.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Проверить нити",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Помешайте: за палочкой должны тянуться липкие нити.",
+      "src": "illustrations/natto/6-how1.webp?v=fe5ca00222"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/6.webp?v=92ee5e8903",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Проверить нити",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Дайте форме остыть до комнатной температуры под плёнкой, около часа.</li><li>Уберите в холодильник минимум на <b>24 часа</b>. Запах аммиака уходит, нити становятся длиннее и липче.</li><li>Разложите по контейнерам по <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span></b>. В холодильнике до недели, в морозилке до двух месяцев; размораживайте ночь в холодильнике.</li><li>Перед едой: энергично помешайте порцию палочками <b>30–50 раз</b>, пока она не побелеет и не покроется нитями и пеной, добавьте соус и караси, ещё раз перемешайте и выложите на горячий рис с зелёным луком.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Остудить, дозреть, разложить",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Перед едой энергично помешайте 30–50 раз, пока не побелеет и не потянется.",
+      "src": "illustrations/natto/7-how1.webp?v=5cb1e97fe8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/7.webp?v=ed5e90f090",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "24 ч",
+   "time_html": "<span>24 ч</span>",
+   "title": "Остудить, дозреть, разложить",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Соевый соус или соус-тарэ к натто"
+    },
+    {
+     "amount_html": "чуть-чуть",
+     "name_html": "Горчица караси"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Зелёный лук"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 4320,
+  "hours": true,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Без участия"
+   },
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   },
+   {
+    "kind": "bath",
+    "label": "Водяная баня"
+   }
+  ],
+  "note_html": "Замочите бобы накануне вечером. Первое натто едят на третий вечер.",
+  "tasks": [
+   {
+    "dur": 900,
+    "dur_label": "15 ч",
+    "kind": "wait",
+    "label": "Замочить (на ночь)",
+    "label_html": "Замочить (на ночь)",
+    "start": 0
+   },
+   {
+    "dur": 60,
+    "dur_label": "1 ч",
+    "kind": "pan",
+    "label": "На пару до мягкости",
+    "label_html": "На пару до мягкости",
+    "start": 900
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "bowl",
+    "label": "Споры, в форму",
+    "label_html": "Споры, в форму",
+    "start": 960
+   },
+   {
+    "dur": 1380,
+    "dur_label": "23 ч",
+    "kind": "bath",
+    "label": "Ванна 41°C, накрыта (22–24 ч)",
+    "label_html": "Ванна <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"41\" data-s=\"0\">41°C</span>, накрыта (22–24 ч)",
+    "start": 970
+   },
+   {
+    "dur": 1440,
+    "dur_label": "24 ч",
+    "kind": "wait",
+    "label": "Остудить, в холодильник (24 ч)",
+    "label_html": "Остудить, в холодильник (24 ч)",
+    "start": 2350
+   }
+  ],
+  "tick_step": 720,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0:00"
+   },
+   {
+    "at": 720,
+    "label": "12:00"
+   },
+   {
+    "at": 1440,
+    "label": "24:00"
+   },
+   {
+    "at": 2160,
+    "label": "36:00"
+   },
+   {
+    "at": 2880,
+    "label": "48:00"
+   },
+   {
+    "at": 3600,
+    "label": "60:00"
+   },
+   {
+    "at": 4320,
+    "label": "72:00"
+   }
+  ],
+  "unit": "ч:мм"
+ },
+ "title": "Натто в ванне су-вид",
+ "total": "~2 дня, из них 1 ч работы",
+ "vinegar_options": null,
+ "yields": "около 700 г, 14 порций"
+}

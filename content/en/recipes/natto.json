@@ -1,0 +1,541 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Soybeans steamed soft, dusted with natto spores while hot, then held at 38–41°C for a day over a sous vide bath.",
+ "chips": [
+  {
+   "html": "<span>about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"700\" data-s=\"0\">700 g</span>, 14 portions</span>",
+   "kind": "",
+   "text": "about 700 g, 14 portions"
+  },
+  {
+   "html": "~2 days, 1 h of it hands-on",
+   "kind": "time",
+   "text": "~2 days, 1 h of it hands-on"
+  }
+ ],
+ "description": "Soybeans steamed soft, dusted with natto spores while hot, then held at 38–41°C for a day over a sous vide bath.",
+ "equipment_html": [
+  "Sous vide circulator and its plastic bath, with a lid or cling film",
+  "2 heavy drinking glasses",
+  "Glass baking dish, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-b=\"25\" data-x=\"1\" data-s=\"0\">20 × 25 cm</span>",
+  "Pressure cooker with a steamer rack, or a big pot",
+  "Probe thermometer",
+  "Cling film and foil",
+  "Small lidded tubs"
+ ],
+ "group": {
+  "id": "japanese-basics",
+  "name": "Japanese basics"
+ },
+ "hero": {
+  "alt": "Natto in a sous vide bath",
+  "image": "illustrations/natto/hero.webp?v=467c7e5596",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Dry soybeans"
+    },
+    {
+     "amount_html": "for soaking and steaming",
+     "name_html": "Water"
+    }
+   ],
+   "name": "Beans"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> packet scoop (see packet)",
+     "name_html": "Natto spore powder"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Boiled water"
+    }
+   ],
+   "name": "Starter"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Soy sauce or the natto tare"
+    },
+    {
+     "amount_html": "a dab, optional",
+     "name_html": "Karashi mustard"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>, sliced",
+     "name_html": "Scallion"
+    }
+   ],
+   "name": "To serve, per 50 g"
+  }
+ ],
+ "intro_html": "Natto is soybeans fermented by <i>Bacillus subtilis</i> var. <i>natto</i>, the spores in your packet. The beans have to be cooked very soft, inoculated while they are still hot, then kept warm, damp and with some air for about a day. A sous vide circulator holds the heat. Stand two upturned glasses in the bath, set the glass baking dish on them so the water warms it from below without getting in, and cover the whole bath. Then a day in the fridge, when the stringiness and flavour develop. Small \"natto\" soybeans give the classic result; ordinary soybeans make bigger, firmer natto.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/natto/mise1.webp?v=acc03c12a8",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> dry, rinsed"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> dry, rinsed",
+   "name": "Soybeans",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/natto/mise2.webp?v=7a39f00f18",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> scoop in <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> boiled water"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> scoop in <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> boiled water",
+   "name": "Spores",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 7",
+   "image": "illustrations/natto/mise3.webp?v=ff618d3026",
+   "items": [
+    "soy",
+    "karashi",
+    "scallion"
+   ],
+   "items_html": "soy · karashi · scallion",
+   "name": "To serve",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More japanese basics:",
+ "next": {
+  "slug": "oyakodon",
+  "title": "Oyakodon"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>In the water the dish would heat evenly but could let water in.</li><li>On glasses with the bath covered, the dish is heated from below and by warm, damp air.</li><li>That's why the probe in the beans, not the bath setting, is what counts.</li><li>Beans run a degree or two below the bath until the bacteria start making their own heat, after about 12 hours.</li></ul>",
+   "title_html": "Why the glasses"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Below about <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"37\" data-s=\"0\">37°C</span> it barely strings.</li><li>Above about <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"45\" data-s=\"0\">45°C</span> it gets bitter and smells strongly of ammonia.</li><li><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"38\" data-b=\"41\" data-s=\"0\">38–41°C</span> in the beans is the target.</li></ul>",
+   "title_html": "Temperature"
+  },
+  {
+   "html": "<p>A spoonful of good natto stirred into the hot beans with the <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> boiled water works as a starter too.</p>",
+   "title_html": "Next batch without powder"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "ramen-egg",
+  "title": "Ramen egg (6-minute)"
+ },
+ "scale": {
+  "mode": "batch",
+  "scalable": true,
+  "serves": 1,
+  "size": "one batch",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/natto.jpg?v=b9765150e0",
+ "siblings": [
+  {
+   "slug": "shiitake-kombu-dashi",
+   "title": "Shiitake–kombu dashi"
+  },
+  {
+   "slug": "niboshi-bonito-dashi",
+   "title": "Niboshi–bonito dashi"
+  },
+  {
+   "slug": "furikake",
+   "title": "Furikake"
+  },
+  {
+   "slug": "cucumber-sunomono",
+   "title": "Japanese cucumber pickle (sunomono)"
+  },
+  {
+   "slug": "radish-pickle",
+   "title": "Pickled radishes"
+  },
+  {
+   "slug": "tamagoyaki",
+   "title": "Tamagoyaki"
+  },
+  {
+   "slug": "ramen-egg",
+   "title": "Ramen egg (6-minute)"
+  }
+ ],
+ "slug": "natto",
+ "sources": [
+  {
+   "label": "Takahashi Nattomoto — instructions (Natural Import)",
+   "url": "https://naturalimport.com/natto_spores"
+  },
+  {
+   "label": "Serious Eats — natto",
+   "url": "https://www.seriouseats.com/natto-japanese-fermented-soybeans-recipe-7376348"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Rinse the soybeans, then cover them with <b>three times their volume</b> of cold water.</li><li>Soak <b>12–18 hours</b>. They roughly double, and a bean splits cleanly into two flat halves with no dry core.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Soak overnight",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Soaked, a bean splits into two flat halves with no dry core.",
+      "src": "illustrations/natto/1-how1.webp?v=4802182d1d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/1.webp?v=01cb59c55f",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "12–18 h",
+   "time_html": "<span>12–18 h</span>",
+   "title": "Soak overnight",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Dry soybeans"
+    },
+    {
+     "amount_html": "for soaking and steaming",
+     "name_html": "Water"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Drain. <b>Pressure cooker:</b> beans on the steamer rack over about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> of water, <b>40 minutes</b> at high pressure, then let the pressure drop on its own.</li><li><b>No pressure cooker:</b> simmer them in plenty of water for <b>3–5 hours</b>, topping up so they stay covered.</li><li>Test one: it should crush with almost no effort between your <b>thumb and ring finger</b>, like a cooked chestnut. Firmer beans make weak, dry natto.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Steam until very soft",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "It should crush with almost no effort between thumb and ring finger.",
+      "src": "illustrations/natto/2-how1.webp?v=f3b27ceee3"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/2.webp?v=bd3b103bdf",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "40 min – 5 h",
+   "time_html": "<span>40 min – 5 h</span>",
+   "title": "Steam until very soft",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Meanwhile, scald the glass dish, a spoon and the tubs with boiling water. Natto bacteria crowd out most other microbes, but give them a clean start.</li><li>Stir <b>one scoop of spore powder</b> into <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> of just-boiled water</b>. Nattomoto's tiny scoop (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"0.1\" data-s=\"0\">0.1 g</span>) is enough for up to <span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\" data-s=\"0\">1 kg</span> of dry beans, so one scoop is plenty here. Follow your packet if it says otherwise.</li><li>Drain the beans well and, while they are still <b>steaming hot</b>, pour the spore water over and fold gently until every bean is coated. The spores survive the heat; the other microbes don't.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Spores in while hot",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Spore water over the beans while they're still steaming hot; fold gently.",
+      "src": "illustrations/natto/3-how1.webp?v=07c81184fe"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/3.webp?v=8e311559f8",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "5 min",
+   "time_html": "<span>5 min</span>",
+   "title": "Spores in while hot",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> packet scoop (see packet)",
+     "name_html": "Natto spore powder"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Boiled water"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spread the beans in the dish in an even layer no more than <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span></b> deep. A deeper layer goes hot and smelly in the middle.</li><li>Lay cling film straight onto the beans and poke <b>10–15 holes</b> through it with a skewer. The bacteria need air; the film stops the top drying out.</li><li>Lay a loose sheet of foil over the dish so condensation from the bath lid can't drip in.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Spread out and cover with holes",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Film straight onto the beans; poke 10–15 holes with a skewer.",
+      "src": "illustrations/natto/4-how1.webp?v=a9914c65fe"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/4.webp?v=27053d9e0b",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "5 min",
+   "time_html": "<span>5 min</span>",
+   "title": "Spread out and cover with holes",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Stand two heavy <b>upturned glasses</b> in the bath and fill it to just below the top of the glasses, above the circulator's minimum line. Set the circulator to <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"41\" data-s=\"0\">41°C</span></b>.</li><li>Set the dish on the glasses. The water may touch its base but must stay well below the rim, and it must not lean on the circulator.</li><li>Cover the whole bath with its lid or cling film, so the air above the water stays warm and damp.</li><li>After an hour, push the probe thermometer through the film into the middle of the beans. Aim for <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"38\" data-b=\"41\" data-s=\"0\">38–41°C</span></b>. If it's lower, raise the bath a degree or two, or add water so more of the dish sits in it.</li><li>Leave it <b>22–24 hours</b>. Check the water level once and top up with warm water.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Hold at 38–41°C in the sous vide bath",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Two upturned glasses in the bath; water just below their tops.",
+      "src": "illustrations/natto/5-how1.webp?v=9bdab88b05"
+     },
+     {
+      "caption": "Dish on the glasses, then the whole bath covered.",
+      "src": "illustrations/natto/5-how2.webp?v=253fc18d8f"
+     },
+     {
+      "caption": "After an hour, probe the middle of the beans: 38–41°C.",
+      "src": "illustrations/natto/5-how3.webp?v=d9b3e17173"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/5.webp?v=2138e4f634",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "22–24 h",
+   "time_html": "<span>22–24 h</span>",
+   "title": "Hold at 38–41°C in the sous vide bath",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the foil and film. The beans should have a thin <b>white bloom</b> and look a little darker. They smell earthy, a bit like ammonia.</li><li>Stir a few with a chopstick. Fine, sticky <b>strings</b> should follow it.</li><li>No strings yet? Cover and give it a few more hours. Pink, black or fuzzy coloured mould, or a rotten smell, means throw it all out.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Check for strings",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stir a few: sticky strings should follow the chopstick.",
+      "src": "illustrations/natto/6-how1.webp?v=fe5ca00222"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/6.webp?v=92ee5e8903",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
+   "title": "Check for strings",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Let the dish cool to room temperature, covered, about an hour.</li><li>Fridge it for at least <b>24 hours</b>. The ammonia fades and the strings get longer and stickier.</li><li>Pack into <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span></b> tubs. Fridge up to a week, freezer up to two months; thaw overnight in the fridge.</li><li>To eat: stir a portion hard with chopsticks <b>30–50 times</b> until it's white and frothy with strings, add the soy and karashi, stir again, and pile it on hot rice with the scallion.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Cool, ripen, portion",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Stir hard 30–50 times before eating, until white and stringy.",
+      "src": "illustrations/natto/7-how1.webp?v=5cb1e97fe8"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/natto/7.webp?v=ed5e90f090",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "24 h",
+   "time_html": "<span>24 h</span>",
+   "title": "Cool, ripen, portion",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Soy sauce or the natto tare"
+    },
+    {
+     "amount_html": "a dab",
+     "name_html": "Karashi mustard"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Scallion"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 4320,
+  "hours": true,
+  "legend": [
+   {
+    "kind": "wait",
+    "label": "Hands-off"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "bath",
+    "label": "Water bath"
+   }
+  ],
+  "note_html": "Start the soak the evening before. The natto is first eaten on the third evening.",
+  "tasks": [
+   {
+    "dur": 900,
+    "dur_label": "15 h",
+    "kind": "wait",
+    "label": "Soak (overnight)",
+    "label_html": "Soak (overnight)",
+    "start": 0
+   },
+   {
+    "dur": 60,
+    "dur_label": "1 h",
+    "kind": "pan",
+    "label": "Steam until crushable",
+    "label_html": "Steam until crushable",
+    "start": 900
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "bowl",
+    "label": "Spores in, into the dish",
+    "label_html": "Spores in, into the dish",
+    "start": 960
+   },
+   {
+    "dur": 1380,
+    "dur_label": "23 h",
+    "kind": "bath",
+    "label": "Bath at 41°C, covered (22–24 h)",
+    "label_html": "Bath at <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"41\" data-s=\"0\">41°C</span>, covered (22–24 h)",
+    "start": 970
+   },
+   {
+    "dur": 1440,
+    "dur_label": "24 h",
+    "kind": "wait",
+    "label": "Cool, then fridge (24 h)",
+    "label_html": "Cool, then fridge (24 h)",
+    "start": 2350
+   }
+  ],
+  "tick_step": 720,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0:00"
+   },
+   {
+    "at": 720,
+    "label": "12:00"
+   },
+   {
+    "at": 1440,
+    "label": "24:00"
+   },
+   {
+    "at": 2160,
+    "label": "36:00"
+   },
+   {
+    "at": 2880,
+    "label": "48:00"
+   },
+   {
+    "at": 3600,
+    "label": "60:00"
+   },
+   {
+    "at": 4320,
+    "label": "72:00"
+   }
+  ],
+  "unit": "h:mm"
+ },
+ "title": "Natto in a sous vide bath",
+ "total": "~2 days, 1 h of it hands-on",
+ "vinegar_options": null,
+ "yields": "about 700 g, 14 portions"
+}

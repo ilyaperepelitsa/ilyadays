@@ -20,7 +20,8 @@
     "cucumber-sunomono",
     "radish-pickle",
     "tamagoyaki",
-    "ramen-egg"
+    "ramen-egg",
+    "natto"
    ],
    "name": "Japanese basics",
    "notes": []
@@ -57,6 +58,15 @@
     "shrimp-poke-bowl"
    ],
    "name": "Sushi",
+   "notes": []
+  },
+  {
+   "id": "japanese-sweets",
+   "items": [
+    "anko",
+    "strawberry-daifuku"
+   ],
+   "name": "Japanese sweets",
    "notes": []
   },
   {
@@ -133,6 +143,9 @@
  ],
  "lede_html": "Japanese basics and big projects, sushi, Korean kimchi and fried chicken, weeknight rice noodles and soba, Indian chicken tikka and a sous vide reference — each with step-by-step pictures, mise-en-place order and a prep timeline.",
  "recent": [
+  "strawberry-daifuku",
+  "anko",
+  "natto",
   "grilled-cheese",
   "mac-and-cheese",
   "nigiri",
@@ -141,10 +154,7 @@
   "nikumaki-onigiri",
   "salmon-onigiri",
   "yaki-onigiri",
-  "onigirazu",
-  "spam-musubi",
-  "drunken-noodles",
-  "singapore-noodles"
+  "onigirazu"
  ],
  "recipes": [
   {
@@ -414,6 +424,36 @@
    "title": "Ramen egg (6-minute)",
    "total": "~20 min",
    "yields": "as many as you need — ½ per bowl of ramen"
+  },
+  {
+   "added": "2026-10-10 03:40",
+   "blurb_html": "Soybeans steamed soft, dusted with natto spores while hot, then held at 38–41°C for a day over a sous vide bath.",
+   "chips": [
+    {
+     "html": "<span>about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"700\" data-s=\"0\">700 g</span>, 14 portions</span>",
+     "kind": "",
+     "text": "about 700 g, 14 portions"
+    },
+    {
+     "html": "~2 days, 1 h of it hands-on",
+     "kind": "time",
+     "text": "~2 days, 1 h of it hands-on"
+    }
+   ],
+   "description": "Soybeans steamed soft, dusted with natto spores while hot, then held at 38–41°C for a day over a sous vide bath.",
+   "group": "Japanese basics",
+   "group_id": "japanese-basics",
+   "hero": {
+    "alt": "Natto in a sous vide bath",
+    "image": "illustrations/natto/hero.webp?v=467c7e5596",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/natto.jpg?v=b9765150e0",
+   "slug": "natto",
+   "title": "Natto in a sous vide bath",
+   "total": "~2 days, 1 h of it hands-on",
+   "yields": "about 700 g, 14 portions"
   },
   {
    "added": "2026-10-05 20:25",
@@ -1014,6 +1054,66 @@
    "title": "Shrimp poke bowl",
    "total": "~25 min (with sushi rice made ahead)",
    "yields": "2 bowls"
+  },
+  {
+   "added": "2026-10-10 03:41",
+   "blurb_html": "Azuki beans simmered soft, then cooked down with sugar into a glossy, chunky paste for daifuku.",
+   "chips": [
+    {
+     "html": "<span>about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"550\" data-s=\"0\">550 g</span></span>",
+     "kind": "",
+     "text": "about 550 g"
+    },
+    {
+     "html": "~2 h, mostly simmering",
+     "kind": "time",
+     "text": "~2 h, mostly simmering"
+    }
+   ],
+   "description": "Azuki beans simmered soft, then cooked down with sugar into a glossy, chunky paste for daifuku.",
+   "group": "Japanese sweets",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Anko: sweet red bean paste (tsubuan)",
+    "image": "illustrations/anko/hero.webp?v=9b69cb95e4",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/anko.jpg?v=c40a87f6e7",
+   "slug": "anko",
+   "title": "Anko: sweet red bean paste (tsubuan)",
+   "total": "~2 h, mostly simmering",
+   "yields": "about 550 g"
+  },
+  {
+   "added": "2026-10-10 03:42",
+   "blurb_html": "A whole strawberry in sweet red bean paste, wrapped in soft, stretchy mochi made in the microwave.",
+   "chips": [
+    {
+     "html": "<span>6 pieces</span>",
+     "kind": "",
+     "text": "6 pieces"
+    },
+    {
+     "html": "~40 min with the anko made",
+     "kind": "time",
+     "text": "~40 min with the anko made"
+    }
+   ],
+   "description": "A whole strawberry in sweet red bean paste, wrapped in soft, stretchy mochi made in the microwave.",
+   "group": "Japanese sweets",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Strawberry daifuku (ichigo daifuku)",
+    "image": "illustrations/strawberry-daifuku/hero.webp?v=f07e91a88e",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/strawberry-daifuku.jpg?v=a77fbbc8a3",
+   "slug": "strawberry-daifuku",
+   "title": "Strawberry daifuku (ichigo daifuku)",
+   "total": "~40 min with the anko made",
+   "yields": "6 pieces"
   },
   {
    "added": "2026-10-06 16:05",
