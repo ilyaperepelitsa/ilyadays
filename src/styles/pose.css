@@ -1,0 +1,23 @@
+/* Nigiri hand-position blueprints (recipes/src/nigiri_pose): each phase is three orthographic views of the
+   same 3D pose — top, front, end — then one key for the step. */
+.pose { display: grid; gap: 14px; min-width: 0; max-width: 100%; }
+.pose-phase { display: grid; gap: 6px; min-width: 0; }
+/* grid items size to their content by default; the wide angle table must scroll inside its own box */
+.pose > *, .pose-phase > *, .pose-angles { min-width: 0; }
+.pose-caption { margin: 0; font-size: .92rem; line-height: 1.35; font-weight: 700; }
+.pose-views { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; }
+.pose-views figure { margin: 0; }
+.pose-views figcaption { font-size: .78rem; color: var(--muted); margin-top: 3px; text-align: center; }
+svg.pose-view { display: block; width: 100%; height: auto; }
+.pose-legend {
+  list-style: none; margin: 0; padding: 10px 12px; display: grid; gap: 4px;
+  background: var(--surface-2); border-radius: 10px; font-size: .8rem; line-height: 1.4; color: var(--muted);
+}
+.pose-angles { font-size: .82rem; }
+.pose-angles summary { cursor: pointer; color: var(--muted); padding: 2px 0; }
+.pose-hands { margin: 6px 0; padding-left: 1.1em; display: grid; gap: 3px; line-height: 1.4; }
+.pose-table { overflow-x: auto; }
+.pose-table table { border-collapse: collapse; width: 100%; min-width: 520px; }
+.pose-table th, .pose-table td { padding: 3px 6px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+.pose-table td:nth-child(n+3) { font-variant-numeric: tabular-nums; }
+.pose-note { margin: 6px 0 0; color: var(--muted); }
