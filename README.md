@@ -96,7 +96,7 @@ npm install
 npm run sync            # pull recipes, pictures, the Istanbul app, covers
 npm run dev             # http://localhost:3000
 npm run build && npm run start
-npm test               # trip template: brief, prompts, notes, pictures, storage
+npm test               # trip template, offline catalog, recipe search and diagrams, site header
 npm run lint && npm run typecheck
 npm run check:cookies   # after a build; add -- --live with `npm run start` running
 ```

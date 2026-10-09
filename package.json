@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/trips/*.test.mjs tests/offline/*.test.mjs tests/food/*.test.mjs",
+    "test": "node --test tests/trips/*.test.mjs tests/offline/*.test.mjs tests/food/*.test.mjs tests/site/*.test.mjs",
     "sync": "bash scripts/sync-content.sh",
     "check:cookies": "node scripts/check-no-cookies.mjs"
   },

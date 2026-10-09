@@ -15,6 +15,10 @@ type Props = {
   auth?: boolean;
 };
 
+/**
+ * The sticky top bar. Links into another section don't prefetch: a prefetched home or travel page brings its
+ * full-width cover pictures (about 260 KB) along to every recipe page that never shows them.
+ */
 export function SiteHeader({ lang, path, section, groups, auth }: Props) {
   const t = strings(lang);
   const home = localPath(lang, "/");
@@ -25,29 +29,30 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
       {section === "food" ? (
         <>
           <span className="brand-group">
-            <Link className="home-link" href={home}>ilyadays</Link>
+            <Link className="home-link" href={home} prefetch={false}>ilyadays</Link>
             <span className="crumb" aria-hidden="true">/</span>
             <Link className="brand" href={food}>
               <span className="brand-mark" aria-hidden="true" />
               {t.recipes}
             </Link>
           </span>
-          <nav aria-label={t.recipes}>
+          <nav className="group-nav" aria-label={t.recipes}>
             {groups?.map((g) => (
               <a key={g.id} href={`${food}#${g.id}`}>{g.name}</a>
             ))}
-            <Link href={travel} className="nav-section">{t.travel}</Link>
+            <Link href={travel} className="nav-section" prefetch={false}>{t.travel}</Link>
           </nav>
         </>
       ) : (
         <>
-          <Link className="brand" href={home}>
+          <Link className="brand" href={home} prefetch={section !== "home" ? false : undefined}>
             <span className="brand-mark" aria-hidden="true" />
             ilyadays
           </Link>
           <nav aria-label="ilyadays">
             <Link href={food}>{t.food}</Link>
-            <Link href={travel} aria-current={section === "travel" ? "page" : undefined}>{t.travel}</Link>
+            <Link href={travel} prefetch={section === "home" ? undefined : false}
+              aria-current={section === "travel" ? "page" : undefined}>{t.travel}</Link>
           </nav>
         </>
       )}

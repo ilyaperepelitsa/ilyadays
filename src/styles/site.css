@@ -12,8 +12,21 @@
   background: var(--surface); color: var(--muted); font: 500 .8rem var(--sans); cursor: pointer;
 }
 .auth-link:hover { color: var(--accent); border-color: var(--accent); }
+/* Recipe groups: one line that scrolls sideways instead of wrapping into a tall sticky bar. */
+.site-header .group-nav {
+  flex: 1 1 0; min-width: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+  overscroll-behavior-x: contain; padding-right: 28px;
+  mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+}
+.site-header .group-nav::-webkit-scrollbar { display: none; }
+.site-header .group-nav a { white-space: nowrap; padding: 4px 0; }
 @media (max-width: 640px) {
   .header-end { order: 1; gap: 10px; }
+  .site-header .group-nav {
+    order: 2; flex-basis: 100%; gap: 16px; margin: -2px -16px -4px; padding: 0 28px 2px 16px;
+    mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 28px), transparent);
+  }
+  .site-header .group-nav a { padding: 6px 0; }
 }
 
 /* ---------- home */
@@ -275,6 +288,17 @@
   .trip-model summary::before { transition: none; }
 }
 .tile-plain .tile-body { min-height: 120px; }
+/* A card without a picture (make a trip): a dashed "new" card that fills its row on purpose. */
+.tile-plain {
+  display: grid; place-items: center; border: 1.5px dashed color-mix(in srgb, var(--muted) 45%, var(--line));
+  box-shadow: none; background: transparent;
+}
+.tile-plain:hover { border-color: var(--accent); }
+.tile-plain .tile-body { text-align: center; max-width: 300px; }
+.tile-plain .tile-body::before {
+  content: "+"; display: grid; place-items: center; width: 56px; height: 56px; margin: 0 auto 14px;
+  border: 1.5px solid var(--line); border-radius: 50%; font: 300 2rem/1 var(--sans); color: var(--accent);
+}
 .made-trip h1 { margin-bottom: 6px; }
 .made-route { margin-top: 28px; }
 .made-route h3 { margin: 0 0 4px; }
