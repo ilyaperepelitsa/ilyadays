@@ -1,0 +1,1080 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Soy-cured yolk on soboro, pork kimchi with natto, shiso kombu, peanut miso and more, the way Bongo and Yadoroku fill theirs.",
+ "chips": [
+  {
+   "html": "<span>12 onigiri, from 2–3 fillings (each makes 4–6)</span>",
+   "kind": "",
+   "text": "12 onigiri, from 2–3 fillings (each makes 4–6)"
+  },
+  {
+   "html": "1 day for the yolks; the rest 5–20 min each",
+   "kind": "time",
+   "text": "1 day for the yolks; the rest 5–20 min each"
+  }
+ ],
+ "description": "Soy-cured yolk on soboro, pork kimchi with natto, shiso kombu, peanut miso and more, the way Bongo and Yadoroku fill theirs.",
+ "equipment_html": [
+  "Small frying pan",
+  "Small pot",
+  "Small dishes with lids",
+  "Four chopsticks for the soboro"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Japanese"
+ },
+ "hero": {
+  "alt": "Onigiri: fillings from Tokyo's onigiri shops",
+  "image": "illustrations/onigiri-shop-fillings/hero.webp?v=9408a212b4",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Very fresh egg yolks"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce (yolks)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (yolks)"
+    }
+   ],
+   "name": "Soy-cured egg yolk (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Ground pork, or pork and beef"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Sugar (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Ginger, grated"
+    }
+   ],
+   "name": "Niku soboro (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Pork belly, thinly sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Kimchi, chopped and squeezed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sesame oil (pork kimchi)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> pack (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>)",
+     "name_html": "Natto, with its sauce"
+    }
+   ],
+   "name": "Pork kimchi with natto (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 g</span>",
+     "name_html": "Kombu left over from dashi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 ml</span>",
+     "name_html": "Water (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Rice vinegar (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Green shiso leaves"
+    }
+   ],
+   "name": "Shiso kombu (Yadoroku, Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Pickled takana (mustard greens)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sesame oil (takana)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Dried chilli, sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Soy sauce (takana)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sesame seeds"
+    }
+   ],
+   "name": "Takana (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Roasted unsalted peanuts"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Miso"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Sugar (peanut miso)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (peanut miso)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Water (peanut miso)"
+    }
+   ],
+   "name": "Peanut miso (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>)",
+     "name_html": "Japanese eggplants"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Salt (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Oil (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake (eggplant)"
+    }
+   ],
+   "name": "Eggplant tsukudani (after Nigihaya)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"clove|cloves\" data-n=\"1\">3 cloves</span>",
+     "name_html": "Garlic, thinly sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Chilli flakes"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt (pepperoncino)"
+    }
+   ],
+   "name": "Pepperoncino (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> sac (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>)",
+     "name_html": "Mentaiko (spicy pollock roe)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Japanese mayo (Kewpie)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+     "name_html": "Cream cheese, small cubes"
+    }
+   ],
+   "name": "Mentai mayo with cream cheese (Bongo)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1.4\">1.4 kg</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\" data-s=\"0\">120 g</span> each)",
+     "name_html": "Cooked rice, from the onigiri page"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "name_html": "Nori strips"
+    },
+    {
+     "amount_html": "a little for each onigiri",
+     "name_html": "Kosher salt (for your hands)"
+    }
+   ],
+   "name": "To shape"
+  }
+ ],
+ "intro_html": "Tokyo's onigiri specialists sell dozens of fillings. <b>Onigiri Bongo</b> in Kita-Ōtsuka, open since 1960, has about 55, and people queue for hours. <b>Asakusa Yadoroku</b>, the first onigiri shop with a Michelin Bib Gourmand, keeps fewer than 20 traditional ones. These are home versions of the ones you can cook, plus a list of the ones you just buy. The shops don't publish recipes, so the amounts are this site's own. Each filling makes 4–6 onigiri: pick two or three. Rice, salt and shaping are on the <a href=\"onigiri.html\">onigiri page</a>; the last step shows how the shops fill them.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/onigiri-shop-fillings/mise1.webp?v=f8e4cfff0a",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>, in soy"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>, in soy",
+   "name": "Cured yolks",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/onigiri-shop-fillings/mise2.webp?v=2e7d23729e",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span> meat"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span> meat",
+   "name": "Soboro",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/onigiri-shop-fillings/mise3.webp?v=224d1db189",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+   "name": "Pork + kimchi",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/onigiri-shop-fillings/mise4.webp?v=ef5eb3179f",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 g</span> + 4 leaves"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 g</span> + 4 leaves",
+   "name": "Kombu + shiso",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/onigiri-shop-fillings/mise5.webp?v=e5f78caf5a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+   "name": "Peanuts",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 9",
+   "image": "illustrations/onigiri-shop-fillings/mise6.webp?v=82c7b75d0a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+   "name": "Mentaiko + cream cheese",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "More japanese:",
+ "next": {
+  "slug": "onigirazu",
+  "title": "Onigirazu (ginger pork rice sandwich)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Bongo's signature is <b>sujiko</b>, salt-cured salmon roe still in its membrane.</li><li>Other fillings you just buy: <b>negitoro</b> (chopped fatty tuna with scallion, eat within the hour), <b>salmon with mentaiko</b> on top, <b>grilled tarako with mentai mayo</b> (Togoshi-ya), and Yadoroku's <b>kazunoko in sake lees</b> (herring roe) and <b>ami tsukudani</b> (tiny shrimp simmered in sweet soy).</li></ul>",
+   "title_html": "Buy and fill"
+  },
+  {
+   "html": "<ul class=\"do\"><li>In spring Bongo also has fuki miso, butterbur stems chopped and fried with miso and sugar.</li><li>The peanut miso in step 6 is the year-round cousin.</li></ul>",
+   "title_html": "Fuki miso"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Nigihaya in Kyoto uses its family's Marizuke, eggplant salted for two years and then simmered.</li><li>Step 7 is a quick version of the idea, not their recipe.</li></ul>",
+   "title_html": "Nigihaya's eggplant"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Soboro, shiso kombu, takana and peanut miso keep 4–5 days in the fridge.</li><li>Pork kimchi keeps two days, but add the natto only on the day.</li></ul>",
+   "title_html": "Keeping"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "baby-octopus-onigiri",
+  "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 4,
+  "size": "4",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/onigiri-shop-fillings.jpg?v=0865272de1",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Oyakodon"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Onigiri: the shape and the fillings"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)"
+  },
+  {
+   "slug": "shrimp-karaage-onigiri",
+   "title": "Shrimp karaage onigiri with spicy mayo"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Spam musubi"
+  },
+  {
+   "slug": "karaage",
+   "title": "Karaage"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Japanese curry from scratch"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Easy Japanese curry (Golden Curry roux)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Creamy white ramen (tonkotsu-style paitan)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Ramen noodles with baked baking soda"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Ginger scallion noodles (gentler)"
+  }
+ ],
+ "slug": "onigiri-shop-fillings",
+ "sources": [
+  {
+   "label": "Hidden Japan Gems — Onigiri Bongo menu",
+   "url": "https://hiddenjapan-gems.com/onigiri-bongo-otsuka-tokyo/"
+  },
+  {
+   "label": "MICHELIN Guide — Onigiri Asakusa Yadoroku",
+   "url": "https://guide.michelin.com/jp/en/tokyo-region/tokyo/restaurant/onigiri-asakusa-yadoroku"
+  },
+  {
+   "label": "Asakusa Yadoroku (official)",
+   "url": "https://onigiriyadoroku.com/english.html"
+  },
+  {
+   "label": "Nigihaya, Kyoto (official, Japanese)",
+   "url": "https://nigihaya.com/"
+  },
+  {
+   "label": "Togoshi-ya (official, Japanese)",
+   "url": "https://www.togoshiya.jp/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>The day before: separate the eggs and slip each <b>yolk</b> into a small dish, whole.</li><li>Pour the <b>soy sauce</b> and <b>mirin</b> over, so the yolks are just covered. Cover and refrigerate <b>24 hours</b>. They turn deep amber and firm up like soft jam.</li><li>Use eggs sold for eating raw, or pasteurised ones. Keep the cured yolks cold and use them within two days.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Soy-cure the egg yolks",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Slip each yolk in whole, then just cover with soy and mirin.",
+      "src": "illustrations/onigiri-shop-fillings/1-how1.webp?v=8760f354da"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/1.webp?v=992f01118c",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "24 h",
+   "time_html": "<span>24 h</span>",
+   "title": "Soy-cure the egg yolks",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Very fresh egg yolks"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Soy sauce (yolks)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (yolks)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Put the <b>meat</b>, <b>soy</b>, <b>sugar</b>, <b>sake</b>, <b>mirin</b> and <b>ginger</b> in a cold pan and stir them together before the heat goes on. That keeps the crumbs fine.</li><li>Cook over medium heat, stirring all the time with four chopsticks held together, until the liquid has gone and the meat is fine, glossy and just dry, <b>6–8 minutes</b>.</li><li>Bongo's favourite: a spoon of soboro with one soy-cured yolk on top.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Niku soboro",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Everything into a cold pan and stirred before the heat goes on: that keeps the crumbs fine.",
+      "src": "illustrations/onigiri-shop-fillings/2-how1.webp?v=d526c40db9"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/2.webp?v=a9fecb0380",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
+   "title": "Niku soboro",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Ground pork, or pork and beef"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Sugar (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (soboro)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Ginger, grated"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the <b>pork belly</b> into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> pieces. Fry it in the <b>sesame oil</b> over high heat until it browns, about 2 minutes.</li><li>Add the squeezed <b>kimchi</b> and fry 1 minute more, until the pan is dry. Wet kimchi soaks the rice and the onigiri falls apart. Let it cool.</li><li>Just before shaping, stir the <b>natto</b> with its sauce 20 times and fold it into the pork kimchi.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Pork kimchi with natto",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Natto goes in only at the end: stirred 20 times with its sauce, then folded through.",
+      "src": "illustrations/onigiri-shop-fillings/3-how1.webp?v=5372fa260d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/3.webp?v=3369983d94",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Pork kimchi with natto",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Pork belly, thinly sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Kimchi, chopped and squeezed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sesame oil (pork kimchi)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> pack (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>)",
+     "name_html": "Natto, with its sauce"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the soft <b>kombu</b> left from making dashi into thin strips, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span> long.</li><li>Simmer with the <b>water</b>, <b>soy</b>, <b>sugar</b>, <b>mirin</b> and <b>vinegar</b> over low heat, stirring now and then, until the liquid is gone and the kombu is glossy, <b>15–20 minutes</b>.</li><li>Off the heat, stir in the <b>shiso</b>, cut into fine strips. It keeps a week in the fridge.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Shiso kombu",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Cut the soft used kombu into thin 3 cm strips.",
+      "src": "illustrations/onigiri-shop-fillings/4-how1.webp?v=d310635eff"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/4.webp?v=e008bd9f59",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~20 min",
+   "time_html": "<span>~20 min</span>",
+   "title": "Shiso kombu",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 g</span>",
+     "name_html": "Kombu left over from dashi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\">100 ml</span>",
+     "name_html": "Water (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Rice vinegar (kombu)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Green shiso leaves"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Chop the <b>takana</b> finely and squeeze out as much liquid as you can.</li><li>Fry it in the <b>sesame oil</b> with the <b>chilli</b> over medium-high heat for <b>2–3 minutes</b>, add the <b>soy</b> and cook until dry. Stir in the <b>sesame seeds</b>.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Takana",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Squeeze the chopped takana as dry as you can.",
+      "src": "illustrations/onigiri-shop-fillings/5-how1.webp?v=2039592544"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/5.webp?v=a9ca76b631",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~4 min",
+   "time_html": "<span>~4 min</span>",
+   "title": "Takana",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Pickled takana (mustard greens)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sesame oil (takana)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span>",
+     "name_html": "Dried chilli, sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Soy sauce (takana)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sesame seeds"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Toast the <b>peanuts</b> in a dry pan over medium-low heat until fragrant, 2–3 minutes.</li><li>Stir the <b>miso</b>, <b>sugar</b>, <b>mirin</b> and <b>water</b> together, pour it over the peanuts and stir over low heat until the miso turns glossy and clings to every nut, <b>2 minutes</b>.</li><li>Spread on a plate to cool. It sets sticky; break it up before using.</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Peanut miso",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Toast the peanuts dry, then pour the miso mix over and stir until glossy.",
+      "src": "illustrations/onigiri-shop-fillings/6-how1.webp?v=0fefad5d2f"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/6.webp?v=07843ba501",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Peanut miso",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Roasted unsalted peanuts"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Miso"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
+     "name_html": "Sugar (peanut miso)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin (peanut miso)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Water (peanut miso)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the <b>eggplants</b> into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> dice, toss with the <b>salt</b> and leave 10 minutes. Squeeze them hard.</li><li>Fry in the <b>oil</b> over medium heat until soft, 4 minutes. Add the <b>soy</b>, <b>sugar</b> and <b>sake</b> and cook, stirring, until the liquid is gone and the eggplant is dark and glossy, about <b>6 minutes</b>.</li><li>Nigihaya mixes its eggplant all through the rice instead of hiding it in the middle. Do the same: fold it into warm rice, then shape.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-7",
+   "images": {
+    "alt": "Eggplant tsukudani",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Nigihaya-style: mix it through the warm rice instead of hiding it inside.",
+      "src": "illustrations/onigiri-shop-fillings/7-how1.webp?v=660f58de66"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/7.webp?v=18b6592926",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~20 min",
+   "time_html": "<span>~20 min</span>",
+   "title": "Eggplant tsukudani",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>)",
+     "name_html": "Japanese eggplants"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Salt (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Oil (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sugar (eggplant)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Sake (eggplant)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Put the <b>olive oil</b> and <b>garlic</b> in a small cold pan and warm it over low heat until the garlic is pale gold, 4–5 minutes. Darker garlic turns bitter.</li><li>Off the heat, add the <b>chilli flakes</b> and <b>salt</b>. Fold the oil and garlic through the rice before shaping, about <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> per onigiri.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Pepperoncino oil",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Fold the oil and garlic through the rice, about 1 tsp per onigiri.",
+      "src": "illustrations/onigiri-shop-fillings/8-how1.webp?v=0c9c5ee388"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/8.webp?v=30030afe81",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~6 min",
+   "time_html": "<span>~6 min</span>",
+   "title": "Pepperoncino oil",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"clove|cloves\" data-n=\"1\">3 cloves</span>",
+     "name_html": "Garlic, thinly sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Chilli flakes"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt (pepperoncino)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Slit the <b>mentaiko</b> sac and scrape the roe out of its skin.</li><li>Stir it with the <b>mayo</b>, then fold in the <b>cream cheese</b> cubes without breaking them.</li></ul>",
+   "heat": null,
+   "id": "step-9",
+   "images": {
+    "alt": "Mentai mayo with cream cheese",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Slit the sac and scrape the roe out of its skin.",
+      "src": "illustrations/onigiri-shop-fillings/9-how1.webp?v=7abec040b2"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/9.webp?v=48208020ec",
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": null,
+   "part_id": null,
+   "time": "3 min",
+   "time_html": "<span>3 min</span>",
+   "title": "Mentai mayo with cream cheese",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> sac (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>)",
+     "name_html": "Mentaiko (spicy pollock roe)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Japanese mayo (Kewpie)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+     "name_html": "Cream cheese, small cubes"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Shape as on the <a href=\"onigiri.html\">onigiri page</a>, but bigger and looser: about <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\" data-s=\"0\">120 g</span></b> of rice, packed only enough to hold.</li><li>Put a heaped tablespoon of filling in the well, close the rice over it, then set a little more <b>on top</b>, so you can see what's inside. That's how Bongo and Togoshi-ya show theirs.</li><li>Wrap a strip of <b>nori</b> around the base and up the sides, leaving the top with the filling open. Eat within the hour, while the nori is crisp.</li><li>Good doubles: soboro with a cured yolk, pork kimchi with natto, mentai mayo on takana.</li></ul>",
+   "heat": null,
+   "id": "step-10",
+   "images": {
+    "alt": "Shape them shop style",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "A heaped spoon in the well, rice closed loosely over it.",
+      "src": "illustrations/onigiri-shop-fillings/10-how1.webp?v=26baa085d0"
+     },
+     {
+      "caption": "A little more on top so it shows, nori round the base only.",
+      "src": "illustrations/onigiri-shop-fillings/10-how2.webp?v=d94961fddd"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/10.webp?v=1c7a2270d4",
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min each",
+   "time_html": "<span>~2 min each</span>",
+   "title": "Shape them shop style",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1.4\">1.4 kg</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\" data-s=\"0\">120 g</span> each)",
+     "name_html": "Cooked rice, from the onigiri page"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"12\" data-n=\"2\">12</span>",
+     "name_html": "Nori strips"
+    },
+    {
+     "amount_html": "a little for each onigiri",
+     "name_html": "Kosher salt (for your hands)"
+    }
+   ]
+  }
+ ],
+ "timeline": {
+  "end": 60,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   },
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   }
+  ],
+  "note_html": "Make two or three fillings, not all of them; the times assume shiso kombu, soboro and pork kimchi.",
+  "tasks": [
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "bowl",
+    "label": "Cure the yolks (day before)",
+    "label_html": "Cure the yolks (day before)",
+    "start": 0
+   },
+   {
+    "dur": 20,
+    "dur_label": "20 min",
+    "kind": "pan",
+    "label": "Shiso kombu",
+    "label_html": "Shiso kombu",
+    "start": 5
+   },
+   {
+    "dur": 8,
+    "dur_label": "8 min",
+    "kind": "pan",
+    "label": "Soboro",
+    "label_html": "Soboro",
+    "start": 25
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "pan",
+    "label": "Pork kimchi",
+    "label_html": "Pork kimchi",
+    "start": 33
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "board",
+    "label": "Mentai mayo",
+    "label_html": "Mentai mayo",
+    "start": 38
+   },
+   {
+    "dur": 12,
+    "dur_label": "12 min",
+    "kind": "board",
+    "label": "Shape",
+    "label_html": "Shape",
+    "start": 41
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Onigiri: fillings from Tokyo's onigiri shops",
+ "total": "1 day for the yolks; the rest 5–20 min each",
+ "vinegar_options": null,
+ "yields": "12 onigiri, from 2–3 fillings (each makes 4–6)"
+}
