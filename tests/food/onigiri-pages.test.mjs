@@ -97,24 +97,29 @@ describe("standalone onigiri recipes", () => {
     }
   });
 
-  it("illustrates preparation, filling or mixing, and shaping with four distinct pictures per recipe", () => {
+  it("shows three filling-preparation pictures and six distinct pictures per recipe", () => {
     const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, "art/onigiri/shop-process-images.json"), "utf8"));
     for (const lang of ["en", "ru"]) {
       for (const slug of FILLINGS) {
         const r = read(lang, slug);
-        assert.ok(r.steps[0].images.illustration, `${slug}: filling preparation needs a picture`);
+        assert.equal(r.steps[0].images.how.length, 2, `${slug}: show two earlier filling-preparation stages`);
+        assert.ok(r.steps[0].images.result, `${slug}: keep the prepared filling picture after the instructions`);
         assert.equal(r.steps[1].images.how.length, 1, `${slug}: show filling the well or mixing the rice`);
         assert.ok(r.steps[1].images.result, `${slug}: show pressing the triangle`);
         const pictures = r.steps.flatMap(({ images: im }) => [im.illustration, im.result, ...im.how.map((h) => h.src)].filter(Boolean));
         const hashes = new Set(pictures.map((src) => createHash("sha256").update(fs.readFileSync(path.join(ROOT, "public/media", src.split("?")[0]))).digest("hex")));
-        assert.equal(hashes.size, 4, `${slug}: repeating the hero does not count as another process picture`);
-        for (const src of pictures.slice(0, 3)) {
+        assert.equal(hashes.size, 6, `${slug}: repeating the hero does not count as another process picture`);
+        for (const src of pictures.slice(0, -1)) {
           const record = manifest.assets.find((a) => a.slug === slug && a.published_path === `public/media/${src.split("?")[0]}`);
           assert.ok(record?.reviewed, `${slug}: each process picture needs a manual review`);
           assert.equal(record.sha256, createHash("sha256").update(fs.readFileSync(path.join(ROOT, record.published_path))).digest("hex"));
         }
         const caption = r.steps[1].images.how[0].caption;
-        if (lang === "ru") assert.match(caption, /[А-Яа-я]/, "translate the technique caption");
+        if (lang === "ru") {
+          for (const step of r.steps) for (const image of step.images.how) {
+            assert.match(image.caption, /[А-Яа-я]/, "translate every preparation and shaping caption");
+          }
+        }
         if (["eggplant-tsukudani-onigiri", "pepperoncino-onigiri"].includes(slug)) {
           assert.match(caption, lang === "en" ? /no central pocket/ : /кармана нет/);
         }

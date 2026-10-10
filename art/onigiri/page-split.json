@@ -26,5 +26,7 @@
   "critic": "art/onigiri/shop-critic-review.json",
   "process_art": "art/onigiri/shop-process-images.json",
   "process_specs": "art/onigiri/source/imagegen/onigiri_shop_pages_art.py",
-  "distinct_pictures_per_recipe": 4
+  "distinct_pictures_per_recipe": 6,
+  "filling_preparation_pictures_per_recipe": 3,
+  "filling_preparation_art": "art/onigiri/filling-preparation-prompts.json"
 }

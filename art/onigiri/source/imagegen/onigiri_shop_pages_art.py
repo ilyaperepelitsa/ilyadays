@@ -1,5 +1,6 @@
 """Step illustration specs for the nine separated ORIGINAL shop-inspired fillings."""
 from recipes.onigiri_shop_fillings import SPEC as ORIGINAL
+from onigiri_filling_preparation_art import PREPARATION
 
 CAPTIONS = [
     "One drained cured yolk in the well, still whole.",
@@ -43,6 +44,7 @@ def make_spec(i):
     return {
         "setting": "Warm Miyazaki-inspired hand-painted Japanese animation food illustration, "
                    "soft cel shading, ivory ceramics and honey wood. Only this recipe: " + filling + ". "
+                   "Preparation scenes use the earlier food state described in that scene; add ingredients only at that stage. "
                    "No assortment, diagrams, labels or photorealism. Natural hand proportions and five digits per hand; "
                    "naturally occluded fingers stay hidden.",
         "steps": [preparation,
@@ -50,7 +52,8 @@ def make_spec(i):
                   "For eggplant or pepperoncino, the filling is mixed evenly throughout the rice. "
                   "For center-filled recipes, the filling is enclosed by plain white rice. No nori yet.",
                   "One onigiri cut into two matching halves, both cut faces showing " + filling + "."],
-        "how": {2: [(CAPTIONS[i],
+        "how": {1: [(stage["caption"], stage["scene"]) for stage in PREPARATION[i]["stages"]],
+                2: [(CAPTIONS[i],
                      ORIGINAL["how"][i + 1][0][1] if i in (6, 7) else
                      "Left palm cups plain rice with a central well. Right hand adds only this recipe's "
                      "prepared filling to the well: " + filling + ". No nori, no other fillings, five fingers per hand.")]},
