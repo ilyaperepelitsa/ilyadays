@@ -1,0 +1,323 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "По мотивам Бонго: острая икра минтая с майонезом и целыми кубиками сливочного сыра.",
+ "chips": [
+  {
+   "html": "<span>4–6 онигири</span>",
+   "kind": "",
+   "text": "4–6 онигири"
+  },
+  {
+   "html": "3 мин на начинку, плюс рис и формовка",
+   "kind": "time",
+   "text": "3 мин на начинку, плюс рис и формовка"
+  }
+ ],
+ "description": "По мотивам Бонго: острая икра минтая с майонезом и целыми кубиками сливочного сыра.",
+ "equipment_html": [
+  "Небольшая миска",
+  "Лопатка для риса",
+  "Маленькая миска с водой для рук",
+  "Кухонные ножницы"
+ ],
+ "group": {
+  "id": "onigiri",
+  "name": "Онигири"
+ },
+ "hero": {
+  "alt": "Онигири с мэнтай-майо и сливочным сыром (Бонго)",
+  "image": "illustrations/mentai-cream-cheese-onigiri/3.webp?v=751fd8bd0e",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> ястык (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>)",
+     "name_html": "Ментайко (острая икра минтая)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Японский майонез (Kewpie)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Сливочный сыр, мелкими кубиками"
+    }
+   ],
+   "name": "Мэнтай-майо со сливочным сыром (Бонго)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"480\" data-b=\"720\">480–720 г</span> (по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Варёный рис, со страницы онигири"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"6\" data-n=\"3\">4–6</span>",
+     "name_html": "Полоски нори"
+    },
+    {
+     "amount_html": "немного на каждый онигири",
+     "name_html": "Крупная (кошерная) соль (для рук)"
+    }
+   ],
+   "name": "Для формовки"
+  }
+ ],
+ "intro_html": "Домашняя версия начинки из указанной выше онигири-лавки. Лавки не публикуют рецепты; количества здесь — собственные, этого сайта. Эта страница посвящена <b>одной начинке</b>, её формовке и подаче. Начните с простого варёного японского короткозёрного риса: <a href=\"onigiri.html\">варка риса, формовка руками и все начинки из лавок →</a>. Время приготовления начинки не включает варку риса.",
+ "mise": [],
+ "more_label": "Ещё — Онигири:",
+ "next": {
+  "slug": "yaki-onigiri",
+  "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+ },
+ "notes": [
+  {
+   "html": "<p>Попробуйте мэнтай-майо на <a href=\"takana-onigiri.html\">такане</a>; приготовьте каждую начинку отдельно.</p>",
+   "title_html": "Ещё одно сочетание из лавки"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-начинка",
+   "title": "Начинка"
+  },
+  {
+   "id": "part-формовка-руками",
+   "title": "Формовка руками"
+  },
+  {
+   "id": "part-подача",
+   "title": "Подача"
+  }
+ ],
+ "prev": {
+  "slug": "pepperoncino-onigiri",
+  "title": "Онигири пеперончино (Бонго)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/mentai-cream-cheese-onigiri.jpg?v=aff273baa0",
+ "siblings": [
+  {
+   "slug": "onigiri",
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку"
+  },
+  {
+   "slug": "soy-cured-yolk-onigiri",
+   "title": "Онигири с желтком в соевом соусе (Бонго)"
+  },
+  {
+   "slug": "soboro-onigiri",
+   "title": "Онигири с нику соборо (Бонго)"
+  },
+  {
+   "slug": "pork-kimchi-onigiri",
+   "title": "Онигири со свининой и кимчи (Бонго)"
+  },
+  {
+   "slug": "shiso-kombu-onigiri",
+   "title": "Онигири с комбу и сисо (Ядороку, Бонго)"
+  },
+  {
+   "slug": "takana-onigiri",
+   "title": "Онигири с таканой (Бонго)"
+  },
+  {
+   "slug": "peanut-miso-onigiri",
+   "title": "Онигири с арахисовым мисо (Бонго)"
+  },
+  {
+   "slug": "eggplant-tsukudani-onigiri",
+   "title": "Онигири с цукудани из баклажана (по мотивам Нигихая)"
+  },
+  {
+   "slug": "pepperoncino-onigiri",
+   "title": "Онигири пеперончино (Бонго)"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)"
+  },
+  {
+   "slug": "shrimp-karaage-onigiri",
+   "title": "Онигири с креветкой караагэ и острым майонезом"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
+  }
+ ],
+ "slug": "mentai-cream-cheese-onigiri",
+ "sources": [
+  {
+   "label": "Hidden Japan Gems — меню Онигири Бонго",
+   "url": "https://hiddenjapan-gems.com/onigiri-bongo-otsuka-tokyo/"
+  },
+  {
+   "label": "Гид MICHELIN — Онигири Асакуса Ядороку",
+   "url": "https://guide.michelin.com/jp/en/tokyo-region/tokyo/restaurant/onigiri-asakusa-yadoroku"
+  },
+  {
+   "label": "Асакуса Ядороку (официальный сайт)",
+   "url": "https://onigiriyadoroku.com/english.html"
+  },
+  {
+   "label": "Нигихая, Киото (официальный сайт, на японском)",
+   "url": "https://nigihaya.com/"
+  },
+  {
+   "label": "Тогоси-я (официальный сайт, на японском)",
+   "url": "https://www.togoshiya.jp/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Надрежьте ястык <b>ментайко</b> и выскребите икру из плёнки.</li><li>Смешайте её с <b>майонезом</b>, затем аккуратно вмешайте кубики <b>сливочного сыра</b>, не раздавливая их.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Мэнтай-майо со сливочным сыром",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": null,
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Начинка",
+   "part_id": "part-начинка",
+   "time": "3 мин",
+   "time_html": "<span>3 мин</span>",
+   "title": "Мэнтай-майо со сливочным сыром",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> ястык (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>)",
+     "name_html": "Ментайко (острая икра минтая)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Японский майонез (Kewpie)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Сливочный сыр, мелкими кубиками"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Подготовьте варёный рис, держите его накрытым и остудите лишь настолько, чтобы можно было держать в руках. Смочите ладони и разотрите по ним немного соли.</li><li>На каждый онигири положите на ладонь около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\" data-s=\"0\">60 г</span> риса, сделайте углубление и добавьте столовую ложку начинки с горкой. Накройте ещё <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\" data-s=\"0\">60 г</span> риса и мягко закройте рис вокруг начинки. Остатки начинки сохраните отдельно.</li><li>Поддерживайте рис снизу одной ладонью. Другую руку согните «крышей», мягко прижмите, чтобы сделать угол, поверните рис на треть оборота и повторите. Сохраняйте рыхлость: сжимайте лишь настолько, чтобы рис держался вместе.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Сформовать, как в онигири-лавках",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": null,
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Формовка руками",
+   "part_id": "part-формовка-руками",
+   "time": "~2 мин каждый",
+   "time_html": "<span>~2 мин каждый</span>",
+   "title": "Сформовать, как в онигири-лавках",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"480\" data-b=\"720\">480–720 г</span> (по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Варёный рис, со страницы онигири"
+    },
+    {
+     "amount_html": "немного на каждый онигири",
+     "name_html": "Крупная (кошерная) соль (для рук)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Для подачи как в лавке выложите немного той же начинки сверху, чтобы было видно, что внутри. Оставьте верх открытым, без нори.</li><li>Перед подачей оберните каждую штуку одной полоской нори вокруг основания и по бокам. Съешьте в течение часа, пока нори хрустит. Разрезанный пример показывает, что внутри; свои онигири разрезать необязательно.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Оберните нори и подавайте",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mentai-cream-cheese-onigiri/3.webp?v=751fd8bd0e",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Подача",
+   "part_id": "part-подача",
+   "time": null,
+   "time_html": null,
+   "title": "Оберните нори и подавайте",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-b=\"6\" data-n=\"3\">4–6</span>",
+     "name_html": "Полоски нори"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Онигири с мэнтай-майо и сливочным сыром (Бонго)",
+ "total": "3 мин на начинку, плюс рис и формовка",
+ "vinegar_options": null,
+ "yields": "4–6 онигири"
+}

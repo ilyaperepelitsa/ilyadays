@@ -72,17 +72,25 @@
    "name": "В конце"
   }
  ],
- "intro_html": "Эта страница учит <b>формовке руками</b>: простой короткозёрный рис, левая ладонь чашей и правая рука «крышей». Выберите ниже <b>один рецепт начинки</b> или сделайте простые рисовые треугольники. Способы <b>в форме</b> и <b>через плёнку</b> вынесены на отдельные страницы — их не нужно выполнять после формовки руками.",
+ "intro_html": "Эта страница учит <b>формовке руками</b>: простой короткозёрный рис, левая ладонь чашечкой и правая рука «крышей». Выберите ниже <b>одну начинку по мотивам онигири-лавок</b> или сделайте треугольники без начинки. Токийская Бонго вдохновила яркие сочетания; Асакуса Ядороку — традиционные начинки, а киотская Нигихая — баклажан, вмешанный во весь рис. Это наши домашние версии: лавки рецептов не публикуют. Способы <b>в форме</b> и <b>через пищевую плёнку</b> вынесены отдельно; их не нужно выполнять после формовки руками.",
  "mise": [],
  "more_label": "Ещё — Онигири:",
  "next": {
-  "slug": "salted-salmon-onigiri",
-  "title": "Онигири с солёным лососем"
+  "slug": "onigiri-mold",
+  "title": "Онигири в форме"
  },
  "notes": [
   {
    "html": "<ul class=\"do\"><li>Онигири — это простой отварной рис с солью; рис для суши заправлен уксусом, сахаром и солью.</li><li>Берите японский короткозёрный рис — жасминовый или длиннозёрный разваливается.</li></ul>",
    "title_html": "Почему не рис для суши?"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Фирменная начинка Бонго — <b>судзико</b>, солёная икра лосося прямо в ястыке.</li><li>Другие начинки просто покупают: <b>негиторо</b> (рубленый жирный тунец с зелёным луком, съесть в течение часа), <b>лосось с ментайко</b> сверху, <b>жареная тарако с мэнтай-майо</b> (Тогоси-я), а у Ядороку — <b>кадзуноко в сакэкасу</b> (икра сельди в винной гуще) и <b>ами цукудани</b> (крошечные креветки, тушённые в сладком соевом соусе).</li></ul>",
+   "title_html": "Купить и начинить"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Весной в Бонго есть ещё фуки-мисо: рубленые стебли белокопытника, обжаренные с мисо и сахаром.</li><li><a href=\"peanut-miso-onigiri.html\">Арахисовое мисо</a> — его круглогодичный родственник.</li></ul>",
+   "title_html": "Фуки-мисо"
   }
  ],
  "original": null,
@@ -131,36 +139,48 @@
  "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
  "siblings": [
   {
-   "slug": "salted-salmon-onigiri",
-   "title": "Онигири с солёным лососем"
-  },
-  {
-   "slug": "okaka-onigiri",
-   "title": "Онигири с окака"
-  },
-  {
-   "slug": "tuna-mayo-onigiri",
-   "title": "Онигири с тунцом и майонезом"
-  },
-  {
-   "slug": "umeboshi-onigiri",
-   "title": "Онигири с умэбоси"
-  },
-  {
-   "slug": "spicy-tuna-mayo-onigiri",
-   "title": "Онигири с острым тунцом и майонезом"
-  },
-  {
-   "slug": "kimchi-cheese-onigiri",
-   "title": "Онигири с кимчи и сыром"
-  },
-  {
    "slug": "onigiri-mold",
    "title": "Онигири в форме"
   },
   {
    "slug": "onigiri-plastic-wrap",
    "title": "Онигири через пищевую плёнку"
+  },
+  {
+   "slug": "soy-cured-yolk-onigiri",
+   "title": "Онигири с желтком в соевом соусе (Бонго)"
+  },
+  {
+   "slug": "soboro-onigiri",
+   "title": "Онигири с нику соборо (Бонго)"
+  },
+  {
+   "slug": "pork-kimchi-onigiri",
+   "title": "Онигири со свининой и кимчи (Бонго)"
+  },
+  {
+   "slug": "shiso-kombu-onigiri",
+   "title": "Онигири с комбу и сисо (Ядороку, Бонго)"
+  },
+  {
+   "slug": "takana-onigiri",
+   "title": "Онигири с таканой (Бонго)"
+  },
+  {
+   "slug": "peanut-miso-onigiri",
+   "title": "Онигири с арахисовым мисо (Бонго)"
+  },
+  {
+   "slug": "eggplant-tsukudani-onigiri",
+   "title": "Онигири с цукудани из баклажана (по мотивам Нигихая)"
+  },
+  {
+   "slug": "pepperoncino-onigiri",
+   "title": "Онигири пеперончино (Бонго)"
+  },
+  {
+   "slug": "mentai-cream-cheese-onigiri",
+   "title": "Онигири с мэнтай-майо и сливочным сыром (Бонго)"
   },
   {
    "slug": "yaki-onigiri",
@@ -208,7 +228,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/kimchi-cheese-onigiri/1.webp?v=9a0341d555",
+    "illustration": "illustrations/onigiri/1.webp?v=9a0341d555",
     "photo": null,
     "result": null,
     "svg_fallback": null
@@ -241,16 +261,16 @@
     "how": [
      {
       "caption": "Смочите обе ладони, затем обмакните 2–3 пальца в крупную соль…",
-      "src": "illustrations/kimchi-cheese-onigiri/3-how1.webp?v=522ee31760"
+      "src": "illustrations/onigiri/2-how1.webp?v=522ee31760"
      },
      {
       "caption": "…и разотрите соль по обеим ладоням.",
-      "src": "illustrations/kimchi-cheese-onigiri/3-how2.webp?v=8ecc676131"
+      "src": "illustrations/onigiri/2-how2.webp?v=8ecc676131"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/kimchi-cheese-onigiri/3.webp?v=6e4c345ccc",
+    "result": "illustrations/onigiri/2.webp?v=6e4c345ccc",
     "svg_fallback": null
    },
    "n": 2,
@@ -267,7 +287,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Положите ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> тёплого риса на ЛЕВУЮ ладонь — левая рука всегда снизу.</li><li>Для онигири с начинкой сделайте небольшое углубление и положите <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 ч. л.</span> одной готовой начинки. Для простых онигири не добавляйте начинку.</li><li>Накройте ещё ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> риса и мягко обожмите вокруг начинки в шарик.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Для баклажана или пеперончино используйте рис с уже вмешанной готовой начинкой. Формуйте сразу из этого риса, пропуская отдельную начинку и углубление, описанные ниже.</li><li>Положите ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> тёплого риса на ЛЕВУЮ ладонь — левая рука всегда снизу.</li><li>Для онигири с начинкой сделайте небольшое углубление и положите <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 ч. л.</span> одной готовой начинки. Для простых онигири не добавляйте начинку.</li><li>Накройте ещё ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> риса и мягко обожмите вокруг начинки в шарик.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -277,7 +297,7 @@
     "how": [
      {
       "caption": "Около 50 г тёплого риса на левую ладонь; сделайте в середине небольшую ямку.",
-      "src": "illustrations/kimchi-cheese-onigiri/4.webp?v=a2447717ab"
+      "src": "illustrations/onigiri/3-how1.webp?v=a2447717ab"
      },
      {
       "caption": "Пример с лососем: используйте выбранную начинку или не добавляйте её для простых онигири.",
@@ -308,16 +328,16 @@
     "how": [
      {
       "caption": "Правая рука сверху, пальцы вместе и согнуты «крышей»; левая снизу буквой «С» прижимает бока.",
-      "src": "illustrations/kimchi-cheese-onigiri/5-how1.webp?v=f09f821ccb"
+      "src": "illustrations/onigiri/4-how1.webp?v=f09f821ccb"
      },
      {
       "caption": "Легко прижмите, затем перекатите только что сделанный угол к себе — на треть оборота — и прижмите снова.",
-      "src": "illustrations/kimchi-cheese-onigiri/5-how2.webp?v=5c94e8c191"
+      "src": "illustrations/onigiri/4-how2.webp?v=5c94e8c191"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
+    "result": "illustrations/onigiri/4.webp?v=bddbbe9acb",
     "svg_fallback": null
    },
    "n": 4,

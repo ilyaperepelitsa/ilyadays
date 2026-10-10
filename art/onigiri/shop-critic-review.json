@@ -1,0 +1,42 @@
+{
+  "scope": "Preservation and practical instruction review of the nine original shop-inspired fillings, hand-shaping hub, mold and plastic-wrap adapters.",
+  "source_files": [
+    "../recipes/src/onigiri_shop.py",
+    "../recipes/src/onigiri_shop_pages.py",
+    "../recipes/src/onigiri_pages.py"
+  ],
+  "method": "Independent source comparison, programmatic equality checks of original filling ingredient groups and preparation bodies, and manual review of shaping branches and note placement. This is not a cooking trial or a live-page verification.",
+  "verdict": "No remaining publication-blocking preservation or instruction issue found within this scope.",
+  "preservation": {
+    "original_filling_recipes": 9,
+    "ingredient_groups_preserved_exactly": 9,
+    "preparation_bodies_unchanged": 7,
+    "preparation_exceptions": [
+      "Soboro retains its cooking instructions and original optional yolk pairing; the pairing now links to the separate yolk recipe and explicitly requires preparing that optional second filling a day ahead.",
+      "Shiso kombu retains its cooking instructions; its conflicting one-week keeping sentence now refers to the original combined Keeping note's 4–5-day period."
+    ],
+    "context_and_notes": [
+      "Shop inspiration and home-version attribution survive. The hub distinguishes Bongo combinations, Yadoroku traditional fillings and Nigihaya mixed eggplant.",
+      "The original Buy and fill note survives on the hub, including sujiko, negitoro, salmon with mentaiko, grilled tarako with mentai mayo, kazunoko and ami tsukudani.",
+      "Fuki miso survives on the hub and peanut-miso page with obsolete step numbering removed.",
+      "Nigihaya's Marizuke explanation survives on the eggplant page with the quick-home-version distinction.",
+      "Mentai mayo on takana remains an optional linked combination.",
+      "Volatile historical menu-count and Michelin-status claims are deliberately omitted from the new hub; they are not represented as freshly verified facts."
+    ]
+  },
+  "resolved_findings": [
+    "The split uses the original nine shop-inspired fillings rather than substituting the unrelated six basic fillings.",
+    "Four cured yolks yield four onigiri, with 480 g cooked rice and four nori strips.",
+    "Eggplant mixes throughout the rice; pepperoncino uses the original approximately 1 tsp per piece with explicit excess oil, rather than pouring the entire batch into the rice.",
+    "Seven center-filled recipes remain distinct from the two mixed-rice recipes; no required second filling is added.",
+    "The hand-shaping hub, mold and wrap filling steps explicitly skip the well and separate filling for mixed rice.",
+    "The shared mixed-rice note is method-neutral and no longer instructs hand-shaping readers to fill a mold or wrap.",
+    "Mold pressure, filling spoon size, salt naming and nori quantity are clarified; wrap filling omits the contradictory bare-hand illustration.",
+    "Cooker and pot directions are present on the hub and alternative-method pages."
+  ],
+  "remaining_blockers": [],
+  "verification_outside_this_review": [
+    "Localized export completeness, generated asset mapping, links, build and browser checks are verified separately by the implementing agent.",
+    "This report does not claim every original sentence is preserved verbatim or that the recipes reproduce unpublished shop recipes."
+  ]
+}

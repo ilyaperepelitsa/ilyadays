@@ -1,86 +1,27 @@
 {
-  "source_module": "../recipes/src/onigiri_pages.py",
+  "source_module": "../recipes/src/onigiri_shop_pages.py",
   "source_registry": "../recipes/src/content.py",
-  "source_art": "../recipes/generated/clean/onigiri-shared",
-  "pages": {
-    "onigiri": {
-      "hero": "hero",
-      "1": 1,
-      "2": 4,
-      "3": 5,
-      "4": 6,
-      "5": 10
-    },
-    "salted-salmon-onigiri": {
-      "hero": 6,
-      "1": 1,
-      "3": 4,
-      "4": "5-how1",
-      "5": 6,
-      "6": "10-how1"
-    },
-    "okaka-onigiri": {
-      "hero": 6,
-      "1": 1,
-      "3": 4,
-      "4": "5-how1",
-      "5": 6,
-      "6": "10-how1"
-    },
-    "tuna-mayo-onigiri": {
-      "hero": 6,
-      "1": 1,
-      "3": 4,
-      "4": "5-how1",
-      "5": 6,
-      "6": "10-how1"
-    },
-    "umeboshi-onigiri": {
-      "hero": 6,
-      "1": 1,
-      "3": 4,
-      "4": "5-how1",
-      "5": 6,
-      "6": "10-how1"
-    },
-    "spicy-tuna-mayo-onigiri": {
-      "hero": 6,
-      "1": 1,
-      "3": 4,
-      "4": "5-how1",
-      "5": 6,
-      "6": "10-how1"
-    },
-    "kimchi-cheese-onigiri": {
-      "hero": 6,
-      "1": 1,
-      "3": 4,
-      "4": "5-how1",
-      "5": 6,
-      "6": "10-how1"
-    },
-    "onigiri-mold": {
-      "hero": 9,
-      "1": 1,
-      "2": 8,
-      "3": 9,
-      "4": "10-how1"
-    },
-    "onigiri-plastic-wrap": {
-      "hero": 7,
-      "1": 1,
-      "3": 7,
-      "4": "10-how1"
-    }
-  },
-  "notes": "Six complete filling recipes and two methods, plus hand-shaped hub. Reuse existing hand-drawn artwork; preparation-only steps intentionally have text without an unrelated image.",
-  "critic_fixes": [
-    "Wrap fill step is text-only; no contradictory bare-hand picture.",
-    "Rice cooker and pot instructions supplied on every page.",
-    "Mold pressure, spoonful, salt naming and four-piece nori quantity clarified.",
-    "Salmon in generic main/mold art explicitly labelled an example."
+  "preservation_source": "../recipes/src/onigiri_shop.py",
+  "original_inventory": "art/onigiri/shop-recipes-source.json",
+  "pages": [
+    "soy-cured-yolk-onigiri",
+    "soboro-onigiri",
+    "pork-kimchi-onigiri",
+    "shiso-kombu-onigiri",
+    "takana-onigiri",
+    "peanut-miso-onigiri",
+    "eggplant-tsukudani-onigiri",
+    "pepperoncino-onigiri",
+    "mentai-cream-cheese-onigiri"
   ],
-  "section": "Onigiri (16 recipes and methods, including onigirazu and spam musubi)",
-  "retired_page": "onigiri-shop-fillings; redirects to the hand-shaping hub in the same language",
-  "art_overrides": "Base reuse mappings above are superseded for heroes and final steps by art/onigiri/cutaway-prompts.json. Mixed-assortment hero and final-result artwork are retired."
+  "methods": [
+    "onigiri",
+    "onigiri-mold",
+    "onigiri-plastic-wrap"
+  ],
+  "section": "Onigiri:19recipes and methods",
+  "retired_page": "onigiri-shop-fillings redirects to the hub with all nine original recipes",
+  "correction": "The initial split mistakenly substituted six basic fillings. Those pages are unpublished and redirect to the hub. The original nine shop fillings and all original ingredient quantities are now preserved on separate pages.",
+  "art": "art/onigiri/shop-cutaway-prompts.json",
+  "critic": "art/onigiri/shop-critic-review.json"
 }

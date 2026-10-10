@@ -45,14 +45,17 @@
    "id": "onigiri",
    "items": [
     "onigiri",
-    "salted-salmon-onigiri",
-    "okaka-onigiri",
-    "tuna-mayo-onigiri",
-    "umeboshi-onigiri",
-    "spicy-tuna-mayo-onigiri",
-    "kimchi-cheese-onigiri",
     "onigiri-mold",
     "onigiri-plastic-wrap",
+    "soy-cured-yolk-onigiri",
+    "soboro-onigiri",
+    "pork-kimchi-onigiri",
+    "shiso-kombu-onigiri",
+    "takana-onigiri",
+    "peanut-miso-onigiri",
+    "eggplant-tsukudani-onigiri",
+    "pepperoncino-onigiri",
+    "mentai-cream-cheese-onigiri",
     "yaki-onigiri",
     "nikumaki-onigiri",
     "shrimp-karaage-onigiri",
@@ -161,18 +164,18 @@
  ],
  "lede_html": "Japanese basics and big projects, sushi, Korean kimchi and fried chicken, weeknight rice noodles and soba, Indian chicken tikka and a sous vide reference — each with step-by-step pictures, mise-en-place order and a prep timeline.",
  "recent": [
-  "salted-salmon-onigiri",
-  "okaka-onigiri",
-  "tuna-mayo-onigiri",
-  "umeboshi-onigiri",
-  "spicy-tuna-mayo-onigiri",
-  "kimchi-cheese-onigiri",
   "onigiri-mold",
   "onigiri-plastic-wrap",
-  "daifuku",
-  "mame-daifuku",
-  "yomogi-daifuku",
-  "strawberry-daifuku"
+  "soy-cured-yolk-onigiri",
+  "soboro-onigiri",
+  "pork-kimchi-onigiri",
+  "shiso-kombu-onigiri",
+  "takana-onigiri",
+  "peanut-miso-onigiri",
+  "eggplant-tsukudani-onigiri",
+  "pepperoncino-onigiri",
+  "mentai-cream-cheese-onigiri",
+  "daifuku"
  ],
  "recipes": [
   {
@@ -744,187 +747,7 @@
    "yields": "9 hand-shaped onigiri"
   },
   {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "A pocket of flaky salted salmon inside plain rice.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "A pocket of flaky salted salmon inside plain rice.",
-   "group": "Onigiri",
-   "group_id": "onigiri",
-   "hero": {
-    "alt": "Salted salmon onigiri",
-    "image": "illustrations/salted-salmon-onigiri/6.webp?v=337aef7aad",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/salted-salmon-onigiri.jpg?v=6a6d883e9e",
-   "slug": "salted-salmon-onigiri",
-   "title": "Salted salmon onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Soy-moistened bonito flakes tucked into a salted rice triangle.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Soy-moistened bonito flakes tucked into a salted rice triangle.",
-   "group": "Onigiri",
-   "group_id": "onigiri",
-   "hero": {
-    "alt": "Okaka onigiri",
-    "image": "illustrations/okaka-onigiri/6.webp?v=d861b4c4f8",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/okaka-onigiri.jpg?v=7c2cc96148",
-   "slug": "okaka-onigiri",
-   "title": "Okaka onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Creamy canned tuna and Japanese mayo in plain salted rice.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Creamy canned tuna and Japanese mayo in plain salted rice.",
-   "group": "Onigiri",
-   "group_id": "onigiri",
-   "hero": {
-    "alt": "Tuna-mayo onigiri",
-    "image": "illustrations/tuna-mayo-onigiri/6.webp?v=7893f6562b",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/tuna-mayo-onigiri.jpg?v=5f150804ad",
-   "slug": "tuna-mayo-onigiri",
-   "title": "Tuna-mayo onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "A tart pickled-plum center in a plain rice triangle.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "A tart pickled-plum center in a plain rice triangle.",
-   "group": "Onigiri",
-   "group_id": "onigiri",
-   "hero": {
-    "alt": "Umeboshi onigiri",
-    "image": "illustrations/umeboshi-onigiri/6.webp?v=21045a4b73",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/umeboshi-onigiri.jpg?v=d902bbc5d8",
-   "slug": "umeboshi-onigiri",
-   "title": "Umeboshi onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Tuna-mayo with a little sriracha, enclosed in plain rice.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Tuna-mayo with a little sriracha, enclosed in plain rice.",
-   "group": "Onigiri",
-   "group_id": "onigiri",
-   "hero": {
-    "alt": "Spicy tuna-mayo onigiri",
-    "image": "illustrations/spicy-tuna-mayo-onigiri/6.webp?v=416b788c71",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/spicy-tuna-mayo-onigiri.jpg?v=1981f5c025",
-   "slug": "spicy-tuna-mayo-onigiri",
-   "title": "Spicy tuna-mayo onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Chopped kimchi and small cheese cubes in a plain rice triangle.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Chopped kimchi and small cheese cubes in a plain rice triangle.",
-   "group": "Onigiri",
-   "group_id": "onigiri",
-   "hero": {
-    "alt": "Kimchi & cheese onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/6.webp?v=2e6ae21ce3",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=a45e078f39",
-   "slug": "kimchi-cheese-onigiri",
-   "title": "Kimchi & cheese onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
+   "added": "2026-10-10 18:00",
    "blurb_html": "Fill, press and release: one dedicated mold method.",
    "chips": [
     {
@@ -954,7 +777,7 @@
    "yields": "about 4 onigiri, depending on mold size"
   },
   {
-   "added": "2026-10-10 16:00",
+   "added": "2026-10-10 18:00",
    "blurb_html": "Fill and shape a rice triangle through plastic wrap, without handling the rice directly.",
    "chips": [
     {
@@ -982,6 +805,276 @@
    "title": "Onigiri through plastic wrap",
    "total": "~1¼ h",
    "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired soy-cured yolk: a deep amber, jammy center inside warm rice.",
+   "chips": [
+    {
+     "html": "<span>4 onigiri</span>",
+     "kind": "",
+     "text": "4 onigiri"
+    },
+    {
+     "html": "24 h filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "24 h filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired soy-cured yolk: a deep amber, jammy center inside warm rice.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Soy-cured egg yolk (Bongo) onigiri",
+    "image": "illustrations/soy-cured-yolk-onigiri/3.webp?v=edd09092b0",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/soy-cured-yolk-onigiri.jpg?v=882617f802",
+   "slug": "soy-cured-yolk-onigiri",
+   "title": "Soy-cured egg yolk (Bongo) onigiri",
+   "total": "24 h filling prep, plus rice and shaping",
+   "yields": "4 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired niku soboro: fine, glossy pork crumbs with soy, ginger and mirin.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~8 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~8 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired niku soboro: fine, glossy pork crumbs with soy, ginger and mirin.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Niku soboro (Bongo) onigiri",
+    "image": "illustrations/soboro-onigiri/3.webp?v=001c5c87c0",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/soboro-onigiri.jpg?v=76a2ab3d83",
+   "slug": "soboro-onigiri",
+   "title": "Niku soboro (Bongo) onigiri",
+   "total": "~8 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired pork kimchi: browned pork belly and squeezed kimchi, fried dry.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~5 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~5 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired pork kimchi: browned pork belly and squeezed kimchi, fried dry.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Pork kimchi (Bongo) onigiri",
+    "image": "illustrations/pork-kimchi-onigiri/3.webp?v=383f951fb0",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/pork-kimchi-onigiri.jpg?v=328415e14e",
+   "slug": "pork-kimchi-onigiri",
+   "title": "Pork kimchi (Bongo) onigiri",
+   "total": "~5 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Yadoroku- and Bongo-inspired shiso kombu: glossy seaweed strips with fresh shiso.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~20 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~20 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Yadoroku- and Bongo-inspired shiso kombu: glossy seaweed strips with fresh shiso.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Shiso kombu (Yadoroku, Bongo) onigiri",
+    "image": "illustrations/shiso-kombu-onigiri/3.webp?v=1adfbec77e",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/shiso-kombu-onigiri.jpg?v=cca1133b3d",
+   "slug": "shiso-kombu-onigiri",
+   "title": "Shiso kombu (Yadoroku, Bongo) onigiri",
+   "total": "~20 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired takana: sesame-fried pickled mustard greens with chilli.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~4 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~4 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired takana: sesame-fried pickled mustard greens with chilli.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Takana (Bongo) onigiri",
+    "image": "illustrations/takana-onigiri/3.webp?v=7047cd0ec8",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/takana-onigiri.jpg?v=3373048f9a",
+   "slug": "takana-onigiri",
+   "title": "Takana (Bongo) onigiri",
+   "total": "~4 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired peanut miso: roasted peanuts in a sticky sweet miso glaze.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~6 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~6 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired peanut miso: roasted peanuts in a sticky sweet miso glaze.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Peanut miso (Bongo) onigiri",
+    "image": "illustrations/peanut-miso-onigiri/3.webp?v=1d5997acfa",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/peanut-miso-onigiri.jpg?v=55b326ccf2",
+   "slug": "peanut-miso-onigiri",
+   "title": "Peanut miso (Bongo) onigiri",
+   "total": "~6 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "A quick Nigihaya-inspired eggplant tsukudani, mixed all through the rice.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~20 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~20 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "A quick Nigihaya-inspired eggplant tsukudani, mixed all through the rice.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Eggplant tsukudani (after Nigihaya) onigiri",
+    "image": "illustrations/eggplant-tsukudani-onigiri/3.webp?v=c07ba830d9",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/eggplant-tsukudani-onigiri.jpg?v=746d08ec8d",
+   "slug": "eggplant-tsukudani-onigiri",
+   "title": "Eggplant tsukudani (after Nigihaya) onigiri",
+   "total": "~20 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired pepperoncino: pale-gold garlic and chilli oil folded through rice.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "~6 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "~6 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired pepperoncino: pale-gold garlic and chilli oil folded through rice.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Pepperoncino (Bongo) onigiri",
+    "image": "illustrations/pepperoncino-onigiri/3.webp?v=7877e99443",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/pepperoncino-onigiri.jpg?v=25989690bc",
+   "slug": "pepperoncino-onigiri",
+   "title": "Pepperoncino (Bongo) onigiri",
+   "total": "~6 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
+  },
+  {
+   "added": "2026-10-10 18:00",
+   "blurb_html": "Bongo-inspired mentai mayo: spicy pollock roe with intact cream-cheese cubes.",
+   "chips": [
+    {
+     "html": "<span>4–6 onigiri</span>",
+     "kind": "",
+     "text": "4–6 onigiri"
+    },
+    {
+     "html": "3 min filling prep, plus rice and shaping",
+     "kind": "time",
+     "text": "3 min filling prep, plus rice and shaping"
+    }
+   ],
+   "description": "Bongo-inspired mentai mayo: spicy pollock roe with intact cream-cheese cubes.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Mentai mayo with cream cheese (Bongo) onigiri",
+    "image": "illustrations/mentai-cream-cheese-onigiri/3.webp?v=751fd8bd0e",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/mentai-cream-cheese-onigiri.jpg?v=aff273baa0",
+   "slug": "mentai-cream-cheese-onigiri",
+   "title": "Mentai mayo with cream cheese (Bongo) onigiri",
+   "total": "3 min filling prep, plus rice and shaping",
+   "yields": "4–6 onigiri"
   },
   {
    "added": "2026-10-07 17:48",

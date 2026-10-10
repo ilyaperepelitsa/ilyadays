@@ -72,17 +72,25 @@
    "name": "To finish"
   }
  ],
- "intro_html": "This page teaches <b>hand shaping</b>: plain short-grain rice, a cupped left hand and a roof-shaped right hand. Choose <b>one filling recipe</b> below, or make plain rice triangles. The <b>mold</b> and <b>plastic-wrap</b> methods have separate pages; you do not follow them after hand shaping.",
+ "intro_html": "This page teaches <b>hand shaping</b>: plain short-grain rice, a cupped left hand and a roof-shaped right hand. Choose <b>one shop-inspired filling recipe</b> below, or make plain rice triangles. Tokyo's Bongo inspires the bold combinations here; Asakusa Yadoroku the traditional fillings, and Kyoto's Nigihaya the eggplant mixed through rice. These are our home versions: the shops do not publish their recipes. The <b>mold</b> and <b>plastic-wrap</b> methods have separate pages; you do not follow them after hand shaping.",
  "mise": [],
  "more_label": "More onigiri:",
  "next": {
-  "slug": "salted-salmon-onigiri",
-  "title": "Salted salmon onigiri"
+  "slug": "onigiri-mold",
+  "title": "Onigiri with a mold"
  },
  "notes": [
   {
    "html": "<ul class=\"do\"><li>Onigiri are plain steamed rice with salt; sushi rice is seasoned with vinegar, sugar and salt.</li><li>Use Japanese short-grain rice — jasmine or long-grain falls apart.</li></ul>",
    "title_html": "Why not sushi rice?"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Bongo's signature is <b>sujiko</b>, salt-cured salmon roe still in its membrane.</li><li>Other fillings you just buy: <b>negitoro</b> (chopped fatty tuna with scallion, eat within the hour), <b>salmon with mentaiko</b> on top, <b>grilled tarako with mentai mayo</b> (Togoshi-ya), and Yadoroku's <b>kazunoko in sake lees</b> (herring roe) and <b>ami tsukudani</b> (tiny shrimp simmered in sweet soy).</li></ul>",
+   "title_html": "Buy and fill"
+  },
+  {
+   "html": "<ul class=\"do\"><li>In spring Bongo also has fuki miso, butterbur stems chopped and fried with miso and sugar.</li><li>The <a href=\"peanut-miso-onigiri.html\">peanut miso</a> is the year-round cousin.</li></ul>",
+   "title_html": "Fuki miso"
   }
  ],
  "original": null,
@@ -131,36 +139,48 @@
  "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
  "siblings": [
   {
-   "slug": "salted-salmon-onigiri",
-   "title": "Salted salmon onigiri"
-  },
-  {
-   "slug": "okaka-onigiri",
-   "title": "Okaka onigiri"
-  },
-  {
-   "slug": "tuna-mayo-onigiri",
-   "title": "Tuna-mayo onigiri"
-  },
-  {
-   "slug": "umeboshi-onigiri",
-   "title": "Umeboshi onigiri"
-  },
-  {
-   "slug": "spicy-tuna-mayo-onigiri",
-   "title": "Spicy tuna-mayo onigiri"
-  },
-  {
-   "slug": "kimchi-cheese-onigiri",
-   "title": "Kimchi & cheese onigiri"
-  },
-  {
    "slug": "onigiri-mold",
    "title": "Onigiri with a mold"
   },
   {
    "slug": "onigiri-plastic-wrap",
    "title": "Onigiri through plastic wrap"
+  },
+  {
+   "slug": "soy-cured-yolk-onigiri",
+   "title": "Soy-cured egg yolk (Bongo) onigiri"
+  },
+  {
+   "slug": "soboro-onigiri",
+   "title": "Niku soboro (Bongo) onigiri"
+  },
+  {
+   "slug": "pork-kimchi-onigiri",
+   "title": "Pork kimchi (Bongo) onigiri"
+  },
+  {
+   "slug": "shiso-kombu-onigiri",
+   "title": "Shiso kombu (Yadoroku, Bongo) onigiri"
+  },
+  {
+   "slug": "takana-onigiri",
+   "title": "Takana (Bongo) onigiri"
+  },
+  {
+   "slug": "peanut-miso-onigiri",
+   "title": "Peanut miso (Bongo) onigiri"
+  },
+  {
+   "slug": "eggplant-tsukudani-onigiri",
+   "title": "Eggplant tsukudani (after Nigihaya) onigiri"
+  },
+  {
+   "slug": "pepperoncino-onigiri",
+   "title": "Pepperoncino (Bongo) onigiri"
+  },
+  {
+   "slug": "mentai-cream-cheese-onigiri",
+   "title": "Mentai mayo with cream cheese (Bongo) onigiri"
   },
   {
    "slug": "yaki-onigiri",
@@ -208,7 +228,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/kimchi-cheese-onigiri/1.webp?v=9a0341d555",
+    "illustration": "illustrations/onigiri/1.webp?v=9a0341d555",
     "photo": null,
     "result": null,
     "svg_fallback": null
@@ -241,16 +261,16 @@
     "how": [
      {
       "caption": "Wet both palms, then dip 2–3 fingers in kosher salt…",
-      "src": "illustrations/kimchi-cheese-onigiri/3-how1.webp?v=522ee31760"
+      "src": "illustrations/onigiri/2-how1.webp?v=522ee31760"
      },
      {
       "caption": "…and rub the salt over both palms.",
-      "src": "illustrations/kimchi-cheese-onigiri/3-how2.webp?v=8ecc676131"
+      "src": "illustrations/onigiri/2-how2.webp?v=8ecc676131"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/kimchi-cheese-onigiri/3.webp?v=6e4c345ccc",
+    "result": "illustrations/onigiri/2.webp?v=6e4c345ccc",
     "svg_fallback": null
    },
    "n": 2,
@@ -267,7 +287,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Scoop ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> warm rice onto your LEFT palm — the left hand always stays underneath.</li><li>For a filled onigiri, press a small well and add <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> of one prepared filling. For plain onigiri, leave the filling out.</li><li>Cover with another ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> of rice and press it gently round the filling into a ball.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>For eggplant or pepperoncino, use rice with the prepared filling already mixed through it. Shape directly from that rice and skip the separate filling and central well below.</li><li>Scoop ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> warm rice onto your LEFT palm — the left hand always stays underneath.</li><li>For a filled onigiri, press a small well and add <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> of one prepared filling. For plain onigiri, leave the filling out.</li><li>Cover with another ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> of rice and press it gently round the filling into a ball.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -277,7 +297,7 @@
     "how": [
      {
       "caption": "About 50 g of warm rice on your left palm; press a small well into the middle.",
-      "src": "illustrations/kimchi-cheese-onigiri/4.webp?v=a2447717ab"
+      "src": "illustrations/onigiri/3-how1.webp?v=a2447717ab"
      },
      {
       "caption": "Example with salmon; use your chosen filling or leave it out for plain onigiri.",
@@ -308,16 +328,16 @@
     "how": [
      {
       "caption": "Right hand on top, fingers together and bent like a roof; left hand underneath in a “C”, pressing the sides.",
-      "src": "illustrations/kimchi-cheese-onigiri/5-how1.webp?v=f09f821ccb"
+      "src": "illustrations/onigiri/4-how1.webp?v=f09f821ccb"
      },
      {
       "caption": "Press lightly, then roll the corner you just made towards you — a third of a turn — and press again.",
-      "src": "illustrations/kimchi-cheese-onigiri/5-how2.webp?v=5c94e8c191"
+      "src": "illustrations/onigiri/4-how2.webp?v=5c94e8c191"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
+    "result": "illustrations/onigiri/4.webp?v=bddbbe9acb",
     "svg_fallback": null
    },
    "n": 4,

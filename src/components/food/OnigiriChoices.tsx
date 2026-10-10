@@ -3,8 +3,9 @@ import { foodHref, getUi } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 
 const FILLINGS = [
-  "salted-salmon-onigiri", "okaka-onigiri", "tuna-mayo-onigiri",
-  "umeboshi-onigiri", "spicy-tuna-mayo-onigiri", "kimchi-cheese-onigiri",
+  "soy-cured-yolk-onigiri", "soboro-onigiri", "pork-kimchi-onigiri",
+  "shiso-kombu-onigiri", "takana-onigiri", "peanut-miso-onigiri",
+  "eggplant-tsukudani-onigiri", "pepperoncino-onigiri", "mentai-cream-cheese-onigiri",
 ];
 const METHODS = ["onigiri-mold", "onigiri-plastic-wrap"];
 

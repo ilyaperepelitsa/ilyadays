@@ -19,6 +19,14 @@ const legacy = [
   { source: "/en/:path*", destination: "/:path*" },
 ];
 
+// These basic filling pages were briefly published during an incorrect split of the shop recipes.
+const supersededFillings = [
+  "salted-salmon-onigiri", "okaka-onigiri", "tuna-mayo-onigiri",
+  "umeboshi-onigiri", "spicy-tuna-mayo-onigiri", "kimchi-cheese-onigiri",
+].flatMap((slug) => ["", "/ru"].map((lang) => ({
+  source: `${lang}/food/${slug}`, destination: `${lang}/food/onigiri`,
+})));
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: false,
@@ -32,6 +40,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...legacy.map((r) => ({ ...r, statusCode: 301 as const })),
+      ...supersededFillings.map((r) => ({ ...r, statusCode: 301 as const })),
       ...Object.entries(mediaAliases).map(([from, to]) => ({
         source: `/media/${from}`, destination: `/media/${to}`, statusCode: 301 as const,
       })),
