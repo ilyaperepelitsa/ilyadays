@@ -28,7 +28,13 @@ FILLINGS = [
 def make_spec(i):
     filling = FILLINGS[i]
     preparation = ORIGINAL["steps"][i]
-    if i == 3:
+    if i == 0:
+        preparation = "ONE small ivory dish containing exactly FOUR whole amber egg yolks just covered by soy-mirin " \
+                      "marinade, with its fitted lid beside it. No second dish, no before-and-after duplicates, no hands."
+    elif i == 1:
+        preparation = "Fine dry glossy brown pork soboro crumbs in a small black pan over medium heat. Exactly FOUR " \
+                      "straight separate wooden chopsticks rest in a parallel bundle across the rim, tips in the mince. No hands."
+    elif i == 3:
         preparation = "Finished thin 3 cm by 2 mm glossy black kombu strips in a saucepan, with fine green shiso ribbons " \
                       "just stirred in OFF THE HEAT. Gas burner visibly OFF, no blue flame. Almost dry glaze."
     elif i == 7:
