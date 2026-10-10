@@ -1,0 +1,617 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Soft white mochi dotted with salty red peas, wrapped around sweet red bean paste.",
+ "chips": [
+  {
+   "html": "<span>6 pieces</span>",
+   "kind": "",
+   "text": "6 pieces"
+  },
+  {
+   "html": "overnight soak, then ~1 h 15 min with the anko made",
+   "kind": "time",
+   "text": "overnight soak, then ~1 h 15 min with the anko made"
+  }
+ ],
+ "description": "Soft white mochi dotted with salty red peas, wrapped around sweet red bean paste.",
+ "equipment_html": [
+  "Small pot",
+  "Sieve",
+  "Microwave",
+  "Heatproof glass bowl",
+  "Silicone spatula",
+  "Tray or baking sheet",
+  "Bench scraper",
+  "Small sieve for the starch",
+  "Pastry brush"
+ ],
+ "group": {
+  "id": "japanese-sweets",
+  "name": "Japanese sweets"
+ },
+ "hero": {
+  "alt": "Mame daifuku (salted red pea mochi)",
+  "image": "illustrations/mame-daifuku/hero.webp?v=468e05dee6",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+     "name_html": "Dried red peas (akaendo)"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Baking soda"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>, plus more for soaking",
+     "name_html": "Water, for the peas"
+    }
+   ],
+   "name": "Peas"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Anko (red bean paste)"
+    }
+   ],
+   "name": "Filling"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Shiratamako (glutinous rice flour)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>",
+     "name_html": "White sugar"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt, for the mochi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 ml</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>, for dusting",
+     "name_html": "Potato starch (katakuriko)"
+    }
+   ],
+   "name": "Mochi"
+  }
+ ],
+ "intro_html": "Mame daifuku is a <a href=\"daifuku.html\">daifuku</a> with whole salted red peas (akaendo) folded into the mochi. Each bite goes salty, then sweet. The peas are soaked overnight and simmered with salt until very soft, since they firm up again as they cool. The mochi has less sugar than usual and a pinch of salt. Smooth koshian is the traditional filling; chunky <a href=\"anko.html\">anko</a> is fine too.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/mame-daifuku/mise1.webp?v=aaa1f166a9",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span> dry"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span> dry",
+   "name": "Red peas",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/mame-daifuku/mise2.webp?v=a1466f0f31",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, in 6 balls"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, in 6 balls",
+   "name": "Anko",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/mame-daifuku/mise3.webp?v=d1b49982a3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>, pinch of salt"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>, pinch of salt",
+   "name": "Shiratamako + sugar",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 6",
+   "image": "illustrations/mame-daifuku/mise4.webp?v=3bf0e9c677",
+   "items": [
+    "for the tray"
+   ],
+   "items_html": "for the tray",
+   "name": "Potato starch",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More japanese sweets:",
+ "next": {
+  "slug": "yomogi-daifuku",
+  "title": "Yomogi daifuku (mugwort mochi)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Some shops use black soybeans (kuromame), soaked and simmered with salt the same way, for about an hour.</li><li>Plain yellow soybeans aren't used for daifuku.</li></ul>",
+   "title_html": "Black soybeans instead"
+  },
+  {
+   "html": "<p>Ready-cooked salted akaendo (sold for mitsumame) skip steps 1–2. Pat them dry.</p>",
+   "title_html": "Cooked peas"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Shiratamako gives the softest, stretchiest mochi.</li><li>Mochiko (sweet rice flour) works too: use <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> with about <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"110\" data-s=\"0\">110 ml</span> water, and expect it a little firmer.</li></ul>",
+   "title_html": "Shiratamako or mochiko"
+  },
+  {
+   "html": "<p>Steam the batter in a heatproof bowl over boiling water for 15–20 minutes, stirring every 5, until translucent.</p>",
+   "title_html": "No microwave"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Best within a few hours.</li><li>Covered at cool room temperature they last until evening.</li><li>In the fridge the mochi hardens within a day.</li></ul>",
+   "title_html": "Keeping"
+  },
+  {
+   "html": "<p>At 1000 W, cut each burst by about a third and check sooner.</p>",
+   "title_html": "Microwave power"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "strawberry-daifuku",
+  "title": "Strawberry daifuku (ichigo daifuku)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/mame-daifuku.jpg?v=15ac36b4e4",
+ "siblings": [
+  {
+   "slug": "anko",
+   "title": "Anko: sweet red bean paste (tsubuan)"
+  },
+  {
+   "slug": "daifuku",
+   "title": "Daifuku (red bean mochi)"
+  },
+  {
+   "slug": "strawberry-daifuku",
+   "title": "Strawberry daifuku (ichigo daifuku)"
+  },
+  {
+   "slug": "yomogi-daifuku",
+   "title": "Yomogi daifuku (mugwort mochi)"
+  }
+ ],
+ "slug": "mame-daifuku",
+ "sources": [
+  {
+   "label": "Wagashi Fuku — mame daifuku",
+   "url": "https://wagashi-fuku.com/2021/11/12/mamedaifuku/"
+  },
+  {
+   "label": "Chopstick Chronicles — daifuku mochi",
+   "url": "https://www.chopstickchronicles.com/daifuku-mochi/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Rinse the <b>peas</b> and cover them with plenty of cold water and a <b>pinch of baking soda</b>, which softens the skins.</li><li>Soak <b>12 hours</b>. They should swell to about twice their size.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Soak the peas overnight",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Soak 12 hours with a pinch of baking soda; they double in size.",
+      "src": "illustrations/mame-daifuku/1-how1.webp?v=c7c250ca2e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/1.webp?v=35a131830d",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "12 h",
+   "time_html": "<span>12 h</span>",
+   "title": "Soak the peas overnight",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+     "name_html": "Dried red peas (akaendo)"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Baking soda"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Drain, cover with fresh water and boil for <b>5 minutes</b> to take off the bitterness. Drain and rinse.</li><li>Put them back with the <b><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\" data-s=\"0\">300 ml</span> water</b> and the <b>salt</b>, and simmer very gently, just enough to move the peas, for <b>30–40 minutes</b>.</li><li>Taste one: it should be soft right through and clearly salty. They firm up as they cool, so err on the soft side.</li><li>Let them cool in their liquid, then drain and pat dry.</li></ul>",
+   "heat": {
+    "label": "low",
+    "label_html": "<span>low</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Simmer the peas with salt",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Simmer so gently the peas barely move; taste one for softness and salt.",
+      "src": "illustrations/mame-daifuku/2-how1.webp?v=cf4ae91bd7"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/2.webp?v=8897ddfda1",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~45 min",
+   "time_html": "<span>~45 min</span>",
+   "title": "Simmer the peas with salt",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>",
+     "name_html": "Water, for the peas"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Salt"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Roll the anko into <b>6 balls of <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\" data-s=\"0\">25 g</span></b> and set them on a plate in the fridge.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Roll the anko",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Roll each ball between your palms.",
+      "src": "illustrations/mame-daifuku/3-how1.webp?v=2fca2ce47c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/3.webp?v=d1bb11f71c",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "5 min",
+   "time_html": "<span>5 min</span>",
+   "title": "Roll the anko",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Anko (red bean paste)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>In a heatproof glass bowl, stir the <b>shiratamako</b> and <b>sugar</b> together.</li><li>Add the <b>water</b> a little at a time, stirring and pressing out the lumps, until it's smooth and pours like thick cream.</li><li>Stir in a pinch of <b>salt</b>.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Mix the batter",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Add the water a little at a time and press out the lumps.",
+      "src": "illustrations/mame-daifuku/4-how1.webp?v=c7f15f9273"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/4.webp?v=bc0180bf85",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3 min",
+   "time_html": "<span>3 min</span>",
+   "title": "Mix the batter",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Shiratamako (glutinous rice flour)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>",
+     "name_html": "White sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 ml</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "a pinch",
+     "name_html": "Salt, for the mochi"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cover loosely with cling film. Microwave <b>1 minute</b> at 600–700 W, then stir hard with a wet spatula. The edges will have set first.</li><li>Another <b>1 minute</b>, stir again. It's now a sticky lump.</li><li>Another <b>20–30 seconds</b>, until the whole mass is <b>translucent</b>, glossy and stretchy, with no opaque white patches. Stir once more.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Microwave in three bursts",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "1 minute, then stir hard with a wet spatula: the edges set first.",
+      "src": "illustrations/mame-daifuku/5-how1.webp?v=ee955a3d7a"
+     },
+     {
+      "caption": "After the last burst it's translucent and stretchy all through.",
+      "src": "illustrations/mame-daifuku/5-how2.webp?v=19377fce50"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/5.webp?v=b6e5581f4b",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Microwave in three bursts",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Sift a thick layer of <b>potato starch</b> over a tray. Scrape the hot mochi onto it and let it cool for a minute or two.</li><li>With starchy hands, pat it out flat. Scatter <b>half the peas</b> over it, fold it in half and press it together.</li><li>Dust the top and cut it into <b>6 even pieces</b> with a dusted bench scraper. Keep the other half of the peas for wrapping.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Fold in the peas and divide",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Pat the mochi flat, scatter half the peas, fold it in half.",
+      "src": "illustrations/mame-daifuku/6-how1.webp?v=d7eb7e2b8a"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/6.webp?v=dcccb1d329",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "5 min",
+   "time_html": "<span>5 min</span>",
+   "title": "Fold in the peas and divide",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Potato starch (katakuriko)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Take one piece and stretch it into a disc about <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 cm</span></b> across with starchy fingers. Make the edge a little thinner than the middle.</li><li>Press a few of the saved peas into the side with the fewest, so they end up spread evenly.</li><li>Set an anko ball in the middle.</li><li>Pull the edge up over the ball in four or five pleats and <b>pinch them together</b> on top. Twist off any extra.</li><li>Turn it over so the seam is underneath, and cup it in your palm to round it.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Wrap and pinch shut",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Press a few saved peas into the bare side, then wrap the anko.",
+      "src": "illustrations/mame-daifuku/7-how1.webp?v=5a3b2ee9eb"
+     },
+     {
+      "caption": "Anko ball in the middle; pleat the edge up over it and pinch shut.",
+      "src": "illustrations/mame-daifuku/7-how2.webp?v=ec12a5c859"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/7.webp?v=64e43b817a",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "10 min",
+   "time_html": "<span>10 min</span>",
+   "title": "Wrap and pinch shut",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Brush off the loose starch.</li><li>Serve the same day, at room temperature. Cut one in half with a wet knife to show the red peas dotted through the white mochi around the dark anko.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Brush and serve",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Brush off the loose starch; cut with a wet knife to show the inside.",
+      "src": "illustrations/mame-daifuku/8-how1.webp?v=a82301c00f"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/8.webp?v=d8d410ad06",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "2 min",
+   "time_html": "<span>2 min</span>",
+   "title": "Brush and serve",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 80,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Pan / stove"
+   },
+   {
+    "kind": "board",
+    "label": "Board"
+   },
+   {
+    "kind": "bowl",
+    "label": "Bowl / counter"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 45,
+    "dur_label": "45 min",
+    "kind": "pan",
+    "label": "Simmer the peas, cool",
+    "label_html": "Simmer the peas, cool",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Roll the anko",
+    "label_html": "Roll the anko",
+    "start": 45
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 min",
+    "kind": "bowl",
+    "label": "Mix the batter",
+    "label_html": "Mix the batter",
+    "start": 50
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "bowl",
+    "label": "Microwave in three bursts",
+    "label_html": "Microwave in three bursts",
+    "start": 53
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 min",
+    "kind": "board",
+    "label": "Divide on starch",
+    "label_html": "Divide on starch",
+    "start": 58
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 min",
+    "kind": "board",
+    "label": "Wrap and pinch shut",
+    "label_html": "Wrap and pinch shut",
+    "start": 63
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   },
+   {
+    "at": 80,
+    "label": "80"
+   }
+  ],
+  "unit": "minutes"
+ },
+ "title": "Mame daifuku (salted red pea mochi)",
+ "total": "overnight soak, then ~1 h 15 min with the anko made",
+ "vinegar_options": null,
+ "yields": "6 pieces"
+}

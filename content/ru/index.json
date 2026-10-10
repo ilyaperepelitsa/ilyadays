@@ -64,7 +64,10 @@
    "id": "japanese-sweets",
    "items": [
     "anko",
-    "strawberry-daifuku"
+    "daifuku",
+    "strawberry-daifuku",
+    "mame-daifuku",
+    "yomogi-daifuku"
    ],
    "name": "Японские сладости",
    "notes": []
@@ -143,6 +146,9 @@
  ],
  "lede_html": "Японская база и большие проекты, суши, корейское кимчи и жареная курица, быстрая рисовая лапша и соба, индийская курица тикка и справочник по су-виду — везде пошаговые картинки, порядок мизанпласа и план подготовки.",
  "recent": [
+  "daifuku",
+  "mame-daifuku",
+  "yomogi-daifuku",
   "strawberry-daifuku",
   "anko",
   "natto",
@@ -151,10 +157,7 @@
   "nigiri",
   "shrimp-karaage-onigiri",
   "baby-octopus-onigiri",
-  "nikumaki-onigiri",
-  "salmon-onigiri",
-  "yaki-onigiri",
-  "onigirazu"
+  "nikumaki-onigiri"
  ],
  "recipes": [
   {
@@ -1086,6 +1089,36 @@
    "yields": "около 550 г"
   },
   {
+   "added": "2026-10-10 03:47",
+   "blurb_html": "Простая классика: щедрый шарик сладкой пасты из красной фасоли в тонкой мягкой оболочке из белого моти.",
+   "chips": [
+    {
+     "html": "<span>6 штук</span>",
+     "kind": "",
+     "text": "6 штук"
+    },
+    {
+     "html": "~30 мин, если анко готова",
+     "kind": "time",
+     "text": "~30 мин, если анко готова"
+    }
+   ],
+   "description": "Простая классика: щедрый шарик сладкой пасты из красной фасоли в тонкой мягкой оболочке из белого моти.",
+   "group": "Японские сладости",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Дайфуку (моти с красной фасолью)",
+    "image": "illustrations/daifuku/hero.webp?v=e0f22f60b3",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/daifuku.jpg?v=b222f81873",
+   "slug": "daifuku",
+   "title": "Дайфуку (моти с красной фасолью)",
+   "total": "~30 мин, если анко готова",
+   "yields": "6 штук"
+  },
+  {
    "added": "2026-10-10 03:42",
    "blurb_html": "Целая клубника в сладкой пасте из красной фасоли, обёрнутая мягким тягучим моти из микроволновки.",
    "chips": [
@@ -1113,6 +1146,66 @@
    "slug": "strawberry-daifuku",
    "title": "Клубничные дайфуку (итиго дайфуку)",
    "total": "~40 мин, если анко готова",
+   "yields": "6 штук"
+  },
+  {
+   "added": "2026-10-10 03:46",
+   "blurb_html": "Мягкое белое моти с солёным красным горошком вокруг сладкой пасты из красной фасоли.",
+   "chips": [
+    {
+     "html": "<span>6 штук</span>",
+     "kind": "",
+     "text": "6 штук"
+    },
+    {
+     "html": "замачивание на ночь, потом ~1 ч 15 мин, если анко готова",
+     "kind": "time",
+     "text": "замачивание на ночь, потом ~1 ч 15 мин, если анко готова"
+    }
+   ],
+   "description": "Мягкое белое моти с солёным красным горошком вокруг сладкой пасты из красной фасоли.",
+   "group": "Японские сладости",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Мамэ дайфуку (моти с солёным красным горохом)",
+    "image": "illustrations/mame-daifuku/hero.webp?v=468e05dee6",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/mame-daifuku.jpg?v=15ac36b4e4",
+   "slug": "mame-daifuku",
+   "title": "Мамэ дайфуку (моти с солёным красным горохом)",
+   "total": "замачивание на ночь, потом ~1 ч 15 мин, если анко готова",
+   "yields": "6 штук"
+  },
+  {
+   "added": "2026-10-10 03:45",
+   "blurb_html": "Зелёное моти с травяным ароматом полыни вокруг зернистой сладкой пасты из красной фасоли.",
+   "chips": [
+    {
+     "html": "<span>6 штук</span>",
+     "kind": "",
+     "text": "6 штук"
+    },
+    {
+     "html": "~35 мин, если анко готова",
+     "kind": "time",
+     "text": "~35 мин, если анко готова"
+    }
+   ],
+   "description": "Зелёное моти с травяным ароматом полыни вокруг зернистой сладкой пасты из красной фасоли.",
+   "group": "Японские сладости",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "Ёмоги дайфуку (моти с полынью)",
+    "image": "illustrations/yomogi-daifuku/hero.webp?v=99acf9254b",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/yomogi-daifuku.jpg?v=de6e06aefb",
+   "slug": "yomogi-daifuku",
+   "title": "Ёмоги дайфуку (моти с полынью)",
+   "total": "~35 мин, если анко готова",
    "yields": "6 штук"
   },
   {

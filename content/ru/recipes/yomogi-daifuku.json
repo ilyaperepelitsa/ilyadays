@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Целая клубника в сладкой пасте из красной фасоли, обёрнутая мягким тягучим моти из микроволновки.",
+ "blurb_html": "Зелёное моти с травяным ароматом полыни вокруг зернистой сладкой пасты из красной фасоли.",
  "chips": [
   {
    "html": "<span>6 штук</span>",
@@ -9,12 +9,12 @@
    "text": "6 штук"
   },
   {
-   "html": "~40 мин, если анко готова",
+   "html": "~35 мин, если анко готова",
    "kind": "time",
-   "text": "~40 мин, если анко готова"
+   "text": "~35 мин, если анко готова"
   }
  ],
- "description": "Целая клубника в сладкой пасте из красной фасоли, обёрнутая мягким тягучим моти из микроволновки.",
+ "description": "Зелёное моти с травяным ароматом полыни вокруг зернистой сладкой пасты из красной фасоли.",
  "equipment_html": [
   "Микроволновка",
   "Термостойкая стеклянная миска",
@@ -29,19 +29,15 @@
   "name": "Японские сладости"
  },
  "hero": {
-  "alt": "Клубничные дайфуку (итиго дайфуку)",
-  "image": "illustrations/strawberry-daifuku/hero.webp?v=f07e91a88e",
+  "alt": "Ёмоги дайфуку (моти с полынью)",
+  "image": "illustrations/yomogi-daifuku/hero.webp?v=99acf9254b",
   "svg_fallback": null
  },
  "ingredients": [
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span> средних, по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\">15–20 г</span>",
-     "name_html": "Клубника"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"180\">180 г</span>",
      "name_html": "Анко (паста из красной фасоли)"
     }
    ],
@@ -54,8 +50,16 @@
      "name_html": "Сиратамако (мука из клейкого риса)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>",
      "name_html": "Белый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Порошок ёмоги (японской полыни)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Горячая вода"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 мл</span>",
@@ -69,40 +73,40 @@
    "name": "Моти"
   }
  ],
- "intro_html": "Целую клубнику оборачивают тонким слоем <a href=\"anko.html\">анко</a>, а потом тонким листом моти. Моти — это сиратамако, сахар и вода, приготовленные в микроволновке в три коротких захода с перемешиванием. На разрезе видно красное кольцо клубники в тёмной анко и белом моти. В холодильнике моти твердеет, поэтому делайте их в день, когда будете есть.",
+ "intro_html": "Ёмоги дайфуку, или куса дайфуку («травяные дайфуку»), — весенняя версия <a href=\"daifuku.html\">дайфуку</a>: моти окрашено и ароматизировано ёмоги, японской полынью. С сушёным порошком ёмоги их можно делать круглый год. Вкус зелёный и чуть горьковатый, как у свежих трав, и лучше всего к нему подходит зернистая цубуан <a href=\"anko.html\">анко</a>. Немного порошка сильно окрашивает, так что отмеряйте его.",
  "mise": [
   {
    "as_list": false,
    "goes_in": "Шаг 1",
-   "image": "illustrations/strawberry-daifuku/mise1.webp?v=32eb948fbd",
+   "image": "illustrations/yomogi-daifuku/mise1.webp?v=4b6e0197aa",
    "items": [
-    "без хвостиков, обсушена"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"180\">180 г</span>, 6 шариков"
    ],
-   "items_html": "без хвостиков, обсушена",
-   "name": "Клубника",
-   "svg_fallback": null,
-   "vessel": "plate"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Шаг 1",
-   "image": "illustrations/strawberry-daifuku/mise2.webp?v=e88a1a680d",
-   "items": [
-    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, 6 шариков"
-   ],
-   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, 6 шариков",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"180\">180 г</span>, 6 шариков",
    "name": "Анко",
    "svg_fallback": null,
    "vessel": "plate"
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 3",
-   "image": "illustrations/strawberry-daifuku/mise3.webp?v=6a58accedf",
+   "goes_in": "Шаг 2",
+   "image": "illustrations/yomogi-daifuku/mise2.webp?v=a07f09034e",
    "items": [
-    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>"
    ],
-   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+   "name": "Порошок ёмоги",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/yomogi-daifuku/mise3.webp?v=8b8b379911",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>",
    "name": "Сиратамако + сахар",
    "svg_fallback": null,
    "vessel": "bowl"
@@ -110,7 +114,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 5",
-   "image": "illustrations/strawberry-daifuku/mise4.webp?v=b185559e4f",
+   "image": "illustrations/yomogi-daifuku/mise4.webp?v=d7d023a8d5",
    "items": [
     "для подноса"
    ],
@@ -122,10 +126,18 @@
  ],
  "more_label": "Ещё — Японские сладости:",
  "next": {
-  "slug": "mame-daifuku",
-  "title": "Мамэ дайфуку (моти с солёным красным горохом)"
+  "slug": "kimchi",
+  "title": "Кимчи из пекинской капусты"
  },
  "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Весной бланшируйте <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\" data-b=\"40\" data-s=\"0\">30–40 г</span> молодых листьев около 5 минут со щепоткой соды, остудите в холодной воде, крепко отожмите и порубите в пасту.</li><li>Используйте её вместо порошка.</li></ul>",
+   "title_html": "Свежая ёмоги"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Куса моти часто обсыпают не крахмалом, а кинако (обжаренной соевой мукой).</li><li>Она даёт поджаристый вкус.</li></ul>",
+   "title_html": "Кинако"
+  },
   {
    "html": "<ul class=\"do\"><li>Сиратамако даёт самое мягкое и тягучее моти.</li><li>Мотико (сладкая рисовая мука) тоже подойдёт: <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> примерно на <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"110\" data-s=\"0\">110 мл</span> воды, моти получится чуть плотнее.</li></ul>",
    "title_html": "Сиратамако или мотико"
@@ -146,8 +158,8 @@
  "original": null,
  "parts": [],
  "prev": {
-  "slug": "daifuku",
-  "title": "Дайфуку (моти с красной фасолью)"
+  "slug": "mame-daifuku",
+  "title": "Мамэ дайфуку (моти с солёным красным горохом)"
  },
  "scale": {
   "mode": "people",
@@ -173,7 +185,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/strawberry-daifuku.jpg?v=a77fbbc8a3",
+ "share_image": "share/yomogi-daifuku.jpg?v=de6e06aefb",
  "siblings": [
   {
    "slug": "anko",
@@ -184,38 +196,42 @@
    "title": "Дайфуку (моти с красной фасолью)"
   },
   {
-   "slug": "mame-daifuku",
-   "title": "Мамэ дайфуку (моти с солёным красным горохом)"
+   "slug": "strawberry-daifuku",
+   "title": "Клубничные дайфуку (итиго дайфуку)"
   },
   {
-   "slug": "yomogi-daifuku",
-   "title": "Ёмоги дайфуку (моти с полынью)"
+   "slug": "mame-daifuku",
+   "title": "Мамэ дайфуку (моти с солёным красным горохом)"
   }
  ],
- "slug": "strawberry-daifuku",
+ "slug": "yomogi-daifuku",
  "sources": [
   {
-   "label": "Just One Cookbook — клубничные дайфуку",
-   "url": "https://www.justonecookbook.com/strawberry-daifuku/"
+   "label": "Choya — куса моти с ёмоги",
+   "url": "https://choyaume.jp/en/blogs/ume_recipe/20220407"
+  },
+  {
+   "label": "Agriture — моти с сушёной ёмоги",
+   "url": "https://agriture.jp/en/sustainable/yomogi-mochi-recipe/"
   }
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Промойте клубнику, срежьте зелёные хвостики ровно и обсушите ягоды <b>полностью</b>. На мокрой ягоде анко не держится.</li><li>Скатайте анко в <b>6 шариков по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\" data-s=\"0\">25 г</span></b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Скатайте анко в <b>6 шариков по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\" data-s=\"0\">30 г</span></b> и уберите на тарелке в холодильник.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
-    "alt": "Клубника и анко",
+    "alt": "Скатать анко",
     "diagram": null,
     "how": [
      {
-      "caption": "Срежьте хвостики ровно и обсушите ягоды полностью.",
-      "src": "illustrations/strawberry-daifuku/1-how1.webp?v=dfa4f080e2"
+      "caption": "Скатывайте каждый шарик между ладонями.",
+      "src": "illustrations/yomogi-daifuku/1-how1.webp?v=2730142f05"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/1.webp?v=1a319aa202",
+    "result": "illustrations/yomogi-daifuku/1.webp?v=739d4d1ac8",
     "svg_fallback": null
    },
    "n": 1,
@@ -223,46 +239,51 @@
    "part_id": null,
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
-   "title": "Клубника и анко",
+   "title": "Скатать анко",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span> средних",
-     "name_html": "Клубника"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"180\">180 г</span>",
      "name_html": "Анко (паста из красной фасоли)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Расплющите шарик в лепёшку на ладони. Поставьте на неё клубнику <b>срезом вниз</b>.</li><li>Пальцами поднимите анко по бокам, чтобы она закрыла всё, кроме острого кончика: красного остаётся около <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span></b>.</li><li>Поставьте на тарелку в холодильник, пока готовите моти. Холодную анко легче оборачивать.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смешайте <b>порошок ёмоги</b> с <b>горячей водой</b> в густую тёмно-зелёную пасту.</li><li>Оставьте на <b>5 минут</b>. Порошок размягчится, и появится травяной запах.</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
-    "alt": "Обернуть каждую ягоду в анко",
+    "alt": "Разбудить ёмоги",
     "diagram": null,
     "how": [
      {
-      "caption": "Ягода срезом вниз на лепёшку анко; поднимите анко, кончик оставьте открытым.",
-      "src": "illustrations/strawberry-daifuku/2-how1.webp?v=a226d5bad2"
+      "caption": "Смешайте порошок со столовой ложкой горячей воды в густую пасту.",
+      "src": "illustrations/yomogi-daifuku/2-how1.webp?v=1ec529c370"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/2.webp?v=c82f177ef5",
+    "result": "illustrations/yomogi-daifuku/2.webp?v=c0eefa14ed",
     "svg_fallback": null
    },
    "n": 2,
    "part": null,
    "part_id": null,
-   "time": "10 мин",
-   "time_html": "<span>10 мин</span>",
-   "title": "Обернуть каждую ягоду в анко",
-   "uses_rows": []
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Разбудить ёмоги",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Порошок ёмоги (японской полыни)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Горячая вода"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>В термостойкой стеклянной миске смешайте <b>сиратамако</b> и <b>сахар</b>.</li><li>Понемногу добавляйте <b>воду</b>, размешивая и раздавливая комочки, пока тесто не станет гладким и не будет литься, как густые сливки.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>В термостойкой стеклянной миске смешайте <b>сиратамако</b> и <b>сахар</b>.</li><li>Понемногу добавляйте <b>воду</b>, размешивая и раздавливая комочки, пока тесто не станет гладким и не будет литься, как густые сливки.</li><li>Вмешайте <b>пасту ёмоги</b>, пока тесто не станет ровно-зелёным, без тёмных разводов.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -271,12 +292,16 @@
     "how": [
      {
       "caption": "Добавляйте воду понемногу и раздавливайте комочки.",
-      "src": "illustrations/strawberry-daifuku/3-how1.webp?v=c921331851"
+      "src": "illustrations/yomogi-daifuku/3-how1.webp?v=f084b95496"
+     },
+     {
+      "caption": "Вмешайте пасту ёмоги, пока тесто не станет ровно-зелёным.",
+      "src": "illustrations/yomogi-daifuku/3-how2.webp?v=e4859aed2b"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/3.webp?v=6dd6792624",
+    "result": "illustrations/yomogi-daifuku/3.webp?v=00610afa11",
     "svg_fallback": null
    },
    "n": 3,
@@ -291,7 +316,7 @@
      "name_html": "Сиратамако (мука из клейкого риса)"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>",
      "name_html": "Белый сахар"
     },
     {
@@ -301,7 +326,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Неплотно накройте плёнкой. <b>1 минута</b> при 600–700 Вт, затем энергично перемешайте мокрой лопаткой. Края схватятся первыми.</li><li>Ещё <b>1 минута</b>, снова перемешайте. Теперь это липкий ком.</li><li>Ещё <b>20–30 секунд</b>, пока вся масса не станет <b>полупрозрачной</b>, блестящей и тягучей, без непрозрачных белых пятен. Перемешайте ещё раз.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Неплотно накройте плёнкой. <b>1 минута</b> при 600–700 Вт, затем энергично перемешайте мокрой лопаткой. Края схватятся первыми.</li><li>Ещё <b>1 минута</b>, снова перемешайте. Теперь это липкий ком.</li><li>Ещё <b>20–30 секунд</b>, пока вся масса не станет <b>полупрозрачной</b>, блестящей и тягучей, насыщенно-зелёной, без бледных непрозрачных пятен. Перемешайте ещё раз.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
@@ -310,16 +335,16 @@
     "how": [
      {
       "caption": "1 минута, затем энергично перемешать мокрой лопаткой: края схватываются первыми.",
-      "src": "illustrations/strawberry-daifuku/4-how1.webp?v=5f6d2db528"
+      "src": "illustrations/yomogi-daifuku/4-how1.webp?v=46893cfcf7"
      },
      {
       "caption": "После последнего захода масса полупрозрачная и тягучая насквозь.",
-      "src": "illustrations/strawberry-daifuku/4-how2.webp?v=2072ee1e2b"
+      "src": "illustrations/yomogi-daifuku/4-how2.webp?v=942d951d69"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/4.webp?v=f5e8c57571",
+    "result": "illustrations/yomogi-daifuku/4.webp?v=a835bd4316",
     "svg_fallback": null
    },
    "n": 4,
@@ -340,12 +365,12 @@
     "how": [
      {
       "caption": "Разрежьте на шесть обсыпанным скребком.",
-      "src": "illustrations/strawberry-daifuku/5-how1.webp?v=c6c0f10b53"
+      "src": "illustrations/yomogi-daifuku/5-how1.webp?v=b34b66969f"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/5.webp?v=58ed9cf668",
+    "result": "illustrations/yomogi-daifuku/5.webp?v=e2717bfcab",
     "svg_fallback": null
    },
    "n": 5,
@@ -362,7 +387,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Возьмите кусок и растяните пальцами в крахмале в лепёшку около <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 см</span></b>. Край пусть будет чуть тоньше середины.</li><li>Положите на неё ягоду в анко <b>кончиком вниз</b>.</li><li>Поднимите край над ягодой четырьмя-пятью складками и <b>защипните их вместе</b> над срезом. Лишнее открутите.</li><li>Переверните швом вниз и покатайте в ладони, чтобы скруглить.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Возьмите кусок и растяните пальцами в крахмале в лепёшку около <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 см</span></b>. Край пусть будет чуть тоньше середины.</li><li>Положите в середину шарик анко.</li><li>Поднимите край над шариком четырьмя-пятью складками и <b>защипните их вместе</b> сверху. Лишнее открутите.</li><li>Переверните швом вниз и покатайте в ладони, чтобы скруглить.</li></ul>",
    "heat": null,
    "id": "step-6",
    "images": {
@@ -371,16 +396,16 @@
     "how": [
      {
       "caption": "Растяните кусок в лепёшку 8 см, край тоньше середины.",
-      "src": "illustrations/strawberry-daifuku/6-how1.webp?v=e980710edc"
+      "src": "illustrations/yomogi-daifuku/6-how1.webp?v=8f34c1fdb2"
      },
      {
-      "caption": "Ягода кончиком вниз; край складками наверх и защипнуть.",
-      "src": "illustrations/strawberry-daifuku/6-how2.webp?v=47dc7e0265"
+      "caption": "Шарик анко в середину; край складками наверх и защипнуть.",
+      "src": "illustrations/yomogi-daifuku/6-how2.webp?v=b0eb723038"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/6.webp?v=421fd38965",
+    "result": "illustrations/yomogi-daifuku/6.webp?v=7dddf5af5c",
     "svg_fallback": null
    },
    "n": 6,
@@ -392,7 +417,7 @@
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Смахните кисточкой лишний крахмал.</li><li>Подавайте в тот же день, комнатной температуры. Чтобы показать начинку, разрежьте одно пополам мокрым ножом, вытирая его между разрезами.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смахните кисточкой лишний крахмал.</li><li>Подавайте в тот же день, комнатной температуры. Разрежьте одно пополам мокрым ножом, чтобы показать тёмную анко внутри зелёного моти.</li></ul>",
    "heat": null,
    "id": "step-7",
    "images": {
@@ -401,12 +426,12 @@
     "how": [
      {
       "caption": "Смахните крахмал; разрежьте мокрым ножом, чтобы показать начинку.",
-      "src": "illustrations/strawberry-daifuku/7-how1.webp?v=8df6ef423b"
+      "src": "illustrations/yomogi-daifuku/7-how1.webp?v=05d71d9c74"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/7.webp?v=6127a8e0f7",
+    "result": "illustrations/yomogi-daifuku/7.webp?v=1adc24ca7d",
     "svg_fallback": null
    },
    "n": 7,
@@ -419,7 +444,7 @@
   }
  ],
  "timeline": {
-  "end": 40,
+  "end": 35,
   "hours": false,
   "legend": [
    {
@@ -437,16 +462,16 @@
     "dur": 5,
     "dur_label": "5 мин",
     "kind": "board",
-    "label": "Почистить и обсушить клубнику",
-    "label_html": "Почистить и обсушить клубнику",
+    "label": "Скатать анко",
+    "label_html": "Скатать анко",
     "start": 0
    },
    {
-    "dur": 10,
-    "dur_label": "10 мин",
-    "kind": "board",
-    "label": "Обернуть в анко, охладить",
-    "label_html": "Обернуть в анко, охладить",
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "bowl",
+    "label": "Разбудить ёмоги",
+    "label_html": "Разбудить ёмоги",
     "start": 5
    },
    {
@@ -455,7 +480,7 @@
     "kind": "bowl",
     "label": "Замесить тесто",
     "label_html": "Замесить тесто",
-    "start": 15
+    "start": 10
    },
    {
     "dur": 5,
@@ -463,7 +488,7 @@
     "kind": "bowl",
     "label": "Микроволновка в три захода",
     "label_html": "Микроволновка в три захода",
-    "start": 18
+    "start": 13
    },
    {
     "dur": 5,
@@ -471,7 +496,7 @@
     "kind": "board",
     "label": "Разделить на крахмале",
     "label_html": "Разделить на крахмале",
-    "start": 23
+    "start": 18
    },
    {
     "dur": 10,
@@ -479,7 +504,7 @@
     "kind": "board",
     "label": "Обернуть и защипнуть",
     "label_html": "Обернуть и защипнуть",
-    "start": 28
+    "start": 23
    }
   ],
   "tick_step": 5,
@@ -515,16 +540,12 @@
    {
     "at": 35,
     "label": "35"
-   },
-   {
-    "at": 40,
-    "label": "40"
    }
   ],
   "unit": "минуты"
  },
- "title": "Клубничные дайфуку (итиго дайфуку)",
- "total": "~40 мин, если анко готова",
+ "title": "Ёмоги дайфуку (моти с полынью)",
+ "total": "~35 мин, если анко готова",
  "vinegar_options": null,
  "yields": "6 штук"
 }

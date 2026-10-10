@@ -1,0 +1,617 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Мягкое белое моти с солёным красным горошком вокруг сладкой пасты из красной фасоли.",
+ "chips": [
+  {
+   "html": "<span>6 штук</span>",
+   "kind": "",
+   "text": "6 штук"
+  },
+  {
+   "html": "замачивание на ночь, потом ~1 ч 15 мин, если анко готова",
+   "kind": "time",
+   "text": "замачивание на ночь, потом ~1 ч 15 мин, если анко готова"
+  }
+ ],
+ "description": "Мягкое белое моти с солёным красным горошком вокруг сладкой пасты из красной фасоли.",
+ "equipment_html": [
+  "Маленькая кастрюля",
+  "Сито",
+  "Микроволновка",
+  "Термостойкая стеклянная миска",
+  "Силиконовая лопатка",
+  "Поднос или противень",
+  "Кондитерский скребок",
+  "Маленькое сито для крахмала",
+  "Кондитерская кисточка"
+ ],
+ "group": {
+  "id": "japanese-sweets",
+  "name": "Японские сладости"
+ },
+ "hero": {
+  "alt": "Мамэ дайфуку (моти с солёным красным горохом)",
+  "image": "illustrations/mame-daifuku/hero.webp?v=468e05dee6",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Сухой красный горох (акаэндо)"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Пищевая сода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span> и ещё для замачивания",
+     "name_html": "Вода для гороха"
+    }
+   ],
+   "name": "Горох"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Анко (паста из красной фасоли)"
+    }
+   ],
+   "name": "Начинка"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Сиратамако (мука из клейкого риса)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Белый сахар"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Соль для моти"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 мл</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>, для обсыпки",
+     "name_html": "Картофельный крахмал (катакурико)"
+    }
+   ],
+   "name": "Моти"
+  }
+ ],
+ "intro_html": "Мамэ дайфуку — это <a href=\"daifuku.html\">дайфуку</a> с целым солёным красным горохом (акаэндо), вмешанным в моти. Каждый кусок сначала солёный, потом сладкий. Горох замачивают на ночь и варят с солью до полной мягкости, потому что, остывая, он снова твердеет. В моти меньше сахара, чем обычно, и щепотка соли. Традиционная начинка — гладкая кошиан, но зернистая <a href=\"anko.html\">анко</a> тоже подойдёт.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/mame-daifuku/mise1.webp?v=aaa1f166a9",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span> сухого"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span> сухого",
+   "name": "Красный горох",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/mame-daifuku/mise2.webp?v=a1466f0f31",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, 6 шариков"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>, 6 шариков",
+   "name": "Анко",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/mame-daifuku/mise3.webp?v=d1b49982a3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>, щепотка соли"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>, щепотка соли",
+   "name": "Сиратамако + сахар",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 6",
+   "image": "illustrations/mame-daifuku/mise4.webp?v=3bf0e9c677",
+   "items": [
+    "для подноса"
+   ],
+   "items_html": "для подноса",
+   "name": "Картофельный крахмал",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Японские сладости:",
+ "next": {
+  "slug": "yomogi-daifuku",
+  "title": "Ёмоги дайфуку (моти с полынью)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>В некоторых кондитерских берут чёрную сою (куромамэ), замоченную и сваренную с солью так же, около часа.</li><li>Обычную жёлтую сою для дайфуку не используют.</li></ul>",
+   "title_html": "Вместо гороха — чёрная соя"
+  },
+  {
+   "html": "<p>С готовым солёным акаэндо (его продают для мицумамэ) шаги 1–2 не нужны. Обсушите его.</p>",
+   "title_html": "Готовый горох"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Сиратамако даёт самое мягкое и тягучее моти.</li><li>Мотико (сладкая рисовая мука) тоже подойдёт: <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span> примерно на <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"110\" data-s=\"0\">110 мл</span> воды, моти получится чуть плотнее.</li></ul>",
+   "title_html": "Сиратамако или мотико"
+  },
+  {
+   "html": "<p>Готовьте тесто на пару в термостойкой миске над кипящей водой 15–20 минут, перемешивая каждые 5, пока оно не станет полупрозрачным.</p>",
+   "title_html": "Без микроволновки"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Лучше всего в первые несколько часов.</li><li>Накрытыми в прохладной комнате они доживут до вечера.</li><li>В холодильнике моти твердеет за сутки.</li></ul>",
+   "title_html": "Хранение"
+  },
+  {
+   "html": "<p>При 1000 Вт сократите каждый заход примерно на треть и проверяйте раньше.</p>",
+   "title_html": "Мощность микроволновки"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "strawberry-daifuku",
+  "title": "Клубничные дайфуку (итиго дайфуку)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/mame-daifuku.jpg?v=15ac36b4e4",
+ "siblings": [
+  {
+   "slug": "anko",
+   "title": "Анко: сладкая паста из красной фасоли (цубуан)"
+  },
+  {
+   "slug": "daifuku",
+   "title": "Дайфуку (моти с красной фасолью)"
+  },
+  {
+   "slug": "strawberry-daifuku",
+   "title": "Клубничные дайфуку (итиго дайфуку)"
+  },
+  {
+   "slug": "yomogi-daifuku",
+   "title": "Ёмоги дайфуку (моти с полынью)"
+  }
+ ],
+ "slug": "mame-daifuku",
+ "sources": [
+  {
+   "label": "Wagashi Fuku — мамэ дайфуку",
+   "url": "https://wagashi-fuku.com/2021/11/12/mamedaifuku/"
+  },
+  {
+   "label": "Chopstick Chronicles — дайфуку моти",
+   "url": "https://www.chopstickchronicles.com/daifuku-mochi/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Промойте <b>горох</b> и залейте большим количеством холодной воды со <b>щепоткой соды</b> — она смягчает кожицу.</li><li>Замачивайте <b>12 часов</b>. Горошины должны набухнуть примерно вдвое.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Замочить горох на ночь",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "12 часов со щепоткой соды; горох увеличится вдвое.",
+      "src": "illustrations/mame-daifuku/1-how1.webp?v=c7c250ca2e"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/1.webp?v=35a131830d",
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "12 ч",
+   "time_html": "<span>12 ч</span>",
+   "title": "Замочить горох на ночь",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Сухой красный горох (акаэндо)"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Пищевая сода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Слейте воду, залейте свежей и прокипятите <b>5 минут</b>, чтобы ушла горечь. Слейте и промойте.</li><li>Верните горох в кастрюлю с <b><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\" data-s=\"0\">300 мл</span> воды</b> и <b>солью</b> и варите на очень слабом огне, чтобы горошины только чуть шевелились, <b>30–40 минут</b>.</li><li>Попробуйте одну: она должна быть мягкой насквозь и заметно солёной. Остывая, горох твердеет, так что лучше чуть переварить.</li><li>Остудите в отваре, затем слейте и обсушите.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Отварить горох с солью",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Варите так тихо, чтобы горошины едва шевелились; попробуйте одну на мягкость и соль.",
+      "src": "illustrations/mame-daifuku/2-how1.webp?v=cf4ae91bd7"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/2.webp?v=8897ddfda1",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~45 мин",
+   "time_html": "<span>~45 мин</span>",
+   "title": "Отварить горох с солью",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span> и ещё для замачивания",
+     "name_html": "Вода для гороха"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Соль"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Скатайте анко в <b>6 шариков по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\" data-s=\"0\">25 г</span></b> и уберите на тарелке в холодильник.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Скатать анко",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Скатывайте каждый шарик между ладонями.",
+      "src": "illustrations/mame-daifuku/3-how1.webp?v=2fca2ce47c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/3.webp?v=d1bb11f71c",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Скатать анко",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Анко (паста из красной фасоли)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>В термостойкой стеклянной миске смешайте <b>сиратамако</b> и <b>сахар</b>.</li><li>Понемногу добавляйте <b>воду</b>, размешивая и раздавливая комочки, пока тесто не станет гладким и не будет литься, как густые сливки.</li><li>Вмешайте щепотку <b>соли</b>.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Замесить тесто",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Добавляйте воду понемногу и раздавливайте комочки.",
+      "src": "illustrations/mame-daifuku/4-how1.webp?v=c7f15f9273"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/4.webp?v=bc0180bf85",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "3 мин",
+   "time_html": "<span>3 мин</span>",
+   "title": "Замесить тесто",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Сиратамако (мука из клейкого риса)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Белый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"120\">120 мл</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "щепотка",
+     "name_html": "Соль для моти"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Неплотно накройте плёнкой. <b>1 минута</b> при 600–700 Вт, затем энергично перемешайте мокрой лопаткой. Края схватятся первыми.</li><li>Ещё <b>1 минута</b>, снова перемешайте. Теперь это липкий ком.</li><li>Ещё <b>20–30 секунд</b>, пока вся масса не станет <b>полупрозрачной</b>, блестящей и тягучей, без непрозрачных белых пятен. Перемешайте ещё раз.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Микроволновка в три захода",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "1 минута, затем энергично перемешать мокрой лопаткой: края схватываются первыми.",
+      "src": "illustrations/mame-daifuku/5-how1.webp?v=ee955a3d7a"
+     },
+     {
+      "caption": "После последнего захода масса полупрозрачная и тягучая насквозь.",
+      "src": "illustrations/mame-daifuku/5-how2.webp?v=19377fce50"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/5.webp?v=b6e5581f4b",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Микроволновка в три захода",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Просейте толстый слой <b>картофельного крахмала</b> на поднос. Выложите горячее моти и дайте остыть минуту-две.</li><li>Руками в крахмале расплющите его. Рассыпьте сверху <b>половину гороха</b>, сложите пополам и прижмите.</li><li>Обсыпьте сверху крахмалом и разрежьте обсыпанным скребком на <b>6 равных кусков</b>. Вторую половину гороха оставьте для обёртывания.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Вмешать горох и разделить",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Расплющите моти, рассыпьте половину гороха, сложите пополам.",
+      "src": "illustrations/mame-daifuku/6-how1.webp?v=d7eb7e2b8a"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/6.webp?v=dcccb1d329",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Вмешать горох и разделить",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "name_html": "Картофельный крахмал (катакурико)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Возьмите кусок и растяните пальцами в крахмале в лепёшку около <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 см</span></b>. Край пусть будет чуть тоньше середины.</li><li>Вдавите несколько оставленных горошин туда, где их меньше всего, чтобы они распределились равномерно.</li><li>Положите в середину шарик анко.</li><li>Поднимите край над шариком четырьмя-пятью складками и <b>защипните их вместе</b> сверху. Лишнее открутите.</li><li>Переверните швом вниз и покатайте в ладони, чтобы скруглить.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Обернуть и защипнуть",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Вдавите несколько оставленных горошин в пустое место, затем оберните анко.",
+      "src": "illustrations/mame-daifuku/7-how1.webp?v=5a3b2ee9eb"
+     },
+     {
+      "caption": "Шарик анко в середину; край складками наверх и защипнуть.",
+      "src": "illustrations/mame-daifuku/7-how2.webp?v=ec12a5c859"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/7.webp?v=64e43b817a",
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "10 мин",
+   "time_html": "<span>10 мин</span>",
+   "title": "Обернуть и защипнуть",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Смахните кисточкой лишний крахмал.</li><li>Подавайте в тот же день, комнатной температуры. Разрежьте одно пополам мокрым ножом, чтобы показать красный горошек в белом моти вокруг тёмной анко.</li></ul>",
+   "heat": null,
+   "id": "step-8",
+   "images": {
+    "alt": "Смахнуть крахмал и подать",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Смахните крахмал; разрежьте мокрым ножом, чтобы показать начинку.",
+      "src": "illustrations/mame-daifuku/8-how1.webp?v=a82301c00f"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/mame-daifuku/8.webp?v=d8d410ad06",
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Смахнуть крахмал и подать",
+   "uses_rows": []
+  }
+ ],
+ "timeline": {
+  "end": 80,
+  "hours": false,
+  "legend": [
+   {
+    "kind": "pan",
+    "label": "Сковорода / плита"
+   },
+   {
+    "kind": "board",
+    "label": "Доска"
+   },
+   {
+    "kind": "bowl",
+    "label": "Миска / стол"
+   }
+  ],
+  "note_html": null,
+  "tasks": [
+   {
+    "dur": 45,
+    "dur_label": "45 мин",
+    "kind": "pan",
+    "label": "Отварить горох, остудить",
+    "label_html": "Отварить горох, остудить",
+    "start": 0
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Скатать анко",
+    "label_html": "Скатать анко",
+    "start": 45
+   },
+   {
+    "dur": 3,
+    "dur_label": "3 мин",
+    "kind": "bowl",
+    "label": "Замесить тесто",
+    "label_html": "Замесить тесто",
+    "start": 50
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "bowl",
+    "label": "Микроволновка в три захода",
+    "label_html": "Микроволновка в три захода",
+    "start": 53
+   },
+   {
+    "dur": 5,
+    "dur_label": "5 мин",
+    "kind": "board",
+    "label": "Разделить на крахмале",
+    "label_html": "Разделить на крахмале",
+    "start": 58
+   },
+   {
+    "dur": 10,
+    "dur_label": "10 мин",
+    "kind": "board",
+    "label": "Обернуть и защипнуть",
+    "label_html": "Обернуть и защипнуть",
+    "start": 63
+   }
+  ],
+  "tick_step": 10,
+  "ticks": [
+   {
+    "at": 0,
+    "label": "0"
+   },
+   {
+    "at": 10,
+    "label": "10"
+   },
+   {
+    "at": 20,
+    "label": "20"
+   },
+   {
+    "at": 30,
+    "label": "30"
+   },
+   {
+    "at": 40,
+    "label": "40"
+   },
+   {
+    "at": 50,
+    "label": "50"
+   },
+   {
+    "at": 60,
+    "label": "60"
+   },
+   {
+    "at": 70,
+    "label": "70"
+   },
+   {
+    "at": 80,
+    "label": "80"
+   }
+  ],
+  "unit": "минуты"
+ },
+ "title": "Мамэ дайфуку (моти с солёным красным горохом)",
+ "total": "замачивание на ночь, потом ~1 ч 15 мин, если анко готова",
+ "vinegar_options": null,
+ "yields": "6 штук"
+}

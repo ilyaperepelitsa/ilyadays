@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "A whole strawberry in sweet red bean paste, wrapped in soft, stretchy mochi made in the microwave.",
+ "blurb_html": "The plain classic: a generous ball of sweet red bean paste in a thin, soft shell of white mochi.",
  "chips": [
   {
    "html": "<span>6 pieces</span>",
@@ -9,12 +9,12 @@
    "text": "6 pieces"
   },
   {
-   "html": "~40 min with the anko made",
+   "html": "~30 min with the anko made",
    "kind": "time",
-   "text": "~40 min with the anko made"
+   "text": "~30 min with the anko made"
   }
  ],
- "description": "A whole strawberry in sweet red bean paste, wrapped in soft, stretchy mochi made in the microwave.",
+ "description": "The plain classic: a generous ball of sweet red bean paste in a thin, soft shell of white mochi.",
  "equipment_html": [
   "Microwave",
   "Heatproof glass bowl",
@@ -29,19 +29,15 @@
   "name": "Japanese sweets"
  },
  "hero": {
-  "alt": "Strawberry daifuku (ichigo daifuku)",
-  "image": "illustrations/strawberry-daifuku/hero.webp?v=f07e91a88e",
+  "alt": "Daifuku (red bean mochi)",
+  "image": "illustrations/daifuku/hero.webp?v=e0f22f60b3",
   "svg_fallback": null
  },
  "ingredients": [
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span> medium, about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 g</span> each",
-     "name_html": "Strawberries"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"210\">210 g</span>",
      "name_html": "Anko (red bean paste)"
     }
    ],
@@ -69,36 +65,24 @@
    "name": "Mochi"
   }
  ],
- "intro_html": "A whole strawberry is wrapped in a thin layer of <a href=\"anko.html\">anko</a>, then in a thin sheet of mochi. The mochi is shiratamako, sugar and water, cooked in the microwave in three short bursts and stirred in between. Cut one in half and you get the red ring of strawberry inside the dark anko and white mochi. Mochi goes hard in the fridge, so make them the day you eat them.",
+ "intro_html": "The everyday daifuku of Japanese sweet shops: a big ball of <a href=\"anko.html\">anko</a> in a thin white mochi shell, with nearly as much filling as mochi. The mochi is shiratamako, sugar and water, cooked in the microwave in three short bursts. Chunky tsubuan or smooth koshian both work. Make them the day you eat them, because the mochi goes hard in the fridge. <a href=\"strawberry-daifuku.html\">Strawberry</a>, <a href=\"mame-daifuku.html\">salted pea</a> and <a href=\"yomogi-daifuku.html\">mugwort</a> daifuku follow the same method.",
  "mise": [
   {
    "as_list": false,
    "goes_in": "Step 1",
-   "image": "illustrations/strawberry-daifuku/mise1.webp?v=32eb948fbd",
+   "image": "illustrations/daifuku/mise1.webp?v=4092644dee",
    "items": [
-    "hulled, dried"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"210\">210 g</span>, in 6 balls"
    ],
-   "items_html": "hulled, dried",
-   "name": "Strawberries",
-   "svg_fallback": null,
-   "vessel": "plate"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Step 1",
-   "image": "illustrations/strawberry-daifuku/mise2.webp?v=e88a1a680d",
-   "items": [
-    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, in 6 balls"
-   ],
-   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>, in 6 balls",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"210\">210 g</span>, in 6 balls",
    "name": "Anko",
    "svg_fallback": null,
    "vessel": "plate"
   },
   {
    "as_list": false,
-   "goes_in": "Step 3",
-   "image": "illustrations/strawberry-daifuku/mise3.webp?v=6a58accedf",
+   "goes_in": "Step 2",
+   "image": "illustrations/daifuku/mise2.webp?v=7a15524c2e",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>"
    ],
@@ -109,8 +93,8 @@
   },
   {
    "as_list": false,
-   "goes_in": "Step 5",
-   "image": "illustrations/strawberry-daifuku/mise4.webp?v=b185559e4f",
+   "goes_in": "Step 4",
+   "image": "illustrations/daifuku/mise3.webp?v=fa0b8bfd80",
    "items": [
     "for the tray"
    ],
@@ -122,10 +106,14 @@
  ],
  "more_label": "More japanese sweets:",
  "next": {
-  "slug": "mame-daifuku",
-  "title": "Mame daifuku (salted red pea mochi)"
+  "slug": "strawberry-daifuku",
+  "title": "Strawberry daifuku (ichigo daifuku)"
  },
  "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Shops use both.</li><li>Chunky tsubuan gives a rustic bite; smooth koshian is the more refined one.</li><li>The <a href=\"anko.html\">anko</a> notes show how to sieve it smooth.</li></ul>",
+   "title_html": "Tsubuan or koshian"
+  },
   {
    "html": "<ul class=\"do\"><li>Shiratamako gives the softest, stretchiest mochi.</li><li>Mochiko (sweet rice flour) works too: use <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 g</span> with about <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"110\" data-s=\"0\">110 ml</span> water, and expect it a little firmer.</li></ul>",
    "title_html": "Shiratamako or mochiko"
@@ -146,8 +134,8 @@
  "original": null,
  "parts": [],
  "prev": {
-  "slug": "daifuku",
-  "title": "Daifuku (red bean mochi)"
+  "slug": "anko",
+  "title": "Anko: sweet red bean paste (tsubuan)"
  },
  "scale": {
   "mode": "people",
@@ -173,15 +161,15 @@
    "person": "person"
   }
  },
- "share_image": "share/strawberry-daifuku.jpg?v=a77fbbc8a3",
+ "share_image": "share/daifuku.jpg?v=b222f81873",
  "siblings": [
   {
    "slug": "anko",
    "title": "Anko: sweet red bean paste (tsubuan)"
   },
   {
-   "slug": "daifuku",
-   "title": "Daifuku (red bean mochi)"
+   "slug": "strawberry-daifuku",
+   "title": "Strawberry daifuku (ichigo daifuku)"
   },
   {
    "slug": "mame-daifuku",
@@ -192,30 +180,30 @@
    "title": "Yomogi daifuku (mugwort mochi)"
   }
  ],
- "slug": "strawberry-daifuku",
+ "slug": "daifuku",
  "sources": [
   {
-   "label": "Just One Cookbook — strawberry daifuku",
-   "url": "https://www.justonecookbook.com/strawberry-daifuku/"
+   "label": "Just One Cookbook — daifuku",
+   "url": "https://www.justonecookbook.com/daifuku/"
   }
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Rinse the strawberries, cut off the green tops flat, and pat them <b>completely dry</b>. A wet berry won't hold the anko.</li><li>Roll the anko into <b>6 balls of <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\" data-s=\"0\">25 g</span></b>.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Roll the anko into <b>6 balls of <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"35\" data-s=\"0\">35 g</span></b> and set them on a plate in the fridge.</li><li>If it's too soft to hold a shape, stir it in a pan over low heat for a few minutes to dry it out, then cool it. Firm anko is much easier to wrap.</li></ul>",
    "heat": null,
    "id": "step-1",
    "images": {
-    "alt": "Strawberries and anko",
+    "alt": "Roll the anko",
     "diagram": null,
     "how": [
      {
-      "caption": "Cut the green tops off flat and pat the berries completely dry.",
-      "src": "illustrations/strawberry-daifuku/1-how1.webp?v=dfa4f080e2"
+      "caption": "Roll each ball between your palms; firm anko wraps more easily.",
+      "src": "illustrations/daifuku/1-how1.webp?v=2702567791"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/1.webp?v=1a319aa202",
+    "result": "illustrations/daifuku/1.webp?v=4846b18b56",
     "svg_fallback": null
    },
    "n": 1,
@@ -223,63 +211,33 @@
    "part_id": null,
    "time": "5 min",
    "time_html": "<span>5 min</span>",
-   "title": "Strawberries and anko",
+   "title": "Roll the anko",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-n=\"1\">6</span> medium",
-     "name_html": "Strawberries"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"210\">210 g</span>",
      "name_html": "Anko (red bean paste)"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Flatten a ball into a disc on your palm. Set a strawberry on it, <b>cut end down</b>.</li><li>Push the anko up the sides with your fingers until it covers all but the pointed tip, about <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span></b> of red showing.</li><li>Put them on a plate in the fridge while you make the mochi. Cold anko is easier to wrap.</li></ul>",
-   "heat": null,
-   "id": "step-2",
-   "images": {
-    "alt": "Wrap each berry in anko",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Berry cut end down on a disc of anko; push the anko up, leave the tip showing.",
-      "src": "illustrations/strawberry-daifuku/2-how1.webp?v=a226d5bad2"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/strawberry-daifuku/2.webp?v=c82f177ef5",
-    "svg_fallback": null
-   },
-   "n": 2,
-   "part": null,
-   "part_id": null,
-   "time": "10 min",
-   "time_html": "<span>10 min</span>",
-   "title": "Wrap each berry in anko",
-   "uses_rows": []
-  },
-  {
    "body_html": "<ul class=\"do\"><li>In a heatproof glass bowl, stir the <b>shiratamako</b> and <b>sugar</b> together.</li><li>Add the <b>water</b> a little at a time, stirring and pressing out the lumps, until it's smooth and pours like thick cream.</li></ul>",
    "heat": null,
-   "id": "step-3",
+   "id": "step-2",
    "images": {
     "alt": "Mix the batter",
     "diagram": null,
     "how": [
      {
       "caption": "Add the water a little at a time and press out the lumps.",
-      "src": "illustrations/strawberry-daifuku/3-how1.webp?v=c921331851"
+      "src": "illustrations/daifuku/2-how1.webp?v=f3803e86ca"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/3.webp?v=6dd6792624",
+    "result": "illustrations/daifuku/2.webp?v=54e1a4e807",
     "svg_fallback": null
    },
-   "n": 3,
+   "n": 2,
    "part": null,
    "part_id": null,
    "time": "3 min",
@@ -303,26 +261,26 @@
   {
    "body_html": "<ul class=\"do\"><li>Cover loosely with cling film. Microwave <b>1 minute</b> at 600–700 W, then stir hard with a wet spatula. The edges will have set first.</li><li>Another <b>1 minute</b>, stir again. It's now a sticky lump.</li><li>Another <b>20–30 seconds</b>, until the whole mass is <b>translucent</b>, glossy and stretchy, with no opaque white patches. Stir once more.</li></ul>",
    "heat": null,
-   "id": "step-4",
+   "id": "step-3",
    "images": {
     "alt": "Microwave in three bursts",
     "diagram": null,
     "how": [
      {
       "caption": "1 minute, then stir hard with a wet spatula: the edges set first.",
-      "src": "illustrations/strawberry-daifuku/4-how1.webp?v=5f6d2db528"
+      "src": "illustrations/daifuku/3-how1.webp?v=a7e3246f99"
      },
      {
       "caption": "After the last burst it's translucent and stretchy all through.",
-      "src": "illustrations/strawberry-daifuku/4-how2.webp?v=2072ee1e2b"
+      "src": "illustrations/daifuku/3-how2.webp?v=c418a929c3"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/4.webp?v=f5e8c57571",
+    "result": "illustrations/daifuku/3.webp?v=6809e64653",
     "svg_fallback": null
    },
-   "n": 4,
+   "n": 3,
    "part": null,
    "part_id": null,
    "time": "~3 min",
@@ -333,22 +291,22 @@
   {
    "body_html": "<ul class=\"do\"><li>Sift a thick layer of <b>potato starch</b> over a tray. Scrape the hot mochi onto it and dust the top too.</li><li>With a dusted bench scraper, cut it into <b>6 even pieces</b>, about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\" data-s=\"0\">40 g</span> each. Wait a minute or two, until you can handle it.</li></ul>",
    "heat": null,
-   "id": "step-5",
+   "id": "step-4",
    "images": {
     "alt": "Divide on starch",
     "diagram": null,
     "how": [
      {
       "caption": "Cut into six with a dusted bench scraper.",
-      "src": "illustrations/strawberry-daifuku/5-how1.webp?v=c6c0f10b53"
+      "src": "illustrations/daifuku/4-how1.webp?v=5d6bb65e61"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/5.webp?v=58ed9cf668",
+    "result": "illustrations/daifuku/4.webp?v=0541aebcb2",
     "svg_fallback": null
    },
-   "n": 5,
+   "n": 4,
    "part": null,
    "part_id": null,
    "time": "5 min",
@@ -362,28 +320,28 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Take one piece and stretch it into a disc about <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 cm</span></b> across with starchy fingers. Make the edge a little thinner than the middle.</li><li>Put an anko-wrapped berry on it, <b>tip down</b>.</li><li>Pull the edge up over the berry in four or five pleats and <b>pinch them together</b> over the cut end. Twist off any extra.</li><li>Turn it over so the seam is underneath, and cup it in your palm to round it.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Take one piece and stretch it into a disc about <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 cm</span></b> across with starchy fingers. Make the edge a little thinner than the middle.</li><li>Set an anko ball in the middle.</li><li>Pull the edge up over the ball in four or five pleats and <b>pinch them together</b> on top. Twist off any extra.</li><li>Turn it over so the seam is underneath, and cup it in your palm to round it.</li></ul>",
    "heat": null,
-   "id": "step-6",
+   "id": "step-5",
    "images": {
     "alt": "Wrap and pinch shut",
     "diagram": null,
     "how": [
      {
       "caption": "Stretch a piece into an 8 cm disc, edge thinner than the middle.",
-      "src": "illustrations/strawberry-daifuku/6-how1.webp?v=e980710edc"
+      "src": "illustrations/daifuku/5-how1.webp?v=3a8d64a276"
      },
      {
-      "caption": "Berry tip down; pleat the edge up over it and pinch shut.",
-      "src": "illustrations/strawberry-daifuku/6-how2.webp?v=47dc7e0265"
+      "caption": "Anko ball in the middle; pleat the edge up over it and pinch shut.",
+      "src": "illustrations/daifuku/5-how2.webp?v=20a6d0d7f7"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/6.webp?v=421fd38965",
+    "result": "illustrations/daifuku/5.webp?v=a53ef04ee7",
     "svg_fallback": null
    },
-   "n": 6,
+   "n": 5,
    "part": null,
    "part_id": null,
    "time": "10 min",
@@ -392,24 +350,24 @@
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Brush off the loose starch.</li><li>Serve the same day, at room temperature. To show the inside, cut one in half with a wet knife, wiped between cuts.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Brush off the loose starch.</li><li>Serve the same day, at room temperature. Cut one in half with a wet knife to show the thick dark anko in its thin white shell.</li></ul>",
    "heat": null,
-   "id": "step-7",
+   "id": "step-6",
    "images": {
     "alt": "Brush and serve",
     "diagram": null,
     "how": [
      {
       "caption": "Brush off the loose starch; cut with a wet knife to show the inside.",
-      "src": "illustrations/strawberry-daifuku/7-how1.webp?v=8df6ef423b"
+      "src": "illustrations/daifuku/6-how1.webp?v=4c7b5e452f"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/strawberry-daifuku/7.webp?v=6127a8e0f7",
+    "result": "illustrations/daifuku/6.webp?v=6ac7d6941b",
     "svg_fallback": null
    },
-   "n": 7,
+   "n": 6,
    "part": null,
    "part_id": null,
    "time": "2 min",
@@ -419,7 +377,7 @@
   }
  ],
  "timeline": {
-  "end": 40,
+  "end": 30,
   "hours": false,
   "legend": [
    {
@@ -437,17 +395,9 @@
     "dur": 5,
     "dur_label": "5 min",
     "kind": "board",
-    "label": "Hull and dry the strawberries",
-    "label_html": "Hull and dry the strawberries",
+    "label": "Roll the anko",
+    "label_html": "Roll the anko",
     "start": 0
-   },
-   {
-    "dur": 10,
-    "dur_label": "10 min",
-    "kind": "board",
-    "label": "Wrap them in anko, chill",
-    "label_html": "Wrap them in anko, chill",
-    "start": 5
    },
    {
     "dur": 3,
@@ -455,7 +405,7 @@
     "kind": "bowl",
     "label": "Mix the batter",
     "label_html": "Mix the batter",
-    "start": 15
+    "start": 5
    },
    {
     "dur": 5,
@@ -463,7 +413,7 @@
     "kind": "bowl",
     "label": "Microwave in three bursts",
     "label_html": "Microwave in three bursts",
-    "start": 18
+    "start": 8
    },
    {
     "dur": 5,
@@ -471,7 +421,7 @@
     "kind": "board",
     "label": "Divide on starch",
     "label_html": "Divide on starch",
-    "start": 23
+    "start": 13
    },
    {
     "dur": 10,
@@ -479,7 +429,7 @@
     "kind": "board",
     "label": "Wrap and pinch shut",
     "label_html": "Wrap and pinch shut",
-    "start": 28
+    "start": 18
    }
   ],
   "tick_step": 5,
@@ -511,20 +461,12 @@
    {
     "at": 30,
     "label": "30"
-   },
-   {
-    "at": 35,
-    "label": "35"
-   },
-   {
-    "at": 40,
-    "label": "40"
    }
   ],
   "unit": "minutes"
  },
- "title": "Strawberry daifuku (ichigo daifuku)",
- "total": "~40 min with the anko made",
+ "title": "Daifuku (red bean mochi)",
+ "total": "~30 min with the anko made",
  "vinegar_options": null,
  "yields": "6 pieces"
 }
