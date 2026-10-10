@@ -17,7 +17,7 @@ function recipe(lang) {
 }
 
 /**
- * Step numbers (1-based) whose images carry a hand-position blueprint.
+ * Step numbers (1-based) whose images carry a technical contact guide.
  *
  * @param {string} lang
  * @returns {number[]}
@@ -26,28 +26,53 @@ function diagramSteps(lang) {
   return recipe(lang).steps.flatMap((step, i) => (step.images.diagram ? [i + 1] : []));
 }
 
-describe("nigiri hand-position blueprints", () => {
+describe("nigiri photographic technique plates", () => {
   it("are on exactly the seven shaping steps, in both languages", () => {
     assert.deepEqual(diagramSteps("en"), SHAPING_STEPS);
     assert.deepEqual(diagramSteps("ru"), SHAPING_STEPS);
   });
 
-  it("show three projections, the cook's own view, the joint angles and the key", () => {
-    const sideLock = recipe("en").steps[5].images.diagram ?? "";
-    assert.equal((sideLock.match(/class="pose-view"/g) ?? []).length, 4);
-    assert.equal(sideLock.includes("Your own view, looking down"), true);
-    assert.equal(sideLock.includes('class="pose-angles"'), true);
-    assert.equal(sideLock.includes('class="pose-legend"'), true);
+  it("replace every shaping illustration and blueprint with a shipped picture and contact guide", () => {
+    for (const lang of ["en", "ru"]) {
+      for (const n of SHAPING_STEPS) {
+        const { images } = recipe(lang).steps[n - 1];
+        assert.match(images.illustration, new RegExp(`^illustrations/nigiri/technique-${n}\\.webp\\?v=[a-f0-9]{10}$`));
+        const asset = fs.readFileSync(path.join(ROOT, "public/media", images.illustration.split("?")[0]));
+        assert.equal(asset.toString("ascii", 0, 4), "RIFF");
+        assert.equal(asset.toString("ascii", 8, 12), "WEBP");
+        assert.ok(asset.length > 20_000, "picture is a full photographic asset");
+        assert.deepEqual(images.how, [], "old pictures do not compete with the plate");
+        assert.equal(images.result, null);
+        assert.equal(images.zoomable, true, "contact details can be opened at full size on phones");
+        assert.match(images.diagram, /class="technique-guide"/);
+        assert.doesNotMatch(images.diagram, /<svg|pose-view|pose-angles|pose-phase/);
+        assert.equal((images.diagram.match(/<dt>/g) ?? []).length, 3);
+        assert.ok(images.alt.length > 60, "describe the hand contacts for nonvisual readers");
+      }
+    }
   });
 
   it("give the second quarter turn its own phase", () => {
     const rotate = recipe("en").steps[7].images.diagram ?? "";
-    assert.equal((rotate.match(/class="pose-phase"/g) ?? []).length, 4);
+    assert.equal((rotate.match(/<li>/g) ?? []).length, 4);
+    assert.match(rotate, /90° \+ release and regrip \+ 90° = 180°/);
+    assert.match(rotate, /set down and release/);
   });
 
   it("are labelled in Russian on the Russian page", () => {
     const sideLock = recipe("ru").steps[5].images.diagram ?? "";
-    assert.equal(sideLock.includes("Сверху"), true);
-    assert.equal(sideLock.includes("Top, looking down"), false);
+    assert.match(sideLock, /Подушечка правого большого пальца/);
+    assert.doesNotMatch(sideLock, /Support|Contact|Checkpoint|Main view|Inset/);
+    assert.equal(recipe("ru").steps[5].images.diagram_title, "Контакты и движение");
+    assert.match(recipe("ru").steps[5].images.alt, /указательный поднят/);
+  });
+
+  it("distinguish the side lock from the index-only top press", () => {
+    const steps = recipe("en").steps;
+    assert.match(steps[5].images.diagram, /middle pad opposite, below the fish/);
+    assert.match(steps[5].images.diagram, /Index lifted/);
+    assert.match(steps[6].images.diagram, /Right index pad alone/);
+    assert.match(steps[8].images.diagram, /then stop/);
+    assert.match(steps[3].images.diagram, /About 5 mm deep/);
   });
 });

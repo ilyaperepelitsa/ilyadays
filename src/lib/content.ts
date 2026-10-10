@@ -81,8 +81,10 @@ export type Step = {
     result: string | null;
     illustration: string | null;
     svg_fallback: string | null;
-    /** Kept under the generated pictures on recipes with Recipe.diagrams (hand positions etc.). */
+    /** Supplemental HTML: localized contact guides or diagrams under the step picture. */
     diagram?: string | null;
+    diagram_title?: string;
+    zoomable?: boolean;
     alt: string;
   };
 };

@@ -141,14 +141,19 @@ function StepCard({ s, t }: { s: Step; t: T }) {
               </figure>
             ))}
           </div>
+        ) : im.illustration && im.zoomable ? (
+          <a className="technique-picture" href={media(im.illustration)} target="_blank" rel="noopener noreferrer">
+            <Illo src={im.illustration} alt={im.alt} />
+            <span>{t("View full-size picture")} ↗</span>
+          </a>
         ) : im.illustration ? (
-          <Illo src={im.illustration} alt={s.title} />
+          <Illo src={im.illustration} alt={im.alt} />
         ) : im.svg_fallback ? (
           <Svg svg={im.svg_fallback} />
         ) : null}
         {im.diagram && (
           <details className="diagram" open>
-            <summary>{t("Diagram")}</summary>
+            <summary>{im.diagram_title ?? t("Diagram")}</summary>
             <Svg svg={im.diagram} />
           </details>
         )}
