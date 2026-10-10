@@ -90,13 +90,30 @@
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Кунжутное масло (свинина с кимчи)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"упаковка|упаковки|упаковок\" data-n=\"1\">1 упаковка</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>)",
-     "name_html": "Натто с его соусом"
     }
    ],
-   "name": "Свинина с кимчи и натто (Бонго)"
+   "name": "Свинина с кимчи (Бонго)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"упаковка|упаковки|упаковок\" data-n=\"1\">2 упаковки</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>)",
+     "name_html": "Натто, домашнее или покупное"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> пакетика (или <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span> соевого)",
+     "name_html": "Соус для натто или соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Караси (японская горчица)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Зелёный лук, тонко нарезанный"
+    }
+   ],
+   "name": "Натто (Бонго)"
   },
   {
    "items": [
@@ -306,7 +323,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 4",
+   "goes_in": "Шаг 5",
    "image": "illustrations/onigiri-shop-fillings/mise4.webp?v=ef5eb3179f",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 г</span> + 4 листа"
@@ -318,7 +335,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 6",
+   "goes_in": "Шаг 7",
    "image": "illustrations/onigiri-shop-fillings/mise5.webp?v=e5f78caf5a",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>"
@@ -330,7 +347,7 @@
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 9",
+   "goes_in": "Шаг 10",
    "image": "illustrations/onigiri-shop-fillings/mise6.webp?v=82c7b75d0a",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>"
@@ -352,15 +369,15 @@
    "title_html": "Купить и начинить"
   },
   {
-   "html": "<ul class=\"do\"><li>Весной в Бонго есть ещё фуки-мисо: рубленые стебли белокопытника, обжаренные с мисо и сахаром.</li><li>Арахисовое мисо из шага 6 — его круглогодичный родственник.</li></ul>",
+   "html": "<ul class=\"do\"><li>Весной в Бонго есть ещё фуки-мисо: рубленые стебли белокопытника, обжаренные с мисо и сахаром.</li><li>Арахисовое мисо из шага 7 — его круглогодичный родственник.</li></ul>",
    "title_html": "Фуки-мисо"
   },
   {
-   "html": "<ul class=\"do\"><li>Нигихая в Киото использует семейный Маридзукэ — баклажан, который солят два года, а потом тушат.</li><li>Шаг 7 — быстрая версия этой идеи, а не их рецепт.</li></ul>",
+   "html": "<ul class=\"do\"><li>Нигихая в Киото использует семейный Маридзукэ — баклажан, который солят два года, а потом тушат.</li><li>Шаг 8 — быстрая версия этой идеи, а не их рецепт.</li></ul>",
    "title_html": "Баклажан Нигихая"
   },
   {
-   "html": "<ul class=\"do\"><li>Собор, комбу с сисо, такана и арахисовое мисо хранятся 4–5 дней в холодильнике.</li><li>Свинина с кимчи — два дня, но натто добавляйте только в день подачи.</li></ul>",
+   "html": "<ul class=\"do\"><li>Собор, комбу с сисо, такана и арахисовое мисо хранятся 4–5 дней в холодильнике.</li><li>Свинина с кимчи — два дня.</li><li>Натто перемешивайте только прямо перед формовкой.</li></ul>",
    "title_html": "Хранение"
   }
  ],
@@ -580,7 +597,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Нарежьте <b>свиную грудинку</b> кусочками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>. Обжарьте на <b>кунжутном масле</b> на сильном огне до румяности, около 2 минут.</li><li>Добавьте отжатую <b>кимчи</b> и жарьте ещё минуту, пока сковорода не станет сухой. Мокрая кимчи размочит рис, и онигири развалится. Остудите.</li><li>Прямо перед формовкой взбейте <b>натто</b> с его соусом, 20 раз перемешав, и вмешайте в свинину с кимчи.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нарежьте <b>свиную грудинку</b> кусочками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>. Обжарьте на <b>кунжутном масле</b> на сильном огне до румяности, около 2 минут.</li><li>Добавьте отжатую <b>кимчи</b> и жарьте ещё минуту, пока сковорода не станет сухой. Мокрая кимчи размочит рис, и онигири развалится. Остудите.</li></ul>",
    "heat": {
     "label": "сильный",
     "label_html": "<span>сильный</span>",
@@ -588,12 +605,12 @@
    },
    "id": "step-3",
    "images": {
-    "alt": "Свинина с кимчи и натто",
+    "alt": "Свинина с кимчи",
     "diagram": null,
     "how": [
      {
-      "caption": "Натто — только в конце: 20 раз перемешать с соусом, потом вмешать.",
-      "src": "illustrations/onigiri-shop-fillings/3-how1.webp?v=5372fa260d"
+      "caption": "Сначала сильно отожмите кимчи: мокрая кимчи размачивает рис.",
+      "src": "illustrations/onigiri-shop-fillings/3-how1.webp?v=867aa73068"
      }
     ],
     "illustration": null,
@@ -606,7 +623,7 @@
    "part_id": null,
    "time": "~5 мин",
    "time_html": "<span>~5 мин</span>",
-   "title": "Свинина с кимчи и натто",
+   "title": "Свинина с кимчи",
    "uses_rows": [
     {
      "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
@@ -619,10 +636,49 @@
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
      "name_html": "Кунжутное масло (свинина с кимчи)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Возьмите покупное натто или <a href=\"natto.html\">сделайте своё в су-вид ванне</a>.</li><li>Прямо перед формовкой энергично перемешайте <b>натто</b> палочками, <b>20 раз</b>, пока оно не посветлеет, а нити не станут густыми и белыми. Затем вмешайте <b>соус</b>, <b>караси</b> и <b>зелёный лук</b>.</li><li>Онигири с натто съешьте в течение часа, пока соус не впитался в рис. В Бонго его ещё сочетают со свининой с кимчи — по ложке того и другого в одном онигири.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Натто",
+    "diagram": null,
+    "how": [
+     {
+      "caption": "Энергично 20 раз, пока нити не станут густыми и белыми; потом соус.",
+      "src": "illustrations/onigiri-shop-fillings/4-how1.webp?v=5372fa260d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-shop-fillings/4.webp?v=90e7b98f6b",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "2 мин",
+   "time_html": "<span>2 мин</span>",
+   "title": "Натто",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"упаковка|упаковки|упаковок\" data-n=\"1\">2 упаковки</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>)",
+     "name_html": "Натто, домашнее или покупное"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"упаковка|упаковки|упаковок\" data-n=\"1\">1 упаковка</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>)",
-     "name_html": "Натто с его соусом"
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> пакетика",
+     "name_html": "Соус для натто или соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Караси (японская горчица)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Зелёный лук, тонко нарезанный"
     }
    ]
   },
@@ -633,22 +689,22 @@
     "label_html": "<span>слабый</span>",
     "off": false
    },
-   "id": "step-4",
+   "id": "step-5",
    "images": {
     "alt": "Комбу с сисо",
     "diagram": null,
     "how": [
      {
       "caption": "Нарезать мягкий комбу после даси тонкими полосками по 3 см.",
-      "src": "illustrations/onigiri-shop-fillings/4-how1.webp?v=d310635eff"
+      "src": "illustrations/onigiri-shop-fillings/5-how1.webp?v=d310635eff"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/4.webp?v=e008bd9f59",
+    "result": "illustrations/onigiri-shop-fillings/5.webp?v=e008bd9f59",
     "svg_fallback": null
    },
-   "n": 4,
+   "n": 5,
    "part": null,
    "part_id": null,
    "time": "~20 мин",
@@ -692,22 +748,22 @@
     "label_html": "<span>выше среднего</span>",
     "off": false
    },
-   "id": "step-5",
+   "id": "step-6",
    "images": {
     "alt": "Такана",
     "diagram": null,
     "how": [
      {
       "caption": "Отжать рубленую такану как можно суше.",
-      "src": "illustrations/onigiri-shop-fillings/5-how1.webp?v=2039592544"
+      "src": "illustrations/onigiri-shop-fillings/6-how1.webp?v=2039592544"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/5.webp?v=a9ca76b631",
+    "result": "illustrations/onigiri-shop-fillings/6.webp?v=a9ca76b631",
     "svg_fallback": null
    },
-   "n": 5,
+   "n": 6,
    "part": null,
    "part_id": null,
    "time": "~4 мин",
@@ -743,22 +799,22 @@
     "label_html": "<span>ниже среднего</span>",
     "off": false
    },
-   "id": "step-6",
+   "id": "step-7",
    "images": {
     "alt": "Арахисовое мисо",
     "diagram": null,
     "how": [
      {
       "caption": "Подсушить арахис, залить смесью мисо и мешать до блеска.",
-      "src": "illustrations/onigiri-shop-fillings/6-how1.webp?v=0fefad5d2f"
+      "src": "illustrations/onigiri-shop-fillings/7-how1.webp?v=0fefad5d2f"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/6.webp?v=07843ba501",
+    "result": "illustrations/onigiri-shop-fillings/7.webp?v=07843ba501",
     "svg_fallback": null
    },
-   "n": 6,
+   "n": 7,
    "part": null,
    "part_id": null,
    "time": "~6 мин",
@@ -794,22 +850,22 @@
     "label_html": "<span>средний</span>",
     "off": false
    },
-   "id": "step-7",
+   "id": "step-8",
    "images": {
     "alt": "Цукудани из баклажана",
     "diagram": null,
     "how": [
      {
       "caption": "Как в Нигихая: вмешать в тёплый рис, а не прятать внутрь.",
-      "src": "illustrations/onigiri-shop-fillings/7-how1.webp?v=660f58de66"
+      "src": "illustrations/onigiri-shop-fillings/8-how1.webp?v=660f58de66"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/7.webp?v=18b6592926",
+    "result": "illustrations/onigiri-shop-fillings/8.webp?v=18b6592926",
     "svg_fallback": null
    },
-   "n": 7,
+   "n": 8,
    "part": null,
    "part_id": null,
    "time": "~20 мин",
@@ -849,22 +905,22 @@
     "label_html": "<span>слабый</span>",
     "off": false
    },
-   "id": "step-8",
+   "id": "step-9",
    "images": {
     "alt": "Масло пеперончино",
     "diagram": null,
     "how": [
      {
       "caption": "Вмешать масло с чесноком в рис, около 1 ч. л. на онигири.",
-      "src": "illustrations/onigiri-shop-fillings/8-how1.webp?v=0c9c5ee388"
+      "src": "illustrations/onigiri-shop-fillings/9-how1.webp?v=0c9c5ee388"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/8.webp?v=30030afe81",
+    "result": "illustrations/onigiri-shop-fillings/9.webp?v=30030afe81",
     "svg_fallback": null
    },
-   "n": 8,
+   "n": 9,
    "part": null,
    "part_id": null,
    "time": "~6 мин",
@@ -892,22 +948,22 @@
   {
    "body_html": "<ul class=\"do\"><li>Надрежьте ястык <b>ментайко</b> и выскребите икру из плёнки.</li><li>Смешайте её с <b>майонезом</b>, затем аккуратно вмешайте кубики <b>сливочного сыра</b>, не раздавливая их.</li></ul>",
    "heat": null,
-   "id": "step-9",
+   "id": "step-10",
    "images": {
     "alt": "Мэнтай-майо со сливочным сыром",
     "diagram": null,
     "how": [
      {
       "caption": "Надрезать ястык и выскрести икру из плёнки.",
-      "src": "illustrations/onigiri-shop-fillings/9-how1.webp?v=7abec040b2"
+      "src": "illustrations/onigiri-shop-fillings/10-how1.webp?v=7abec040b2"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/9.webp?v=48208020ec",
+    "result": "illustrations/onigiri-shop-fillings/10.webp?v=48208020ec",
     "svg_fallback": null
    },
-   "n": 9,
+   "n": 10,
    "part": null,
    "part_id": null,
    "time": "3 мин",
@@ -931,26 +987,26 @@
   {
    "body_html": "<ul class=\"do\"><li>Формуйте, как на <a href=\"onigiri.html\">странице онигири</a>, но крупнее и рыхлее: около <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\" data-s=\"0\">120 г</span></b> риса, сжатого ровно настолько, чтобы держал форму.</li><li>Положите в углубление полную столовую ложку начинки, закройте её рисом, а затем выложите ещё немного <b>сверху</b>, чтобы было видно, что внутри. Так показывают свои онигири Бонго и Тогоси-я.</li><li>Оберните полоску <b>нори</b> вокруг основания и по бокам, оставив верх с начинкой открытым. Съешьте в течение часа, пока нори хрустит.</li><li>Хорошие пары: собор с маринованным желтком, свинина с кимчи и натто, мэнтай-майо на такане.</li></ul>",
    "heat": null,
-   "id": "step-10",
+   "id": "step-11",
    "images": {
     "alt": "Сформовать, как в онигири-лавках",
     "diagram": null,
     "how": [
      {
       "caption": "Полная ложка в углубление, рис рыхло закрыть сверху.",
-      "src": "illustrations/onigiri-shop-fillings/10-how1.webp?v=26baa085d0"
+      "src": "illustrations/onigiri-shop-fillings/11-how1.webp?v=26baa085d0"
      },
      {
       "caption": "Ещё немного сверху, чтобы было видно; нори — только вокруг основания.",
-      "src": "illustrations/onigiri-shop-fillings/10-how2.webp?v=d94961fddd"
+      "src": "illustrations/onigiri-shop-fillings/11-how2.webp?v=d94961fddd"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri-shop-fillings/10.webp?v=1c7a2270d4",
+    "result": "illustrations/onigiri-shop-fillings/11.webp?v=1c7a2270d4",
     "svg_fallback": null
    },
-   "n": 10,
+   "n": 11,
    "part": null,
    "part_id": null,
    "time": "~2 мин каждый",
@@ -989,7 +1045,7 @@
     "label": "Доска"
    }
   ],
-  "note_html": "Делайте две-три начинки, не все сразу; время указано для комбу с сисо, собора и свинины с кимчи.",
+  "note_html": "Делайте две-три начинки, не все сразу; время указано для комбу с сисо, собора и свинины с кимчи и натто.",
   "tasks": [
    {
     "dur": 5,
@@ -1024,12 +1080,20 @@
     "start": 33
    },
    {
+    "dur": 2,
+    "dur_label": "2 мин",
+    "kind": "board",
+    "label": "Натто",
+    "label_html": "Натто",
+    "start": 38
+   },
+   {
     "dur": 3,
     "dur_label": "3 мин",
     "kind": "board",
     "label": "Мэнтай-майо",
     "label_html": "Мэнтай-майо",
-    "start": 38
+    "start": 40
    },
    {
     "dur": 12,
@@ -1037,7 +1101,7 @@
     "kind": "board",
     "label": "Формовка",
     "label_html": "Формовка",
-    "start": 41
+    "start": 43
    }
   ],
   "tick_step": 10,
