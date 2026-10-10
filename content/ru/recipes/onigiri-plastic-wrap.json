@@ -1,0 +1,357 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Начините и сформуйте рисовый треугольник через плёнку, не касаясь риса руками.",
+ "chips": [
+  {
+   "html": "<span>3 онигири</span>",
+   "kind": "",
+   "text": "3 онигири"
+  },
+  {
+   "html": "~1¼ ч",
+   "kind": "time",
+   "text": "~1¼ ч"
+  }
+ ],
+ "description": "Начините и сформуйте рисовый треугольник через плёнку, не касаясь риса руками.",
+ "equipment_html": [
+  "Рисоварка или тяжёлая кастрюля",
+  "Большая миска или кадка для суши, чтобы остудить рис",
+  "Лопатка для риса",
+  "Маленькая миска с водой для рук",
+  "Кухонные ножницы",
+  "Пищевая плёнка",
+  "Небольшая миска"
+ ],
+ "group": {
+  "id": "japanese",
+  "name": "Японская кухня"
+ },
+ "hero": {
+  "alt": "Онигири через пищевую плёнку",
+  "image": "illustrations/onigiri-plastic-wrap/3.webp?v=44a93107e2",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Японский короткозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\">200 мл</span>",
+     "name_html": "Вода (для риса)"
+    },
+    {
+     "amount_html": "немного на каждый онигири",
+     "name_html": "Крупная соль (для формовки)"
+    }
+   ],
+   "name": "Рис"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 ч. л.</span> на онигири",
+     "name_html": "Готовая начинка на ваш выбор"
+    }
+   ],
+   "name": "Начинка"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>, разрезанный на три полоски",
+     "name_html": "Нори"
+    },
+    {
+     "amount_html": "для обсыпки (по желанию)",
+     "name_html": "Фурикакэ"
+    }
+   ],
+   "name": "В конце"
+  }
+ ],
+ "intro_html": "Один способ формовки от риса до подачи. Заранее подготовьте <b>одну начинку</b>: <a href=\"tuna-mayo-onigiri.html\">тунец с майонезом</a>, <a href=\"salted-salmon-onigiri.html\">солёный лосось</a>, <a href=\"okaka-onigiri.html\">окака</a>, <a href=\"umeboshi-onigiri.html\">умэбоси</a>, <a href=\"spicy-tuna-mayo-onigiri.html\">острый тунец с майонезом</a> или <a href=\"kimchi-cheese-onigiri.html\">кимчи и сыр</a>. <a href=\"onigiri.html\">Назад к формовке руками и всем начинкам →</a>",
+ "mise": [],
+ "more_label": "Ещё — Японская кухня:",
+ "next": {
+  "slug": "yaki-onigiri",
+  "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Онигири — это простой отварной рис с солью; рис для суши заправлен уксусом, сахаром и солью.</li><li>Берите японский короткозёрный рис — жасминовый или длиннозёрный разваливается.</li></ul>",
+   "title_html": "Почему не рис для суши?"
+  }
+ ],
+ "original": null,
+ "parts": [
+  {
+   "id": "part-рис",
+   "title": "Рис"
+  },
+  {
+   "id": "part-формовка-через-плёнку",
+   "title": "Формовка через плёнку"
+  },
+  {
+   "id": "part-подача",
+   "title": "Подача"
+  }
+ ],
+ "prev": {
+  "slug": "onigiri-mold",
+  "title": "Онигири в форме"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 1,
+  "size": "1",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/onigiri-plastic-wrap.jpg?v=e77d761bde",
+ "siblings": [
+  {
+   "slug": "oyakodon",
+   "title": "Оякодон"
+  },
+  {
+   "slug": "napa-shiitake-egg-bowl",
+   "title": "Миска с пекинской капустой, шиитаке и яйцом"
+  },
+  {
+   "slug": "onigiri",
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)"
+  },
+  {
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)"
+  },
+  {
+   "slug": "shrimp-karaage-onigiri",
+   "title": "Онигири с креветкой караагэ и острым майонезом"
+  },
+  {
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой"
+  },
+  {
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)"
+  },
+  {
+   "slug": "onigiri-shop-fillings",
+   "title": "Онигири: начинки из токийских онигири-лавок"
+  },
+  {
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)"
+  },
+  {
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби"
+  },
+  {
+   "slug": "karaage",
+   "title": "Караагэ"
+  },
+  {
+   "slug": "japanese-curry",
+   "title": "Японское карри с нуля"
+  },
+  {
+   "slug": "easy-curry",
+   "title": "Быстрое японское карри (ру Golden Curry)"
+  },
+  {
+   "slug": "ramen",
+   "title": "Сливочно-белый рамен (пайтан в стиле тонкоцу)"
+  },
+  {
+   "slug": "alkaline-ramen-noodles",
+   "title": "Лапша для рамена на запечённой соде"
+  },
+  {
+   "slug": "ginger-scallion-noodles",
+   "title": "Лапша с имбирём и зелёным луком (помягче)"
+  }
+ ],
+ "slug": "onigiri-plastic-wrap",
+ "sources": [
+  {
+   "label": "Just One Cookbook — онигири (японские рисовые шарики)",
+   "url": "https://www.justonecookbook.com/onigiri-rice-balls/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Промойте рис и замочите в воде на 20–30 минут.</li><li>Рисоварка: выберите режим для короткозёрного риса. Кастрюля: доведите до кипения на среднем огне с приоткрытой крышкой, затем плотно закройте и варите на слабом огне 12–13 минут, пока вода не впитается. Снимите с огня, оставьте под крышкой на 10 минут, затем разрыхлите рис.</li><li>Получится около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"330\" data-s=\"0\">330 г</span> готового риса — на три онигири.</li><li>Не добавляйте уксус и сахар. Накройте влажным полотенцем и остудите лишь настолько, чтобы рис можно было держать в руках.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Сварите рис",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/kimchi-cheese-onigiri/1.webp?v=9a0341d555",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": "Рис",
+   "part_id": "part-рис",
+   "time": "~1 ч, включая замачивание",
+   "time_html": "<span>~1 ч, включая замачивание</span>",
+   "title": "Сварите рис",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Японский короткозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\">200 мл</span>",
+     "name_html": "Вода (для риса)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Застелите небольшую миску пищевой плёнкой, оставив края, чтобы собрать их сверху. Посыпьте внутри небольшим количеством соли.</li><li>Положите около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> тёплого риса, сделайте углубление и добавьте в центр <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 ч. л.</span> готовой начинки.</li><li>Накройте ещё <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 г</span> риса, закройте его вокруг начинки и добавьте сверху немного соли.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Наполните плёнку",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": null,
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": "Формовка через плёнку",
+   "part_id": "part-формовка-через-плёнку",
+   "time": null,
+   "time_html": null,
+   "title": "Наполните плёнку",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Соберите плёнку над рисом и закрутите. Аккуратно формируйте через плёнку, не сжимая рис сильно.</li><li>Поддерживайте рис снизу левой ладонью. Согните правую руку «крышей», чтобы сделать один угол, поверните рис на треть оборота и повторите для трёх углов.</li><li>Слегка приплюсните каждую грань. Перед подачей разверните; перед едой полностью уберите плёнку.</li></ul>",
+   "heat": null,
+   "id": "step-3",
+   "images": {
+    "alt": "Соберите плёнку и сформуйте",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Рис с начинкой на плёнке в миске; соберите и закрутите плёнку, затем сформуйте треугольник.",
+      "src": "illustrations/onigiri-plastic-wrap/3-how1.webp?v=7bfd4fb88d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/onigiri-plastic-wrap/3.webp?v=44a93107e2",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": "Формовка через плёнку",
+   "part_id": "part-формовка-через-плёнку",
+   "time": null,
+   "time_html": null,
+   "title": "Соберите плёнку и сформуйте",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Оберните нижнюю часть каждого онигири третью листа нори перед едой, чтобы нори оставались хрустящими.</li><li>Или влажными пальцами обваляйте грани в фурикакэ. Подавайте свежеприготовленными.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Нори, фурикакэ, метка сверху",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/kimchi-cheese-onigiri/6.webp?v=9ed82e4594",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": "Подача",
+   "part_id": "part-подача",
+   "time": "~4 мин",
+   "time_html": "<span>~4 мин</span>",
+   "title": "Нори, фурикакэ, метка сверху",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"лист|листа|листов\" data-n=\"1\">1 лист</span>",
+     "name_html": "Нори"
+    },
+    {
+     "amount_html": "для обсыпки (по желанию)",
+     "name_html": "Фурикакэ"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Онигири через пищевую плёнку",
+ "total": "~1¼ ч",
+ "vinegar_options": null,
+ "yields": "3 онигири"
+}

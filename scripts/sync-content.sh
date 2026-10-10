@@ -24,6 +24,7 @@ fi
 # Recipes: JSON for both languages + every picture they reference.
 rm -rf content public/media
 python3 "$RECIPES/export_json.py" --out content --images-out public/media
+python3 scripts/optimize-media.py
 mkdir -p src/styles public/icons
 cp "$RECIPES/static/style.css" src/styles/food.css
 cp "$RECIPES/static/units.js" src/lib/units.js

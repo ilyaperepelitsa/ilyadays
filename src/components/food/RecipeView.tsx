@@ -6,6 +6,7 @@ import { Html, HeroArt, Illo, Svg, SvgDefs } from "./parts";
 import { BatchCalc } from "./BatchCalc";
 import { Portions } from "./Portions";
 import { VinegarPicker } from "./VinegarPicker";
+import { OnigiriChoices } from "./OnigiriChoices";
 
 type T = (key: string) => string;
 
@@ -125,9 +126,10 @@ function TimelineChart({ tl, t }: { tl: Timeline; t: T }) {
 
 function StepCard({ s, t }: { s: Step; t: T }) {
   const im = s.images;
+  const hasArt = !!(im.photo || im.how.length || im.illustration || im.svg_fallback || im.diagram);
   return (
-    <li className="step" id={s.id}>
-      <figure className={`step-art${im.photo ? " has-photo" : ""}`}>
+    <li className={`step${hasArt ? "" : " text-only"}`} id={s.id}>
+      {hasArt && <figure className={`step-art${im.photo ? " has-photo" : ""}`}>
         {im.photo && (
           // eslint-disable-next-line @next/next/no-img-element -- static photo
           <img className="photo" src={media(im.photo)} alt={s.title} loading="lazy" decoding="async" />
@@ -157,7 +159,7 @@ function StepCard({ s, t }: { s: Step; t: T }) {
             <Svg svg={im.diagram} />
           </details>
         )}
-      </figure>
+      </figure>}
       <div className="step-text">
         <h3>
           <span className="step-n">{s.n}</span>
@@ -285,6 +287,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
         <div className="recipe-body">
           <Ingredients r={r} t={t} lang={lang} />
           <div className="recipe-main">
+            <OnigiriChoices r={r} lang={lang} />
             <Mise r={r} t={t} />
             {r.timeline && <TimelineChart tl={r.timeline} t={t} />}
             <Steps r={r} t={t} />

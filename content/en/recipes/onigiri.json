@@ -1,12 +1,12 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Salted rice triangles by hand or in a mold, with classic and loud fillings — the base for every onigiri on this site.",
+ "blurb_html": "The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
  "chips": [
   {
-   "html": "<span>9 onigiri by hand (13 with a mold)</span>",
+   "html": "<span>9 hand-shaped onigiri</span>",
    "kind": "",
-   "text": "9 onigiri by hand (13 with a mold)"
+   "text": "9 hand-shaped onigiri"
   },
   {
    "html": "~1½ h",
@@ -14,14 +14,12 @@
    "text": "~1½ h"
   }
  ],
- "description": "Salted rice triangles by hand or in a mold, with classic and loud fillings — the base for every onigiri on this site.",
+ "description": "The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
  "equipment_html": [
   "Rice cooker or heavy pot",
   "Large bowl or sushi tub to cool the rice",
   "Rice paddle",
   "Small bowl of water for your hands",
-  "Plastic wrap",
-  "Onigiri mold — triangle, with lid and push-out button (optional)",
   "Kitchen scissors"
  ],
  "group": {
@@ -29,7 +27,7 @@
   "name": "Japanese"
  },
  "hero": {
-  "alt": "Onigiri: the shape and the fillings",
+  "alt": "Onigiri: shape by hand",
   "image": "illustrations/onigiri/hero.webp?v=f5fc5c19fd",
   "svg_fallback": null
  },
@@ -54,56 +52,11 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-f=\"fillet|fillets\" data-n=\"3\">1–2 fillets</span>",
-     "name_html": "Salmon fillet"
-    },
-    {
-     "amount_html": "to sprinkle both sides",
-     "name_html": "Kosher salt (salmon)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> packet (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\" data-b=\"5\">3–5 g</span>)",
-     "name_html": "Katsuobushi (bonito flakes)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Soy sauce (okaka)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"can|cans\" data-n=\"1\">1 can</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"140\">140 g</span>, <span class=\"q\" data-k=\"mass\" data-u=\"oz\" data-a=\"5\">5 oz</span>)",
-     "name_html": "Canned tuna, drained"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Japanese mayo (Kewpie)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span>",
-     "name_html": "Soy sauce (tuna-mayo)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
-     "name_html": "Umeboshi (pickled plums)"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> per onigiri",
+     "name_html": "Prepared filling of your choice"
     }
    ],
-   "name": "Classic fillings"
-  },
-  {
-   "items": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>, into half the tuna-mayo",
-     "name_html": "Sriracha (spicy tuna-mayo)"
-    },
-    {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
-     "name_html": "Kimchi, chopped and squeezed"
-    },
-    {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>",
-     "name_html": "Cheese (mozzarella or cheddar), small cubes"
-    }
-   ],
-   "name": "Loud fillings"
+   "name": "Filling (optional)"
   },
   {
    "items": [
@@ -119,96 +72,17 @@
    "name": "To finish"
   }
  ],
- "intro_html": "Japanese rice balls. The rice is <b>plain</b> short-grain rice, seasoned only by the salt on your hands — not <a href=\"sushi-rice.html\">sushi rice</a>, which is vinegared and too soft and sharp for this. Shape them <b>by hand</b> (left hand underneath, right hand the roof) or <b>with a mold</b>; fill them with the classics or something louder. The juicier ones have their own pages: <a href=\"yaki-onigiri.html\">yaki onigiri</a> (a crisp soy-glazed crust), <a href=\"nikumaki-onigiri.html\">nikumaki onigiri</a> (wrapped in glazed pork belly), <a href=\"shrimp-karaage-onigiri.html\">shrimp karaage onigiri</a> (craggy fried shrimp + spicy mayo), <a href=\"onigirazu.html\">onigirazu</a> (the rice sandwich), <a href=\"spam-musubi.html\">spam musubi</a>, <a href=\"baby-octopus-onigiri.html\">baby octopus onigiri</a> (octopus rice, all inside) and <a href=\"salmon-onigiri.html\">salmon onigiri</a> (salmon through the rice, ikura in the center).",
- "mise": [
-  {
-   "as_list": false,
-   "goes_in": "Step 4",
-   "image": "illustrations/onigiri/mise1.webp?v=d2fdb9e0ca",
-   "items": [
-    "freshly cooked, warm"
-   ],
-   "items_html": "freshly cooked, warm",
-   "name": "Rice",
-   "svg_fallback": null,
-   "vessel": "bowl"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Step 4",
-   "image": "illustrations/onigiri/mise2.webp?v=c21cd0e1d9",
-   "items": [
-    "bowl of water",
-    "kosher salt"
-   ],
-   "items_html": "bowl of water · kosher salt",
-   "name": "Hand station",
-   "svg_fallback": null,
-   "vessel": "bowl"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Step 5",
-   "image": "illustrations/onigiri/mise3.webp?v=2505e97df2",
-   "items": [
-    "salmon",
-    "okaka",
-    "tuna-mayo",
-    "umeboshi"
-   ],
-   "items_html": "salmon · okaka · tuna-mayo · umeboshi",
-   "name": "Classic fillings",
-   "svg_fallback": null,
-   "vessel": "plate"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Step 5",
-   "image": "illustrations/onigiri/mise4.webp?v=5d0e852cb8",
-   "items": [
-    "spicy tuna-mayo",
-    "kimchi + cheese"
-   ],
-   "items_html": "spicy tuna-mayo · kimchi + cheese",
-   "name": "Loud fillings",
-   "svg_fallback": null,
-   "vessel": "plate"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Step 10",
-   "image": "illustrations/onigiri/mise5.webp?v=cec215bf41",
-   "items": [
-    "nori in thirds",
-    "furikake"
-   ],
-   "items_html": "nori in thirds · furikake",
-   "name": "Nori + furikake",
-   "svg_fallback": null,
-   "vessel": "plate"
-  }
- ],
+ "intro_html": "This page teaches <b>hand shaping</b>: plain short-grain rice, a cupped left hand and a roof-shaped right hand. Choose <b>one filling recipe</b> below, or make plain rice triangles. The <b>mold</b> and <b>plastic-wrap</b> methods have separate pages; you do not follow them after hand shaping.",
+ "mise": [],
  "more_label": "More japanese:",
  "next": {
-  "slug": "yaki-onigiri",
-  "title": "Yaki onigiri (grilled, soy-glazed rice balls)"
+  "slug": "salted-salmon-onigiri",
+  "title": "Salted salmon onigiri"
  },
  "notes": [
   {
    "html": "<ul class=\"do\"><li>Onigiri are plain steamed rice with salt; sushi rice is seasoned with vinegar, sugar and salt.</li><li>Use Japanese short-grain rice — jasmine or long-grain falls apart.</li></ul>",
    "title_html": "Why not sushi rice?"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Molds come in sizes; the common triangle one takes about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 g</span> of rice (13 onigiri from a 3-cup pot) against ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span> by hand (9).</li><li>Pressed in a mold, rice comes out denser — push just until you feel resistance.</li></ul>",
-   "title_html": "Mold sizes"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Spicy tuna-mayo and kimchi + cheese are this site’s picks.</li><li>The sriracha amount is a starting point — taste it.</li></ul>",
-   "title_html": "The loud fillings"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Rice hardens in the fridge.</li><li>Wrap each onigiri in plastic and then a thick towel to keep it cool but not cold.</li></ul>",
-   "title_html": "Keeping them"
   }
  ],
  "original": null,
@@ -218,16 +92,8 @@
    "title": "Rice"
   },
   {
-   "id": "part-fillings",
-   "title": "Fillings"
-  },
-  {
    "id": "part-shape-by-hand",
    "title": "Shape by hand"
-  },
-  {
-   "id": "part-shape-with-a-mold",
-   "title": "Shape with a mold"
   },
   {
    "id": "part-finish",
@@ -271,6 +137,38 @@
   {
    "slug": "napa-shiitake-egg-bowl",
    "title": "Napa cabbage & shiitake egg bowl"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Salted salmon onigiri"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Okaka onigiri"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Tuna-mayo onigiri"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Umeboshi onigiri"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Spicy tuna-mayo onigiri"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Kimchi & cheese onigiri"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Onigiri with a mold"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Onigiri through plastic wrap"
   },
   {
    "slug": "yaki-onigiri",
@@ -338,18 +236,15 @@
  ],
  "steps": [
   {
-   "body_html": "<ul class=\"do\"><li>Wash the rice, then soak it 20–30 minutes in the water.</li><li>Cook it (rice cooker or pot): <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"450\" data-s=\"0\">450 g</span> raw makes about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"990\" data-s=\"0\">990 g</span> cooked — enough for 9 hand-shaped onigiri of ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"110\" data-s=\"0\">110 g</span>.</li><li>Plain rice — no vinegar, no sugar. The salt goes on your hands.</li></ul>",
-   "heat": {
-    "label": "per your rice cooker",
-    "label_html": "<span>per your rice cooker</span>",
-    "off": false
-   },
+   "body_html": "<ul class=\"do\"><li>Wash the rice, then soak it 20–30 minutes in the water.</li><li>Rice cooker: use the short-grain cycle. Pot: bring to a boil over medium heat with the lid slightly ajar, then cover tightly and cook on low for 12–13 minutes, until the water is absorbed. Rest off the heat, covered, for 10 minutes, then fluff.</li><li>This batch makes about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"990\" data-s=\"0\">990 g</span> cooked rice, enough for nine hand-shaped onigiri.</li><li>Plain rice — no vinegar, no sugar. The salt goes on your hands.</li></ul>",
+   "heat": null,
    "id": "step-1",
    "images": {
     "alt": "Cook the rice",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/onigiri/1.webp?v=9a0341d555",
+    "illustration": "illustrations/kimchi-cheese-onigiri/1.webp?v=9a0341d555",
     "photo": null,
     "result": null,
     "svg_fallback": null
@@ -372,121 +267,29 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>While the rice cooks:<ul class=\"ing\"><li><b>Salted salmon:</b> salt both sides, broil or bake at <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"218\" data-s=\"0\">218 °C</span> for 10–20 minutes until well done and flaky, then flake it</li><li><b>Okaka:</b> katsuobushi moistened (not drenched) with the soy sauce</li><li><b>Tuna-mayo:</b> drained tuna + mayo + soy sauce</li><li><b>Umeboshi:</b> pits out, flesh on a plate</li></ul></li></ul>",
+   "body_html": "<ul class=\"do\"><li>Let the rice cool just until you can hold it — it must still be warm to stick.</li><li>Wet both palms with a little water.</li><li>Dip 2–3 fingers in kosher salt and rub it over both palms (table salt: half as much).</li></ul>",
    "heat": null,
    "id": "step-2",
    "images": {
-    "alt": "Classic fillings",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Okaka: moisten the bonito flakes with soy — damp, not drenched.",
-      "src": "illustrations/onigiri/2-how1.webp?v=5a2c2b70a6"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/2.webp?v=e559d81536",
-    "svg_fallback": null
-   },
-   "n": 2,
-   "part": "Fillings",
-   "part_id": "part-fillings",
-   "time": "~25 min",
-   "time_html": "<span>~25 min</span>",
-   "title": "Classic fillings",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-b=\"2\" data-f=\"fillet|fillets\" data-n=\"3\">1–2 fillets</span>",
-     "name_html": "Salmon fillet"
-    },
-    {
-     "amount_html": "to sprinkle both sides",
-     "name_html": "Kosher salt (salmon)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> packet (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\" data-b=\"5\">3–5 g</span>)",
-     "name_html": "Katsuobushi (bonito flakes)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Soy sauce (okaka)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"can|cans\" data-n=\"1\">1 can</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"140\">140 g</span>",
-     "name_html": "Canned tuna, drained"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
-     "name_html": "Japanese mayo (Kewpie)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"0.5\">½ tbsp</span>",
-     "name_html": "Soy sauce (tuna-mayo)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
-     "name_html": "Umeboshi (pickled plums)"
-    }
-   ]
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Same <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> per onigiri:<ul class=\"ing\"><li><b>Spicy tuna-mayo:</b> half the tuna-mayo with sriracha stirred in (the <a href=\"tuna-mango-roll.html\">roll’s spicy mayo</a> works too)</li><li><b>Kimchi + cheese:</b> chopped <a href=\"kimchi.html\">kimchi</a>, squeezed dry, with a few cheese cubes</li></ul></li></ul>",
-   "heat": null,
-   "id": "step-3",
-   "images": {
-    "alt": "Loud fillings",
-    "diagram": null,
-    "how": [],
-    "illustration": "illustrations/onigiri/3.webp?v=87203aa257",
-    "photo": null,
-    "result": null,
-    "svg_fallback": null
-   },
-   "n": 3,
-   "part": "Fillings",
-   "part_id": "part-fillings",
-   "time": "~4 min",
-   "time_html": "<span>~4 min</span>",
-   "title": "Loud fillings",
-   "uses_rows": [
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>",
-     "name_html": "Sriracha (spicy tuna-mayo)"
-    },
-    {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
-     "name_html": "Kimchi, chopped and squeezed"
-    },
-    {
-     "amount_html": "~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>",
-     "name_html": "Cheese (mozzarella or cheddar), small cubes"
-    }
-   ]
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Let the rice cool just until you can hold it — it must still be warm to stick.</li><li>Wet both palms with a little water.</li><li>Dip 2–3 fingers in kosher salt and rub it over both palms (table salt: half as much).</li></ul>",
-   "heat": null,
-   "id": "step-4",
-   "images": {
     "alt": "Wet and salt your hands",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Wet both palms, then dip 2–3 fingers in kosher salt…",
-      "src": "illustrations/onigiri/4-how1.webp?v=522ee31760"
+      "src": "illustrations/kimchi-cheese-onigiri/3-how1.webp?v=522ee31760"
      },
      {
       "caption": "…and rub the salt over both palms.",
-      "src": "illustrations/onigiri/4-how2.webp?v=8ecc676131"
+      "src": "illustrations/kimchi-cheese-onigiri/3-how2.webp?v=8ecc676131"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/4.webp?v=6e4c345ccc",
+    "result": "illustrations/kimchi-cheese-onigiri/3.webp?v=6e4c345ccc",
     "svg_fallback": null
    },
-   "n": 4,
+   "n": 2,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "~5 min",
@@ -500,28 +303,29 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Scoop ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> warm rice onto your LEFT palm — the left hand always stays underneath.</li><li>Press a small well in the middle and put in <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> of one filling.</li><li>Cover with another ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> of rice and press it gently round the filling into a ball.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Scoop ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> warm rice onto your LEFT palm — the left hand always stays underneath.</li><li>For a filled onigiri, press a small well and add <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tsp</span> of one prepared filling. For plain onigiri, leave the filling out.</li><li>Cover with another ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\" data-s=\"0\">50 g</span> of rice and press it gently round the filling into a ball.</li></ul>",
    "heat": null,
-   "id": "step-5",
+   "id": "step-3",
    "images": {
     "alt": "Rice, filling, close",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "About 50 g of warm rice on your left palm; press a small well into the middle.",
-      "src": "illustrations/onigiri/5-how1.webp?v=a2447717ab"
+      "src": "illustrations/kimchi-cheese-onigiri/4.webp?v=a2447717ab"
      },
      {
-      "caption": "1–2 tsp of filling in the well, then cover with more rice.",
-      "src": "illustrations/onigiri/5-how2.webp?v=c3e8771711"
+      "caption": "Example with salmon; use your chosen filling or leave it out for plain onigiri.",
+      "src": "illustrations/onigiri/3-how2.webp?v=c3e8771711"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/5.webp?v=ab5c2f4b21",
+    "result": "illustrations/onigiri/3.webp?v=ab5c2f4b21",
     "svg_fallback": null
    },
-   "n": 5,
+   "n": 3,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "1 min each",
@@ -532,26 +336,27 @@
   {
    "body_html": "<ul class=\"do\"><li>RIGHT hand on top, fingers together and bent into a roof — it makes the corner.</li><li>LEFT hand underneath in a “C” — fingers and heel gently flatten the two sides.</li><li>Press lightly, then roll the corner you just made <b>towards you</b> — a third of a turn.</li><li>Three corners, then 2–3 more rounds. Lay it on each face and press once to flatten.</li><li>Firm enough to hold together, but airy inside — don’t squeeze.</li></ul>",
    "heat": null,
-   "id": "step-6",
+   "id": "step-4",
    "images": {
     "alt": "Press the triangle",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Right hand on top, fingers together and bent like a roof; left hand underneath in a “C”, pressing the sides.",
-      "src": "illustrations/onigiri/6-how1.webp?v=f09f821ccb"
+      "src": "illustrations/kimchi-cheese-onigiri/5-how1.webp?v=f09f821ccb"
      },
      {
       "caption": "Press lightly, then roll the corner you just made towards you — a third of a turn — and press again.",
-      "src": "illustrations/onigiri/6-how2.webp?v=5c94e8c191"
+      "src": "illustrations/kimchi-cheese-onigiri/5-how2.webp?v=5c94e8c191"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/6.webp?v=bddbbe9acb",
+    "result": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
     "svg_fallback": null
    },
-   "n": 6,
+   "n": 4,
    "part": "Shape by hand",
    "part_id": "part-shape-by-hand",
    "time": "~1 min each",
@@ -560,114 +365,29 @@
    "uses_rows": []
   },
   {
-   "body_html": "<ul class=\"do\"><li>Line a small bowl with plastic wrap and sprinkle in a little salt.</li><li>Rice in, a well, the filling, more rice on top, a little more salt.</li><li>Gather and twist the wrap shut, then press the same triangle through it. Good for lunchboxes — nobody’s hands touch the rice.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Wrap a third of a nori sheet round the bottom of each onigiri just before eating for crisp nori.</li><li>Or coat the faces in furikake with damp fingers. Serve freshly made.</li></ul>",
    "heat": null,
-   "id": "step-7",
-   "images": {
-    "alt": "Or: through plastic wrap",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Rice and filling on plastic wrap in a bowl; gather and twist it shut, then press the triangle.",
-      "src": "illustrations/onigiri/7-how1.webp?v=7bfd4fb88d"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/7.webp?v=44a93107e2",
-    "svg_fallback": null
-   },
-   "n": 7,
-   "part": "Shape by hand",
-   "part_id": "part-shape-by-hand",
-   "time": "~1 min each",
-   "time_html": "<span>~1 min each</span>",
-   "title": "Or: through plastic wrap",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Dip the mold and its lid in water, shake off the excess, and sprinkle salt inside.</li><li>Fill it halfway with warm rice, pushing it into the corners.</li><li>A spoonful of filling in the middle, then rice to the brim and a little salt on top.</li></ul>",
-   "heat": null,
-   "id": "step-8",
-   "images": {
-    "alt": "Fill the mold",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Fill the wet mold halfway, pushing the rice into the corners.",
-      "src": "illustrations/onigiri/8-how1.webp?v=c42ae1f5d0"
-     },
-     {
-      "caption": "Filling in the middle, then rice to the brim.",
-      "src": "illustrations/onigiri/8-how2.webp?v=ae64c7a07c"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/8.webp?v=f3441ab996",
-    "svg_fallback": null
-   },
-   "n": 8,
-   "part": "Shape with a mold",
-   "part_id": "part-shape-with-a-mold",
-   "time": "~1 min each",
-   "time_html": "<span>~1 min each</span>",
-   "title": "Fill the mold",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Lid on and push down firmly — you should feel a slight resistance. No resistance? Add a little rice.</li><li>Lid off, flip the mold over the tray and push the button to pop the onigiri out.</li><li>Wet your fingers before touching it. A mold makes smaller, denser onigiri (~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\" data-s=\"0\">75 g</span> each, 13 from the pot); a lighter push keeps them fluffier.</li></ul>",
-   "heat": null,
-   "id": "step-9",
-   "images": {
-    "alt": "Press and push out",
-    "diagram": null,
-    "how": [
-     {
-      "caption": "Lid on and press down firmly — stop when you feel resistance.",
-      "src": "illustrations/onigiri/9-how1.webp?v=3811fd7ac5"
-     },
-     {
-      "caption": "Flip it over and push the button to pop the onigiri out.",
-      "src": "illustrations/onigiri/9-how2.webp?v=d686c3937e"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/onigiri/9.webp?v=d2b1350720",
-    "svg_fallback": null
-   },
-   "n": 9,
-   "part": "Shape with a mold",
-   "part_id": "part-shape-with-a-mold",
-   "time": "~30 s each",
-   "time_html": "<span>~30 s each</span>",
-   "title": "Press and push out",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Wrap a third of a nori sheet round the bottom of each onigiri — <b>right before eating</b> for crisp nori, or now for soft nori that sticks.</li><li>Or skip the nori: coat the three faces in <a href=\"furikake.html\">furikake</a> with wet fingers.</li><li>A little of the filling on the tip tells you what’s inside. Eat warm or at room temperature, within about 6 hours.</li></ul>",
-   "heat": null,
-   "id": "step-10",
+   "id": "step-5",
    "images": {
     "alt": "Nori, furikake, a dab on top",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Wrap a third of a nori sheet round the bottom just before eating — the nori stays crisp.",
-      "src": "illustrations/onigiri/10-how1.webp?v=9ed82e4594"
+      "src": "illustrations/kimchi-cheese-onigiri/6.webp?v=9ed82e4594"
      },
      {
       "caption": "Or coat the faces in furikake with damp fingers.",
-      "src": "illustrations/onigiri/10-how2.webp?v=8ae726eff4"
+      "src": "illustrations/onigiri/5-how2.webp?v=8ae726eff4"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/onigiri/10.webp?v=6e4b65b2e6",
+    "result": "illustrations/onigiri/5.webp?v=6e4b65b2e6",
     "svg_fallback": null
    },
-   "n": 10,
+   "n": 5,
    "part": "Finish",
    "part_id": "part-finish",
    "time": "~4 min",
@@ -675,131 +395,19 @@
    "title": "Nori, furikake, a dab on top",
    "uses_rows": [
     {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"sheet|sheets\" data-n=\"1\">3 sheets</span>",
+     "name_html": "Nori"
+    },
+    {
      "amount_html": "to coat (optional)",
      "name_html": "Furikake"
     }
    ]
   }
  ],
- "timeline": {
-  "end": 105,
-  "hours": true,
-  "legend": [
-   {
-    "kind": "pan",
-    "label": "Pan / stove"
-   },
-   {
-    "kind": "bowl",
-    "label": "Bowl / counter"
-   },
-   {
-    "kind": "board",
-    "label": "Board"
-   },
-   {
-    "kind": "wait",
-    "label": "Hands-off"
-   }
-  ],
-  "note_html": "Keep the rice and the shaped onigiri covered with a damp towel so they don’t dry out.",
-  "tasks": [
-   {
-    "dur": 60,
-    "dur_label": "1 h",
-    "kind": "pan",
-    "label": "Wash, soak, cook rice",
-    "label_html": "Wash, soak, cook rice",
-    "start": 0
-   },
-   {
-    "dur": 20,
-    "dur_label": "20 min",
-    "kind": "pan",
-    "label": "Salt and broil the salmon",
-    "label_html": "Salt and broil the salmon",
-    "start": 15
-   },
-   {
-    "dur": 8,
-    "dur_label": "8 min",
-    "kind": "bowl",
-    "label": "Okaka, tuna-mayo, umeboshi",
-    "label_html": "Okaka, tuna-mayo, umeboshi",
-    "start": 35
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 min",
-    "kind": "board",
-    "label": "Loud fillings",
-    "label_html": "Loud fillings",
-    "start": 43
-   },
-   {
-    "dur": 5,
-    "dur_label": "5 min",
-    "kind": "wait",
-    "label": "Rice cools a little, covered",
-    "label_html": "Rice cools a little, covered",
-    "start": 60
-   },
-   {
-    "dur": 25,
-    "dur_label": "25 min",
-    "kind": "bowl",
-    "label": "Shape (hand or mold)",
-    "label_html": "Shape (hand or mold)",
-    "start": 65
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 min",
-    "kind": "bowl",
-    "label": "Nori, furikake",
-    "label_html": "Nori, furikake",
-    "start": 90
-   }
-  ],
-  "tick_step": 15,
-  "ticks": [
-   {
-    "at": 0,
-    "label": "0:00"
-   },
-   {
-    "at": 15,
-    "label": "0:15"
-   },
-   {
-    "at": 30,
-    "label": "0:30"
-   },
-   {
-    "at": 45,
-    "label": "0:45"
-   },
-   {
-    "at": 60,
-    "label": "1:00"
-   },
-   {
-    "at": 75,
-    "label": "1:15"
-   },
-   {
-    "at": 90,
-    "label": "1:30"
-   },
-   {
-    "at": 105,
-    "label": "1:45"
-   }
-  ],
-  "unit": "h:mm"
- },
- "title": "Onigiri: the shape and the fillings",
+ "timeline": null,
+ "title": "Onigiri: shape by hand",
  "total": "~1½ h",
  "vinegar_options": null,
- "yields": "9 onigiri by hand (13 with a mold)"
+ "yields": "9 hand-shaped onigiri"
 }

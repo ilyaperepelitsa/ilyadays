@@ -122,7 +122,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 2",
-   "image": "illustrations/karaage/mise1.webp?v=ce6696a899",
+   "image": "illustrations/karaage/mise1.webp?v=bf2787bdff",
    "items": [
     "наколота, кусками"
    ],
@@ -134,7 +134,7 @@
   {
    "as_list": true,
    "goes_in": "Шаг 2",
-   "image": "illustrations/karaage/mise2.webp?v=d647250d6e",
+   "image": "illustrations/karaage/mise2.webp?v=0d08f368d1",
    "items": [
     "соя",
     "саке",
@@ -153,7 +153,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 3",
-   "image": "illustrations/karaage/mise3.webp?v=a0fb957218",
+   "image": "illustrations/karaage/mise3.webp?v=a22cf4817a",
    "items": [
     "по <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>"
    ],
@@ -165,7 +165,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 6",
-   "image": "illustrations/karaage/mise4.webp?v=aece5bbe49",
+   "image": "illustrations/karaage/mise4.webp?v=d40d090c8c",
    "items": [
     "тапиока + крошка вилкой"
    ],
@@ -177,7 +177,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 8",
-   "image": "illustrations/karaage/mise5.webp?v=18e94fbd3f",
+   "image": "illustrations/karaage/mise5.webp?v=806e0aa1f9",
    "items": [
     "для отдыха и стекания"
    ],
@@ -189,7 +189,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 10",
-   "image": "illustrations/karaage/mise6.webp?v=5b893aa291",
+   "image": "illustrations/karaage/mise6.webp?v=e18596e4e7",
    "items": [
     "лимон",
     "майонез"
@@ -265,7 +265,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Онигири: форма и начинки"
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку"
   },
   {
    "slug": "yaki-onigiri",
@@ -330,6 +362,7 @@
    "images": {
     "alt": "Нарезать и наколоть",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Наколите каждый кусок острой вилкой повсюду — с обеих сторон, — чтобы маринад проник внутрь.",
@@ -361,6 +394,7 @@
    "images": {
     "alt": "Замариновать",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Смешайте маринад, затем перемешайте в нём курицу.",
@@ -387,6 +421,7 @@
    "images": {
     "alt": "Слить, затем мука + крахмал",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Наклоните миску и слейте лишний маринад, придерживая курицу.",
@@ -426,6 +461,7 @@
    "images": {
     "alt": "Доска с крахмалом и крошка",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Сбрызните часть крахмала водой и разотрите вилкой в мелкую крошку.",
@@ -465,6 +501,7 @@
    "images": {
     "alt": "Разогрейте масло",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/karaage/5.webp?v=d0622c26a4",
     "photo": null,
@@ -491,6 +528,7 @@
    "images": {
     "alt": "Обвалять в крахмале",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Обваляйте каждый кусок в крахмале и прижмите к крошке, чтобы она прилипла.",
@@ -521,6 +559,7 @@
    "images": {
     "alt": "Первая обжарка — светлая",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Опускайте куски по одному, от себя, — не перегружайте кастрюлю.",
@@ -547,6 +586,7 @@
    "images": {
     "alt": "Отдых",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Выньте их пауком на решётку и дайте отдохнуть.",
@@ -577,6 +617,7 @@
    "images": {
     "alt": "Вторая обжарка — тёмная и хрустящая",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/karaage/9.webp?v=9c5535118b",
     "photo": null,
@@ -598,6 +639,7 @@
    "images": {
     "alt": "Подача",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/karaage/10.webp?v=94857c5d24",
     "photo": null,

@@ -110,7 +110,7 @@
   {
    "as_list": true,
    "goes_in": "Шаг 7",
-   "image": "illustrations/oyakodon/mise1.webp?v=0bb0fd2e66",
+   "image": "illustrations/oyakodon/mise1.webp?v=e812a3ee50",
    "items": [
     "даси",
     "комбу",
@@ -127,7 +127,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 5",
-   "image": "illustrations/oyakodon/mise2.webp?v=69159aa8e2",
+   "image": "illustrations/oyakodon/mise2.webp?v=4d6a0338b8",
    "items": [
     "мелко нарезан"
    ],
@@ -139,7 +139,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 5",
-   "image": "illustrations/oyakodon/mise3.webp?v=f4e7afbece",
+   "image": "illustrations/oyakodon/mise3.webp?v=770b402a26",
    "items": [
     "нарезан вдоль",
     "щепотка соли"
@@ -152,7 +152,7 @@
   {
    "as_list": false,
    "goes_in": "Шаги 8–9",
-   "image": "illustrations/oyakodon/mise4.webp?v=82d195d4aa",
+   "image": "illustrations/oyakodon/mise4.webp?v=d531f6cb93",
    "items": [
     "слегка взбиты"
    ],
@@ -164,7 +164,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 10",
-   "image": "illustrations/oyakodon/mise5.webp?v=9750193445",
+   "image": "illustrations/oyakodon/mise5.webp?v=574db60243",
    "items": [
     "горячий рис",
     "зелёный лук"
@@ -236,7 +236,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Онигири: форма и начинки"
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку"
   },
   {
    "slug": "yaki-onigiri",
@@ -305,6 +337,7 @@
    "images": {
     "alt": "Сначала рис",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Накладывайте горячий рис рыхло, влажной лопаткой — не утрамбовывайте.",
@@ -336,6 +369,7 @@
    "images": {
     "alt": "Замаринуйте курицу",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Срежьте лишний жир, затем нарежьте бедро кусочками 2–3 см.",
@@ -375,6 +409,7 @@
    "images": {
     "alt": "Лук и имбирь",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Лук: срежьте оба конца — корень и верхушку, — затем разрежьте пополам через срезы и очистите.",
@@ -418,6 +453,7 @@
    "images": {
     "alt": "Взбейте яйца",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Взбейте слегка — 4–5 быстрых движений, разрезая белки. Остановитесь, пока видны прожилки.",
@@ -453,6 +489,7 @@
    "images": {
     "alt": "Имбирь, потом лук",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Сначала имбирь, ~30 секунд в масле, пока не запахнет.",
@@ -504,6 +541,7 @@
    "images": {
     "alt": "Дайте остыть",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/oyakodon/6.webp?v=01dbaa47d7",
     "photo": null,
@@ -529,6 +567,7 @@
    "images": {
     "alt": "Курица — со всем маринадом",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Снова на средний огонь: выложите курицу со всем маринадом, вместе с комбу.",
@@ -563,6 +602,7 @@
    "images": {
     "alt": "Влейте ⅔ яйца",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/oyakodon/8.webp?v=db6481a64c",
     "photo": null,
@@ -588,6 +628,7 @@
    "images": {
     "alt": "Остальное — и огонь выключить",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Последнюю треть влейте в середину, где яйца меньше всего, — затем выключите огонь и накройте.",
@@ -614,6 +655,7 @@
    "images": {
     "alt": "Выложите на рис",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Наклоните сковороду над рисом и выложите всё одним движением, вместе с бульоном.",

@@ -202,7 +202,7 @@
   {
    "as_list": false,
    "goes_in": "Step 17",
-   "image": "illustrations/ramen/mise1.webp?v=eed07f3d60",
+   "image": "illustrations/ramen/mise1.webp?v=f8c15d03cf",
    "items": [
     "strained, kept at a boil"
    ],
@@ -214,7 +214,7 @@
   {
    "as_list": false,
    "goes_in": "Step 17",
-   "image": "illustrations/ramen/mise2.webp?v=484adc43f3",
+   "image": "illustrations/ramen/mise2.webp?v=41b267e9dc",
    "items": [
     "reduced marinade"
    ],
@@ -226,7 +226,7 @@
   {
    "as_list": false,
    "goes_in": "Step 15",
-   "image": "illustrations/ramen/mise3.webp?v=762598c976",
+   "image": "illustrations/ramen/mise3.webp?v=3e9b579002",
    "items": [
     "sliced, seared"
    ],
@@ -238,7 +238,7 @@
   {
    "as_list": false,
    "goes_in": "Step 15",
-   "image": "illustrations/ramen/mise4.webp?v=f9841f32b6",
+   "image": "illustrations/ramen/mise4.webp?v=3202ce7eac",
    "items": [
     "whole tentacle, soy-seared"
    ],
@@ -250,7 +250,7 @@
   {
    "as_list": false,
    "goes_in": "Step 18",
-   "image": "illustrations/ramen/mise5.webp?v=b61981367d",
+   "image": "illustrations/ramen/mise5.webp?v=3744fd4424",
    "items": [
     "fresh alkaline, loosened"
    ],
@@ -262,7 +262,7 @@
   {
    "as_list": true,
    "goes_in": "Step 19",
-   "image": "illustrations/ramen/mise6.webp?v=a4cd6dbdf2",
+   "image": "illustrations/ramen/mise6.webp?v=3a7443fcdc",
    "items": [
     "spring onion",
     "nori",
@@ -368,7 +368,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Onigiri: the shape and the fillings"
+   "title": "Onigiri: shape by hand"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Salted salmon onigiri"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Okaka onigiri"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Tuna-mayo onigiri"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Umeboshi onigiri"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Spicy tuna-mayo onigiri"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Kimchi & cheese onigiri"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Onigiri with a mold"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Onigiri through plastic wrap"
   },
   {
    "slug": "yaki-onigiri",
@@ -433,6 +465,7 @@
    "images": {
     "alt": "Make the dashi",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [],
     "illustration": "illustrations/ramen/1.webp?v=fd4fe0765a",
     "photo": null,
@@ -463,6 +496,7 @@
    "images": {
     "alt": "Blanch the bones",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Cover all the bones with cold water, then bring it to a hard boil.",
@@ -502,6 +536,7 @@
    "images": {
     "alt": "Scrub and rinse",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Scrub every bone under cold running water — dark bits, blood and scum off.",
@@ -532,6 +567,7 @@
    "images": {
     "alt": "Stage 1 — chicken + onion, 6–8 hours",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Chicken bones and onion go into the dashi first.",
@@ -575,6 +611,7 @@
    "images": {
     "alt": "Stage 2 — pork + ginger + garlic, 6–8 hours",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "After 6–8 hours, lift the chicken bones and onion out with the spider.",
@@ -609,6 +646,7 @@
    "images": {
     "alt": "Stage 3 — beef, 6–8 hours",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "After 6–8 hours, lift the pork bones, ginger and garlic out.",
@@ -639,6 +677,7 @@
    "images": {
     "alt": "Strain",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Lift the beef bones out, then pour the broth through a fine sieve.",
@@ -669,6 +708,7 @@
    "images": {
     "alt": "Roll, tie and marinate the belly",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Stir the marinade until the sugar is gone.",
@@ -708,6 +748,7 @@
    "images": {
     "alt": "Roast hot",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "After 30 minutes, baste it with the juices, then 30 more.",
@@ -738,6 +779,7 @@
    "images": {
     "alt": "Then low until tender",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [],
     "illustration": "illustrations/ramen/10.webp?v=b9eabb6c06",
     "photo": null,
@@ -759,6 +801,7 @@
    "images": {
     "alt": "Chill until firm, untie, slice",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Cold from the fridge: cut and pull off the string.",
@@ -793,6 +836,7 @@
    "images": {
     "alt": "Reduce the marinade into tare",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Skim the fat off the strained liquid, then reduce by a third.",
@@ -828,6 +872,7 @@
    "images": {
     "alt": "Sous vide the tentacle",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Raw tentacles: rub with salt, then rinse the slime off.",
@@ -863,6 +908,7 @@
    "images": {
     "alt": "Pat dry — keep it whole",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Pat dry and keep it whole — it goes on the bowl in one piece.",
@@ -893,6 +939,7 @@
    "images": {
     "alt": "Sear chashu; sear the octopus with soy",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Sear the tentacle in a little oil, then add a splash of soy and turn until glazed and charred.",
@@ -936,6 +983,7 @@
    "images": {
     "alt": "Warm the bowls",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Fill the bowls with boiling water; tip it out just before building.",
@@ -962,6 +1010,7 @@
    "images": {
     "alt": "Tare, then broth",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Tare in first, then 350 ml of boiling broth; whisk briefly.",
@@ -1001,6 +1050,7 @@
    "images": {
     "alt": "Cook the noodles",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Drain hard — shake out every drop of water.",
@@ -1032,6 +1082,7 @@
    "images": {
     "alt": "Top and serve",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Fold the noodles into the broth, then lay the toppings on.",
@@ -1063,6 +1114,7 @@
    "images": {
     "alt": "Make ahead & store (optional)",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Chashu: vacuum-seal the slices one by one.",

@@ -117,7 +117,7 @@
   {
    "as_list": true,
    "goes_in": "Шаг 1",
-   "image": "illustrations/onigirazu/mise1.webp?v=b245c0baf4",
+   "image": "illustrations/onigirazu/mise1.webp?v=ed2edd44ef",
    "items": [
     "соя",
     "мирин",
@@ -134,7 +134,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 2",
-   "image": "illustrations/onigirazu/mise2.webp?v=a98c21f5c0",
+   "image": "illustrations/onigirazu/mise2.webp?v=58ae1667d2",
    "items": [
     "тонкие ломтики корейки"
    ],
@@ -146,7 +146,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 4",
-   "image": "illustrations/onigirazu/mise3.webp?v=d72e536a3d",
+   "image": "illustrations/onigirazu/mise3.webp?v=566e0a2f4e",
    "items": [
     "остальное, тонко нарезанное"
    ],
@@ -158,7 +158,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 5",
-   "image": "illustrations/onigirazu/mise4.webp?v=855b860d22",
+   "image": "illustrations/onigirazu/mise4.webp?v=596cd5c80b",
    "items": [
     "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> целых листа"
    ],
@@ -170,7 +170,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 6",
-   "image": "illustrations/onigirazu/mise5.webp?v=ad57347f7a",
+   "image": "illustrations/onigirazu/mise5.webp?v=61675bbc12",
    "items": [
     "тёплый, солёный при сборке"
    ],
@@ -182,7 +182,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 7",
-   "image": "illustrations/onigirazu/mise6.webp?v=b1480c6b94",
+   "image": "illustrations/onigirazu/mise6.webp?v=54b854d7f4",
    "items": [
     "по одному листу"
    ],
@@ -270,7 +270,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Онигири: форма и начинки"
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку"
   },
   {
    "slug": "yaki-onigiri",
@@ -348,6 +380,7 @@
    "images": {
     "alt": "Имбирный соус",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Натрите очищенный имбирь, сохраняя сок.",
@@ -387,6 +420,7 @@
    "images": {
     "alt": "Свинина и лук",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Толще 3 мм? Несколько надрезов через жировую полоску.",
@@ -434,6 +468,7 @@
    "images": {
     "alt": "Обжарьте свинину",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Переворачивайте каждый ломтик, когда низ золотистый.",
@@ -469,6 +504,7 @@
    "images": {
     "alt": "Лук, затем соус",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Свинину обратно, соус сверху, поливайте около 2 минут.",
@@ -500,6 +536,7 @@
    "images": {
     "alt": "Нори на плёнке",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Нори на плёнке, блестящей стороной вниз, углом вверх.",
@@ -531,6 +568,7 @@
    "images": {
     "alt": "Первый слой риса",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Разложите рис тонко квадратом посередине.",
@@ -566,6 +604,7 @@
    "images": {
     "alt": "Начинки",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Салат, капля Kewpie, затем свинина высокой горкой посередине.",
@@ -601,6 +640,7 @@
    "images": {
     "alt": "Верхний слой риса",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Рис сверху, тем же квадратом.",
@@ -627,6 +667,7 @@
    "images": {
     "alt": "Сложите нори",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Сначала левый и правый углы, аккуратно, но плотно.",
@@ -657,6 +698,7 @@
    "images": {
     "alt": "Завернуть и отдохнуть",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Плотно заверните в плёнку; отдых швом вниз.",
@@ -683,6 +725,7 @@
    "images": {
     "alt": "Разрежьте пополам",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Мокрый нож, один прямой разрез через середину, вместе с плёнкой.",

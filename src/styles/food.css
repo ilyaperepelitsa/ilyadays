@@ -415,3 +415,15 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 .site-header .home-link { color: var(--muted); text-decoration: none; font-weight: 600; margin-right: 6px; }
 .site-header .home-link:hover { color: var(--accent); }
 .site-header .crumb { color: var(--line); margin-right: 8px; }
+
+/* Standalone onigiri choices and preparation steps without artwork. */
+.onigiri-choices > p { color: var(--muted); margin: 0 0 16px; }
+.onigiri-choices > h3 { margin: 24px 0 12px; font-size: 1.2rem; }
+.onigiri-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.onigiri-options a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 15px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 600; line-height: 1.35; }
+.onigiri-options a:hover { border-color: var(--accent); }
+.onigiri-options a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.onigiri-options a span { color: var(--accent); flex: none; }
+.step.text-only { grid-template-columns: minmax(0, 1fr); }
+.step.text-only .step-text { position: static; }
+@media (max-width: 600px) { .onigiri-options { grid-template-columns: minmax(0, 1fr); } }

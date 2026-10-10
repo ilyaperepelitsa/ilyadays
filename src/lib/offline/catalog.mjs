@@ -24,7 +24,7 @@ export function skipPublicFile(rel) {
 
 /**
  * Pages in both languages, plus the files the site actually serves.
- * `public/food` is a local duplicate and is left out.
+ * Legacy `public/food` copies are excluded if present during migration.
  *
  * @param {string[]} slugs recipe slugs
  * @param {{ rel: string, bytes: number }[]} files

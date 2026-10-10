@@ -267,7 +267,7 @@
   {
    "as_list": false,
    "goes_in": "Step 1",
-   "image": "illustrations/onigiri-shop-fillings/mise1.webp?v=f8e4cfff0a",
+   "image": "illustrations/onigiri-shop-fillings/mise1.webp?v=d3e64a7ffb",
    "items": [
     "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>, in soy"
    ],
@@ -279,7 +279,7 @@
   {
    "as_list": false,
    "goes_in": "Step 2",
-   "image": "illustrations/onigiri-shop-fillings/mise2.webp?v=2e7d23729e",
+   "image": "illustrations/onigiri-shop-fillings/mise2.webp?v=08a3ef7311",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span> meat"
    ],
@@ -291,7 +291,7 @@
   {
    "as_list": false,
    "goes_in": "Step 3",
-   "image": "illustrations/onigiri-shop-fillings/mise3.webp?v=224d1db189",
+   "image": "illustrations/onigiri-shop-fillings/mise3.webp?v=f06c0f72da",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>"
    ],
@@ -303,7 +303,7 @@
   {
    "as_list": false,
    "goes_in": "Step 4",
-   "image": "illustrations/onigiri-shop-fillings/mise4.webp?v=ef5eb3179f",
+   "image": "illustrations/onigiri-shop-fillings/mise4.webp?v=8086917db1",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 g</span> + 4 leaves"
    ],
@@ -315,7 +315,7 @@
   {
    "as_list": false,
    "goes_in": "Step 6",
-   "image": "illustrations/onigiri-shop-fillings/mise5.webp?v=e5f78caf5a",
+   "image": "illustrations/onigiri-shop-fillings/mise5.webp?v=6260d6b124",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>"
    ],
@@ -327,7 +327,7 @@
   {
    "as_list": false,
    "goes_in": "Step 9",
-   "image": "illustrations/onigiri-shop-fillings/mise6.webp?v=82c7b75d0a",
+   "image": "illustrations/onigiri-shop-fillings/mise6.webp?v=f0222dd3c9",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span> + <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>"
    ],
@@ -402,7 +402,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Onigiri: the shape and the fillings"
+   "title": "Onigiri: shape by hand"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Salted salmon onigiri"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Okaka onigiri"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Tuna-mayo onigiri"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Umeboshi onigiri"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Spicy tuna-mayo onigiri"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Kimchi & cheese onigiri"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Onigiri with a mold"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Onigiri through plastic wrap"
   },
   {
    "slug": "yaki-onigiri",
@@ -488,6 +520,7 @@
    "images": {
     "alt": "Soy-cure the egg yolks",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Slip each yolk in whole, then just cover with soy and mirin.",
@@ -531,6 +564,7 @@
    "images": {
     "alt": "Niku soboro",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Everything into a cold pan and stirred before the heat goes on: that keeps the crumbs fine.",
@@ -586,6 +620,7 @@
    "images": {
     "alt": "Pork kimchi",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Squeeze the kimchi hard first: wet kimchi soaks the rice.",
@@ -629,6 +664,7 @@
    "images": {
     "alt": "Shiso kombu",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Cut the soft used kombu into thin 3 cm strips.",
@@ -688,6 +724,7 @@
    "images": {
     "alt": "Takana",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Squeeze the chopped takana as dry as you can.",
@@ -739,6 +776,7 @@
    "images": {
     "alt": "Peanut miso",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Toast the peanuts dry, then pour the miso mix over and stir until glossy.",
@@ -790,6 +828,7 @@
    "images": {
     "alt": "Eggplant tsukudani",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Nigihaya-style: mix it through the warm rice instead of hiding it inside.",
@@ -845,6 +884,7 @@
    "images": {
     "alt": "Pepperoncino oil",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Fold the oil and garlic through the rice, about 1 tsp per onigiri.",
@@ -888,6 +928,7 @@
    "images": {
     "alt": "Mentai mayo with cream cheese",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "Slit the sac and scrape the roe out of its skin.",
@@ -927,6 +968,7 @@
    "images": {
     "alt": "Shape them shop style",
     "diagram": null,
+    "diagram_title": "Diagram",
     "how": [
      {
       "caption": "A heaped spoon in the well, rice closed loosely over it.",

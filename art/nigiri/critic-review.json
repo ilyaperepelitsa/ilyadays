@@ -1,0 +1,57 @@
+{
+  "task": "Recheck finger count/length, fish slicing and whether instructions are good enough for a beginner.",
+  "reviewers": [
+    "primary manual visual review",
+    "independent sequential-critic challenger"
+  ],
+  "initial_verdict": "Corrections required before publishing.",
+  "resolved_findings": [
+    {
+      "issue": "Slicing block/slice/cut geometry incoherent",
+      "fix": "Redraw end cut with one slice and coherent knife/block topology; remove conflicting inset.",
+      "asset": "2-how1.webp"
+    },
+    {
+      "issue": "Working fingers disproportionately long/cropped",
+      "fix": "Normal-length working fingers and connected hands in top/side presses.",
+      "assets": [
+        "technique-6.webp",
+        "technique-7.webp",
+        "technique-9.webp"
+      ]
+    },
+    {
+      "issue": "Thumb catches or locks short end rather than long rice flank; flip catch two-finger ambiguity",
+      "fix": "Move opposing pads to long-flank midpoints; fold unused middle finger clear in flip catch.",
+      "assets": [
+        "technique-5.webp",
+        "technique-6.webp",
+        "technique-9.webp"
+      ]
+    },
+    {
+      "issue": "Slicing lacks left stabilizing hand, heel-to-tip endpoint; unsupported angle precision",
+      "fix": "Add curled left fingertips clear of blade, heel-to-tip smooth stroke, descriptive slant instead of ungrounded degrees."
+    },
+    {
+      "issue": "Cut-face-down ambiguous; impossible180-degree absolute and only-touch contradiction",
+      "fix": "Presentation side down, reset grip between quarter turns, avoid flattening without banning necessary supporting contact."
+    }
+  ],
+  "final_verdict": "Identified image blockers resolved in the reviewed replacements. With the recorded prose corrections, written steps plus contact guides adequately describe this selected shaping sequence.",
+  "limitations": [
+    "Manual visual review is not automated anatomy proof.",
+    "Folded, cropped or occluded digits cannot always be individually counted.",
+    "Instructions describe a selected nigiri technique, not a universal method or a hands-on cooking trial."
+  ],
+  "sources": [
+    {
+      "url": "https://www.kikkoman.co.jp/homecook/tsushin/tips0022/",
+      "supports": "Smooth pull cuts and slanted wider slices, without universal degree measurement."
+    },
+    {
+      "url": "https://ginzawatari.jp/%e3%80%90%e9%ae%a8%e3%81%ae%e6%8f%a1%e3%82%8a%e6%96%b9%e3%80%91%e5%b0%8f%e6%89%8b%e8%bf%94%e3%81%97%e3%83%bb%e6%9c%ac%e6%89%8b%e8%bf%94%e3%81%97%e3%83%bb%e3%81%9f%e3%81%a6%e8%bf%94%e3%81%97%e3%81%ae/",
+      "supports": "Presentation side down before combining fish and rice."
+    }
+  ]
+}

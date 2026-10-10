@@ -108,7 +108,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 6",
-   "image": "illustrations/salmon-onigiri/mise1.webp?v=bf1baa4c71",
+   "image": "illustrations/salmon-onigiri/mise1.webp?v=c89bd8de93",
    "items": [
     "только что сваренный, горячий"
    ],
@@ -120,7 +120,7 @@
   {
    "as_list": true,
    "goes_in": "Шаг 2",
-   "image": "illustrations/salmon-onigiri/mise2.webp?v=21d700c61c",
+   "image": "illustrations/salmon-onigiri/mise2.webp?v=f670980b49",
    "items": [
     "филе с кожей",
     "саке",
@@ -134,7 +134,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 5",
-   "image": "illustrations/salmon-onigiri/mise3.webp?v=729a353324",
+   "image": "illustrations/salmon-onigiri/mise3.webp?v=38e193efb7",
    "items": [
     "шисо",
     "мёга"
@@ -147,7 +147,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 6",
-   "image": "illustrations/salmon-onigiri/mise4.webp?v=eec1a07f17",
+   "image": "illustrations/salmon-onigiri/mise4.webp?v=5ebcbd8aae",
    "items": [
     "солёные полоски ламинарии",
     "обжаренный кунжут"
@@ -160,7 +160,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 7",
-   "image": "illustrations/salmon-onigiri/mise5.webp?v=5857b93afa",
+   "image": "illustrations/salmon-onigiri/mise5.webp?v=5261bfb0fb",
    "items": [
     "икра лосося, холодная"
    ],
@@ -172,7 +172,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 7",
-   "image": "illustrations/salmon-onigiri/mise6.webp?v=d7a1cdddd8",
+   "image": "illustrations/salmon-onigiri/mise6.webp?v=3e85c342b6",
    "items": [
     "миска с водой",
     "крупная соль"
@@ -185,7 +185,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 7",
-   "image": "illustrations/salmon-onigiri/mise7.webp?v=023acf0b29",
+   "image": "illustrations/salmon-onigiri/mise7.webp?v=2ee0866160",
    "items": [
     "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"полоска|полоски|полосок\" data-n=\"1\">6 полосок</span> (по желанию)"
    ],
@@ -277,7 +277,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Онигири: форма и начинки"
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку"
   },
   {
    "slug": "yaki-onigiri",
@@ -355,6 +387,7 @@
    "images": {
     "alt": "Сварите рис",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/salmon-onigiri/1.webp?v=f3d3758e66",
     "photo": null,
@@ -385,6 +418,7 @@
    "images": {
     "alt": "Посолите лосось",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Саке сверху, 10 минут, затем промокнуть.",
@@ -432,6 +466,7 @@
    "images": {
     "alt": "Жарьте — снимите, пока сочный",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Сначала кожей вниз, пока кожа не станет хрустящей.",
@@ -462,6 +497,7 @@
    "images": {
     "alt": "Разберите на хлопья, нарежьте кожу",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Снимите кожу, затем разберите мясо на крупные сочные хлопья.",
@@ -492,6 +528,7 @@
    "images": {
     "alt": "Шисо и мёга",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Сложите шисо, сверните от стебля, нарежьте тонкой соломкой.",
@@ -531,6 +568,7 @@
    "images": {
     "alt": "Вмешайте лосось в рис",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Разбросайте всё по горячему рису.",
@@ -565,6 +603,7 @@
    "images": {
     "alt": "Икура в центр, затем лепка",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Влажные ладони, соль на кончиках пальцев, разотрите по обеим ладоням.",

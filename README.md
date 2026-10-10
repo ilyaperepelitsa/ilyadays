@@ -63,6 +63,10 @@ The recipes and the Istanbul app are edited in their own repos (`../recipes`, `.
 2. It runs `python3 ../recipes/export_json.py --out content --images-out public/media`.
    - This writes `content/{en,ru}/…json` and `content/svg-defs.svg`.
    - It copies every referenced picture.
+   - `scripts/optimize-media.py` then resizes ingredient thumbnails to 600 px, shares byte-identical images,
+     and refreshes image cache hashes. Install libwebp (`cwebp` and `webpinfo`) before syncing.
+     Detailed technique images retain their resolution. Legacy `public/food` asset copies are removed;
+     their URLs already redirect to `/media` in `next.config.ts`.
 3. It copies the recipe stylesheet and the site icons.
 4. It copies `../istanbul_trip/dist/app.{js,css,d.ts}`.
 5. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.

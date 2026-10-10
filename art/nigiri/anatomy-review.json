@@ -1,6 +1,6 @@
 {
   "scope": "All 19 hand-drawn raster illustrations displayed by the English and Russian nigiri recipes, including hero, ingredient cards, preparation, shaping panels/insets and serving.",
-  "method": "Direct manual visual inspection of every generated illustration at full size and of final optimized assets. Check style consistency, instructional food orientation/contact/motion and one thumb plus four fingers per hand. Naturally cropped/occluded digits are recorded explicitly. Hash tests verify coverage/freshness, not anatomical correctness.",
+  "method": "Direct manual reinspection of all 19 full-size shipped assets and replacement originals, followed by an independent critic of hand anatomy, finger length, food contacts and instruction alignment. Check one thumb plus four fingers, relative lengths, joint/palm connections, foreshortening and crop/occlusion in every panel/inset. Occluded digits cannot be individually verified. Hash tests verify freshness only, not anatomy.",
   "style": "Warm hand-drawn Japanese animation, thin brown outlines, matte cel shading; no photorealistic skin or geometric blueprints.",
   "prompt_manifest": "art/nigiri/illustration-prompts.json",
   "assets": [
@@ -8,115 +8,136 @@
       "path": "public/media/illustrations/nigiri/1.webp",
       "sha256": "cead17c095edcc7652b2d665e40602fc8a9a6d43bd46b6c49c429e74fffb184f",
       "status": "reviewed",
-      "notes": "Both complete open palms have exactly one thumb and four distinct fingers. Damp checkpoint has matte skin and a few stylized edge droplets."
+      "notes": "Both complete open palms have exactly one thumb and four distinct fingers. Damp checkpoint has matte skin and a few stylized edge droplets.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/1-how1.webp",
       "sha256": "5567ffa4430c0b8f1b175aa8c0f7b94432fbfba171cbab4a77a2e84172c15820",
       "status": "reviewed",
-      "notes": "Single middle fingertip dips to the first joint. Thumb, raised index, dipping middle and curled ring/little are connected; exactly five digits. Inset crops to the same middle fingertip."
+      "notes": "Single middle fingertip dips to the first joint. Thumb, raised index, dipping middle and curled ring/little are connected; exactly five digits. Inset crops to the same middle fingertip.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/1-how2.webp",
       "sha256": "eb7c32412ae4266961004c69347f68aa52af337ba95f5482050ffc97f3cc43ca",
       "status": "reviewed",
-      "notes": "Both sequence panels inspected. Open left palms have thumb plus four fingers. Rubbing right fingers overlap naturally; right hand becomes a loose fist in the second panel, hiding folded digits. No visible extra or disconnected fingers."
+      "notes": "Both sequence panels inspected. Open left palms have thumb plus four fingers. Rubbing right fingers overlap naturally; right hand becomes a loose fist in the second panel, hiding folded digits. No visible extra or disconnected fingers.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/10.webp",
       "sha256": "483927a8cfc055260254a43b6b426a7f64208d4eda986662d6191ee67ac664b8",
       "status": "no-hands",
-      "notes": "Four plated nigiri and a side-view shape checkpoint; no hands."
+      "notes": "Four plated nigiri and a side-view shape checkpoint; no hands.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/2.webp",
       "sha256": "5703256f71008cb9ab047f03263b7027936d570aa0d5de90e87a086b7633181f",
       "status": "no-hands",
-      "notes": "Finished sliced fish with a side-view thickness inset; no hands."
+      "notes": "Finished sliced fish with a side-view thickness inset; no hands.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/2-how1.webp",
-      "sha256": "4a354af3ea501f8a4d85c021f71b86e289f7285d8417c5f685a780f946993ba2",
+      "sha256": "6f70539df798cf81d0184fe04099b43f5d50e58bf29576c78720db1937abc6b1",
       "status": "reviewed",
-      "notes": "Left guiding claw has thumb and four connected bent fingers, fingertips tucked behind the blade. Right knife grip is partly cropped and naturally hides folded digits. No visible count defect. Single pull arrow and blade-angle inset checked."
+      "notes": "Redrawn coherent end crosscut: one detached thin slice matches one continuous loin; knife between end face and slice. Left claw has thumb plus four bent fingers; knife grip naturally obscures folded digits. Visible phalanges and thumb proportions plausible. Removed conflicting inset.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/hero.webp",
       "sha256": "82399e3b2bb3a08ce5ac09976be7b813b94b83f47e8e6f4d975321591d93348c",
       "status": "reviewed",
-      "notes": "Both complete hands have exactly one thumb and four separate fingers. Finished fish-up nigiri and drawn matte skin checked."
+      "notes": "Both complete hands have exactly one thumb and four separate fingers. Finished fish-up nigiri and drawn matte skin checked.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/mise1.webp",
-      "sha256": "42f571aff73bc3004bd49f5676d7f1d8215fb4cc26a5bffa69e4a0931e7c65e4",
+      "sha256": "ca08e151a6f08ce131abfe5c1f17d4a7456620a47a30345c9a3559377d515418",
       "status": "no-hands",
-      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/mise2.webp",
-      "sha256": "3cea9c485211beb21f9ecfbcc380b0c8dd944fcef24f1cf370e3aae2e977ae30",
+      "sha256": "0b861162788f6c4843b5aed0d78b1ed416d8ce363e962267b6c5816e21d46b26",
       "status": "no-hands",
-      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/mise3.webp",
-      "sha256": "a14699b0dcfc3486935b7e326a4964594b52e7b08adb69b0ac89bbe41a8f8b85",
+      "sha256": "1cce2fb6de3ca9165603785147f2524cf2c6a308115b06d700c6730c1b52e8e8",
       "status": "no-hands",
-      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/mise4.webp",
-      "sha256": "b6021e5e2fe35942b09b1a10fce76cd8686b3c83bb1c8d44d4566d55a5534f99",
+      "sha256": "f6182bf278724c11fddc2370fb11c193df3a1ffb3e68158acfe9f7e7791bb8e6",
       "status": "no-hands",
-      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/mise5.webp",
-      "sha256": "b3b706a4f100dde0eecb55bce9c44d95e9643ced57667b3a1852db341ac3c893",
+      "sha256": "37ae9aa49ea5eb61ab06e52db1e96767c01f7756b926c0d3abb465c397452fea",
       "status": "no-hands",
-      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked.",
+      "finger_length_review": "No hands."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-3.webp",
       "sha256": "aaa7fafd69de572e502ed2676b533f93d5397afec55eafc881eb54fc8913cffb",
       "status": "reviewed",
-      "notes": "Main left palm has one thumb and four separate supporting fingers. Side inset overlaps supporting fingers naturally. Rice up, tuna underneath, clear finger-root support."
+      "notes": "Main left palm has one thumb and four separate supporting fingers. Side inset overlaps supporting fingers naturally. Rice up, tuna underneath, clear finger-root support.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-4.webp",
       "sha256": "54f3180cee97ed785cba0c1c161fd60952ece2f8e0edf98eca5f105de0f199af",
       "status": "reviewed",
-      "notes": "Main single left hand has exactly one pressing thumb and four distinct supporting fingers. Small inset crops to that same thumb/support. Shallow central dimple, tuna underneath checked."
+      "notes": "Main single left hand has exactly one pressing thumb and four distinct supporting fingers. Small inset crops to that same thumb/support. Shallow central dimple, tuna underneath checked.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-5.webp",
-      "sha256": "ea4f9fdd0f9475e9c67b8806f065e9509721acb9371781f2586a57e4494768c7",
+      "sha256": "55f52ca2057e12e98e2fadd1915e0bc33fb5d87af43cc8400f4e440ffbacb0b8",
       "status": "reviewed",
-      "notes": "All three panels inspected: left hand alone in the first two, two hands in the last. Side-view supporting fingers overlap and right curled digits partly crop. No visible count defect. Fish-down, long-edge balance, fish-up sequence checked."
+      "notes": "All three flip phases rechecked. Last right-hand catch has only one descending index pad behind long rice flank and thumb at front long-flank midpoint; three unused fingers curl clear. No extra or excessive-length digit visible; supporting fingers naturally overlap.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-6.webp",
-      "sha256": "388eafb3670eb69cef693d907da0ef1a36f1a1e73c0f09c60c309b7fd514c370",
+      "sha256": "8869d2e8013b72ef8e5e23badcd8d898adb8c0f6e6fc9b31957d430c8dc0b5a4",
       "status": "reviewed",
-      "notes": "Left little finger partly hidden by working hand. Right thumb, raised index, contacting middle and curled ring/little are connected. Inset crops to opposed contact pads. Side lock and raised-index clearance checked."
+      "notes": "Working index shortened to natural hand proportions; middle contacts back long rice flank opposite thumb at front long-flank midpoint. Ring/little visibly curl behind. Left little finger partly hidden. Inset matches opposed rice-side pads. No visible count/length defect.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-7.webp",
-      "sha256": "733677f2b76c44e3aa20165b007a9e828809e4a75ca177509c35537b8ef9c451",
+      "sha256": "5e16b04bacc2a1f6b5e8053b6358c3e3866a7b25467599416f821fcc9f00ea8e",
       "status": "reviewed",
-      "notes": "Left index partly hidden behind food and working index; other supporting digits connect naturally. Working right hand is cropped and folds digits clear of food. Inset crops contact pads. Only index contacts tuna top."
+      "notes": "Whole working right hand now shown: ordinary-length bent index alone on tuna top, three unused fingers folded, thumb clear. Left index partly hidden by food, not a missing-digit assertion. No visible count/length defect; inset matches.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-8.webp",
       "sha256": "f6505a6fb55147f57c76c78fb6fcd24ef983903f7286b7d5c3a3ff0c8e6d4f51",
       "status": "reviewed",
-      "notes": "All four panels inspected. Supporting left fingers partly occluded by working hand; right three unused digits curl behind palm. No visible extra or detached digit. Revised index grip reaches the far rice flank; horizontal/vertical/vertical/horizontal sequence retained."
+      "notes": "All four panels inspected. Supporting left fingers partly occluded by working hand; right three unused digits curl behind palm. No visible extra or detached digit. Revised index grip reaches the far rice flank; horizontal/vertical/vertical/horizontal sequence retained.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-9.webp",
-      "sha256": "e10cc6e37cdf0fb2668bd09cf0962c35b4d8ffe7f1dcc4a7a213f226885ab9e0",
+      "sha256": "367343f681125cdbac84c52ff32e9e077e1865883b3e5d5f8c318e1a43dec811",
       "status": "reviewed",
-      "notes": "Both panels inspected. First left little finger hidden by working hand; second support has four fingers plus thumb. Working right curled digits partly cropped. Side lock then index-only top press checked."
+      "notes": "Both panels rechecked: short relaxed working index clears side lock, then ordinary-length index alone presses top. Side lock thumb/middle oppose at midpoints of long rice flanks. Supporting little partly occluded in first panel. No visible extra/elongated digit.",
+      "finger_length_review": "Visible finger lengths, joint chains and palm connections reviewed; ordinary relative lengths with natural bending/foreshortening. Naturally occluded portions cannot be measured or individually counted."
     }
-  ]
+  ],
+  "critic_review": "art/nigiri/critic-review.json",
+  "web_encoding": "Final exported WebP: technique plates retain 1200px width; ingredient thumbnails are 600px. Reinspected after encoding; review hashes match published bytes."
 }

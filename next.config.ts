@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import mediaAliases from "./art/media/aliases.json";
 
 // Old static-site URLs (ilyadays.com/food/*.html etc.) keep working: permanent 301s to the new routes.
 const legacy = [
@@ -26,7 +27,12 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
-    return legacy.map((r) => ({ ...r, statusCode: 301 as const }));
+    return [
+      ...legacy.map((r) => ({ ...r, statusCode: 301 as const })),
+      ...Object.entries(mediaAliases).map(([from, to]) => ({
+        source: `/media/${from}`, destination: `/media/${to}`, statusCode: 301 as const,
+      })),
+    ];
   },
 
   async headers() {

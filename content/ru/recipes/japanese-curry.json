@@ -30,7 +30,7 @@
  },
  "hero": {
   "alt": "Японское карри с нуля",
-  "image": "illustrations/japanese-curry/hero.webp?v=96e3cfb3ac",
+  "image": "illustrations/easy-curry/hero.webp?v=96e3cfb3ac",
   "svg_fallback": null
  },
  "ingredients": [
@@ -226,7 +226,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 22",
-   "image": "illustrations/japanese-curry/mise1.webp?v=b61336d59b",
+   "image": "illustrations/japanese-curry/mise1.webp?v=74a4dc9ad1",
    "items": [
     "маринуется ночь, потом запекается"
    ],
@@ -238,7 +238,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 19",
-   "image": "illustrations/japanese-curry/mise2.webp?v=ddc9e5b63f",
+   "image": "illustrations/japanese-curry/mise2.webp?v=f5c6fea73d",
    "items": [
     "процежен, ~<span class=\"q\" data-k=\"vol\" data-u=\"l\" data-a=\"1\">1 л</span>"
    ],
@@ -250,7 +250,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 20",
-   "image": "illustrations/japanese-curry/mise3.webp?v=7c103dc12d",
+   "image": "illustrations/japanese-curry/mise3.webp?v=f7a8fe5ce3",
    "items": [
     "уварен"
    ],
@@ -262,7 +262,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 18",
-   "image": "illustrations/japanese-curry/mise4.webp?v=92a2c09721",
+   "image": "illustrations/easy-curry/mise3.webp?v=2e78cbe343",
    "items": [
     "рангири",
     "четвертинки"
@@ -275,7 +275,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 20",
-   "image": "illustrations/japanese-curry/mise5.webp?v=f788c5ed46",
+   "image": "illustrations/japanese-curry/mise5.webp?v=d3da07457e",
    "items": [],
    "items_html": "",
    "name": "Натёртое яблоко",
@@ -285,7 +285,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 21",
-   "image": "illustrations/japanese-curry/mise6.webp?v=35a0f12cc2",
+   "image": "illustrations/easy-curry/mise4.webp?v=29cf37c592",
    "items": [
     "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"226\">226 г</span> квадратиков"
    ],
@@ -297,7 +297,7 @@
   {
    "as_list": false,
    "goes_in": "Шаг 25",
-   "image": "illustrations/japanese-curry/mise7.webp?v=3912b6e75c",
+   "image": "illustrations/easy-curry/mise5.webp?v=ce5f2aaab3",
    "items": [
     "горячий"
    ],
@@ -392,7 +392,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/japanese-curry.jpg?v=483fda3f80",
+ "share_image": "share/easy-curry.jpg?v=483fda3f80",
  "siblings": [
   {
    "slug": "oyakodon",
@@ -404,7 +404,39 @@
   },
   {
    "slug": "onigiri",
-   "title": "Онигири: форма и начинки"
+   "title": "Онигири: формовка руками"
+  },
+  {
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем"
+  },
+  {
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака"
+  },
+  {
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом"
+  },
+  {
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси"
+  },
+  {
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом"
+  },
+  {
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром"
+  },
+  {
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме"
+  },
+  {
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку"
   },
   {
    "slug": "yaki-onigiri",
@@ -469,6 +501,7 @@
    "images": {
     "alt": "Замаринуйте говядину",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Вмешайте натёртый имбирь, чеснок и куркуму в йогурт.",
@@ -508,6 +541,7 @@
    "images": {
     "alt": "Запечь",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Разложите куски в форме и запекайте 1 час при средней температуре (~180 °C).",
@@ -538,6 +572,7 @@
    "images": {
     "alt": "Белые грибы вместо говядины",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Обжаривайте белые грибы на небольшом количестве оливкового и сливочного масла, переворачивая, до золотистого цвета.",
@@ -573,6 +608,7 @@
    "images": {
     "alt": "Всё в кастрюлю",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Кости, крылья, лук четвертинками и крупные куски моркови в кастрюлю — затем залейте холодной водой, чтобы только покрыла.",
@@ -608,6 +644,7 @@
    "images": {
     "alt": "Варить 1 час",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/japanese-curry/5.webp?v=2204b6872a",
     "photo": null,
@@ -629,6 +666,7 @@
    "images": {
     "alt": "Процедить",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Процедите через мелкое сито, оставив только жидкость.",
@@ -655,6 +693,7 @@
    "images": {
     "alt": "Застелите форму",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Застелите форму пергаментом, чтобы он немного свисал по краям.",
@@ -685,6 +724,7 @@
    "images": {
     "alt": "Растопите масло",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/japanese-curry/8.webp?v=2e0e1a6b18",
     "photo": null,
@@ -715,6 +755,7 @@
    "images": {
     "alt": "Прожарьте муку",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Вмешайте муку и мешайте около 5 минут, до золотисто-коричневого цвета.",
@@ -750,6 +791,7 @@
    "images": {
     "alt": "Специи",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Всыпьте все специи и мешайте около 30 секунд, пока не появится аромат.",
@@ -776,6 +818,7 @@
    "images": {
     "alt": "Вылить и охладить",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Вылейте в застеленную форму и разровняйте одним ровным слоем.",
@@ -802,6 +845,7 @@
    "images": {
     "alt": "Нарезать квадратиками",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Вытащите застывший ру из формы за края пергамента.",
@@ -832,6 +876,7 @@
    "images": {
     "alt": "Бланшируйте и очистите помидоры",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Сделайте неглубокий крестообразный надрез на кожице каждого помидора.",
@@ -867,6 +912,7 @@
    "images": {
     "alt": "Удалить семена и нарезать",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Разрежьте пополам и выньте все семена и сок.",
@@ -901,10 +947,11 @@
    "images": {
     "alt": "Обжарьте лук",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Нарежьте лук очень тонко.",
-      "src": "illustrations/japanese-curry/15-how1.webp?v=7b2ac36983"
+      "src": "illustrations/easy-curry/1-how1.webp?v=7b2ac36983"
      },
      {
       "caption": "Жарьте в масле на огне выше среднего, часто помешивая, 4–5 минут до мягкости и золотистого цвета.",
@@ -944,6 +991,7 @@
    "images": {
     "alt": "Чеснок, имбирь, потом соя",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Огонь до среднего: чеснок и имбирь, перемешать, затем соевый соус.",
@@ -987,6 +1035,7 @@
    "images": {
     "alt": "Уварите с помидорами",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Переложите луковую смесь в большую кастрюлю к нарезанным помидорам; добавьте ½ банки томатного соуса.",
@@ -1026,14 +1075,15 @@
    "images": {
     "alt": "Отварите морковь и картофель",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Рангири: срежьте морковь наискосок, поверните на четверть оборота, снова срежьте наискосок.",
-      "src": "illustrations/japanese-curry/18-how1.webp?v=6324185977"
+      "src": "illustrations/easy-curry/1-how2.webp?v=6324185977"
      },
      {
       "caption": "Очистите картофель и разрежьте на четвертинки; варите с морковью в кастрюле, на ⅓ заполненной водой, почти до мягкости.",
-      "src": "illustrations/japanese-curry/18-how2.webp?v=5a2c37cc1d"
+      "src": "illustrations/easy-curry/1-how3.webp?v=5a2c37cc1d"
      }
     ],
     "illustration": null,
@@ -1069,6 +1119,7 @@
    "images": {
     "alt": "Влейте бульон",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Влейте куриный бульон и доведите до слабого кипения.",
@@ -1104,6 +1155,7 @@
    "images": {
     "alt": "Томатный соус, потом яблоко",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Натрите яблоко на крупной тёрке.",
@@ -1143,6 +1195,7 @@
    "images": {
     "alt": "Растворите ру",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Зачерпните немного жидкости из кастрюли в маленький сотейник и положите квадратики ру.",
@@ -1178,6 +1231,7 @@
    "images": {
     "alt": "Мясо или грибы",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Добавьте запечённую говядину (или обжаренные белые грибы).",
@@ -1208,15 +1262,16 @@
    "images": {
     "alt": "Томить 30 минут",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Томите на огне ниже среднего 30 минут — помешивайте, чтобы не пригорело.",
-      "src": "illustrations/japanese-curry/23-how1.webp?v=f4303f3603"
+      "src": "illustrations/easy-curry/6-how1.webp?v=f4303f3603"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/japanese-curry/23.webp?v=9ce224b5c5",
+    "result": "illustrations/easy-curry/6.webp?v=9ce224b5c5",
     "svg_fallback": null
    },
    "n": 23,
@@ -1234,6 +1289,7 @@
    "images": {
     "alt": "Солить в три приёма",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Солите в три небольших приёма, хорошо перемешивая и пробуя каждый раз.",
@@ -1265,15 +1321,16 @@
    "images": {
     "alt": "Подача",
     "diagram": null,
+    "diagram_title": "Схема",
     "how": [
      {
       "caption": "Рис — с одной стороны глубокой тарелки, карри — с другой.",
-      "src": "illustrations/japanese-curry/25-how1.webp?v=b0e6dbe043"
+      "src": "illustrations/easy-curry/7-how1.webp?v=b0e6dbe043"
      }
     ],
     "illustration": null,
     "photo": null,
-    "result": "illustrations/japanese-curry/25.webp?v=c56283bfad",
+    "result": "illustrations/easy-curry/7.webp?v=c56283bfad",
     "svg_fallback": null
    },
    "n": 25,
