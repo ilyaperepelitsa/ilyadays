@@ -55,14 +55,14 @@ PREPARATION = [
     "slug": "shiso-kombu-onigiri",
     "stages": [
       {
-        "caption": "Slice the softened dashi kombu into thin strips about 3 cm long.",
-        "ru": "Нарежьте размягчённый комбу после даси тонкими полосками длиной около 3 см.",
+        "caption": "Slice hydrated dashi kombu into strips about 2 mm wide and 3 cm long; it still needs simmering until tender.",
+        "ru": "Нарежьте набухший комбу после даси полосками шириной около 2 мм и длиной 3 см; затем его ещё нужно варить до мягкости.",
         "scene": "Safe claw grip holds softened kombu while knife cuts thin 3 cm strips on a wooden board.",
         "reuse": "onigiri-shop-fillings/4-how1.webp"
       },
       {
-        "caption": "Simmer the kombu in the seasoning liquid over low heat for 15–20 minutes; add shiso only after turning off the heat.",
-        "ru": "Томите комбу в заправке на слабом огне 15–20 минут. Сисо добавляйте только после выключения огня.",
+        "caption": "Only after the kombu passes the bite test, add the soy seasonings and reduce to a moist glaze. Add optional shiso off the heat.",
+        "ru": "Только когда комбу легко раскусывается, добавьте соевую заправку и уварите до влажной глазури. Сисо по желанию добавьте после выключения огня.",
         "scene": "Stainless small saucepan on low small blue gas flame, thin flat glossy black kombu strips about 3 cm long and 2 mm wide simmering in shallow dark soy seasoning liquid, gentle small bubbles. No green shiso anywhere in pan. A wooden spoon rests across rim. No hands.",
         "ref": "shiso-kombu-onigiri/1.webp"
       }

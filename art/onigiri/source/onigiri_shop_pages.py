@@ -41,13 +41,39 @@ def make_recipe(i):
     original = STEPS[i]
     prep = replace(deepcopy(original), part="Filling", art=None)
     notes = []
+    ingredients = deepcopy(INGREDIENTS[i])
+    sources = deepcopy(ORIGINAL.sources)
     if i == 1:
         prep.body[-1] = ('Bongo\'s favourite: a spoon of soboro with one '
                          '<a href="soy-cured-yolk-onigiri.html">soy-cured yolk</a> on top. '
                          'The yolk is an optional second filling; prepare it a day ahead.')
     if i == 3:
-        # The original page contradicted its own Keeping note (one week vs 4–5 days).
-        prep.body[-1] = 'Off the heat, stir in the <b>shiso</b>, cut into fine strips. See the keeping note below.'
+        # Dashi hydrates kombu but does not necessarily tenderize it. Soften before reducing.
+        ingredients = (INGREDIENTS[i][0], [
+            ("Kombu left over from dashi, drained (wet weight)", "50 g"),
+            ("Water (kombu)", "300 ml, plus more as needed"),
+            ("Soy sauce (kombu)", "2 tbsp"), ("Sugar (kombu)", "1 tbsp"),
+            ("Mirin (kombu)", "1 tbsp"), ("Rice vinegar (kombu)", "1 tsp"),
+            ("Fresh green shiso (perilla) leaves, optional", "4")])
+        prep.uses = [name for name, _ in ingredients[1]]
+        prep.time = "~35–80 min (until tender)"
+        prep.body = [
+            'Use <b>50 g drained, hydrated kombu left from dashi</b>, not 50 g dry seaweed. Cut into strips about <b>2 mm wide and 3 cm long</b>. Hydrated does not necessarily mean tender.',
+            'Put the kombu, <b>300 ml water and 1 tsp rice vinegar</b> in a small pot. Bring to a boil, then simmer gently, partly covered. Keep the strips submerged: add water whenever the level drops. <b>Do not add soy sauce, sugar or mirin yet.</b>',
+            'Start checking after <b>20 minutes</b>; thick kombu may need <b>60 minutes or longer</b>. Cool a strip and bite it: it must cut through easily, without a leathery or stringy centre. <b>Keep simmering with water until it passes this test</b>; the clock is only a guide.',
+            'Reserve <b>50 ml cooking water</b>, then drain. Return the tender kombu and reserved water to the pot; add the <b>soy sauce, sugar and mirin</b>. Simmer gently, stirring, about <b>10–15 minutes</b>, until the sauce coats the strips and no loose puddle remains. Stop while the kombu is <b>soft, moist and glossy</b>; do not fry or dry it into furikake.',
+            'Turn off the heat and stir in the <b>fresh green shiso (perilla)</b>, finely sliced. It is an aromatic Japanese herb; <b>omit it if unavailable</b> for a plain kombu filling. Let the filling cool before shaping.'
+        ]
+        notes.extend([
+            ("Which kombu?", 'Hidaka or quick-cooking kombu (hayani) is easier to soften for eating. Thick dashi kombu can take longer. If starting from dry kombu, hydrate it fully first, then weigh out 50 g. The cooking time depends on the type and thickness.'),
+            ("Still tough?", 'Do not reduce a chewy batch further. Add enough water to cover and simmer gently again, checking a cooled strip until tender. Recheck the seasoning afterwards. This filling should stay moist; dried furikake is a different preparation.'),
+            ("What is shiso?", 'Fresh green shiso is green perilla, also sold as aojiso or oba: an aromatic, serrated green leaf. Use fresh leaves here, not dried red shiso seasoning. It adds fragrance, not softness; leaving it out does not change the kombu cooking method.')
+        ])
+        sources.extend([
+            ("Nissui — softening leftover dashi kombu (Japanese)", "https://www.nissui.co.jp/recipe/00990.html"),
+            ("Kikkoman — kombu varieties (Japanese)", "https://www.kikkoman.co.jp/homecook/series/konbu/detail.html"),
+            ("Kikkoman — shiso / perilla", "https://www.kikkoman.com/en/cookbook/glossary/shiso.html")
+        ])
     if i == 5:
         notes.append((ORIGINAL.notes[1][0], ORIGINAL.notes[1][1].replace('in step 6', 'in this recipe')))
     if i == 6:
@@ -65,12 +91,12 @@ def make_recipe(i):
         slug=SLUGS[i], title=INGREDIENTS[i][0] + " onigiri", group="Onigiri",
         blurb=BLURBS[i], intro=INTRO,
         yields="4 onigiri" if i == 0 else "4–6 onigiri",
-        serves=2, total=original.time + " filling prep, plus rice and shaping",
+        serves=2, total=prep.time + " filling prep, plus rice and shaping",
         equipment=(["Small dishes with lids"] if i == 0 else ["Small bowl"] if i == 8
                    else ["Small pot"] if i == 3 else ["Small frying pan"])
                   + (["Four chopsticks for the soboro"] if i == 1 else [])
                   + ["Rice paddle", "Small bowl of water for your hands", "Kitchen scissors"],
-        ingredients=[deepcopy(INGREDIENTS[i]), ("To shape", [
+        ingredients=[ingredients, ("To shape", [
             ("Cooked rice, from the onigiri page", rice_amount), ("Nori strips", nori_amount),
             ("Kosher salt (for your hands)", "a little for each onigiri")])],
         steps=[prep,
@@ -78,7 +104,7 @@ def make_recipe(i):
                     time="~2 min each", uses=["Cooked rice, from the onigiri page", "Kosher salt (for your hands)"]),
                Step("Wrap and serve", ([TOP] if i not in (0, 6, 7) else []) + [FINISH],
                     part="Finish", uses=["Nori strips"])],
-        notes=notes, sources=deepcopy(ORIGINAL.sources), hero=None,
+        notes=notes, sources=sources, hero=None,
     )
 
 RECIPES = [make_recipe(i) for i in range(9)]

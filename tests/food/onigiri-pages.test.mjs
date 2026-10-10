@@ -127,7 +127,7 @@ describe("standalone onigiri recipes", () => {
     }
   });
 
-  it("preserves all nine original shop ingredient lists, cooking times and source links", () => {
+  it("preserves the original shop recipes except the documented kombu softening correction", () => {
     const original = JSON.parse(fs.readFileSync(path.join(ROOT, "art/onigiri/shop-recipes-source.json"), "utf8"));
     const plain = (s) => s.replace(/<[^>]+>/g, "");
     assert.equal(original.recipes.length, 9);
@@ -135,15 +135,15 @@ describe("standalone onigiri recipes", () => {
     for (const entry of original.recipes) {
       const r = read("en", entry.slug);
       assert.equal(r.ingredients[0].name, entry.original_group);
+      assert.deepEqual(r.sources.slice(0, original.original_sources.length).map((s) => [s.label, s.url]), original.original_sources);
+      assert.match(r.intro_html, /shops do not publish their recipes/);
+      if (entry.slug === "shiso-kombu-onigiri") continue; // Corrected method is verified separately below.
       assert.deepEqual(r.ingredients[0].items.map((i) => [plain(i.name_html), plain(i.amount_html)]), entry.ingredients);
       assert.equal(r.steps[0].time, entry.original_time);
       for (const paragraph of entry.original_body) {
-        const preserved = entry.slug === "shiso-kombu-onigiri"
-          ? paragraph.replace(" It keeps a week in the fridge.", "") : paragraph;
-        assert.ok(plain(r.steps[0].body_html).includes(plain(preserved)), `${entry.slug}: original preparation instruction`);
+        assert.ok(plain(r.steps[0].body_html).includes(plain(paragraph)), `${entry.slug}: original preparation instruction`);
       }
       assert.deepEqual(r.sources.map((s) => [s.label, s.url]), original.original_sources);
-      assert.match(r.intro_html, /shops do not publish their recipes/);
     }
     const main = JSON.stringify(read("en", "onigiri"));
     for (const retained of ["sujiko", "negitoro", "tarako", "kazunoko", "ami tsukudani", "Fuki miso"]) {
@@ -152,6 +152,26 @@ describe("standalone onigiri recipes", () => {
     assert.match(JSON.stringify(read("en", "eggplant-tsukudani-onigiri")), /Marizuke/);
     assert.match(read("en", "soboro-onigiri").steps[0].body_html, /soy-cured-yolk-onigiri/);
     assert.match(JSON.stringify(read("en", "mentai-cream-cheese-onigiri")), /takana-onigiri/);
+  });
+
+  it("softens wet kombu before seasoning and explains optional fresh shiso", () => {
+    const r = read("en", "shiso-kombu-onigiri");
+    const body = r.steps[0].body_html.replace(/<[^>]+>/g, "");
+    assert.match(r.ingredients[0].items[0].name_html, /wet weight/);
+    assert.match(r.ingredients[0].items.at(-1).name_html, /perilla.*optional/);
+    assert.match(body, /not 50 g dry/);
+    assert.match(body, /Keep the strips submerged/);
+    assert.match(body, /Do not add soy sauce, sugar or mirin yet/);
+    assert.match(body, /Cool a strip and bite it/);
+    assert.match(body, /60 minutes or longer/);
+    assert.ok(body.indexOf("bite it") < body.indexOf("Reserve 50 ml"));
+    assert.match(body, /soft, moist and glossy/);
+    assert.match(body, /omit it if unavailable/);
+    assert.match(r.steps[0].time, /until tender/);
+    assert.ok(r.chips.some((chip) => chip.text.includes(r.steps[0].time)));
+    assert.match(r.steps[0].images.how[1].caption, /Only after.*bite test/);
+    assert.match(JSON.stringify(r.notes), /Hidaka|quick-cooking/);
+    assert.ok(r.sources.some((s) => s.url === "https://www.nissui.co.jp/recipe/00990.html"));
   });
 
   it("keeps mixed rice distinct from pocket fillings and doses the extra oil", () => {
