@@ -31,6 +31,19 @@
    "items": [
     "oyakodon",
     "napa-shiitake-egg-bowl",
+    "karaage",
+    "japanese-curry",
+    "easy-curry",
+    "ramen",
+    "alkaline-ramen-noodles",
+    "ginger-scallion-noodles"
+   ],
+   "name": "Japanese",
+   "notes": []
+  },
+  {
+   "id": "onigiri",
+   "items": [
     "onigiri",
     "salted-salmon-onigiri",
     "okaka-onigiri",
@@ -45,17 +58,10 @@
     "shrimp-karaage-onigiri",
     "salmon-onigiri",
     "baby-octopus-onigiri",
-    "onigiri-shop-fillings",
     "onigirazu",
-    "spam-musubi",
-    "karaage",
-    "japanese-curry",
-    "easy-curry",
-    "ramen",
-    "alkaline-ramen-noodles",
-    "ginger-scallion-noodles"
+    "spam-musubi"
    ],
-   "name": "Japanese",
+   "name": "Onigiri",
    "notes": []
   },
   {
@@ -163,10 +169,10 @@
   "kimchi-cheese-onigiri",
   "onigiri-mold",
   "onigiri-plastic-wrap",
-  "onigiri-shop-fillings",
   "daifuku",
   "mame-daifuku",
-  "yomogi-daifuku"
+  "yomogi-daifuku",
+  "strawberry-daifuku"
  ],
  "recipes": [
   {
@@ -528,516 +534,6 @@
    "yields": "1 bowl"
   },
   {
-   "added": "2026-10-07 14:21",
-   "blurb_html": "The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
-   "chips": [
-    {
-     "html": "<span>9 hand-shaped onigiri</span>",
-     "kind": "",
-     "text": "9 hand-shaped onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Onigiri: shape by hand",
-    "image": "illustrations/onigiri/hero.webp?v=f5fc5c19fd",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri.jpg?v=153bd13557",
-   "slug": "onigiri",
-   "title": "Onigiri: shape by hand",
-   "total": "~1½ h",
-   "yields": "9 hand-shaped onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "A pocket of flaky salted salmon inside plain rice.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "A pocket of flaky salted salmon inside plain rice.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Salted salmon onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "salted-salmon-onigiri",
-   "title": "Salted salmon onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Soy-moistened bonito flakes tucked into a salted rice triangle.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Soy-moistened bonito flakes tucked into a salted rice triangle.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Okaka onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "okaka-onigiri",
-   "title": "Okaka onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Creamy canned tuna and Japanese mayo in plain salted rice.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Creamy canned tuna and Japanese mayo in plain salted rice.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Tuna-mayo onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "tuna-mayo-onigiri",
-   "title": "Tuna-mayo onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "A tart pickled-plum center in a plain rice triangle.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "A tart pickled-plum center in a plain rice triangle.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Umeboshi onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "umeboshi-onigiri",
-   "title": "Umeboshi onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Tuna-mayo with a little sriracha, enclosed in plain rice.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Tuna-mayo with a little sriracha, enclosed in plain rice.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Spicy tuna-mayo onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "spicy-tuna-mayo-onigiri",
-   "title": "Spicy tuna-mayo onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Chopped kimchi and small cheese cubes in a plain rice triangle.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1½ h",
-     "kind": "time",
-     "text": "~1½ h"
-    }
-   ],
-   "description": "Chopped kimchi and small cheese cubes in a plain rice triangle.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Kimchi & cheese onigiri",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "kimchi-cheese-onigiri",
-   "title": "Kimchi & cheese onigiri",
-   "total": "~1½ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Fill, press and release: one dedicated mold method.",
-   "chips": [
-    {
-     "html": "<span>about 4 onigiri, depending on mold size</span>",
-     "kind": "",
-     "text": "about 4 onigiri, depending on mold size"
-    },
-    {
-     "html": "~1¼ h",
-     "kind": "time",
-     "text": "~1¼ h"
-    }
-   ],
-   "description": "Fill, press and release: one dedicated mold method.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Onigiri with a mold",
-    "image": "illustrations/onigiri-mold/3.webp?v=d2b1350720",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri-mold.jpg?v=9b64ad5993",
-   "slug": "onigiri-mold",
-   "title": "Onigiri with a mold",
-   "total": "~1¼ h",
-   "yields": "about 4 onigiri, depending on mold size"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Fill and shape a rice triangle through plastic wrap, without handling the rice directly.",
-   "chips": [
-    {
-     "html": "<span>3 onigiri</span>",
-     "kind": "",
-     "text": "3 onigiri"
-    },
-    {
-     "html": "~1¼ h",
-     "kind": "time",
-     "text": "~1¼ h"
-    }
-   ],
-   "description": "Fill and shape a rice triangle through plastic wrap, without handling the rice directly.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Onigiri through plastic wrap",
-    "image": "illustrations/onigiri-plastic-wrap/3.webp?v=44a93107e2",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri-plastic-wrap.jpg?v=e77d761bde",
-   "slug": "onigiri-plastic-wrap",
-   "title": "Onigiri through plastic wrap",
-   "total": "~1¼ h",
-   "yields": "3 onigiri"
-  },
-  {
-   "added": "2026-10-07 17:48",
-   "blurb_html": "Rice seasoned with soy and sesame oil, pressed into firm triangles, pan-grilled until the outside is a crisp brown crust and lacquered with a soy glaze — plus miso and butter versions.",
-   "chips": [
-    {
-     "html": "<span>9 yaki onigiri</span>",
-     "kind": "",
-     "text": "9 yaki onigiri"
-    },
-    {
-     "html": "~30 min with the rice cooked",
-     "kind": "time",
-     "text": "~30 min with the rice cooked"
-    }
-   ],
-   "description": "Rice seasoned with soy and sesame oil, pressed into firm triangles, pan-grilled until the outside is a crisp brown crust and lacquered with a soy glaze — plus miso and butter versions.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Yaki onigiri (grilled, soy-glazed rice balls)",
-    "image": "illustrations/yaki-onigiri/hero.webp?v=d711692932",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/yaki-onigiri.jpg?v=d6b156db1e",
-   "slug": "yaki-onigiri",
-   "title": "Yaki onigiri (grilled, soy-glazed rice balls)",
-   "total": "~30 min with the rice cooked",
-   "yields": "9 yaki onigiri"
-  },
-  {
-   "added": "2026-10-07 17:49",
-   "blurb_html": "Rice barrels wrapped in thin pork belly, fried crisp and rolled in a sticky garlic-soy glaze — juicy outside, soft rice inside.",
-   "chips": [
-    {
-     "html": "<span>6 rice balls</span>",
-     "kind": "",
-     "text": "6 rice balls"
-    },
-    {
-     "html": "~25 min (with rice cooked)",
-     "kind": "time",
-     "text": "~25 min (with rice cooked)"
-    }
-   ],
-   "description": "Rice barrels wrapped in thin pork belly, fried crisp and rolled in a sticky garlic-soy glaze — juicy outside, soft rice inside.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Nikumaki onigiri (pork-wrapped rice balls)",
-    "image": "illustrations/nikumaki-onigiri/hero.webp?v=4c2969cf7a",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/nikumaki-onigiri.jpg?v=6cb2ce9c9c",
-   "slug": "nikumaki-onigiri",
-   "title": "Nikumaki onigiri (pork-wrapped rice balls)",
-   "total": "~25 min (with rice cooked)",
-   "yields": "6 rice balls"
-  },
-  {
-   "added": "2026-10-07 19:00",
-   "blurb_html": "Curled shrimp in a craggy karaage crust, tucked into a small rice triangle with spicy mayo — crunchy, juicy, no tail hanging out.",
-   "chips": [
-    {
-     "html": "<span>12 onigiri</span>",
-     "kind": "",
-     "text": "12 onigiri"
-    },
-    {
-     "html": "~1 h",
-     "kind": "time",
-     "text": "~1 h"
-    }
-   ],
-   "description": "Curled shrimp in a craggy karaage crust, tucked into a small rice triangle with spicy mayo — crunchy, juicy, no tail hanging out.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Shrimp karaage onigiri with spicy mayo",
-    "image": "illustrations/shrimp-karaage-onigiri/hero.webp?v=7c1dcf00ba",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/shrimp-karaage-onigiri.jpg?v=c8a47258de",
-   "slug": "shrimp-karaage-onigiri",
-   "title": "Shrimp karaage onigiri with spicy mayo",
-   "total": "~1 h",
-   "yields": "12 onigiri"
-  },
-  {
-   "added": "2026-10-07 17:49",
-   "blurb_html": "Juicy grilled salted salmon folded through the rice with shiso, shio kombu and sesame, with a pocket of cold ikura in the center — pink rice, a pop of red caviar in the middle.",
-   "chips": [
-    {
-     "html": "<span>6 onigiri</span>",
-     "kind": "",
-     "text": "6 onigiri"
-    },
-    {
-     "html": "~1½ h (mostly the rice)",
-     "kind": "time",
-     "text": "~1½ h (mostly the rice)"
-    }
-   ],
-   "description": "Juicy grilled salted salmon folded through the rice with shiso, shio kombu and sesame, with a pocket of cold ikura in the center — pink rice, a pop of red caviar in the middle.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Salmon onigiri with ikura",
-    "image": "illustrations/salmon-onigiri/hero.webp?v=cdfcf1557c",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/salmon-onigiri.jpg?v=f5f0fea996",
-   "slug": "salmon-onigiri",
-   "title": "Salmon onigiri with ikura",
-   "total": "~1½ h (mostly the rice)",
-   "yields": "6 onigiri"
-  },
-  {
-   "added": "2026-10-07 17:50",
-   "blurb_html": "Octopus rice cooked with dashi and ginger, with sweet-soy baby octopus folded through it, shaped into triangles with a nori strip — all the octopus inside, nothing on top.",
-   "chips": [
-    {
-     "html": "<span>6 onigiri</span>",
-     "kind": "",
-     "text": "6 onigiri"
-    },
-    {
-     "html": "~1½ h (45 min of it the rice cooker)",
-     "kind": "time",
-     "text": "~1½ h (45 min of it the rice cooker)"
-    }
-   ],
-   "description": "Octopus rice cooked with dashi and ginger, with sweet-soy baby octopus folded through it, shaped into triangles with a nori strip — all the octopus inside, nothing on top.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Baby octopus onigiri (takomeshi + sweet-soy iidako)",
-    "image": "illustrations/baby-octopus-onigiri/hero.webp?v=5ab0ffc213",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/baby-octopus-onigiri.jpg?v=8960ee1db9",
-   "slug": "baby-octopus-onigiri",
-   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)",
-   "total": "~1½ h (45 min of it the rice cooker)",
-   "yields": "6 onigiri"
-  },
-  {
-   "added": "2026-10-10 11:20",
-   "blurb_html": "Soy-cured yolk on soboro, pork kimchi, shiso kombu, peanut miso and more, the way Bongo and Yadoroku fill theirs.",
-   "chips": [
-    {
-     "html": "<span>12 onigiri, from 2–3 fillings (each makes 4–6)</span>",
-     "kind": "",
-     "text": "12 onigiri, from 2–3 fillings (each makes 4–6)"
-    },
-    {
-     "html": "1 day for the yolks; the rest 5–20 min each",
-     "kind": "time",
-     "text": "1 day for the yolks; the rest 5–20 min each"
-    }
-   ],
-   "description": "Soy-cured yolk on soboro, pork kimchi, shiso kombu, peanut miso and more, the way Bongo and Yadoroku fill theirs.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Onigiri: fillings from Tokyo's onigiri shops",
-    "image": "illustrations/onigiri-shop-fillings/hero.webp?v=490e8b40fe",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri-shop-fillings.jpg?v=f8c66dd913",
-   "slug": "onigiri-shop-fillings",
-   "title": "Onigiri: fillings from Tokyo's onigiri shops",
-   "total": "1 day for the yolks; the rest 5–20 min each",
-   "yields": "12 onigiri, from 2–3 fillings (each makes 4–6)"
-  },
-  {
-   "added": "2026-10-07 17:47",
-   "blurb_html": "Nori folded around two thin layers of rice and a thick, saucy filling of ginger pork, lettuce and Kewpie, then cut in half to show the layers.",
-   "chips": [
-    {
-     "html": "<span>4 onigirazu (8 halves)</span>",
-     "kind": "",
-     "text": "4 onigirazu (8 halves)"
-    },
-    {
-     "html": "~50 min (with the rice cooked)",
-     "kind": "time",
-     "text": "~50 min (with the rice cooked)"
-    }
-   ],
-   "description": "Nori folded around two thin layers of rice and a thick, saucy filling of ginger pork, lettuce and Kewpie, then cut in half to show the layers.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Onigirazu (ginger pork rice sandwich)",
-    "image": "illustrations/onigirazu/hero.webp?v=6f10c640d0",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigirazu.jpg?v=ee6abf88a6",
-   "slug": "onigirazu",
-   "title": "Onigirazu (ginger pork rice sandwich)",
-   "total": "~50 min (with the rice cooked)",
-   "yields": "4 onigirazu (8 halves)"
-  },
-  {
-   "added": "2026-10-07 17:46",
-   "blurb_html": "Hawaii's onigiri: a teriyaki-glazed slice of Spam on a pressed block of rice and furikake, belted with nori — salty, sweet, juicy, and fun to make with a mold or the Spam can itself.",
-   "chips": [
-    {
-     "html": "<span>8 musubi</span>",
-     "kind": "",
-     "text": "8 musubi"
-    },
-    {
-     "html": "~25 min with the rice cooked",
-     "kind": "time",
-     "text": "~25 min with the rice cooked"
-    }
-   ],
-   "description": "Hawaii's onigiri: a teriyaki-glazed slice of Spam on a pressed block of rice and furikake, belted with nori — salty, sweet, juicy, and fun to make with a mold or the Spam can itself.",
-   "group": "Japanese",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Spam musubi",
-    "image": "illustrations/spam-musubi/hero.webp?v=0339e570a2",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/spam-musubi.jpg?v=530a8d8efc",
-   "slug": "spam-musubi",
-   "title": "Spam musubi",
-   "total": "~25 min with the rice cooked",
-   "yields": "8 musubi"
-  },
-  {
    "added": "2026-10-06 01:52",
    "blurb_html": "Marinated thigh, tapioca crust with fork-made crumbs, double-fried at 180 °C.",
    "chips": [
@@ -1216,6 +712,486 @@
    "title": "Ginger scallion noodles (gentler)",
    "total": "~30 min",
    "yields": "4 bowls (about 1½ cups sauce)"
+  },
+  {
+   "added": "2026-10-07 14:21",
+   "blurb_html": "The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
+   "chips": [
+    {
+     "html": "<span>9 hand-shaped onigiri</span>",
+     "kind": "",
+     "text": "9 hand-shaped onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Onigiri: shape by hand",
+    "image": "illustrations/onigiri/5.webp?v=0404666ef7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
+   "slug": "onigiri",
+   "title": "Onigiri: shape by hand",
+   "total": "~1½ h",
+   "yields": "9 hand-shaped onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "A pocket of flaky salted salmon inside plain rice.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "A pocket of flaky salted salmon inside plain rice.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Salted salmon onigiri",
+    "image": "illustrations/salted-salmon-onigiri/6.webp?v=337aef7aad",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/salted-salmon-onigiri.jpg?v=6a6d883e9e",
+   "slug": "salted-salmon-onigiri",
+   "title": "Salted salmon onigiri",
+   "total": "~1½ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Soy-moistened bonito flakes tucked into a salted rice triangle.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "Soy-moistened bonito flakes tucked into a salted rice triangle.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Okaka onigiri",
+    "image": "illustrations/okaka-onigiri/6.webp?v=d861b4c4f8",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/okaka-onigiri.jpg?v=7c2cc96148",
+   "slug": "okaka-onigiri",
+   "title": "Okaka onigiri",
+   "total": "~1½ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Creamy canned tuna and Japanese mayo in plain salted rice.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "Creamy canned tuna and Japanese mayo in plain salted rice.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Tuna-mayo onigiri",
+    "image": "illustrations/tuna-mayo-onigiri/6.webp?v=7893f6562b",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/tuna-mayo-onigiri.jpg?v=5f150804ad",
+   "slug": "tuna-mayo-onigiri",
+   "title": "Tuna-mayo onigiri",
+   "total": "~1½ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "A tart pickled-plum center in a plain rice triangle.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "A tart pickled-plum center in a plain rice triangle.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Umeboshi onigiri",
+    "image": "illustrations/umeboshi-onigiri/6.webp?v=21045a4b73",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/umeboshi-onigiri.jpg?v=d902bbc5d8",
+   "slug": "umeboshi-onigiri",
+   "title": "Umeboshi onigiri",
+   "total": "~1½ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Tuna-mayo with a little sriracha, enclosed in plain rice.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "Tuna-mayo with a little sriracha, enclosed in plain rice.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Spicy tuna-mayo onigiri",
+    "image": "illustrations/spicy-tuna-mayo-onigiri/6.webp?v=416b788c71",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/spicy-tuna-mayo-onigiri.jpg?v=1981f5c025",
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Spicy tuna-mayo onigiri",
+   "total": "~1½ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Chopped kimchi and small cheese cubes in a plain rice triangle.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1½ h",
+     "kind": "time",
+     "text": "~1½ h"
+    }
+   ],
+   "description": "Chopped kimchi and small cheese cubes in a plain rice triangle.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Kimchi & cheese onigiri",
+    "image": "illustrations/kimchi-cheese-onigiri/6.webp?v=2e6ae21ce3",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/kimchi-cheese-onigiri.jpg?v=a45e078f39",
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Kimchi & cheese onigiri",
+   "total": "~1½ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Fill, press and release: one dedicated mold method.",
+   "chips": [
+    {
+     "html": "<span>about 4 onigiri, depending on mold size</span>",
+     "kind": "",
+     "text": "about 4 onigiri, depending on mold size"
+    },
+    {
+     "html": "~1¼ h",
+     "kind": "time",
+     "text": "~1¼ h"
+    }
+   ],
+   "description": "Fill, press and release: one dedicated mold method.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Onigiri with a mold",
+    "image": "illustrations/onigiri/5.webp?v=0404666ef7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
+   "slug": "onigiri-mold",
+   "title": "Onigiri with a mold",
+   "total": "~1¼ h",
+   "yields": "about 4 onigiri, depending on mold size"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Fill and shape a rice triangle through plastic wrap, without handling the rice directly.",
+   "chips": [
+    {
+     "html": "<span>3 onigiri</span>",
+     "kind": "",
+     "text": "3 onigiri"
+    },
+    {
+     "html": "~1¼ h",
+     "kind": "time",
+     "text": "~1¼ h"
+    }
+   ],
+   "description": "Fill and shape a rice triangle through plastic wrap, without handling the rice directly.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Onigiri through plastic wrap",
+    "image": "illustrations/onigiri/5.webp?v=0404666ef7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
+   "slug": "onigiri-plastic-wrap",
+   "title": "Onigiri through plastic wrap",
+   "total": "~1¼ h",
+   "yields": "3 onigiri"
+  },
+  {
+   "added": "2026-10-07 17:48",
+   "blurb_html": "Rice seasoned with soy and sesame oil, pressed into firm triangles, pan-grilled until the outside is a crisp brown crust and lacquered with a soy glaze — plus miso and butter versions.",
+   "chips": [
+    {
+     "html": "<span>9 yaki onigiri</span>",
+     "kind": "",
+     "text": "9 yaki onigiri"
+    },
+    {
+     "html": "~30 min with the rice cooked",
+     "kind": "time",
+     "text": "~30 min with the rice cooked"
+    }
+   ],
+   "description": "Rice seasoned with soy and sesame oil, pressed into firm triangles, pan-grilled until the outside is a crisp brown crust and lacquered with a soy glaze — plus miso and butter versions.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Yaki onigiri (grilled, soy-glazed rice balls)",
+    "image": "illustrations/yaki-onigiri/hero.webp?v=d711692932",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/yaki-onigiri.jpg?v=d6b156db1e",
+   "slug": "yaki-onigiri",
+   "title": "Yaki onigiri (grilled, soy-glazed rice balls)",
+   "total": "~30 min with the rice cooked",
+   "yields": "9 yaki onigiri"
+  },
+  {
+   "added": "2026-10-07 17:49",
+   "blurb_html": "Rice barrels wrapped in thin pork belly, fried crisp and rolled in a sticky garlic-soy glaze — juicy outside, soft rice inside.",
+   "chips": [
+    {
+     "html": "<span>6 rice balls</span>",
+     "kind": "",
+     "text": "6 rice balls"
+    },
+    {
+     "html": "~25 min (with rice cooked)",
+     "kind": "time",
+     "text": "~25 min (with rice cooked)"
+    }
+   ],
+   "description": "Rice barrels wrapped in thin pork belly, fried crisp and rolled in a sticky garlic-soy glaze — juicy outside, soft rice inside.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Nikumaki onigiri (pork-wrapped rice balls)",
+    "image": "illustrations/nikumaki-onigiri/hero.webp?v=4c2969cf7a",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/nikumaki-onigiri.jpg?v=6cb2ce9c9c",
+   "slug": "nikumaki-onigiri",
+   "title": "Nikumaki onigiri (pork-wrapped rice balls)",
+   "total": "~25 min (with rice cooked)",
+   "yields": "6 rice balls"
+  },
+  {
+   "added": "2026-10-07 19:00",
+   "blurb_html": "Curled shrimp in a craggy karaage crust, tucked into a small rice triangle with spicy mayo — crunchy, juicy, no tail hanging out.",
+   "chips": [
+    {
+     "html": "<span>12 onigiri</span>",
+     "kind": "",
+     "text": "12 onigiri"
+    },
+    {
+     "html": "~1 h",
+     "kind": "time",
+     "text": "~1 h"
+    }
+   ],
+   "description": "Curled shrimp in a craggy karaage crust, tucked into a small rice triangle with spicy mayo — crunchy, juicy, no tail hanging out.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Shrimp karaage onigiri with spicy mayo",
+    "image": "illustrations/shrimp-karaage-onigiri/hero.webp?v=7c1dcf00ba",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/shrimp-karaage-onigiri.jpg?v=c8a47258de",
+   "slug": "shrimp-karaage-onigiri",
+   "title": "Shrimp karaage onigiri with spicy mayo",
+   "total": "~1 h",
+   "yields": "12 onigiri"
+  },
+  {
+   "added": "2026-10-07 17:49",
+   "blurb_html": "Juicy grilled salted salmon folded through the rice with shiso, shio kombu and sesame, with a pocket of cold ikura in the center — pink rice, a pop of red caviar in the middle.",
+   "chips": [
+    {
+     "html": "<span>6 onigiri</span>",
+     "kind": "",
+     "text": "6 onigiri"
+    },
+    {
+     "html": "~1½ h (mostly the rice)",
+     "kind": "time",
+     "text": "~1½ h (mostly the rice)"
+    }
+   ],
+   "description": "Juicy grilled salted salmon folded through the rice with shiso, shio kombu and sesame, with a pocket of cold ikura in the center — pink rice, a pop of red caviar in the middle.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Salmon onigiri with ikura",
+    "image": "illustrations/salmon-onigiri/hero.webp?v=cdfcf1557c",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/salmon-onigiri.jpg?v=f5f0fea996",
+   "slug": "salmon-onigiri",
+   "title": "Salmon onigiri with ikura",
+   "total": "~1½ h (mostly the rice)",
+   "yields": "6 onigiri"
+  },
+  {
+   "added": "2026-10-07 17:50",
+   "blurb_html": "Octopus rice cooked with dashi and ginger, with sweet-soy baby octopus folded through it, shaped into triangles with a nori strip — all the octopus inside, nothing on top.",
+   "chips": [
+    {
+     "html": "<span>6 onigiri</span>",
+     "kind": "",
+     "text": "6 onigiri"
+    },
+    {
+     "html": "~1½ h (45 min of it the rice cooker)",
+     "kind": "time",
+     "text": "~1½ h (45 min of it the rice cooker)"
+    }
+   ],
+   "description": "Octopus rice cooked with dashi and ginger, with sweet-soy baby octopus folded through it, shaped into triangles with a nori strip — all the octopus inside, nothing on top.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Baby octopus onigiri (takomeshi + sweet-soy iidako)",
+    "image": "illustrations/baby-octopus-onigiri/hero.webp?v=5ab0ffc213",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/baby-octopus-onigiri.jpg?v=8960ee1db9",
+   "slug": "baby-octopus-onigiri",
+   "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)",
+   "total": "~1½ h (45 min of it the rice cooker)",
+   "yields": "6 onigiri"
+  },
+  {
+   "added": "2026-10-07 17:47",
+   "blurb_html": "Nori folded around two thin layers of rice and a thick, saucy filling of ginger pork, lettuce and Kewpie, then cut in half to show the layers.",
+   "chips": [
+    {
+     "html": "<span>4 onigirazu (8 halves)</span>",
+     "kind": "",
+     "text": "4 onigirazu (8 halves)"
+    },
+    {
+     "html": "~50 min (with the rice cooked)",
+     "kind": "time",
+     "text": "~50 min (with the rice cooked)"
+    }
+   ],
+   "description": "Nori folded around two thin layers of rice and a thick, saucy filling of ginger pork, lettuce and Kewpie, then cut in half to show the layers.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Onigirazu (ginger pork rice sandwich)",
+    "image": "illustrations/onigirazu/hero.webp?v=6f10c640d0",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigirazu.jpg?v=ee6abf88a6",
+   "slug": "onigirazu",
+   "title": "Onigirazu (ginger pork rice sandwich)",
+   "total": "~50 min (with the rice cooked)",
+   "yields": "4 onigirazu (8 halves)"
+  },
+  {
+   "added": "2026-10-07 17:46",
+   "blurb_html": "Hawaii's onigiri: a teriyaki-glazed slice of Spam on a pressed block of rice and furikake, belted with nori — salty, sweet, juicy, and fun to make with a mold or the Spam can itself.",
+   "chips": [
+    {
+     "html": "<span>8 musubi</span>",
+     "kind": "",
+     "text": "8 musubi"
+    },
+    {
+     "html": "~25 min with the rice cooked",
+     "kind": "time",
+     "text": "~25 min with the rice cooked"
+    }
+   ],
+   "description": "Hawaii's onigiri: a teriyaki-glazed slice of Spam on a pressed block of rice and furikake, belted with nori — salty, sweet, juicy, and fun to make with a mold or the Spam can itself.",
+   "group": "Onigiri",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Spam musubi",
+    "image": "illustrations/spam-musubi/hero.webp?v=0339e570a2",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/spam-musubi.jpg?v=530a8d8efc",
+   "slug": "spam-musubi",
+   "title": "Spam musubi",
+   "total": "~25 min with the rice cooked",
+   "yields": "8 musubi"
   },
   {
    "added": "2026-10-07 14:00",

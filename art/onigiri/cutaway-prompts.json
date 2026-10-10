@@ -1,0 +1,100 @@
+{
+  "tool": "built-in image_gen",
+  "scope": "Six filling-specific cutaway heroes and finishing illustrations; one whole-onigiri image for the hand-shaping hub and alternative methods.",
+  "style": "Hand-painted Miyazaki-inspired Japanese animation, brown contours, matte cel shading, warm honey wood and ivory plate; no photorealism, diagrams or labels.",
+  "source_module": "../recipes/src/onigiri_pages.py",
+  "assets": [
+    {
+      "slug": "salted-salmon-onigiri",
+      "filling": "Cooked salted salmon: distinct soft opaque pale coral-pink irregular flakes, with a few visible layered flake edges. NO mayonnaise, raw fish, red roe or cream; this is cooked flaked salmon.",
+      "prompt": "Use case: scientific-educational. Asset type: recipe hero and finished-result illustration. Style reference is input image only: match its warm hand-painted Miyazaki-inspired Japanese animation look, delicate warm-brown contours, matte cel shading, softly painted honey wood and ivory ceramic. Clearly drawn; no photorealism, photographic grain, pores, CGI, vector diagrams, arrows, text or labels.\nShow ONLY ONE hand-sized rounded triangular onigiri sliced parallel to its broad triangular faces into TWO matching triangular halves. Stand the two halves upright side by side on one small ivory plate, with the cut faces facing the viewer at slight opposing angles, enough gap to see the true cut surfaces. Both halves are from the SAME rice ball and reveal the SAME filling. The rice is plain white Japanese short-grain rice, plump oval grains with sparse clean outlines. A SMALL compact central filling pocket, about 1–2 teaspoons, is completely surrounded by a thick continuous border of white rice including above and below; filling occupies about 15 percent of each cut face. Thin matte black-green nori around the BASE only, visible on the outer base edges, never through the rice interior. Clear instructional cross-section, appetizing and physically plausible. Landscape3:2, tight three-quarter view at plate height, food fills75percent of frame. No hands, utensils, loose toppings, extra rice balls, decorative garnishes or other filling varieties.\nFilling for BOTH cut faces: Cooked salted salmon: distinct soft opaque pale coral-pink irregular flakes, with a few visible layered flake edges. NO mayonnaise, raw fish, red roe or cream; this is cooked flaked salmon.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-a91b9929-258c-4f31-b5a3-19b4a03ce900.png",
+      "reviewed": true,
+      "review_notes": "Two cut halves show the same recipe-specific center, enclosed by a continuous white rice border. Filling texture and color checked against the recipe. Consistent drawn style; no hands, extra toppings or other varieties.",
+      "source_path": "../recipes/generated/clean/salted-salmon-onigiri/hero.webp",
+      "published_path": "public/media/illustrations/salted-salmon-onigiri/6.webp",
+      "sha256": "4c9dd8e9cbe56b01ae611be2134971ad89eb3bec9ac3b040665ef0f0931dcd2e",
+      "web_bytes": 58660
+    },
+    {
+      "slug": "okaka-onigiri",
+      "filling": "Moistened bonito flakes (okaka): fine soft warm-brown papery shreds, lightly bound by soy sauce, a compact fibrous brown pocket. Not chunks of beef, minced meat, mushroom or a dark liquid puddle.",
+      "prompt": "Use case: precise-object-edit. This image is the edit target. Preserve exactly its two triangular cut onigiri halves, thick white rice border, rice grain drawing, camera, plate, nori, framing, soft painted wood background, hand-painted Japanese animation style and lighting. Change ONLY the central filling on BOTH cut faces to match this recipe. The two halves must have the SAME new filling. Moistened bonito flakes (okaka): fine soft warm-brown papery shreds, lightly bound by soy sauce, a compact fibrous brown pocket. Not chunks of beef, minced meat, mushroom or a dark liquid puddle. No text, labels, diagrams, arrows, hands, utensils, garnish or extra objects.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-aaba36af-49a4-47ce-b99f-c27c56507808.png",
+      "reviewed": true,
+      "review_notes": "Two cut halves show the same recipe-specific center, enclosed by a continuous white rice border. Filling texture and color checked against the recipe. Consistent drawn style; no hands, extra toppings or other varieties.",
+      "source_path": "../recipes/generated/clean/okaka-onigiri/hero.webp",
+      "published_path": "public/media/illustrations/okaka-onigiri/6.webp",
+      "sha256": "f8f121aa5f81bf0aae5134d3cceec8593ba591e108477dfa2876452712535c87",
+      "web_bytes": 58752
+    },
+    {
+      "slug": "tuna-mayo-onigiri",
+      "filling": "Canned cooked tuna with Japanese mayonnaise: soft tiny pale beige-taupe tuna flakes in a modest creamy ivory coating; recognizable flaky fish, not smooth cream alone. No pink salmon, orange chili, red raw tuna or green herbs.",
+      "prompt": "Use case: precise-object-edit. This image is the edit target. Preserve exactly its two triangular cut onigiri halves, thick white rice border, rice grain drawing, camera, plate, nori, framing, soft painted wood background, hand-painted Japanese animation style and lighting. Change ONLY the central filling on BOTH cut faces to match this recipe. The two halves must have the SAME new filling. Canned cooked tuna with Japanese mayonnaise: soft tiny pale beige-taupe tuna flakes in a modest creamy ivory coating; recognizable flaky fish, not smooth cream alone. No pink salmon, orange chili, red raw tuna or green herbs. No text, labels, diagrams, arrows, hands, utensils, garnish or extra objects.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-a1c2ac6c-bb69-4661-95f1-082d3e8b71d1.png",
+      "reviewed": true,
+      "review_notes": "Two cut halves show the same recipe-specific center, enclosed by a continuous white rice border. Filling texture and color checked against the recipe. Consistent drawn style; no hands, extra toppings or other varieties.",
+      "source_path": "../recipes/generated/clean/tuna-mayo-onigiri/hero.webp",
+      "published_path": "public/media/illustrations/tuna-mayo-onigiri/6.webp",
+      "sha256": "c7381f5021fe9fc22a10ae66f6e19e5231ddff7cdf315a2a1c525e5a6d9fea7f",
+      "web_bytes": 55560
+    },
+    {
+      "slug": "umeboshi-onigiri",
+      "filling": "Pitted umeboshi flesh: a SMALL deep muted brick-red/burgundy moist wrinkled mashed pickled-plum pocket, slightly irregular and fibrous, no pit or whole round plum. This intensely flavored center is about HALF the volume of the salmon reference center: shrink the pocket and fill the remaining space with white rice. No roe, raw fish, red beans or bright jam.",
+      "prompt": "Use case: precise-object-edit. Edit target: the attached umeboshi onigiri cutaway. Preserve both white rice triangles, nori, outlines, plate, composition and hand-painted Japanese animation style. REPLACE THE ENTIRE CONTENTS of the two central red filling pockets, not merely their color. They must contain MASHED PICKLED PLUM, not fish. Draw a small compact deep muted burgundy-red, coarse soft paste with a few irregular darker purple wrinkled PLUM SKIN fragments, rounded mashed lumps and smooth moist pulp. Both cut faces show the same mashed plum. Absolutely remove the parallel layered red flake geometry: no elongated fish flakes, shredded red meat, muscle fibers, stripes, roe beads, pit or whole plum. The pocket should be smaller than fish filling, with a generous white rice border on all sides. Natural hand-painted contours and matte cel shadows, no diagrams, labels, text or photorealism.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-b32c89fc-465b-47de-8aef-2a827b9ec08e.png",
+      "revisions": [
+        {
+          "prompt": "Use case: precise-object-edit. This image is the edit target. Preserve exactly its two triangular cut onigiri halves, thick white rice border, rice grain drawing, camera, plate, nori, framing, soft painted wood background, hand-painted Japanese animation style and lighting. Change ONLY the central filling on BOTH cut faces to match this recipe. The two halves must have the SAME new filling. Pitted umeboshi flesh: a SMALL deep muted brick-red/burgundy moist wrinkled mashed pickled-plum pocket, slightly irregular and fibrous, no pit or whole round plum. This intensely flavored center is about HALF the volume of the salmon reference center: shrink the pocket and fill the remaining space with white rice. No roe, raw fish, red beans or bright jam. No text, labels, diagrams, arrows, hands, utensils, garnish or extra objects.",
+          "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-f5c16acd-5ff8-4538-81dc-ee3b080d40b7.png",
+          "decision": "Rejected: plum texture still resembled fish flakes."
+        }
+      ],
+      "reviewed": true,
+      "review_notes": "Two cut halves show the same recipe-specific center, enclosed by a continuous white rice border. Filling texture and color checked against the recipe. Consistent drawn style; no hands, extra toppings or other varieties.",
+      "source_path": "../recipes/generated/clean/umeboshi-onigiri/hero.webp",
+      "published_path": "public/media/illustrations/umeboshi-onigiri/6.webp",
+      "sha256": "505e37bfe2d82388299c0a0aaed2859cbd72d5260409b640a060ac1be507be8e",
+      "web_bytes": 56556
+    },
+    {
+      "slug": "spicy-tuna-mayo-onigiri",
+      "filling": "Cooked canned tuna with Japanese mayonnaise and a LITTLE sriracha: tiny recognizable beige tuna flakes evenly coated in a muted dusty coral-peach creamy sauce, slightly warmer in color than regular tuna-mayo, never vivid red/orange. Not raw tuna, salmon, shrimp, eggs or chili chunks.",
+      "prompt": "Use case: precise-object-edit. This image is the edit target. Preserve exactly its two triangular cut onigiri halves, thick white rice border, rice grain drawing, camera, plate, nori, framing, soft painted wood background, hand-painted Japanese animation style and lighting. Change ONLY the central filling on BOTH cut faces to match this recipe. The two halves must have the SAME new filling. Cooked canned tuna with Japanese mayonnaise and a LITTLE sriracha: tiny recognizable beige tuna flakes evenly coated in a muted dusty coral-peach creamy sauce, slightly warmer in color than regular tuna-mayo, never vivid red/orange. Not raw tuna, salmon, shrimp, eggs or chili chunks. No text, labels, diagrams, arrows, hands, utensils, garnish or extra objects.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-b0a42f22-556b-421a-868c-d25732edbed6.png",
+      "reviewed": true,
+      "review_notes": "Two cut halves show the same recipe-specific center, enclosed by a continuous white rice border. Filling texture and color checked against the recipe. Consistent drawn style; no hands, extra toppings or other varieties.",
+      "source_path": "../recipes/generated/clean/spicy-tuna-mayo-onigiri/hero.webp",
+      "published_path": "public/media/illustrations/spicy-tuna-mayo-onigiri/6.webp",
+      "sha256": "ffa140f7632a099254d5c0504100f0fcccbeff1913d0aa74a0d2887a5780a19c",
+      "web_bytes": 55750
+    },
+    {
+      "slug": "kimchi-cheese-onigiri",
+      "filling": "Finely chopped squeezed kimchi and SMALL cubes of cheese: recognizable soft folded cabbage fragments in muted brick-orange, mixed with several discrete small pale ivory/light-yellow cheese cubes. Cheese is not melted, no long stretchy strings. Compact chopped kimchi-and-cheese center; not salmon flakes, carrots, macaroni or scrambled eggs.",
+      "prompt": "Use case: precise-object-edit. This image is the edit target. Preserve exactly its two triangular cut onigiri halves, thick white rice border, rice grain drawing, camera, plate, nori, framing, soft painted wood background, hand-painted Japanese animation style and lighting. Change ONLY the central filling on BOTH cut faces to match this recipe. The two halves must have the SAME new filling. Finely chopped squeezed kimchi and SMALL cubes of cheese: recognizable soft folded cabbage fragments in muted brick-orange, mixed with several discrete small pale ivory/light-yellow cheese cubes. Cheese is not melted, no long stretchy strings. Compact chopped kimchi-and-cheese center; not salmon flakes, carrots, macaroni or scrambled eggs. No text, labels, diagrams, arrows, hands, utensils, garnish or extra objects.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-1e80f8f2-0f2b-43ee-a4b6-6d72cf0f3a55.png",
+      "reviewed": true,
+      "review_notes": "Two cut halves show the same recipe-specific center, enclosed by a continuous white rice border. Filling texture and color checked against the recipe. Consistent drawn style; no hands, extra toppings or other varieties.",
+      "source_path": "../recipes/generated/clean/kimchi-cheese-onigiri/hero.webp",
+      "published_path": "public/media/illustrations/kimchi-cheese-onigiri/6.webp",
+      "sha256": "208be008477bede99c1a44f073d760426e5169cc5ce9043be3438626f78a58ce",
+      "web_bytes": 61884
+    },
+    {
+      "slug": "onigiri",
+      "filling": "One whole plain white rice triangle wrapped with matte dark nori around its base; no cross-section and no visible filling.",
+      "prompt": "Use case: scientific-educational. Asset type: recipe hero and finished-result illustration. Style reference is input image only: match its warm hand-painted Miyazaki-inspired Japanese animation look, delicate warm-brown contours, matte cel shading, softly painted honey wood and ivory ceramic. Clearly drawn; no photorealism, photographic grain, pores, CGI, vector diagrams, arrows, text or labels.\nInput is a STYLE REFERENCE only. Draw a single hand-sized rounded triangular onigiri, WHOLE and uncut, standing upright on a small ivory ceramic plate on softly painted warm honey wood. Thick white plain short-grain rice, sparse outlined plump oval grains, and a matte dark green-black nori strip neatly wrapped around its bottom third, leaving the whole white top visible. Only ONE rice ball; no assortment, cross-section, toppings, fillings, furikake, garnish, hands, utensils, arrows, diagrams or text. Tight landscape3:2 composition and clear hand-painted animation contours.",
+      "generated_path": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-e8ea0d8b-a829-4a4a-8aee-30b75ba4f138.png",
+      "reviewed": true,
+      "review_notes": "One whole rice triangle with a nori base; retired mixed assortment is absent. No hands.",
+      "source_path": "../recipes/generated/clean/onigiri/hero.webp",
+      "published_path": "public/media/illustrations/onigiri/5.webp",
+      "sha256": "0dfc5880cf05ea2776cd7dc4868b08752ebdb016ae542192766f444c3c14266c",
+      "web_bytes": 48774
+    }
+  ],
+  "web_encoding": "1200px-wide compressed WebP, exported at quality80; byte-identical hero and finish assets shared by optimize-media.py."
+}

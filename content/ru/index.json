@@ -31,6 +31,19 @@
    "items": [
     "oyakodon",
     "napa-shiitake-egg-bowl",
+    "karaage",
+    "japanese-curry",
+    "easy-curry",
+    "ramen",
+    "alkaline-ramen-noodles",
+    "ginger-scallion-noodles"
+   ],
+   "name": "Японская кухня",
+   "notes": []
+  },
+  {
+   "id": "onigiri",
+   "items": [
     "onigiri",
     "salted-salmon-onigiri",
     "okaka-onigiri",
@@ -45,17 +58,10 @@
     "shrimp-karaage-onigiri",
     "salmon-onigiri",
     "baby-octopus-onigiri",
-    "onigiri-shop-fillings",
     "onigirazu",
-    "spam-musubi",
-    "karaage",
-    "japanese-curry",
-    "easy-curry",
-    "ramen",
-    "alkaline-ramen-noodles",
-    "ginger-scallion-noodles"
+    "spam-musubi"
    ],
-   "name": "Японская кухня",
+   "name": "Онигири",
    "notes": []
   },
   {
@@ -163,10 +169,10 @@
   "kimchi-cheese-onigiri",
   "onigiri-mold",
   "onigiri-plastic-wrap",
-  "onigiri-shop-fillings",
   "daifuku",
   "mame-daifuku",
-  "yomogi-daifuku"
+  "yomogi-daifuku",
+  "strawberry-daifuku"
  ],
  "recipes": [
   {
@@ -528,516 +534,6 @@
    "yields": "1 миска"
   },
   {
-   "added": "2026-10-07 14:21",
-   "blurb_html": "Базовый рисовый треугольник, сформованный руками. У каждой начинки и другого способа формовки — своя страница рецепта.",
-   "chips": [
-    {
-     "html": "<span>9 онигири, сформованных руками</span>",
-     "kind": "",
-     "text": "9 онигири, сформованных руками"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Базовый рисовый треугольник, сформованный руками. У каждой начинки и другого способа формовки — своя страница рецепта.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири: формовка руками",
-    "image": "illustrations/onigiri/hero.webp?v=f5fc5c19fd",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri.jpg?v=153bd13557",
-   "slug": "onigiri",
-   "title": "Онигири: формовка руками",
-   "total": "~1½ ч",
-   "yields": "9 онигири, сформованных руками"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Начинка из солёного лосося внутри простого риса.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Начинка из солёного лосося внутри простого риса.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с солёным лососем",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "salted-salmon-onigiri",
-   "title": "Онигири с солёным лососем",
-   "total": "~1½ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Стружка бонито с соевым соусом внутри солёного рисового треугольника.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Стружка бонито с соевым соусом внутри солёного рисового треугольника.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с окака",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "okaka-onigiri",
-   "title": "Онигири с окака",
-   "total": "~1½ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Нежная начинка из консервированного тунца и японского майонеза в простом солёном рисе.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Нежная начинка из консервированного тунца и японского майонеза в простом солёном рисе.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с тунцом и майонезом",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "tuna-mayo-onigiri",
-   "title": "Онигири с тунцом и майонезом",
-   "total": "~1½ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Кислая маринованная слива в центре простого рисового треугольника.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Кислая маринованная слива в центре простого рисового треугольника.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с умэбоси",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "umeboshi-onigiri",
-   "title": "Онигири с умэбоси",
-   "total": "~1½ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Тунец с майонезом и каплей шрирачи внутри простого риса.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Тунец с майонезом и каплей шрирачи внутри простого риса.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с острым тунцом и майонезом",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "spicy-tuna-mayo-onigiri",
-   "title": "Онигири с острым тунцом и майонезом",
-   "total": "~1½ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Мелко нарезанное кимчи и кубики сыра внутри простого рисового треугольника.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1½ ч",
-     "kind": "time",
-     "text": "~1½ ч"
-    }
-   ],
-   "description": "Мелко нарезанное кимчи и кубики сыра внутри простого рисового треугольника.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с кимчи и сыром",
-    "image": "illustrations/kimchi-cheese-onigiri/5.webp?v=bddbbe9acb",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/kimchi-cheese-onigiri.jpg?v=d4ec8c8a70",
-   "slug": "kimchi-cheese-onigiri",
-   "title": "Онигири с кимчи и сыром",
-   "total": "~1½ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Наполните, прижмите и вытолкните: отдельный способ формовки в форме.",
-   "chips": [
-    {
-     "html": "<span>около 4 онигири, в зависимости от размера формы</span>",
-     "kind": "",
-     "text": "около 4 онигири, в зависимости от размера формы"
-    },
-    {
-     "html": "~1¼ ч",
-     "kind": "time",
-     "text": "~1¼ ч"
-    }
-   ],
-   "description": "Наполните, прижмите и вытолкните: отдельный способ формовки в форме.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири в форме",
-    "image": "illustrations/onigiri-mold/3.webp?v=d2b1350720",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri-mold.jpg?v=9b64ad5993",
-   "slug": "onigiri-mold",
-   "title": "Онигири в форме",
-   "total": "~1¼ ч",
-   "yields": "около 4 онигири, в зависимости от размера формы"
-  },
-  {
-   "added": "2026-10-10 16:00",
-   "blurb_html": "Начините и сформуйте рисовый треугольник через плёнку, не касаясь риса руками.",
-   "chips": [
-    {
-     "html": "<span>3 онигири</span>",
-     "kind": "",
-     "text": "3 онигири"
-    },
-    {
-     "html": "~1¼ ч",
-     "kind": "time",
-     "text": "~1¼ ч"
-    }
-   ],
-   "description": "Начините и сформуйте рисовый треугольник через плёнку, не касаясь риса руками.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири через пищевую плёнку",
-    "image": "illustrations/onigiri-plastic-wrap/3.webp?v=44a93107e2",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri-plastic-wrap.jpg?v=e77d761bde",
-   "slug": "onigiri-plastic-wrap",
-   "title": "Онигири через пищевую плёнку",
-   "total": "~1¼ ч",
-   "yields": "3 онигири"
-  },
-  {
-   "added": "2026-10-07 17:48",
-   "blurb_html": "Рис с соевым соусом и кунжутным маслом, плотные треугольники, обжаренные до хрустящей коричневой корочки и залакированные соевой глазурью — плюс варианты с мисо и маслом.",
-   "chips": [
-    {
-     "html": "<span>9 яки-онигири</span>",
-     "kind": "",
-     "text": "9 яки-онигири"
-    },
-    {
-     "html": "~30 мин при готовом рисе",
-     "kind": "time",
-     "text": "~30 мин при готовом рисе"
-    }
-   ],
-   "description": "Рис с соевым соусом и кунжутным маслом, плотные треугольники, обжаренные до хрустящей коричневой корочки и залакированные соевой глазурью — плюс варианты с мисо и маслом.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)",
-    "image": "illustrations/yaki-onigiri/hero.webp?v=d711692932",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/yaki-onigiri.jpg?v=d6b156db1e",
-   "slug": "yaki-onigiri",
-   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)",
-   "total": "~30 мин при готовом рисе",
-   "yields": "9 яки-онигири"
-  },
-  {
-   "added": "2026-10-07 17:49",
-   "blurb_html": "Рисовые бочонки в тонкой свиной грудинке, обжаренные до хруста и обвалянные в липкой чесночно-соевой глазури — снаружи сочно, внутри мягкий рис.",
-   "chips": [
-    {
-     "html": "<span>6 рисовых шариков</span>",
-     "kind": "",
-     "text": "6 рисовых шариков"
-    },
-    {
-     "html": "~25 мин (при готовом рисе)",
-     "kind": "time",
-     "text": "~25 мин (при готовом рисе)"
-    }
-   ],
-   "description": "Рисовые бочонки в тонкой свиной грудинке, обжаренные до хруста и обвалянные в липкой чесночно-соевой глазури — снаружи сочно, внутри мягкий рис.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Никумаки-онигири (рисовые шарики в свинине)",
-    "image": "illustrations/nikumaki-onigiri/hero.webp?v=4c2969cf7a",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/nikumaki-onigiri.jpg?v=6cb2ce9c9c",
-   "slug": "nikumaki-onigiri",
-   "title": "Никумаки-онигири (рисовые шарики в свинине)",
-   "total": "~25 мин (при готовом рисе)",
-   "yields": "6 рисовых шариков"
-  },
-  {
-   "added": "2026-10-07 19:00",
-   "blurb_html": "Свёрнутая креветка в неровной корочке караагэ, спрятанная в маленький рисовый треугольник с острым майонезом — хруст, сочность, без хвоста снаружи.",
-   "chips": [
-    {
-     "html": "<span>12 онигири</span>",
-     "kind": "",
-     "text": "12 онигири"
-    },
-    {
-     "html": "~1 ч",
-     "kind": "time",
-     "text": "~1 ч"
-    }
-   ],
-   "description": "Свёрнутая креветка в неровной корочке караагэ, спрятанная в маленький рисовый треугольник с острым майонезом — хруст, сочность, без хвоста снаружи.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с креветкой караагэ и острым майонезом",
-    "image": "illustrations/shrimp-karaage-onigiri/hero.webp?v=7c1dcf00ba",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/shrimp-karaage-onigiri.jpg?v=c8a47258de",
-   "slug": "shrimp-karaage-onigiri",
-   "title": "Онигири с креветкой караагэ и острым майонезом",
-   "total": "~1 ч",
-   "yields": "12 онигири"
-  },
-  {
-   "added": "2026-10-07 17:49",
-   "blurb_html": "Сочный жареный солёный лосось, смешанный с рисом, шисо, сио-комбу и кунжутом, с кармашком холодной икры в центре — розовый рис и красная икра посередине.",
-   "chips": [
-    {
-     "html": "<span>6 онигири</span>",
-     "kind": "",
-     "text": "6 онигири"
-    },
-    {
-     "html": "~1½ ч (в основном рис)",
-     "kind": "time",
-     "text": "~1½ ч (в основном рис)"
-    }
-   ],
-   "description": "Сочный жареный солёный лосось, смешанный с рисом, шисо, сио-комбу и кунжутом, с кармашком холодной икры в центре — розовый рис и красная икра посередине.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Лососевые онигири с икрой",
-    "image": "illustrations/salmon-onigiri/hero.webp?v=cdfcf1557c",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/salmon-onigiri.jpg?v=f5f0fea996",
-   "slug": "salmon-onigiri",
-   "title": "Лососевые онигири с икрой",
-   "total": "~1½ ч (в основном рис)",
-   "yields": "6 онигири"
-  },
-  {
-   "added": "2026-10-07 17:50",
-   "blurb_html": "Рис с осьминогом на даси и имбире, с детёнышем в сладком соевом, смешанным по всему рису, треугольные онигири с полоской нори — весь осьминог внутри, ничего сверху.",
-   "chips": [
-    {
-     "html": "<span>6 онигири</span>",
-     "kind": "",
-     "text": "6 онигири"
-    },
-    {
-     "html": "~1½ ч (из них 45 мин рисоварка)",
-     "kind": "time",
-     "text": "~1½ ч (из них 45 мин рисоварка)"
-    }
-   ],
-   "description": "Рис с осьминогом на даси и имбире, с детёнышем в сладком соевом, смешанным по всему рису, треугольные онигири с полоской нори — весь осьминог внутри, ничего сверху.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)",
-    "image": "illustrations/baby-octopus-onigiri/hero.webp?v=5ab0ffc213",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/baby-octopus-onigiri.jpg?v=8960ee1db9",
-   "slug": "baby-octopus-onigiri",
-   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)",
-   "total": "~1½ ч (из них 45 мин рисоварка)",
-   "yields": "6 онигири"
-  },
-  {
-   "added": "2026-10-10 11:20",
-   "blurb_html": "Желток в соевом соусе на соборе, свинина с кимчи, комбу с сисо, арахисовое мисо и другие — так, как начиняют в Бонго и Ядороку.",
-   "chips": [
-    {
-     "html": "<span>12 онигири из 2–3 начинок (каждой хватает на 4–6)</span>",
-     "kind": "",
-     "text": "12 онигири из 2–3 начинок (каждой хватает на 4–6)"
-    },
-    {
-     "html": "1 день на желтки; остальное по 5–20 мин",
-     "kind": "time",
-     "text": "1 день на желтки; остальное по 5–20 мин"
-    }
-   ],
-   "description": "Желток в соевом соусе на соборе, свинина с кимчи, комбу с сисо, арахисовое мисо и другие — так, как начиняют в Бонго и Ядороку.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигири: начинки из токийских онигири-лавок",
-    "image": "illustrations/onigiri-shop-fillings/hero.webp?v=490e8b40fe",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigiri-shop-fillings.jpg?v=f8c66dd913",
-   "slug": "onigiri-shop-fillings",
-   "title": "Онигири: начинки из токийских онигири-лавок",
-   "total": "1 день на желтки; остальное по 5–20 мин",
-   "yields": "12 онигири из 2–3 начинок (каждой хватает на 4–6)"
-  },
-  {
-   "added": "2026-10-07 17:47",
-   "blurb_html": "Нори, сложенное вокруг двух тонких слоёв риса и густой сочной начинки из свинины с имбирём, салата и Kewpie, затем разрезанное пополам, чтобы показать слои.",
-   "chips": [
-    {
-     "html": "<span>4 онигирадзу (8 половинок)</span>",
-     "kind": "",
-     "text": "4 онигирадзу (8 половинок)"
-    },
-    {
-     "html": "~50 мин (при готовом рисе)",
-     "kind": "time",
-     "text": "~50 мин (при готовом рисе)"
-    }
-   ],
-   "description": "Нори, сложенное вокруг двух тонких слоёв риса и густой сочной начинки из свинины с имбирём, салата и Kewpie, затем разрезанное пополам, чтобы показать слои.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Онигирадзу (рисовый сэндвич со свининой с имбирём)",
-    "image": "illustrations/onigirazu/hero.webp?v=6f10c640d0",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/onigirazu.jpg?v=ee6abf88a6",
-   "slug": "onigirazu",
-   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)",
-   "total": "~50 мин (при готовом рисе)",
-   "yields": "4 онигирадзу (8 половинок)"
-  },
-  {
-   "added": "2026-10-07 17:46",
-   "blurb_html": "Гавайские онигири: ломтик Spam в глазури терияки на прессованном бруске риса с фурикакэ, опоясанный нори — солёно, сладко, сочно и весело лепить формой или самой банкой Spam.",
-   "chips": [
-    {
-     "html": "<span>8 мусуби</span>",
-     "kind": "",
-     "text": "8 мусуби"
-    },
-    {
-     "html": "~25 мин при готовом рисе",
-     "kind": "time",
-     "text": "~25 мин при готовом рисе"
-    }
-   ],
-   "description": "Гавайские онигири: ломтик Spam в глазури терияки на прессованном бруске риса с фурикакэ, опоясанный нори — солёно, сладко, сочно и весело лепить формой или самой банкой Spam.",
-   "group": "Японская кухня",
-   "group_id": "japanese",
-   "hero": {
-    "alt": "Спам-мусуби",
-    "image": "illustrations/spam-musubi/hero.webp?v=0339e570a2",
-    "svg_fallback": null
-   },
-   "kind": "recipe",
-   "share_image": "share/spam-musubi.jpg?v=530a8d8efc",
-   "slug": "spam-musubi",
-   "title": "Спам-мусуби",
-   "total": "~25 мин при готовом рисе",
-   "yields": "8 мусуби"
-  },
-  {
    "added": "2026-10-06 01:52",
    "blurb_html": "Маринованное бедро, корочка из тапиоки с крошкой, сделанной вилкой, двойная обжарка при 180 °C.",
    "chips": [
@@ -1216,6 +712,486 @@
    "title": "Лапша с имбирём и зелёным луком (помягче)",
    "total": "~30 мин",
    "yields": "4 миски (около 1½ стакана соуса)"
+  },
+  {
+   "added": "2026-10-07 14:21",
+   "blurb_html": "Базовый рисовый треугольник, сформованный руками. У каждой начинки и другого способа формовки — своя страница рецепта.",
+   "chips": [
+    {
+     "html": "<span>9 онигири, сформованных руками</span>",
+     "kind": "",
+     "text": "9 онигири, сформованных руками"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Базовый рисовый треугольник, сформованный руками. У каждой начинки и другого способа формовки — своя страница рецепта.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири: формовка руками",
+    "image": "illustrations/onigiri/5.webp?v=0404666ef7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
+   "slug": "onigiri",
+   "title": "Онигири: формовка руками",
+   "total": "~1½ ч",
+   "yields": "9 онигири, сформованных руками"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Начинка из солёного лосося внутри простого риса.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Начинка из солёного лосося внутри простого риса.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с солёным лососем",
+    "image": "illustrations/salted-salmon-onigiri/6.webp?v=337aef7aad",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/salted-salmon-onigiri.jpg?v=6a6d883e9e",
+   "slug": "salted-salmon-onigiri",
+   "title": "Онигири с солёным лососем",
+   "total": "~1½ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Стружка бонито с соевым соусом внутри солёного рисового треугольника.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Стружка бонито с соевым соусом внутри солёного рисового треугольника.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с окака",
+    "image": "illustrations/okaka-onigiri/6.webp?v=d861b4c4f8",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/okaka-onigiri.jpg?v=7c2cc96148",
+   "slug": "okaka-onigiri",
+   "title": "Онигири с окака",
+   "total": "~1½ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Нежная начинка из консервированного тунца и японского майонеза в простом солёном рисе.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Нежная начинка из консервированного тунца и японского майонеза в простом солёном рисе.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с тунцом и майонезом",
+    "image": "illustrations/tuna-mayo-onigiri/6.webp?v=7893f6562b",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/tuna-mayo-onigiri.jpg?v=5f150804ad",
+   "slug": "tuna-mayo-onigiri",
+   "title": "Онигири с тунцом и майонезом",
+   "total": "~1½ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Кислая маринованная слива в центре простого рисового треугольника.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Кислая маринованная слива в центре простого рисового треугольника.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с умэбоси",
+    "image": "illustrations/umeboshi-onigiri/6.webp?v=21045a4b73",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/umeboshi-onigiri.jpg?v=d902bbc5d8",
+   "slug": "umeboshi-onigiri",
+   "title": "Онигири с умэбоси",
+   "total": "~1½ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Тунец с майонезом и каплей шрирачи внутри простого риса.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Тунец с майонезом и каплей шрирачи внутри простого риса.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с острым тунцом и майонезом",
+    "image": "illustrations/spicy-tuna-mayo-onigiri/6.webp?v=416b788c71",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/spicy-tuna-mayo-onigiri.jpg?v=1981f5c025",
+   "slug": "spicy-tuna-mayo-onigiri",
+   "title": "Онигири с острым тунцом и майонезом",
+   "total": "~1½ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Мелко нарезанное кимчи и кубики сыра внутри простого рисового треугольника.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1½ ч",
+     "kind": "time",
+     "text": "~1½ ч"
+    }
+   ],
+   "description": "Мелко нарезанное кимчи и кубики сыра внутри простого рисового треугольника.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с кимчи и сыром",
+    "image": "illustrations/kimchi-cheese-onigiri/6.webp?v=2e6ae21ce3",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/kimchi-cheese-onigiri.jpg?v=a45e078f39",
+   "slug": "kimchi-cheese-onigiri",
+   "title": "Онигири с кимчи и сыром",
+   "total": "~1½ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Наполните, прижмите и вытолкните: отдельный способ формовки в форме.",
+   "chips": [
+    {
+     "html": "<span>около 4 онигири, в зависимости от размера формы</span>",
+     "kind": "",
+     "text": "около 4 онигири, в зависимости от размера формы"
+    },
+    {
+     "html": "~1¼ ч",
+     "kind": "time",
+     "text": "~1¼ ч"
+    }
+   ],
+   "description": "Наполните, прижмите и вытолкните: отдельный способ формовки в форме.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири в форме",
+    "image": "illustrations/onigiri/5.webp?v=0404666ef7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
+   "slug": "onigiri-mold",
+   "title": "Онигири в форме",
+   "total": "~1¼ ч",
+   "yields": "около 4 онигири, в зависимости от размера формы"
+  },
+  {
+   "added": "2026-10-10 16:00",
+   "blurb_html": "Начините и сформуйте рисовый треугольник через плёнку, не касаясь риса руками.",
+   "chips": [
+    {
+     "html": "<span>3 онигири</span>",
+     "kind": "",
+     "text": "3 онигири"
+    },
+    {
+     "html": "~1¼ ч",
+     "kind": "time",
+     "text": "~1¼ ч"
+    }
+   ],
+   "description": "Начините и сформуйте рисовый треугольник через плёнку, не касаясь риса руками.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири через пищевую плёнку",
+    "image": "illustrations/onigiri/5.webp?v=0404666ef7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigiri-mold.jpg?v=1008dce38b",
+   "slug": "onigiri-plastic-wrap",
+   "title": "Онигири через пищевую плёнку",
+   "total": "~1¼ ч",
+   "yields": "3 онигири"
+  },
+  {
+   "added": "2026-10-07 17:48",
+   "blurb_html": "Рис с соевым соусом и кунжутным маслом, плотные треугольники, обжаренные до хрустящей коричневой корочки и залакированные соевой глазурью — плюс варианты с мисо и маслом.",
+   "chips": [
+    {
+     "html": "<span>9 яки-онигири</span>",
+     "kind": "",
+     "text": "9 яки-онигири"
+    },
+    {
+     "html": "~30 мин при готовом рисе",
+     "kind": "time",
+     "text": "~30 мин при готовом рисе"
+    }
+   ],
+   "description": "Рис с соевым соусом и кунжутным маслом, плотные треугольники, обжаренные до хрустящей коричневой корочки и залакированные соевой глазурью — плюс варианты с мисо и маслом.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)",
+    "image": "illustrations/yaki-onigiri/hero.webp?v=d711692932",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/yaki-onigiri.jpg?v=d6b156db1e",
+   "slug": "yaki-onigiri",
+   "title": "Яки-онигири (обжаренные рисовые шарики с соевой глазурью)",
+   "total": "~30 мин при готовом рисе",
+   "yields": "9 яки-онигири"
+  },
+  {
+   "added": "2026-10-07 17:49",
+   "blurb_html": "Рисовые бочонки в тонкой свиной грудинке, обжаренные до хруста и обвалянные в липкой чесночно-соевой глазури — снаружи сочно, внутри мягкий рис.",
+   "chips": [
+    {
+     "html": "<span>6 рисовых шариков</span>",
+     "kind": "",
+     "text": "6 рисовых шариков"
+    },
+    {
+     "html": "~25 мин (при готовом рисе)",
+     "kind": "time",
+     "text": "~25 мин (при готовом рисе)"
+    }
+   ],
+   "description": "Рисовые бочонки в тонкой свиной грудинке, обжаренные до хруста и обвалянные в липкой чесночно-соевой глазури — снаружи сочно, внутри мягкий рис.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Никумаки-онигири (рисовые шарики в свинине)",
+    "image": "illustrations/nikumaki-onigiri/hero.webp?v=4c2969cf7a",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/nikumaki-onigiri.jpg?v=6cb2ce9c9c",
+   "slug": "nikumaki-onigiri",
+   "title": "Никумаки-онигири (рисовые шарики в свинине)",
+   "total": "~25 мин (при готовом рисе)",
+   "yields": "6 рисовых шариков"
+  },
+  {
+   "added": "2026-10-07 19:00",
+   "blurb_html": "Свёрнутая креветка в неровной корочке караагэ, спрятанная в маленький рисовый треугольник с острым майонезом — хруст, сочность, без хвоста снаружи.",
+   "chips": [
+    {
+     "html": "<span>12 онигири</span>",
+     "kind": "",
+     "text": "12 онигири"
+    },
+    {
+     "html": "~1 ч",
+     "kind": "time",
+     "text": "~1 ч"
+    }
+   ],
+   "description": "Свёрнутая креветка в неровной корочке караагэ, спрятанная в маленький рисовый треугольник с острым майонезом — хруст, сочность, без хвоста снаружи.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с креветкой караагэ и острым майонезом",
+    "image": "illustrations/shrimp-karaage-onigiri/hero.webp?v=7c1dcf00ba",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/shrimp-karaage-onigiri.jpg?v=c8a47258de",
+   "slug": "shrimp-karaage-onigiri",
+   "title": "Онигири с креветкой караагэ и острым майонезом",
+   "total": "~1 ч",
+   "yields": "12 онигири"
+  },
+  {
+   "added": "2026-10-07 17:49",
+   "blurb_html": "Сочный жареный солёный лосось, смешанный с рисом, шисо, сио-комбу и кунжутом, с кармашком холодной икры в центре — розовый рис и красная икра посередине.",
+   "chips": [
+    {
+     "html": "<span>6 онигири</span>",
+     "kind": "",
+     "text": "6 онигири"
+    },
+    {
+     "html": "~1½ ч (в основном рис)",
+     "kind": "time",
+     "text": "~1½ ч (в основном рис)"
+    }
+   ],
+   "description": "Сочный жареный солёный лосось, смешанный с рисом, шисо, сио-комбу и кунжутом, с кармашком холодной икры в центре — розовый рис и красная икра посередине.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Лососевые онигири с икрой",
+    "image": "illustrations/salmon-onigiri/hero.webp?v=cdfcf1557c",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/salmon-onigiri.jpg?v=f5f0fea996",
+   "slug": "salmon-onigiri",
+   "title": "Лососевые онигири с икрой",
+   "total": "~1½ ч (в основном рис)",
+   "yields": "6 онигири"
+  },
+  {
+   "added": "2026-10-07 17:50",
+   "blurb_html": "Рис с осьминогом на даси и имбире, с детёнышем в сладком соевом, смешанным по всему рису, треугольные онигири с полоской нори — весь осьминог внутри, ничего сверху.",
+   "chips": [
+    {
+     "html": "<span>6 онигири</span>",
+     "kind": "",
+     "text": "6 онигири"
+    },
+    {
+     "html": "~1½ ч (из них 45 мин рисоварка)",
+     "kind": "time",
+     "text": "~1½ ч (из них 45 мин рисоварка)"
+    }
+   ],
+   "description": "Рис с осьминогом на даси и имбире, с детёнышем в сладком соевом, смешанным по всему рису, треугольные онигири с полоской нори — весь осьминог внутри, ничего сверху.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)",
+    "image": "illustrations/baby-octopus-onigiri/hero.webp?v=5ab0ffc213",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/baby-octopus-onigiri.jpg?v=8960ee1db9",
+   "slug": "baby-octopus-onigiri",
+   "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)",
+   "total": "~1½ ч (из них 45 мин рисоварка)",
+   "yields": "6 онигири"
+  },
+  {
+   "added": "2026-10-07 17:47",
+   "blurb_html": "Нори, сложенное вокруг двух тонких слоёв риса и густой сочной начинки из свинины с имбирём, салата и Kewpie, затем разрезанное пополам, чтобы показать слои.",
+   "chips": [
+    {
+     "html": "<span>4 онигирадзу (8 половинок)</span>",
+     "kind": "",
+     "text": "4 онигирадзу (8 половинок)"
+    },
+    {
+     "html": "~50 мин (при готовом рисе)",
+     "kind": "time",
+     "text": "~50 мин (при готовом рисе)"
+    }
+   ],
+   "description": "Нори, сложенное вокруг двух тонких слоёв риса и густой сочной начинки из свинины с имбирём, салата и Kewpie, затем разрезанное пополам, чтобы показать слои.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Онигирадзу (рисовый сэндвич со свининой с имбирём)",
+    "image": "illustrations/onigirazu/hero.webp?v=6f10c640d0",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/onigirazu.jpg?v=ee6abf88a6",
+   "slug": "onigirazu",
+   "title": "Онигирадзу (рисовый сэндвич со свининой с имбирём)",
+   "total": "~50 мин (при готовом рисе)",
+   "yields": "4 онигирадзу (8 половинок)"
+  },
+  {
+   "added": "2026-10-07 17:46",
+   "blurb_html": "Гавайские онигири: ломтик Spam в глазури терияки на прессованном бруске риса с фурикакэ, опоясанный нори — солёно, сладко, сочно и весело лепить формой или самой банкой Spam.",
+   "chips": [
+    {
+     "html": "<span>8 мусуби</span>",
+     "kind": "",
+     "text": "8 мусуби"
+    },
+    {
+     "html": "~25 мин при готовом рисе",
+     "kind": "time",
+     "text": "~25 мин при готовом рисе"
+    }
+   ],
+   "description": "Гавайские онигири: ломтик Spam в глазури терияки на прессованном бруске риса с фурикакэ, опоясанный нори — солёно, сладко, сочно и весело лепить формой или самой банкой Spam.",
+   "group": "Онигири",
+   "group_id": "onigiri",
+   "hero": {
+    "alt": "Спам-мусуби",
+    "image": "illustrations/spam-musubi/hero.webp?v=0339e570a2",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/spam-musubi.jpg?v=530a8d8efc",
+   "slug": "spam-musubi",
+   "title": "Спам-мусуби",
+   "total": "~25 мин при готовом рисе",
+   "yields": "8 мусуби"
   },
   {
    "added": "2026-10-07 14:00",

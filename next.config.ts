@@ -7,6 +7,9 @@ const legacy = [
   { source: "/food/index.html", destination: "/food" },
   { source: "/travel/index.html", destination: "/travel" },
   { source: "/travel/istanbul/index.html", destination: "/travel/istanbul" },
+  { source: "/food/onigiri-shop-fillings", destination: "/food/onigiri" },
+  { source: "/ru/food/onigiri-shop-fillings", destination: "/ru/food/onigiri" },
+  { source: "/ru/food/onigiri-shop-fillings.html", destination: "/ru/food/onigiri" },
   { source: "/food/:slug([a-z0-9-]+)\\.html", destination: "/food/:slug" },
   // Pictures and the PDF moved from /food/<dir> to /media/<dir>; old link previews point at /food/share/*.jpg.
   { source: "/food/:dir(illustrations|share|assets|photos)/:path*", destination: "/media/:dir/:path*" },
