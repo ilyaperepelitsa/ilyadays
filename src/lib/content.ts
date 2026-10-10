@@ -150,6 +150,7 @@ export type SousVide = {
     title: string;
     cols: { label_html: string; numeric: boolean }[];
     rows: string[][];
+    states?: ("chilled" | "frozen" | "both")[];
     after_html: string[];
     /** Generated picture of the table's food, finished (imagegen/recipes/sous_vide.py). */
     image?: string | null;

@@ -1,0 +1,314 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Толстый фри в стиле ChefSteps: рассол, су-вид, обсушка, первая жарка, заморозка и горячая финальная жарка для хрустящей корочки и пушистой середины.",
+ "chips": [
+  {
+   "html": "<span>2 щедрые порции</span>",
+   "kind": "",
+   "text": "2 щедрые порции"
+  },
+  {
+   "html": "~1½ ч подготовки, плюс заморозка",
+   "kind": "time",
+   "text": "~1½ ч подготовки, плюс заморозка"
+  }
+ ],
+ "description": "Толстый фри в стиле ChefSteps: рассол, су-вид, обсушка, первая жарка, заморозка и горячая финальная жарка для хрустящей корочки и пушистой середины.",
+ "equipment_html": [
+  "Погружной термостат и водяная баня",
+  "Пакеты для су-вида, рассчитанные на <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"90\" data-s=\"0\">90 °C</span>",
+  "Весы с точностью до <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"0.1\" data-s=\"0\">0,1 г</span>",
+  "Глубокая кастрюля с толстым дном",
+  "Термометр для масла",
+  "Решётка и противень",
+  "Шумовка"
+ ],
+ "group": {
+  "id": "sous-vide",
+  "name": "Су-вид"
+ },
+ "hero": {
+  "alt": "Картофель фри су-вид в рассоле",
+  "image": "illustrations/sous-vide-fries/5.webp?v=b5059f7347",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
+     "name_html": "Очищенный рассыпчатый картофель (Russet или похожий)"
+    }
+   ],
+   "name": "Картофель"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
+     "name_html": "Вода (для рассола)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"7.5\">7,5 г</span>",
+     "name_html": "Соль (для рассола)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span> (или <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1.25\">1,25 г</span> сахара)",
+     "name_html": "Глюкозный сироп DE 42"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1.25\">1,25 г</span>",
+     "name_html": "Пищевая сода"
+    }
+   ],
+   "name": "Рассол"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "для слоя глубиной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-b=\"7\" data-s=\"0\">5–7 см</span>",
+     "name_html": "Нейтральное масло для жарки"
+    },
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Мелкая соль для подачи"
+    }
+   ],
+   "name": "Жарка"
+  }
+ ],
+ "intro_html": "Домашняя адаптация толстого фри ChefSteps: брусочки <b>по <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"18\" data-s=\"0\">18 мм</span></b>. Замораживайте <b>после первой жарки</b>. Заготовьте заранее, а перед подачей жарьте прямо из морозилки.",
+ "mise": [],
+ "more_label": "Ещё — Су-вид:",
+ "next": {
+  "slug": "shiitake-kombu-dashi",
+  "title": "Даси из шиитаке и комбу"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Соль приправляет картофель, глюкоза помогает подрумяниванию, а сода делает поверхность более рыхлой.</li><li>Взвешивайте соду точно: избыток может разрушить картофель или дать щелочной вкус.</li></ul>",
+   "title_html": "Зачем нужен рассол"
+  },
+  {
+   "html": "<ul class=\"do\"><li>На эту порцию возьмите <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-s=\"0\">5 г</span> глюкозного сиропа или <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1.25\" data-s=\"0\">1,25 г</span> сахара</b>, не оба сразу.</li><li>Соотношение замены взято у ChefSteps.</li></ul>",
+   "title_html": "Сахар заменяет сироп не один к одному"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Варка 25 минут и первая жарка — ориентиры для этих толстых брусочков.</li><li>Перед сливом рассола проверьте мягкость.</li><li>Тонкому фри нужен другой режим; не готовьте его по этому без изменений.</li></ul>",
+   "title_html": "Другой картофель или толщина?"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "sous-vide-salmon",
+  "title": "Лосось су-вид"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/sous-vide-fries.jpg?v=7a6322a3e9",
+ "siblings": [
+  {
+   "slug": "sous-vide-beets",
+   "title": "Свёкла су-вид"
+  },
+  {
+   "slug": "sous-vide-salmon",
+   "title": "Лосось су-вид"
+  }
+ ],
+ "slug": "sous-vide-fries",
+ "sources": [
+  {
+   "label": "ChefSteps — толстый картофель фри",
+   "url": "https://www.chefsteps.com/recipes/thick-cut-french-fries"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Нарежьте картофель брусочками <b>сечением <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"18\" data-b=\"18\" data-x=\"1\" data-s=\"0\">18 × 18 мм</span></b>. Растворите все ингредиенты рассола.</li><li>Уложите <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> картофеля и <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\" data-s=\"0\">500 г</span> готового рассола</b> в пакет одним слоем; немного рассола останется. Запаяйте, не сминая картофель, или закрепите открытый край пакета выше воды.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Нарежьте и упакуйте с рассолом",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-fries/1.webp?v=4233bad23e",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~15 мин",
+   "time_html": "<span>~15 мин</span>",
+   "title": "Нарежьте и упакуйте с рассолом",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
+     "name_html": "Очищенный рассыпчатый картофель (Russet или похожий)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"500\">500 г</span>",
+     "name_html": "Вода (для рассола)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"7.5\">7,5 г</span>",
+     "name_html": "Соль (для рассола)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Глюкозный сироп DE 42"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1.25\">1,25 г</span>",
+     "name_html": "Пищевая сода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Нагрейте воду до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"90\" data-s=\"0\">90 °C</span></b>. Погрузите картофель и готовьте около <b>25 минут</b> после восстановления температуры.</li><li>Брусочек должен стать очень мягким внутри, но сохранять форму при поднятии.</li></ul>",
+   "heat": {
+    "label": "вода 90 °C",
+    "label_html": "<span>вода <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"90\" data-s=\"0\">90 °C</span></span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Сварите картофель",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-fries/2.webp?v=2c9ac8ae09",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~25 мин",
+   "time_html": "<span>~25 мин</span>",
+   "title": "Сварите картофель",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Аккуратно слейте рассол и разложите на решётке. Остудите и обсушите до исчезновения воды на поверхности.</li><li>Нагрейте масло до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"130\" data-s=\"0\">130 °C</span></b>. Жарьте малыми партиями около <b>8 минут</b>, пока поверхность не уплотнится, оставаясь бледной. Переложите на решётку. Кастрюля должна быть заполнена не более чем наполовину.</li></ul>",
+   "heat": {
+    "label": "масло 130 °C",
+    "label_html": "<span>масло <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"130\" data-s=\"0\">130 °C</span></span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Обсушите и обжарьте первый раз",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-fries/3.webp?v=e32383edd9",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~30–45 мин",
+   "time_html": "<span>~30–45 мин</span>",
+   "title": "Обсушите и обжарьте первый раз",
+   "uses_rows": [
+    {
+     "amount_html": "для слоя глубиной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-b=\"7\" data-s=\"0\">5–7 см</span>",
+     "name_html": "Нейтральное масло для жарки"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Остудите обжаренный картофель.</li><li>Заморозьте на решётке, не давая брусочкам соприкасаться, примерно <b>4 часа</b> до полного затвердевания; затем переложите в герметичный пакет для морозилки.</li></ul>",
+   "heat": {
+    "label": "огонь выключен",
+    "label_html": "огонь выключен",
+    "off": true
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Заморозьте после первой жарки",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-fries/4.webp?v=aa2bcfa7ef",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "4 ч или ночь",
+   "time_html": "<span>4 ч или ночь</span>",
+   "title": "Заморозьте после первой жарки",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Нагрейте масло до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"190\" data-s=\"0\">190 °C</span></b>.</li><li>Стряхните свободный лёд и жарьте замороженные брусочки малыми партиями около <b>3 минут</b>, до золотистой хрустящей корочки.</li><li>Дайте стечь маслу, посолите и сразу подавайте.</li></ul>",
+   "heat": {
+    "label": "масло 190 °C",
+    "label_html": "<span>масло <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"190\" data-s=\"0\">190 °C</span></span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Финальная жарка из замороженного",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-fries/5.webp?v=b5059f7347",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин на партию",
+   "time_html": "<span>~3 мин на партию</span>",
+   "title": "Финальная жарка из замороженного",
+   "uses_rows": [
+    {
+     "amount_html": "по вкусу",
+     "name_html": "Мелкая соль для подачи"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Картофель фри су-вид в рассоле",
+ "total": "~1½ ч подготовки, плюс заморозка",
+ "vinegar_options": null,
+ "yields": "2 щедрые порции"
+}

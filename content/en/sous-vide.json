@@ -9,14 +9,14 @@
   "image": "illustrations/sous-vide/hero.webp?v=1cdcfb39df",
   "svg_fallback": null
  },
- "intro_html": "Timer starts after the bath reaches set temperature. Times are practical cook windows. For poultry, prefer adding time over raising temperature.",
+ "intro_html": "Choose chilled/thawed or frozen explicitly. Start timing after the bag is submerged and the preheated bath has recovered. Measure the thickest part and keep portions in one layer. The calculator distinguishes meat heating, soft-salmon recipe times and lean-fish pasteurization.",
  "pdf": {
   "download": "Download",
   "fallback": "Your browser can’t show the PDF inline — use the button above.",
   "open": "Open the PDF",
-  "src": "assets/sous_vide_quick_tables_v4.pdf?v=bef94740a9",
-  "subtitle": "— v4, generated 2026-03-01",
-  "title": "Original PDF"
+  "src": "assets/sous_vide_quick_tables_v5.pdf?v=ba98f1d9d1",
+  "subtitle": "— v5, updated 2026-10-11",
+  "title": "Printable tables"
  },
  "share_image": "share/sous-vide.jpg?v=b717becc83",
  "slug": "sous-vide",
@@ -61,14 +61,14 @@
     ],
     [
      "Asparagus (~1 cm spears)",
-     "Thawed",
+     "Chilled / thawed",
      "85°C",
      "8–12 min",
      "Mostly heat-through + slight tenderizing. Single layer cooks best."
     ],
     [
      "Cauliflower (florets, ~5 cm)",
-     "Thawed",
+     "Chilled / thawed",
      "85°C",
      "30–45 min",
      "Bag with butter + curry powder. Single layer; weigh down if needed."
@@ -81,12 +81,19 @@
      "Add ~15 min for frozen. Same bag additions."
     ]
    ],
+   "states": [
+    "frozen",
+    "chilled",
+    "chilled",
+    "frozen"
+   ],
    "title": "Vegetables"
   },
   {
    "after_html": [
     "<b>Finish:</b> pat dry, then hard sear 30–60 sec/side for color.",
-    "Sliced into <a href=\"oyakodon.html\">oyakodon</a>: see the sous vide shortcut there."
+    "Sliced into <a href=\"oyakodon.html\">oyakodon</a>: see the sous vide shortcut there.",
+    "Poultry needs a temperature-and-thickness-specific pasteurization schedule. Do not substitute the generic meat heating calculator for these chicken presets."
    ],
    "cols": [
     {
@@ -120,7 +127,7 @@
     [
      "Breast",
      "~2 cm",
-     "Thawed",
+     "Chilled / thawed",
      "63°C",
      "60–75 min",
      "Juicy + tender (default)."
@@ -136,7 +143,7 @@
     [
      "Breast",
      "~2 cm",
-     "Thawed",
+     "Chilled / thawed",
      "65°C",
      "45–60 min",
      "Firmer, more 'classic' bite."
@@ -147,15 +154,15 @@
      "Frozen",
      "65°C",
      "75–90 min",
-     "Firmer + safer buffer."
+     "Firmer texture; extra time for frozen heating."
     ],
     [
      "Breast",
      "~4 cm",
-     "Thawed",
+     "Chilled / thawed",
      "63°C",
      "2.5 h",
-     "2 h is often short; 2.5 h is safer."
+     "Thick breast: allow the full listed time."
     ],
     [
      "Breast",
@@ -168,7 +175,7 @@
     [
      "Breast",
      "~4 cm",
-     "Thawed",
+     "Chilled / thawed",
      "65°C",
      "2 h",
      "Closest 'set-and-forget 2 hours' plan."
@@ -181,6 +188,16 @@
      "2.5 h",
      "Add buffer if not fully thawed."
     ]
+   ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
    ],
    "title": "Poultry: Chicken Breast"
   },
@@ -215,7 +232,7 @@
    "rows": [
     [
      "Tender / pulls off bone",
-     "Defrosted",
+     "Chilled / thawed",
      "74°C",
      "3–5 h",
      "Good all-round; avoids near-bone pinkness."
@@ -229,7 +246,7 @@
     ],
     [
      "Fall-off-the-bone",
-     "Defrosted",
+     "Chilled / thawed",
      "78°C",
      "3 h",
      "Best match for 'fall off bone'."
@@ -242,11 +259,18 @@
      "Add ~1 h if very thick or tightly packed."
     ]
    ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
+   ],
    "title": "Poultry: Chicken Drumsticks (bone-in)"
   },
   {
    "after_html": [
-    "<b>Sear:</b> optional cool-in-bag 5–10 min, pat very dry, then 30–60 sec/side in screaming-hot pan + neutral oil. Add butter only at the end (15–30 sec baste)."
+    "<b>Sear:</b> optional cool-in-bag 5–10 min, pat very dry, then 30–60 sec/side in screaming-hot pan + neutral oil. Add butter only at the end (15–30 sec baste).",
+    "These steak windows are practical texture guides, not pasteurization schedules. For other thicknesses, use the meat heat-through calculator above."
    ],
    "cols": [
     {
@@ -284,6 +308,15 @@
     [
      "Ribeye",
      "~2.5 cm",
+     "Chilled / thawed",
+     "Medium",
+     "57°C",
+     "1½ h",
+     "Best 1.5–3 h; OK up to ~4 h (softer past that)."
+    ],
+    [
+     "Ribeye",
+     "~2.5 cm",
      "Frozen",
      "Medium",
      "57°C",
@@ -291,15 +324,24 @@
      "Best 1.5–3 h; OK up to ~4 h (softer past that)."
     ]
    ],
+   "states": [
+    "chilled",
+    "frozen"
+   ],
    "title": "Beef"
   },
   {
    "after_html": [
-    "<b>Finish:</b> dry well, brush thin sauce, then broil 4–8 min total (flip once). If sauce is sweet, apply late and watch constantly."
+    "<b>Finish:</b> dry well, brush thin sauce, then broil 4–8 min total (flip once). If sauce is sweet, apply late and watch constantly.",
+    "For these long texture cooks, use the same broad window from chilled or frozen. Frozen pieces must be individually separated; a solid frozen bundle or unusually large cut needs a separate schedule."
    ],
    "cols": [
     {
      "label_html": "Texture target",
+     "numeric": false
+    },
+    {
+     "label_html": "State",
      "numeric": false
     },
     {
@@ -320,27 +362,61 @@
    "rows": [
     [
      "BBQ tender (sliceable)",
+     "Chilled / thawed",
+     "74°C",
+     "18–24 h",
+     "Default long-cook ribs."
+    ],
+    [
+     "BBQ tender (sliceable)",
+     "Frozen",
      "74°C",
      "18–24 h",
      "Default long-cook ribs."
     ],
     [
      "Fall-off-the-bone",
+     "Chilled / thawed",
+     "78°C",
+     "12–18 h",
+     "Softer, more shreddy."
+    ],
+    [
+     "Fall-off-the-bone",
+     "Frozen",
      "78°C",
      "12–18 h",
      "Softer, more shreddy."
     ],
     [
      "Steakier chew",
+     "Chilled / thawed",
+     "68°C",
+     "24–36 h",
+     "Tender but more bite."
+    ],
+    [
+     "Steakier chew",
+     "Frozen",
      "68°C",
      "24–36 h",
      "Tender but more bite."
     ]
    ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
+   ],
    "title": "Pork Ribs"
   },
   {
-   "after_html": [],
+   "after_html": [
+    "For these long texture cooks, use the same broad window from chilled or frozen. Frozen pieces must be individually separated; a solid frozen bundle or unusually large cut needs a separate schedule."
+   ],
    "cols": [
     {
      "label_html": "Cut",
@@ -348,6 +424,10 @@
     },
     {
      "label_html": "Goal",
+     "numeric": false
+    },
+    {
+     "label_html": "State",
      "numeric": false
     },
     {
@@ -369,6 +449,15 @@
     [
      "Lamb shank (whole)",
      "Braised tender (sliceable)",
+     "Chilled / thawed",
+     "68°C",
+     "24–36 h",
+     "Frozen vs thawed negligible at this scale."
+    ],
+    [
+     "Lamb shank (whole)",
+     "Braised tender (sliceable)",
+     "Frozen",
      "68°C",
      "24–36 h",
      "Frozen vs thawed negligible at this scale."
@@ -376,10 +465,25 @@
     [
      "Lamb shank (whole)",
      "Fall-apart",
+     "Chilled / thawed",
+     "74°C",
+     "18–24 h",
+     "More 'braise' texture."
+    ],
+    [
+     "Lamb shank (whole)",
+     "Fall-apart",
+     "Frozen",
      "74°C",
      "18–24 h",
      "More 'braise' texture."
     ]
+   ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
    ],
    "title": "Lamb — collagen-heavy cuts"
   },
@@ -419,10 +523,26 @@
     [
      "Shank steaks (cross-cut)",
      "2–2.5 cm",
+     "Chilled / thawed",
+     "60°C",
+     "8–12 h",
+     "Collagen needs time. Add ~1 h buffer for frozen."
+    ],
+    [
+     "Shank steaks (cross-cut)",
+     "2–2.5 cm",
      "Frozen",
      "60°C",
      "9–13 h",
      "Collagen needs time. Add ~1 h buffer for frozen."
+    ],
+    [
+     "Boneless lamb slices w/ fat + some skin",
+     "2–2.5 cm",
+     "Chilled / thawed",
+     "56–57°C",
+     "1½–2 h",
+     "Dry thoroughly. Crisp skin in pan skin-side down 2–5 min (press for contact)."
     ],
     [
      "Boneless lamb slices w/ fat + some skin",
@@ -433,7 +553,475 @@
      "Dry thoroughly. Crisp skin in pan skin-side down 2–5 min (press for contact)."
     ]
    ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
+   ],
    "title": "Lamb — steak-like slices"
+  },
+  {
+   "after_html": [
+    "Use salmon suitable for undercooked service with supplier-confirmed parasite controls. Ordinary freezer storage does not establish parasite destruction. Unpasteurized fish is unsuitable for pregnant or immunocompromised people.",
+    "<a href=\"sous-vide-salmon.html\">Full salmon recipe: bagging, cooking and crisp-skin finish →</a>",
+    "Sources: <a href=\"https://www.chefsteps.com/recipes/sous-vide-salmon\">ChefSteps salmon recipe</a>; <a href=\"https://www.chefsteps.com/guides-tools/you-can-cook-frozen-food-sous-vide-without-defrosting-here-s-how\">ChefSteps frozen-food guidance</a>."
+   ],
+   "cols": [
+    {
+     "label_html": "Food",
+     "numeric": false
+    },
+    {
+     "label_html": "Thickness",
+     "numeric": false
+    },
+    {
+     "label_html": "State",
+     "numeric": false
+    },
+    {
+     "label_html": "Temp",
+     "numeric": true
+    },
+    {
+     "label_html": "Time",
+     "numeric": true
+    },
+    {
+     "label_html": "Notes",
+     "numeric": false
+    }
+   ],
+   "id": "salmon",
+   "image": "illustrations/sous-vide/salmon.webp?v=bc6205fa6a",
+   "rows": [
+    [
+     "Salmon, soft",
+     "up to 13 mm",
+     "Chilled / thawed",
+     "50°C",
+     "30 min",
+     "ChefSteps recipe timing; serve immediately. Not pasteurized."
+    ],
+    [
+     "Salmon, soft",
+     "up to 13 mm",
+     "Frozen",
+     "50°C",
+     "45 min",
+     "Estimate: recipe time × 1.5. Not a validated pasteurization schedule."
+    ],
+    [
+     "Salmon, soft",
+     "14–25 mm",
+     "Chilled / thawed",
+     "50°C",
+     "40 min",
+     "ChefSteps recipe timing; serve immediately. Not pasteurized."
+    ],
+    [
+     "Salmon, soft",
+     "14–25 mm",
+     "Frozen",
+     "50°C",
+     "60 min",
+     "Estimate: recipe time × 1.5. Not a validated pasteurization schedule."
+    ],
+    [
+     "Salmon, soft",
+     "26–38 mm",
+     "Chilled / thawed",
+     "50°C",
+     "60 min",
+     "ChefSteps recipe timing; serve immediately. Not pasteurized."
+    ],
+    [
+     "Salmon, soft",
+     "26–38 mm",
+     "Frozen",
+     "50°C",
+     "90 min",
+     "Estimate: recipe time × 1.5. Not a validated pasteurization schedule."
+    ]
+   ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
+   ],
+   "title": "Salmon — soft at 50 °C"
+  },
+  {
+   "after_html": [
+    "Measure the thickest part; round up to the next 5 mm row. These are Baldwin’s separate fatty- and lean-fish schedules. They are not interchangeable.",
+    "Remove reduced-oxygen retail packaging before fridge thawing. These schedules start with fully thawed fish, not a frozen centre.",
+    "Source: <a href=\"https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish\">Baldwin, Table 3.1 — fish pasteurization</a>."
+   ],
+   "cols": [
+    {
+     "label_html": "Food",
+     "numeric": false
+    },
+    {
+     "label_html": "Thickness",
+     "numeric": false
+    },
+    {
+     "label_html": "State",
+     "numeric": false
+    },
+    {
+     "label_html": "Temp",
+     "numeric": true
+    },
+    {
+     "label_html": "Time",
+     "numeric": true
+    },
+    {
+     "label_html": "Notes",
+     "numeric": false
+    }
+   ],
+   "id": "salmon-pasteurized",
+   "image": null,
+   "rows": [
+    [
+     "Salmon, fatty fish",
+     "5 mm",
+     "Chilled / thawed",
+     "60°C",
+     "40 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "5 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 40 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "10 mm",
+     "Chilled / thawed",
+     "60°C",
+     "50 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "10 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 50 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "15 mm",
+     "Chilled / thawed",
+     "60°C",
+     "60 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "15 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 60 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "20 mm",
+     "Chilled / thawed",
+     "60°C",
+     "75 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "20 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 75 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "25 mm",
+     "Chilled / thawed",
+     "60°C",
+     "90 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "25 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 90 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "30 mm",
+     "Chilled / thawed",
+     "60°C",
+     "120 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "30 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 120 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "35 mm",
+     "Chilled / thawed",
+     "60°C",
+     "135 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "35 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 135 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Salmon, fatty fish",
+     "40 mm",
+     "Chilled / thawed",
+     "60°C",
+     "150 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Salmon, fatty fish",
+     "40 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 150 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ]
+   ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
+   ],
+   "title": "Salmon — pasteurized at 60 °C"
+  },
+  {
+   "after_html": [
+    "Measure the thickest part; round up to the next 5 mm row. These are Baldwin’s separate fatty- and lean-fish schedules. They are not interchangeable.",
+    "Remove reduced-oxygen retail packaging before fridge thawing. These schedules start with fully thawed fish, not a frozen centre.",
+    "Source: <a href=\"https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish\">Baldwin, Table 3.1 — fish pasteurization</a>."
+   ],
+   "cols": [
+    {
+     "label_html": "Food",
+     "numeric": false
+    },
+    {
+     "label_html": "Thickness",
+     "numeric": false
+    },
+    {
+     "label_html": "State",
+     "numeric": false
+    },
+    {
+     "label_html": "Temp",
+     "numeric": true
+    },
+    {
+     "label_html": "Time",
+     "numeric": true
+    },
+    {
+     "label_html": "Notes",
+     "numeric": false
+    }
+   ],
+   "id": "lean-fish",
+   "image": null,
+   "rows": [
+    [
+     "Cod or similar lean fish",
+     "5 mm",
+     "Chilled / thawed",
+     "60°C",
+     "30 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "5 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 30 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "10 mm",
+     "Chilled / thawed",
+     "60°C",
+     "35 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "10 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 35 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "15 mm",
+     "Chilled / thawed",
+     "60°C",
+     "50 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "15 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 50 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "20 mm",
+     "Chilled / thawed",
+     "60°C",
+     "60 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "20 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 60 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "25 mm",
+     "Chilled / thawed",
+     "60°C",
+     "75 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "25 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 75 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "30 mm",
+     "Chilled / thawed",
+     "60°C",
+     "105 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "30 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 105 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "35 mm",
+     "Chilled / thawed",
+     "60°C",
+     "120 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "35 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 120 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ],
+    [
+     "Cod or similar lean fish",
+     "40 mm",
+     "Chilled / thawed",
+     "60°C",
+     "135 min",
+     "Starts at 5°C; includes heating and pasteurization."
+    ],
+    [
+     "Cod or similar lean fish",
+     "40 mm",
+     "Frozen → thaw first",
+     "60°C",
+     "Thaw, then 135 min",
+     "Thaw in the fridge to 5°C first. Thawing time is additional."
+    ]
+   ],
+   "states": [
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen",
+    "chilled",
+    "frozen"
+   ],
+   "title": "Lean fish — pasteurized at 60 °C"
   }
  ],
  "title": "Sous vide quick tables"

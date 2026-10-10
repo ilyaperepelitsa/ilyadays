@@ -1,0 +1,281 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Нежный сочный лосось при 50 °C: время по толщине для охлаждённых и замороженных порций, с хрустящей кожей по желанию.",
+ "chips": [
+  {
+   "html": "<span>2 порции</span>",
+   "kind": "",
+   "text": "2 порции"
+  },
+  {
+   "html": "~1 ч; из замороженного дольше",
+   "kind": "time",
+   "text": "~1 ч; из замороженного дольше"
+  }
+ ],
+ "description": "Нежный сочный лосось при 50 °C: время по толщине для охлаждённых и замороженных порций, с хрустящей кожей по желанию.",
+ "equipment_html": [
+  "Погружной термостат и водяная баня",
+  "Термостойкие пакеты для су-вида",
+  "Линейка",
+  "Лопатка для рыбы",
+  "Сковорода"
+ ],
+ "group": {
+  "id": "sous-vide",
+  "name": "Су-вид"
+ },
+ "hero": {
+  "alt": "Лосось су-вид",
+  "image": "illustrations/sous-vide/salmon.webp?v=bc6205fa6a",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "2 × <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-b=\"180\" data-s=\"0\">150–180 г</span>",
+     "name_html": "Порции лосося без мелких костей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 г</span>",
+     "name_html": "Мелкая соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Оливковое масло"
+    }
+   ],
+   "name": "Лосось"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Нейтральное масло для жарки"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Дольки лимона"
+    },
+    {
+     "amount_html": "несколько веточек, по желанию",
+     "name_html": "Укроп"
+    }
+   ],
+   "name": "Для подачи"
+  }
+ ],
+ "intro_html": "Измеряйте толщину, а не вес. Здесь используется метод ChefSteps для <b>нежного лосося при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"50\" data-s=\"0\">50 °C</span></b>, с отдельной оценкой времени для замороженных порций. Другие размеры и более плотный пастеризованный вариант при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span> — в <a href=\"sous-vide.html#salmon\">таблице для лосося</a>.",
+ "mise": [],
+ "more_label": "Ещё — Су-вид:",
+ "next": {
+  "slug": "sous-vide-fries",
+  "title": "Картофель фри су-вид в рассоле"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Нужен лосось, подходящий для подачи недоготовленным, с подтверждённой поставщиком защитой от паразитов.</li><li>Обычное хранение в морозилке не подтверждает их уничтожение.</li><li>Этот непастеризованный вариант не подходит беременным и людям с ослабленным иммунитетом; выбирайте полностью приготовленную рыбу.</li></ul>",
+   "title_html": "Как выбрать лосося для 50 °C"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Для охлаждённого лосося таблица жирной рыбы Болдуина при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span></b> включает прогрев и снижение количества бактерий: <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"20\" data-s=\"0\">20 мм</span> → 75 мин; <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"25\" data-s=\"0\">25 мм</span> → 90 мин; <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"30\" data-s=\"0\">30 мм</span> → 120 мин.</li><li>Не применяйте эти времена прямо к замороженной рыбе.</li><li>Сначала разморозьте в холодильнике, сняв упаковку с пониженным содержанием кислорода до разморозки.</li></ul>",
+   "title_html": "Более плотный пастеризованный лосось"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Для того же режима нежного лосося используйте <a href=\"sous-vide.html#thickness\">калькулятор толщины</a>.</li><li>Время для лосося считается отдельно от оценок прогрева мяса.</li></ul>",
+   "title_html": "Калькулятор толщины"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "sous-vide-beets",
+  "title": "Свёкла су-вид"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/sous-vide-salmon.jpg?v=aa244157f8",
+ "siblings": [
+  {
+   "slug": "sous-vide-beets",
+   "title": "Свёкла су-вид"
+  },
+  {
+   "slug": "sous-vide-fries",
+   "title": "Картофель фри су-вид в рассоле"
+  }
+ ],
+ "slug": "sous-vide-salmon",
+ "sources": [
+  {
+   "label": "ChefSteps — лосось су-вид",
+   "url": "https://www.chefsteps.com/recipes/sous-vide-salmon"
+  },
+  {
+   "label": "ChefSteps — готовка из замороженного",
+   "url": "https://www.chefsteps.com/guides-tools/you-can-cook-frozen-food-sous-vide-without-defrosting-here-s-how"
+  },
+  {
+   "label": "Болдуин — рыба и морепродукты",
+   "url": "https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish"
+  },
+  {
+   "label": "FDA — риски при приготовлении морепродуктов",
+   "url": "https://www.fda.gov/files/food/published/SeafoodHazardsGuide-CompleteDocument-June2022.pdf"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Измерьте <b>самую толстую часть</b> каждой порции; если они в одном пакете, берите больший размер. Режим рассчитан на толщину до <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"38\" data-s=\"0\">38 мм</span></b>.</li><li>Посолите и уложите с оливковым маслом в пакет <b>одним слоем</b>. Используйте слабый вакуум, чтобы не смять рыбу. С замороженной рыбы снимите магазинную упаковку и переложите в новый пакет, пока она ещё заморожена.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Измерьте, посолите и упакуйте",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-salmon/1.webp?v=b2caae6966",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Измерьте, посолите и упакуйте",
+   "uses_rows": [
+    {
+     "amount_html": "2 × <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-b=\"180\" data-s=\"0\">150–180 г</span>",
+     "name_html": "Порции лосося без мелких костей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 г</span>",
+     "name_html": "Мелкая соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Оливковое масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Нагрейте воду до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"50\" data-s=\"0\">50 °C</span></b>. Полностью погрузите пакет, оставляя воде свободный проход вокруг него. Начинайте отсчёт после восстановления температуры.</li><li><table class=\"mini\"><thead><tr><th>Толщина</th><th>Охлаждённый / размороженный</th><th>Замороженный (оценка)</th></tr></thead><tbody><tr><td>до <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"13\" data-s=\"0\">13 мм</span></td><td>30 мин</td><td>45 мин</td></tr><tr><td><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"14\" data-b=\"25\" data-s=\"0\">14–25 мм</span></td><td>40 мин</td><td>60 мин</td></tr><tr><td><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"26\" data-b=\"38\" data-s=\"0\">26–38 мм</span></td><td>60 мин</td><td>90 мин</td></tr></tbody></table></li><li>Округляйте толщину <b>вверх</b> до следующей строки. Время для замороженного — <b>примерное</b>: к рецепту лосося применён общий совет ChefSteps добавить 50%. Это время для нужной текстуры, <b>не для пастеризации</b>.</li></ul>",
+   "heat": {
+    "label": "вода 50 °C",
+    "label_html": "<span>вода <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"50\" data-s=\"0\">50 °C</span></span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Готовьте при 50 °C",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-salmon/2.webp?v=08d560a232",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "30–90 мин",
+   "time_html": "<span>30–90 мин</span>",
+   "title": "Готовьте при 50 °C",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Осторожно достаньте рыбу лопаткой и промокните насухо. Рыбу без кожи можно сразу выкладывать на тарелку.</li><li>Для порций с кожей нагрейте нейтральное масло и обжарьте <b>кожей вниз</b> до хруста, около <b>30–60 секунд</b>. Сохраните мякоть целой; не готовьте её долго второй раз.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Обсушите; обжарьте кожу по желанию",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide-salmon/3.webp?v=224b0fba7b",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 мин",
+   "time_html": "<span>~2 мин</span>",
+   "title": "Обсушите; обжарьте кожу по желанию",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Нейтральное масло для жарки"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Аккуратно выложите с лимоном и укропом по желанию.</li><li>Середина должна быть нежной и влажной, а слои — расходиться при лёгком нажатии.</li><li>Подавайте сразу; этот низкотемпературный рецепт не рассчитан на готовку с последующим охлаждением и хранением.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Подавайте сразу",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/sous-vide/salmon.webp?v=bc6205fa6a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Подавайте сразу",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Дольки лимона"
+    },
+    {
+     "amount_html": "несколько веточек",
+     "name_html": "Укроп"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Лосось су-вид",
+ "total": "~1 ч; из замороженного дольше",
+ "vinegar_options": null,
+ "yields": "2 порции"
+}

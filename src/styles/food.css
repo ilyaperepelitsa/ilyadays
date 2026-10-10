@@ -427,3 +427,21 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 .step.text-only { grid-template-columns: minmax(0, 1fr); }
 .step.text-only .step-text { position: static; }
 @media (max-width: 600px) { .onigiri-options { grid-template-columns: minmax(0, 1fr); } }
+
+/* Sous-vide timing controls share the recipe palette and table typography. */
+.sv-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
+.sv-inputs label { display: grid; align-content: start; gap: 6px; min-width: 0; font-size: .85rem; font-weight: 700; }
+.sv-inputs input, .sv-inputs select { width: 100%; min-width: 0; min-height: 44px; padding: 9px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink); font: inherit; font-size: .95rem; }
+.sv-inputs input:disabled, .sv-inputs select:disabled { opacity: .65; }
+.sv-inputs input:focus-visible, .sv-inputs select:focus-visible, .sv-filter input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.sv-answer { padding: 18px 20px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; background: var(--surface-2); }
+.sv-answer p { margin: 0 0 8px; }
+.sv-answer .sv-time { font-family: var(--font-serif, Georgia, serif); font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.sv-answer small, .sv-help, .sv-sources { color: var(--muted); font-size: .88rem; }
+.sv-help { margin-top: 14px; }
+.sv-filter { border: 1px solid var(--line); border-radius: 12px; margin: 24px 0; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 12px 22px; }
+.sv-filter legend { padding: 0 6px; font-weight: 700; }
+.sv-filter label { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; cursor: pointer; }
+.sv-filter input { accent-color: var(--accent); width: 18px; height: 18px; }
+@media (max-width: 680px) { .sv-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sv-inputs label:nth-child(-n+3) { grid-column: 1 / -1; } .sv-answer { padding: 14px; } }
+@media (max-width: 380px) { .sv-inputs { grid-template-columns: 1fr; } }

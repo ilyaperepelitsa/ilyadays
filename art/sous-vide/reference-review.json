@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-11",
+  "critic": "Focused independent source/code review: no publication blockers. Not a cooking trial.",
+  "meat": {
+    "source": "https://douglasbaldwin.com/sous-vide.html#Table_2.2",
+    "tables": [
+      "2.2",
+      "2.3"
+    ],
+    "start_celsius": {
+      "chilled": 5,
+      "frozen": -18
+    },
+    "bath_range_celsius": [
+      45,
+      80
+    ],
+    "model_diffusivity_m2_s": 1.4e-07,
+    "goal": "Approximate centre temperature within 0.5°C of bath; excludes pasteurization and collagen tenderizing.",
+    "rounding": "Next published 5mm row; 5–50mm only. No extrapolation.",
+    "low_temperature_limit": "Below55°C, preparation+cooking+serving must remain under4hours; block heating results >=4hours."
+  },
+  "salmon": {
+    "source": "https://www.chefsteps.com/recipes/sous-vide-salmon",
+    "bath_celsius": 50,
+    "rows_mm_minutes": [
+      [
+        13,
+        30
+      ],
+      [
+        25,
+        40
+      ],
+      [
+        38,
+        60
+      ]
+    ],
+    "kind": "Recipe texture timings, unpasteurized.",
+    "frozen": "×1.5 approximate; explicitly not validated frozen pasteurization.",
+    "frozen_source": "https://www.chefsteps.com/guides-tools/you-can-cook-frozen-food-sous-vide-without-defrosting-here-s-how",
+    "parasites": "Supplier-confirmed controls for undercooked service; ordinary freezer storage is not proof."
+  },
+  "fish_pasteurization": {
+    "source": "https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish",
+    "table": "3.1",
+    "bath_celsius": 60,
+    "start_celsius": 5,
+    "thickness_mm": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ],
+    "lean_minutes": [
+      30,
+      35,
+      50,
+      60,
+      75,
+      105,
+      120,
+      135
+    ],
+    "fatty_minutes": [
+      40,
+      50,
+      60,
+      75,
+      90,
+      120,
+      135,
+      150
+    ],
+    "frozen": "Thaw in refrigerator first; remove reduced-oxygen retail packaging before thawing. Thawing time additional."
+  },
+  "fries": {
+    "source": "https://www.chefsteps.com/recipes/thick-cut-french-fries",
+    "adaptation": "Home quantity,18mm batons;500g potato+500g preparedbrine. Brine500gwater7.5gsalt5gDE42glucosesyrup1.25gbakingsoda. Glucosesubstitution1.25gsugar,not1:1.",
+    "sequence": [
+      "90°C~25min",
+      "Drain,cool,dry completely",
+      "130°C~8min first fry",
+      "Cool,freeze separate until solid",
+      "190°C~3min fromfrozen"
+    ]
+  },
+  "tempura_sources": [
+    "https://www.kikkoman.eu/recipes/detail/tempura-with-seafood-and-vegetables",
+    "https://www.kikkoman.co.jp/homecook/washoku/101/",
+    "https://park.ajinomoto.co.jp/recipe/card/700928/",
+    "https://www.mizkan.co.jp/ouchirecipe/recipe/?menu_id=527"
+  ],
+  "historical_presets": "Original vegetable/poultry/long-meat practical windows retained, with explicit state labels. Not relabelled as validated pasteurization schedules. Long texture cooks use same broad window for separated chilled/frozen portions; frozen bundles excluded."
+}

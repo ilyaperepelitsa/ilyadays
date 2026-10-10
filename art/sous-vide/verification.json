@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-11",
+  "automated": {
+    "tests": "79 passed",
+    "typecheck": "passed",
+    "production_build": "passed",
+    "translations": "0 untranslated Russian strings",
+    "media_references": "all exported paths and cache hashes valid"
+  },
+  "manual": {
+    "illustrations": "All17 generated stages viewed; warm painted animation, correct stage/equipment, no hands or diagrams.",
+    "pdfs": "All pages of EN/RU v5 PDFs rendered and inspected; no clipping or orphan notes."
+  },
+  "browser": {
+    "pages": [
+      {
+        "page": "en/sous-vide",
+        "status": 200,
+        "calculator": "passed",
+        "filters": "passed",
+        "pdf": 200,
+        "overflow": false
+      },
+      {
+        "page": "ru/sous-vide",
+        "status": 200,
+        "calculator": "passed",
+        "filters": "passed",
+        "pdf": 200,
+        "overflow": false
+      },
+      {
+        "page": "en/sous-vide-fries",
+        "status": 200,
+        "images": 5,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "en/sous-vide-salmon",
+        "status": 200,
+        "images": 4,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "en/jumbo-shrimp-tempura",
+        "status": 200,
+        "images": 4,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "en/king-oyster-tempura",
+        "status": 200,
+        "images": 4,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "ru/sous-vide-fries",
+        "status": 200,
+        "images": 5,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "ru/sous-vide-salmon",
+        "status": 200,
+        "images": 4,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "ru/jumbo-shrimp-tempura",
+        "status": 200,
+        "images": 4,
+        "diagrams": 0,
+        "overflow": false
+      },
+      {
+        "page": "ru/king-oyster-tempura",
+        "status": 200,
+        "images": 4,
+        "diagrams": 0,
+        "overflow": false
+      }
+    ],
+    "mediaFailures": [],
+    "desktopOverflow": false
+  },
+  "legacy_pdf": "v4 URL permanently redirects to v5."
+}

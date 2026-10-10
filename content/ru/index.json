@@ -6,7 +6,9 @@
    "id": "sous-vide",
    "items": [
     "sous-vide",
-    "sous-vide-beets"
+    "sous-vide-beets",
+    "sous-vide-salmon",
+    "sous-vide-fries"
    ],
    "name": "Су-вид",
    "notes": []
@@ -29,6 +31,8 @@
   {
    "id": "japanese",
    "items": [
+    "jumbo-shrimp-tempura",
+    "king-oyster-tempura",
     "oyakodon",
     "napa-shiitake-egg-bowl",
     "karaage",
@@ -164,6 +168,10 @@
  ],
  "lede_html": "Японская база и большие проекты, суши, корейское кимчи и жареная курица, быстрая рисовая лапша и соба, индийская курица тикка и справочник по су-виду — везде пошаговые картинки, порядок мизанпласа и план подготовки.",
  "recent": [
+  "sous-vide-salmon",
+  "sous-vide-fries",
+  "jumbo-shrimp-tempura",
+  "king-oyster-tempura",
   "onigiri-mold",
   "onigiri-plastic-wrap",
   "soy-cured-yolk-onigiri",
@@ -171,11 +179,7 @@
   "pork-kimchi-onigiri",
   "shiso-kombu-onigiri",
   "takana-onigiri",
-  "peanut-miso-onigiri",
-  "eggplant-tsukudani-onigiri",
-  "pepperoncino-onigiri",
-  "mentai-cream-cheese-onigiri",
-  "daifuku"
+  "peanut-miso-onigiri"
  ],
  "recipes": [
   {
@@ -235,6 +239,66 @@
    "title": "Свёкла су-вид",
    "total": "~2–3 ч, в основном без участия",
    "yields": "партия 500 г · 3–4 гарнира"
+  },
+  {
+   "added": "2026-10-11 08:00",
+   "blurb_html": "Нежный сочный лосось при 50 °C: время по толщине для охлаждённых и замороженных порций, с хрустящей кожей по желанию.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "~1 ч; из замороженного дольше",
+     "kind": "time",
+     "text": "~1 ч; из замороженного дольше"
+    }
+   ],
+   "description": "Нежный сочный лосось при 50 °C: время по толщине для охлаждённых и замороженных порций, с хрустящей кожей по желанию.",
+   "group": "Су-вид",
+   "group_id": "sous-vide",
+   "hero": {
+    "alt": "Лосось су-вид",
+    "image": "illustrations/sous-vide/salmon.webp?v=bc6205fa6a",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/sous-vide-salmon.jpg?v=aa244157f8",
+   "slug": "sous-vide-salmon",
+   "title": "Лосось су-вид",
+   "total": "~1 ч; из замороженного дольше",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-11 07:59",
+   "blurb_html": "Толстый фри в стиле ChefSteps: рассол, су-вид, обсушка, первая жарка, заморозка и горячая финальная жарка для хрустящей корочки и пушистой середины.",
+   "chips": [
+    {
+     "html": "<span>2 щедрые порции</span>",
+     "kind": "",
+     "text": "2 щедрые порции"
+    },
+    {
+     "html": "~1½ ч подготовки, плюс заморозка",
+     "kind": "time",
+     "text": "~1½ ч подготовки, плюс заморозка"
+    }
+   ],
+   "description": "Толстый фри в стиле ChefSteps: рассол, су-вид, обсушка, первая жарка, заморозка и горячая финальная жарка для хрустящей корочки и пушистой середины.",
+   "group": "Су-вид",
+   "group_id": "sous-vide",
+   "hero": {
+    "alt": "Картофель фри су-вид в рассоле",
+    "image": "illustrations/sous-vide-fries/5.webp?v=b5059f7347",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/sous-vide-fries.jpg?v=7a6322a3e9",
+   "slug": "sous-vide-fries",
+   "title": "Картофель фри су-вид в рассоле",
+   "total": "~1½ ч подготовки, плюс заморозка",
+   "yields": "2 щедрые порции"
   },
   {
    "added": "2026-10-06 01:52",
@@ -475,6 +539,66 @@
    "title": "Натто в ванне су-вид",
    "total": "~2 дня, из них 1 ч работы",
    "yields": "около 700 г, 14 порций"
+  },
+  {
+   "added": "2026-10-11 07:58",
+   "blurb_html": "Крупные прямые креветки с хвостиками и лёгким кляром: правильная подготовка, холодный кляр и жарка небольшими партиями.",
+   "chips": [
+    {
+     "html": "<span>8 крупных креветок</span>",
+     "kind": "",
+     "text": "8 крупных креветок"
+    },
+    {
+     "html": "~35 мин",
+     "kind": "time",
+     "text": "~35 мин"
+    }
+   ],
+   "description": "Крупные прямые креветки с хвостиками и лёгким кляром: правильная подготовка, холодный кляр и жарка небольшими партиями.",
+   "group": "Японская кухня",
+   "group_id": "japanese",
+   "hero": {
+    "alt": "Темпура из крупных креветок",
+    "image": "illustrations/jumbo-shrimp-tempura/4.webp?v=6b464c7505",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/jumbo-shrimp-tempura.jpg?v=2afcda74d1",
+   "slug": "jumbo-shrimp-tempura",
+   "title": "Темпура из крупных креветок",
+   "total": "~35 мин",
+   "yields": "8 крупных креветок"
+  },
+  {
+   "added": "2026-10-11 07:57",
+   "blurb_html": "Тонкие продольные ломтики королевской вешенки в лёгком хрустящем кляре, с сочной серединой.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "~25 мин",
+     "kind": "time",
+     "text": "~25 мин"
+    }
+   ],
+   "description": "Тонкие продольные ломтики королевской вешенки в лёгком хрустящем кляре, с сочной серединой.",
+   "group": "Японская кухня",
+   "group_id": "japanese",
+   "hero": {
+    "alt": "Темпура из еринги",
+    "image": "illustrations/king-oyster-tempura/4.webp?v=3d18f3e05c",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/king-oyster-tempura.jpg?v=6b09bb632e",
+   "slug": "king-oyster-tempura",
+   "title": "Темпура из еринги",
+   "total": "~25 мин",
+   "yields": "2 порции"
   },
   {
    "added": "2026-10-05 20:25",

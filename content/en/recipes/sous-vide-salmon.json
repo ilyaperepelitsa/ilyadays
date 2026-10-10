@@ -1,0 +1,281 @@
+{
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Soft, moist salmon at 50 °C, with thickness-based chilled and frozen timings and an optional crisp-skin finish.",
+ "chips": [
+  {
+   "html": "<span>2 portions</span>",
+   "kind": "",
+   "text": "2 portions"
+  },
+  {
+   "html": "~1 h; longer from frozen",
+   "kind": "time",
+   "text": "~1 h; longer from frozen"
+  }
+ ],
+ "description": "Soft, moist salmon at 50 °C, with thickness-based chilled and frozen timings and an optional crisp-skin finish.",
+ "equipment_html": [
+  "Immersion circulator and water bath",
+  "Heat-rated sous-vide pouches",
+  "Ruler",
+  "Fish spatula",
+  "Frying pan"
+ ],
+ "group": {
+  "id": "sous-vide",
+  "name": "Sous vide"
+ },
+ "hero": {
+  "alt": "Sous vide salmon",
+  "image": "illustrations/sous-vide/salmon.webp?v=bc6205fa6a",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "2 × <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-b=\"180\" data-s=\"0\">150–180 g</span>",
+     "name_html": "Salmon portions, pin bones removed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 g</span>",
+     "name_html": "Fine salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Olive oil"
+    }
+   ],
+   "name": "Salmon"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Neutral frying oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Lemon wedges"
+    },
+    {
+     "amount_html": "a few sprigs, optional",
+     "name_html": "Dill"
+    }
+   ],
+   "name": "To finish"
+  }
+ ],
+ "intro_html": "Measure thickness, not weight. This page uses ChefSteps’ <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"50\" data-s=\"0\">50 °C</span> soft-salmon method</b>, with a separate estimate for frozen portions. For other sizes and the firmer <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span> pasteurized option, see the <a href=\"sous-vide.html#salmon\">salmon reference table</a>.",
+ "mise": [],
+ "more_label": "More sous vide:",
+ "next": {
+  "slug": "sous-vide-fries",
+  "title": "Brined sous vide French fries"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Use salmon suitable for undercooked service with supplier-confirmed parasite controls.</li><li>Ordinary freezer storage does not prove parasite destruction.</li><li>This unpasteurized preparation is unsuitable for pregnant or immunocompromised people; choose a fully cooked option instead.</li></ul>",
+   "title_html": "Choosing salmon for 50 °C"
+  },
+  {
+   "html": "<ul class=\"do\"><li>For chilled salmon, Baldwin’s fatty-fish table at <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"60\" data-s=\"0\">60 °C</span></b> includes both heating and bacterial reduction: <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"20\" data-s=\"0\">20 mm</span> → 75 min; <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"25\" data-s=\"0\">25 mm</span> → 90 min; <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"30\" data-s=\"0\">30 mm</span> → 120 min.</li><li>Do not apply these chilled times directly to frozen fish.</li><li>Thaw in the fridge first, removing reduced-oxygen retail packaging before thawing.</li></ul>",
+   "title_html": "Firmer, pasteurized salmon"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Use the <a href=\"sous-vide.html#thickness\">thickness calculator</a> for the same soft-salmon schedule.</li><li>It keeps salmon timings separate from meat heating estimates.</li></ul>",
+   "title_html": "Thickness calculator"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "sous-vide-beets",
+  "title": "Sous vide beets"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/sous-vide-salmon.jpg?v=aa244157f8",
+ "siblings": [
+  {
+   "slug": "sous-vide-beets",
+   "title": "Sous vide beets"
+  },
+  {
+   "slug": "sous-vide-fries",
+   "title": "Brined sous vide French fries"
+  }
+ ],
+ "slug": "sous-vide-salmon",
+ "sources": [
+  {
+   "label": "ChefSteps — sous vide salmon",
+   "url": "https://www.chefsteps.com/recipes/sous-vide-salmon"
+  },
+  {
+   "label": "ChefSteps — cooking from frozen",
+   "url": "https://www.chefsteps.com/guides-tools/you-can-cook-frozen-food-sous-vide-without-defrosting-here-s-how"
+  },
+  {
+   "label": "Baldwin — fish and shellfish",
+   "url": "https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish"
+  },
+  {
+   "label": "FDA — seafood hazards guidance",
+   "url": "https://www.fda.gov/files/food/published/SeafoodHazardsGuide-CompleteDocument-June2022.pdf"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Measure the <b>thickest part</b> of each portion; use the larger size if they share a bag. This schedule covers portions no thicker than <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"38\" data-s=\"0\">38 mm</span></b>.</li><li>Season with salt and bag with olive oil in <b>one layer</b>. Use a gentle vacuum so the fish keeps its shape. For frozen fish, remove the retail wrapping and rebag while still frozen.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Measure, season and bag",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/sous-vide-salmon/1.webp?v=b2caae6966",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Measure, season and bag",
+   "uses_rows": [
+    {
+     "amount_html": "2 × <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-b=\"180\" data-s=\"0\">150–180 g</span>",
+     "name_html": "Salmon portions, pin bones removed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 g</span>",
+     "name_html": "Fine salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Olive oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Preheat the bath to <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"50\" data-s=\"0\">50 °C</span></b>. Submerge the pouch fully, with water circulating around it. Start timing once the bath recovers its temperature.</li><li><table class=\"mini\"><thead><tr><th>Thickness</th><th>Chilled / thawed</th><th>Frozen (estimate)</th></tr></thead><tbody><tr><td>up to <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"13\" data-s=\"0\">13 mm</span></td><td>30 min</td><td>45 min</td></tr><tr><td><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"14\" data-b=\"25\" data-s=\"0\">14–25 mm</span></td><td>40 min</td><td>60 min</td></tr><tr><td><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"26\" data-b=\"38\" data-s=\"0\">26–38 mm</span></td><td>60 min</td><td>90 min</td></tr></tbody></table></li><li>Round thickness <b>up</b> to the next row. Frozen times are <b>approximate</b>: ChefSteps’ general 50% extra-time guidance applied to its salmon recipe. These are texture timings, <b>not pasteurization times</b>.</li></ul>",
+   "heat": {
+    "label": "50 °C bath",
+    "label_html": "<span><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"50\" data-s=\"0\">50 °C</span> bath</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Cook at 50 °C",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/sous-vide-salmon/2.webp?v=08d560a232",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "30–90 min",
+   "time_html": "<span>30–90 min</span>",
+   "title": "Cook at 50 °C",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lift the fish out carefully with a fish spatula and pat dry. Skinless salmon can go straight to the plate.</li><li>For skin-on portions, heat the neutral oil in a pan and sear <b>skin-side down</b> until crisp, about <b>30–60 seconds</b>. Keep the flesh intact; avoid a long second cook.</li></ul>",
+   "heat": {
+    "label": "high",
+    "label_html": "<span>high</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Dry; crisp the skin if you like",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/sous-vide-salmon/3.webp?v=224b0fba7b",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Dry; crisp the skin if you like",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Neutral frying oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Plate gently with lemon and optional dill.</li><li>The centre should be soft and moist, with flakes that separate under light pressure.</li><li>Serve straight away; this low-temperature recipe is not a cook-chill storage method.</li></ul>",
+   "heat": null,
+   "id": "step-4",
+   "images": {
+    "alt": "Serve immediately",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/sous-vide/salmon.webp?v=bc6205fa6a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Serve immediately",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Lemon wedges"
+    },
+    {
+     "amount_html": "a few sprigs",
+     "name_html": "Dill"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Sous vide salmon",
+ "total": "~1 h; longer from frozen",
+ "vinegar_options": null,
+ "yields": "2 portions"
+}
