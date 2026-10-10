@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { describe, it } from "node:test";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../..");
@@ -74,5 +75,22 @@ describe("nigiri photographic technique plates", () => {
     assert.match(steps[6].images.diagram, /Right index pad alone/);
     assert.match(steps[8].images.diagram, /then stop/);
     assert.match(steps[3].images.diagram, /About 5 mm deep/);
+  });
+
+  it("keeps the manual anatomy review matched to every shipped nigiri image", () => {
+    // This checks review coverage/freshness; anatomy itself is reviewed visually.
+    const review = JSON.parse(fs.readFileSync(path.join(ROOT, "art/nigiri/anatomy-review.json"), "utf8"));
+    const reviewed = review.assets.map((a) => a.path).sort();
+    for (const lang of ["en", "ru"]) {
+      const r = recipe(lang);
+      const paths = [r.hero.image, ...r.mise.map((m) => m.image),
+        ...r.steps.flatMap(({ images: im }) => [im.photo, im.illustration, im.result, ...im.how.map((h) => h.src)])];
+      const shipped = [...new Set(paths.filter(Boolean).map((p) => `public/media/${p.split("?")[0]}`))].sort();
+      assert.deepEqual(reviewed, shipped, "new or replaced images need a visual review");
+    }
+    for (const asset of review.assets) {
+      const hash = createHash("sha256").update(fs.readFileSync(path.join(ROOT, asset.path))).digest("hex");
+      assert.equal(hash, asset.sha256, `${asset.path} has changed since its anatomy review`);
+    }
   });
 });
