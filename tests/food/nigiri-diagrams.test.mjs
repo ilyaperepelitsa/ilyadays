@@ -27,7 +27,7 @@ function diagramSteps(lang) {
   return recipe(lang).steps.flatMap((step, i) => (step.images.diagram ? [i + 1] : []));
 }
 
-describe("nigiri photographic technique plates", () => {
+describe("nigiri illustrated technique plates", () => {
   it("are on exactly the seven shaping steps, in both languages", () => {
     assert.deepEqual(diagramSteps("en"), SHAPING_STEPS);
     assert.deepEqual(diagramSteps("ru"), SHAPING_STEPS);
@@ -41,7 +41,7 @@ describe("nigiri photographic technique plates", () => {
         const asset = fs.readFileSync(path.join(ROOT, "public/media", images.illustration.split("?")[0]));
         assert.equal(asset.toString("ascii", 0, 4), "RIFF");
         assert.equal(asset.toString("ascii", 8, 12), "WEBP");
-        assert.ok(asset.length > 20_000, "picture is a full photographic asset");
+        assert.ok(asset.length > 20_000, "picture is a full illustrated asset");
         assert.deepEqual(images.how, [], "old pictures do not compete with the plate");
         assert.equal(images.result, null);
         assert.equal(images.zoomable, true, "contact details can be opened at full size on phones");

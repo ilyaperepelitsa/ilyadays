@@ -1,7 +1,8 @@
 {
   "tool": "built-in image_gen",
   "use_case": "scientific-educational",
-  "description": "Photographic technique plates generated from the nigiri 3D pose references. Captions and technical contact guides live in localized HTML.",
+  "description": "Historical photographic pose references, superseded by the illustrated assets in illustration-prompts.json. These prompts no longer describe the shipped pictures.",
+  "superseded_by": "art/nigiri/illustration-prompts.json",
   "assets": [
     {
       "step": 3,

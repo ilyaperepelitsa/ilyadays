@@ -1,120 +1,122 @@
 {
-  "scope": "All 19 raster illustrations currently referenced by the English and Russian nigiri recipe, including hero, mise, preparation, shaping panels/insets and serving.",
-  "method": "Direct visual inspection of each shipped image. Anatomy requirement: one thumb and four fingers per hand. Visible digits and their connections were inspected; naturally occluded or cropped digits are recorded explicitly. This is a manual visual review, not an automated anatomical proof.",
+  "scope": "All 19 hand-drawn raster illustrations displayed by the English and Russian nigiri recipes, including hero, ingredient cards, preparation, shaping panels/insets and serving.",
+  "method": "Direct manual visual inspection of every generated illustration at full size and of final optimized assets. Check style consistency, instructional food orientation/contact/motion and one thumb plus four fingers per hand. Naturally cropped/occluded digits are recorded explicitly. Hash tests verify coverage/freshness, not anatomical correctness.",
+  "style": "Warm hand-drawn Japanese animation, thin brown outlines, matte cel shading; no photorealistic skin or geometric blueprints.",
+  "prompt_manifest": "art/nigiri/illustration-prompts.json",
   "assets": [
     {
-      "path": "public/media/illustrations/nigiri/1-how1.webp",
-      "sha256": "50ac3248e6a38c64ab935c7966e2b4e4c21606503ed5fbd3687cb65a269b0015",
+      "path": "public/media/illustrations/nigiri/1.webp",
+      "sha256": "cead17c095edcc7652b2d665e40602fc8a9a6d43bd46b6c49c429e74fffb184f",
       "status": "reviewed",
-      "notes": "Single hand has one thumb and four distinguishable fingers."
+      "notes": "Both complete open palms have exactly one thumb and four distinct fingers. Damp checkpoint has matte skin and a few stylized edge droplets."
+    },
+    {
+      "path": "public/media/illustrations/nigiri/1-how1.webp",
+      "sha256": "5567ffa4430c0b8f1b175aa8c0f7b94432fbfba171cbab4a77a2e84172c15820",
+      "status": "reviewed",
+      "notes": "Single middle fingertip dips to the first joint. Thumb, raised index, dipping middle and curled ring/little are connected; exactly five digits. Inset crops to the same middle fingertip."
     },
     {
       "path": "public/media/illustrations/nigiri/1-how2.webp",
-      "sha256": "9679242e84026093f2f2d108ebdc5ec3fafd9f13a4e1304f6305fb63cb7c12d7",
+      "sha256": "eb7c32412ae4266961004c69347f68aa52af337ba95f5482050ffc97f3cc43ca",
       "status": "reviewed",
-      "notes": "Both open palms have one thumb and four fingers."
-    },
-    {
-      "path": "public/media/illustrations/nigiri/1.webp",
-      "sha256": "4c8fa717bd7000647a7c5698df9886eb81bc2d5f0c60ccf49e5a961beaede01a",
-      "status": "reviewed",
-      "notes": "Open left palm and dipping right hand each have five digits."
+      "notes": "Both sequence panels inspected. Open left palms have thumb plus four fingers. Rubbing right fingers overlap naturally; right hand becomes a loose fist in the second panel, hiding folded digits. No visible extra or disconnected fingers."
     },
     {
       "path": "public/media/illustrations/nigiri/10.webp",
-      "sha256": "640489b38f9c7a744bab6378040bd42ea7203ea069879c51f99d4077e0fdf7ef",
+      "sha256": "483927a8cfc055260254a43b6b426a7f64208d4eda986662d6191ee67ac664b8",
       "status": "no-hands",
-      "notes": "Plated sushi only."
-    },
-    {
-      "path": "public/media/illustrations/nigiri/2-how1.webp",
-      "sha256": "5212e9a3e7ac6f4158904dd2f4b0a1c1cbc4c5716183e16fae97f4e09b69c451",
-      "status": "reviewed",
-      "notes": "Both knife-work hands reviewed. Folded fingers overlap; part of the knife-holding hand is cropped. No visible extra or disconnected digit."
+      "notes": "Four plated nigiri and a side-view shape checkpoint; no hands."
     },
     {
       "path": "public/media/illustrations/nigiri/2.webp",
-      "sha256": "4867d29ed72f9d43cac1b7587a849e3f76dd491d96496d090fe19d990910355d",
+      "sha256": "5703256f71008cb9ab047f03263b7027936d570aa0d5de90e87a086b7633181f",
+      "status": "no-hands",
+      "notes": "Finished sliced fish with a side-view thickness inset; no hands."
+    },
+    {
+      "path": "public/media/illustrations/nigiri/2-how1.webp",
+      "sha256": "4a354af3ea501f8a4d85c021f71b86e289f7285d8417c5f685a780f946993ba2",
       "status": "reviewed",
-      "notes": "Both knife-work hands reviewed. Folded fingers overlap and the knife-holding hand is partly cropped; no visible count defect."
+      "notes": "Left guiding claw has thumb and four connected bent fingers, fingertips tucked behind the blade. Right knife grip is partly cropped and naturally hides folded digits. No visible count defect. Single pull arrow and blade-angle inset checked."
     },
     {
       "path": "public/media/illustrations/nigiri/hero.webp",
-      "sha256": "eeab09e280cc731670ce1518f61785258419d946b217717a128a17ae8ad5bd7b",
+      "sha256": "82399e3b2bb3a08ce5ac09976be7b813b94b83f47e8e6f4d975321591d93348c",
       "status": "reviewed",
-      "notes": "Both complete hands: one thumb and four fingers each."
+      "notes": "Both complete hands have exactly one thumb and four separate fingers. Finished fish-up nigiri and drawn matte skin checked."
     },
     {
       "path": "public/media/illustrations/nigiri/mise1.webp",
-      "sha256": "d70aa28339977a96fec4f2d30c935877426778ce27896ccd13cbc81b62338257",
+      "sha256": "42f571aff73bc3004bd49f5676d7f1d8215fb4cc26a5bffa69e4a0931e7c65e4",
       "status": "no-hands",
-      "notes": "Rice vessel only."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
     },
     {
       "path": "public/media/illustrations/nigiri/mise2.webp",
-      "sha256": "0b4b58516d4a2d1f903b6db763124b0b16be69880cbbbce773407333ad18c102",
+      "sha256": "3cea9c485211beb21f9ecfbcc380b0c8dd944fcef24f1cf370e3aae2e977ae30",
       "status": "no-hands",
-      "notes": "Fish plate only."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
     },
     {
       "path": "public/media/illustrations/nigiri/mise3.webp",
-      "sha256": "f9803603042960c22dffd3fa9960f3b41c4f980fa490f9f40a30999f926bed24",
+      "sha256": "a14699b0dcfc3486935b7e326a4964594b52e7b08adb69b0ac89bbe41a8f8b85",
       "status": "no-hands",
-      "notes": "Wasabi plate only."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
     },
     {
       "path": "public/media/illustrations/nigiri/mise4.webp",
-      "sha256": "0cf0812a7eacef5b49f8ac0c8bff22fd9f242dd6a6c4a507ebd9e72006e15723",
+      "sha256": "b6021e5e2fe35942b09b1a10fce76cd8686b3c83bb1c8d44d4566d55a5534f99",
       "status": "no-hands",
-      "notes": "Tezu and vinegar vessels only."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
     },
     {
       "path": "public/media/illustrations/nigiri/mise5.webp",
-      "sha256": "374a0f22d2f60ec06dfa8551a9f3fce40cd2b5930b4b9e60841b8ae1830b103a",
+      "sha256": "b3b706a4f100dde0eecb55bce9c44d95e9643ced57667b3a1852db341ac3c893",
       "status": "no-hands",
-      "notes": "Soy sauce and ginger only."
+      "notes": "Ingredient vessel and food only; no hands. Consistent hand-painted palette and clean ingredient silhouettes checked."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-3.webp",
-      "sha256": "3babc903685aedd3e35b74fb2cda1f8031a35ccd239c93970eb557ba826ec57c",
+      "sha256": "aaa7fafd69de572e502ed2676b533f93d5397afec55eafc881eb54fc8913cffb",
       "status": "reviewed",
-      "notes": "Main left palm has one thumb and four fingers. Side inset overlaps the four supporting fingers naturally."
+      "notes": "Main left palm has one thumb and four separate supporting fingers. Side inset overlaps supporting fingers naturally. Rice up, tuna underneath, clear finger-root support."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-4.webp",
-      "sha256": "847a9fc71290f4966753708dc0f6c258c67adc0325ab3ce8ff4ab0507d63bd78",
-      "status": "corrected",
-      "notes": "Removed duplicated supporting fingertips. Main left hand now has exactly one pressing thumb and four distinct supporting fingers; inset preserves the same grip."
+      "sha256": "54f3180cee97ed785cba0c1c161fd60952ece2f8e0edf98eca5f105de0f199af",
+      "status": "reviewed",
+      "notes": "Main single left hand has exactly one pressing thumb and four distinct supporting fingers. Small inset crops to that same thumb/support. Shallow central dimple, tuna underneath checked."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-5.webp",
-      "sha256": "26f201281eeda9ebaabeb63c58be3ae58d7c4c25f4c7d896e5ae08bf338da51b",
+      "sha256": "ea4f9fdd0f9475e9c67b8806f065e9509721acb9371781f2586a57e4494768c7",
       "status": "reviewed",
-      "notes": "All three panels reviewed: one left hand in the first two, left and right in the third. Supporting fingers overlap in the side views; right curled digits are partly cropped."
+      "notes": "All three panels inspected: left hand alone in the first two, two hands in the last. Side-view supporting fingers overlap and right curled digits partly crop. No visible count defect. Fish-down, long-edge balance, fish-up sequence checked."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-6.webp",
-      "sha256": "1dfc4b6977ea0118dd825d81e1cd34087f85d14dd230f8597c3d9ffe76a32014",
+      "sha256": "388eafb3670eb69cef693d907da0ef1a36f1a1e73c0f09c60c309b7fd514c370",
       "status": "reviewed",
-      "notes": "Main view: left little finger partly occluded by working hand; right thumb, raised index, contacting middle and curled ring/little are coherent. Inset shows cropped contact pads, not complete hands."
+      "notes": "Left little finger partly hidden by working hand. Right thumb, raised index, contacting middle and curled ring/little are connected. Inset crops to opposed contact pads. Side lock and raised-index clearance checked."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-7.webp",
-      "sha256": "88990e61cb15e6e8695c5b36a3eacba18c6d7c9ea43696c43c9ff3df2f59928c",
+      "sha256": "733677f2b76c44e3aa20165b007a9e828809e4a75ca177509c35537b8ef9c451",
       "status": "reviewed",
-      "notes": "Main view: four supporting left fingers, with index partly behind the working finger/food. Right hand is cropped; remaining visible fingers stay off food. Inset shows only the contact and support pads."
+      "notes": "Left index partly hidden behind food and working index; other supporting digits connect naturally. Working right hand is cropped and folds digits clear of food. Inset crops contact pads. Only index contacts tuna top."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-8.webp",
-      "sha256": "8f7a8b875fb1305aa300ca7931cf746c990aee452859f243f2fe6a5a762a06b4",
+      "sha256": "f6505a6fb55147f57c76c78fb6fcd24ef983903f7286b7d5c3a3ff0c8e6d4f51",
       "status": "reviewed",
-      "notes": "All four panels reviewed. Left supporting fingers partly overlap the right hand; right thumb/index grip and curled remaining fingers are anatomically coherent, partly hidden by the palm/crop."
+      "notes": "All four panels inspected. Supporting left fingers partly occluded by working hand; right three unused digits curl behind palm. No visible extra or detached digit. Revised index grip reaches the far rice flank; horizontal/vertical/vertical/horizontal sequence retained."
     },
     {
       "path": "public/media/illustrations/nigiri/technique-9.webp",
-      "sha256": "90502a87bfdc8b014c7648bc4726ca81ae2e05d998d49b0e1cf94bd8299968eb",
+      "sha256": "e10cc6e37cdf0fb2668bd09cf0962c35b4d8ffe7f1dcc4a7a213f226885ab9e0",
       "status": "reviewed",
-      "notes": "Both panels reviewed. First left little finger is partly obscured by the working hand; second left palm has four supporting fingers and thumb. Right curled fingers are partly cropped."
+      "notes": "Both panels inspected. First left little finger hidden by working hand; second support has four fingers plus thumb. Working right curled digits partly cropped. Side lock then index-only top press checked."
     }
   ]
 }
