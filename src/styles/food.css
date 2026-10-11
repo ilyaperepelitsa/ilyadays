@@ -454,7 +454,12 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 .sv-slider > label { font-weight: 700; font-size: .9rem; }
 .sv-number { display: flex; align-items: center; gap: 6px; }
 .sv-number input { width: 76px; min-height: 44px; padding: 8px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink); font: inherit; font-variant-numeric: tabular-nums; }
-.sv-slider input[type=range] { grid-column: 1/-1; width: 100%; min-width: 0; min-height: 32px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.sv-size-value { color: var(--accent); font-size: 1.35rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.sv-slider input[type=range] { appearance: none; -webkit-appearance: none; grid-column: 1/-1; width: 100%; min-width: 0; height: 44px; margin: 0; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.sv-slider input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 999px; background: var(--line); }
+.sv-slider input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; margin-top: -9px; border: 3px solid var(--surface); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.sv-slider input[type=range]::-moz-range-track { height: 6px; border: 0; border-radius: 999px; background: var(--line); }
+.sv-slider input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border: 3px solid var(--surface); border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
 .sv-range-ends { grid-column: 1/-1; display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; margin-top: -12px; }
 .sv-fixed-temp { grid-column: 1/-1; font-size: 1.6rem; margin: 0; font-weight: 700; }
 .sv-fixed-temp small { display: block; font-size: .82rem; font-weight: 400; color: var(--muted); }
@@ -468,9 +473,7 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 /* One onigiri recipe at a time, with its own ingredients and illustrated sequence. */
 .onigiri-controls { padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface-2); margin-bottom: 28px; }
 .onigiri-controls h2 { margin-top: 0; }
-.onigiri-select { display: grid; gap: 10px; font-weight: 700; font-size: .9rem; margin: 0 0 22px; max-width: 680px; }
-.onigiri-select select { min-width: 0; width: 100%; min-height: 48px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; }
-.onigiri-select select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.onigiri-fillings button { max-width: 100%; overflow-wrap: anywhere; }
 .onigiri-selection { margin: 0; }
 .onigiri-controls .sv-help { margin-bottom: 0; }
-@media (max-width: 600px) { .onigiri-controls { padding: 16px; } .onigiri-select select { font-size: 16px; } }
+@media (max-width: 600px) { .onigiri-controls { padding: 16px; } .onigiri-fillings .sv-buttons { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); } }

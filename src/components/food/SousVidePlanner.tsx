@@ -16,8 +16,7 @@ export function SousVidePlanner({lang,tables}:{lang:Lang;tables:SousVide['tables
   const [choice,setChoice]=useState('');
   const foods=[
     ['meat',t('Meat · by thickness','Мясо · по толщине')],
-    ['salmon',t('Salmon · soft','Лосось · нежный')],
-    ['salmon-pasteurized',t('Salmon · pasteurized','Лосось · пастеризация')],
+    ['salmon',t('Salmon','Лосось')],
     ['lean-fish',t('Lean fish','Нежирная рыба')],
     ['chicken-breast',t('Chicken breast','Куриная грудка')],
     ['drumsticks',t('Drumsticks','Куриные голени')],
@@ -27,6 +26,7 @@ export function SousVidePlanner({lang,tables}:{lang:Lang;tables:SousVide['tables
     ['lamb-slices',t('Lamb slices','Баранина ломтиками')],
     ['vegetables',t('Vegetables','Овощи')],
   ];
+  const salmon=food==='salmon'||food==='salmon-pasteurized';
   const calculated=['meat','salmon','salmon-pasteurized','lean-fish'].includes(food);
   const table=tables.find(table=>table.id===food);
   const presets=table?cookingPresets(table,state):[];
@@ -34,12 +34,16 @@ export function SousVidePlanner({lang,tables}:{lang:Lang;tables:SousVide['tables
   return <section className="block sv-planner" id="thickness">
     <h2>{t('Choose your cook','Выберите режим')}</h2>
     <fieldset className="sv-choice"><legend>{t('1. Food & cut','1. Продукт и отруб')}</legend>
-      <div className="sv-buttons sv-foods">{foods.map(([id,label])=><button type="button" key={id} aria-pressed={food===id} onClick={()=>{setFood(id);setChoice('');}}>{label}</button>)}</div>
+      <div className="sv-buttons sv-foods">{foods.map(([id,label])=><button type="button" key={id} aria-pressed={food===id||(id==='salmon'&&salmon)} onClick={()=>{setFood(id==='salmon'&&salmon?food:id);setChoice('');}}>{label}</button>)}</div>
     </fieldset>
+    {salmon&&<fieldset className="sv-choice sv-salmon-style"><legend>{t('Salmon cooking style','Как приготовить лосось')}</legend>
+      <div className="sv-buttons">{[['salmon',t('Soft · 50°C','Нежный · 50 °C')],['salmon-pasteurized',t('Pasteurized · 60°C','Пастеризация · 60 °C')]].map(([id,label])=><button type="button" key={id} aria-pressed={food===id} onClick={()=>setFood(id)}>{label}</button>)}</div>
+      <p className="sv-help">{t('Soft: a tender centre, served immediately; this schedule does not pasteurize. Pasteurized: a longer cook to reduce harmful bacteria, with a firmer texture.', 'Нежный: мягкая середина, подавайте сразу; этот режим не пастеризует рыбу. Пастеризация: более длительное приготовление для снижения количества опасных бактерий; текстура получается плотнее.')}</p>
+    </fieldset>}
     <fieldset className="sv-choice"><legend>{t('2. Starting state','2. Начальное состояние')}</legend>
       <div className="sv-buttons">{[['chilled',t('Chilled / thawed · 5°C','Охлаждённое / размороженное · 5 °C')],['frozen',t('Frozen · −18°C','Замороженное · −18 °C')]].map(([id,label])=><button type="button" key={id} aria-pressed={state===id} onClick={()=>setState(id)}>{label}</button>)}</div>
     </fieldset>
-    {calculated?<SousVideCalculator key={food} lang={lang} food={food} state={state}/>:<>
+    {calculated?<SousVideCalculator key={salmon?'salmon':food} lang={lang} food={food} state={state}/>:<>
       <fieldset className="sv-choice"><legend>{t('3. Size & texture preset','3. Размер и желаемая текстура')}</legend>
         <div className="sv-buttons">{presets.map(p=><button type="button" key={p.id} aria-pressed={selected?.id===p.id} onClick={()=>setChoice(p.id)}>{p.label}<span className="sv-preset-temp">{p.temperature}</span></button>)}</div>
       </fieldset>

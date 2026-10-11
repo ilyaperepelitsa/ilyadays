@@ -30,10 +30,10 @@ export function OnigiriChoices({base,fillings,methods,lang,ui}:{base:Recipe;fill
     </div>
     <section className="block onigiri-controls" aria-labelledby="onigiri-choices-title">
       <h2 id="onigiri-choices-title">{text('Make it your way','Выберите свой вариант')}</h2>
-      <label className="onigiri-select" htmlFor="onigiri-filling">{text('1. Filling','1. Начинка')}
-        <select id="onigiri-filling" value={fillingSlug} onChange={e=>setFilling(e.target.value)}>{fillings.map(r=><option key={r.slug} value={r.slug}>{r.ingredients[0].name}</option>)}</select>
-      </label>
-      <fieldset className="sv-choice"><legend>{text('2. Shaping method','2. Способ лепки')}</legend><div className="sv-buttons">
+      <fieldset className="sv-choice onigiri-fillings"><legend>{text('1. Filling','1. Начинка')}</legend>
+        <div className="sv-buttons">{fillings.map(r=><button type="button" key={r.slug} data-filling={r.slug} aria-pressed={fillingSlug===r.slug} onClick={()=>setFilling(r.slug)}>{r.ingredients[0].name.replace(/\s+\((?:after|по мотивам)\s[^)]*\)$/,'')}</button>)}</div>
+      </fieldset>
+      <fieldset className="sv-choice onigiri-methods"><legend>{text('2. Shaping method','2. Способ лепки')}</legend><div className="sv-buttons">
         {[["onigiri",text('By hand','Руками')],["onigiri-mold",text('With a mold','В форме')],["onigiri-plastic-wrap",text('Through plastic wrap','Через плёнку')]].map(([slug,label])=><button type="button" key={slug} aria-pressed={methodSlug===slug} onClick={()=>setMethod(slug)}>{label}</button>)}
       </div></fieldset>
       <p className="onigiri-selection" role="status" aria-live="polite" aria-atomic="true"><b>{filling.ingredients[0].name}</b> · {methodName} · {filling.yields}</p>

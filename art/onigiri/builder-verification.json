@@ -64,5 +64,63 @@
     "audit": "Three active deployments per project across ilyadays, typekana and ratiocin. ilyadays had both GitHub and CLI deployments of eb33d70.",
     "team_storage_total": "Not accessible; no claim that the 10 GB usage has been cleared.",
     "deployments_deleted": 0
+  },
+  "controls_revision": {
+    "date": "2026-10-11",
+    "onigiri_fillings": "Nine sv-buttons bubbles replace the select; source attribution remains in selected recipe",
+    "salmon": "One food bubble with nested Soft 50C and Pasteurized 60C buttons; legacy mode URLs retained",
+    "thickness": "Range slider with mm output, keyboard/pointer input, and retained supported size across salmon styles",
+    "typecheck": "passed",
+    "build": "passed",
+    "targeted_eslint": "passed",
+    "relevant_recipe_tests_passed": 12,
+    "browser": {
+      "checks": [
+        {
+          "lang": "en",
+          "thickness": "slider with keyboard and pointer input",
+          "salmon": "one food, two nested styles",
+          "timings": "correct for both styles and starting states",
+          "thicknessAcrossStyles": "preserved within supported bounds",
+          "legacyModeUrl": "passed"
+        },
+        {
+          "lang": "ru",
+          "thickness": "slider with keyboard and pointer input",
+          "salmon": "one food, two nested styles",
+          "timings": "correct for both styles and starting states",
+          "thicknessAcrossStyles": "preserved within supported bounds",
+          "legacyModeUrl": "passed"
+        }
+      ],
+      "errors": []
+    },
+    "onigiri_browser": {
+      "checks": [
+        {
+          "lang": "en",
+          "combinations": 27,
+          "languageSwitch": "selection preserved both ways",
+          "normalRecipe": "passed",
+          "legacyRedirects": "passed",
+          "reload": "passed",
+          "checkmarks": "scoped to selection",
+          "mobileOverflow": false,
+          "images": "all selected filling prep images and cutaways present"
+        },
+        {
+          "lang": "ru",
+          "combinations": 27,
+          "languageSwitch": "selection preserved both ways",
+          "normalRecipe": "passed",
+          "legacyRedirects": "passed",
+          "reload": "passed",
+          "checkmarks": "scoped to selection",
+          "mobileOverflow": false,
+          "images": "all selected filling prep images and cutaways present"
+        }
+      ],
+      "errors": []
+    }
   }
 }

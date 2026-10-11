@@ -7,16 +7,17 @@ import { sousVideTiming, duration, HEATING_SOURCE, SALMON_SOURCE, FROZEN_SOURCE 
 export function SousVideCalculator({ lang, food, state }: {lang: Lang; food: string; state: string}) {
   const ru=lang==="ru";
   const t=(en:string, r:string)=>ru?r:en;
-  const [size,setSize]=useState("25");
+  const [size,setSize]=useState(25);
   const [shape,setShape]=useState("slab");
-  const [temp,setTemp]=useState(food==="salmon"?"50":food==="meat"?"57":"60");
-  const mm=Number(size);
-  const result=sousVideTiming({food,state,mm:size.trim()?mm:NaN,shape,temperature:Number(temp)});
+  const [meatTemp,setTemp]=useState("57");
   const salmon=food==="salmon";
   const lean=food==="lean-fish";
   const fatty=food==="salmon-pasteurized";
   const fish=salmon||lean||fatty;
   const maxMm=salmon?38:fish?40:50;
+  const mm=Math.min(size,maxMm);
+  const temp=fish?(salmon?"50":"60"):meatTemp;
+  const result=sousVideTiming({food,state,mm,shape,temperature:Number(temp)});
   return <div className="sv-calculator">
     <p>{t("Measure the thickest part. Bag individual portions in one layer, with water circulating on both sides.","Измерьте самую толстую часть. Укладывайте отдельные порции в один слой: вода должна омывать пакет с обеих сторон.")}</p>
     {!fish&&<fieldset className="sv-choice"><legend>{t("Shape", "Форма")}</legend><div className="sv-buttons">
@@ -25,8 +26,8 @@ export function SousVideCalculator({ lang, food, state }: {lang: Lang; food: str
     <div className="sv-sliders">
       <div className="sv-slider">
         <label htmlFor="sv-size">{shape==="slab"?t("Thickness", "Толщина"):t("Diameter", "Диаметр")}</label>
-        <div className="sv-number"><input id="sv-size" type="number" min="5" max={maxMm} step="1" value={size} onChange={e=>setSize(e.target.value)}/><span>{t("mm","мм")}</span></div>
-        <input aria-label={shape==="slab"?t("Thickness slider","Ползунок толщины"):t("Diameter slider","Ползунок диаметра")} type="range" min="5" max={maxMm} step="1" value={Number.isFinite(mm)?Math.min(maxMm,Math.max(5,mm)):5} onChange={e=>setSize(e.target.value)}/>
+        <output className="sv-size-value" htmlFor="sv-size">{mm} {t("mm","мм")}</output>
+        <input id="sv-size" aria-valuetext={`${mm} ${t('millimetres','миллиметров')}`} type="range" min="5" max={maxMm} step="1" value={mm} onChange={e=>setSize(Number(e.target.value))}/>
         <div className="sv-range-ends"><span>5 {t("mm","мм")}</span><span>{maxMm} {t("mm","мм")}</span></div>
       </div>
       <div className="sv-slider">
@@ -48,7 +49,7 @@ export function SousVideCalculator({ lang, food, state }: {lang: Lang; food: str
         {salmon&&state==="frozen"&&<p>{t("Frozen estimate: the fish-specific recipe time × 1.5, following ChefSteps’ general frozen-food guidance. It is an estimate, not a tested frozen-salmon pasteurization time.","Оценка для замороженного: время рецепта для рыбы × 1,5 по общему совету ChefSteps. Это оценка, а не проверенное время пастеризации замороженного лосося.")}</p>}
       </>}
     </div>
-    <p className="sv-help">{fatty?t("Remove reduced-oxygen retail packaging before fridge thawing. Keep portions separate; this schedule starts with salmon fully thawed and chilled to 5°C.","Перед разморозкой в холодильнике снимите упаковку с пониженным содержанием кислорода. Порции держите отдельно; режим начинается с полностью размороженного лосося при 5 °C."):lean?t("For cod and similar lean finfish. Remove reduced-oxygen retail packaging before fridge thawing. Keep portions separate; this schedule starts with fish fully thawed and chilled to 5°C.","Для трески и другой нежирной рыбы. Перед разморозкой в холодильнике снимите упаковку с пониженным содержанием кислорода. Порции держите отдельно; режим начинается с полностью размороженной рыбы при 5 °C."):salmon?t("At 50°C use salmon suitable for undercooked service with supplier-confirmed parasite controls. Ordinary freezer storage does not establish that. For a fully pasteurized option, choose “Salmon · pasteurized” above.","При 50 °C нужен лосось, подходящий для подачи недоготовленным, с подтверждённой поставщиком защитой от паразитов. Обычное хранение в морозилке этого не подтверждает. Для пастеризации выберите «Лосось · пастеризация» выше."):t("Use these heating estimates for tender meat portions. Chicken needs its own poultry schedule; ribs and shanks need their longer texture times. Below 55°C, preparation, cooking and serving together must stay within four hours.","Оценки прогрева подходят для мягких порционных кусков мяса. Для курицы нужен отдельный режим для птицы; рёбрам и голяшкам — длительное приготовление до мягкости. Ниже 55 °C подготовка, готовка и подача вместе должны уложиться в четыре часа.")}</p>
+    <p className="sv-help">{fatty?t("Remove reduced-oxygen retail packaging before fridge thawing. Keep portions separate; this schedule starts with salmon fully thawed and chilled to 5°C.","Перед разморозкой в холодильнике снимите упаковку с пониженным содержанием кислорода. Порции держите отдельно; режим начинается с полностью размороженного лосося при 5 °C."):lean?t("For cod and similar lean finfish. Remove reduced-oxygen retail packaging before fridge thawing. Keep portions separate; this schedule starts with fish fully thawed and chilled to 5°C.","Для трески и другой нежирной рыбы. Перед разморозкой в холодильнике снимите упаковку с пониженным содержанием кислорода. Порции держите отдельно; режим начинается с полностью размороженной рыбы при 5 °C."):salmon?t("At 50°C use salmon suitable for undercooked service with supplier-confirmed parasite controls. Ordinary freezer storage does not establish that. For pasteurization, select “Pasteurized · 60°C” under Salmon cooking style.","При 50 °C нужен лосось, подходящий для подачи недоготовленным, с подтверждённой поставщиком защитой от паразитов. Обычное хранение в морозилке этого не подтверждает. Для пастеризации выберите «Пастеризация · 60 °C» в настройках приготовления лосося."):t("Use these heating estimates for tender meat portions. Chicken needs its own poultry schedule; ribs and shanks need their longer texture times. Below 55°C, preparation, cooking and serving together must stay within four hours.","Оценки прогрева подходят для мягких порционных кусков мяса. Для курицы нужен отдельный режим для птицы; рёбрам и голяшкам — длительное приготовление до мягкости. Ниже 55 °C подготовка, готовка и подача вместе должны уложиться в четыре часа.")}</p>
     <p className="sv-sources">{t("Sources: ","Источники: ")}<a href={salmon?SALMON_SOURCE:fish?"https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish":HEATING_SOURCE} target="_blank" rel="noopener">{salmon?"ChefSteps — salmon":fish?"Baldwin — 3.1":"Baldwin — 2.2 / 2.3"}</a>{salmon&&<> · <a href={FROZEN_SOURCE} target="_blank" rel="noopener">{t("Frozen timing", "Время из замороженного")}</a></>}</p>
   </div>;
 }
