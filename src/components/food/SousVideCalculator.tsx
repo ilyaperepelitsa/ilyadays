@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { Lang } from "@/lib/i18n";
-import { foodHref } from "@/lib/paths";
 import { sousVideTiming, duration, HEATING_SOURCE, SALMON_SOURCE, FROZEN_SOURCE } from "@/lib/sous-vide.mjs";
 
 export function SousVideCalculator({ lang, food, state }: {lang: Lang; food: string; state: string}) {
@@ -50,6 +49,6 @@ export function SousVideCalculator({ lang, food, state }: {lang: Lang; food: str
       </>}
     </div>
     <p className="sv-help">{fatty?t("Remove reduced-oxygen retail packaging before fridge thawing. Keep portions separate; this schedule starts with salmon fully thawed and chilled to 5°C.","Перед разморозкой в холодильнике снимите упаковку с пониженным содержанием кислорода. Порции держите отдельно; режим начинается с полностью размороженного лосося при 5 °C."):lean?t("For cod and similar lean finfish. Remove reduced-oxygen retail packaging before fridge thawing. Keep portions separate; this schedule starts with fish fully thawed and chilled to 5°C.","Для трески и другой нежирной рыбы. Перед разморозкой в холодильнике снимите упаковку с пониженным содержанием кислорода. Порции держите отдельно; режим начинается с полностью размороженной рыбы при 5 °C."):salmon?t("At 50°C use salmon suitable for undercooked service with supplier-confirmed parasite controls. Ordinary freezer storage does not establish that. For a fully pasteurized option, choose “Salmon · pasteurized” above.","При 50 °C нужен лосось, подходящий для подачи недоготовленным, с подтверждённой поставщиком защитой от паразитов. Обычное хранение в морозилке этого не подтверждает. Для пастеризации выберите «Лосось · пастеризация» выше."):t("Use these heating estimates for tender meat portions. Chicken needs its own poultry schedule; ribs and shanks need their longer texture times. Below 55°C, preparation, cooking and serving together must stay within four hours.","Оценки прогрева подходят для мягких порционных кусков мяса. Для курицы нужен отдельный режим для птицы; рёбрам и голяшкам — длительное приготовление до мягкости. Ниже 55 °C подготовка, готовка и подача вместе должны уложиться в четыре часа.")}</p>
-    <p className="sv-sources">{t("Sources: ","Источники: ")}<a href={salmon?SALMON_SOURCE:fish?"https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish":HEATING_SOURCE} target="_blank" rel="noopener">{salmon?"ChefSteps — salmon":fish?"Baldwin — 3.1":"Baldwin — 2.2 / 2.3"}</a>{salmon&&<> · <a href={FROZEN_SOURCE} target="_blank" rel="noopener">{t("Frozen timing", "Время из замороженного")}</a></>}{salmon&&<> · <a href={foodHref(lang,"sous-vide-salmon")}>{t("Full salmon recipe", "Полный рецепт лосося")}</a></>}</p>
+    <p className="sv-sources">{t("Sources: ","Источники: ")}<a href={salmon?SALMON_SOURCE:fish?"https://douglasbaldwin.com/sous-vide.html#Fish_and_Shellfish":HEATING_SOURCE} target="_blank" rel="noopener">{salmon?"ChefSteps — salmon":fish?"Baldwin — 3.1":"Baldwin — 2.2 / 2.3"}</a>{salmon&&<> · <a href={FROZEN_SOURCE} target="_blank" rel="noopener">{t("Frozen timing", "Время из замороженного")}</a></>}</p>
   </div>;
 }

@@ -1,8 +1,12 @@
 "use client";
 import { LANG_KEY, type Lang, localPath } from "@/lib/i18n";
+import { useSyncExternalStore } from "react";
+import { subscribeChoices, choiceSearch, serverSearch } from "@/components/food/useUrlChoice";
 
 /** EN · RU. Remembers the choice in localStorage (the head script reads it on every page); never a cookie. */
 export function LangSwitch({ lang, path, label }: { lang: Lang; path: string; label: string }) {
+  const search=useSyncExternalStore(subscribeChoices,choiceSearch,serverSearch);
+  const selection=path==='/food/onigiri'||path==='/food/sous-vide'?search:'';
   const remember = (to: Lang) => {
     try {
       localStorage.setItem(LANG_KEY, to);
@@ -18,7 +22,7 @@ export function LangSwitch({ lang, path, label }: { lang: Lang; path: string; la
           {l === lang ? (
             <span className="on" aria-current="true">{l.toUpperCase()}</span>
           ) : (
-            <a href={localPath(l, path)} hrefLang={l} lang={l} onClick={() => remember(l)}>
+            <a href={localPath(l, path)+selection} hrefLang={l} lang={l} onClick={() => remember(l)}>
               {l.toUpperCase()}
             </a>
           )}

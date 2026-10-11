@@ -464,3 +464,13 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 .sv-reference > summary { cursor: pointer; font-weight: 700; padding: 12px 0; min-height: 44px; }
 .sv-reference:not([open]) { padding-bottom: 0; }
 @media (max-width: 600px) { .sv-sliders { grid-template-columns: 1fr; gap: 24px; } .sv-foods { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); } .sv-foods button { overflow-wrap: anywhere; } }
+
+/* One onigiri recipe at a time, with its own ingredients and illustrated sequence. */
+.onigiri-controls { padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface-2); margin-bottom: 28px; }
+.onigiri-controls h2 { margin-top: 0; }
+.onigiri-select { display: grid; gap: 10px; font-weight: 700; font-size: .9rem; margin: 0 0 22px; max-width: 680px; }
+.onigiri-select select { min-width: 0; width: 100%; min-height: 48px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; }
+.onigiri-select select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.onigiri-selection { margin: 0; }
+.onigiri-controls .sv-help { margin-bottom: 0; }
+@media (max-width: 600px) { .onigiri-controls { padding: 16px; } .onigiri-select select { font-size: 16px; } }

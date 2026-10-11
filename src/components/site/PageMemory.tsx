@@ -3,7 +3,9 @@
 // ingredients and steps. Restored on reload and back/forward, and when the page is reopened within a cooking
 // session (12 h) — e.g. the phone dropped the tab while you were cooking. Ported from recipes/static/app.js.
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
+import { subscribeChoices, choiceSearch, serverSearch } from "@/components/food/useUrlChoice";
+import { ONIGIRI_FILLINGS, ONIGIRI_METHODS } from "@/lib/food/integrated-recipes.mjs";
 
 const SESSION_MS = 12 * 60 * 60 * 1000;
 const TICKABLE = ".ingredients li, li.step";
@@ -12,9 +14,17 @@ type Saved = { y?: number; done?: number[]; t?: number };
 
 export function PageMemory() {
   const pathname = usePathname();
+  const search=useSyncExternalStore(subscribeChoices,choiceSearch,serverSearch);
+  const query=new URLSearchParams(search);
+  const filling=query.get('filling')??'';
+  const method=query.get('method')??'';
+  const variant=pathname.endsWith('/food/onigiri')?`${ONIGIRI_FILLINGS.includes(filling)?filling:ONIGIRI_FILLINGS[0]}:${ONIGIRI_METHODS.includes(method)?method:'onigiri'}`:'';
+  const previousPath=useRef('');
 
   useEffect(() => {
-    const key = `page:${pathname}`;
+    const changedPage=previousPath.current!==pathname;
+    previousPath.current=pathname;
+    const key = `page:${pathname}${variant?`:builder:${variant}`:''}`;
     const load = (): Saved => {
       try {
         return JSON.parse(localStorage.getItem(key) ?? "{}") || {};
@@ -41,7 +51,7 @@ export function PageMemory() {
 
     const cleanups: (() => void)[] = [];
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-    if (resume && (saved.y ?? 0) > 0 && !location.hash) {
+    if (changedPage && resume && (saved.y ?? 0) > 0 && !location.hash) {
       // Pictures load lazily, so re-apply until the page settles or the reader scrolls themselves.
       let userMoved = false;
       const go = () => {
@@ -98,7 +108,7 @@ export function PageMemory() {
       document.removeEventListener("click", onClick);
       cleanups.forEach((f) => f());
     };
-  }, [pathname]);
+  }, [pathname,variant]);
 
   return null;
 }

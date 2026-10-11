@@ -69,12 +69,9 @@ WRAP = Recipe(
 RECIPES = [MOLD, WRAP]
 
 MAIN = replace(ORIGINAL,
-    title="Onigiri: shape by hand",
-    blurb="The basic hand-shaped rice triangle. Each filling and alternative method has its own recipe page.",
-    yields="9 hand-shaped onigiri", intro=
-    'This page teaches <b>hand shaping</b>: plain short-grain rice, a cupped left hand and a roof-shaped right hand. '
-    'Choose <b>one shop-inspired filling recipe</b> below, or make plain rice triangles. '
-    'Tokyo\'s Bongo inspires the bold combinations here; Asakusa Yadoroku the traditional fillings, and Kyoto\'s Nigihaya the eggplant mixed through rice. These are our home versions: the shops do not publish their recipes. The <b>mold</b> and <b>plastic-wrap</b> methods have separate pages; you do not follow them after hand shaping.',
+    title="Onigiri: fillings & shaping",
+    blurb='Nine shop-inspired fillings, one illustrated recipe: choose your filling and shape by hand, with a mold or through plastic wrap.',
+    yields='9 fillings, 3 shaping methods', total='Time varies by filling', intro='Choose one filling and one shaping method. Your ingredients, preparation pictures and steps update below. These are home versions inspired by Bongo, Yadoroku and Nigihaya; the shops do not publish their recipes.',
     equipment=HAND_EQUIPMENT,
     ingredients=[deepcopy(ORIGINAL.ingredients[0]),
                  ("Filling (optional)", [("Prepared filling of your choice", "1–2 tsp per onigiri")]),

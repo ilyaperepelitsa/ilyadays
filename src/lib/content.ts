@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { type Lang } from "./i18n";
 import { foodHref, media } from "./paths";
+import { consolidatedIndex, integratedDestination } from "./food/integrated-recipes.mjs";
 
 export { foodHref, media };
 
@@ -187,7 +188,7 @@ function load<T>(lang: Lang, file: string): T {
   return cache.get(key) as T;
 }
 
-export const getFoodIndex = (lang: Lang) => load<FoodIndex>(lang, "index.json");
+export const getFoodIndex = (lang: Lang) => consolidatedIndex(load<FoodIndex>(lang, "index.json"));
 export const getSousVide = (lang: Lang) => load<SousVide>(lang, "sous-vide.json");
 
 export function getRecipe(lang: Lang, slug: string): Recipe | null {
@@ -201,6 +202,7 @@ export const recipeSlugs = () =>
     .readdirSync(path.join(ROOT, "en", "recipes"))
     .filter((f) => f.endsWith(".json"))
     .map((f) => f.slice(0, -5))
+    .filter((slug) => !integratedDestination(slug))
     .sort();
 
 /** The recipe site's UI strings: English text → shown text. Missing keys fall back to English. */

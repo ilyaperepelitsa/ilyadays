@@ -14,7 +14,8 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/` | `/ru` | Home: hello, Food / Travel, about me |
 | `/food` | `/ru/food` | Recipe index. Search and ingredient bubbles stay behind two buttons until you open them. Search matches titles and ingredient names (`bok choi` finds bok choy); ingredient bubbles wrap in sections and filter the list |
 | `/food/<slug>` | `/ru/food/<slug>` | A recipe |
-| `/food/sous-vide` | `/ru/food/sous-vide` | Sous vide tables + PDF |
+| `/food/onigiri` | `/ru/food/onigiri` | Nine original shop-inspired fillings and three shaping methods, selected on one illustrated page |
+| `/food/sous-vide` | `/ru/food/sous-vide` | Cooking calculator, including salmon, with chilled/frozen controls, thickness sliders, recipe presets, reference tables and PDF |
 | `/travel` | `/ru/travel` | Trips |
 | `/travel/new` | `/ru/travel/new` | Template for a new city: days, pace, meals, themes. A model fills the plan; Wikipedia and Commons add links and pictures. Saved in this browser |
 | `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it |
@@ -64,7 +65,8 @@ The recipes and the Istanbul app are edited in their own repos (`../recipes`, `.
    - This writes `content/{en,ru}/…json` and `content/svg-defs.svg`.
    - It copies every referenced picture.
    - `scripts/optimize-media.py` then resizes ingredient thumbnails to 600 px, shares byte-identical images,
-     and refreshes image cache hashes. Install libwebp (`cwebp` and `webpinfo`) before syncing.
+     losslessly optimizes preview JPEGs, and refreshes image cache hashes. Install libwebp (`cwebp` and `webpinfo`)
+     and libjpeg-turbo (`jpegtran`) before syncing.
      Detailed technique images retain their resolution. Legacy `public/food` asset copies are removed;
      their URLs already redirect to `/media` in `next.config.ts`.
 3. It copies the recipe stylesheet and the site icons.
@@ -72,6 +74,24 @@ The recipes and the Istanbul app are edited in their own repos (`../recipes`, `.
 5. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.
 
 Commit the result. Vercel builds only from this repo and never sees the sibling repos.
+
+The onigiri filling and method JSON files remain source data for the combined page. Their old routes redirect
+to `/food/onigiri?filling=…` or `?method=…`; salmon redirects to `/food/sous-vide?food=salmon`.
+Integrated recipes are excluded from index cards, the sitemap, prerendered routes and the offline page list.
+
+## Publishing and deployment storage
+
+Push `main` and let Vercel's GitHub integration deploy it. Verify that deployment's commit and production alias.
+Do not also run a CLI production deployment for the same commit: the 2026-10-11 storage audit found both a GitHub
+and a CLI build of `eb33d70`, retaining duplicate output. Use a manual deployment only when the Git integration
+is disabled or a specific Git deployment has failed and its cause is understood.
+
+Vercel Deployment Storage includes retained build output and static assets, and the allowance is team-wide.
+Check Usage → Deployment Storage → Projects before attributing the entire team total to this site. Current
+public assets are approximately 119 MB; the 67 preview JPEGs were losslessly reduced by 864,054 bytes.
+The audit could list three active deployments for each of `ilyadays`, `typekana` and `ratiocin`; it could not
+read the dashboard's project-level storage totals. Preserve the production deployment and a working rollback
+before cleaning deployment history. See [Vercel's optimization guide](https://vercel.com/docs/deployment-storage/optimize).
 
 In the exported HTML, links still point at `<slug>.html`. `src/lib/content.ts` rewrites them to `/food/<slug>` or `/ru/food/<slug>` at build time.
 

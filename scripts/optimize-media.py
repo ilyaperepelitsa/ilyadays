@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Run after recipe export: size ingredient thumbnails and share identical media.
 
-Requires cwebp and webpinfo (libwebp). Detailed technique plates stay at full size.
+Requires cwebp and webpinfo (libwebp), and jpegtran (libjpeg-turbo).
+Detailed technique plates stay at full size. JPEG optimization preserves coefficients and metadata.
 The exporter remains the source of images; this step updates all cache hashes.
 """
 import hashlib
@@ -20,11 +21,22 @@ def digest(path, algorithm="sha256"):
 
 
 def main():
-    for command in ("cwebp", "webpinfo"):
+    for command in ("cwebp", "webpinfo", "jpegtran"):
         if not shutil.which(command):
-            raise SystemExit(f"{command} is required; install libwebp before syncing")
+            raise SystemExit(f"{command} is required; install libwebp and jpeg-turbo before syncing")
     before = sum(p.stat().st_size for p in MEDIA.rglob("*") if p.is_file())
     thumbnails = 0
+    jpeg_bytes_saved = 0
+    for image in sorted(MEDIA.glob("share/*.jpg")):
+        temp = image.with_suffix(".tmp.jpg")
+        try:
+            subprocess.run(["jpegtran", "-copy", "all", "-optimize", "-progressive",
+                            "-outfile", str(temp), str(image)], check=True)
+            if temp.stat().st_size < image.stat().st_size:
+                jpeg_bytes_saved += image.stat().st_size - temp.stat().st_size
+                temp.replace(image)
+        finally:
+            temp.unlink(missing_ok=True)
     for image in sorted(MEDIA.glob("illustrations/*/mise*.webp")):
         info = subprocess.check_output(["webpinfo", str(image)], text=True)
         width = re.search(r"Width: (\d+)", info)
@@ -91,7 +103,7 @@ def main():
     after = sum(p.stat().st_size for p in MEDIA.rglob("*") if p.is_file())
     print(json.dumps({"media_bytes_before": before, "media_bytes_after": after,
                       "legacy_duplicate_bytes_removed": legacy_bytes,
-                      "thumbnails_resized": thumbnails, "duplicate_images_removed": removed}, indent=2))
+                      "thumbnails_resized": thumbnails, "jpeg_bytes_saved": jpeg_bytes_saved, "duplicate_images_removed": removed}, indent=2))
 
 
 if __name__ == "__main__":

@@ -6,11 +6,12 @@ import type { Lang } from "@/lib/i18n";
 import { cookingPresets } from "@/lib/sous-vide-presets.mjs";
 import { SousVideCalculator } from "./SousVideCalculator";
 import { Html } from "./parts";
+import { useUrlChoice } from "./useUrlChoice";
 
 export function SousVidePlanner({lang,tables}:{lang:Lang;tables:SousVide['tables']}) {
   const ru=lang==='ru';
   const t=(en:string,r:string)=>ru?r:en;
-  const [food,setFood]=useState('meat');
+  const [food,setFood]=useUrlChoice('food',['meat','salmon','salmon-pasteurized','lean-fish','chicken-breast','drumsticks','beef','pork-ribs','lamb','lamb-slices','vegetables'],'meat');
   const [state,setState]=useState('chilled');
   const [choice,setChoice]=useState('');
   const foods=[

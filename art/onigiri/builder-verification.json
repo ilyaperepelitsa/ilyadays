@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-11",
+  "scope": "Combined onigiri page and lossless preview optimization",
+  "verification": {
+    "unit_tests_passed": 84,
+    "typecheck": "passed",
+    "production_build": "passed",
+    "targeted_eslint": "passed",
+    "browser": {
+      "checks": [
+        {
+          "lang": "en",
+          "combinations": 27,
+          "languageSwitch": "selection preserved both ways",
+          "normalRecipe": "passed",
+          "legacyRedirects": "passed",
+          "reload": "passed",
+          "checkmarks": "scoped to selection",
+          "mobileOverflow": false,
+          "images": "all selected filling prep images and cutaways present"
+        },
+        {
+          "lang": "ru",
+          "combinations": 27,
+          "languageSwitch": "selection preserved both ways",
+          "normalRecipe": "passed",
+          "legacyRedirects": "passed",
+          "reload": "passed",
+          "checkmarks": "scoped to selection",
+          "mobileOverflow": false,
+          "images": "all selected filling prep images and cutaways present"
+        }
+      ],
+      "errors": []
+    }
+  },
+  "preserved_content": {
+    "fillings": 9,
+    "shaping_methods": 3,
+    "original_filling_preparation_text_and_ingredients": true,
+    "all_filling_preparation_images_and_cutaways": true,
+    "source_data_retained": true
+  },
+  "routing": {
+    "fillings": "/food/onigiri?filling=<slug>",
+    "methods": "/food/onigiri?method=<slug>",
+    "salmon": "/food/sous-vide?food=salmon",
+    "languages": [
+      "en",
+      "ru"
+    ],
+    "legacy_redirect_status": 301
+  },
+  "storage": {
+    "preview_jpegs_optimized": 67,
+    "bytes_before": 14791290,
+    "bytes_after": 13927236,
+    "bytes_saved": 864054,
+    "decoded_rgb_pixels": "identical to HEAD for every optimized image",
+    "dimensions_and_icc_profiles": "identical",
+    "offline_catalog_pages": 126,
+    "offline_catalog_asset_bytes": 118975071,
+    "deployment_policy": "Push main; verify the GitHub deployment. Do not also CLI-deploy the same commit.",
+    "audit": "Three active deployments per project across ilyadays, typekana and ratiocin. ilyadays had both GitHub and CLI deployments of eb33d70.",
+    "team_storage_total": "Not accessible; no claim that the 10 GB usage has been cleared.",
+    "deployments_deleted": 0
+  }
+}

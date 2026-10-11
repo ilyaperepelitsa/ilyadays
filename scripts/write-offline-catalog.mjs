@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { buildCatalog } from "../src/lib/offline/catalog.mjs";
+import { integratedDestination } from "../src/lib/food/integrated-recipes.mjs";
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const PUBLIC = path.join(ROOT, "public");
@@ -24,6 +25,7 @@ const slugs = fs
   .readdirSync(path.join(ROOT, "content/en/recipes"))
   .filter((name) => name.endsWith(".json"))
   .map((name) => name.slice(0, -5))
+  .filter(slug=>!integratedDestination(slug))
   .sort();
 
 const catalog = buildCatalog(slugs, walk(PUBLIC));

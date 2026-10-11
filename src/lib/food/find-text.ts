@@ -2,6 +2,7 @@ import { getRecipe, type FoodIndex, type RecipeSummary } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { recipeIngredients } from "./ingredients.mjs";
 import { stripHtml } from "./search.mjs";
+import { ONIGIRI_FILLINGS } from "./integrated-recipes.mjs";
 
 export type IngredientRef = { id: string; label: string };
 export type FindableRecipe = RecipeSummary & { find: string; ingredients: IngredientRef[] };
@@ -24,6 +25,8 @@ export function findText(recipe: RecipeSummary, full: Named | null): string {
 export function findableRecipes(lang: Lang, index: FoodIndex): FindableRecipe[] {
   return index.recipes.map((recipe) => {
     const full = recipe.kind === "recipe" ? getRecipe(lang, recipe.slug) : null;
-    return { ...recipe, find: findText(recipe, full), ingredients: recipeIngredients(ingredientHtml(full)) };
+    const fillings=recipe.slug==='onigiri'?ONIGIRI_FILLINGS.map(slug=>getRecipe(lang,slug)):[];
+    const combined=fillings.length?{ingredients:[...(full?.ingredients??[]),...fillings.flatMap(f=>f?.ingredients??[])]}:full;
+    return { ...recipe, find: [findText(recipe, combined),...fillings.map(f=>f?.title??'')].join(' '), ingredients: recipeIngredients(ingredientHtml(combined)) };
   });
 }

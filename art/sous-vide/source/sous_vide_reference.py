@@ -40,7 +40,6 @@ def update_tables(original):
         rows.append(['Salmon, soft',thick,'Frozen','50°C',f'{int(chilled*1.5)} min','Estimate: recipe time × 1.5. Not a validated pasteurization schedule.'])
     tables.append({'id':'salmon','title':'Salmon — soft at 50 °C','cols':cols,'rows':rows,'after':[
         'Use salmon suitable for undercooked service with supplier-confirmed parasite controls. Ordinary freezer storage does not establish parasite destruction. Unpasteurized fish is unsuitable for pregnant or immunocompromised people.',
-        '<a href="sous-vide-salmon.html">Full salmon recipe: bagging, cooking and crisp-skin finish →</a>',
         'Sources: <a href="https://www.chefsteps.com/recipes/sous-vide-salmon">ChefSteps salmon recipe</a>; <a href="https://www.chefsteps.com/guides-tools/you-can-cook-frozen-food-sous-vide-without-defrosting-here-s-how">ChefSteps frozen-food guidance</a>.']})
     for ident,title,food,minutes in [
         ('salmon-pasteurized','Salmon — pasteurized at 60 °C','Salmon, fatty fish',[40,50,60,75,90,120,135,150]),
