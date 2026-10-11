@@ -17,13 +17,14 @@ export const HEATING_ROWS = [
 export const SALMON_ROWS = [{mm:13, minutes:30},{mm:25, minutes:40},{mm:38, minutes:60}];
 // Baldwin table 3.1, lean fish starting at 5°C, bath 60°C. Includes pasteurization.
 export const LEAN_FISH_ROWS = [30,35,50,60,75,105,120,135].map((minutes,i)=>({mm:(i+1)*5,minutes}));
+export const FATTY_FISH_ROWS = [40,50,60,75,90,120,135,150].map((minutes,i)=>({mm:(i+1)*5,minutes}));
 /** @param {{food: string, state: string, mm: number, shape?: string, temperature?: number}} input */
 export function sousVideTiming({food, state, mm, shape='slab', temperature=57}) {
-  if (!['meat','salmon','lean-fish'].includes(food) || !['chilled','frozen'].includes(state) ||
-      !Number.isFinite(mm) || mm<5 || mm>(food==='salmon'?38:food==='lean-fish'?40:50)) return {error:'size'};
-  if (food==='lean-fish') {
+  if (!['meat','salmon','salmon-pasteurized','lean-fish'].includes(food) || !['chilled','frozen'].includes(state) ||
+      !Number.isFinite(mm) || mm<5 || mm>(food==='salmon'?38:food==='meat'?50:40)) return {error:'size'};
+  if (food==='lean-fish' || food==='salmon-pasteurized') {
     if (temperature!==60 || shape!=='slab') return {error:'temperature'};
-    const row=LEAN_FISH_ROWS.find(r=>r.mm>=mm);
+    const row=(food==='lean-fish'?LEAN_FISH_ROWS:FATTY_FISH_ROWS).find(r=>r.mm>=mm);
     return {minutes:row.minutes,usedMm:row.mm,approximate:false,kind:'pasteurization',thawFirst:state==='frozen'};
   }
   if (food==='salmon') {

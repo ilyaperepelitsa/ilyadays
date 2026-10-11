@@ -429,11 +429,6 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 @media (max-width: 600px) { .onigiri-options { grid-template-columns: minmax(0, 1fr); } }
 
 /* Sous-vide timing controls share the recipe palette and table typography. */
-.sv-inputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
-.sv-inputs label { display: grid; align-content: start; gap: 6px; min-width: 0; font-size: .85rem; font-weight: 700; }
-.sv-inputs input, .sv-inputs select { width: 100%; min-width: 0; min-height: 44px; padding: 9px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink); font: inherit; font-size: .95rem; }
-.sv-inputs input:disabled, .sv-inputs select:disabled { opacity: .65; }
-.sv-inputs input:focus-visible, .sv-inputs select:focus-visible, .sv-filter input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .sv-answer { padding: 18px 20px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; background: var(--surface-2); }
 .sv-answer p { margin: 0 0 8px; }
 .sv-answer .sv-time { font-family: var(--font-serif, Georgia, serif); font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -442,6 +437,30 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 .sv-filter { border: 1px solid var(--line); border-radius: 12px; margin: 24px 0; padding: 14px 18px; display: flex; flex-wrap: wrap; gap: 12px 22px; }
 .sv-filter legend { padding: 0 6px; font-weight: 700; }
 .sv-filter label { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; cursor: pointer; }
+.sv-filter input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .sv-filter input { accent-color: var(--accent); width: 18px; height: 18px; }
-@media (max-width: 680px) { .sv-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sv-inputs label:nth-child(-n+3) { grid-column: 1 / -1; } .sv-answer { padding: 14px; } }
-@media (max-width: 380px) { .sv-inputs { grid-template-columns: 1fr; } }
+
+/* Cooking planner: native controls, large targets and a single live result. */
+.sv-choice { min-width: 0; border: 0; padding: 0; margin: 0 0 22px; }
+.sv-choice legend { padding: 0; margin-bottom: 10px; font-weight: 700; font-size: .9rem; }
+.sv-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.sv-buttons button { min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; font-size: .9rem; text-align: left; cursor: pointer; }
+.sv-buttons button:hover { border-color: var(--accent); }
+.sv-buttons button[aria-pressed=true] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); font-weight: 700; }
+.sv-buttons button:focus-visible, .sv-slider input:focus-visible, .sv-reference summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.sv-preset-temp { display: block; margin-top: 4px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.sv-sliders { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin: 24px 0; }
+.sv-slider { min-width: 0; display: grid; grid-template-columns: 1fr auto; gap: 12px; align-content: start; align-items: center; }
+.sv-slider > label { font-weight: 700; font-size: .9rem; }
+.sv-number { display: flex; align-items: center; gap: 6px; }
+.sv-number input { width: 76px; min-height: 44px; padding: 8px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink); font: inherit; font-variant-numeric: tabular-nums; }
+.sv-slider input[type=range] { grid-column: 1/-1; width: 100%; min-width: 0; min-height: 32px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.sv-range-ends { grid-column: 1/-1; display: flex; justify-content: space-between; color: var(--muted); font-size: .8rem; margin-top: -12px; }
+.sv-fixed-temp { grid-column: 1/-1; font-size: 1.6rem; margin: 0; font-weight: 700; }
+.sv-fixed-temp small { display: block; font-size: .82rem; font-weight: 400; color: var(--muted); }
+.sv-result-label { color: var(--muted); font-size: .85rem; }
+.sv-preset-result { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.sv-preset-result > span { color: var(--muted); }
+.sv-reference > summary { cursor: pointer; font-weight: 700; padding: 12px 0; min-height: 44px; }
+.sv-reference:not([open]) { padding-bottom: 0; }
+@media (max-width: 600px) { .sv-sliders { grid-template-columns: 1fr; gap: 24px; } .sv-foods { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); } .sv-foods button { overflow-wrap: anywhere; } }

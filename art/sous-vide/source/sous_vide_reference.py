@@ -1,8 +1,7 @@
 """Current additions to the historical v4 sous-vide reference; preserve its practical presets."""
 from copy import deepcopy
 
-INTRO = ('Choose chilled/thawed or frozen explicitly. Start timing after the bag is submerged and the preheated bath has recovered. '
-         'Measure the thickest part and keep portions in one layer. The calculator distinguishes meat heating, soft-salmon recipe times and lean-fish pasteurization.')
+INTRO = 'Choose your food, starting state and thickness or recipe preset. Start timing after the bag is submerged and the preheated bath has recovered. Keep portions in one layer.'
 
 def update_tables(original):
     tables=deepcopy(original)

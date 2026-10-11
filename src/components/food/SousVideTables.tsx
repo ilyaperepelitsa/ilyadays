@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { SousVide } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { Html, Illo } from "./parts";
@@ -8,7 +8,21 @@ const plain=(html:string)=>html.replace(/<[^>]+>/g," ").trim();
 export function SousVideTables({lang,tables}:{lang:Lang;tables:SousVide['tables']}) {
   const [state,setState]=useState('all');
   const ru=lang==='ru';
-  return <>
+  const reference=useRef<HTMLDetailsElement>(null);
+  useEffect(()=>{
+    const reveal=()=>{
+      const id=window.location.hash.slice(1);
+      if (id==='reference'||tables.some(t=>t.id===id)) {
+        if (reference.current) reference.current.open=true;
+        requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView());
+      }
+    };
+    reveal();
+    window.addEventListener('hashchange',reveal);
+    return ()=>window.removeEventListener('hashchange',reveal);
+  },[tables]);
+  return <details className="block sv-reference" id="reference" ref={reference}>
+    <summary>{ru?'Полные таблицы и примечания':'Full reference tables & notes'}</summary>
     <fieldset className="sv-filter">
       <legend>{ru?'Показать режимы':'Show schedules'}</legend>
       {[['all',ru?'Оба состояния':'Both states'],['chilled',ru?'Охлаждённое / размороженное':'Chilled / thawed'],['frozen',ru?'Из морозилки':'From frozen']].map(([value,label])=><label key={value}><input type="radio" name="sv-state" value={value} checked={state===value} onChange={()=>setState(value)}/>{label}</label>)}
@@ -22,5 +36,5 @@ export function SousVideTables({lang,tables}:{lang:Lang;tables:SousVide['tables'
       </table></div>
       {!!t.after_html.length&&<div className="sv-after">{t.after_html.map((a,i)=><Html as="p" key={i} html={a}/>)}</div>}
     </section>)}
-  </>;
+  </details>;
 }

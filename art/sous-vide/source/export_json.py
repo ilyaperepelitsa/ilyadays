@@ -185,15 +185,14 @@ def recipe(r, order, img):
 def sv_hero(img):
     """The sous vide page's generated hero (imagegen/recipes/sous_vide.py), else the SVG."""
     illo = img(B.illo_for("sous-vide", "hero"))
-    return {"image": illo, "svg_fallback": None if illo else sous_vide_hero(), "alt": B.site("Sous vide quick tables")}
+    return {"image": illo, "svg_fallback": None if illo else sous_vide_hero(), "alt": B.site("Sous vide calculator")}
 
 
 def sv_summary(img):
-    return {"slug": "sous-vide", "kind": "reference", "title": B.site("Sous vide quick tables"),
+    return {"slug": "sous-vide", "kind": "reference", "title": B.site("Sous vide calculator"),
             "group": B.site("Sous vide"), "group_id": B.gid("Sous vide"),
-            "blurb_html": B.site("Times and temperatures: asparagus, cauliflower, chicken breast & drumsticks, "
-                                 "ribeye, pork ribs, lamb."),
-            "description": B.site("Sous vide times and temperatures"), "yields": None, "total": None,
+            "blurb_html": B.site('Choose chilled or frozen, adjust thickness, or pick a cooking preset for meat, fish, poultry and vegetables.'),
+            "description": B.site("Interactive sous vide cooking calculator: chilled or frozen, thickness, temperature and recipe texture presets."), "yields": None, "total": None,
             "chips": [{"text": B.ui("reference"), "kind": ""}, {"text": B.ui("PDF included"), "kind": ""}],
             "hero": sv_hero(img), "share_image": img(B.share_image("sous-vide") or B.share_image("sous-vide-beets")),
             "added": ADDED.get("sous-vide")}
@@ -229,8 +228,8 @@ def sous_vide(img):
                "states": ["frozen" if row[t["cols"].index("State")].startswith("Frozen") else "chilled" for row in t["rows"]],
                "after_html": [B.site(a) for a in t["after"]],
                "image": img(B.illo_for("sous-vide", t["id"]))} for t in SOUS_VIDE]
-    return {"slug": "sous-vide", "title": B.site("Sous vide quick tables"),
-            "description": B.site("Sous vide times and temperatures"),
+    return {"slug": "sous-vide", "title": B.site("Sous vide calculator"),
+            "description": B.site("Interactive sous vide cooking calculator: chilled or frozen, thickness, temperature and recipe texture presets."),
             "group": {"id": B.gid("Sous vide"), "name": B.site("Sous vide")},
             "intro_html": B.site(SV_INTRO), "tables": tables,
             "pdf": {"src": img(SV_PDF.replace(".pdf", "_ru.pdf") if B.LANG == "ru" else SV_PDF), "title": B.ui("Printable tables"), "subtitle": B.ui("— v5, updated 2026-10-11"),

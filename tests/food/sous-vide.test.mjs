@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { describe, it } from 'node:test';
 import { sousVideTiming, duration } from '../../src/lib/sous-vide.mjs';
+import { cookingPresets, PRESET_COLUMNS } from '../../src/lib/sous-vide-presets.mjs';
 
 const root = path.resolve(import.meta.dirname, '../..');
 const read = (lang, slug) => JSON.parse(fs.readFileSync(path.join(root, 'content', lang, `${slug}.json`)));
@@ -60,6 +61,39 @@ describe('thickness timing lookup', () => {
 });
 
 describe('published sous-vide content', () => {
+  it('keeps fatty salmon pasteurization distinct from lean fish, with thaw-first frozen results', () => {
+    for (const lang of ['en','ru']) {
+      const table=read(lang,'sous-vide').tables.find(t=>t.id==='salmon-pasteurized');
+      for (let mm=5;mm<=40;mm+=5) {
+        const result=timing({food:'salmon-pasteurized',temperature:60,mm});
+        assert.equal(result.minutes,[40,50,60,75,90,120,135,150][mm/5-1]);
+        assert.equal(result.kind,'pasteurization');
+        assert.equal(timing({food:'salmon-pasteurized',temperature:60,mm,state:'frozen'}).thawFirst,true);
+        assert.equal(parseInt(table.rows[(mm/5-1)*2][4],10),result.minutes);
+      }
+    }
+    assert.equal(timing({food:'salmon-pasteurized',temperature:60,mm:26}).minutes,120);
+    assert.equal(timing({food:'salmon-pasteurized',temperature:50}).error,'temperature');
+    assert.equal(timing({food:'salmon-pasteurized',temperature:60,mm:41}).error,'size');
+  });
+
+  it('preserves every published recipe option and its identity across starting states in both languages', () => {
+    for (const lang of ['en','ru']) {
+      for (const table of read(lang,'sous-vide').tables.filter(t=>PRESET_COLUMNS[t.id])) {
+        const chilled=cookingPresets(table,'chilled'), frozen=cookingPresets(table,'frozen');
+        assert.equal(chilled.length,table.rows.filter((_,i)=>table.states[i]==='chilled').length);
+        assert.deepEqual(chilled.map(p=>p.id),frozen.map(p=>p.id),table.id);
+        for (const state of ['chilled','frozen']) {
+          for (const p of cookingPresets(table,state)) {
+            const c=PRESET_COLUMNS[table.id];
+            assert.ok(table.rows.some((row,i)=>table.states[i]===state && row[c.time]===p.time && row[c.temperature]===p.temperature && row[c.note]===p.note));
+          }
+        }
+      }
+    }
+    assert.deepEqual(cookingPresets({id:'unknown',rows:[]},'chilled'),[]);
+  });
+
   it('provides locale-independent starting-state metadata for every row and matching printable PDFs', () => {
     for (const lang of ['en', 'ru']) {
       const sv = read(lang, 'sous-vide');

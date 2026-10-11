@@ -2,7 +2,7 @@ import type { SousVide } from "@/lib/content";
 import { foodHref, getSvgDefs, media } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt, SvgDefs } from "./parts";
-import { SousVideCalculator } from "./SousVideCalculator";
+import { SousVidePlanner } from "./SousVidePlanner";
 import { SousVideTables } from "./SousVideTables";
 
 export function SousVideView({ lang, sv }: { lang: Lang; sv: SousVide }) {
@@ -19,10 +19,8 @@ export function SousVideView({ lang, sv }: { lang: Lang; sv: SousVide }) {
             <h1>{sv.title}</h1>
             <Html as="p" className="lede" html={sv.intro_html} />
             <nav className="jump">
-              <a href="#thickness">{lang === "ru" ? "По толщине" : "Thickness calculator"}</a>
-              {sv.tables.map((t) => (
-                <a key={t.id} href={`#${t.id}`}>{t.title}</a>
-              ))}
+              <a href="#thickness">{lang === "ru" ? "Калькулятор" : "Cooking calculator"}</a>
+              <a href="#reference">{lang === "ru" ? "Таблицы для справки" : "Reference tables"}</a>
               <a href="#pdf">{sv.pdf.title}</a>
             </nav>
           </div>
@@ -30,7 +28,7 @@ export function SousVideView({ lang, sv }: { lang: Lang; sv: SousVide }) {
             <HeroArt hero={sv.hero} eager />
           </figure>
         </div>
-        <SousVideCalculator lang={lang} />
+        <SousVidePlanner lang={lang} tables={sv.tables} />
         <SousVideTables lang={lang} tables={sv.tables} />
         <section className="block" id="pdf">
           <h2>
@@ -40,9 +38,9 @@ export function SousVideView({ lang, sv }: { lang: Lang; sv: SousVide }) {
             <a className="button" href={pdf} target="_blank" rel="noopener">{sv.pdf.open}</a>{" "}
             <a className="button ghost" href={pdf} download>{sv.pdf.download}</a>
           </p>
-          <object className="pdf" data={pdf} type="application/pdf">
-            <p>{sv.pdf.fallback}</p>
-          </object>
+          <details className="sv-reference"><summary>{lang === "ru" ? "Предпросмотр PDF" : "Preview PDF"}</summary>
+            <object className="pdf" data={pdf} type="application/pdf"><p>{sv.pdf.fallback}</p></object>
+          </details>
         </section>
       </article>
     </>

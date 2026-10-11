@@ -120,5 +120,33 @@
     },
     "art": "All4 replacement outputs manually reviewed: ordinary oyster caps, short lateral stems, preparation/coating/frying/serving.",
     "legacy": "Old EN/RU normal and .html routes301 to new recipe; old illustration URLs redirect to new pictures."
+  },
+  "calculator_redesign": {
+    "automated": "81 tests passed; typecheck, production build, targeted ESLint and diff checks passed.",
+    "browser": {
+      "checks": [
+        {
+          "lang": "en",
+          "presetResults": 32,
+          "sliders": "keyboard and typed input passed",
+          "frozenFish": "thaw-first passed",
+          "legacyHash": "passed",
+          "mobileOverflow": false,
+          "desktopOverflow": false
+        },
+        {
+          "lang": "ru",
+          "presetResults": 32,
+          "sliders": "keyboard and typed input passed",
+          "frozenFish": "thaw-first passed",
+          "legacyHash": "passed",
+          "mobileOverflow": false,
+          "desktopOverflow": false
+        }
+      ],
+      "errors": []
+    },
+    "visual": "Viewed English mobile and Russian dark desktop screenshots; readable buttons, sliders and result, no overflow.",
+    "behavior": "11 food/cut choices; separate meat, soft salmon, pasteurized fatty salmon and lean-fish thickness schedules; seven recipe preset groups; starting-state toggles preserve selection; reference tables and PDF preview collapsed; legacy section links reveal reference."
   }
 }
