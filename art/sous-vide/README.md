@@ -7,3 +7,5 @@ Register `sous_vide_tempura.RECIPES` in canonical `content.RECIPES` and give all
 Export with `python ../recipes/export_json.py --out content --images-out public/media`, then run `python scripts/optimize-media.py`. Imagegen files use the installed generated WebP stages. Final-stage images also serve as recipe heroes; exact duplicates share a published file.
 
 See `reference-review.json` for timing assumptions and sources, and `new-recipe-art.json` for prompts, output hashes and visual review. No new diagrams, photographic assets or hand anatomy are introduced.
+
+Regular oyster mushroom tempura replaces king oyster tempura at the user’s request. The current slug and ADDED registration are `oyster-mushroom-tempura`; old EN/RU URLs and pictures redirect to the replacement. Its four new illustrations show fan-shaped caps with short lateral stems.

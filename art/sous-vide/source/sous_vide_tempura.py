@@ -45,7 +45,7 @@ shrimp=Recipe(
  slug='jumbo-shrimp-tempura',title='Jumbo shrimp tempura',group='Japanese',serves=2,
  blurb='Large, straight tail-on prawns with a light tempura coat: proper trimming, cold batter and small frying batches.',
  yields='8 large shrimp',total='~35 min',
- intro='Use <b>raw jumbo or king prawns</b>, about 30–40 g each before peeling. Straighten gently so the thickest part cooks evenly. This is a thin tempura coating, without breadcrumbs. For mushrooms, see <a href="king-oyster-tempura.html">king oyster tempura</a>.',
+ intro='Use <b>raw jumbo or king prawns</b>, about 30–40 g each before peeling. Straighten gently so the thickest part cooks evenly. This is a thin tempura coating, without breadcrumbs. For mushrooms, see <a href="oyster-mushroom-tempura.html">oyster mushroom tempura</a>.',
  equipment=['Deep heavy pot','Oil thermometer','Kitchen scissors','Chopsticks','Bowl and ice','Wire rack and tray'],
  ingredients=[('Shrimp',[('Raw jumbo shrimp, shell-on','8 (about 300 g)'),('Plain flour (dusting)','2 tbsp')]),('Batter',BATTER),('Dipping sauce',SAUCE),('To fry and serve',[('Neutral frying oil','enough for 5–7 cm depth'),('Grated daikon','2 tbsp, optional'),('Lemon wedges','2')])],
  steps=[
@@ -57,18 +57,18 @@ shrimp=Recipe(
  sources=[*SOURCES,('Ajinomoto — shrimp trimming and belly cuts (Japanese)','https://park.ajinomoto.co.jp/recipe/card/700928/')])
 
 mushroom=Recipe(
- slug='king-oyster-tempura',title='King oyster mushroom tempura',group='Japanese',serves=2,
- blurb='Thin lengthwise slices of king oyster mushroom in a delicate crisp batter, with a juicy centre.',
+ slug='oyster-mushroom-tempura',title='Oyster mushroom tempura',group='Japanese',serves=2,
+ blurb='Fan-shaped oyster mushrooms in light tempura batter: crisp frilly edges and a juicy centre.',
  yields='2 portions',total='~25 min',
- intro='King oyster mushrooms are also sold as <b>eringi</b>: thick ivory stems with small tan caps. Slice them lengthwise so every piece keeps some stem and cap. For seafood, see <a href="jumbo-shrimp-tempura.html">jumbo shrimp tempura</a>.',
+ intro='Use <b>regular oyster mushrooms</b>, with broad grey or tan fan-shaped caps and short side stems. Tear them into small, flat pieces so the frilly edges crisp while the mushroom stays juicy. For seafood, see <a href="jumbo-shrimp-tempura.html">jumbo shrimp tempura</a>.',
  equipment=['Deep heavy pot','Oil thermometer','Chopsticks','Bowl and ice','Wire rack and tray'],
- ingredients=[('Mushrooms',[('King oyster mushrooms','250 g'),('Plain flour (dusting)','2 tbsp')]),('Batter',BATTER),('Dipping sauce',SAUCE),('To fry and serve',[('Neutral frying oil','enough for 5–7 cm depth'),('Fine salt to finish','to taste'),('Lemon wedges','2')])],
+ ingredients=[('Mushrooms',[('Oyster mushrooms','250 g'),('Plain flour (dusting)','2 tbsp')]),('Batter',BATTER),('Dipping sauce',SAUCE),('To fry and serve',[('Neutral frying oil','enough for 5–7 cm depth'),('Fine salt to finish','to taste'),('Lemon wedges','2')])],
  steps=[
-  Step('Slice the mushrooms',[DIP,'Wipe the mushrooms clean and trim only the hard base. Cut lengthwise into <b>5 mm slices</b>. Pat dry; avoid soaking them.'],time='~5 min',uses=['King oyster mushrooms',*map(lambda x:x[0],SAUCE)]),
-  Step('Mix cold batter; coat a few slices',[BOWL,'Heat oil to <b>170 °C</b>. Lightly dust a few dry slices with flour, shake off excess, dip in batter and let excess drip.'],heat='170 °C oil',time='~5 min',uses=['Plain flour (dusting)',*map(lambda x:x[0],BATTER),'Neutral frying oil']),
-  Step('Fry until crisp and tender','Lower a few slices into the oil without overlapping. Fry about <b>2–3 minutes</b>, turning once, until the batter is crisp and pale gold and the mushroom is tender through the centre. Thick slices need longer. Skim loose crumbs and restore <b>170 °C</b> between batches.',heat='170 °C oil',time='~2–3 min per batch'),
-  Step('Drain and serve','Drain on a rack, keeping the slices separate. Serve immediately with a little salt and lemon or the dipping sauce. The mushroom inside should be juicy, with a light crisp coating rather than a thick doughy layer.',uses=['Fine salt to finish','Lemon wedges'])],
- notes=[('Other mushrooms','Shiitake caps, small maitake clusters and oyster mushrooms also work. Keep pieces small enough to cook through while the coating stays pale.'),('Vegetarian dipping sauce','Use kombu-shiitake dashi instead of bonito dashi. The batter contains egg; this version is vegetarian with vegetable dashi, not vegan.'),OTHER],
- sources=[('Mizkan — mushroom tempura, 5 mm eringi slices (Japanese)','https://www.mizkan.co.jp/ouchirecipe/recipe/?menu_id=527'),*SOURCES])
+  Step('Trim and tear the mushrooms',[DIP,'Brush or wipe the mushrooms clean and trim the tough shared base. Tear into <b>small, flat pieces of one or two caps</b>; split any thick stem lengthwise. Pat dry and avoid soaking. Do not leave a dense whole bunch.'],time='~5 min',uses=['Oyster mushrooms',*map(lambda x:x[0],SAUCE)]),
+  Step('Mix cold batter; coat a few pieces',[BOWL,'Heat oil to <b>170 °C</b>. Lightly dust a few dry mushroom pieces with flour, shake off excess, dip in batter and let excess drip. Keep the thin cap edges separate.'],heat='170 °C oil',time='~5 min',uses=['Plain flour (dusting)',*map(lambda x:x[0],BATTER),'Neutral frying oil']),
+  Step('Fry until crisp and tender','Lower a few flat pieces into the oil without overlapping. Fry about <b>2–3 minutes</b>, turning once, until the batter is crisp and pale gold and the thickest stem join is tender. Use the time as a guide and check a thick piece. Skim loose crumbs and restore <b>170 °C</b> between batches.',heat='170 °C oil',time='~2–3 min per batch'),
+  Step('Drain and serve','Drain on a rack, keeping the pieces separate. Serve immediately with a little salt and lemon or the dipping sauce. The frilly edges should be crisp and the mushroom inside juicy, under a thin coating.',uses=['Fine salt to finish','Lemon wedges'])],
+ notes=[('Other mushrooms','Shiitake caps and small maitake clusters also work. Keep pieces small and flat enough to cook through while the coating stays pale.'),('Vegetarian dipping sauce','Use kombu-shiitake dashi instead of bonito dashi. The batter contains egg; this version is vegetarian with vegetable dashi, not vegan.'),OTHER],
+ sources=[('Hokto — torn oyster mushrooms for tempura (Japanese)','https://www.hokto-kinoko.co.jp/kinorepi/kinorepinews/?n_id=2937'),*SOURCES])
 
 RECIPES=[salmon,fries,shrimp,mushroom]

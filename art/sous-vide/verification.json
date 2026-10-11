@@ -89,5 +89,36 @@
     "mediaFailures": [],
     "desktopOverflow": false
   },
-  "legacy_pdf": "v4 URL permanently redirects to v5."
+  "legacy_pdf": "v4 URL permanently redirects to v5.",
+  "oyster_replacement": {
+    "automated": "79 tests, typecheck and production build pass;0 untranslated Russian strings.",
+    "browser": {
+      "pages": [
+        {
+          "lang": "en",
+          "status": 200,
+          "images": 4,
+          "diagrams": 0,
+          "overflow": false,
+          "legacyRedirects": "passed",
+          "index": "passed",
+          "shrimpLink": "passed"
+        },
+        {
+          "lang": "ru",
+          "status": 200,
+          "images": 4,
+          "diagrams": 0,
+          "overflow": false,
+          "legacyRedirects": "passed",
+          "index": "passed",
+          "shrimpLink": "passed"
+        }
+      ],
+      "mediaFailures": [],
+      "desktopOverflow": false
+    },
+    "art": "All4 replacement outputs manually reviewed: ordinary oyster caps, short lateral stems, preparation/coating/frying/serving.",
+    "legacy": "Old EN/RU normal and .html routes301 to new recipe; old illustration URLs redirect to new pictures."
+  }
 }

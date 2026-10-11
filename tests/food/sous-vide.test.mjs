@@ -85,7 +85,7 @@ describe('published sous-vide content', () => {
   });
 
   it('publishes four illustrated recipes in both languages, with distinct pictures at every stage', () => {
-    const slugs = ['sous-vide-fries', 'sous-vide-salmon', 'jumbo-shrimp-tempura', 'king-oyster-tempura'];
+    const slugs = ['sous-vide-fries', 'sous-vide-salmon', 'jumbo-shrimp-tempura', 'oyster-mushroom-tempura'];
     for (const lang of ['en', 'ru']) for (const slug of slugs) {
       const r = read(lang, `recipes/${slug}`);
       assert.equal(r.steps.length, slug === 'sous-vide-fries' ? 5 : 4);
@@ -116,7 +116,8 @@ describe('published sous-vide content', () => {
     const shrimp = read('en', 'recipes/jumbo-shrimp-tempura');
     assert.match(text(shrimp.steps[0].body_html), /3 shallow cuts across the belly/);
     assert.match(text(shrimp.steps[2].body_html), /63 °C/);
-    const mushroom = read('en', 'recipes/king-oyster-tempura');
-    assert.match(text(mushroom.steps[0].body_html), /5 mm slices/);
+    const mushroom = read('en', 'recipes/oyster-mushroom-tempura');
+    assert.match(text(mushroom.steps[0].body_html), /small, flat pieces of one or two caps/);
+    assert.doesNotMatch(JSON.stringify(mushroom), /eringi|king oyster|5 mm slices/i);
   });
 });
