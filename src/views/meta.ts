@@ -40,7 +40,7 @@ export const travelMeta = (lang: Lang): Metadata => {
 export const yachtFoodMeta = (lang: Lang): Metadata => pageMetadata({
   lang, path:'/travel/turkey-yacht-food',
   title:lang==='ru'?'Турция: еда на яхте':'Turkey: yacht food',
-  description:lang==='ru'?'12 турецких идей для яхты из Гёчека, осенние покупки и единый гид по всем вариантам сашими.':'Twelve Turkish-inspired yacht meal ideas from Göcek, autumn shopping and one guide to all sashimi options.',
+  description:lang==='ru'?'Сезонные закупки для яхты из Гёчека и 12 полных рецептов в разделе «Еда», с упрощёнными версиями и всеми сашими на одной странице.':'Seasonal yacht provisioning from Göcek, with twelve full Food recipes, simplified versions and all sashimi options on one page.',
   image:'/share/turkey-yacht-food.jpg',
 });
 

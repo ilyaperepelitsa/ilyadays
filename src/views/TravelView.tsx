@@ -1,4 +1,5 @@
 import Link from "next/link";
+import yachtFood from '../../content/travel/turkey-yacht-food.json';
 import { type Lang, localPath, strings } from "@/lib/i18n";
 import { SiteFooter, SiteHeader } from "@/components/site/SiteHeader";
 import { AuthProvider } from "@/components/site/AuthProvider";
@@ -17,11 +18,11 @@ export function TravelView({ lang }: { lang: Lang }) {
         <div className="tiles tiles-fill">
           <Link className="tile" href={localPath(lang, "/travel/turkey-yacht-food")}>
             {/* eslint-disable-next-line @next/next/no-img-element -- small static cover */}
-            <img src="/media/travel/turkey-yacht-food/tuna-sashimi.webp" alt={lang==='ru'?'Сашими на столе яхты':'Sashimi on a yacht table'} width={600} height={400}/>
+            <img src={yachtFood.cards[0].image} alt={lang==='ru'?'Сашими на столе яхты':'Sashimi on a yacht table'} width={600} height={400}/>
             <div className="tile-body">
               <h2>{lang==='ru'?'Турция · еда на яхте':'Turkey · yacht food'}</h2>
-              <p>{lang==='ru'?'Гёчек, 24 октября — примерно 7 ноября. 12 турецких идей блюд, покупки на берегу и все варианты сашими на одной странице.':'Göcek, 24 October – around 7 November. Twelve Turkish-inspired meal ideas, shore shopping and all sashimi options on one page.'}</p>
-              <span className="tile-go">{lang==='ru'?'Выбрать блюда':'Browse the shortlist'} →</span>
+              <p>{lang==='ru'?'Гёчек, 24 октября — примерно 7 ноября. Сезонные закупки на берегу, 12 полных рецептов в разделе «Еда» и все сашими на одной странице.':'Göcek, 24 October – around 7 November. Seasonal shore shopping, twelve full recipes in Food and all sashimi options on one page.'}</p>
+              <span className="tile-go">{lang==='ru'?'Закупки и рецепты':'Shopping & recipes'} →</span>
             </div>
           </Link>
           <Link className="tile" href={localPath(lang, "/travel/istanbul")}>

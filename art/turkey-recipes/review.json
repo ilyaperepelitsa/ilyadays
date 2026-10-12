@@ -1,0 +1,508 @@
+{
+  "date": "2026-10-13",
+  "policy_version": "2026-10-13.3",
+  "recipes": 12,
+  "steps": 49,
+  "unique_final_generated_scenes": 50,
+  "critic": "Sequential content and full-size preparation-image critic; final corrections checked by critic and root.",
+  "findings_fixed": [
+    "Shrimp batch handling, shortcut quantities and times, equipment, heat translations, realistic potato frying method.",
+    "Lean lamb cut instead of marbled beef; all fish/lamb hands and knife positions rechecked.",
+    "Calm poaching water, thick fritter batter, thin-film potato oil, small beef strips.",
+    "No invented onion, fresh seeds in dressing or whole chillies; consistent pepper dice.",
+    "Unbroken fish skin and safe guiding hand visibly separated from the sashimi blade.",
+    "Minced-lamb cover replaced formed meatballs with loose irregular broken mince.",
+    "Menemen cover corrected from intact eggs to scrambled folds, matching the method."
+  ],
+  "limits": "Natural grip occlusion hides some digits; no visible extra, fused or overlong fingers were found. Recipes are source-informed home adaptations, not claimed as kitchen-tested.",
+  "final_assets": [
+    {
+      "slug": "yacht-sashimi",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-661708cc-190f-4f47-8411-380aa3df97d7.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/yacht-sashimi/1.webp",
+      "sha256": "7e51412bae325dcdae7ac0e8c2ae8af91d795388974389e779986f012d14d1e8",
+      "review": "pass"
+    },
+    {
+      "slug": "yacht-sashimi",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-ee9fe61a-ab93-4125-a97b-123d2d894e81.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/yacht-sashimi/2.webp",
+      "sha256": "420f009661aed4fdbf44ddccb969d958b766a328e370978f5914c88696c6165e",
+      "review": "pass"
+    },
+    {
+      "slug": "yacht-sashimi",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-b9d9664e-c386-4949-b8d7-69d54fb08369.png",
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/yacht-sashimi/3.webp",
+      "sha256": "b15b25d4fe8a15ca5f42f18234394c4dfa263eea2ffca4e7ad95bdf3461755f5",
+      "review": "pass"
+    },
+    {
+      "slug": "yacht-sashimi",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-7c180d18-815d-40e5-990e-fc8b9ceacce2.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/yacht-sashimi/4.webp",
+      "sha256": "97df722f74731951691e418e15f93681fec6266f75ca7fd137951ca13c7e244d",
+      "review": "pass"
+    },
+    {
+      "slug": "lemon-caper-dorada",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-4e1aec77-b23c-46fa-ae91-c72dffb0a5e5.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/lemon-caper-dorada/1.webp",
+      "sha256": "32c124b01f5a2193e008cb6992892565e5b40d9613a345ad5796d8015be3586d",
+      "review": "pass"
+    },
+    {
+      "slug": "lemon-caper-dorada",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-e8f90957-de73-44ff-b31c-1857b47a5102.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/lemon-caper-dorada/2.webp",
+      "sha256": "9b05ba995daad9f1279f6e26f94d0e3c520690cf57b06e8fe4a35783d293a8fe",
+      "review": "pass"
+    },
+    {
+      "slug": "lemon-caper-dorada",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-73bd95c8-5cb9-4e3d-810f-1dbd6ef4f688.png",
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/lemon-caper-dorada/3.webp",
+      "sha256": "61f0c7c7b43ae010cd37bfa9d1c9448e4cbe6c1db7b6c23b9aaf4d7d8654d4ac",
+      "review": "pass"
+    },
+    {
+      "slug": "lemon-caper-dorada",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-c9c26f2c-15ad-4331-8bc6-ba8dc09790c3.png",
+      "also_hero": true,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/lemon-caper-dorada/4.webp",
+      "sha256": "5d71a19339fb022fe09b3ecf076dd3d691e3f29c00f849284ae9dc1ba67a3196",
+      "review": "pass"
+    },
+    {
+      "slug": "garlic-chilli-shrimp",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-69aaa825-a7ec-4f8b-b86a-a91abee8e16f.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/garlic-chilli-shrimp/1.webp",
+      "sha256": "bc4d7f62f5295c4ff775cdf550171f6246ca0c03d149d1654bc20d31f8fa29ab",
+      "review": "pass"
+    },
+    {
+      "slug": "garlic-chilli-shrimp",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-a8e07303-5bce-4908-990d-d9c6e8dca72d.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/garlic-chilli-shrimp/2.webp",
+      "sha256": "85d5fd9321ff26af10e46cad422e341b3053499278f9774bfcbfe54c45e1582e",
+      "review": "pass"
+    },
+    {
+      "slug": "garlic-chilli-shrimp",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-dcbd05d5-904c-4d39-9c58-e1c775c6b8db.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/garlic-chilli-shrimp/3.webp",
+      "sha256": "154dc2a38b1aacc46d65d39392d9a363d0f0bc532f7e7ad1ce40dcdcdb4c611a",
+      "review": "pass"
+    },
+    {
+      "slug": "garlic-chilli-shrimp",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-d2b132b1-5d69-4bcd-9ee8-bc2e5ac57695.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/garlic-chilli-shrimp/4.webp",
+      "sha256": "632d7bed0621e3a0d4253a3113a4cd9d9054c05e47760556428fbca0d9905481",
+      "review": "pass"
+    },
+    {
+      "slug": "palamut-tava",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-4f73a535-57cf-48e7-bf35-3805630f9fd7.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/palamut-tava/1.webp",
+      "sha256": "dd4db8fc1745d6713ca68b95b8ac22f71e048220c7ba88c188acecbcf506110b",
+      "review": "pass"
+    },
+    {
+      "slug": "palamut-tava",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-6766edc1-0ca6-4862-81d7-fec438433e3d.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/palamut-tava/2.webp",
+      "sha256": "39c2d39c4c0f9d48af2acc2a0bbd7380b3cca4e6ae9f128e5a4e3ffb8ca49950",
+      "review": "pass"
+    },
+    {
+      "slug": "palamut-tava",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-0729b9e1-4d39-4ee9-9921-c4b1f2d19701.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/palamut-tava/3.webp",
+      "sha256": "b33664f50854e121f819e23ab60092f90ab9e7922c04624ae332b32295357915",
+      "review": "pass"
+    },
+    {
+      "slug": "palamut-tava",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-464b4279-a507-4a7e-8f6b-dbd186d0b1ef.png",
+      "also_hero": true,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/palamut-tava/4.webp",
+      "sha256": "51bc4694d3ef9d63276aa573d10e848024cab654fc7ba232f060d9b6ed2a7055",
+      "review": "pass"
+    },
+    {
+      "slug": "sumac-lamb-wraps",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-a0c42c1a-1a70-426d-ac73-b14e2016bebc.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/sumac-lamb-wraps/1.webp",
+      "sha256": "4a153f5f068dfca8fb9f9c5d3835045d7440135f863854eced661dfaf9f6638f",
+      "review": "pass"
+    },
+    {
+      "slug": "sumac-lamb-wraps",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-c57c0e7a-a95f-4b05-b0af-abda8770c777.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/sumac-lamb-wraps/2.webp",
+      "sha256": "3e1c32938d16755d359ff8fd2ab17393052711e2fac01cc925d9a768779791a2",
+      "review": "pass"
+    },
+    {
+      "slug": "sumac-lamb-wraps",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-5c2d0ade-172b-4583-89ac-f9ee83b1df81.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/sumac-lamb-wraps/3.webp",
+      "sha256": "8f2797c0757f2435615aff0a6c8d010d7e98b55174d5e0c66c15a5fb03df97ac",
+      "review": "pass"
+    },
+    {
+      "slug": "sumac-lamb-wraps",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-70e91009-ded5-4035-af40-e9d584d68365.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/sumac-lamb-wraps/4.webp",
+      "sha256": "a4c24bc9ff8aa40b4af8c742be4e8ea14c83e9c65b43720df2d8eb1815968a4f",
+      "review": "pass"
+    },
+    {
+      "slug": "sumac-lamb-wraps",
+      "key": "hero",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-ab35fdcc-203b-45a0-b68a-85350b1ba386.png",
+      "also_hero": true,
+      "exit_code": 1,
+      "canonical": "../recipes/generated/clean/sumac-lamb-wraps/hero.webp",
+      "sha256": "1967c21a7902819c9e5e44d22554fbacef88f1d8055ef1cb33c19eea992ad00d",
+      "review": "pass"
+    },
+    {
+      "slug": "ali-nazik",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-21a3ea35-ac9f-4fcb-8f08-3e414fb9cadc.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/ali-nazik/1.webp",
+      "sha256": "1ec87e21b30a61819ce668ca8275b2e92dd3bdf6b38cfafb510e99bdef765a0b",
+      "review": "pass"
+    },
+    {
+      "slug": "ali-nazik",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-68849b58-7e26-486d-b8d3-aaf51b089647.png",
+      "policy_version": "2026-10-13.2",
+      "canonical": "../recipes/generated/clean/ali-nazik/2.webp",
+      "sha256": "07fa09ea78e8d126ace19180986c3b1743348b756632e30383fdbd1a26bc871a",
+      "review": "pass"
+    },
+    {
+      "slug": "ali-nazik",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-2b12aa86-720b-47bf-af32-42e10da023c0.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/ali-nazik/3.webp",
+      "sha256": "6f192edfa212af2a7c170ccd1e0655481985f37f3fcb979fc3d90bd398fd342e",
+      "review": "pass"
+    },
+    {
+      "slug": "ali-nazik",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-b75ba273-dc28-4e25-a11b-e6c7f34cf14c.png",
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/ali-nazik/4.webp",
+      "sha256": "bac9ccfc50ad463fa982e2efa02ac83f01e9532415644923f4910f5c2bb5720e",
+      "review": "pass"
+    },
+    {
+      "slug": "gavurdagi-salad",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-c338ee6a-90e7-49c2-a416-f6f39ace3f96.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/gavurdagi-salad/1.webp",
+      "sha256": "34f85beac3900896d4d19490125b3170345172d58f4f171e5e810ce7c5a5fead",
+      "review": "pass"
+    },
+    {
+      "slug": "gavurdagi-salad",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-8586c5a8-9a5f-4229-bd18-91271d44e124.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/gavurdagi-salad/2.webp",
+      "sha256": "bb6d16b4cf2098785c0731ef9636f90cf5eae9d361d74c2202ab111ef68d5a0a",
+      "review": "pass"
+    },
+    {
+      "slug": "gavurdagi-salad",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-45d7af38-ad1f-426e-a855-c2d8e2e148d0.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/gavurdagi-salad/3.webp",
+      "sha256": "76986f64d91a4fcc0c86cf62875f2093012c6aef1b85b1b1f728836924757e36",
+      "review": "pass"
+    },
+    {
+      "slug": "gavurdagi-salad",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-22cad80c-5723-49a2-b0de-298b8e2feb4b.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/gavurdagi-salad/4.webp",
+      "sha256": "3c0f70b4d7e35cf209a38c9a24f6ecd641d3e27bca7ca00814c3409f86f07550",
+      "review": "pass"
+    },
+    {
+      "slug": "pomegranate-salad",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-67e8ab19-8fba-4979-ba28-0b655845deb5.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/pomegranate-salad/1.webp",
+      "sha256": "e0d7e20faca445fd9a0a01825b8fb50fbed663bfa514de8b63bc77aaf402a0f8",
+      "review": "pass"
+    },
+    {
+      "slug": "pomegranate-salad",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-c8a1f60a-5c77-4313-8f72-5ce3a1574685.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/pomegranate-salad/2.webp",
+      "sha256": "6f2b749e61105f84df8877e117a86314340fc9bff0ac72980c0feb5643d68af9",
+      "review": "pass"
+    },
+    {
+      "slug": "pomegranate-salad",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-5cbad7b4-678b-41c8-86a4-ad557add7bdb.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/pomegranate-salad/3.webp",
+      "sha256": "24f3be83d99673c50864740428bb4bb42fb398e59638784e7ab9075bb6b3a8e6",
+      "review": "pass"
+    },
+    {
+      "slug": "pomegranate-salad",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-f1021486-cb5d-4072-be2b-91b06b11862e.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/pomegranate-salad/4.webp",
+      "sha256": "fc516107fb1baeffb6ba2a4e16a40b953e53fbb670fb4f07bb977774c9be425b",
+      "review": "pass"
+    },
+    {
+      "slug": "cilbir",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-c3f25f1a-d408-4c42-ba37-58f0e5335f24.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/cilbir/1.webp",
+      "sha256": "a42087a6618039584a33f105150992e940f32ab522a0f6dfdb89fe6331714efb",
+      "review": "pass"
+    },
+    {
+      "slug": "cilbir",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-c3166097-909f-44b5-bdf0-7a09fdda3649.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/cilbir/2.webp",
+      "sha256": "6862df92957c7b2f896ff9fe48a68b789a41200e8901ed27489515702166e155",
+      "review": "pass"
+    },
+    {
+      "slug": "cilbir",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-74790e39-ddfc-4661-8862-f9f2e833c39a.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/cilbir/3.webp",
+      "sha256": "0a515830da3983be591a9b8c68db8cf227e953db3b9670f4a9c17a8390026330",
+      "review": "pass"
+    },
+    {
+      "slug": "cilbir",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-e62a6b25-2cb2-4c95-836b-80531eab690c.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/cilbir/4.webp",
+      "sha256": "58da92f86b78c216064dc56714cc5283dcf68a9f9d25d54c9b3c22390728e166",
+      "review": "pass"
+    },
+    {
+      "slug": "kabak-mucver",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-2b5de816-8da5-4cc0-83cc-74bf9465b8e5.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/kabak-mucver/1.webp",
+      "sha256": "d86e2a5f56070ed93382ae3d11e9d78a5db03c1774fe68f8913fcd8093bc2320",
+      "review": "pass"
+    },
+    {
+      "slug": "kabak-mucver",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-61ab66c9-dde0-4be2-8bcf-3a6e00ece52d.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/kabak-mucver/2.webp",
+      "sha256": "282280f2dfd250f88ba7d7433f732aa05a7a4dd5335f6fa2291e0f795c8cebf0",
+      "review": "pass"
+    },
+    {
+      "slug": "kabak-mucver",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-f36a3d0a-cbf8-4c0e-9210-aecbd2c94d72.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/kabak-mucver/3.webp",
+      "sha256": "788ea8754bc2f033d425d90207e6a72adb7631e49571cc6cfd409c90a71bddf7",
+      "review": "pass"
+    },
+    {
+      "slug": "kabak-mucver",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-0b4bc5ba-cf03-4099-a3ce-7e80c7ef901a.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/kabak-mucver/4.webp",
+      "sha256": "b0eeedb7738f4dfa9e621c870133ba916a325da55ffd54615ee69829efe85fc1",
+      "review": "pass"
+    },
+    {
+      "slug": "cokertme",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-b9c9ce45-4d9e-476e-a10d-d3e45c6368ff.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/cokertme/1.webp",
+      "sha256": "453c73307d4c699e9487ea7b12785a8f474db2289ea8038e2684c2ace9c5d54e",
+      "review": "pass"
+    },
+    {
+      "slug": "cokertme",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-1e23c69f-662c-453a-b9b5-bb4b24bef94c.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/cokertme/2.webp",
+      "sha256": "10bc3421f479fe593dee48f09469c81ae413ff3169cd283287cbd7f83dc06462",
+      "review": "pass"
+    },
+    {
+      "slug": "cokertme",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-3b3e8bfa-dd1b-4f97-b033-356208231389.png",
+      "also_hero": false,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/cokertme/3.webp",
+      "sha256": "0d1f88f7374835cdecc7803bb6d666a0cc9bd4f9307d8878847b90b1801643ad",
+      "review": "pass"
+    },
+    {
+      "slug": "cokertme",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-4846dca6-e4a7-463f-9dca-f809de45ad95.png",
+      "also_hero": false,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/cokertme/4.webp",
+      "sha256": "a6d241d8cc3c590af77f0bbb8576ef78c63a8aed2fbe6fe4d85963db55d97938",
+      "review": "pass"
+    },
+    {
+      "slug": "cokertme",
+      "key": "5",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-f5accf49-9367-44fb-a184-46d5c84172a8.png",
+      "also_hero": true,
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/cokertme/5.webp",
+      "sha256": "f66fdad0d67f7f2f3a347197f33b6760e43208b0d451240ac7451b7de5b6e359",
+      "review": "pass"
+    },
+    {
+      "slug": "menemen",
+      "key": "1",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-55542230-6b42-4f8a-959f-1ef732f6b3ce.png",
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/menemen/1.webp",
+      "sha256": "0e575ded383ea9afed578f4271c6820435cd01f3c7a2e00f5162791dda3962a1",
+      "review": "pass"
+    },
+    {
+      "slug": "menemen",
+      "key": "2",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-072af96a-e4fe-4bf8-82be-77e24b554de4.png",
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/menemen/2.webp",
+      "sha256": "cc9f87c927ac587dd4f2d5cdab9c9f6bc060990eedfeeb97c077ecec092691db",
+      "review": "pass"
+    },
+    {
+      "slug": "menemen",
+      "key": "3",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-7de93a3c-7826-42c6-817d-94c1d133ff77.png",
+      "policy_version": "2026-10-13.3",
+      "canonical": "../recipes/generated/clean/menemen/3.webp",
+      "sha256": "496cd2be4d81692415be674ab3d7a37194855c507ef969ebb1a7c2f4867bb0be",
+      "review": "pass"
+    },
+    {
+      "slug": "menemen",
+      "key": "4",
+      "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-7942bc32-523a-4d7c-a472-65097e1130be.png",
+      "also_hero": true,
+      "exit_code": 0,
+      "canonical": "../recipes/generated/clean/menemen/4.webp",
+      "sha256": "386154f50b8a67ff97cd30e9b5d6e14f9ca028dcc39b90ed1f6c0cea23d1d698",
+      "review": "pass",
+      "policy_version": "2026-10-13.3"
+    }
+  ]
+}

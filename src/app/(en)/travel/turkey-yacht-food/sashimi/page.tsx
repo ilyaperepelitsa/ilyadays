@@ -1,4 +1,2 @@
-import { TurkeyYachtSashimiView } from '@/views/TurkeyYachtSashimiView';
-import { yachtSashimiMeta } from '@/views/meta';
-export const metadata=yachtSashimiMeta('en');
-export default function Page(){return <TurkeyYachtSashimiView lang="en"/>;}
+import { permanentRedirect } from "next/navigation";
+export default function Page(){permanentRedirect("/food/yacht-sashimi");}

@@ -4,6 +4,8 @@ import { ONIGIRI_FILLINGS, ONIGIRI_METHODS, integratedDestination } from "./src/
 
 // Old static-site URLs (ilyadays.com/food/*.html etc.) keep working: permanent 301s to the new routes.
 const legacy = [
+  { source: "/travel/turkey-yacht-food/sashimi", destination: "/food/yacht-sashimi" },
+  { source: "/ru/travel/turkey-yacht-food/sashimi", destination: "/ru/food/yacht-sashimi" },
   { source: "/index.html", destination: "/" },
   { source: "/food/index.html", destination: "/food" },
   { source: "/travel/index.html", destination: "/travel" },

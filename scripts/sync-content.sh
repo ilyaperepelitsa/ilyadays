@@ -14,6 +14,10 @@ cd "$(dirname "$0")/.."
 RECIPES="${RECIPES_DIR:-../recipes}"
 TRIP="${ISTANBUL_DIR:-../istanbul_trip}"
 
+# Shared, versioned requirements apply to every generated image, including the
+# sibling recipe generator. Refresh its runtime mirror before any generation.
+cp art/image-requirements.json "$RECIPES/imagegen/requirements.json"
+
 # Pictures first: every recipe gets its generated illustrations automatically — missing ones are made now, and a new
 # recipe without an image spec gets a drafted one (../recipes/imagegen/auto.py). Costs nothing when nothing is missing.
 # SKIP_IMAGES=1 npm run sync skips this (offline).

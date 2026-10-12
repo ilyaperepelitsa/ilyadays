@@ -4,6 +4,7 @@ import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt, SvgDefs } from "./parts";
 import { BatchCalc } from "./BatchCalc";
 import { VinegarPicker } from "./VinegarPicker";
+import { SashimiOptions } from "./SashimiOptions";
 import { Ingredients, Mise, TimelineChart, Steps, NotesAndSources } from "./RecipeSections";
 
 export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
@@ -30,6 +31,10 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
               {r.mise.length > 0 && <a href="#mise">{t("Mise en place")}</a>}
               {r.timeline && <a href="#timeline">{t("Prep order")}</a>}
               <a href="#steps">{t("Steps")}</a>
+              {r.slug === 'yacht-sashimi' && <>
+                <a href="#sashimi-guide">{lang === 'ru' ? '9 вариантов морепродуктов' : '9 seafood options'}</a>
+                <a href="#supplier-leads">{lang === 'ru' ? 'Где искать' : 'Supplier leads'}</a>
+              </>}
               {r.parts.map((p) => (
                 <a key={p.id} href={`#${p.id}`}>{p.title}</a>
               ))}
@@ -46,6 +51,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
             <Mise r={r} t={t} />
             {r.timeline && <TimelineChart tl={r.timeline} t={t} />}
             <Steps r={r} t={t} />
+            {r.slug === 'yacht-sashimi' && <SashimiOptions lang={lang} />}
             {r.batch && r.vinegar_options && <BatchCalc batch={r.batch} options={r.vinegar_options} lang={lang} />}
             <NotesAndSources r={r} t={t} />
             {r.siblings.length > 0 && (

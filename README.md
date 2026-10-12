@@ -18,7 +18,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/food/sous-vide` | `/ru/food/sous-vide` | Cooking calculator, including salmon, with chilled/frozen controls, thickness sliders, recipe presets, reference tables and PDF |
 | `/travel` | `/ru/travel` | Trips |
 | `/travel/turkey-yacht-food` | `/ru/travel/turkey-yacht-food` | Twelve Turkish-inspired yacht meal proposals and seasonal shopping |
-| `/travel/turkey-yacht-food/sashimi` | `/ru/travel/turkey-yacht-food/sashimi` | One page for nine sashimi options, serving ideas and sourced buying/holding guidance |
+| `/food/yacht-sashimi` | `/ru/food/yacht-sashimi` | One full sashimi recipe with nine seafood variations and sourced buying/holding guidance; old Travel sashimi URLs redirect here |
 | `/travel/new` | `/ru/travel/new` | Template for a new city: days, pace, meals, themes. A model fills the plan; Wikipedia and Commons add links and pictures. Saved in this browser |
 | `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it |
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
@@ -75,9 +75,9 @@ The recipes and the Istanbul app are edited in their own repos (`../recipes`, `.
 4. It copies `../istanbul_trip/dist/app.{js,css,d.ts}`.
 5. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.
 
-The yacht shortlist is authored here in `content/travel/turkey-yacht-food.json`, with compressed covers in
-`public/media/travel/turkey-yacht-food/` and generation records in `art/travel/turkey-yacht-food/`. Sync preserves
-these Travel directories. These are proposals, not full recipes exported from the recipe repo.
+The Turkey seasonal shopping guide is authored here in `content/travel/turkey-yacht-food.json`. Its twelve cards link to full Food recipes, sourced from `../recipes/src/turkish_recipes.{py,json}` with bilingual translations and per-step art. The reusable Food collection is separate from the dated Travel provisioning notes. Source snapshots are retained in `art/turkey-recipes/source/` because the sibling currently has no Git repository.
+
+All future generated art follows the shared [image requirements](art/IMAGE_REQUIREMENTS.md), owned by `art/image-requirements.json`. Sync refreshes the recipe generator's policy mirror before any generation; built-in workflows use `scripts/recipe-image-prompts.py` and `SKIP_IMAGES=1 npm run sync`.
 
 Commit the result. Vercel builds only from this repo and never sees the sibling repos.
 

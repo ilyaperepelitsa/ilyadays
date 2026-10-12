@@ -1,7 +1,26 @@
 {
- "description": "Japanese basics, ramen, sushi, Korean, rice noodles, soba, Indian and sous vide — step by step with pictures.",
+ "description": "Turkish dishes, coastal seafood, Japanese basics, sushi, Korean, noodles, Indian, cheese and sous vide — step by step with pictures.",
  "footer": "Tap ingredients and steps to tick them off while you cook.",
  "groups": [
+  {
+   "id": "turkish--coastal",
+   "items": [
+    "yacht-sashimi",
+    "lemon-caper-dorada",
+    "garlic-chilli-shrimp",
+    "palamut-tava",
+    "sumac-lamb-wraps",
+    "ali-nazik",
+    "gavurdagi-salad",
+    "pomegranate-salad",
+    "cilbir",
+    "kabak-mucver",
+    "cokertme",
+    "menemen"
+   ],
+   "name": "Turkish & coastal",
+   "notes": []
+  },
   {
    "id": "sous-vide",
    "items": [
@@ -166,20 +185,20 @@
    "notes": []
   }
  ],
- "lede_html": "Japanese basics and big projects, sushi, Korean kimchi and fried chicken, weeknight rice noodles and soba, Indian chicken tikka and a sous vide reference — each with step-by-step pictures, mise-en-place order and a prep timeline.",
+ "lede_html": "Illustrated recipes for everyday cooking and bigger projects: Turkish dishes and coastal seafood, Japanese basics and sushi, Korean, noodles, Indian, cheese and sous vide. Start with ingredients, then follow the preparation pictures.",
  "recent": [
-  "sous-vide-salmon",
-  "sous-vide-fries",
-  "jumbo-shrimp-tempura",
-  "oyster-mushroom-tempura",
-  "onigiri-mold",
-  "onigiri-plastic-wrap",
-  "soy-cured-yolk-onigiri",
-  "soboro-onigiri",
-  "pork-kimchi-onigiri",
-  "shiso-kombu-onigiri",
-  "takana-onigiri",
-  "peanut-miso-onigiri"
+  "yacht-sashimi",
+  "lemon-caper-dorada",
+  "garlic-chilli-shrimp",
+  "palamut-tava",
+  "sumac-lamb-wraps",
+  "ali-nazik",
+  "gavurdagi-salad",
+  "pomegranate-salad",
+  "cilbir",
+  "kabak-mucver",
+  "cokertme",
+  "menemen"
  ],
  "recipes": [
   {
@@ -209,6 +228,366 @@
    "title": "Sous vide calculator",
    "total": null,
    "yields": null
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "One cold preparation, nine seafood variations, with lemon–soy dip. Only use documented raw-use seafood.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "20 min, plus fridge thawing if frozen",
+     "kind": "time",
+     "text": "20 min, plus fridge thawing if frozen"
+    }
+   ],
+   "description": "One cold preparation, nine seafood variations, with lemon–soy dip. Only use documented raw-use seafood.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Sashimi (sliced raw seafood) · all options",
+    "image": "illustrations/yacht-sashimi/4.webp?v=12098f6cda",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/yacht-sashimi.jpg?v=257489d9eb",
+   "slug": "yacht-sashimi",
+   "title": "Sashimi (sliced raw seafood) · all options",
+   "total": "20 min, plus fridge thawing if frozen",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Crisp skin, moist fish and a quick lemon pan sauce; a modern coastal variation.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "25 min",
+     "kind": "time",
+     "text": "25 min"
+    }
+   ],
+   "description": "Crisp skin, moist fish and a quick lemon pan sauce; a modern coastal variation.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Çipura tava (pan-fried sea bream), lemon & capers",
+    "image": "illustrations/lemon-caper-dorada/4.webp?v=501cbcb5d9",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/lemon-caper-dorada.jpg?v=e1cd70bb3d",
+   "slug": "lemon-caper-dorada",
+   "title": "Çipura tava (pan-fried sea bream), lemon & capers",
+   "total": "25 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Big shrimp in garlic butter with pul biber (mild red-pepper flakes).",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "~25 min; longer in batches",
+     "kind": "time",
+     "text": "~25 min; longer in batches"
+    }
+   ],
+   "description": "Big shrimp in garlic butter with pul biber (mild red-pepper flakes).",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Tereyağlı karides (butter shrimp), garlic & chilli",
+    "image": "illustrations/garlic-chilli-shrimp/4.webp?v=5dd883e308",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/garlic-chilli-shrimp.jpg?v=afffa4bbcd",
+   "slug": "garlic-chilli-shrimp",
+   "title": "Tereyağlı karides (butter shrimp), garlic & chilli",
+   "total": "~25 min; longer in batches",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Autumn fish with a thin flour crust and sharp onion salad.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "25 min",
+     "kind": "time",
+     "text": "25 min"
+    }
+   ],
+   "description": "Autumn fish with a thin flour crust and sharp onion salad.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Palamut tava (pan-fried bonito) & sumac onions",
+    "image": "illustrations/palamut-tava/4.webp?v=e2b914d181",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/palamut-tava.jpg?v=1509465613",
+   "slug": "palamut-tava",
+   "title": "Palamut tava (pan-fried bonito) & sumac onions",
+   "total": "25 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "A pan-fried lamb adaptation with sumac onion and cooling yoghurt.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "25 min",
+     "kind": "time",
+     "text": "25 min"
+    }
+   ],
+   "description": "A pan-fried lamb adaptation with sumac onion and cooling yoghurt.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Kuzu tantuni-style wraps (quick lamb wraps)",
+    "image": "illustrations/sumac-lamb-wraps/hero.webp?v=e789570964",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/sumac-lamb-wraps.jpg?v=bc681bbf36",
+   "slug": "sumac-lamb-wraps",
+   "title": "Kuzu tantuni-style wraps (quick lamb wraps)",
+   "total": "25 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "A quick pan version using ready-grilled aubergine, with no grill or oven.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "25 min",
+     "kind": "time",
+     "text": "25 min"
+    }
+   ],
+   "description": "A quick pan version using ready-grilled aubergine, with no grill or oven.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Ali nazik (lamb on smoky aubergine yoghurt)",
+    "image": "illustrations/ali-nazik/4.webp?v=5ed2bb5a25",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/ali-nazik.jpg?v=9bc4e04ee9",
+   "slug": "ali-nazik",
+   "title": "Ali nazik (lamb on smoky aubergine yoghurt)",
+   "total": "25 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Small-cut tomato salad with walnuts and a sweet-tart pomegranate dressing.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "15 min",
+     "kind": "time",
+     "text": "15 min"
+    }
+   ],
+   "description": "Small-cut tomato salad with walnuts and a sweet-tart pomegranate dressing.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Gavurdağı (tomato–walnut salad)",
+    "image": "illustrations/gavurdagi-salad/4.webp?v=2e5288b023",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/gavurdagi-salad.jpg?v=cd2ac68f23",
+   "slug": "gavurdagi-salad",
+   "title": "Gavurdağı (tomato–walnut salad)",
+   "total": "15 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Peppery leaves, juicy pomegranate and salty cheese: a modern Turkish-style side.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "15 min",
+     "kind": "time",
+     "text": "15 min"
+    }
+   ],
+   "description": "Peppery leaves, juicy pomegranate and salty cheese: a modern Turkish-style side.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Roka (rocket) salad, pomegranate & white cheese",
+    "image": "illustrations/pomegranate-salad/4.webp?v=0f1e7e8891",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/pomegranate-salad.jpg?v=85db3cc8fe",
+   "slug": "pomegranate-salad",
+   "title": "Roka (rocket) salad, pomegranate & white cheese",
+   "total": "15 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Warm poached eggs, cool thick yoghurt and a quick red-pepper butter.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "20 min",
+     "kind": "time",
+     "text": "20 min"
+    }
+   ],
+   "description": "Warm poached eggs, cool thick yoghurt and a quick red-pepper butter.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Çılbır (eggs on garlic yoghurt), chilli butter",
+    "image": "illustrations/cilbir/4.webp?v=9d39cbd81b",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/cilbir.jpg?v=dc94186ea3",
+   "slug": "cilbir",
+   "title": "Çılbır (eggs on garlic yoghurt), chilli butter",
+   "total": "20 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Thin shallow-fried fritters: squeeze the courgette well for crisp edges.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "~35 min",
+     "kind": "time",
+     "text": "~35 min"
+    }
+   ],
+   "description": "Thin shallow-fried fritters: squeeze the courgette well for crisp edges.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Kabak mücver (courgette fritters), dill & cheese",
+    "image": "illustrations/kabak-mucver/4.webp?v=ebd36e4d89",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/kabak-mucver.jpg?v=778b4fee87",
+   "slug": "kabak-mucver",
+   "title": "Kabak mücver (courgette fritters), dill & cheese",
+   "total": "~35 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "A Bodrum-style layered plate, adapted to thin-film pan-frying in a small galley.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "~45–55 min",
+     "kind": "time",
+     "text": "~45–55 min"
+    }
+   ],
+   "description": "A Bodrum-style layered plate, adapted to thin-film pan-frying in a small galley.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Çökertme (beef, crisp potatoes & garlic yoghurt)",
+    "image": "illustrations/cokertme/5.webp?v=6ae461fe4c",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/cokertme.jpg?v=7bc69f23aa",
+   "slug": "cokertme",
+   "title": "Çökertme (beef, crisp potatoes & garlic yoghurt)",
+   "total": "~45–55 min",
+   "yields": "2 portions"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "A thick tomato-pepper base with soft folded eggs and optional white cheese.",
+   "chips": [
+    {
+     "html": "<span>2 portions</span>",
+     "kind": "",
+     "text": "2 portions"
+    },
+    {
+     "html": "25 min",
+     "kind": "time",
+     "text": "25 min"
+    }
+   ],
+   "description": "A thick tomato-pepper base with soft folded eggs and optional white cheese.",
+   "group": "Turkish & coastal",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Menemen (Turkish tomato-and-pepper eggs)",
+    "image": "illustrations/menemen/4.webp?v=9f1cb49334",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/menemen.jpg?v=c6d615320d",
+   "slug": "menemen",
+   "title": "Menemen (Turkish tomato-and-pepper eggs)",
+   "total": "25 min",
+   "yields": "2 portions"
   },
   {
    "added": "2026-10-06 01:53",
@@ -845,7 +1224,7 @@
    "blurb_html": "Nine shop-inspired fillings, one illustrated recipe: choose your filling and shape by hand, with a mold or through plastic wrap.",
    "chips": [
     {
-     "html": "9 fillings, 3 shaping methods",
+     "html": "<span>9 fillings, 3 shaping methods</span>",
      "kind": "",
      "text": "9 fillings, 3 shaping methods"
     },

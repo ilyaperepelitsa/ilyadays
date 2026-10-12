@@ -1,7 +1,26 @@
 {
- "description": "Японская база, рамен, суши, корейская кухня, рисовая лапша, соба, индийская кухня и су-вид — шаг за шагом, с картинками.",
+ "description": "Турецкие блюда, морепродукты, японские основы, суши, корейская кухня, лапша, индийские блюда, сыр и су-вид — пошагово с иллюстрациями.",
  "footer": "Нажимайте на ингредиенты и шаги, чтобы отмечать их по ходу готовки.",
  "groups": [
+  {
+   "id": "turkish--coastal",
+   "items": [
+    "yacht-sashimi",
+    "lemon-caper-dorada",
+    "garlic-chilli-shrimp",
+    "palamut-tava",
+    "sumac-lamb-wraps",
+    "ali-nazik",
+    "gavurdagi-salad",
+    "pomegranate-salad",
+    "cilbir",
+    "kabak-mucver",
+    "cokertme",
+    "menemen"
+   ],
+   "name": "Турецкая кухня и морепродукты",
+   "notes": []
+  },
   {
    "id": "sous-vide",
    "items": [
@@ -166,20 +185,20 @@
    "notes": []
   }
  ],
- "lede_html": "Японская база и большие проекты, суши, корейское кимчи и жареная курица, быстрая рисовая лапша и соба, индийская курица тикка и справочник по су-виду — везде пошаговые картинки, порядок мизанпласа и план подготовки.",
+ "lede_html": "Рецепты с иллюстрациями на каждый день и для больших проектов: турецкая кухня и морепродукты, японские основы и суши, корейская кухня, лапша, индийские блюда, сыр и су-вид. Сначала ингредиенты, затем иллюстрации этапов приготовления.",
  "recent": [
-  "sous-vide-salmon",
-  "sous-vide-fries",
-  "jumbo-shrimp-tempura",
-  "oyster-mushroom-tempura",
-  "onigiri-mold",
-  "onigiri-plastic-wrap",
-  "soy-cured-yolk-onigiri",
-  "soboro-onigiri",
-  "pork-kimchi-onigiri",
-  "shiso-kombu-onigiri",
-  "takana-onigiri",
-  "peanut-miso-onigiri"
+  "yacht-sashimi",
+  "lemon-caper-dorada",
+  "garlic-chilli-shrimp",
+  "palamut-tava",
+  "sumac-lamb-wraps",
+  "ali-nazik",
+  "gavurdagi-salad",
+  "pomegranate-salad",
+  "cilbir",
+  "kabak-mucver",
+  "cokertme",
+  "menemen"
  ],
  "recipes": [
   {
@@ -209,6 +228,366 @@
    "title": "Калькулятор су-вид",
    "total": null,
    "yields": null
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Одна холодная техника, девять вариантов морепродуктов и лимонно-соевый соус. Только подтверждённая поставка для сырой подачи.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "20 мин, плюс разморозка в холодильнике",
+     "kind": "time",
+     "text": "20 мин, плюс разморозка в холодильнике"
+    }
+   ],
+   "description": "Одна холодная техника, девять вариантов морепродуктов и лимонно-соевый соус. Только подтверждённая поставка для сырой подачи.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Сашими (сырые морепродукты ломтиками) · все варианты",
+    "image": "illustrations/yacht-sashimi/4.webp?v=12098f6cda",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/yacht-sashimi.jpg?v=257489d9eb",
+   "slug": "yacht-sashimi",
+   "title": "Сашими (сырые морепродукты ломтиками) · все варианты",
+   "total": "20 мин, плюс разморозка в холодильнике",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Хрустящая кожа, сочная рыба и быстрый лимонный соус; современная прибрежная вариация.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "25 мин",
+     "kind": "time",
+     "text": "25 мин"
+    }
+   ],
+   "description": "Хрустящая кожа, сочная рыба и быстрый лимонный соус; современная прибрежная вариация.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Çipura tava (дорада на сковороде), лимон и каперсы",
+    "image": "illustrations/lemon-caper-dorada/4.webp?v=501cbcb5d9",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/lemon-caper-dorada.jpg?v=e1cd70bb3d",
+   "slug": "lemon-caper-dorada",
+   "title": "Çipura tava (дорада на сковороде), лимон и каперсы",
+   "total": "25 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Крупные креветки в чесночном масле с pul biber (хлопьями неострого красного перца).",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "~25 мин; партиями дольше",
+     "kind": "time",
+     "text": "~25 мин; партиями дольше"
+    }
+   ],
+   "description": "Крупные креветки в чесночном масле с pul biber (хлопьями неострого красного перца).",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Tereyağlı karides (креветки в масле), чеснок и чили",
+    "image": "illustrations/garlic-chilli-shrimp/4.webp?v=5dd883e308",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/garlic-chilli-shrimp.jpg?v=afffa4bbcd",
+   "slug": "garlic-chilli-shrimp",
+   "title": "Tereyağlı karides (креветки в масле), чеснок и чили",
+   "total": "~25 мин; партиями дольше",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Осенняя рыба с тонкой мучной корочкой и острым луковым салатом.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "25 мин",
+     "kind": "time",
+     "text": "25 мин"
+    }
+   ],
+   "description": "Осенняя рыба с тонкой мучной корочкой и острым луковым салатом.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Palamut tava (жареная пеламида) и лук с сумахом",
+    "image": "illustrations/palamut-tava/4.webp?v=e2b914d181",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/palamut-tava.jpg?v=1509465613",
+   "slug": "palamut-tava",
+   "title": "Palamut tava (жареная пеламида) и лук с сумахом",
+   "total": "25 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Вариация с жареной бараниной, луком с сумахом и прохладным йогуртом.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "25 мин",
+     "kind": "time",
+     "text": "25 мин"
+    }
+   ],
+   "description": "Вариация с жареной бараниной, луком с сумахом и прохладным йогуртом.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Рулеты в стиле kuzu tantuni (быстрая баранина в лаваше)",
+    "image": "illustrations/sumac-lamb-wraps/hero.webp?v=e789570964",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/sumac-lamb-wraps.jpg?v=bc681bbf36",
+   "slug": "sumac-lamb-wraps",
+   "title": "Рулеты в стиле kuzu tantuni (быстрая баранина в лаваше)",
+   "total": "25 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Быстрая версия с готовыми печёными баклажанами, без гриля и духовки.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "25 мин",
+     "kind": "time",
+     "text": "25 мин"
+    }
+   ],
+   "description": "Быстрая версия с готовыми печёными баклажанами, без гриля и духовки.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Ali nazik (баранина на баклажанах с йогуртом)",
+    "image": "illustrations/ali-nazik/4.webp?v=5ed2bb5a25",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/ali-nazik.jpg?v=9bc4e04ee9",
+   "slug": "ali-nazik",
+   "title": "Ali nazik (баранина на баклажанах с йогуртом)",
+   "total": "25 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Мелко нарезанный салат с орехами и кисло-сладкой гранатовой заправкой.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "15 мин",
+     "kind": "time",
+     "text": "15 мин"
+    }
+   ],
+   "description": "Мелко нарезанный салат с орехами и кисло-сладкой гранатовой заправкой.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Gavurdağı (салат из помидоров с грецкими орехами)",
+    "image": "illustrations/gavurdagi-salad/4.webp?v=2e5288b023",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/gavurdagi-salad.jpg?v=cd2ac68f23",
+   "slug": "gavurdagi-salad",
+   "title": "Gavurdağı (салат из помидоров с грецкими орехами)",
+   "total": "15 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Пряная руккола, сочный гранат и солёный сыр: современный салат в турецком стиле.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "15 мин",
+     "kind": "time",
+     "text": "15 мин"
+    }
+   ],
+   "description": "Пряная руккола, сочный гранат и солёный сыр: современный салат в турецком стиле.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Салат roka (руккола), гранат и белый сыр",
+    "image": "illustrations/pomegranate-salad/4.webp?v=0f1e7e8891",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/pomegranate-salad.jpg?v=85db3cc8fe",
+   "slug": "pomegranate-salad",
+   "title": "Салат roka (руккола), гранат и белый сыр",
+   "total": "15 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Тёплые яйца пашот, густой йогурт и быстрое перечное масло.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "20 мин",
+     "kind": "time",
+     "text": "20 мин"
+    }
+   ],
+   "description": "Тёплые яйца пашот, густой йогурт и быстрое перечное масло.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Çılbır (яйца на чесночном йогурте), масло с перцем",
+    "image": "illustrations/cilbir/4.webp?v=9d39cbd81b",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/cilbir.jpg?v=dc94186ea3",
+   "slug": "cilbir",
+   "title": "Çılbır (яйца на чесночном йогурте), масло с перцем",
+   "total": "20 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Тонкие оладьи на небольшом количестве масла: хорошо отожмите кабачок для хрустящих краёв.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "~35 мин",
+     "kind": "time",
+     "text": "~35 мин"
+    }
+   ],
+   "description": "Тонкие оладьи на небольшом количестве масла: хорошо отожмите кабачок для хрустящих краёв.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Kabak mücver (оладьи из кабачка), укроп и сыр",
+    "image": "illustrations/kabak-mucver/4.webp?v=ebd36e4d89",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/kabak-mucver.jpg?v=778b4fee87",
+   "slug": "kabak-mucver",
+   "title": "Kabak mücver (оладьи из кабачка), укроп и сыр",
+   "total": "~35 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Слоёное блюдо в стиле Бодрума с жаркой картофеля на тонком слое масла.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "~45–55 мин",
+     "kind": "time",
+     "text": "~45–55 мин"
+    }
+   ],
+   "description": "Слоёное блюдо в стиле Бодрума с жаркой картофеля на тонком слое масла.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Çökertme (говядина, хрустящий картофель и йогурт)",
+    "image": "illustrations/cokertme/5.webp?v=6ae461fe4c",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/cokertme.jpg?v=7bc69f23aa",
+   "slug": "cokertme",
+   "title": "Çökertme (говядина, хрустящий картофель и йогурт)",
+   "total": "~45–55 мин",
+   "yields": "2 порции"
+  },
+  {
+   "added": "2026-10-13 18:00",
+   "blurb_html": "Густая томатно-перечная основа, мягкие складки яйца и необязательный белый сыр.",
+   "chips": [
+    {
+     "html": "<span>2 порции</span>",
+     "kind": "",
+     "text": "2 порции"
+    },
+    {
+     "html": "25 мин",
+     "kind": "time",
+     "text": "25 мин"
+    }
+   ],
+   "description": "Густая томатно-перечная основа, мягкие складки яйца и необязательный белый сыр.",
+   "group": "Турецкая кухня и морепродукты",
+   "group_id": "turkish--coastal",
+   "hero": {
+    "alt": "Menemen (турецкие яйца с помидором и перцем)",
+    "image": "illustrations/menemen/4.webp?v=9f1cb49334",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/menemen.jpg?v=c6d615320d",
+   "slug": "menemen",
+   "title": "Menemen (турецкие яйца с помидором и перцем)",
+   "total": "25 мин",
+   "yields": "2 порции"
   },
   {
    "added": "2026-10-06 01:53",
@@ -845,7 +1224,7 @@
    "blurb_html": "Девять начинок по мотивам японских магазинов и один иллюстрированный рецепт: выберите начинку и лепите руками, в форме или через плёнку.",
    "chips": [
     {
-     "html": "9 начинок, 3 способа лепки",
+     "html": "<span>9 начинок, 3 способа лепки</span>",
      "kind": "",
      "text": "9 начинок, 3 способа лепки"
     },
