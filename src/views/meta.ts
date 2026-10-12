@@ -37,6 +37,13 @@ export const travelMeta = (lang: Lang): Metadata => {
   return pageMetadata({ lang, path: "/travel", title: t.travelTitle, description: t.travelDescription, image: "/share/travel.jpg" });
 };
 
+export const yachtFoodMeta = (lang: Lang): Metadata => pageMetadata({
+  lang, path:'/travel/turkey-yacht-food',
+  title:lang==='ru'?'Турция: еда на яхте':'Turkey: yacht food',
+  description:lang==='ru'?'12 идей блюд для яхты из Гёчека: осенние покупки, рыба, баранина, салаты и гид по продуктам для сашими.':'Twelve small-galley meal ideas from Göcek: autumn provisions, seafood, lamb, salads and a sourced sashimi buying guide.',
+  image:'/share/turkey-yacht-food.jpg',
+});
+
 export const makeTripMeta = (lang: Lang): Metadata => {
   const t = strings(lang);
   return pageMetadata({ lang, path: "/travel/new", title: t.makeTripTitle, description: t.makeTripDescription, image: "/share/travel.jpg" });

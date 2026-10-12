@@ -22,7 +22,15 @@ if [[ "${SKIP_IMAGES:-}" != 1 ]]; then
 fi
 
 # Recipes: JSON for both languages + every picture they reference.
-rm -rf content public/media
+# Travel proposals are authored here, rather than in the recipe source repo.
+# Keep their content and media when replacing the exported recipe trees.
+shopt -s nullglob
+for root in content public/media; do
+  for item in "$root"/*; do
+    [[ "$item" == "$root/travel" ]] || rm -rf -- "$item"
+  done
+done
+shopt -u nullglob
 python3 "$RECIPES/export_json.py" --out content --images-out public/media
 python3 scripts/optimize-media.py
 mkdir -p src/styles public/icons

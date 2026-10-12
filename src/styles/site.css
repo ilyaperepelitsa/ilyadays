@@ -327,3 +327,29 @@
   .note, .on, .part, .photo) {
   all: revert-layer;
 }
+
+/* ---------- Turkey yacht meal shortlist */
+.yacht-food .hello { max-width: 850px; margin-bottom: 24px; }
+.yacht-dates, .yacht-research-date { color: var(--muted); font-size: .9rem; }
+.yacht-food .jump { margin-top: 20px; }
+.yacht-plan-note { margin-bottom: 32px; }
+.yacht-cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.yacht-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
+.yacht-card > img { display: block; width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; }
+.yacht-card-body { padding: 16px 18px 20px; }
+.yacht-card-number { color: var(--muted); font-size: .75rem; font-variant-numeric: tabular-nums; letter-spacing: .1em; margin: 0 0 5px; }
+.yacht-card h3 { font-size: 1.35rem; margin: 0 0 14px; }
+.yacht-card .chip { font-size: .75rem; }
+.yacht-conditional { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
+.yacht-conditional:focus-visible, .yacht-ask summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.yacht-notes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin: 18px 0; }
+.yacht-notes .note { min-width: 0; }
+.yacht-notes p, .yacht-raw-note p, .yacht-ask p { font-size: .93rem; }
+.yacht-references { display: flex; flex-wrap: wrap; gap: 5px 12px; font-size: .75rem; }
+.yacht-references a { overflow-wrap: anywhere; }
+.yacht-ask { margin-top: 18px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; }
+.yacht-ask summary { cursor: pointer; font-weight: 600; }
+.yacht-ask[open] summary { margin-bottom: 14px; }
+.yacht-ask p[lang=tr] { border-left: 3px solid var(--accent); padding-left: 14px; }
+@media (max-width: 900px) { .yacht-cards { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) { .yacht-cards, .yacht-notes { grid-template-columns: minmax(0,1fr); } }

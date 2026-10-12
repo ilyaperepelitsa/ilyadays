@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-13",
+  "scope": "12 meal proposals with cover artwork; no full recipe instructions",
+  "research": "Göcek/Fethiye shore provisioning, 24 October–around 7 November; local stock and marina delivery unconfirmed",
+  "critic": "Sequential critic reviewed raw-use species distinctions and supplier caveats. Fixed cold-chain failure fallback; flagged +4°C scallop shipping; added fridge/vacuum-pack thawing guidance; specified canned lentils and fine bulgur.",
+  "artwork": {
+    "mode": "built-in imagegen",
+    "covers": 12,
+    "size": [
+      600,
+      400
+    ],
+    "totalWebpBytes": 525726,
+    "review": "All 12 covers visually checked; consistent painted style, correct dishes, no hands, diagrams or photorealism."
+  },
+  "verification": [
+    "TypeScript typecheck passed",
+    "Production build passed, both routes prerendered",
+    "Targeted ESLint and git diff whitespace checks passed",
+    "84 tests passed",
+    "Card IDs, references, cover dimensions and unique image hashes checked",
+    "1200×630 social preview checked",
+    "Sync cleanup exercised in disposable fixtures; Travel content and media preserved",
+    "Browser review: 1440px desktop and 390px mobile; EN/RU, dark mode, 12 loaded images, no horizontal overflow, language switch, raw-guide anchor, expanded Turkish phrases, Travel tile discovery",
+    "Local console errors limited to Vercel analytics endpoints unavailable on local Next server"
+  ]
+}

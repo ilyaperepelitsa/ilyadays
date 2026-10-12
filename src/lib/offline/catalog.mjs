@@ -1,6 +1,6 @@
 /** The list of URLs a phone stores so the site opens with no connection. */
 
-const FIXED = ["/", "/food", "/food/sous-vide", "/travel", "/travel/istanbul", "/travel/new"];
+const FIXED = ["/", "/food", "/food/sous-vide", "/travel", "/travel/turkey-yacht-food", "/travel/istanbul", "/travel/new"];
 
 /**
  * @param {string[]} parts

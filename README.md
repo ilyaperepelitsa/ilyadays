@@ -17,6 +17,7 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/food/onigiri` | `/ru/food/onigiri` | Nine original shop-inspired fillings and three shaping methods, selected on one illustrated page |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Cooking calculator, including salmon, with chilled/frozen controls, thickness sliders, recipe presets, reference tables and PDF |
 | `/travel` | `/ru/travel` | Trips |
+| `/travel/turkey-yacht-food` | `/ru/travel/turkey-yacht-food` | Twelve yacht meal proposals, seasonal shopping and a sourced raw-seafood buying guide |
 | `/travel/new` | `/ru/travel/new` | Template for a new city: days, pace, meals, themes. A model fills the plan; Wikipedia and Commons add links and pictures. Saved in this browser |
 | `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it |
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
@@ -72,6 +73,10 @@ The recipes and the Istanbul app are edited in their own repos (`../recipes`, `.
 3. It copies the recipe stylesheet and the site icons.
 4. It copies `../istanbul_trip/dist/app.{js,css,d.ts}`.
 5. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.
+
+The yacht shortlist is authored here in `content/travel/turkey-yacht-food.json`, with compressed covers in
+`public/media/travel/turkey-yacht-food/` and generation records in `art/travel/turkey-yacht-food/`. Sync preserves
+these Travel directories. These are proposals, not full recipes exported from the recipe repo.
 
 Commit the result. Vercel builds only from this repo and never sees the sibling repos.
 
