@@ -1,27 +1,26 @@
 {
   "date": "2026-10-13",
-  "scope": "12 meal proposals with cover artwork; no full recipe instructions",
+  "scope": "12 Turkish-leaning meal proposals; one sashimi card opens one page with nine seafood options and serving ideas. No full cooking recipes yet.",
   "research": "Göcek/Fethiye shore provisioning, 24 October–around 7 November; local stock and marina delivery unconfirmed",
-  "critic": "Sequential critic reviewed raw-use species distinctions and supplier caveats. Fixed cold-chain failure fallback; flagged +4°C scallop shipping; added fridge/vacuum-pack thawing guidance; specified canned lentils and fine bulgur.",
+  "critic": "Previously reviewed raw-seafood guidance retained: reject temperature-abused seafood, +4°C scallop delivery caveat, and fridge/vacuum-pack thawing instructions. Expanded species sections remain conditional on raw-use supply; supermarket squid is for cooking unless explicitly documented otherwise.",
   "artwork": {
     "mode": "built-in imagegen",
-    "covers": 12,
+    "covers": 13,
     "size": [
       600,
       400
     ],
-    "totalWebpBytes": 525726,
-    "review": "All 12 covers visually checked; consistent painted style, correct dishes, no hands, diagrams or photorealism."
+    "totalWebpBytes": 600828,
+    "review": "Six replacement covers visually reviewed: palamut tava, ali nazik, gavurdağı salad, çılbır, kabak mücver and çökertme. Matching previous covers reused; five retired covers removed. Painted style, no hands or diagrams."
   },
   "verification": [
     "TypeScript typecheck passed",
-    "Production build passed, both routes prerendered",
+    "Production build passed; EN/RU menu and sashimi routes prerendered",
     "Targeted ESLint and git diff whitespace checks passed",
-    "84 tests passed",
-    "Card IDs, references, cover dimensions and unique image hashes checked",
-    "1200×630 social preview checked",
-    "Sync cleanup exercised in disposable fixtures; Travel content and media preserved",
-    "Browser review: 1440px desktop and 390px mobile; EN/RU, dark mode, 12 loaded images, no horizontal overflow, language switch, raw-guide anchor, expanded Turkish phrases, Travel tile discovery",
-    "Local console errors limited to Vercel analytics endpoints unavailable on local Next server"
-  ]
+    "Five offline tests passed; both sashimi routes in generated catalog; retired covers absent",
+    "12 unique menu cards with one sashimi destination; nine unique seafood options; menu text excludes rejected ingredients; references and 600×400 covers checked",
+    "Browser review: desktop 1440px, mobile 390px, EN/RU, light/dark; 12 loaded covers, one clickable sashimi card, nine options; no overflow or broken anchors; keyboard card navigation, seafood jump links, Turkish disclosure and language switch passed",
+    "Local console errors limited to unavailable Vercel analytics scripts"
+  ],
+  "preferences": "No bulgur, chickpeas, lentils or beans in the yacht menu; Turkish dishes or modern variations preferred."
 }

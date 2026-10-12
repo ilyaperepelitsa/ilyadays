@@ -20,7 +20,7 @@ export function TravelView({ lang }: { lang: Lang }) {
             <img src="/media/travel/turkey-yacht-food/tuna-sashimi.webp" alt={lang==='ru'?'Сашими на столе яхты':'Sashimi on a yacht table'} width={600} height={400}/>
             <div className="tile-body">
               <h2>{lang==='ru'?'Турция · еда на яхте':'Turkey · yacht food'}</h2>
-              <p>{lang==='ru'?'Гёчек, 24 октября — примерно 7 ноября. 12 идей блюд, покупки на берегу и гид по продуктам для сашими.':'Göcek, 24 October – around 7 November. Twelve meal ideas, shore shopping and a sashimi buying guide.'}</p>
+              <p>{lang==='ru'?'Гёчек, 24 октября — примерно 7 ноября. 12 турецких идей блюд, покупки на берегу и все варианты сашими на одной странице.':'Göcek, 24 October – around 7 November. Twelve Turkish-inspired meal ideas, shore shopping and all sashimi options on one page.'}</p>
               <span className="tile-go">{lang==='ru'?'Выбрать блюда':'Browse the shortlist'} →</span>
             </div>
           </Link>

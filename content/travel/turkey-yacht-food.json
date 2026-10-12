@@ -5,54 +5,36 @@
   "endTentative": true,
   "cards": [
     {
-      "id": "tuna-sashimi",
+      "id": "sashimi",
       "title": {
-        "en": "Tuna sashimi with lemon-soy dip",
-        "ru": "Сашими из тунца с лимонно-соевым соусом"
+        "en": "Sashimi · all seafood options",
+        "ru": "Сашими · все варианты"
       },
       "method": {
         "en": "No hob",
         "ru": "Без плиты"
       },
       "note": {
-        "en": "Source for raw use",
-        "ru": "Подтвердить сырой продукт"
+        "en": "9 options · buying guide",
+        "ru": "9 вариантов · гид по закупкам"
       },
       "raw": true,
       "image": "/media/travel/turkey-yacht-food/tuna-sashimi.webp",
       "subject": "Raw tuna slices, cucumber ribbons, lemon wedge, a separate small bowl of soy-lemon dipping sauce. Deep red tuna, no seared edges."
     },
     {
-      "id": "scallop-sashimi",
-      "title": {
-        "en": "Scallop sashimi, mandarin & chilli",
-        "ru": "Сашими из гребешка с мандарином и чили"
-      },
-      "method": {
-        "en": "No hob",
-        "ru": "Без плиты"
-      },
-      "note": {
-        "en": "Special-order idea",
-        "ru": "Нужен спецзаказ"
-      },
-      "raw": true,
-      "image": "/media/travel/turkey-yacht-food/scallop-sashimi.webp",
-      "subject": "Thin ivory raw scallop adductor-muscle slices arranged on a small plate, a few mandarin segments, tiny red chilli rings and a light citrus dressing. No shells, no roe, no seared surfaces."
-    },
-    {
       "id": "lemon-caper-dorada",
       "title": {
-        "en": "Pan-fried dorada, lemon & capers",
-        "ru": "Дорада на сковороде с лимоном и каперсами"
+        "en": "Çipura tava, lemon & capers",
+        "ru": "Чипура тава с лимоном и каперсами"
       },
       "method": {
         "en": "One pan",
         "ru": "Одна сковорода"
       },
       "note": {
-        "en": "Çipura / levrek",
-        "ru": "Чипура / леврек"
+        "en": "Modern Turkish fish pan",
+        "ru": "Современная турецкая подача"
       },
       "raw": false,
       "image": "/media/travel/turkey-yacht-food/lemon-caper-dorada.webp",
@@ -61,146 +43,164 @@
     {
       "id": "garlic-chilli-shrimp",
       "title": {
-        "en": "Garlic–pul biber shrimp skillet",
-        "ru": "Креветки с чесноком и пул-бибером"
+        "en": "Tereyağlı karides · garlic & pul biber",
+        "ru": "Терейаглы каридес · чеснок и пул-бибер"
       },
       "method": {
         "en": "One pan",
         "ru": "Одна сковорода"
       },
       "note": {
-        "en": "Karides",
-        "ru": "Каридес"
+        "en": "Butter shrimp skillet",
+        "ru": "Креветки в сливочном масле"
       },
       "raw": false,
       "image": "/media/travel/turkey-yacht-food/garlic-chilli-shrimp.webp",
       "subject": "Cooked peeled pink shrimp in a small skillet, red chilli flakes, sliced garlic, chopped parsley and olive oil, rustic bread alongside. No raw grey shrimp."
     },
     {
-      "id": "bonito-rice-bowl",
+      "id": "palamut-tava",
       "title": {
-        "en": "Bonito rice bowls, soy & ginger",
-        "ru": "Боул с пеламидой, соей и имбирём"
-      },
-      "method": {
-        "en": "Pot + pan",
-        "ru": "Кастрюля + сковорода"
-      },
-      "note": {
-        "en": "Autumn palamut",
-        "ru": "Осенняя пеламида"
-      },
-      "raw": false,
-      "image": "/media/travel/turkey-yacht-food/bonito-rice-bowl.webp",
-      "subject": "A bowl of rice topped with fully cooked bonito pieces with browned edges and opaque flaky centres, a light soy-ginger glaze, cucumber and spring onion. No raw red tuna."
-    },
-    {
-      "id": "sumac-lamb-wraps",
-      "title": {
-        "en": "Sumac lamb & labneh lavash",
-        "ru": "Лаваш с бараниной, сумахом и лабне"
+        "en": "Palamut tava & sumac onions",
+        "ru": "Паламут тава с луком и сумахом"
       },
       "method": {
         "en": "One pan",
         "ru": "Одна сковорода"
       },
       "note": {
-        "en": "Butcher-cut strips",
-        "ru": "Тонкая нарезка у мясника"
+        "en": "Ask the fishmonger to portion",
+        "ru": "Попросить продавца нарезать"
+      },
+      "raw": false,
+      "image": "/media/travel/turkey-yacht-food/palamut-tava.webp",
+      "subject": "Cooked pan-fried bonito steaks with golden-brown skin and fully opaque interiors, a small pile of thin red onion with sumac and parsley, lemon wedges and Turkish bread. No rice, no soy sauce, no beans."
+    },
+    {
+      "id": "sumac-lamb-wraps",
+      "title": {
+        "en": "Kuzu tantuni-style wraps, sumac & labneh",
+        "ru": "Лаваш в стиле кузу тантуни с сумахом и лабне"
+      },
+      "method": {
+        "en": "One pan",
+        "ru": "Одна сковорода"
+      },
+      "note": {
+        "en": "Modern lamb variation",
+        "ru": "Современный вариант с бараниной"
       },
       "raw": false,
       "image": "/media/travel/turkey-yacht-food/sumac-lamb-wraps.webp",
       "subject": "Two open soft lavash wraps filled with thin browned cooked lamb strips, thick white labneh, sumac-red-onion salad and parsley. No skewers, no kebab sticks."
     },
     {
-      "id": "lamb-chickpea-skillet",
+      "id": "ali-nazik",
       "title": {
-        "en": "Lamb, chickpeas & cumin yoghurt",
-        "ru": "Баранина с нутом и зирным йогуртом"
+        "en": "Quick ali nazik · lamb & smoky aubergine",
+        "ru": "Быстрый али-назик · баранина и дымный баклажан"
       },
       "method": {
         "en": "One pan",
         "ru": "Одна сковорода"
       },
       "note": {
-        "en": "Kuzu kıyma",
-        "ru": "Бараний фарш"
+        "en": "Jarred grilled aubergine shortcut",
+        "ru": "Печёный баклажан из банки"
       },
       "raw": false,
-      "image": "/media/travel/turkey-yacht-food/lamb-chickpea-skillet.webp",
-      "subject": "A shallow bowl of browned lamb mince, chickpeas, wilted spinach and tomatoes, topped with a spoonful of white cumin yoghurt. Warm rustic one-pan meal."
+      "image": "/media/travel/turkey-yacht-food/ali-nazik.webp",
+      "subject": "Ali nazik: a low oval cream ceramic plate of smoky mashed aubergine folded with thick garlic yoghurt, topped with browned cooked lamb mince, a little red pepper butter and parsley, warm lavash alongside. The pale aubergine base is smooth and creamy, no chickpeas or beans, no skewers."
     },
     {
-      "id": "tahini-bean-piyaz",
+      "id": "gavurdagi-salad",
       "title": {
-        "en": "White-bean piyaz with tahini",
-        "ru": "Пияз из белой фасоли с тахини"
+        "en": "Gavurdağı · tomato, walnuts & nar ekşisi",
+        "ru": "Гавурдагы · томаты, орехи и нар-экшиси"
       },
       "method": {
         "en": "No hob",
         "ru": "Без плиты"
       },
       "note": {
-        "en": "Canned beans",
-        "ru": "Консервированная фасоль"
+        "en": "Chop & dress",
+        "ru": "Нарезать и заправить"
       },
       "raw": false,
-      "image": "/media/travel/turkey-yacht-food/tahini-bean-piyaz.webp",
-      "subject": "Creamy white cannellini beans with tahini-lemon dressing, finely sliced red onion, tomato chunks, chopped parsley and a few black olives in a shallow bowl."
+      "image": "/media/travel/turkey-yacht-food/gavurdagi-salad.webp",
+      "subject": "Gavurdagi salad: finely chopped ripe red tomatoes, green peppers, red onion, parsley, generous crumbled walnuts and shiny dark pomegranate-molasses dressing in a shallow cream ceramic bowl. No beans, grains, bulgur or chickpeas."
     },
     {
       "id": "pomegranate-salad",
       "title": {
-        "en": "Pomegranate, walnut & white-cheese salad",
-        "ru": "Салат с гранатом, орехами и белым сыром"
+        "en": "Roka, pomegranate & beyaz peynir",
+        "ru": "Руккола, гранат и белый сыр"
       },
       "method": {
         "en": "No hob",
         "ru": "Без плиты"
       },
       "note": {
-        "en": "Autumn produce",
-        "ru": "Осенние продукты"
+        "en": "Modern Turkish salad",
+        "ru": "Современный турецкий салат"
       },
       "raw": false,
       "image": "/media/travel/turkey-yacht-food/pomegranate-salad.webp",
       "subject": "A fresh salad of ruby pomegranate seeds, cucumber half-moons, walnut pieces, white brined cheese cubes and green rocket leaves. Crisp bright salad, no lettuce iceberg."
     },
     {
-      "id": "lentil-bulgur-kisir",
+      "id": "cilbir",
       "title": {
-        "en": "Lentil–bulgur kısır, herbs & pickles",
-        "ru": "Кысыр с чечевицей, зеленью и соленьями"
+        "en": "Çılbır · garlic yoghurt & chilli butter",
+        "ru": "Чылбыр · чесночный йогурт и масло с чили"
       },
       "method": {
-        "en": "Kettle only",
-        "ru": "Только кипяток"
+        "en": "One pot",
+        "ru": "Одна кастрюля"
       },
       "note": {
-        "en": "Canned lentils · fine bulgur",
-        "ru": "Чечевица из банки · мелкий булгур"
+        "en": "Eggs, yoghurt, butter",
+        "ru": "Яйца, йогурт, масло"
       },
       "raw": false,
-      "image": "/media/travel/turkey-yacht-food/lentil-bulgur-kisir.webp",
-      "subject": "A terracotta bowl of fine red-tinted bulgur grains mixed with cooked green lentils, abundant parsley, spring onion and chopped pickled green peppers, a lemon wedge on side."
+      "image": "/media/travel/turkey-yacht-food/cilbir.webp",
+      "subject": "Cilbir: two softly poached eggs with fully set white exteriors, one egg cut to reveal a golden yolk, on a thick bed of white garlic yoghurt, with red chilli butter streaks and a little dill, toasted Turkish bread beside. Clearly poached eggs, not fried eggs. No legumes or grains."
     },
     {
-      "id": "salmon-tahini-beans",
+      "id": "kabak-mucver",
       "title": {
-        "en": "Crisp salmon & lemon-tahini beans",
-        "ru": "Лосось с фасолью и лимонной тахини"
+        "en": "Kabak mücver · courgette, dill & cheese",
+        "ru": "Кабак мюджвер · кабачок, укроп и сыр"
       },
       "method": {
         "en": "One pan",
         "ru": "Одна сковорода"
       },
       "note": {
-        "en": "Norwegian salmon",
-        "ru": "Норвежский лосось"
+        "en": "Shallow-fried · yoghurt dip",
+        "ru": "На сковороде · йогуртовый соус"
       },
       "raw": false,
-      "image": "/media/travel/turkey-yacht-food/salmon-tahini-beans.webp",
-      "subject": "A cooked orange salmon fillet with crisp browned skin resting on creamy white beans in lemon-tahini sauce, dill fronds and a lemon wedge. Opaque cooked centre, no raw sashimi."
+      "image": "/media/travel/turkey-yacht-food/kabak-mucver.webp",
+      "subject": "Five small golden pan-fried Turkish courgette fritters, kabak mucver, flecked with green dill and grated courgette, broken edge showing soft green herb interior, served on a cream plate with a small bowl of white garlic yoghurt and lemon. No chickpeas, beans or falafel."
+    },
+    {
+      "id": "cokertme",
+      "title": {
+        "en": "Çökertme · beef, crisp potatoes & yoghurt",
+        "ru": "Чёкертме · говядина, хрустящий картофель и йогурт"
+      },
+      "method": {
+        "en": "One pan",
+        "ru": "Одна сковорода"
+      },
+      "note": {
+        "en": "Muğla classic · cook in batches",
+        "ru": "Классика Муглы · жарить партиями"
+      },
+      "raw": false,
+      "image": "/media/travel/turkey-yacht-food/cokertme.webp",
+      "subject": "Cokertme kebabi: a plate of crisp thin shoestring fried potatoes layered with thick garlic yoghurt and thin browned cooked beef strips, a little red tomato-butter sauce on top, a grilled green pepper alongside. Potatoes must remain clearly visible, beef in small strips, no skewers, no rice or legumes."
     },
     {
       "id": "menemen",
@@ -282,6 +282,28 @@
   ],
   "sashimi": [
     {
+      "id": "tuna",
+      "title": {
+        "en": "Tuna / orkinos",
+        "ru": "Тунец / orkinos"
+      },
+      "text": {
+        "en": "Potentially suitable when supplied for raw eating. Confirm the exact species: certain Thunnus tuna have a parasite-freezing exemption in the FDA technical reference, but this does not remove bacterial or histamine risks. Do not extend it to bonito or vaguely labelled “tuna”.",
+        "ru": "Возможен при поставке для сырого употребления. Уточните точный вид: для некоторых тунцов Thunnus в техническом справочнике FDA есть исключение из противопаразитарной заморозки, но оно не устраняет бактериальные риски и гистамин. Не переносите его на пеламиду или рыбу с расплывчатым названием «тунец»."
+      },
+      "sources": [
+        "parasites",
+        "histamine",
+        "tuna"
+      ],
+      "serving": {
+        "en": "Lemon–soy dip, cucumber & sumac onion",
+        "ru": "Лимонно-соевый соус, огурец и лук с сумахом"
+      },
+      "specialist": false
+    },
+    {
+      "id": "salmon",
       "title": {
         "en": "Atlantic farmed salmon",
         "ru": "Фермерский атлантический лосось"
@@ -295,24 +317,15 @@
         "parasites",
         "trout",
         "efsa"
-      ]
+      ],
+      "serving": {
+        "en": "Dill, lemon & cucumber",
+        "ru": "Укроп, лимон и огурец"
+      },
+      "specialist": false
     },
     {
-      "title": {
-        "en": "Tuna / orkinos",
-        "ru": "Тунец / orkinos"
-      },
-      "text": {
-        "en": "Potentially suitable when supplied for raw eating. Confirm the exact species: certain Thunnus tuna have a parasite-freezing exemption in the FDA technical reference, but this does not remove bacterial or histamine risks. Do not extend it to bonito or vaguely labelled “tuna”.",
-        "ru": "Возможен при поставке для сырого употребления. Уточните точный вид: для некоторых тунцов Thunnus в техническом справочнике FDA есть исключение из противопаразитарной заморозки, но оно не устраняет бактериальные риски и гистамин. Не переносите его на пеламиду или рыбу с расплывчатым названием «тунец»."
-      },
-      "sources": [
-        "parasites",
-        "histamine",
-        "tuna"
-      ]
-    },
-    {
+      "id": "scallops",
       "title": {
         "en": "Scallops / deniz tarağı / hotate",
         "ru": "Гребешки / deniz tarağı / hotate"
@@ -325,12 +338,18 @@
         "scallops",
         "parasites",
         "fda"
-      ]
+      ],
+      "serving": {
+        "en": "Mandarin, chilli & a little olive oil",
+        "ru": "Мандарин, чили и немного оливкового масла"
+      },
+      "specialist": false
     },
     {
+      "id": "sea-bass",
       "title": {
-        "en": "Dorada & sea bass",
-        "ru": "Дорада и сибас"
+        "en": "Sea bass / levrek",
+        "ru": "Сибас / levrek"
       },
       "text": {
         "en": "Good candidates for the cooked menu. They can be used raw only with a verified raw-use supply and parasite-control basis; a fresh market display, farmed label or clear Mediterranean water is not enough.",
@@ -340,12 +359,39 @@
         "seafood",
         "parasites",
         "efsa"
-      ]
+      ],
+      "serving": {
+        "en": "Lemon zest, olive oil & parsley",
+        "ru": "Цедра лимона, оливковое масло и петрушка"
+      },
+      "specialist": true
     },
     {
+      "id": "dorada",
       "title": {
-        "en": "Bonito & mackerel",
-        "ru": "Пеламида и скумбрия"
+        "en": "Dorada / çipura",
+        "ru": "Дорада / çipura"
+      },
+      "text": {
+        "en": "Good candidates for the cooked menu. They can be used raw only with a verified raw-use supply and parasite-control basis; a fresh market display, farmed label or clear Mediterranean water is not enough.",
+        "ru": "Хорошая основа для приготовленных блюд. Для сырой подачи нужны подтверждённая поставка и контроль паразитов; свежая витрина, надпись «фермерская» или чистая средиземноморская вода недостаточны."
+      },
+      "sources": [
+        "seafood",
+        "parasites",
+        "efsa"
+      ],
+      "serving": {
+        "en": "Mandarin, chilli & sea salt",
+        "ru": "Мандарин, чили и морская соль"
+      },
+      "specialist": true
+    },
+    {
+      "id": "mackerel",
+      "title": {
+        "en": "Mackerel / uskumru",
+        "ru": "Скумбрия / uskumru"
       },
       "text": {
         "en": "Keep these in the cooked autumn menu unless a specialist supplies them specifically for raw use with parasite controls. Cold-chain records matter: histamine formed during temperature abuse survives both cooking and freezing.",
@@ -355,12 +401,60 @@
         "season",
         "histamine",
         "parasites"
-      ]
+      ],
+      "serving": {
+        "en": "Ginger, lemon & soy on the side",
+        "ru": "Имбирь, лимон и соевый соус отдельно"
+      },
+      "specialist": true
     },
     {
+      "id": "bonito",
       "title": {
-        "en": "Shrimp / karides",
-        "ru": "Креветки / karides"
+        "en": "Bonito / palamut",
+        "ru": "Пеламида / palamut"
+      },
+      "text": {
+        "en": "Keep these in the cooked autumn menu unless a specialist supplies them specifically for raw use with parasite controls. Cold-chain records matter: histamine formed during temperature abuse survives both cooking and freezing.",
+        "ru": "Оставьте их в приготовленном осеннем меню, если профильный поставщик не подтвердит продукт для сырой подачи и контроль паразитов. Важна холодовая цепь: гистамин, образовавшийся при неправильном хранении, сохраняется и после готовки, и после заморозки."
+      },
+      "sources": [
+        "season",
+        "histamine",
+        "parasites"
+      ],
+      "serving": {
+        "en": "Spring onion, ginger & lemon–soy",
+        "ru": "Зелёный лук, имбирь и лимонно-соевый соус"
+      },
+      "specialist": true
+    },
+    {
+      "id": "squid",
+      "title": {
+        "en": "Squid / kalamar / ika",
+        "ru": "Кальмар / kalamar / ika"
+      },
+      "text": {
+        "en": "Only consider squid explicitly supplied and processed for raw eating, with documented parasite controls and cold handling. A frozen supermarket pack of rings or breaded squid is not raw-use clearance; follow its cooking instructions. Local raw-use squid stock is unconfirmed.",
+        "ru": "Рассматривайте только кальмара, прямо поставленного и обработанного для сырой подачи, с документированным контролем паразитов и холодным хранением. Замороженные кольца или панированный кальмар из магазина не означают пригодность для сырой подачи; следуйте инструкции по приготовлению. Наличие кальмара для сырой подачи на месте не подтверждено."
+      },
+      "sources": [
+        "frozen-seafood",
+        "parasites",
+        "fda"
+      ],
+      "serving": {
+        "en": "Lemon, sea salt & a little soy",
+        "ru": "Лимон, морская соль и немного соевого соуса"
+      },
+      "specialist": true
+    },
+    {
+      "id": "shrimp",
+      "title": {
+        "en": "Specialist sweet shrimp / amaebi",
+        "ru": "Специальная сладкая креветка / амаэби"
       },
       "text": {
         "en": "Cook the ordinary supermarket or market shrimp for this trip. Specialist raw sweet-shrimp products exist, but that does not make an ordinary local pack a sashimi product.",
@@ -368,7 +462,12 @@
       },
       "sources": [
         "fda"
-      ]
+      ],
+      "serving": {
+        "en": "Lemon & soy, if a specialist raw-use pack is found",
+        "ru": "Лимон и соя, если найдётся специальная упаковка для сырой подачи"
+      },
+      "specialist": true
     }
   ],
   "leads": [
@@ -493,6 +592,21 @@
       "id": "efsa",
       "title": "EFSA: farmed-fish parasite evidence and limits",
       "url": "https://www.efsa.europa.eu/en/news/many-farmed-fish-parasite-free-more-data-needed"
+    },
+    {
+      "id": "frozen-seafood",
+      "title": "CarrefourSA frozen seafood catalogue",
+      "url": "https://www.carrefoursa.com/dondurulmus-deniz-urunleri/c/1253"
+    },
+    {
+      "id": "gocek-cuisine",
+      "title": "GoTürkiye: Göcek food traditions",
+      "url": "https://goturkiye.com/gocek/taste"
+    },
+    {
+      "id": "mugla-cuisine",
+      "title": "GoTürkiye: Muğla dishes",
+      "url": "https://goturkiye.com/tr/mugla/tat"
     }
   ]
 }

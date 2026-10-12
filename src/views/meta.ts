@@ -40,7 +40,14 @@ export const travelMeta = (lang: Lang): Metadata => {
 export const yachtFoodMeta = (lang: Lang): Metadata => pageMetadata({
   lang, path:'/travel/turkey-yacht-food',
   title:lang==='ru'?'Турция: еда на яхте':'Turkey: yacht food',
-  description:lang==='ru'?'12 идей блюд для яхты из Гёчека: осенние покупки, рыба, баранина, салаты и гид по продуктам для сашими.':'Twelve small-galley meal ideas from Göcek: autumn provisions, seafood, lamb, salads and a sourced sashimi buying guide.',
+  description:lang==='ru'?'12 турецких идей для яхты из Гёчека, осенние покупки и единый гид по всем вариантам сашими.':'Twelve Turkish-inspired yacht meal ideas from Göcek, autumn shopping and one guide to all sashimi options.',
+  image:'/share/turkey-yacht-food.jpg',
+});
+
+export const yachtSashimiMeta = (lang: Lang): Metadata => pageMetadata({
+  lang, path:'/travel/turkey-yacht-food/sashimi',
+  title:lang==='ru'?'Сашими: все варианты для яхты':'Sashimi: all yacht seafood options',
+  description:lang==='ru'?'Девять вариантов сашими на одной странице: тунец, лосось, гребешки, другие морепродукты, идеи подачи и проверка поставщиков в Турции.':'Nine sashimi options on one page: tuna, salmon, scallops, specialist alternatives, serving ideas and supplier checks for a Turkey yacht trip.',
   image:'/share/turkey-yacht-food.jpg',
 });
 

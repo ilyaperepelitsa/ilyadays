@@ -340,6 +340,17 @@
 .yacht-card-number { color: var(--muted); font-size: .75rem; font-variant-numeric: tabular-nums; letter-spacing: .1em; margin: 0 0 5px; }
 .yacht-card h3 { font-size: 1.35rem; margin: 0 0 14px; }
 .yacht-card .chip { font-size: .75rem; }
+.yacht-card-link { display: block; color: var(--ink); text-decoration: none; }
+.yacht-card-link:hover { border-color: var(--accent); }
+.yacht-card-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.yacht-card-go { color: var(--accent); font-size: .85rem; margin: 12px 0 0; font-weight: 600; }
+.yacht-sashimi-covers { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; margin: 28px 0; }
+.yacht-sashimi-covers figure { margin: 0; min-width: 0; }
+.yacht-sashimi-covers img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.yacht-sashimi-covers figcaption { color: var(--muted); font-size: .85rem; margin-top: 8px; }
+.yacht-option-status { color: var(--accent); font-size: .75rem !important; font-weight: 600; margin: 0 0 8px; }
+.yacht-serving { border-top: 1px solid var(--line); padding-top: 12px; }
+.yacht-sashimi-option { scroll-margin-top: 80px; }
 .yacht-conditional { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
 .yacht-conditional:focus-visible, .yacht-ask summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .yacht-notes { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin: 18px 0; }
@@ -352,4 +363,4 @@
 .yacht-ask[open] summary { margin-bottom: 14px; }
 .yacht-ask p[lang=tr] { border-left: 3px solid var(--accent); padding-left: 14px; }
 @media (max-width: 900px) { .yacht-cards { grid-template-columns: repeat(2,minmax(0,1fr)); } }
-@media (max-width: 600px) { .yacht-cards, .yacht-notes { grid-template-columns: minmax(0,1fr); } }
+@media (max-width: 600px) { .yacht-cards, .yacht-notes, .yacht-sashimi-covers { grid-template-columns: minmax(0,1fr); } }

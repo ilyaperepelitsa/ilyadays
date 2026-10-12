@@ -17,7 +17,8 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/food/onigiri` | `/ru/food/onigiri` | Nine original shop-inspired fillings and three shaping methods, selected on one illustrated page |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Cooking calculator, including salmon, with chilled/frozen controls, thickness sliders, recipe presets, reference tables and PDF |
 | `/travel` | `/ru/travel` | Trips |
-| `/travel/turkey-yacht-food` | `/ru/travel/turkey-yacht-food` | Twelve yacht meal proposals, seasonal shopping and a sourced raw-seafood buying guide |
+| `/travel/turkey-yacht-food` | `/ru/travel/turkey-yacht-food` | Twelve Turkish-inspired yacht meal proposals and seasonal shopping |
+| `/travel/turkey-yacht-food/sashimi` | `/ru/travel/turkey-yacht-food/sashimi` | One page for nine sashimi options, serving ideas and sourced buying/holding guidance |
 | `/travel/new` | `/ru/travel/new` | Template for a new city: days, pace, meals, themes. A model fills the plan; Wikipedia and Commons add links and pictures. Saved in this browser |
 | `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it |
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
