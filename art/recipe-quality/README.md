@@ -8,4 +8,6 @@ The approved style block is preserved **verbatim** from `art/nigiri/illustration
 
 `generated.json` maps final unique scenes to their source PNG, submitted prompt hash, optimized canonical asset and published asset. Shared chilling, dip and plated/hero images reuse the same bytes. `review.json` records the final content and image review. The earlier `art/turkey-recipes/` prompts and review are historical and are superseded by this collection for the currently published pictures.
 
+The separate `title-card-review.json` records remaining aesthetic issues identified after the technique review. Roka was subsequently redrawn with natural rocket leaves, irregular cheese and broken nuts; a focused edit reduced oversized pomegranate arils. `roka-revision.json` preserves both exact requests, references, sources and the final review. Check style and ingredient scale at actual card size as well as full resolution.
+
 Canonical recipe data, measured step ingredients, exact-string Russian translations, scene specifications and exporter/model support are preserved in `art/turkey-recipes/source/`. The sibling recipe source remains the authoring owner. Restore those files and use `SKIP_IMAGES=1 npm run sync` to export without launching additional image generation.

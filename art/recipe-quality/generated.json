@@ -1119,26 +1119,29 @@
   {
     "slug": "pomegranate-salad",
     "key": "4",
-    "scene": "Finished rocket salad with eight distinct white cheese chunks, fifteen large pomegranate seeds and three walnut pieces, pale bowl and clean turquoise background, no hands.",
-    "prompt_sha256": "e4c84ac1d2bf7a05a0ef128b6978c0d8bb481cd7e459a970617a5c57719038e9",
+    "scene": "Input1 is the SALAD EDIT TARGET. Input2 is the approved illustration STYLE only. Preserve the ENTIRE improved bowl, framing, warm ivory backdrop, rocket leaves, folded overlapping leaf orientations, cheese pieces, broken walnuts and their exact positions. Change ONLY the pomegranate arils and tiny wet flecks. Every existing red aril is currently too large and gem-like. REPLACE EACH with ONE SMALL natural pomegranate aril only45–50PERCENT of its current WIDTH and HEIGHT, centred near its current position; use adjacent leaf colour to fill the newly exposed gap naturally. Each seed must now be only about one quarter the width of a nearby1–2cm cheese crumble, roughly5–7pixels wide when this picture is reduced to600pixels width. They are little irregular translucent red droplets with a gently rounded end and a small natural flat cut face, NOT red spheres, cherries or cut gemstones. Use ONLY2–3 broad red shades and ONE modest soft highlight per seed; absolutely no polygonal jewel facets, crystal planes, glitter or thick white shine. Keep approximately the same sparse count, no new seed clusters or tiny seed carpet. Remove only small isolated white wet-glitter flecks from leaves; preserve broad muted leaf shadows and warm cel-painted shading. No other edits, no added food, hands, text, arrows, diagram or inset.",
+    "prompt_sha256": "6021934141b66cdec1d1221161206366b0c094c375ddaaa4891af7dd50431995",
     "policy_version": "2026-10-13.4",
     "reference_paths": [
+      "/Users/ilyaperepelitsa/PycharmProjects/ilyadays/art/recipe-quality/references/roka-candidate-v1.webp",
       "/Users/ilyaperepelitsa/PycharmProjects/ilyadays/public/media/illustrations/nigiri/technique-4.webp"
     ],
     "also_hero": true,
-    "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-cfb56b41-4405-4d21-ba57-2cfc5c4e4320.png",
+    "source": "/Users/ilyaperepelitsa/.codex/generated_images/01a1251d-1a68-70d1-a025-231dd029b98a/exec-dda32768-de4f-4f53-8695-b7a5981e47c4.png",
     "final_key": "4",
     "canonical": "../recipes/generated/clean/pomegranate-salad/4.webp",
-    "canonical_sha256": "85fb1a44ee07ce4b27d3bc77fe9be4414a27c86aa0eca795e15c42fb5c5e5487",
+    "canonical_sha256": "c28ef3984f528144f805388e5e36953ec68e5faa7aae5a1d076e707efccb0ea5",
     "published": "public/media/illustrations/pomegranate-salad/4.webp",
-    "published_sha256": "20acb8d03ccb36753565010ad31efae8dfd7a9607305ad5f8bb6249d9e575a62",
+    "published_sha256": "d98e8471921a8e31610190deb06618f2f3f63d5b6b0ff16b7b646e2f6fd70bfe",
     "published_dimensions": [
       1200,
       800
     ],
-    "prompt_file": "art/recipe-quality/prompts.json",
+    "prompt_file": "art/recipe-quality/roka-revision.json#corrections",
     "generation_mode": "builtin",
-    "review": "pass"
+    "review": "pass",
+    "repair": true,
+    "style_review": "pass after independent full-size and thumbnail review"
   },
   {
     "slug": "pomegranate-salad",

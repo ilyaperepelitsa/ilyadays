@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-13",
+  "commit_reviewed": "d1c7bdf53a90ea2515c4ff3a4b5e6121e7c57c22",
+  "scope": "12 current Turkish/coastal title cards in Food and Travel, plus9 selected sashimi heroes; tuna is shared.4 older title images and approved nigiri reference used for comparison.",
+  "verification": {
+    "live_downloads": 37,
+    "live_matches_repo": 37,
+    "browser": "Live Food desktop grid, live Travel desktop grid and mobile card inspected.",
+    "inspection": "Root and independent title-card critic inspected all12 current collection hero assets; critic also inspected all12 actual600x400 Travel thumbnails. Root inspected all9 sashimi heroes and comparison references."
+  },
+  "verdict": "Not a consistent finished visual set; prior technique review does not establish aesthetic/style approval.",
+  "findings": [
+    {
+      "priority": "high",
+      "cards": [
+        "ali-nazik"
+      ],
+      "finding": "Mince is composed of rounded beads with smaller beads inside each cluster, violating the explicit no-beaded/no-cauliflower texture requirement. Visible even at card size.",
+      "recommendation": "Fewer loose irregular torn crumbles, broad matte cel shading, minimal surface marks.",
+      "evidence": [
+        "public/media/illustrations/ali-nazik/4.webp"
+      ]
+    },
+    {
+      "priority": "high",
+      "cards": [
+        "lemon-caper-dorada",
+        "palamut-tava",
+        "kabak-mucver"
+      ],
+      "finding": "Dense skin scales, mottled crust and tiny raised fritter nubs drift from broad cel shapes. Mucver broken centre also reads as thick and spongy, whereas recipe calls for flattened8–10mm fritters. Exact millimetres cannot be measured from the image.",
+      "recommendation": "Simplify cooked surfaces to broad browned/shadow areas with sparse readable marks; show a visibly thin fritter edge.",
+      "evidence": [
+        "public/media/illustrations/lemon-caper-dorada/4.webp",
+        "public/media/illustrations/palamut-tava/4.webp",
+        "public/media/illustrations/kabak-mucver/4.webp"
+      ]
+    },
+    {
+      "priority": "medium",
+      "cards": [
+        "garlic-chilli-shrimp",
+        "menemen"
+      ],
+      "finding": "Busy mottled food shading and bread pores create a polished cookbook-painted finish. Menemen egg is puffy and lumpy rather than broad silky folds.",
+      "recommendation": "Simplify highlights and bread detail; use broad soft egg folds; retain clear ingredient silhouettes.",
+      "evidence": [
+        "public/media/illustrations/garlic-chilli-shrimp/4.webp",
+        "public/media/illustrations/menemen/4.webp"
+      ]
+    },
+    {
+      "priority": "medium",
+      "cards": [
+        "gavurdagi-salad"
+      ],
+      "finding": "Large-looking tomato pieces and whole herb leaves read as a chunky salad, not the recipe fine5mm dice and chopped herbs. Exact cut dimensions cannot be established without scale.",
+      "recommendation": "Communicate a finer, more uniform chop with visibly chopped parsley and fewer distracting surface details.",
+      "evidence": [
+        "public/media/illustrations/gavurdagi-salad/4.webp"
+      ]
+    },
+    {
+      "priority": "low",
+      "cards": [
+        "sashimi-scallops",
+        "sashimi-squid"
+      ],
+      "finding": "Pale seafood on pale plates loses edge definition at thumbnail size. This is a readability polish issue rather than a food-state failure.",
+      "recommendation": "Strengthen restrained contours/contact shadows while keeping naturally pale flesh and the approved palette.",
+      "evidence": [
+        "public/media/illustrations/sashimi-scallops/4.webp",
+        "public/media/illustrations/sashimi-squid/4.webp"
+      ]
+    }
+  ],
+  "main_card_verdicts": {
+    "ali-nazik": "substantial style rework",
+    "lemon-caper-dorada": "substantial style rework",
+    "palamut-tava": "substantial style rework",
+    "kabak-mucver": "substantial style rework",
+    "garlic-chilli-shrimp": "substantial style rework",
+    "menemen": "substantial style rework",
+    "gavurdagi-salad": "targeted chop/readability correction",
+    "pomegranate-salad": "Reworked and reviewed: natural rocket leaves, irregular cheese/nuts, smaller arils and warm ivory.",
+    "yacht-sashimi": "keep",
+    "sumac-lamb-wraps": "keep",
+    "cilbir": "keep",
+    "cokertme": "keep; optional surface simplification"
+  },
+  "composition": "No substantive clipping of identifying food in Travel thumbnails. Main defects are illustration rendering and food-state communication, not WebP compression.",
+  "reference_caveat": "Older onigiri/oyakodon cards are themselves more rendered/textured; use approved nigiri art rather than treating every existing card as valid style target.",
+  "changes_made": "Roka title/final serving art replaced; other title-card findings remain open.",
+  "screenshots": [
+    "output/title-card-review/food-desktop.png",
+    "output/title-card-review/travel-desktop.png",
+    "output/title-card-review/shrimp-mobile.png"
+  ],
+  "roka_revision": "art/recipe-quality/roka-revision.json"
+}
