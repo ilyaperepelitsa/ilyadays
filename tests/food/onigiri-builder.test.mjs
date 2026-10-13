@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { describe, it } from 'node:test';
 import { composeOnigiri } from '../../src/lib/food/onigiri-builder.mjs';
-import { ONIGIRI_FILLINGS, ONIGIRI_METHODS, integratedDestination, consolidatedIndex } from '../../src/lib/food/integrated-recipes.mjs';
+import { ONIGIRI_FILLINGS, ONIGIRI_METHODS, ONIGIRI_RECIPES, integratedDestination, consolidatedIndex } from '../../src/lib/food/integrated-recipes.mjs';
 
 const read=(lang,slug)=>JSON.parse(fs.readFileSync(new URL(`../../content/${lang}/recipes/${slug}.json`,import.meta.url)));
 const text=html=>html.replace(/<[^>]*>/g,'');
@@ -52,14 +52,14 @@ describe('one-page onigiri recipes',()=>{
     for(const lang of ['en','ru']) {
       const raw=JSON.parse(fs.readFileSync(new URL(`../../content/${lang}/index.json`,import.meta.url)));
       const index=consolidatedIndex(raw);
-      for(const slug of [...ONIGIRI_FILLINGS,...ONIGIRI_METHODS,'sous-vide-salmon']) {
+      for(const slug of [...ONIGIRI_RECIPES,...ONIGIRI_METHODS,'sous-vide-salmon']) {
         assert.ok(!index.recipes.some(r=>r.slug===slug));
         assert.ok(!index.groups.some(g=>g.items.includes(slug)));
         assert.ok(!index.recent.includes(slug));
         assert.ok(integratedDestination(slug).includes('?'));
       }
       assert.ok(index.groups.find(g=>g.id==='onigiri').items.includes('onigiri'));
-      for(const slug of ['onigirazu','spam-musubi','yaki-onigiri','baby-octopus-onigiri']) assert.ok(index.recipes.some(r=>r.slug===slug));
+      assert.equal(index.groups.find(g=>g.id==='onigiri').items.length,1);
     }
     assert.equal(integratedDestination('sous-vide-salmon'),'/sous-vide?food=salmon');
     assert.equal(integratedDestination('soboro-onigiri'),'/onigiri?filling=soboro-onigiri');

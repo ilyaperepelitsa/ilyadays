@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 import mediaAliases from "./art/media/aliases.json";
-import { ONIGIRI_FILLINGS, ONIGIRI_METHODS, integratedDestination } from "./src/lib/food/integrated-recipes.mjs";
+import { ONIGIRI_RECIPES, ONIGIRI_METHODS, integratedDestination } from "./src/lib/food/integrated-recipes.mjs";
 
 // Old static-site URLs (ilyadays.com/food/*.html etc.) keep working: permanent 301s to the new routes.
 const legacy = [
@@ -46,7 +46,7 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      ...[...ONIGIRI_FILLINGS,...ONIGIRI_METHODS,'sous-vide-salmon'].flatMap(slug=>['','/ru'].flatMap(lang=>['','.html'].map(ext=>({
+      ...[...ONIGIRI_RECIPES,...ONIGIRI_METHODS,'sous-vide-salmon'].flatMap(slug=>['','/ru'].flatMap(lang=>['','.html'].map(ext=>({
         source:`${lang}/food/${slug}${ext}`,destination:`${lang}/food${integratedDestination(slug)}`,statusCode:301 as const,
       })))),
       ...legacy.map((r) => ({ ...r, statusCode: 301 as const })),

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { getFoodIndex, getRecipe, getSousVide, getUi, getSashimi } from "@/lib/content";
-import { ONIGIRI_FILLINGS, ONIGIRI_METHODS } from "@/lib/food/integrated-recipes.mjs";
+import { getFoodIndex, getRecipe, getSousVide, getUi, getSashimi, getOnigiriWrapping } from "@/lib/content";
+import { ONIGIRI_RECIPES, ONIGIRI_METHODS } from "@/lib/food/integrated-recipes.mjs";
 import type { Lang } from "@/lib/i18n";
 import { SiteFooter, SiteHeader } from "@/components/site/SiteHeader";
 import { FoodIndexView } from "@/components/food/FoodIndexView";
@@ -35,9 +35,10 @@ export function RecipePage({ lang, slug }: { lang: Lang; slug: string }) {
   return (
     <FoodShell lang={lang} path={`/food/${slug}`}>
       {slug==='onigiri'?<OnigiriChoices lang={lang} base={r}
-        fillings={ONIGIRI_FILLINGS.map(slug=>getRecipe(lang,slug)!)}
+        fillings={ONIGIRI_RECIPES.map(slug=>getRecipe(lang,slug)!)}
         methods={['onigiri',...ONIGIRI_METHODS].map(slug=>getRecipe(lang,slug)!)}
-        ui={Object.fromEntries(['Ingredients','Equipment','Step by step','For this step','Should look like this','Based on:','View full-size picture','Diagram'].map(key=>[key,getUi(lang)(key)]))}/>:slug==='yacht-sashimi'?<SashimiChoices base={r} variants={getSashimi(lang)} lang={lang}
+        wrappings={getOnigiriWrapping(lang)}
+        ui={Object.fromEntries(['Ingredients','Equipment','Mise en place','— set out in the order it goes in','Step by step','For this step','Should look like this','Based on:','View full-size picture','Diagram'].map(key=>[key,getUi(lang)(key)]))}/>:slug==='yacht-sashimi'?<SashimiChoices base={r} variants={getSashimi(lang)} lang={lang}
           ui={Object.fromEntries(['Ingredients','Equipment','Mise en place','— set out in the order it goes in','Steps','Step by step','For this step','Should look like this','Based on:','View full-size picture'].map(key=>[key,getUi(lang)(key)]))}
           sourcing={<SashimiOptions lang={lang}/>}/>:<RecipeView lang={lang} r={r}/>}
     </FoodShell>

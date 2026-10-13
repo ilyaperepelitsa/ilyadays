@@ -69,9 +69,9 @@ WRAP = Recipe(
 RECIPES = [MOLD, WRAP]
 
 MAIN = replace(ORIGINAL,
-    title="Onigiri: fillings & shaping",
-    blurb='Nine shop-inspired fillings, one illustrated recipe: choose your filling and shape by hand, with a mold or through plastic wrap.',
-    yields='9 fillings, 3 shaping methods', total='Time varies by filling', intro='Choose one filling and one shaping method. Your ingredients, preparation pictures and steps update below. These are home versions inspired by Bongo, Yadoroku and Nigihaya; the shops do not publish their recipes.',
+    title="Onigiri: recipes, shaping & wrapping",
+    blurb='Sixteen illustrated recipes in one place, with shaping and seaweed wrapping choices.',
+    yields='16 recipes, shaping & wrapping choices', total='Time varies by filling', intro='Choose a recipe, shaping method and wrapping. Ingredients, preparation pictures and instructions update together. Shop-inspired fillings are home adaptations; the shops do not publish their recipes.',
     equipment=HAND_EQUIPMENT,
     ingredients=[deepcopy(ORIGINAL.ingredients[0]),
                  ("Filling (optional)", [("Prepared filling of your choice", "1–2 tsp per onigiri")]),

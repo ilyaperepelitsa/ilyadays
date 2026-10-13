@@ -1,0 +1,67 @@
+{
+  "reviewed_at": "2026-10-13",
+  "scope": "16 onigiri recipes; three shaping methods; three nori wrappings; fixed structural formats",
+  "recipe_critic": "Approved after correcting wrap-aware serving text and separating all octopus cooking from plain rice.",
+  "image_critic": "Approved corrected ginger mince, evenly mixed hero, and smaller octopus pieces. No definite extra/fused digits or unsafe blade contact; occluded digits anatomically plausible.",
+  "accepted_limitations": [
+    "Nori retains stylized mottling. Hand views naturally occlude some fingers."
+  ],
+  "verification": {
+    "tests": 93,
+    "typecheck": "pass",
+    "production_build": "pass",
+    "source_compositions": 288,
+    "browser_recipe_choices_en_ru": 32,
+    "browser_special_shape_wrapping_states_en_ru": 72,
+    "mobile_overflow": false,
+    "broken_images": 0,
+    "legacy_redirect": 301,
+    "wrapping_memory_isolation": "pass"
+  },
+  "assets": [
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/5.webp",
+      "sha256": "229f6de3f82c5e644bc42810c5f4bb9bd1af40809020e33937880692469e245e"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/10.webp",
+      "sha256": "8ef3461c3f5925575a983e87ac96c66f520c7abbbbb58d945a3c99e3c58800cf"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/4.webp",
+      "sha256": "fffae9c492cc6803c06d2f633155b519a70f7e9211b86e51f1437ed990b74ac4"
+    },
+    {
+      "path": "public/media/illustrations/onigiri-wrapping/full.webp",
+      "sha256": "5ab7049604c04540a624cd6da133f78276d27fda197d78f42096e6ee2f7c324d"
+    },
+    {
+      "path": "public/media/illustrations/onigiri-wrapping/none.webp",
+      "sha256": "45b9a5b184007097b8a65f7e65ec582d32b919010f170f3dd92fa34d6b0a2822"
+    },
+    {
+      "path": "public/media/illustrations/onigiri-wrapping/strip.webp",
+      "sha256": "0008e7dee845c1ce706572924a2c3216dc22552bf8c337f198a32ea4d1173d3a"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/8.webp",
+      "sha256": "9288b9b5156ca5bf55d17d2e8a0a11c038f78a31f8adc2d9a1eb80b8b1f21c97"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/7.webp",
+      "sha256": "0ddf8e74cf233d40b86bd0456492b81eac8af4ba6296979e10a0a435f311567c"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/9.webp",
+      "sha256": "4071920fed2a2c29e315a101f27c29f4337978a3971434bde7da99d3badb2a51"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/hero.webp",
+      "sha256": "78dd0bcd8ab71fec5fa2d69f2743eaf755cf97b2ef71f26e07ed2aff927767ef"
+    },
+    {
+      "path": "public/media/illustrations/baby-octopus-onigiri/mise3.webp",
+      "sha256": "c1e66e4b14ff63db9018ed4a8e4f8bf9db943759b9561e5b11beec9cf078b334"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Рис с осьминогом на даси и имбире, с детёнышем в сладком соевом, смешанным по всему рису, треугольные онигири с полоской нори — весь осьминог внутри, ничего сверху.",
+ "blurb_html": "Простой рис с отдельно приготовленными до мягкости, обжаренными и глазированными осьминогами; мелко рубленный имбирь, без отвара осьминога в рисе.",
  "chips": [
   {
    "html": "<span>6 онигири</span>",
@@ -9,27 +9,25 @@
    "text": "6 онигири"
   },
   {
-   "html": "~1½ ч (из них 45 мин рисоварка)",
+   "html": "~75–95 мин, в зависимости от мягкости",
    "kind": "time",
-   "text": "~1½ ч (из них 45 мин рисоварка)"
+   "text": "~75–95 мин, в зависимости от мягкости"
   }
  ],
- "description": "Рис с осьминогом на даси и имбире, с детёнышем в сладком соевом, смешанным по всему рису, треугольные онигири с полоской нори — весь осьминог внутри, ничего сверху.",
+ "description": "Простой рис с отдельно приготовленными до мягкости, обжаренными и глазированными осьминогами; мелко рубленный имбирь, без отвара осьминога в рисе.",
  "equipment_html": [
-  "Рисоварка (или тяжёлая кастрюля с крышкой)",
-  "Кухонные ножницы",
-  "Поварской нож + разделочная доска",
-  "Маленький сотейник + крышка-падение (отосибута) или кружок бумаги для выпечки",
-  "Мелкое сито",
-  "Лопатка для риса"
+  "Рисоварка или кастрюля с толстым дном и крышкой",
+  "Сотейник, сито и чистые полотенца",
+  "Сковорода <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 см</span> и щипцы",
+  "Кухонные ножницы, нож, доска и лопатка для риса"
  ],
  "group": {
   "id": "onigiri",
   "name": "Онигири"
  },
  "hero": {
-  "alt": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)",
-  "image": "illustrations/baby-octopus-onigiri/hero.webp?v=5ab0ffc213",
+  "alt": "Онигири с маленькими осьминогами в карамелизованной соевой глазури",
+  "image": "illustrations/baby-octopus-onigiri/hero.webp?v=96d5eb5aae",
   "svg_fallback": null
  },
  "ingredients": [
@@ -49,60 +47,48 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1.5\" data-n=\"2\">1½</span> мерных стакана рисоварки (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"270\">270 мл</span>, ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span>)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span>",
      "name_html": "Короткозёрный рис"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"320\">320 мл</span>",
-     "name_html": "Даси"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Светлый соевый соус (усукути)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
-     "name_html": "Мирин"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
-     "name_html": "Саке"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 г</span> (чуть меньше <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.6667\">⅔ ч. л.</span>)",
-     "name_html": "Соль"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"ломтик|ломтика|ломтиков\" data-n=\"1\">1 ломтик</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span>), тонкой соломкой",
-     "name_html": "Имбирь"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">1 стебель</span>, тонко нарезанный",
-     "name_html": "Зелёный лук"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span>",
+     "name_html": "Вода для риса"
     }
    ],
-   "name": "Такомэси"
+   "name": "Простой рис"
   },
   {
    "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span>, мелко нарубить до <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 мм</span>",
+     "name_html": "Имбирь"
+    },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
      "name_html": "Соевый соус"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
-     "name_html": "Мирин (для тушения)"
+     "name_html": "Мирин"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Сахар"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\">200 мл</span>",
-     "name_html": "Вода"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Вода для глазури"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">1 стебель</span>, тонко нарезанный",
+     "name_html": "Зелёный лук"
     }
    ],
-   "name": "Сладко-соевое тушение (для половины осьминога)"
+   "name": "Карамелизованные осьминоги"
   },
   {
    "items": [
@@ -118,66 +104,51 @@
    "name": "Для формовки"
   }
  ],
- "intro_html": "Два блюда Окаямы с Внутреннего Японского моря вместе: <b>такомэси</b> — рис с осьминогом, имбирём и даси — и <b>иидако но ницукэ</b>, детёныш осьминога, томлёный в сладком соевом. Половина осьминога варится в рисе; вторая глазируется и <b>вмешивается</b>, чтобы в каждом куске были розовые и блестящие кусочки. Треугольники с полоской нори — без начинки сверху. Основы лепки — на странице <a href=\"onigiri.html\">онигири</a>.",
+ "intro_html": "Сварите рис отдельно. Всех осьминогов отдельно доведите до мягкости, слейте отвар и обсушите, затем быстро подрумяньте и покройте глазурью. В готовый рис вмешайте только покрытые глазурью кусочки и зелёный лук. Так проще сохранить текстуру риса и не окрасить его фиолетовым отваром; небольшие следы цвета от глазури нормальны. Это домашняя вариация, а не традиционный такомэси (рис, сваренный с осьминогом).",
  "mise": [
   {
-   "as_list": true,
-   "goes_in": "Шаг 3",
+   "as_list": false,
+   "goes_in": "Шаги 3 и 6",
    "image": "illustrations/baby-octopus-onigiri/mise1.webp?v=f65350f9c0",
    "items": [
-    "очищенные",
-    "нарезанные",
-    "половина + половина"
+    "всё очищено и нарезано",
+    "без деления на партии"
    ],
-   "items_html": "очищенные · нарезанные · половина + половина",
+   "items_html": "всё очищено и нарезано · без деления на партии",
    "name": "Детёныш осьминога",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   },
   {
    "as_list": false,
-   "goes_in": "Шаг 4",
+   "goes_in": "Шаг 5",
    "image": "illustrations/baby-octopus-onigiri/mise2.webp?v=3ef734a687",
    "items": [
-    "промытый и откинутый"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span> риса",
+    "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span> свежей воды"
    ],
-   "items_html": "промытый и откинутый",
-   "name": "Рис",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span> риса · <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span> свежей воды",
+   "name": "Простой рис",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 8",
+   "image": "illustrations/baby-octopus-onigiri/mise3.webp?v=4cfd23ba2e",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span>",
+    "мелко нарубить до <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 мм</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span> · мелко нарубить до <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 мм</span>",
+   "name": "Имбирь",
    "svg_fallback": null,
    "vessel": "bowl"
   },
   {
    "as_list": true,
-   "goes_in": "Шаг 5",
-   "image": "illustrations/baby-octopus-onigiri/mise3.webp?v=c5305b2abe",
-   "items": [
-    "даси",
-    "светлый соевый",
-    "мирин",
-    "саке",
-    "соль"
-   ],
-   "items_html": "даси · светлый соевый · мирин · саке · соль",
-   "name": "Приправы для риса",
-   "svg_fallback": null,
-   "vessel": "cup"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Шаг 5",
-   "image": "illustrations/baby-octopus-onigiri/mise4.webp?v=f5133b611d",
-   "items": [
-    "тонкая соломка"
-   ],
-   "items_html": "тонкая соломка",
-   "name": "Имбирь",
-   "svg_fallback": null,
-   "vessel": "plate"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Шаг 7",
-   "image": "illustrations/baby-octopus-onigiri/mise5.webp?v=a88e7fbea2",
+   "goes_in": "Шаг 8",
+   "image": "illustrations/baby-octopus-onigiri/mise4.webp?v=a88e7fbea2",
    "items": [
     "соя",
     "мирин",
@@ -185,33 +156,33 @@
     "вода"
    ],
    "items_html": "соя · мирин · сахар · вода",
-   "name": "Сладко-соевое тушение",
+   "name": "Сладко-соевая глазурь",
    "svg_fallback": null,
    "vessel": "cup"
   },
   {
    "as_list": false,
    "goes_in": "Шаг 9",
-   "image": "illustrations/baby-octopus-onigiri/mise6.webp?v=78d718ed07",
+   "image": "illustrations/baby-octopus-onigiri/mise5.webp?v=78d718ed07",
    "items": [
     "тонко нарезанный"
    ],
    "items_html": "тонко нарезанный",
    "name": "Зелёный лук",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   },
   {
    "as_list": false,
    "goes_in": "Шаг 10",
-   "image": "illustrations/baby-octopus-onigiri/mise7.webp?v=7b6fc60f8a",
+   "image": "illustrations/baby-octopus-onigiri/mise6.webp?v=7b6fc60f8a",
    "items": [
     "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"полоска|полоски|полосок\" data-n=\"1\">6 полосок</span> шириной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>"
    ],
    "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"полоска|полоски|полосок\" data-n=\"1\">6 полосок</span> шириной <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span>",
    "name": "Полоски нори",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   }
  ],
  "more_label": "Ещё — Онигири:",
@@ -221,24 +192,20 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>Такомэси и детёныш в сладком соевом — оба региональные рецепты Окаямы по публикации Министерства сельского хозяйства Японии; очистка — по рыболовному гиду Honda по иидако.</li><li>Такомэси часто едят как онигири.</li><li><b>Версия этого сайта:</b> детёныш вместо ножек, половина кусочков в рисе и половина глазированная и вмешана (ничего сверху), уваривание соуса до глазури, треугольник и полоска нори, количества на шесть.</li></ul>",
-   "title_html": "Что из источников и что этого сайта"
+   "html": "<ul class=\"do\"><li>Источник MAFF описывает очистку и предварительное приготовление до мягкости перед добавлением приправ.</li><li>Отдельная обжарка, уваренная глазурь и смешивание с простым рисом — обновлённый домашний способ этого сайта.</li><li>Все осьминоги готовятся вне рисоварки.</li></ul>",
+   "title_html": "Вариация и источники"
   },
   {
-   "html": "<ul class=\"do\"><li>Иидако значит «рисовый осьминог»: зимой головы полны икры, похожей на зёрна варёного риса — деликатес Окаямы.</li><li>Если есть — можно оставить: вырежьте глаза и клювик и выньте только внутренности ниже икры.</li></ul>",
-   "title_html": "«Рисовый осьминог»"
+   "html": "<ul class=\"do\"><li>Розовый цвет сам по себе не означает мягкость.</li><li>Остудите пробный кусочек и попробуйте: он должен легко разжёвываться.</li><li>Если жёсткий, продолжайте спокойное приготовление; быстрая обжарка его не размягчит.</li></ul>",
+   "title_html": "Первый этап — до мягкости"
   },
   {
-   "html": "<ul class=\"do\"><li>Слабый огонь для первого томления и никогда сильного кипения.</li><li>Рецепт Окаямы ещё слегка отбивает щупальца (кусочком дайкона), чтобы смягчить — стоит сделать, если они крупные.</li></ul>",
-   "title_html": "Нежный, не резиновый"
+   "html": "<ul class=\"do\"><li>Отвар осьминогов слейте.</li><li>Вмешивайте только обсушенные кусочки с тонким слоем глазури, не остаток соуса из сковороды.</li><li>Разделите готовую смесь на шесть равных порций, не ориентируясь на фиксированные <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"90\" data-s=\"0\">90 г</span>.</li></ul>",
+   "title_html": "Сохраните рис рассыпчатым"
   },
   {
-   "html": "<p>Используйте <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\" data-b=\"300\" data-s=\"0\">200–300 г</span> ножек осьминога, нарезанных по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>: половина в рисоварку, половина глазируется так же.</p>",
-   "title_html": "Нет детёнышей осьминога?"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Лучше в течение нескольких часов при прохладной комнатной температуре.</li><li>Холодный рис твердеет — готовые онигири не в холодильник.</li></ul>",
-   "title_html": "Хранение"
+   "html": "<ul class=\"do\"><li>Ешьте свежими.</li><li>На потом быстро охладите и уберите в холодильник, желательно в течение часа; используйте за 24 часа.</li><li>Нори добавляйте перед едой.</li><li>В холодильнике рис станет плотнее, но это не причина оставлять его в тепле.</li></ul>",
+   "title_html": "Подавайте или быстро охлаждайте"
   }
  ],
  "original": null,
@@ -248,16 +215,16 @@
    "title": "Осьминог"
   },
   {
-   "id": "part-такомэси",
-   "title": "Такомэси"
+   "id": "part-простой-рис",
+   "title": "Простой рис"
   },
   {
-   "id": "part-детёныш-осьминога-в-сладком-соевом",
-   "title": "Детёныш осьминога в сладком соевом"
+   "id": "part-отдельное-приготовление-осьминогов",
+   "title": "Отдельное приготовление осьминогов"
   },
   {
-   "id": "part-формовка",
-   "title": "Формовка"
+   "id": "part-лепка",
+   "title": "Лепка"
   }
  ],
  "prev": {
@@ -288,11 +255,11 @@
    "person": "человека"
   }
  },
- "share_image": "share/baby-octopus-onigiri.jpg?v=5ca664bbae",
+ "share_image": "share/baby-octopus-onigiri.jpg?v=d0e23d58c5",
  "siblings": [
   {
    "slug": "onigiri",
-   "title": "Онигири: начинки и лепка"
+   "title": "Онигири: рецепты, лепка и обёртки"
   },
   {
    "slug": "onigiri-mold",
@@ -366,16 +333,16 @@
  "slug": "baby-octopus-onigiri",
  "sources": [
   {
-   "label": "MAFF — Такомэси (осьминог с рисом), Окаяма",
-   "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/2803/index.html"
-  },
-  {
    "label": "MAFF — Иидако но ницукэ (томлёный детёныш осьминога), Окаяма",
    "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/4556/index.html"
   },
   {
    "label": "Honda fishing — как чистить иидако (яп.)",
    "url": "https://www.honda.co.jp/fishing/picture-book/iidako/clean01/"
+  },
+  {
+   "label": "Food Standards Agency — хранение риса",
+   "url": "https://www.food.gov.uk/safety-hygiene/home-food-fact-checker"
   }
  ],
  "steps": [
@@ -456,7 +423,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Нарежьте каждого осьминога кусочками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>.</li><li>Разделите на две кучки примерно по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span>: одну в рисоварку, другую в сладко-соевую кастрюлю.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нарежьте всех очищенных осьминогов кусочками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>. Всю партию готовьте отдельно до мягкости; в рисоварку осьминоги не идут.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -480,77 +447,83 @@
    "time": "~4 мин",
    "time_html": "<span>~4 мин</span>",
    "title": "Нарежьте всё",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"10\" data-b=\"12\" data-n=\"5\">10–12</span> шт.)",
+     "name_html": "Детёныш осьминога (иидако)"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Промойте рис, пока вода почти не станет прозрачной, и откиньте на сито.</li><li>Нарежьте имбирь тонкой соломкой.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Промойте рис почти до прозрачной воды, хорошо слейте, затем замочите на 20 минут в отмеренных <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\" data-s=\"0\">300 мл</span> свежей воды. Эту воду оставьте для варки.</li><li>Нарежьте имбирь тонкой соломкой, затем поперёк и мелко нарубите до <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 мм</span>. Оставьте для сковороды: в начинке не должно быть длинных волокон.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
-    "alt": "Промойте рис, нарежьте имбирь",
+    "alt": "Промойте рис; мелко нарубите имбирь",
     "diagram": null,
     "diagram_title": "Схема",
-    "how": [
-     {
-      "caption": "Промойте рис, пока вода почти не станет прозрачной.",
-      "src": "illustrations/baby-octopus-onigiri/4-how1.webp?v=91b799c650"
-     },
-     {
-      "caption": "Нарежьте имбирь тонкой соломкой.",
-      "src": "illustrations/baby-octopus-onigiri/4-how2.webp?v=cc6962c50d"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/4.webp?v=f31f4fb0c5",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/4.webp?v=a3bf155808",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 4,
-   "part": "Такомэси",
-   "part_id": "part-такомэси",
-   "time": "~5 мин",
-   "time_html": "<span>~5 мин</span>",
-   "title": "Промойте рис, нарежьте имбирь",
+   "part": "Простой рис",
+   "part_id": "part-простой-рис",
+   "time": "~25 мин including soaking",
+   "time_html": "<span>~25 мин including soaking</span>",
+   "title": "Промойте рис; мелко нарубите имбирь",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1.5\" data-n=\"2\">1½</span> мерных стакана рисоварки",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span>",
      "name_html": "Короткозёрный рис"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"ломтик|ломтика|ломтиков\" data-n=\"1\">1 ломтик</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span>)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span>",
+     "name_html": "Вода для риса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span>",
      "name_html": "Имбирь"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Положите рис в рисоварку и добавьте:<ul class=\"ing two-col\"><li>даси <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"320\">320 мл</span></span></li><li>светлый соевый соус (усукути) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>мирин <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span></span></li><li>саке <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span></span></li><li>соль <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 г</span></span></li></ul></li><li>Размешайте один раз, затем разбросайте сверху <b>половину</b> нарезанного осьминога и имбирь. Не вмешивайте.</li><li>Варите на обычном режиме.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>В рисоварке: сварите замоченный рис в отмеренной свежей воде на обычном режиме для короткозёрного риса. Не добавляйте осьминогов, их отвар, сою, даси или глазурь.</li><li>В кастрюле: доведите до кипения, плотно накройте, готовьте на самом слабом огне 12–13 минут до впитывания воды, затем оставьте накрытым без огня на 10 минут. Если на упаковке другое соотношение воды, следуйте ему.</li><li>Осторожно разрыхлите и держите накрытым, пока осьминоги не будут готовы.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
-    "alt": "Сварите такомэси",
+    "alt": "Сварите простой рис отдельно",
     "diagram": null,
     "diagram_title": "Схема",
-    "how": [
-     {
-      "caption": "Разбросайте сверху нарезанного осьминога и имбирь — не вмешивайте.",
-      "src": "illustrations/baby-octopus-onigiri/5-how1.webp?v=585027fc12"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/5.webp?v=11c12b5663",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/5.webp?v=120af670f2",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 5,
-   "part": "Такомэси",
-   "part_id": "part-такомэси",
-   "time": "~45 мин (рисоварка)",
-   "time_html": "<span>~45 мин (рисоварка)</span>",
-   "title": "Сварите такомэси",
-   "uses_rows": []
+   "part": "Простой рис",
+   "part_id": "part-простой-рис",
+   "time": "~25–45 мин",
+   "time_html": "<span>~25–45 мин</span>",
+   "title": "Сварите простой рис отдельно",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 г</span>",
+     "name_html": "Короткозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 мл</span>",
+     "name_html": "Вода для риса"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Положите вторую половину нарезанного осьминога в маленький сотейник и залейте холодной водой.</li><li>Медленно доведите на <b>слабом</b> огне, около 10 минут, пока кусочки не станут розовыми и матовыми. Не дайте сильно кипеть — от этого осьминог становится резиновым.</li><li>Откиньте на дуршлаг.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Залейте всех нарезанных осьминогов свежей водой в сотейнике. Доведите до спокойного кипения и готовьте без бурления; начните проверять через 20 минут.</li><li>Остудите кусочек и попробуйте. Продолжайте интервалами по 5–10 минут, пока легко не разжёвывается; время зависит от размера и вида. Одного розового цвета и матовости мало.</li><li>Слейте и выбросьте весь отвар. Разложите на чистых полотенцах и тщательно обсушите. Если осьминоги уже приготовлены до мягкости, пропустите варку и хорошо обсушите.</li></ul>",
    "heat": {
     "label": "слабый",
     "label_html": "<span>слабый</span>",
@@ -558,128 +531,139 @@
    },
    "id": "step-6",
    "images": {
-    "alt": "Сначала потомите в чистой воде",
+    "alt": "Всех осьминогов отдельно доведите до мягкости",
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
     "illustration": "illustrations/baby-octopus-onigiri/6.webp?v=93a6fb503f",
     "photo": null,
     "result": null,
-    "svg_fallback": null
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 6,
-   "part": "Детёныш осьминога в сладком соевом",
-   "part_id": "part-детёныш-осьминога-в-сладком-соевом",
-   "time": "~10 мин",
-   "time_html": "<span>~10 мин</span>",
-   "title": "Сначала потомите в чистой воде",
-   "uses_rows": []
+   "part": "Отдельное приготовление осьминогов",
+   "part_id": "part-отдельное-приготовление-осьминогов",
+   "time": "20–40+ мин; test tenderness",
+   "time_html": "<span>20–40+ мин; test tenderness</span>",
+   "title": "Всех осьминогов отдельно доведите до мягкости",
+   "uses_rows": [
+    {
+     "amount_html": "около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"10\" data-b=\"12\" data-n=\"5\">10–12</span> шт.)",
+     "name_html": "Детёныш осьминога (иидако)"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Положите в сотейник соевый соус, мирин, сахар и воду и доведите до кипения.</li><li>Добавьте осьминогов, снова доведите до кипения, затем убавьте до <b>среднего</b>.</li><li>Накройте крышкой-падением (или кружком бумаги для выпечки на жидкости) и томите 20 минут.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Нагрейте нейтральное масло в сковороде <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 см</span> на огне выше среднего. Выложите обсушенных мягких осьминогов свободным слоем; при необходимости жарьте партиями.</li><li>Дайте краям подрумяниться, затем переверните: всего примерно 2–3 минуты. Не пытайтесь долгой жаркой исправить жёстких осьминогов: они уже должны быть мягкими. Переложите на чистую тарелку.</li></ul>",
    "heat": {
-    "label": "средний",
-    "label_html": "<span>средний</span>",
+    "label": "выше среднего",
+    "label_html": "<span>выше среднего</span>",
     "off": false
    },
    "id": "step-7",
    "images": {
-    "alt": "Томите в сладком соевом",
+    "alt": "Подрумяньте обсушенные кусочки",
     "diagram": null,
     "diagram_title": "Схема",
-    "how": [
-     {
-      "caption": "Накройте крышкой-падением и томите 20 минут.",
-      "src": "illustrations/baby-octopus-onigiri/7-how1.webp?v=212e05ba0c"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/7.webp?v=f7567a64b6",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/7.webp?v=110c34dc2b",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 7,
-   "part": "Детёныш осьминога в сладком соевом",
-   "part_id": "part-детёныш-осьминога-в-сладком-соевом",
-   "time": "20 мин",
-   "time_html": "<span>20 мин</span>",
-   "title": "Томите в сладком соевом",
+   "part": "Отдельное приготовление осьминогов",
+   "part_id": "part-отдельное-приготовление-осьминогов",
+   "time": "2–3 мин",
+   "time_html": "<span>2–3 мин</span>",
+   "title": "Подрумяньте обсушенные кусочки",
    "uses_rows": [
+    {
+     "amount_html": "около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"10\" data-b=\"12\" data-n=\"5\">10–12</span> шт.)",
+     "name_html": "Детёныш осьминога (иидако)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Нейтральное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Убавьте огонь. Перемешивайте мелко рубленный имбирь в оставшемся масле 20–30 секунд. Добавьте сою, мирин, сахар и <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 ст. л.</span> воды.</li><li>Спокойно уварите за 1–2 минуты до лёгкого сиропа. Верните подрумяненные кусочки и перемешивайте 30–60 секунд, пока не покроются тонкой карамелизованной сладко-соевой глазурью. Не дайте сахару сгореть.</li><li>Выньте покрытые глазурью кусочки щипцами или шумовкой. Лишний соус оставьте в сковороде.</li></ul>",
+   "heat": {
+    "label": "слабый-средний",
+    "label_html": "<span>слабый-средний</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Уварите глазурь с имбирём и покройте кусочки",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/8.webp?v=c70d51ac9a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
+   },
+   "n": 8,
+   "part": "Отдельное приготовление осьминогов",
+   "part_id": "part-отдельное-приготовление-осьминогов",
+   "time": "2–3 мин",
+   "time_html": "<span>2–3 мин</span>",
+   "title": "Уварите глазурь с имбирём и покройте кусочки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 г</span>",
+     "name_html": "Имбирь"
+    },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
      "name_html": "Соевый соус"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ ст. л.</span>",
-     "name_html": "Мирин (для тушения)"
+     "name_html": "Мирин"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
      "name_html": "Сахар"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\">200 мл</span>",
-     "name_html": "Вода"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Вода для глазури"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Снимите крышку-падение и усильте огонь до средне-сильного.</li><li>Поливайте соусом и мешайте, пока не станет сиропообразным, а кусочки — тёмными и блестящими, 3–5 минут.</li><li>Снимите с огня. Оставьте в глазури, пока не будет готов рис.</li></ul>",
-   "heat": {
-    "label": "выше среднего",
-    "label_html": "<span>выше среднего</span>",
-    "off": false
-   },
-   "id": "step-8",
-   "images": {
-    "alt": "Уварите до глазури",
-    "diagram": null,
-    "diagram_title": "Схема",
-    "how": [
-     {
-      "caption": "Без крышки, средне-сильный огонь: поливайте соусом до сиропа и блеска.",
-      "src": "illustrations/baby-octopus-onigiri/8-how1.webp?v=5be23ab85d"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/8.webp?v=d79ee2daf3",
-    "svg_fallback": null
-   },
-   "n": 8,
-   "part": "Детёныш осьминога в сладком соевом",
-   "part_id": "part-детёныш-осьминога-в-сладком-соевом",
-   "time": "3–5 мин",
-   "time_html": "<span>3–5 мин</span>",
-   "title": "Уварите до глазури",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>Когда рис готов, выложите глазированного осьминога с оставшейся глазурью и зелёный лук.</li><li>Аккуратно вмешайте лопаткой, разрезая рис, а не мня — в каждой порции должны быть розовые и блестящие кусочки.</li><li>Дайте остыть несколько минут, пока не станет достаточно тёплым, чтобы держать.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Выложите тёплый готовый рис в широкую миску. Добавьте только вынутые из соуса глазированные кусочки и тонко нарезанный зелёный лук. Не вливайте отвар или остаток глазури.</li><li>Осторожно смешайте режущими и складывающими движениями лопатки, не раздавливая зёрна. Небольшие коричневые следы нормальны; рис не варился в фиолетовом отваре.</li><li>Остудите лишь до комфортной для рук температуры и разделите всю смесь на шесть равных порций.</li></ul>",
    "heat": null,
    "id": "step-9",
    "images": {
-    "alt": "Вмешайте глазурь и лук в рис",
+    "alt": "Вмешайте покрытых глазурью осьминогов в готовый рис",
     "diagram": null,
     "diagram_title": "Схема",
-    "how": [
-     {
-      "caption": "Вмешайте глазированные кусочки и зелёный лук лопаткой — режьте, не мните.",
-      "src": "illustrations/baby-octopus-onigiri/9-how1.webp?v=68f40238c7"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/9.webp?v=bc909b79fb",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/9.webp?v=c608c9646e",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 9,
-   "part": "Формовка",
-   "part_id": "part-формовка",
-   "time": "~7 мин",
-   "time_html": "<span>~7 мин</span>",
-   "title": "Вмешайте глазурь и лук в рис",
+   "part": "Лепка",
+   "part_id": "part-лепка",
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Вмешайте покрытых глазурью осьминогов в готовый рис",
    "uses_rows": [
+    {
+     "amount_html": "около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> (<span class=\"q\" data-k=\"count\" data-a=\"10\" data-b=\"12\" data-n=\"5\">10–12</span> шт.)",
+     "name_html": "Детёныш осьминога (иидако)"
+    },
     {
      "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"стебель|стебля|стеблей\" data-n=\"1\">1 стебель</span>",
      "name_html": "Зелёный лук"
@@ -687,31 +671,23 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Намочите руки и разотрите щепотку соли по ладоням.</li><li>Возьмите около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"90\" data-s=\"0\">90 г</span> смешанного риса (шестую часть) в левую ладонь.</li><li>Пресс треугольника: правая рука «горой» сверху, левая чашечкой, поворачивая на треть каждый раз — легко, чтобы остался воздушным (см. <a href=\"onigiri.html\">онигири</a>).</li><li>Оберните полоской нори низ. Повторите для шести.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Смочите и слегка посолите руки. Осторожно сформуйте каждую из шести равных порций треугольником, сохраняя рис воздушным.</li><li>Добавьте выбранную обёртку нори перед едой. Перед подачей полностью уберите пищевую плёнку.</li></ul>",
    "heat": null,
    "id": "step-10",
    "images": {
     "alt": "Слепите и оберните",
     "diagram": null,
     "diagram_title": "Схема",
-    "how": [
-     {
-      "caption": "Правая рука горой сверху, левая чашечкой снизу — слегка нажмите и поверните.",
-      "src": "illustrations/baby-octopus-onigiri/10-how1.webp?v=c43be700da"
-     },
-     {
-      "caption": "Полоска нори вокруг низа.",
-      "src": "illustrations/baby-octopus-onigiri/10-how2.webp?v=00e5b9b76e"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/10.webp?v=f2ffaa82dd",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/10.webp?v=8f52a759c5",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 10,
-   "part": "Формовка",
-   "part_id": "part-формовка",
+   "part": "Лепка",
+   "part_id": "part-лепка",
    "time": "~12 мин",
    "time_html": "<span>~12 мин</span>",
    "title": "Слепите и оберните",
@@ -740,95 +716,63 @@
     "label": "Миска / стол"
    },
    {
-    "kind": "wait",
-    "label": "Без участия"
-   },
-   {
     "kind": "pan",
     "label": "Сковорода / плита"
+   },
+   {
+    "kind": "wait",
+    "label": "Без участия"
    }
   ],
-  "note_html": "Сладко-соевая половина томится, пока варится рис; вмешайте глазированные кусочки, когда рис готов.",
+  "note_html": "Рис варится, пока осьминоги размягчаются в отдельной посуде. Время для осьминогов ориентировочное: перед обжаркой проверьте мягкость. Готовый рис держите накрытым до смешивания.",
   "tasks": [
    {
-    "dur": 10,
-    "dur_label": "10 мин",
+    "dur": 18,
+    "dur_label": "18 мин",
     "kind": "board",
-    "label": "Очистите осьминогов",
-    "label_html": "Очистите осьминогов",
+    "label": "Очистить, промыть, нарезать",
+    "label_html": "Очистить, промыть, нарезать",
     "start": 0
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 мин",
-    "kind": "bowl",
-    "label": "Натереть солью, промыть",
-    "label_html": "Натереть солью, промыть",
-    "start": 10
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 мин",
-    "kind": "board",
-    "label": "Нарежьте всё",
-    "label_html": "Нарежьте всё",
-    "start": 14
-   },
-   {
-    "dur": 5,
-    "dur_label": "5 мин",
-    "kind": "bowl",
-    "label": "Промыть рис, нарезать имбирь",
-    "label_html": "Промыть рис, нарезать имбирь",
-    "start": 18
-   },
-   {
-    "dur": 45,
-    "dur_label": "45 мин",
-    "kind": "wait",
-    "label": "Рисоварка",
-    "label_html": "Рисоварка",
-    "start": 23
-   },
-   {
-    "dur": 10,
-    "dur_label": "10 мин",
-    "kind": "pan",
-    "label": "Томление в чистой воде",
-    "label_html": "Томление в чистой воде",
-    "start": 25
    },
    {
     "dur": 20,
     "dur_label": "20 мин",
-    "kind": "pan",
-    "label": "Сладко-соевое тушение",
-    "label_html": "Сладко-соевое тушение",
-    "start": 35
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 мин",
-    "kind": "pan",
-    "label": "Уварите до глазури",
-    "label_html": "Уварите до глазури",
-    "start": 55
-   },
-   {
-    "dur": 7,
-    "dur_label": "7 мин",
     "kind": "bowl",
-    "label": "Вмешать глазурь + лук",
-    "label_html": "Вмешать глазурь + лук",
-    "start": 68
+    "label": "Промыть и замочить рис; нарубить имбирь",
+    "label_html": "Промыть и замочить рис; нарубить имбирь",
+    "start": 18
+   },
+   {
+    "dur": 40,
+    "dur_label": "40 мин",
+    "kind": "pan",
+    "label": "Отдельно довести осьминогов до мягкости",
+    "label_html": "Отдельно довести осьминогов до мягкости",
+    "start": 20
+   },
+   {
+    "dur": 35,
+    "dur_label": "35 мин",
+    "kind": "wait",
+    "label": "Сварить рис и дать постоять",
+    "label_html": "Сварить рис и дать постоять",
+    "start": 38
+   },
+   {
+    "dur": 9,
+    "dur_label": "9 мин",
+    "kind": "pan",
+    "label": "Слить отвар, обсушить, обжарить и глазировать",
+    "label_html": "Слить отвар, обсушить, обжарить и глазировать",
+    "start": 60
    },
    {
     "dur": 12,
     "dur_label": "12 мин",
     "kind": "board",
-    "label": "Лепка + нори",
-    "label_html": "Лепка + нори",
-    "start": 75
+    "label": "Вмешать, затем слепить",
+    "label_html": "Вмешать, затем слепить",
+    "start": 73
    }
   ],
   "tick_step": 10,
@@ -876,8 +820,8 @@
   ],
   "unit": "минуты"
  },
- "title": "Онигири с детёнышем осьминога (такомэси + иидако в сладком соевом)",
- "total": "~1½ ч (из них 45 мин рисоварка)",
+ "title": "Онигири с маленькими осьминогами в карамелизованной соевой глазури",
+ "total": "~75–95 мин, в зависимости от мягкости",
  "vinegar_options": null,
  "yields": "6 онигири"
 }

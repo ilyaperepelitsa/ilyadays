@@ -1,7 +1,7 @@
 {
  "batch": null,
  "before_ingredients_html": null,
- "blurb_html": "Octopus rice cooked with dashi and ginger, with sweet-soy baby octopus folded through it, shaped into triangles with a nori strip — all the octopus inside, nothing on top.",
+ "blurb_html": "Plain rice with separately tender-cooked, browned and glazed baby octopus folded through; finely chopped ginger, no octopus cooking liquor in the rice.",
  "chips": [
   {
    "html": "<span>6 onigiri</span>",
@@ -9,27 +9,25 @@
    "text": "6 onigiri"
   },
   {
-   "html": "~1½ h (45 min of it the rice cooker)",
+   "html": "~75–95 min, depending on tenderness",
    "kind": "time",
-   "text": "~1½ h (45 min of it the rice cooker)"
+   "text": "~75–95 min, depending on tenderness"
   }
  ],
- "description": "Octopus rice cooked with dashi and ginger, with sweet-soy baby octopus folded through it, shaped into triangles with a nori strip — all the octopus inside, nothing on top.",
+ "description": "Plain rice with separately tender-cooked, browned and glazed baby octopus folded through; finely chopped ginger, no octopus cooking liquor in the rice.",
  "equipment_html": [
-  "Rice cooker (or a heavy pot with a lid)",
-  "Kitchen scissors",
-  "Chef's knife + cutting board",
-  "Small saucepan + a drop lid (otoshibuta) or a round of baking paper",
-  "Fine strainer",
-  "Rice paddle"
+  "Rice cooker or heavy pot with lid",
+  "Saucepan, strainer and clean towels",
+  "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 cm</span> frying pan and tongs",
+  "Kitchen scissors, knife, board and rice paddle"
  ],
  "group": {
   "id": "onigiri",
   "name": "Onigiri"
  },
  "hero": {
-  "alt": "Baby octopus onigiri (takomeshi + sweet-soy iidako)",
-  "image": "illustrations/baby-octopus-onigiri/hero.webp?v=5ab0ffc213",
+  "alt": "Baby octopus onigiri (caramelized sweet-soy filling)",
+  "image": "illustrations/baby-octopus-onigiri/hero.webp?v=96d5eb5aae",
   "svg_fallback": null
  },
  "ingredients": [
@@ -49,60 +47,48 @@
   {
    "items": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1.5\" data-n=\"2\">1½</span> rice-cooker cups (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"270\">270 ml</span>, ~<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span>)",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span>",
      "name_html": "Short-grain rice"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"320\">320 ml</span>",
-     "name_html": "Dashi"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Light soy sauce (usukuchi)"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
-     "name_html": "Mirin"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
-     "name_html": "Sake"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 g</span> (a scant <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.6667\">⅔ tsp</span>)",
-     "name_html": "Salt"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"slice|slices\" data-n=\"1\">1 slice</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span>), in thin strips",
-     "name_html": "Ginger"
-    },
-    {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"stalk|stalks\" data-n=\"1\">1 stalk</span>, thinly sliced",
-     "name_html": "Green onion"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>",
+     "name_html": "Water for rice"
     }
    ],
-   "name": "Takomeshi"
+   "name": "Plain rice"
   },
   {
    "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span>, finely chopped to <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 mm</span>",
+     "name_html": "Ginger"
+    },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
      "name_html": "Soy sauce"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
-     "name_html": "Mirin (for the simmer)"
+     "name_html": "Mirin"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Sugar"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\">200 ml</span>",
-     "name_html": "Water"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Water for glaze"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"stalk|stalks\" data-n=\"1\">1 stalk</span>, thinly sliced",
+     "name_html": "Green onion"
     }
    ],
-   "name": "Sweet-soy simmer (for half the octopus)"
+   "name": "Caramelized octopus"
   },
   {
    "items": [
@@ -118,66 +104,51 @@
    "name": "To shape"
   }
  ],
- "intro_html": "Two Okayama dishes from the Seto Inland Sea, put together: <b>takomeshi</b> — rice cooked with octopus, ginger and dashi — and <b>iidako no nitsuke</b>, baby octopus simmered in sweet soy. Half the octopus cooks in the rice; the other half is glazed and <b>folded through</b> so every bite has pink and glossy pieces inside. Triangles with a nori strip — no topping. Shaping basics are on the <a href=\"onigiri.html\">onigiri page</a>.",
+ "intro_html": "Cook the rice on its own. Tender-cook all the octopus separately, drain and dry it, then brown and glaze it briefly. Fold only the coated pieces and green onion into the cooked rice. This keeps the rice texture under control and avoids cooking it in purple octopus liquor; a little local colour from the glaze is normal. This is a home adaptation, rather than traditional takomeshi (rice cooked with octopus).",
  "mise": [
   {
-   "as_list": true,
-   "goes_in": "Step 3",
+   "as_list": false,
+   "goes_in": "Steps 3 & 6",
    "image": "illustrations/baby-octopus-onigiri/mise1.webp?v=f65350f9c0",
    "items": [
-    "cleaned",
-    "chopped",
-    "half + half"
+    "all cleaned and chopped",
+    "no split batch"
    ],
-   "items_html": "cleaned · chopped · half + half",
+   "items_html": "all cleaned and chopped · no split batch",
    "name": "Baby octopus",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   },
   {
    "as_list": false,
-   "goes_in": "Step 4",
+   "goes_in": "Step 5",
    "image": "illustrations/baby-octopus-onigiri/mise2.webp?v=3ef734a687",
    "items": [
-    "washed and drained"
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span> rice",
+    "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span> fresh water"
    ],
-   "items_html": "washed and drained",
-   "name": "Rice",
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span> rice · <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span> fresh water",
+   "name": "Plain rice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 8",
+   "image": "illustrations/baby-octopus-onigiri/mise3.webp?v=4cfd23ba2e",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span>",
+    "finely chopped to <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 mm</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span> · finely chopped to <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 mm</span>",
+   "name": "Ginger",
    "svg_fallback": null,
    "vessel": "bowl"
   },
   {
    "as_list": true,
-   "goes_in": "Step 5",
-   "image": "illustrations/baby-octopus-onigiri/mise3.webp?v=c5305b2abe",
-   "items": [
-    "dashi",
-    "light soy",
-    "mirin",
-    "sake",
-    "salt"
-   ],
-   "items_html": "dashi · light soy · mirin · sake · salt",
-   "name": "Rice seasonings",
-   "svg_fallback": null,
-   "vessel": "cup"
-  },
-  {
-   "as_list": false,
-   "goes_in": "Step 5",
-   "image": "illustrations/baby-octopus-onigiri/mise4.webp?v=f5133b611d",
-   "items": [
-    "thin strips"
-   ],
-   "items_html": "thin strips",
-   "name": "Ginger",
-   "svg_fallback": null,
-   "vessel": "plate"
-  },
-  {
-   "as_list": true,
-   "goes_in": "Step 7",
-   "image": "illustrations/baby-octopus-onigiri/mise5.webp?v=a88e7fbea2",
+   "goes_in": "Step 8",
+   "image": "illustrations/baby-octopus-onigiri/mise4.webp?v=a88e7fbea2",
    "items": [
     "soy",
     "mirin",
@@ -185,33 +156,33 @@
     "water"
    ],
    "items_html": "soy · mirin · sugar · water",
-   "name": "Sweet-soy simmer",
+   "name": "Sweet-soy glaze",
    "svg_fallback": null,
    "vessel": "cup"
   },
   {
    "as_list": false,
    "goes_in": "Step 9",
-   "image": "illustrations/baby-octopus-onigiri/mise6.webp?v=78d718ed07",
+   "image": "illustrations/baby-octopus-onigiri/mise5.webp?v=78d718ed07",
    "items": [
     "thinly sliced"
    ],
    "items_html": "thinly sliced",
    "name": "Green onion",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   },
   {
    "as_list": false,
    "goes_in": "Step 10",
-   "image": "illustrations/baby-octopus-onigiri/mise7.webp?v=7b6fc60f8a",
+   "image": "illustrations/baby-octopus-onigiri/mise6.webp?v=7b6fc60f8a",
    "items": [
     "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"strip|strips\" data-n=\"1\">6 strips</span>, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> wide"
    ],
    "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"strip|strips\" data-n=\"1\">6 strips</span>, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> wide",
    "name": "Nori strips",
    "svg_fallback": null,
-   "vessel": "plate"
+   "vessel": "bowl"
   }
  ],
  "more_label": "More onigiri:",
@@ -221,24 +192,20 @@
  },
  "notes": [
   {
-   "html": "<ul class=\"do\"><li>The takomeshi and the sweet-soy baby octopus are both Okayama regional recipes as published by Japan's Ministry of Agriculture, Forestry and Fisheries; the cleaning follows Honda's fishing guide to iidako.</li><li>Takomeshi is commonly eaten as onigiri.</li><li><b>This site's version:</b> baby octopus instead of octopus legs, half the pieces cooked in the rice and half glazed then folded in (nothing on top), reducing the sauce to a glaze, the triangle and the nori strip, and the amounts for six.</li></ul>",
-   "title_html": "What's established and what's this site's"
+   "html": "<ul class=\"do\"><li>MAFF supplies the cleaning/tenderizing-before-seasoning reference.</li><li>The separate browning, reduced glaze and folding into plain rice are this site’s revised home method.</li><li>All octopus is cooked outside the rice cooker.</li></ul>",
+   "title_html": "Adaptation and sources"
   },
   {
-   "html": "<ul class=\"do\"><li>Iidako means “rice octopus”: in winter the heads are full of roe that looks like grains of cooked rice — a delicacy in Okayama.</li><li>If yours have it, you can leave it in: snip off the eyes and beak and pull out only the innards below the roe.</li></ul>",
-   "title_html": "“Rice octopus”"
+   "html": "<ul class=\"do\"><li>Pink colour alone does not mean tender.</li><li>Cool a test piece and bite it: it should yield easily.</li><li>Continue gentle cooking if chewy; a brief sear will not tenderize it.</li></ul>",
+   "title_html": "Tenderness controls the first stage"
   },
   {
-   "html": "<ul class=\"do\"><li>Low heat for the first simmer, and never a hard boil.</li><li>The Okayama recipe also beats the tentacles lightly (with a piece of daikon) to soften them — worth doing if yours are on the large side.</li></ul>",
-   "title_html": "Tender, not rubbery"
+   "html": "<ul class=\"do\"><li>Discard the octopus cooking liquor.</li><li>Fold in only drained, thinly coated pieces, not the leftover pan sauce.</li><li>Divide the finished mixture into six equal portions rather than assuming a fixed <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"90\" data-s=\"0\">90 g</span> ball.</li></ul>",
+   "title_html": "Keep the rice dry and fluffy"
   },
   {
-   "html": "<p>Use <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\" data-b=\"300\" data-s=\"0\">200–300 g</span> of octopus legs, cut into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> pieces: half in the rice cooker, half glazed the same way.</p>",
-   "title_html": "No baby octopus?"
-  },
-  {
-   "html": "<ul class=\"do\"><li>Best within a few hours, at cool room temperature.</li><li>Cold rice goes hard — don't refrigerate the shaped onigiri.</li></ul>",
-   "title_html": "Keeping them"
+   "html": "<ul class=\"do\"><li>Eat freshly made.</li><li>For later, cool rice quickly and refrigerate ideally within one hour; use within 24 hours.</li><li>Add nori just before eating.</li><li>Texture will firm in the fridge, but that is not a reason to leave rice out.</li></ul>",
+   "title_html": "Serve or chill promptly"
   }
  ],
  "original": null,
@@ -248,12 +215,12 @@
    "title": "The octopus"
   },
   {
-   "id": "part-takomeshi",
-   "title": "Takomeshi"
+   "id": "part-plain-rice",
+   "title": "Plain rice"
   },
   {
-   "id": "part-sweet-soy-baby-octopus",
-   "title": "Sweet-soy baby octopus"
+   "id": "part-separate-octopus-cooking",
+   "title": "Separate octopus cooking"
   },
   {
    "id": "part-shape",
@@ -288,11 +255,11 @@
    "person": "person"
   }
  },
- "share_image": "share/baby-octopus-onigiri.jpg?v=5ca664bbae",
+ "share_image": "share/baby-octopus-onigiri.jpg?v=d0e23d58c5",
  "siblings": [
   {
    "slug": "onigiri",
-   "title": "Onigiri: fillings & shaping"
+   "title": "Onigiri: recipes, shaping & wrapping"
   },
   {
    "slug": "onigiri-mold",
@@ -366,16 +333,16 @@
  "slug": "baby-octopus-onigiri",
  "sources": [
   {
-   "label": "MAFF — Takomeshi (octopus with rice), Okayama",
-   "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/2803/index.html"
-  },
-  {
    "label": "MAFF — Iidako no nitsuke (simmered baby octopus), Okayama",
    "url": "https://www.maff.go.jp/e/policies/market/k_ryouri/search_menu/4556/index.html"
   },
   {
    "label": "Honda fishing — how to clean iidako (Japanese)",
    "url": "https://www.honda.co.jp/fishing/picture-book/iidako/clean01/"
+  },
+  {
+   "label": "Food Standards Agency — rice storage",
+   "url": "https://www.food.gov.uk/safety-hygiene/home-food-fact-checker"
   }
  ],
  "steps": [
@@ -456,7 +423,7 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Cut every octopus into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> pieces.</li><li>Split into two piles of about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> each: one for the rice cooker, one for the sweet-soy pan.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Cut all the cleaned octopus into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> pieces. Keep the whole batch for separate tender-cooking; none goes into the rice cooker.</li></ul>",
    "heat": null,
    "id": "step-3",
    "images": {
@@ -480,77 +447,83 @@
    "time": "~4 min",
    "time_html": "<span>~4 min</span>",
    "title": "Chop all of it",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> (10–12)",
+     "name_html": "Baby octopus (iidako)"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Wash the rice until the water runs nearly clear and drain it in a strainer.</li><li>Cut the ginger into thin strips.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Wash the rice until the water runs nearly clear, drain well, then soak in the measured <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\" data-s=\"0\">300 ml</span> fresh water for 20 minutes. Keep that water for cooking.</li><li>Slice ginger into thin matchsticks, then cut across them and finely chop to <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 mm</span>. Reserve for the pan; no long fibres in the filling.</li></ul>",
    "heat": null,
    "id": "step-4",
    "images": {
-    "alt": "Wash the rice, cut the ginger",
+    "alt": "Wash rice; finely chop ginger",
     "diagram": null,
     "diagram_title": "Diagram",
-    "how": [
-     {
-      "caption": "Wash the rice until the water runs nearly clear.",
-      "src": "illustrations/baby-octopus-onigiri/4-how1.webp?v=91b799c650"
-     },
-     {
-      "caption": "Cut the ginger into thin strips.",
-      "src": "illustrations/baby-octopus-onigiri/4-how2.webp?v=cc6962c50d"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/4.webp?v=f31f4fb0c5",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/4.webp?v=a3bf155808",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 4,
-   "part": "Takomeshi",
-   "part_id": "part-takomeshi",
-   "time": "~5 min",
-   "time_html": "<span>~5 min</span>",
-   "title": "Wash the rice, cut the ginger",
+   "part": "Plain rice",
+   "part_id": "part-plain-rice",
+   "time": "~25 min including soaking",
+   "time_html": "<span>~25 min including soaking</span>",
+   "title": "Wash rice; finely chop ginger",
    "uses_rows": [
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1.5\" data-n=\"2\">1½</span> rice-cooker cups",
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span>",
      "name_html": "Short-grain rice"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"slice|slices\" data-n=\"1\">1 slice</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span>)",
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>",
+     "name_html": "Water for rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span>",
      "name_html": "Ginger"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Put the rice in the rice cooker and add:<ul class=\"ing two-col\"><li>dashi <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"320\">320 ml</span></span></li><li>light soy sauce (usukuchi) <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>mirin <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span></span></li><li>sake <span class=\"amt\"><span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span></span></li><li>salt <span class=\"amt\"><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"3\">3 g</span></span></li></ul></li><li>Stir once, then scatter <b>half</b> the chopped octopus and the ginger on top. Don't stir them in.</li><li>Cook on the normal setting.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Rice cooker: cook the soaked rice in its measured fresh water on the normal short-grain setting. Do not add octopus, octopus liquor, soy, dashi or glaze.</li><li>Pot: bring to a boil, cover tightly, cook on the lowest heat for 12–13 minutes until absorbed, then rest off heat covered for 10 minutes. Follow your rice packet if its water ratio differs.</li><li>Fluff gently and keep covered until the octopus is ready.</li></ul>",
    "heat": null,
    "id": "step-5",
    "images": {
-    "alt": "Cook the takomeshi",
+    "alt": "Cook plain rice on its own",
     "diagram": null,
     "diagram_title": "Diagram",
-    "how": [
-     {
-      "caption": "Scatter the chopped octopus and the ginger on top — don't stir them in.",
-      "src": "illustrations/baby-octopus-onigiri/5-how1.webp?v=585027fc12"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/5.webp?v=11c12b5663",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/5.webp?v=120af670f2",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 5,
-   "part": "Takomeshi",
-   "part_id": "part-takomeshi",
-   "time": "~45 min (rice cooker)",
-   "time_html": "<span>~45 min (rice cooker)</span>",
-   "title": "Cook the takomeshi",
-   "uses_rows": []
+   "part": "Plain rice",
+   "part_id": "part-plain-rice",
+   "time": "~25–45 min",
+   "time_html": "<span>~25–45 min</span>",
+   "title": "Cook plain rice on its own",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"225\">225 g</span>",
+     "name_html": "Short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"300\">300 ml</span>",
+     "name_html": "Water for rice"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Put the other half of the chopped octopus in the small saucepan with cold water to cover.</li><li>Bring it up slowly over <b>low</b> heat, about 10 minutes, until the pieces turn pink and opaque. Don't let it boil hard — that's what makes octopus rubbery.</li><li>Drain.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Cover all the chopped octopus with fresh water in a saucepan. Bring to a gentle simmer and cook quietly; start checking after 20 minutes.</li><li>Cool a piece and taste it. Continue in 5–10 minute intervals until it bites easily; size and species change the timing. Pink and opaque alone is not enough.</li><li>Drain and discard all cooking liquor. Spread on clean towels and pat thoroughly dry. If using already tender-cooked octopus, skip the simmer and dry it well.</li></ul>",
    "heat": {
     "label": "low",
     "label_html": "<span>low</span>",
@@ -558,128 +531,139 @@
    },
    "id": "step-6",
    "images": {
-    "alt": "Simmer in plain water first",
+    "alt": "Tender-cook all octopus separately",
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
     "illustration": "illustrations/baby-octopus-onigiri/6.webp?v=93a6fb503f",
     "photo": null,
     "result": null,
-    "svg_fallback": null
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 6,
-   "part": "Sweet-soy baby octopus",
-   "part_id": "part-sweet-soy-baby-octopus",
-   "time": "~10 min",
-   "time_html": "<span>~10 min</span>",
-   "title": "Simmer in plain water first",
-   "uses_rows": []
+   "part": "Separate octopus cooking",
+   "part_id": "part-separate-octopus-cooking",
+   "time": "20–40+ min; test tenderness",
+   "time_html": "<span>20–40+ min; test tenderness</span>",
+   "title": "Tender-cook all octopus separately",
+   "uses_rows": [
+    {
+     "amount_html": "about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> (10–12)",
+     "name_html": "Baby octopus (iidako)"
+    }
+   ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Put the soy sauce, mirin, sugar and water in the saucepan and bring to a boil.</li><li>Add the octopus, bring back to a boil, then turn down to <b>medium</b>.</li><li>Cover with a drop lid (or a round of baking paper laid on the liquid) and simmer for 20 minutes.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Heat neutral oil in a <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 cm</span> pan over medium-high heat. Add the dry tender octopus in one uncrowded layer; work in batches if necessary.</li><li>Leave briefly to develop browned edges, then turn: about 2–3 minutes total. Do not keep frying to fix tough octopus; it should already be tender. Transfer to a clean plate.</li></ul>",
    "heat": {
-    "label": "medium",
-    "label_html": "<span>medium</span>",
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
     "off": false
    },
    "id": "step-7",
    "images": {
-    "alt": "Simmer in sweet soy",
+    "alt": "Brown the dry pieces",
     "diagram": null,
     "diagram_title": "Diagram",
-    "how": [
-     {
-      "caption": "Cover with a drop lid and simmer 20 minutes.",
-      "src": "illustrations/baby-octopus-onigiri/7-how1.webp?v=212e05ba0c"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/7.webp?v=f7567a64b6",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/7.webp?v=110c34dc2b",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 7,
-   "part": "Sweet-soy baby octopus",
-   "part_id": "part-sweet-soy-baby-octopus",
-   "time": "20 min",
-   "time_html": "<span>20 min</span>",
-   "title": "Simmer in sweet soy",
+   "part": "Separate octopus cooking",
+   "part_id": "part-separate-octopus-cooking",
+   "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
+   "title": "Brown the dry pieces",
    "uses_rows": [
+    {
+     "amount_html": "about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> (10–12)",
+     "name_html": "Baby octopus (iidako)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Neutral oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Lower the heat. Stir the finely chopped ginger in the remaining oil for 20–30 seconds. Add soy, mirin, sugar and <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 tbsp</span> water.</li><li>Bubble gently for 1–2 minutes until lightly syrupy. Return the browned octopus and toss for 30–60 seconds, just until a thin caramelized sweet-soy coating clings. Stop before sugar burns.</li><li>Lift the coated pieces out with tongs or a slotted spoon. Leave any excess sauce in the pan.</li></ul>",
+   "heat": {
+    "label": "medium-low",
+    "label_html": "<span>medium-low</span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Reduce the ginger glaze, then coat",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/8.webp?v=c70d51ac9a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
+   },
+   "n": 8,
+   "part": "Separate octopus cooking",
+   "part_id": "part-separate-octopus-cooking",
+   "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
+   "title": "Reduce the ginger glaze, then coat",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"14\">14 g</span>",
+     "name_html": "Ginger"
+    },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
      "name_html": "Soy sauce"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1.5\">1½ tbsp</span>",
-     "name_html": "Mirin (for the simmer)"
+     "name_html": "Mirin"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
      "name_html": "Sugar"
     },
     {
-     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"200\">200 ml</span>",
-     "name_html": "Water"
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Water for glaze"
     }
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Take off the drop lid and turn the heat up to medium-high.</li><li>Spoon the sauce over and stir until it's syrupy and the pieces are dark and glossy, 3–5 minutes.</li><li>Off the heat. Leave them in the glaze until the rice is ready.</li></ul>",
-   "heat": {
-    "label": "medium-high",
-    "label_html": "<span>medium-high</span>",
-    "off": false
-   },
-   "id": "step-8",
-   "images": {
-    "alt": "Reduce to a glaze",
-    "diagram": null,
-    "diagram_title": "Diagram",
-    "how": [
-     {
-      "caption": "Lid off, medium-high: spoon the sauce over until syrupy and glossy.",
-      "src": "illustrations/baby-octopus-onigiri/8-how1.webp?v=5be23ab85d"
-     }
-    ],
-    "illustration": null,
-    "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/8.webp?v=d79ee2daf3",
-    "svg_fallback": null
-   },
-   "n": 8,
-   "part": "Sweet-soy baby octopus",
-   "part_id": "part-sweet-soy-baby-octopus",
-   "time": "3–5 min",
-   "time_html": "<span>3–5 min</span>",
-   "title": "Reduce to a glaze",
-   "uses_rows": []
-  },
-  {
-   "body_html": "<ul class=\"do\"><li>When the rice is done, tip in the glazed octopus with any leftover glaze and the green onion.</li><li>Fold through gently with the paddle, cutting through the rice rather than mashing it — every scoop should have pink and glossy pieces.</li><li>Let it cool for a few minutes, until it's warm enough to hold.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Put the warm cooked rice in a wide bowl. Add only the drained coated octopus pieces and finely sliced green onion. Do not pour in cooking liquor or leftover glaze.</li><li>Cut and fold gently with the rice paddle so pieces spread through without crushing the grains. A few local brown marks are normal; the rice was never cooked in purple octopus broth.</li><li>Cool only until comfortable to handle, then divide the entire mixture into six equal portions.</li></ul>",
    "heat": null,
    "id": "step-9",
    "images": {
-    "alt": "Fold the glaze and onion into the rice",
+    "alt": "Fold coated octopus into cooked rice",
     "diagram": null,
     "diagram_title": "Diagram",
-    "how": [
-     {
-      "caption": "Fold the glazed pieces and green onion through with the paddle — cut, don't mash.",
-      "src": "illustrations/baby-octopus-onigiri/9-how1.webp?v=68f40238c7"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/9.webp?v=bc909b79fb",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/9.webp?v=c608c9646e",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 9,
    "part": "Shape",
    "part_id": "part-shape",
-   "time": "~7 min",
-   "time_html": "<span>~7 min</span>",
-   "title": "Fold the glaze and onion into the rice",
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Fold coated octopus into cooked rice",
    "uses_rows": [
+    {
+     "amount_html": "about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> (10–12)",
+     "name_html": "Baby octopus (iidako)"
+    },
     {
      "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"stalk|stalks\" data-n=\"1\">1 stalk</span>",
      "name_html": "Green onion"
@@ -687,27 +671,19 @@
    ]
   },
   {
-   "body_html": "<ul class=\"do\"><li>Wet your hands and rub a pinch of salt over your palms.</li><li>Take about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"90\" data-s=\"0\">90 g</span> of the mixed rice (a sixth of it) in your left palm.</li><li>Press the triangle: right hand bent into a “mountain” on top, left hand cupping, turning a third each time — light, so it stays airy (see the <a href=\"onigiri.html\">onigiri page</a>).</li><li>Wrap a nori strip round the bottom. Repeat for six.</li></ul>",
+   "body_html": "<ul class=\"do\"><li>Wet and lightly salt your hands. Shape each of the six equal portions gently into a triangle, keeping the rice airy.</li><li>Add the selected nori wrapping just before eating. Remove all cling film before serving.</li></ul>",
    "heat": null,
    "id": "step-10",
    "images": {
     "alt": "Shape and wrap",
     "diagram": null,
     "diagram_title": "Diagram",
-    "how": [
-     {
-      "caption": "Right hand bent into a mountain on top, left hand cupping underneath — press lightly and turn.",
-      "src": "illustrations/baby-octopus-onigiri/10-how1.webp?v=c43be700da"
-     },
-     {
-      "caption": "A nori strip round the bottom.",
-      "src": "illustrations/baby-octopus-onigiri/10-how2.webp?v=00e5b9b76e"
-     }
-    ],
-    "illustration": null,
+    "how": [],
+    "illustration": "illustrations/baby-octopus-onigiri/10.webp?v=f2ffaa82dd",
     "photo": null,
-    "result": "illustrations/baby-octopus-onigiri/10.webp?v=8f52a759c5",
-    "svg_fallback": null
+    "result": null,
+    "svg_fallback": null,
+    "zoomable": true
    },
    "n": 10,
    "part": "Shape",
@@ -740,95 +716,63 @@
     "label": "Bowl / counter"
    },
    {
-    "kind": "wait",
-    "label": "Hands-off"
-   },
-   {
     "kind": "pan",
     "label": "Pan / stove"
+   },
+   {
+    "kind": "wait",
+    "label": "Hands-off"
    }
   ],
-  "note_html": "The sweet-soy half simmers while the rice cooks; fold the glazed pieces in when the rice is done.",
+  "note_html": "Cook the rice while the octopus tenderizes in a separate pan. The octopus timing is a guide: test tenderness before browning. Keep cooked rice covered until folding.",
   "tasks": [
    {
-    "dur": 10,
-    "dur_label": "10 min",
+    "dur": 18,
+    "dur_label": "18 min",
     "kind": "board",
-    "label": "Clean the octopus",
-    "label_html": "Clean the octopus",
+    "label": "Clean, rinse and chop",
+    "label_html": "Clean, rinse and chop",
     "start": 0
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 min",
-    "kind": "bowl",
-    "label": "Salt rub, rinse",
-    "label_html": "Salt rub, rinse",
-    "start": 10
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 min",
-    "kind": "board",
-    "label": "Chop all of it",
-    "label_html": "Chop all of it",
-    "start": 14
-   },
-   {
-    "dur": 5,
-    "dur_label": "5 min",
-    "kind": "bowl",
-    "label": "Wash rice, cut ginger",
-    "label_html": "Wash rice, cut ginger",
-    "start": 18
-   },
-   {
-    "dur": 45,
-    "dur_label": "45 min",
-    "kind": "wait",
-    "label": "Rice cooker",
-    "label_html": "Rice cooker",
-    "start": 23
-   },
-   {
-    "dur": 10,
-    "dur_label": "10 min",
-    "kind": "pan",
-    "label": "Plain-water simmer",
-    "label_html": "Plain-water simmer",
-    "start": 25
    },
    {
     "dur": 20,
     "dur_label": "20 min",
-    "kind": "pan",
-    "label": "Sweet-soy simmer",
-    "label_html": "Sweet-soy simmer",
-    "start": 35
-   },
-   {
-    "dur": 4,
-    "dur_label": "4 min",
-    "kind": "pan",
-    "label": "Reduce to a glaze",
-    "label_html": "Reduce to a glaze",
-    "start": 55
-   },
-   {
-    "dur": 7,
-    "dur_label": "7 min",
     "kind": "bowl",
-    "label": "Fold glaze + onion in",
-    "label_html": "Fold glaze + onion in",
-    "start": 68
+    "label": "Wash and soak rice; chop ginger",
+    "label_html": "Wash and soak rice; chop ginger",
+    "start": 18
+   },
+   {
+    "dur": 40,
+    "dur_label": "40 min",
+    "kind": "pan",
+    "label": "Tender-cook octopus separately",
+    "label_html": "Tender-cook octopus separately",
+    "start": 20
+   },
+   {
+    "dur": 35,
+    "dur_label": "35 min",
+    "kind": "wait",
+    "label": "Cook and rest plain rice",
+    "label_html": "Cook and rest plain rice",
+    "start": 38
+   },
+   {
+    "dur": 9,
+    "dur_label": "9 min",
+    "kind": "pan",
+    "label": "Drain, dry, brown and glaze",
+    "label_html": "Drain, dry, brown and glaze",
+    "start": 60
    },
    {
     "dur": 12,
     "dur_label": "12 min",
     "kind": "board",
-    "label": "Shape + nori",
-    "label_html": "Shape + nori",
-    "start": 75
+    "label": "Fold, then shape",
+    "label_html": "Fold, then shape",
+    "start": 73
    }
   ],
   "tick_step": 10,
@@ -876,8 +820,8 @@
   ],
   "unit": "minutes"
  },
- "title": "Baby octopus onigiri (takomeshi + sweet-soy iidako)",
- "total": "~1½ h (45 min of it the rice cooker)",
+ "title": "Baby octopus onigiri (caramelized sweet-soy filling)",
+ "total": "~75–95 min, depending on tenderness",
  "vinegar_options": null,
  "yields": "6 onigiri"
 }
