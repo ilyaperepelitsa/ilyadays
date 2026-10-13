@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Menemen (турецкие яйца с помидором и перцем)",
-  "image": "illustrations/menemen/4.webp?v=9f1cb49334",
+  "image": "illustrations/menemen/4.webp?v=41d3e03bfe",
   "svg_fallback": null
  },
  "ingredients": [
@@ -75,7 +75,47 @@
   }
  ],
  "intro_html": "Густая томатно-перечная основа, мягкие складки яйца и необязательный белый сыр. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/menemen/mise1.webp?v=d3113b4bc3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+    "кубики <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"8\" data-s=\"0\">5–8 мм</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> · кубики <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"8\" data-s=\"0\">5–8 мм</span>",
+   "name": "Кубики перца",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/menemen/mise2.webp?v=ea00051be3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+    "кубики <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span> · кубики <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span>",
+   "name": "Кубики помидоров",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/menemen/mise3.webp?v=733383e3ff",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"яйцо|яйца|яиц\" data-n=\"1\">4 яйца</span>",
+    "не взбивать в пену"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"яйцо|яйца|яиц\" data-n=\"1\">4 яйца</span> · не взбивать в пену",
+   "name": "Слегка взбитые яйца",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "sous-vide-beets",
@@ -117,7 +157,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/menemen.jpg?v=c6d615320d",
+ "share_image": "share/menemen.jpg?v=ba0d6c8577",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -185,7 +225,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/menemen/1.webp?v=3e590a47d9",
+    "illustration": "illustrations/menemen/1.webp?v=3c9bb1d47b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -197,7 +237,20 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Нарежьте и размягчите перец",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Неострый зелёный перец, кубиками"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Оливковое масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Добавьте помидоры, соль и необязательный перец.</li><li>Тушите без крышки 8–10 минут, помешивая, до густоты.</li><li>Проведите лопаткой: след должен ненадолго сохраняться, а не сразу заполняться водянистым соком.</li><li>Консервированным помидорам может потребоваться дольше.</li></ul>",
@@ -212,7 +265,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/menemen/2.webp?v=cf9f2d527d",
+    "illustration": "illustrations/menemen/2.webp?v=860b36083b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -224,7 +277,16 @@
    "time": "8–10 мин",
    "time_html": "<span>8–10 мин</span>",
    "title": "Уварите помидоры",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+     "name_html": "Спелые помидоры, кубиками"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Pul biber (хлопья неострого красного перца)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Слегка взбейте яйца в чашке.</li><li>Убавьте огонь и влейте в густой соус.</li><li>Подождите 20 секунд, затем медленно подворачивайте лопаткой 2–4 минуты.</li><li>Нужны мягкие схватившиеся складки без жидкого сырого яйца; <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"71\" data-s=\"0\">71 °C</span></b> в яичной смеси — консервативный ориентир готовности.</li><li>Не мешайте резко до сухой крошки.</li></ul>",
@@ -239,7 +301,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/menemen/3.webp?v=293182c786",
+    "illustration": "illustrations/menemen/3.webp?v=aca70d8047",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -251,7 +313,12 @@
    "time": "2–4 мин",
    "time_html": "<span>2–4 мин</span>",
    "title": "Осторожно вмешайте яйца",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Яйца"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Снимите с огня.</li><li>По желанию добавьте сыр крупными мягкими кусочками; попробуйте до дополнительной соли.</li><li>Сразу подайте в сковороде с хлебом.</li><li>Основа должна быть сочной и густой, не водянистой и не сухой.</li></ul>",
@@ -262,7 +329,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/menemen/4.webp?v=9f1cb49334",
+    "illustration": "illustrations/menemen/4.webp?v=41d3e03bfe",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -274,7 +341,16 @@
    "time": "1 мин",
    "time_html": "<span>1 мин</span>",
    "title": "Добавьте сыр вне огня",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Beyaz peynir (белый рассольный сыр) или фета"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Хлеб"
+    }
+   ]
   }
  ],
  "timeline": null,

@@ -29,7 +29,7 @@
  },
  "hero": {
   "alt": "Kabak mücver (courgette fritters), dill & cheese",
-  "image": "illustrations/kabak-mucver/4.webp?v=ebd36e4d89",
+  "image": "illustrations/kabak-mucver/4.webp?v=f515b076fc",
   "svg_fallback": null
  },
  "ingredients": [
@@ -85,7 +85,46 @@
   }
  ],
  "intro_html": "Thin shallow-fried fritters: squeeze the courgette well for crisp edges. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/kabak-mucver/mise1.webp?v=95062b0175",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span> before grating; squeeze very dry"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span> before grating; squeeze very dry",
+   "name": "Squeezed courgette",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/kabak-mucver/mise2.webp?v=b7f1651806",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"egg|eggs\" data-n=\"1\">1 egg</span>",
+    "flour <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"egg|eggs\" data-n=\"1\">1 egg</span> · flour <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>",
+   "name": "Egg and flour",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/kabak-mucver/mise3.webp?v=f30cea4d18",
+   "items": [
+    "Cheese <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+    "dill <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>"
+   ],
+   "items_html": "Cheese <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span> · dill <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
+   "name": "Cheese and dill",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "cokertme",
@@ -127,7 +166,7 @@
    "person": "person"
   }
  },
- "share_image": "share/kabak-mucver.jpg?v=778b4fee87",
+ "share_image": "share/kabak-mucver.jpg?v=1116a9d049",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -191,7 +230,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/1.webp?v=b5be347b6c",
+    "illustration": "illustrations/kabak-mucver/1.webp?v=768863212e",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -203,7 +242,16 @@
    "time": "10 min",
    "time_html": "<span>10 min</span>",
    "title": "Grate, salt and squeeze",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+     "name_html": "Courgettes"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Beat egg in a bowl, then mix in squeezed courgette, flour, cheese, dill and optional finely sliced spring onion.</li><li>The mixture should hold on a spoon, without liquid pooling.</li><li>If watery despite squeezing, add <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> flour at a time, up to 2 extra tsp.</li></ul>",
@@ -214,7 +262,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/2.webp?v=5cfaa9991f",
+    "illustration": "illustrations/kabak-mucver/2.webp?v=e6207ccd6b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -226,7 +274,28 @@
    "time": "4 min",
    "time_html": "<span>4 min</span>",
    "title": "Mix a thick batter",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Egg"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>",
+     "name_html": "Plain flour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "White brined cheese, crumbled"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
+     "name_html": "Dill, chopped"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
+     "name_html": "Spring onion"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Heat half the oil over medium heat.</li><li>Add heaped spoonfuls and flatten to <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"8\" data-b=\"10\" data-s=\"0\">8–10 mm</span></b> thick, about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 cm</span> across.</li><li>Fry 3–4 minutes per side, turning once, until golden and the centre is set, with no raw flour or wet egg.</li><li>Cook in two batches, adding remaining oil as needed; check the centre reaches <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"71\" data-s=\"0\">71 °C</span></b>.</li></ul>",
@@ -241,7 +310,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/3.webp?v=c944f26462",
+    "illustration": "illustrations/kabak-mucver/3.webp?v=588146e0a2",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -253,7 +322,12 @@
    "time": "12–16 min",
    "time_html": "<span>12–16 min</span>",
    "title": "Flatten and shallow-fry",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Olive oil for shallow frying"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Drain in one layer on clean paper or a rack for a minute.</li><li>Serve hot with optional yoghurt and lemon.</li><li>If the outside browns before the centre sets, make the next batch thinner and lower the heat.</li></ul>",
@@ -264,7 +338,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/4.webp?v=ebd36e4d89",
+    "illustration": "illustrations/kabak-mucver/4.webp?v=f515b076fc",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -276,7 +350,16 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Drain without stacking",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Plain yoghurt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Lemon wedges"
+    }
+   ]
   }
  ],
  "timeline": null,

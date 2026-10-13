@@ -25,7 +25,7 @@
  },
  "hero": {
   "alt": "Gavurdağı (салат из помидоров с грецкими орехами)",
-  "image": "illustrations/gavurdagi-salad/4.webp?v=2e5288b023",
+  "image": "illustrations/gavurdagi-salad/4.webp?v=714f009ecb",
   "svg_fallback": null
  },
  "ingredients": [
@@ -81,7 +81,47 @@
   }
  ],
  "intro_html": "Мелко нарезанный салат с орехами и кисло-сладкой гранатовой заправкой. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/gavurdagi-salad/mise1.webp?v=41f838ca85",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>, мелкие кубики <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>, мелкие кубики <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span>",
+   "name": "Помидоры",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/gavurdagi-salad/mise2.webp?v=b0856e7867",
+   "items": [
+    "Лук <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+    "орехи <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>"
+   ],
+   "items_html": "Лук <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span> · орехи <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>",
+   "name": "Лук и грецкие орехи",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/gavurdagi-salad/mise3.webp?v=cf3b206caa",
+   "items": [
+    "Масло",
+    "лимон",
+    "необязательный гранатовый соус"
+   ],
+   "items_html": "Масло · лимон · необязательный гранатовый соус",
+   "name": "Заправка",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "pomegranate-salad",
@@ -123,7 +163,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/gavurdagi-salad.jpg?v=cd2ac68f23",
+ "share_image": "share/gavurdagi-salad.jpg?v=96c5db5a09",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -187,7 +227,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/1.webp?v=9a13258eac",
+    "illustration": "illustrations/gavurdagi-salad/1.webp?v=313b368f60",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -199,7 +239,20 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Нарежьте помидоры",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Спелые помидоры"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Огурец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Неострый зелёный перец"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Лук нарежьте очень мелко, <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 мм</span>.</li><li>Орехи крупно порубите на кусочки <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"8\" data-s=\"0\">5–8 мм</span>, не в пыль.</li><li>Необязательную петрушку нарубите отдельно.</li></ul>",
@@ -210,7 +263,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/2.webp?v=8507c55a94",
+    "illustration": "illustrations/gavurdagi-salad/2.webp?v=c92fcecf64",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -222,7 +275,16 @@
    "time": "4 мин",
    "time_html": "<span>4 мин</span>",
    "title": "Порубите лук и орехи",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Красный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>",
+     "name_html": "Грецкие орехи"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Смешайте масло, лимон, соль и необязательный гранатовый соус в салатнике.</li><li>Вкус должен быть ярким и кислым, со слабой сладостью при использовании соуса.</li><li>Если он концентрированный, начните с половины количества.</li></ul>",
@@ -233,7 +295,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/3.webp?v=fb06f03931",
+    "illustration": "illustrations/gavurdagi-salad/3.webp?v=2c24339154",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -245,7 +307,24 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Смешайте заправку",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Оливковое масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Лимонный сок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Nar ekşisi (густой кислый гранатовый соус)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Добавьте помидоры, лук, орехи и выбранные овощи с зеленью.</li><li>Осторожно перемешайте, оставьте на 2 минуты и подавайте с соком.</li><li>Не заправляйте за несколько часов: помидоры размякнут, орехи потеряют хруст.</li></ul>",
@@ -256,7 +335,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/4.webp?v=2e5288b023",
+    "illustration": "illustrations/gavurdagi-salad/4.webp?v=714f009ecb",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -268,7 +347,12 @@
    "time": "4 мин",
    "time_html": "<span>4 мин</span>",
    "title": "Смешайте перед подачей",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
+     "name_html": "Петрушка"
+    }
+   ]
   }
  ],
  "timeline": null,

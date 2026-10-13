@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Çökertme (beef, crisp potatoes & garlic yoghurt)",
-  "image": "illustrations/cokertme/5.webp?v=6ae461fe4c",
+  "image": "illustrations/cokertme/5.webp?v=d76794c27f",
   "svg_fallback": null
  },
  "ingredients": [
@@ -84,7 +84,48 @@
   }
  ],
  "intro_html": "A Bodrum-style layered plate, adapted to thin-film pan-frying in a small galley. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/cokertme/mise1.webp?v=231575b5c8",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+    "<span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"3\" data-s=\"0\">3 mm</span> thick"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span> · <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"3\" data-s=\"0\">3 mm</span> thick",
+   "name": "Dry potato sticks",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 4",
+   "image": "illustrations/cokertme/mise2.webp?v=908599cd1a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+    "<span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> thick",
+    "cut across grain"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> · <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> thick · cut across grain",
+   "name": "Thin beef strips",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 5",
+   "image": "illustrations/cokertme/mise3.webp?v=ea9bbfbdb3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> small garlic clove"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span> · 1 small garlic clove",
+   "name": "Garlic yoghurt",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "menemen",
@@ -126,7 +167,7 @@
    "person": "person"
   }
  },
- "share_image": "share/cokertme.jpg?v=7bc69f23aa",
+ "share_image": "share/cokertme.jpg?v=5d7a1bb78f",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -190,7 +231,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cokertme/1.webp?v=b15c38347c",
+    "illustration": "illustrations/cokertme/1.webp?v=89ac301dcf",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -202,7 +243,24 @@
    "time": "8 min",
    "time_html": "<span>8 min</span>",
    "title": "Cut and dry the potatoes",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Potatoes"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Thick plain yoghurt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 small clove</span>",
+     "name_html": "Garlic, finely grated"
+    },
+    {
+     "amount_html": "a little from the measured <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Divide <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 tbsp</span> oil between two or three potato batches in a <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 cm</span> pan over medium-high heat.</li><li>Fry in loose single layers, turning gently, for about 6–9 minutes per batch until golden and tender; thin-film frying gives crisp edges rather than deep-fried shoestrings.</li><li>Drain in one layer, salt lightly and leave uncovered.</li><li>Lower heat if darkening before tender.</li><li>Cook at a calm berth; avoid hot-oil frying while the boat is moving.</li></ul>",
@@ -217,7 +275,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cokertme/2.webp?v=e9080b64f6",
+    "illustration": "illustrations/cokertme/2.webp?v=22edd2cd58",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +287,20 @@
    "time": "12–27 min",
    "time_html": "<span>12–27 min</span>",
    "title": "Pan-fry in small batches",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Potatoes"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span> across potato batches",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "a little from the measured <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>If using the sauce, pour off the potato oil into a heatproof container.</li><li>Melt butter in the pan over low heat; stir tomato paste for 30 seconds, add water and optional pepper, and simmer 1 minute.</li><li>Pour into a cup.</li><li>Omit this step if skipping the sauce.</li></ul>",
@@ -244,7 +315,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cokertme/3.webp?v=3b03cf865c",
+    "illustration": "illustrations/cokertme/3.webp?v=cca908cff8",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -256,7 +327,24 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Make the optional sauce",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Tomato paste"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Drinking water for sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
+     "name_html": "Butter for sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Pul biber (mild red-pepper flakes)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Slice beef across the grain into <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> strips</b> on a clean meat board.</li><li>Pat dry and season with remaining salt.</li><li>Heat the last tbsp oil over high heat; fry in two uncrowded batches for 2–3 minutes each, turning once.</li><li>Check <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> and rest 3 minutes on a clean plate.</li></ul>",
@@ -271,7 +359,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cokertme/4.webp?v=1acecc197f",
+    "illustration": "illustrations/cokertme/4.webp?v=5de02eeeab",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -283,7 +371,20 @@
    "time": "7–9 min",
    "time_html": "<span>7–9 min</span>",
    "title": "Sear the beef",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Tender beef steak, trimmed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> for beef",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "a little from the measured <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Divide potatoes between plates, spoon yoghurt across the middle and pile beef on top.</li><li>Add optional tomato sauce in a narrow line.</li><li>Serve immediately; mixing everything or waiting under a lid makes the potatoes soggy.</li></ul>",
@@ -294,7 +395,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cokertme/5.webp?v=6ae461fe4c",
+    "illustration": "illustrations/cokertme/5.webp?v=d76794c27f",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -306,7 +407,12 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Layer just before eating",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Thick plain yoghurt"
+    }
+   ]
   }
  ],
  "timeline": null,

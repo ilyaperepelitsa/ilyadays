@@ -29,12 +29,15 @@
           "Confirm exact species, raw-consumption suitability and parasite-control documentation with the supplier. Keep sealed at <b>0–4 °C</b>, transport on ice and prepare on purchase day. Thaw frozen seafood in the fridge following its label; remove keep-frozen vacuum-packed fish from its packaging before thawing. No room-temperature thawing.",
           "Уточните точный вид, пригодность для сырого употребления и документы контроля паразитов. Храните запечатанным при <b>0–4 °C</b>, перевозите со льдом и готовьте в день покупки. Замороженное размораживайте в холодильнике по этикетке; рыбу в вакууме с указанием хранить замороженной выньте из упаковки до разморозки. Не размораживайте на столе."
         ],
-        "scene": "A SMALL TIGHTLY SEALED TRANSPARENT LIDDED FOOD CONTAINER holding one trimmed raw red tuna loin, resting ON a bed of large smooth ice cubes inside an open cooler. The food container itself is closed with a clearly visible clear plastic lid and rim. Ice stays entirely outside the sealed food box; fish does not touch ice. Tuna is smooth flat red cel colour with only five broad pale muscle lines, no pores, speckles or fibrous microtexture. No hands, no labels.",
+        "scene": "A SMALL TIGHTLY SEALED TRANSPARENT LIDDED FOOD CONTAINER holding one trimmed raw red tuna loin, resting ON a bed of large smooth ice cubes inside an open cooler. The food container itself is closed with a clearly visible clear plastic lid and rim. Ice stays entirely outside the sealed food box; fish does not touch ice. Tuna is smooth deep coral-red with readable broad muscle structure with only five broad pale muscle lines, no pores, speckles or fibrous microtexture. No hands, no labels.",
         "time": [
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Seafood documented for raw consumption"
+        ]
       },
       {
         "title": [
@@ -50,7 +53,13 @@
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Soy sauce",
+          "Lemon juice",
+          "Cold drinking water",
+          "Cucumber"
+        ]
       },
       {
         "title": [
@@ -61,12 +70,15 @@
           "Pat the seafood dry with clean disposable paper. For a trimmed tuna or salmon loin, find the direction of the visible muscle lines and cut across them into <b>5–7 mm</b> slices. Use one long pulling stroke per slice, without sawing. Keep the guiding hand well behind the blade; do not attempt to slice a slippery tiny offcut. See the species notes below for scallops and specialist alternatives.",
           "Промокните чистым одноразовым полотенцем. На зачищенном тунце или лососе найдите направление мышечных волокон и режьте поперёк ломтиками <b>5–7 мм</b>. На ломтик — одно длинное движение ножа к себе, без пиления. Направляющую руку держите позади лезвия; не пытайтесь нарезать скользкий маленький обрезок. Для гребешков и специальных вариантов см. пояснения ниже."
         ],
-        "scene": "A right-handed cook slicing a smooth red tuna loin across grain into 6 mm slices with a long knife. The entire left guiding hand stabilizes the far rear end of the loin, visibly 5 cm behind and away from every part of the knife tip and edge. Right hand grips knife naturally, exactly five proportional digits per hand. Three clean slices in front, flat red cel colour with four broad muscle lines only, no microtexture.",
+        "scene": "A right-handed cook slicing a smooth red tuna loin across grain into 6 mm slices with a long knife. The entire left guiding hand stabilizes the far rear end of the loin, visibly 5 cm behind and away from every part of the knife tip and edge. Right hand grips knife naturally, exactly five proportional digits per hand. Three clean slices in front, deep coral-red with readable broad muscle structure with four broad muscle lines only, no microtexture.",
         "time": [
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Seafood documented for raw consumption"
+        ]
       },
       {
         "title": [
@@ -82,7 +94,13 @@
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Seafood documented for raw consumption",
+          "Cucumber",
+          "Mandarin juice, instead of lemon",
+          "Olive oil"
+        ]
       }
     ],
     "notes": [
@@ -103,6 +121,44 @@
         "FDA — выбор и подача морепродуктов",
         "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Trimmed tuna loin",
+          "Зачищенный тунец"
+        ],
+        "items": [
+          "300 g, skinless and boneless; keep refrigerated",
+          "300 г, без кожи и костей; держите в холодильнике"
+        ],
+        "step": 1,
+        "scene": "a chilled small plate with a single skinless trimmed deep coral-red raw tuna saku, long parallel muscle fibres visible as a few subtle red-on-red contours"
+      },
+      {
+        "name": [
+          "Lemon–soy dip",
+          "Лимонно-соевый соус"
+        ],
+        "items": [
+          "Soy 1 tbsp · lemon 2 tsp · water 2 tsp",
+          "Соя 1 ст. л. · лимон 2 ч. л. · вода 2 ч. л."
+        ],
+        "step": 2,
+        "scene": "one small white ceramic cup with smooth dark lemon soy dip, no seeds or zest"
+      },
+      {
+        "name": [
+          "Optional cucumber",
+          "Необязательный огурец"
+        ],
+        "items": [
+          "80 g, cut into 2 mm rounds",
+          "80 г, кружки толщиной 2 мм"
+        ],
+        "step": 4,
+        "scene": "one small white plate with six thin cucumber rounds, pale translucent centres and clear dark green rims"
+      }
     ]
   },
   {
@@ -140,7 +196,11 @@
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Sea bream fillets, skin-on, pin bones removed",
+          "Fine salt"
+        ]
       },
       {
         "title": [
@@ -156,7 +216,11 @@
           "3–5 min",
           "3–5 мин"
         ],
-        "heat": "medium-high"
+        "heat": "medium-high",
+        "uses": [
+          "Sea bream fillets, skin-on, pin bones removed",
+          "Olive oil"
+        ]
       },
       {
         "title": [
@@ -172,7 +236,10 @@
           "1–3 min",
           "1–3 мин"
         ],
-        "heat": "medium"
+        "heat": "medium",
+        "uses": [
+          "Sea bream fillets, skin-on, pin bones removed"
+        ]
       },
       {
         "title": [
@@ -183,12 +250,20 @@
           "Take the pan off the heat. Carefully add water and lemon; swirl in optional butter and capers for 20–30 seconds. Spoon around the fish so the skin stays crisp. Add optional chopped parsley and lemon wedges; serve immediately.",
           "Снимите сковороду с огня. Осторожно добавьте воду и лимон, вмешайте необязательные масло и каперсы 20–30 секунд. Полейте вокруг рыбы, сохраняя кожу хрустящей. По желанию добавьте рубленую петрушку и дольки лимона; сразу подавайте."
         ],
-        "scene": "Finished sea bream fillet with skin upward on cream plate. Skin is one smooth GOLDEN-SILVER flat cel-colour shape with FOUR large curved lines to suggest crisp scales, never a detailed scale mesh. Pale flesh a smooth single broad shape. A little smooth lemon butter sauce around it, SIX distinct capers, two parsley leaves and one lemon wedge. No speckles, food photography or microtexture, no hands.",
+        "scene": "Finished close-up of TWO cooked sea-bream fillets, intact continuous golden-brown unbroken skin facing upward on a warm ivory ceramic plate. The skin surface is smooth, taut and completely UNSCORED, absolutely no cuts, slashes, grooves or knife marks. Show only six small soft highlights on its surface, no dark scale mesh. Pale lemon butter sauce with a dozen capers lies AROUND the fillets, keeping skin dry and crisp; three parsley leaves beside. No hands, no other food or props.",
         "time": [
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Lemon juice",
+          "Drinking water",
+          "Capers, drained",
+          "Butter",
+          "Parsley",
+          "Lemon wedges"
+        ]
       }
     ],
     "notes": [
@@ -209,6 +284,44 @@
         "FDA — выбор и подача морепродуктов",
         "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Dry fillets",
+          "Обсушенное филе"
+        ],
+        "items": [
+          "350 g · skin on · pin bones removed",
+          "350 г · на коже · без костей"
+        ],
+        "step": 2,
+        "scene": "a small white plate holding two raw skin-on sea-bream fillets flesh up, pearly pale flesh, intact skin edge, no scoring"
+      },
+      {
+        "name": [
+          "Lemon and water",
+          "Лимон и вода"
+        ],
+        "items": [
+          "1 tbsp lemon · 2 tbsp water",
+          "1 ст. л. лимона · 2 ст. л. воды"
+        ],
+        "step": 4,
+        "scene": "one small cup of translucent pale lemon juice and water, smooth surface no seeds"
+      },
+      {
+        "name": [
+          "Optional finish",
+          "Необязательные добавки"
+        ],
+        "items": [
+          "Capers · butter · parsley",
+          "Каперсы · сливочное масло · петрушка"
+        ],
+        "step": 4,
+        "scene": "one small plate with a dozen separate olive-green capers, one neat butter pat and three parsley leaves arranged apart"
+      }
     ]
   },
   {
@@ -246,7 +359,11 @@
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Raw peeled shrimp, thawed and deveined",
+          "Fine salt"
+        ]
       },
       {
         "title": [
@@ -262,7 +379,18 @@
           "2 min",
           "2 мин"
         ],
-        "heat": "medium-high"
+        "heat": "medium-high",
+        "uses": [
+          "Raw peeled shrimp, thawed and deveined",
+          "Butter",
+          "Olive oil"
+        ],
+        "amounts": {
+          "Butter": [
+            "12.5 g (first half)",
+            "12,5 г (первая половина)"
+          ]
+        }
       },
       {
         "title": [
@@ -278,7 +406,18 @@
           "1–2 min",
           "1–2 мин"
         ],
-        "heat": "medium-low"
+        "heat": "medium-low",
+        "uses": [
+          "Butter",
+          "Garlic, thinly sliced",
+          "Pul biber (mild red-pepper flakes)"
+        ],
+        "amounts": {
+          "Butter": [
+            "12.5 g (remaining half)",
+            "12,5 г (оставшаяся половина)"
+          ]
+        }
       },
       {
         "title": [
@@ -294,7 +433,12 @@
           "1 min",
           "1 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Lemon juice",
+          "Parsley",
+          "Crusty bread"
+        ]
       }
     ],
     "notes": [],
@@ -309,6 +453,44 @@
         "FDA — выбор и подача морепродуктов",
         "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Dry raw shrimp",
+          "Обсушенные сырые креветки"
+        ],
+        "items": [
+          "350 g · peeled · deveined",
+          "350 г · очищены · без кишечной жилки"
+        ],
+        "step": 2,
+        "scene": "a small white plate with eight raw peeled deveined shrimp, translucent pale-grey clean curved bodies, no black intestinal lines"
+      },
+      {
+        "name": [
+          "Sliced garlic and butter",
+          "Чеснок ломтиками и масло"
+        ],
+        "items": [
+          "2 cloves · butter 25 g",
+          "2 зубчика · масло 25 г"
+        ],
+        "step": 3,
+        "scene": "a small plate with a loose fan of thin ivory garlic slices and one butter pat arranged separately"
+      },
+      {
+        "name": [
+          "Optional finish",
+          "Необязательные добавки"
+        ],
+        "items": [
+          "Pepper flakes · parsley · bread",
+          "Хлопья перца · петрушка · хлеб"
+        ],
+        "step": 4,
+        "scene": "a small plate with a tiny cup holding a few broad red chilli flakes, three parsley leaves and one piece of plain crusty bread"
+      }
     ]
   },
   {
@@ -346,7 +528,14 @@
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Red onion",
+          "Lemon juice",
+          "Fine salt",
+          "Sumac (tart red spice)",
+          "Parsley"
+        ]
       },
       {
         "title": [
@@ -362,7 +551,11 @@
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Bonito steaks, cleaned, 15–20 mm thick",
+          "Plain flour"
+        ]
       },
       {
         "title": [
@@ -378,7 +571,11 @@
           "6–8 min",
           "6–8 мин"
         ],
-        "heat": "medium-high"
+        "heat": "medium-high",
+        "uses": [
+          "Bonito steaks, cleaned, 15–20 mm thick",
+          "Olive oil"
+        ]
       },
       {
         "title": [
@@ -394,7 +591,11 @@
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Red onion",
+          "Lemon wedges"
+        ]
       }
     ],
     "notes": [
@@ -415,6 +616,44 @@
         "FDA — выбор и подача морепродуктов",
         "https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Sharp onion salad",
+          "Кислый луковый салат"
+        ],
+        "items": [
+          "100 g thin onion · lemon · optional sumac",
+          "100 г тонкого лука · лимон · необязательный сумах"
+        ],
+        "step": 1,
+        "scene": "one small white bowl with slender translucent red onion half-moons and a light lemon dressing, a few broad burgundy sumac flecks"
+      },
+      {
+        "name": [
+          "Bonito steaks",
+          "Стейки пеламиды"
+        ],
+        "items": [
+          "400 g · 15–20 mm thick",
+          "400 г · толщина 15–20 мм"
+        ],
+        "step": 2,
+        "scene": "a small white plate with two raw bonito cross-cut steaks, each an oval dark silver skin ring around pink-red flesh and central bone"
+      },
+      {
+        "name": [
+          "Flour for dusting",
+          "Мука для обваливания"
+        ],
+        "items": [
+          "2 tbsp, thin coating only",
+          "2 ст. л., только тонкий слой"
+        ],
+        "step": 2,
+        "scene": "a small shallow white plate with a smooth low mound of plain white flour, clean edges and no powder cloud"
+      }
     ]
   },
   {
@@ -452,7 +691,21 @@
           "7 min",
           "7 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Red onion",
+          "Tomato",
+          "Lemon juice",
+          "Fine salt",
+          "Sumac (tart red spice)",
+          "Parsley"
+        ],
+        "amounts": {
+          "Fine salt": [
+            "¼ tsp (half)",
+            "¼ ч. л. (половина)"
+          ]
+        }
       },
       {
         "title": [
@@ -463,12 +716,22 @@
           "On a separate board, cut lamb across the grain into strips about <b>5 mm thick and 3 cm long</b>. Pat dry; season with remaining salt. Wash knife, board and hands before returning to the vegetables.",
           "На отдельной доске нарежьте баранину поперёк волокон полосками примерно <b>5 мм толщиной и 3 см длиной</b>. Обсушите, посолите остатком соли. Вымойте нож, доску и руки, прежде чем возвращаться к овощам."
         ],
-        "scene": "Tight close-up of right hand cutting a SMALL LEAN BONELESS LAMB LEG piece across the grain. Lamb is a palm-sized uniform muted pink piece with ONLY one narrow outer fat edge, no internal marbling, no ribeye shape, no steak tray. Left hand in tucked safe claw grip, fingertips away from blade. On board are exactly six SHORT RECTANGULAR strips each only 3 cm long and 5 mm thick; their surfaces are entirely flat pink cel colour with a single broad shadow, absolutely no speckling, pores, fibres, fat flecks or microtexture. Correct five-digit hands, natural short proportional fingers. Single landscape illustration.",
+        "scene": "Tight instructional close-up of right hand with chef knife cutting lean raw lamb across visible local muscle grain into SHORT THIN FLAT RIBBONS, each 3 cm long, 8 mm wide and only 4–5 mm THICK. Five cut ribbons lie flat with visibly very thin edges, less than half a fingernail wide in thickness. Natural dusky pink lamb with a tiny outside cream fat edge, no beef marbling. Left hand uses safe claw grip far behind the cutting edge. Not cubes, square sticks, chunks or thick batons.",
         "time": [
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Boneless lamb leg or loin, trimmed",
+          "Fine salt"
+        ],
+        "amounts": {
+          "Fine salt": [
+            "¼ tsp (remaining half)",
+            "¼ ч. л. (оставшаяся половина)"
+          ]
+        }
       },
       {
         "title": [
@@ -479,12 +742,17 @@
           "Heat oil over medium-high heat. Fry half the meat for 2–3 minutes, turning to brown, then repeat. Add optional chilli in the last 20 seconds. Check lamb reaches <b>63 °C</b>, then rest for <b>3 minutes</b> on a clean plate. Do not use the raw-meat plate.",
           "Нагрейте масло на огне выше среднего. Жарьте половину мяса 2–3 минуты, переворачивая до подрумянивания; повторите. Необязательный перец добавьте в последние 20 секунд. Проверьте <b>63 °C</b>, затем дайте отдохнуть <b>3 минуты</b> на чистой тарелке, не на той, где было сырое мясо."
         ],
-        "scene": "Right hand using wooden spatula to spread twelve small browned lamb strips in one sparse layer in black frying pan, no tomatoes or sauce yet, clean smooth meat surfaces.",
+        "scene": "Tight close-up into black frying pan with a sparse single layer of short THIN FLAT lamb strips, 3 cm long, 8 mm wide, 4–5 mm thick, browned edges and tender centre. Each strip reads as a small flat ribbon with a visibly very thin edge, not a chunky stick or cube. Right hand turns one ribbon with simple metal tongs, left hand holds pan handle, natural proportional digits. Light olive oil film, a dozen clean bubbles only, no vegetables, no sauce.",
         "time": [
           "7–9 min",
           "7–9 мин"
         ],
-        "heat": "medium-high"
+        "heat": "medium-high",
+        "uses": [
+          "Boneless lamb leg or loin, trimmed",
+          "Olive oil",
+          "Pul biber (mild red-pepper flakes)"
+        ]
       },
       {
         "title": [
@@ -495,12 +763,16 @@
           "Warm each flatbread in the empty pan for 15–20 seconds per side. Spread optional yoghurt, then divide lamb, tomato, onion and optional parsley between them. Fold the bottom over the filling, tuck in both sides and roll snugly. Serve immediately.",
           "Прогрейте каждый лаваш в пустой сковороде по 15–20 секунд с каждой стороны. Намажьте необязательный йогурт, разделите мясо, помидор, лук и зелень между листами. Накройте начинку нижним краем, подверните бока и плотно сверните. Сразу подавайте."
         ],
-        "scene": "Close-up of two anatomically correct hands folding one thin lavash bottom over a narrow line of EIGHT SMOOTH BROWN LAMB STRIPS, each a simple flat-coloured rectangular shape 3 cm long with one broad shadow. Three red tomato cubes and four red onion ribbons. Both side edges of bread tucked inward. No crumbly mince, no granular nubbly texture, no mottling or stippled highlights on lamb. Show filling layers clearly. Clean hand-drawn animation cels, flat colours, no microtexture.",
+        "scene": "Tight close-up of two natural adult hands folding one thin lavash sheet around a narrow line of cooked THIN FLAT lamb ribbons, 3 cm long and only 4–5 mm thick, tomato 5 mm dice and fine red-onion half-moons. A thin smear of plain yoghurt underneath. Fold lower flap over filling, sides slightly tucked inward; fingers support the bread, no knife. Lamb has thin edges and lies flat, never chunky batons. Exact five anatomically proportional digits on each hand, naturally occluded only where bread is held.",
         "time": [
           "3 min",
           "3 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Thin lavash (flatbread)",
+          "Labneh (strained yoghurt) or thick plain yoghurt"
+        ]
       }
     ],
     "notes": [],
@@ -515,6 +787,44 @@
         "USDA — безопасная температура приготовления",
         "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Cold filling",
+          "Овощная начинка"
+        ],
+        "items": [
+          "Onion · tomato · optional parsley",
+          "Лук · помидор · необязательная петрушка"
+        ],
+        "step": 1,
+        "scene": "one shallow bowl with red onion half-moons, large tomato dice and three parsley leaves, distinct pieces not a tiny chopped mass"
+      },
+      {
+        "name": [
+          "Thin lamb strips",
+          "Тонкие полоски баранины"
+        ],
+        "items": [
+          "300 g · cut across the grain",
+          "300 г · нарезать поперёк волокон"
+        ],
+        "step": 3,
+        "scene": "a small white plate of raw lean lamb strips 5 mm thick, natural dusky pink-red with small outer cream fat edges, no beef marbling"
+      },
+      {
+        "name": [
+          "Lavash and optional yoghurt",
+          "Лаваш и необязательный йогурт"
+        ],
+        "items": [
+          "2 large sheets · yoghurt 80 g",
+          "2 больших листа · йогурт 80 г"
+        ],
+        "step": 4,
+        "scene": "one plate with two folded thin lavash flatbreads and one small white cup of smooth thick plain yoghurt"
+      }
     ]
   },
   {
@@ -547,12 +857,15 @@
           "Drain the ready-grilled aubergine in a sieve for 5 minutes. Chop into a soft coarse mash, not a watery purée. Use 250 g drained flesh; weigh after draining.",
           "Подержите готовый печёный баклажан в сите 5 минут. Порубите в мягкую крупную массу, не в водянистое пюре. Нужно 250 г мякоти после сливания жидкости."
         ],
-        "scene": "Right-handed cook chopping SKINLESS soft roasted aubergine flesh on a clean board. All purple skin has been removed; only pale cream soft flesh remains. Knife in right hand, safe left claw grip away from blade. Six broad soft creamy ribbons, flat cel colour, no dark skin, no raw whole aubergine, no speckles or seeds. Single clear close-up.",
+        "scene": "Right-handed cook chopping SKINLESS soft roasted aubergine flesh on a clean board. All purple skin has been removed; only pale cream soft flesh remains. Knife in right hand, safe left claw grip away from blade. Six broad soft creamy ribbons, clean layered cel colours, no dark skin, no raw whole aubergine, no speckles or seeds. Single clear close-up.",
         "time": [
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Grilled aubergine flesh, drained, ready to eat"
+        ]
       },
       {
         "title": [
@@ -568,7 +881,19 @@
           "4 min",
           "4 мин"
         ],
-        "heat": "low"
+        "heat": "low",
+        "uses": [
+          "Grilled aubergine flesh, drained, ready to eat",
+          "Thick plain yoghurt",
+          "Garlic, finely grated",
+          "Fine salt"
+        ],
+        "amounts": {
+          "Fine salt": [
+            "¼ tsp (half)",
+            "¼ ч. л. (половина)"
+          ]
+        }
       },
       {
         "title": [
@@ -579,12 +904,18 @@
           "Melt butter over medium-high heat. Add mince in a thin layer; leave 2 minutes, then break into small 1 cm pieces and turn. Cook 5–7 minutes total, until browned and <b>71 °C</b>. If using tomato paste, stir it in for the last minute; optional chilli goes in for the last 20 seconds.",
           "Растопите масло на огне выше среднего. Разложите фарш тонким слоем, оставьте на 2 минуты, затем разбейте на кусочки 1 см и переверните. Всего готовьте 5–7 минут до подрумянивания и <b>71 °C</b>. Томатную пасту при желании вмешайте за минуту до конца, перец — за 20 секунд."
         ],
-        "scene": "Right hand using wooden spatula to break lamb mince into TWELVE SMALL 1 cm browned pieces in frying pan, not steak strips or meatballs. Each piece is one clean soft angular flat brown cel shape with a single broad shadow; no granular crumb carpet, no fibres, no beaded texture or stippled highlights. Much clear pan visible between pieces, thin smooth butter, no yoghurt yet. Natural hand, five proportional digits.",
+        "scene": "Tight instructional close-up of right hand using a broad wooden spatula to break browning lamb mince into SMALL irregular loose angular pieces about 1 cm across in a black frying pan. Fifteen broad individual fragments visible on a simple continuous browned meat mass, not 2–3 cm lumps, no meatballs, tiny beads or pebbles. Small amount of smooth butter film, no onion, no tomato chunks, no noodles, no rice, no garnish. Left hand holds pan handle; natural proportional fingers.",
         "time": [
           "5–7 min",
           "5–7 мин"
         ],
-        "heat": "medium-high"
+        "heat": "medium-high",
+        "uses": [
+          "Lamb mince",
+          "Butter",
+          "Pul biber (mild red-pepper flakes)",
+          "Tomato paste"
+        ]
       },
       {
         "title": [
@@ -595,12 +926,23 @@
           "Spoon hot lamb and its butter over the warm aubergine yoghurt. Finish with remaining salt to taste, optional parsley and flatbread. Keep meat on top rather than stirring everything into a grey mixture.",
           "Выложите горячую баранину с маслом на тёплый баклажан с йогуртом. Добавьте оставшуюся соль по вкусу, необязательную петрушку и лаваш. Мясо оставьте сверху, не смешивайте всё в серую массу."
         ],
-        "scene": "Finished ali nazik plate: a smooth pale skinless aubergine-yoghurt base with one low heap of loose browned lamb mince. Irregular small angular 1 cm fragments touch and overlap, twelve broad outlined fragments on top of a flat warm-brown mass, no formed meatballs or steak chunks. Three parsley leaves, lavash at side. Clean hand-drawn animation cels, no hands, no speckled surface.",
+        "scene": "Input1 is the EDIT TARGET, input2 approved illustration STYLE. Preserve the same plate, aubergine yoghurt, three parsley leaves and framing. REPLACE the entire meat topping with ONLY LOOSE FRIED LAMB MINCE. Every meat piece must be visibly broken and torn, small irregular flat CRUMBLES, NOT any smooth cube, dice, steak chunk, rounded meatball or solid big meat lump. Remove ALL rectangular chunks and their muscle-stripe faces. Draw the central mince layer as one broad warm-brown clean cel-shaded shape and ONLY 18 distinct irregular FLAT torn fragments along its edge and top, each 5–8 mm across, with generous clear gaps. No hundreds of little beads, no beaded cauliflower surface, pores, speckles or recursive microtexture. Small butter glaze smooth, warm hand-drawn film style. No hands, onions or new garnish.",
         "time": [
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Parsley",
+          "Flatbread",
+          "Fine salt"
+        ],
+        "amounts": {
+          "Fine salt": [
+            "up to ¼ tsp, to taste",
+            "до ¼ ч. л., по вкусу"
+          ]
+        }
       }
     ],
     "notes": [
@@ -621,6 +963,44 @@
         "Turkey’s For Life — али назик",
         "https://www.turkeysforlife.com/2020/04/ali-nazik-kebab-recipe.html"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Drained aubergine",
+          "Баклажан без жидкости"
+        ],
+        "items": [
+          "250 g, ready-grilled flesh",
+          "250 г готовой печёной мякоти"
+        ],
+        "step": 1,
+        "scene": "one white bowl of drained coarse-chopped ready-grilled aubergine flesh, smooth pale tan soft pieces with a few dark skin remnants, no whole purple aubergine"
+      },
+      {
+        "name": [
+          "Garlic yoghurt",
+          "Чесночный йогурт"
+        ],
+        "items": [
+          "Yoghurt 200 g · 1 small garlic clove",
+          "Йогурт 200 г · 1 маленький зубчик"
+        ],
+        "step": 2,
+        "scene": "one white bowl of thick smooth plain yoghurt with a small ivory mound of finely grated garlic on the surface, no herbs"
+      },
+      {
+        "name": [
+          "Lamb mince",
+          "Бараний фарш"
+        ],
+        "items": [
+          "300 g · keep cold",
+          "300 г · держите в холоде"
+        ],
+        "step": 3,
+        "scene": "a small white plate of raw lamb mince, loosely irregular pink-red short strands with small cream fat flecks, no formed balls or patties"
+      }
     ]
   },
   {
@@ -653,12 +1033,17 @@
           "Wash produce with drinking-quality water. Cut tomatoes into <b>5 mm</b> dice with a sharp knife. Keep the juicy flesh; if very watery, leave only the excess puddle behind. Finely dice optional cucumber and pepper to the same size.",
           "Вымойте овощи питьевой водой. Острым ножом нарежьте помидоры кубиком <b>5 мм</b>. Сочную мякоть сохраните; уберите только избыток жидкости. Необязательные огурец и перец нарежьте так же."
         ],
-        "scene": "Right hand cutting ripe red tomato into tidy 5 mm dice on pale board, left hand in safe tucked claw grip. A modest number of individually drawn cubes, smooth flesh, no seed microtexture.",
+        "scene": "Tight instructional close-up of right-handed cook making FINE 5 mm tomato dice on pale honey board. Red tomato slices already cut into narrow 5 mm strips; sharp knife cuts across those strips to form small 5 mm cubes, many times smaller than the adjacent thumbnail. Left hand safe claw behind blade. A modest loose pile of 20 clearly outlined small red cubes, broad smooth cut faces and a few readable seed chambers, no large wedges or 1 cm chunks, no onions or nuts yet.",
         "time": [
           "5 min",
           "5 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Ripe tomatoes",
+          "Cucumber",
+          "Mild green pepper"
+        ]
       },
       {
         "title": [
@@ -674,7 +1059,11 @@
           "4 min",
           "4 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Red onion",
+          "Walnuts"
+        ]
       },
       {
         "title": [
@@ -690,7 +1079,13 @@
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Olive oil",
+          "Lemon juice",
+          "Fine salt",
+          "Nar ekşisi (pomegranate molasses)"
+        ]
       },
       {
         "title": [
@@ -701,12 +1096,15 @@
           "Add tomato, onion, walnuts and any optional vegetables and herbs. Fold gently, leave 2 minutes, then serve with the juices. Do not dress hours ahead: the tomatoes will collapse and the nuts soften.",
           "Добавьте помидоры, лук, орехи и выбранные овощи с зеленью. Осторожно перемешайте, оставьте на 2 минуты и подавайте с соком. Не заправляйте за несколько часов: помидоры размякнут, орехи потеряют хруст."
         ],
-        "scene": "Finished shallow salad bowl with neatly readable red tomato dice, fine pale red onion pieces and eight large walnut fragments, sparse parsley, light glossy dressing. No hands, no rice-like textures.",
+        "scene": "Input1 is the EDIT TARGET, input2 approved illustration STYLE. Preserve tomato dice, chopped red onion, parsley, dressing, plate and framing. REMOVE every currently large walnut piece. Replace them with TWENTY small COARSE-CHOPPED walnut chips, each ONLY 5 mm across, the SAME SIZE as ONE diced onion piece. These are broken ANGULAR FLAT chips with cream interior and a little tan edge, each at most ONE simple short ridge, not whole walnut lobes, halves, quarters or full brain-shaped kernels. Chips are smaller than tomato dice, scattered loosely with gaps; no large nuts remain. No new ingredients or hands. Keep smooth clean cel shading with countable details.",
         "time": [
           "4 min",
           "4 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Parsley"
+        ]
       }
     ],
     "notes": [],
@@ -716,6 +1114,44 @@
         "Turkey’s For Life — салат с помидорами и орехами",
         "https://www.turkeysforlife.com/2020/08/gavurdagi-salad-recipe-turkish.html"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Tomatoes",
+          "Помидоры"
+        ],
+        "items": [
+          "350 g, fine 5 mm dice",
+          "350 г, мелкие кубики 5 мм"
+        ],
+        "step": 1,
+        "scene": "Single square ingredient preview seen from above: one small white bowl with FINE 5 mm ripe tomato dice, small red cubes with a few readable seed chambers. A clean broad red mass with 25 distinct small cubes along top and edges, not huge wedges, not 1 cm cubes, no tiny recursive speckles. Plain warm ivory background, no hands or other objects."
+      },
+      {
+        "name": [
+          "Onion and walnuts",
+          "Лук и грецкие орехи"
+        ],
+        "items": [
+          "Onion 60 g · walnuts 40 g",
+          "Лук 60 г · орехи 40 г"
+        ],
+        "step": 2,
+        "scene": "Input1 is the EDIT TARGET, input2 approved illustration STYLE. Preserve plate, left-hand pile of finely diced red onion, crop and warm rendering. Completely REMOVE the eight big walnut lobes on the right. In their place draw a low loose pile of TWENTY small chopped walnut CHIPS, each only 5–8 mm across, about the SAME SIZE as ONE adjacent onion cube. Each chip is an irregular small ANGULAR FLAT shard with broken cream interior and thin tan edge, at most one short ridge, no whole lobe, half, quarter or brain shape. The chips are several times smaller than the removed walnut pieces. No hands, knives, tools, extra ingredients or texture noise."
+      },
+      {
+        "name": [
+          "Dressing",
+          "Заправка"
+        ],
+        "items": [
+          "Oil · lemon · optional pomegranate molasses",
+          "Масло · лимон · необязательный гранатовый соус"
+        ],
+        "step": 3,
+        "scene": "one small white ceramic cup holding amber lemon olive-oil dressing with one smooth dark red swirl of pomegranate molasses, no seeds or zest"
+      }
     ]
   },
   {
@@ -753,7 +1189,10 @@
           "4 min",
           "4 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Rocket leaves"
+        ]
       },
       {
         "title": [
@@ -769,7 +1208,13 @@
           "6 min",
           "6 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Pomegranate seeds",
+          "Beyaz peynir (white brined cheese), or feta",
+          "Walnuts",
+          "Red onion, thinly sliced"
+        ]
       },
       {
         "title": [
@@ -785,7 +1230,12 @@
           "3 min",
           "3 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Olive oil",
+          "Lemon juice",
+          "Nar ekşisi (pomegranate molasses)"
+        ]
       },
       {
         "title": [
@@ -801,7 +1251,10 @@
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Fine salt"
+        ]
       }
     ],
     "notes": [],
@@ -811,6 +1264,44 @@
         "GoTürkiye — кухня Муглы",
         "https://goturkiye.com/tr/mugla/tat"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Dry rocket",
+          "Сухая руккола"
+        ],
+        "items": [
+          "80 g · washed and completely dry",
+          "80 г · вымыть и полностью обсушить"
+        ],
+        "step": 1,
+        "scene": "one small bowl holding a loose handful of distinct dry rocket leaves, readable green lobed leaf shapes, no droplets"
+      },
+      {
+        "name": [
+          "Pomegranate and cheese",
+          "Гранат и сыр"
+        ],
+        "items": [
+          "Seeds 80 g · white cheese 100 g",
+          "Зёрна 80 г · белый сыр 100 г"
+        ],
+        "step": 2,
+        "scene": "one small plate with a modest cluster of separate glossy ruby pomegranate seeds and five large irregular creamy-white cheese pieces on the other side"
+      },
+      {
+        "name": [
+          "Lemon dressing",
+          "Лимонная заправка"
+        ],
+        "items": [
+          "Oil 1 tbsp · lemon 2 tsp",
+          "Масло 1 ст. л. · лимон 2 ч. л."
+        ],
+        "step": 3,
+        "scene": "one white ceramic cup with smooth translucent golden olive oil and lemon dressing, no seeds, zest or herbs"
+      }
     ]
   },
   {
@@ -848,7 +1339,12 @@
           "3 min",
           "3 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Thick plain yoghurt",
+          "Garlic, finely grated",
+          "Fine salt"
+        ]
       },
       {
         "title": [
@@ -864,7 +1360,11 @@
           "2 min",
           "2 мин"
         ],
-        "heat": "low"
+        "heat": "low",
+        "uses": [
+          "Eggs (pasteurized for soft yolks)",
+          "White vinegar for poaching water"
+        ]
       },
       {
         "title": [
@@ -880,7 +1380,10 @@
           "6–8 min",
           "6–8 мин"
         ],
-        "heat": "low"
+        "heat": "low",
+        "uses": [
+          "Eggs (pasteurized for soft yolks)"
+        ]
       },
       {
         "title": [
@@ -896,7 +1399,13 @@
           "3 min",
           "3 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Butter",
+          "Pul biber (mild red-pepper flakes), or paprika",
+          "Dill",
+          "Bread"
+        ]
       }
     ],
     "notes": [],
@@ -911,6 +1420,44 @@
         "FDA — безопасность яиц",
         "https://www.fda.gov/food/buy-store-serve-safe-food/what-you-need-know-about-egg-safety"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Garlic yoghurt",
+          "Чесночный йогурт"
+        ],
+        "items": [
+          "250 g · 1 small clove · salt",
+          "250 г · 1 маленький зубчик · соль"
+        ],
+        "step": 1,
+        "scene": "one small white bowl of smooth thick garlic yoghurt, simple soft cream folds with no garnish"
+      },
+      {
+        "name": [
+          "Eggs in cups",
+          "Яйца в чашках"
+        ],
+        "items": [
+          "4 eggs · crack each separately",
+          "4 яйца · разбить каждое отдельно"
+        ],
+        "step": 2,
+        "scene": "four small plain white cups grouped naturally together, each containing exactly one raw egg with one intact golden yolk in clear egg white"
+      },
+      {
+        "name": [
+          "Butter and mild pepper",
+          "Масло и неострый перец"
+        ],
+        "items": [
+          "Butter 20 g · pepper ½ tsp",
+          "Масло 20 г · перец ½ ч. л."
+        ],
+        "step": 4,
+        "scene": "one small white plate with a neat pale yellow butter pat and a tiny white cup of sparse broad red pepper flakes"
+      }
     ]
   },
   {
@@ -948,7 +1495,11 @@
           "10 min",
           "10 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Courgettes",
+          "Fine salt"
+        ]
       },
       {
         "title": [
@@ -964,7 +1515,14 @@
           "4 min",
           "4 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Egg",
+          "Plain flour",
+          "White brined cheese, crumbled",
+          "Dill, chopped",
+          "Spring onion"
+        ]
       },
       {
         "title": [
@@ -980,7 +1538,10 @@
           "12–16 min",
           "12–16 мин"
         ],
-        "heat": "medium"
+        "heat": "medium",
+        "uses": [
+          "Olive oil for shallow frying"
+        ]
       },
       {
         "title": [
@@ -996,7 +1557,11 @@
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Plain yoghurt",
+          "Lemon wedges"
+        ]
       }
     ],
     "notes": [],
@@ -1006,6 +1571,44 @@
         "Озлем Уоррен — кабачковые оладьи",
         "https://ozlemsturkishtable.com/2011/10/zucchini-courgette-fritters-flavored-with-feta-and-dill-kabak-mucveri/"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Squeezed courgette",
+          "Отжатый кабачок"
+        ],
+        "items": [
+          "400 g before grating; squeeze very dry",
+          "400 г до натирания; хорошо отжать"
+        ],
+        "step": 2,
+        "scene": "one small white bowl of well-squeezed coarse courgette shreds, distinct pale-green short strips with darker green skin edges, no water pool"
+      },
+      {
+        "name": [
+          "Egg and flour",
+          "Яйцо и мука"
+        ],
+        "items": [
+          "1 egg · flour 40 g",
+          "1 яйцо · мука 40 г"
+        ],
+        "step": 2,
+        "scene": "a small white plate holding one cracked raw egg in a small cup and a separate smooth flour mound, not mixed into batter"
+      },
+      {
+        "name": [
+          "Cheese and dill",
+          "Сыр и укроп"
+        ],
+        "items": [
+          "Cheese 60 g · dill 10 g",
+          "Сыр 60 г · укроп 10 г"
+        ],
+        "step": 2,
+        "scene": "one small white plate of six coarse white cheese crumbles beside a modest handful of chopped dark green dill fronds, readable simple botanical shapes"
+      }
     ]
   },
   {
@@ -1038,12 +1641,24 @@
           "Peel potatoes and cut into <b>3 mm matchsticks</b>. Rinse in cold drinking water, drain and dry thoroughly in a towel. Wet potatoes spit and will not crisp. Mix yoghurt with garlic and a pinch of the measured salt; keep chilled.",
           "Очистите картофель и нарежьте <b>соломкой 3 мм</b>. Промойте холодной питьевой водой, слейте её и тщательно обсушите полотенцем. Мокрый картофель брызгается и не хрустит. Смешайте йогурт, чеснок и щепотку соли из указанного количества; держите в холоде."
         ],
-        "scene": "Right hand cutting peeled potato batons into precise 3 mm matchsticks on stable board, left hand safe claw grip behind blade, twelve distinct long straight matchsticks, no irregular dice.",
+        "scene": "Tight instructional close-up of right-handed cook cutting peeled raw potato into TRUE 3 mm matchsticks, each stick is a very slender 4 cm long pencil-thin julienne strip. Show 5 already-cut strips lying side by side spanning only the width of ONE index fingernail (about 15 mm). Blade cuts a 3 mm slab into 3 mm strips. Left hand safe claw well behind blade. The strips have angular clean faces and very thin edges, never ordinary 6–10 mm fries. No oil or cooking yet.",
         "time": [
           "8 min",
           "8 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Potatoes",
+          "Thick plain yoghurt",
+          "Garlic, finely grated",
+          "Fine salt"
+        ],
+        "amounts": {
+          "Fine salt": [
+            "a little from the measured ½ tsp",
+            "немного от отмеренной ½ ч. л."
+          ]
+        }
       },
       {
         "title": [
@@ -1054,12 +1669,27 @@
           "Divide 3 tbsp oil between two or three potato batches in a 26 cm pan over medium-high heat. Fry in loose single layers, turning gently, for about 6–9 minutes per batch until golden and tender; thin-film frying gives crisp edges rather than deep-fried shoestrings. Drain in one layer, salt lightly and leave uncovered. Lower heat if darkening before tender. Cook at a calm berth; avoid hot-oil frying while the boat is moving.",
           "Разделите 3 ст. л. масла на две-три партии картофеля для сковороды 26 см на огне выше среднего. Жарьте свободным слоем, осторожно переворачивая, примерно по 6–9 минут до золотистости и мягкости; на тонком слое масла хрустят края, это не картофель фри во фритюре. Обсушите одним слоем, слегка посолите, не накрывайте. Если темнеет раньше мягкости, убавьте огонь. Готовьте на спокойной стоянке; не жарьте в горячем масле на ходу."
         ],
-        "scene": "Right hand using a flat slotted spatula to turn a small sparse single layer of 3 mm potato matchsticks in black pan. Exactly twelve distinct golden matchsticks on pan surface. Only a THIN GLOSSY FILM of oil coating the pan bottom, less than 1 mm, not deep oil or a frying bath. Pan bottom visible between potatoes, two isolated bubbles. Left hand holds pan handle. Flat clean cels, no noisy crumb texture.",
+        "scene": "Tight close-up of a black frying pan with sparse single layer of VERY THIN 3 mm potato julienne strips, 4 cm long, each only one sixth of an index finger width. Slender matchsticks, not ordinary thick fries. Golden edges, pale tender middles, all matchsticks keep the same narrow thickness. Right hand turns them with a broad wooden spatula; left hand holds pan handle. A thin olive oil film, only a dozen clean bubbles, no deep oil pool, no batter.",
         "time": [
           "12–27 min",
           "12–27 мин"
         ],
-        "heat": "medium-high"
+        "heat": "medium-high",
+        "uses": [
+          "Potatoes",
+          "Olive oil",
+          "Fine salt"
+        ],
+        "amounts": {
+          "Olive oil": [
+            "3 tbsp across potato batches",
+            "3 ст. л. на все партии картофеля"
+          ],
+          "Fine salt": [
+            "a little from the measured ½ tsp",
+            "немного от отмеренной ½ ч. л."
+          ]
+        }
       },
       {
         "title": [
@@ -1075,7 +1705,13 @@
           "2 min",
           "2 мин"
         ],
-        "heat": "low"
+        "heat": "low",
+        "uses": [
+          "Tomato paste",
+          "Drinking water for sauce",
+          "Butter for sauce",
+          "Pul biber (mild red-pepper flakes)"
+        ]
       },
       {
         "title": [
@@ -1091,7 +1727,22 @@
           "7–9 min",
           "7–9 мин"
         ],
-        "heat": "high"
+        "heat": "high",
+        "uses": [
+          "Tender beef steak, trimmed",
+          "Olive oil",
+          "Fine salt"
+        ],
+        "amounts": {
+          "Olive oil": [
+            "1 tbsp for beef",
+            "1 ст. л. для говядины"
+          ],
+          "Fine salt": [
+            "a little from the measured ½ tsp",
+            "немного от отмеренной ½ ч. л."
+          ]
+        }
       },
       {
         "title": [
@@ -1102,12 +1753,15 @@
           "Divide potatoes between plates, spoon yoghurt across the middle and pile beef on top. Add optional tomato sauce in a narrow line. Serve immediately; mixing everything or waiting under a lid makes the potatoes soggy.",
           "Разделите картофель между тарелками, выложите йогурт по центру и мясо сверху. Необязательный томатный соус нанесите узкой полосой. Подавайте сразу: при перемешивании или ожидании под крышкой картофель размокает."
         ],
-        "scene": "Finished plate of cokertme: twelve long thin golden potato matchsticks shown on a simple smooth golden base shape; a white yoghurt stripe; TEN SMALL NARROW browned beef strips each only 5 mm thick and 3 cm long on top; one narrow smooth red tomato sauce ribbon. Every strip a smooth flat brown cel shape with one shadow, no chunky steaks, crumbly mince or grainy textures. No hands, classic clean Japanese hand-drawn animated film style.",
+        "scene": "Tight close-up of a finished plate of Turkish cokertme: a low nest of VERY THIN 3 mm golden potato matchsticks, each 4 cm long and pencil-thin, topped in the centre with smooth thick white garlic yoghurt and a small pile of tender browned beef ribbons only 5 mm thick. A narrow smooth red tomato sauce line over the top. Potatoes are much finer than ordinary French fries, thin edges clearly visible. No hands, herbs, garnish, cubes, deep oil or tiny beaded textures.",
         "time": [
           "2 min",
           "2 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Thick plain yoghurt"
+        ]
       }
     ],
     "notes": [],
@@ -1117,6 +1771,44 @@
         "Айла Клулее — чёкертме (говядина с картофелем)",
         "https://cookingorgeous.com/blog/cokertme-kebabi/"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Dry potato sticks",
+          "Сухие картофельные полоски"
+        ],
+        "items": [
+          "350 g · 3 mm thick",
+          "350 г · толщина 3 мм"
+        ],
+        "step": 2,
+        "scene": "Single square ingredient preview from directly above: one small white plate holding a loose aligned pile of raw peeled potato julienne matchsticks, ONLY 3 mm thick and 4 cm long, slender pencil-thin angular cream sticks. Very fine narrow edges, not ordinary thick French fries or square batons. A few dozen distinct sticks, no hands, water, tools or other objects."
+      },
+      {
+        "name": [
+          "Thin beef strips",
+          "Тонкие полоски говядины"
+        ],
+        "items": [
+          "300 g · 5 mm thick · cut across grain",
+          "300 г · толщина 5 мм · поперёк волокон"
+        ],
+        "step": 4,
+        "scene": "a small white plate holding lean red raw beef strips 5 mm thick, short uniform strips with a few broad fibre lines, no steak cubes"
+      },
+      {
+        "name": [
+          "Garlic yoghurt",
+          "Чесночный йогурт"
+        ],
+        "items": [
+          "200 g · 1 small garlic clove",
+          "200 г · 1 маленький зубчик"
+        ],
+        "step": 5,
+        "scene": "one white bowl of thick smooth garlic yoghurt, simple soft creamy folds with no herbs or garnish"
+      }
     ]
   },
   {
@@ -1154,7 +1846,12 @@
           "5 min",
           "5 мин"
         ],
-        "heat": "medium"
+        "heat": "medium",
+        "uses": [
+          "Mild green pepper, diced",
+          "Olive oil",
+          "Fine salt"
+        ]
       },
       {
         "title": [
@@ -1165,12 +1862,16 @@
           "Add tomatoes, salt and optional chilli. Simmer uncovered for 8–10 minutes, stirring, until thick. Draw a spatula through: the trail should stay visible briefly rather than immediately filling with watery juice. Canned tomatoes may need longer.",
           "Добавьте помидоры, соль и необязательный перец. Тушите без крышки 8–10 минут, помешивая, до густоты. Проведите лопаткой: след должен ненадолго сохраняться, а не сразу заполняться водянистым соком. Консервированным помидорам может потребоваться дольше."
         ],
-        "scene": "Right hand drawing wooden spatula through THICK RED TOMATO SAUCE with ONLY GREEN PEPPER DICE, 5–8 mm small squares. A clear channel briefly exposes pan bottom. Tomato mass smooth red flat cel colour with twelve distinct red cubes and twelve small green squares. Absolutely no onions, no pale half moons, no white ribbons, no garlic, no egg yet. Three isolated bubbles, no watery liquid or fine texture. Natural hands, five proportional digits.",
+        "scene": "Right hand drawing wooden spatula through THICK RED TOMATO SAUCE with ONLY GREEN PEPPER DICE, 5–8 mm small squares. A clear channel briefly exposes pan bottom. Tomato mass smooth red clean layered cel colours with twelve distinct red cubes and twelve small green squares. Absolutely no onions, no pale half moons, no white ribbons, no garlic, no egg yet. Three isolated bubbles, no watery liquid or fine texture. Natural hands, five proportional digits.",
         "time": [
           "8–10 min",
           "8–10 мин"
         ],
-        "heat": "medium-low"
+        "heat": "medium-low",
+        "uses": [
+          "Ripe tomatoes, diced",
+          "Pul biber (mild red-pepper flakes)"
+        ]
       },
       {
         "title": [
@@ -1186,7 +1887,10 @@
           "2–4 min",
           "2–4 мин"
         ],
-        "heat": "low"
+        "heat": "low",
+        "uses": [
+          "Eggs"
+        ]
       },
       {
         "title": [
@@ -1202,7 +1906,11 @@
           "1 min",
           "1 мин"
         ],
-        "heat": ""
+        "heat": "",
+        "uses": [
+          "Beyaz peynir (white brined cheese), or feta",
+          "Bread"
+        ]
       }
     ],
     "notes": [],
@@ -1212,6 +1920,44 @@
         "Озлем Уоррен — менемен (яйца с помидором и перцем)",
         "https://ozlemsturkishtable.com/2010/07/tomato-pepper-feta-cheese-scrambled-egg-menemen/"
       ]
+    ],
+    "mise": [
+      {
+        "name": [
+          "Pepper dice",
+          "Кубики перца"
+        ],
+        "items": [
+          "100 g · 5–8 mm dice",
+          "100 г · кубики 5–8 мм"
+        ],
+        "step": 1,
+        "scene": "one white bowl with mild green pepper dice 5–8 mm across, hollow curved square pieces with broad pale green cut edges"
+      },
+      {
+        "name": [
+          "Tomato dice",
+          "Кубики помидоров"
+        ],
+        "items": [
+          "400 g · 1 cm dice",
+          "400 г · кубики 1 см"
+        ],
+        "step": 2,
+        "scene": "one white bowl of ripe red tomato dice approximately 1 cm, a few readable seed chambers and broad glossy cut surfaces, no onion"
+      },
+      {
+        "name": [
+          "Lightly beaten eggs",
+          "Слегка взбитые яйца"
+        ],
+        "items": [
+          "4 eggs · stop before frothy",
+          "4 яйца · не взбивать в пену"
+        ],
+        "step": 3,
+        "scene": "one white bowl containing smooth lightly beaten golden eggs, a few pale white streaks and no foam or bubbles"
+      }
     ]
   }
 ]

@@ -1,4 +1,4 @@
-import { getRecipe, type FoodIndex, type RecipeSummary } from "@/lib/content";
+import { getRecipe, getSashimi, type FoodIndex, type RecipeSummary } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
 import { recipeIngredients } from "./ingredients.mjs";
 import { stripHtml } from "./search.mjs";
@@ -25,8 +25,8 @@ export function findText(recipe: RecipeSummary, full: Named | null): string {
 export function findableRecipes(lang: Lang, index: FoodIndex): FindableRecipe[] {
   return index.recipes.map((recipe) => {
     const full = recipe.kind === "recipe" ? getRecipe(lang, recipe.slug) : null;
-    const fillings=recipe.slug==='onigiri'?ONIGIRI_FILLINGS.map(slug=>getRecipe(lang,slug)):[];
-    const combined=fillings.length?{ingredients:[...(full?.ingredients??[]),...fillings.flatMap(f=>f?.ingredients??[])]}:full;
-    return { ...recipe, find: [findText(recipe, combined),...fillings.map(f=>f?.title??'')].join(' '), ingredients: recipeIngredients(ingredientHtml(combined)) };
+    const choices=recipe.slug==='onigiri'?ONIGIRI_FILLINGS.map(slug=>getRecipe(lang,slug)):recipe.slug==='yacht-sashimi'?getSashimi(lang):[];
+    const combined=choices.length?{ingredients:[...(full?.ingredients??[]),...choices.flatMap(f=>f?.ingredients??[])]}:full;
+    return { ...recipe, find: [findText(recipe, combined),...choices.map(f=>f?.title??'')].join(' '), ingredients: recipeIngredients(ingredientHtml(combined)) };
   });
 }

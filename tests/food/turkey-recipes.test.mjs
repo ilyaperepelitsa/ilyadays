@@ -22,9 +22,15 @@ for (const lang of ['en', 'ru']) {
       assert.match(r.intro_html, /turkey-yacht-food#shopping/);
       assert.ok(r.sources.length > 0, `${slug}: attributed references`);
       assert.ok(r.steps.length >= 4, `${slug}: full instructions`);
+      assert.equal(r.mise.length, 3, `${slug}: prepared ingredient previews`);
+      for (const preview of r.mise) {
+        assert.ok(preview.image, `${slug}/${preview.name}: preview picture`);
+        assert.equal(preview.svg_fallback, null);
+      }
       const images = r.steps.map(step => step.images.illustration);
       assert.equal(new Set(images).size, images.length, `${slug}: different preparation stages`);
       for (const step of r.steps) {
+        assert.ok(step.uses_rows.length, `${slug}/${step.n}: measured step ingredients`);
         assert.ok(step.body_html.length > 150, `${slug}/${step.n}: usable instructions`);
         assert.equal(step.images.svg_fallback, null);
         assert.ok(!step.images.diagram, `${slug}/${step.n}: no diagram`);
@@ -52,6 +58,50 @@ test('one sashimi recipe contains all nine actionable species variations', () =>
   assert.match(prose, /cold chain/);
   assert.match(prose, /vacuum/);
   assert.match(prose, /Reject/);
+});
+
+test('sashimi has nine complete illustrated, scalable selections in both languages', () => {
+  for (const lang of ['en','ru']) {
+    const variants=read(`content/${lang}/sashimi.json`);
+    assert.equal(variants.length,9);
+    assert.equal(new Set(variants.map(r=>r.hero.image)).size,9);
+    assert.equal(new Set(variants.map(r=>r.mise[0].image)).size,9);
+    for (const r of variants) {
+      assert.equal(r.scale.serves,2);
+      assert.match(r.ingredients[0].items[0].amount_html,/data-a="300"/);
+      assert.ok(r.mise.every(m=>m.image&&!m.svg_fallback));
+      assert.ok(r.steps.every(s=>s.uses_rows.length));
+      assert.ok(r.steps[2].images.illustration||r.steps[2].images.how.length);
+      assert.ok(r.steps.every(s=>!s.images.diagram&&!s.images.svg_fallback));
+    }
+    const tuna=variants.find(r=>r.slug==='sashimi-tuna');
+    assert.equal(tuna.steps[2].images.how.length,2);
+    assert.match(tuna.steps[2].body_html,/90/);
+    const shrimp=variants.find(r=>r.slug==='sashimi-shrimp');
+    assert.match(shrimp.steps[2].body_html,lang==='en'?/No cutting/:/Нарезка не нужна/);
+  }
+});
+
+test('split cooking fats retain their exact per-step amounts', () => {
+  for(const lang of ['en','ru']) {
+    const shrimp=read(`content/${lang}/recipes/garlic-chilli-shrimp.json`);
+    for(const step of shrimp.steps.slice(1,3)) assert.ok(step.uses_rows.some(row=>row.amount_html.includes('data-a="12.5"')));
+    const beef=read(`content/${lang}/recipes/cokertme.json`);
+    assert.ok(beef.steps[1].uses_rows.some(row=>row.amount_html.includes('data-a="3"')));
+    assert.ok(beef.steps[3].uses_rows.some(row=>row.amount_html.includes('data-a="1"')));
+  }
+});
+
+test('the approved image style is preserved verbatim, with a real style reference', () => {
+  const policy=read('art/image-requirements.json');
+  assert.equal(policy.style,read('art/nigiri/illustration-prompts.json').style);
+  const prompts=read('art/recipe-quality/prompts.json');
+  for(const row of prompts) {
+    assert.ok(row.prompt.includes(policy.style));
+    assert.ok(row.reference_paths.length);
+    assert.ok(row.reference_paths[0].endsWith(policy.style_reference));
+    assert.ok(fs.existsSync(path.join(root,policy.style_reference)));
+  }
 });
 
 test('image prompts carry the centralized policy and distinct action scenes', () => {

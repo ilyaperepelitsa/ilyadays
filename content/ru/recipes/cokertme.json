@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Çökertme (говядина, хрустящий картофель и йогурт)",
-  "image": "illustrations/cokertme/5.webp?v=6ae461fe4c",
+  "image": "illustrations/cokertme/5.webp?v=d76794c27f",
   "svg_fallback": null
  },
  "ingredients": [
@@ -84,7 +84,48 @@
   }
  ],
  "intro_html": "Слоёное блюдо в стиле Бодрума с жаркой картофеля на тонком слое масла. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/cokertme/mise1.webp?v=231575b5c8",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+    "толщина <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"3\" data-s=\"0\">3 мм</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span> · толщина <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"3\" data-s=\"0\">3 мм</span>",
+   "name": "Сухие картофельные полоски",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/cokertme/mise2.webp?v=908599cd1a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+    "толщина <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span>",
+    "поперёк волокон"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> · толщина <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span> · поперёк волокон",
+   "name": "Тонкие полоски говядины",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/cokertme/mise3.webp?v=ea9bbfbdb3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> маленький зубчик"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span> · 1 маленький зубчик",
+   "name": "Чесночный йогурт",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "menemen",
@@ -126,7 +167,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/cokertme.jpg?v=7bc69f23aa",
+ "share_image": "share/cokertme.jpg?v=5d7a1bb78f",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -190,7 +231,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/cokertme/1.webp?v=b15c38347c",
+    "illustration": "illustrations/cokertme/1.webp?v=89ac301dcf",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -202,7 +243,24 @@
    "time": "8 мин",
    "time_html": "<span>8 мин</span>",
    "title": "Нарежьте и обсушите картофель",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Картофель"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Густой натуральный йогурт"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"небольшой зубчик|небольших зубчика|небольших зубчиков|небольшого зубчика\" data-n=\"1\">1 небольшой зубчик</span>",
+     "name_html": "Чеснок, мелко натёртый"
+    },
+    {
+     "amount_html": "немного от отмеренной <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Разделите <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 ст. л.</span> масла на две-три партии картофеля для сковороды <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 см</span> на огне выше среднего.</li><li>Жарьте свободным слоем, осторожно переворачивая, примерно по 6–9 минут до золотистости и мягкости; на тонком слое масла хрустят края, это не картофель фри во фритюре.</li><li>Обсушите одним слоем, слегка посолите, не накрывайте.</li><li>Если темнеет раньше мягкости, убавьте огонь.</li><li>Готовьте на спокойной стоянке; не жарьте в горячем масле на ходу.</li></ul>",
@@ -217,7 +275,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/cokertme/2.webp?v=e9080b64f6",
+    "illustration": "illustrations/cokertme/2.webp?v=22edd2cd58",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +287,20 @@
    "time": "12–27 мин",
    "time_html": "<span>12–27 мин</span>",
    "title": "Жарьте небольшими партиями",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Картофель"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span> на все партии картофеля",
+     "name_html": "Оливковое масло"
+    },
+    {
+     "amount_html": "немного от отмеренной <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Если делаете соус, слейте картофельное масло в жаропрочную ёмкость.</li><li>На слабом огне растопите масло, прогрейте пасту 30 секунд, добавьте воду и необязательный перец, проварите 1 минуту.</li><li>Перелейте в чашку.</li><li>Если соус не нужен, пропустите шаг.</li></ul>",
@@ -244,7 +315,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/cokertme/3.webp?v=3b03cf865c",
+    "illustration": "illustrations/cokertme/3.webp?v=cca908cff8",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -256,7 +327,24 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Сделайте необязательный соус",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Томатная паста"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "name_html": "Питьевая вода для соуса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
+     "name_html": "Сливочное масло для соуса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Pul biber (хлопья неострого красного перца)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>На чистой мясной доске нарежьте говядину поперёк волокон <b>полосками <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 мм</span></b>.</li><li>Обсушите, посолите остатком соли.</li><li>Нагрейте последнюю ложку масла на сильном огне; жарьте двумя свободными партиями по 2–3 минуты, перевернув один раз.</li><li>Проверьте <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b>, дайте отдохнуть 3 минуты на чистой тарелке.</li></ul>",
@@ -271,7 +359,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/cokertme/4.webp?v=1acecc197f",
+    "illustration": "illustrations/cokertme/4.webp?v=5de02eeeab",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -283,7 +371,20 @@
    "time": "7–9 мин",
    "time_html": "<span>7–9 мин</span>",
    "title": "Обжарьте говядину",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Нежный говяжий стейк, зачищенный"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> для говядины",
+     "name_html": "Оливковое масло"
+    },
+    {
+     "amount_html": "немного от отмеренной <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Разделите картофель между тарелками, выложите йогурт по центру и мясо сверху.</li><li>Необязательный томатный соус нанесите узкой полосой.</li><li>Подавайте сразу: при перемешивании или ожидании под крышкой картофель размокает.</li></ul>",
@@ -294,7 +395,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/cokertme/5.webp?v=6ae461fe4c",
+    "illustration": "illustrations/cokertme/5.webp?v=d76794c27f",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -306,7 +407,12 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Соберите перед едой",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Густой натуральный йогурт"
+    }
+   ]
   }
  ],
  "timeline": null,

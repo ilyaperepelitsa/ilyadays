@@ -111,7 +111,7 @@ def prompt(look, setting, scene, hands=False):
     return f"{st['style']} {HANDS if hands else NO_TEXT}\n\n{RULES}\n\n{setting.format(**st)}\n\nScene: {scene}\n\n{tail}"
 
 
-MISE_FRAME = ("Mise-en-place icon: viewed from directly above (top-down), {item}, centred and filling about 80% of "
+MISE_FRAME = ("Mise-en-place ingredient still life: viewed from directly above (top-down), {item}, centred and filling about 80% of "
               "a square frame, on a plain clean off-white background with a soft round shadow. Nothing else in "
               "frame, no hands, no table edges.")
 

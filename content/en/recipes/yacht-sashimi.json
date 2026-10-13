@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Sashimi (sliced raw seafood) · all options",
-  "image": "illustrations/yacht-sashimi/4.webp?v=12098f6cda",
+  "image": "illustrations/sashimi-tuna/4.webp?v=78533e3347",
   "svg_fallback": null
  },
  "ingredients": [
@@ -87,7 +87,46 @@
   }
  ],
  "intro_html": "One cold preparation, nine seafood variations, with lemon–soy dip. Only use documented raw-use seafood. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/sashimi-tuna/mise1.webp?v=606026eef2",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>, skinless and boneless; keep refrigerated"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>, skinless and boneless; keep refrigerated",
+   "name": "Trimmed tuna loin",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/sashimi-bonito/mise2.webp?v=32051c9ce6",
+   "items": [
+    "Soy <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+    "lemon <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+    "water <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>"
+   ],
+   "items_html": "Soy <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> · lemon <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span> · water <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+   "name": "Lemon–soy dip",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/yacht-sashimi/mise3.webp?v=bc2b3d7098",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>, cut into <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 mm</span> rounds"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>, cut into <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 mm</span> rounds",
+   "name": "Optional cucumber",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "lemon-caper-dorada",
@@ -130,7 +169,7 @@
    "person": "person"
   }
  },
- "share_image": "share/yacht-sashimi.jpg?v=257489d9eb",
+ "share_image": "share/sashimi-tuna.jpg?v=b909daff59",
  "siblings": [
   {
    "slug": "lemon-caper-dorada",
@@ -194,7 +233,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/1.webp?v=addb4824bb",
+    "illustration": "illustrations/sashimi-bonito/1.webp?v=73f594d94d",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -206,7 +245,12 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Verify and chill",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Seafood documented for raw consumption"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Stir soy, lemon and water in a small cup.</li><li>Keep the dip separate until eating.</li><li>Wash hands and use a freshly cleaned board, sharp long knife and chilled plate.</li><li>Slice optional cucumber into <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 mm</span> rounds on a separate clean board before handling seafood.</li><li>Work with one small portion at a time, leaving the rest refrigerated.</li></ul>",
@@ -217,7 +261,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/2.webp?v=b2b444bf82",
+    "illustration": "illustrations/sashimi-bonito/2.webp?v=8ba25ddc15",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +273,24 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Mix the dip; prepare clean tools",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Lemon juice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Cold drinking water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Cucumber"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Pat the seafood dry with clean disposable paper.</li><li>For a trimmed tuna or salmon loin, find the direction of the visible muscle lines and cut across them into <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"7\" data-s=\"0\">5–7 mm</span></b> slices.</li><li>Use one long pulling stroke per slice, without sawing.</li><li>Keep the guiding hand well behind the blade; do not attempt to slice a slippery tiny offcut.</li><li>See the species notes below for scallops and specialist alternatives.</li></ul>",
@@ -240,7 +301,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/3.webp?v=5586ebbec6",
+    "illustration": "illustrations/sashimi-tuna/3-how2.webp?v=31144783bd",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -252,7 +313,12 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Slice across the grain",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Seafood documented for raw consumption"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Arrange <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> seafood per person in one layer.</li><li>Add optional cucumber; serve the dip beside it.</li><li>Mandarin may replace lemon; olive oil and chilli are optional additions to the dip.</li><li>Do not leave a communal platter in the sun.</li><li>Lemon, soy, quick searing and a boat freezer do not replace raw-use controls.</li><li>Reject seafood after a failed cold chain; cooking cannot rescue it.</li></ul>",
@@ -263,7 +329,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/4.webp?v=12098f6cda",
+    "illustration": "illustrations/sashimi-tuna/4.webp?v=78533e3347",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -275,7 +341,24 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Plate cold; eat immediately",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Seafood documented for raw consumption"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Cucumber"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Mandarin juice, instead of lemon"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Olive oil"
+    }
+   ]
   }
  ],
  "timeline": null,

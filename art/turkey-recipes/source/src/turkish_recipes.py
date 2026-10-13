@@ -5,7 +5,7 @@ The site exports these Recipe instances; Travel owns season and shopping researc
 import json
 import re
 from pathlib import Path
-from kit import Recipe, Step
+from kit import Recipe, Step, Bowl
 
 DATA = json.loads(Path(__file__).with_suffix('.json').read_text())
 RECIPES = []
@@ -54,12 +54,13 @@ for item in DATA:
     notes = [(t(title), t(body)) for title, body in item['notes']]
     notes.append((t(('Core and optional', 'Основное и необязательное')), t(('Make the core ingredient list first. Optional additions are separate; each is called out where it enters. Quantities serve two. Cook meat and seafood just before eating; keep dairy and raw ingredients refrigerated at 0–4 °C. Prep vegetables before raw meat or use a separate board and clean tools.', 'Сначала соберите основные ингредиенты. Необязательные добавки вынесены отдельно; в шагах указано, когда их добавлять. Количества на двоих. Мясо и морепродукты готовьте перед едой; молочное и сырые продукты держите при 0–4 °C. Подготовьте овощи до сырого мяса или используйте отдельную доску и чистые инструменты.'))))
     heat_ru = {'medium-high': 'выше среднего', 'medium-low': 'слабый-средний', 'medium': 'средний', 'high': 'сильный', 'low': 'слабый'}
-    steps = [Step(t(x['title']), t(x['body']), time=t(x['time']), heat=t((x['heat'], heat_ru.get(x['heat'], x['heat']))) if x['heat'] else '') for x in item['steps']]
+    steps = [Step(t(x['title']), t(x['body']), uses=x.get('uses', []), amounts={name:t(pair) for name,pair in x.get('amounts',{}).items()}, time=t(x['time']), heat=t((x['heat'], heat_ru.get(x['heat'], x['heat']))) if x['heat'] else '') for x in item['steps']]
+    mise = [Bowl(t(x['name']), t(x['items']), [], t((f"Step {x['step']}", f"Шаг {x['step']}"))) for x in item.get('mise', [])]
     recipe = Recipe(slug=item['slug'], title=t(item['title']), group='Turkish & coastal', blurb=t(item['blurb']),
                     yields=t(('2 portions', '2 порции')), total=t(item['total']), serves=2,
                     intro=t(item['blurb']) + ' ' + context,
                     ingredients=ingredients, equipment=equipment, before_ingredients=simple_html,
-                    steps=steps, notes=notes, sources=[(t((en, ru)), url) for en, ru, url in item['sources']])
+                    steps=steps, mise=mise, notes=notes, sources=[(t((en, ru)), url) for en, ru, url in item['sources']])
     for i, step in enumerate(recipe.steps, 1):
         # Enable the existing full-size picture link without generating a diagram.
         def picture_only():

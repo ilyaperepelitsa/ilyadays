@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useSyncExternalStore } from "react";
 import { subscribeChoices, choiceSearch, serverSearch } from "@/components/food/useUrlChoice";
 import { ONIGIRI_FILLINGS, ONIGIRI_METHODS } from "@/lib/food/integrated-recipes.mjs";
+import { sashimiSelection } from '@/lib/food/sashimi.mjs';
 
 const SESSION_MS = 12 * 60 * 60 * 1000;
 const TICKABLE = ".ingredients li, li.step";
@@ -18,7 +19,7 @@ export function PageMemory() {
   const query=new URLSearchParams(search);
   const filling=query.get('filling')??'';
   const method=query.get('method')??'';
-  const variant=pathname.endsWith('/food/onigiri')?`${ONIGIRI_FILLINGS.includes(filling)?filling:ONIGIRI_FILLINGS[0]}:${ONIGIRI_METHODS.includes(method)?method:'onigiri'}`:'';
+  const variant=pathname.endsWith('/food/onigiri')?`${ONIGIRI_FILLINGS.includes(filling)?filling:ONIGIRI_FILLINGS[0]}:${ONIGIRI_METHODS.includes(method)?method:'onigiri'}`:pathname.endsWith('/food/yacht-sashimi')?`sashimi:${sashimiSelection(query.get('seafood'))}`:'';
   const previousPath=useRef('');
 
   useEffect(() => {

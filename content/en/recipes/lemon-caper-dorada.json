@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Çipura tava (pan-fried sea bream), lemon & capers",
-  "image": "illustrations/lemon-caper-dorada/4.webp?v=501cbcb5d9",
+  "image": "illustrations/lemon-caper-dorada/4.webp?v=f3eac2d44a",
   "svg_fallback": null
  },
  "ingredients": [
@@ -80,7 +80,49 @@
   }
  ],
  "intro_html": "Crisp skin, moist fish and a quick lemon pan sauce; a modern coastal variation. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/lemon-caper-dorada/mise1.webp?v=0e0451bd3a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+    "skin on",
+    "pin bones removed"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span> · skin on · pin bones removed",
+   "name": "Dry fillets",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/lemon-caper-dorada/mise2.webp?v=3a1a596419",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> lemon",
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span> water"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span> lemon · <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span> water",
+   "name": "Lemon and water",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 4",
+   "image": "illustrations/lemon-caper-dorada/mise3.webp?v=b0857371f0",
+   "items": [
+    "Capers",
+    "butter",
+    "parsley"
+   ],
+   "items_html": "Capers · butter · parsley",
+   "name": "Optional finish",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "garlic-chilli-shrimp",
@@ -126,7 +168,7 @@
    "person": "person"
   }
  },
- "share_image": "share/lemon-caper-dorada.jpg?v=e1cd70bb3d",
+ "share_image": "share/lemon-caper-dorada.jpg?v=4538889e86",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -190,7 +232,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/1.webp?v=227b4ce91d",
+    "illustration": "illustrations/lemon-caper-dorada/1.webp?v=23f902bf77",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -202,7 +244,16 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Dry and check the fillets",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Sea bream fillets, skin-on, pin bones removed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Heat oil in a <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"24\" data-b=\"26\" data-s=\"0\">24–26 cm</span> frying pan over medium-high heat.</li><li>Lay fillets <b>skin-side down</b> away from you.</li><li>Press gently with a fish spatula for 20 seconds, then leave for 3–5 minutes until the skin releases and the flesh is opaque most of the way up.</li><li>Lower heat if the skin darkens too fast.</li></ul>",
@@ -217,7 +268,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/2.webp?v=b27499427f",
+    "illustration": "illustrations/lemon-caper-dorada/2.webp?v=46ba3001c2",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +280,16 @@
    "time": "3–5 min",
    "time_html": "<span>3–5 min</span>",
    "title": "Crisp the skin",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Sea bream fillets, skin-on, pin bones removed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Olive oil"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Slide the spatula fully underneath; turn once.</li><li>Cook the flesh side for 1–3 minutes, depending on thickness.</li><li>Check <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> in the thickest part; the flesh should separate easily.</li><li>Transfer to warm plates.</li><li>Time is a guide, not the doneness test.</li></ul>",
@@ -244,7 +304,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/3.webp?v=000b37f6bf",
+    "illustration": "illustrations/lemon-caper-dorada/3.webp?v=3d72c7dc0b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -256,7 +316,12 @@
    "time": "1–3 min",
    "time_html": "<span>1–3 min</span>",
    "title": "Turn and finish",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Sea bream fillets, skin-on, pin bones removed"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Take the pan off the heat.</li><li>Carefully add water and lemon; swirl in optional butter and capers for 20–30 seconds.</li><li>Spoon around the fish so the skin stays crisp.</li><li>Add optional chopped parsley and lemon wedges; serve immediately.</li></ul>",
@@ -267,7 +332,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/4.webp?v=501cbcb5d9",
+    "illustration": "illustrations/lemon-caper-dorada/4.webp?v=f3eac2d44a",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -279,7 +344,32 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Make the lemon sauce",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Lemon juice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Drinking water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Capers, drained"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>",
+     "name_html": "Butter"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 g</span>",
+     "name_html": "Parsley"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Lemon wedges"
+    }
+   ]
   }
  ],
  "timeline": null,

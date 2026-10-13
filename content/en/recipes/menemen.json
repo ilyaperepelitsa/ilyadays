@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Menemen (Turkish tomato-and-pepper eggs)",
-  "image": "illustrations/menemen/4.webp?v=9f1cb49334",
+  "image": "illustrations/menemen/4.webp?v=41d3e03bfe",
   "svg_fallback": null
  },
  "ingredients": [
@@ -75,7 +75,47 @@
   }
  ],
  "intro_html": "A thick tomato-pepper base with soft folded eggs and optional white cheese. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/menemen/mise1.webp?v=d3113b4bc3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+    "<span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"8\" data-s=\"0\">5–8 mm</span> dice"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span> · <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"8\" data-s=\"0\">5–8 mm</span> dice",
+   "name": "Pepper dice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/menemen/mise2.webp?v=ea00051be3",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+    "<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> dice"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span> · <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> dice",
+   "name": "Tomato dice",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/menemen/mise3.webp?v=733383e3ff",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"egg|eggs\" data-n=\"1\">4 eggs</span>",
+    "stop before frothy"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"egg|eggs\" data-n=\"1\">4 eggs</span> · stop before frothy",
+   "name": "Lightly beaten eggs",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "sous-vide-beets",
@@ -117,7 +157,7 @@
    "person": "person"
   }
  },
- "share_image": "share/menemen.jpg?v=c6d615320d",
+ "share_image": "share/menemen.jpg?v=ba0d6c8577",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -185,7 +225,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/menemen/1.webp?v=3e590a47d9",
+    "illustration": "illustrations/menemen/1.webp?v=3c9bb1d47b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -197,7 +237,20 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Dice and soften the pepper",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Mild green pepper, diced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Add tomatoes, salt and optional chilli.</li><li>Simmer uncovered for 8–10 minutes, stirring, until thick.</li><li>Draw a spatula through: the trail should stay visible briefly rather than immediately filling with watery juice.</li><li>Canned tomatoes may need longer.</li></ul>",
@@ -212,7 +265,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/menemen/2.webp?v=cf9f2d527d",
+    "illustration": "illustrations/menemen/2.webp?v=860b36083b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -224,7 +277,16 @@
    "time": "8–10 min",
    "time_html": "<span>8–10 min</span>",
    "title": "Reduce the tomatoes",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+     "name_html": "Ripe tomatoes, diced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Pul biber (mild red-pepper flakes)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Beat eggs briefly in a cup.</li><li>Lower heat and pour into the thick sauce.</li><li>Wait 20 seconds, then fold slowly with a spatula for about 2–4 minutes.</li><li>Stop when eggs form soft set folds with no runny raw egg; an egg-mixture temperature of <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"71\" data-s=\"0\">71 °C</span></b> gives a conservative endpoint.</li><li>Avoid constant vigorous stirring into dry crumbs.</li></ul>",
@@ -239,7 +301,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/menemen/3.webp?v=293182c786",
+    "illustration": "illustrations/menemen/3.webp?v=aca70d8047",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -251,7 +313,12 @@
    "time": "2–4 min",
    "time_html": "<span>2–4 min</span>",
    "title": "Fold in the eggs gently",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Eggs"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Remove from the heat.</li><li>Add optional cheese in large soft crumbles; taste before extra salt.</li><li>Serve immediately from the pan with optional bread.</li><li>The base should be spoonable and glossy, not watery or dry.</li></ul>",
@@ -262,7 +329,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/menemen/4.webp?v=9f1cb49334",
+    "illustration": "illustrations/menemen/4.webp?v=41d3e03bfe",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -274,7 +341,16 @@
    "time": "1 min",
    "time_html": "<span>1 min</span>",
    "title": "Add cheese off the heat",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Beyaz peynir (white brined cheese), or feta"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Bread"
+    }
+   ]
   }
  ],
  "timeline": null,

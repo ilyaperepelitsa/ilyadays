@@ -190,6 +190,7 @@ function load<T>(lang: Lang, file: string): T {
 
 export const getFoodIndex = (lang: Lang) => consolidatedIndex(load<FoodIndex>(lang, "index.json"));
 export const getSousVide = (lang: Lang) => load<SousVide>(lang, "sous-vide.json");
+export const getSashimi = (lang: Lang) => load<Recipe[]>(lang, "sashimi.json");
 
 export function getRecipe(lang: Lang, slug: string): Recipe | null {
   if (!/^[a-z0-9-]+$/.test(slug) || !fs.existsSync(path.join(ROOT, lang, "recipes", `${slug}.json`))) return null;

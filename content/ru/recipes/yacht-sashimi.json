@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Сашими (сырые морепродукты ломтиками) · все варианты",
-  "image": "illustrations/yacht-sashimi/4.webp?v=12098f6cda",
+  "image": "illustrations/sashimi-tuna/4.webp?v=78533e3347",
   "svg_fallback": null
  },
  "ingredients": [
@@ -87,7 +87,46 @@
   }
  ],
  "intro_html": "Одна холодная техника, девять вариантов морепродуктов и лимонно-соевый соус. Только подтверждённая поставка для сырой подачи. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/sashimi-tuna/mise1.webp?v=606026eef2",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>, без кожи и костей; держите в холодильнике"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>, без кожи и костей; держите в холодильнике",
+   "name": "Зачищенный тунец",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/sashimi-bonito/mise2.webp?v=32051c9ce6",
+   "items": [
+    "Соя <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+    "лимон <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+    "вода <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>"
+   ],
+   "items_html": "Соя <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> · лимон <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span> · вода <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+   "name": "Лимонно-соевый соус",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/yacht-sashimi/mise3.webp?v=bc2b3d7098",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>, кружки толщиной <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 мм</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>, кружки толщиной <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 мм</span>",
+   "name": "Необязательный огурец",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "lemon-caper-dorada",
@@ -130,7 +169,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/yacht-sashimi.jpg?v=257489d9eb",
+ "share_image": "share/sashimi-tuna.jpg?v=b909daff59",
  "siblings": [
   {
    "slug": "lemon-caper-dorada",
@@ -194,7 +233,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/1.webp?v=addb4824bb",
+    "illustration": "illustrations/sashimi-bonito/1.webp?v=73f594d94d",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -206,7 +245,12 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Проверьте и охладите",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Морепродукты с подтверждённой пригодностью для сырой подачи"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Смешайте сою, лимон и воду в чашке.</li><li>Соус держите отдельно до еды.</li><li>Вымойте руки, возьмите чистую доску, острый длинный нож и охлаждённую тарелку.</li><li>Необязательный огурец нарежьте кружками <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 мм</span> на отдельной чистой доске до работы с рыбой.</li><li>Доставайте небольшую порцию; остальное оставляйте в холодильнике.</li></ul>",
@@ -217,7 +261,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/2.webp?v=b2b444bf82",
+    "illustration": "illustrations/sashimi-bonito/2.webp?v=8ba25ddc15",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +273,24 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Смешайте соус; подготовьте чистые инструменты",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Лимонный сок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Холодная питьевая вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Огурец"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Промокните чистым одноразовым полотенцем.</li><li>На зачищенном тунце или лососе найдите направление мышечных волокон и режьте поперёк ломтиками <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"7\" data-s=\"0\">5–7 мм</span></b>.</li><li>На ломтик — одно длинное движение ножа к себе, без пиления.</li><li>Направляющую руку держите позади лезвия; не пытайтесь нарезать скользкий маленький обрезок.</li><li>Для гребешков и специальных вариантов см. пояснения ниже.</li></ul>",
@@ -240,7 +301,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/3.webp?v=5586ebbec6",
+    "illustration": "illustrations/sashimi-tuna/3-how2.webp?v=31144783bd",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -252,7 +313,12 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Нарежьте поперёк волокон",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Морепродукты с подтверждённой пригодностью для сырой подачи"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Разложите по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> на человека в один слой.</li><li>Добавьте необязательный огурец; соус подайте отдельно.</li><li>Мандарин может заменить лимон, масло и чили — необязательные добавки в соус.</li><li>Не оставляйте общее блюдо на солнце.</li><li>Лимон, соя, быстрая обжарка и морозилка яхты не заменяют контроль сырой подачи.</li><li>Продукт с нарушенной холодовой цепью выбрасывайте: приготовление его не спасёт.</li></ul>",
@@ -263,7 +329,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/yacht-sashimi/4.webp?v=12098f6cda",
+    "illustration": "illustrations/sashimi-tuna/4.webp?v=78533e3347",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -275,7 +341,24 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Подайте холодным и сразу ешьте",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Морепродукты с подтверждённой пригодностью для сырой подачи"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Огурец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Мандариновый сок вместо лимонного"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Оливковое масло"
+    }
+   ]
   }
  ],
  "timeline": null,

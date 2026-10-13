@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Palamut tava (pan-fried bonito) & sumac onions",
-  "image": "illustrations/palamut-tava/4.webp?v=e2b914d181",
+  "image": "illustrations/palamut-tava/4.webp?v=0220e0853d",
   "svg_fallback": null
  },
  "ingredients": [
@@ -79,7 +79,47 @@
   }
  ],
  "intro_html": "Autumn fish with a thin flour crust and sharp onion salad. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 1",
+   "image": "illustrations/palamut-tava/mise1.webp?v=baebf10c4d",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span> thin onion",
+    "lemon",
+    "optional sumac"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span> thin onion · lemon · optional sumac",
+   "name": "Sharp onion salad",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/palamut-tava/mise2.webp?v=2a64c3027d",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+    "<span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 mm</span> thick"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span> · <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 mm</span> thick",
+   "name": "Bonito steaks",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/palamut-tava/mise3.webp?v=3263be06d6",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>, thin coating only"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>, thin coating only",
+   "name": "Flour for dusting",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "sumac-lamb-wraps",
@@ -125,7 +165,7 @@
    "person": "person"
   }
  },
- "share_image": "share/palamut-tava.jpg?v=1509465613",
+ "share_image": "share/palamut-tava.jpg?v=f34b124973",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -189,7 +229,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/palamut-tava/1.webp?v=8852a35ab8",
+    "illustration": "illustrations/palamut-tava/1.webp?v=17b4022010",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -201,7 +241,28 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Soften the onions",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Red onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Lemon juice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Fine salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sumac (tart red spice)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 g</span>",
+     "name_html": "Parsley"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Pat steaks dry and season with the remaining salt.</li><li>Spread flour on a plate; coat each side lightly and shake off loose flour.</li><li>Keep the central bones in place for cooking and warn eaters about them.</li></ul>",
@@ -212,7 +273,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/palamut-tava/2.webp?v=3dcaa97744",
+    "illustration": "illustrations/palamut-tava/2.webp?v=da19368d5a",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -224,7 +285,16 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Dry and dust the fish",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+     "name_html": "Bonito steaks, cleaned, 15–20 mm thick"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Plain flour"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Heat oil over medium-high heat.</li><li>Lay steaks in one layer; fry about 3–4 minutes per side, lowering heat if flour darkens quickly.</li><li>Turn with a broad spatula.</li><li>Check <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> at the thickest flesh away from bone.</li><li>Use time as a guide; do not leave the centre raw.</li></ul>",
@@ -239,7 +309,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/palamut-tava/3.webp?v=e9824dc332",
+    "illustration": "illustrations/palamut-tava/3.webp?v=3b1ce47d92",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -251,7 +321,16 @@
    "time": "6–8 min",
    "time_html": "<span>6–8 min</span>",
    "title": "Fry; turn once",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>",
+     "name_html": "Bonito steaks, cleaned, 15–20 mm thick"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Olive oil"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Plate fish with the onion salad, optional parsley and lemon wedges.</li><li>Eat immediately, removing bones carefully.</li><li>Cold-chain failure is a reason to discard bonito: histamine is not reliably destroyed by cooking.</li></ul>",
@@ -262,7 +341,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/palamut-tava/4.webp?v=e2b914d181",
+    "illustration": "illustrations/palamut-tava/4.webp?v=0220e0853d",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -274,7 +353,16 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Serve with the sharp onions",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Red onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Lemon wedges"
+    }
+   ]
   }
  ],
  "timeline": null,

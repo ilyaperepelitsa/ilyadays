@@ -180,7 +180,7 @@ function StepCard({ s, t }: { s: Step; t: T }) {
           </div>
         )}
         <Html as="div" className="step-body" html={s.body_html} />
-        {im.how.length > 0 && im.result && (
+        {im.how.length > 0 && im.result && !im.how.some(h => h.src === im.result) && (
           <figure className="result">
             <Illo src={im.result} alt={s.title} />
             <figcaption>{t("Should look like this")}</figcaption>

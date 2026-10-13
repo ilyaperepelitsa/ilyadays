@@ -6,7 +6,7 @@ import { subscribeChoices, choiceSearch, serverSearch } from "@/components/food/
 /** EN · RU. Remembers the choice in localStorage (the head script reads it on every page); never a cookie. */
 export function LangSwitch({ lang, path, label }: { lang: Lang; path: string; label: string }) {
   const search=useSyncExternalStore(subscribeChoices,choiceSearch,serverSearch);
-  const selection=path==='/food/onigiri'||path==='/food/sous-vide'?search:'';
+  const selection=['/food/onigiri','/food/sous-vide','/food/yacht-sashimi'].includes(path)?search:'';
   const remember = (to: Lang) => {
     try {
       localStorage.setItem(LANG_KEY, to);

@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Ali nazik (lamb on smoky aubergine yoghurt)",
-  "image": "illustrations/ali-nazik/4.webp?v=5ed2bb5a25",
+  "image": "illustrations/ali-nazik/4.webp?v=50c8d86fa0",
   "svg_fallback": null
  },
  "ingredients": [
@@ -84,7 +84,46 @@
   }
  ],
  "intro_html": "A quick pan version using ready-grilled aubergine, with no grill or oven. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/ali-nazik/mise1.webp?v=782e907dd8",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>, ready-grilled flesh"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>, ready-grilled flesh",
+   "name": "Drained aubergine",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/ali-nazik/mise2.webp?v=c28d8f8ada",
+   "items": [
+    "Yoghurt <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> small garlic clove"
+   ],
+   "items_html": "Yoghurt <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span> · 1 small garlic clove",
+   "name": "Garlic yoghurt",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/ali-nazik/mise3.webp?v=b56435a667",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+    "keep cold"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> · keep cold",
+   "name": "Lamb mince",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "gavurdagi-salad",
@@ -130,7 +169,7 @@
    "person": "person"
   }
  },
- "share_image": "share/ali-nazik.jpg?v=9bc4e04ee9",
+ "share_image": "share/ali-nazik.jpg?v=71c3a8b9a7",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -194,7 +233,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/ali-nazik/1.webp?v=734adbdbc3",
+    "illustration": "illustrations/ali-nazik/1.webp?v=ef1129146c",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -206,7 +245,12 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Drain and chop the aubergine",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>",
+     "name_html": "Grilled aubergine flesh, drained, ready to eat"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Stir yoghurt with garlic and half the salt.</li><li>Warm aubergine gently in a small pan for 2 minutes; take off the heat and fold into yoghurt.</li><li>Keep warm, not bubbling: boiling can split the yoghurt.</li><li>Divide between two plates.</li></ul>",
@@ -221,7 +265,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/ali-nazik/2.webp?v=4318d76001",
+    "illustration": "illustrations/ali-nazik/2.webp?v=9afb364c38",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -233,7 +277,24 @@
    "time": "4 min",
    "time_html": "<span>4 min</span>",
    "title": "Mix the yoghurt base",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>",
+     "name_html": "Grilled aubergine flesh, drained, ready to eat"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Thick plain yoghurt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 small clove</span>",
+     "name_html": "Garlic, finely grated"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span> (half)",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Melt butter over medium-high heat.</li><li>Add mince in a thin layer; leave 2 minutes, then break into small <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> pieces and turn.</li><li>Cook 5–7 minutes total, until browned and <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"71\" data-s=\"0\">71 °C</span></b>.</li><li>If using tomato paste, stir it in for the last minute; optional chilli goes in for the last 20 seconds.</li></ul>",
@@ -248,7 +309,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/ali-nazik/3.webp?v=8c86c599e7",
+    "illustration": "illustrations/ali-nazik/3.webp?v=2bee9ccac5",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -260,7 +321,24 @@
    "time": "5–7 min",
    "time_html": "<span>5–7 min</span>",
    "title": "Brown the lamb thoroughly",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Lamb mince"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 g</span>",
+     "name_html": "Butter"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Pul biber (mild red-pepper flakes)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Tomato paste"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Spoon hot lamb and its butter over the warm aubergine yoghurt.</li><li>Finish with remaining salt to taste, optional parsley and flatbread.</li><li>Keep meat on top rather than stirring everything into a grey mixture.</li></ul>",
@@ -271,7 +349,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/ali-nazik/4.webp?v=5ed2bb5a25",
+    "illustration": "illustrations/ali-nazik/4.webp?v=50c8d86fa0",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -283,7 +361,20 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Layer and eat warm",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 g</span>",
+     "name_html": "Parsley"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Flatbread"
+    },
+    {
+     "amount_html": "up to <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>, to taste",
+     "name_html": "Fine salt"
+    }
+   ]
   }
  ],
  "timeline": null,

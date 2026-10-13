@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Tereyağlı karides (креветки в масле), чеснок и чили",
-  "image": "illustrations/garlic-chilli-shrimp/4.webp?v=5dd883e308",
+  "image": "illustrations/garlic-chilli-shrimp/4.webp?v=f1593664a3",
   "svg_fallback": null
  },
  "ingredients": [
@@ -80,7 +80,49 @@
   }
  ],
  "intro_html": "Крупные креветки в чесночном масле с pul biber (хлопьями неострого красного перца). Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/garlic-chilli-shrimp/mise1.webp?v=73fe615191",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+    "очищены",
+    "без кишечной жилки"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span> · очищены · без кишечной жилки",
+   "name": "Обсушенные сырые креветки",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/garlic-chilli-shrimp/mise2.webp?v=6c4d6455cc",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
+    "масло <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span> · масло <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>",
+   "name": "Чеснок ломтиками и масло",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/garlic-chilli-shrimp/mise3.webp?v=84e93f1d58",
+   "items": [
+    "Хлопья перца",
+    "петрушка",
+    "хлеб"
+   ],
+   "items_html": "Хлопья перца · петрушка · хлеб",
+   "name": "Необязательные добавки",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "palamut-tava",
@@ -122,7 +164,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/garlic-chilli-shrimp.jpg?v=afffa4bbcd",
+ "share_image": "share/garlic-chilli-shrimp.jpg?v=3a677a0008",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -190,7 +232,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/1.webp?v=9a90adea3a",
+    "illustration": "illustrations/garlic-chilli-shrimp/1.webp?v=8f495a8e7b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -202,7 +244,16 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Обсушите креветки",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Сырые очищенные креветки без кишечной жилки, размороженные"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>На огне выше среднего нагрейте оливковое масло и половину сливочного в сковороде <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 см</span>.</li><li>Разложите креветки одним слоем.</li><li>Готовьте 1–2 минуты до розового низа, затем переверните.</li><li>Если тесно, обжарьте половину и переложите на чистую тарелку, затем обжарьте вторую, сохранив жир для обеих партий.</li><li>Соединяйте их только для короткого завершения с чесночным маслом в следующем шаге.</li></ul>",
@@ -217,7 +268,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/2.webp?v=82c7008347",
+    "illustration": "illustrations/garlic-chilli-shrimp/2.webp?v=2734bf1aef",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +280,20 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Обжарьте в один слой",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Сырые очищенные креветки без кишечной жилки, размороженные"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12.5\">12,5 г</span> (первая половина)",
+     "name_html": "Сливочное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Оливковое масло"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Убавьте огонь до слабого-среднего; добавьте оставшееся масло, чеснок и необязательный чили.</li><li>Готовьте ещё 1–2 минуты, перемешивая масло вокруг креветок.</li><li>Чеснок должен быть светло-золотистым.</li><li>В толстой креветке проверьте <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> и непрозрачную середину; очень крупным нужно дольше.</li></ul>",
@@ -244,7 +308,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/3.webp?v=5c2bb01842",
+    "illustration": "illustrations/garlic-chilli-shrimp/3.webp?v=ef8faf4963",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -256,7 +320,20 @@
    "time": "1–2 мин",
    "time_html": "<span>1–2 мин</span>",
    "title": "Добавьте чеснок, не сожгите",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12.5\">12,5 г</span> (оставшаяся половина)",
+     "name_html": "Сливочное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
+     "name_html": "Чеснок тонкими ломтиками"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Pul biber (хлопья неострого красного перца)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Выключите огонь и добавьте лимон.</li><li>По желанию добавьте петрушку, полейте маслом и сразу ешьте с хлебом.</li><li>Креветки должны быть сочными, не туго скрученными и резиновыми.</li></ul>",
@@ -267,7 +344,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/4.webp?v=5dd883e308",
+    "illustration": "illustrations/garlic-chilli-shrimp/4.webp?v=f1593664a3",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -279,7 +356,20 @@
    "time": "1 мин",
    "time_html": "<span>1 мин</span>",
    "title": "Завершите лимоном",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Лимонный сок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Петрушка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Хлеб с корочкой"
+    }
+   ]
   }
  ],
  "timeline": null,

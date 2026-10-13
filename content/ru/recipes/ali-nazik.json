@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Ali nazik (баранина на баклажанах с йогуртом)",
-  "image": "illustrations/ali-nazik/4.webp?v=5ed2bb5a25",
+  "image": "illustrations/ali-nazik/4.webp?v=50c8d86fa0",
   "svg_fallback": null
  },
  "ingredients": [
@@ -48,7 +48,7 @@
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
-     "name_html": "Фарш из баранины"
+     "name_html": "Бараний фарш"
     },
     {
      "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
@@ -84,7 +84,46 @@
   }
  ],
  "intro_html": "Быстрая версия с готовыми печёными баклажанами, без гриля и духовки. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/ali-nazik/mise1.webp?v=782e907dd8",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span> готовой печёной мякоти"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span> готовой печёной мякоти",
+   "name": "Баклажан без жидкости",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/ali-nazik/mise2.webp?v=c28d8f8ada",
+   "items": [
+    "Йогурт <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> маленький зубчик"
+   ],
+   "items_html": "Йогурт <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span> · 1 маленький зубчик",
+   "name": "Чесночный йогурт",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/ali-nazik/mise3.webp?v=b56435a667",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+    "держите в холоде"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span> · держите в холоде",
+   "name": "Бараний фарш",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "gavurdagi-salad",
@@ -130,7 +169,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/ali-nazik.jpg?v=9bc4e04ee9",
+ "share_image": "share/ali-nazik.jpg?v=71c3a8b9a7",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -194,7 +233,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/ali-nazik/1.webp?v=734adbdbc3",
+    "illustration": "illustrations/ali-nazik/1.webp?v=ef1129146c",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -206,7 +245,12 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Слейте жидкость и порубите баклажан",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span>",
+     "name_html": "Мякоть печёного баклажана, без жидкости, готовая к употреблению"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Смешайте йогурт с чесноком и половиной соли.</li><li>Слегка прогрейте баклажан 2 минуты, снимите с огня и вмешайте в йогурт.</li><li>Держите тёплым, не кипятите: йогурт может расслоиться.</li><li>Разделите между двумя тарелками.</li></ul>",
@@ -221,7 +265,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/ali-nazik/2.webp?v=4318d76001",
+    "illustration": "illustrations/ali-nazik/2.webp?v=9afb364c38",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -233,7 +277,24 @@
    "time": "4 мин",
    "time_html": "<span>4 мин</span>",
    "title": "Смешайте йогуртовую основу",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span>",
+     "name_html": "Мякоть печёного баклажана, без жидкости, готовая к употреблению"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Густой натуральный йогурт"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"небольшой зубчик|небольших зубчика|небольших зубчиков|небольшого зубчика\" data-n=\"1\">1 небольшой зубчик</span>",
+     "name_html": "Чеснок, мелко натёртый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span> (половина)",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Растопите масло на огне выше среднего.</li><li>Разложите фарш тонким слоем, оставьте на 2 минуты, затем разбейте на кусочки <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 см</span> и переверните.</li><li>Всего готовьте 5–7 минут до подрумянивания и <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"71\" data-s=\"0\">71 °C</span></b>.</li><li>Томатную пасту при желании вмешайте за минуту до конца, перец — за 20 секунд.</li></ul>",
@@ -248,7 +309,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/ali-nazik/3.webp?v=8c86c599e7",
+    "illustration": "illustrations/ali-nazik/3.webp?v=2bee9ccac5",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -260,7 +321,24 @@
    "time": "5–7 мин",
    "time_html": "<span>5–7 мин</span>",
    "title": "Хорошо обжарьте фарш",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>",
+     "name_html": "Бараний фарш"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Сливочное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Pul biber (хлопья неострого красного перца)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Томатная паста"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Выложите горячую баранину с маслом на тёплый баклажан с йогуртом.</li><li>Добавьте оставшуюся соль по вкусу, необязательную петрушку и лаваш.</li><li>Мясо оставьте сверху, не смешивайте всё в серую массу.</li></ul>",
@@ -271,7 +349,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/ali-nazik/4.webp?v=5ed2bb5a25",
+    "illustration": "illustrations/ali-nazik/4.webp?v=50c8d86fa0",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -283,7 +361,20 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Соберите и ешьте тёплым",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Петрушка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Лаваш"
+    },
+    {
+     "amount_html": "до <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>, по вкусу",
+     "name_html": "Мелкая соль"
+    }
+   ]
   }
  ],
  "timeline": null,

@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Çipura tava (дорада на сковороде), лимон и каперсы",
-  "image": "illustrations/lemon-caper-dorada/4.webp?v=501cbcb5d9",
+  "image": "illustrations/lemon-caper-dorada/4.webp?v=f3eac2d44a",
   "svg_fallback": null
  },
  "ingredients": [
@@ -80,7 +80,49 @@
   }
  ],
  "intro_html": "Хрустящая кожа, сочная рыба и быстрый лимонный соус; современная прибрежная вариация. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/lemon-caper-dorada/mise1.webp?v=0e0451bd3a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+    "на коже",
+    "без костей"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span> · на коже · без костей",
+   "name": "Обсушенное филе",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/lemon-caper-dorada/mise2.webp?v=3a1a596419",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> лимона",
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span> воды"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> лимона · <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span> воды",
+   "name": "Лимон и вода",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/lemon-caper-dorada/mise3.webp?v=b0857371f0",
+   "items": [
+    "Каперсы",
+    "сливочное масло",
+    "петрушка"
+   ],
+   "items_html": "Каперсы · сливочное масло · петрушка",
+   "name": "Необязательные добавки",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "garlic-chilli-shrimp",
@@ -126,7 +168,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/lemon-caper-dorada.jpg?v=e1cd70bb3d",
+ "share_image": "share/lemon-caper-dorada.jpg?v=4538889e86",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -190,7 +232,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/1.webp?v=227b4ce91d",
+    "illustration": "illustrations/lemon-caper-dorada/1.webp?v=23f902bf77",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -202,7 +244,16 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Обсушите и проверьте филе",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Филе дорады на коже без костей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Нагрейте масло в сковороде <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"24\" data-b=\"26\" data-s=\"0\">24–26 см</span> на огне выше среднего.</li><li>Положите филе <b>кожей вниз</b> от себя.</li><li>Прижмите лопаткой на 20 секунд, затем оставьте на 3–5 минут: кожа должна отлипать, а мякоть — стать непрозрачной почти по всей толщине.</li><li>Если кожа темнеет слишком быстро, убавьте огонь.</li></ul>",
@@ -217,7 +268,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/2.webp?v=b27499427f",
+    "illustration": "illustrations/lemon-caper-dorada/2.webp?v=46ba3001c2",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +280,16 @@
    "time": "3–5 мин",
    "time_html": "<span>3–5 мин</span>",
    "title": "Поджарьте кожу",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Филе дорады на коже без костей"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Оливковое масло"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Полностью подведите лопатку и переверните один раз.</li><li>Готовьте со стороны мякоти 1–3 минуты по толщине.</li><li>Проверьте <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> в толстой части; мякоть должна легко разделяться.</li><li>Переложите на тёплые тарелки.</li><li>Время — ориентир, готовность проверяем отдельно.</li></ul>",
@@ -244,7 +304,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/3.webp?v=000b37f6bf",
+    "illustration": "illustrations/lemon-caper-dorada/3.webp?v=3d72c7dc0b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -256,7 +316,12 @@
    "time": "1–3 мин",
    "time_html": "<span>1–3 мин</span>",
    "title": "Переверните и доведите",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 г</span>",
+     "name_html": "Филе дорады на коже без костей"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Снимите сковороду с огня.</li><li>Осторожно добавьте воду и лимон, вмешайте необязательные масло и каперсы 20–30 секунд.</li><li>Полейте вокруг рыбы, сохраняя кожу хрустящей.</li><li>По желанию добавьте рубленую петрушку и дольки лимона; сразу подавайте.</li></ul>",
@@ -267,7 +332,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/lemon-caper-dorada/4.webp?v=501cbcb5d9",
+    "illustration": "illustrations/lemon-caper-dorada/4.webp?v=f3eac2d44a",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -279,7 +344,32 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Сделайте лимонный соус",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Лимонный сок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Питьевая вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Каперсы без рассола"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Сливочное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Петрушка"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Дольки лимона"
+    }
+   ]
   }
  ],
  "timeline": null,

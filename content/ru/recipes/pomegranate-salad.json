@@ -25,7 +25,7 @@
  },
  "hero": {
   "alt": "Салат roka (руккола), гранат и белый сыр",
-  "image": "illustrations/pomegranate-salad/4.webp?v=0f1e7e8891",
+  "image": "illustrations/pomegranate-salad/4.webp?v=05ec258fd1",
   "svg_fallback": null
  },
  "ingredients": [
@@ -77,7 +77,47 @@
   }
  ],
  "intro_html": "Пряная руккола, сочный гранат и солёный сыр: современный салат в турецком стиле. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/pomegranate-salad/mise1.webp?v=913b690362",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
+    "вымыть и полностью обсушить"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span> · вымыть и полностью обсушить",
+   "name": "Сухая руккола",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/pomegranate-salad/mise2.webp?v=ffbc01a36d",
+   "items": [
+    "Зёрна <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
+    "белый сыр <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>"
+   ],
+   "items_html": "Зёрна <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span> · белый сыр <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+   "name": "Гранат и сыр",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/pomegranate-salad/mise3.webp?v=4ba4fa33e9",
+   "items": [
+    "Масло <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+    "лимон <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>"
+   ],
+   "items_html": "Масло <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span> · лимон <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+   "name": "Лимонная заправка",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "cilbir",
@@ -119,7 +159,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/pomegranate-salad.jpg?v=85db3cc8fe",
+ "share_image": "share/pomegranate-salad.jpg?v=c9af0ca9cd",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -183,7 +223,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/pomegranate-salad/1.webp?v=c6bce55327",
+    "illustration": "illustrations/pomegranate-salad/1.webp?v=a289303892",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -195,7 +235,12 @@
    "time": "4 мин",
    "time_html": "<span>4 мин</span>",
    "title": "Вымойте и обсушите листья",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
+     "name_html": "Руккола"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Целый гранат надрежьте только по кожуре, разломите на секции, выньте зёрна и уберите белые плёнки.</li><li>Отмерьте <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\" data-s=\"0\">80 г</span>.</li><li>Слейте рассол с сыра и разломите на кусочки <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 см</span>.</li><li>По желанию подготовьте лук и крупно разломанные орехи.</li></ul>",
@@ -206,7 +251,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/pomegranate-salad/2.webp?v=d507abab29",
+    "illustration": "illustrations/pomegranate-salad/2.webp?v=a18125383e",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -218,7 +263,24 @@
    "time": "6 мин",
    "time_html": "<span>6 мин</span>",
    "title": "Подготовьте гранат и сыр",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>",
+     "name_html": "Зёрна граната"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Beyaz peynir (белый рассольный сыр) или фета"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
+     "name_html": "Грецкие орехи"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 г</span>",
+     "name_html": "Красный лук тонкими ломтиками"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Смешайте масло, лимон и необязательный гранатовый соус.</li><li>Перемешайте рукколу примерно с двумя третями заправки.</li><li>Добавьте сыр и зёрна, осторожно переверните один раз: если давить, листья станут мокрыми и розовыми.</li></ul>",
@@ -229,7 +291,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/pomegranate-salad/3.webp?v=8d0043a0f4",
+    "illustration": "illustrations/pomegranate-salad/3.webp?v=292e9f89ac",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -241,7 +303,20 @@
    "time": "3 мин",
    "time_html": "<span>3 мин</span>",
    "title": "Легко заправьте",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Оливковое масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 ч. л.</span>",
+     "name_html": "Лимонный сок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Nar ekşisi (густой кислый гранатовый соус)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Попробуйте лист вместе с сыром до добавления необязательной соли.</li><li>Остаток заправки добавьте только при необходимости; выложите необязательные лук и орехи.</li><li>Ешьте, пока листья упругие и хрустящие.</li></ul>",
@@ -252,7 +327,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/pomegranate-salad/4.webp?v=0f1e7e8891",
+    "illustration": "illustrations/pomegranate-salad/4.webp?v=05ec258fd1",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -264,7 +339,12 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Попробуйте и сразу подавайте",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "щепотка",
+     "name_html": "Мелкая соль"
+    }
+   ]
   }
  ],
  "timeline": null,

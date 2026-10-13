@@ -28,7 +28,7 @@
  },
  "hero": {
   "alt": "Tereyağlı karides (butter shrimp), garlic & chilli",
-  "image": "illustrations/garlic-chilli-shrimp/4.webp?v=5dd883e308",
+  "image": "illustrations/garlic-chilli-shrimp/4.webp?v=f1593664a3",
   "svg_fallback": null
  },
  "ingredients": [
@@ -80,7 +80,49 @@
   }
  ],
  "intro_html": "Big shrimp in garlic butter with pul biber (mild red-pepper flakes). Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/garlic-chilli-shrimp/mise1.webp?v=73fe615191",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+    "peeled",
+    "deveined"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span> · peeled · deveined",
+   "name": "Dry raw shrimp",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/garlic-chilli-shrimp/mise2.webp?v=6c4d6455cc",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
+    "butter <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 g</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span> · butter <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 g</span>",
+   "name": "Sliced garlic and butter",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 4",
+   "image": "illustrations/garlic-chilli-shrimp/mise3.webp?v=84e93f1d58",
+   "items": [
+    "Pepper flakes",
+    "parsley",
+    "bread"
+   ],
+   "items_html": "Pepper flakes · parsley · bread",
+   "name": "Optional finish",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "palamut-tava",
@@ -122,7 +164,7 @@
    "person": "person"
   }
  },
- "share_image": "share/garlic-chilli-shrimp.jpg?v=afffa4bbcd",
+ "share_image": "share/garlic-chilli-shrimp.jpg?v=3a677a0008",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -190,7 +232,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/1.webp?v=9a90adea3a",
+    "illustration": "illustrations/garlic-chilli-shrimp/1.webp?v=8f495a8e7b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -202,7 +244,16 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Dry the shrimp",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Raw peeled shrimp, thawed and deveined"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Heat olive oil and half the butter over medium-high heat in a <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-s=\"0\">26 cm</span> pan.</li><li>Add shrimp in a single layer.</li><li>Cook 1–2 minutes until the underside turns pink, then turn.</li><li>If crowded, sear half, transfer to a clean plate, then sear the second half, reserving pan fat between batches.</li><li>Return both batches only for the short garlic-butter finish in the next step.</li></ul>",
@@ -217,7 +268,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/2.webp?v=82c7008347",
+    "illustration": "illustrations/garlic-chilli-shrimp/2.webp?v=2734bf1aef",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -229,7 +280,20 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Sear in one layer",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Raw peeled shrimp, thawed and deveined"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12.5\">12.5 g</span> (first half)",
+     "name_html": "Butter"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Olive oil"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Lower to medium-low; add the remaining butter, garlic and optional chilli.</li><li>Cook 1–2 minutes more, stirring the butter around the shrimp.</li><li>Garlic should stay pale gold.</li><li>Check the thickest shrimp is <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> and opaque through the centre; large shrimp may need longer.</li></ul>",
@@ -244,7 +308,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/3.webp?v=5c2bb01842",
+    "illustration": "illustrations/garlic-chilli-shrimp/3.webp?v=ef8faf4963",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -256,7 +320,20 @@
    "time": "1–2 min",
    "time_html": "<span>1–2 min</span>",
    "title": "Add garlic without burning it",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12.5\">12.5 g</span> (remaining half)",
+     "name_html": "Butter"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
+     "name_html": "Garlic, thinly sliced"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Pul biber (mild red-pepper flakes)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Turn off the heat and stir in lemon.</li><li>Add optional parsley, spoon the butter over the shrimp and eat immediately with optional bread.</li><li>Shrimp should be juicy, not tightly curled and rubbery.</li></ul>",
@@ -267,7 +344,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/garlic-chilli-shrimp/4.webp?v=5dd883e308",
+    "illustration": "illustrations/garlic-chilli-shrimp/4.webp?v=f1593664a3",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -279,7 +356,20 @@
    "time": "1 min",
    "time_html": "<span>1 min</span>",
    "title": "Finish with lemon",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Lemon juice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 g</span>",
+     "name_html": "Parsley"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Crusty bread"
+    }
+   ]
   }
  ],
  "timeline": null,

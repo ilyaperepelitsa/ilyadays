@@ -255,6 +255,10 @@ def main():
             shutil.rmtree(d)
         write(d / "index.json", index(order, img))
         write(d / "sous-vide.json", sous_vide(img))
+        from sashimi_recipes import VARIANTS
+        from i18n import localize
+        variants = [localize(r, B.T) for r in VARIANTS]
+        write(d / "sashimi.json", [recipe(r, variants, img) for r in variants])
         for r in order:
             write(d / "recipes" / f"{r.slug}.json", recipe(r, order, img))
         write(d / "ui.json", {k: B.ui(k) for k in UI_KEYS})

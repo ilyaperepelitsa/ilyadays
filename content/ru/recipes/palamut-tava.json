@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Palamut tava (жареная пеламида) и лук с сумахом",
-  "image": "illustrations/palamut-tava/4.webp?v=e2b914d181",
+  "image": "illustrations/palamut-tava/4.webp?v=0220e0853d",
   "svg_fallback": null
  },
  "ingredients": [
@@ -79,7 +79,47 @@
   }
  ],
  "intro_html": "Осенняя рыба с тонкой мучной корочкой и острым луковым салатом. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/palamut-tava/mise1.webp?v=baebf10c4d",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> тонкого лука",
+    "лимон",
+    "необязательный сумах"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span> тонкого лука · лимон · необязательный сумах",
+   "name": "Кислый луковый салат",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/palamut-tava/mise2.webp?v=2a64c3027d",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+    "толщина <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 мм</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span> · толщина <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"15\" data-b=\"20\" data-s=\"0\">15–20 мм</span>",
+   "name": "Стейки пеламиды",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/palamut-tava/mise3.webp?v=3263be06d6",
+   "items": [
+    "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, только тонкий слой"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, только тонкий слой",
+   "name": "Мука для обваливания",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "sumac-lamb-wraps",
@@ -125,7 +165,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/palamut-tava.jpg?v=1509465613",
+ "share_image": "share/palamut-tava.jpg?v=f34b124973",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -189,7 +229,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/palamut-tava/1.webp?v=8852a35ab8",
+    "illustration": "illustrations/palamut-tava/1.webp?v=17b4022010",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -201,7 +241,28 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Смягчите лук",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Красный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Лимонный сок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Сумах (кислая красная пряность)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 г</span>",
+     "name_html": "Петрушка"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Обсушите стейки и посолите оставшейся солью.</li><li>Насыпьте муку на тарелку, слегка покройте обе стороны и стряхните лишнее.</li><li>Центральные кости оставьте при жарке и предупредите о них за столом.</li></ul>",
@@ -212,7 +273,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/palamut-tava/2.webp?v=3dcaa97744",
+    "illustration": "illustrations/palamut-tava/2.webp?v=da19368d5a",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -224,7 +285,16 @@
    "time": "5 мин",
    "time_html": "<span>5 мин</span>",
    "title": "Обсушите и обваляйте рыбу",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+     "name_html": "Стейки пеламиды, зачищенные, толщиной 15–20 мм"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Пшеничная мука"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Нагрейте масло на огне выше среднего.</li><li>Положите стейки одним слоем; жарьте примерно 3–4 минуты с каждой стороны, убавляя огонь, если мука быстро темнеет.</li><li>Переворачивайте широкой лопаткой.</li><li>Проверьте <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b> в толстой мякоти вдали от кости.</li><li>Время — ориентир; середина не должна оставаться сырой.</li></ul>",
@@ -239,7 +309,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/palamut-tava/3.webp?v=e9824dc332",
+    "illustration": "illustrations/palamut-tava/3.webp?v=3b1ce47d92",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -251,7 +321,16 @@
    "time": "6–8 мин",
    "time_html": "<span>6–8 мин</span>",
    "title": "Обжарьте и переверните один раз",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+     "name_html": "Стейки пеламиды, зачищенные, толщиной 15–20 мм"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Оливковое масло"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Подайте рыбу с луковым салатом, необязательной петрушкой и лимоном.</li><li>Ешьте сразу, внимательно удаляя кости.</li><li>При нарушенной холодовой цепи пеламиду выбрасывают: приготовление не гарантирует разрушение гистамина.</li></ul>",
@@ -262,7 +341,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/palamut-tava/4.webp?v=e2b914d181",
+    "illustration": "illustrations/palamut-tava/4.webp?v=0220e0853d",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -274,7 +353,16 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Подайте с кислым луком",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Красный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Дольки лимона"
+    }
+   ]
   }
  ],
  "timeline": null,

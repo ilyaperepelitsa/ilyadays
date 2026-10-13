@@ -29,7 +29,7 @@
  },
  "hero": {
   "alt": "Kabak mücver (оладьи из кабачка), укроп и сыр",
-  "image": "illustrations/kabak-mucver/4.webp?v=ebd36e4d89",
+  "image": "illustrations/kabak-mucver/4.webp?v=f515b076fc",
   "svg_fallback": null
  },
  "ingredients": [
@@ -85,7 +85,46 @@
   }
  ],
  "intro_html": "Тонкие оладьи на небольшом количестве масла: хорошо отожмите кабачок для хрустящих краёв. Для Гёчека, Турция · 24 октября–примерно 7 ноября 2026. Подходит и для домашней кухни. См. <a href=\"/ru/travel/turkey-yacht-food#shopping\">сезонные закупки и поставщиков</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/kabak-mucver/mise1.webp?v=95062b0175",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span> до натирания; хорошо отжать"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span> до натирания; хорошо отжать",
+   "name": "Отжатый кабачок",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/kabak-mucver/mise2.webp?v=b7f1651806",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"яйцо|яйца|яиц\" data-n=\"1\">1 яйцо</span>",
+    "мука <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"яйцо|яйца|яиц\" data-n=\"1\">1 яйцо</span> · мука <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>",
+   "name": "Яйцо и мука",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/kabak-mucver/mise3.webp?v=f30cea4d18",
+   "items": [
+    "Сыр <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+    "укроп <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>"
+   ],
+   "items_html": "Сыр <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span> · укроп <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
+   "name": "Сыр и укроп",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "Ещё — Турецкая кухня и морепродукты:",
  "next": {
   "slug": "cokertme",
@@ -127,7 +166,7 @@
    "person": "человека"
   }
  },
- "share_image": "share/kabak-mucver.jpg?v=778b4fee87",
+ "share_image": "share/kabak-mucver.jpg?v=1116a9d049",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -191,7 +230,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/1.webp?v=b5be347b6c",
+    "illustration": "illustrations/kabak-mucver/1.webp?v=768863212e",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -203,7 +242,16 @@
    "time": "10 мин",
    "time_html": "<span>10 мин</span>",
    "title": "Натрите, посолите и отожмите",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>",
+     "name_html": "Кабачки"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Мелкая соль"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Взбейте яйцо в миске, вмешайте отжатый кабачок, муку, сыр, укроп и необязательный тонко нарезанный лук.</li><li>Масса должна держаться на ложке, без лужицы.</li><li>Если после отжима она жидкая, добавляйте по <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> муки, не больше двух дополнительных.</li></ul>",
@@ -214,7 +262,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/2.webp?v=5cfaa9991f",
+    "illustration": "illustrations/kabak-mucver/2.webp?v=e6207ccd6b",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -226,7 +274,28 @@
    "time": "4 мин",
    "time_html": "<span>4 мин</span>",
    "title": "Смешайте густую массу",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Яйцо"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>",
+     "name_html": "Пшеничная мука"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Белый рассольный сыр, раскрошенный"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 г</span>",
+     "name_html": "Укроп, рубленый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 г</span>",
+     "name_html": "Зелёный лук"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Нагрейте половину масла на среднем огне.</li><li>Выложите массу с горкой и расплющите до <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"8\" data-b=\"10\" data-s=\"0\">8–10 мм</span></b> толщиной и примерно <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"8\" data-s=\"0\">8 см</span> шириной.</li><li>Жарьте по 3–4 минуты с каждой стороны, перевернув один раз, до румяности и схватившейся середины без сырой муки и яйца.</li><li>Готовьте двумя партиями, добавляя масло по необходимости; проверьте <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"71\" data-s=\"0\">71 °C</span></b> в центре.</li></ul>",
@@ -241,7 +310,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/3.webp?v=c944f26462",
+    "illustration": "illustrations/kabak-mucver/3.webp?v=588146e0a2",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -253,7 +322,12 @@
    "time": "12–16 мин",
    "time_html": "<span>12–16 мин</span>",
    "title": "Расплющите и обжарьте",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 ст. л.</span>",
+     "name_html": "Оливковое масло для жарки тонким слоем"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Обсушите минуту одним слоем на чистой бумаге или решётке.</li><li>Подайте горячими с необязательными йогуртом и лимоном.</li><li>Если снаружи темнеют раньше готовности внутри, следующую партию делайте тоньше и убавьте огонь.</li></ul>",
@@ -264,7 +338,7 @@
     "diagram": null,
     "diagram_title": "Схема",
     "how": [],
-    "illustration": "illustrations/kabak-mucver/4.webp?v=ebd36e4d89",
+    "illustration": "illustrations/kabak-mucver/4.webp?v=f515b076fc",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -276,7 +350,16 @@
    "time": "2 мин",
    "time_html": "<span>2 мин</span>",
    "title": "Обсушите без стопки",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>",
+     "name_html": "Натуральный йогурт"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Дольки лимона"
+    }
+   ]
   }
  ],
  "timeline": null,

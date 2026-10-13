@@ -33,6 +33,7 @@ for slug in args.slug:
     for key, scene in scenes:
         hands = 'hand' in scene.lower() and 'no hands' not in scene.lower()
         rows.append({'slug': slug, 'key': key, 'scene': scene,
+                     'reference_paths': [str(ROOT / POLICY['style_reference'])] if POLICY.get('style_reference') else [],
                      'policy_version': POLICY['version'],
                      'policy_sha256': hashlib.sha256(policy.read_bytes()).hexdigest(),
                      'prompt': prompt('clean', spec['setting'], scene, hands=hands)})

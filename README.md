@@ -28,10 +28,10 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 - The old static-site URLs answer with a 301 to the new routes (see `next.config.ts`):
   - `/food/<slug>.html`, `/food/index.html`
   - `/food/share/*.jpg`, `/food/illustrations/*`
-- The EN · RU switch stores the choice in `localStorage["lang"]`. The Istanbul app uses the same key.
+- The EN · RU switch stores the choice in `localStorage["site-lang"]`.
 - `/travel/new` asks for a city, how many days, hours, sights, food breaks, linger or rapid pace, and whether days share a place. A preference note covers food and shops (secret bars, cafés, modern or traditional local food). Places to pass through are one per line and are not pinned to a day: one route walks through each. Each day has a short title and a longer description, in English and Russian. Suggest themes fills those first. Generate then asks for the stops, the visit notes, and names a Wikipedia article and a Commons search. Pictures come from those APIs. The model does not return image URLs. The key stays in `localStorage["cdays-ai-key"]` (the same key as the Istanbul re-plan) and saved trips stay in `localStorage["ilyadays-trips-v1"]`. Neither is sent to this site.
 - A tiny script in `<head>` sends the reader to the same page in their language before the page paints.
-  - On a first visit it picks Russian if the browser prefers Russian or the link was a `/ru` link.
+  - Without a saved choice, the linked language stays in place: English at the root and Russian under `/ru`.
 
 ## Layout
 
@@ -130,3 +130,5 @@ npm test               # trip template, offline catalog, recipe search and diagr
 npm run lint && npm run typecheck
 npm run check:cookies   # after a build; add -- --live with `npm run start` running
 ```
+
+The sashimi page uses `SashimiChoices` with nine complete recipe variants exported together as `content/{en,ru}/sashimi.json`. Author variants in `../recipes/src/sashimi_variants.json` and `sashimi_recipes.py`; they are not registered as separate Food routes. Shared cold-storage/dip art is deduplicated, while each seafood has a distinct raw preview, technique and plated picture. The `seafood` query parameter survives EN/RU switching and isolates cooking checkmarks. Turkish recipes use the standard mise and per-step ingredients; `Step.amounts` supports measured ingredients split between steps. Source snapshots live under `art/turkey-recipes/source/`.

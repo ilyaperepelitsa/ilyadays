@@ -25,7 +25,7 @@
  },
  "hero": {
   "alt": "Gavurdağı (tomato–walnut salad)",
-  "image": "illustrations/gavurdagi-salad/4.webp?v=2e5288b023",
+  "image": "illustrations/gavurdagi-salad/4.webp?v=714f009ecb",
   "svg_fallback": null
  },
  "ingredients": [
@@ -81,7 +81,47 @@
   }
  ],
  "intro_html": "Small-cut tomato salad with walnuts and a sweet-tart pomegranate dressing. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/gavurdagi-salad/mise1.webp?v=41f838ca85",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>, fine <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> dice"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>, fine <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> dice",
+   "name": "Tomatoes",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/gavurdagi-salad/mise2.webp?v=b0856e7867",
+   "items": [
+    "Onion <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+    "walnuts <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>"
+   ],
+   "items_html": "Onion <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span> · walnuts <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>",
+   "name": "Onion and walnuts",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 3",
+   "image": "illustrations/gavurdagi-salad/mise3.webp?v=cf3b206caa",
+   "items": [
+    "Oil",
+    "lemon",
+    "optional pomegranate molasses"
+   ],
+   "items_html": "Oil · lemon · optional pomegranate molasses",
+   "name": "Dressing",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "pomegranate-salad",
@@ -123,7 +163,7 @@
    "person": "person"
   }
  },
- "share_image": "share/gavurdagi-salad.jpg?v=cd2ac68f23",
+ "share_image": "share/gavurdagi-salad.jpg?v=96c5db5a09",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -187,7 +227,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/1.webp?v=9a13258eac",
+    "illustration": "illustrations/gavurdagi-salad/1.webp?v=313b368f60",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -199,7 +239,20 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Dice the tomatoes",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"350\">350 g</span>",
+     "name_html": "Ripe tomatoes"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Cucumber"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Mild green pepper"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Cut onion into very fine <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-b=\"3\" data-s=\"0\">2–3 mm</span> pieces.</li><li>Roughly chop walnuts to <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-b=\"8\" data-s=\"0\">5–8 mm</span>; keep recognisable pieces, not dust.</li><li>Chop optional parsley separately.</li></ul>",
@@ -210,7 +263,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/2.webp?v=8507c55a94",
+    "illustration": "illustrations/gavurdagi-salad/2.webp?v=c92fcecf64",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -222,7 +275,16 @@
    "time": "4 min",
    "time_html": "<span>4 min</span>",
    "title": "Chop onion and walnuts",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 g</span>",
+     "name_html": "Red onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 g</span>",
+     "name_html": "Walnuts"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Whisk oil, lemon, salt and optional pomegranate molasses in the serving bowl.</li><li>Taste: bright and tart, with a little sweetness if using molasses.</li><li>Start with half the molasses if your brand is very concentrated.</li></ul>",
@@ -233,7 +295,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/3.webp?v=fb06f03931",
+    "illustration": "illustrations/gavurdagi-salad/3.webp?v=2c24339154",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -245,7 +307,24 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Mix the dressing",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Lemon juice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Fine salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Nar ekşisi (pomegranate molasses)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Add tomato, onion, walnuts and any optional vegetables and herbs.</li><li>Fold gently, leave 2 minutes, then serve with the juices.</li><li>Do not dress hours ahead: the tomatoes will collapse and the nuts soften.</li></ul>",
@@ -256,7 +335,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/gavurdagi-salad/4.webp?v=2e5288b023",
+    "illustration": "illustrations/gavurdagi-salad/4.webp?v=714f009ecb",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -268,7 +347,12 @@
    "time": "4 min",
    "time_html": "<span>4 min</span>",
    "title": "Toss just before serving",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"10\">10 g</span>",
+     "name_html": "Parsley"
+    }
+   ]
   }
  ],
  "timeline": null,

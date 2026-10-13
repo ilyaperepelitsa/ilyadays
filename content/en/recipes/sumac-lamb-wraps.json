@@ -27,7 +27,7 @@
  },
  "hero": {
   "alt": "Kuzu tantuni-style wraps (quick lamb wraps)",
-  "image": "illustrations/sumac-lamb-wraps/hero.webp?v=e789570964",
+  "image": "illustrations/sumac-lamb-wraps/hero.webp?v=3aaeb78190",
   "svg_fallback": null
  },
  "ingredients": [
@@ -87,7 +87,48 @@
   }
  ],
  "intro_html": "A pan-fried lamb adaptation with sumac onion and cooling yoghurt. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 1",
+   "image": "illustrations/sumac-lamb-wraps/mise1.webp?v=dd83a5baaa",
+   "items": [
+    "Onion",
+    "tomato",
+    "optional parsley"
+   ],
+   "items_html": "Onion · tomato · optional parsley",
+   "name": "Cold filling",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/sumac-lamb-wraps/mise2.webp?v=6c161b8f9a",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+    "cut across the grain"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span> · cut across the grain",
+   "name": "Thin lamb strips",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/sumac-lamb-wraps/mise3.webp?v=7d033d81c9",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 large sheets</span>",
+    "yoghurt <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 large sheets</span> · yoghurt <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+   "name": "Lavash and optional yoghurt",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "ali-nazik",
@@ -129,7 +170,7 @@
    "person": "person"
   }
  },
- "share_image": "share/sumac-lamb-wraps.jpg?v=bc681bbf36",
+ "share_image": "share/sumac-lamb-wraps.jpg?v=64cccbf862",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -197,7 +238,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/sumac-lamb-wraps/1.webp?v=f4279ea83f",
+    "illustration": "illustrations/sumac-lamb-wraps/1.webp?v=bdd4e7b5aa",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -209,7 +250,32 @@
    "time": "7 min",
    "time_html": "<span>7 min</span>",
    "title": "Prepare the cold filling first",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Red onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Tomato"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"2\">2 tsp</span>",
+     "name_html": "Lemon juice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span> (half)",
+     "name_html": "Fine salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sumac (tart red spice)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 g</span>",
+     "name_html": "Parsley"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>On a separate board, cut lamb across the grain into strips about <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"5\" data-s=\"0\">5 mm</span> thick and <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 cm</span> long</b>.</li><li>Pat dry; season with remaining salt.</li><li>Wash knife, board and hands before returning to the vegetables.</li></ul>",
@@ -220,7 +286,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/sumac-lamb-wraps/2.webp?v=547c897b63",
+    "illustration": "illustrations/sumac-lamb-wraps/2.webp?v=a94107fa1d",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -232,7 +298,16 @@
    "time": "5 min",
    "time_html": "<span>5 min</span>",
    "title": "Slice lamb across the grain",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Boneless lamb leg or loin, trimmed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span> (remaining half)",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Heat oil over medium-high heat.</li><li>Fry half the meat for 2–3 minutes, turning to brown, then repeat.</li><li>Add optional chilli in the last 20 seconds.</li><li>Check lamb reaches <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"63\" data-s=\"0\">63 °C</span></b>, then rest for <b>3 minutes</b> on a clean plate.</li><li>Do not use the raw-meat plate.</li></ul>",
@@ -247,7 +322,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/sumac-lamb-wraps/3.webp?v=d3b6e129ca",
+    "illustration": "illustrations/sumac-lamb-wraps/3.webp?v=bba62a80f8",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -259,7 +334,20 @@
    "time": "7–9 min",
    "time_html": "<span>7–9 min</span>",
    "title": "Brown in two quick batches",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 g</span>",
+     "name_html": "Boneless lamb leg or loin, trimmed"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Olive oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Pul biber (mild red-pepper flakes)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Warm each flatbread in the empty pan for 15–20 seconds per side.</li><li>Spread optional yoghurt, then divide lamb, tomato, onion and optional parsley between them.</li><li>Fold the bottom over the filling, tuck in both sides and roll snugly.</li><li>Serve immediately.</li></ul>",
@@ -270,7 +358,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/sumac-lamb-wraps/4.webp?v=3733a9896a",
+    "illustration": "illustrations/sumac-lamb-wraps/4.webp?v=d37c7f7a2d",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -282,7 +370,16 @@
    "time": "3 min",
    "time_html": "<span>3 min</span>",
    "title": "Warm and roll the flatbread",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"sheet|sheets\" data-n=\"1\">2 large sheets</span>",
+     "name_html": "Thin lavash (flatbread)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Labneh (strained yoghurt) or thick plain yoghurt"
+    }
+   ]
   }
  ],
  "timeline": null,

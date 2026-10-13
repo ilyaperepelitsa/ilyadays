@@ -29,7 +29,7 @@
  },
  "hero": {
   "alt": "Çılbır (eggs on garlic yoghurt), chilli butter",
-  "image": "illustrations/cilbir/4.webp?v=9d39cbd81b",
+  "image": "illustrations/cilbir/4.webp?v=7b07788252",
   "svg_fallback": null
  },
  "ingredients": [
@@ -81,7 +81,48 @@
   }
  ],
  "intro_html": "Warm poached eggs, cool thick yoghurt and a quick red-pepper butter. Planned for Göcek, Turkey · 24 October–around 7 November 2026. Also works in a home kitchen. See the <a href=\"/travel/turkey-yacht-food#shopping\">seasonal shopping and supplier guide</a>.",
- "mise": [],
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 1",
+   "image": "illustrations/cilbir/mise1.webp?v=f26b4d238d",
+   "items": [
+    "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>",
+    "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 small clove</span>",
+    "salt"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span> · 1 small clove · salt",
+   "name": "Garlic yoghurt",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/cilbir/mise2.webp?v=ba0d48bac3",
+   "items": [
+    "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"egg|eggs\" data-n=\"1\">4 eggs</span>",
+    "crack each separately"
+   ],
+   "items_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-f=\"egg|eggs\" data-n=\"1\">4 eggs</span> · crack each separately",
+   "name": "Eggs in cups",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 4",
+   "image": "illustrations/cilbir/mise3.webp?v=3f3c223404",
+   "items": [
+    "Butter <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
+    "pepper <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>"
+   ],
+   "items_html": "Butter <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span> · pepper <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+   "name": "Butter and mild pepper",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
  "more_label": "More turkish & coastal:",
  "next": {
   "slug": "kabak-mucver",
@@ -123,7 +164,7 @@
    "person": "person"
   }
  },
- "share_image": "share/cilbir.jpg?v=dc94186ea3",
+ "share_image": "share/cilbir.jpg?v=82c8c9f789",
  "siblings": [
   {
    "slug": "yacht-sashimi",
@@ -191,7 +232,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cilbir/1.webp?v=8369b6e3b2",
+    "illustration": "illustrations/cilbir/1.webp?v=f7bbec0706",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -203,7 +244,20 @@
    "time": "3 min",
    "time_html": "<span>3 min</span>",
    "title": "Make the yoghurt base",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 g</span>",
+     "name_html": "Thick plain yoghurt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"clove|cloves\" data-n=\"1\">1 small clove</span>",
+     "name_html": "Garlic, finely grated"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Fine salt"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Bring <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"6\" data-b=\"8\" data-s=\"0\">6–8 cm</span> of water to a bare simmer in a wide pot; add optional vinegar.</li><li>Crack each egg into a small cup, then slide it in close to the surface.</li><li>Cook two at a time; no vigorous whirlpool or rolling boil.</li></ul>",
@@ -218,7 +272,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cilbir/2.webp?v=f176ea7ad2",
+    "illustration": "illustrations/cilbir/2.webp?v=a39a2c2523",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -230,7 +284,16 @@
    "time": "2 min",
    "time_html": "<span>2 min</span>",
    "title": "Lower eggs into gentle water",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Eggs (pasteurized for soft yolks)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "White vinegar for poaching water"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Poach about 3–4 minutes for fully set whites and a soft yolk.</li><li>Lift with a slotted spoon and drain on clean paper for 10 seconds.</li><li>Repeat for the other pair.</li><li>For firm yolks cook longer until set; use pasteurized eggs for soft-yolk service, especially for vulnerable diners.</li></ul>",
@@ -245,7 +308,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cilbir/3.webp?v=cf0e36b51f",
+    "illustration": "illustrations/cilbir/3.webp?v=2911ed05af",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -257,7 +320,12 @@
    "time": "6–8 min",
    "time_html": "<span>6–8 min</span>",
    "title": "Poach; drain well",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Eggs (pasteurized for soft yolks)"
+    }
+   ]
   },
   {
    "body_html": "<ul class=\"do\"><li>Melt butter over low heat.</li><li>Turn off the heat, stir in pepper and let infuse 15–20 seconds without blackening.</li><li>Place two drained eggs on each yoghurt bowl; spoon butter over, add optional dill and eat immediately.</li></ul>",
@@ -268,7 +336,7 @@
     "diagram": null,
     "diagram_title": "Diagram",
     "how": [],
-    "illustration": "illustrations/cilbir/4.webp?v=9d39cbd81b",
+    "illustration": "illustrations/cilbir/4.webp?v=7b07788252",
     "photo": null,
     "result": null,
     "svg_fallback": null,
@@ -280,7 +348,24 @@
    "time": "3 min",
    "time_html": "<span>3 min</span>",
    "title": "Infuse butter; finish",
-   "uses_rows": []
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"20\">20 g</span>",
+     "name_html": "Butter"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Pul biber (mild red-pepper flakes), or paprika"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\">5 g</span>",
+     "name_html": "Dill"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Bread"
+    }
+   ]
   }
  ],
  "timeline": null,
