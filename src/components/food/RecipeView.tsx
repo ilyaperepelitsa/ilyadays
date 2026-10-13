@@ -1,3 +1,4 @@
+import { RecipeText } from "./RecipeText";
 import type { Recipe } from "@/lib/content";
 import { foodHref, getSvgDefs, getUi } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
@@ -40,6 +41,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
             <HeroArt hero={r.hero} eager />
           </figure>
         </div>
+        <RecipeText title={r.title} yields={r.yields} total={r.total} lang={lang}/>
         <div className="recipe-body">
           <Ingredients r={r} t={t} lang={lang} />
           <div className="recipe-main">

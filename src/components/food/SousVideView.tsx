@@ -1,3 +1,4 @@
+import { RecipeText } from "./RecipeText";
 import type { SousVide } from "@/lib/content";
 import { foodHref, getSvgDefs, media } from "@/lib/content";
 import type { Lang } from "@/lib/i18n";
@@ -28,6 +29,7 @@ export function SousVideView({ lang, sv }: { lang: Lang; sv: SousVide }) {
             <HeroArt hero={sv.hero} eager />
           </figure>
         </div>
+        <RecipeText title={sv.title} lang={lang}/>
         <SousVidePlanner lang={lang} tables={sv.tables} />
         <SousVideTables lang={lang} tables={sv.tables} />
         <section className="block" id="pdf">

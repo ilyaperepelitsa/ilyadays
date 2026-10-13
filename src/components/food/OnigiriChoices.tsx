@@ -1,5 +1,7 @@
 "use client";
 
+import { RecipeText } from "./RecipeText";
+
 import type { Recipe, OnigiriWrapping } from '@/lib/content';
 import type { Lang } from '@/lib/i18n';
 import { foodHref } from '@/lib/paths';
@@ -36,6 +38,7 @@ export function OnigiriChoices({base,fillings,methods,wrappings,lang,ui}:{base:R
    {fixed&&<p className="sv-help">{text('This recipe includes its own shaping and structural wrapping; follow its illustrated steps below.','В этом рецепте свои форма и обёртка, которые удерживают начинку; следуйте иллюстрированным шагам ниже.')}</p>}
    <p className="onigiri-selection" role="status" aria-live="polite" aria-atomic="true"><b>{onigiriLabel(filling,lang)}</b> · {methodLabel} · {fixed?fixedWrap:wrapping.title} · {filling.yields}</p>
   </section>
+  <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
   <div className="recipe-body" key={`${choice.recipe}:${choice.method}:${choice.wrapping}`} data-onigiri-selection={`${choice.recipe}:${choice.method}:${choice.wrapping}`}>
    <Ingredients r={selected} t={t} lang={lang}/><div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t}/><NotesAndSources r={selected} t={t}/></div>
   </div>

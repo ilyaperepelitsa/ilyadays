@@ -1,5 +1,7 @@
 "use client";
 
+import { RecipeText } from "./RecipeText";
+
 import type { ReactNode } from 'react';
 import type { Recipe } from '@/lib/content';
 import { type Lang, localPath } from '@/lib/i18n';
@@ -41,6 +43,7 @@ export function SashimiChoices({base, variants, lang, ui, sourcing}: {
       <p className="onigiri-selection" role="status" aria-live="polite" aria-atomic="true"><b>{selected.title}</b></p>
       <Html as="p" className="sv-help" html={selected.intro_html}/>
     </section>
+    <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
     <div className="recipe-body" key={selected.slug} data-sashimi-selection={id}>
       <Ingredients r={selected} t={t} lang={lang}/>
       <div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t}/><NotesAndSources r={selected} t={t}/>{sourcing}</div>

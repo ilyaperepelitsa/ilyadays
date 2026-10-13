@@ -489,3 +489,13 @@ table.stack tbody tr:hover { background: color-mix(in srgb, var(--accent-soft) 4
 }
 
 .mise img.art.illo { object-fit: contain; }
+
+/* Copyable plain-text recipe, shared by every recipe and selected variant. */
+.recipe-text { border: 1px solid var(--line); border-radius: 14px; padding: 0 20px; margin-bottom: 28px; background: var(--surface-2); }
+.recipe-text > summary { cursor: pointer; font-weight: 700; padding: 16px 0; min-height: 44px; }
+.recipe-text-content { padding-bottom: 20px; }
+.recipe-text-content > p { margin-top: 0; color: var(--muted); font-size: .9rem; }
+.recipe-text-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 14px; }
+.recipe-text-actions [role=status] { font-size: .9rem; color: var(--muted); }
+.recipe-text textarea { display: block; width: 100%; min-height: 280px; max-height: 65vh; resize: vertical; padding: 16px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink); font: .875rem/1.65 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.recipe-text textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
