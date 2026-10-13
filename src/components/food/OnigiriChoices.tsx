@@ -38,6 +38,18 @@ export function OnigiriChoices({base,fillings,methods,wrappings,lang,ui}:{base:R
    {fixed&&<p className="sv-help">{text('This recipe includes its own shaping and structural wrapping; follow its illustrated steps below.','В этом рецепте свои форма и обёртка, которые удерживают начинку; следуйте иллюстрированным шагам ниже.')}</p>}
    <p className="onigiri-selection" role="status" aria-live="polite" aria-atomic="true"><b>{onigiriLabel(filling,lang)}</b> · {methodLabel} · {fixed?fixedWrap:wrapping.title} · {filling.yields}</p>
   </section>
+  <section className="block notes" aria-labelledby="onigiri-hand-tips">
+   <aside className="note">
+    <h3 id="onigiri-hand-tips">{text('Keep rice from sticking to your hands','Чтобы рис не прилипал к рукам')}</h3>
+    <ul className="do">
+     <li>{text('Before every onigiri, wet both palms, fingertips and between your fingers. Shake off excess: hands should be damp, without dripping.','Перед каждым онигири смочите обе ладони, кончики пальцев и между пальцами. Стряхните лишнее: руки должны быть влажными, без капель.')}</li>
+     <li>{text('Keep clean water nearby. If rice sticks, rinse off grains and starch, then wet your hands again. Replace cloudy water.','Держите рядом чистую воду. Если рис липнет, смойте зёрна и крахмал, затем снова смочите руки. Помутневшую воду смените.')}</li>
+     <li>{text('Shape rice while warm and comfortable to hold. Keep the rest covered; press and turn gently instead of kneading.','Лепите из тёплого риса, который комфортно держать. Остальной рис держите накрытым; мягко прижимайте и поворачивайте, не вымешивая.')}</li>
+     <li>{text('For triangular onigiri, choose cling-film shaping for easier handling. With a mold, wet the mold and lid and shake off excess before filling.','Для треугольных онигири можно выбрать удобную лепку через пищевую плёнку. При работе с формой смочите форму и крышку и стряхните лишнюю воду перед наполнением.')}</li>
+    </ul>
+    <p className="sources"><a href="https://www.justonecookbook.com/onigiri-rice-balls/" target="_blank" rel="noopener">{text('Hand-shaping technique · Just One Cookbook','Лепка руками · Just One Cookbook')}</a></p>
+   </aside>
+  </section>
   <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
   <div className="recipe-body" key={`${choice.recipe}:${choice.method}:${choice.wrapping}`} data-onigiri-selection={`${choice.recipe}:${choice.method}:${choice.wrapping}`}>
    <Ingredients r={selected} t={t} lang={lang}/><div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t}/><NotesAndSources r={selected} t={t}/></div>
