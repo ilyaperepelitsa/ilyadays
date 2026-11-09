@@ -10,11 +10,24 @@ export function Html({ as: As = "span", html, className }: { as?: Tag; html: str
   return <As className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-/** A generated illustration (`img.art.illo`), lazy like the original. */
-export function Illo({ src, alt, eager }: { src: string; alt: string; eager?: boolean }) {
+/** The 600 px card copy of a recipe picture (scripts/card-thumbnails.py); it keeps the picture's `?v=`. */
+export const cardPicture = (src: string) => (/^illustrations\/[^?]+\.webp(\?|$)/.test(src) ? `thumbs/${src}` : src);
+
+/** A generated illustration (`img.art.illo`), lazy like the original. `eager` marks the picture that is the page's
+ *  largest paint (hero, first cards): it loads at once with high priority. Card copies are 600×400. */
+export function Illo({ src, alt, eager, card }: { src: string; alt: string; eager?: boolean; card?: boolean }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element -- static pictures, pre-sized webp; no optimizer needed
-    <img className="art illo" src={media(src)} alt={alt} loading={eager ? "eager" : "lazy"} decoding="async" />
+    <img
+      className="art illo"
+      src={media(card ? cardPicture(src) : src)}
+      alt={alt}
+      width={card ? 600 : undefined}
+      height={card ? 400 : undefined}
+      loading={eager ? "eager" : "lazy"}
+      fetchPriority={eager ? "high" : undefined}
+      decoding="async"
+    />
   );
 }
 
@@ -23,9 +36,9 @@ export function Svg({ svg }: { svg: string }) {
   return <span style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: svg }} />;
 }
 
-/** Hero/card art: the picture, else the drawing. */
-export function HeroArt({ hero, eager }: { hero: Hero; eager?: boolean }) {
-  if (hero.image) return <Illo src={hero.image} alt={hero.alt} eager={eager} />;
+/** Hero/card art: the picture, else the drawing. `card` uses the small copy. */
+export function HeroArt({ hero, eager, card }: { hero: Hero; eager?: boolean; card?: boolean }) {
+  if (hero.image) return <Illo src={hero.image} alt={hero.alt} eager={eager} card={card} />;
   if (hero.svg_fallback) return <Svg svg={hero.svg_fallback} />;
   return null;
 }

@@ -1,11 +1,11 @@
 # ilyadays.com
 
-Ilya's homepage: **Food** (step-by-step recipes) and **Travel** (trip plans with the progress I've made), in English
-and Russian. Next.js 16 (App Router, React 19, TypeScript, Tailwind 4), deployed on Vercel from `main`.
+Ilya's homepage: **Food** (step-by-step recipes), **Travel** (trip plans with the progress I've made) and **Fitness**
+(a machine-first strength program with a one-tap gym log), in English and Russian. Next.js 16 (App Router, React 19, TypeScript, Tailwind 4), deployed on Vercel from `main`.
 
-**No cookies anywhere.** Language, scroll position, ticked steps and the Supabase session all live in `localStorage`.
+**This site sets no cookies.** Language, scroll position, ticked steps and the Supabase session all live in `localStorage`.
 There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insights are cookieless.
-`npm run check:cookies` audits a build for cookie use.
+`npm run check:cookies` audits the production build; add `-- --live` to check served response headers too. Google can use cookies on its own sign-in pages; the ilyadays session stays in browser storage.
 
 ## Routes
 
@@ -17,11 +17,22 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
 | `/food/onigiri` | `/ru/food/onigiri` | Nine original shop-inspired fillings and three shaping methods, selected on one illustrated page |
 | `/food/sous-vide` | `/ru/food/sous-vide` | Cooking calculator, including salmon, with chilled/frozen controls, thickness sliders, recipe presets, reference tables and PDF |
 | `/travel` | `/ru/travel` | Trips |
-| `/travel/turkey-yacht-food` | `/ru/travel/turkey-yacht-food` | Twelve Turkish-inspired yacht meal proposals and seasonal shopping |
+| `/travel/turkey-yacht-food` | `/ru/travel/turkey-yacht-food` | Twelve Turkish-inspired yacht meal proposals, seasonal shopping, and the shops on Google, Yandex and Apple Maps |
 | `/food/yacht-sashimi` | `/ru/food/yacht-sashimi` | One full sashimi recipe with nine seafood variations and sourced buying/holding guidance; old Travel sashimi URLs redirect here |
-| `/travel/new` | `/ru/travel/new` | Template for a new city: days, pace, meals, themes. A model fills the plan; Wikipedia and Commons add links and pictures. Saved in this browser |
-| `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it |
+| `/travel/new` | `/ru/travel/new` | Create a trip with optional stay dates and source-checked events; explicitly accepted events remain fixed through rebuilds. Saved in this browser |
+| `/travel/made/<id>` | `/ru/travel/made/<id>` | A generated trip, on the browser that saved it. Each stop opens in Google, Yandex or Apple Maps by name; each day opens as a walking route in all three |
 | `/travel/istanbul` | `/ru/travel/istanbul` | The Istanbul planner. Everyone sees my progress; only I can edit it |
+| `/fitness` | `/ru/fitness` | Fitness hub: the next workout, Start, this week |
+| `/fitness/train` | `/ru/fitness/train` | The gym log. One tap per set; weights progress on their own; a workout closes itself after 6 hours |
+| `/fitness/program` | `/ru/fitness/program` | Personal plan constructor: primary/supporting goals, muscle exclusions, custom days/exercises, versioned pivots and adviser |
+| `/fitness/profile` | `/ru/fitness/profile` | Private self-service profiles, optional sharing, personal goals and first-plan setup |
+| `/fitness/exercises` | `/ru/fitness/exercises` | 138 exercises with generated technique diagrams, muscle maps, cues, mistakes and interchangeable machines |
+| `/fitness/exercises/<id>` | `/ru/fitness/exercises/<id>` | One exercise |
+| `/fitness/gyms` | `/ru/fitness/gyms` | Gym profiles: which machines a gym has; missing ones swap to an equivalent |
+| `/fitness/progress` | `/ru/fitness/progress` | Strength, volume, dated weigh-ins, waist/arm/body measurements and consistency; private unless explicitly shared |
+| `/fitness/nutrition` | `/ru/fitness/nutrition` | Protein and energy calculators and a protein food table |
+| `/fitness/tools` | `/ru/fitness/tools` | One-rep max and the weight for any reps from a set you did, rounded to the machine; warm-up; plates per side |
+| `/fitness/science`, `/fitness/science/<topic>` | `/ru/fitness/science/…` | Sourced explainers: goals and loads, progression, injury prevention, longevity, nutrition, the analytics |
 
 - Every content page is static (SSG). Each page has a canonical URL, EN/RU alternates, and a 1200×630 link-preview card (Open Graph + Twitter).
 - **Save on this phone**, in the footer, stores the pages and pictures in this browser (about the size of `public/media`). After that the recipes open with no connection. On an iPhone, add the site to the Home Screen, open that icon, and tap Save there — that copy is separate from Safari. Making a new trip still needs the network. The list is `public/offline-catalog.json`, written by `scripts/write-offline-catalog.mjs` at the start of `npm run build`.
@@ -30,6 +41,8 @@ There is no middleware and no `@supabase/ssr`. Vercel Analytics and Speed Insigh
   - `/food/share/*.jpg`, `/food/illustrations/*`
 - The EN · RU switch stores the choice in `localStorage["site-lang"]`.
 - `/travel/new` asks for a city, how many days, hours, sights, food breaks, linger or rapid pace, and whether days share a place. A preference note covers food and shops (secret bars, cafés, modern or traditional local food). Places to pass through are one per line and are not pinned to a day: one route walks through each. Each day has a short title and a longer description, in English and Russian. Suggest themes fills those first. Generate then asks for the stops, the visit notes, and names a Wikipedia article and a Commons search. Pictures come from those APIs. The model does not return image URLs. The key stays in `localStorage["cdays-ai-key"]` (the same key as the Istanbul re-plan) and saved trips stay in `localStorage["ilyadays-trips-v1"]`. Neither is sent to this site.
+- Map links come from `src/lib/maps.mjs` (`placeLinks`, `routeLinks`, `walkLinks`) and render through `src/components/travel/MapLinks.tsx`. A pin only says "somewhere here", so a place opens by search: Google gets the search text, and Yandex and Apple search around the place's point. Generated stops carry the model's own `search` ("name, street, city"). Turkey shops search inside their town. Yandex uses `yandex.ru` for Russian pages. A phone browser keeps only three Google waypoints, so a longer walk becomes Google pieces of five stops ("Google Maps 1–5", "5–9"). Yandex and Apple take the whole day as one route. The Istanbul app does the same with its own `q`/`near` fields in `../istanbul_trip/data/catalog.json`.
+- Generating a trip retries one busy or failed OpenAI request (not a bad key or a spent quota). The timeout grows with effort (1–6 minutes). A sight whose named Wikipedia article lies within 1 km takes the article's coordinates, so pins land on the place.
 - A tiny script in `<head>` sends the reader to the same page in their language before the page paints.
   - Without a saved choice, the linked language stays in place: English at the root and Russian under `/ru`.
 
@@ -72,7 +85,8 @@ The recipes and the Istanbul app are edited in their own repos (`../recipes`, `.
      Detailed technique images retain their resolution. Legacy `public/food` asset copies are removed;
      their URLs already redirect to `/media` in `next.config.ts`.
 3. It copies the recipe stylesheet and the site icons.
-4. It copies `../istanbul_trip/dist/app.{js,css,d.ts}`.
+4. It copies `../istanbul_trip/dist/app.{js,css,d.ts}` and `mapdata.json`. `app.js` fetches the map data by its own
+   `?v=` hash, so the two files must come from the same build (`tests/site/istanbul-bundle.test.mjs` checks).
 5. It turns `art/covers/*.webp` into `public/covers` and the 1200×630 previews `public/share/{home,travel}.jpg`.
 
 The Turkey seasonal shopping guide is authored here in `content/travel/turkey-yacht-food.json`. Its twelve cards link to full Food recipes, sourced from `../recipes/src/turkish_recipes.{py,json}` with bilingual translations and per-step art. The reusable Food collection is separate from the dated Travel provisioning notes. Source snapshots are retained in `art/turkey-recipes/source/` because the sibling currently has no Git repository.
@@ -105,18 +119,32 @@ In the exported HTML, links still point at `<slug>.html`. `src/lib/content.ts` r
 
 - The page reads the owner's progress from the Supabase table `public.trip_state` (one JSON value per trip and key).
 - Anyone can read it.
-- Writes are allowed by Row Level Security only when `public.is_admin()` is true. That is TypeKana's admin check.
+- Writes are allowed by Row Level Security only when `public.is_admin()` is true. The dedicated project defines this against its own `ilyadays_admins` membership table.
 - The client mounts the app read-only and switches to editing only when `rpc('is_admin')` returns `true`. Any error means read-only.
-- Sign-in is Google through Supabase OAuth (PKCE), with the session in `localStorage`. Sign-in returns to the same page.
+- Sign-in is Google through Supabase OAuth (PKCE), with the session in `localStorage`. Sign-in returns to the same page. Auth and offline progress caches are namespaced by the backend project; users sign in again after cutover.
+
+The Istanbul map has Hide/Show map controls on desktop, Plan/Map tabs on phones, and a Full screen button with an iPhone-compatible fallback. Fullscreen keeps a day picker available; Escape exits it. **Use my location** requests browser permission, shows a live position and accuracy circle, and links to walking navigation to the next unvisited stop in the selected day in Google, Yandex or Apple Maps. Dragging stops camera following. Stopping location, hiding the map, switching to the phone plan, leaving the page or moving the app to the background clears location tracking. Location is never written to Supabase or localStorage.
+
+## Fitness: who can log
+
+- Everything under `/fitness` reads and writes through a local-first store (`src/lib/fitness/store.ts`). A logged set lands in this browser at once and uploads when the account and the network allow.
+- With no fitness tables in Supabase (today), the log stays in the browser it was made in, and the page says so. On the first signed-in visit after setup, that log uploads once.
+- A phone that logs keeps the gym pages working with no network at all (the "gym copy": `src/components/fitness/GymOffline.tsx` + `public/sw.js`, production builds only); visitors get no service worker. **Save on this phone** is still the way to take the whole site offline.
+- Anyone can read the log. Only the owner (a `fitness_profiles` row, or `public.is_admin()`) writes, and only their own rows. Set-up steps and checks: [fitness setup](docs/fitness-setup.md).
+- Plans, research notes and the decisions behind the section live in [`plans/fitness/`](plans/fitness/README.md). The exercise catalog is `content/fitness/exercises/<slice>.json`, merged into `content/fitness/exercises.json` by `node scripts/fitness-catalog-merge.mjs`; ids come from `content/fitness/registry.json`.
+- Diagrams are generated by `scripts/fitness-images.py` (OpenAI Images, a hard spend cap in `art/fitness/spend.json`). After a run, `python scripts/fitness-thumbs.py` makes the list thumbnails and `node scripts/fitness-image-index.mjs` indexes everything (the build re-runs the index).
 
 ## Environment
 
 | Variable | Value |
 | --- | --- |
-| `NEXT_PUBLIC_SUPABASE_URL` | TypeKana's Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | its anon / publishable key (public; RLS protects the data) |
+| `NEXT_PUBLIC_SUPABASE_URL` | The dedicated ilyadays Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | its public `sb_publishable_` key (RLS protects the data) |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | legacy fallback when no publishable key is set |
 
-Copy `.env.example` to `.env.local` for local runs, and set both variables in Vercel → Project → Settings → Environment Variables.
+Use [the Supabase, Google OAuth and Vercel cutover guide](docs/supabase-cutover.md) to move off the previously shared Typekana backend, preserve progress, and grant owner access. Run the three SQL migrations in order in the new project (admin, trip state, fitness).
+
+Copy `.env.example` to `.env.local` for local runs, and set the URL and public key in Vercel → Project → Settings → Environment Variables.
 Without them the site still builds and works, but the Istanbul page shows the plan only, with no progress and no sign-in.
 
 ## Commands
@@ -126,7 +154,9 @@ npm install
 npm run sync            # pull recipes, pictures, the Istanbul app, covers
 npm run dev             # http://localhost:3000
 npm run build && npm run start
-npm test               # trip template, offline catalog, recipe search and diagrams, site header
+npm test               # trip template, offline catalog, recipe search and diagrams, site header, fitness (+ SQL checks if Postgres is installed)
+npm run test:fitness:sql   # fitness migrations + 30 access checks on a throwaway local Postgres
+npm run test:fitness:e2e   # phone-sized browser tests of the fitness pages and a gym session (Python Playwright)
 npm run lint && npm run typecheck
 npm run check:cookies   # after a build; add -- --live with `npm run start` running
 ```

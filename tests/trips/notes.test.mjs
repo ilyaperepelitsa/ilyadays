@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { mapsUrl, parseNotes } from "../../src/lib/trips/parse.mjs";
+import { parseNotes } from "../../src/lib/trips/parse.mjs";
 import { stop } from "./fixtures.mjs";
 
 function row(id, kind, spotSearch) {
@@ -59,13 +59,4 @@ test("a sight needs two facts and a meal needs one", () => {
     { kind: "events", en: "A siege.", ru: "Осада." },
   ];
   assert.throws(() => parseNotes({ places: [noKeeps] }, stops), /notes/);
-});
-
-test("the map link is a search for one stop and a route for several", () => {
-  assert.equal(mapsUrl([]), "");
-  assert.match(mapsUrl([{ lat: 1, lon: 2 }]), /search\/\?api=1&query=1,2/);
-  const url = mapsUrl([{ lat: 1, lon: 2 }, { lat: 3, lon: 4 }, { lat: 5, lon: 6 }]);
-  assert.match(url, /origin=1,2/);
-  assert.match(url, /destination=5,6/);
-  assert.match(url, /3%2C4/);
 });

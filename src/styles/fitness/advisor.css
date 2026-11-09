@@ -1,0 +1,39 @@
+/* fitness: advisor stream — owned by plans/fitness; see 00-master-plan.md */
+/* AI coach and plan history on /fitness/program (stream 10, plans/fitness/10-ai-advisor.md): fad-* classes. */
+
+.fad { display: grid; gap: 12px; }
+.fad > h2, .fad > p { margin: 0; }
+.fad-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.fad-chip {
+  min-height: 44px; padding: 8px 12px; border-radius: 999px; border: 1px dashed var(--line); background: var(--surface-2);
+  color: var(--ink); font: inherit; font-size: .88rem; text-align: left; cursor: pointer; touch-action: manipulation;
+}
+.fad-chip:hover:not(:disabled) { border-color: var(--accent); }
+.fad-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fad-request { min-height: 96px; resize: vertical; line-height: 1.4; }
+.fad-key { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.fad-link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; border: 0; background: none;
+  color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer;
+}
+.fad-model > summary { font-weight: 600; font-size: .92rem; }
+.fad-model .fpr-field { margin-top: 8px; }
+.fad-ask { width: 100%; }
+
+.fad-proposal { display: grid; gap: 10px; padding: 12px; border: 1.5px solid var(--accent); border-radius: 14px; background: var(--surface); }
+.fad-summary { margin: 0; font-weight: 600; }
+.fad-changes { margin: 0; padding-left: 1.3em; display: grid; gap: 10px; }
+.fad-changes li { display: grid; gap: 2px; }
+.fad-line { font-weight: 650; overflow-wrap: anywhere; }
+.fad-reason { color: var(--muted); font-size: .9rem; }
+.fad-cautions { margin: 0; }
+.fad-cautions ul { margin: 6px 0 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.fad-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.fad .fit-note { margin: 0; }
+.fad .fit-note ul { margin: 6px 0 0; padding-left: 1.2em; }
+.fad .fit-note p { margin: 0; }
+
+.fad-history ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fad-history li { display: grid; gap: 2px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.fad-history li:last-child { border-bottom: 0; padding-bottom: 0; }
+.fad-history-meta { color: var(--muted); }

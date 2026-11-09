@@ -18,6 +18,8 @@ const eslintConfig = defineConfig([
     "public/**",
     "content/**",
     "art/**",
+    // Local QA screenshots, logs and one-off browser scripts (gitignored).
+    "output/**",
   ]),
 ]);
 

@@ -1,0 +1,2726 @@
+[
+  {
+    "id": "vertical-traction",
+    "name": {
+      "en": "Machine lat pulldown (lever)",
+      "ru": "Вертикальная тяга в рычажном тренажёре"
+    },
+    "aka": [
+      "Vertical Traction (Technogym Selection)",
+      "Life Fitness Insignia Pulldown",
+      "Life Fitness Signature Series Lat Pulldown",
+      "Life Fitness Insignia Dual Axis Pulldown",
+      "Lever lat pulldown",
+      "Iso-lateral pulldown machine"
+    ],
+    "equipment": "selectorized",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rhomboids",
+      "rotator-cuff",
+      "delt-rear",
+      "biceps",
+      "brachialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "lat-pulldown",
+      "plate-loaded-pulldown",
+      "neutral-grip-pulldown",
+      "assisted-pull-up",
+      "single-arm-cable-pulldown",
+      "band-assisted-pull-up"
+    ],
+    "setup": {
+      "en": "Set the seat so you can just reach the handles with your arms fully straight; if the machine has thigh pads, lock them snugly over your thighs. Sit tall against the back pad with your feet flat.",
+      "ru": "Отрегулируйте сиденье так, чтобы доставать до рукоятей полностью прямыми руками; если есть валики для бёдер, плотно зафиксируйте их. Сядьте ровно, прижавшись спиной к спинке, стопы на полу."
+    },
+    "cues": {
+      "en": [
+        "Start every rep by drawing the shoulder blades down, then drive the elbows down toward your ribs.",
+        "Pull until the handles reach upper-chest level, elbows close to your sides.",
+        "Keep the chest up and the torso still; only the arms and shoulder blades move.",
+        "Exhale as you pull, inhale as the handles rise.",
+        "Return over 2–3 s to straight arms and a lat stretch without letting the plates touch.",
+        "The arms move independently: keep both handles level and let the weaker side set the pace."
+      ],
+      "ru": [
+        "Каждый повтор начинайте с опускания лопаток, затем ведите локти вниз к рёбрам.",
+        "Тяните, пока рукояти не окажутся на уровне верха груди; локти близко к корпусу.",
+        "Грудь вперёд, корпус неподвижен: двигаются только руки и лопатки.",
+        "Выдох на тяге, вдох, когда рукояти уходят вверх.",
+        "Возвращайте 2–3 секунды до прямых рук и растяжения широчайших так, чтобы плитки стека не касались друг друга.",
+        "Рычаги независимы: держите рукояти на одной высоте, темп задаёт более слабая сторона."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Shrugging the shoulders toward the ears at the bottom of the pull.",
+        "Leaning far back and turning the pulldown into a row.",
+        "Yanking the handles with momentum or letting the stack slam.",
+        "Stopping short at the top, so the lats never lengthen.",
+        "Ego loading: a weight so heavy that the biceps finish every rep."
+      ],
+      "ru": [
+        "Поднимать плечи к ушам в нижней точке тяги.",
+        "Сильно отклоняться назад, превращая тягу сверху в горизонтальную.",
+        "Дёргать рукояти рывком или бросать вес на стек.",
+        "Не выпрямлять руки вверху — широчайшие так и не растягиваются.",
+        "Гнаться за весом: такой вес, что каждый повтор дожимают бицепсы."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "Strength Level lat pulldown, 80 kg man: Beginner 1RM 47 kg; × 0.6 ≈ 28 kg, rounded down to 25 kg because lever machines differ by brand (research 04 §3.9)."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Selection 700 Vertical Traction — Technogym, 2026. https://www.technogym.com/en-SG/product/selection-700-vertical-traction_MNGC.html",
+      "Effects of grip width on muscle strength and activation in the lat pull-down — J Strength Cond Res, 2014. https://doi.org/10.1097/JSC.0000000000000232",
+      "Voluntary increase in latissimus dorsi muscle activity during the lat pull-down following expert instruction — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181bb7213",
+      "Lat Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/lat-pulldown/kg"
+    ]
+  },
+  {
+    "id": "lat-pulldown",
+    "name": {
+      "en": "Lat pulldown",
+      "ru": "Тяга верхнего блока к груди"
+    },
+    "aka": [
+      "Wide-grip pulldown",
+      "Cable lat pulldown",
+      "Front pulldown",
+      "Lat Machine (Technogym Selection / Element)",
+      "Pulldown/Seated Row (Precor Vitality)"
+    ],
+    "equipment": "selectorized",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rhomboids",
+      "rotator-cuff",
+      "delt-rear",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "neutral-grip-pulldown",
+      "assisted-pull-up",
+      "single-arm-cable-pulldown",
+      "band-assisted-pull-up"
+    ],
+    "setup": {
+      "en": "Set the thigh pad so your thighs are locked in with feet flat on the floor. Stand, take an overhand grip about 1.5 times shoulder width, then sit down with the arms straight.",
+      "ru": "Отрегулируйте валики так, чтобы бёдра были плотно зафиксированы, а стопы стояли на полу. Встаньте, возьмитесь за гриф хватом сверху примерно в 1,5 ширины плеч и сядьте с прямыми руками."
+    },
+    "cues": {
+      "en": [
+        "Sit tall with the chest up and a slight backward lean; keep that torso angle for the whole set.",
+        "Start each rep by pulling the shoulder blades down, then drive the elbows down to your sides.",
+        "Pull the bar in front of your face to the top of your chest; the elbows finish under or slightly behind the bar.",
+        "Think 'elbows down', not 'hands down': the hands are hooks, wrists straight.",
+        "Exhale on the pull and pause briefly with the bar at the chest.",
+        "Return over 2–3 s to straight arms and a full lat stretch without letting the plates touch.",
+        "Keep the neck neutral: look ahead and don't push the head forward to meet the bar."
+      ],
+      "ru": [
+        "Сядьте ровно, грудь вперёд, корпус слегка отклонён назад; сохраняйте этот угол весь подход.",
+        "Каждый повтор начинайте с опускания лопаток, затем ведите локти вниз к бокам.",
+        "Тяните гриф перед лицом к верху груди; в нижней точке локти под грифом или чуть позади.",
+        "Думайте «локти вниз», а не «кисти вниз»: кисти — крюки, запястья прямые.",
+        "Выдох на тяге, короткая пауза, когда гриф у груди.",
+        "Возвращайте гриф 2–3 секунды до прямых рук и полного растяжения широчайших так, чтобы плитки стека не касались друг друга.",
+        "Шея нейтрально: смотрите вперёд и не тянитесь головой навстречу грифу."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Pulling the bar behind the neck: it forces the shoulder into an extreme position and works the lats no better than the front pulldown.",
+        "Shrugging the shoulders toward the ears instead of pulling them down.",
+        "Swinging the torso back to move the weight (momentum and lower-back strain).",
+        "Ego loading: a weight you cannot control even at the bottom of the rep range.",
+        "Letting the bar yank the arms up and the plates slam at the top.",
+        "Cutting the range: stopping at chin level or never straightening the arms."
+      ],
+      "ru": [
+        "Тянуть гриф за голову: плечевой сустав уходит в крайнее положение, а широчайшие работают не лучше, чем при тяге к груди.",
+        "Поднимать плечи к ушам вместо того, чтобы опускать их.",
+        "Раскачиваться корпусом назад, чтобы сдвинуть вес (инерция и нагрузка на поясницу).",
+        "Гнаться за весом: вес, который не удаётся контролировать даже на нижней границе повторов.",
+        "Позволять грифу дёргать руки вверх, а плиткам — с грохотом падать на стек.",
+        "Неполная амплитуда: остановка у подбородка или недовыпрямленные руки."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Strength Level lat pulldown, 80 kg man: Beginner 1RM 47 kg; first working load ≈ 0.6 × 47 ≈ 28 → 30 kg at about 3 reps in reserve (research 04 §3.9)."
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Electromyographic analysis of three different types of lat pull-down — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181b8d30a",
+      "Effects of grip width on muscle strength and activation in the lat pull-down — J Strength Cond Res, 2014. https://doi.org/10.1097/JSC.0000000000000232",
+      "Voluntary increase in latissimus dorsi muscle activity during the lat pull-down following expert instruction — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181bb7213",
+      "Lat Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/lat-pulldown/kg"
+    ]
+  },
+  {
+    "id": "plate-loaded-pulldown",
+    "name": {
+      "en": "Plate-loaded lat pulldown",
+      "ru": "Тяга сверху в рычажном тренажёре с дисками"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral Front Lat Pulldown",
+      "Hammer Strength Iso-Lateral Wide Pulldown",
+      "Plate-loaded lever pulldown",
+      "Iso-lateral pulldown"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rhomboids",
+      "rotator-cuff",
+      "delt-rear",
+      "biceps",
+      "brachialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "vertical-traction",
+      "lat-pulldown",
+      "neutral-grip-pulldown",
+      "assisted-pull-up",
+      "single-arm-cable-pulldown",
+      "band-assisted-pull-up"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles are just within reach with the arms fully straight and lower the thigh pad onto your thighs. Load the same plates on both arms and log the total plate weight.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукояти были в зоне досягаемости на полностью прямых руках, и опустите валик на бёдра. Навесьте одинаковые диски на оба рычага и записывайте общий вес дисков."
+    },
+    "cues": {
+      "en": [
+        "Grip the handles, sit tall with the chest up and feet braced on the floor.",
+        "Pull the shoulder blades down first, then drive the elbows down and back toward your hips.",
+        "Bring the handles to shoulder or upper-chest level, following the arc of the levers.",
+        "Pull both arms at the same speed; they move independently, so keep them level.",
+        "Exhale on the pull, then lower for 2–3 s to a full stretch.",
+        "Progress in small plates (1.25 kg per side) and compare loads only on this machine."
+      ],
+      "ru": [
+        "Возьмитесь за рукояти, сядьте ровно, грудь вперёд, стопы упираются в пол.",
+        "Сначала опустите лопатки, затем ведите локти вниз и назад к тазу.",
+        "Доводите рукояти до уровня плеч или верха груди, следуя дуге рычагов.",
+        "Тяните обеими руками с одной скоростью: рычаги независимы, держите их на одном уровне.",
+        "Выдох на тяге, затем опускайте 2–3 секунды до полного растяжения.",
+        "Прибавляйте маленькими дисками (по 1,25 кг на сторону) и сравнивайте веса только на этом тренажёре."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Loading different plates on the two arms.",
+        "Shrugging up at the bottom of the pull.",
+        "Leaning back and using body weight to start the levers moving.",
+        "Letting the levers fly up and bang at the top.",
+        "Comparing the plate weight with a cable pulldown: the lever changes the resistance."
+      ],
+      "ru": [
+        "Навешивать разный вес на два рычага.",
+        "Поднимать плечи к ушам в нижней точке тяги.",
+        "Отклоняться назад и сдёргивать рычаги весом тела.",
+        "Отпускать рычаги так, что они взлетают и ударяются вверху.",
+        "Сравнивать вес дисков с весом в блочной тяге: рычаг меняет сопротивление."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Estimate: no crowd standard for lever pulldowns; ≈ 0.6–0.7 × the 30 kg cable-pulldown start, i.e. 10 kg of plates per side (research 04 §3.8: lever ratios vary, start low and adjust)."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Plate Loaded Iso-Lateral Front Lat Pulldown — Hammer Strength (Life Fitness), 2026. https://www.lifefitness.com/en-eu/catalog/strength-training/plate-loaded/plate-loaded-iso-lateral-front-lat-pulldown",
+      "Effects of grip width on muscle strength and activation in the lat pull-down — J Strength Cond Res, 2014. https://doi.org/10.1097/JSC.0000000000000232",
+      "Lat Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/lat-pulldown/kg"
+    ]
+  },
+  {
+    "id": "neutral-grip-pulldown",
+    "name": {
+      "en": "Neutral-grip lat pulldown",
+      "ru": "Тяга верхнего блока узким параллельным хватом"
+    },
+    "aka": [
+      "Close-grip V-bar pulldown",
+      "Parallel-grip pulldown",
+      "MAG-grip pulldown",
+      "Close neutral-grip lat pulldown"
+    ],
+    "equipment": "selectorized",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "biceps",
+      "brachialis",
+      "brachioradialis",
+      "traps-lower",
+      "rhomboids",
+      "delt-rear"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "lat-pulldown",
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "assisted-pull-up",
+      "single-arm-cable-pulldown",
+      "band-assisted-pull-up"
+    ],
+    "setup": {
+      "en": "Clip a close neutral-grip (V) handle or a parallel-grip bar to the high pulley, lock your thighs under the pads and start with straight arms, palms facing each other.",
+      "ru": "Пристегните к верхнему блоку узкую параллельную (V-образную) рукоять или гриф с параллельными ручками, зафиксируйте бёдра валиками и начните с прямых рук, ладони смотрят друг на друга."
+    },
+    "cues": {
+      "en": [
+        "Lean back slightly with the chest up and keep that angle.",
+        "Draw the shoulder blades down, then drive the elbows down close to your ribs.",
+        "Bring the handle to the upper chest, just below the collarbones.",
+        "Exhale on the pull and squeeze the lats briefly at the bottom.",
+        "Return over 2–3 s until the arms are straight and the lats stretch."
+      ],
+      "ru": [
+        "Слегка отклонитесь назад, грудь вперёд, и сохраняйте этот угол.",
+        "Опустите лопатки, затем ведите локти вниз вдоль рёбер.",
+        "Доводите рукоять до верха груди, чуть ниже ключиц.",
+        "Выдох на тяге; внизу коротко напрягите широчайшие.",
+        "Возвращайте 2–3 секунды до прямых рук и растяжения широчайших."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning back so far that the pulldown becomes a row.",
+        "Rounding the upper back and pushing the head forward to meet the handle.",
+        "Shrugging at the top or the bottom of the rep.",
+        "Jerking the stack with a hip swing."
+      ],
+      "ru": [
+        "Отклоняться так сильно, что тяга превращается в горизонтальную.",
+        "Сутулиться и тянуть голову навстречу рукояти.",
+        "Поднимать плечи к ушам в верхней или нижней точке.",
+        "Сдёргивать стек рывком корпуса."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Strength Level close-grip lat pulldown, 80 kg man: Beginner 1RM 54 kg; × 0.6 ≈ 32 → 30 kg."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Electromyographic analysis of three different types of lat pull-down — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181b8d30a",
+      "Electromyographic analysis of muscle activation during pull-up variations — J Electromyogr Kinesiol, 2017. https://doi.org/10.1016/j.jelekin.2016.11.004",
+      "Close Grip Lat Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/close-grip-lat-pulldown/kg"
+    ]
+  },
+  {
+    "id": "assisted-pull-up",
+    "name": {
+      "en": "Assisted pull-up (machine)",
+      "ru": "Подтягивания в гравитроне"
+    },
+    "aka": [
+      "Gravitron",
+      "Assisted chin-up machine",
+      "Assist Dip Chin (Life Fitness Insignia / Signature)",
+      "Chin/Dip Assist (Hoist)",
+      "Dip Chin Assist (Cybex Prestige VRS)"
+    ],
+    "equipment": "assisted",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rhomboids",
+      "rotator-cuff",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "assistance": true,
+    "alternatives": [
+      "lat-pulldown",
+      "band-assisted-pull-up",
+      "neutral-grip-pulldown",
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "single-arm-cable-pulldown"
+    ],
+    "setup": {
+      "en": "Select the counterweight on the stack (more kg = more help). Climb the steps, take the handles about shoulder width (neutral or overhand), then place your knees or feet on the pad one at a time and lower yourself under control to straight arms.",
+      "ru": "Выберите на стеке вес противовеса (больше килограммов — больше помощи). Поднимитесь по ступенькам, возьмитесь за рукояти на ширине плеч (параллельно или сверху), поставьте колени или стопы на платформу по одному и плавно опуститесь до прямых рук."
+    },
+    "cues": {
+      "en": [
+        "Hang with straight arms but active shoulders: pull them slightly down, away from the ears, before each rep.",
+        "Drive the elbows down and back until your chin clears the handles.",
+        "Keep the ribs down and the legs still: no kicking or swinging.",
+        "Exhale on the way up, inhale on the way down.",
+        "Lower over 2–3 s to straight arms; don't drop into the bottom.",
+        "Progress by taking assistance off: 5 kg less once every set reaches the top of the rep range.",
+        "To get off, step back onto the steps before you let go of the handles."
+      ],
+      "ru": [
+        "Висите на прямых руках, но с активными плечами: перед каждым повтором слегка опустите их от ушей.",
+        "Ведите локти вниз и назад, пока подбородок не окажется выше рукоятей.",
+        "Рёбра опущены, ноги неподвижны: без махов и раскачки.",
+        "Выдох на подъёме, вдох на опускании.",
+        "Опускайтесь 2–3 секунды до прямых рук, не проваливаясь вниз.",
+        "Прогресс — это меньше помощи: снимайте 5 кг противовеса, когда во всех подходах выполнен верх диапазона повторов.",
+        "Чтобы сойти, сначала встаньте на ступеньки и только потом отпускайте рукояти."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Stepping off the pad before standing on the steps: the platform springs up.",
+        "Dropping into the bottom and hanging on relaxed, shrugged shoulders.",
+        "Half reps: not straightening the arms or not getting the chin over the handles.",
+        "Kicking or swinging to finish the rep.",
+        "Reading the stack backwards: adding kg makes it easier, not harder."
+      ],
+      "ru": [
+        "Сходить с платформы, не встав на ступеньки: она резко подпрыгивает вверх.",
+        "Проваливаться вниз и висеть на расслабленных, поднятых к ушам плечах.",
+        "Неполные повторы: руки не выпрямляются или подбородок не поднимается выше рукоятей.",
+        "Помогать себе махом ног или раскачкой.",
+        "Путать направление: больше килограммов противовеса — легче, а не тяжелее."
+      ]
+    },
+    "startLoad": {
+      "kg": 45,
+      "source": "Assistance, not load: research 04 §3.9 seeds 35–50 kg of assistance for 6–8 reps (≈ a 30–45 kg pulldown) for an 80 kg man; Strength Level puts an 80 kg Beginner at 1 strict pull-up."
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Insignia Series Assist Dip Chin — Life Fitness, 2026. https://www.lifefitness.com/en-us/catalog/strength-training/selectorized/insignia-series-assist-dip-chin",
+      "Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181f1598c",
+      "Pull Ups Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/pull-ups"
+    ]
+  },
+  {
+    "id": "single-arm-cable-pulldown",
+    "name": {
+      "en": "Single-arm cable pulldown",
+      "ru": "Тяга верхнего блока одной рукой"
+    },
+    "aka": [
+      "One-arm lat pulldown",
+      "Kneeling single-arm pulldown",
+      "Single-arm high cable pull",
+      "Unilateral cable pulldown"
+    ],
+    "equipment": "cable",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rhomboids",
+      "biceps",
+      "brachialis",
+      "obliques"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      12
+    ],
+    "alternatives": [
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "lat-pulldown",
+      "neutral-grip-pulldown",
+      "assisted-pull-up",
+      "band-assisted-pull-up",
+      "pull-up",
+      "chin-up"
+    ],
+    "setup": {
+      "en": "Clip a single D-handle to a high pulley. Sit at a pulldown station with the thighs under the pads (or half-kneel facing a cable column) and start with the working arm straight overhead.",
+      "ru": "Пристегните одиночную D-рукоять к верхнему блоку. Сядьте в тренажёр для тяги сверху, зафиксировав бёдра валиками (или встаньте на одно колено лицом к кроссоверу), и начните с прямой рабочей руки над головой."
+    },
+    "cues": {
+      "en": [
+        "Let the working shoulder rise into a stretch at the top, then pull it down first.",
+        "Drive the elbow down toward your hip, palm facing forward or inward.",
+        "Keep the torso square: don't twist or lean toward the working side.",
+        "Exhale as you pull and pause with the hand at shoulder height.",
+        "Return over 2–3 s to a full stretch; finish all reps on one side, then switch."
+      ],
+      "ru": [
+        "Вверху позвольте рабочему плечу подняться в растяжение, а затем первым делом опустите его.",
+        "Ведите локоть вниз к тазу; ладонь смотрит вперёд или внутрь.",
+        "Держите корпус ровно: не скручивайтесь и не заваливайтесь в рабочую сторону.",
+        "Выдох на тяге, пауза, когда кисть на уровне плеча.",
+        "Возвращайте 2–3 секунды до полного растяжения; сделайте все повторы одной рукой, затем другой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rotating the trunk to pull with the body instead of the lat.",
+        "Shrugging the working shoulder at the bottom.",
+        "Bending the wrist and pulling with the forearm.",
+        "Doing more reps or load on the stronger side: match both arms."
+      ],
+      "ru": [
+        "Скручивать корпус, чтобы тянуть телом, а не широчайшей.",
+        "Поднимать рабочее плечо к уху в нижней точке.",
+        "Сгибать запястье и тянуть предплечьем.",
+        "Делать сильной рукой больше, чем слабой: повторы и вес на обеих руках одинаковые."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Per arm: about half of the 30 kg two-arm pulldown start (Strength Level lat pulldown Beginner 1RM 47 kg × 0.6), rounded down."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Voluntary increase in latissimus dorsi muscle activity during the lat pull-down following expert instruction — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181bb7213",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315",
+      "Lat Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/lat-pulldown/kg"
+    ]
+  },
+  {
+    "id": "band-assisted-pull-up",
+    "name": {
+      "en": "Band-assisted pull-up",
+      "ru": "Подтягивания с резиновой петлёй"
+    },
+    "aka": [
+      "Banded pull-up",
+      "Band-assisted chin-up",
+      "Resistance-band pull-up"
+    ],
+    "equipment": "band",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rhomboids",
+      "rotator-cuff",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      5,
+      10
+    ],
+    "alternatives": [
+      "assisted-pull-up",
+      "lat-pulldown",
+      "neutral-grip-pulldown",
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "chin-up",
+      "pull-up"
+    ],
+    "setup": {
+      "en": "Loop a strong resistance band around the pull-up bar, step into it with one knee or both feet (stand on a bench to reach) and grip the bar overhand about shoulder width.",
+      "ru": "Закрепите плотную резиновую петлю на перекладине, вставьте в неё колено или обе стопы (встаньте на скамью, чтобы дотянуться) и возьмитесь за перекладину хватом сверху на ширине плеч."
+    },
+    "cues": {
+      "en": [
+        "Start from straight arms with the shoulders drawn slightly down.",
+        "Pull your chest toward the bar until the chin is over it.",
+        "Keep the legs together and the body still; the band helps most at the bottom and least at the top.",
+        "Lower over 2–3 s; don't let the band fling you up or snap you down.",
+        "Move to a thinner band once every set reaches the top of the rep range."
+      ],
+      "ru": [
+        "Начинайте с прямых рук, плечи слегка опущены.",
+        "Тяните грудь к перекладине, пока подбородок не окажется над ней.",
+        "Ноги вместе, тело неподвижно; резина сильнее всего помогает внизу и слабее всего — вверху.",
+        "Опускайтесь 2–3 секунды; не позволяйте резине подбрасывать вас или дёргать вниз.",
+        "Переходите на более тонкую петлю, когда во всех подходах выполнен верх диапазона повторов."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Stepping into the band carelessly: it can slip off the foot and whip back.",
+        "Bouncing out of the bottom on the band's recoil.",
+        "Half reps with the chin below the bar.",
+        "Staying on the same band for months instead of progressing."
+      ],
+      "ru": [
+        "Неаккуратно вставать в петлю: она может соскользнуть со стопы и хлестнуть.",
+        "Отскакивать из нижней точки за счёт отдачи резины.",
+        "Неполные повторы: подбородок не доходит до перекладины.",
+        "Месяцами работать с одной и той же петлёй вместо прогрессии."
+      ]
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181f1598c",
+      "Electromyographic analysis of muscle activation during pull-up variations — J Electromyogr Kinesiol, 2017. https://doi.org/10.1016/j.jelekin.2016.11.004",
+      "Pull Ups Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/pull-ups"
+    ]
+  },
+  {
+    "id": "pull-up",
+    "name": {
+      "en": "Pull-up",
+      "ru": "Подтягивания прямым хватом"
+    },
+    "aka": [
+      "Overhand pull-up",
+      "Pronated-grip pull-up",
+      "Bodyweight pull-up",
+      "Strict pull-up"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "traps-lower",
+      "rotator-cuff",
+      "rhomboids",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      3,
+      8
+    ],
+    "alternatives": [
+      "chin-up",
+      "band-assisted-pull-up",
+      "assisted-pull-up",
+      "lat-pulldown",
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "neutral-grip-pulldown",
+      "single-arm-cable-pulldown"
+    ],
+    "setup": {
+      "en": "Grip the bar overhand slightly wider than shoulder width and hang with straight arms, legs together or crossed at the ankles.",
+      "ru": "Возьмитесь за перекладину хватом сверху чуть шире плеч и повисните на прямых руках, ноги вместе или скрещены в лодыжках."
+    },
+    "cues": {
+      "en": [
+        "Before each rep pull the shoulders down, away from the ears (active hang).",
+        "Drive the elbows down to your ribs and pull your chest toward the bar.",
+        "Finish with the chin over the bar without craning the neck.",
+        "Hold a slight hollow: ribs down, glutes tight, no swing.",
+        "Exhale on the way up; lower over 2–3 s to straight arms.",
+        "If you cannot do 3 clean reps, use the assisted machine or a band instead."
+      ],
+      "ru": [
+        "Перед каждым повтором опустите плечи от ушей (активный вис).",
+        "Ведите локти к рёбрам и тяните грудь к перекладине.",
+        "Заканчивайте с подбородком над перекладиной, не вытягивая шею.",
+        "Корпус слегка собран: рёбра опущены, ягодицы напряжены, без раскачки.",
+        "Выдох на подъёме; опускайтесь 2–3 секунды до прямых рук.",
+        "Если не получается 3 чистых повтора — работайте в гравитроне или с резиновой петлёй."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Kipping or swinging the legs to get over the bar.",
+        "Half reps that never reach straight arms at the bottom.",
+        "Reaching the chin up to the bar instead of pulling the body up.",
+        "Dropping into the bottom on relaxed shoulders, which jolts the joint.",
+        "Adding weight before you can do 8 strict reps."
+      ],
+      "ru": [
+        "Киппинг или раскачка ногами, чтобы перебраться через перекладину.",
+        "Неполные повторы без выпрямления рук внизу.",
+        "Тянуться подбородком к перекладине вместо подъёма всего тела.",
+        "Падать в нижнюю точку на расслабленных плечах — это рывок для сустава.",
+        "Вешать дополнительный вес раньше, чем получается 8 строгих повторов."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Bodyweight: Strength Level pull-ups, 80 kg man: Beginner 1 rep, Novice 7 reps; add load only after 8 strict reps."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181f1598c",
+      "ACE-sponsored research: what is the best back exercise? — American Council on Exercise, 2018. https://www.acefitness.org/continuing-education/certified/april-2018/6959/ace-sponsored-research-what-is-the-best-back-exercise/",
+      "Electromyographic analysis of muscle activation during pull-up variations — J Electromyogr Kinesiol, 2017. https://doi.org/10.1016/j.jelekin.2016.11.004",
+      "Pull Ups Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/pull-ups"
+    ]
+  },
+  {
+    "id": "chin-up",
+    "name": {
+      "en": "Chin-up",
+      "ru": "Подтягивания обратным хватом"
+    },
+    "aka": [
+      "Underhand pull-up",
+      "Supinated-grip pull-up",
+      "Reverse-grip pull-up"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "vertical-pull",
+    "class": "vertical-pull",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "biceps",
+      "brachialis",
+      "pec-sternal",
+      "traps-lower",
+      "rhomboids",
+      "forearm-flexors"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      3,
+      8
+    ],
+    "alternatives": [
+      "pull-up",
+      "band-assisted-pull-up",
+      "assisted-pull-up",
+      "neutral-grip-pulldown",
+      "lat-pulldown",
+      "vertical-traction",
+      "plate-loaded-pulldown",
+      "single-arm-cable-pulldown"
+    ],
+    "setup": {
+      "en": "Grip the bar underhand (palms toward you) about shoulder width and hang with straight arms.",
+      "ru": "Возьмитесь за перекладину хватом снизу (ладони к себе) на ширине плеч и повисните на прямых руках."
+    },
+    "cues": {
+      "en": [
+        "Set the shoulders down before the first rep.",
+        "Pull the elbows down to your sides and your chest to the bar.",
+        "Finish with the chin over the bar, neck neutral.",
+        "Ribs down, legs still: no swing.",
+        "Exhale on the way up; lower over 2–3 s until the elbows are fully straight."
+      ],
+      "ru": [
+        "Перед первым повтором опустите плечи.",
+        "Ведите локти вниз к бокам, а грудь — к перекладине.",
+        "Заканчивайте с подбородком над перекладиной, шея нейтрально.",
+        "Рёбра опущены, ноги неподвижны: без раскачки.",
+        "Выдох на подъёме; опускайтесь 2–3 секунды до полностью прямых локтей."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Stopping short of straight elbows at the bottom.",
+        "Swinging or kipping.",
+        "Gripping so narrow that the wrists and elbows ache.",
+        "Dropping fast and jolting the elbows at the bottom."
+      ],
+      "ru": [
+        "Не выпрямлять локти в нижней точке.",
+        "Раскачиваться или делать киппинг.",
+        "Брать хват настолько узкий, что болят запястья и локти.",
+        "Резко падать вниз с рывком в локтях."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Bodyweight: Strength Level chin-ups, 80 kg man: Beginner 1 rep, Novice 7 reps."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or Perfect-Pullup rotational exercise — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181f1598c",
+      "Kinematic and electromyographic comparisons between chin-ups and lat-pull down exercises — Sports Biomech, 2013. https://doi.org/10.1080/14763141.2012.760204",
+      "Chin Ups Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/chin-ups"
+    ]
+  },
+  {
+    "id": "machine-pullover",
+    "name": {
+      "en": "Machine pullover",
+      "ru": "Пуловер в тренажёре"
+    },
+    "aka": [
+      "Nautilus Pullover",
+      "Nautilus Inspiration Pull Over",
+      "Hammer Strength Pullover",
+      "Technogym Pure Strength Pullover",
+      "Lever pullover"
+    ],
+    "equipment": "selectorized",
+    "pattern": "pullover",
+    "class": "lat-isolation",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "pec-sternal",
+      "triceps-long",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "straight-arm-pulldown",
+      "dumbbell-pullover",
+      "lat-pulldown",
+      "single-arm-cable-pulldown"
+    ],
+    "setup": {
+      "en": "Set the seat so your shoulder joint lines up with the machine's pivot (usually marked) and fasten the belt. Press the foot bar to bring the pads forward, rest the backs of your upper arms on the elbow pads and keep the hands open on the bar.",
+      "ru": "Отрегулируйте сиденье так, чтобы плечевой сустав был на одной линии с осью вращения тренажёра (обычно она отмечена), и застегните ремень. Нажмите на педаль, чтобы подвести упоры вперёд, положите на них заднюю поверхность плеч, кисти держите открытыми на перекладине."
+    },
+    "cues": {
+      "en": [
+        "Release the foot bar slowly and let the arms travel back overhead into a stretch.",
+        "Drive with the elbows, not the hands: push the pads down in an arc to your sides.",
+        "Keep your back against the pad and the ribs down; don't arch to finish.",
+        "Exhale as you drive the pads down and pause briefly at the bottom.",
+        "Return over 2–3 s to the deepest stretch you can control without shoulder pain.",
+        "At the end of the set take the weight with the foot bar before you get out."
+      ],
+      "ru": [
+        "Медленно отпустите педаль и дайте рукам уйти назад за голову в растяжение.",
+        "Работайте локтями, а не кистями: ведите упоры по дуге вниз к бокам.",
+        "Спина прижата к спинке, рёбра опущены; не прогибайтесь, чтобы дожать.",
+        "Выдох, когда ведёте упоры вниз; короткая пауза внизу.",
+        "Возвращайте 2–3 секунды до самого глубокого растяжения, которое контролируете без боли в плече.",
+        "В конце подхода примите вес на педаль и только потом выходите из тренажёра."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat at the wrong height, so the shoulder does not rotate around the machine's axis.",
+        "Gripping hard and pulling with the forearms instead of pressing with the elbows.",
+        "Arching the lower back to gain range.",
+        "Forcing the stretch past what the shoulder tolerates.",
+        "Letting the weight snap the arms back overhead."
+      ],
+      "ru": [
+        "Неправильная высота сиденья: плечо вращается не вокруг оси тренажёра.",
+        "Крепко сжимать перекладину и тянуть предплечьями вместо давления локтями.",
+        "Прогибать поясницу ради амплитуды.",
+        "Форсировать растяжение сверх того, что терпит плечо.",
+        "Позволять весу рывком утаскивать руки за голову."
+      ]
+    },
+    "startLoad": {
+      "kg": 15,
+      "source": "Estimate: no crowd standard for this machine; between 0.6 × Strength Level straight-arm pulldown (Beginner 20 kg) and lat pulldown (47 kg) for an 80 kg man; cams differ by brand."
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Inspiration Pull Over product sheet — Nautilus (Core Health & Fitness), 2026. https://www.corehandf.com/cdn/shop/files/Product_Pull_Over_Inspiration_Nautilus_Product_Sheet.pdf",
+      "Differences between pullover and pulldown exercises on maximal isometric force and myoelectric activity in recreationally-trained men — Int J Exerc Sci, 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC9362894/",
+      "Straight Arm Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/straight-arm-pulldown/kg"
+    ]
+  },
+  {
+    "id": "straight-arm-pulldown",
+    "name": {
+      "en": "Straight-arm pulldown",
+      "ru": "Тяга прямыми руками на верхнем блоке"
+    },
+    "aka": [
+      "Straight-arm lat pulldown",
+      "Standing cable pullover",
+      "Stiff-arm pulldown",
+      "Rope pullover (cable)"
+    ],
+    "equipment": "cable",
+    "pattern": "pullover",
+    "class": "lat-isolation",
+    "primary": [
+      "lats",
+      "teres-major"
+    ],
+    "secondary": [
+      "triceps-long",
+      "pec-costal",
+      "delt-rear",
+      "traps-lower"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      15
+    ],
+    "alternatives": [
+      "machine-pullover",
+      "dumbbell-pullover",
+      "single-arm-cable-pulldown",
+      "lat-pulldown"
+    ],
+    "setup": {
+      "en": "Clip a straight bar or rope to a high pulley and step back until the cable is taut with your arms extended in front at about head height. Soften the knees and hinge forward slightly with a neutral spine.",
+      "ru": "Пристегните прямую рукоять или канат к верхнему блоку и отойдите назад, чтобы трос был натянут, а руки вытянуты вперёд примерно на уровне головы. Колени слегка согнуты, корпус немного наклонён вперёд, спина ровная."
+    },
+    "cues": {
+      "en": [
+        "Lock a slight bend in the elbows and keep it: the elbows neither open nor close.",
+        "Draw the shoulder blades down, then sweep the bar in an arc down to your thighs.",
+        "Keep the torso still; the movement happens only at the shoulders.",
+        "Exhale on the way down and squeeze the lats at the thighs.",
+        "Return over 2–3 s until the arms reach about head height and you feel a stretch under the armpits."
+      ],
+      "ru": [
+        "Зафиксируйте небольшой сгиб в локтях и не меняйте его.",
+        "Опустите лопатки и ведите рукоять по дуге вниз к бёдрам.",
+        "Корпус неподвижен, движение только в плечевых суставах.",
+        "Выдох при движении вниз; у бёдер напрягите широчайшие.",
+        "Возвращайте 2–3 секунды, пока руки не поднимутся примерно до уровня головы и не почувствуется растяжение под мышками."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bending the elbows and turning it into a triceps pushdown.",
+        "Bobbing the torso up and down to move the weight.",
+        "Shrugging as the bar comes up.",
+        "Loading it like a compound lift: the exercise is light by nature and fails as soon as form breaks."
+      ],
+      "ru": [
+        "Сгибать локти — получается разгибание рук на трицепс.",
+        "Качать корпусом вверх-вниз, чтобы сдвинуть вес.",
+        "Поднимать плечи к ушам, когда рукоять идёт вверх.",
+        "Грузить его как базовое упражнение: оно по природе лёгкое и теряет смысл, как только ломается техника."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Strength Level straight-arm pulldown, 80 kg man: Beginner 1RM 20 kg; × 0.6 = 12 → 12.5 kg."
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Straight Arm Pulldown Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/straight-arm-pulldown/kg",
+      "Differences between pullover and pulldown exercises on maximal isometric force and myoelectric activity in recreationally-trained men — Int J Exerc Sci, 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC9362894/",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315"
+    ]
+  },
+  {
+    "id": "dumbbell-pullover",
+    "name": {
+      "en": "Dumbbell pullover",
+      "ru": "Пуловер с гантелью лёжа"
+    },
+    "aka": [
+      "Lying dumbbell pullover",
+      "Bench pullover",
+      "Cross-bench pullover"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "pullover",
+    "class": "lat-isolation",
+    "primary": [
+      "lats",
+      "pec-sternal"
+    ],
+    "secondary": [
+      "teres-major",
+      "pec-costal",
+      "triceps-long",
+      "serratus-anterior"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "machine-pullover",
+      "straight-arm-pulldown",
+      "lat-pulldown",
+      "single-arm-cable-pulldown"
+    ],
+    "setup": {
+      "en": "Lie on a flat bench with your head and upper back supported and the feet flat. Hold one dumbbell with both palms cupped under the top plate, arms over the chest, elbows slightly bent.",
+      "ru": "Лягте на горизонтальную скамью так, чтобы голова и верх спины были на опоре, стопы на полу. Держите одну гантель обеими ладонями под верхним диском, руки над грудью, локти слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Brace: ribs down and the lower back lightly in contact with the bench.",
+        "Lower the dumbbell behind your head in an arc, keeping the elbow bend fixed.",
+        "Stop when the upper arms are in line with your torso or at a comfortable stretch.",
+        "Inhale on the way down, exhale as you pull it back.",
+        "Bring it back only to above the forehead so the lats and chest stay loaded."
+      ],
+      "ru": [
+        "Напрягите пресс: рёбра опущены, поясница слегка касается скамьи.",
+        "Опускайте гантель по дуге за голову, не меняя сгиб в локтях.",
+        "Остановитесь, когда плечи окажутся на одной линии с корпусом или в комфортном растяжении.",
+        "Вдох при опускании, выдох при подъёме.",
+        "Возвращайте гантель только до положения над лбом, чтобы широчайшие и грудь оставались под нагрузкой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Arching the lower back as the weight goes behind the head.",
+        "Bending and straightening the elbows, which turns it into a triceps extension.",
+        "Lowering past a comfortable shoulder stretch or with a heavy, uncontrolled weight.",
+        "A loose grip on the handle instead of cupping the top plate (the dumbbell is over your face)."
+      ],
+      "ru": [
+        "Прогибать поясницу, когда гантель уходит за голову.",
+        "Сгибать и разгибать локти — так получается разгибание на трицепс.",
+        "Опускать глубже комфортного растяжения плеча или с тяжёлым неконтролируемым весом.",
+        "Держать гантель за ручку некрепко вместо обхвата верхнего диска (гантель над лицом)."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "Strength Level dumbbell pullover, 80 kg man: Beginner 1RM 15 kg (one dumbbell); × 0.6 = 9 → 10 kg."
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Effects of the pullover exercise on the pectoralis major and latissimus dorsi muscles as evaluated by EMG — J Appl Biomech, 2011. https://doi.org/10.1123/jab.27.4.380",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315",
+      "Dumbbell Pullover Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-pullover/kg"
+    ]
+  },
+  {
+    "id": "machine-row",
+    "name": {
+      "en": "Chest-supported machine row",
+      "ru": "Горизонтальная тяга в тренажёре с упором в грудь"
+    },
+    "aka": [
+      "Low Row (Technogym Selection)",
+      "Row (Life Fitness Insignia)",
+      "Row (Cybex Eagle NX)",
+      "Row (Nautilus One)",
+      "Vertical Row (Nautilus Inspiration)",
+      "Seated row machine"
+    ],
+    "equipment": "selectorized",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "teres-major",
+      "traps-lower",
+      "biceps",
+      "brachialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "plate-loaded-row",
+      "t-bar-row",
+      "high-row-machine",
+      "chest-supported-dumbbell-row",
+      "seated-cable-row",
+      "single-arm-dumbbell-row",
+      "inverted-row",
+      "single-arm-cable-row"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles are at lower-chest height and the chest pad so you can just reach them with straight arms and the shoulder blades drawn forward. Sit tall, chest on the pad, feet flat.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукояти были на уровне низа груди, а упор — так, чтобы вы доставали до них прямыми руками с выведенными вперёд лопатками. Сядьте ровно, грудь на упоре, стопы на полу."
+    },
+    "cues": {
+      "en": [
+        "Keep the chest on the pad from the first rep to the last.",
+        "Start each rep by pulling the shoulder blades back, then drive the elbows back past your torso.",
+        "Pick the grip for the goal: neutral handles with the elbows close work the lats more; a wide overhand grip with the elbows out works the upper back and rear delts.",
+        "Pause for a moment with the elbows behind you and the shoulders down.",
+        "Exhale as you pull, inhale on the way back.",
+        "Return over 2–3 s until the arms are straight and the shoulder blades spread forward.",
+        "Keep the neck long and the chin slightly tucked; look straight ahead."
+      ],
+      "ru": [
+        "Держите грудь на упоре от первого до последнего повтора.",
+        "Каждый повтор начинайте со сведения лопаток, затем ведите локти назад за линию корпуса.",
+        "Хват — под цель: параллельные рукояти и локти у корпуса сильнее нагружают широчайшие, широкий хват сверху с локтями в стороны — верх спины и задние дельты.",
+        "Коротко задержитесь, когда локти позади корпуса, а плечи опущены.",
+        "Выдох на тяге, вдох на возврате.",
+        "Возвращайте 2–3 секунды до прямых рук и разведённых вперёд лопаток.",
+        "Шея длинная, подбородок слегка втянут, взгляд вперёд."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Lifting the chest off the pad and leaning back to finish the rep.",
+        "Shrugging the shoulders up as you pull.",
+        "Jerking the handles and letting the stack slam between reps.",
+        "Short reps: the arms never straighten, so the upper back never stretches.",
+        "Ego loading: if you cannot pause at the end of the pull, the weight is too heavy."
+      ],
+      "ru": [
+        "Отрывать грудь от упора и отклоняться назад, чтобы дотянуть повтор.",
+        "Поднимать плечи к ушам на тяге.",
+        "Дёргать рукояти и бросать стек между повторами.",
+        "Короткие повторы: руки не выпрямляются, и верх спины не растягивается.",
+        "Гнаться за весом: если не удаётся задержаться в конце тяги, вес слишком большой."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Strength Level machine row, 80 kg man: Beginner 1RM 47 kg; × 0.6 ≈ 28 → 30 kg at about 3 reps in reserve (research 04 §3.9)."
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Selection 700 Low Row — Technogym, 2026. https://www.technogym.com/en-SG/product/selection-700-low-row_MNHC.html",
+      "Variations in muscle activation levels during traditional latissimus dorsi weight training exercises — Dyn Med, 2004. https://doi.org/10.1186/1476-5918-3-4",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315",
+      "Machine Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-row/kg"
+    ]
+  },
+  {
+    "id": "plate-loaded-row",
+    "name": {
+      "en": "Plate-loaded row (iso-lateral)",
+      "ru": "Горизонтальная тяга в рычажном тренажёре с дисками"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral Row",
+      "Hammer Strength Iso-Lateral Low Row",
+      "Technogym Pure Strength Row",
+      "Technogym Pure Strength Low Row",
+      "Iso-lateral row"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "teres-major",
+      "traps-lower",
+      "biceps",
+      "brachialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-row",
+      "t-bar-row",
+      "high-row-machine",
+      "chest-supported-dumbbell-row",
+      "seated-cable-row",
+      "single-arm-dumbbell-row",
+      "inverted-row",
+      "single-arm-cable-row"
+    ],
+    "setup": {
+      "en": "Adjust the seat so the handles are at mid-to-lower chest height with your chest on the pad. Load equal plates on both arms and log the total plate weight.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукояти были на уровне середины или низа груди, а грудь лежала на упоре. Навесьте одинаковые диски на оба рычага и записывайте общий вес дисков."
+    },
+    "cues": {
+      "en": [
+        "Chest stays on the pad, feet planted.",
+        "Pull the shoulder blades back first, then row the elbows past your ribs.",
+        "Follow the levers' converging arc and keep the wrists straight.",
+        "Exhale on the pull and pause briefly at the end.",
+        "Lower over 2–3 s to straight arms and a full upper-back stretch.",
+        "The arms move independently: keep them level, or row one arm at a time if one side lags."
+      ],
+      "ru": [
+        "Грудь на упоре, стопы упираются в пол.",
+        "Сначала сведите лопатки, затем ведите локти назад мимо рёбер.",
+        "Следуйте сходящейся дуге рычагов, запястья прямые.",
+        "Выдох на тяге, короткая пауза в конце.",
+        "Опускайте 2–3 секунды до прямых рук и полного растяжения верха спины.",
+        "Рычаги независимы: держите их на одной высоте или тяните по одной руке, если одна сторона отстаёт."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Different plates on each side.",
+        "Peeling the chest off the pad and swinging the torso.",
+        "Shrugging toward the ears.",
+        "Dropping the levers so they bang at the bottom."
+      ],
+      "ru": [
+        "Разный вес дисков на сторонах.",
+        "Отрывать грудь от упора и раскачивать корпус.",
+        "Поднимать плечи к ушам.",
+        "Бросать рычаги, чтобы они ударялись внизу."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Estimate: 10 kg of plates per side (≈ 0.6–0.7 × the 30 kg machine-row start; Strength Level machine row Beginner 1RM 47 kg); the Hammer Strength arms already add about 5 kg each before plates."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Plate Loaded Iso-Lateral Row — Hammer Strength (Life Fitness), 2026. https://www.lifefitness.com/en-eu/catalog/strength-training/plate-loaded/plate-loaded-iso-lateral-row",
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "Machine Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-row/kg"
+    ]
+  },
+  {
+    "id": "t-bar-row",
+    "name": {
+      "en": "Chest-supported T-bar row",
+      "ru": "Тяга Т-грифа с упором в грудь"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral T-Bar Row",
+      "Lying T-bar row",
+      "Incline lever row",
+      "Chest-supported lever row"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "teres-major",
+      "traps-lower",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "plate-loaded-row",
+      "machine-row",
+      "chest-supported-dumbbell-row",
+      "high-row-machine",
+      "seated-cable-row",
+      "single-arm-dumbbell-row",
+      "inverted-row"
+    ],
+    "setup": {
+      "en": "Stand on the foot platform (or the floor, braced against the foot bar) and lean your chest onto the inclined pad so you can reach the handles with straight arms. Load plates on the lever and log their total weight.",
+      "ru": "Встаньте на подставку (или на пол, упершись стопами в упор для ног) и лягте грудью на наклонный упор так, чтобы доставать до рукоятей прямыми руками. Навесьте диски на рычаг и записывайте их общий вес."
+    },
+    "cues": {
+      "en": [
+        "Keep the chest and stomach on the pad; knees soft, feet planted.",
+        "Lift the lever off its rest, pull the shoulder blades back, then row the elbows toward your hips.",
+        "Use the neutral handles with the elbows about 45° from your sides.",
+        "Exhale as you pull and pause with the handles near the chest.",
+        "Lower over 2–3 s to straight arms."
+      ],
+      "ru": [
+        "Грудь и живот на упоре, колени мягкие, стопы надёжно упираются.",
+        "Снимите рычаг с упоров, сведите лопатки и ведите локти к тазу.",
+        "Используйте параллельные рукояти, локти примерно под 45° к корпусу.",
+        "Выдох на тяге, пауза, когда рукояти у груди.",
+        "Опускайте 2–3 секунды до прямых рук."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Using a T-bar without a chest pad and a rounded back: that is a bent-over row with a high lower-back load.",
+        "Lifting the chest off the pad to heave the weight up.",
+        "Craning the head up to look forward.",
+        "Letting the plates crash onto the rests."
+      ],
+      "ru": [
+        "Делать тягу Т-грифа без упора с круглой спиной: это уже тяга в наклоне с большой нагрузкой на поясницу.",
+        "Отрывать грудь от упора, чтобы рывком поднять вес.",
+        "Задирать голову, чтобы смотреть вперёд.",
+        "Ронять диски на упоры."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Strength Level T-bar row, 80 kg man: Beginner 1RM 38 kg; × 0.6 ≈ 23 kg, rounded down to 20 kg of plates because lever weight differs by model."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Plate-Loaded Iso-Lateral T-Bar Row — Hammer Strength (Life Fitness), 2026. https://www.lifefitness.com/en-us/catalog/strength-training/plate-loaded/iso-lateral-t-bar-row",
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "T Bar Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/t-bar-row/kg"
+    ]
+  },
+  {
+    "id": "chest-supported-dumbbell-row",
+    "name": {
+      "en": "Chest-supported dumbbell row",
+      "ru": "Тяга гантелей лёжа на наклонной скамье"
+    },
+    "aka": [
+      "Incline dumbbell row",
+      "Prone incline row",
+      "Seal row (dumbbells)",
+      "Chest-supported row (dumbbells)"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "teres-major",
+      "traps-lower",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "single-arm-dumbbell-row",
+      "t-bar-row",
+      "machine-row",
+      "plate-loaded-row",
+      "seated-cable-row",
+      "inverted-row",
+      "high-row-machine"
+    ],
+    "setup": {
+      "en": "Set a bench to about 30–45°, lie face down with the top of your chest at the upper edge and your feet on the floor, and let a dumbbell hang in each hand with straight arms.",
+      "ru": "Установите скамью под углом 30–45°, лягте на неё лицом вниз так, чтобы верх груди был у края, стопы на полу; гантели висят в прямых руках."
+    },
+    "cues": {
+      "en": [
+        "Keep the chest on the bench, chin tucked, neck neutral.",
+        "Pull the shoulder blades back, then row the dumbbells toward your lower ribs.",
+        "Elbows about 30–45° from your sides, palms facing each other.",
+        "Exhale on the pull and pause at the top.",
+        "Lower over 2–3 s until the arms are straight and the shoulder blades spread."
+      ],
+      "ru": [
+        "Грудь на скамье, подбородок слегка втянут, шея нейтрально.",
+        "Сведите лопатки и тяните гантели к низу рёбер.",
+        "Локти под 30–45° к корпусу, ладони смотрят друг на друга.",
+        "Выдох на тяге, пауза вверху.",
+        "Опускайте 2–3 секунды до прямых рук и разведения лопаток."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Lifting the chest off the bench and arching the back to finish.",
+        "Shrugging the dumbbells up instead of rowing them back.",
+        "Craning the neck to look forward.",
+        "Swinging the dumbbells up with momentum."
+      ],
+      "ru": [
+        "Отрывать грудь от скамьи и прогибаться, чтобы дотянуть.",
+        "Поднимать гантели плечами вверх вместо тяги назад.",
+        "Задирать голову, чтобы смотреть вперёд.",
+        "Забрасывать гантели вверх рывком."
+      ]
+    },
+    "startLoad": {
+      "kg": 8,
+      "source": "Per dumbbell: Strength Level chest-supported dumbbell row, 80 kg man: Beginner 1RM 14 kg; × 0.6 ≈ 8 kg."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Chest Supported Dumbbell Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/chest-supported-dumbbell-row/kg",
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315"
+    ]
+  },
+  {
+    "id": "high-row-machine",
+    "name": {
+      "en": "High row machine",
+      "ru": "Тяга под углом сверху в рычажном тренажёре"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral High Row",
+      "Hammer Strength MTS Iso-Lateral High Row",
+      "Plate-loaded high row",
+      "Iso-lateral high row"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "teres-major",
+      "traps-lower",
+      "delt-rear",
+      "biceps",
+      "brachialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "plate-loaded-row",
+      "machine-row",
+      "t-bar-row",
+      "chest-supported-dumbbell-row",
+      "seated-cable-row",
+      "single-arm-dumbbell-row",
+      "inverted-row"
+    ],
+    "setup": {
+      "en": "Set the seat so you reach the high handles with the arms fully straight and lock your thighs under the pad. Load equal plates on both arms and log the total plate weight.",
+      "ru": "Отрегулируйте сиденье так, чтобы доставать до верхних рукоятей полностью прямыми руками, и зафиксируйте бёдра валиком. Навесьте одинаковые диски на оба рычага и записывайте общий вес дисков."
+    },
+    "cues": {
+      "en": [
+        "Sit tall with the chest up.",
+        "Draw the shoulder blades down and back, then drive the elbows down and back.",
+        "Finish with the hands near the shoulders and the elbows behind your torso.",
+        "Exhale on the pull; return over 2–3 s to a full stretch.",
+        "Keep both arms level; work one arm at a time (free hand on the thigh-pad handle) if a side lags."
+      ],
+      "ru": [
+        "Сядьте ровно, грудь вперёд.",
+        "Опустите и сведите лопатки, затем ведите локти вниз и назад.",
+        "Заканчивайте, когда кисти у плеч, а локти позади корпуса.",
+        "Выдох на тяге; возвращайте 2–3 секунды до полного растяжения.",
+        "Держите рычаги на одной высоте; если одна сторона отстаёт, работайте по одной руке, держась свободной рукой за ручку у валика."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Pulling with the traps (shrugging) instead of driving the elbows.",
+        "Leaning back to use body weight.",
+        "Letting the levers yank the shoulders up at the top.",
+        "Unequal plates on the two arms."
+      ],
+      "ru": [
+        "Тянуть трапециями (поднимая плечи) вместо движения локтями.",
+        "Отклоняться назад, помогая весом тела.",
+        "Позволять рычагам рывком тянуть плечи вверх.",
+        "Неравный вес дисков на рычагах."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Estimate: 10 kg of plates per side, the same ≈ 0.6–0.7 × cable-equivalent rule used for other lever pulls (research 04 §3.8); lever ratios vary, so log it per machine."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Plate Loaded Iso-Lateral High Row — Hammer Strength (Life Fitness), 2026. https://www.lifefitness.com/en-us/catalog/strength-training/plate-loaded/plate-loaded-iso-lateral-high-row",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315",
+      "Machine Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-row/kg"
+    ]
+  },
+  {
+    "id": "seated-cable-row",
+    "name": {
+      "en": "Seated cable row",
+      "ru": "Тяга нижнего блока сидя"
+    },
+    "aka": [
+      "Low cable row",
+      "Seated low-pulley row",
+      "Pulley row (Technogym Selection Pulley)",
+      "Pulldown/Seated Row (Precor Vitality)",
+      "V-handle row"
+    ],
+    "equipment": "cable",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "teres-major",
+      "biceps",
+      "brachialis",
+      "erectors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-row",
+      "plate-loaded-row",
+      "single-arm-cable-row",
+      "t-bar-row",
+      "chest-supported-dumbbell-row",
+      "high-row-machine",
+      "single-arm-dumbbell-row",
+      "inverted-row"
+    ],
+    "setup": {
+      "en": "Clip a close neutral (V) handle to the low pulley, sit with the feet on the platform and the knees slightly bent. Take the handle with straight arms and sit upright with a neutral lower back.",
+      "ru": "Пристегните к нижнему блоку узкую параллельную (V-образную) рукоять, сядьте, поставив стопы на платформу, колени слегка согнуты. Возьмите рукоять прямыми руками и сядьте прямо, поясница в нейтральном положении."
+    },
+    "cues": {
+      "en": [
+        "Sit tall: chest up, lower back neutral; the torso stays upright for the whole set.",
+        "Start each rep by pulling the shoulder blades back, then drive the elbows back close to your sides.",
+        "Pull the handle to your upper abdomen, just under the ribs.",
+        "Pause for a moment with the elbows behind you and the shoulders down.",
+        "Exhale on the pull, inhale on the return.",
+        "Return over 2–3 s until the arms are straight and the shoulder blades glide forward; the torso does not follow.",
+        "Keep the knees soft: the legs only brace, they never push."
+      ],
+      "ru": [
+        "Сидите ровно: грудь вперёд, поясница нейтрально; корпус вертикален весь подход.",
+        "Каждый повтор начинайте со сведения лопаток, затем ведите локти назад вдоль корпуса.",
+        "Тяните рукоять к верху живота, чуть ниже рёбер.",
+        "Коротко задержитесь: локти позади корпуса, плечи опущены.",
+        "Выдох на тяге, вдох на возврате.",
+        "Возвращайте 2–3 секунды до прямых рук: лопатки уходят вперёд, а корпус остаётся на месте.",
+        "Колени мягкие: ноги только упираются, но не толкают."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rocking the torso back and forth to move the weight.",
+        "Rounding the lower back as the handle goes forward (lumbar flexion under load).",
+        "Leaning back past vertical to finish the rep.",
+        "Shrugging the shoulders toward the ears.",
+        "Yanking the handle from a dead stop and letting the stack crash.",
+        "Ego loading: a weight you cannot hold for a one-second pause."
+      ],
+      "ru": [
+        "Раскачиваться корпусом вперёд-назад, чтобы сдвинуть вес.",
+        "Округлять поясницу, когда рукоять уходит вперёд (сгибание поясницы под нагрузкой).",
+        "Отклоняться назад за вертикаль, чтобы дотянуть повтор.",
+        "Поднимать плечи к ушам.",
+        "Дёргать рукоять с места и бросать стек.",
+        "Гнаться за весом: вес, с которым не получается секундная пауза в конце тяги."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Strength Level seated cable row, 80 kg man: Beginner 1RM 47 kg; first working load ≈ 0.6 × 47 ≈ 28 → 30 kg (research 04 §3.9)."
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Variations in muscle activation levels during traditional latissimus dorsi weight training exercises — Dyn Med, 2004. https://doi.org/10.1186/1476-5918-3-4",
+      "High-density surface electromyography excitation of prime movers across scapular positions in the seated row — J Funct Morphol Kinesiol, 2025. https://doi.org/10.3390/jfmk11010006",
+      "ACE-sponsored research: what is the best back exercise? — American Council on Exercise, 2018. https://www.acefitness.org/continuing-education/certified/april-2018/6959/ace-sponsored-research-what-is-the-best-back-exercise/",
+      "Seated Cable Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/seated-cable-row/kg"
+    ]
+  },
+  {
+    "id": "inverted-row",
+    "name": {
+      "en": "Inverted row",
+      "ru": "Горизонтальные подтягивания (австралийские)"
+    },
+    "aka": [
+      "Australian pull-up",
+      "Body row",
+      "Smith-machine inverted row",
+      "Supine row",
+      "Ring or suspension row"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "traps-lower",
+      "biceps",
+      "brachialis",
+      "glute-max"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-row",
+      "chest-supported-dumbbell-row",
+      "plate-loaded-row",
+      "t-bar-row",
+      "seated-cable-row",
+      "single-arm-dumbbell-row",
+      "high-row-machine",
+      "single-arm-cable-row"
+    ],
+    "setup": {
+      "en": "Fix a bar in a Smith machine or a rack at about waist height, lie underneath it, grip it slightly wider than shoulder width and hang with straight arms, body straight from heels to head.",
+      "ru": "Закрепите гриф в машине Смита или в раме примерно на уровне пояса, лягте под него, возьмитесь чуть шире плеч и повисните на прямых руках; тело — прямая линия от пяток до головы."
+    },
+    "cues": {
+      "en": [
+        "Squeeze the glutes and brace the abs: the body moves as one plank.",
+        "Pull your chest to the bar, elbows at about 45°.",
+        "Pause with the shoulder blades squeezed together.",
+        "Exhale on the way up; lower over 2–3 s to straight arms.",
+        "Make it harder by lowering the bar or walking the feet forward; easier by bending the knees or raising the bar."
+      ],
+      "ru": [
+        "Напрягите ягодицы и пресс: тело движется как единая планка.",
+        "Тяните грудь к грифу, локти примерно под 45°.",
+        "Пауза со сведёнными лопатками.",
+        "Выдох на подъёме; опускайтесь 2–3 секунды до прямых рук.",
+        "Сложнее — опустите гриф или выдвиньте стопы вперёд; легче — согните колени или поднимите гриф."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Sagging hips or an arched lower back.",
+        "Reaching the chin to the bar instead of bringing the chest.",
+        "Half reps that never reach straight arms.",
+        "A bar that is not locked: a loose barbell can roll off the hooks."
+      ],
+      "ru": [
+        "Провисать тазом или прогибаться в пояснице.",
+        "Тянуться к грифу подбородком вместо груди.",
+        "Неполные повторы без выпрямления рук внизу.",
+        "Незафиксированный гриф: свободная штанга может скатиться с крюков."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Bodyweight: Strength Level inverted row, 80 kg man: Novice about 9 reps; set the bar height so 6–12 reps are possible."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "ACE-sponsored research: what is the best back exercise? — American Council on Exercise, 2018. https://www.acefitness.org/continuing-education/certified/april-2018/6959/ace-sponsored-research-what-is-the-best-back-exercise/",
+      "Inverted Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/inverted-row"
+    ]
+  },
+  {
+    "id": "single-arm-cable-row",
+    "name": {
+      "en": "Single-arm cable row (standing)",
+      "ru": "Тяга блока одной рукой стоя"
+    },
+    "aka": [
+      "One-arm standing cable row",
+      "Split-stance cable row",
+      "Single-arm low cable row",
+      "Anti-rotation row"
+    ],
+    "equipment": "cable",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "obliques",
+      "transverse-abdominis",
+      "delt-rear",
+      "biceps",
+      "brachialis"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      12
+    ],
+    "alternatives": [
+      "seated-cable-row",
+      "single-arm-dumbbell-row",
+      "plate-loaded-row",
+      "machine-row",
+      "chest-supported-dumbbell-row",
+      "inverted-row",
+      "pallof-press"
+    ],
+    "setup": {
+      "en": "Set a D-handle at about chest height or lower and stand facing the cable in a split stance, the leg opposite the working arm in front. Hold the handle with a straight arm, hips and shoulders square to the cable.",
+      "ru": "Установите D-рукоять примерно на уровне груди или ниже и встаньте лицом к блоку в разножку: впереди нога, противоположная рабочей руке. Держите рукоять прямой рукой, таз и плечи развёрнуты прямо к тросу."
+    },
+    "cues": {
+      "en": [
+        "Brace the trunk: the hips and shoulders must not rotate toward the cable.",
+        "Pull the shoulder blade back, then row the elbow past your ribs.",
+        "Exhale on the pull and pause with the hand at the lower ribs.",
+        "Return over 2–3 s; let the shoulder blade reach forward without the torso twisting.",
+        "Start with the weaker side, then match the reps on the stronger side."
+      ],
+      "ru": [
+        "Напрягите корпус: таз и плечи не должны разворачиваться к блоку.",
+        "Сведите лопатку, затем ведите локоть назад мимо рёбер.",
+        "Выдох на тяге, пауза, когда кисть у нижних рёбер.",
+        "Возвращайте 2–3 секунды: лопатка уходит вперёд, корпус не скручивается.",
+        "Начинайте со слабой стороны и повторите на сильной столько же."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Twisting the torso to pull with the body.",
+        "Leaning back or sideways to finish the rep.",
+        "Shrugging the working shoulder.",
+        "Choosing a load you cannot hold square for the whole set."
+      ],
+      "ru": [
+        "Скручивать корпус, чтобы тянуть всем телом.",
+        "Отклоняться назад или вбок, чтобы дотянуть повтор.",
+        "Поднимать рабочее плечо к уху.",
+        "Брать вес, при котором не удаётся держать корпус ровно весь подход."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Per arm: about half of the 30 kg seated-row start (Strength Level seated cable row Beginner 1RM 47 kg × 0.6), rounded down for the standing anti-rotation demand."
+    },
+    "tags": [
+      "owner-alt",
+      "core"
+    ],
+    "images": [],
+    "sources": [
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "Seated Cable Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/seated-cable-row/kg"
+    ]
+  },
+  {
+    "id": "single-arm-dumbbell-row",
+    "name": {
+      "en": "Single-arm dumbbell row",
+      "ru": "Тяга гантели одной рукой с упором в скамью"
+    },
+    "aka": [
+      "One-arm dumbbell row",
+      "Bench-supported dumbbell row",
+      "Single-arm DB row"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "delt-rear",
+      "teres-major",
+      "biceps",
+      "brachialis",
+      "forearm-flexors"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "chest-supported-dumbbell-row",
+      "plate-loaded-row",
+      "machine-row",
+      "single-arm-cable-row",
+      "t-bar-row",
+      "seated-cable-row",
+      "inverted-row"
+    ],
+    "setup": {
+      "en": "Put one knee and the same-side hand on a flat bench and the other foot on the floor. Hold a dumbbell in the free hand with the arm hanging straight and the back flat, roughly parallel to the floor.",
+      "ru": "Поставьте колено и ладонь одной стороны на горизонтальную скамью, другую стопу — на пол. Гантель в свободной руке, рука висит прямо, спина ровная, примерно параллельна полу."
+    },
+    "cues": {
+      "en": [
+        "Brace the trunk: spine neutral, shoulders level.",
+        "Pull the shoulder blade back, then row the dumbbell toward your hip.",
+        "Keep the elbow close to your side; finish with it just past your torso.",
+        "Exhale on the pull; lower over 2–3 s to a full stretch.",
+        "Don't rotate the torso to lift: the chest keeps facing the bench."
+      ],
+      "ru": [
+        "Напрягите корпус: позвоночник нейтрален, плечи на одном уровне.",
+        "Сведите лопатку, затем тяните гантель к тазу.",
+        "Локоть близко к корпусу; в конце он чуть за линией спины.",
+        "Выдох на тяге; опускайте 2–3 секунды до полного растяжения.",
+        "Не разворачивайте корпус, чтобы поднять гантель: грудь смотрит в скамью."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding the back or letting it sag.",
+        "Twisting the torso to heave the dumbbell up.",
+        "Shrugging the dumbbell toward the ear.",
+        "Dropping the dumbbell at the bottom and jerking it up again."
+      ],
+      "ru": [
+        "Округлять спину или давать ей провисать.",
+        "Скручивать корпус, чтобы закинуть гантель.",
+        "Тянуть гантель к уху, поднимая плечо.",
+        "Бросать гантель вниз и снова дёргать вверх."
+      ]
+    },
+    "startLoad": {
+      "kg": 12,
+      "source": "Strength Level dumbbell row, 80 kg man: Beginner 1RM 19 kg; × 0.6 ≈ 11 → 12 kg."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Dumbbell Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-row/kg",
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "Electromyographic analysis of latissimus dorsi activation during common resistance training exercises: a narrative review — J Funct Morphol Kinesiol, 2026. https://doi.org/10.3390/jfmk11030315"
+    ]
+  },
+  {
+    "id": "barbell-row",
+    "name": {
+      "en": "Bent-over barbell row",
+      "ru": "Тяга штанги в наклоне"
+    },
+    "aka": [
+      "Barbell row",
+      "Bent-over row",
+      "Pendlay row (strict variant)"
+    ],
+    "equipment": "barbell",
+    "pattern": "horizontal-pull",
+    "class": "horizontal-pull",
+    "primary": [
+      "lats",
+      "traps-mid",
+      "rhomboids"
+    ],
+    "secondary": [
+      "erectors",
+      "delt-rear",
+      "traps-lower",
+      "biceps",
+      "brachialis",
+      "hamstrings"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "t-bar-row",
+      "plate-loaded-row",
+      "machine-row",
+      "chest-supported-dumbbell-row",
+      "single-arm-dumbbell-row",
+      "seated-cable-row",
+      "inverted-row"
+    ],
+    "setup": {
+      "en": "Stand with the feet hip-width, grip the bar overhand just outside the knees, then hinge at the hips until the torso is about 45° or lower with a flat back and slightly bent knees, the bar hanging at arm's length.",
+      "ru": "Встаньте, стопы на ширине таза, возьмите гриф хватом сверху чуть шире коленей и наклонитесь, сгибаясь в тазобедренных суставах, до угла корпуса около 45° или ниже: спина ровная, колени слегка согнуты, гриф висит на прямых руках."
+    },
+    "cues": {
+      "en": [
+        "Before each rep take a breath and brace the abs; keep the spine neutral.",
+        "Hold the torso angle still: only the arms and shoulder blades move.",
+        "Row the bar to the lower chest or upper abdomen, elbows about 45° from your sides.",
+        "Lower under control for about 2 s; breathe out once the bar is down.",
+        "Keep the bar close to the thighs and your weight over mid-foot.",
+        "Leave 1–3 reps in reserve and end the set as soon as the back starts to round."
+      ],
+      "ru": [
+        "Перед каждым повтором вдохните и напрягите пресс; позвоночник нейтрален.",
+        "Угол наклона неизменен: двигаются только руки и лопатки.",
+        "Тяните гриф к низу груди или верху живота, локти под 45° к корпусу.",
+        "Опускайте подконтрольно около 2 секунд; выдох, когда гриф внизу.",
+        "Гриф близко к бёдрам, вес на середине стопы.",
+        "Оставляйте 1–3 повтора в запасе и заканчивайте подход, как только спина начинает округляться."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding the lower back under the bar.",
+        "Heaving with the hips and torso, so the torso rises a little more with every rep.",
+        "Standing almost upright, which turns it into a shrug.",
+        "Ego loading on a lift with a high lower-back load: leave reps in reserve.",
+        "Jerking the bar up without bracing first."
+      ],
+      "ru": [
+        "Округлять поясницу под штангой.",
+        "Читинг тазом и корпусом: с каждым повтором корпус поднимается всё выше.",
+        "Стоять почти вертикально — получается шраг.",
+        "Гнаться за весом в упражнении с высокой нагрузкой на поясницу: оставляйте запас.",
+        "Дёргать штангу, не напрягая корпус."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Strength Level bent-over row, 80 kg man: Beginner 1RM 48 kg; × 0.6 ≈ 29 → 30 kg including the 20 kg bar."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181942019",
+      "ACE-sponsored research: what is the best back exercise? — American Council on Exercise, 2018. https://www.acefitness.org/continuing-education/certified/april-2018/6959/ace-sponsored-research-what-is-the-best-back-exercise/",
+      "Bent Over Row Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/bent-over-row/kg"
+    ]
+  },
+  {
+    "id": "lower-back-machine",
+    "name": {
+      "en": "Lower back machine (lumbar extension)",
+      "ru": "Разгибание спины сидя в тренажёре"
+    },
+    "aka": [
+      "Lower Back (Technogym Selection / Element)",
+      "Back Extension (Life Fitness Insignia)",
+      "Back Extension (Cybex Eagle NX)",
+      "Low Back (Nautilus One)",
+      "MedX Lumbar Extension",
+      "Abdominal/Back Extension (Precor Vitality)"
+    ],
+    "equipment": "selectorized",
+    "pattern": "spinal-extension",
+    "class": "spinal-extension",
+    "primary": [
+      "erectors"
+    ],
+    "secondary": [
+      "quadratus-lumborum",
+      "glute-max",
+      "hamstrings"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "back-extension-45",
+      "reverse-hyperextension",
+      "bird-dog"
+    ],
+    "setup": {
+      "en": "Sit with your hips back against the seat so the pelvis lines up with the machine's pivot, put your feet on the footrest step that fits your leg length and tighten the thigh or hip restraint if there is one; the back pad sits across your shoulder blades. Set the start-position lever to a range you can move through without pain.",
+      "ru": "Сядьте, прижав таз к спинке сиденья, чтобы он был на одной линии с осью тренажёра; поставьте стопы на ту ступень подставки, что подходит по длине ног, и затяните фиксатор бёдер или таза, если он есть; спинка упирается в область лопаток. Рычагом стартовой позиции выставьте амплитуду, которую проходите без боли."
+    },
+    "cues": {
+      "en": [
+        "Lock the pelvis: press the feet into the footrest and the thighs into the pads so the lower back, not the hips, does the work.",
+        "Cross your arms on your chest or hold the handles lightly; don't pull with them.",
+        "Extend the trunk back smoothly until you are upright or just past it, no further.",
+        "Move slowly: about 2 s back and 3–4 s forward, with no bounce at either end.",
+        "Exhale as you push back, inhale as you return.",
+        "Keep the chin neutral; the head moves with the trunk.",
+        "Start light: for the first weeks stop 2–3 reps short of failure. Muscle effort is fine; sharp or leg-radiating pain means stop."
+      ],
+      "ru": [
+        "Зафиксируйте таз: упритесь стопами в подставку, а бёдрами — в валики, чтобы работала поясница, а не тазобедренные суставы.",
+        "Скрестите руки на груди или слегка держитесь за рукояти, не тяните ими.",
+        "Плавно отводите корпус назад до вертикали или чуть дальше — не больше.",
+        "Медленно: около 2 секунд назад и 3–4 секунды вперёд, без пружинящих движений в крайних точках.",
+        "Выдох при отклонении назад, вдох при возврате.",
+        "Голова в нейтральном положении и движется вместе с корпусом.",
+        "Начинайте с малого веса: первые недели оставляйте 2–3 повтора в запасе. Мышечное усилие — нормально, острая или отдающая в ногу боль — стоп."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Throwing the trunk back with momentum and slamming into the end of the range.",
+        "Arching hard at the end: finish upright, not hyperextended.",
+        "A loose restraint or feet off the footrest, so the pelvis tilts and the hips do the work.",
+        "Pushing through sharp, burning or leg-radiating pain.",
+        "Ego loading: a stack you can only move with a jerk.",
+        "Throwing the head back or jutting the chin forward during the rep."
+      ],
+      "ru": [
+        "Забрасывать корпус назад рывком и ударяться в крайнюю точку.",
+        "Сильно прогибаться в конце: заканчивайте в вертикали, а не в переразгибании.",
+        "Ослабленный фиксатор или стопы не на подставке: таз наклоняется, и работают тазобедренные суставы.",
+        "Терпеть острую, жгучую или отдающую в ногу боль.",
+        "Гнаться за весом: стек, который сдвигается только рывком.",
+        "Запрокидывать голову или тянуть подбородок вперёд во время повтора."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "Strength Level machine back extension, 80 kg man: Beginner 1RM 45 kg; × 0.6 = 27 → 25 kg; lumbar work starts light and is progressed slowly."
+    },
+    "tags": [
+      "owner-primary",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "A review of the clinical value of isolated lumbar extension resistance training for chronic low back pain — PM R, 2015. https://doi.org/10.1016/j.pmrj.2014.10.009",
+      "The effect of lumbar extension training with and without pelvic stabilization on lumbar strength and low back pain — J Back Musculoskelet Rehabil, 2011. https://doi.org/10.3233/BMR-2011-0301",
+      "Effect of training frequency and specificity on isometric lumbar extension strength — Spine, 1990. https://doi.org/10.1097/00007632-199006000-00014",
+      "Machine Back Extension Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-back-extension/kg"
+    ]
+  },
+  {
+    "id": "back-extension-45",
+    "name": {
+      "en": "45° back extension",
+      "ru": "Гиперэкстензия 45°"
+    },
+    "aka": [
+      "45-degree hyperextension",
+      "Roman chair back extension",
+      "45° Back Hyperextension (Technogym Pure Strength)",
+      "Hyperextension bench",
+      "Back raise"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "spinal-extension",
+    "class": "spinal-extension",
+    "primary": [
+      "erectors",
+      "glute-max",
+      "hamstrings"
+    ],
+    "secondary": [
+      "quadratus-lumborum"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "lower-back-machine",
+      "reverse-hyperextension",
+      "cable-pull-through",
+      "bird-dog"
+    ],
+    "setup": {
+      "en": "Set the hip pad so its top edge sits just below the crease of your hips (the pelvis must be free to tilt), hook your heels under the ankle rollers and start with the body in a straight line.",
+      "ru": "Отрегулируйте упор так, чтобы его верхний край был чуть ниже паховой складки (таз должен свободно наклоняться), зацепите пятки за валики и начните из положения, где тело — прямая линия."
+    },
+    "cues": {
+      "en": [
+        "Cross your arms on your chest; once 15 reps are easy, hold a plate there.",
+        "Hinge at the hips and lower the torso over 2–3 s with a neutral back.",
+        "Go down only as far as you can without the lower back rounding.",
+        "Squeeze the glutes and rise until the body is a straight line, not arched.",
+        "Exhale on the way up and keep the chin slightly tucked.",
+        "Turn the toes slightly in to bias the lower-back muscles (about 18% more activity than with the toes turned out)."
+      ],
+      "ru": [
+        "Скрестите руки на груди; когда 15 повторов даются легко, держите у груди диск.",
+        "Наклоняйтесь в тазобедренных суставах и опускайте корпус 2–3 секунды, спина ровная.",
+        "Опускайтесь только до тех пор, пока поясница не начинает округляться.",
+        "Напрягите ягодицы и поднимайтесь до прямой линии тела, без прогиба.",
+        "Выдох на подъёме, подбородок слегка втянут.",
+        "Чуть разверните носки внутрь, чтобы сильнее нагрузить разгибатели спины (активность примерно на 18 % выше, чем с носками наружу)."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Hyperextending at the top, arching past a straight line.",
+        "Pad set too high, so the hips cannot bend and the lower back bends instead.",
+        "Bouncing out of the bottom or swinging up with momentum.",
+        "Rounding the lower back under load at the bottom.",
+        "Holding a plate behind the head, which strains the neck."
+      ],
+      "ru": [
+        "Переразгибаться вверху, прогибаясь за прямую линию.",
+        "Слишком высоко выставленный упор: таз не сгибается, и вместо него гнётся поясница.",
+        "Пружинить из нижней точки или подниматься махом.",
+        "Округлять поясницу под нагрузкой внизу.",
+        "Держать диск за головой — это перегружает шею."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Bodyweight: Strength Level back extension, 80 kg man: Beginner 5 reps, Novice 15 reps; add a plate at the chest after 15."
+    },
+    "tags": [
+      "owner-alt",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Electromyographic activity of the trunk extensor muscles: effect of varying hip position and lumbar posture during Roman chair exercise — Arch Phys Med Rehabil, 2002. https://doi.org/10.1053/apmr.2002.35103",
+      "Back extension endurance and strength: the effect of variable-angle Roman chair exercise training — Spine, 2002. https://doi.org/10.1097/00007632-200208150-00016",
+      "Effect of Roman chair exercise training on the development of lumbar extension strength — J Strength Cond Res, 2003. https://pubmed.ncbi.nlm.nih.gov/12741878/",
+      "Back Extension Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/back-extension"
+    ]
+  },
+  {
+    "id": "reverse-hyperextension",
+    "name": {
+      "en": "Reverse hyperextension",
+      "ru": "Обратная гиперэкстензия"
+    },
+    "aka": [
+      "Reverse hyper",
+      "Hammer Strength Glute Ham / Reverse Hyper",
+      "Bench reverse hyperextension",
+      "Prone leg raise"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "hip-extension",
+    "class": "spinal-extension",
+    "primary": [
+      "erectors",
+      "glute-max",
+      "hamstrings"
+    ],
+    "secondary": [
+      "quadratus-lumborum"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      10,
+      15
+    ],
+    "alternatives": [
+      "back-extension-45",
+      "lower-back-machine",
+      "machine-hip-thrust",
+      "glute-kickback-machine"
+    ],
+    "setup": {
+      "en": "Lie face down on a reverse-hyper machine, or with your hips at the edge of a high, stable bench or glute-ham developer, so the legs hang freely; hold the handles or the bench firmly.",
+      "ru": "Лягте на живот на тренажёр для обратной гиперэкстензии или так, чтобы таз был на краю высокой устойчивой скамьи либо станка для ягодично-бицепсового подъёма (GHD); ноги свободно свисают, крепко держитесь за рукояти или скамью."
+    },
+    "cues": {
+      "en": [
+        "Brace the trunk on the pad; the upper body stays still.",
+        "Squeeze the glutes and lift straight legs until they are in line with your torso.",
+        "Pause for a moment at the top without arching any further.",
+        "Lower over 2–3 s; don't let the legs or the pendulum swing.",
+        "Exhale on the lift; legs together or slightly apart."
+      ],
+      "ru": [
+        "Корпус прижат к упору и неподвижен.",
+        "Напрягите ягодицы и поднимайте прямые ноги до линии корпуса.",
+        "Короткая пауза вверху без дополнительного прогиба.",
+        "Опускайте 2–3 секунды; не давайте ногам или маятнику раскачиваться.",
+        "Выдох на подъёме; ноги вместе или чуть врозь."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Swinging the legs, or a loaded pendulum, with momentum.",
+        "Kicking the legs above the torso line and cranking the lower back into extension.",
+        "Using a bench that is unstable or can tip.",
+        "Loading the machine before you can do 15 controlled reps without weight."
+      ],
+      "ru": [
+        "Раскачивать ноги или нагруженный маятник по инерции.",
+        "Забрасывать ноги выше линии корпуса, переразгибая поясницу.",
+        "Использовать неустойчивую или опрокидывающуюся скамью.",
+        "Нагружать тренажёр, пока не получается 15 подконтрольных повторов без веса."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Bodyweight first: Strength Level reverse hyperextension, 80 kg man: Novice 14 reps; external load increases hip and trunk flexion (Lawrence 2022), so add it only after 15 controlled reps."
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Biomechanical comparison of the reverse hyperextension machine and the hyperextension exercise — J Strength Cond Res, 2019. https://doi.org/10.1519/JSC.0000000000003146",
+      "Electromyographical differences between the hyperextension and reverse-hyperextension — J Strength Cond Res, 2021. https://doi.org/10.1519/JSC.0000000000004049",
+      "Effect of load on muscle activity, kinematics, and force production during the reverse hyperextension exercise — J Appl Biomech, 2022. https://doi.org/10.1123/jab.2022-0046",
+      "Reverse Hyperextension Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/reverse-hyperextension"
+    ]
+  },
+  {
+    "id": "four-way-neck-machine",
+    "name": {
+      "en": "4-way neck machine",
+      "ru": "Тренажёр для шеи на 4 направления"
+    },
+    "aka": [
+      "Hammer Strength Plate Loaded 4-Way Neck",
+      "Nautilus One 4-Way Neck",
+      "Multi-neck machine",
+      "Neck machine"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "neck",
+    "class": "neck",
+    "primary": [
+      "neck-extensors",
+      "neck-flexors"
+    ],
+    "secondary": [
+      "traps-upper"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1.25,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "neck-extension",
+      "neck-flexion",
+      "neck-isometrics"
+    ],
+    "setup": {
+      "en": "Adjust the seat so the head pad sits on the forehead (flexion), the back of the head (extension) or just above the ear (side bending). Sit tall, hold the handles and start with the neck in neutral.",
+      "ru": "Отрегулируйте сиденье так, чтобы упор приходился на лоб (сгибание), затылок (разгибание) или чуть выше уха (наклоны в сторону). Сядьте ровно, возьмитесь за рукояти и начните с нейтрального положения шеи."
+    },
+    "cues": {
+      "en": [
+        "Move only the head and neck; the torso stays fixed against the seat.",
+        "Go slowly: about 2 s out, a short pause, 3 s back to neutral.",
+        "Stay in a pain-free middle range; don't push to the end of your neck's range.",
+        "Breathe normally; never hold your breath.",
+        "Train all four directions; flexion usually needs clearly less load than extension, side bends a little less.",
+        "Stop 2–3 reps short of failure."
+      ],
+      "ru": [
+        "Двигаются только голова и шея, корпус неподвижно прижат к сиденью.",
+        "Медленно: около 2 секунд в одну сторону, короткая пауза, 3 секунды обратно в нейтраль.",
+        "Работайте в безболезненной средней амплитуде, не доводите шею до крайних положений.",
+        "Дышите ровно, не задерживайте дыхание.",
+        "Тренируйте все четыре направления; для сгибания обычно нужен заметно меньший вес, чем для разгибания, для наклонов в стороны — немного меньший.",
+        "Останавливайтесь за 2–3 повтора до отказа."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Jerking the head or using momentum.",
+        "Loading the neck like a big muscle group, with heavy weight and grinding reps.",
+        "Pushing into the end of range or carrying on through pain, dizziness, tingling or numbness.",
+        "Moving the torso to help the neck."
+      ],
+      "ru": [
+        "Двигать головой рывками, по инерции.",
+        "Нагружать шею как крупную мышечную группу — большим весом и дожиманием.",
+        "Уходить в крайние положения или продолжать при боли, головокружении, покалывании или онемении.",
+        "Помогать шее движением корпуса."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Conley 1997: untrained controls' head-extension 3 × 10RM was about 10 kg; start at about half, and lighter for flexion."
+    },
+    "tags": [
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Plate Loaded 4-Way Neck — Hammer Strength (Life Fitness), 2026. https://www.lifefitness.com/en-eu/catalog/strength-training/plate-loaded/4-way-neck",
+      "Specificity of resistance training responses in neck muscle size and strength — Eur J Appl Physiol, 1997. https://doi.org/10.1007/s004210050186",
+      "Effects of neck strength training on isometric neck strength in rugby union players — Clin J Sport Med, 2014. https://doi.org/10.1097/JSM.0000000000000071"
+    ]
+  },
+  {
+    "id": "neck-extension",
+    "name": {
+      "en": "Prone neck extension (plate)",
+      "ru": "Разгибание шеи лёжа с диском"
+    },
+    "aka": [
+      "Plate neck extension",
+      "Lying neck extension",
+      "Head harness extension",
+      "Neck harness extension"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "neck",
+    "class": "neck",
+    "primary": [
+      "neck-extensors"
+    ],
+    "secondary": [
+      "traps-upper"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1.25,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "four-way-neck-machine",
+      "neck-isometrics",
+      "neck-flexion"
+    ],
+    "setup": {
+      "en": "Lie face down on a flat bench with the shoulders at the end and the head off the edge. Put a folded towel on the back of your head and hold a light plate on it with both hands, or use a head harness.",
+      "ru": "Лягте на живот на горизонтальную скамью так, чтобы плечи были у края, а голова — за краем. Положите на затылок сложенное полотенце и придерживайте на нём лёгкий диск обеими руками или используйте упряжь для головы."
+    },
+    "cues": {
+      "en": [
+        "Start with the head in line with the spine.",
+        "Lower the chin toward the chest slowly, over about 3 s, in a comfortable range.",
+        "Lift the head back to neutral, eyes on the floor ahead of you, and no higher.",
+        "Keep the plate pinned so it cannot slide; breathe normally.",
+        "Stop 2–3 reps short of failure and progress in 1.25 kg steps."
+      ],
+      "ru": [
+        "Начните с головы на одной линии с позвоночником.",
+        "Медленно, около 3 секунд, опускайте подбородок к груди в комфортной амплитуде.",
+        "Поднимайте голову до нейтрали — взгляд в пол перед собой, не выше.",
+        "Надёжно прижимайте диск, чтобы он не соскользнул; дышите ровно.",
+        "Останавливайтесь за 2–3 повтора до отказа и добавляйте по 1,25 кг."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Throwing the head back hard into full extension.",
+        "Going heavy too soon: the neck adapts more slowly than the big muscles.",
+        "Letting the plate slide or holding it with one hand.",
+        "Carrying on through pain, dizziness, tingling or numbness."
+      ],
+      "ru": [
+        "Резко запрокидывать голову в полное разгибание.",
+        "Слишком рано брать тяжёлый диск: шея адаптируется медленнее крупных мышц.",
+        "Позволять диску соскальзывать или держать его одной рукой.",
+        "Продолжать при боли, головокружении, покалывании или онемении."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Conley 1997: untrained controls' head-extension 3 × 10RM was about 10 kg (the training group rose from 17.9 to 23.9 kg in 12 weeks); start at about half."
+    },
+    "tags": [
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Specificity of resistance training responses in neck muscle size and strength — Eur J Appl Physiol, 1997. https://doi.org/10.1007/s004210050186",
+      "Resistance training and human cervical muscle recruitment plasticity — J Appl Physiol, 1997. https://doi.org/10.1152/jappl.1997.83.6.2105",
+      "Active neck muscle training in the treatment of chronic neck pain in women: a randomized controlled trial — JAMA, 2003. https://doi.org/10.1001/jama.289.19.2509"
+    ]
+  },
+  {
+    "id": "neck-flexion",
+    "name": {
+      "en": "Supine neck flexion (plate)",
+      "ru": "Сгибание шеи лёжа с диском"
+    },
+    "aka": [
+      "Plate neck curl",
+      "Lying neck curl",
+      "Supine neck curl",
+      "Neck flexion with plate"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "neck",
+    "class": "neck",
+    "primary": [
+      "neck-flexors"
+    ],
+    "secondary": [],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1.25,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "four-way-neck-machine",
+      "neck-isometrics",
+      "neck-extension"
+    ],
+    "setup": {
+      "en": "Lie on your back on a flat bench with the head off the end. Put a folded towel on your forehead and hold a light plate on it with both hands.",
+      "ru": "Лягте на спину на горизонтальную скамью, голова за краем. Положите на лоб сложенное полотенце и придерживайте на нём лёгкий диск обеими руками."
+    },
+    "cues": {
+      "en": [
+        "Start with the head level with the bench, not hanging back.",
+        "Tuck the chin first, then curl the head toward the chest.",
+        "Lower over about 3 s back to neutral; don't let the head drop into extension.",
+        "Breathe normally and keep the shoulders on the bench.",
+        "If the plate is too much, start with head weight only; add 1.25 kg at a time."
+      ],
+      "ru": [
+        "Начните с головы на уровне скамьи, а не свисающей назад.",
+        "Сначала втяните подбородок, затем подкручивайте голову к груди.",
+        "Опускайте около 3 секунд обратно до нейтрали; не давайте голове проваливаться назад.",
+        "Дышите ровно, плечи остаются на скамье.",
+        "Если с диском тяжело, начните без него; добавляйте по 1,25 кг."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Jutting the chin forward instead of tucking it.",
+        "Letting the head drop back into extension at the bottom.",
+        "Jerking the head up.",
+        "Holding the breath and straining."
+      ],
+      "ru": [
+        "Выдвигать подбородок вперёд вместо того, чтобы втягивать его.",
+        "Ронять голову назад в разгибание в нижней точке.",
+        "Поднимать голову рывком.",
+        "Задерживать дыхание и натуживаться."
+      ]
+    },
+    "startLoad": {
+      "kg": 2.5,
+      "source": "Neck flexors are weaker than extensors (about 55% in Geary 2014); about a quarter of the ≈10 kg untrained head-extension 3 × 10RM (Conley 1997) → 2.5 kg, or head weight only for the first session."
+    },
+    "tags": [
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Active neck muscle training in the treatment of chronic neck pain in women: a randomized controlled trial — JAMA, 2003. https://doi.org/10.1001/jama.289.19.2509",
+      "Effects of neck strength training on isometric neck strength in rugby union players — Clin J Sport Med, 2014. https://doi.org/10.1097/JSM.0000000000000071",
+      "Specificity of resistance training responses in neck muscle size and strength — Eur J Appl Physiol, 1997. https://doi.org/10.1007/s004210050186"
+    ]
+  },
+  {
+    "id": "neck-isometrics",
+    "name": {
+      "en": "Neck isometrics (4-way)",
+      "ru": "Изометрия для шеи в 4 направлениях"
+    },
+    "aka": [
+      "Manual neck isometrics",
+      "Hand-resisted neck holds",
+      "4-way neck isometric holds",
+      "Self-resisted neck isometrics"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "neck",
+    "class": "neck",
+    "primary": [
+      "neck-extensors",
+      "neck-flexors"
+    ],
+    "secondary": [
+      "traps-upper"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      10,
+      20
+    ],
+    "repUnit": "seconds",
+    "alternatives": [
+      "four-way-neck-machine",
+      "neck-extension",
+      "neck-flexion"
+    ],
+    "setup": {
+      "en": "Sit or stand tall with the head in neutral. Press a palm, or both hands, against your forehead, the back of your head or the side of your head and resist with the neck so the head does not move.",
+      "ru": "Сядьте или встаньте прямо, голова в нейтральном положении. Давите ладонью или обеими руками на лоб, затылок или висок и сопротивляйтесь шеей так, чтобы голова не двигалась."
+    },
+    "cues": {
+      "en": [
+        "Build the pressure up over 2–3 s; never start with a jolt.",
+        "Work at moderate effort, about 50–70%, holding 10–20 s per direction.",
+        "Cover all four directions: front, back, left and right.",
+        "Keep breathing during the hold.",
+        "Keep the chin slightly tucked and the head level."
+      ],
+      "ru": [
+        "Наращивайте давление 2–3 секунды и никогда не начинайте рывком.",
+        "Усилие умеренное, около 50–70 %, удержание 10–20 секунд в каждом направлении.",
+        "Выполняйте все четыре направления: вперёд, назад, влево и вправо.",
+        "Продолжайте дышать во время удержания.",
+        "Подбородок слегка втянут, голова ровно."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Pushing suddenly or at maximal effort.",
+        "Holding the breath.",
+        "Letting the head tilt or turn under the pressure.",
+        "Carrying on through pain, dizziness or tingling."
+      ],
+      "ru": [
+        "Давить резко или с максимальным усилием.",
+        "Задерживать дыхание.",
+        "Позволять голове наклоняться или поворачиваться под давлением.",
+        "Продолжать при боли, головокружении или покалывании."
+      ]
+    },
+    "tags": [
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Active neck muscle training in the treatment of chronic neck pain in women: a randomized controlled trial — JAMA, 2003. https://doi.org/10.1001/jama.289.19.2509",
+      "Effects of neck muscle training in women with chronic neck pain: one-year follow-up study — J Strength Cond Res, 2006. https://doi.org/10.1519/R-17274.1",
+      "Effects of neck strength training on isometric neck strength in rugby union players — Clin J Sport Med, 2014. https://doi.org/10.1097/JSM.0000000000000071"
+    ]
+  }
+]

@@ -4,6 +4,11 @@ export type Pace = "linger" | "rapid";
 
 export type TripBrief = {
   city: string;
+  /** Inclusive destination-local calendar dates; absent on undated/legacy trips. */
+  stayStart?: string;
+  stayEnd?: string;
+  /** Explicit destination IANA timezone; required for source-confirmed event scheduling. */
+  timeZone?: string;
   routes: number;
   hours: number;
   placesPerRoute: number;
@@ -29,6 +34,8 @@ export type DraftStop = {
   id: string;
   name: string;
   local: string;
+  /** What to type into a map's search box to land on this place. Trips saved before it existed lack it. */
+  search?: string;
   lat: number;
   lon: number;
   minutes: number;
@@ -75,7 +82,18 @@ export type TripPlace = DraftStop & {
 
 export type Spine = { name: string; why: string; whyRu: string };
 
-export type TripRoute = { theme: Theme; stops: TripPlace[] };
+export type TripEvent = {
+  id: string; name: string; venue: string; address: string; city: string;
+  kind: "concert" | "exhibition" | "event";
+  availableFrom: string; availableThrough: string;
+  fixedTime: string; durationMinutes: number | null; timeZone: string; utcOffset?: string;
+  sourceUrl: string; ticketUrl?: string; verifiedAt: string; startsAt?: string; endsAt?: string;
+};
+export type TripCommitment = {
+  event: TripEvent; date: string; visitTime: string; durationMinutes: number; acceptedAt: string; startsAt?: string; endsAt?: string;
+};
+export type ScheduledStop = { stopId: string; start: string; end: string };
+export type TripRoute = { theme: Theme; stops: TripPlace[]; date?: string; schedule?: ScheduledStop[] };
 
 export type SavedTrip = {
   id: string;
@@ -84,6 +102,8 @@ export type SavedTrip = {
   brief: TripBrief;
   spine: Spine | null;
   routes: TripRoute[];
+  commitments?: TripCommitment[];
+  revisionOf?: string;
 };
 
 export type LlmCall = {
@@ -91,6 +111,7 @@ export type LlmCall = {
   developer: string;
   user: string;
   schema: Record<string, unknown>;
+  webSearch?: boolean;
 };
 
 export type Outline = { spine: Spine | null; routes: DraftStop[][] };

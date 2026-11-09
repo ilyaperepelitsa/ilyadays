@@ -12,7 +12,7 @@ export function NotFoundView({ lang }: { lang: Lang }) {
           <h1>{t.notFoundTitle}</h1>
           <p className="lede">{t.notFoundText}</p>
           <p>
-            <Link href={localPath(lang, "/")}>{t.backHome}</Link>
+            <Link prefetch={false} href={localPath(lang, "/")}>{t.backHome}</Link>
           </p>
         </section>
       </main>

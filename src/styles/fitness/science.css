@@ -1,0 +1,130 @@
+/* fitness: science stream — owned by plans/fitness; see 00-master-plan.md and 08-science-content.md.
+   Explainers: a ≈68ch reading column, tables that scroll inside their own box on phones (the page itself never
+   scrolls sideways), a callout for the "In short" blocks and small superscript citations. Colours only through the
+   food.css tokens (dark mode). Phone first; from 1040 px the contents move into a sticky column beside the text.
+   `.fit-tile` etc. are declared after this file is imported: compound selectors keep these overrides winning. */
+
+/* ---------- header */
+.fit-sci-head { max-width: 68ch; }
+.fit-sci-kicker { margin: 0; font: 700 .8rem var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+.fit-sci-kicker a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; }
+.fit-sci-kicker a::before { content: "←"; margin-right: 6px; }
+.fit-sci-kicker a:hover, .fit-sci-kicker a:focus-visible { color: var(--accent); }
+.fit-sci-meta { margin: 8px 0 0; color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+
+/* ---------- layout */
+.fit-sci { display: grid; grid-template-columns: minmax(0, 1fr); }
+.fit-sci-main { min-width: 0; max-width: 68ch; }
+
+/* ---------- table of contents: a closed <details> on phones, a sticky column on wide screens */
+.fit-toc-wide { display: none; }
+.fit-toc-phone {
+  max-width: 68ch; margin: 0 0 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.fit-toc-phone > summary {
+  display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 10px 16px; border-radius: 14px;
+  font-weight: 600; cursor: pointer; list-style: none;
+}
+.fit-toc-phone > summary::-webkit-details-marker { display: none; }
+.fit-toc-phone > summary::after {
+  content: ""; width: 8px; height: 8px; margin: 0 4px 4px auto; border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .2s ease;
+}
+.fit-toc-phone[open] > summary::after { margin-bottom: -4px; transform: rotate(-135deg); }
+.fit-toc-phone > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-sci-count {
+  display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 7px; border-radius: 999px;
+  background: var(--surface-2); color: var(--muted); font-size: .8rem;
+}
+.fit-toc-list { margin: 0; padding: 0 8px 10px; list-style: none; }
+.fit-toc-list ol { margin: 0; padding: 0 0 4px 14px; list-style: none; }
+.fit-toc-list a {
+  display: flex; align-items: center; min-height: 44px; padding: 8px 10px; border-radius: 10px; color: var(--ink);
+  line-height: 1.3; text-decoration: none;
+}
+.fit-toc-list ol a { min-height: 40px; color: var(--muted); font-size: .92rem; }
+.fit-toc-list a:hover { background: var(--surface-2); color: var(--accent); }
+.fit-toc-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* ---------- body text */
+.fit-article { font-size: 1.02rem; line-height: 1.65; overflow-wrap: break-word; }
+.fit-article > :first-child { margin-top: 0; }
+.fit-article h2 { margin: 1.9em 0 .55em; font-size: 1.45rem; scroll-margin-top: 84px; }
+.fit-article h3 { margin: 1.5em 0 .45em; font-size: 1.16rem; scroll-margin-top: 84px; }
+.fit-article h4, .fit-article h5, .fit-article h6 { margin: 1.3em 0 .4em; font: 700 1rem var(--sans); scroll-margin-top: 84px; }
+.fit-article p { margin: 0 0 1em; }
+.fit-article ul, .fit-article ol { margin: 0 0 1em; padding-left: 1.35em; }
+.fit-article li { margin: .35em 0; }
+.fit-article li > ul, .fit-article li > ol { margin: .35em 0 0; }
+.fit-article li::marker { color: var(--muted); }
+.fit-article a { text-decoration-thickness: 1px; }
+.fit-article code {
+  padding: .08em .35em; border-radius: 6px; background: var(--surface-2);
+  font: .88em/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere;
+}
+.fit-article pre { margin: 0 0 1em; padding: 12px 14px; overflow-x: auto; border-radius: 12px; background: var(--surface-2); }
+.fit-article pre code { padding: 0; background: none; overflow-wrap: normal; }
+.fit-article hr { margin: 2em 0; border: 0; border-top: 1px solid var(--line); }
+
+/* "In short" and other `>` blocks */
+.fit-callout {
+  margin: 1.4em 0; padding: 14px 16px; border-left: 4px solid var(--accent); border-radius: 0 14px 14px 0;
+  background: var(--accent-soft); color: var(--ink);
+}
+.fit-callout > :last-child { margin-bottom: 0; }
+
+/* tables: their own scroll box on phones; cells keep a readable minimum width instead of squeezing */
+.fit-table {
+  max-width: 100%; margin: 1.3em 0; overflow-x: auto; overscroll-behavior-x: contain; border: 1px solid var(--line);
+  border-radius: 12px; background: var(--surface);
+}
+.fit-table:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-table table { width: 100%; border-collapse: collapse; font-size: .9rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.fit-table th, .fit-table td { min-width: 6.5em; padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.fit-table th { background: var(--surface-2); font-weight: 700; }
+.fit-table tbody tr:last-child td { border-bottom: 0; }
+.fit-table .al-r { text-align: right; }
+.fit-table .al-c { text-align: center; }
+
+/* citations: small superscripts that do not open up the line spacing */
+.fit-cite { margin-left: 1px; font-size: .72em; line-height: 0; white-space: nowrap; }
+.fit-cite a { padding: 0 1px; color: var(--accent); font-weight: 600; text-decoration: none; }
+.fit-cite a:hover, .fit-cite a:focus-visible { text-decoration: underline; }
+
+/* ---------- sources */
+.fit-sources { margin-top: 2.6em; padding-top: 1.2em; border-top: 1px solid var(--line); }
+.fit-sources h2 { font-size: 1.3rem; scroll-margin-top: 84px; }
+.fit-sources ol { margin: 0; padding-left: 2.2em; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+.fit-sources li { margin: .5em 0; padding: 2px 6px; border-radius: 8px; overflow-wrap: anywhere; scroll-margin-top: 84px; }
+.fit-sources li::marker { font-variant-numeric: tabular-nums; }
+.fit-sources li:target { background: var(--accent-soft); color: var(--ink); }
+.fit-src-title { color: var(--ink); }
+
+/* ---------- index: a card per topic */
+.fit-sci-list { padding: 0; list-style: none; }
+.fit-sci-list > li { display: grid; }
+.fit-tile.fit-sci-card { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; }
+.fit-tile.fit-sci-card h2 { font-size: 1.2rem; }
+.fit-tile.fit-sci-card .fit-sci-card-meta { margin-top: auto; padding-top: 4px; font-size: .82rem; }
+.fit-sci-disclaimer { max-width: 68ch; }
+
+/* ---------- wide screens: contents in a sticky column beside the text */
+@media (min-width: 1040px) {
+  .fit-sci { grid-template-columns: minmax(0, 68ch) minmax(200px, 250px); column-gap: 56px; justify-content: start; align-items: start; }
+  .fit-sci-main { grid-column: 1; grid-row: 1; }
+  .fit-toc-phone { display: none; }
+  .fit-toc-wide {
+    display: block; position: sticky; top: 84px; grid-column: 2; grid-row: 1; max-height: calc(100vh - 104px);
+    overflow-y: auto; padding: 2px 0 12px; border-left: 1px solid var(--line);
+  }
+  .fit-toc-title { margin: 0 0 4px; padding: 0 14px; color: var(--muted); font: 700 .78rem var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+  .fit-toc-wide .fit-toc-list { padding: 0 4px; }
+  .fit-toc-wide .fit-toc-list a { min-height: 32px; padding: 5px 10px; font-size: .9rem; }
+  .fit-toc-wide .fit-toc-list ol a { min-height: 28px; font-size: .84rem; }
+}
+
+@media print {
+  .fit-toc { display: none; }
+  .fit-table { overflow: visible; }
+}

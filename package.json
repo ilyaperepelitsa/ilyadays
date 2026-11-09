@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/write-offline-catalog.mjs && next build",
+    "build": "node scripts/fitness-image-index.mjs && node scripts/write-offline-catalog.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/trips/*.test.mjs tests/offline/*.test.mjs tests/food/*.test.mjs tests/site/*.test.mjs",
+    "test": "node --test tests/trips/*.test.mjs tests/offline/*.test.mjs tests/food/*.test.mjs tests/site/*.test.mjs tests/fitness/*.test.mjs",
     "sync": "bash scripts/sync-content.sh",
-    "check:cookies": "node scripts/check-no-cookies.mjs"
+    "check:cookies": "node scripts/check-no-cookies.mjs",
+    "test:fitness:sql": "bash scripts/fitness-sql-check.sh",
+    "test:fitness:e2e": "bash scripts/fitness-e2e.sh"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.89.0",

@@ -1,0 +1,2056 @@
+[
+  {
+    "id": "machine-preacher-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Machine preacher curl",
+      "ru": "Сгибания рук в тренажёре Скотта"
+    },
+    "aka": [
+      "Preacher curl machine",
+      "Biceps curl machine",
+      "Arm Curl (Technogym Selection, Cybex Eagle NX)",
+      "Biceps Curl (Life Fitness Insignia, Nautilus Inspiration, Precor Vitality)",
+      "Seated Biceps (Hammer Strength, plate-loaded)"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "cable-curl",
+      "bayesian-cable-curl",
+      "incline-dumbbell-curl",
+      "dumbbell-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl",
+      "hammer-curl",
+      "reverse-curl"
+    ],
+    "setup": {
+      "en": "Set the seat so your armpits sit snugly over the top of the arm pad and your elbows line up with the machine's pivot; take the handles palms up with your arms almost straight.",
+      "ru": "Отрегулируйте сиденье так, чтобы подмышки плотно лежали на верхнем краю подушки для рук, а локти совпадали с осью вращения тренажёра; возьмитесь за рукояти хватом снизу, руки почти прямые."
+    },
+    "cues": {
+      "en": [
+        "Line your elbows up with the machine's pivot and keep the backs of your upper arms flat on the pad.",
+        "Chest against the pad, shoulders down and away from your ears.",
+        "Keep your wrists straight, the handle deep in your palm.",
+        "Curl up in 1–2 s and squeeze for a moment at the top without lifting your elbows.",
+        "Lower in 2–3 s until your arms are almost straight: the stretched bottom half matters most, so don't cut it short.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Совместите локти с осью вращения тренажёра; руки выше локтя всё время плотно лежат на подушке.",
+        "Грудь прижата к упору, плечи опущены, подальше от ушей.",
+        "Запястья прямые, рукоять лежит глубоко в ладони.",
+        "Сгибайте руки за 1–2 секунды и на мгновение задержитесь вверху, не отрывая локтей.",
+        "Опускайте за 2–3 секунды почти до прямых рук: нижняя, растянутая половина амплитуды важнее всего, не сокращайте её.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the weight drop into a straight, locked elbow: a sudden load that forces the elbow straight is the typical way the biceps tendon tears at the elbow.",
+        "Lifting the elbows off the pad or shrugging to finish the rep.",
+        "Leaning back or rocking the torso to swing the weight up.",
+        "Seat at the wrong height, so the elbow and the pivot don't line up and the elbow is strained.",
+        "Ego loading: a stack so heavy that you only manage half reps."
+      ],
+      "ru": [
+        "Бросать вес вниз до прямого «запертого» локтя: резкая нагрузка, выпрямляющая согнутый локоть, — типичный механизм отрыва сухожилия бицепса.",
+        "Отрывать локти от подушки или дотягивать повтор, поднимая плечи.",
+        "Отклоняться назад и раскачивать корпус, чтобы закинуть вес.",
+        "Неправильная высота сиденья: локоть не совпадает с осью, и сустав перегружается.",
+        "Погоня за весом: такой груз, что получаются только полуповторы."
+      ]
+    },
+    "startLoad": {
+      "kg": 15,
+      "source": "≈0.6 × Strength Level Beginner 1RM (25 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Machine Bicep Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-bicep-curl/kg",
+      "Pedrosa et al. Training in the initial range of motion promotes greater muscle adaptations than at final in the arm curl — Sports (Basel), 2023. https://www.mdpi.com/2075-4663/11/2/39",
+      "Biceps tendon tear at the elbow — OrthoInfo (AAOS), accessed 2026. https://www.orthoinfo.org/en/diseases--conditions/biceps-tendon-tear-at-the-elbow/"
+    ]
+  },
+  {
+    "id": "incline-dumbbell-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Incline dumbbell curl",
+      "ru": "Сгибания рук с гантелями сидя на наклонной скамье"
+    },
+    "aka": [
+      "Incline curl",
+      "Seated incline dumbbell curl",
+      "Incline bench biceps curl"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "dumbbell-curl",
+      "machine-preacher-curl",
+      "bayesian-cable-curl",
+      "cable-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl",
+      "hammer-curl"
+    ],
+    "setup": {
+      "en": "Set an adjustable bench to about 45–60°, sit back with your head and shoulder blades on the pad, and let the dumbbells hang straight down from your shoulders, palms facing forward.",
+      "ru": "Установите регулируемую скамью под углом 45–60°, сядьте, прижав голову и лопатки к спинке, и опустите гантели прямо вниз от плеч, ладони вперёд."
+    },
+    "cues": {
+      "en": [
+        "Head and shoulder blades stay on the pad; your upper arms hang straight down.",
+        "Curl without letting the elbows drift forward: the upper arm stays vertical.",
+        "Palms face up the whole way; squeeze briefly at the top.",
+        "Lower in about 3 s to a fully straight arm and feel the stretch at the front of the arm.",
+        "Breathe out as you curl, in as you lower.",
+        "If the front of your shoulder aches, raise the backrest a notch closer to upright."
+      ],
+      "ru": [
+        "Голова и лопатки остаются на спинке, руки свободно висят вертикально вниз.",
+        "Сгибайте руки, не выводя локти вперёд: рука выше локтя остаётся вертикальной.",
+        "Ладони всё время смотрят вверх; вверху коротко напрягите бицепс.",
+        "Опускайте примерно 3 секунды до полностью прямой руки и почувствуйте растяжение передней поверхности руки.",
+        "Выдох — на подъёме, вдох — на опускании.",
+        "Если ноет передняя часть плеча, поднимите спинку на одно деление ближе к вертикали."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Swinging the elbows forward, which turns the curl into a front raise.",
+        "Lifting your head and shoulders off the pad to heave the weight up.",
+        "Setting the bench too low (flatter than about 45°) or going too heavy, which strains the front of the shoulder.",
+        "Dropping into the bottom and bouncing out of the stretch."
+      ],
+      "ru": [
+        "Выводить локти вперёд — сгибание превращается в подъём перед собой.",
+        "Отрывать голову и плечи от спинки, чтобы закинуть вес.",
+        "Слишком низкая спинка (положе 45°) или слишком тяжёлые гантели — перегрузка передней части плеча.",
+        "Падать вниз и «отбивать» вес из растянутого положения."
+      ]
+    },
+    "startLoad": {
+      "kg": 6,
+      "source": "Per dumbbell: ≈0.6 × Strength Level Beginner 1RM (10 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Incline Dumbbell Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/incline-dumbbell-curl/kg",
+      "Zabaleta-Korta et al. Regional hypertrophy: exercises at long and short muscle lengths (incline vs preacher curl) — J Hum Kinet, 2023. https://pmc.ncbi.nlm.nih.gov/articles/PMC10407320/",
+      "Attarieh et al. Shoulder flexed vs extended elbow flexion training: preacher versus Bayesian cable curls — Eur J Sport Sci, 2025. https://doi.org/10.1002/ejsc.12279"
+    ]
+  },
+  {
+    "id": "bayesian-cable-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Bayesian cable curl",
+      "ru": "Байесовское сгибание руки на блоке (спиной к тренажёру)"
+    },
+    "aka": [
+      "Bayesian curl",
+      "Behind-the-body cable curl",
+      "Face-away cable curl",
+      "Single-arm low-pulley curl, facing away"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "cable-curl",
+      "machine-preacher-curl",
+      "incline-dumbbell-curl",
+      "dumbbell-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl",
+      "hammer-curl"
+    ],
+    "setup": {
+      "en": "Set a single pulley low (about knee height) with a D-handle, face away from it, take the handle palm forward and step into a staggered stance until the cable draws your arm slightly behind your body.",
+      "ru": "Установите блок низко (примерно на уровне колена) с одиночной рукоятью, встаньте спиной к тренажёру, возьмите рукоять ладонью вперёд и шагните в разножку, пока трос не отведёт руку немного за корпус."
+    },
+    "cues": {
+      "en": [
+        "Staggered stance, abs braced, chest up: your torso does not move.",
+        "Let the cable draw the arm back until you feel a stretch at the front of the arm and shoulder.",
+        "Curl by bending only the elbow; the upper arm stays behind your body.",
+        "Squeeze for a moment at the top, palm facing up.",
+        "Lower in 2–3 s back into the stretch; don't let the cable yank your arm back.",
+        "Finish all reps with one arm, then switch; start with your weaker arm."
+      ],
+      "ru": [
+        "Стойка в разножку, пресс напряжён, грудь раскрыта — корпус неподвижен.",
+        "Позвольте тросу отвести руку назад до ощущения растяжения в передней части руки и плеча.",
+        "Сгибайте только в локте: рука выше локтя всё время остаётся позади корпуса.",
+        "Вверху на мгновение задержитесь, ладонь смотрит вверх.",
+        "Опускайте за 2–3 секунды обратно в растяжение — не давайте тросу рвать руку назад.",
+        "Сделайте все повторы одной рукой, потом смените руку; начинайте с более слабой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the cable snap the arm back at the bottom: a sudden stretch under load strains the front of the shoulder and the biceps tendon.",
+        "Swinging the elbow forward, which turns it into a front raise and removes the stretch.",
+        "Twisting or leaning the torso to finish the rep.",
+        "Standing too close to the pulley, so the cable hangs straight down and there is no stretch at the bottom.",
+        "Shrugging the working shoulder up toward your ear."
+      ],
+      "ru": [
+        "Позволять тросу резко дёргать руку назад внизу: внезапное растяжение под нагрузкой перегружает переднюю часть плеча и сухожилие бицепса.",
+        "Выводить локоть вперёд — упражнение превращается в подъём перед собой, и растяжение пропадает.",
+        "Скручивать или наклонять корпус, чтобы дожать повтор.",
+        "Стоять слишком близко к блоку: трос висит вертикально, и внизу нет растяжения.",
+        "Поднимать рабочее плечо к уху."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Per arm: about half the two-arm cable-curl start (12.5 kg), rounded down; preacher and behind-the-body cable curls have similar 1RMs (Attarieh 2025)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Attarieh et al. Shoulder flexed vs extended elbow flexion training: preacher versus Bayesian cable curls — Eur J Sport Sci, 2025. https://doi.org/10.1002/ejsc.12279",
+      "Cable Bicep Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-bicep-curl/kg"
+    ]
+  },
+  {
+    "id": "ez-bar-preacher-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "EZ-bar preacher curl",
+      "ru": "Сгибания рук с EZ-грифом на скамье Скотта"
+    },
+    "aka": [
+      "Preacher curl",
+      "Scott curl",
+      "Scott bench curl",
+      "EZ-bar Scott curl"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "barbell-curl",
+      "machine-preacher-curl",
+      "bayesian-cable-curl",
+      "cable-curl",
+      "incline-dumbbell-curl",
+      "dumbbell-curl",
+      "reverse-curl",
+      "hammer-curl"
+    ],
+    "setup": {
+      "en": "Set the seat so your armpits rest snugly over the top of the pad with the backs of your upper arms flat on it, and take an EZ bar on the angled grips, palms up, about shoulder-width apart.",
+      "ru": "Отрегулируйте сиденье так, чтобы подмышки плотно лежали на верхнем краю подушки, а руки выше локтя — на самой подушке; возьмите EZ-гриф за изгибы хватом снизу примерно на ширине плеч."
+    },
+    "cues": {
+      "en": [
+        "Armpits snug over the pad, upper arms flat on it for the whole set.",
+        "Hold the angled part of the bar so your wrists stay straight and relaxed.",
+        "Curl until your forearms are just short of vertical: above that the tension fades.",
+        "Lower in 2–3 s until your elbows are almost straight; the bottom half matters most.",
+        "Pause for a moment near the bottom, then curl without bouncing.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Подмышки плотно на краю подушки, руки выше локтя лежат на ней весь подход.",
+        "Держите гриф за изогнутые участки, чтобы запястья оставались прямыми и расслабленными.",
+        "Сгибайте, пока предплечья почти не станут вертикальными: выше нагрузка с бицепса уходит.",
+        "Опускайте за 2–3 секунды почти до прямых локтей: нижняя половина амплитуды важнее всего.",
+        "Внизу задержитесь на мгновение и поднимайте без отбива.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the bar drop into a locked, straight elbow: a sudden load that forces the elbow straight is the classic way the distal biceps tendon tears.",
+        "Lifting your elbows or hips off the pad to heave the bar up.",
+        "Bending the wrists back or curling them in to move the weight.",
+        "Seat set too low, so your armpits sit below the top of the pad and your shoulders roll forward.",
+        "Ego loading: a bar so heavy that you can't control the bottom half."
+      ],
+      "ru": [
+        "Ронять гриф до «запертого» прямого локтя: резкая нагрузка, выпрямляющая локоть, — классический механизм отрыва сухожилия бицепса.",
+        "Отрывать локти или таз от подушки, чтобы закинуть гриф.",
+        "Отгибать или подкручивать запястья, помогая поднять вес.",
+        "Слишком низкое сиденье: подмышки ниже края подушки, плечи заваливаются вперёд.",
+        "Погоня за весом: гриф так тяжёл, что нижнюю половину не удаётся контролировать."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Bar included: ≈0.6 × Strength Level Beginner 1RM (20 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Preacher Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/preacher-curl/kg",
+      "Pedrosa et al. Training in the initial range of motion promotes greater muscle adaptations than at final in the arm curl — Sports (Basel), 2023. https://www.mdpi.com/2075-4663/11/2/39",
+      "Biceps tendon tear at the elbow — OrthoInfo (AAOS), accessed 2026. https://www.orthoinfo.org/en/diseases--conditions/biceps-tendon-tear-at-the-elbow/"
+    ]
+  },
+  {
+    "id": "cable-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Cable curl",
+      "ru": "Сгибания рук на нижнем блоке стоя"
+    },
+    "aka": [
+      "Standing cable curl",
+      "Low-pulley curl",
+      "Cable biceps curl",
+      "Straight-bar or EZ-bar cable curl"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "bayesian-cable-curl",
+      "machine-preacher-curl",
+      "incline-dumbbell-curl",
+      "dumbbell-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl",
+      "hammer-curl",
+      "reverse-curl"
+    ],
+    "setup": {
+      "en": "Attach a straight or EZ bar to the low pulley, stand tall close to the stack with feet hip-width, and hold the bar palms up with your elbows at your sides.",
+      "ru": "Прикрепите прямую или EZ-рукоять к нижнему блоку, встаньте прямо вплотную к тренажёру, стопы на ширине таза, возьмите рукоять хватом снизу, локти у корпуса."
+    },
+    "cues": {
+      "en": [
+        "Stand tall, abs braced, knees soft.",
+        "Pin your elbows to your sides; only the forearms move.",
+        "Curl the bar to upper-chest height in 1–2 s without bringing the elbows forward.",
+        "Lower in 2–3 s to straight arms, keeping tension on the cable.",
+        "Wrists straight, the bar deep in your palms.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Стойте прямо, пресс напряжён, колени чуть согнуты.",
+        "Прижмите локти к бокам: двигаются только предплечья.",
+        "Сгибайте до уровня верха груди за 1–2 секунды, не выводя локти вперёд.",
+        "Опускайте за 2–3 секунды до прямых рук, сохраняя натяжение троса.",
+        "Запястья прямые, рукоять лежит глубоко в ладонях.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning back and rocking the hips to swing the weight up, which shifts the load onto your lower back.",
+        "Elbows drifting forward and up, turning it into a front raise.",
+        "Shrugging your shoulders toward your ears.",
+        "Letting the stack crash down between reps."
+      ],
+      "ru": [
+        "Отклоняться назад и раскачивать таз, чтобы закинуть вес, — нагрузка уходит на поясницу.",
+        "Выводить локти вперёд и вверх — получается подъём перед собой.",
+        "Поднимать плечи к ушам.",
+        "Бросать вес между повторами так, что плиты бьются друг о друга."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "≈0.6 × Strength Level Beginner 1RM (20 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Cable Bicep Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-bicep-curl/kg",
+      "Pedrosa et al. Training in the initial range of motion promotes greater muscle adaptations than at final in the arm curl — Sports (Basel), 2023. https://www.mdpi.com/2075-4663/11/2/39"
+    ]
+  },
+  {
+    "id": "dumbbell-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Dumbbell curl",
+      "ru": "Сгибания рук с гантелями стоя"
+    },
+    "aka": [
+      "Standing dumbbell curl",
+      "Dumbbell biceps curl",
+      "Alternating dumbbell curl",
+      "Supinating dumbbell curl"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "incline-dumbbell-curl",
+      "machine-preacher-curl",
+      "cable-curl",
+      "bayesian-cable-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl",
+      "hammer-curl",
+      "reverse-curl"
+    ],
+    "setup": {
+      "en": "Stand tall with feet hip-width, a dumbbell in each hand, arms straight at your sides and palms facing forward.",
+      "ru": "Встаньте прямо, стопы на ширине таза, в каждой руке гантель, руки прямые вдоль корпуса, ладони смотрят вперёд."
+    },
+    "cues": {
+      "en": [
+        "Stand tall, abs braced, knees soft; your torso stays still.",
+        "Elbows stay by your sides; bend only at the elbow.",
+        "Keep your palms facing up as you curl; squeeze briefly at the top.",
+        "Lower in 2–3 s all the way to straight arms.",
+        "Curl both arms together, or alternate and finish each rep before the other arm starts.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Стойте прямо, пресс напряжён, колени чуть согнуты — корпус неподвижен.",
+        "Локти остаются у боков, сгибайте руку только в локте.",
+        "Ладони смотрят вверх по ходу движения; вверху коротко напрягите бицепс.",
+        "Опускайте за 2–3 секунды до полностью прямых рук.",
+        "Сгибайте обе руки вместе или поочерёдно, заканчивая повтор одной рукой до начала другой.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Swinging the dumbbells up with your hips and lower back.",
+        "Letting the elbows travel forward so the shoulders do the lifting.",
+        "Bending the wrists to curl the dumbbell.",
+        "Cutting reps short at the bottom because the weight is too heavy."
+      ],
+      "ru": [
+        "Закидывать гантели рывком тазом и поясницей.",
+        "Выводить локти вперёд, так что работают плечи.",
+        "Сгибать запястья, подтягивая гантель кистью.",
+        "Не опускать руки до конца, потому что вес слишком тяжёлый."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Per dumbbell: ≈0.6 × Strength Level Beginner 1RM (8 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Dumbbell Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-curl/kg",
+      "Pedrosa et al. Training in the initial range of motion promotes greater muscle adaptations than at final in the arm curl — Sports (Basel), 2023. https://www.mdpi.com/2075-4663/11/2/39"
+    ]
+  },
+  {
+    "id": "barbell-curl",
+    "class": "biceps-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Barbell curl",
+      "ru": "Подъём штанги на бицепс стоя"
+    },
+    "aka": [
+      "Standing barbell curl",
+      "Straight-bar curl",
+      "EZ-bar curl",
+      "Barbell biceps curl"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "biceps"
+    ],
+    "secondary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "ez-bar-preacher-curl",
+      "machine-preacher-curl",
+      "cable-curl",
+      "bayesian-cable-curl",
+      "incline-dumbbell-curl",
+      "dumbbell-curl",
+      "reverse-curl",
+      "hammer-curl"
+    ],
+    "setup": {
+      "en": "Stand tall with feet hip-width and hold a straight bar (or an EZ bar if your wrists complain) palms up at about shoulder width, arms straight and elbows at your sides.",
+      "ru": "Встаньте прямо, стопы на ширине таза; возьмите прямой гриф (или EZ-гриф, если беспокоят запястья) хватом снизу на ширине плеч, руки прямые, локти у корпуса."
+    },
+    "cues": {
+      "en": [
+        "Brace your abs and squeeze your glutes so your lower back stays still.",
+        "Elbows stay at your sides; curl the bar in an arc to upper-chest height.",
+        "Wrists straight, the bar in the heels of your palms.",
+        "Lower in 2–3 s to straight arms without bouncing.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Напрягите пресс и ягодицы, чтобы поясница оставалась неподвижной.",
+        "Локти у боков; поднимайте гриф по дуге до уровня верха груди.",
+        "Запястья прямые, гриф лежит в основании ладоней.",
+        "Опускайте за 2–3 секунды до прямых рук, без отбива.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning back and swinging the bar up with your lower back: the classic back-straining cheat.",
+        "Elbows drifting forward so the front delts take over.",
+        "Loading more than you can curl without body English.",
+        "Forcing a straight bar when your wrists or elbows ache: switch to an EZ bar."
+      ],
+      "ru": [
+        "Отклоняться назад и закидывать гриф поясницей — классический читинг, перегружающий спину.",
+        "Выводить локти вперёд, перекладывая работу на передние дельты.",
+        "Брать вес, который не поднять без раскачки.",
+        "Упрямо работать с прямым грифом при боли в запястьях или локтях — возьмите EZ-гриф."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Bar included: ≈0.6 × Strength Level Beginner 1RM (22 kg at 80 kg body weight); use a fixed or EZ bar, since an Olympic bar alone is 20 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Barbell Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/barbell-curl/kg",
+      "Pedrosa et al. Training in the initial range of motion promotes greater muscle adaptations than at final in the arm curl — Sports (Basel), 2023. https://www.mdpi.com/2075-4663/11/2/39"
+    ]
+  },
+  {
+    "id": "hammer-curl",
+    "class": "brachialis-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Hammer curl",
+      "ru": "Сгибания рук с гантелями хватом «молот»"
+    },
+    "aka": [
+      "Dumbbell hammer curl",
+      "Neutral-grip curl",
+      "Hammer curls",
+      "Rope hammer curl (cable version)"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondary": [
+      "biceps"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "reverse-curl",
+      "dumbbell-curl",
+      "machine-preacher-curl",
+      "cable-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl"
+    ],
+    "setup": {
+      "en": "Stand tall (or sit upright on a bench with back support) with a dumbbell in each hand at your sides, palms facing your thighs and thumbs forward.",
+      "ru": "Встаньте прямо (или сядьте на скамью с вертикальной спинкой), гантели в опущенных руках, ладони смотрят на бёдра, большие пальцы — вперёд."
+    },
+    "cues": {
+      "en": [
+        "Palms face each other, thumbs up, for the whole rep, like holding a hammer.",
+        "Stand tall, abs braced, knees soft; your torso doesn't move.",
+        "Elbows stay pinned to your sides; only the forearms move.",
+        "Curl in 1–2 s until your thumb is close to your shoulder, then squeeze briefly.",
+        "Lower in 2–3 s all the way to a straight arm.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Ладони смотрят друг на друга, большие пальцы вверх весь повтор — как будто держите молоток.",
+        "Стойте прямо, пресс напряжён, колени чуть согнуты — корпус не двигается.",
+        "Локти прижаты к бокам, двигаются только предплечья.",
+        "Сгибайте за 1–2 секунды, пока большой палец не окажется у плеча, и коротко задержитесь.",
+        "Опускайте за 2–3 секунды до полностью прямой руки.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Swinging the dumbbells up with your hips and lower back.",
+        "Elbows drifting forward so the front delts do the lifting.",
+        "Turning the palms up mid-rep, which turns it into a regular curl.",
+        "Cocking the wrists to flick the dumbbell up.",
+        "Going so heavy that you only cover half the range."
+      ],
+      "ru": [
+        "Раскачивать гантели тазом и поясницей.",
+        "Выводить локти вперёд, так что поднимают передние дельты.",
+        "Разворачивать ладони вверх по ходу повтора — получается обычное сгибание.",
+        "Подбрасывать гантель движением кисти.",
+        "Брать такой вес, что проходится только половина амплитуды."
+      ]
+    },
+    "startLoad": {
+      "kg": 6,
+      "source": "Per dumbbell: ≈0.6 × Strength Level Beginner 1RM (11 kg at 80 kg body weight), rounded down"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Hammer Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/hammer-curl/kg",
+      "Kleiber et al. Muscular coordination of biceps brachii and brachioradialis in elbow flexion with respect to hand position — Front Physiol, 2015. https://doi.org/10.3389/fphys.2015.00215",
+      "Pedrosa et al. Training in the initial range of motion promotes greater muscle adaptations than at final in the arm curl — Sports (Basel), 2023. https://www.mdpi.com/2075-4663/11/2/39"
+    ]
+  },
+  {
+    "id": "reverse-curl",
+    "class": "brachialis-curl",
+    "pattern": "elbow-flexion",
+    "name": {
+      "en": "Reverse-grip curl",
+      "ru": "Сгибания рук со штангой обратным хватом"
+    },
+    "aka": [
+      "Reverse curl",
+      "Overhand curl",
+      "Pronated-grip curl",
+      "EZ-bar reverse curl"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "brachialis",
+      "brachioradialis"
+    ],
+    "secondary": [
+      "biceps",
+      "forearm-extensors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      15
+    ],
+    "alternatives": [
+      "hammer-curl",
+      "ez-bar-preacher-curl",
+      "barbell-curl",
+      "machine-preacher-curl",
+      "cable-curl",
+      "dumbbell-curl"
+    ],
+    "setup": {
+      "en": "Stand tall holding an EZ bar (or a straight bar) with an overhand grip, palms down, at shoulder width, arms straight in front of your thighs.",
+      "ru": "Встаньте прямо, возьмите EZ-гриф (или прямой гриф) хватом сверху, ладонями вниз, на ширине плеч, руки прямые перед бёдрами."
+    },
+    "cues": {
+      "en": [
+        "Overhand grip, thumbs wrapped, wrists straight in line with your forearms.",
+        "Elbows at your sides; curl the bar up to chest height.",
+        "Keep your knuckles pointing forward and up; don't let the wrists droop.",
+        "Lower in 2–3 s to straight arms.",
+        "Start at about two-thirds of your normal curl weight: palms down, the biceps is at a mechanical disadvantage and the brachioradialis takes a bigger share of the work.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Хват сверху, большие пальцы обхватывают гриф, запястья прямые, на одной линии с предплечьями.",
+        "Локти у боков; поднимайте гриф до уровня груди.",
+        "Костяшки смотрят вперёд и вверх — не давайте запястьям провисать.",
+        "Опускайте за 2–3 секунды до прямых рук.",
+        "Начинайте примерно с двух третей обычного веса для сгибаний: при хвате сверху бицепс в невыгодном положении, и плечелучевая мышца берёт на себя заметную часть работы.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the wrists bend down or roll back, which strains the forearm tendons.",
+        "Swinging the bar up with your hips.",
+        "Pushing through pain on the outside of the elbow (the tennis-elbow spot) instead of lightening the load.",
+        "Elbows drifting forward."
+      ],
+      "ru": [
+        "Позволять запястьям сгибаться вниз или заваливаться назад — перегрузка сухожилий предплечья.",
+        "Закидывать гриф раскачкой таза.",
+        "Терпеть боль с наружной стороны локтя (зона «локтя теннисиста») вместо того, чтобы снизить вес.",
+        "Выводить локти вперёд."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "Bar included: ≈0.6 × Strength Level Beginner 1RM (15 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Reverse Barbell Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/reverse-barbell-curl/kg",
+      "Kleiber et al. Muscular coordination of biceps brachii and brachioradialis in elbow flexion with respect to hand position — Front Physiol, 2015. https://doi.org/10.3389/fphys.2015.00215"
+    ]
+  },
+  {
+    "id": "overhead-cable-triceps-extension",
+    "class": "triceps-extension",
+    "pattern": "elbow-extension",
+    "name": {
+      "en": "Overhead cable triceps extension",
+      "ru": "Разгибание рук из-за головы на блоке"
+    },
+    "aka": [
+      "Cable overhead triceps extension",
+      "Rope overhead extension",
+      "Cable French press",
+      "Overhead cable extension"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "triceps-long",
+      "triceps-lateral"
+    ],
+    "secondary": [],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "dumbbell-overhead-triceps-extension",
+      "skull-crusher",
+      "cable-pushdown",
+      "machine-triceps-extension"
+    ],
+    "setup": {
+      "en": "Attach a rope to a pulley at about head height, face away from the stack in a split stance, lean slightly forward from the hips and hold the rope behind your head with your elbows pointing forward.",
+      "ru": "Закрепите канат на блоке примерно на уровне головы, встаньте спиной к тренажёру в разножку, слегка наклонитесь вперёд в тазобедренных суставах и держите канат за головой, локти направлены вперёд."
+    },
+    "cues": {
+      "en": [
+        "Split stance, abs braced, ribs down: don't arch your lower back.",
+        "Elbows point forward, close to your head, and stay put.",
+        "Straighten your elbows fully, finishing with your hands in front of your forehead.",
+        "Return in 2–3 s until your hands are behind your head and the back of your arm is stretched.",
+        "Start about a third lighter than your pushdown: the overhead position is weaker but grows the triceps more.",
+        "Breathe out as you extend, in as you return."
+      ],
+      "ru": [
+        "Стойка в разножку, пресс напряжён, рёбра опущены — не прогибайтесь в пояснице.",
+        "Локти смотрят вперёд, близко к голове, и не двигаются.",
+        "Полностью разгибайте локти, заканчивая с кистями перед лбом.",
+        "Возвращайтесь за 2–3 секунды, пока кисти не окажутся за головой, а задняя поверхность руки не растянется.",
+        "Начинайте с веса примерно на треть меньше, чем в разгибаниях на верхнем блоке: над головой рука слабее, зато трицепс растёт сильнее.",
+        "Выдох — на разгибании, вдох — на возврате."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Arching the lower back and flaring the ribs to get your arms overhead.",
+        "Elbows flaring wide, turning it into a press.",
+        "Moving the upper arms to pull with your back and shoulders instead of bending only at the elbow.",
+        "Letting the cable yank your hands back into the stretch instead of lowering under control.",
+        "Using your pushdown weight: the stretched position can't handle it."
+      ],
+      "ru": [
+        "Прогибаться в пояснице и раскрывать рёбра, чтобы завести руки за голову.",
+        "Разводить локти в стороны — получается жим.",
+        "Двигать руками в плечевых суставах, подключая спину и дельты, вместо работы только в локтях.",
+        "Позволять тросу рывком утягивать кисти назад вместо подконтрольного опускания.",
+        "Брать вес из разгибаний на верхнем блоке — в растянутом положении с ним не справиться."
+      ]
+    },
+    "startLoad": {
+      "kg": 7.5,
+      "source": "≈0.6 × Strength Level Beginner 1RM (14 kg at 80 kg body weight); overhead loads run 34–39% below pushdowns (Maeo 2023)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Maeo et al. Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position — Eur J Sport Sci, 2023. https://pubmed.ncbi.nlm.nih.gov/35819335/",
+      "Cable Overhead Tricep Extension strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-overhead-tricep-extension/kg"
+    ]
+  },
+  {
+    "id": "machine-triceps-extension",
+    "class": "triceps-extension",
+    "pattern": "elbow-extension",
+    "name": {
+      "en": "Machine triceps extension",
+      "ru": "Разгибание рук в тренажёре на трицепс"
+    },
+    "aka": [
+      "Triceps extension machine",
+      "Arm Extension (Technogym Selection, Cybex Eagle NX)",
+      "Triceps Extension (Life Fitness Insignia)",
+      "Biceps Curl/Triceps Extension combo (Precor Vitality)",
+      "Seated triceps extension machine"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "triceps-lateral",
+      "triceps-long"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "cable-pushdown",
+      "overhead-cable-triceps-extension",
+      "dumbbell-overhead-triceps-extension",
+      "skull-crusher"
+    ],
+    "setup": {
+      "en": "Adjust the seat so your elbows line up with the machine's pivot and the backs of your upper arms rest flat on the pad, then sit tall against the backrest and take the handles.",
+      "ru": "Отрегулируйте сиденье так, чтобы локти совпадали с осью вращения тренажёра, а руки выше локтя лежали на подушке; сядьте прямо, прижавшись к спинке, и возьмитесь за рукояти."
+    },
+    "cues": {
+      "en": [
+        "Elbows on the pad, lined up with the pivot; your upper arms never move.",
+        "Back against the pad, shoulders down.",
+        "Press to fully straight elbows in 1–2 s and squeeze briefly.",
+        "Return in 2–3 s until your elbows are well bent, without letting the stack touch down.",
+        "Breathe out as you press, in as you return."
+      ],
+      "ru": [
+        "Локти на подушке, на одной линии с осью; руки выше локтя не двигаются.",
+        "Спина прижата к спинке, плечи опущены.",
+        "Разгибайте до полностью прямых локтей за 1–2 секунды и коротко задержитесь.",
+        "Возвращайтесь за 2–3 секунды до глубокого сгибания в локтях, не давая плитам лечь на стопку.",
+        "Выдох — на разгибании, вдох — на возврате."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat at the wrong height, so your elbows and the pivot don't line up and the elbows ache.",
+        "Lifting the elbows off the pad or leaning forward to push with your shoulders.",
+        "Snapping into lockout or letting the weight crash back.",
+        "Shrugging your shoulders up toward your ears."
+      ],
+      "ru": [
+        "Неправильная высота сиденья: локти не совпадают с осью, и суставы ноют.",
+        "Отрывать локти от подушки или наклоняться вперёд, дожимая плечами.",
+        "Резко «выстреливать» в выпрямление или бросать вес назад.",
+        "Поднимать плечи к ушам."
+      ]
+    },
+    "startLoad": {
+      "kg": 17.5,
+      "source": "≈0.6 × Strength Level Beginner 1RM (31 kg at 80 kg body weight), rounded down"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Machine Tricep Extension strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-tricep-extension/kg",
+      "Maeo et al. Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position — Eur J Sport Sci, 2023. https://pubmed.ncbi.nlm.nih.gov/35819335/"
+    ]
+  },
+  {
+    "id": "dumbbell-overhead-triceps-extension",
+    "class": "triceps-extension",
+    "pattern": "elbow-extension",
+    "name": {
+      "en": "Seated dumbbell overhead triceps extension",
+      "ru": "Французский жим с гантелью сидя"
+    },
+    "aka": [
+      "Seated dumbbell French press",
+      "Two-hand overhead dumbbell extension",
+      "Overhead dumbbell triceps extension",
+      "Seated triceps extension"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "triceps-long",
+      "triceps-lateral"
+    ],
+    "secondary": [],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "overhead-cable-triceps-extension",
+      "skull-crusher",
+      "machine-triceps-extension",
+      "cable-pushdown"
+    ],
+    "setup": {
+      "en": "Sit on a bench with an upright back support and hold one dumbbell overhead with both hands, palms cupping the upper plate and thumbs around the handle, arms straight.",
+      "ru": "Сядьте на скамью с вертикальной спинкой и держите одну гантель над головой двумя руками: ладони обхватывают верхний диск, большие пальцы — гриф, руки прямые."
+    },
+    "cues": {
+      "en": [
+        "Back against the pad, ribs down, abs braced: don't arch.",
+        "Elbows point forward and stay close to your head; only your forearms move.",
+        "Lower the dumbbell behind your head in 2–3 s until your elbows are fully bent and the back of the arm stretches.",
+        "Press back up to straight arms without letting the elbows flare.",
+        "Breathe out as you press, in as you lower."
+      ],
+      "ru": [
+        "Спина прижата к спинке, рёбра опущены, пресс напряжён — не прогибайтесь.",
+        "Локти смотрят вперёд и остаются у головы; двигаются только предплечья.",
+        "Опускайте гантель за голову за 2–3 секунды до полного сгибания в локтях и растяжения задней поверхности руки.",
+        "Выжимайте обратно до прямых рук, не разводя локти.",
+        "Выдох — на подъёме, вдох — на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Arching your lower back off the pad to get the weight overhead.",
+        "Elbows flaring out wide.",
+        "Dropping fast into the bottom and bouncing out of the stretch, which strains the elbow.",
+        "A loose grip on the dumbbell: it is over your head, so cup the plate firmly.",
+        "Starting too heavy: the stretched bottom is the weak point."
+      ],
+      "ru": [
+        "Отрывать поясницу от спинки, чтобы выжать вес.",
+        "Широко разводить локти.",
+        "Быстро ронять гантель вниз и отбивать её из растяжения — перегрузка локтя.",
+        "Слабый хват: гантель над головой, плотно обхватывайте диск.",
+        "Слишком тяжёлый старт: растянутое нижнее положение — самое слабое место."
+      ]
+    },
+    "startLoad": {
+      "kg": 8,
+      "source": "One dumbbell: ≈0.63 × the pushdown start (12.5 kg), since overhead loads run 34–39% lighter (Maeo 2023)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Maeo et al. Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position — Eur J Sport Sci, 2023. https://pubmed.ncbi.nlm.nih.gov/35819335/",
+      "Boehler, Porcari et al. ACE-sponsored research: best triceps exercises — ACE Certified News, 2011. https://www.acefitness.org/certifiednewsarticle/1562/ace-study-identifies-best-triceps-exercises/"
+    ]
+  },
+  {
+    "id": "skull-crusher",
+    "class": "triceps-extension",
+    "pattern": "elbow-extension",
+    "name": {
+      "en": "Skull crusher",
+      "ru": "Французский жим лёжа с EZ-грифом"
+    },
+    "aka": [
+      "Lying triceps extension",
+      "EZ-bar skull crusher",
+      "Lying French press",
+      "Nose breaker"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "triceps-long",
+      "triceps-lateral"
+    ],
+    "secondary": [],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "overhead-cable-triceps-extension",
+      "dumbbell-overhead-triceps-extension",
+      "machine-triceps-extension",
+      "cable-pushdown"
+    ],
+    "setup": {
+      "en": "Lie on a flat bench with your feet flat and hold an EZ bar on the angled grips, thumbs wrapped, arms straight over your shoulders; then tilt your arms slightly back toward your head.",
+      "ru": "Лягте на горизонтальную скамью, стопы на полу; возьмите EZ-гриф за изгибы, обхватив его большими пальцами, руки прямые над плечами, затем слегка наклоните их назад к голове."
+    },
+    "cues": {
+      "en": [
+        "Upper arms tilted slightly back toward your head; keep them still.",
+        "Bend only at the elbows and lower the bar in 2–3 s to just behind the top of your head.",
+        "Elbows stay about shoulder-width apart, pointing up.",
+        "Extend to straight arms, keeping tension on the triceps at the top.",
+        "Shoulder blades and back stay on the bench, feet planted.",
+        "Breathe in as you lower, out as you extend."
+      ],
+      "ru": [
+        "Руки выше локтя слегка наклонены назад, к голове, и неподвижны.",
+        "Сгибайте только локти и опускайте гриф за 2–3 секунды чуть за макушку.",
+        "Локти примерно на ширине плеч, смотрят вверх.",
+        "Разгибайте до прямых рук, сохраняя напряжение трицепса вверху.",
+        "Лопатки и спина прижаты к скамье, стопы упираются в пол.",
+        "Вдох — на опускании, выдох — на разгибании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Elbows flaring wide.",
+        "Swinging the upper arms so it becomes a pullover or a press.",
+        "Lowering fast toward your face: control every rep.",
+        "A thumbless grip: the bar is over your face, so wrap your thumbs.",
+        "Pushing through elbow pain with heavy loads: lighten it or switch to a cable or machine."
+      ],
+      "ru": [
+        "Разводить локти в стороны.",
+        "Двигать руками в плечевых суставах — упражнение превращается в пуловер или жим.",
+        "Быстро опускать гриф к лицу — контролируйте каждый повтор.",
+        "Хват без больших пальцев: гриф над лицом, обхватывайте его.",
+        "Работать через боль в локтях с большим весом — снизьте его или перейдите на блок или тренажёр."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Bar included: ≈0.6 × Strength Level Beginner 1RM for the lying triceps extension (20 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Lying Tricep Extension strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/lying-tricep-extension/kg",
+      "Boehler, Porcari et al. ACE-sponsored research: best triceps exercises — ACE Certified News, 2011. https://www.acefitness.org/certifiednewsarticle/1562/ace-study-identifies-best-triceps-exercises/"
+    ]
+  },
+  {
+    "id": "cable-pushdown",
+    "class": "triceps-extension",
+    "pattern": "elbow-extension",
+    "name": {
+      "en": "Cable triceps pushdown",
+      "ru": "Разгибание рук на верхнем блоке"
+    },
+    "aka": [
+      "Triceps pushdown",
+      "Rope pushdown",
+      "Straight-bar pushdown",
+      "V-bar pushdown",
+      "Cable press-down"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "triceps-lateral",
+      "triceps-long"
+    ],
+    "secondary": [],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "machine-triceps-extension",
+      "overhead-cable-triceps-extension",
+      "dumbbell-overhead-triceps-extension",
+      "skull-crusher"
+    ],
+    "setup": {
+      "en": "Set the pulley at the top with a rope, straight bar or V-bar, stand tall facing the stack with feet hip-width or staggered, and grip the attachment with your thumbs wrapped, elbows bent and tucked at your sides.",
+      "ru": "Установите блок в верхнее положение с канатом, прямой или V-образной рукоятью, встаньте прямо лицом к тренажёру, стопы на ширине таза или в разножку, возьмитесь за рукоять, обхватив её большими пальцами, локти согнуты и прижаты к бокам."
+    },
+    "cues": {
+      "en": [
+        "Stand tall, abs braced, with the natural arch in your lower back.",
+        "Pull your shoulders back and down and hold them there for the whole set.",
+        "Elbows stay pinned to your sides; only the forearms move.",
+        "Press down until your elbows are straight without slamming into lockout; with a rope, spread the ends at the bottom.",
+        "Pause for a moment at the bottom with the triceps squeezed.",
+        "Let your hands rise in 2–3 s to about upper-chest height, stopping before the elbows start to drift forward.",
+        "Breathe out as you press, in as you return."
+      ],
+      "ru": [
+        "Стойте прямо, пресс напряжён, естественный прогиб в пояснице сохранён.",
+        "Отведите плечи назад и вниз и держите их так весь подход.",
+        "Локти прижаты к бокам, двигаются только предплечья.",
+        "Разгибайте руки вниз до прямых локтей, не «вбивая» их в замок; с канатом разводите концы внизу.",
+        "Внизу на мгновение задержитесь, напрягая трицепс.",
+        "Поднимайте кисти за 2–3 секунды примерно до уровня верха груди — пока локти не начали уходить вперёд.",
+        "Выдох — на разгибании, вдох — на возврате."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning over the attachment to push with your bodyweight and shoulders: a sign the weight is too heavy.",
+        "Elbows drifting forward, which hands the work to the lats and shoulders.",
+        "Shrugging your shoulders up toward your ears.",
+        "Letting the attachment fly up past chest height, which lifts the elbows off your sides.",
+        "Bending the wrists to push: keep them in line with your forearms."
+      ],
+      "ru": [
+        "Наваливаться на рукоять, дожимая весом тела и плечами, — признак того, что вес слишком велик.",
+        "Уводить локти вперёд — работа переходит на широчайшие и плечи.",
+        "Поднимать плечи к ушам.",
+        "Отпускать рукоять выше груди, так что локти отрываются от боков.",
+        "Сгибать запястья, дожимая кистями, — держите их на одной линии с предплечьями."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "≈0.6 × Strength Level Beginner 1RM (22 kg at 80 kg body weight), rounded down"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Triceps pushdowns — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/185/triceps-pushdowns/",
+      "Tricep Pushdown strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/tricep-pushdown/kg",
+      "Maeo et al. Triceps brachii hypertrophy is substantially greater after elbow extension training performed in the overhead versus neutral arm position — Eur J Sport Sci, 2023. https://pubmed.ncbi.nlm.nih.gov/35819335/"
+    ]
+  },
+  {
+    "id": "close-grip-bench-press",
+    "class": "triceps-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Close-grip bench press",
+      "ru": "Жим штанги лёжа узким хватом"
+    },
+    "aka": [
+      "Narrow-grip bench press",
+      "CGBP",
+      "Triceps bench press",
+      "Close-grip barbell bench"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "triceps-lateral",
+      "triceps-long"
+    ],
+    "secondary": [
+      "pec-sternal",
+      "pec-clavicular",
+      "delt-front"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      10
+    ],
+    "alternatives": [
+      "triceps-press-machine",
+      "assisted-dip",
+      "diamond-push-up",
+      "dip",
+      "smith-bench-press"
+    ],
+    "setup": {
+      "en": "In a rack with the safety arms set just below chest height, lie on a flat bench with your eyes under the bar, grip it about shoulder-width (hands just outside your torso), pull your shoulder blades back and down and plant your feet.",
+      "ru": "В силовой раме с упорами чуть ниже уровня груди лягте на скамью так, чтобы глаза были под грифом; возьмите гриф примерно на ширине плеч (кисти чуть шире корпуса), сведите и опустите лопатки, твёрдо поставьте стопы."
+    },
+    "cues": {
+      "en": [
+        "Hands about shoulder-width: that already shifts work to the triceps, and going narrower mostly strains the wrists.",
+        "Shoulder blades pulled back and down, feet planted, glutes on the bench.",
+        "Lower the bar in 2–3 s to your lower chest with your elbows tucked at about 30–45° from your sides.",
+        "Touch lightly, with no bounce, then press up and slightly back over your shoulders.",
+        "Wrists stacked over your elbows, the bar in the heels of your palms.",
+        "Take a breath and brace before each rep; breathe out past the hardest part."
+      ],
+      "ru": [
+        "Хват примерно на ширине плеч: этого уже достаточно, чтобы сместить нагрузку на трицепс, а более узкий хват в основном перегружает запястья.",
+        "Лопатки сведены и опущены, стопы упираются в пол, ягодицы на скамье.",
+        "Опускайте гриф за 2–3 секунды к низу груди, локти прижаты под углом 30–45° к корпусу.",
+        "Касайтесь груди мягко, без отбива, затем выжимайте вверх и слегка назад, к линии плеч.",
+        "Запястья над локтями, гриф лежит в основании ладоней.",
+        "Перед каждым повтором вдохните и напрягите корпус; выдыхайте после самой тяжёлой точки."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Training alone without safety arms or a spotter: never take this lift close to failure unprotected.",
+        "Hands touching or very close, which bends and strains the wrists.",
+        "Elbows flaring past about 75° from your torso, which loads the front of the shoulder.",
+        "Bouncing the bar off your chest.",
+        "Lifting your hips off the bench or overarching your lower back.",
+        "Ego loading: using your regular bench-press weight."
+      ],
+      "ru": [
+        "Работать в одиночку без страховочных упоров или партнёра: никогда не подходите к отказу без страховки.",
+        "Ставить кисти вплотную или почти вплотную — запястья заламываются и перегружаются.",
+        "Разводить локти больше чем примерно на 75° от корпуса — перегрузка передней части плеча.",
+        "Отбивать гриф от груди.",
+        "Отрывать таз от скамьи или чрезмерно прогибать поясницу.",
+        "Погоня за весом: брать свой обычный вес из жима лёжа."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Bar included: ≈0.55 × Strength Level Beginner 1RM (55 kg at 80 kg body weight) = empty bar plus two 5 kg plates"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Close Grip Bench Press strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/close-grip-bench-press/kg",
+      "Lehman. The influence of grip width and forearm pronation/supination on upper-body myoelectric activity during the flat bench press — J Strength Cond Res, 2005. https://pubmed.ncbi.nlm.nih.gov/16095407/",
+      "Boehler, Porcari et al. ACE-sponsored research: best triceps exercises — ACE Certified News, 2011. https://www.acefitness.org/certifiednewsarticle/1562/ace-study-identifies-best-triceps-exercises/"
+    ]
+  },
+  {
+    "id": "diamond-push-up",
+    "class": "triceps-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Diamond push-up",
+      "ru": "Алмазные отжимания (узкая постановка рук)"
+    },
+    "aka": [
+      "Triangle push-up",
+      "Close-hand push-up",
+      "Narrow push-up",
+      "Diamond press-up"
+    ],
+    "equipment": "bodyweight",
+    "primary": [
+      "triceps-lateral",
+      "triceps-long"
+    ],
+    "secondary": [
+      "pec-sternal",
+      "delt-front",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      6,
+      15
+    ],
+    "alternatives": [
+      "dip",
+      "triceps-press-machine",
+      "assisted-dip",
+      "close-grip-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Place your hands under your chest with thumbs and index fingers touching to form a diamond, and set a straight plank from head to heels (knees down or hands on a bench to make it easier).",
+      "ru": "Поставьте руки под грудью так, чтобы большие и указательные пальцы соприкасались и образовывали ромб, и примите упор лёжа: тело прямое от головы до пяток (для облегчения — с колен или руками на скамье)."
+    },
+    "cues": {
+      "en": [
+        "One straight line from head to heels: squeeze your glutes and abs.",
+        "Elbows travel back along your ribs, not out to the sides.",
+        "Lower in about 2 s until your chest nearly touches your hands.",
+        "Push the floor away to straight arms; keep your shoulders away from your ears.",
+        "Breathe in on the way down, out on the way up.",
+        "If you can't do 6, put your hands on a bench or box: the higher, the easier."
+      ],
+      "ru": [
+        "Тело — одна прямая линия от головы до пяток: напрягите ягодицы и пресс.",
+        "Локти уходят назад вдоль рёбер, а не в стороны.",
+        "Опускайтесь примерно 2 секунды, пока грудь почти не коснётся кистей.",
+        "Отталкивайте пол до прямых рук, плечи подальше от ушей.",
+        "Вдох — при опускании, выдох — при подъёме.",
+        "Если не получается 6 раз, поставьте руки на скамью или тумбу: чем выше опора, тем легче."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Hips sagging and the lower back arching.",
+        "Elbows flaring straight out to the sides, which loads the shoulders.",
+        "Half reps that stop well short of your hands.",
+        "Forcing the diamond when your wrists or elbows hurt: move the hands to just inside shoulder-width instead."
+      ],
+      "ru": [
+        "Провисание таза и прогиб в пояснице.",
+        "Разведение локтей в стороны — нагрузка уходит на плечи.",
+        "Полуповторы, далеко не доходящие до кистей.",
+        "Упорствовать с «ромбом» при боли в запястьях или локтях — лучше поставьте руки чуть уже плеч."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Body weight; the Strength Level Beginner standard at 80 kg is 2–3 reps, so most beginners start with their hands on a bench"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Boehler, Porcari et al. ACE-sponsored research: best triceps exercises — ACE Certified News, 2011. https://www.acefitness.org/certifiednewsarticle/1562/ace-study-identifies-best-triceps-exercises/",
+      "Diamond Push Ups strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/diamond-push-ups"
+    ]
+  },
+  {
+    "id": "wrist-curl",
+    "class": "wrist",
+    "pattern": "forearm-flexion",
+    "name": {
+      "en": "Dumbbell wrist curl",
+      "ru": "Сгибания кистей с гантелями сидя"
+    },
+    "aka": [
+      "Wrist curl",
+      "Seated dumbbell wrist curl",
+      "Palms-up wrist curl",
+      "Barbell wrist curl"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "forearm-flexors"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "gripper",
+      "dead-hang",
+      "plate-pinch",
+      "farmers-carry",
+      "reverse-wrist-curl"
+    ],
+    "setup": {
+      "en": "Sit on a bench with your forearms resting on your thighs, palms up, wrists just past your knees, and a dumbbell in each hand.",
+      "ru": "Сядьте на скамью, положите предплечья на бёдра ладонями вверх так, чтобы запястья выступали за колени, в каждой руке гантель."
+    },
+    "cues": {
+      "en": [
+        "Forearms stay glued to your thighs; only the wrists move.",
+        "Let the wrist bend back under control; you can let the dumbbell roll toward your fingertips.",
+        "Close your fingers and curl the wrist up as high as it goes.",
+        "Move slowly: 1–2 s up, 2 s down, no bouncing.",
+        "Breathe steadily throughout the set."
+      ],
+      "ru": [
+        "Предплечья неподвижно лежат на бёдрах, двигаются только кисти.",
+        "Подконтрольно опускайте кисть назад; можно дать гантели скатиться к кончикам пальцев.",
+        "Сожмите пальцы и согните кисть вверх как можно выше.",
+        "Двигайтесь медленно: 1–2 секунды вверх, 2 секунды вниз, без рывков.",
+        "Дышите ровно на протяжении всего подхода."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Lifting the forearms off your thighs to swing the weight.",
+        "Heavy, jerky, short reps.",
+        "Letting the dumbbell drop at the bottom, which jolts the wrist."
+      ],
+      "ru": [
+        "Отрывать предплечья от бёдер, раскачивая вес.",
+        "Тяжёлые, рваные, короткие повторы.",
+        "Ронять гантель в нижней точке — это бьёт по запястью."
+      ]
+    },
+    "startLoad": {
+      "kg": 4,
+      "source": "Per dumbbell: ≈0.6 × Strength Level Beginner 1RM (7 kg at 80 kg body weight)"
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Dumbbell Wrist Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-wrist-curl/kg",
+      "Delp, Grierson, Buchanan. Maximum isometric moments generated by the wrist muscles in flexion-extension and radial-ulnar deviation — J Biomech, 1996. https://doi.org/10.1016/0021-9290(96)00029-2"
+    ]
+  },
+  {
+    "id": "reverse-wrist-curl",
+    "class": "wrist",
+    "pattern": "forearm-extension",
+    "name": {
+      "en": "Dumbbell reverse wrist curl",
+      "ru": "Разгибания кистей с гантелями сидя"
+    },
+    "aka": [
+      "Reverse wrist curl",
+      "Wrist extension",
+      "Palms-down wrist curl",
+      "Barbell reverse wrist curl"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "forearm-extensors"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1,
+    "repRange": [
+      12,
+      20
+    ],
+    "alternatives": [
+      "reverse-curl",
+      "wrist-curl",
+      "plate-pinch"
+    ],
+    "setup": {
+      "en": "Sit on a bench with your forearms resting on your thighs, palms down, wrists just past your knees, and a light dumbbell in each hand.",
+      "ru": "Сядьте на скамью, положите предплечья на бёдра ладонями вниз так, чтобы запястья выступали за колени, в каждой руке лёгкая гантель."
+    },
+    "cues": {
+      "en": [
+        "Forearms stay on your thighs; only your hands move.",
+        "Lift the back of your hand as high as it goes, fingers relaxed around the handle.",
+        "Lower slowly, over about 3 s: slow lowering is the core of tennis-elbow rehab.",
+        "Use about half of your wrist-curl weight: the wrist extensors are much weaker.",
+        "Smooth tempo, no jerks."
+      ],
+      "ru": [
+        "Предплечья лежат на бёдрах, двигаются только кисти.",
+        "Поднимайте тыльную сторону кисти как можно выше, пальцы спокойно обхватывают гриф.",
+        "Опускайте медленно, около 3 секунд: медленное опускание — основа реабилитации «локтя теннисиста».",
+        "Берите примерно половину веса из сгибаний кистей: разгибатели запястья заметно слабее.",
+        "Плавный темп, без рывков."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Adding weight before reps: the extensors are small, so reach 20 clean reps first.",
+        "Swinging the weight or lifting the forearms.",
+        "Twisting the wrist sideways to help the weight up.",
+        "Training through sharp pain on the outside of the elbow instead of lightening the load."
+      ],
+      "ru": [
+        "Добавлять вес раньше повторов: разгибатели небольшие, сначала добейтесь 20 чистых повторов.",
+        "Раскачивать вес или отрывать предплечья.",
+        "Выворачивать кисть в сторону, помогая поднять вес.",
+        "Терпеть острую боль с наружной стороны локтя вместо того, чтобы снизить вес."
+      ]
+    },
+    "startLoad": {
+      "kg": 2,
+      "source": "Per dumbbell: about half the wrist-curl start, since the wrist extensors produce ≈60% of the flexors' torque (Delp 1996)"
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Dumbbell Reverse Wrist Curl strength standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-reverse-wrist-curl/kg",
+      "Delp, Grierson, Buchanan. Maximum isometric moments generated by the wrist muscles in flexion-extension and radial-ulnar deviation — J Biomech, 1996. https://doi.org/10.1016/0021-9290(96)00029-2",
+      "Peterson et al. Eccentric vs concentric graded exercise in chronic tennis elbow: a randomized controlled trial — Clin Rehabil, 2014. https://pubmed.ncbi.nlm.nih.gov/24634444/"
+    ]
+  },
+  {
+    "id": "farmers-carry",
+    "class": "grip",
+    "pattern": "carry",
+    "name": {
+      "en": "Farmer's carry",
+      "ru": "Прогулка фермера"
+    },
+    "aka": [
+      "Farmer's walk",
+      "Farmers walk",
+      "Loaded carry",
+      "Dumbbell farmer's carry",
+      "Trap-bar or handle farmer's walk"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "forearm-flexors",
+      "traps-upper"
+    ],
+    "secondary": [
+      "erectors",
+      "quadratus-lumborum",
+      "obliques",
+      "glute-med"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      20,
+      40
+    ],
+    "repUnit": "meters",
+    "alternatives": [
+      "suitcase-carry",
+      "plate-pinch",
+      "dead-hang",
+      "gripper"
+    ],
+    "setup": {
+      "en": "Stand between two equal dumbbells (or kettlebells, or farmer's handles), pick them up like a deadlift — hips back, flat back, chest up — and stand tall with them at your sides, facing a clear, straight 20–40 m lane.",
+      "ru": "Встаньте между двумя одинаковыми гантелями (гирями или рукоятями для прогулки фермера), поднимите их как в становой тяге — таз назад, спина ровная, грудь раскрыта — и выпрямитесь с ними в опущенных руках лицом к свободной прямой дорожке длиной 20–40 м."
+    },
+    "cues": {
+      "en": [
+        "Grip the middle of the handles hard; arms straight and relaxed at your sides.",
+        "Stand tall: chest up, shoulders down and slightly back, head level, eyes forward.",
+        "Brace your abs as if about to be poked, and breathe in short breaths behind the brace.",
+        "Walk with short, quick, controlled steps; keep the weights from swinging.",
+        "Keep your hips and shoulders level: no leaning or twisting.",
+        "Turn around with small steps, or put the weights down and pick them up again.",
+        "Set the weights down the way you picked them up — hips back, flat back — before your grip gives out."
+      ],
+      "ru": [
+        "Крепко держите рукояти посередине, руки прямые и расслабленные вдоль корпуса.",
+        "Стойте ровно: грудь раскрыта, плечи опущены и слегка отведены назад, голова прямо, взгляд вперёд.",
+        "Напрягите пресс, как перед лёгким толчком в живот, и дышите короткими вдохами, не теряя напряжения.",
+        "Идите короткими, частыми, подконтрольными шагами, не давая весу раскачиваться.",
+        "Таз и плечи держите ровно — без наклонов и скручиваний.",
+        "Разворачивайтесь мелкими шагами или поставьте вес и поднимите его снова.",
+        "Ставьте вес так же, как поднимали, — таз назад, спина ровная, — до того как хват откажет."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding your back to pick the weights up or put them down.",
+        "Leaning to one side, slouching, or letting your shoulders roll forward.",
+        "Shrugging your shoulders up to your ears.",
+        "Long, bouncing strides that set the weights swinging.",
+        "Holding your breath for the whole walk.",
+        "Walking until your grip fails and the weights drop."
+      ],
+      "ru": [
+        "Округлять спину, поднимая или ставя вес.",
+        "Заваливаться в сторону, сутулиться или сводить плечи вперёд.",
+        "Поднимать плечи к ушам.",
+        "Длинные, прыгающие шаги, раскачивающие вес.",
+        "Задерживать дыхание на всю дистанцию.",
+        "Идти до отказа хвата, пока вес не выпадет из рук."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Per hand: 25% of body weight (50% in total), the NSCA Coach 'rehabilitation' benchmark for a 30 s bilateral carry"
+    },
+    "tags": [
+      "owner-primary",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Taylor, Reed. Increase hip and trunk stability with loaded carries — NSCA Coach 7.3, 2020. https://www.nsca.com/contentassets/927868f8d4bb45f2ac4429631d558d83/coach-7.3.6-increase-hip-and-trunk-stability-with-loaded-carries-for-injury-prevention-rehabilitation-and-performance.pdf",
+      "McGill, McDermott, Fenwick. Comparison of different strongman events: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://pubmed.ncbi.nlm.nih.gov/19528856/",
+      "McGill, Marshall, Andersen. Low back loads while walking and carrying: comparing the load carried in one hand or in both hands — Ergonomics, 2013. https://doi.org/10.1080/00140139.2012.752528",
+      "Leong et al. Prognostic value of grip strength: findings from the PURE study — Lancet, 2015. https://doi.org/10.1016/S0140-6736(14)62000-6"
+    ]
+  },
+  {
+    "id": "dead-hang",
+    "class": "grip",
+    "pattern": "grip",
+    "name": {
+      "en": "Dead hang",
+      "ru": "Вис на перекладине"
+    },
+    "aka": [
+      "Bar hang",
+      "Passive hang",
+      "Active hang",
+      "Hang from a pull-up bar"
+    ],
+    "equipment": "bodyweight",
+    "primary": [
+      "forearm-flexors"
+    ],
+    "secondary": [
+      "lats",
+      "traps-lower",
+      "rotator-cuff"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      20,
+      60
+    ],
+    "repUnit": "seconds",
+    "alternatives": [
+      "plate-pinch",
+      "gripper",
+      "farmers-carry",
+      "suitcase-carry"
+    ],
+    "setup": {
+      "en": "Stand on a box or step under a pull-up bar, take an overhand grip just outside shoulder-width with your thumbs wrapped around the bar, then lift your feet and hang with straight arms.",
+      "ru": "Встаньте на тумбу или ступень под перекладиной, возьмитесь хватом сверху чуть шире плеч, обхватив перекладину большими пальцами, затем поднимите ноги и повисните на прямых руках."
+    },
+    "cues": {
+      "en": [
+        "Full grip: thumbs wrapped around the bar.",
+        "Arms straight, shoulders gently pulled down away from your ears (an active hang).",
+        "Ribs down, legs still and slightly in front of you; don't swing.",
+        "Breathe slowly and steadily for the whole hold.",
+        "Finish by stepping back onto the box instead of dropping.",
+        "Build time first: 60 s is a good target before making it harder."
+      ],
+      "ru": [
+        "Полный хват: большие пальцы обхватывают перекладину.",
+        "Руки прямые, плечи мягко опущены от ушей (активный вис).",
+        "Рёбра опущены, ноги неподвижны и чуть впереди — не раскачивайтесь.",
+        "Дышите медленно и ровно всё время виса.",
+        "Заканчивайте, вставая обратно на тумбу, а не спрыгивая.",
+        "Сначала наращивайте время: 60 секунд — хорошая цель, прежде чем усложнять."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Dropping off the bar instead of stepping down, which jars the shoulders and ankles.",
+        "Hanging through pain at the front or top of the shoulder: set the shoulders down or stop.",
+        "Kipping or swinging the body.",
+        "Holding your breath."
+      ],
+      "ru": [
+        "Спрыгивать с перекладины вместо того, чтобы встать на опору, — удар по плечам и голеностопам.",
+        "Висеть через боль в передней или верхней части плеча — опустите плечи или прекратите.",
+        "Раскачиваться или делать киппинг.",
+        "Задерживать дыхание."
+      ]
+    },
+    "tags": [
+      "owner-alt",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Leong et al. Prognostic value of grip strength: findings from the PURE study — Lancet, 2015. https://doi.org/10.1016/S0140-6736(14)62000-6",
+      "Dodds et al. Grip strength across the life course: normative data from twelve British studies — PLoS One, 2014. https://doi.org/10.1371/journal.pone.0113637"
+    ]
+  },
+  {
+    "id": "gripper",
+    "class": "grip",
+    "pattern": "grip",
+    "name": {
+      "en": "Hand gripper",
+      "ru": "Кистевой эспандер"
+    },
+    "aka": [
+      "Gripper",
+      "Grip trainer",
+      "Torsion-spring gripper (e.g. Captains of Crush)",
+      "Adjustable hand gripper",
+      "Gripper (Hammer Strength, plate-loaded machine)"
+    ],
+    "equipment": "band",
+    "primary": [
+      "forearm-flexors"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "plate-pinch",
+      "dead-hang",
+      "farmers-carry",
+      "suitcase-carry",
+      "wrist-curl"
+    ],
+    "setup": {
+      "en": "Sit or stand tall and hold the gripper in one hand with the spring above your thumb and index finger, one handle across your palm and the other across the middle of your fingers.",
+      "ru": "Сядьте или встаньте прямо и возьмите эспандер в одну руку пружиной вверх, над большим и указательным пальцами: одна рукоять лежит поперёк ладони, другая — поперёк середины пальцев."
+    },
+    "cues": {
+      "en": [
+        "Pick a gripper you can close fully 10–20 times.",
+        "Squeeze until the handles touch, hold for a second, then open slowly.",
+        "Keep your wrist straight.",
+        "Train both hands with the same reps, weaker hand first.",
+        "Breathe steadily; don't hold your breath."
+      ],
+      "ru": [
+        "Выберите эспандер, который можете полностью сжать 10–20 раз.",
+        "Сжимайте до касания рукоятей, задержитесь на секунду и медленно разжимайте.",
+        "Держите запястье прямым.",
+        "Работайте обеими руками с одинаковым числом повторов, начиная со слабой.",
+        "Дышите ровно, не задерживайте дыхание."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Using a gripper too strong to close, so every rep is a partial squeeze.",
+        "Letting the gripper snap open.",
+        "Bending the wrist to help the squeeze.",
+        "Squeezing to failure every day: give the fingers a rest day between hard sessions."
+      ],
+      "ru": [
+        "Слишком тугой эспандер: ни одного полного сжатия, только частичные.",
+        "Позволять эспандеру резко разжиматься.",
+        "Сгибать запястье, помогая сжатию.",
+        "Сжимать до отказа каждый день — давайте пальцам день отдыха между тяжёлыми тренировками."
+      ]
+    },
+    "tags": [
+      "owner-alt",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Leong et al. Prognostic value of grip strength: findings from the PURE study — Lancet, 2015. https://doi.org/10.1016/S0140-6736(14)62000-6",
+      "Dodds et al. Grip strength across the life course: normative data from twelve British studies — PLoS One, 2014. https://doi.org/10.1371/journal.pone.0113637"
+    ]
+  },
+  {
+    "id": "plate-pinch",
+    "class": "grip",
+    "pattern": "grip",
+    "name": {
+      "en": "Plate pinch hold",
+      "ru": "Удержание блинов щипковым хватом"
+    },
+    "aka": [
+      "Plate pinch",
+      "Pinch grip hold",
+      "Two-plate pinch",
+      "Plate pinch carry (walking version)"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "forearm-flexors"
+    ],
+    "secondary": [
+      "forearm-extensors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      20,
+      40
+    ],
+    "repUnit": "seconds",
+    "alternatives": [
+      "dead-hang",
+      "gripper",
+      "farmers-carry",
+      "suitcase-carry"
+    ],
+    "setup": {
+      "en": "Stand two smooth-faced plates of the same size together, smooth sides out, on a bench or the floor; pinch them along the top rim, fingers on one side and thumb on the other, one pair in each hand, and stand up tall with a flat back.",
+      "ru": "Поставьте вместе два одинаковых блина гладкими сторонами наружу на скамью или пол; зажмите их за верхний край — пальцы с одной стороны, большой палец с другой, по паре в каждой руке — и выпрямитесь с ровной спиной."
+    },
+    "cues": {
+      "en": [
+        "Smooth sides out; fingers straight and together on one side, thumb flat on the other.",
+        "Squeeze the thumb hard toward the fingers so the plates can't swivel.",
+        "Stand tall, shoulders down, arms straight, plates beside your legs.",
+        "Hold for the target time, breathing steadily.",
+        "Set the plates down with a hip hinge before your grip gives out.",
+        "Progress by time first, then by a third plate or bigger plates."
+      ],
+      "ru": [
+        "Гладкие стороны наружу; пальцы прямые и сомкнуты с одной стороны, большой палец плашмя — с другой.",
+        "С силой прижимайте большой палец к остальным, чтобы блины не проворачивались.",
+        "Стойте прямо, плечи опущены, руки прямые, блины сбоку от ног.",
+        "Удерживайте заданное время, дыша ровно.",
+        "Ставьте блины, наклоняясь в тазобедренных суставах, до того как хват откажет.",
+        "Прогрессируйте сначала временем, затем третьим блином или более крупными блинами."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Holding the plates over your feet or training in open shoes: a slipped plate lands on your toes.",
+        "Curling the fingers over the rim, which turns the pinch into an ordinary grip.",
+        "Leaning or shrugging to cope with the load.",
+        "Holding on until the plates slip out of your hands."
+      ],
+      "ru": [
+        "Держать блины над стопами или тренироваться в открытой обуви: сорвавшийся блин падает на пальцы ног.",
+        "Загибать пальцы за край блина — щипковый хват превращается в обычный.",
+        "Наклоняться или поднимать плечи, чтобы справиться с весом.",
+        "Держать, пока блины не выскользнут из рук."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "Per hand: two 5 kg plates, a conservative coaching start; progress by hold time first"
+    },
+    "tags": [
+      "owner-alt",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Leong et al. Prognostic value of grip strength: findings from the PURE study — Lancet, 2015. https://doi.org/10.1016/S0140-6736(14)62000-6",
+      "Dodds et al. Grip strength across the life course: normative data from twelve British studies — PLoS One, 2014. https://doi.org/10.1371/journal.pone.0113637"
+    ]
+  },
+  {
+    "id": "suitcase-carry",
+    "class": "grip",
+    "pattern": "carry",
+    "name": {
+      "en": "Suitcase carry",
+      "ru": "Прогулка с гантелью в одной руке («чемодан»)"
+    },
+    "aka": [
+      "One-arm farmer's carry",
+      "Single-arm farmer's walk",
+      "Unilateral carry",
+      "Suitcase walk"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "forearm-flexors",
+      "obliques",
+      "quadratus-lumborum"
+    ],
+    "secondary": [
+      "glute-med",
+      "erectors",
+      "traps-upper"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      20,
+      40
+    ],
+    "repUnit": "meters",
+    "alternatives": [
+      "farmers-carry",
+      "side-plank",
+      "plate-pinch",
+      "dead-hang",
+      "gripper"
+    ],
+    "setup": {
+      "en": "Pick up one dumbbell or kettlebell from a rack, or from the floor with a hip hinge, and stand tall with it at your side, free arm relaxed or slightly out; walk 20–40 m, then switch hands.",
+      "ru": "Возьмите одну гантель или гирю со стойки или с пола, наклонившись в тазобедренных суставах, и выпрямитесь, держа её сбоку, свободная рука расслаблена или чуть отведена; пройдите 20–40 м и смените руку."
+    },
+    "cues": {
+      "en": [
+        "Stand perfectly upright: lean neither toward nor away from the weight.",
+        "Brace your abs and tense the side opposite the weight, as if resisting a push from the side.",
+        "Keep your shoulders level: the loaded shoulder neither drops nor shrugs up.",
+        "Take short, controlled steps; keep the weight from bumping your leg.",
+        "Breathe in short breaths behind the brace.",
+        "Walk the same distance with each hand and log the distance per side."
+      ],
+      "ru": [
+        "Держитесь строго вертикально — не наклоняйтесь ни к весу, ни от него.",
+        "Напрягите пресс и сторону, противоположную весу, как будто сопротивляетесь толчку сбоку.",
+        "Плечи на одном уровне: нагруженное плечо не опускается и не поднимается.",
+        "Делайте короткие подконтрольные шаги, не давая весу биться о ногу.",
+        "Дышите короткими вдохами, сохраняя напряжение корпуса.",
+        "Пройдите одинаковую дистанцию каждой рукой и записывайте её для каждой стороны."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning away from the weight (or toward it).",
+        "Twisting the torso or letting the hips swing.",
+        "Picking the weight up or setting it down with a rounded, twisted back.",
+        "Going heavier than you can carry perfectly upright."
+      ],
+      "ru": [
+        "Отклоняться от веса (или наклоняться к нему).",
+        "Скручивать корпус или раскачивать таз.",
+        "Поднимать или ставить вес с округлённой, скрученной спиной.",
+        "Брать вес больше, чем можете пронести строго вертикально."
+      ]
+    },
+    "startLoad": {
+      "kg": 16,
+      "source": "One hand: ≈20% of body weight, lighter than the farmer's carry per hand because one-hand carrying loads the spine more (McGill 2013)"
+    },
+    "tags": [
+      "owner-alt",
+      "core",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "McGill, Marshall, Andersen. Low back loads while walking and carrying: comparing the load carried in one hand or in both hands — Ergonomics, 2013. https://doi.org/10.1080/00140139.2012.752528",
+      "McGill, McDermott, Fenwick. Comparison of different strongman events: trunk muscle activation and lumbar spine motion, load, and stiffness — J Strength Cond Res, 2009. https://pubmed.ncbi.nlm.nih.gov/19528856/",
+      "Taylor, Reed. Increase hip and trunk stability with loaded carries — NSCA Coach 7.3, 2020. https://www.nsca.com/contentassets/927868f8d4bb45f2ac4429631d558d83/coach-7.3.6-increase-hip-and-trunk-stability-with-loaded-carries-for-injury-prevention-rehabilitation-and-performance.pdf"
+    ]
+  }
+]

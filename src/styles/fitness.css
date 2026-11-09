@@ -1,0 +1,75 @@
+/* Fitness section. Builds on food.css tokens (--bg, --surface, --surface-2, --ink, --muted, --line, --accent,
+   --accent-soft, --on-accent, --cool, --cool-soft, --ok, --shadow). Phone first: design at 360–430 px, touch
+   targets >= 44 px. Each work stream appends its own clearly commented block below; nothing is edited in place
+   by another stream. */
+
+/* Per-stream stylesheets: each work stream owns exactly one file under src/styles/fitness/. */
+@import "./fitness/home.css";
+@import "./fitness/profile.css";
+@import "./fitness/store.css";
+@import "./fitness/train.css";
+@import "./fitness/program.css";
+@import "./fitness/exercises.css";
+@import "./fitness/gyms.css";
+@import "./fitness/progress.css";
+@import "./fitness/nutrition.css";
+@import "./fitness/science.css";
+@import "./fitness/advisor.css";
+@import "./fitness/tools.css";
+
+/* ---------- shared fitness shell (master plan) */
+main.fit { padding-bottom: 96px; }
+.fit .hello { margin-bottom: 18px; }
+.fit-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 12px; margin: 16px 0 28px; }
+.fit-tile {
+  display: grid; gap: 4px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px;
+  background: var(--surface); color: var(--ink); text-decoration: none; box-shadow: var(--shadow); min-height: 44px;
+}
+.fit-tile:hover { border-color: var(--accent); }
+.fit-tile h2, .fit-tile h3 { margin: 0; font-size: 1.1rem; }
+.fit-tile p { margin: 0; color: var(--muted); font-size: .9rem; }
+.fit-note { margin: 0 0 14px; padding: 10px 14px; border-radius: 12px; background: var(--surface-2); color: var(--muted); font-size: .9rem; }
+.fit-note.editing { background: var(--accent-soft); color: var(--ink); }
+.fit-note.warn { background: var(--accent-soft); color: var(--ink); border: 1px solid var(--accent); }
+.fit-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 18px;
+  border-radius: 12px; border: 1.5px solid var(--accent); background: var(--accent); color: var(--on-accent);
+  font: 600 1rem var(--sans); cursor: pointer; text-decoration: none;
+}
+.fit-button.ghost { background: transparent; color: var(--accent); }
+.fit-button.quiet { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.fit-button:disabled { opacity: .5; cursor: default; }
+.fit-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.fit-seg { display: flex; flex-wrap: wrap; gap: 8px; }
+.fit-seg button {
+  min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+  color: var(--ink); font: inherit; font-size: .92rem; cursor: pointer; text-align: left;
+}
+.fit-seg button:hover { border-color: var(--accent); }
+.fit-seg button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); font-weight: 700; }
+.fit-seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.fit-card { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); padding: 16px; }
+.fit-card h2, .fit-card h3 { margin-top: 0; }
+.fit-muted { color: var(--muted); }
+.fit-num { font-variant-numeric: tabular-nums; }
+.fit-kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0; font-size: .95rem; }
+.fit-kv dt { color: var(--muted); }
+.fit-kv dd { margin: 0; font-weight: 600; }
+.fit-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 640px) { .fit-grid-2 { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- fitness sub-navigation (master plan) */
+.fit-nav { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 4px -16px 18px; padding: 2px 16px 6px; overscroll-behavior-x: contain; }
+.fit-nav::-webkit-scrollbar { display: none; }
+.fit-nav a { flex: none; min-height: 40px; display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font: 600 .88rem var(--sans); white-space: nowrap; }
+.fit-nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.fit-nav a:hover { border-color: var(--accent); }
+
+/* ---------- phone ergonomics pass (mobile-ux review, 2026-11-09): appended, so it overrides the shell rules above */
+/* 44 px touch targets for the sub-nav pills; tiles in a stretched grid row keep their text at the top */
+.fit-nav a { min-height: 44px; }
+.fit-tile { align-content: start; }
+/* no one-word last lines at 360 px (EN and RU). The text-wrap-style longhand leaves any white-space: nowrap alone.
+   Prose only: on short data values (dd) the rebalancing can split a number from its unit ("400 / mg"). */
+main.fit :is(h1, h2, h3), main.fit .fit-button { text-wrap-style: balance; }
+main.fit :is(p, li) { text-wrap-style: pretty; }

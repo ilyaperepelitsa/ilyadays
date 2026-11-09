@@ -10,5 +10,8 @@ test("each form failure has its own sentence", () => {
   assert.equal(tripErrorKey("food"), "tripErrFood");
   assert.equal(tripErrorKey("pace"), "tripErrPace");
   assert.equal(tripErrorKey("length"), "tripErrLength");
+  assert.equal(tripErrorKey("timeout"), "tripErrTimeout");
+  assert.equal(tripErrorKey("network"), "tripErrNetwork");
+  assert.equal(tripErrorKey("incomplete"), "tripErrIncomplete");
   assert.equal(tripErrorKey("nope"), "tripErrGeneric");
 });

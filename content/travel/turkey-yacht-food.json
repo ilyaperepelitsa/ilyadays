@@ -303,6 +303,70 @@
       "sources": []
     }
   ],
+  "places": [
+    {
+      "id": "macrocenter-gocek",
+      "title": {
+        "en": "Macrocenter · D-Marin Göcek",
+        "ru": "Macrocenter · D-Marin Гёчек"
+      },
+      "text": {
+        "en": "Supermarket at the marina. First stop for lamb, dairy, produce and packaged seafood; branch stock is not confirmed.",
+        "ru": "Супермаркет в марине. Первая остановка за бараниной, молочным, овощами и фасованными морепродуктами; наличие в этом магазине не подтверждено."
+      },
+      "query": "Macrocenter D-Marin Göcek",
+      "sources": [
+        "macro"
+      ],
+      "area": {
+        "lat": 36.7547,
+        "lon": 28.9406,
+        "zoom": 14
+      }
+    },
+    {
+      "id": "ada-su-urunleri",
+      "title": {
+        "en": "Ada Su Ürünleri · Göcek",
+        "ru": "Ada Su Ürünleri · Гёчек"
+      },
+      "text": {
+        "en": "Fishmonger listing Süleymanağa Cd. 6–8 and fresh/frozen seafood. Ask about raw-use lots before buying.",
+        "ru": "Рыбный магазин, адрес Süleymanağa Cd. 6–8, свежие и замороженные морепродукты. Про партии для сырой подачи спрашивайте до покупки."
+      },
+      "query": "Ada Su Ürünleri, Süleymanağa Caddesi, Göcek",
+      "sources": [
+        "ada"
+      ],
+      "area": {
+        "lat": 36.7535,
+        "lon": 28.9432,
+        "zoom": 17
+      },
+      "googlePlaceId": "ChIJM3MbFABlwBQRQLKApM7toQI"
+    },
+    {
+      "id": "fethiye-balik-pazari",
+      "title": {
+        "en": "Balık Pazarı (fish market) · Fethiye",
+        "ru": "Balık Pazarı (рыбный рынок) · Фетхие"
+      },
+      "text": {
+        "en": "The central fish market in Fethiye, a shore-side alternative to Göcek. Bring a cold bag and ice for the trip back.",
+        "ru": "Центральный рыбный рынок Фетхие — альтернатива Гёчеку на берегу. Возьмите термосумку и лёд на обратную дорогу."
+      },
+      "query": "Balık Pazarı, Fethiye",
+      "sources": [
+        "tourism"
+      ],
+      "area": {
+        "lat": 36.6208,
+        "lon": 29.1113,
+        "zoom": 17
+      },
+      "googlePlaceId": "ChIJZ89xGC5BwBQRiYbbxpn5NRg"
+    }
+  ],
   "sashimi": [
     {
       "id": "tuna",

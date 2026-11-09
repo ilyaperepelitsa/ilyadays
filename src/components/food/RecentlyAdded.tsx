@@ -25,7 +25,7 @@ export function RecentlyAdded({ lang, linked }: { lang: Lang; linked?: boolean }
       {recent.some((r) => !r.hero.image && r.hero.svg_fallback) && <SvgDefs svg={getSvgDefs()} />}
       <div className="recent-head">
         <h2 id="recent-title">{t.recentTitle}</h2>
-        {linked ? <Link href={localPath(lang, "/food")}>{t.recentAll}</Link> : null}
+        {linked ? <Link prefetch={false} href={localPath(lang, "/food")}>{t.recentAll}</Link> : null}
       </div>
       <div className="cards">
         {recent.map((r) => (

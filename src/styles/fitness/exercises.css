@@ -1,0 +1,118 @@
+/* fitness: exercises stream — owned by plans/fitness; see 00-master-plan.md */
+/* Stream 02 (plans/fitness/02-exercise-catalog-and-alternatives.md): catalog list, exercise page, muscle map.
+   Phone first (360–430 px); colours only through the food.css tokens, so dark mode follows. */
+
+/* ---------- muscle map */
+.fx-mm { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; }
+.fx-mm-view { margin: 0; flex: 1 1 130px; max-width: 210px; display: grid; justify-items: center; gap: 2px; }
+.fx-mm-view svg { display: block; width: 100%; height: auto; overflow: visible; }
+.fx-mm-view figcaption { font-size: .8rem; color: var(--muted); }
+.fx-mm-body { fill: var(--surface); stroke: var(--line); stroke: color-mix(in srgb, var(--line), var(--muted) 40%); stroke-width: 1.2; stroke-linejoin: round; }
+.fx-mm-m { fill: var(--surface-2); stroke: var(--line); stroke: color-mix(in srgb, var(--line), var(--muted) 22%); stroke-width: .7; stroke-linejoin: round; }
+.fx-mm-m[data-level="secondary"] { fill: var(--accent-soft); stroke: var(--accent); stroke-width: .8; }
+.fx-mm-m[data-level="primary"] { fill: var(--accent); stroke: var(--accent); }
+.fx-mm-m.deep { stroke-dasharray: 2 1.4; fill-opacity: .7; }
+.fx-mm-detail { fill: none; stroke: var(--line); stroke: color-mix(in srgb, var(--line), var(--muted) 30%); stroke-width: .7; stroke-linecap: round; }
+.fx-mm-compact { display: block; width: 100%; height: 100%; }
+.fx-mm-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* ---------- catalog list */
+.fx-lede { max-width: 720px; margin: 0 0 14px; }
+.fx-controls { display: grid; gap: 10px; }
+.fx-search { max-width: 640px; }
+.fx-search input {
+  width: 100%; min-height: 48px; padding: 10px 14px; border: 1.5px solid var(--line); border-radius: 12px;
+  background: var(--surface); color: var(--ink); font: 16px/1.3 var(--sans); /* 16 px: no zoom on iOS focus */
+}
+.fx-search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-color: var(--accent); }
+.fx-row { display: grid; gap: 4px; min-width: 0; }
+.fx-row-label { font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+/* .fx-row prefix: beats the shared .fit-seg rules that come later in fitness.css */
+.fx-row .fx-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; margin: 0 -16px; padding: 2px 16px 6px; }
+.fx-row .fx-chips::-webkit-scrollbar { display: none; }
+.fx-row .fx-chips button { flex: none; white-space: nowrap; }
+.fx-row .fx-chips small { color: var(--muted); font-weight: 400; font-size: .8em; }
+.fx-row .fx-chips button[aria-pressed="true"] small { color: inherit; }
+@media (min-width: 760px) { .fx-row .fx-chips { flex-wrap: wrap; overflow: visible; margin: 0; padding: 0; } }
+.fx-toggles { display: flex; flex-wrap: wrap; gap: 8px; }
+.fx-toggle {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line);
+  border-radius: 999px; background: var(--surface); color: var(--ink); font: 600 .9rem var(--sans); cursor: pointer;
+}
+.fx-toggle::before { content: ""; width: 14px; height: 14px; border-radius: 4px; border: 1.5px solid var(--muted); flex: none; }
+.fx-toggle[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.fx-toggle[aria-pressed="true"]::before { border-color: var(--accent); background: var(--accent); box-shadow: inset 0 0 0 2px var(--accent-soft); }
+.fx-toggle:disabled { opacity: .55; cursor: default; }
+.fx-toggle:focus-visible, .fx-linkish:focus-visible, .fx-card:focus-visible, .fx-alt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fx-count { margin: 12px 0 8px; font-size: .95rem; color: var(--muted); }
+.fx-linkish { display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px; border: 0; background: none; color: var(--accent); font: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.fx-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fx-list > li { content-visibility: auto; contain-intrinsic-size: auto 112px; } /* 138 cards: skip off-screen work */
+@media (min-width: 680px) { .fx-list { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); } }
+.fx-card {
+  display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px; align-items: center; min-height: 92px; padding: 10px;
+  border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); text-decoration: none;
+  box-shadow: var(--shadow);
+}
+.fx-card:hover { border-color: var(--accent); }
+.fx-thumb { display: grid; place-items: center; width: 112px; aspect-ratio: 3 / 2; border-radius: 10px; overflow: hidden; background: var(--surface-2); }
+.fx-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.fx-card-body { display: grid; gap: 2px; min-width: 0; }
+.fx-card-name { font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.fx-card-meta { font-size: .84rem; color: var(--muted); }
+.fx-card-muscles { font-size: .84rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.fx-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.fx-badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 999px; font-size: .76rem; font-weight: 700; line-height: 1.5; }
+.fx-badge.mine { background: var(--accent-soft); color: var(--ink); }
+.fx-badge.missing { border: 1px dashed var(--muted); color: var(--muted); }
+
+/* ---------- exercise page */
+.fx-back { margin: 0 0 4px; }
+.fx-back a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
+.fx-facts-line { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; padding: 0; }
+.fx-facts-line li { padding: 4px 10px; border-radius: 999px; background: var(--surface-2); font-size: .85rem; }
+.fx-status { display: grid; gap: 8px; justify-items: start; margin: 0 0 12px; }
+.fx-status .fit-note { margin: 0; }
+.fx-status .fx-badge { font-size: .85rem; padding: 4px 10px; }
+.fx-columns { display: grid; gap: 16px; }
+@media (min-width: 960px) { .fx-columns { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: start; } }
+.fx-col { display: grid; gap: 16px; min-width: 0; }
+.fx-section h2 { font-size: 1.25rem; }
+.fx-section p { margin: 0 0 8px; }
+.fx-figures { display: grid; gap: 12px; }
+.fx-figure { margin: 0; }
+.fx-figure img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: 14px; border: 1px solid var(--line); background: var(--surface-2); }
+.fx-figure figcaption { margin-top: 4px; font-size: .85rem; color: var(--muted); }
+.fx-machine { margin-top: 12px; }
+.fx-machine img { max-width: 520px; }
+.fx-muscles .fx-mm { margin: 4px auto 10px; max-width: 440px; }
+.fx-legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .92rem; }
+.fx-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 4px; vertical-align: -2px; }
+.fx-swatch.primary { background: var(--accent); }
+.fx-swatch.secondary { background: var(--accent-soft); border: 1.5px solid var(--accent); }
+.fx-cues, .fx-mistakes { margin: 0; padding-left: 1.3em; }
+.fx-cues li, .fx-mistakes li { margin: .45em 0; }
+.fx-cues li::marker { color: var(--accent); font-weight: 700; }
+.fx-alts { list-style: none; margin: 8px 0; padding: 0; display: grid; gap: 8px; }
+.fx-alt {
+  display: grid; gap: 2px; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--surface); color: var(--ink); text-decoration: none;
+}
+.fx-alt:hover { border-color: var(--accent); }
+.fx-alt-name { font-weight: 650; }
+.fx-alt-meta { font-size: .84rem; color: var(--muted); }
+.fx-mark { font-size: .82rem; font-weight: 600; }
+.fx-mark.ok { color: var(--ok); }
+.fx-mark.no { color: var(--muted); }
+.fx-alts li[data-available="false"] .fx-alt { border-style: dashed; }
+.fx-alts li[data-available="false"] .fx-alt-name { color: var(--muted); }
+.fx-table-wrap { overflow-x: auto; margin: 4px 0 8px; }
+.fx-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.fx-table th, .fx-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.fx-table th { font-size: .8rem; color: var(--muted); font-weight: 600; }
+.fx-table .fx-working td { font-weight: 700; }
+.fx-small { font-size: .85rem; }
+.fx-sources { margin-top: 24px; }
+.fx-sources ol { margin: 0; padding-left: 1.3em; font-size: .85rem; color: var(--muted); }
+.fx-sources li { margin: .35em 0; overflow-wrap: anywhere; }
+.fx-url { word-break: break-all; }

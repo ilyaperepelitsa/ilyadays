@@ -119,7 +119,7 @@ export function ingredientFacets(recipes, options = {}) {
     });
   }
   facets.sort((a, b) => b.global - a.global || a.label.localeCompare(b.label));
-  return facets.map(({ global, ...facet }) => facet);
+  return facets.map(({ id, label, count, pressed }) => ({ id, label, count, pressed }));
 }
 
 /**

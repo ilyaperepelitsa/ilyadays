@@ -1,0 +1,1193 @@
+{
+  "version": "2026-11-08",
+  "note": "Stream 08 (plans/fitness/08-science-content.md), from research/03. Every `source` id is that source's number on /fitness/science/safety (content/fitness/science/safety.en.md); `sources` repeats them with URLs. warmup.ramp and warmup.heavy equal content/fitness/templates.json (what the engine prescribes); tests/fitness/science.test.mjs checks both.",
+  "warmup": {
+    "general": {
+      "en": "5 min of easy cardio (bike, rower or brisk incline walk) at a pace where you can still talk in full sentences; 8–10 min on heavy days, after a week off or in a cold gym. If a band or cable is free: 15 pull-aparts and 12–15 external rotations per arm. Then the ramp sets the plan shows before each multi-joint exercise.",
+      "ru": "5 минут лёгкого кардио (велотренажёр, гребля или быстрая ходьба в горку) в темпе, при котором можно говорить полными предложениями; 8–10 минут в тяжёлые дни, после недели перерыва или в холодном зале. Если свободна резинка или блок — 15 разведений и 12–15 наружных ротаций на каждую руку. Затем подводящие подходы, которые план показывает перед каждым многосуставным упражнением."
+    },
+    "minutes": 5,
+    "extendedMinutes": [8, 10],
+    "activation": [
+      {
+        "exerciseId": "band-pull-apart",
+        "sets": 1,
+        "reps": [15, 15],
+        "when": {
+          "en": "Before the first press or pull of the session.",
+          "ru": "Перед первым жимом или тягой тренировки."
+        }
+      },
+      {
+        "exerciseId": "band-external-rotation",
+        "sets": 1,
+        "reps": [12, 15],
+        "perSide": true,
+        "when": {
+          "en": "Before the first press or pull of the session; a cable works too.",
+          "ru": "Перед первым жимом или тягой тренировки; подойдёт и блок."
+        }
+      }
+    ],
+    "ramp": [
+      { "pct": 50, "reps": 8, "when": "always" },
+      { "pct": 70, "reps": 4, "when": "heavy" },
+      { "pct": 85, "reps": 2, "when": "heavy" }
+    ],
+    "heavy": { "pctE1rm": 80, "totalReps": 8 },
+    "rules": [
+      {
+        "en": "Ramp sets come before the first working set of every multi-joint exercise; single-joint machines, holds, carries and bodyweight moves get none.",
+        "ru": "Подводящие подходы идут перед первым рабочим подходом каждого многосуставного упражнения; односуставные тренажёры, удержания, переноски и упражнения с собственным весом идут без них."
+      },
+      {
+        "en": "Heavy means a working weight of at least 80 % of the estimated one-rep max or, before there is an estimate, target reps plus reps in reserve of 8 or fewer: then 70 % × 4 and 85 % × 2 follow the 50 % × 8.",
+        "ru": "Тяжёлый — это рабочий вес от 80 % расчётного 1ПМ, а пока оценки нет — целевые повторения плюс запас 8 или меньше: тогда после 50 % × 8 идут 70 % × 4 и 85 % × 2."
+      },
+      {
+        "en": "A second multi-joint exercise for muscles that are already warm keeps only its heaviest ramp set.",
+        "ru": "Второе многосуставное упражнение на уже разогретые мышцы сохраняет только самый тяжёлый подводящий подход."
+      },
+      {
+        "en": "Each step is rounded to the machine, must be lighter than the working weight and heavier than the step before; on assisted machines the ramp adds assistance instead.",
+        "ru": "Каждая ступень округляется до шага тренажёра, должна быть легче рабочего веса и тяжелее предыдущей; в гравитроне вместо этого добавляется помощь."
+      },
+      {
+        "en": "Ramp sets never count as working sets. Rate the last one for pain before the first working set.",
+        "ru": "Подводящие подходы не считаются рабочими. Оцените боль в последнем из них перед первым рабочим подходом."
+      }
+    ],
+    "source": [13, 14, 15, 16, 17, 18, 19, 20]
+  },
+  "pain": [
+    {
+      "level": "green",
+      "range": [0, 3],
+      "action": {
+        "en": "0–3 of 10 and steady: carry on and progress as planned.",
+        "ru": "0–3 из 10 и не нарастает: продолжайте и прогрессируйте по плану."
+      },
+      "source": [39, 40]
+    },
+    {
+      "level": "amber",
+      "range": [4, 5],
+      "action": {
+        "en": "4–5, or pain that rises from set to set: modify today — 10–20 % lighter, a shorter range, a 3-second lowering or a pain-free swap from the same family. No progression until two green sessions.",
+        "ru": "4–5 или боль нарастает от подхода к подходу: измените нагрузку сегодня — на 10–20 % легче, короче амплитуда, опускание за 3 секунды или безболезненная замена из того же семейства. Без прогрессии до двух «зелёных» тренировок."
+      },
+      "source": [39]
+    },
+    {
+      "level": "red",
+      "range": [6, 10],
+      "action": {
+        "en": "6 or more, or any sharp, catching or radiating pain: stop this exercise today and train other areas. Red twice in a row, or amber for more than two weeks: see a physiotherapist or doctor.",
+        "ru": "6 и больше или любая острая, «заклинивающая» или отдающая боль: прекратите это упражнение сегодня и тренируйте другие зоны. Красный два раза подряд или жёлтый дольше двух недель — к физиотерапевту или врачу."
+      },
+      "source": [39]
+    }
+  ],
+  "painRules": [
+    {
+      "en": "Rate the worst pain during the set from 0 to 10; muscle burn and next-day soreness don't count.",
+      "ru": "Оценивайте самую сильную боль в подходе от 0 до 10; жжение в мышцах и крепатура не считаются.",
+      "source": [39]
+    },
+    {
+      "en": "By the next morning pain must be back to its usual level; otherwise the exercise starts amber next time.",
+      "ru": "К следующему утру боль должна вернуться к привычному уровню; иначе в следующий раз упражнение начинается с жёлтого.",
+      "source": [39]
+    },
+    {
+      "en": "Pain and stiffness must not trend upward from week to week; two weeks of upward trend mean fewer sets for that area or a lighter week.",
+      "ru": "Боль и скованность не должны нарастать от недели к неделе; две недели роста — повод сократить подходы на эту зону или взять облегчённую неделю.",
+      "source": [39]
+    },
+    {
+      "en": "For an area injured before, keep one more rep in reserve and use half-size load steps for the first eight weeks back.",
+      "ru": "Для зоны, которая уже была травмирована, первые восемь недель после возвращения держите на одно повторение больше в запасе и прибавляйте вес половинными шагами.",
+      "source": [6]
+    }
+  ],
+  "doms": {
+    "en": "Soreness that starts 12–24 h after a session, peaks at 24–72 h and fades within a week is normal muscle soreness, not injury, and it shrinks after the first exposure. Sharp pain at one spot, swelling, weakness, or pain that lasts beyond a week is not soreness.",
+    "ru": "Болезненность, которая начинается через 12–24 часа после тренировки, достигает пика через 24–72 часа и проходит за неделю, — обычная крепатура, а не травма; после первого знакомства с упражнением она слабее. Острая боль в одной точке, отёк, слабость или боль дольше недели — это уже не крепатура.",
+    "source": [41, 42]
+  },
+  "redFlags": [
+    {
+      "en": "Chest pain or pressure, unusual breathlessness, palpitations, dizziness or fainting: stop and call emergency services.",
+      "ru": "Боль или давление в груди, необычная одышка, сердцебиение, головокружение или обморок: остановитесь и вызовите скорую помощь.",
+      "source": [43],
+      "urgency": "emergency"
+    },
+    {
+      "en": "A sudden, severe headache during or right after a lift: stop and get emergency care.",
+      "ru": "Внезапная сильная головная боль во время подхода или сразу после него: остановитесь и срочно обратитесь за помощью.",
+      "source": [44],
+      "urgency": "emergency"
+    },
+    {
+      "en": "Numbness, tingling or weakness running down an arm or leg, or new bladder or bowel problems: get medical help, urgently if it is getting worse.",
+      "ru": "Онемение, покалывание или слабость, отдающие в руку или ногу, или новые проблемы с мочеиспусканием или стулом: обратитесь к врачу, а если становится хуже — срочно.",
+      "source": [45],
+      "urgency": "days"
+    },
+    {
+      "en": "A pop or snap followed by weakness, bruising or a changed muscle shape: see a doctor within days; torn tendons repair best early.",
+      "ru": "Щелчок, после которого появились слабость, кровоподтёк или изменилась форма мышцы: к врачу в ближайшие дни — разорванное сухожилие лучше восстанавливается при ранней операции.",
+      "source": [22],
+      "urgency": "days"
+    },
+    {
+      "en": "Dark, cola-coloured urine with severe muscle pain or swelling 1–3 days after a session: same-day medical care, fluids and no training.",
+      "ru": "Тёмная моча цвета колы с сильной болью или отёком мышц через 1–3 дня после тренировки: к врачу в тот же день, пить воду и не тренироваться.",
+      "source": [46],
+      "urgency": "same-day"
+    }
+  ],
+  "recovery": [
+    { "en": "Sleep at least 7 hours a night.", "ru": "Спите не меньше 7 часов.", "source": [47] },
+    {
+      "en": "After a night under 6 hours: train, but skip top sets and tests and keep one more rep in reserve on the big lifts.",
+      "ru": "После ночи короче 6 часов: тренируйтесь, но без самых тяжёлых подходов и тестов, с запасом на одно повторение больше в базовых упражнениях.",
+      "source": [49]
+    },
+    {
+      "en": "Three or more short nights in a week, or the same joint amber two sessions running: take a lighter week.",
+      "ru": "Три и больше коротких ночей за неделю или один и тот же сустав «жёлтый» две тренировки подряд: возьмите облегчённую неделю.",
+      "source": [48, 49]
+    },
+    {
+      "en": "At least 48 hours between hard sessions for the same muscles; the A/B/C rotation on non-consecutive days does this.",
+      "ru": "Не меньше 48 часов между тяжёлыми тренировками одних и тех же мышц; ротация A/B/C через день это обеспечивает.",
+      "source": [38]
+    },
+    {
+      "en": "Soreness after a new exercise is normal: train other muscles, or the same ones lighter, for a day or two.",
+      "ru": "Крепатура после нового упражнения нормальна: день-два тренируйте другие мышцы или те же, но легче.",
+      "source": [41, 42]
+    },
+    {
+      "en": "A lighter week reduces training rather than stopping it: a full week off mid-programme cost strength in a trial.",
+      "ru": "Облегчённая неделя сокращает тренировки, а не отменяет их: в исследовании полная неделя отдыха посреди программы стоила прироста силы.",
+      "source": [50]
+    },
+    {
+      "en": "No training with a fever; come back with a light session.",
+      "ru": "С температурой не тренируйтесь; возвращайтесь с лёгкой тренировки.",
+      "source": []
+    }
+  ],
+  "globalCues": {
+    "cues": {
+      "en": [
+        "Set the machine up before loading it: seat height, pads, pivot in line with the joint, range limiter.",
+        "Control every rep: 2–3 s down, no bouncing, no slamming the stack.",
+        "Exhale through the effort; hold your breath only briefly on the hardest reps.",
+        "End the set at the first rep that looks different from rep 1; never grind a compound to failure.",
+        "Pain check every set: 0–3 carry on, 4–5 modify, 6+ or sharp pain stop."
+      ],
+      "ru": [
+        "Сначала настройте тренажёр: высота сиденья, валики, ось вращения напротив сустава, ограничитель амплитуды.",
+        "Контролируйте каждое повторение: 2–3 с вниз, без отбивов и без ударов стека.",
+        "Выдыхайте на усилии; задерживайте дыхание лишь ненадолго на самых тяжёлых повторениях.",
+        "Заканчивайте подход на первом повторении, которое выглядит иначе, чем первое; базовые упражнения не дожимайте до отказа.",
+        "Проверка боли в каждом подходе: 0–3 — продолжайте, 4–5 — измените нагрузку, 6+ или острая боль — стоп."
+      ]
+    },
+    "risks": {
+      "en": "Most gym injuries are overuse from load spikes plus fatigue, or weights dropped on the body.",
+      "ru": "Большинство травм в зале — перегрузка от скачков нагрузки на фоне усталости или уроненный на себя вес."
+    },
+    "source": [1, 5, 7]
+  },
+  "families": {
+    "horizontal-press": {
+      "cues": {
+        "en": [
+          "Set the seat so the handles start level with mid-chest, not behind it.",
+          "Pull the shoulder blades back and down before the first rep and keep them there.",
+          "Hands no wider than about 1.5× shoulder width; elbows 45–60° from the torso, never flared to 90°.",
+          "Keep the wrists straight and stacked over the forearms.",
+          "Lower in 2–3 s and don't let the elbows sink far behind the body."
+        ],
+        "ru": [
+          "Выставьте сиденье так, чтобы рукояти стартовали на уровне середины груди, а не за ней.",
+          "Перед первым повторением сведите и опустите лопатки и держите их так весь подход.",
+          "Хват не шире примерно 1,5 ширины плеч; локти под 45–60° к корпусу, никогда не разводите их на 90°.",
+          "Запястья прямые и стоят над предплечьями.",
+          "Опускайте вес 2–3 с и не уводите локти далеко за линию корпуса."
+        ]
+      },
+      "risks": {
+        "en": "Front of the shoulder: impingement, anterior instability, overload of the collarbone (AC) joint and, rarely, a pec tear in the heavy lowering phase.",
+        "ru": "Передняя часть плеча: импинджмент, передняя нестабильность, перегрузка акромиально-ключичного сустава и, редко, разрыв большой грудной мышцы в тяжёлой уступающей фазе."
+      },
+      "source": [4, 21, 22, 24]
+    },
+    "incline-press": {
+      "cues": {
+        "en": [
+          "Set the bench or seat at 30–45° so the handles start at the upper chest.",
+          "Shoulder blades back and down; no shrug at the top.",
+          "Elbows 45–60° with vertical forearms, never past about 75°.",
+          "Lower in 2–3 s to the upper chest, no deeper."
+        ],
+        "ru": [
+          "Наклон скамьи или сиденья 30–45°, рукояти стартуют на уровне верха груди.",
+          "Лопатки сведены и опущены; не поднимайте плечи в верхней точке.",
+          "Локти под 45–60°, предплечья вертикальны; не разводите локти больше чем примерно на 75°.",
+          "Опускайте вес 2–3 с до верха груди, не глубже."
+        ]
+      },
+      "risks": {
+        "en": "Front of the shoulder and the collarbone joint: a seat set too low turns it into a pinching shoulder press.",
+        "ru": "Передняя часть плеча и акромиально-ключичный сустав: при слишком низком сиденье упражнение превращается в жим над головой с защемлением."
+      },
+      "source": [21, 24]
+    },
+    "decline-press": {
+      "cues": {
+        "en": [
+          "Chest up, shoulders pulled down away from the ears.",
+          "Elbows point back, close to the body.",
+          "Dips: lower only until the upper arm is about parallel to the floor; use the assisted machine until you can do 8 controlled reps.",
+          "On machines, stop the return at about 90° of elbow bend."
+        ],
+        "ru": [
+          "Грудь вперёд, плечи опущены, подальше от ушей.",
+          "Локти направлены назад и прижаты к корпусу.",
+          "Отжимания на брусьях: опускайтесь, только пока плечо не станет примерно параллельно полу; работайте в гравитроне, пока не сделаете 8 подконтрольных повторений.",
+          "В тренажёре останавливайте возврат примерно на 90° сгиба в локте."
+        ]
+      },
+      "risks": {
+        "en": "The front of the shoulder in deep dips (shoulder extension under load); otherwise one of the safer chest positions.",
+        "ru": "Передняя часть плеча при глубоких отжиманиях на брусьях (разгибание плеча под нагрузкой); в остальном одно из самых безопасных положений для груди."
+      },
+      "source": [4, 21]
+    },
+    "chest-fly": {
+      "cues": {
+        "en": [
+          "Set the seat so the handles are at or slightly below shoulder height.",
+          "Keep a soft, fixed elbow bend: hug, don't press.",
+          "Set the start so the arms open only to the line of the torso, never behind it.",
+          "Open slowly (2–3 s) and don't bounce in the stretch."
+        ],
+        "ru": [
+          "Выставьте сиденье так, чтобы рукояти были на уровне плеч или чуть ниже.",
+          "Локти слегка согнуты и не меняют угол: обнимайте, а не жмите.",
+          "Выставьте старт так, чтобы руки раскрывались только до линии корпуса, а не за неё.",
+          "Разводите медленно (2–3 с) и не пружиньте в растянутом положении."
+        ]
+      },
+      "risks": {
+        "en": "The front of the shoulder capsule and the pec tendon in the high-five position: arm out, rotated back, behind the body.",
+        "ru": "Передняя капсула плечевого сустава и сухожилие грудной мышцы в положении «дай пять»: рука отведена, развёрнута назад и уходит за линию корпуса."
+      },
+      "source": [4, 21, 22]
+    },
+    "vertical-press": {
+      "cues": {
+        "en": [
+          "Always press in front of the head, never behind the neck.",
+          "Elbows about 30° in front of the body, wrists over the elbows.",
+          "Ribs down and back on the pad; if the lower back arches off it, the weight is too heavy.",
+          "Lower to about shoulder height and press without shrugging."
+        ],
+        "ru": [
+          "Всегда жмите перед головой, никогда из-за головы.",
+          "Локти примерно на 30° впереди корпуса, запястья над локтями.",
+          "Рёбра опущены, спина прижата к спинке; если поясница отрывается, вес слишком большой.",
+          "Опускайте примерно до уровня плеч и жмите, не поднимая плечи к ушам."
+        ]
+      },
+      "risks": {
+        "en": "Subacromial impingement and front-of-shoulder stress; lower-back arching when pressing standing.",
+        "ru": "Субакромиальный импинджмент и нагрузка на переднюю часть плеча; прогиб в пояснице при жиме стоя."
+      },
+      "source": [4, 21]
+    },
+    "lateral-raise": {
+      "cues": {
+        "en": [
+          "Raise in the scapular plane, arms about 30° forward of the sides.",
+          "Thumbs neutral or slightly up; don't 'pour the can'.",
+          "Stop at shoulder height (90°).",
+          "Lead with the elbows, shoulders down, no swing; 2–3 s down."
+        ],
+        "ru": [
+          "Поднимайте в плоскости лопатки — руки примерно на 30° впереди корпуса.",
+          "Большие пальцы в нейтральном положении или чуть вверх; не «выливайте воду из кувшина».",
+          "Останавливайтесь на высоте плеч (90°).",
+          "Ведите локтями, плечи опущены, без рывков; вниз 2–3 с."
+        ]
+      },
+      "risks": {
+        "en": "Subacromial impingement when raising above 90° or with the arm turned in.",
+        "ru": "Субакромиальный импинджмент при подъёме выше 90° или с развёрнутой внутрь рукой."
+      },
+      "source": [21, 25]
+    },
+    "rear-delt": {
+      "cues": {
+        "en": [
+          "Chest on the pad, or a braced flat-back hinge for free weights.",
+          "Soft elbows; sweep wide to the line of the body, no further.",
+          "Shoulders down; don't shrug or poke the chin forward.",
+          "Light to moderate load for 12–20 reps, with a slow return."
+        ],
+        "ru": [
+          "Грудь на упоре или, со свободными весами, наклон с прямой напряжённой спиной.",
+          "Локти слегка согнуты; разводите руки широко до линии корпуса, не дальше.",
+          "Плечи опущены; не поднимайте их и не вытягивайте подбородок вперёд.",
+          "Лёгкий или средний вес на 12–20 повторений, медленный возврат."
+        ]
+      },
+      "risks": {
+        "en": "Low: neck and upper-trap strain from shrugging; the lower back in unsupported bent-over versions.",
+        "ru": "Небольшой: перенапряжение шеи и верхней трапеции, если поднимать плечи; поясница — в вариантах в наклоне без упора."
+      },
+      "source": []
+    },
+    "external-rotation": {
+      "cues": {
+        "en": [
+          "Elbow pinned to the side (a rolled towel helps), forearm level.",
+          "Rotate out slowly through a comfortable range without twisting the torso.",
+          "Go light: 12–20 reps at RIR 2–3; this is joint-health work.",
+          "Do it 2–3 times a week, as warm-up activation or as a programmed set."
+        ],
+        "ru": [
+          "Локоть прижат к боку (поможет свёрнутое полотенце), предплечье горизонтально.",
+          "Медленно разворачивайте руку наружу в комфортной амплитуде, не поворачивая корпус.",
+          "Лёгкий вес: 12–20 повторений с запасом 2–3 — это работа на здоровье сустава.",
+          "Делайте 2–3 раза в неделю — в разминке или отдельным подходом."
+        ]
+      },
+      "risks": {
+        "en": "Low; heavy or jerky loading can irritate the rotator cuff.",
+        "ru": "Небольшой; большой вес или рывки могут раздражать вращательную манжету."
+      },
+      "source": [25, 26]
+    },
+    "shrug": {
+      "cues": {
+        "en": [
+          "Lift straight up toward the ears, hold 1 s, lower fully.",
+          "No rolling; arms long and relaxed; straps are fine.",
+          "Chin level and neck neutral."
+        ],
+        "ru": [
+          "Поднимайте плечи строго вверх к ушам, задержка 1 с, опускайте полностью.",
+          "Без вращения плечами; руки длинные и расслабленные; лямки можно.",
+          "Подбородок горизонтально, шея нейтрально."
+        ]
+      },
+      "risks": {
+        "en": "Neck strain from jutting the head forward; dropped dumbbells.",
+        "ru": "Перенапряжение шеи, если выдвигать голову вперёд; уроненные гантели."
+      },
+      "source": [5]
+    },
+    "vertical-pull": {
+      "cues": {
+        "en": [
+          "Pull to the front, to the upper chest; never behind the neck.",
+          "Start by drawing the shoulder blades down, then drive the elbows to the ribs.",
+          "Grip about 1–1.5× shoulder width; take neutral handles if the shoulders or elbows complain.",
+          "Return in 2–3 s to straight arms without letting the stack yank you up."
+        ],
+        "ru": [
+          "Тяните перед собой к верху груди; никогда за голову.",
+          "Начинайте с опускания лопаток, затем ведите локти к рёбрам.",
+          "Хват примерно в 1–1,5 ширины плеч; если ноют плечи или локти, берите нейтральные рукояти.",
+          "Возвращайте за 2–3 с до прямых рук, не давая стеку дёрнуть вас вверх."
+        ]
+      },
+      "risks": {
+        "en": "Shoulder impingement or instability with behind-the-neck pulls; inner-elbow and biceps-tendon strain with heavy underhand grips.",
+        "ru": "Импинджмент или нестабильность плеча при тяге за голову; перегрузка внутренней части локтя и сухожилия бицепса при тяжёлой работе обратным хватом."
+      },
+      "source": [4, 21, 23]
+    },
+    "lat-isolation": {
+      "cues": {
+        "en": [
+          "Arms nearly straight with a fixed elbow bend.",
+          "Ribs down; don't arch the lower back to gain range.",
+          "Take the overhead stretch only as far as it is pain-free.",
+          "Lower slowly and finish the set with the foot bar or the rack."
+        ],
+        "ru": [
+          "Руки почти прямые, угол в локтях не меняется.",
+          "Рёбра опущены; не прогибайте поясницу ради амплитуды.",
+          "Растягивайтесь над головой только в безболезненной амплитуде.",
+          "Опускайте медленно и завершайте подход с опорой на подножку или стойку."
+        ]
+      },
+      "risks": {
+        "en": "Rotator-cuff compression in the overhead stretch, and lower-back arching.",
+        "ru": "Сдавливание вращательной манжеты в растяжении над головой и прогиб в пояснице."
+      },
+      "source": [21]
+    },
+    "horizontal-pull": {
+      "cues": {
+        "en": [
+          "Prefer chest-supported rows and keep the chest on the pad for the whole set.",
+          "Shoulder blades back first, then elbows past the torso; pause 1 s.",
+          "Return until the arms are straight and the shoulder blades spread.",
+          "No rocking or yanking; neck long, chin slightly tucked.",
+          "On unsupported rows, hinge with a braced flat back."
+        ],
+        "ru": [
+          "Выбирайте тяги с упором в грудь и не отрывайте грудь от упора весь подход.",
+          "Сначала сведите лопатки, затем ведите локти за линию корпуса; пауза 1 с.",
+          "Возвращайте до прямых рук и разведённых лопаток.",
+          "Без раскачки и рывков; шея длинная, подбородок слегка опущен.",
+          "В тягах без упора — наклон с прямой напряжённой спиной."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back strain in unsupported rows (the bent-over row loads the lower back most); biceps and elbow strain from yanking.",
+        "ru": "Перегрузка поясницы в тягах без упора (тяга в наклоне нагружает её сильнее всего); перегрузка бицепса и локтя при рывках."
+      },
+      "source": [9, 29]
+    },
+    "spinal-extension": {
+      "cues": {
+        "en": [
+          "Fasten the pelvic strap or footplate so the lower back moves, not the hips.",
+          "Move slowly, 2 s back and 3–4 s forward; finish upright, not overextended.",
+          "Start light for the first weeks: 15–20 reps, 2–3 reps short of failure.",
+          "Effort is fine, but sharp pain or pain running into the leg means stop."
+        ],
+        "ru": [
+          "Застегните фиксатор таза или упритесь в подножку, чтобы двигалась поясница, а не таз.",
+          "Медленно: 2 с назад и 3–4 с вперёд; заканчивайте в прямом положении, без переразгибания.",
+          "Первые недели — малый вес: 15–20 повторений с запасом 2–3.",
+          "Напряжение — нормально, но острая боль или боль, отдающая в ногу, — сигнал остановиться."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back strain or disc irritation with fast, heavy, end-of-range reps.",
+        "ru": "Перегрузка поясницы или раздражение межпозвонкового диска при быстрых тяжёлых повторениях в крайних положениях."
+      },
+      "source": [31]
+    },
+    "neck": {
+      "cues": {
+        "en": [
+          "Start with 5–10 s isometric holds and very light loads.",
+          "Only the head moves and the torso stays fixed; 2 s out, 3 s back.",
+          "Stay in a pain-free middle range; never load the end of the range or jerk.",
+          "Stop 2–3 reps short of failure, and stop at once with dizziness, tingling or arm symptoms."
+        ],
+        "ru": [
+          "Начинайте с изометрических удержаний по 5–10 с и очень малых весов.",
+          "Двигается только голова, корпус неподвижен; 2 с в одну сторону, 3 с обратно.",
+          "Работайте в безболезненной средней амплитуде; никогда не нагружайте крайние положения и не делайте рывков.",
+          "Останавливайтесь за 2–3 повторения до отказа и сразу — при головокружении, покалывании или симптомах в руке."
+        ]
+      },
+      "risks": {
+        "en": "Neck strain or nerve-root irritation from heavy, jerky or end-of-range loading.",
+        "ru": "Перегрузка шеи или раздражение нервных корешков при тяжёлой, рывковой или крайней амплитуде."
+      },
+      "source": []
+    },
+    "biceps-curl": {
+      "cues": {
+        "en": [
+          "Elbows fixed, on the pad or at the sides; no swinging.",
+          "Lower in 2–3 s and never let the weight drop into a locked elbow.",
+          "Wrists straight; switch to an EZ bar, dumbbells or cables if a straight bar strains the wrists or elbows.",
+          "Progress by reps first, then in small load steps."
+        ],
+        "ru": [
+          "Локти неподвижны — на упоре или у боков; без раскачки.",
+          "Опускайте вес 2–3 с и никогда не роняйте его в полностью выпрямленный локоть.",
+          "Запястья прямые; если прямой гриф нагружает запястья или локти, переходите на EZ-гриф, гантели или блок.",
+          "Сначала прибавляйте повторения, потом — вес маленькими шагами."
+        ]
+      },
+      "risks": {
+        "en": "The distal biceps tendon under heavy lowering at full extension; elbow tendon pain from volume spikes.",
+        "ru": "Дистальное сухожилие бицепса при тяжёлом опускании в полностью выпрямленную руку; тендинопатия локтя при скачках объёма."
+      },
+      "source": [32]
+    },
+    "brachialis-curl": {
+      "cues": {
+        "en": [
+          "Hold the neutral (hammer) or overhand grip for the whole rep, wrist in line with the forearm.",
+          "Elbows pinned; control the lowering.",
+          "Keep reverse curls lighter than hammer curls; an EZ bar eases the wrists."
+        ],
+        "ru": [
+          "Держите нейтральный (молотковый) или прямой хват всё повторение, запястье на одной линии с предплечьем.",
+          "Локти прижаты; контролируйте опускание.",
+          "Обратным хватом работайте легче, чем молотом; EZ-гриф разгружает запястья."
+        ]
+      },
+      "risks": {
+        "en": "Outer-elbow (forearm extensor) tendon pain, especially with heavy reverse curls.",
+        "ru": "Боль в сухожилиях разгибателей предплечья снаружи локтя, особенно при тяжёлых сгибаниях обратным хватом."
+      },
+      "source": [34]
+    },
+    "triceps-extension": {
+      "cues": {
+        "en": [
+          "Upper arms stay still; only the elbows move.",
+          "Overhead: ribs down, go only as deep as the elbow and shoulder tolerate, and start about a third lighter than pushdowns.",
+          "Use a rope, neutral or EZ grip if the elbow or wrist aches.",
+          "Control the stretch; no bouncing at the bottom."
+        ],
+        "ru": [
+          "Плечи неподвижны, двигаются только локти.",
+          "Из-за головы: рёбра опущены, опускайтесь лишь настолько, насколько позволяют локоть и плечо, и начинайте примерно на треть легче, чем на блоке.",
+          "Если ноют локоть или запястье, берите канат, нейтральный хват или EZ-гриф.",
+          "Контролируйте растяжение; без отбива внизу."
+        ]
+      },
+      "risks": {
+        "en": "Triceps-tendon and back-of-elbow irritation from skull crushers and heavy overhead work.",
+        "ru": "Раздражение сухожилия трицепса и задней части локтя при французском жиме и тяжёлой работе из-за головы."
+      },
+      "source": [32]
+    },
+    "triceps-press": {
+      "cues": {
+        "en": [
+          "Elbows close to the body and pointing back (about 30–45°).",
+          "Close-grip press: hands about shoulder width, not touching; wrists stacked.",
+          "Dips: torso upright, down until the upper arm is parallel to the floor.",
+          "On the machine, stop the return at about 90° of elbow bend."
+        ],
+        "ru": [
+          "Локти близко к корпусу и направлены назад (примерно 30–45°).",
+          "Жим узким хватом: руки примерно на ширине плеч, не вплотную; запястья над предплечьями.",
+          "Отжимания на брусьях: корпус вертикально, вниз — пока плечо не станет параллельно полу.",
+          "В тренажёре останавливайте возврат примерно на 90° сгиба в локте."
+        ]
+      },
+      "risks": {
+        "en": "The back of the elbow and, in dips, the front of the shoulder.",
+        "ru": "Задняя часть локтя, а при отжиманиях на брусьях — передняя часть плеча."
+      },
+      "source": [21]
+    },
+    "wrist": {
+      "cues": {
+        "en": [
+          "Forearms supported on the thighs or a bench; only the wrists move.",
+          "Light weight for 15–25 slow reps; no jerks or drops at the bottom.",
+          "Use about half the wrist-curl weight for reverse wrist curls."
+        ],
+        "ru": [
+          "Предплечья лежат на бёдрах или скамье; двигаются только кисти.",
+          "Лёгкий вес на 15–25 медленных повторений; без рывков и бросков внизу.",
+          "В разгибаниях кистей берите примерно половину веса сгибаний."
+        ]
+      },
+      "risks": {
+        "en": "Inner- or outer-elbow tendon pain from heavy, jerky wrist work.",
+        "ru": "Боль в сухожилиях с внутренней или наружной стороны локтя при тяжёлой рывковой работе кистями."
+      },
+      "source": [34]
+    },
+    "grip": {
+      "cues": {
+        "en": [
+          "Pick up and set down with a hinge and a braced back; never round over to grab.",
+          "Stand tall with the shoulders down, take short steps, and set the weights down before your grip fails.",
+          "Clear the path, wear closed shoes and keep the weights away from your feet.",
+          "Dead hang: keep the shoulders slightly active and step down instead of dropping."
+        ],
+        "ru": [
+          "Поднимайте и ставьте вес наклоном с прямой напряжённой спиной; не горбитесь, хватая его.",
+          "Стойте прямо, плечи опущены, шаги короткие; ставьте вес, пока хват ещё держит.",
+          "Освободите дорогу, наденьте закрытую обувь и держите вес подальше от стоп.",
+          "Вис на перекладине: плечи слегка напряжены; спускайтесь на опору, а не спрыгивайте."
+        ]
+      },
+      "risks": {
+        "en": "Weights dropped on feet or hands (the leading cause of gym emergency visits) and lower-back strain at pick-up.",
+        "ru": "Вес, упавший на ноги или руки (главная причина обращений в неотложку после зала), и перегрузка поясницы при подъёме."
+      },
+      "source": [5]
+    },
+    "spine-stability": {
+      "cues": {
+        "en": [
+          "Brace as if about to be poked, and keep breathing.",
+          "Neutral spine: hips neither sagging nor piked.",
+          "Quality over time: hold 10–30 s and stop when the position breaks.",
+          "Move the arms and legs slowly in dead bugs and bird dogs."
+        ],
+        "ru": [
+          "Напрягите корпус, словно ждёте тычка в живот, и продолжайте дышать.",
+          "Нейтральная спина: таз не провисает и не задирается.",
+          "Качество важнее времени: держите 10–30 с и заканчивайте, когда ломается положение.",
+          "В «мёртвом жуке» и «птице-собаке» двигайте руками и ногами медленно."
+        ]
+      },
+      "risks": {
+        "en": "Low; a sagging lower back in planks and shoulder load on the elbows.",
+        "ru": "Небольшой: провисание поясницы в планке и нагрузка на плечи в упоре на локтях."
+      },
+      "source": [27]
+    },
+    "trunk-flexion": {
+      "cues": {
+        "en": [
+          "Curl the ribs toward the pelvis: roll, don't fold at the hips.",
+          "The head moves with the trunk, chin slightly tucked, hands on the chest or handles; never pull on the head.",
+          "Exhale on the curl, squeeze 1 s, take 2–3 s back.",
+          "Loaded crunches: 2–3 sets of 8–15; skip them in the first hour after waking."
+        ],
+        "ru": [
+          "Скручивайтесь, приближая рёбра к тазу: перекатывайтесь, а не складывайтесь в тазобедренных суставах.",
+          "Голова движется вместе с корпусом, подбородок слегка опущен, руки на груди или на рукоятях; голову руками не тянуть.",
+          "Выдох на скручивании, пауза 1 с, обратно 2–3 с.",
+          "Скручивания с весом: 2–3 подхода по 8–15; не делайте их в первый час после пробуждения."
+        ]
+      },
+      "risks": {
+        "en": "Neck strain from pulling on the head; disc irritation from high-rep loaded flexion (the risk is debated).",
+        "ru": "Перенапряжение шеи, если тянуть голову руками; раздражение дисков при многоповторных скручиваниях с весом (риск спорный)."
+      },
+      "source": []
+    },
+    "lower-ab-flexion": {
+      "cues": {
+        "en": [
+          "Lift the knees, then curl the pelvis up toward the ribs; that last part is the abs.",
+          "No swinging; pause at the top and lower in 2–3 s.",
+          "Bent knees first; straight legs only once you have full control.",
+          "Press down through the forearms on the captain's chair, or keep the shoulders active when hanging."
+        ],
+        "ru": [
+          "Поднимите колени, затем подкрутите таз к рёбрам — эта последняя часть и есть работа пресса.",
+          "Без раскачки; пауза вверху, опускание 2–3 с.",
+          "Сначала с согнутыми коленями; прямые ноги — только при полном контроле.",
+          "В упоре на локтях давите предплечьями в опору, в висе держите плечи напряжёнными."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back arching and the hip flexors taking over; shoulder strain when hanging.",
+        "ru": "Прогиб в пояснице и работа сгибателей бедра вместо пресса; нагрузка на плечи в висе."
+      },
+      "source": []
+    },
+    "anti-extension": {
+      "cues": {
+        "en": [
+          "Ribs down and glutes squeezed; the lower back must not sag.",
+          "Ab wheel: start on the knees with a short range (roll to a wall) and extend it week by week.",
+          "Exhale and pull back with the abs and lats; stop when the hips drop."
+        ],
+        "ru": [
+          "Рёбра опущены, ягодицы напряжены; поясница не должна провисать.",
+          "Ролик: начинайте с колен с короткой амплитудой (до стены) и удлиняйте её неделя за неделей.",
+          "Выдыхайте и возвращайтесь за счёт пресса и широчайших; заканчивайте, когда проваливается таз."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back overextension at the far end of the rollout.",
+        "ru": "Переразгибание поясницы в дальней точке выката."
+      },
+      "source": [27]
+    },
+    "anti-rotation": {
+      "cues": {
+        "en": [
+          "Stand side-on to the cable, braced, hips and shoulders square.",
+          "Press straight out from the breastbone, hold 2–3 s, return slowly.",
+          "Progress by load or distance from the stack in small steps."
+        ],
+        "ru": [
+          "Встаньте боком к блоку, корпус напряжён, таз и плечи развёрнуты прямо.",
+          "Выжмите рукоять прямо от груди, задержка 2–3 с, медленно верните.",
+          "Усложняйте маленькими шагами — весом или расстоянием от блока."
+        ]
+      },
+      "risks": { "en": "Low.", "ru": "Небольшой." },
+      "source": [27]
+    },
+    "rotation": {
+      "cues": {
+        "en": [
+          "Brace and turn the ribcage and pelvis together; the lower back doesn't twist on its own.",
+          "Pivot the back foot so the hips can rotate (woodchop).",
+          "Controlled tempo, no momentum; on the rotary machine, moderate range and load.",
+          "Never round forward and twist at the same time."
+        ],
+        "ru": [
+          "Напрягите корпус и поворачивайте грудную клетку и таз вместе; поясница не скручивается сама по себе.",
+          "Разворачивайте заднюю стопу, чтобы таз мог вращаться («дровосек»).",
+          "Подконтрольный темп без инерции; в ротационном тренажёре — умеренные амплитуда и вес.",
+          "Никогда не наклоняйтесь вперёд и не скручивайтесь одновременно."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back disc or joint strain from bending and twisting together under load.",
+        "ru": "Перегрузка дисков или межпозвонковых суставов поясницы при одновременном наклоне и скручивании под нагрузкой."
+      },
+      "source": []
+    },
+    "anti-lateral-flexion": {
+      "cues": {
+        "en": [
+          "Keep a straight line from head to feet with the hips stacked, not sagging.",
+          "Elbow under the shoulder; push the floor away.",
+          "Suitcase carry: stand tall without leaning, and pick the weight up with a hinge."
+        ],
+        "ru": [
+          "Прямая линия от головы до стоп, бёдра друг над другом, без провисания.",
+          "Локоть под плечом; отталкивайтесь от пола.",
+          "Переноска «чемодана»: идите прямо, не заваливаясь в сторону, и поднимайте вес наклоном с прямой спиной."
+        ]
+      },
+      "risks": {
+        "en": "Low; shoulder load in side planks and the lower back at pick-up.",
+        "ru": "Небольшой: нагрузка на плечо в боковой планке и на поясницу при подъёме веса."
+      },
+      "source": [27]
+    },
+    "squat": {
+      "cues": {
+        "en": [
+          "Leg press or hack squat: go only as deep as the pelvis and lower back stay on the pad.",
+          "Knees track over the second toe; heels down.",
+          "Brace before lowering and exhale through the hardest part.",
+          "Don't snap into locked knees, and use the safety stops."
+        ],
+        "ru": [
+          "Жим ногами или гакк-присед: опускайтесь, только пока таз и поясница прижаты к спинке.",
+          "Колени идут по линии второго пальца стопы; пятки прижаты.",
+          "Напрягите корпус перед опусканием и выдыхайте на самом тяжёлом участке.",
+          "Не выпрямляйте колени рывком до замка и выставляйте страховочные упоры."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back flexion under load at the bottom (the pelvis rolling off the pad); knee irritation from snapped lockouts.",
+        "ru": "Сгибание поясницы под нагрузкой в нижней точке (таз отрывается от спинки); раздражение колен при резком выпрямлении «в замок»."
+      },
+      "source": [9, 30]
+    },
+    "knee-extension": {
+      "cues": {
+        "en": [
+          "Line the knee up with the machine pivot, with the pad just above the ankle.",
+          "Extend smoothly, squeeze 1 s, take 2–3 s down; no kicking.",
+          "Shorten the range if the front of the knee hurts."
+        ],
+        "ru": [
+          "Совместите колено с осью тренажёра, валик — чуть выше голеностопа.",
+          "Разгибайте плавно, пауза 1 с, вниз 2–3 с; без выбрасывания ног.",
+          "Если болит передняя часть колена, сократите амплитуду."
+        ]
+      },
+      "risks": {
+        "en": "Front-of-knee (kneecap or patellar tendon) irritation with heavy, fast reps.",
+        "ru": "Раздражение передней части колена (надколенника или его связки) при тяжёлых быстрых повторениях."
+      },
+      "source": [32]
+    },
+    "knee-flexion": {
+      "cues": {
+        "en": [
+          "Knee at the pivot, thighs pinned, hips down.",
+          "Curl fully, pause, return slowly.",
+          "Nordic curls: a partial range and very low volume at first; expect strong soreness."
+        ],
+        "ru": [
+          "Колено напротив оси, бёдра прижаты, таз не поднимается.",
+          "Сгибайте полностью, пауза, медленный возврат.",
+          "Скандинавские сгибания: сначала неполная амплитуда и очень малый объём; ждите сильной крепатуры."
+        ]
+      },
+      "risks": {
+        "en": "Hamstring strain or cramp; severe soreness from new eccentric work.",
+        "ru": "Растяжение или судорога задней поверхности бедра; сильная крепатура от новой эксцентрической работы."
+      },
+      "source": [41, 42]
+    },
+    "hip-hinge": {
+      "cues": {
+        "en": [
+          "Hips back, back flat, bar or handles close to the legs.",
+          "Brace before every rep and lower only as far as the back stays flat.",
+          "If your back position changes, set the weight down and end the set.",
+          "Do the heaviest hinge work early in the session, never after fatiguing back work."
+        ],
+        "ru": [
+          "Таз назад, спина прямая, гриф или рукояти близко к ногам.",
+          "Напрягайте корпус перед каждым повторением и опускайтесь, только пока спина остаётся прямой.",
+          "Если положение спины меняется, поставьте вес и закончите подход.",
+          "Самые тяжёлые наклоны — в начале тренировки и никогда после утомительной работы на спину."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back strain when fatigue lets the spine round.",
+        "ru": "Перегрузка поясницы, когда от усталости спина начинает округляться."
+      },
+      "source": [9, 28]
+    },
+    "hip-thrust": {
+      "cues": {
+        "en": [
+          "Chin tucked and ribs down; finish with the glutes, not a lower-back arch.",
+          "Shins vertical at the top, with a 1 s pause.",
+          "Pad the bar or use the machine belt."
+        ],
+        "ru": [
+          "Подбородок прижат, рёбра опущены; дожимайте ягодицами, а не прогибом в пояснице.",
+          "Голени вертикальны в верхней точке, пауза 1 с.",
+          "Подложите на гриф валик или используйте ремень тренажёра."
+        ]
+      },
+      "risks": {
+        "en": "Lower-back overextension used to fake the lockout.",
+        "ru": "Переразгибание поясницы вместо полного выпрямления в тазобедренных суставах."
+      },
+      "source": []
+    },
+    "hip-abduction": {
+      "cues": {
+        "en": [
+          "Sit back on the seat without rocking.",
+          "Push out to a comfortable width, pause 1 s, return slowly without slamming.",
+          "Use a range you control; no bouncing."
+        ],
+        "ru": [
+          "Сядьте глубоко и не раскачивайтесь.",
+          "Разводите до комфортной ширины, пауза 1 с, медленный возврат без удара.",
+          "Работайте в подконтрольной амплитуде, без отбивов."
+        ]
+      },
+      "risks": {
+        "en": "Low; a strain from bouncing at the end of the range.",
+        "ru": "Небольшой: растяжение из-за отбивов в крайней точке."
+      },
+      "source": []
+    },
+    "hip-adduction": {
+      "cues": {
+        "en": [
+          "Start with a narrow setting and widen it over weeks.",
+          "Squeeze smoothly and open slowly (2–3 s); never let the weight yank the legs apart.",
+          "Copenhagen plank: start with the short lever (knee support)."
+        ],
+        "ru": [
+          "Начинайте с узкой настройки и расширяйте её неделями.",
+          "Сводите плавно и раскрывайте медленно (2–3 с); не давайте весу растягивать ноги рывком.",
+          "Копенгагенская планка: начинайте с короткого рычага (опора на колено)."
+        ]
+      },
+      "risks": {
+        "en": "Groin (adductor) strain from a wide start or jerky first reps.",
+        "ru": "Растяжение приводящих мышц (паха) при широком старте или рывках в первых повторениях."
+      },
+      "source": []
+    },
+    "calf-straight": {
+      "cues": {
+        "en": [
+          "Lower over 2–3 s into a deep stretch and pause 1–2 s; no bounce.",
+          "Knees straight but not locked.",
+          "Leg-press calf raise: feet secure on the plate, safety stops engaged.",
+          "Add load in small steps, because the Achilles tendon adapts slowly."
+        ],
+        "ru": [
+          "Опускайтесь 2–3 с в глубокое растяжение и задержитесь на 1–2 с; без отбива.",
+          "Колени прямые, но не в замке.",
+          "Подъёмы на носки в жиме ногами: стопы надёжно стоят на платформе, страховочные упоры выставлены.",
+          "Прибавляйте вес маленькими шагами: ахиллово сухожилие адаптируется медленно."
+        ]
+      },
+      "risks": {
+        "en": "Achilles overload from load jumps or bouncing; a foot slipping on the leg-press plate.",
+        "ru": "Перегрузка ахиллова сухожилия при скачках веса или отбивах; соскальзывание стопы с платформы жима ногами."
+      },
+      "source": [36, 37, 39]
+    },
+    "calf-bent": {
+      "cues": {
+        "en": [
+          "Lower slowly, pause in the stretch, then rise fully.",
+          "Pad on the lower thighs, torso still.",
+          "Lock the safety lever before taking your feet off."
+        ],
+        "ru": [
+          "Опускайтесь медленно, задержитесь в растяжении, затем поднимайтесь полностью.",
+          "Валик на нижней части бёдер, корпус неподвижен.",
+          "Закройте страховочный рычаг, прежде чем снимать стопы."
+        ]
+      },
+      "risks": {
+        "en": "Achilles irritation from load jumps.",
+        "ru": "Раздражение ахиллова сухожилия при скачках веса."
+      },
+      "source": [37]
+    }
+  },
+  "sources": [
+    {
+      "id": 1,
+      "text": "The epidemiology of injuries across the weight-training sports — Sports Medicine, 2017.",
+      "url": "https://doi.org/10.1007/s40279-016-0575-0"
+    },
+    {
+      "id": 2,
+      "text": "Injuries among weightlifters and powerlifters: a systematic review — British Journal of Sports Medicine, 2017.",
+      "url": "https://doi.org/10.1136/bjsports-2016-096037"
+    },
+    {
+      "id": 3,
+      "text": "Epidemiology of injuries in resistance training practitioners – a prospective study — Revista Brasileira de Cineantropometria & Desempenho Humano, 2025.",
+      "url": "https://doi.org/10.1590/1980-0037.2025v27e99383"
+    },
+    {
+      "id": 4,
+      "text": "Shoulder injuries attributed to resistance training: a brief review — Journal of Strength and Conditioning Research, 2010.",
+      "url": "https://doi.org/10.1519/JSC.0b013e3181dc4330"
+    },
+    {
+      "id": 5,
+      "text": "Epidemiology of weight training-related injuries presenting to United States emergency departments, 1990 to 2007 — American Journal of Sports Medicine, 2010.",
+      "url": "https://doi.org/10.1177/0363546509351560"
+    },
+    {
+      "id": 6,
+      "text": "Injuries in recreational adult fitness activities — American Journal of Sports Medicine, 1993.",
+      "url": "https://doi.org/10.1177/036354659302100323"
+    },
+    {
+      "id": 7,
+      "text": "Resistance training prescription for muscle function, hypertrophy, and physical performance in healthy adults: an overview of reviews (ACSM position stand) — Medicine & Science in Sports & Exercise, 2026.",
+      "url": "https://doi.org/10.1249/MSS.0000000000003897"
+    },
+    {
+      "id": 8,
+      "text": "The training–injury prevention paradox: should athletes be training smarter and harder? — British Journal of Sports Medicine, 2016.",
+      "url": "https://doi.org/10.1136/bjsports-2015-095788"
+    },
+    {
+      "id": 9,
+      "text": "Repetitive lifting tasks fatigue the back muscles and increase the bending moment acting on the lumbar spine — Journal of Biomechanics, 1998.",
+      "url": "https://doi.org/10.1016/s0021-9290(98)00086-4"
+    },
+    {
+      "id": 10,
+      "text": "Fatigue effects on bar kinematics during the bench press — Journal of Strength and Conditioning Research, 2007.",
+      "url": "https://doi.org/10.1519/R-19885.1"
+    },
+    {
+      "id": 11,
+      "text": "The effects of competition and the presence of an audience on weight lifting performance — Journal of Strength and Conditioning Research, 2003.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12741867/"
+    },
+    {
+      "id": 12,
+      "text": "The effectiveness of exercise interventions to prevent sports injuries: a systematic review and meta-analysis of randomised controlled trials — British Journal of Sports Medicine, 2014.",
+      "url": "https://doi.org/10.1136/bjsports-2013-092538"
+    },
+    {
+      "id": 13,
+      "text": "The Warm-Up: Maximize Performance and Improve Long-Term Athletic Development — Human Kinetics, 2019.",
+      "url": "https://doi.org/10.5040/9781718214170"
+    },
+    {
+      "id": 14,
+      "text": "Sports and environmental temperature: from warming-up to heating-up — Temperature, 2017.",
+      "url": "https://doi.org/10.1080/23328940.2017.1356427"
+    },
+    {
+      "id": 15,
+      "text": "Combination of general and specific warm-ups improves leg-press one repetition maximum compared with specific warm-up in trained individuals — Journal of Strength and Conditioning Research, 2011.",
+      "url": "https://doi.org/10.1519/JSC.0b013e3181e8611b"
+    },
+    {
+      "id": 16,
+      "text": "The effects of different intensities and durations of the general warm-up on leg press 1RM — Journal of Strength and Conditioning Research, 2013.",
+      "url": "https://doi.org/10.1519/JSC.0b013e3182606cd9"
+    },
+    {
+      "id": 17,
+      "text": "The role of specific warm-up during bench press and squat exercises: a novel approach — International Journal of Environmental Research and Public Health, 2020.",
+      "url": "https://doi.org/10.3390/ijerph17186882"
+    },
+    {
+      "id": 18,
+      "text": "Acute effects of muscle stretching on physical performance, range of motion, and injury incidence in healthy active individuals: a systematic review — Applied Physiology, Nutrition, and Metabolism, 2016.",
+      "url": "https://doi.org/10.1139/apnm-2015-0235"
+    },
+    {
+      "id": 19,
+      "text": "What is a one-rep max? (the NSCA testing protocol) — Human Performance Resources by CHAMP, 2022.",
+      "url": "https://www.hprc-online.org/articles/one-rep-max-for-strength"
+    },
+    {
+      "id": 20,
+      "text": "International expert consensus on warm-up protocols for athletes: a Delphi study — International Journal of Sports Physiology and Performance, 2026.",
+      "url": "https://doi.org/10.1123/ijspp.2025-0647"
+    },
+    {
+      "id": 21,
+      "text": "Avoiding shoulder injury from resistance training — Strength and Conditioning Journal, 2001.",
+      "url": "https://doi.org/10.1519/00126548-200110000-00002"
+    },
+    {
+      "id": 22,
+      "text": "Rupture of the pectoralis major: a meta-analysis of 112 cases — Knee Surgery, Sports Traumatology, Arthroscopy, 2000.",
+      "url": "https://doi.org/10.1007/s001670050197"
+    },
+    {
+      "id": 23,
+      "text": "Electromyographic analysis of three different types of lat pull-down — Journal of Strength and Conditioning Research, 2009.",
+      "url": "https://doi.org/10.1519/JSC.0b013e3181b8d30a"
+    },
+    {
+      "id": 24,
+      "text": "Effects of bench press technique variations on musculoskeletal shoulder loads and potential injury risk — Frontiers in Physiology, 2024.",
+      "url": "https://doi.org/10.3389/fphys.2024.1393235"
+    },
+    {
+      "id": 25,
+      "text": "Characteristics of shoulder impingement in the recreational weight-training population — Journal of Strength and Conditioning Research, 2014.",
+      "url": "https://doi.org/10.1519/JSC.0000000000000250"
+    },
+    {
+      "id": 26,
+      "text": "Preventing overuse shoulder injuries among throwing athletes: a cluster-randomised controlled trial in 660 elite handball players — British Journal of Sports Medicine, 2017.",
+      "url": "https://doi.org/10.1136/bjsports-2016-096226"
+    },
+    {
+      "id": 27,
+      "text": "Quantification of lumbar stability by using 2 different abdominal activation strategies — Archives of Physical Medicine and Rehabilitation, 2007.",
+      "url": "https://doi.org/10.1016/j.apmr.2006.10.014"
+    },
+    {
+      "id": 28,
+      "text": "To flex or not to flex? Is there a relationship between lumbar spine flexion during lifting and low back pain? A systematic review with meta-analysis — Journal of Orthopaedic & Sports Physical Therapy, 2020.",
+      "url": "https://doi.org/10.2519/jospt.2020.9218"
+    },
+    {
+      "id": 29,
+      "text": "Comparison of different rowing exercises: trunk muscle activation and lumbar spine motion, load, and stiffness — Journal of Strength and Conditioning Research, 2009.",
+      "url": "https://doi.org/10.1519/JSC.0b013e3181b07334"
+    },
+    {
+      "id": 30,
+      "text": "Arterial blood pressure response to heavy resistance exercise — Journal of Applied Physiology, 1985.",
+      "url": "https://doi.org/10.1152/jappl.1985.58.3.785"
+    },
+    {
+      "id": 31,
+      "text": "A review of the specificity of exercises designed for conditioning the lumbar extensors — British Journal of Sports Medicine, 2015.",
+      "url": "https://doi.org/10.1136/bjsports-2013-092197"
+    },
+    {
+      "id": 32,
+      "text": "Is tendon pathology a continuum? A pathology model to explain the clinical presentation of load-induced tendinopathy — British Journal of Sports Medicine, 2009.",
+      "url": "https://doi.org/10.1136/bjsm.2008.051193"
+    },
+    {
+      "id": 33,
+      "text": "Heavy slow resistance versus eccentric training as treatment for Achilles tendinopathy: a randomized controlled trial — American Journal of Sports Medicine, 2015.",
+      "url": "https://doi.org/10.1177/0363546515584760"
+    },
+    {
+      "id": 34,
+      "text": "Addition of isolated wrist extensor eccentric exercise to standard treatment for chronic lateral epicondylosis: a prospective randomized trial — Journal of Shoulder and Elbow Surgery, 2010.",
+      "url": "https://doi.org/10.1016/j.jse.2010.04.041"
+    },
+    {
+      "id": 35,
+      "text": "Effectiveness of isometric exercise in the management of tendinopathy: a systematic review and meta-analysis of randomised trials — BMJ Open Sport & Exercise Medicine, 2020.",
+      "url": "https://doi.org/10.1136/bmjsem-2020-000760"
+    },
+    {
+      "id": 36,
+      "text": "Time course of changes in muscle and tendon properties during strength training and detraining — Journal of Strength and Conditioning Research, 2010.",
+      "url": "https://doi.org/10.1519/JSC.0b013e3181c865e2"
+    },
+    {
+      "id": 37,
+      "text": "Human tendon adaptation in response to mechanical loading: a systematic review and meta-analysis of exercise intervention studies on healthy adults — Sports Medicine Open, 2015.",
+      "url": "https://doi.org/10.1186/s40798-015-0009-9"
+    },
+    {
+      "id": 38,
+      "text": "The pathogenesis of tendinopathy: balancing the response to loading — Nature Reviews Rheumatology, 2010.",
+      "url": "https://doi.org/10.1038/nrrheum.2010.43"
+    },
+    {
+      "id": 39,
+      "text": "Continued sports activity, using a pain-monitoring model, during rehabilitation in patients with Achilles tendinopathy: a randomized controlled study — American Journal of Sports Medicine, 2007.",
+      "url": "https://doi.org/10.1177/0363546506298279"
+    },
+    {
+      "id": 40,
+      "text": "Should exercises be painful in the management of chronic musculoskeletal pain? A systematic review and meta-analysis — British Journal of Sports Medicine, 2017.",
+      "url": "https://doi.org/10.1136/bjsports-2016-097383"
+    },
+    {
+      "id": 41,
+      "text": "Delayed onset muscle soreness: treatment strategies and performance factors — Sports Medicine, 2003.",
+      "url": "https://doi.org/10.2165/00007256-200333020-00005"
+    },
+    {
+      "id": 42,
+      "text": "Recent advances in the understanding of the repeated bout effect: the protective effect against muscle damage from a single bout of eccentric exercise — Scandinavian Journal of Medicine & Science in Sports, 2003.",
+      "url": "https://doi.org/10.1034/j.1600-0838.2003.02477.x"
+    },
+    {
+      "id": 43,
+      "text": "Updating ACSM's recommendations for exercise preparticipation health screening — Medicine & Science in Sports & Exercise, 2015.",
+      "url": "https://doi.org/10.1249/MSS.0000000000000664"
+    },
+    {
+      "id": 44,
+      "text": "Red and orange flags for secondary headaches in clinical practice: SNNOOP10 list — Neurology, 2019.",
+      "url": "https://doi.org/10.1212/WNL.0000000000006697"
+    },
+    {
+      "id": 45,
+      "text": "International framework for red flags for potential serious spinal pathologies — Journal of Orthopaedic & Sports Physical Therapy, 2020.",
+      "url": "https://doi.org/10.2519/jospt.2020.9971"
+    },
+    {
+      "id": 46,
+      "text": "Exercise-induced rhabdomyolysis mechanisms and prevention: a literature review — Journal of Sport and Health Science, 2016.",
+      "url": "https://doi.org/10.1016/j.jshs.2015.01.012"
+    },
+    {
+      "id": 47,
+      "text": "Recommended amount of sleep for a healthy adult: a joint consensus statement of the American Academy of Sleep Medicine and Sleep Research Society — Sleep, 2015.",
+      "url": "https://doi.org/10.5665/sleep.4716"
+    },
+    {
+      "id": 48,
+      "text": "The effect of acute sleep deprivation on skeletal muscle protein synthesis and the hormonal environment — Physiological Reports, 2021.",
+      "url": "https://doi.org/10.14814/phy2.14660"
+    },
+    {
+      "id": 49,
+      "text": "Effects of acute sleep loss on physical performance: a systematic and meta-analytical review — Sports Medicine, 2022.",
+      "url": "https://doi.org/10.1007/s40279-022-01706-y"
+    },
+    {
+      "id": 50,
+      "text": "Gaining more from doing less? The effects of a one-week deload period during supervised resistance training on muscular adaptations — PeerJ, 2024.",
+      "url": "https://doi.org/10.7717/peerj.16777"
+    }
+  ]
+}

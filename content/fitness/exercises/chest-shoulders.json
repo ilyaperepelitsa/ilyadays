@@ -1,0 +1,3708 @@
+[
+  {
+    "id": "machine-chest-press",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Chest press machine",
+      "ru": "Жим от груди в тренажёре"
+    },
+    "aka": [
+      "Technogym Selection / Element Chest Press",
+      "Life Fitness Insignia Chest Press",
+      "Cybex Eagle NX Chest Press",
+      "Nautilus Inspiration Chest Press",
+      "Precor Vitality Chest Press",
+      "Seated chest press"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front",
+      "triceps-lateral"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "converging-chest-press",
+      "plate-loaded-chest-press",
+      "dumbbell-bench-press",
+      "smith-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles sit at mid-chest (nipple line) and start no further back than the front of your chest — use the handle-depth lever or foot bar if there is one. Sit with head, upper back and hips on the pads and feet flat.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукоятки были на уровне середины груди (линия сосков) и в старте не уходили назад дальше передней поверхности груди — для этого есть регулировка глубины рукояток или педаль. Голова, лопатки и таз прижаты к спинке и сиденью, стопы на полу."
+    },
+    "cues": {
+      "en": [
+        "Pull your shoulder blades back and down into the pad before the first rep, and keep them there.",
+        "Grip with straight wrists in line with the forearms; take the vertical (neutral) handles if the machine has them.",
+        "Keep the elbows about 45–60° from your sides, a little below shoulder height.",
+        "Breathe out and press smoothly until the arms are almost straight — stop just short of locking out.",
+        "At the end of the press your shoulders stay on the pad: push the handles away, not your shoulders.",
+        "Lower for 2–3 s until the hands are level with the front of your chest, then press again without clanking the plates.",
+        "Keep the natural curve in your lower back; don't lift your hips off the seat."
+      ],
+      "ru": [
+        "Перед первым повтором сведите и опустите лопатки, прижав их к спинке, — и держите так весь подход.",
+        "Запястья прямые, на одной линии с предплечьями; если есть вертикальные (нейтральные) рукоятки — берите их.",
+        "Локти — примерно под 45–60° к корпусу, чуть ниже линии плеч.",
+        "На выдохе плавно выжимайте почти до прямых рук, не выпрямляя локти до упора.",
+        "В конце жима плечи остаются на спинке: отталкивайте рукоятки, а не плечи вперёд.",
+        "Опускайте 2–3 секунды, пока кисти не окажутся на уровне передней поверхности груди, и жмите снова, не стуча плитами.",
+        "Сохраняйте естественный прогиб в пояснице; не отрывайте таз от сиденья."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat too low: the elbows drift up toward the ears and the front of the shoulder takes the load.",
+        "Handles set too deep, so every rep starts behind the chest and overstretches the front of the shoulder.",
+        "Shrugging or rolling the shoulders forward off the pad to finish the press.",
+        "Elbows flared out past ~75°, straight out from the shoulders.",
+        "Arching the lower back or lifting the hips to grind out a rep.",
+        "Ego loading: dropping the weight fast so the plates bang together."
+      ],
+      "ru": [
+        "Сиденье слишком низко: локти уходят вверх к ушам, и нагрузку забирает передняя часть плеча.",
+        "Рукоятки выставлены слишком глубоко: каждый повтор начинается позади линии груди и перерастягивает переднюю часть плечевого сустава.",
+        "Плечи поднимаются к ушам или уходят вперёд со спинки, чтобы дожать.",
+        "Локти разведены шире ~75°, прямо в стороны от плеч.",
+        "Прогиб в пояснице или отрыв таза от сиденья, чтобы дожать повтор.",
+        "Эго-лифтинг: вес бросают вниз, и плиты грузоблока бьются друг о друга."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "≈0.6 × Strength Level Beginner chest-press 1RM (39 kg at 80 kg body weight), research 04 §3.9"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Chest Press — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/188/seated-chest-press/",
+      "Chest Press Machine — NASM Exercise Library, accessed 2026. https://www.nasm.org/resource-center/exercise-library/chest-press-machine",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Chest Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/chest-press/kg"
+    ]
+  },
+  {
+    "id": "converging-chest-press",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Converging chest press machine",
+      "ru": "Конвергентный жим от груди в тренажёре"
+    },
+    "aka": [
+      "Matrix Versa Converging Chest Press",
+      "Life Fitness Insignia Dual Axis Chest Press",
+      "Hammer Strength MTS Iso-Lateral Chest Press",
+      "Iso-lateral chest press"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front",
+      "triceps-lateral"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-chest-press",
+      "plate-loaded-chest-press",
+      "dumbbell-bench-press",
+      "smith-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles start at mid-chest with the elbows just behind the line of your torso; back and head on the pad, feet flat. The arms move independently and converge as you press, so start with both handles level.",
+      "ru": "Установите сиденье так, чтобы рукоятки в старте были на уровне середины груди, а локти — чуть позади линии корпуса; спина и голова на спинке, стопы на полу. Рычаги независимые и сходятся к центру по ходу жима — начинайте с обеими рукоятками на одном уровне."
+    },
+    "cues": {
+      "en": [
+        "Set the shoulder blades back and down before you push the handles off their stops.",
+        "Press both handles at the same speed; the arcs meet in front of your lower chest.",
+        "Elbows 45–60° from your sides; let them follow the converging path instead of flaring.",
+        "Breathe out through the press and stop just short of lockout.",
+        "Return for 2–3 s until the hands are level with your chest — no deeper.",
+        "If one arm is weaker, keep both handles level and don't twist the torso to help it."
+      ],
+      "ru": [
+        "Сведите и опустите лопатки до того, как сдвинете рукоятки с упоров.",
+        "Жмите обе рукоятки синхронно — дуги сходятся перед нижней частью груди.",
+        "Локти под 45–60° к корпусу; пусть они идут по сходящейся траектории, а не разъезжаются в стороны.",
+        "Выдох на жиме; остановитесь чуть раньше полного выпрямления локтей.",
+        "Возвращайте рукоятки 2–3 секунды до уровня груди — не глубже.",
+        "Если одна рука слабее, держите рукоятки на одном уровне и не скручивайте корпус, помогая ей."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat too low, so the press starts near the shoulders and the elbows ride up.",
+        "Letting the handles drift behind the chest at the bottom — a stretch the shoulder capsule pays for.",
+        "Shoulders rolling forward off the pad as the handles meet.",
+        "Uneven arms: one handle racing ahead while the torso twists.",
+        "Ego loading, with the plates banging between reps."
+      ],
+      "ru": [
+        "Сиденье слишком низко: жим начинается у плеч, локти уходят вверх.",
+        "Рукоятки внизу уходят за линию груди — за такое растяжение платит капсула плечевого сустава.",
+        "Плечи уходят вперёд со спинки, когда рукоятки сходятся.",
+        "Руки работают несинхронно: одна рукоятка опережает, корпус скручивается.",
+        "Эго-лифтинг: плиты грузоблока бьются между повторами."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "One 5 kg step under the chest-press seed (0.6 × Strength Level Beginner 39 kg ≈ 23 kg): converging stacks differ by brand"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Chest Press — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/188/seated-chest-press/",
+      "Muyor et al., Bench press vs seated chest press muscle activity with several grips — J Hum Kinet, 2023. https://doi.org/10.5114/jhk/161468",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Chest Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/chest-press/kg"
+    ]
+  },
+  {
+    "id": "plate-loaded-chest-press",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Plate-loaded chest press",
+      "ru": "Жим от груди в рычажном тренажёре"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral Bench Press",
+      "Hammer Strength Iso-Lateral Horizontal Bench Press",
+      "Hammer Strength Iso-Lateral Wide Chest",
+      "Technogym Pure Strength Chest Press",
+      "Lever chest press"
+    ],
+    "equipment": "plate-loaded",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front",
+      "triceps-lateral"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-chest-press",
+      "converging-chest-press",
+      "dumbbell-bench-press",
+      "smith-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Seated models: set the seat so the handles line up with mid-chest; bench models: lie with the handles over mid-chest. Load the same plates on both arms and log the total of both sides (the lever's own weight is not counted).",
+      "ru": "Модели сидя: сиденье так, чтобы рукоятки были на уровне середины груди; модели лёжа: лягте так, чтобы рукоятки были над серединой груди. Вешайте одинаковые диски на оба рычага и записывайте их общий вес с двух сторон (вес самого рычага не считается)."
+    },
+    "cues": {
+      "en": [
+        "Back and head on the pad, shoulder blades pulled back and down.",
+        "Straight wrists; elbows 45–60° from your sides.",
+        "Press both arms in the same rhythm — the independent levers will show a weaker side.",
+        "Breathe out and press to just short of lockout.",
+        "Lower for 2–3 s to chest level; don't let the plates' momentum pull your hands deeper.",
+        "Feet planted, hips on the seat — no bridging."
+      ],
+      "ru": [
+        "Спина и голова на спинке, лопатки сведены и опущены.",
+        "Запястья прямые; локти под 45–60° к корпусу.",
+        "Жмите обеими руками в одном ритме — независимые рычаги сразу покажут слабую сторону.",
+        "На выдохе выжимайте почти до прямых рук, без блокировки локтей.",
+        "Опускайте 2–3 секунды до уровня груди; не позволяйте инерции дисков утянуть руки глубже.",
+        "Стопы упираются в пол, таз на сиденье — без «моста»."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Different plates on each side, or not knowing what was loaded last time — log the total.",
+        "Letting the heavy levers drop into a deep stretch behind the chest.",
+        "Shrugging and rolling the shoulders off the pad at the top.",
+        "Elbows flared out past ~75°.",
+        "Bouncing out of the bottom and arching to finish reps."
+      ],
+      "ru": [
+        "Разный вес на двух рычагах или забытый прошлый вес — записывайте общий вес дисков.",
+        "Тяжёлые рычаги проваливаются в глубокое растяжение за линию груди.",
+        "Плечи поднимаются и уходят вперёд со спинки вверху.",
+        "Локти разведены шире ~75°.",
+        "Отбив внизу и прогиб, чтобы дожать повтор."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Total plates (10 kg per arm): ≈0.6 × the barbell-bench seed (Strength Level Beginner 56 kg × 0.6 ≈ 34 kg), research 04 §3.8; lever ratios vary"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "NSCA, Exercise Technique Manual for Resistance Training, 3rd ed. — Human Kinetics, 2016. https://canada.humankinetics.com/products/exercise-technique-manual-for-resistance-training-3rd-edition-with-online-video",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Noteboom et al., Bench press technique variations and musculoskeletal shoulder loads — Front Physiol, 2024. https://doi.org/10.3389/fphys.2024.1393235",
+      "Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/bench-press/kg"
+    ]
+  },
+  {
+    "id": "smith-bench-press",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Smith machine bench press",
+      "ru": "Жим лёжа в машине Смита"
+    },
+    "aka": [
+      "Smith bench press",
+      "Technogym Multipower bench press",
+      "Guided-bar bench press"
+    ],
+    "equipment": "smith",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front",
+      "triceps-lateral"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-chest-press",
+      "converging-chest-press",
+      "plate-loaded-chest-press",
+      "dumbbell-bench-press",
+      "barbell-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Place a flat bench so the bar lands on your lower chest (just below the nipples) and set the safety stops just below that touch point. Grip about 1.5× shoulder width and note the bar's own weight once — Smith bars weigh 7–25 kg.",
+      "ru": "Поставьте горизонтальную скамью так, чтобы гриф опускался на нижнюю часть груди (чуть ниже сосков), а страховочные упоры — чуть ниже точки касания. Хват примерно в 1,5 ширины плеч; один раз узнайте вес самого грифа — в разных машинах Смита он от 7 до 25 кг."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades squeezed together and down, feet flat, small natural arch.",
+        "Unrack by rotating the hooks off with straight arms over your shoulders.",
+        "Lower for 2–3 s to the lower chest with forearms vertical and elbows 45–70° from your sides.",
+        "Touch lightly — no bounce — then breathe out and press straight up.",
+        "Stop just short of lockout; after the last rep rotate the hooks back onto a pin.",
+        "Head, shoulders and hips stay on the bench for the whole set."
+      ],
+      "ru": [
+        "Лопатки сведены и опущены, стопы на полу, небольшой естественный прогиб.",
+        "Снимайте гриф поворотом крюков на прямых руках над плечами.",
+        "Опускайте 2–3 секунды к нижней части груди: предплечья вертикальны, локти под 45–70° к корпусу.",
+        "Легко коснитесь груди — без отбива — и на выдохе жмите вверх.",
+        "Не блокируйте локти до упора; после последнего повтора поверните крюки на ближайший упор.",
+        "Голова, лопатки и таз весь подход на скамье."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bench in the wrong spot, so the fixed bar lands on the neck or belly instead of the lower chest.",
+        "No safety stops set — the guided bar still pins you if you fail.",
+        "Elbows flared out to 90°, straight out from the shoulders.",
+        "Bouncing the bar off the chest or lifting the hips.",
+        "Forgetting the bar weight, so loads don't match between gyms."
+      ],
+      "ru": [
+        "Скамья стоит не там: фиксированный гриф опускается на шею или живот вместо нижней части груди.",
+        "Не выставлены страховочные упоры — направляющий гриф всё равно придавит, если не дожмёте.",
+        "Локти разведены на 90°, прямо в стороны от плеч.",
+        "Отбив грифа от груди или отрыв таза от скамьи.",
+        "Не учтён вес грифа — нагрузки в разных залах несопоставимы."
+      ]
+    },
+    "startLoad": {
+      "kg": 32.5,
+      "source": "Bar + plates: 0.6 × Strength Level Beginner Smith bench 1RM (53 kg at 80 kg) ≈ 32 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Saeterbakken et al., Muscle activity and 1-RM of three chest presses with different stability — J Sports Sci, 2011. https://doi.org/10.1080/02640414.2010.543916",
+      "Noteboom et al., Bench press technique variations and musculoskeletal shoulder loads — Front Physiol, 2024. https://doi.org/10.3389/fphys.2024.1393235",
+      "Nuckols, How to Bench Press: The Definitive Guide — Stronger by Science, accessed 2026. https://www.strongerbyscience.com/how-to-bench/",
+      "Smith Machine Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/smith-machine-bench-press/kg"
+    ]
+  },
+  {
+    "id": "dumbbell-bench-press",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Dumbbell bench press",
+      "ru": "Жим гантелей лёжа"
+    },
+    "aka": [
+      "Flat dumbbell press",
+      "DB bench press",
+      "Dumbbell chest press"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front",
+      "triceps-lateral"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-chest-press",
+      "converging-chest-press",
+      "plate-loaded-chest-press",
+      "smith-bench-press",
+      "barbell-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Sit on the end of a flat bench with the dumbbells on your thighs, lie back and kick them up with your knees to the start. Arms straight above the lower chest, palms forward or angled slightly in.",
+      "ru": "Сядьте на край горизонтальной скамьи, гантели на бёдрах, лягте и толчком коленей подайте их в исходное положение. Руки прямые над нижней частью груди, ладони вперёд или слегка развёрнуты друг к другу."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades back and down, feet flat; head, shoulders and hips stay on the bench.",
+        "Lower for 2–3 s to the sides of the chest, elbows 45–70° from your torso, forearms vertical.",
+        "Stop at chest level — a little deeper than a bar allows, not as deep as you can go.",
+        "Breathe out and press up and slightly in until the dumbbells nearly touch over the chest.",
+        "Keep the wrists straight and stacked over the elbows.",
+        "Finish by pulling the dumbbells to your chest and rocking up with them onto your thighs."
+      ],
+      "ru": [
+        "Лопатки сведены и опущены, стопы на полу; голова, лопатки и таз остаются на скамье.",
+        "Опускайте 2–3 секунды к бокам груди: локти под 45–70° к корпусу, предплечья вертикальны.",
+        "Остановитесь на уровне груди: чуть глубже, чем позволяет штанга, но не до предела.",
+        "На выдохе выжимайте вверх и немного внутрь, пока гантели почти не соприкоснутся над грудью.",
+        "Запястья прямые, точно над локтями.",
+        "Закончив, подтяните гантели к груди и вместе с ними перекатитесь в положение сидя, опустив их на бёдра."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Dropping the dumbbells far below the chest for a “stretch” — strains the front of the shoulder.",
+        "Elbows flared out to 90° at the bottom.",
+        "Clanging the dumbbells together and losing tension at the top.",
+        "Lifting the hips off the bench to finish a rep.",
+        "Dumping the dumbbells out to the sides after the set."
+      ],
+      "ru": [
+        "Гантели опускают намного ниже груди «для растяжки» — это перегружает переднюю часть плеча.",
+        "Локти внизу разведены на 90°.",
+        "Гантели бьются друг о друга вверху, и мышцы теряют напряжение.",
+        "Отрыв таза от скамьи, чтобы дожать.",
+        "Гантели бросают в стороны после подхода."
+      ]
+    },
+    "startLoad": {
+      "kg": 12,
+      "source": "Per hand: 0.6 × Strength Level Beginner dumbbell bench 1RM (19 kg per hand at 80 kg) ≈ 11 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Chest Press (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/19/chest-press/",
+      "Saeterbakken et al., Muscle activity and 1-RM of three chest presses with different stability — J Sports Sci, 2011. https://doi.org/10.1080/02640414.2010.543916",
+      "Welsch et al., Pectoralis and anterior deltoid EMG in three upper-body lifts — J Strength Cond Res, 2005. https://doi.org/10.1519/14513.1",
+      "Dumbbell Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-bench-press/kg"
+    ]
+  },
+  {
+    "id": "barbell-bench-press",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Barbell bench press",
+      "ru": "Жим штанги лёжа"
+    },
+    "aka": [
+      "Bench press",
+      "Flat bench press",
+      "BB bench"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front",
+      "triceps-lateral"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "machine-chest-press",
+      "converging-chest-press",
+      "plate-loaded-chest-press",
+      "dumbbell-bench-press",
+      "smith-bench-press",
+      "push-up"
+    ],
+    "setup": {
+      "en": "Lie with your eyes under the bar and grip about 1.5× shoulder width, bar low in the palm over the forearm. You train alone, so set the rack's safety arms just below chest height first.",
+      "ru": "Лягте так, чтобы глаза были под грифом; хват примерно в 1,5 ширины плеч, гриф лежит в основании ладони над предплечьем. Вы тренируетесь без страхующего, поэтому сначала выставьте страховочные упоры стойки чуть ниже уровня груди."
+    },
+    "cues": {
+      "en": [
+        "Pinch the shoulder blades together and down, keep a small arch, feet pressing into the floor.",
+        "Take a big breath and brace before each rep; breathe out near the top.",
+        "Lower for 2–3 s to the lower chest, between the nipples and the bottom of the sternum.",
+        "Forearms vertical, elbows 45–70° from the torso.",
+        "Touch without bouncing, then drive the bar up and slightly back over the shoulders.",
+        "Butt, upper back and head stay on the bench.",
+        "Stop each set with 1–2 reps in reserve — there is no spotter."
+      ],
+      "ru": [
+        "Сведите и опустите лопатки, сохраните небольшой прогиб, стопы упираются в пол.",
+        "Перед каждым повтором — глубокий вдох и напряжённый пресс; выдох ближе к верху.",
+        "Опускайте 2–3 секунды к нижней части груди — между сосками и низом грудины.",
+        "Предплечья вертикальны, локти под 45–70° к корпусу.",
+        "Коснитесь груди без отбива и выжимайте вверх и немного назад, к линии плеч.",
+        "Ягодицы, верх спины и голова остаются на скамье.",
+        "Заканчивайте подход с запасом 1–2 повтора — страхующего нет."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Benching heavy alone without the safety arms set.",
+        "Grip much wider than 1.5× shoulder width — more load on the AC joint.",
+        "Elbows flared out to 90°.",
+        "Bouncing the bar off the chest.",
+        "Hips lifting off the bench.",
+        "Shoulders shrugging toward the ears at lockout."
+      ],
+      "ru": [
+        "Тяжёлый жим в одиночку без выставленных страховочных упоров.",
+        "Хват намного шире 1,5 ширины плеч — больше нагрузки на акромиально-ключичный сустав.",
+        "Локти разведены на 90°.",
+        "Отбив грифа от груди.",
+        "Таз отрывается от скамьи.",
+        "Плечи поднимаются к ушам в верхней точке."
+      ]
+    },
+    "startLoad": {
+      "kg": 32.5,
+      "source": "Bar + plates: 0.6 × Strength Level Beginner bench 1RM (56 kg at 80 kg) ≈ 34 kg, rounded down"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Nuckols, How to Bench Press: The Definitive Guide — Stronger by Science, accessed 2026. https://www.strongerbyscience.com/how-to-bench/",
+      "Noteboom et al., Bench press technique variations and musculoskeletal shoulder loads — Front Physiol, 2024. https://doi.org/10.3389/fphys.2024.1393235",
+      "NSCA, Exercise Technique Manual for Resistance Training, 3rd ed. — Human Kinetics, 2016. https://canada.humankinetics.com/products/exercise-technique-manual-for-resistance-training-3rd-edition-with-online-video",
+      "Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/bench-press/kg"
+    ]
+  },
+  {
+    "id": "push-up",
+    "class": "horizontal-press",
+    "pattern": "horizontal-push",
+    "name": {
+      "en": "Push-up",
+      "ru": "Отжимания от пола"
+    },
+    "aka": [
+      "Press-up",
+      "Floor push-up"
+    ],
+    "equipment": "bodyweight",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "delt-front",
+      "triceps-lateral",
+      "serratus-anterior",
+      "rectus-abdominis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      6,
+      20
+    ],
+    "alternatives": [
+      "machine-chest-press",
+      "converging-chest-press",
+      "plate-loaded-chest-press",
+      "dumbbell-bench-press",
+      "smith-bench-press",
+      "barbell-bench-press"
+    ],
+    "setup": {
+      "en": "Hands slightly wider than the shoulders and under them, body straight from head to heels with glutes and abs tight. Too hard: hands on a bench; too easy: feet raised or a plate on the upper back.",
+      "ru": "Ладони чуть шире плеч, под плечевыми суставами; тело — прямая линия от головы до пяток, ягодицы и пресс напряжены. Тяжело — упритесь руками в скамью; легко — поставьте ноги на возвышение или положите блин на верх спины."
+    },
+    "cues": {
+      "en": [
+        "Brace like a plank: hips neither sag nor pike.",
+        "Lower for 2 s with the elbows about 45° from your body until the chest is a fist from the floor.",
+        "Head in line with the spine — the chest leads, not the chin.",
+        "Breathe out and push the floor away until the arms are straight.",
+        "At the top, push a little further to spread the shoulder blades (push-up plus).",
+        "Progress with reps first, then a harder lever (feet up) or added load."
+      ],
+      "ru": [
+        "Держите тело как в планке: таз не провисает и не задирается.",
+        "Опускайтесь 2 секунды, локти примерно под 45° к корпусу, пока до пола не останется кулак.",
+        "Голова на одной линии с позвоночником — к полу идёт грудь, а не подбородок.",
+        "На выдохе отталкивайте пол, пока руки не выпрямятся.",
+        "Вверху дотолкните чуть дальше, разводя лопатки (push-up plus).",
+        "Прогрессируйте сначала повторами, потом более тяжёлым вариантом (ноги выше) или отягощением."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Hips sagging, so the lower back hangs into an arch.",
+        "Elbows flared straight out to 90°.",
+        "Half reps that stop well above the floor.",
+        "Head dropping and the neck craning toward the floor."
+      ],
+      "ru": [
+        "Таз провисает, поясница прогибается.",
+        "Локти разведены прямо в стороны, на 90°.",
+        "Половинчатые повторы высоко над полом.",
+        "Голова опущена, шея тянется к полу."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Body weight; Strength Level Beginner = 6 push-ups for an 80 kg man"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Push-Ups — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/",
+      "Calatayud et al., Bench press and push-up at matched muscle activity give similar strength gains — J Strength Cond Res, 2015. https://doi.org/10.1519/JSC.0000000000000589",
+      "Kotarsky et al., Progressive push-up training: muscle strength and thickness — J Strength Cond Res, 2018. https://doi.org/10.1519/JSC.0000000000002345",
+      "Push Ups Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/push-ups/kg"
+    ]
+  },
+  {
+    "id": "machine-incline-press",
+    "class": "incline-press",
+    "pattern": "incline-push",
+    "name": {
+      "en": "Incline chest press machine",
+      "ru": "Наклонный жим от груди в тренажёре"
+    },
+    "aka": [
+      "Hammer Strength MTS Iso-Lateral Incline Press",
+      "Incline press machine",
+      "Seated incline chest press",
+      "Incline lever press"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-lateral"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "plate-loaded-incline-press",
+      "incline-dumbbell-press",
+      "smith-incline-press",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles start at upper-chest height, just below the collarbones. Sit with hips all the way back, back and head on the pad, feet flat.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукоятки в старте были на уровне верха груди, чуть ниже ключиц. Таз до упора назад, спина и голова на спинке, стопы на полу."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades back and down, chest lifted toward the handles.",
+        "Straight wrists; elbows about 45–60° from your sides, under the handles.",
+        "Breathe out and press along the machine's path until the arms are nearly straight.",
+        "Shoulders stay on the pad at the top — reach with the arms, not with a shrug.",
+        "Lower for 2–3 s until the hands are back at the upper chest, no deeper.",
+        "Keep the low back's natural curve; don't slide the hips forward.",
+        "The upper chest should do the work: if the shoulders take over, raise the seat one notch."
+      ],
+      "ru": [
+        "Лопатки сведены и опущены, грудь подана к рукояткам.",
+        "Запястья прямые; локти примерно под 45–60° к корпусу, под рукоятками.",
+        "На выдохе выжимайте по траектории тренажёра до почти прямых рук.",
+        "Вверху плечи остаются на спинке — тянитесь руками, а не плечами к ушам.",
+        "Опускайте 2–3 секунды, пока кисти не вернутся к верху груди, — не глубже.",
+        "Сохраняйте естественный прогиб в пояснице; не сползайте тазом вперёд.",
+        "Работать должен верх груди: если тянут плечи, поднимите сиденье на одну позицию."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat too low, so the handles start near the ears and it turns into a shoulder press that pinches the front of the shoulder.",
+        "Shrugging toward the ears at the top.",
+        "Elbows flared out past ~75°.",
+        "Arching hard or sliding the hips forward to finish reps.",
+        "Ego loading, with the plates banging between reps."
+      ],
+      "ru": [
+        "Сиденье слишком низко: рукоятки стартуют у ушей, и упражнение превращается в жим на плечи, который защемляет переднюю часть плеча.",
+        "Плечи поднимаются к ушам вверху.",
+        "Локти разведены шире ~75°.",
+        "Сильный прогиб или сползание таза вперёд, чтобы дожать.",
+        "Эго-лифтинг: плиты грузоблока бьются между повторами."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "≈0.6 × Strength Level chest-press Beginner 39 kg × 0.89 (incline vs flat bench, 50 vs 56 kg) ≈ 21 kg"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Rodríguez-Ridao et al., Five bench inclinations and pectoralis, deltoid and triceps EMG — Int J Environ Res Public Health, 2020. https://doi.org/10.3390/ijerph17197339",
+      "Seated Chest Press — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/188/seated-chest-press/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Incline Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/incline-bench-press/kg"
+    ]
+  },
+  {
+    "id": "plate-loaded-incline-press",
+    "class": "incline-press",
+    "pattern": "incline-push",
+    "name": {
+      "en": "Plate-loaded incline press",
+      "ru": "Наклонный жим в рычажном тренажёре"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral Incline Press",
+      "Hammer Strength Iso-Lateral Super Incline Press",
+      "Technogym Pure Strength Incline Chest Press",
+      "Lever incline chest press",
+      "Iso-lateral incline press"
+    ],
+    "equipment": "plate-loaded",
+    "primary": [
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-lateral"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-incline-press",
+      "incline-dumbbell-press",
+      "smith-incline-press",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles start at upper-chest height, just below the collarbones. Load equal plates on both arms and log their total.",
+      "ru": "Сиденье так, чтобы рукоятки в старте были на уровне верха груди, чуть ниже ключиц. Вешайте на оба рычага одинаковые диски и записывайте их общий вес."
+    },
+    "cues": {
+      "en": [
+        "Back and head on the pad, shoulder blades pulled back and down.",
+        "Elbows 45–60° from your sides with the wrists stacked over them.",
+        "Breathe out and press both arms evenly up and slightly together.",
+        "Stop just short of lockout with the shoulders down.",
+        "Lower for 2–3 s to the upper chest without letting the levers drop.",
+        "On a “super incline” model the angle is steep: expect more front-delt work and a lighter load."
+      ],
+      "ru": [
+        "Спина и голова на спинке, лопатки сведены и опущены.",
+        "Локти под 45–60° к корпусу, запястья точно над локтями.",
+        "На выдохе выжимайте обе руки равномерно вверх и чуть к центру.",
+        "Не блокируйте локти до упора; плечи опущены.",
+        "Опускайте 2–3 секунды к верху груди, не роняя рычаги.",
+        "В модели «super incline» угол крутой: больше работают передние дельты, вес будет меньше."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat too low, so it becomes a shoulder press.",
+        "Levers dropping into a deep stretch behind the chest.",
+        "Shrugging at lockout.",
+        "Uneven plates, or one arm racing ahead of the other."
+      ],
+      "ru": [
+        "Сиденье слишком низко — получается жим на плечи.",
+        "Рычаги проваливаются в глубокое растяжение за линию груди.",
+        "Подъём плеч к ушам в верхней точке.",
+        "Разный вес на рычагах или одна рука опережает другую."
+      ]
+    },
+    "startLoad": {
+      "kg": 17.5,
+      "source": "Total plates (8.75 kg per arm): ≈0.6 × the incline-bench seed (Strength Level Beginner 50 kg × 0.6 = 30 kg), research 04 §3.8"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Rodríguez-Ridao et al., Five bench inclinations and pectoralis, deltoid and triceps EMG — Int J Environ Res Public Health, 2020. https://doi.org/10.3390/ijerph17197339",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Incline Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/incline-bench-press/kg"
+    ]
+  },
+  {
+    "id": "smith-incline-press",
+    "class": "incline-press",
+    "pattern": "incline-push",
+    "name": {
+      "en": "Smith machine incline press",
+      "ru": "Жим на наклонной скамье в машине Смита"
+    },
+    "aka": [
+      "Incline Smith press",
+      "Technogym Multipower incline press",
+      "Smith incline bench press"
+    ],
+    "equipment": "smith",
+    "primary": [
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-lateral"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-incline-press",
+      "plate-loaded-incline-press",
+      "incline-dumbbell-press",
+      "incline-barbell-press",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set an adjustable bench to about 30° and place it so the bar comes down just below your collarbones; set the safety stops just below that touch point. Grip about 1.5× shoulder width.",
+      "ru": "Установите регулируемую скамью примерно на 30° так, чтобы гриф опускался чуть ниже ключиц, а страховочные упоры — чуть ниже точки касания. Хват около 1,5 ширины плеч."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades back and down, feet flat, hips on the seat.",
+        "Unrack by rotating the hooks with straight arms.",
+        "Lower for 2–3 s to the upper chest, forearms vertical, elbows 45–70° from your sides.",
+        "Touch lightly, breathe out and press straight up.",
+        "Keep the bench near 30°: steeper turns it into a shoulder press.",
+        "Hook the bar onto a pin after the last rep before you sit up."
+      ],
+      "ru": [
+        "Лопатки сведены и опущены, стопы на полу, таз на сиденье.",
+        "Снимайте гриф поворотом крюков на прямых руках.",
+        "Опускайте 2–3 секунды к верху груди: предплечья вертикальны, локти под 45–70° к корпусу.",
+        "Легко коснитесь груди и на выдохе выжмите вверх.",
+        "Держите наклон около 30°: круче — и это уже жим на плечи.",
+        "После последнего повтора зацепите гриф за упор и только потом вставайте."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bench at 45–60°: the front delts take over.",
+        "Bench in the wrong spot, so the bar lands on the neck or mid-chest.",
+        "No safety stops set.",
+        "Elbows flared out past ~75° with the shoulders shrugging."
+      ],
+      "ru": [
+        "Наклон скамьи 45–60°: работу забирают передние дельты.",
+        "Скамья стоит не там: гриф опускается на шею или середину груди.",
+        "Не выставлены страховочные упоры.",
+        "Локти разведены шире ~75°, плечи поднимаются к ушам."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Bar + plates: 0.6 × Strength Level Beginner incline bench 1RM (50 kg at 80 kg) = 30 kg; Smith ≈ 0.97 × barbell"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Rodríguez-Ridao et al., Five bench inclinations and pectoralis, deltoid and triceps EMG — Int J Environ Res Public Health, 2020. https://doi.org/10.3390/ijerph17197339",
+      "Saeterbakken et al., Muscle activity and 1-RM of three chest presses with different stability — J Sports Sci, 2011. https://doi.org/10.1080/02640414.2010.543916",
+      "Incline Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/incline-bench-press/kg"
+    ]
+  },
+  {
+    "id": "incline-dumbbell-press",
+    "class": "incline-press",
+    "pattern": "incline-push",
+    "name": {
+      "en": "Incline dumbbell press",
+      "ru": "Жим гантелей на наклонной скамье"
+    },
+    "aka": [
+      "Incline DB press",
+      "Incline dumbbell bench press",
+      "Incline dumbbell chest press"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-lateral"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-incline-press",
+      "plate-loaded-incline-press",
+      "smith-incline-press",
+      "incline-barbell-press",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set the bench to about 30°. Sit with the dumbbells on your thighs, lie back and kick them up one knee at a time to arms' length over the upper chest.",
+      "ru": "Установите скамью примерно на 30°. Сядьте с гантелями на бёдрах, лягте и толчком коленей по очереди подайте их на прямые руки над верхом груди."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades back and down; head, shoulders and hips stay on the bench.",
+        "Lower for 2–3 s to the sides of the upper chest, elbows 45–70° from your torso.",
+        "Stop at chest level; don't sink the dumbbells far below it.",
+        "Breathe out and press up and slightly in, finishing over the upper chest.",
+        "Keep the wrists straight over the elbows.",
+        "End the set by bringing the dumbbells to your chest and sitting up with them on your thighs."
+      ],
+      "ru": [
+        "Лопатки сведены и опущены; голова, лопатки и таз остаются на скамье.",
+        "Опускайте 2–3 секунды к бокам верхней части груди, локти под 45–70° к корпусу.",
+        "Остановитесь на уровне груди; не опускайте гантели намного ниже.",
+        "На выдохе выжимайте вверх и немного внутрь, до положения над верхом груди.",
+        "Запястья прямые, точно над локтями.",
+        "Закончив подход, подтяните гантели к груди и сядьте, опустив их на бёдра."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bench at 45° or steeper: the front delts take the work.",
+        "Sinking the dumbbells deep below the chest.",
+        "Elbows flared out to 90°.",
+        "Hips lifting or the back arching hard to finish reps."
+      ],
+      "ru": [
+        "Скамья под 45° и круче: работу забирают передние дельты.",
+        "Гантели опускают глубоко ниже груди.",
+        "Локти разведены на 90°.",
+        "Отрыв таза или сильный прогиб спины, чтобы дожать."
+      ]
+    },
+    "startLoad": {
+      "kg": 12,
+      "source": "Per hand: 0.6 × Strength Level Beginner incline dumbbell press 1RM (22 kg per hand at 80 kg) ≈ 13 kg, rounded down"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Rodríguez-Ridao et al., Five bench inclinations and pectoralis, deltoid and triceps EMG — Int J Environ Res Public Health, 2020. https://doi.org/10.3390/ijerph17197339",
+      "Incline Chest Press (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/",
+      "Incline Dumbbell Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/incline-dumbbell-bench-press/kg"
+    ]
+  },
+  {
+    "id": "incline-barbell-press",
+    "class": "incline-press",
+    "pattern": "incline-push",
+    "name": {
+      "en": "Incline barbell bench press",
+      "ru": "Жим штанги на наклонной скамье"
+    },
+    "aka": [
+      "Incline bench press",
+      "Incline BB press"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-lateral"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "machine-incline-press",
+      "plate-loaded-incline-press",
+      "incline-dumbbell-press",
+      "smith-incline-press",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Use an incline bench near 30° inside a rack with the safety arms just below the bar's lowest point. Grip about 1.5× shoulder width, bar low in the palm.",
+      "ru": "Работайте на наклонной скамье под углом около 30° в силовой раме, страховочные упоры — чуть ниже нижней точки грифа. Хват около 1,5 ширины плеч, гриф в основании ладони."
+    },
+    "cues": {
+      "en": [
+        "Pinch the shoulder blades back and down; feet flat.",
+        "Unrack with straight arms and bring the bar over the upper chest.",
+        "Big breath, brace, then lower for 2–3 s to just below the collarbones.",
+        "Forearms vertical, elbows 45–70° from your torso.",
+        "Touch without bouncing and press straight up, breathing out near the top.",
+        "Leave 1–2 reps in reserve — there is no spotter."
+      ],
+      "ru": [
+        "Сведите и опустите лопатки; стопы на полу.",
+        "Снимите гриф на прямых руках и выведите его над верхом груди.",
+        "Глубокий вдох, напрягите пресс и опускайте 2–3 секунды чуть ниже ключиц.",
+        "Предплечья вертикальны, локти под 45–70° к корпусу.",
+        "Коснитесь без отбива и жмите вверх, выдыхая ближе к верху.",
+        "Оставляйте запас 1–2 повтора — страхующего нет."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Training heavy alone without safety arms.",
+        "Using a fixed 45° bench as a chest exercise: the work shifts to the front delts.",
+        "Bouncing the bar off the chest.",
+        "Elbows flared out to 90°.",
+        "Hips lifting off the seat."
+      ],
+      "ru": [
+        "Тяжёлые подходы в одиночку без страховочных упоров.",
+        "Фиксированная скамья на 45° вместо «грудного» угла: нагрузка уходит в передние дельты.",
+        "Отбив грифа от груди.",
+        "Локти разведены на 90°.",
+        "Таз отрывается от сиденья."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Bar + plates: 0.6 × Strength Level Beginner incline bench 1RM (50 kg at 80 kg) = 30 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Rodríguez-Ridao et al., Five bench inclinations and pectoralis, deltoid and triceps EMG — Int J Environ Res Public Health, 2020. https://doi.org/10.3390/ijerph17197339",
+      "Noteboom et al., Bench press technique variations and musculoskeletal shoulder loads — Front Physiol, 2024. https://doi.org/10.3389/fphys.2024.1393235",
+      "Nuckols, How to Bench Press: The Definitive Guide — Stronger by Science, accessed 2026. https://www.strongerbyscience.com/how-to-bench/",
+      "Incline Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/incline-bench-press/kg"
+    ]
+  },
+  {
+    "id": "low-to-high-cable-fly",
+    "class": "incline-press",
+    "pattern": "chest-fly",
+    "name": {
+      "en": "Low-to-high cable fly",
+      "ru": "Сведение рук в кроссовере снизу вверх"
+    },
+    "aka": [
+      "Low cable fly",
+      "Incline cable fly",
+      "Low-to-high cable crossover",
+      "Upward cable fly"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "cable-fly",
+      "pec-deck",
+      "machine-incline-press",
+      "incline-dumbbell-press",
+      "dumbbell-fly",
+      "high-to-low-cable-fly"
+    ],
+    "setup": {
+      "en": "Set both pulleys between knee and hip height with single handles. Step forward into a staggered stance until the cables pull your arms slightly back and down, palms forward, elbows softly bent.",
+      "ru": "Установите оба блока между уровнем коленей и бёдер, одиночные рукоятки. Шагните вперёд в разножку, чтобы тросы слегка тянули руки назад-вниз; ладони вперёд, локти слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Brace the abs and keep the torso upright — no leaning back.",
+        "Lock a soft bend in the elbows; it doesn't change during the rep.",
+        "Sweep the hands up and in along an arc, finishing level with the chin.",
+        "Squeeze for 1 s with the hands together, breathing out.",
+        "Lower for 2–3 s and stop when the hands reach the line of your armpits — not behind you.",
+        "Keep the shoulders down: the upper chest lifts the arms, not a shrug."
+      ],
+      "ru": [
+        "Напрягите пресс и держите корпус вертикально — без отклонения назад.",
+        "Зафиксируйте лёгкий сгиб в локтях; он не меняется по ходу повтора.",
+        "Ведите руки по дуге вверх и к центру, заканчивая на уровне подбородка.",
+        "Задержитесь на 1 секунду, кисти вместе, — на выдохе.",
+        "Опускайте 2–3 секунды и остановитесь, когда кисти дошли до линии подмышек, — не за спину.",
+        "Плечи опущены: руки поднимает верх груди, а не трапеции."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bending the elbows so it becomes a front raise or a press.",
+        "Letting the cables pull the hands behind the body at the bottom.",
+        "Shrugging and leaning back to lift the handles.",
+        "Too much weight, so the reps get short and jerky."
+      ],
+      "ru": [
+        "Сгибание локтей — получается подъём перед собой или жим.",
+        "Тросы утягивают руки за корпус в нижней точке.",
+        "Подъём плеч к ушам и отклонение назад, чтобы поднять рукоятки.",
+        "Слишком большой вес: повторы короткие и рывковые."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Per handle: ≈0.6 × Strength Level Beginner cable fly 1RM (8 kg at 80 kg)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Incline Cable Flyes — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/163/standing-incline-cable-flyes/",
+      "Rodríguez-Ridao et al., Five bench inclinations and pectoralis, deltoid and triceps EMG — Int J Environ Res Public Health, 2020. https://doi.org/10.3390/ijerph17197339",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Cable Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-fly/kg"
+    ]
+  },
+  {
+    "id": "triceps-press-machine",
+    "class": "decline-press",
+    "pattern": "decline-push",
+    "name": {
+      "en": "Triceps press machine (seated dip)",
+      "ru": "Отжимания сидя в тренажёре (на трицепс)"
+    },
+    "aka": [
+      "Seated dip machine",
+      "Life Fitness Insignia Triceps Press",
+      "Nautilus Inspiration Tricep Dip",
+      "Matrix Ultra Triceps Press",
+      "Hammer Strength Plate-Loaded Seated Dip",
+      "Nautilus One Triceps Press"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "triceps-lateral",
+      "pec-costal"
+    ],
+    "secondary": [
+      "triceps-long",
+      "delt-front",
+      "pec-sternal"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "assisted-dip",
+      "decline-chest-press-machine",
+      "dip",
+      "diamond-push-up",
+      "machine-triceps-extension"
+    ],
+    "setup": {
+      "en": "Set the seat so that, holding the handles at your sides, your elbows are bent about 90° with the hands just below chest height. Fasten the thigh pad snugly and sit tall with your back on the pad.",
+      "ru": "Отрегулируйте сиденье так, чтобы, держа рукоятки по бокам, локти были согнуты примерно на 90°, а кисти — чуть ниже уровня груди. Плотно зафиксируйте валик на бёдрах, сядьте ровно, спина на спинке."
+    },
+    "cues": {
+      "en": [
+        "Sit tall with the chest up and the shoulders pulled down away from the ears.",
+        "Keep the elbows close to your sides and pointing back, not out.",
+        "Breathe out and press the handles down until the arms are straight.",
+        "Squeeze the triceps for a second at the bottom without shrugging.",
+        "Return for 2–3 s until the elbows are bent about 90° — no higher.",
+        "Stay upright for the triceps; leaning forward shifts the work to the chest.",
+        "Move only at the elbows and shoulders — no rocking off the seat."
+      ],
+      "ru": [
+        "Сядьте ровно, грудь вперёд, плечи опущены — подальше от ушей.",
+        "Локти близко к корпусу и направлены назад, а не в стороны.",
+        "На выдохе выжимайте рукоятки вниз до прямых рук.",
+        "Внизу секунду напрягите трицепс, не поднимая плечи.",
+        "Возвращайте рукоятки 2–3 секунды, пока локти не согнутся примерно на 90°, — не выше.",
+        "Для трицепса держите корпус вертикально; наклон вперёд переносит работу на грудь.",
+        "Движение только в локтях и плечах — без раскачки на сиденье."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the handles ride up past 90° so the shoulders roll forward — strains the front of the shoulder.",
+        "Elbows flaring wide.",
+        "Shrugging the shoulders up at the top of each rep.",
+        "Rocking or lifting off the seat to move the stack.",
+        "Ego loading with half reps near the bottom."
+      ],
+      "ru": [
+        "Рукоятки уходят вверх выше 90°, плечи заваливаются вперёд — перегрузка передней части плеча.",
+        "Локти разводятся в стороны.",
+        "Плечи поднимаются к ушам в верхней точке каждого повтора.",
+        "Раскачка или отрыв от сиденья, чтобы сдвинуть вес.",
+        "Эго-лифтинг с половинчатыми повторами внизу."
+      ]
+    },
+    "startLoad": {
+      "kg": 35,
+      "source": "≈0.6 × Strength Level Beginner seated dip machine 1RM (56 kg at 80 kg) ≈ 34 kg"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "McKenzie et al., Bench, bar and ring dips: kinematics and muscle activity — Int J Environ Res Public Health, 2022. https://doi.org/10.3390/ijerph192013211",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Seated Dip Machine Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/seated-dip-machine/kg"
+    ]
+  },
+  {
+    "id": "decline-chest-press-machine",
+    "class": "decline-press",
+    "pattern": "decline-push",
+    "name": {
+      "en": "Decline chest press machine",
+      "ru": "Жим под отрицательным углом в тренажёре"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral Decline Press",
+      "Hammer Strength MTS Iso-Lateral Decline Press",
+      "Lower chest press",
+      "Decline press machine"
+    ],
+    "equipment": "plate-loaded",
+    "primary": [
+      "pec-costal",
+      "pec-sternal"
+    ],
+    "secondary": [
+      "triceps-lateral",
+      "delt-front"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "assisted-dip",
+      "triceps-press-machine",
+      "dip",
+      "high-to-low-cable-fly",
+      "machine-chest-press"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles start at lower-chest height with your back on the pad; the arms press forward and down toward the waist. On plate-loaded models load both arms equally and log the total.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукоятки в старте были на уровне нижней части груди, спина на спинке; рычаги идут вперёд-вниз, к поясу. В моделях с дисками вешайте поровну на оба рычага и записывайте общий вес."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades back and down before the first rep.",
+        "Elbows about 45° from your sides, wrists straight.",
+        "Breathe out and press forward and down until the arms are almost straight.",
+        "Keep the shoulders on the pad; don't let them roll forward at the end.",
+        "Return for 2–3 s until the hands are back at the lower chest.",
+        "Press both arms evenly — the levers are independent."
+      ],
+      "ru": [
+        "Перед первым повтором сведите и опустите лопатки.",
+        "Локти примерно под 45° к корпусу, запястья прямые.",
+        "На выдохе выжимайте вперёд-вниз почти до прямых рук.",
+        "Плечи остаются на спинке, не заваливайте их вперёд в конце.",
+        "Возвращайте 2–3 секунды, пока кисти не вернутся к нижней части груди.",
+        "Жмите обеими руками равномерно — рычаги независимые."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat set so the handles start at mid-chest or higher — it becomes a flat press.",
+        "Letting the levers pull the hands behind the chest line.",
+        "Shoulders rolling forward and shrugging at lockout.",
+        "Ego loading with bounced reps."
+      ],
+      "ru": [
+        "Сиденье выставлено так, что рукоятки стартуют на середине груди или выше, — получается обычный жим.",
+        "Рычаги утягивают кисти за линию груди.",
+        "Плечи заваливаются вперёд и поднимаются в конце жима.",
+        "Эго-лифтинг с отбитыми повторами."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Total plates (10 kg per arm): ≈0.6 × the decline-bench seed (Strength Level Beginner 58 kg × 0.6 ≈ 35 kg), research 04 §3.8"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Decline Cable Press — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/166/seated-decline-cable-press/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Decline Bench Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/decline-bench-press/kg"
+    ]
+  },
+  {
+    "id": "assisted-dip",
+    "class": "decline-press",
+    "pattern": "decline-push",
+    "name": {
+      "en": "Assisted dip machine",
+      "ru": "Отжимания на брусьях в гравитроне"
+    },
+    "aka": [
+      "Gravitron dip",
+      "Life Fitness Insignia Assist Dip Chin",
+      "Assisted dip/chin machine",
+      "Machine-assisted dip"
+    ],
+    "equipment": "assisted",
+    "primary": [
+      "pec-costal",
+      "triceps-lateral"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-long"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "assistance": true,
+    "alternatives": [
+      "triceps-press-machine",
+      "decline-chest-press-machine",
+      "dip",
+      "diamond-push-up",
+      "high-to-low-cable-fly"
+    ],
+    "setup": {
+      "en": "Choose the assistance first (more kg = easier), take the dip handles, then kneel or stand on the platform with straight arms and the shoulders pulled down. Log the assistance, not your body weight.",
+      "ru": "Сначала выберите противовес (больше кг — легче), возьмитесь за брусья, затем встаньте коленями или стопами на платформу на прямых руках, плечи опущены. Записывайте вес противовеса, а не свой вес."
+    },
+    "cues": {
+      "en": [
+        "Start tall: arms straight, shoulders pushed down away from the ears.",
+        "Lean the torso slightly forward and keep the elbows pointing back.",
+        "Lower for 2–3 s until the upper arms are about parallel to the floor — no deeper.",
+        "Breathe out and press up until the arms are straight.",
+        "Keep tension at the top; don't let the platform bounce you.",
+        "Once you pass 12 reps, take 5 kg of assistance off."
+      ],
+      "ru": [
+        "Старт в верхней точке: руки прямые, плечи опущены, подальше от ушей.",
+        "Слегка наклоните корпус вперёд, локти направлены назад.",
+        "Опускайтесь 2–3 секунды, пока плечи не станут примерно параллельны полу, — не глубже.",
+        "На выдохе выжимайте себя вверх до прямых рук.",
+        "Держите напряжение вверху — не давайте платформе подбрасывать вас.",
+        "Когда получается больше 12 повторов, уменьшите противовес на 5 кг."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Sinking far below parallel: the deepest part of the dip strains the front of the shoulder.",
+        "Shoulders shrugging up to the ears at the bottom.",
+        "Elbows flaring wide.",
+        "Dropping fast and bouncing off the counterweight.",
+        "Logging it backwards: less assistance means harder."
+      ],
+      "ru": [
+        "Опускание намного ниже параллели: самая глубокая часть движения перегружает переднюю часть плеча.",
+        "Плечи поднимаются к ушам в нижней точке.",
+        "Локти разводятся в стороны.",
+        "Быстрое падение вниз и отбив от противовеса.",
+        "Путаница в записи: меньше противовес — значит тяжелее."
+      ]
+    },
+    "startLoad": {
+      "kg": 40,
+      "source": "Assistance, not load: about half of an 80 kg body weight, since Strength Level Beginner = 3 bodyweight dips; take 5 kg off after 12 reps"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "McKenzie et al., Bench, bar and ring dips: kinematics and muscle activity — Int J Environ Res Public Health, 2022. https://doi.org/10.3390/ijerph192013211",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Dips Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dips/kg"
+    ]
+  },
+  {
+    "id": "dip",
+    "class": "decline-press",
+    "pattern": "decline-push",
+    "name": {
+      "en": "Parallel bar dip",
+      "ru": "Отжимания на брусьях"
+    },
+    "aka": [
+      "Dip",
+      "Bar dip",
+      "Chest dip",
+      "Triceps dip"
+    ],
+    "equipment": "bodyweight",
+    "primary": [
+      "pec-costal",
+      "triceps-lateral"
+    ],
+    "secondary": [
+      "delt-front",
+      "pec-sternal",
+      "triceps-long"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      5,
+      12
+    ],
+    "alternatives": [
+      "assisted-dip",
+      "triceps-press-machine",
+      "decline-chest-press-machine",
+      "diamond-push-up",
+      "close-grip-bench-press",
+      "high-to-low-cable-fly"
+    ],
+    "setup": {
+      "en": "Grip the bars about shoulder width, jump to straight arms with the shoulders pushed down and cross your ankles behind you. Below 5 clean reps use the assisted dip; extra load later goes on a dip belt.",
+      "ru": "Возьмитесь за брусья примерно на ширине плеч, выпрыгните на прямые руки, опустив плечи, и скрестите голени позади. Пока не выходит 5 чистых повторов — используйте гравитрон; отягощение позже — на пояс для отягощений."
+    },
+    "cues": {
+      "en": [
+        "Shoulders down and back at the top — long neck.",
+        "Lean slightly forward for more chest; stay upright for more triceps.",
+        "Lower for 2–3 s until the upper arms are about parallel to the floor.",
+        "Keep the elbows tracking back, not out.",
+        "Breathe out and press up to straight arms.",
+        "End the set when depth or speed starts to drop."
+      ],
+      "ru": [
+        "Вверху плечи опущены и отведены назад — шея длинная.",
+        "Небольшой наклон вперёд — больше грудь; вертикальный корпус — больше трицепс.",
+        "Опускайтесь 2–3 секунды, пока плечи не станут примерно параллельны полу.",
+        "Локти идут назад, а не в стороны.",
+        "На выдохе выжимайте себя до прямых рук.",
+        "Заканчивайте подход, когда начинают проседать глубина или скорость."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Going far below parallel: the end-range stretch overloads the front of the shoulder.",
+        "Shoulders shrugging up to the ears at the bottom.",
+        "Swinging the legs or kipping.",
+        "Elbows flaring wide.",
+        "Adding weight before 12 clean bodyweight reps."
+      ],
+      "ru": [
+        "Опускание сильно ниже параллели: растяжение в крайней точке перегружает переднюю часть плеча.",
+        "Плечи поднимаются к ушам в нижней точке.",
+        "Раскачка ногами или рывки.",
+        "Локти разводятся в стороны.",
+        "Отягощение раньше, чем получится 12 чистых повторов со своим весом."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Body weight; Strength Level Beginner = 3 dips for an 80 kg man — use the assisted dip below 5 reps"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "McKenzie et al., Bench, bar and ring dips: kinematics and muscle activity — Int J Environ Res Public Health, 2022. https://doi.org/10.3390/ijerph192013211",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Dips Standards — Strength Level, 2026. https://strengthlevel.com/strength-standards/dips/kg"
+    ]
+  },
+  {
+    "id": "high-to-low-cable-fly",
+    "class": "decline-press",
+    "pattern": "chest-fly",
+    "name": {
+      "en": "High-to-low cable fly",
+      "ru": "Сведение рук в кроссовере сверху вниз"
+    },
+    "aka": [
+      "Cable crossover",
+      "High cable fly",
+      "Decline cable fly",
+      "Standing cable crossover"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "pec-costal"
+    ],
+    "secondary": [
+      "pec-sternal",
+      "delt-front"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "cable-fly",
+      "pec-deck",
+      "decline-chest-press-machine",
+      "assisted-dip",
+      "dumbbell-fly",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set both pulleys at or just above head height with single handles. Step forward into a staggered stance with a slight forward lean until the cables pull your arms up and back, elbows softly bent.",
+      "ru": "Установите оба блока на уровне головы или чуть выше, одиночные рукоятки. Шагните вперёд в разножку с лёгким наклоном корпуса, чтобы тросы тянули руки вверх-назад; локти слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Brace and hold the torso still; only the arms move.",
+        "Keep a fixed soft bend in the elbows.",
+        "Sweep the hands down and in to meet in front of the lower chest or belt line.",
+        "Squeeze for 1 s, breathing out.",
+        "Return for 2–3 s and stop when the hands reach the line of your armpits.",
+        "Keep the shoulders down and back as the hands meet."
+      ],
+      "ru": [
+        "Напрягите пресс и держите корпус неподвижным — двигаются только руки.",
+        "Сохраняйте постоянный лёгкий сгиб в локтях.",
+        "Ведите руки по дуге вниз и к центру, сводя их перед низом груди или на уровне пояса.",
+        "Задержитесь на 1 секунду на выдохе.",
+        "Возвращайте 2–3 секунды и остановитесь, когда кисти дошли до линии подмышек.",
+        "Плечи опущены и отведены назад, когда кисти сходятся."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the cables pull the arms behind the body.",
+        "Bending and straightening the elbows, so it becomes a pressdown.",
+        "Bobbing the torso to swing the weight.",
+        "Rounding the shoulders forward at the finish."
+      ],
+      "ru": [
+        "Тросы утягивают руки за корпус.",
+        "Сгибание и разгибание локтей — получается жим вниз.",
+        "Раскачка корпусом, чтобы закинуть вес.",
+        "Плечи заваливаются вперёд в конце движения."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Per handle: ≈0.6 × Strength Level Beginner cable fly 1RM (8 kg at 80 kg)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Standing Decline Cable Flyes — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/161/standing-decline-cable-flyes/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Cable Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-fly/kg"
+    ]
+  },
+  {
+    "id": "pec-deck",
+    "class": "chest-fly",
+    "pattern": "chest-fly",
+    "name": {
+      "en": "Pec deck (machine fly)",
+      "ru": "Бабочка (пек-дек)"
+    },
+    "aka": [
+      "Technogym Selection / Element Pectoral",
+      "Technogym Selection 700 Dual Pectoral/Reverse Fly",
+      "Life Fitness Insignia Pectoral Fly/Rear Deltoid",
+      "Nautilus Inspiration Pec Fly/Rear Deltoid",
+      "Machine chest fly",
+      "Butterfly"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "pec-costal",
+      "delt-front"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "cable-fly",
+      "dumbbell-fly",
+      "high-to-low-cable-fly",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles (or arm pads) are at chest height with the upper arms about parallel to the floor. Set the start position so that at the widest point your hands are level with your body, never behind it.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукоятки (или упоры для рук) были на высоте груди, а плечи — примерно параллельны полу. Выставьте стартовую позицию так, чтобы в самой широкой точке кисти были на линии корпуса, но не позади него."
+    },
+    "cues": {
+      "en": [
+        "Head and back on the pad, shoulder blades pulled back and down.",
+        "Soft, fixed bend in the elbows — the movement happens at the shoulder.",
+        "Bring the handles together in a wide arc, as if hugging a big tree.",
+        "Squeeze for 1 s with the hands in front of your chest, breathing out.",
+        "Open for 2–3 s until you feel a stretch across the chest with the elbows still in line with your torso.",
+        "Keep the shoulders down and the neck relaxed through the whole rep.",
+        "Don't let the plates touch between reps — keep the tension on."
+      ],
+      "ru": [
+        "Голова и спина на спинке, лопатки сведены и опущены.",
+        "Лёгкий постоянный сгиб в локтях — движение идёт в плечевом суставе.",
+        "Сводите рукоятки по широкой дуге, будто обнимаете толстое дерево.",
+        "Задержитесь на 1 секунду, кисти перед грудью, — на выдохе.",
+        "Разводите 2–3 секунды до ощущения растяжения в груди, пока локти ещё на линии корпуса.",
+        "Плечи опущены, шея расслаблена весь повтор.",
+        "Не опускайте плиты до касания между повторами — держите напряжение."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Start position set too wide, so the arms are pulled behind the body — the “high-five” position that loads the front of the shoulder capsule.",
+        "Bending and straightening the elbows, turning it into a press.",
+        "Seat too low or too high: the handles end up above the shoulders or far below the chest.",
+        "Shoulders rolling forward or shrugging as the hands meet.",
+        "Letting the weight yank the arms open so the plates bang down.",
+        "Ego loading with short, jerky reps."
+      ],
+      "ru": [
+        "Стартовая позиция слишком широкая: руки уходят за корпус — положение «дай пять», которое нагружает переднюю капсулу плечевого сустава.",
+        "Сгибание и разгибание локтей — получается жим.",
+        "Сиденье слишком низко или высоко: рукоятки оказываются выше плеч или намного ниже груди.",
+        "Плечи заваливаются вперёд или поднимаются, когда кисти сходятся.",
+        "Вес резко растаскивает руки, и плиты грузоблока бьются друг о друга.",
+        "Эго-лифтинг с короткими рывковыми повторами."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "≈0.6 × Strength Level Beginner machine fly 1RM (42 kg at 80 kg), research 04 §3.9"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Machine Chest Fly: muscles worked and proper form — StrengthLog, 2026. https://www.strengthlog.com/machine-chest-fly/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Pinto et al., Pectoralis thickness after one vs three sets of pec deck in untrained men — J Strength Cond Res, 2025. https://doi.org/10.1519/JSC.0000000000005045",
+      "Machine Chest Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-chest-fly/kg"
+    ]
+  },
+  {
+    "id": "cable-fly",
+    "class": "chest-fly",
+    "pattern": "chest-fly",
+    "name": {
+      "en": "Cable fly",
+      "ru": "Сведение рук в кроссовере"
+    },
+    "aka": [
+      "Cable crossover fly",
+      "Standing cable fly",
+      "Cable chest fly",
+      "Mid-pulley cable fly"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "pec-costal",
+      "delt-front"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "pec-deck",
+      "dumbbell-fly",
+      "high-to-low-cable-fly",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Set both pulleys at or slightly above shoulder height with single handles. Take one handle in each hand, step forward into a staggered stance and lean slightly forward until the cables hold your arms open at chest height, elbows softly bent.",
+      "ru": "Установите оба блока на уровне плеч или чуть выше, одиночные рукоятки. Возьмите по рукоятке в каждую руку, шагните вперёд в разножку и слегка наклоните корпус, чтобы тросы удерживали разведённые руки на высоте груди; локти слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Staggered stance, abs braced, a slight forward lean that doesn't change.",
+        "Fix a soft bend in the elbows for the whole set.",
+        "Sweep the hands forward and together at chest height, as if hugging a barrel.",
+        "Squeeze for 1 s with the hands meeting in front of your lower chest; breathe out.",
+        "Return for 2–3 s and stop when the hands are in line with your torso — never behind it.",
+        "Keep the shoulders down and back; don't let them roll forward at the finish.",
+        "Pick a weight you control in the stretch: the cable loads the chest hardest there."
+      ],
+      "ru": [
+        "Разножка, пресс напряжён, небольшой наклон вперёд, который не меняется.",
+        "Зафиксируйте лёгкий сгиб в локтях на весь подход.",
+        "Сводите руки вперёд на уровне груди, будто обнимаете бочку.",
+        "Задержитесь на 1 секунду, кисти сходятся перед нижней частью груди; выдох.",
+        "Возвращайте руки 2–3 секунды и остановитесь, когда кисти окажутся на линии корпуса, — не заводите их за спину.",
+        "Плечи опущены и отведены назад; не заваливайте их вперёд в конце.",
+        "Берите вес, который контролируете в растяжении: именно там трос нагружает грудь сильнее всего."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the cables drag the arms far behind the body — strains the front of the shoulder.",
+        "Bending and straightening the elbows, turning it into a press.",
+        "Rocking the torso to swing the handles.",
+        "Shrugging or rounding the shoulders as the hands meet.",
+        "Ego loading — the stack slamming between reps."
+      ],
+      "ru": [
+        "Тросы утягивают руки далеко за корпус — это перегружает переднюю часть плеча.",
+        "Сгибание и разгибание локтей — получается жим.",
+        "Раскачка корпусом, чтобы закинуть рукоятки.",
+        "Плечи поднимаются или заваливаются вперёд, когда кисти сходятся.",
+        "Эго-лифтинг — плиты грохочут между повторами."
+      ]
+    },
+    "startLoad": {
+      "kg": 5,
+      "source": "Per handle: ≈0.6 × Strength Level Beginner cable fly 1RM (8 kg at 80 kg)"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Standing Chest Fly (cables) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/160/standing-chest-fly/",
+      "Standing Decline Cable Flyes — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/161/standing-decline-cable-flyes/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Cable Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-fly/kg"
+    ]
+  },
+  {
+    "id": "dumbbell-fly",
+    "class": "chest-fly",
+    "pattern": "chest-fly",
+    "name": {
+      "en": "Dumbbell fly",
+      "ru": "Разводка гантелей лёжа"
+    },
+    "aka": [
+      "Flat dumbbell fly",
+      "DB fly",
+      "Lying chest fly"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "pec-sternal"
+    ],
+    "secondary": [
+      "pec-clavicular",
+      "delt-front"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "alternatives": [
+      "pec-deck",
+      "cable-fly",
+      "high-to-low-cable-fly",
+      "low-to-high-cable-fly"
+    ],
+    "setup": {
+      "en": "Lie on a flat bench, press the dumbbells up over your chest with the palms facing each other, then unlock the elbows into a slight bend.",
+      "ru": "Лягте на горизонтальную скамью, выжмите гантели над грудью ладонями друг к другу и слегка согните локти."
+    },
+    "cues": {
+      "en": [
+        "Shoulder blades back and down; head, shoulders and hips on the bench.",
+        "Keep the slight elbow bend fixed from the first rep to the last.",
+        "Lower in a wide arc for 2–3 s until the dumbbells are level with your chest — no lower.",
+        "Breathe out and bring them back up along the same arc, as if hugging a barrel.",
+        "Stop with the dumbbells a hand's width apart above the chest to keep the tension.",
+        "Go light: the stretch at the bottom is where the shoulder is most exposed."
+      ],
+      "ru": [
+        "Лопатки сведены и опущены; голова, лопатки и таз на скамье.",
+        "Лёгкий сгиб в локтях одинаковый от первого повтора до последнего.",
+        "Опускайте по широкой дуге 2–3 секунды, пока гантели не окажутся на уровне груди, — не ниже.",
+        "На выдохе возвращайте их по той же дуге, будто обнимаете бочку.",
+        "Остановитесь, когда между гантелями останется ладонь, — так сохраняется напряжение.",
+        "Берите лёгкий вес: в растяжении внизу плечевой сустав наиболее уязвим."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Dropping the dumbbells below chest level for a deep stretch — the classic way to strain a shoulder or a pec.",
+        "Bending the elbows more as you lower, turning it into a press.",
+        "Going heavy for low reps.",
+        "Clanging the dumbbells together at the top.",
+        "Arching the back or lifting the hips."
+      ],
+      "ru": [
+        "Гантели опускают ниже уровня груди ради глубокой растяжки — классический способ травмировать плечо или грудную мышцу.",
+        "Локти сгибаются всё сильнее по ходу опускания — получается жим.",
+        "Тяжёлый вес на малое число повторов.",
+        "Гантели бьются друг о друга вверху.",
+        "Прогиб в спине или отрыв таза."
+      ]
+    },
+    "startLoad": {
+      "kg": 4,
+      "source": "Per hand: ≈0.6 × Strength Level Beginner dumbbell fly 1RM (8 kg per hand at 80 kg) ≈ 5 kg, rounded down"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Lying Chest Fly — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/21/lying-chest-fly/",
+      "Welsch et al., Pectoralis and anterior deltoid EMG in three upper-body lifts — J Strength Cond Res, 2005. https://doi.org/10.1519/14513.1",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Dumbbell Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-fly/kg"
+    ]
+  },
+  {
+    "id": "machine-shoulder-press",
+    "class": "vertical-press",
+    "pattern": "vertical-push",
+    "name": {
+      "en": "Shoulder press machine",
+      "ru": "Жим над головой в тренажёре"
+    },
+    "aka": [
+      "Technogym Selection / Element Shoulder Press",
+      "Life Fitness Insignia Shoulder Press",
+      "Cybex Eagle NX Overhead Press",
+      "Matrix Versa Converging Shoulder Press",
+      "Hammer Strength MTS Iso-Lateral Shoulder Press",
+      "Nautilus Inspiration Shoulder Press"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "delt-front"
+    ],
+    "secondary": [
+      "delt-side",
+      "triceps-lateral",
+      "pec-clavicular",
+      "traps-upper"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "plate-loaded-shoulder-press",
+      "seated-dumbbell-shoulder-press",
+      "smith-shoulder-press",
+      "landmine-press"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles start level with your shoulders or slightly above, with your back flat on the pad and feet planted. Use the neutral (palms-in) handles if the machine has them.",
+      "ru": "Отрегулируйте сиденье так, чтобы рукоятки в старте были на уровне плеч или чуть выше; спина плотно на спинке, стопы на полу. Если есть нейтральные рукоятки (ладони друг к другу) — берите их."
+    },
+    "cues": {
+      "en": [
+        "Back and head on the pad, ribs down — brace without arching.",
+        "Keep the elbows slightly in front of your body — angled about 30° forward rather than flared straight out to the sides.",
+        "Start with the shoulders down, away from the ears; as you press, let the shoulder blades rotate up with the arms instead of pinning them down or hunching.",
+        "Breathe out and press up until the arms are almost straight, hands over or just in front of your head.",
+        "Lower for 2–3 s until the hands are back at shoulder height — no deeper.",
+        "Keep the wrists straight over the elbows.",
+        "If your lower back leaves the pad, the weight is too heavy."
+      ],
+      "ru": [
+        "Спина и голова на спинке, рёбра опущены — напрягите пресс, не прогибаясь.",
+        "Держите локти немного впереди корпуса — примерно на 30° вперёд, а не прямо в стороны.",
+        "В старте плечи опущены, подальше от ушей; по ходу жима дайте лопаткам поворачиваться вверх вместе с руками — не прижимайте их вниз и не втягивайте голову в плечи.",
+        "На выдохе выжимайте вверх почти до прямых рук, кисти над головой или чуть впереди.",
+        "Опускайте 2–3 секунды, пока кисти не вернутся на уровень плеч, — не ниже.",
+        "Запястья прямые, точно над локтями.",
+        "Если поясница отрывается от спинки — вес слишком большой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat too high: each rep starts with the hands below the shoulders, overloading the front of the shoulder.",
+        "Arching the lower back off the pad to press more.",
+        "Shrugging into the press, so the neck and upper traps take over.",
+        "Pressing behind the head on the wide handles: it needs end-range shoulder mobility most people lack.",
+        "Elbows flared straight out to the sides.",
+        "Half reps with too much weight."
+      ],
+      "ru": [
+        "Сиденье слишком высоко: каждый повтор начинается с кистями ниже плеч, и передняя часть плеча перегружается.",
+        "Поясница отрывается от спинки и прогибается, чтобы выжать больше.",
+        "Плечи поднимаются к ушам во время жима — работу забирают шея и верх трапеций.",
+        "Жим из-за головы на широких рукоятках: он требует подвижности плеча, которой у большинства нет.",
+        "Локти разведены прямо в стороны.",
+        "Половинчатые повторы с чрезмерным весом."
+      ]
+    },
+    "startLoad": {
+      "kg": 17.5,
+      "source": "≈0.6 × Strength Level Beginner machine shoulder press 1RM (29 kg at 80 kg), research 04 §3.9"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Shoulder Press (machine) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/186/seated-shoulder-press/",
+      "Coratella et al., Front vs back and barbell vs machine overhead press: EMG — Front Physiol, 2022. https://doi.org/10.3389/fphys.2022.825880",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Machine Shoulder Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-shoulder-press/kg",
+      "Ludewig et al., Motion of the shoulder complex during multiplanar humeral elevation — J Bone Joint Surg Am, 2009. https://doi.org/10.2106/JBJS.G.01483"
+    ]
+  },
+  {
+    "id": "plate-loaded-shoulder-press",
+    "class": "vertical-press",
+    "pattern": "vertical-push",
+    "name": {
+      "en": "Plate-loaded shoulder press",
+      "ru": "Жим над головой в рычажном тренажёре"
+    },
+    "aka": [
+      "Hammer Strength Iso-Lateral Shoulder Press",
+      "Technogym Pure Strength Shoulder Press",
+      "Lever shoulder press",
+      "Iso-lateral shoulder press"
+    ],
+    "equipment": "plate-loaded",
+    "primary": [
+      "delt-front"
+    ],
+    "secondary": [
+      "delt-side",
+      "triceps-lateral",
+      "pec-clavicular",
+      "traps-upper"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-shoulder-press",
+      "seated-dumbbell-shoulder-press",
+      "smith-shoulder-press",
+      "landmine-press"
+    ],
+    "setup": {
+      "en": "Set the seat so the handles start at shoulder height with your back flat on the pad. Load equal plates on both arms and log their total.",
+      "ru": "Сиденье так, чтобы рукоятки в старте были на уровне плеч, спина плотно на спинке. Вешайте на оба рычага одинаковые диски и записывайте их общий вес."
+    },
+    "cues": {
+      "en": [
+        "Back on the pad, ribs down, feet planted.",
+        "Elbows slightly in front of the body, wrists over the elbows.",
+        "Pull the shoulders down before the first rep.",
+        "Breathe out and press both arms up evenly until almost straight.",
+        "Lower for 2–3 s back to shoulder height without letting the levers drop.",
+        "Watch for a weaker side — the arms move independently."
+      ],
+      "ru": [
+        "Спина на спинке, рёбра опущены, стопы упираются в пол.",
+        "Локти немного впереди корпуса, запястья над локтями.",
+        "Опустите плечи перед первым повтором.",
+        "На выдохе выжимайте обе руки вверх равномерно почти до прямых.",
+        "Опускайте 2–3 секунды до уровня плеч, не роняя рычаги.",
+        "Следите за слабой стороной — рычаги работают независимо."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Seat too low, so each rep starts deep below the shoulders.",
+        "Arching off the pad.",
+        "Shrugging at the top.",
+        "Uneven plates, or one arm racing ahead."
+      ],
+      "ru": [
+        "Сиденье слишком низко: каждый повтор начинается глубоко ниже плеч.",
+        "Прогиб с отрывом спины от спинки.",
+        "Подъём плеч к ушам вверху.",
+        "Разный вес на рычагах или одна рука опережает другую."
+      ]
+    },
+    "startLoad": {
+      "kg": 12.5,
+      "source": "Total plates (6.25 kg per arm): ≈0.6 × the overhead-press seed (Strength Level Beginner 33 kg × 0.6 ≈ 20 kg), research 04 §3.8"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Shoulder Press (machine) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/186/seated-shoulder-press/",
+      "Coratella et al., Front vs back and barbell vs machine overhead press: EMG — Front Physiol, 2022. https://doi.org/10.3389/fphys.2022.825880",
+      "Shoulder Press (barbell) Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/shoulder-press/kg"
+    ]
+  },
+  {
+    "id": "smith-shoulder-press",
+    "class": "vertical-press",
+    "pattern": "vertical-push",
+    "name": {
+      "en": "Smith machine shoulder press",
+      "ru": "Жим над головой сидя в машине Смита"
+    },
+    "aka": [
+      "Seated Smith press",
+      "Smith overhead press",
+      "Technogym Multipower shoulder press"
+    ],
+    "equipment": "smith",
+    "primary": [
+      "delt-front"
+    ],
+    "secondary": [
+      "delt-side",
+      "triceps-lateral",
+      "pec-clavicular",
+      "traps-upper"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-shoulder-press",
+      "plate-loaded-shoulder-press",
+      "seated-dumbbell-shoulder-press",
+      "landmine-press",
+      "standing-barbell-overhead-press"
+    ],
+    "setup": {
+      "en": "Set a bench upright (80–90°) under the bar so it travels just in front of your face, with the safety stops at about chin height. Grip slightly wider than the shoulders.",
+      "ru": "Поставьте скамью почти вертикально (80–90°) под гриф так, чтобы он ходил прямо перед лицом, а страховочные упоры — примерно на уровне подбородка. Хват чуть шире плеч."
+    },
+    "cues": {
+      "en": [
+        "Back and head on the pad, ribs down.",
+        "Unrack with the bar at about chin height and forearms vertical under it.",
+        "Breathe out and press up until the arms are almost straight.",
+        "Shoulders stay down — no shrug at the top.",
+        "Lower for 2–3 s to chin or upper-chest level, bar in front of the face.",
+        "Hook the bar onto a pin after the last rep."
+      ],
+      "ru": [
+        "Спина и голова на спинке, рёбра опущены.",
+        "Снимайте гриф примерно на уровне подбородка, предплечья вертикально под ним.",
+        "На выдохе выжимайте вверх почти до прямых рук.",
+        "Плечи опущены — не поднимайте их к ушам вверху.",
+        "Опускайте 2–3 секунды до уровня подбородка или верха груди, гриф перед лицом.",
+        "После последнего повтора зацепите гриф за упор."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bench placed so the bar comes down behind the head.",
+        "Arching hard off the backrest.",
+        "No safety stops set.",
+        "Shrugging and flaring the elbows straight out."
+      ],
+      "ru": [
+        "Скамья стоит так, что гриф опускается за голову.",
+        "Сильный прогиб с отрывом от спинки.",
+        "Не выставлены страховочные упоры.",
+        "Подъём плеч к ушам и локти, разведённые прямо в стороны."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Bar + plates: 0.6 × Strength Level Beginner overhead press 1RM (33 kg at 80 kg) ≈ 20 kg; Smith bars weigh 7–25 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Coratella et al., Front vs back and barbell vs machine overhead press: EMG — Front Physiol, 2022. https://doi.org/10.3389/fphys.2022.825880",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Shoulder Press (barbell) Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/shoulder-press/kg"
+    ]
+  },
+  {
+    "id": "seated-dumbbell-shoulder-press",
+    "class": "vertical-press",
+    "pattern": "vertical-push",
+    "name": {
+      "en": "Seated dumbbell shoulder press",
+      "ru": "Жим гантелей сидя"
+    },
+    "aka": [
+      "Seated DB press",
+      "Dumbbell overhead press",
+      "Seated dumbbell overhead press"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "delt-front"
+    ],
+    "secondary": [
+      "delt-side",
+      "triceps-lateral",
+      "pec-clavicular",
+      "traps-upper"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-shoulder-press",
+      "plate-loaded-shoulder-press",
+      "smith-shoulder-press",
+      "landmine-press",
+      "standing-barbell-overhead-press"
+    ],
+    "setup": {
+      "en": "Set the bench back upright (80–90°). Sit with the dumbbells on your thighs and kick them up one at a time to shoulder height, palms forward or turned in.",
+      "ru": "Поставьте спинку скамьи почти вертикально (80–90°). Сядьте, гантели на бёдрах, и толчком колена по одной подайте их к плечам, ладони вперёд или друг к другу."
+    },
+    "cues": {
+      "en": [
+        "Head, shoulders and hips on the bench; ribs down.",
+        "Elbows slightly in front of the body, forearms vertical.",
+        "Breathe out and press up and slightly in until the arms are almost straight.",
+        "Keep the shoulders down at the top.",
+        "Lower for 2–3 s until the dumbbells are at ear or chin level.",
+        "Bring the dumbbells back to your thighs to finish — don't drop them from overhead."
+      ],
+      "ru": [
+        "Голова, лопатки и таз на скамье; рёбра опущены.",
+        "Локти немного впереди корпуса, предплечья вертикальны.",
+        "На выдохе выжимайте вверх и немного к центру почти до прямых рук.",
+        "Вверху плечи опущены.",
+        "Опускайте 2–3 секунды, пока гантели не окажутся на уровне ушей или подбородка.",
+        "Закончив подход, опустите гантели на бёдра — не бросайте их сверху."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Arching the lower back off the bench.",
+        "Lowering the dumbbells far below the shoulders with the elbows behind the body.",
+        "Shrugging into the press.",
+        "Clanging the dumbbells together overhead."
+      ],
+      "ru": [
+        "Поясница отрывается от спинки и прогибается.",
+        "Гантели опускаются намного ниже плеч, локти уходят за корпус.",
+        "Плечи поднимаются к ушам во время жима.",
+        "Гантели бьются друг о друга над головой."
+      ]
+    },
+    "startLoad": {
+      "kg": 8,
+      "source": "Per hand: 0.6 × Strength Level Beginner dumbbell shoulder press 1RM (15 kg per hand at 80 kg) = 9 kg, rounded down"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Overhead Press (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/45/seated-overhead-press/",
+      "Saeterbakken & Fimland, Body position and loading modality in shoulder presses — J Strength Cond Res, 2013. https://doi.org/10.1519/JSC.0b013e318276b873",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Dumbbell Shoulder Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-shoulder-press/kg"
+    ]
+  },
+  {
+    "id": "landmine-press",
+    "class": "vertical-press",
+    "pattern": "vertical-push",
+    "name": {
+      "en": "Landmine press",
+      "ru": "Жим штанги в ландмайне"
+    },
+    "aka": [
+      "Angled barbell press",
+      "Two-hand landmine press",
+      "Single-arm landmine press",
+      "Barbell corner press"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "delt-front",
+      "pec-clavicular"
+    ],
+    "secondary": [
+      "triceps-lateral",
+      "serratus-anterior",
+      "transverse-abdominis"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-shoulder-press",
+      "plate-loaded-shoulder-press",
+      "seated-dumbbell-shoulder-press",
+      "smith-shoulder-press",
+      "standing-barbell-overhead-press"
+    ],
+    "setup": {
+      "en": "Put one end of a barbell in a landmine sleeve (or a padded corner), load the other end and stand in a staggered stance holding it with both hands at your upper chest. Log bar plus plates; an empty Olympic bar counts as 20 kg.",
+      "ru": "Вставьте один конец штанги в ландмайн (или уприте в угол через полотенце), на другой наденьте диски и встаньте в разножку, держа его обеими руками у верха груди. Записывайте гриф вместе с дисками; пустой олимпийский гриф — 20 кг."
+    },
+    "cues": {
+      "en": [
+        "Brace the abs and squeeze the glutes; the torso stays still.",
+        "Press up and forward along the bar's arc until the arms are straight.",
+        "Let the shoulder blades glide forward a little at the top; the angled path is easy on the shoulders.",
+        "Breathe out on the press.",
+        "Lower for 2–3 s back to the upper chest.",
+        "For the single-arm version, kneel on the knee on the pressing side and keep the hips square."
+      ],
+      "ru": [
+        "Напрягите пресс и ягодицы; корпус неподвижен.",
+        "Выжимайте вверх и вперёд по дуге грифа до прямых рук.",
+        "Вверху дайте лопаткам немного уйти вперёд; наклонная траектория бережёт плечи.",
+        "Выдох на жиме.",
+        "Опускайте 2–3 секунды обратно к верху груди.",
+        "В варианте одной рукой встаньте на колено со стороны рабочей руки и держите таз ровно."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning back with the lower back arched to turn it into an incline press.",
+        "Shrugging toward the ears at the top.",
+        "Driving with the legs (a push press) instead of the shoulders.",
+        "An unsecured bar end that slides on the floor."
+      ],
+      "ru": [
+        "Отклонение назад с прогибом в пояснице — жим превращается в наклонный.",
+        "Плечи поднимаются к ушам вверху.",
+        "Толчок ногами вместо работы плеч.",
+        "Незакреплённый конец грифа скользит по полу."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Empty 20 kg bar (≈11 kg felt at the hands); Strength Level Beginner landmine press = 20 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Landmine Press: muscles worked and proper form — StrengthLog, 2025. https://www.strengthlog.com/landmine-press/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Landmine Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/landmine-press/kg"
+    ]
+  },
+  {
+    "id": "standing-barbell-overhead-press",
+    "class": "vertical-press",
+    "pattern": "vertical-push",
+    "name": {
+      "en": "Standing barbell overhead press",
+      "ru": "Жим штанги стоя (армейский жим)"
+    },
+    "aka": [
+      "Overhead press (OHP)",
+      "Military press",
+      "Standing press",
+      "Strict press"
+    ],
+    "equipment": "barbell",
+    "primary": [
+      "delt-front"
+    ],
+    "secondary": [
+      "delt-side",
+      "triceps-lateral",
+      "pec-clavicular",
+      "traps-upper",
+      "serratus-anterior"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "landmine-press",
+      "machine-shoulder-press",
+      "plate-loaded-shoulder-press",
+      "seated-dumbbell-shoulder-press",
+      "smith-shoulder-press"
+    ],
+    "setup": {
+      "en": "Set the bar in a rack at upper-chest height and grip just outside the shoulders, bar low in the palms with forearms vertical. Step back with feet hip-width and the bar resting on the front delts.",
+      "ru": "Установите гриф в стойке на уровне верха груди; хват чуть шире плеч, гриф в основании ладоней, предплечья вертикальны. Отойдите на шаг, стопы на ширине таза, гриф лежит на передних дельтах."
+    },
+    "cues": {
+      "en": [
+        "Squeeze the glutes and brace the abs hard before every rep.",
+        "Breathe in, then press the bar straight up, tipping the head back just enough to clear the chin.",
+        "As the bar passes the forehead, move your head forward under it.",
+        "Finish with straight arms, biceps by the ears and the bar over mid-foot.",
+        "Lower for 2 s back to the front delts, elbows slightly in front of the bar.",
+        "Keep the ribs down and the torso vertical — no lean-back.",
+        "Stop each set with 1–2 reps in reserve."
+      ],
+      "ru": [
+        "Перед каждым повтором сильно напрягите ягодицы и пресс.",
+        "Вдохните и выжимайте гриф строго вверх, отведя голову назад ровно настолько, чтобы гриф прошёл мимо подбородка.",
+        "Когда гриф минует лоб, подайте голову вперёд, под гриф.",
+        "Вверху руки прямые, бицепсы у ушей, гриф над серединой стопы.",
+        "Опускайте 2 секунды обратно на передние дельты, локти чуть впереди грифа.",
+        "Рёбра опущены, корпус вертикален — без отклонения назад.",
+        "Заканчивайте подход с запасом 1–2 повтора."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning back into a standing incline press, so the lower back takes the load.",
+        "Pressing the bar around the face instead of moving the head.",
+        "Loose glutes and abs, so the hips drift forward.",
+        "Elbows flared out wide at the start.",
+        "Pressing behind the neck.",
+        "Pushing with the legs to finish reps."
+      ],
+      "ru": [
+        "Отклонение назад — жим превращается в наклонный, нагрузку берёт поясница.",
+        "Гриф ведут по дуге вокруг лица вместо того, чтобы убрать голову.",
+        "Расслабленные ягодицы и пресс — таз уезжает вперёд.",
+        "Локти широко разведены в старте.",
+        "Жим из-за головы.",
+        "Подталкивание ногами, чтобы дожать повтор."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "Empty 20 kg bar: 0.6 × Strength Level Beginner overhead press 1RM (33 kg at 80 kg) ≈ 20 kg"
+    },
+    "tags": [
+      "owner-alt",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "NSCA, Exercise Technique Manual for Resistance Training, 3rd ed. — Human Kinetics, 2016. https://canada.humankinetics.com/products/exercise-technique-manual-for-resistance-training-3rd-edition-with-online-video",
+      "Saeterbakken & Fimland, Body position and loading modality in shoulder presses — J Strength Cond Res, 2013. https://doi.org/10.1519/JSC.0b013e318276b873",
+      "Coratella et al., Front vs back and barbell vs machine overhead press: EMG — Front Physiol, 2022. https://doi.org/10.3389/fphys.2022.825880",
+      "Shoulder Press (barbell) Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/shoulder-press/kg"
+    ]
+  },
+  {
+    "id": "machine-lateral-raise",
+    "class": "lateral-raise",
+    "pattern": "lateral-raise",
+    "name": {
+      "en": "Lateral raise machine",
+      "ru": "Махи в стороны в тренажёре"
+    },
+    "aka": [
+      "Technogym Selection Delts Machine",
+      "Life Fitness Insignia Lateral Raise",
+      "Nautilus Inspiration Deltoid Raise",
+      "Hammer Strength Plate-Loaded Lateral Raise",
+      "Deltoid raise machine"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "delt-side"
+    ],
+    "secondary": [
+      "traps-upper",
+      "rotator-cuff",
+      "delt-front"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "cable-lateral-raise",
+      "dumbbell-lateral-raise",
+      "band-lateral-raise"
+    ],
+    "setup": {
+      "en": "Adjust the seat so your shoulder joints line up with the machine's pivot points (often marked). Rest the pads on the outside of your arms just above the elbows and hold the handles lightly.",
+      "ru": "Отрегулируйте сиденье так, чтобы плечевые суставы совпали с осями вращения тренажёра (их часто отмечают). Упоры — на внешней стороне рук чуть выше локтей, рукоятки держите без напряжения."
+    },
+    "cues": {
+      "en": [
+        "Line up the shoulders with the pivots before the first rep.",
+        "Sit tall with the chest against the pad (or the back flat on the backrest).",
+        "Lead with the elbows: push the pads out and up, not with the hands.",
+        "Raise until the upper arms are level with the shoulders — no higher.",
+        "Keep the shoulders down: think “arms out wide”, not “shoulders up”.",
+        "Pause for 1 s at the top, then lower for 2–3 s.",
+        "Breathe out on the way up, in on the way down."
+      ],
+      "ru": [
+        "Перед первым повтором совместите плечевые суставы с осями тренажёра.",
+        "Сидите ровно, грудью к упору (или спиной к спинке).",
+        "Ведите локтями: толкайте упоры в стороны и вверх, а не кистями.",
+        "Поднимайте до горизонтали плеч — не выше.",
+        "Плечи опущены: думайте «руки широко в стороны», а не «плечи вверх».",
+        "Задержитесь вверху на 1 секунду, затем опускайте 2–3 секунды.",
+        "Выдох на подъёме, вдох на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Pivots not lined up with the shoulders, so the path grinds or pinches.",
+        "Shrugging to lift the pads, so the upper traps do the work.",
+        "Raising above shoulder height.",
+        "Swinging the weight up and dropping it.",
+        "Leaning the torso to start the rep."
+      ],
+      "ru": [
+        "Оси тренажёра не совпадают с плечевыми суставами — движение идёт рывками или защемляет.",
+        "Подъём плеч к ушам, чтобы поднять упоры, — работают трапеции.",
+        "Подъём выше уровня плеч.",
+        "Вес забрасывают рывком и бросают вниз.",
+        "Отклонение корпуса, чтобы стронуть вес."
+      ]
+    },
+    "startLoad": {
+      "kg": 15,
+      "source": "0.6 × Strength Level Beginner machine lateral raise 1RM (25 kg at 80 kg) = 15 kg"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Lateral Shoulder Raise (machine) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/295/lateral-shoulder-raise/",
+      "Machine Lateral Raise — StrengthLog, 2023. https://www.strengthlog.com/machine-lateral-raise/",
+      "Lateral Raise (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/",
+      "Machine Lateral Raise Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-lateral-raise/kg"
+    ]
+  },
+  {
+    "id": "cable-lateral-raise",
+    "class": "lateral-raise",
+    "pattern": "lateral-raise",
+    "name": {
+      "en": "Cable lateral raise",
+      "ru": "Махи в сторону на нижнем блоке"
+    },
+    "aka": [
+      "Single-arm cable lateral raise",
+      "Cable side raise",
+      "Low-pulley lateral raise"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "delt-side"
+    ],
+    "secondary": [
+      "traps-upper",
+      "rotator-cuff"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 1.25,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "machine-lateral-raise",
+      "dumbbell-lateral-raise",
+      "band-lateral-raise"
+    ],
+    "setup": {
+      "en": "Set a pulley low (or about hand height for a flatter resistance curve) with a single handle. Stand side-on, hold the handle in the far hand so the cable runs in front of your body, and steady yourself on the machine with the other hand.",
+      "ru": "Установите блок внизу (или примерно на уровне кисти, чтобы нагрузка была ровнее), одиночная рукоятка. Встаньте боком, возьмите рукоятку дальней рукой так, чтобы трос проходил перед корпусом, другой рукой держитесь за тренажёр."
+    },
+    "cues": {
+      "en": [
+        "Soft bend in the elbow, with the elbow leading the hand.",
+        "Raise the arm out to the side until it is level with the shoulder.",
+        "Keep the shoulder down and the torso still — no leaning.",
+        "Pause briefly, then lower for 2–3 s until the hand is by your hip.",
+        "Breathe out on the way up.",
+        "Do the weaker arm first and match its reps with the other."
+      ],
+      "ru": [
+        "Локоть слегка согнут и идёт впереди кисти.",
+        "Поднимайте руку в сторону до уровня плеча.",
+        "Плечо опущено, корпус неподвижен — без наклона.",
+        "Короткая пауза, затем опускайте 2–3 секунды до уровня бедра.",
+        "Выдох на подъёме.",
+        "Начинайте со слабой руки и повторите её число повторов другой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Shrugging the shoulder up to start the rep.",
+        "Leaning away from the stack to swing the weight.",
+        "Raising above shoulder height with the thumb turned down.",
+        "Bending and straightening the elbow."
+      ],
+      "ru": [
+        "Подъём плеча к уху в начале повтора.",
+        "Отклонение от тренажёра, чтобы закинуть вес.",
+        "Подъём выше плеча с большим пальцем, развёрнутым вниз.",
+        "Сгибание и разгибание локтя."
+      ]
+    },
+    "startLoad": {
+      "kg": 2.5,
+      "source": "The lightest plate on most stacks; Strength Level Beginner cable lateral raise 1RM = 3 kg at 80 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Larsen et al., Dumbbell versus cable lateral raises for lateral deltoid hypertrophy — Front Physiol, 2025. https://doi.org/10.3389/fphys.2025.1611468",
+      "Cable Lateral Raise — StrengthLog, 2026. https://www.strengthlog.com/cable-lateral-raise/",
+      "Lateral Raise (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/",
+      "Cable Lateral Raise Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-lateral-raise/kg"
+    ]
+  },
+  {
+    "id": "dumbbell-lateral-raise",
+    "class": "lateral-raise",
+    "pattern": "lateral-raise",
+    "name": {
+      "en": "Dumbbell lateral raise",
+      "ru": "Махи гантелями в стороны"
+    },
+    "aka": [
+      "Side raise",
+      "Lateral raise",
+      "DB side lateral"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "delt-side"
+    ],
+    "secondary": [
+      "traps-upper",
+      "rotator-cuff",
+      "delt-front"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "machine-lateral-raise",
+      "cable-lateral-raise",
+      "band-lateral-raise"
+    ],
+    "setup": {
+      "en": "Stand with feet hip-width or in a split stance, dumbbells at your sides, palms facing in and elbows slightly bent. Brace and stand tall.",
+      "ru": "Встаньте, стопы на ширине таза или в разножке, гантели по бокам, ладони к корпусу, локти слегка согнуты. Напрягите пресс и выпрямитесь."
+    },
+    "cues": {
+      "en": [
+        "Raise the arms out to the sides with the elbows and upper arms leading the dumbbells.",
+        "Stop when the arms are level with the shoulders.",
+        "Near the top, tip the front of the dumbbells slightly up — never pour them thumb-down.",
+        "Shoulders down and back, torso still.",
+        "Lower for 2–3 s.",
+        "Breathe out on the way up."
+      ],
+      "ru": [
+        "Поднимайте руки в стороны: локти и плечи идут впереди гантелей.",
+        "Остановитесь, когда руки на уровне плеч.",
+        "Вверху слегка разверните передний край гантелей вверх — никогда не «выливайте» их большим пальцем вниз.",
+        "Плечи опущены и отведены назад, корпус неподвижен.",
+        "Опускайте 2–3 секунды.",
+        "Выдох на подъёме."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Swinging the torso to throw the weights up.",
+        "Shrugging, so the upper traps do the work.",
+        "Thumb-down “pouring” above shoulder height, which pinches the shoulder.",
+        "Dumbbells too heavy for the full range."
+      ],
+      "ru": [
+        "Раскачка корпусом, чтобы забросить гантели.",
+        "Подъём плеч — работу забирают трапеции.",
+        "«Выливание» гантелей большим пальцем вниз выше уровня плеч — защемляет плечо.",
+        "Гантели слишком тяжёлые для полной амплитуды."
+      ]
+    },
+    "startLoad": {
+      "kg": 3,
+      "source": "Per hand: 0.6 × Strength Level Beginner dumbbell lateral raise 1RM (5 kg per hand at 80 kg) = 3 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Lateral Raise (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/",
+      "Larsen et al., Dumbbell versus cable lateral raises for lateral deltoid hypertrophy — Front Physiol, 2025. https://doi.org/10.3389/fphys.2025.1611468",
+      "Dynamite Delts: ACE research identifies top shoulder exercises — ACE ProSource, 2015. https://www.acefitness.org/continuing-education/prosource/research-special-issue-2015/5320/dynamite-delts-ace-research-identifies-top-shoulder-exercises/",
+      "Dumbbell Lateral Raise Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-lateral-raise/kg"
+    ]
+  },
+  {
+    "id": "band-lateral-raise",
+    "class": "lateral-raise",
+    "pattern": "lateral-raise",
+    "name": {
+      "en": "Band lateral raise",
+      "ru": "Махи в стороны с резиновой лентой"
+    },
+    "aka": [
+      "Resistance band lateral raise",
+      "Band side raise"
+    ],
+    "equipment": "band",
+    "primary": [
+      "delt-side"
+    ],
+    "secondary": [
+      "traps-upper",
+      "rotator-cuff"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "machine-lateral-raise",
+      "cable-lateral-raise",
+      "dumbbell-lateral-raise"
+    ],
+    "setup": {
+      "en": "Stand on the middle of a band with feet hip-width and hold one end in each hand at your sides. For less tension, stand on it with one foot or hold the ends longer.",
+      "ru": "Встаньте на середину ленты, стопы на ширине таза, концы в руках по бокам. Чтобы уменьшить натяжение, наступите на неё одной ногой или возьмите концы длиннее."
+    },
+    "cues": {
+      "en": [
+        "Elbows slightly bent and leading the hands.",
+        "Raise the arms out to the sides to shoulder height.",
+        "Shoulders down, torso still.",
+        "Pause at the top, where the band is hardest, then lower for 2 s.",
+        "Progress with reps, then a stronger band or a shorter grip."
+      ],
+      "ru": [
+        "Локти слегка согнуты и идут впереди кистей.",
+        "Поднимайте руки в стороны до уровня плеч.",
+        "Плечи опущены, корпус неподвижен.",
+        "Задержитесь вверху, где лента тянет сильнее всего, и опускайте 2 секунды.",
+        "Прогрессируйте повторами, затем более тугой лентой или более коротким хватом."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Shrugging as the band tension rises.",
+        "Letting the band snap the arms down.",
+        "Leaning or swinging."
+      ],
+      "ru": [
+        "Подъём плеч к ушам по мере роста натяжения.",
+        "Лента резко бросает руки вниз.",
+        "Наклон корпуса или раскачка."
+      ]
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Lateral Raise (dumbbells) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/26/lateral-raise/",
+      "Dynamite Delts: ACE research identifies top shoulder exercises — ACE ProSource, 2015. https://www.acefitness.org/continuing-education/prosource/research-special-issue-2015/5320/dynamite-delts-ace-research-identifies-top-shoulder-exercises/"
+    ]
+  },
+  {
+    "id": "reverse-pec-deck",
+    "class": "rear-delt",
+    "pattern": "rear-delt",
+    "name": {
+      "en": "Reverse pec deck (rear-delt machine)",
+      "ru": "Обратная бабочка (задние дельты)"
+    },
+    "aka": [
+      "Technogym Selection Reverse Fly",
+      "Technogym Selection 700 Dual Pectoral/Reverse Fly",
+      "Life Fitness Insignia Pectoral Fly/Rear Deltoid",
+      "Nautilus Inspiration Pec Fly/Rear Deltoid",
+      "Rear delt machine",
+      "Reverse fly machine"
+    ],
+    "equipment": "selectorized",
+    "primary": [
+      "delt-rear"
+    ],
+    "secondary": [
+      "traps-mid",
+      "rhomboids",
+      "rotator-cuff"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "cable-rear-delt-fly",
+      "face-pull",
+      "rear-delt-dumbbell-fly",
+      "band-pull-apart"
+    ],
+    "setup": {
+      "en": "Sit facing the pad with your chest against it, the seat set so the handles are at shoulder height and the arms in their rear-delt start position. Use the vertical (neutral) handles.",
+      "ru": "Сядьте лицом к спинке, грудью к упору; сиденье — так, чтобы рукоятки были на уровне плеч, рычаги — в стартовой позиции для задних дельт. Берите вертикальные (нейтральные) рукоятки."
+    },
+    "cues": {
+      "en": [
+        "Chest on the pad, shoulders down; arms long with a soft elbow.",
+        "Sweep the arms out and back in a wide arc to about the line of your body.",
+        "Move at the shoulders; don't bend the elbows to row the weight back.",
+        "Pause for 1 s, breathing out.",
+        "Return for 2–3 s until the hands nearly meet in front.",
+        "Keep the neck long — don't poke the chin forward."
+      ],
+      "ru": [
+        "Грудь на упоре, плечи опущены; руки длинные, локти чуть согнуты.",
+        "Разводите руки по широкой дуге назад примерно до линии корпуса.",
+        "Движение — в плечевых суставах; не сгибайте локти, превращая упражнение в тягу.",
+        "Задержитесь на 1 секунду на выдохе.",
+        "Возвращайте 2–3 секунды, пока кисти почти не сойдутся впереди.",
+        "Шея длинная — не вытягивайте подбородок вперёд."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Shrugging, so the upper traps take over.",
+        "Bending the elbows into a row.",
+        "Swinging the arms far past the body line with momentum.",
+        "Too heavy, so the chest lifts off the pad."
+      ],
+      "ru": [
+        "Подъём плеч — работу забирает верх трапеций.",
+        "Локти сгибаются — получается тяга.",
+        "Руки с инерцией улетают далеко за линию корпуса.",
+        "Слишком тяжело: грудь отрывается от упора."
+      ]
+    },
+    "startLoad": {
+      "kg": 17.5,
+      "source": "0.6 × Strength Level Beginner machine reverse fly 1RM (29 kg at 80 kg) ≈ 17 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Franke et al., Deltoid activation in single- and multi-joint exercises — J Sports Med Phys Fitness, 2015. https://pubmed.ncbi.nlm.nih.gov/24947920/",
+      "Schoenfeld et al., Hand position and posterior shoulder EMG on the reverse fly machine — J Strength Cond Res, 2013. https://doi.org/10.1519/JSC.0b013e318281e1e9",
+      "Reverse Machine Fly — StrengthLog, 2025. https://www.strengthlog.com/reverse-machine-fly/",
+      "Machine Reverse Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-reverse-fly/kg"
+    ]
+  },
+  {
+    "id": "rear-delt-dumbbell-fly",
+    "class": "rear-delt",
+    "pattern": "rear-delt",
+    "name": {
+      "en": "Chest-supported rear-delt dumbbell fly",
+      "ru": "Обратные разведения гантелей с упором грудью"
+    },
+    "aka": [
+      "Incline reverse fly",
+      "Seated rear lateral raise",
+      "Rear delt raise",
+      "Reverse dumbbell fly"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "delt-rear"
+    ],
+    "secondary": [
+      "traps-mid",
+      "rhomboids",
+      "rotator-cuff"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "reverse-pec-deck",
+      "cable-rear-delt-fly",
+      "face-pull",
+      "band-pull-apart"
+    ],
+    "setup": {
+      "en": "Set an incline bench to about 45° and lie chest-down on it with the dumbbells hanging under your shoulders, palms facing each other and elbows slightly bent.",
+      "ru": "Установите наклонную скамью примерно на 45° и лягте на неё грудью; гантели висят под плечами, ладони друг к другу, локти слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Chest stays on the pad; neck long.",
+        "Raise the dumbbells out to the sides until the arms are level with the shoulders.",
+        "Finish with the dumbbells in line with, or slightly in front of, your ears — not behind the head.",
+        "Pause for 1 s, breathing out, then lower for 2–3 s.",
+        "Keep the slight elbow bend fixed."
+      ],
+      "ru": [
+        "Грудь остаётся на скамье; шея длинная.",
+        "Поднимайте гантели в стороны до уровня плеч.",
+        "В верхней точке гантели на линии ушей или чуть впереди — не за головой.",
+        "Задержитесь на 1 секунду на выдохе, затем опускайте 2–3 секунды.",
+        "Лёгкий сгиб в локтях не меняется."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Raising the dumbbells behind the head, which shifts the work from the rear delts to the lats.",
+        "Shrugging the shoulders up.",
+        "Lifting the chest off the bench to swing.",
+        "Too heavy, so the elbows bend into a row."
+      ],
+      "ru": [
+        "Гантели уходят за голову — работа смещается с задних дельт на широчайшие.",
+        "Подъём плеч к ушам.",
+        "Отрыв груди от скамьи для раскачки.",
+        "Слишком тяжело: локти сгибаются, получается тяга."
+      ]
+    },
+    "startLoad": {
+      "kg": 2,
+      "source": "Per hand: ≈0.6 × Strength Level Beginner dumbbell reverse fly 1RM (3 kg per hand at 80 kg)"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Incline Reverse Fly — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/34/incline-reverse-fly/",
+      "Dynamite Delts: ACE research identifies top shoulder exercises — ACE ProSource, 2015. https://www.acefitness.org/continuing-education/prosource/research-special-issue-2015/5320/dynamite-delts-ace-research-identifies-top-shoulder-exercises/",
+      "Dumbbell Reverse Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-reverse-fly/kg"
+    ]
+  },
+  {
+    "id": "cable-rear-delt-fly",
+    "class": "rear-delt",
+    "pattern": "rear-delt",
+    "name": {
+      "en": "Cable rear-delt fly",
+      "ru": "Обратные разведения в кроссовере"
+    },
+    "aka": [
+      "Cable reverse fly",
+      "Standing cable rear-delt crossover",
+      "Cable rear lateral raise"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "delt-rear"
+    ],
+    "secondary": [
+      "traps-mid",
+      "rhomboids",
+      "rotator-cuff"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 1.25,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "face-pull",
+      "reverse-pec-deck",
+      "rear-delt-dumbbell-fly",
+      "band-pull-apart"
+    ],
+    "setup": {
+      "en": "Set both pulleys at about shoulder height or slightly below. Stand centred and take the left cable in the right hand and the right cable in the left hand, so the arms start crossed in front of you.",
+      "ru": "Установите оба блока примерно на уровне плеч или чуть ниже. Встаньте по центру, левый трос возьмите правой рукой, правый — левой, чтобы в старте руки были скрещены перед собой."
+    },
+    "cues": {
+      "en": [
+        "Stand tall, abs braced, knees soft.",
+        "With a soft elbow, sweep the arms apart until they form a straight line with the shoulders.",
+        "Pause for 1 s, breathing out.",
+        "Return for 2–3 s to the crossed start, keeping tension.",
+        "Shoulders stay down; the movement is at the shoulder joint."
+      ],
+      "ru": [
+        "Стойте ровно, пресс напряжён, колени слегка согнуты.",
+        "С чуть согнутыми локтями разводите руки, пока они не образуют прямую линию с плечами.",
+        "Задержитесь на 1 секунду на выдохе.",
+        "Возвращайтесь 2–3 секунды в скрещённое положение, не теряя натяжения.",
+        "Плечи опущены; движение — в плечевых суставах."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Leaning back to pull with the body.",
+        "Shrugging the shoulders up.",
+        "Bending the elbows into a row.",
+        "Letting the stack slam between reps."
+      ],
+      "ru": [
+        "Отклонение назад, чтобы тянуть корпусом.",
+        "Подъём плеч к ушам.",
+        "Сгибание локтей — получается тяга.",
+        "Плиты грохочут между повторами."
+      ]
+    },
+    "startLoad": {
+      "kg": 2.5,
+      "source": "Per side: the lightest plate on most stacks; Strength Level Beginner cable reverse fly 1RM = 3 kg at 80 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Reverse Fly (cables) — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/353/reverse-fly/",
+      "Franke et al., Deltoid activation in single- and multi-joint exercises — J Sports Med Phys Fitness, 2015. https://pubmed.ncbi.nlm.nih.gov/24947920/",
+      "Cable Reverse Fly Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-reverse-fly/kg"
+    ]
+  },
+  {
+    "id": "face-pull",
+    "class": "rear-delt",
+    "pattern": "rear-delt",
+    "name": {
+      "en": "Face pull",
+      "ru": "Тяга каната к лицу (фейс-пулл)"
+    },
+    "aka": [
+      "Rope face pull",
+      "Cable face pull",
+      "High rope pull",
+      "Rear-delt rope pull"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "delt-rear",
+      "rotator-cuff"
+    ],
+    "secondary": [
+      "traps-mid",
+      "traps-lower",
+      "rhomboids",
+      "delt-side"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "cable-rear-delt-fly",
+      "reverse-pec-deck",
+      "rear-delt-dumbbell-fly",
+      "band-pull-apart",
+      "cable-external-rotation",
+      "side-lying-external-rotation",
+      "band-external-rotation"
+    ],
+    "setup": {
+      "en": "Set the pulley at about forehead height with a rope, grip both ends overhand (palms down) and step back until your arms are straight and the plates lift. Stand tall in a slight split stance.",
+      "ru": "Установите блок примерно на уровне лба с канатной рукояткой, возьмитесь за оба конца хватом сверху (ладони вниз) и отойдите, пока руки не выпрямятся, а плиты не поднимутся. Стойте ровно, в небольшой разножке."
+    },
+    "cues": {
+      "en": [
+        "Brace the abs and keep the ribs down; the torso doesn't move.",
+        "Pull the rope toward your forehead, spreading the ends apart.",
+        "Keep the elbows high, at shoulder height, as they travel out to the sides.",
+        "Rotate the forearms up as you pull, finishing with the hands beside your ears like a double-biceps pose.",
+        "Squeeze the shoulder blades back and down for 1 s, breathing out.",
+        "Return for 2–3 s until the arms are straight and the shoulder blades open.",
+        "Keep it light enough that every rep reaches your ears."
+      ],
+      "ru": [
+        "Напрягите пресс, рёбра опущены; корпус неподвижен.",
+        "Тяните канат ко лбу, разводя концы в стороны.",
+        "Локти высоко, на уровне плеч, — они расходятся в стороны.",
+        "По ходу тяги поворачивайте предплечья вверх: в конце кисти у ушей, как в позе «двойной бицепс».",
+        "Сведите и опустите лопатки на 1 секунду — на выдохе.",
+        "Возвращайтесь 2–3 секунды до прямых рук, лопатки расходятся.",
+        "Вес такой, чтобы каждый повтор доходил до ушей."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Too heavy: it turns into a row, with the elbows dropping and the torso leaning back.",
+        "Shrugging toward the ears instead of drawing the shoulder blades back and down.",
+        "Pulling to the chin or neck with low elbows — no external rotation at the end.",
+        "Arching the lower back to finish the rep.",
+        "Yanking the rope and letting the stack snap back."
+      ],
+      "ru": [
+        "Слишком тяжело: получается тяга к груди — локти опускаются, корпус отклоняется назад.",
+        "Плечи поднимаются к ушам вместо того, чтобы лопатки шли назад-вниз.",
+        "Тяга к подбородку или шее с низкими локтями — нет наружной ротации в конце.",
+        "Прогиб в пояснице, чтобы дотянуть.",
+        "Рывок каната и резкий возврат плит."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "0.6 × Strength Level Beginner face pull 1RM (15 kg at 80 kg) = 9 kg"
+    },
+    "tags": [
+      "owner-primary"
+    ],
+    "images": [],
+    "sources": [
+      "Face Pull: muscles worked and proper form — StrengthLog, 2025. https://www.strengthlog.com/face-pull/",
+      "Reinold et al., Rotator cuff and deltoid EMG during shoulder external rotation exercises — J Orthop Sports Phys Ther, 2004. https://doi.org/10.2519/jospt.2004.34.7.385",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Face Pull Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/face-pull/kg"
+    ]
+  },
+  {
+    "id": "band-pull-apart",
+    "class": "rear-delt",
+    "pattern": "rear-delt",
+    "name": {
+      "en": "Band pull-apart",
+      "ru": "Разведение резиновой ленты перед собой"
+    },
+    "aka": [
+      "Resistance band pull-apart",
+      "Band reverse fly"
+    ],
+    "equipment": "band",
+    "primary": [
+      "delt-rear"
+    ],
+    "secondary": [
+      "traps-mid",
+      "rhomboids",
+      "rotator-cuff"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "reverse-pec-deck",
+      "cable-rear-delt-fly",
+      "face-pull",
+      "rear-delt-dumbbell-fly"
+    ],
+    "setup": {
+      "en": "Hold a light band at shoulder height on straight arms with an overhand grip, hands about shoulder-width apart, and stand tall.",
+      "ru": "Держите лёгкую ленту на уровне плеч на прямых руках хватом сверху, кисти примерно на ширине плеч; стойте ровно."
+    },
+    "cues": {
+      "en": [
+        "Ribs down, shoulders down.",
+        "Pull the band apart by moving the arms out to the sides until it touches your chest.",
+        "Keep the arms straight with a soft elbow.",
+        "Pause for 1 s, then return for 2 s without letting the band snap.",
+        "Narrow your grip on the band to make it harder."
+      ],
+      "ru": [
+        "Рёбра опущены, плечи опущены.",
+        "Растягивайте ленту, разводя руки в стороны, пока она не коснётся груди.",
+        "Руки прямые, локти чуть согнуты.",
+        "Задержитесь на 1 секунду и возвращайтесь 2 секунды, не давая ленте дёрнуть руки.",
+        "Чтобы стало тяжелее, возьмите ленту уже."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Shrugging toward the ears.",
+        "Bending the elbows and rowing.",
+        "Arching the lower back to finish the rep."
+      ],
+      "ru": [
+        "Подъём плеч к ушам.",
+        "Сгибание локтей и тяга.",
+        "Прогиб в пояснице, чтобы дотянуть."
+      ]
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Band Pull-Apart — StrengthLog, 2023. https://www.strengthlog.com/band-pull-apart/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330"
+    ]
+  },
+  {
+    "id": "cable-external-rotation",
+    "class": "external-rotation",
+    "pattern": "external-rotation",
+    "name": {
+      "en": "Cable external rotation",
+      "ru": "Наружная ротация плеча на блоке"
+    },
+    "aka": [
+      "Standing cable external rotation",
+      "Cable ER at the side",
+      "Cable rotator-cuff external rotation"
+    ],
+    "equipment": "cable",
+    "primary": [
+      "rotator-cuff"
+    ],
+    "secondary": [
+      "delt-rear"
+    ],
+    "difficulty": 1,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 1.25,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "side-lying-external-rotation",
+      "band-external-rotation",
+      "face-pull"
+    ],
+    "setup": {
+      "en": "Set a pulley at elbow height with a single handle and stand side-on with the working arm farther from the stack. Bend the elbow to 90° and tuck it against your side (a rolled towel between elbow and ribs helps), forearm across your belly.",
+      "ru": "Установите блок на уровне локтя, одиночная рукоятка; встаньте боком так, чтобы рабочая рука была дальше от тренажёра. Согните локоть под 90° и прижмите его к боку (поможет свёрнутое полотенце между локтем и рёбрами), предплечье перед животом."
+    },
+    "cues": {
+      "en": [
+        "Keep the elbow pinned to your side for the whole set.",
+        "Rotate the forearm out like a door on a hinge, as far as is comfortable.",
+        "Keep the wrist straight and the forearm level.",
+        "Pause for 1 s, then return for 2–3 s.",
+        "Shoulder down and back; don't twist the torso.",
+        "Light weight, slow reps: this is joint-health work, not a max-effort lift."
+      ],
+      "ru": [
+        "Локоть прижат к боку весь подход.",
+        "Разворачивайте предплечье наружу, как дверь на петле, — насколько комфортно.",
+        "Запястье прямое, предплечье горизонтально.",
+        "Задержитесь на 1 секунду и возвращайтесь 2–3 секунды.",
+        "Плечо опущено и отведено назад; не скручивайте корпус.",
+        "Лёгкий вес, медленные повторы: это работа на здоровье сустава, а не на максимум."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "The elbow drifting away from your side.",
+        "Twisting the torso to move the handle.",
+        "Shrugging the shoulder.",
+        "Too heavy, so the range shrinks to a few centimetres."
+      ],
+      "ru": [
+        "Локоть отходит от корпуса.",
+        "Скручивание корпуса, чтобы сдвинуть рукоятку.",
+        "Подъём плеча к уху.",
+        "Слишком тяжело — амплитуда сжимается до нескольких сантиметров."
+      ]
+    },
+    "startLoad": {
+      "kg": 2.5,
+      "source": "The lightest plate on most stacks; Strength Level cable external rotation 1RM at 80 kg: Beginner 1 kg, Novice 7 kg"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Rotator Cuff External Rotation — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/352/rotator-cuff-external-rotation/",
+      "Reinold et al., Rotator cuff and deltoid EMG during shoulder external rotation exercises — J Orthop Sports Phys Ther, 2004. https://doi.org/10.2519/jospt.2004.34.7.385",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330",
+      "Cable External Rotation Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-external-rotation/kg"
+    ]
+  },
+  {
+    "id": "side-lying-external-rotation",
+    "class": "external-rotation",
+    "pattern": "external-rotation",
+    "name": {
+      "en": "Side-lying dumbbell external rotation",
+      "ru": "Наружная ротация плеча с гантелью лёжа на боку"
+    },
+    "aka": [
+      "Side-lying external rotation",
+      "Lying dumbbell external rotation",
+      "Side-lying ER"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "rotator-cuff"
+    ],
+    "secondary": [
+      "delt-rear"
+    ],
+    "difficulty": 1,
+    "unilateral": true,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 1,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "cable-external-rotation",
+      "band-external-rotation",
+      "face-pull"
+    ],
+    "setup": {
+      "en": "Lie on your side on a bench or mat with the working arm on top, elbow bent 90° and resting on a folded towel against your side, forearm across your belly holding a light dumbbell.",
+      "ru": "Лягте на бок на скамью или коврик, рабочая рука сверху: локоть согнут под 90° и лежит на сложенном полотенце у бока, предплечье перед животом, в руке лёгкая гантель."
+    },
+    "cues": {
+      "en": [
+        "Keep the elbow on the towel against your side.",
+        "Rotate the forearm up until it points at the ceiling, or as far as is comfortable.",
+        "Pause for 1 s, then lower for 2–3 s.",
+        "Keep the wrist straight and the shoulder blade drawn back.",
+        "Don't roll the body back to lift the weight."
+      ],
+      "ru": [
+        "Локоть на полотенце, прижат к боку.",
+        "Поворачивайте предплечье вверх, пока оно не будет смотреть в потолок или пока комфортно.",
+        "Задержитесь на 1 секунду и опускайте 2–3 секунды.",
+        "Запястье прямое, лопатка отведена назад.",
+        "Не перекатывайтесь корпусом назад, чтобы поднять гантель."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "The elbow lifting off your side.",
+        "Rolling the torso back.",
+        "Going heavy — these small muscles need light loads and full control."
+      ],
+      "ru": [
+        "Локоть отрывается от бока.",
+        "Перекат корпуса назад.",
+        "Тяжёлая гантель — этим небольшим мышцам нужны малый вес и полный контроль."
+      ]
+    },
+    "startLoad": {
+      "kg": 2,
+      "source": "Light by design: no Strength Level standard; cuff work starts with the lightest dumbbell that allows 15 slow reps"
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Reinold et al., Rotator cuff and deltoid EMG during shoulder external rotation exercises — J Orthop Sports Phys Ther, 2004. https://doi.org/10.2519/jospt.2004.34.7.385",
+      "Lying Dumbbell External Shoulder Rotation — StrengthLog, 2023. https://www.strengthlog.com/lying-dumbbell-external-shoulder-rotation/",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330"
+    ]
+  },
+  {
+    "id": "band-external-rotation",
+    "class": "external-rotation",
+    "pattern": "external-rotation",
+    "name": {
+      "en": "Band external rotation",
+      "ru": "Наружная ротация плеча с резиновой лентой"
+    },
+    "aka": [
+      "Resistance band external rotation",
+      "Band ER at the side"
+    ],
+    "equipment": "band",
+    "primary": [
+      "rotator-cuff"
+    ],
+    "secondary": [
+      "delt-rear"
+    ],
+    "difficulty": 1,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "cable-external-rotation",
+      "side-lying-external-rotation",
+      "face-pull"
+    ],
+    "setup": {
+      "en": "Anchor a light band at elbow height (door anchor or rack) and stand side-on with the working arm farther from the anchor. Bend the elbow to 90° and tuck it against your side, forearm across the belly.",
+      "ru": "Закрепите лёгкую ленту на уровне локтя (дверной анкер или стойка) и встаньте боком, рабочая рука дальше от точки крепления. Согните локоть под 90° и прижмите к боку, предплечье перед животом."
+    },
+    "cues": {
+      "en": [
+        "Elbow pinned to your side — a rolled towel helps.",
+        "Rotate the forearm out like a door on a hinge.",
+        "Pause at the end, where the band is hardest, then return slowly.",
+        "Shoulder down, torso square.",
+        "Step farther from the anchor to add tension."
+      ],
+      "ru": [
+        "Локоть прижат к боку — поможет свёрнутое полотенце.",
+        "Разворачивайте предплечье наружу, как дверь на петле.",
+        "Задержитесь в конце, где лента тянет сильнее, и медленно возвращайтесь.",
+        "Плечо опущено, корпус развёрнут прямо.",
+        "Чтобы добавить натяжение, отойдите дальше от точки крепления."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "The elbow drifting away from the body.",
+        "Twisting the torso instead of rotating the shoulder.",
+        "Letting the band snap the arm back."
+      ],
+      "ru": [
+        "Локоть отходит от корпуса.",
+        "Поворот корпуса вместо вращения в плече.",
+        "Лента резко возвращает руку."
+      ]
+    },
+    "tags": [
+      "owner-alt"
+    ],
+    "images": [],
+    "sources": [
+      "Band External Shoulder Rotation — StrengthLog, 2023. https://www.strengthlog.com/band-external-shoulder-rotation/",
+      "Reinold et al., Rotator cuff and deltoid EMG during shoulder external rotation exercises — J Orthop Sports Phys Ther, 2004. https://doi.org/10.2519/jospt.2004.34.7.385",
+      "Kolber et al., Shoulder injuries attributed to resistance training: a brief review — J Strength Cond Res, 2010. https://doi.org/10.1519/JSC.0b013e3181dc4330"
+    ]
+  },
+  {
+    "id": "machine-shrug",
+    "class": "shrug",
+    "pattern": "shrug",
+    "name": {
+      "en": "Machine shrug",
+      "ru": "Шраги в тренажёре"
+    },
+    "aka": [
+      "Hammer Strength Plate-Loaded Seated/Standing Shrug",
+      "Shrug machine",
+      "Plate-loaded shrug"
+    ],
+    "equipment": "plate-loaded",
+    "primary": [
+      "traps-upper"
+    ],
+    "secondary": [
+      "forearm-flexors",
+      "traps-mid"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "dumbbell-shrug",
+      "farmers-carry",
+      "suitcase-carry"
+    ],
+    "setup": {
+      "en": "Stand (or sit) between the handles with feet hip-width and arms straight at your sides. Load equal plates on both sides and log their total.",
+      "ru": "Встаньте (или сядьте) между рукоятками, стопы на ширине таза, руки прямые по бокам. Вешайте одинаковые диски с двух сторон и записывайте их общий вес."
+    },
+    "cues": {
+      "en": [
+        "Stand tall with the abs braced and the chin level.",
+        "Lift the shoulders straight up toward the ears as high as they go.",
+        "Hold for 1 s at the top, breathing out.",
+        "Lower for 2 s to a full stretch.",
+        "Arms stay straight; the elbows don't bend."
+      ],
+      "ru": [
+        "Стойте ровно, пресс напряжён, подбородок прямо.",
+        "Поднимайте плечи строго вверх к ушам, насколько получается.",
+        "Задержитесь вверху на 1 секунду на выдохе.",
+        "Опускайте 2 секунды до полного растяжения.",
+        "Руки прямые; локти не сгибаются."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rolling the shoulders in circles instead of lifting straight up and down.",
+        "Bending the elbows to pull the weight.",
+        "Jutting the head forward.",
+        "Heavy half-reps with a rounded back."
+      ],
+      "ru": [
+        "Вращение плечами по кругу вместо подъёма строго вверх-вниз.",
+        "Сгибание локтей, чтобы подтянуть вес.",
+        "Голова выдвигается вперёд.",
+        "Тяжёлые полуповторы с круглой спиной."
+      ]
+    },
+    "startLoad": {
+      "kg": 35,
+      "source": "Total plates: 0.6 × Strength Level Beginner machine shrug 1RM (60 kg at 80 kg) = 36 kg"
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Standing Shrug — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/75/standing-shrug/",
+      "Pizzari et al., Modifying a shrug exercise to facilitate the scapular upward rotators — Clin Biomech, 2014. https://doi.org/10.1016/j.clinbiomech.2013.11.011",
+      "Machine Shrug Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-shrug/kg"
+    ]
+  },
+  {
+    "id": "dumbbell-shrug",
+    "class": "shrug",
+    "pattern": "shrug",
+    "name": {
+      "en": "Dumbbell shrug",
+      "ru": "Шраги с гантелями"
+    },
+    "aka": [
+      "DB shrug",
+      "Standing dumbbell shrug"
+    ],
+    "equipment": "dumbbell",
+    "primary": [
+      "traps-upper"
+    ],
+    "secondary": [
+      "forearm-flexors",
+      "traps-mid"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "machine-shrug",
+      "farmers-carry",
+      "suitcase-carry"
+    ],
+    "setup": {
+      "en": "Stand tall holding the dumbbells at your sides, palms facing in, feet hip-width or in a slight split stance, abs braced.",
+      "ru": "Встаньте ровно с гантелями по бокам, ладони к корпусу, стопы на ширине таза или в небольшой разножке, пресс напряжён."
+    },
+    "cues": {
+      "en": [
+        "Lift the shoulders straight up toward the ears.",
+        "Hold for 1 s at the top, then lower for 2 s to a full stretch.",
+        "Arms stay straight; the hands just hold on.",
+        "Keep the chin level and the neck long.",
+        "Holding the dumbbells slightly away from the thighs (arms about 30° out) also works the lower traps."
+      ],
+      "ru": [
+        "Поднимайте плечи строго вверх, к ушам.",
+        "Задержитесь вверху на 1 секунду, затем опускайте 2 секунды до полного растяжения.",
+        "Руки прямые, кисти только держат вес.",
+        "Подбородок прямо, шея длинная.",
+        "Если держать гантели чуть в стороне от бёдер (руки отведены примерно на 30°), работает и нижняя часть трапеций."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rolling the shoulders in circles instead of lifting straight up and down.",
+        "Bending the elbows to help.",
+        "Jutting the head forward.",
+        "Grip failing first — use a lighter pair or straps rather than half-reps."
+      ],
+      "ru": [
+        "Вращение плечами по кругу вместо подъёма строго вверх-вниз.",
+        "Сгибание локтей, чтобы помочь.",
+        "Голова выдвигается вперёд.",
+        "Хват сдаётся раньше трапеций — возьмите гантели легче или лямки, а не делайте полуповторы."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "Per hand: 0.6 × Strength Level Beginner dumbbell shrug 1RM (17 kg per hand at 80 kg) ≈ 10 kg"
+    },
+    "tags": [],
+    "images": [],
+    "sources": [
+      "Standing Shrug — ACE Exercise Library, accessed 2026. https://www.acefitness.org/resources/everyone/exercise-library/75/standing-shrug/",
+      "Pizzari et al., Modifying a shrug exercise to facilitate the scapular upward rotators — Clin Biomech, 2014. https://doi.org/10.1016/j.clinbiomech.2013.11.011",
+      "Dumbbell Shrug Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-shrug/kg"
+    ]
+  }
+]

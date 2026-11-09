@@ -1,0 +1,2718 @@
+{
+ "version": "2026-11-09.7",
+ "note": "Drawing data for scripts/fitness-images.py (stream 07). One entry per registry exercise id: what the picture must show (machine as set up, setup, START/END, the arrow's path, the hardest point for the side view, camera override, fallback muscles and equipment). When content/fitness/exercises.json exists its name, equipment, muscles, setup and cues are used too; this file stays the source of the drawing directions. Text fields have no trailing full stop; the script adds punctuation.",
+ "cameras": {
+  "three-quarter front": "three-quarter front view: the camera stands in front of the mannequin and about 45 degrees to its left, at chest height, so the chest, both arms and the handles are all visible",
+  "three-quarter rear": "three-quarter rear view: the camera stands behind the mannequin and about 45 degrees to its left, so the back of the shoulders and the upper back are visible",
+  "pure side": "pure side (profile) view: the camera looks at the mannequin's left side at exactly 90 degrees to the direction it faces, so the mannequin is seen in profile facing the right side of the picture, with one arm and one leg in front and the other mostly hidden behind them; never a front, back or three-quarter view",
+  "high side": "side view from the mannequin's left and slightly above, so the mannequin lying on the bench, the bar or dumbbells and their path are all visible",
+  "front": "straight front view, the camera facing the mannequin at chest height",
+  "close-up": "close-up three-quarter view of one forearm and hand only, filling the panel",
+  "three-quarter front, away from the column": "three-quarter front view from the side away from the cable column: the camera stands in front of the mannequin and about 45 degrees to its LEFT, at chest height; the cable column stands at the mannequin's RIGHT side, at the right edge of the picture and a little behind the mannequin, so the cable runs from the column across to the hands and the direction the chest faces points toward the lower left of the picture"
+ },
+ "patterns": {
+  "horizontal-push": {
+   "camera": "three-quarter front",
+   "start": "hands at the chest, elbows bent about 90 degrees",
+   "end": "arms extended forward, elbows almost straight",
+   "path": "straight forward from the chest"
+  },
+  "incline-push": {
+   "camera": "three-quarter front",
+   "start": "hands at the upper chest, elbows bent about 90 degrees",
+   "end": "arms pressed up and forward along the incline",
+   "path": "up and forward along the incline"
+  },
+  "decline-push": {
+   "camera": "three-quarter front",
+   "start": "hands at the lower chest, elbows bent about 90 degrees",
+   "end": "arms pressed down and forward, elbows almost straight",
+   "path": "down and forward from the lower chest"
+  },
+  "vertical-push": {
+   "camera": "three-quarter front",
+   "start": "hands at shoulder height, elbows bent below the hands",
+   "end": "arms pressed straight overhead",
+   "path": "straight up from the shoulders"
+  },
+  "chest-fly": {
+   "camera": "three-quarter front",
+   "start": "arms open wide at chest height, elbows softly bent",
+   "end": "hands brought together in front of the chest",
+   "path": "an inward arc at chest height"
+  },
+  "vertical-pull": {
+   "camera": "pure side",
+   "start": "arms extended overhead",
+   "end": "hands pulled down to the upper chest, elbows down beside the ribs",
+   "path": "straight down to the upper chest"
+  },
+  "horizontal-pull": {
+   "camera": "pure side",
+   "start": "arms extended forward, shoulder blades spread",
+   "end": "hands pulled to the lower ribs, elbows behind the torso",
+   "path": "straight back to the ribs"
+  },
+  "pullover": {
+   "camera": "pure side",
+   "start": "arms overhead",
+   "end": "arms swept down to the thighs",
+   "path": "a downward arc around the shoulders"
+  },
+  "rear-delt": {
+   "camera": "three-quarter rear",
+   "start": "arms straight out in front at shoulder height",
+   "end": "arms swept out to the sides at shoulder height",
+   "path": "an outward arc at shoulder height"
+  },
+  "lateral-raise": {
+   "camera": "front",
+   "start": "arms at the sides",
+   "end": "arms raised out to the sides to shoulder height",
+   "path": "upward arcs out to the sides"
+  },
+  "front-raise": {
+   "camera": "pure side",
+   "start": "arms in front of the thighs",
+   "end": "arms raised forward to shoulder height",
+   "path": "a forward and upward arc"
+  },
+  "external-rotation": {
+   "camera": "front",
+   "start": "forearm across the belly, elbow at the side",
+   "end": "forearm rotated outward, elbow still at the side",
+   "path": "an outward arc around the elbow"
+  },
+  "shrug": {
+   "camera": "front",
+   "start": "shoulders low, arms straight",
+   "end": "shoulders raised toward the ears",
+   "path": "straight up from the shoulders"
+  },
+  "elbow-flexion": {
+   "camera": "pure side",
+   "start": "arms extended",
+   "end": "elbows fully bent, upper arms unmoved",
+   "path": "an upward arc around the elbows"
+  },
+  "elbow-extension": {
+   "camera": "pure side",
+   "start": "elbows bent about 90 degrees",
+   "end": "elbows straight, upper arms unmoved",
+   "path": "an arc around the elbows"
+  },
+  "forearm-flexion": {
+   "camera": "pure side",
+   "start": "wrists extended",
+   "end": "wrists curled up",
+   "path": "a small arc around the wrists"
+  },
+  "forearm-extension": {
+   "camera": "pure side",
+   "start": "wrists flexed",
+   "end": "wrists extended",
+   "path": "a small arc around the wrists"
+  },
+  "grip": {
+   "camera": "three-quarter front",
+   "start": "hand open around the handle",
+   "end": "hand closed tight",
+   "path": "a short arc beside the hand"
+  },
+  "trunk-flexion": {
+   "camera": "pure side",
+   "start": "torso upright",
+   "end": "torso curled forward, ribs toward the pelvis",
+   "path": "a forward arc of the chest"
+  },
+  "anti-extension": {
+   "camera": "pure side",
+   "start": "body in the set-up position",
+   "end": "body a long straight line, hips not sagging",
+   "path": "forward along the floor"
+  },
+  "anti-rotation": {
+   "camera": "three-quarter front",
+   "start": "hands at the chest",
+   "end": "arms pressed straight out, torso square",
+   "path": "straight forward from the chest"
+  },
+  "rotation": {
+   "camera": "three-quarter front",
+   "start": "torso turned toward the load",
+   "end": "torso rotated away",
+   "path": "a horizontal arc"
+  },
+  "lateral-flexion": {
+   "camera": "front",
+   "start": "torso upright",
+   "end": "hips raised into a straight side line",
+   "path": "upward under the hips"
+  },
+  "hip-flexion": {
+   "camera": "pure side",
+   "start": "legs hanging straight",
+   "end": "knees raised to hip height",
+   "path": "an upward arc of the knees"
+  },
+  "spinal-extension": {
+   "camera": "pure side",
+   "start": "torso bent forward",
+   "end": "torso raised in line with the hips",
+   "path": "an upward arc of the torso"
+  },
+  "hip-hinge": {
+   "camera": "pure side",
+   "start": "hips back, torso hinged forward, back flat",
+   "end": "standing tall",
+   "path": "straight up close to the legs"
+  },
+  "squat": {
+   "camera": "pure side",
+   "start": "hips and knees bent, thighs about parallel",
+   "end": "standing tall",
+   "path": "straight up"
+  },
+  "lunge": {
+   "camera": "pure side",
+   "start": "front thigh about parallel, back knee low",
+   "end": "front leg straightened",
+   "path": "straight up"
+  },
+  "knee-flexion": {
+   "camera": "pure side",
+   "start": "legs straight",
+   "end": "knees bent fully",
+   "path": "an arc of the heels around the knees"
+  },
+  "knee-extension": {
+   "camera": "pure side",
+   "start": "knees bent 90 degrees",
+   "end": "knees straightened",
+   "path": "an arc of the shins around the knees"
+  },
+  "hip-abduction": {
+   "camera": "front",
+   "start": "knees together",
+   "end": "knees pushed apart",
+   "path": "outward arcs of the knees"
+  },
+  "hip-adduction": {
+   "camera": "front",
+   "start": "knees apart",
+   "end": "knees squeezed together",
+   "path": "inward arcs of the knees"
+  },
+  "calf-raise": {
+   "camera": "pure side",
+   "start": "heels below the step",
+   "end": "heels raised high",
+   "path": "straight up"
+  },
+  "carry": {
+   "camera": "three-quarter front",
+   "start": "standing tall holding the load",
+   "end": "walking forward mid-stride",
+   "path": "a straight arrow low beside the feet in the walking direction"
+  },
+  "neck": {
+   "camera": "pure side",
+   "start": "head flexed forward",
+   "end": "head back to neutral",
+   "path": "a small arc of the head"
+  },
+  "hip-extension": {
+   "camera": "pure side",
+   "start": "hips bent",
+   "end": "hips extended in line with the torso",
+   "path": "an upward arc of the hips"
+  }
+ },
+ "muscles": {
+  "pec-clavicular": "the upper chest: the top part of the pectoralis major just below the collarbone",
+  "pec-sternal": "the mid chest: the large fan-shaped pectoralis major from the breastbone to the front of the armpit",
+  "pec-costal": "the lower chest: the lowest band of the pectoralis major along the bottom edge of the chest",
+  "serratus-anterior": "the serratus: the finger-like strip on the side of the ribcage below the armpit",
+  "lats": "the lats: the broad sheets on both sides of the back from under the armpits down to the lower back (from the side, the band under the armpit along the side of the ribcage)",
+  "teres-major": "the teres major: the small thick muscle at the lower outer edge of the shoulder blade, at the back of the armpit",
+  "rhomboids": "the rhomboids: between the shoulder blades and the spine",
+  "traps-upper": "the upper trapezius: the slope between the neck and the shoulder",
+  "traps-mid": "the middle trapezius: across the upper back between the shoulder blades",
+  "traps-lower": "the lower trapezius: the lower point of the diamond running from between the shoulder blades down to the mid-back",
+  "delt-front": "the front deltoid: the front of the shoulder",
+  "delt-side": "the side deltoid: the outside cap of the shoulder",
+  "delt-rear": "the rear deltoid: the back of the shoulder",
+  "rotator-cuff": "the rotator cuff: the back of the shoulder blade below its ridge",
+  "biceps": "the biceps: the front of the upper arm",
+  "brachialis": "the brachialis: the outer front of the upper arm just above the elbow, beside the biceps",
+  "triceps-long": "the triceps long head: the inner back of the upper arm running up into the armpit",
+  "triceps-lateral": "the triceps lateral head: the outer back of the upper arm",
+  "forearm-flexors": "the forearm flexors: the palm side of the forearm",
+  "forearm-extensors": "the forearm extensors: the back-of-the-hand side of the forearm",
+  "brachioradialis": "the brachioradialis: the thumb-side top of the forearm just below the elbow",
+  "rectus-abdominis": "the rectus abdominis: the strip down the front of the belly from the ribs to the pelvis",
+  "obliques": "the obliques: the sides of the waist between the ribs and the hip",
+  "transverse-abdominis": "the deep abdominal corset: the lower belly and the waist",
+  "erectors": "the spinal erectors: the two long columns either side of the spine in the lower and middle back",
+  "quadratus-lumborum": "the quadratus lumborum: the deep lower back at the sides of the spine just above the pelvis",
+  "glute-max": "the gluteus maximus: the buttocks",
+  "glute-med": "the gluteus medius: the upper outer hip just below the rim of the pelvis",
+  "quads": "the quadriceps: the front of the thigh",
+  "hip-flexors": "the hip flexors: the front of the hip crease at the top of the thigh",
+  "hamstrings": "the hamstrings: the back of the thigh",
+  "gastrocnemius": "the gastrocnemius: the upper calf, the two bulging heads at the back of the lower leg",
+  "soleus": "the soleus: the lower calf under the gastrocnemius, down to the Achilles tendon",
+  "adductors": "the adductors: the inner thigh of BOTH legs (the left and the right, mirror images)",
+  "neck-flexors": "the neck flexors: the front and sides of the neck",
+  "neck-extensors": "the neck extensors: the back of the neck"
+ },
+ "cover": "A quiet, clean corner of a small modern gym in soft warm morning light, seen at eye level from a gentle three-quarter angle: on the left a seated chest press machine (upright cream back pad, two horizontal handles on lever arms, a plain weight stack), in the middle a tall dual-pulley cable station with two weight stacks and a stirrup handle hanging from each pulley, on the right a lat pulldown station (tall frame, high pulley, a long bar on the cable, a seat with padded knee rollers, a weight stack); dark graphite frames, cream pads, light grey plates; a small pale-wood bench with a folded terracotta-orange towel on it; a warm grey rubber floor; a pale wall with one large window letting in warm ivory daylight that casts long soft shadows. Uncluttered, tidy and inviting. No people, no mirrors with reflections, no posters, nothing written anywhere: the weight stacks are plain plates without numbers, and there are no logos or brand names",
+ "exercises": {
+  "machine-chest-press": {
+   "name": "Seated chest press machine",
+   "eq": "selectorized",
+   "machine": "a seated pin-loaded chest press: an upright padded back rest, an adjustable seat, two lever arms (one on each side of the seat, pivoting high on the frame behind the shoulders) that each end in a horizontal handle beside the chest and swing forward with the hands, and a weight stack with a selector pin standing behind the seat; nothing crosses in front of the chest",
+   "setup": "seat height set so the handles are level with the middle of the chest; feet flat on the floor; hips, upper back and head against the back pad; a full grip on the horizontal handles with straight wrists",
+   "start": "hands on the handles beside the chest, elbows bent about 90 degrees and slightly below shoulder height, upper arms about 45 degrees out from the torso, chest up, shoulder blades back against the pad",
+   "end": "arms extended straight forward, handles pushed away to arm's length at mid-chest height, elbows almost straight but not locked, shoulder blades and head still on the pad",
+   "path": "from the handles beside the chest straight forward to arm's length",
+   "hard": "the bottom of the press: handles beside the middle of the chest, elbows bent about 90 degrees and just below shoulder height, upper arms level with the back pad, chest up, back and head on the pad",
+   "primary": [
+    "pec-sternal",
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "converging-chest-press": {
+   "name": "Converging chest press machine",
+   "eq": "selectorized",
+   "machine": "a seated pin-loaded converging chest press: an upright back pad, an adjustable seat, two independent handle arms that swing forward and inward on angled pivots so the hands meet in front of the chest, a weight stack beside the seat",
+   "setup": "seat set so the handles are level with the middle of the chest; feet flat; back and head against the pad",
+   "start": "hands on the handles beside the chest, elbows bent about 90 degrees and slightly below shoulder height",
+   "end": "arms extended forward and inward, hands almost meeting in front of the breastbone, elbows nearly straight",
+   "path": "forward and inward in a gentle arc from beside the chest to in front of the breastbone",
+   "primary": [
+    "pec-sternal",
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "plate-loaded-chest-press": {
+   "name": "Plate-loaded chest press",
+   "eq": "plate-loaded",
+   "machine": "a plate-loaded iso-lateral chest press: a heavy steel frame with a slightly reclined back pad and a seat, two independent lever arms with vertical handles that pivot from above and behind, round weight plates on a horn on each lever arm, no weight stack",
+   "setup": "seat set so the handles are level with the middle of the chest; feet flat; back and head on the pad; neutral grip on the vertical handles",
+   "start": "hands on the handles beside the chest, elbows bent about 90 degrees",
+   "end": "both arms pressed forward to almost straight, the lever arms swung forward",
+   "path": "forward and slightly downward in an arc from beside the chest to arm's length",
+   "primary": [
+    "pec-sternal",
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "smith-bench-press": {
+   "name": "Smith machine bench press",
+   "eq": "smith",
+   "camera": "high side",
+   "machine": "a Smith machine: a barbell fixed on two vertical steel guide rails inside a tall frame, with rack hooks and adjustable safety stops, and a flat bench placed inside it so the bar comes down over the middle of the chest",
+   "setup": "lying on the flat bench inside the Smith machine, eyes under the bar, feet flat on the floor, shoulder blades pulled back; hands on the bar a little wider than the shoulders",
+   "start": "bar lowered to touch the middle of the chest, forearms vertical, elbows about 45 to 60 degrees out from the torso",
+   "end": "bar pressed straight up along the rails to arm's length above the chest, elbows almost straight",
+   "path": "straight up along the guide rails from the chest to arm's length",
+   "primary": [
+    "pec-sternal"
+   ],
+   "secondary": [
+    "pec-clavicular",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "dumbbell-bench-press": {
+   "name": "Dumbbell bench press",
+   "eq": "dumbbell",
+   "camera": "high side",
+   "setup": "lying on a flat bench, feet flat on the floor, shoulder blades pulled back, a dumbbell in each hand",
+   "start": "dumbbells at the sides of the chest, forearms vertical, elbows about 45 degrees out from the torso",
+   "end": "dumbbells pressed up over the chest to arm's length, close together but not touching",
+   "path": "straight up and slightly inward from the chest to arm's length",
+   "primary": [
+    "pec-sternal"
+   ],
+   "secondary": [
+    "pec-clavicular",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "barbell-bench-press": {
+   "name": "Barbell bench press",
+   "eq": "barbell",
+   "camera": "high side",
+   "setup": "lying on a flat bench with rack uprights, eyes under the bar, feet flat, shoulder blades pulled back; hands a little wider than the shoulders",
+   "start": "bar lowered to touch the middle of the chest, forearms vertical",
+   "end": "bar pressed up to arm's length over the shoulders, elbows almost straight",
+   "path": "up and slightly back from the chest to above the shoulders",
+   "primary": [
+    "pec-sternal"
+   ],
+   "secondary": [
+    "pec-clavicular",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "push-up": {
+   "name": "Push-up",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "hands on the floor a little wider than the shoulders, body one straight line from head to heels, on the toes",
+   "start": "chest lowered to a fist's height above the floor, elbows bent and about 45 degrees out from the torso",
+   "end": "arms straight, body still one straight line",
+   "path": "the chest rises straight up while the body pivots on the toes",
+   "primary": [
+    "pec-sternal"
+   ],
+   "secondary": [
+    "delt-front",
+    "triceps-lateral",
+    "rectus-abdominis"
+   ]
+  },
+  "machine-incline-press": {
+   "name": "Incline chest press machine",
+   "eq": "selectorized",
+   "machine": "a seated pin-loaded incline chest press: a back pad reclined about 30 to 45 degrees, an adjustable seat, two handles on lever arms that travel up and forward along the incline, a weight stack behind",
+   "setup": "seat set so the handles start level with the upper chest just below the collarbones; feet flat; back and head on the reclined pad",
+   "start": "hands on the handles beside the upper chest, elbows bent about 90 degrees and below the hands",
+   "end": "arms extended up and forward along the incline, elbows almost straight, shoulders down",
+   "path": "up and forward along the incline from the upper chest to arm's length",
+   "hard": "the bottom of the press: handles beside the upper chest, elbows bent about 90 degrees, upper arms level with the back pad, back and head on the reclined pad",
+   "primary": [
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "plate-loaded-incline-press": {
+   "name": "Plate-loaded incline press",
+   "eq": "plate-loaded",
+   "machine": "a plate-loaded iso-lateral incline press: a back pad reclined about 30 to 45 degrees, a seat, two independent lever arms with handles that press up and forward, weight plates on a horn on each lever arm",
+   "setup": "seat set so the handles start at the upper chest; feet flat; back on the pad",
+   "start": "hands on the handles beside the upper chest, elbows bent about 90 degrees",
+   "end": "arms pressed up and forward to almost straight",
+   "path": "up and forward in an arc from the upper chest",
+   "primary": [
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "smith-incline-press": {
+   "name": "Smith machine incline press",
+   "eq": "smith",
+   "camera": "high side",
+   "machine": "a Smith machine with an adjustable bench set to about 30 degrees incline inside it, so the bar comes down to the upper chest",
+   "setup": "lying back on the 30-degree incline bench, feet flat, shoulder blades back; hands a little wider than the shoulders",
+   "start": "bar lowered to the upper chest just below the collarbones, forearms vertical",
+   "end": "bar pressed straight up along the rails to arm's length",
+   "path": "straight up along the rails from the upper chest",
+   "primary": [
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "incline-dumbbell-press": {
+   "name": "Incline dumbbell press",
+   "eq": "dumbbell",
+   "camera": "high side",
+   "setup": "lying back on a bench set to about 30 degrees incline, feet flat, a dumbbell in each hand",
+   "start": "dumbbells at the sides of the upper chest, forearms vertical",
+   "end": "dumbbells pressed up over the upper chest to arm's length",
+   "path": "straight up from the upper chest to arm's length",
+   "primary": [
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "incline-barbell-press": {
+   "name": "Incline barbell press",
+   "eq": "barbell",
+   "camera": "high side",
+   "setup": "lying back on an incline bench of about 30 degrees with rack uprights, feet flat; hands a little wider than the shoulders",
+   "start": "bar lowered to the upper chest just below the collarbones",
+   "end": "bar pressed up to arm's length above the shoulders",
+   "path": "up from the upper chest to above the shoulders",
+   "primary": [
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front",
+    "triceps-lateral"
+   ]
+  },
+  "low-to-high-cable-fly": {
+   "name": "Low-to-high cable fly",
+   "eq": "cable",
+   "machine": "a dual-pulley cable crossover station: two tall columns, each with a weight stack and an adjustable pulley carriage set at the LOWEST position, a single stirrup handle on each cable",
+   "setup": "standing in the middle between the two low pulleys in a short split stance, a stirrup handle in each hand, palms facing forward and up",
+   "start": "arms down and out to the sides below hip height, elbows softly bent, a stretch across the chest",
+   "end": "hands swept up and together in front of the upper chest at about chin height, elbow bend unchanged",
+   "path": "an upward and inward arc from beside the hips to in front of the upper chest, its head pointing at the middle of the upper chest",
+   "primary": [
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "delt-front",
+    "pec-sternal"
+   ]
+  },
+  "triceps-press-machine": {
+   "name": "Seated dip machine (triceps press)",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded dip machine (triceps press): an upright back pad, a seat with a padded thigh hold-down, two handles beside the hips on lever arms that are pushed downward, a weight stack behind",
+   "setup": "seat set so the handles start level with the lower chest; back against the pad, thighs under the pad; neutral grip on the handles at the sides",
+   "start": "elbows bent about 90 degrees and pointing back, hands beside the lower ribs, shoulders down",
+   "end": "arms pressed straight down, hands beside the hips, elbows almost straight, torso upright against the pad",
+   "path": "straight down beside the body from the lower ribs to the hips",
+   "hard": "the start of the press: elbows bent about 90 degrees and pointing straight back, hands beside the lower ribs, shoulders down, torso upright against the pad",
+   "primary": [
+    "triceps-lateral",
+    "triceps-long"
+   ],
+   "secondary": [
+    "pec-costal",
+    "delt-front"
+   ]
+  },
+  "decline-chest-press-machine": {
+   "name": "Decline chest press machine",
+   "eq": "selectorized",
+   "machine": "a seated pin-loaded decline chest press: an upright seat with a back pad, low handles on lever arms that travel forward and downward, a weight stack behind",
+   "setup": "seat set so the handles start level with the lower chest; feet flat; back on the pad",
+   "start": "hands on the handles beside the lower chest, elbows bent about 90 degrees",
+   "end": "arms extended forward and slightly downward, elbows almost straight",
+   "path": "forward and downward from the lower chest to arm's length",
+   "primary": [
+    "pec-costal",
+    "pec-sternal"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "delt-front"
+   ]
+  },
+  "assisted-dip": {
+   "name": "Assisted dip",
+   "eq": "assisted",
+   "camera": "pure side",
+   "machine": "an assisted dip and chin-up machine: a tall frame with chin-up handles on top, parallel dip handles at hip height on both sides, and a padded knee platform on a lever linked to a weight stack that pushes up to help",
+   "setup": "kneeling on the assistance pad, hands on the parallel dip handles, torso leaning slightly forward",
+   "start": "elbows bent about 90 degrees, shoulders just above elbow height, torso leaning slightly forward",
+   "end": "arms pressed straight, body raised between the handles, shoulders down away from the ears",
+   "path": "the whole body rises straight up between the handles",
+   "primary": [
+    "pec-costal",
+    "triceps-lateral"
+   ],
+   "secondary": [
+    "triceps-long",
+    "delt-front",
+    "pec-sternal"
+   ]
+  },
+  "dip": {
+   "name": "Parallel-bar dip",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "supported on parallel bars, arms straight, knees bent and ankles crossed behind",
+   "start": "elbows bent about 90 degrees, shoulders just above elbow height, torso leaning slightly forward",
+   "end": "arms pressed straight, body raised, shoulders down",
+   "path": "the whole body rises straight up between the bars",
+   "primary": [
+    "pec-costal",
+    "triceps-lateral"
+   ],
+   "secondary": [
+    "triceps-long",
+    "delt-front",
+    "pec-sternal"
+   ]
+  },
+  "high-to-low-cable-fly": {
+   "name": "High-to-low cable fly",
+   "eq": "cable",
+   "machine": "a dual-pulley cable crossover station with both pulley carriages set HIGH, a single stirrup handle on each cable",
+   "setup": "standing in the middle in a short split stance, leaning slightly forward, a stirrup handle in each hand",
+   "start": "arms up and out to the sides above shoulder height, elbows softly bent, a stretch across the chest",
+   "end": "hands swept down and together in front of the lower chest, elbow bend unchanged",
+   "path": "a downward and inward arc from above the shoulders to in front of the lower chest, its head pointing at the middle of the lower chest",
+   "primary": [
+    "pec-costal",
+    "pec-sternal"
+   ],
+   "secondary": [
+    "delt-front"
+   ]
+  },
+  "pec-deck": {
+   "name": "Pec deck (machine fly)",
+   "eq": "selectorized",
+   "sideCamera": "front view from slightly above: the camera in front of the seated mannequin and a little higher than its head, looking down at about 30 degrees, so the height of both arms and how far they open read clearly",
+   "machine": "a seated pin-loaded pec deck (butterfly) machine: an upright back pad, an adjustable seat, two long swinging arms with vertical handles that swing together in front of the chest, a weight stack behind the seat",
+   "setup": "seat set so the handles are at mid-chest height and the shoulders level with the arms' pivots; back and head against the pad; hands on the vertical handles, elbows softly bent",
+   "start": "arms open wide to the sides at chest height, elbows softly bent and level with the back pad, a stretch across the chest",
+   "end": "arms swept forward together so the handles nearly touch in front of the chest, elbow bend unchanged, back still on the pad",
+   "path": "a curved arrow just above the hand on the right of the picture, starting at that open hand and curving inward toward the middle of the chest, its head pointing at the breastbone",
+   "hard": "the open, stretched position: upper arms at chest height and in line with the back pad (not behind it), elbows softly bent about 20 degrees, chest up, back and head on the pad",
+   "primary": [
+    "pec-sternal",
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "delt-front"
+   ],
+   "sidePath": "a curved arrow just above the hand on the right of the picture, starting at that open hand and curving inward toward the middle of the chest, its head pointing at the breastbone",
+   "sideNote": "both arms open symmetrically at chest height, mirror images of each other; neither hand drops below the chest; the elbows are level with the back pad, not behind it"
+  },
+  "cable-fly": {
+   "name": "Cable fly",
+   "eq": "cable",
+   "sideCamera": "high front view: the camera in front of the mannequin and well above it, looking down at about 60 degrees, so both the height of the arms and how far they open behind the chest read clearly",
+   "machine": "a dual-pulley cable crossover station: two tall columns, each with a weight stack and a pulley carriage set at shoulder height, a single stirrup handle on each cable",
+   "setup": "standing centred between the columns in a short split stance, a slight forward lean, a handle in each hand, elbows softly bent",
+   "start": "arms out to the sides at chest height, elbows softly bent, hands slightly behind the chest line, a stretch across the chest",
+   "end": "hands brought together in front of the chest at chest height, elbow bend unchanged",
+   "path": "one arrow beside each open hand, each starting at that hand and curving forward and inward toward the middle in front of the chest, the two heads pointing toward each other in front of the breastbone",
+   "hard": "the open, stretched position: arms out to the sides at chest height with the hands just behind the chest line, elbows softly bent, slight forward lean, split stance",
+   "primary": [
+    "pec-sternal",
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "delt-front"
+   ],
+   "pair": true,
+   "fresh": [
+    "sequence"
+   ],
+   "seqNote": "both columns and their pulleys stay exactly the same in both panels, the pulleys at shoulder height; in both panels each cable runs from its own pulley straight to the handle in the hand on that side"
+  },
+  "dumbbell-fly": {
+   "name": "Dumbbell fly",
+   "eq": "dumbbell",
+   "camera": "high side",
+   "setup": "lying on a flat bench, feet flat, a dumbbell in each hand, palms facing each other, elbows softly bent",
+   "start": "arms open wide to the sides with the dumbbells level with the chest, elbows softly bent",
+   "end": "dumbbells brought together above the chest in a wide arc",
+   "path": "an upward arc from beside the chest to above it",
+   "primary": [
+    "pec-sternal"
+   ],
+   "secondary": [
+    "pec-clavicular",
+    "delt-front"
+   ]
+  },
+  "machine-shoulder-press": {
+   "name": "Seated shoulder press machine",
+   "eq": "selectorized",
+   "machine": "a seated pin-loaded shoulder press: an upright back pad, an adjustable seat, two handles at shoulder height on lever arms that travel straight up, a weight stack behind",
+   "setup": "seat set so the handles start level with the top of the shoulders; feet flat; back and head against the pad; palms facing forward on the handles",
+   "start": "hands at shoulder height beside the head, elbows bent below the hands and slightly in front of the torso",
+   "end": "arms pressed straight overhead, elbows almost straight, ribs down, back still on the pad",
+   "path": "straight up from the shoulders to overhead",
+   "hard": "the bottom of the press: handles level with the top of the shoulders, elbows bent below the hands and slightly in front of the torso, back flat on the pad",
+   "primary": [
+    "delt-front",
+    "delt-side"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "traps-upper",
+    "pec-clavicular"
+   ],
+   "fresh": [
+    "side"
+   ],
+   "sideNote": "the handles are at the height of the top of the shoulders, beside the ears — higher than the chin, never in front of the chest; the forearms are vertical with the elbows directly under the hands and a little below shoulder height; the lever arms come down from pivots above and behind the head; the handle in each hand is the lower end of its lever arm: the lever runs in one piece from its pivot above and behind the head down to the handle in the hand, so no handle floats"
+  },
+  "plate-loaded-shoulder-press": {
+   "name": "Plate-loaded shoulder press",
+   "eq": "plate-loaded",
+   "machine": "a plate-loaded shoulder press: a seat with an upright back pad, two independent lever arms with handles at shoulder height that press upward in an arc, weight plates on a horn on each lever arm",
+   "setup": "seat set so the handles start level with the shoulders; feet flat; back on the pad",
+   "start": "hands at shoulder height, elbows bent below the hands",
+   "end": "arms pressed up overhead to almost straight",
+   "path": "up in a slight arc from the shoulders to overhead",
+   "primary": [
+    "delt-front",
+    "delt-side"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "traps-upper"
+   ],
+   "fresh": [
+    "sequence"
+   ],
+   "seqNote": "the bright orange is ONLY on the shoulders — the round front and side deltoid caps where the arms join the body; the chest itself stays grey apart from, at most, a faint pale tint just under the collarbones"
+  },
+  "smith-shoulder-press": {
+   "name": "Smith machine shoulder press",
+   "eq": "smith",
+   "camera": "pure side",
+   "machine": "a Smith machine with an upright bench (back rest almost vertical) inside it, placed so the bar passes just in front of the face",
+   "setup": "seated on the upright bench, back against the pad, feet flat; hands on the bar a little wider than the shoulders",
+   "start": "bar at chin height just in front of the face, forearms vertical, elbows under the bar",
+   "end": "bar pressed straight up along the rails to arm's length overhead",
+   "path": "straight up along the rails from chin height to overhead",
+   "primary": [
+    "delt-front",
+    "delt-side"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "traps-upper"
+   ]
+  },
+  "seated-dumbbell-shoulder-press": {
+   "name": "Seated dumbbell shoulder press",
+   "eq": "dumbbell",
+   "setup": "seated on a bench with the back rest upright, feet flat, a dumbbell in each hand",
+   "start": "dumbbells at shoulder height beside the ears, palms forward, forearms vertical",
+   "end": "dumbbells pressed overhead, arms almost straight, dumbbells close together",
+   "path": "straight up from the shoulders to overhead",
+   "primary": [
+    "delt-front",
+    "delt-side"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "traps-upper"
+   ]
+  },
+  "landmine-press": {
+   "name": "Landmine press",
+   "eq": "barbell",
+   "camera": "pure side",
+   "uni": false,
+   "setup": "standing in a staggered stance facing the free end of a barbell whose other end sits in a pivot on the floor, holding the free end with both hands, one cupped over the other, at the upper chest",
+   "start": "bar end held in both hands at the upper chest, elbows bent and tucked in close to the ribs",
+   "end": "both arms pressed up and forward along the bar's arc to full extension, the bar end in front of and above the forehead, the torso still",
+   "path": "a curved arrow beside the bar end: its tail at the hands at the upper chest and its head pointing UP and to the RIGHT of the picture (forward, the way the chest faces, toward the side of the bar's floor pivot), following the bar's arc; it never curls back over the head",
+   "primary": [
+    "delt-front",
+    "pec-clavicular"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "serratus-anterior"
+   ],
+   "seqNote": "in both panels the mannequin faces the RIGHT of the picture and the bar's other end sits in its pivot on the floor at the lower RIGHT, so the bar slopes down and to the right from the hands; in the RIGHT panel the arms reach up and forward to the right along the bar, the bar end above and in front of the forehead"
+  },
+  "standing-barbell-overhead-press": {
+   "name": "Standing barbell overhead press",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "standing tall, feet hip-width, bar resting on the front of the shoulders, hands just outside shoulder width",
+   "start": "bar at the top of the chest at collarbone height, elbows slightly in front of the bar",
+   "end": "bar pressed straight overhead, arms straight, head moved slightly forward through the arms, body upright",
+   "path": "straight up, close to the face, from the collarbones to overhead",
+   "primary": [
+    "delt-front",
+    "delt-side"
+   ],
+   "secondary": [
+    "triceps-lateral",
+    "traps-upper",
+    "rectus-abdominis"
+   ]
+  },
+  "machine-lateral-raise": {
+   "name": "Lateral raise machine",
+   "eq": "selectorized",
+   "camera": "three-quarter rear",
+   "sideCamera": "straight rear view: the camera directly behind the seated mannequin, which faces the machine, so the angle of the upper arms out to the sides reads clearly",
+   "machine": "a seated pin-loaded lateral raise machine: a seat facing a padded chest rest, two padded lever arms at the sides whose round pads rest against the outside of the upper arms just above the elbows, the lever pivots level with the shoulders, a weight stack in front",
+   "setup": "seat set so the shoulders line up with the lever pivots; chest against the chest rest, feet flat; the pads against the outside of the upper arms, elbows bent about 90 degrees, hands lightly on the handles",
+   "start": "upper arms down at the sides, elbows bent, pads resting on the outer upper arms",
+   "end": "upper arms raised out to the sides to shoulder height, elbows leading, shoulders down and not shrugged",
+   "path": "the elbows travel up and out to the sides in an arc to shoulder height",
+   "hard": "the top: upper arms horizontal at shoulder height out to the sides, elbows bent, shoulders down and not shrugged, chest on the chest rest",
+   "primary": [
+    "delt-side"
+   ],
+   "secondary": [
+    "traps-upper",
+    "delt-front"
+   ],
+   "seqNote": "the two padded lever arms are mirror images and each pivots right behind its own shoulder joint in both panels: each lever runs from that pivot to the round pad on the outside of the upper arm and the handle beside it; nothing reaches across the picture to the frame"
+  },
+  "cable-lateral-raise": {
+   "name": "Cable lateral raise",
+   "eq": "cable",
+   "camera": "front",
+   "uni": true,
+   "machine": "a single cable column with the pulley carriage set at the LOWEST position and a single stirrup handle",
+   "setup": "standing side-on to the low pulley, holding the handle in the far hand so the cable crosses in front of the body; the near hand on the column",
+   "start": "working arm hanging across the front of the hips, elbow softly bent",
+   "end": "working arm raised out to the side to shoulder height, elbow slightly bent and level with the hand",
+   "path": "an upward arc out to the side from the front of the hips to shoulder height",
+   "primary": [
+    "delt-side"
+   ],
+   "secondary": [
+    "traps-upper"
+   ],
+   "machineNote": "the cable leaves the column through the pulley on the carriage near the floor and the stirrup handle hangs right at that low pulley; no cable runs down from the top of the column to the handle"
+  },
+  "dumbbell-lateral-raise": {
+   "name": "Dumbbell lateral raise",
+   "eq": "dumbbell",
+   "camera": "front",
+   "setup": "standing tall, feet hip-width, a dumbbell in each hand at the sides, elbows softly bent",
+   "start": "arms hanging at the sides, dumbbells beside the thighs",
+   "end": "arms raised out to the sides to shoulder height, elbows slightly above the wrists, palms down",
+   "path": "upward arcs out to both sides to shoulder height",
+   "primary": [
+    "delt-side"
+   ],
+   "secondary": [
+    "traps-upper",
+    "delt-front"
+   ]
+  },
+  "band-lateral-raise": {
+   "name": "Band lateral raise",
+   "eq": "band",
+   "camera": "front",
+   "setup": "standing on the middle of a resistance band, feet hip-width, an end of the band in each hand at the sides",
+   "start": "arms hanging at the sides, band taut",
+   "end": "arms raised out to the sides to shoulder height, band stretched",
+   "path": "one arrow beside each hand, curving up and out to the side to shoulder height",
+   "primary": [
+    "delt-side"
+   ],
+   "secondary": [
+    "traps-upper"
+   ],
+   "pair": true,
+   "seqNote": "the resistance band is light grey like a cable, never orange; its middle runs under both feet and one end goes up to each hand"
+  },
+  "reverse-pec-deck": {
+   "name": "Reverse pec deck (rear delt fly machine)",
+   "eq": "selectorized",
+   "camera": "three-quarter rear",
+   "machine": "a pec deck and rear delt machine set for reverse flyes: a seat facing a tall chest pad, two swinging arms with handles in front of the pad at shoulder height, a weight stack",
+   "setup": "seat set so the handles are at shoulder height; chest against the pad; arms straight forward holding the handles, palms facing each other or down",
+   "start": "arms extended straight forward at shoulder height, hands close together",
+   "end": "arms swept out and back in a wide arc until in line with the shoulders, elbows softly bent, shoulder blades squeezed",
+   "path": "a single curved arrow beside the hand on the right of the picture, curving outward and back from in front of the chest to the side at shoulder height, its head pointing away from the body",
+   "primary": [
+    "delt-rear"
+   ],
+   "secondary": [
+    "traps-mid",
+    "rhomboids"
+   ]
+  },
+  "rear-delt-dumbbell-fly": {
+   "name": "Rear delt dumbbell fly",
+   "eq": "dumbbell",
+   "camera": "three-quarter rear",
+   "setup": "lying face down on a bench set to about 30 degrees incline (chest supported), a dumbbell in each hand hanging below the shoulders",
+   "start": "arms hanging straight down under the shoulders, palms facing each other, elbows softly bent",
+   "end": "arms raised out to the sides to shoulder level, elbows softly bent",
+   "path": "a single curved arrow beside one hand, rising up and out to the side, its head pointing up and away from the body",
+   "primary": [
+    "delt-rear"
+   ],
+   "secondary": [
+    "traps-mid",
+    "rhomboids"
+   ]
+  },
+  "cable-rear-delt-fly": {
+   "name": "Cable rear delt fly",
+   "eq": "cable",
+   "camera": "three-quarter rear",
+   "machine": "a dual-pulley cable crossover station with both pulley carriages at shoulder height and no handles, the cable ends held directly",
+   "setup": "standing centred, holding the left cable in the right hand and the right cable in the left hand, the cables crossed in front of the chest",
+   "start": "arms crossed in front of the chest at shoulder height",
+   "end": "arms swept out and back to a T at shoulder height, elbows softly bent",
+   "path": "one arrow beside each hand, each starting at that hand in front of the chest and curving outward and back to the side at shoulder height, the two heads pointing away from each other, toward the two columns",
+   "primary": [
+    "delt-rear"
+   ],
+   "secondary": [
+    "traps-mid",
+    "rhomboids"
+   ],
+   "pair": true,
+   "seqNote": "the two cables cross IN FRONT of the chest, hidden by the torso in this rear view: the cable from the LEFT pulley runs to the mannequin's RIGHT hand and the cable from the RIGHT pulley to its LEFT hand; no cable crosses the back, the shoulders or the neck; in the RIGHT panel each hand still grips its own cable end, out to the side level with the shoulder and well inside the columns, and the hands never hold the frame",
+   "machineNote": "each cable hangs on its own from its own pulley carriage and ends in a small ball stop just below the pulley, with no handle; the two cables are separate and never meet, cross or span the gap between the columns"
+  },
+  "face-pull": {
+   "name": "Face pull",
+   "eq": "cable",
+   "camera": "three-quarter rear",
+   "machine": "a single cable column with the pulley carriage set at about forehead height and a rope attachment with two knotted ends",
+   "setup": "standing tall facing the pulley in a slight split stance, a step back so the cable is taut and the arms are straight; an overhand grip on the two rope ends, palms down, one end in each hand",
+   "start": "arms extended forward toward the pulley at face height",
+   "end": "rope pulled to the face, the two ends split apart beside the ears, elbows high and level with the shoulders, forearms pointing up, upper arms rotated back",
+   "path": "a straight arrow beside the forearms running from the pulley side back toward the face, its head next to the face (the way the rope travels when pulled)",
+   "hard": "the end of the pull: rope at the face with the hands beside the ears, elbows high at shoulder level and slightly behind the torso, forearms vertical, chest up",
+   "primary": [
+    "delt-rear",
+    "rotator-cuff"
+   ],
+   "secondary": [
+    "traps-mid",
+    "traps-lower",
+    "rhomboids"
+   ],
+   "machineNote": "a single upright column with a vertical row of adjustment holes and a pulley carriage clamped at about the forehead height of a standing adult, the rope hanging from that carriage's pulley; NO seat, NO bench, NO top beam reaching forward"
+  },
+  "band-pull-apart": {
+   "name": "Band pull-apart",
+   "eq": "band",
+   "camera": "three-quarter rear",
+   "setup": "standing tall, holding a resistance band with both hands about shoulder width apart, straight arms out in front at shoulder height",
+   "start": "arms straight out in front at shoulder height, band slack",
+   "end": "band pulled apart until the arms are out to the sides at shoulder height and the band touches the chest",
+   "path": "one arrow beside each hand, each curving outward and back from in front of the chest to the side at shoulder height, the two heads pointing away from each other",
+   "primary": [
+    "delt-rear"
+   ],
+   "secondary": [
+    "traps-mid",
+    "rhomboids"
+   ],
+   "pair": true,
+   "seqNote": "the resistance band is light grey like a cable, never orange, and it stays in FRONT of the body: in the LEFT panel it stretches between the hands in front of the shoulders; in the RIGHT panel it lies across the front of the chest, so from behind only its two ends show at the hands; it never crosses the back, the neck or the shoulder blades"
+  },
+  "cable-external-rotation": {
+   "name": "Cable external rotation",
+   "eq": "cable",
+   "camera": "front",
+   "uni": false,
+   "machine": "a single cable column with the pulley carriage set at elbow height and a single stirrup handle",
+   "setup": "standing side-on to the column with the working arm farthest from it; elbow bent 90 degrees and pinned to the side with a small rolled towel between elbow and ribs; the handle held across the belly",
+   "start": "forearm across the belly, elbow bent 90 degrees at the side",
+   "end": "forearm rotated outward away from the body as far as is comfortable, elbow still pinned to the side",
+   "path": "a curved arrow just below the moving forearm: its tail starts at the hand in front of the belly and it curves outward to the LEFT, toward the left edge of the picture and away from the cable column, its head pointing left: the hand swings outward around the pinned elbow",
+   "primary": [
+    "rotator-cuff"
+   ],
+   "secondary": [
+    "delt-rear"
+   ],
+   "seqNote": "the mannequin faces the camera; the cable column stands at the RIGHT edge of the picture beside it; the working arm is the mannequin's arm on the LEFT of the picture (the one farthest from the column), its elbow bent 90 degrees and pinned to the side with a small rolled towel; the cable runs from the column across the front of the belly to the handle in that hand; the other arm hangs relaxed; in the RIGHT panel that forearm points out to the LEFT, away from the column, the elbow still at the side"
+  },
+  "side-lying-external-rotation": {
+   "name": "Side-lying external rotation",
+   "eq": "dumbbell",
+   "camera": "front",
+   "uni": true,
+   "setup": "lying on one side on a flat bench, head resting on the lower arm, the top arm's elbow bent 90 degrees and resting on the side with a small rolled towel under it, a light dumbbell in the top hand",
+   "start": "forearm resting across the belly",
+   "end": "forearm rotated up until it points toward the ceiling, elbow still on the side",
+   "path": "a curved arrow from the hand resting on the belly up around the elbow, its head pointing straight up at the ceiling above the elbow",
+   "primary": [
+    "rotator-cuff"
+   ],
+   "secondary": [
+    "delt-rear"
+   ],
+   "seqNote": "the mannequin lies on its side facing the camera, the head at the LEFT end of the bench resting on the lower arm; the top arm's upper arm lies flat along the top of the ribcage, horizontal in the picture, from the shoulder next to the head to the elbow at the waist, and a small rolled towel sits on top of the ribs between that elbow and the body, not under the body; in both panels the upper arm, the elbow and the towel do not move; in the LEFT panel the forearm lies across the belly holding the dumbbell; in the RIGHT panel only the forearm has turned up: it points straight up at the ceiling from the elbow at the waist, so the dumbbell is straight above the waist, in the middle of the body's length, never above the shoulder or the head"
+  },
+  "band-external-rotation": {
+   "name": "Band external rotation",
+   "eq": "band",
+   "camera": "front",
+   "uni": false,
+   "setup": "standing side-on to a resistance band anchored at elbow height, the working arm farthest from the anchor, elbow bent 90 degrees and pinned to the side",
+   "start": "forearm across the belly holding the band",
+   "end": "forearm rotated outward away from the body, elbow still at the side",
+   "path": "a curved arrow just below the moving forearm: its tail starts at the hand in front of the belly and it curves outward to the RIGHT, away from the anchor post, its head pointing right",
+   "primary": [
+    "rotator-cuff"
+   ],
+   "secondary": [
+    "delt-rear"
+   ],
+   "seqNote": "the resistance band is light grey like a cable, never orange; the mannequin faces the camera; the band's anchor post stands at the LEFT edge of the picture and the working arm is the mannequin's arm on the RIGHT of the picture (the one farthest from the anchor), its elbow bent 90 degrees and pinned to the side; the band runs from the post across the front of the belly to that hand; the other arm hangs relaxed"
+  },
+  "machine-shrug": {
+   "name": "Shrug machine",
+   "eq": "plate-loaded",
+   "camera": "front",
+   "machine": "a plate-loaded standing shrug machine: a platform to stand on between two handles at hip height at the ends of a lever arm, weight plates on horns at the lever ends",
+   "setup": "standing tall on the platform between the handles, arms straight down holding the handles",
+   "start": "shoulders relaxed and low, arms straight",
+   "end": "shoulders raised straight up toward the ears, arms still straight",
+   "path": "straight up from the shoulders",
+   "primary": [
+    "traps-upper"
+   ],
+   "secondary": [
+    "forearm-flexors"
+   ]
+  },
+  "dumbbell-shrug": {
+   "name": "Dumbbell shrug",
+   "eq": "dumbbell",
+   "camera": "front",
+   "setup": "standing tall, a heavy dumbbell in each hand at the sides",
+   "start": "shoulders relaxed and low, arms straight",
+   "end": "shoulders raised straight up toward the ears, arms still straight",
+   "path": "straight up from the shoulders",
+   "primary": [
+    "traps-upper"
+   ],
+   "secondary": [
+    "forearm-flexors"
+   ]
+  },
+  "vertical-traction": {
+   "name": "Vertical traction (lever pulldown) machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded vertical traction machine: a seat with padded knee rollers on a short post at the front end of the seat, resting on top of the thighs just behind the knees (in a profile view: a round pad seen end-on, sitting on top of the thigh near the knee, never behind the hips), two independent handle arms above the head that pull down in an arc (no bar and no cable at the hands), a weight stack",
+   "setup": "seat set so the thighs fit snugly under the pads and the handles are just reachable with straight arms; feet flat",
+   "start": "arms extended up gripping the handles, shoulders reaching up, torso upright",
+   "end": "handles pulled down to the shoulders, elbows down beside the ribs and slightly back, chest up",
+   "path": "down and slightly back in an arc from overhead to the shoulders",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "biceps",
+    "rhomboids",
+    "traps-lower"
+   ]
+  },
+  "lat-pulldown": {
+   "name": "Lat pulldown",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a lat pulldown station: a tall frame whose weight stack column stands in front of the seated mannequin (on the right in a profile view), a top beam reaching back from the column to a pulley just above and in front of the mannequin's head, the cable running from that pulley straight down to the middle of a long straight bar with slightly bent ends, and a seat with padded knee rollers on a short post at the front end of the seat, resting on top of the thighs just behind the knees (in a profile view: a round pad seen end-on, sitting on top of the thigh near the knee, never behind the hips)",
+   "setup": "seated facing the weight stack column, thighs locked under the knee rollers, feet flat; overhand grip on the bar about one and a half times shoulder width (in this profile view the bar is seen end-on, as a short stub held in the hands)",
+   "start": "arms fully extended overhead holding the bar above and slightly in front of the head, torso upright with a slight lean back of about 10 to 15 degrees, shoulders reaching up; the cable is long and straight from the pulley to the bar",
+   "end": "bar pulled down IN FRONT of the face to the top of the chest at collarbone height (never behind the neck), elbows pointing down and slightly back beside the ribs, forearms vertical under the bar, chest lifted toward the bar; the torso keeps the same slight lean and the thighs stay under the rollers",
+   "path": "straight down in front of the face from overhead to the upper chest",
+   "hard": "the bottom of the pull: bar at the upper chest, elbows down beside the ribs and slightly behind the torso, forearms vertical under the bar, chest up, torso leaning back only about 10 to 15 degrees, thighs under the rollers",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "biceps",
+    "rhomboids",
+    "traps-lower",
+    "delt-rear"
+   ],
+   "note": "the weight stack column stands on the RIGHT, in front of the mannequin, which faces it; the top beam reaches back from that column over the mannequin's head to the pulley; no part of the frame stands behind the mannequin's back; the knee roller is a round pad seen end-on resting on top of the thigh just behind the knee, never at the hip or behind the buttocks"
+  },
+  "plate-loaded-pulldown": {
+   "name": "Plate-loaded pulldown",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded front lat pulldown: a seat with padded knee rollers on a short post at the front end of the seat, resting on top of the thighs just behind the knees (in a profile view: a round pad seen end-on, sitting on top of the thigh near the knee, never behind the hips), two independent lever arms with handles overhead that pull down and back in an arc, weight plates on horns at the back of the levers",
+   "setup": "thighs locked under the pads, feet flat; hands on the overhead handles",
+   "start": "arms extended up holding the handles, shoulders reaching up",
+   "end": "handles pulled down to the upper chest, elbows down and back beside the ribs, chest up",
+   "path": "down and slightly back in an arc to the upper chest",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "biceps",
+    "rhomboids"
+   ]
+  },
+  "neutral-grip-pulldown": {
+   "name": "Neutral-grip pulldown",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a lat pulldown station with a parallel-grip handle (two handles with the palms facing each other, about shoulder width apart) on the high pulley, the weight stack column in front of the seated mannequin, and a seat with padded knee rollers on a short post at the front end of the seat, resting on top of the thighs just behind the knees (in a profile view: a round pad seen end-on, sitting on top of the thigh near the knee, never behind the hips)",
+   "setup": "seated facing the weight stack column, thighs locked under the knee rollers, feet flat; palms facing each other on the parallel handles",
+   "start": "arms fully extended overhead, torso upright with a slight lean back",
+   "end": "handle pulled down to the upper chest, elbows down beside the ribs, chest up",
+   "path": "straight down in front of the face to the upper chest",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "biceps",
+    "brachialis",
+    "rhomboids"
+   ]
+  },
+  "assisted-pull-up": {
+   "name": "Assisted pull-up",
+   "eq": "assisted",
+   "camera": "pure side",
+   "machine": "an assisted pull-up and dip machine: a tall frame with wide overhand handles and parallel handles on top, dip handles lower at the sides, a padded knee platform on a lever linked to a weight stack that pushes up to help, steps to climb on",
+   "setup": "kneeling with both knees on the assistance pad, hands on the top handles a little wider than the shoulders, overhand grip",
+   "start": "hanging with straight arms overhead, body upright, knees on the pad, shoulders reaching up",
+   "end": "body pulled up until the chin is level with the handles, elbows bent sharply and down beside the ribs, chest toward the handles, knees still on the pad",
+   "path": "the whole body rises straight up",
+   "hard": "the top of the pull: chin level with the handles, elbows bent sharply and down beside the ribs, chest up toward the handles, knees on the pad",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "biceps",
+    "teres-major",
+    "rhomboids",
+    "traps-lower",
+    "brachialis"
+   ]
+  },
+  "single-arm-cable-pulldown": {
+   "name": "Single-arm cable pulldown",
+   "eq": "cable",
+   "camera": "pure side",
+   "uni": true,
+   "machine": "a single cable column with the pulley carriage set at the TOP and a single stirrup handle",
+   "setup": "kneeling on one knee below the high pulley, the working arm reaching up holding the handle",
+   "start": "working arm extended overhead, shoulder reaching up",
+   "end": "handle pulled down to the side of the chest, elbow down beside the ribs",
+   "path": "straight down from overhead to the side of the chest",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "biceps"
+   ]
+  },
+  "band-assisted-pull-up": {
+   "name": "Band-assisted pull-up",
+   "eq": "band",
+   "camera": "pure side",
+   "setup": "a long loop resistance band hooked over a pull-up bar, one knee resting in the band's loop, hands on the bar a little wider than the shoulders with an overhand grip",
+   "start": "hanging with straight arms, knee in the band",
+   "end": "chin above the bar, elbows down beside the ribs, chest toward the bar",
+   "path": "the whole body rises straight up",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "biceps",
+    "teres-major",
+    "rhomboids"
+   ]
+  },
+  "pull-up": {
+   "name": "Pull-up",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "hanging from a pull-up bar, overhand grip a little wider than the shoulders, legs straight or knees slightly bent",
+   "start": "dead hang with straight arms",
+   "end": "chin over the bar, elbows down and back beside the ribs, chest toward the bar",
+   "path": "the whole body rises straight up",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "biceps",
+    "teres-major",
+    "rhomboids",
+    "traps-lower"
+   ]
+  },
+  "chin-up": {
+   "name": "Chin-up",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "hanging from a pull-up bar, underhand grip (palms facing you) at shoulder width",
+   "start": "dead hang with straight arms",
+   "end": "chin over the bar, elbows down in front of the ribs, chest toward the bar",
+   "path": "the whole body rises straight up",
+   "primary": [
+    "lats",
+    "biceps"
+   ],
+   "secondary": [
+    "teres-major",
+    "brachialis",
+    "rhomboids"
+   ]
+  },
+  "machine-pullover": {
+   "name": "Pullover machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded pullover machine: a seat with a back pad and a hip belt, a curved bar above the head joined to padded elbow plates on a lever that rotates around the shoulders, a weight stack",
+   "setup": "seat set so the shoulders line up with the lever's pivot; belt across the hips; elbows against the pads, hands resting lightly on the bar",
+   "start": "arms raised overhead and slightly behind the head, elbows on the pads, a stretch along the sides of the back",
+   "end": "arms rotated forward and down in a big arc until the bar touches the belly",
+   "path": "a large downward arc around the shoulders from overhead to the belly",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "triceps-long",
+    "pec-sternal"
+   ]
+  },
+  "straight-arm-pulldown": {
+   "name": "Straight-arm pulldown",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a single cable column with the pulley carriage set at the TOP and a straight bar attachment",
+   "setup": "standing a step back from the high pulley, feet hip-width, hips hinged slightly forward with a flat back, arms straight holding the bar at shoulder width",
+   "start": "arms straight up in front at about head height, a stretch along the sides of the back",
+   "end": "bar swept down in an arc to the thighs, arms still straight",
+   "path": "a downward arc with straight arms from head height to the thighs",
+   "primary": [
+    "lats"
+   ],
+   "secondary": [
+    "teres-major",
+    "triceps-long"
+   ]
+  },
+  "dumbbell-pullover": {
+   "name": "Dumbbell pullover",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "lying on the back along a flat bench, feet flat on the floor, holding one dumbbell with both hands above the chest, elbows softly bent",
+   "start": "arms lowered back behind the head in an arc, the dumbbell about level with the bench, a stretch through the sides and the chest",
+   "end": "dumbbell brought back up over the chest in the same arc",
+   "path": "an upward arc from behind the head to over the chest",
+   "primary": [
+    "lats",
+    "pec-sternal"
+   ],
+   "secondary": [
+    "teres-major",
+    "triceps-long",
+    "serratus-anterior"
+   ]
+  },
+  "machine-row": {
+   "name": "Seated row machine (chest-supported)",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded row machine: a seat, an upright padded chest rest in front, two handles on lever arms reaching forward with horizontal and vertical grips, a weight stack",
+   "setup": "seat set so the handles are level with the lower chest; chest rest set so the arms are fully stretched at the handles; chest against the pad, feet flat",
+   "start": "arms extended forward holding the handles, shoulder blades spread forward, chest on the pad",
+   "end": "handles pulled back to the sides of the lower ribs, elbows driven back past the torso, shoulder blades squeezed together, chest still on the pad",
+   "path": "a straight arrow just below the forearms, its tail at the handles and its head pointing LEFT toward the lower ribs and the seat (toward the left edge of the picture, away from the weight stack): the hands travel back toward the body",
+   "hard": "the end of the pull: handles beside the lower ribs, elbows behind the torso and close to the sides, shoulder blades squeezed, chest on the pad, torso upright",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps",
+    "teres-major"
+   ],
+   "fresh": [
+    "sequence",
+    "machine"
+   ],
+   "machineNote": "the chest pad stands upright at the front edge of the seat, facing the seat; the two handles sit on the FAR side of the chest pad (between the pad and the weight stack) at chest height, so a user on the seat leans the chest on the pad and reaches past it to the handles; seen from the seat side at three-quarter, so the seat, then the pad, then the handles beyond it read in that order",
+   "seqNote": "seen as a true profile: the seat on the left, the vertical chest pad standing just in front of the mannequin's chest, the two handles on the far side of that pad (between the pad and the weight stack) at lower-chest height; the chest stays pressed on the pad in both panels; in the RIGHT panel the hands are pulled back to beside the lower ribs at the sides of the pad and the elbows point straight BACK, clearly behind the back line of the torso"
+  },
+  "plate-loaded-row": {
+   "name": "Plate-loaded row",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded iso-lateral row: a seat and an upright chest pad, two independent lever arms with handles reaching forward, weight plates on horns on the levers",
+   "setup": "chest against the pad, feet flat; hands on the handles",
+   "start": "arms extended forward, shoulder blades spread",
+   "end": "handles pulled back to the ribs, elbows behind the torso, shoulder blades squeezed",
+   "path": "back and slightly down in an arc to the ribs (toward the left of the picture, toward the mannequin's back)",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps"
+   ]
+  },
+  "t-bar-row": {
+   "name": "Chest-supported T-bar row",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a chest-supported T-bar row: a foot platform, an inclined chest pad, a long lever arm under the pad with wide and narrow handles, weight plates on a horn at the end of the lever",
+   "setup": "standing on the foot platform with the chest on the inclined pad, arms hanging straight down holding the handles",
+   "start": "arms straight down holding the handles, shoulder blades spread",
+   "end": "handles pulled up to the lower chest, elbows back past the torso, shoulder blades squeezed",
+   "path": "straight up from the hanging position to the lower chest",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps",
+    "erectors"
+   ],
+   "machineNote": "one long lever arm pivots at floor level at the BACK end, just in front of the foot platform, runs forward under the chest pad and ends in the plate horn at the FRONT; the wide and narrow handles are fixed on that lever just below the front edge of the chest pad, within arm's reach of someone lying on the pad; nothing else: no seat, no stool and no second post with handles"
+  },
+  "chest-supported-dumbbell-row": {
+   "name": "Chest-supported dumbbell row",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "lying face down on a bench set to about 30 to 45 degrees incline, feet on the floor, a dumbbell in each hand hanging straight down",
+   "start": "arms hanging straight below the shoulders",
+   "end": "dumbbells rowed up to the sides of the lower ribs, elbows behind the torso",
+   "path": "straight up from below the shoulders to the lower ribs",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps"
+   ]
+  },
+  "high-row-machine": {
+   "name": "High row machine",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded high row: a seat with a thigh pad and a chest pad, two independent lever arms with handles high in front that pull down and back in an arc, weight plates on horns on the levers",
+   "setup": "thighs under the pad, chest against the pad; arms reaching up and forward to the handles",
+   "start": "arms extended up and forward holding the handles",
+   "end": "handles pulled down and back to the shoulders, elbows behind the torso",
+   "path": "down and back in an arc to the shoulders (down and toward the left of the picture, toward the mannequin's back)",
+   "primary": [
+    "lats",
+    "traps-mid"
+   ],
+   "secondary": [
+    "rhomboids",
+    "teres-major",
+    "biceps",
+    "delt-rear"
+   ]
+  },
+  "seated-cable-row": {
+   "name": "Seated cable row",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a seated cable row (low row) station: a long low bench, an angled foot platform, a low pulley at foot level with a close-grip V-handle (two parallel grips), a weight stack at the far end",
+   "setup": "sitting on the bench, feet on the platform, knees softly bent, torso upright; both hands on the V-handle with the palms facing each other",
+   "start": "arms extended forward toward the pulley, shoulder blades spread, torso upright and leaning forward no more than slightly",
+   "end": "handle pulled to the belly just below the ribs, elbows driven back close to the sides, shoulder blades squeezed, torso upright and still",
+   "path": "straight back from the pulley to the belly",
+   "hard": "the end of the pull: handle at the belly, elbows behind the torso close to the sides, shoulder blades squeezed, torso upright at about 90 degrees to the bench, knees softly bent",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "delt-rear",
+    "teres-major",
+    "erectors"
+   ]
+  },
+  "inverted-row": {
+   "name": "Inverted row",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying under a bar fixed at about hip height (a Smith machine or rack), hands on the bar a little wider than the shoulders, heels on the floor, body straight",
+   "start": "hanging under the bar with straight arms, body one straight line from heels to head",
+   "end": "chest pulled up to the bar, elbows back, body still straight",
+   "path": "the straight body rises toward the bar, pivoting on the heels",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps"
+   ]
+  },
+  "single-arm-cable-row": {
+   "name": "Single-arm cable row",
+   "eq": "cable",
+   "camera": "pure side",
+   "uni": true,
+   "machine": "a single cable column with the pulley carriage set at chest height and a single stirrup handle",
+   "setup": "standing facing the pulley in a split stance, the working hand on the handle, the other hand on the hip",
+   "start": "working arm extended forward toward the pulley, shoulder reaching forward",
+   "end": "handle pulled to the side of the ribs, elbow back past the torso, torso not rotating",
+   "path": "straight back from the pulley to the side of the ribs (toward the left of the picture, toward the mannequin's back)",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "biceps",
+    "obliques",
+    "delt-rear"
+   ]
+  },
+  "single-arm-dumbbell-row": {
+   "name": "Single-arm dumbbell row",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "uni": true,
+   "setup": "one knee and the same-side hand on a flat bench, back flat and nearly parallel to the floor, the other foot on the floor, a dumbbell hanging in the free hand",
+   "start": "arm hanging straight down below the shoulder",
+   "end": "dumbbell rowed up to the hip, elbow close to the body and behind the torso",
+   "path": "up and slightly back from below the shoulder to the hip",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps"
+   ]
+  },
+  "barbell-row": {
+   "name": "Barbell bent-over row",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "standing with feet hip-width, hinged forward at the hips to about 45 degrees with a flat back and soft knees, overhand grip a little wider than the shoulders",
+   "start": "bar hanging at arm's length below the knees, back flat",
+   "end": "bar rowed to the lower ribs, elbows back past the torso, back still flat and at the same angle",
+   "path": "straight up from below the knees to the lower ribs",
+   "primary": [
+    "lats",
+    "traps-mid",
+    "rhomboids"
+   ],
+   "secondary": [
+    "delt-rear",
+    "biceps",
+    "erectors"
+   ]
+  },
+  "lower-back-machine": {
+   "name": "Lower back machine (lumbar extension)",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded lower back machine: a seat with a foot platform, thigh and hip pads that lock the pelvis, a padded roller across the upper back on a lever arm pivoting at the level of the lower back, a weight stack",
+   "setup": "seat set so the machine's pivot lines up with the lower back at navel height; feet on the platform, thigh pads locked; upper back against the roller, arms crossed on the chest",
+   "start": "torso leaning forward about 30 to 40 degrees, the back gently rounded forward against the roller",
+   "end": "torso pushed back to upright, spine extended to neutral, hips still locked",
+   "path": "a curved arrow in the empty space behind the upper back, between the back and the weight stack: its tail starts beside the roller and it curves UP and to the LEFT, toward the top-left corner of the picture (toward the weight stack side), its head at its upper-left end; the roller and the upper back travel up and backward as the trunk comes upright; the arrow never points right, forward or over the head",
+   "hard": "the forward position: torso leaning forward about 40 degrees against the roller, pelvis locked by the pads, feet flat on the platform, arms crossed on the chest",
+   "primary": [
+    "erectors"
+   ],
+   "secondary": [
+    "quadratus-lumborum",
+    "glute-max"
+   ],
+   "sideNote": "the mannequin SITS: the buttocks rest fully on the seat, the thighs lie level on the seat locked under the thigh pads, the knees are bent about 90 degrees with the feet on the platform; only the trunk leans forward from the hips against the roller",
+   "sidePath": "a curved arrow in the empty space behind the upper back, between the back and the weight stack: its tail starts beside the roller and it curves UP and to the LEFT, toward the top-left corner of the picture (toward the weight stack side), its head at its upper-left end; the roller and the upper back travel up and backward as the trunk comes upright; the arrow never points right, forward or over the head"
+  },
+  "back-extension-45": {
+   "name": "45-degree back extension",
+   "eq": "bodyweight",
+   "station": true,
+   "camera": "pure side",
+   "machine": "a 45-degree back extension bench (hyperextension): an angled frame with a padded thigh support and two ankle rollers on a foot plate, no weights",
+   "setup": "on the 45-degree bench with the thighs on the pad, its top edge just below the hip crease, ankles locked under the rollers, arms crossed on the chest",
+   "start": "torso hanging down toward the floor, hips bent, back flat",
+   "end": "torso raised until the body forms one straight line from head to heels, not beyond",
+   "path": "a curved arrow just beyond the head and shoulders, arcing around the hips: its tail starts at the hanging head below and to the right of the hip pad, it bulges out to the right and curves UP, and its head points up toward the upper RIGHT of the picture where the head ends in line with the legs; it never continues past that line toward the feet or the upper left",
+   "primary": [
+    "erectors",
+    "glute-max"
+   ],
+   "secondary": [
+    "hamstrings"
+   ],
+   "seqNote": "in both panels the foot plate and ankle rollers are at the LOWER LEFT and the hip pad in the middle, so the legs slope up to the right; in the RIGHT panel the head is at the upper RIGHT and the body is one straight diagonal line from the heels through the hips to the head, never arched back"
+  },
+  "reverse-hyperextension": {
+   "name": "Reverse hyperextension",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying face down on a high flat bench with the hips at the end of the bench, holding the sides of the bench, legs hanging down",
+   "start": "legs hanging down toward the floor, hips bent",
+   "end": "straight legs raised behind until in line with the torso",
+   "path": "a curved arrow beside the feet that swings them up and BACK, away from the bench, until the legs are level with the body (toward the upper left of the picture when the head is on the right), its head pointing up and back",
+   "primary": [
+    "glute-max",
+    "erectors"
+   ],
+   "secondary": [
+    "hamstrings"
+   ]
+  },
+  "four-way-neck-machine": {
+   "name": "4-way neck machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded 4-way neck machine: a seat with a torso pad, a padded head plate on a lever arm at head height that can face front, back or sides, side handles, a weight stack",
+   "setup": "seated facing away from the head pad so the back of the head rests on it, torso upright, hands on the side handles",
+   "start": "head tilted slightly forward, chin toward the chest, back of the head against the pad",
+   "end": "head pushed back to neutral and slightly beyond against the pad, torso still",
+   "path": "the head moves back in a small arc against the pad",
+   "primary": [
+    "neck-extensors"
+   ],
+   "secondary": [
+    "traps-upper"
+   ]
+  },
+  "neck-extension": {
+   "name": "Neck extension",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying face down on a flat bench with the head and neck over the end, both hands holding a light weight plate on a folded towel against the back of the head",
+   "start": "head lowered, chin toward the chest",
+   "end": "head raised until it is in line with the body",
+   "path": "the head rises in a small arc",
+   "primary": [
+    "neck-extensors"
+   ],
+   "secondary": [
+    "traps-upper"
+   ],
+   "station": false
+  },
+  "neck-flexion": {
+   "name": "Neck flexion",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying face up on a flat bench with the head over the end, both hands holding a light weight plate on a folded towel on the forehead",
+   "start": "head relaxed back level with the bench, hanging just beyond its LEFT end",
+   "end": "chin tucked toward the chest and the head lifted, the shoulders and upper back still flat on the bench",
+   "path": "the head curls up in a small arc",
+   "primary": [
+    "neck-flexors"
+   ],
+   "secondary": [],
+   "station": false,
+   "seqNote": "the flat bench ends at the top of the shoulders: the whole head is beyond the LEFT end of the bench, unsupported, in both panels; the shoulder blades and the upper back stay pressed flat on the bench pad in both panels and the chest never lifts; the elbows point up and the upper arms rest on the chest; the movement is only a nod of the head: in the LEFT panel the head hangs back level with the bench, in the RIGHT panel the head has tilted up so the chin moves toward the chest; never a sit-up or a crunch"
+  },
+  "neck-isometrics": {
+   "name": "Neck isometrics",
+   "eq": "bodyweight",
+   "camera": "three-quarter front",
+   "setup": "seated tall on a bench, neck neutral; one palm presses against the head while the neck resists without moving",
+   "start": "palm on the forehead pressing back, head still and neutral",
+   "end": "palm on the side of the head pressing sideways, head still and neutral",
+   "path": "a short straight arrow at the palm showing it pressing into the forehead while the head does not move",
+   "primary": [
+    "neck-flexors",
+    "neck-extensors"
+   ],
+   "secondary": [
+    "traps-upper"
+   ],
+   "fresh": [
+    "sequence"
+   ]
+  },
+  "machine-preacher-curl": {
+   "name": "Machine preacher curl",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded preacher curl (arm curl) machine: a seat, an angled arm pad in front sloping down away from the body, two handles on a lever whose pivot sits level with the elbows, a weight stack",
+   "setup": "seat set so the armpits sit snugly at the top of the arm pad and the elbows line up with the machine's pivot; upper arms flat on the pad; underhand grip on the handles",
+   "start": "arms almost straight along the pad, elbows slightly bent, handles low",
+   "end": "elbows fully bent, handles raised toward the shoulders, upper arms still flat on the pad",
+   "path": "the hands curl up in an arc around the elbows",
+   "hard": "early in the curl: forearms about level with the floor, elbows bent about 45 degrees from straight, upper arms flat on the pad, armpits snug against its top",
+   "primary": [
+    "biceps",
+    "brachialis"
+   ],
+   "secondary": [
+    "brachioradialis"
+   ]
+  },
+  "incline-dumbbell-curl": {
+   "name": "Incline dumbbell curl",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "lying back on a bench set to about 45 to 60 degrees incline, arms hanging straight down behind the torso line, a dumbbell in each hand, palms forward",
+   "start": "arms hanging straight down from the shoulders",
+   "end": "dumbbells curled up toward the shoulders, upper arms still hanging vertically",
+   "path": "the hands curl up in an arc around the elbows",
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "brachialis",
+    "brachioradialis"
+   ]
+  },
+  "bayesian-cable-curl": {
+   "name": "Bayesian cable curl",
+   "eq": "cable",
+   "camera": "pure side",
+   "uni": true,
+   "machine": "a single cable column with the pulley carriage set LOW, at about knee height, and a single stirrup handle",
+   "setup": "standing facing away from the column in a split stance, the working arm extended down and behind the body holding the handle, palm forward",
+   "start": "working arm extended down and slightly behind the torso, a stretch in the biceps",
+   "end": "handle curled up toward the shoulder, the upper arm still behind the torso line",
+   "path": "the hand curls forward and up in an arc around the elbow",
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "brachialis"
+   ],
+   "seqNote": "the cable column stands on the LEFT of each panel, BEHIND the mannequin, which faces the right edge with its back to the column; the cable runs from the low pulley behind the mannequin forward and up to the hand at its side, never between the legs; in the LEFT panel the working arm hangs slightly BEHIND the hip, drawn back by the cable; in the RIGHT panel the forearm is curled up to the front of the shoulder while the upper arm still points down and slightly back"
+  },
+  "ez-bar-preacher-curl": {
+   "name": "EZ-bar preacher curl",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "seated at a preacher bench, upper arms on the angled pad, an EZ curl bar held underhand on its angled grips",
+   "start": "arms almost straight along the pad",
+   "end": "bar curled up toward the shoulders, upper arms still on the pad",
+   "path": "the bar curls up in an arc around the elbows",
+   "primary": [
+    "biceps",
+    "brachialis"
+   ],
+   "secondary": [
+    "brachioradialis"
+   ]
+  },
+  "cable-curl": {
+   "name": "Cable curl",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a single cable column with the pulley carriage at the LOWEST position and a short straight bar attachment",
+   "setup": "standing facing the pulley, feet hip-width, underhand grip on the bar at shoulder width, elbows at the sides",
+   "start": "arms straight down, bar at the thighs",
+   "end": "bar curled up to the shoulders, elbows still at the sides",
+   "path": "the bar curls up in an arc around the elbows",
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "brachialis",
+    "brachioradialis"
+   ]
+  },
+  "dumbbell-curl": {
+   "name": "Dumbbell curl",
+   "eq": "dumbbell",
+   "camera": "three-quarter front",
+   "setup": "standing tall, a dumbbell in each hand at the sides, palms forward",
+   "start": "arms straight down at the sides",
+   "end": "dumbbells curled to the shoulders, elbows still at the sides",
+   "path": "the hands curl up in an arc around the elbows",
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "brachialis",
+    "brachioradialis"
+   ],
+   "seqNote": "an underhand grip: the palms face forward in the LEFT panel and up toward the shoulders in the RIGHT panel, so each dumbbell's handle runs across the body from side to side, never front to back like a hammer curl; the elbows stay pinned at the sides of the ribs in both panels",
+   "fresh": [
+    "sequence"
+   ]
+  },
+  "barbell-curl": {
+   "name": "Barbell curl",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "standing tall, underhand grip on a barbell at shoulder width, elbows at the sides",
+   "start": "bar at the thighs, arms straight",
+   "end": "bar curled to the shoulders, elbows still at the sides",
+   "path": "the bar curls up in an arc around the elbows",
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "brachialis",
+    "brachioradialis"
+   ]
+  },
+  "hammer-curl": {
+   "name": "Hammer curl",
+   "eq": "dumbbell",
+   "camera": "three-quarter front",
+   "setup": "standing tall, a dumbbell in each hand at the sides with the palms facing the thighs (neutral grip, thumbs forward)",
+   "start": "arms straight down at the sides, palms facing the thighs",
+   "end": "dumbbells curled up to the shoulders keeping the thumbs up and the palms facing each other, elbows still at the sides",
+   "path": "the hands curl up in an arc around the elbows",
+   "hard": "the middle of the curl: elbows bent 90 degrees at the sides, forearms level with the floor, thumbs up, upper arms vertical",
+   "primary": [
+    "brachialis",
+    "brachioradialis"
+   ],
+   "secondary": [
+    "biceps"
+   ]
+  },
+  "reverse-curl": {
+   "name": "Reverse curl",
+   "eq": "barbell",
+   "camera": "three-quarter front",
+   "setup": "standing tall, overhand grip (palms down) on an EZ bar or barbell at shoulder width, elbows at the sides",
+   "start": "bar at the thighs, arms straight, palms facing back",
+   "end": "bar curled to the shoulders with the palms still down",
+   "path": "the bar curls up in an arc around the elbows",
+   "primary": [
+    "brachioradialis",
+    "brachialis"
+   ],
+   "secondary": [
+    "forearm-extensors",
+    "biceps"
+   ]
+  },
+  "overhead-cable-triceps-extension": {
+   "name": "Overhead cable triceps extension",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a single cable column with the pulley carriage set at about head height and a rope attachment",
+   "setup": "standing in a split stance facing away from the column, leaning slightly forward, holding the rope behind the head with both hands, upper arms beside the head pointing forward and up",
+   "start": "elbows bent fully, hands behind the head, a stretch along the back of the upper arms",
+   "end": "arms extended forward and up in line with the upper arms, elbows straight, upper arms unmoved",
+   "path": "a curved arrow from behind the head that swings the hands forward and up, AWAY from the column (toward the right of the picture), its head pointing forward-up beyond the forehead",
+   "primary": [
+    "triceps-long",
+    "triceps-lateral"
+   ],
+   "secondary": []
+  },
+  "machine-triceps-extension": {
+   "name": "Triceps extension machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded triceps extension machine: a seat, an angled arm pad in front, two handles on a lever whose pivot sits level with the elbows, a weight stack",
+   "setup": "seat set so the elbows line up with the machine's pivot, upper arms flat on the pad, hands on the handles",
+   "start": "elbows bent about 90 degrees or more, hands near the shoulders",
+   "end": "arms extended straight along the pad, upper arms unmoved",
+   "path": "the hands push forward and down in an arc around the elbows",
+   "primary": [
+    "triceps-lateral",
+    "triceps-long"
+   ],
+   "secondary": []
+  },
+  "dumbbell-overhead-triceps-extension": {
+   "name": "Dumbbell overhead triceps extension",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "seated on a bench with an upright back rest, holding one dumbbell with both hands behind the head, upper arms vertical beside the ears",
+   "start": "elbows bent fully, dumbbell behind the head",
+   "end": "arms extended straight overhead, upper arms unmoved",
+   "path": "the dumbbell rises in an arc around the elbows to overhead",
+   "primary": [
+    "triceps-long",
+    "triceps-lateral"
+   ],
+   "secondary": []
+  },
+  "skull-crusher": {
+   "name": "Lying triceps extension (skull crusher)",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "lying on a flat bench, feet flat, holding an EZ bar above the chest with the arms angled slightly back toward the head",
+   "start": "elbows bent, bar lowered to just above the forehead, upper arms angled slightly back",
+   "end": "arms extended, bar above the eyes and shoulders, upper arms unmoved",
+   "path": "the bar rises in an arc around the elbows",
+   "primary": [
+    "triceps-long",
+    "triceps-lateral"
+   ],
+   "secondary": []
+  },
+  "cable-pushdown": {
+   "name": "Cable triceps pushdown",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a single cable column with the pulley carriage set at the TOP and a short straight bar attachment",
+   "setup": "standing tall facing the pulley, close to the cable, feet hip-width, a slight forward lean, elbows pinned to the sides; overhand grip on the bar with the hands about 20 to 30 centimetres apart",
+   "start": "elbows bent a little more than 90 degrees, forearms about level with the floor, bar at lower-chest height, upper arms vertical at the sides",
+   "end": "arms pushed straight down, bar at the thighs, elbows still at the sides",
+   "path": "the bar travels down in a short arc around the elbows",
+   "hard": "the middle of the push: elbows bent 90 degrees, forearms level with the floor, upper arms vertical and pinned to the sides, wrists straight",
+   "primary": [
+    "triceps-lateral",
+    "triceps-long"
+   ],
+   "secondary": [],
+   "sideNote": "the cable column stands on the RIGHT of the picture in front of the mannequin, which faces it; the cable hangs from the top pulley straight down in front of the mannequin's face and chest to the bar held in front of the belly; no part of the column stands behind the mannequin and the cable never passes behind or through the body",
+   "machineNote": "a free-standing single cable column with the pulley at the top and the short bar hanging from it; NO seat, NO bench, NO knee rollers — the exercise is done standing"
+  },
+  "close-grip-bench-press": {
+   "name": "Close-grip bench press",
+   "eq": "barbell",
+   "camera": "high side",
+   "setup": "lying on a flat bench with rack uprights, hands on the bar about shoulder width apart, elbows close to the body",
+   "start": "bar lowered to the lower chest, elbows tucked close to the sides",
+   "end": "bar pressed up to arm's length",
+   "path": "straight up from the lower chest to arm's length",
+   "primary": [
+    "triceps-lateral",
+    "triceps-long"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front"
+   ]
+  },
+  "diamond-push-up": {
+   "name": "Diamond push-up",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "push-up position with the hands together under the chest, thumbs touching so the hands frame a diamond-shaped gap, body one straight line",
+   "start": "chest lowered to the hands, elbows close to the body",
+   "end": "arms straight, body still one straight line",
+   "path": "the chest rises straight up while the body pivots on the toes",
+   "primary": [
+    "triceps-lateral",
+    "triceps-long"
+   ],
+   "secondary": [
+    "pec-sternal",
+    "delt-front"
+   ]
+  },
+  "wrist-curl": {
+   "name": "Wrist curl",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "seated on a bench, forearms resting on the thighs palms up, hands hanging over the knees holding dumbbells",
+   "start": "wrists bent back, dumbbells lowered",
+   "end": "wrists curled up as far as possible, forearms still resting on the thighs",
+   "path": "the hands curl up in a small arc around the wrists",
+   "primary": [
+    "forearm-flexors"
+   ],
+   "secondary": []
+  },
+  "reverse-wrist-curl": {
+   "name": "Reverse wrist curl",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "seated on a bench, forearms resting on the thighs palms down, hands hanging over the knees holding dumbbells",
+   "start": "wrists bent down, dumbbells lowered",
+   "end": "backs of the hands raised, wrists extended, forearms still resting",
+   "path": "the hands rise in a small arc around the wrists",
+   "primary": [
+    "forearm-extensors"
+   ],
+   "secondary": [
+    "brachioradialis"
+   ]
+  },
+  "farmers-carry": {
+   "name": "Farmer's carry",
+   "eq": "dumbbell",
+   "camera": "three-quarter front",
+   "setup": "standing tall with a heavy dumbbell in each hand at the sides, shoulders level and pulled back",
+   "start": "standing tall holding the dumbbells at the sides, about to step off",
+   "end": "walking forward mid-stride, torso tall and still, arms straight at the sides, shoulders level",
+   "path": "a straight arrow on the floor beside the feet, running from behind the heels to in front of the toes, in the direction the toes point and the mannequin walks",
+   "hard": "mid-stride: torso tall and vertical, head over the shoulders over the hips, arms straight at the sides holding the heavy dumbbells, shoulders level and pulled back",
+   "primary": [
+    "forearm-flexors",
+    "traps-upper"
+   ],
+   "secondary": [
+    "obliques",
+    "quadratus-lumborum",
+    "glute-med",
+    "rectus-abdominis"
+   ]
+  },
+  "dead-hang": {
+   "name": "Dead hang",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "a pull-up bar overhead, overhand grip at shoulder width",
+   "start": "standing on a low step under the bar, both hands gripping the bar",
+   "end": "hanging from the bar with straight arms, feet off the step, shoulders gently engaged",
+   "path": "a short arrow under the feet showing them lifting off the step",
+   "primary": [
+    "forearm-flexors"
+   ],
+   "secondary": [
+    "lats",
+    "teres-major"
+   ],
+   "seqNote": "seen from the side, in profile; the bar is a plain pull-up bar on a simple steel frame with no cable, pulley or weight stack; the low step stays on the floor under the feet in BOTH panels: in the LEFT panel the feet stand on it, in the RIGHT panel they hang just above it, ready to step back down"
+  },
+  "gripper": {
+   "name": "Hand gripper",
+   "eq": "bodyweight",
+   "camera": "close-up",
+   "uni": true,
+   "setup": "close-up of one forearm and hand holding a hand gripper (two handles joined by a coiled spring)",
+   "start": "fingers curled around the front handle and the back handle across the palm, the handles held apart by the spring, the hand half closed",
+   "end": "hand squeezed shut so the handles touch",
+   "path": "a short curved arrow beside the fingertips: its tail at the front handle and its head pointing in toward the palm and the back handle, showing the fingers squeezing the two handles together",
+   "primary": [
+    "forearm-flexors"
+   ],
+   "secondary": [],
+   "seqNote": "the same hand from the same angle in both panels, the palm toward the camera and the fingers wrapped around the front handle; in the LEFT panel the handles are apart in a V, in the RIGHT panel the fist is closed and the handles touch; the fingers are never flat or straight"
+  },
+  "plate-pinch": {
+   "name": "Plate pinch",
+   "eq": "barbell",
+   "camera": "three-quarter front",
+   "uni": false,
+   "setup": "two pairs of smooth weight plates, each pair stood together with the smooth sides out and pinched along the top rim between the flat thumb on one side and the flat mitten hand on the other",
+   "start": "squatting with a flat back between the two pairs of plates, each hand pinching one pair along its rim",
+   "end": "standing tall holding a pinched pair of plates beside each leg, arms straight, shoulders down",
+   "path": "an upward arrow beside the plates as they are lifted",
+   "primary": [
+    "forearm-flexors"
+   ],
+   "secondary": [
+    "forearm-extensors"
+   ]
+  },
+  "suitcase-carry": {
+   "name": "Suitcase carry",
+   "eq": "dumbbell",
+   "camera": "three-quarter front",
+   "uni": true,
+   "setup": "standing tall holding one heavy dumbbell in one hand at the side, the other arm relaxed",
+   "start": "standing tall holding the dumbbell at one side, shoulders level",
+   "end": "walking forward mid-stride, torso upright and not leaning toward the weight",
+   "path": "a long straight arrow low beside the feet pointing in the walking direction",
+   "primary": [
+    "obliques",
+    "quadratus-lumborum"
+   ],
+   "secondary": [
+    "forearm-flexors",
+    "glute-med"
+   ]
+  },
+  "bird-dog": {
+   "name": "Bird dog",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "on hands and knees on the floor, hands under the shoulders, knees under the hips, back flat",
+   "start": "on all fours, back flat, head in line with the spine",
+   "end": "one arm and the opposite leg extended straight out, level with the back, hips and shoulders square",
+   "path": "beside the moving leg, from the knee on the floor back to the extended leg",
+   "primary": [
+    "erectors",
+    "glute-max"
+   ],
+   "secondary": [
+    "transverse-abdominis",
+    "obliques",
+    "delt-front"
+   ],
+   "uni": false
+  },
+  "dead-bug": {
+   "name": "Dead bug",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying on the back on the floor, arms pointing straight up at the ceiling, hips and knees bent 90 degrees with the shins level with the floor, lower back pressed to the floor",
+   "start": "arms up, knees over the hips, shins level",
+   "end": "one arm lowered back overhead and the opposite leg extended straight out just above the floor, lower back still flat",
+   "path": "beside the extending leg, from the bent knee out to the straight leg just above the floor",
+   "primary": [
+    "rectus-abdominis",
+    "transverse-abdominis"
+   ],
+   "secondary": [
+    "obliques",
+    "hip-flexors"
+   ],
+   "uni": false
+  },
+  "plank": {
+   "name": "Plank",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "forearms on the floor under the shoulders, feet together on the toes",
+   "start": "knees resting on the floor, forearms down, back flat",
+   "end": "knees lifted so the body is one straight line from head to heels on the forearms and toes, hips level",
+   "path": "a short upward arrow under the hips as the knees lift into the line",
+   "primary": [
+    "rectus-abdominis",
+    "transverse-abdominis"
+   ],
+   "secondary": [
+    "obliques",
+    "delt-front",
+    "quads"
+   ]
+  },
+  "side-plank": {
+   "name": "Side plank",
+   "eq": "bodyweight",
+   "camera": "front",
+   "setup": "lying on one side, propped on the forearm with the elbow under the shoulder, legs straight and stacked",
+   "start": "hips resting on the floor, body straight",
+   "end": "hips lifted so the body forms one straight line from head to feet, top hand on the hip",
+   "path": "a short upward arrow under the hips",
+   "primary": [
+    "obliques",
+    "quadratus-lumborum"
+   ],
+   "secondary": [
+    "transverse-abdominis",
+    "glute-med"
+   ],
+   "uni": false
+  },
+  "machine-crunch": {
+   "name": "Abdominal crunch machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded abdominal crunch machine: a seat with a back pad, two handles above the shoulders on a lever that pivots forward and down, padded foot rollers, a weight stack",
+   "setup": "seat set so the handles sit just above the shoulders; feet hooked under the rollers; hands holding the handles beside the head",
+   "start": "torso upright against the back pad, hands at the handles beside the head",
+   "end": "torso curled forward and down, ribs pulled toward the pelvis, chin tucked, the lever brought down by the trunk rather than the arms",
+   "path": "an arc in front of the chest and face that curves forward and down toward the thighs",
+   "hard": "the end of the crunch: torso curled forward with the ribs pulled toward the pelvis, the spine rounded, hips still on the seat, hands still beside the head",
+   "primary": [
+    "rectus-abdominis"
+   ],
+   "secondary": [
+    "obliques"
+   ],
+   "fresh": [
+    "machine",
+    "sequence"
+   ],
+   "sidePath": "an arc in front of the chest and face that curves forward and down toward the thighs, its head pointing down toward the knees",
+   "seqNote": "a true profile: the mannequin faces the right edge of the picture; in the RIGHT panel the trunk is clearly curled: the ribcage pulled down toward the pelvis, the upper back rounded like the letter C, the head and shoulders well forward and down (about 30 to 45 degrees of trunk flexion), while the hips stay on the seat and the thighs stay level",
+   "machineNote": "the two handles sit just above the top of the back pad, one on each side of where the user's head goes, at the ends of a lever arm that pivots above and behind the back pad; the handles stay close to the back pad, never out in front of it like a chest press; the padded foot rollers sit low in front of the seat"
+  },
+  "cable-crunch": {
+   "name": "Kneeling cable crunch",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a single cable column with the pulley carriage set at the TOP and a rope attachment",
+   "setup": "kneeling facing the column about an arm's length away, hips high over the knees, holding the rope ends beside the forehead",
+   "start": "torso tall and slightly arched, hips over the knees, rope by the head",
+   "end": "torso curled down so the elbows reach toward the thighs, spine rounded, hips still over the knees rather than sitting back",
+   "path": "the head and elbows curl down in an arc toward the thighs",
+   "primary": [
+    "rectus-abdominis"
+   ],
+   "secondary": [
+    "obliques"
+   ]
+  },
+  "decline-sit-up": {
+   "name": "Decline sit-up",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying back on a decline bench that slopes DOWN toward the head: the feet hooked under the rollers at the HIGH end, the head at the LOW end, knees bent, arms crossed on the chest",
+   "start": "torso lying back along the bench",
+   "end": "torso curled up to upright",
+   "path": "a curved arrow beside the chest that starts where the shoulders lie and curves up and forward toward the knees (toward the upper right of the picture), its head pointing at the knees",
+   "primary": [
+    "rectus-abdominis"
+   ],
+   "secondary": [
+    "obliques",
+    "hip-flexors"
+   ],
+   "seqNote": "in both panels the HIGH end of the bench, with the foot rollers, is on the RIGHT and the LOW end is on the LEFT, so in the LEFT panel the lying head is clearly lower than the knees"
+  },
+  "bicycle-crunch": {
+   "name": "Bicycle crunch",
+   "eq": "bodyweight",
+   "camera": "three-quarter front",
+   "setup": "lying on the back on the floor, hands lightly behind the head, legs raised",
+   "start": "shoulders lifted slightly, both knees bent 90 degrees above the hips",
+   "end": "torso rotated so the right elbow moves toward the left knee while the right leg extends straight",
+   "path": "the right elbow arcs across toward the left knee",
+   "primary": [
+    "rectus-abdominis",
+    "obliques"
+   ],
+   "secondary": [
+    "hip-flexors"
+   ],
+   "uni": false
+  },
+  "mcgill-curl-up": {
+   "name": "McGill curl-up",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying on the back, one knee bent with the foot flat and the other leg straight, hands under the lower back",
+   "start": "head and shoulders resting on the floor",
+   "end": "head and shoulders lifted slightly off the floor as one unit, neck not bending",
+   "path": "a short upward arrow above the shoulders",
+   "primary": [
+    "rectus-abdominis"
+   ],
+   "secondary": [
+    "obliques"
+   ]
+  },
+  "captains-chair-knee-raise": {
+   "name": "Captain's chair knee raise",
+   "eq": "bodyweight",
+   "station": true,
+   "camera": "pure side",
+   "machine": "a captain's chair (vertical knee raise station): a tall upright frame with a vertical back pad, two horizontal padded forearm rests with grip handles at elbow height, and a step at the bottom, no weights",
+   "setup": "back against the pad, forearms on the arm rests, hands on the handles, feet off the step, legs hanging",
+   "start": "legs hanging straight down, back against the pad",
+   "end": "knees raised to hip height or higher with the pelvis tucked under, lower back curling slightly off the pad",
+   "path": "the knees rise in an arc toward the chest",
+   "hard": "the top: knees raised above hip height, thighs past level, pelvis tucked under so the lower back curls slightly off the pad, shoulders down on the arm rests",
+   "primary": [
+    "rectus-abdominis",
+    "hip-flexors"
+   ],
+   "secondary": [
+    "obliques"
+   ]
+  },
+  "reverse-crunch": {
+   "name": "Reverse crunch",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "lying on the back on a flat bench, hands holding the bench behind the head, knees bent 90 degrees",
+   "start": "thighs vertical above the hips, knees bent",
+   "end": "hips curled up off the bench, knees toward the chest",
+   "path": "a curved arrow just above the knees: its tail starts at the knees and it curves toward the chest and head, to the LEFT of the picture, its head pointing at the chest: the knees travel toward the chest as the hips curl up off the bench",
+   "primary": [
+    "rectus-abdominis"
+   ],
+   "secondary": [
+    "obliques",
+    "hip-flexors"
+   ],
+   "seqNote": "the head lies at the LEFT end of the bench in both panels and the knees point up; in the RIGHT panel the hips are clearly lifted off the bench and the knees are over the chest"
+  },
+  "hanging-leg-raise": {
+   "name": "Hanging leg raise",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "hanging from a pull-up bar with straight arms, overhand grip at shoulder width",
+   "start": "legs hanging straight down",
+   "end": "straight legs raised to level with the floor or higher, pelvis tucked",
+   "path": "the feet swing up in an arc to hip height",
+   "primary": [
+    "rectus-abdominis",
+    "hip-flexors"
+   ],
+   "secondary": [
+    "obliques",
+    "forearm-flexors"
+   ]
+  },
+  "ab-wheel-rollout": {
+   "name": "Ab wheel rollout",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "kneeling on a pad, hands on the handles of an ab wheel on the floor under the shoulders",
+   "start": "hips over the knees, wheel under the shoulders, back flat",
+   "end": "wheel rolled forward so the body forms a long straight line from knees to head, hips not sagging, ribs down",
+   "path": "the wheel rolls forward along the floor",
+   "primary": [
+    "rectus-abdominis"
+   ],
+   "secondary": [
+    "obliques",
+    "lats",
+    "transverse-abdominis"
+   ]
+  },
+  "pallof-press": {
+   "name": "Pallof press",
+   "eq": "cable",
+   "camera": "three-quarter front, away from the column",
+   "sideCamera": "three-quarter front view from the side away from the cable column: the camera stands in front of the mannequin and about 45 degrees to its LEFT, at chest height; the cable column stands at the mannequin's RIGHT side, at the right edge of the picture and a little behind the mannequin, so the cable runs from the column across to the hands and the direction the chest faces points toward the lower left of the picture",
+   "machine": "a single cable column with the pulley carriage set at chest height and a single stirrup handle",
+   "setup": "standing side-on to the column with the column at the mannequin's RIGHT side, feet shoulder-width, knees soft, a step away so the cable is taut; both hands hold the single handle against the breastbone",
+   "start": "hands holding the handle against the breastbone, elbows bent and tucked in, the cable running sideways from the column to the hands; chest, hips and feet square to the front, the direction the mannequin faces (toward the lower left of the picture)",
+   "end": "arms pressed straight out in FRONT of the chest, in the direction the chest faces (toward the lower left of the picture), at a right angle to the cable: the cable and the straight arms form an L at the hands; the hands do NOT move toward or away from the column; chest and hips still square to the front, never turned toward the column",
+   "path": "from the breastbone straight forward along the forearms in the direction the chest faces, at a right angle to the cable",
+   "hard": "arms fully extended straight in front of the chest at a right angle to the cable, the cable pulling the hands sideways toward the column at the right edge, chest, hips and feet square to the front, knees soft",
+   "primary": [
+    "obliques",
+    "transverse-abdominis"
+   ],
+   "secondary": [
+    "rectus-abdominis",
+    "glute-med"
+   ],
+   "uni": false,
+   "sidePath": "from the breastbone straight forward along the arms in the direction the chest faces, its head at the hands",
+   "seqNote": "the reference picture is this exercise's own side view: keep its camera, its cable column at the right edge and its stance, and draw that same mannequin in both panels; the RIGHT panel matches the reference pose, both arms straight out in front of the chest in the direction the chest faces (toward the left of the picture); in the LEFT panel the two hands hold the handle against the breastbone with the elbows bent and tucked; in both panels the cable runs from the pulley all the way to the handle in the hands, and the chest, hips and feet face the same way, never turned toward the column"
+  },
+  "cable-woodchop": {
+   "name": "Cable woodchop",
+   "eq": "cable",
+   "camera": "three-quarter front",
+   "machine": "a single cable column with the pulley carriage set at the TOP and a single stirrup handle",
+   "setup": "standing side-on to the column, feet wider than the shoulders, both hands on the handle up by the shoulder nearest the pulley",
+   "start": "arms extended up toward the high pulley, torso turned toward the column",
+   "end": "arms pulled diagonally down and across the body to the outside of the far knee, torso rotated away, pivoting on the back foot",
+   "path": "a diagonal downward arc across the body",
+   "primary": [
+    "obliques"
+   ],
+   "secondary": [
+    "rectus-abdominis",
+    "transverse-abdominis"
+   ],
+   "uni": false
+  },
+  "rotary-torso-machine": {
+   "name": "Rotary torso machine",
+   "eq": "selectorized",
+   "camera": "three-quarter front",
+   "machine": "a seated pin-loaded rotary torso machine: a seat that turns with knee pads that hold the legs, an upright chest pad with handles, a starting-angle selector, a weight stack",
+   "setup": "seated with the knees between the pads, chest against the pad, arms on the handles",
+   "start": "hips turned to one side with the seat, torso facing forward",
+   "end": "hips and seat turned to the other side, torso still facing forward",
+   "path": "a horizontal arc of the knees",
+   "primary": [
+    "obliques"
+   ],
+   "secondary": [
+    "transverse-abdominis"
+   ],
+   "uni": false,
+   "fresh": [
+    "sequence"
+   ]
+  },
+  "leg-press-45": {
+   "name": "45-degree leg press",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a 45-degree plate-loaded sled leg press: a reclined padded seat and back pad, a large foot platform on a sled that slides up and down 45-degree rails, weight plates on horns on the sled, safety stop handles at the sides",
+   "setup": "lying back in the seat, feet on the platform about shoulder width apart in its middle, hands on the side handles, safety stops released",
+   "start": "knees bent about 90 degrees, thighs toward the chest, hips and lower back still flat on the pad",
+   "end": "legs pressed out to almost straight, knees not locked, the sled pushed up the rails",
+   "path": "up along the 45-degree rails",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors",
+    "hamstrings"
+   ]
+  },
+  "seated-leg-press": {
+   "name": "Seated leg press",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded horizontal leg press: an upright adjustable seat and back pad, a vertical foot plate in front, side handles, a weight stack",
+   "setup": "back against the pad, feet flat on the foot plate about shoulder width apart, hands on the side handles",
+   "start": "knees bent about 90 degrees",
+   "end": "legs pushed out nearly straight, knees not locked",
+   "path": "straight out away from the seat",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors",
+    "hamstrings"
+   ],
+   "seqNote": "both panels show the same machine from the same side, never mirrored: the seat and back pad on the LEFT, the foot plate on the RIGHT, the mannequin facing the right edge in both panels; only the legs change"
+  },
+  "hack-squat": {
+   "name": "Hack squat machine",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded hack squat: an angled sled with shoulder pads and a back pad running on rails at about 45 degrees, a large angled foot platform at the bottom, weight plates on horns on the sled",
+   "setup": "back flat against the pad, shoulders under the shoulder pads, feet about shoulder width on the platform",
+   "start": "knees bent deeply, thighs about parallel to the platform, back flat on the pad",
+   "end": "legs extended, standing up along the rails, knees not locked",
+   "path": "up along the angled rails",
+   "primary": [
+    "quads"
+   ],
+   "secondary": [
+    "glute-max",
+    "adductors"
+   ]
+  },
+  "v-squat": {
+   "name": "V-squat machine",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded V-squat: an angled foot platform, padded shoulder yokes on a long lever arm that pivots behind, weight plates on a horn on the lever",
+   "setup": "standing on the platform under the shoulder pads, feet about shoulder width",
+   "start": "knees and hips bent, thighs about parallel to the platform",
+   "end": "standing up with the legs straight, knees not locked",
+   "path": "the shoulder pads rise in a gentle arc",
+   "primary": [
+    "quads"
+   ],
+   "secondary": [
+    "glute-max",
+    "adductors"
+   ]
+  },
+  "belt-squat": {
+   "name": "Belt squat machine",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded belt squat machine: a raised standing platform, a hip belt hanging from a chain on a lever arm loaded with plates, handrails in front",
+   "setup": "standing on the platform with the belt around the hips, hands on the front rails",
+   "start": "hips and knees bent, thighs about parallel to the floor, torso upright",
+   "end": "standing up tall, legs straight",
+   "path": "straight up",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors"
+   ]
+  },
+  "goblet-squat": {
+   "name": "Goblet squat",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "standing with feet a little wider than the shoulders, holding one dumbbell vertically against the chest with both hands",
+   "start": "deep squat, thighs at or below parallel, elbows inside the knees, torso upright, heels down",
+   "end": "standing tall, legs straight",
+   "path": "straight up",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors",
+    "erectors"
+   ]
+  },
+  "bulgarian-split-squat": {
+   "name": "Bulgarian split squat",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "uni": true,
+   "setup": "rear foot resting laces-down on a bench behind, front foot a long step forward, a dumbbell in each hand at the sides",
+   "start": "front thigh about parallel to the floor, back knee near the floor, torso upright",
+   "end": "front leg straightened, standing up on the front leg",
+   "path": "straight up",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors",
+    "hamstrings"
+   ]
+  },
+  "smith-squat": {
+   "name": "Smith machine squat",
+   "eq": "smith",
+   "camera": "pure side",
+   "machine": "a Smith machine: a barbell fixed on two vertical steel guide rails with rack hooks and safety stops, the bar set at upper-chest height",
+   "setup": "bar across the upper back, feet about shoulder width and slightly in front of the bar",
+   "start": "squatted down, thighs about parallel to the floor, back straight",
+   "end": "standing tall, legs straight",
+   "path": "straight up along the guide rails",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors"
+   ]
+  },
+  "barbell-back-squat": {
+   "name": "Barbell back squat",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "bar on the upper back, feet about shoulder width, toes slightly out",
+   "start": "squatted down, thighs about parallel, torso leaning slightly forward, heels down, bar over the middle of the feet",
+   "end": "standing tall, hips and knees straight",
+   "path": "straight up over the middle of the feet",
+   "primary": [
+    "quads",
+    "glute-max"
+   ],
+   "secondary": [
+    "adductors",
+    "erectors",
+    "hamstrings"
+   ]
+  },
+  "leg-extension": {
+   "name": "Leg extension machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded leg extension machine: a seat with an adjustable back pad, a padded roller on a lever arm in front of the shins with the pivot level with the knees, side handles, a weight stack",
+   "setup": "back pad set so the knee joint lines up with the machine's pivot; the roller on the shins just above the ankles; hands on the side handles",
+   "start": "knees bent about 90 degrees, feet under the front edge of the seat",
+   "end": "knees straightened, legs level with the floor, toes up",
+   "path": "the shins swing up in an arc around the knees",
+   "primary": [
+    "quads"
+   ],
+   "secondary": []
+  },
+  "seated-leg-curl": {
+   "name": "Seated leg curl machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a seated pin-loaded leg curl: a seat with a back pad, a thigh pad that clamps down over the thighs just above the knees, a padded roller on a lever behind the lower calves with the pivot level with the knees, a weight stack",
+   "setup": "knees lined up with the pivot, thigh pad locked down on the thighs, the roller behind the lower calves just above the heels",
+   "start": "legs straight out in front, roller behind the lower calves",
+   "end": "knees bent fully, heels pulled down and back under the seat",
+   "path": "the lower legs swing down and back in an arc around the knees",
+   "primary": [
+    "hamstrings"
+   ],
+   "secondary": [
+    "gastrocnemius"
+   ]
+  },
+  "lying-leg-curl": {
+   "name": "Lying leg curl machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a lying (prone) pin-loaded leg curl: an angled bench to lie face down on, handles at the front, a padded roller on a lever behind the ankles with the pivot level with the knees, a weight stack",
+   "setup": "lying face down, knees just off the end of the pad and in line with the pivot, roller on the back of the ankles, hands on the handles",
+   "start": "legs straight, roller on the back of the ankles",
+   "end": "knees bent, heels curled toward the glutes, hips pressed into the pad",
+   "path": "the heels curl up in an arc around the knees",
+   "primary": [
+    "hamstrings"
+   ],
+   "secondary": [
+    "gastrocnemius"
+   ]
+  },
+  "nordic-hamstring-curl": {
+   "name": "Nordic hamstring curl",
+   "eq": "bodyweight",
+   "camera": "pure side",
+   "setup": "kneeling on a pad with the ankles held down under a fixed bar or roller, body straight from knees to head",
+   "start": "upright kneeling, hips straight",
+   "end": "leaning forward as one straight line from knees to head, lowering slowly toward the floor, hands ready to catch",
+   "path": "the straight body tips forward in an arc around the knees",
+   "primary": [
+    "hamstrings"
+   ],
+   "secondary": [
+    "gastrocnemius",
+    "glute-max"
+   ]
+  },
+  "trap-bar-deadlift": {
+   "name": "Trap bar deadlift",
+   "eq": "barbell",
+   "camera": "three-quarter front",
+   "setup": "standing inside a hexagonal trap bar loaded with plates on the floor, feet hip-width, hands on the side handles",
+   "start": "hips back and down, knees bent, back flat, arms straight, shoulders over the handles, plates on the floor",
+   "end": "standing tall, hips and knees straight, bar at arm's length beside the thighs",
+   "path": "straight up",
+   "primary": [
+    "glute-max",
+    "quads",
+    "hamstrings"
+   ],
+   "secondary": [
+    "erectors",
+    "traps-upper",
+    "forearm-flexors"
+   ],
+   "seqNote": "the trap bar's two sleeves and plates stick out to the mannequin's LEFT and RIGHT, one plate beside each leg; the mannequin stands in the middle of the hexagonal frame and grips the two side handles, which run front to back beside the legs; the bar never runs front to back past the shins",
+   "fresh": [
+    "sequence"
+   ]
+  },
+  "dumbbell-rdl": {
+   "name": "Dumbbell Romanian deadlift",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "setup": "standing tall, feet hip-width, a dumbbell in each hand in front of the thighs, knees soft",
+   "start": "hips pushed back, torso hinged forward to about 45 to 60 degrees, back flat, dumbbells at mid-shin close to the legs, knees soft",
+   "end": "standing tall, hips forward, dumbbells in front of the thighs",
+   "path": "the dumbbells rise straight up close to the legs",
+   "primary": [
+    "hamstrings",
+    "glute-max"
+   ],
+   "secondary": [
+    "erectors",
+    "forearm-flexors"
+   ]
+  },
+  "barbell-rdl": {
+   "name": "Barbell Romanian deadlift",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "standing tall, feet hip-width, overhand grip on a barbell just outside the thighs, knees soft",
+   "start": "hips pushed back, torso hinged forward to about 45 to 60 degrees, back flat, bar at mid-shin close to the legs",
+   "end": "standing tall, hips forward, bar at the thighs",
+   "path": "the bar rises straight up close to the legs",
+   "primary": [
+    "hamstrings",
+    "glute-max"
+   ],
+   "secondary": [
+    "erectors",
+    "forearm-flexors"
+   ]
+  },
+  "cable-pull-through": {
+   "name": "Cable pull-through",
+   "eq": "cable",
+   "camera": "pure side",
+   "machine": "a single cable column with the pulley carriage at the LOWEST position and a rope attachment",
+   "setup": "standing facing away from the column, straddling the cable, holding the rope between the legs with both hands, two steps forward",
+   "start": "hips hinged back, torso forward about 45 degrees, rope pulled back between the legs, back flat",
+   "end": "hips driven forward to standing tall, arms straight, glutes squeezed",
+   "path": "a curved arrow at the hips that drives them forward and up, AWAY from the cable column behind the mannequin, its head pointing away from the column, toward the way the mannequin faces",
+   "primary": [
+    "glute-max",
+    "hamstrings"
+   ],
+   "secondary": [
+    "erectors"
+   ]
+  },
+  "conventional-deadlift": {
+   "name": "Conventional deadlift",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "barbell on the floor over the middle of the feet, feet hip-width, hands gripping the bar just outside the knees",
+   "start": "hips back, back flat, shins touching the bar, shoulders slightly in front of the bar, arms straight",
+   "end": "standing tall with the bar at the thighs, hips and knees straight",
+   "path": "straight up close to the legs",
+   "primary": [
+    "glute-max",
+    "hamstrings",
+    "erectors"
+   ],
+   "secondary": [
+    "quads",
+    "traps-upper",
+    "forearm-flexors"
+   ]
+  },
+  "kettlebell-swing": {
+   "name": "Kettlebell swing",
+   "eq": "kettlebell",
+   "camera": "pure side",
+   "setup": "standing with feet wider than the hips, holding a kettlebell with both hands",
+   "start": "hips hinged back, kettlebell swung back between the legs, forearms against the inner thighs, back flat",
+   "end": "hips snapped forward to standing tall, arms straight out in front at chest height holding the kettlebell",
+   "path": "the kettlebell swings forward and up in an arc to chest height",
+   "primary": [
+    "glute-max",
+    "hamstrings"
+   ],
+   "secondary": [
+    "erectors",
+    "forearm-flexors"
+   ]
+  },
+  "machine-hip-thrust": {
+   "name": "Hip thrust machine",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded hip thrust machine: a padded back rest for the upper back, a padded lever pad across the hips, a foot platform, weight plates on horns",
+   "setup": "upper back on the back rest, the hip pad across the hip crease, feet flat about hip width on the platform, knees bent",
+   "start": "hips lowered below the level of the knees",
+   "end": "hips driven up until the body is a straight line from shoulders to knees, shins vertical, chin tucked",
+   "path": "the hips rise straight up",
+   "primary": [
+    "glute-max"
+   ],
+   "secondary": [
+    "hamstrings",
+    "quads"
+   ]
+  },
+  "barbell-hip-thrust": {
+   "name": "Barbell hip thrust",
+   "eq": "barbell",
+   "camera": "pure side",
+   "setup": "upper back against the edge of a flat bench, a padded barbell across the hips, feet flat about hip width, knees bent",
+   "start": "hips lowered toward the floor",
+   "end": "hips driven up until the body is a straight line from shoulders to knees, shins vertical",
+   "path": "the hips rise straight up",
+   "primary": [
+    "glute-max"
+   ],
+   "secondary": [
+    "hamstrings",
+    "quads"
+   ]
+  },
+  "glute-kickback-machine": {
+   "name": "Glute kickback machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "uni": true,
+   "machine": "a glute kickback machine: a standing frame with a chest pad and handles, a padded foot plate on a lever behind the working leg, a weight stack",
+   "setup": "standing with the chest on the pad, holding the handles, the working foot on the foot plate",
+   "start": "working hip and knee bent, the thigh forward under the hip",
+   "end": "working leg pushed back and up until the hip is straight",
+   "path": "the foot plate is pushed back and up in an arc",
+   "primary": [
+    "glute-max"
+   ],
+   "secondary": [
+    "hamstrings"
+   ]
+  },
+  "hip-abduction-machine": {
+   "name": "Hip abduction machine",
+   "eq": "selectorized",
+   "camera": "front",
+   "machine": "a seated pin-loaded hip abduction machine: a reclined seat with a back pad, two padded leg pads on levers on the outside of the knees, foot rests, a weight stack",
+   "setup": "seated with the back against the pad, feet on the foot rests, the outside of the knees against the pads",
+   "start": "knees together",
+   "end": "knees pushed wide apart against the pads",
+   "path": "a single curved arrow beside the knee on the right of the picture, curving outward away from the other knee, its head pointing away from the body",
+   "primary": [
+    "glute-med"
+   ],
+   "secondary": [
+    "glute-max"
+   ]
+  },
+  "hip-adduction-machine": {
+   "name": "Hip adduction machine",
+   "eq": "selectorized",
+   "camera": "front",
+   "machine": "a seated pin-loaded hip adduction machine: a reclined seat with a back pad, two padded leg pads on levers on the inside of the knees, foot rests, a weight stack",
+   "setup": "seated with the back against the pad, feet on the foot rests, the inside of the knees against the pads",
+   "start": "knees spread wide apart",
+   "end": "knees squeezed together",
+   "path": "in the open gap between the knees, one short arrow starting at the inside of each knee and pointing toward the middle of the machine, the two heads facing each other with a small space between them: the knees travel toward each other as the legs squeeze together; no arrow outside the knees",
+   "primary": [
+    "adductors"
+   ],
+   "secondary": [],
+   "pair": true,
+   "seqNote": "in the LEFT panel the two leg pads sit INSIDE the spread knees, between the legs, each pad touching the inner side of its knee, so the two arrows lie in the open space between the two pads; in the RIGHT panel the pads have swung together and meet in the middle between the closed knees"
+  },
+  "copenhagen-adduction": {
+   "name": "Copenhagen adduction",
+   "eq": "bodyweight",
+   "camera": "front",
+   "setup": "side plank on the forearm with the inside of the top leg's knee or ankle resting on a flat bench, the bottom leg under the bench",
+   "start": "hips lowered toward the floor, bottom leg hanging below the bench",
+   "end": "hips raised so the body forms a straight line, the bottom leg lifted to touch the underside of the bench",
+   "path": "a short upward arrow under the hips",
+   "primary": [
+    "adductors"
+   ],
+   "secondary": [
+    "obliques"
+   ],
+   "uni": false
+  },
+  "standing-calf-raise-machine": {
+   "name": "Standing calf raise machine",
+   "eq": "selectorized",
+   "camera": "pure side",
+   "machine": "a standing pin-loaded calf raise machine: padded shoulder yokes on a lever, a raised foot step block beneath, side handles, a weight stack",
+   "setup": "shoulders under the pads, balls of the feet on the edge of the step, knees straight but not locked, body upright",
+   "start": "heels lowered below the step, a deep stretch in the calves",
+   "end": "heels raised as high as possible onto the balls of the feet",
+   "path": "straight up",
+   "primary": [
+    "gastrocnemius"
+   ],
+   "secondary": [
+    "soleus"
+   ]
+  },
+  "leg-press-calf-raise": {
+   "name": "Leg press calf raise",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a 45-degree plate-loaded sled leg press: a reclined seat, a foot platform on a sled on 45-degree rails, weight plates on horns, safety handles",
+   "setup": "seated in the leg press with the legs straight but the knees not locked, only the balls of the feet on the bottom edge of the platform",
+   "start": "ankles flexed, toes pulled back toward the shins, heels below the platform edge",
+   "end": "ankles pointed, pushing the platform up with the balls of the feet",
+   "path": "the platform moves a short way up the rails",
+   "primary": [
+    "gastrocnemius"
+   ],
+   "secondary": [
+    "soleus"
+   ],
+   "seqNote": "the legs are STRAIGHT in BOTH panels (knees soft, never bent like a leg press) and the sled is already pressed up the rails; only the ankles move: in the LEFT panel the heels sink below the platform edge, in the RIGHT panel the ankles point and the platform has moved a short way further up"
+  },
+  "single-leg-dumbbell-calf-raise": {
+   "name": "Single-leg dumbbell calf raise",
+   "eq": "dumbbell",
+   "camera": "pure side",
+   "uni": true,
+   "setup": "standing on one foot on the edge of a step, a dumbbell in the same-side hand, the other hand on a support, the free foot behind the working ankle",
+   "start": "heel dropped below the step",
+   "end": "heel raised as high as possible",
+   "path": "straight up",
+   "primary": [
+    "gastrocnemius"
+   ],
+   "secondary": [
+    "soleus"
+   ]
+  },
+  "seated-calf-raise-machine": {
+   "name": "Seated calf raise machine",
+   "eq": "plate-loaded",
+   "camera": "pure side",
+   "machine": "a plate-loaded seated calf raise: a seat, a padded knee lever resting on the lower thighs, a foot step block, weight plates on a horn at the lever's end, a safety release handle",
+   "setup": "seated, knees under the pad, balls of the feet on the step",
+   "start": "heels dropped below the step",
+   "end": "heels raised as high as possible, lifting the knee pad",
+   "path": "the knee pad rises straight up",
+   "primary": [
+    "soleus"
+   ],
+   "secondary": [
+    "gastrocnemius"
+   ]
+  }
+ }
+}

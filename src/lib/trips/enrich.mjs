@@ -2,6 +2,22 @@
 
 const FREE = /public domain|cc0|cc by|cc-by|\bfal\b|free art/i;
 
+/** Wikimedia serves thumbnails only at standard widths (others are rounded up, or refused when hotlinked).
+ *  The main photo is at most ~420 CSS px and a fact thumbnail 96 px, so these keep phones off 960 px files. */
+export const PHOTO_WIDTH = 500;
+export const SPOT_WIDTH = 250;
+
+/**
+ * A Commons thumbnail at a smaller standard width. URLs that are not thumbnails, or already small enough, stay.
+ * @param {string} url
+ * @param {number} width
+ */
+export function commonsWidth(url, width) {
+  const match = /^(https:\/\/(?:upload|thumb)\.wikimedia\.org\/wikipedia\/commons\/thumb\/.+\/)(\d+)px-([^/?]+)$/.exec(String(url || ""));
+  if (!match || Number(match[2]) <= width) return url;
+  return `${match[1]}${width}px-${match[3]}`;
+}
+
 /**
  * @param {string} license
  */
@@ -65,14 +81,15 @@ function metaValue(meta, key) {
 
 /**
  * @param {string} title
+ * @param {number} [width]
  */
-async function imageOf(title) {
+async function imageOf(title, width = PHOTO_WIDTH) {
   const data = await getJson(api("https://commons.wikimedia.org/w/api.php", {
     action: "query",
     titles: title.startsWith("File:") ? title : `File:${title}`,
     prop: "imageinfo",
     iiprop: "url|mime|extmetadata",
-    iiurlwidth: "640",
+    iiurlwidth: String(width),
   }));
   const page = data?.query?.pages?.[0];
   const info = page?.imageinfo?.[0];
@@ -101,17 +118,21 @@ async function commonsFile(query) {
     .map((hit) => String(hit.title || ""))
     .filter((title) => /\.(jpe?g|png|webp)$/i.test(title) && !/logo/i.test(title));
   for (const title of hits.slice(0, 3)) {
-    const image = await imageOf(title);
+    const image = await imageOf(title, SPOT_WIDTH);
     if (image) return image;
   }
   return null;
 }
 
+/** A named article this close to the model's point is the same place, and its coordinates are surveyed ones. */
+const SNAP_KM = 1;
+
 /**
  * @param {string} title
  * @param {string} fallback
+ * @param {boolean} [named] false once the article came from a search instead of the title the model gave
  */
-async function wikiPage(title, fallback) {
+async function wikiPage(title, fallback, named = true) {
   const lookup = title || "";
   const data = await getJson(api("https://en.wikipedia.org/w/api.php", {
     action: "query",
@@ -133,7 +154,7 @@ async function wikiPage(title, fallback) {
     }));
     const hit = found?.query?.search?.[0]?.title;
     if (!hit) return null;
-    return wikiPage(String(hit), "");
+    return wikiPage(String(hit), "", false);
   }
   const ru = (page.langlinks || []).find((link) => link.lang === "ru");
   const article = page.title || lookup;
@@ -143,6 +164,7 @@ async function wikiPage(title, fallback) {
     image: page.pageimage ? String(page.pageimage) : "",
     lat: page.coordinates?.[0]?.lat,
     lon: page.coordinates?.[0]?.lon,
+    named,
   };
 }
 
@@ -164,7 +186,14 @@ export async function enrichStop(stop, facts, city) {
   try {
     const wiki = await wikiPage(facts.wikiTitle, `${stop.name} ${city}`);
     if (wiki?.en) place.wiki = { en: wiki.en, ...(wiki.ru ? { ru: wiki.ru } : {}) };
-    const near = wiki && (wiki.lat == null || km(stop.lat, stop.lon, Number(wiki.lat), Number(wiki.lon)) <= 5);
+    const away = wiki && wiki.lat != null ? km(stop.lat, stop.lon, Number(wiki.lat), Number(wiki.lon)) : null;
+    const near = wiki && (away == null || away <= 5);
+    // Model coordinates drift by a street or two; map links and routes should land on the door, not near it.
+    // Only for the article the model named for this sight: a search hit may be a neighbour with a similar name.
+    if (wiki?.named && stop.kind === "sight" && away != null && away <= SNAP_KM) {
+      place.lat = Number(wiki.lat);
+      place.lon = Number(wiki.lon);
+    }
     if (wiki?.image && near) place.photo = await imageOf(wiki.image) || undefined;
   } catch {
     /* A missing article leaves the facts without a picture. */

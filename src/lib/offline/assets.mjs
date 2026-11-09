@@ -6,7 +6,18 @@ const CSS_URL = /url\(\s*['"]?([^'")\s]+)['"]?\s*\)/g;
 const NEXT_CHUNK = /\/_next\/static\/[A-Za-z0-9_./-]+/g;
 
 /**
- * A site path, or "" when the reference points off this site.
+ * The `?v=` cache-buster of a reference, kept so a saved file sits under the URL pages ask for.
+ *
+ * @param {string} query
+ * @returns {string}
+ */
+function versionOf(query) {
+  const v = new URLSearchParams(query).get("v");
+  return v && /^[0-9a-f]{6,40}$/.test(v) ? `?v=${v}` : "";
+}
+
+/**
+ * A site path (with its `?v=`, if any), or "" when the reference points off this site.
  *
  * @param {string} raw
  * @returns {string}
@@ -18,14 +29,14 @@ export function sameOriginPath(raw) {
       const url = new URL(raw);
       const host = url.hostname.replace(/^www\./, "");
       if (host !== "ilyadays.com" && host !== "localhost") return "";
-      return url.pathname;
+      return url.pathname + versionOf(url.search);
     } catch {
       return "";
     }
   }
-  const path = raw.split("#")[0].split("?")[0];
+  const [path, query = ""] = raw.split("#")[0].split("?");
   if (!path.startsWith("/") || path.includes("..")) return "";
-  return path;
+  return path + versionOf(query);
 }
 
 /**

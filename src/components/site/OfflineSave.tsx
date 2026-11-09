@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { type Lang, strings } from "@/lib/i18n";
 import { formatBytes, savedTripUrls } from "@/lib/offline/catalog.mjs";
 import { listTrips } from "@/lib/trips/store.mjs";
@@ -17,6 +17,20 @@ function fill(template: string, values: Record<string, string>) {
 function rememberLang(): Lang {
   return document.documentElement.lang === "ru" ? "ru" : "en";
 }
+
+/** Which copy this browser saved last, or "". A private window can refuse storage. */
+function readSavedId() {
+  try {
+    return localStorage.getItem(SAVED) || "";
+  } catch {
+    return "";
+  }
+}
+
+const subscribeNothing = () => () => {};
+/** Fitness pages describe what the save adds for training (the gym pages already work offline on a training phone). */
+const onFitness = () => /^\/(?:ru\/)?fitness(?:\/|$)/.test(location.pathname);
+const canSave = () => "serviceWorker" in navigator;
 
 /** Ask the service worker to store every page and picture, then remember which copy. */
 async function runSave(catalog: Catalog, onProgress: (progress: Progress) => void) {
@@ -63,25 +77,50 @@ function installOfflineClicks() {
 }
 
 export function OfflineSave() {
-  const [lang, setLang] = useState<Lang>("en");
-  const [ready, setReady] = useState(false);
+  // Browser-only facts: the static HTML renders nothing here, and the client fills them in after hydration.
+  const lang = useSyncExternalStore(subscribeNothing, rememberLang, (): Lang => "en");
+  const ready = useSyncExternalStore(subscribeNothing, canSave, () => false);
+  const storedId = useSyncExternalStore(subscribeNothing, readSavedId, () => "");
   const [catalog, setCatalog] = useState<Catalog | null>(null);
-  const [savedId, setSavedId] = useState("");
+  const [justSaved, setJustSaved] = useState("");
+  const savedId = justSaved || storedId;
   const [progress, setProgress] = useState<Progress | null>(null);
   const [failed, setFailed] = useState(false);
+  const spot = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setLang(rememberLang());
-    setReady("serviceWorker" in navigator);
-    setSavedId(localStorage.getItem(SAVED) || "");
     installOfflineClicks();
-    fetch("/offline-catalog.json")
-      .then((response) => response.json())
-      .then((body: Catalog) => setCatalog(body))
-      .catch(() => setCatalog(null));
   }, []);
 
-  if (!ready || !catalog) return null;
+  // The list of files is only needed for this footer button, so it is fetched when the footer comes near the screen,
+  // not on every page view.
+  useEffect(() => {
+    const el = spot.current;
+    if (!ready || !el) return;
+    let started = false;
+    const load = () => {
+      if (started) return;
+      started = true;
+      fetch("/offline-catalog.json")
+        .then((response) => response.json())
+        .then((body: Catalog) => setCatalog(body))
+        .catch(() => setCatalog(null));
+    };
+    if (!("IntersectionObserver" in window)) {
+      load();
+      return;
+    }
+    const watcher = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      watcher.disconnect();
+      load();
+    }, { rootMargin: "600px 0px" });
+    watcher.observe(el);
+    return () => watcher.disconnect();
+  }, [ready]);
+
+  if (!ready) return null;
+  if (!catalog) return <div ref={spot} className="offline-save-spot" aria-hidden="true" />;
   const list = catalog;
   const t = strings(lang);
   const saved = savedId === list.id;
@@ -99,7 +138,7 @@ export function OfflineSave() {
     setProgress({ done: 0, total: list.pages.length + list.files.length });
     try {
       await runSave(list, setProgress);
-      setSavedId(list.id);
+      setJustSaved(list.id);
     } catch {
       setFailed(true);
     } finally {
@@ -111,7 +150,7 @@ export function OfflineSave() {
     <div className="offline-save">
       <button type="button" onClick={onSave} disabled={progress !== null}>{label}</button>
       {progress ? <span className="offline-bar" aria-hidden="true"><span style={{ width: `${pct}%` }} /></span> : null}
-      <p>{failed ? t.offlineFail : fill(t.offlineHint, { size: formatBytes(list.bytes) })}</p>
+      <p>{failed ? t.offlineFail : fill(onFitness() ? t.offlineHintFitness : t.offlineHint, { size: formatBytes(list.bytes) })}</p>
       <p>{t.offlineIphone}</p>
     </div>
   );

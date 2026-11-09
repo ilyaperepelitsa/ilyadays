@@ -1,0 +1,2548 @@
+[
+  {
+    "id": "leg-press-45",
+    "name": {
+      "en": "45° leg press",
+      "ru": "Жим ногами под углом 45°"
+    },
+    "aka": [
+      "Sled leg press",
+      "Incline leg press",
+      "Hammer Strength Plate-Loaded Linear Leg Press",
+      "Technogym Pure Strength Linear Leg Press"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "seated-leg-press",
+      "hack-squat",
+      "belt-squat",
+      "v-squat",
+      "goblet-squat",
+      "bulgarian-split-squat",
+      "smith-squat"
+    ],
+    "setup": {
+      "en": "Sit with your lower back and hips flat on the pad and your feet hip- to shoulder-width in the middle of the platform, toes turned slightly out. Press the sled up and turn the safety handles out before the first rep; if the machine has bottom stops, set them just below your deepest position.",
+      "ru": "Сядьте так, чтобы поясница и таз плотно лежали на спинке; стопы на ширине таза–плеч в середине платформы, носки чуть врозь. Выжмите платформу и откройте страховочные рукоятки перед первым повторением; если есть нижние ограничители, выставьте их чуть ниже вашей самой глубокой точки."
+    },
+    "cues": {
+      "en": [
+        "Lower the sled under control (2–3 s) as deep as you can while your hips and lower back stay on the pad — for most people a little past 90° at the knee.",
+        "Keep your knees in line with your second toe; never let them cave inward.",
+        "Push through the whole foot with heels down; feet low on the platform shift work to the quads, feet high to the glutes.",
+        "Breathe in and brace before you lower; breathe out as you drive through the hardest part.",
+        "Stop just short of locking the knees at the top, then start the next rep.",
+        "Turn the safety handles back in before you move your feet or get out."
+      ],
+      "ru": [
+        "Опускайте платформу подконтрольно (2–3 с), пока таз и поясница остаются прижатыми к спинке, — обычно это чуть глубже 90° в коленях.",
+        "Ведите колени по линии второго пальца стопы, не сводите их внутрь.",
+        "Давите всей стопой, пятки не отрывайте; стопы ниже на платформе — больше работы квадрицепсам, выше — ягодицам.",
+        "Перед опусканием вдохните и напрягите корпус; выдыхайте, проходя самую тяжёлую часть подъёма.",
+        "Вверху не выпрямляйте колени до блокировки — остановитесь чуть раньше и начинайте следующее повторение.",
+        "Прежде чем переставить ноги или встать, закройте страховочные рукоятки."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Going so deep that the pelvis rolls off the pad and the lower back rounds under load.",
+        "Snapping the knees into a hard lockout with a heavy sled.",
+        "Knees collapsing inward as you push.",
+        "Bouncing off the bottom, or quarter-depth reps with a mountain of plates (ego loading).",
+        "Pushing on your knees with your hands or lifting the heels."
+      ],
+      "ru": [
+        "Слишком глубокое опускание: таз подкручивается и отрывается от спинки, поясница округляется под весом.",
+        "Резкое выпрямление коленей до блокировки с тяжёлой платформой.",
+        "Колени заваливаются внутрь при выжиме.",
+        "Отбив от нижней точки или четверть амплитуды с горой блинов — погоня за весом.",
+        "Помощь руками на коленях или отрыв пяток от платформы."
+      ]
+    },
+    "startLoad": {
+      "kg": 65,
+      "source": "≈0.6 × Strength Level Beginner 1RM (109 kg at 80 kg body weight); count plates only, not the sled"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Sled Leg Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/sled-leg-press/kg",
+      "Analysis of muscle activation during different leg press exercises at submaximum effort levels — J Strength Cond Res, 2008. https://doi.org/10.1519/JSC.0b013e3181739445",
+      "Effects of technique variations on knee biomechanics during the squat and leg press — Med Sci Sports Exerc, 2001. https://doi.org/10.1097/00005768-200109000-00020",
+      "Exercise Technique Manual for Resistance Training, 4th ed. — NSCA / Human Kinetics, 2021. https://us.humankinetics.com/products/exercise-technique-manual-for-resistance-training-4th-edition-with-hkpropel-online-video"
+    ]
+  },
+  {
+    "id": "seated-leg-press",
+    "name": {
+      "en": "Seated leg press",
+      "ru": "Горизонтальный жим ногами сидя"
+    },
+    "aka": [
+      "Horizontal leg press",
+      "Selectorized leg press",
+      "Technogym Selection Leg Press",
+      "Cybex Eagle NX Leg Press",
+      "Nautilus One Leg Press"
+    ],
+    "equipment": "selectorized",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "leg-press-45",
+      "hack-squat",
+      "belt-squat",
+      "v-squat",
+      "goblet-squat",
+      "bulgarian-split-squat",
+      "smith-squat"
+    ],
+    "setup": {
+      "en": "Adjust the seat or backrest so your knees start bent to about 90° with the heels flat on the footplate, feet hip-width. Sit with your hips and lower back against the pad and hold the side handles.",
+      "ru": "Отрегулируйте сиденье или спинку так, чтобы в исходной позиции колени были согнуты примерно на 90°, а пятки стояли на платформе; стопы на ширине таза. Таз и поясница прижаты к спинке, руки на боковых рукоятках."
+    },
+    "cues": {
+      "en": [
+        "Brace and breathe out as you press the plate away through your heels and midfoot.",
+        "Keep the knees tracking over the toes the whole way.",
+        "Finish with the knees soft, not locked; the hips stay on the seat.",
+        "Return slowly (2–3 s) to the start and let the plates almost touch the stack without resting.",
+        "A deeper start trains the quads and glutes through a longer range — only as long as your lower back stays on the pad."
+      ],
+      "ru": [
+        "Напрягите корпус и на выдохе отталкивайте платформу пятками и серединой стопы.",
+        "Колени всё время идут по линии носков.",
+        "Вверху колени остаются слегка согнутыми, без блокировки; таз не отрывается от сиденья.",
+        "Возвращайтесь медленно (2–3 с): грузы почти касаются стопки, но не ложатся на неё.",
+        "Более глубокая исходная позиция нагружает квадрицепсы и ягодицы в большей амплитуде — но только пока поясница прижата к спинке."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Starting so deep that the thighs press into the ribs and the lower back peels off the pad.",
+        "Locking the knees out hard at the top.",
+        "Knees collapsing inward or heels lifting off the plate.",
+        "Letting the stack crash down between reps."
+      ],
+      "ru": [
+        "Слишком глубокая исходная позиция: бёдра упираются в рёбра, поясница отрывается от спинки.",
+        "Резкое выпрямление коленей до блокировки в верхней точке.",
+        "Колени заваливаются внутрь или пятки отрываются от платформы.",
+        "Грузы с грохотом падают на стопку между повторениями."
+      ]
+    },
+    "startLoad": {
+      "kg": 45,
+      "source": "≈0.6 × Strength Level Beginner 1RM for the horizontal leg press (76 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Horizontal Leg Press Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/horizontal-leg-press/kg",
+      "Seated Leg Press — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/154/seated-leg-press/",
+      "Analysis of muscle activation during different leg press exercises at submaximum effort levels — J Strength Cond Res, 2008. https://doi.org/10.1519/JSC.0b013e3181739445"
+    ]
+  },
+  {
+    "id": "hack-squat",
+    "name": {
+      "en": "Hack squat",
+      "ru": "Гакк-приседания в тренажёре"
+    },
+    "aka": [
+      "Machine hack squat",
+      "Sled hack squat",
+      "Hammer Strength Plate-Loaded Hack Squat",
+      "Hammer Strength Plate-Loaded Linear Hack Squat"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "v-squat",
+      "leg-press-45",
+      "seated-leg-press",
+      "belt-squat",
+      "goblet-squat",
+      "bulgarian-split-squat",
+      "smith-squat"
+    ],
+    "setup": {
+      "en": "Stand on the platform with your back and hips flat against the pad and your shoulders under the pads; feet shoulder-width, slightly ahead of your hips, toes turned out a little. Straighten up and release the safety handles.",
+      "ru": "Встаньте на платформу, прижав спину и таз к спинке, плечи — под валиками; стопы на ширине плеч, немного впереди таза, носки чуть врозь. Выпрямитесь и откройте страховочные рукоятки."
+    },
+    "cues": {
+      "en": [
+        "Brace, then sit down between your heels under control (2–3 s) to at least thighs parallel to the platform.",
+        "Let the knees travel forward over the toes along the line of the second toe; keep the heels down.",
+        "Keep your back, hips and head on the pad for the whole rep.",
+        "Drive up through the whole foot and breathe out past the hardest point.",
+        "Stop just short of locking the knees and go straight into the next rep.",
+        "Lock the safety handles before you step off."
+      ],
+      "ru": [
+        "Напрягите корпус и подконтрольно (2–3 с) опускайтесь между пятками — минимум до параллели бёдер с платформой.",
+        "Колени могут выходить вперёд за носки — главное, чтобы шли по линии второго пальца; пятки на платформе.",
+        "Спина, таз и голова всё повторение прижаты к спинке.",
+        "Вставайте, давя всей стопой, и выдыхайте после самой тяжёлой точки.",
+        "Вверху не выпрямляйте колени до блокировки — сразу начинайте следующее повторение.",
+        "Закройте страховочные рукоятки, прежде чем сойти с платформы."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Feet so low that the heels lift, or so high that the knees barely bend.",
+        "Hips sliding off the pad at the bottom and the lower back rounding.",
+        "Knees caving inward on the way up.",
+        "Half reps with a heavy load and bouncing out of the bottom."
+      ],
+      "ru": [
+        "Стопы стоят так низко, что отрываются пятки, или так высоко, что колени почти не сгибаются.",
+        "Таз сползает со спинки внизу, поясница округляется.",
+        "Колени заваливаются внутрь при подъёме.",
+        "Полуповторения с большим весом и отбив из нижней точки."
+      ]
+    },
+    "startLoad": {
+      "kg": 35,
+      "source": "≈0.55 × Strength Level Beginner 1RM (63 kg at 80 kg body weight); count plates only, not the sled"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Hack Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/hack-squat/kg",
+      "Trunk muscle activation in the back and hack squat at the same relative loads — J Strength Cond Res, 2019. https://doi.org/10.1519/JSC.0000000000002144",
+      "Effect of knee position on hip and knee torques during the barbell squat — J Strength Cond Res, 2003. https://pubmed.ncbi.nlm.nih.gov/14636100/"
+    ]
+  },
+  {
+    "id": "v-squat",
+    "name": {
+      "en": "V-squat machine",
+      "ru": "Приседания в рычажном тренажёре (V-squat)"
+    },
+    "aka": [
+      "V-squat",
+      "Hammer Strength Plate-Loaded V-Squat",
+      "Hammer Strength Pendulum-X Squat",
+      "Pendulum squat"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "hack-squat",
+      "leg-press-45",
+      "seated-leg-press",
+      "belt-squat",
+      "goblet-squat",
+      "bulgarian-split-squat",
+      "smith-squat"
+    ],
+    "setup": {
+      "en": "Step onto the platform with your back against the back pad and your shoulders under the pads; feet about shoulder-width in the middle of the platform. Stand up and release the racking lever.",
+      "ru": "Встаньте на платформу спиной к опорной подушке, плечи под валиками; стопы примерно на ширине плеч в середине платформы. Выпрямитесь и снимите рычаг с фиксатора."
+    },
+    "cues": {
+      "en": [
+        "Brace and sit down along the machine's arc under control (2–3 s) to at least thighs parallel.",
+        "Keep the knees in line with the toes and the heels down.",
+        "Keep your back on the pad — the curved path already shares the work with the hips.",
+        "Drive up through the whole foot, breathing out past the sticking point; stop short of locking the knees.",
+        "Re-rack with the lever before you step off."
+      ],
+      "ru": [
+        "Напрягите корпус и подконтрольно (2–3 с) опускайтесь по дуге тренажёра — минимум до параллели бёдер.",
+        "Колени по линии носков, пятки прижаты.",
+        "Спина остаётся на подушке: изогнутая траектория уже распределяет работу между коленями и тазом.",
+        "Вставайте, давя всей стопой, с выдохом после самой тяжёлой точки; колени до блокировки не выпрямляйте.",
+        "Прежде чем сойти, поставьте рычаг на фиксатор."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding the lower back at the bottom as the hips tuck under.",
+        "Knees caving in or heels lifting.",
+        "Bouncing out of the bottom or cutting depth to move more plates."
+      ],
+      "ru": [
+        "Округление поясницы внизу, когда таз подкручивается.",
+        "Колени заваливаются внутрь или отрываются пятки.",
+        "Отбив из нижней точки или неполная глубина ради большего веса."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Estimate: no published standard; ≈0.5 × Strength Level hack-squat Beginner 1RM (63 kg at 80 kg). The Hammer Strength lever adds about 25 kg of starting resistance"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Hammer Strength Plate-Loaded V-Squat — Life Fitness, n.d. https://www.lifefitness.com/en-eu/catalog/strength-training/plate-loaded/plate-loaded-v-squat",
+      "Hack Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/hack-squat/kg",
+      "Effects of squat training with different depths on lower limb muscle volumes — Eur J Appl Physiol, 2019. https://doi.org/10.1007/s00421-019-04181-y"
+    ]
+  },
+  {
+    "id": "belt-squat",
+    "name": {
+      "en": "Belt squat",
+      "ru": "Приседания с поясом (белт-сквот)"
+    },
+    "aka": [
+      "Belt squat machine",
+      "Hip belt squat",
+      "Hammer Strength Plate-Loaded Belt Squat",
+      "Pit Shark belt squat"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "leg-press-45",
+      "seated-leg-press",
+      "hack-squat",
+      "v-squat",
+      "goblet-squat",
+      "bulgarian-split-squat",
+      "smith-squat"
+    ],
+    "setup": {
+      "en": "Fasten the belt low around your hips (on the pelvis, not the waist) and clip it to the lever or chain; stand on the platform with feet shoulder-width, toes slightly out, hands on the handles. Stand tall to lift the weight off the stops.",
+      "ru": "Застегните пояс низко на тазу (на тазовых костях, а не на талии) и пристегните к рычагу или цепи; встаньте на платформу, стопы на ширине плеч, носки чуть врозь, руки на рукоятках. Выпрямитесь, чтобы снять вес с упоров."
+    },
+    "cues": {
+      "en": [
+        "Stay tall: the load hangs from your hips, so the torso stays upright and the spine is unloaded.",
+        "Sit straight down (2–3 s) until the thighs are at least parallel, knees tracking over the toes.",
+        "Use the handles for balance only, not to pull yourself up.",
+        "Drive the floor away and finish by squeezing the glutes; breathe out on the way up.",
+        "Set the strap length so the weight clears the stops at the top and you can reach full depth."
+      ],
+      "ru": [
+        "Держите корпус вертикально: вес висит на тазу, позвоночник разгружен.",
+        "Опускайтесь прямо вниз (2–3 с) минимум до параллели бёдер, колени по линии носков.",
+        "Рукоятки — только для равновесия, не подтягивайтесь за них.",
+        "Отталкивайте пол и вверху напрягите ягодицы; выдох на подъёме.",
+        "Подберите длину ремня так, чтобы вверху вес отрывался от упоров, а внизу хватало глубины."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Wearing the belt at the waist, where it rides up and pulls you forward.",
+        "Pulling on the handles to stand up.",
+        "Knees caving in or cutting depth.",
+        "Leaning far forward, which turns it into a hinge and loses the back-friendly set-up."
+      ],
+      "ru": [
+        "Пояс на талии: он уезжает вверх и тянет корпус вперёд.",
+        "Вставание за счёт рук на рукоятках.",
+        "Колени заваливаются внутрь или неполная глубина.",
+        "Сильный наклон вперёд: упражнение превращается в наклон и теряет щадящую для спины механику."
+      ]
+    },
+    "startLoad": {
+      "kg": 45,
+      "source": "≈0.6 × Strength Level Beginner 1RM (75 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Belt Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/belt-squat/kg",
+      "Activity of trunk and lower extremity musculature: comparison between parallel back squats and belt squats — J Hum Kinet, 2020. https://doi.org/10.2478/hukin-2019-0126",
+      "Hammer Strength Plate-Loaded Belt Squat — Life Fitness, n.d. https://www.lifefitness.com/en-eu/catalog/strength-training/plate-loaded/hammer-strength-plate-loaded-belt-squat"
+    ]
+  },
+  {
+    "id": "goblet-squat",
+    "name": {
+      "en": "Goblet squat",
+      "ru": "Гоблет-приседания с гантелью"
+    },
+    "aka": [
+      "Dumbbell goblet squat",
+      "Kettlebell goblet squat",
+      "Cup squat"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors",
+      "erectors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "bulgarian-split-squat",
+      "leg-press-45",
+      "hack-squat",
+      "belt-squat",
+      "seated-leg-press",
+      "smith-squat",
+      "barbell-back-squat"
+    ],
+    "setup": {
+      "en": "Hold one dumbbell vertically against your chest, both hands cupping the top end, elbows tucked under it. Stand with feet shoulder-width or slightly wider, toes turned out 15–30°.",
+      "ru": "Держите гантель вертикально у груди, обхватив ладонями верхний диск, локти под гантелью. Стопы на ширине плеч или чуть шире, носки развёрнуты на 15–30°."
+    },
+    "cues": {
+      "en": [
+        "Breathe in, brace and sit straight down between your heels.",
+        "Keep the dumbbell touching your chest and the chest up — the weight in front lets you stay upright.",
+        "Push the knees out over the toes; at the bottom your elbows can brush the inside of the knees.",
+        "Go as deep as you can with a neutral back (hips at least level with the knees) and pause briefly — no bounce.",
+        "Drive up through the whole foot and breathe out near the top."
+      ],
+      "ru": [
+        "Вдохните, напрягите корпус и садитесь прямо вниз между пятками.",
+        "Гантель прижата к груди, грудь раскрыта: вес спереди помогает держать корпус вертикально.",
+        "Разводите колени по линии носков; внизу локти могут касаться внутренней стороны коленей.",
+        "Опускайтесь так глубоко, как позволяет ровная спина (таз минимум на уровне коленей), и сделайте короткую паузу без отбива.",
+        "Вставайте, давя всей стопой, выдох ближе к верхней точке."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Letting the dumbbell drift away from the chest, which pulls you forward and rounds the upper back.",
+        "Heels lifting or knees caving in.",
+        "Rounding the lower back to chase depth (the pelvis tucking under at the bottom).",
+        "Choosing a dumbbell so heavy that your arms give out before your legs."
+      ],
+      "ru": [
+        "Гантель отходит от груди: корпус заваливается вперёд, верх спины округляется.",
+        "Отрыв пяток или колени внутрь.",
+        "Округление поясницы ради глубины (таз подкручивается внизу).",
+        "Гантель настолько тяжёлая, что руки устают раньше ног."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "≈0.6 × Strength Level Beginner 1RM for the goblet squat (15 kg, one dumbbell, at 80 kg body weight)"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Goblet Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/goblet-squat/kg",
+      "Goblet Squat — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/362/goblet-squat/",
+      "Effects of squat training with different depths on lower limb muscle volumes — Eur J Appl Physiol, 2019. https://doi.org/10.1007/s00421-019-04181-y"
+    ]
+  },
+  {
+    "id": "bulgarian-split-squat",
+    "name": {
+      "en": "Bulgarian split squat",
+      "ru": "Болгарские выпады (сплит-приседания)"
+    },
+    "aka": [
+      "Rear-foot-elevated split squat",
+      "RFESS",
+      "Dumbbell Bulgarian split squat"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "lunge",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors",
+      "glute-med"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "goblet-squat",
+      "leg-press-45",
+      "hack-squat",
+      "belt-squat",
+      "seated-leg-press",
+      "smith-squat",
+      "barbell-back-squat"
+    ],
+    "setup": {
+      "en": "Rest the top of your back foot on a knee-height bench and place the front foot far enough forward that, at the bottom, the front shin is about vertical or slightly forward. Hold a dumbbell in each hand at your sides (or one at the chest).",
+      "ru": "Положите подъём задней стопы на скамью высотой примерно до колена, переднюю ногу выставьте так далеко, чтобы внизу голень была почти вертикальной или чуть наклонена вперёд. Гантели в опущенных руках по бокам (или одна у груди)."
+    },
+    "cues": {
+      "en": [
+        "Lower straight down (2–3 s) until the back knee nearly touches the floor; the front leg does the work.",
+        "Keep the front knee over the middle toes and the whole front foot planted.",
+        "Lean the torso slightly forward for more glutes; stay upright for more quads.",
+        "Keep the hips square — don't let the pelvis twist or drop to one side.",
+        "Push up through the front heel and midfoot; breathe out on the way up.",
+        "Start with your weaker leg and match its reps on the other side."
+      ],
+      "ru": [
+        "Опускайтесь прямо вниз (2–3 с), пока заднее колено почти не коснётся пола; работает передняя нога.",
+        "Переднее колено над средними пальцами стопы, вся передняя стопа прижата к полу.",
+        "Небольшой наклон корпуса вперёд — больше работы ягодицам, вертикальный корпус — квадрицепсам.",
+        "Таз держите ровно: не разворачивайте и не проваливайте его в сторону.",
+        "Поднимайтесь, давя пяткой и серединой передней стопы; выдох на подъёме.",
+        "Начинайте со слабой ноги и сделайте столько же повторений другой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Front foot too close, so the heel lifts and the knee is driven far forward.",
+        "Pushing off the back foot instead of the front leg.",
+        "Front knee caving inward.",
+        "A bench so high that the rear hip and thigh are over-stretched."
+      ],
+      "ru": [
+        "Передняя стопа слишком близко: пятка отрывается, колено уходит далеко вперёд.",
+        "Толчок задней ногой вместо работы передней.",
+        "Переднее колено заваливается внутрь.",
+        "Слишком высокая скамья: передняя поверхность бедра и сгибатели бедра задней ноги перерастянуты."
+      ]
+    },
+    "startLoad": {
+      "kg": 8,
+      "source": "≈0.6 × Strength Level Beginner 1RM (13 kg per dumbbell at 80 kg body weight); per hand"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Dumbbell Bulgarian Split Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-bulgarian-split-squat/kg",
+      "Bulgarian Split Squat — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/366/bulgarian-split-squat/",
+      "Targeted muscle activation in Bulgarian split squat variations: effects of trunk position and suspension-based execution — BMC Sports Sci Med Rehabil, 2025. https://doi.org/10.1186/s13102-025-01306-z",
+      "Gluteus maximus activation during common strength and hypertrophy exercises: a systematic review — J Sports Sci Med, 2020. https://pmc.ncbi.nlm.nih.gov/articles/PMC7039033/"
+    ]
+  },
+  {
+    "id": "smith-squat",
+    "name": {
+      "en": "Smith machine squat",
+      "ru": "Приседания в машине Смита"
+    },
+    "aka": [
+      "Smith squat",
+      "Technogym Multipower squat",
+      "Guided-bar squat"
+    ],
+    "equipment": "smith",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors",
+      "erectors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "hack-squat",
+      "v-squat",
+      "leg-press-45",
+      "belt-squat",
+      "goblet-squat",
+      "bulgarian-split-squat",
+      "barbell-back-squat"
+    ],
+    "setup": {
+      "en": "Set the safety stops just below the lowest point of your squat. Bar across your upper back (not the neck), hands just outside the shoulders; feet shoulder-width and 10–20 cm in front of the bar line.",
+      "ru": "Выставьте страховочные упоры чуть ниже нижней точки вашего приседа. Гриф на верхней части спины (не на шее), хват чуть шире плеч; стопы на ширине плеч и на 10–20 см впереди линии грифа."
+    },
+    "cues": {
+      "en": [
+        "Unhook the bar by twisting it off the hooks, then brace before the first rep.",
+        "Sit down under control (2–3 s) to at least thighs parallel, knees tracking over the toes.",
+        "Keep the whole foot planted and the chest up; the bar path is fixed, so your foot position sets the balance.",
+        "Drive up and breathe out past the hardest part; stop short of locking the knees.",
+        "Rack the bar by twisting it onto the nearest hooks."
+      ],
+      "ru": [
+        "Снимите гриф с крюков поворотом и напрягите корпус перед первым повторением.",
+        "Подконтрольно (2–3 с) опускайтесь минимум до параллели бёдер, колени по линии носков.",
+        "Вся стопа на полу, грудь раскрыта: траектория грифа фиксирована, поэтому баланс задаёт постановка стоп.",
+        "Поднимайтесь, выдыхая после самой тяжёлой точки; колени до блокировки не выпрямляйте.",
+        "Возвращайте гриф поворотом на ближайшие крюки."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Training without the safety stops set.",
+        "Feet right under the bar (knees forced far forward, heels up) or far in front (the lower back rounds at the bottom).",
+        "Resting the bar on the neck.",
+        "Bouncing out of the bottom or cutting depth."
+      ],
+      "ru": [
+        "Работа без выставленных страховочных упоров.",
+        "Стопы прямо под грифом (колени уходят далеко вперёд, пятки отрываются) или слишком далеко впереди (поясница округляется внизу).",
+        "Гриф лежит на шее.",
+        "Отбив снизу или неполная глубина."
+      ]
+    },
+    "startLoad": {
+      "kg": 35,
+      "source": "≈0.6 × Strength Level Beginner 1RM (57 kg at 80 kg body weight), bar included; Smith bars weigh 7–25 kg, so check yours"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Smith Machine Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/smith-machine-squat/kg",
+      "A comparison of free weight squat to Smith machine squat using electromyography — J Strength Cond Res, 2009. https://doi.org/10.1519/JSC.0b013e3181b1b181",
+      "Effects of squat training with different depths on lower limb muscle volumes — Eur J Appl Physiol, 2019. https://doi.org/10.1007/s00421-019-04181-y"
+    ]
+  },
+  {
+    "id": "barbell-back-squat",
+    "name": {
+      "en": "Barbell back squat",
+      "ru": "Приседания со штангой на спине"
+    },
+    "aka": [
+      "Back squat",
+      "High-bar squat",
+      "Low-bar squat",
+      "Barbell squat"
+    ],
+    "equipment": "barbell",
+    "pattern": "squat",
+    "class": "squat",
+    "primary": [
+      "quads",
+      "glute-max"
+    ],
+    "secondary": [
+      "adductors",
+      "erectors"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "hack-squat",
+      "smith-squat",
+      "belt-squat",
+      "leg-press-45",
+      "v-squat",
+      "goblet-squat",
+      "bulgarian-split-squat"
+    ],
+    "setup": {
+      "en": "In a power rack, set the J-hooks at mid-chest height and the safety arms just below your bottom position. Bar on the upper back (on the traps, not the neck), hands just outside the shoulders; unrack, take two or three steps back and set the feet shoulder-width, toes out 15–30°.",
+      "ru": "В силовой раме поставьте крюки на уровне середины груди, а страховочные упоры — чуть ниже нижней точки приседа. Гриф на трапециях (не на шее), хват чуть шире плеч; снимите штангу, сделайте 2–3 шага назад, стопы на ширине плеч, носки развёрнуты на 15–30°."
+    },
+    "cues": {
+      "en": [
+        "Breathe into your belly and brace before every rep; keep the upper back tight and pull the bar into your back.",
+        "Sit down between your heels (2–3 s) until the thighs are at least parallel, keeping a neutral spine.",
+        "Let the knees travel forward over the toes along the line of the second toe; keep the whole foot planted.",
+        "Drive up so the chest and hips rise together; breathe out near the top.",
+        "First weeks: learn the pattern with the empty bar and add load only while every rep looks the same.",
+        "Training alone: squat only inside the rack with the safety arms set — if a rep fails, sit down and let the bar rest on them."
+      ],
+      "ru": [
+        "Перед каждым повторением наберите воздух в живот и напрягите корпус; верх спины собран, гриф прижат к спине.",
+        "Садитесь вниз между пятками (2–3 с), пока бёдра не станут хотя бы параллельны полу; спина ровная.",
+        "Колени могут выходить вперёд за носки по линии второго пальца; вся стопа на полу.",
+        "Поднимайтесь так, чтобы грудь и таз шли вверх одновременно; выдох ближе к верхней точке.",
+        "Первые недели отрабатывайте технику с пустым грифом и добавляйте вес, только пока все повторения одинаково чистые.",
+        "В одиночку приседайте только в раме с выставленными упорами: если повторение не идёт, опуститесь и положите штангу на упоры."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Squatting outside a rack, or without safety arms, when training alone.",
+        "Lower back rounding at the bottom (pelvis tucking under) or over-arching at the top.",
+        "Hips shooting up first so the squat turns into a good-morning.",
+        "Knees caving inward on the way up.",
+        "Bar on the neck, or adding weight faster than your technique allows."
+      ],
+      "ru": [
+        "Приседания вне рамы или без страховочных упоров, когда тренируетесь один.",
+        "Округление поясницы внизу (таз подкручивается) или переразгибание вверху.",
+        "Таз уходит вверх первым, и присед превращается в «гуд-морнинг».",
+        "Колени заваливаются внутрь на подъёме.",
+        "Гриф на шее или прибавка веса быстрее, чем позволяет техника."
+      ]
+    },
+    "startLoad": {
+      "kg": 45,
+      "source": "≈0.6 × Strength Level Beginner 1RM (75 kg at 80 kg body weight), 20 kg bar included"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Squat Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/squat/kg",
+      "Effect of knee position on hip and knee torques during the barbell squat — J Strength Cond Res, 2003. https://pubmed.ncbi.nlm.nih.gov/14636100/",
+      "Effects of squat training with different depths on lower limb muscle volumes — Eur J Appl Physiol, 2019. https://doi.org/10.1007/s00421-019-04181-y",
+      "A comparison of bone-targeted exercise strategies to reduce fracture risk in middle-aged and older men with osteopenia and osteoporosis (LIFTMOR-M) — J Bone Miner Res, 2020. https://doi.org/10.1002/jbmr.4008"
+    ]
+  },
+  {
+    "id": "leg-extension",
+    "name": {
+      "en": "Leg extension",
+      "ru": "Разгибание ног сидя в тренажёре"
+    },
+    "aka": [
+      "Knee extension machine",
+      "Technogym Selection Leg Extension",
+      "Life Fitness Insignia Leg Extension",
+      "Cybex Eagle NX Leg Extension",
+      "Nautilus One Leg Extension",
+      "Hammer Strength Leg Extension"
+    ],
+    "equipment": "selectorized",
+    "pattern": "knee-extension",
+    "class": "knee-extension",
+    "primary": [
+      "quads"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "leg-press-45",
+      "seated-leg-press",
+      "hack-squat",
+      "belt-squat",
+      "v-squat",
+      "goblet-squat",
+      "bulgarian-split-squat"
+    ],
+    "setup": {
+      "en": "Line up your knee joint with the machine's pivot (often marked with a coloured dot), set the shin pad on the lower shin just above the ankle, and adjust the backrest so your knees start bent to at least 90°. Hold the side handles.",
+      "ru": "Совместите коленный сустав с осью вращения тренажёра (часто отмечена цветной точкой), валик — на нижней части голени чуть выше голеностопа; спинку настройте так, чтобы в исходной позиции колени были согнуты не меньше чем на 90°. Держитесь за боковые рукоятки."
+    },
+    "cues": {
+      "en": [
+        "Keep your hips down on the seat and your back on the pad; pull on the handles to stay put.",
+        "Extend the knees smoothly until straight and squeeze the quads for a one-second pause.",
+        "Lower slowly (2–3 s) all the way back to the deep-knee start — the stretched bottom range builds the most muscle.",
+        "If the backrest reclines, lean it back: a more open hip stretches the rectus femoris, which then grows more.",
+        "Breathe out as you extend, in as you lower."
+      ],
+      "ru": [
+        "Таз прижат к сиденью, спина к спинке — удерживайте себя руками за рукоятки.",
+        "Плавно выпрямите колени и задержитесь на секунду, напрягая квадрицепсы.",
+        "Опускайте медленно (2–3 с) до глубокого сгибания в исходной точке: нижняя, растянутая часть амплитуды даёт больше всего роста.",
+        "Если спинка отклоняется, отклоните её: при более открытом тазобедренном суставе прямая мышца бедра растягивается и растёт сильнее.",
+        "Выдох на разгибании, вдох на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Knee not lined up with the pivot, so the pad slides along the shin and loads the knee awkwardly.",
+        "Swinging the weight up and letting the stack drop.",
+        "Lifting the hips off the seat to finish the rep.",
+        "Working only the top half of the range."
+      ],
+      "ru": [
+        "Колено не совмещено с осью: валик ездит по голени, и колено нагружается неправильно.",
+        "Забрасывание веса рывком и бросок стопки вниз.",
+        "Отрыв таза от сиденья, чтобы дожать повторение.",
+        "Работа только в верхней половине амплитуды."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "≈0.6 × Strength Level Beginner 1RM (48 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Leg Extension Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/leg-extension/kg",
+      "Partial range of motion training elicits favorable improvements in muscular adaptations when carried out at long muscle lengths — Eur J Sport Sci, 2022. https://doi.org/10.1080/17461391.2021.1927199",
+      "The effects of hip flexion angle on quadriceps femoris muscle hypertrophy in the leg extension exercise — J Sports Sci, 2025. https://doi.org/10.1080/02640414.2024.2444713",
+      "Muscular strength as a predictor of all-cause mortality in an apparently healthy population: a systematic review and meta-analysis of data from approximately 2 million men and women — Arch Phys Med Rehabil, 2018. https://doi.org/10.1016/j.apmr.2018.01.008"
+    ]
+  },
+  {
+    "id": "seated-leg-curl",
+    "name": {
+      "en": "Seated leg curl",
+      "ru": "Сгибание ног сидя в тренажёре"
+    },
+    "aka": [
+      "Seated hamstring curl",
+      "Technogym Selection Leg Curl",
+      "Life Fitness Insignia Seated Leg Curl",
+      "Nautilus One Seated Leg Curl"
+    ],
+    "equipment": "selectorized",
+    "pattern": "knee-flexion",
+    "class": "knee-flexion",
+    "primary": [
+      "hamstrings"
+    ],
+    "secondary": [
+      "gastrocnemius"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "lying-leg-curl",
+      "dumbbell-rdl",
+      "back-extension-45",
+      "cable-pull-through"
+    ],
+    "setup": {
+      "en": "Line up your knee joint with the pivot, put the lower-leg pad on the back of your lower calves (above the Achilles tendon) and clamp the thigh pad snugly just above the knees. Sit back against the pad and hold the handles.",
+      "ru": "Совместите колено с осью вращения, валик для голеней — под нижней частью икр (выше ахиллова сухожилия), бедренный валик плотно прижмите чуть выше коленей. Сядьте вплотную к спинке и возьмитесь за рукоятки."
+    },
+    "cues": {
+      "en": [
+        "Sit tall or lean slightly forward: the bent hip stretches the hamstrings, which is why seated curls grow them more than lying curls.",
+        "Curl the pad down and back as far as you can (well past 90°) and pause for a second.",
+        "Return slowly (2–3 s) to an almost straight knee without letting the stack rest.",
+        "Keep the thighs pinned under the pad; don't lift the hips.",
+        "Breathe out as you curl, in on the way back."
+      ],
+      "ru": [
+        "Сидите прямо или чуть наклонитесь вперёд: согнутый тазобедренный сустав растягивает заднюю поверхность бедра — поэтому сгибания сидя растят её лучше, чем лёжа.",
+        "Сгибайте ноги вниз и назад как можно дальше (заметно больше 90°) с паузой в секунду.",
+        "Возвращайте медленно (2–3 с) почти до прямого колена, не опуская грузы на стопку.",
+        "Бёдра прижаты валиком, таз не отрывайте.",
+        "Выдох на сгибании, вдох на возврате."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Thigh pad left loose, so the hips ride up and the stretch is lost.",
+        "Pad pressing on the Achilles tendon, or the knee off the pivot.",
+        "Jerking the weight and stopping short of a full curl.",
+        "Letting the stack slam on the way back."
+      ],
+      "ru": [
+        "Бедренный валик не прижат: таз уезжает вверх, и растяжение теряется.",
+        "Валик давит на ахиллово сухожилие или колено не совмещено с осью.",
+        "Рывки и неполное сгибание.",
+        "Грузы падают на стопку при возврате."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "≈0.6 × Strength Level Beginner 1RM (39 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Leg Curl Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/seated-leg-curl/kg",
+      "Greater hamstrings muscle hypertrophy but similar damage protection after training at long versus short muscle lengths — Med Sci Sports Exerc, 2021. https://doi.org/10.1249/MSS.0000000000002523"
+    ]
+  },
+  {
+    "id": "lying-leg-curl",
+    "name": {
+      "en": "Lying leg curl",
+      "ru": "Сгибание ног лёжа в тренажёре"
+    },
+    "aka": [
+      "Prone leg curl",
+      "Lying hamstring curl",
+      "Technogym Selection Prone Leg Curl",
+      "Life Fitness Insignia Leg Curl"
+    ],
+    "equipment": "selectorized",
+    "pattern": "knee-flexion",
+    "class": "knee-flexion",
+    "primary": [
+      "hamstrings"
+    ],
+    "secondary": [
+      "gastrocnemius"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "seated-leg-curl",
+      "dumbbell-rdl",
+      "back-extension-45",
+      "cable-pull-through"
+    ],
+    "setup": {
+      "en": "Lie face down with your knees just off the end of the pad and in line with the pivot; place the roller on the lower third of your calves, above the heels. Hold the handles.",
+      "ru": "Лягте лицом вниз так, чтобы колени были чуть за краем скамьи и на одной линии с осью вращения; валик — на нижней трети голеней, выше пяток. Возьмитесь за рукоятки."
+    },
+    "cues": {
+      "en": [
+        "Press your hips into the pad and brace your abs so the lower back doesn't arch.",
+        "Curl your heels toward your glutes until the knees are bent past 90°, then pause for a second.",
+        "Lower under control (2–3 s) to almost straight, keeping tension at the bottom.",
+        "Breathe out as you curl, in as you lower."
+      ],
+      "ru": [
+        "Прижмите таз к скамье и напрягите пресс, чтобы поясница не прогибалась.",
+        "Сгибайте ноги, подводя пятки к ягодицам, пока колени не согнутся больше чем на 90°, затем секундная пауза.",
+        "Опускайте подконтрольно (2–3 с) почти до прямых ног, не теряя напряжения внизу.",
+        "Выдох на сгибании, вдох на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Hips lifting off the pad and the lower back arching to finish reps.",
+        "Roller on the Achilles or heels, or knees out of line with the pivot.",
+        "Swinging the weight up and dropping it."
+      ],
+      "ru": [
+        "Таз отрывается от скамьи, поясница прогибается, чтобы дожать повторение.",
+        "Валик на ахиллах или пятках либо колени не совмещены с осью.",
+        "Забрасывание веса и бросок вниз."
+      ]
+    },
+    "startLoad": {
+      "kg": 20,
+      "source": "≈0.6 × Strength Level Beginner 1RM (30 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Lying Leg Curl Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/lying-leg-curl/kg",
+      "Lying Hamstrings Curl — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/153/lying-hamstrings-curl/",
+      "Greater hamstrings muscle hypertrophy but similar damage protection after training at long versus short muscle lengths — Med Sci Sports Exerc, 2021. https://doi.org/10.1249/MSS.0000000000002523"
+    ]
+  },
+  {
+    "id": "nordic-hamstring-curl",
+    "name": {
+      "en": "Nordic hamstring curl",
+      "ru": "Нордические сгибания ног"
+    },
+    "aka": [
+      "Nordic curl",
+      "Nordic hamstring exercise (NHE)",
+      "Russian hamstring curl",
+      "Hammer Strength Plate-Loaded Assisted Nordic Ham"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "knee-flexion",
+    "class": "knee-flexion",
+    "primary": [
+      "hamstrings"
+    ],
+    "secondary": [
+      "gastrocnemius",
+      "glute-max"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 0,
+    "repRange": [
+      3,
+      8
+    ],
+    "alternatives": [
+      "seated-leg-curl",
+      "lying-leg-curl",
+      "dumbbell-rdl",
+      "back-extension-45",
+      "barbell-rdl"
+    ],
+    "setup": {
+      "en": "Kneel on a soft pad with your heels locked under a padded bar, a machine roller or a partner's hands. Keep your body straight from knees to head, hands ready in front of your chest.",
+      "ru": "Встаньте на колени на мягкий коврик, зафиксировав пятки под валиком, перекладиной или руками партнёра. Тело прямое от коленей до головы, руки перед грудью наготове."
+    },
+    "cues": {
+      "en": [
+        "Squeeze your glutes and keep the hips straight — the movement happens only at the knees.",
+        "Lean forward as slowly as you can (3–5 s), braking with your hamstrings.",
+        "When you can no longer hold it, catch yourself with your hands as in a push-up and push lightly back up.",
+        "Progress by controlling a longer range, then add reps; at first get help from a band anchored behind you around your chest, or from plates on an assisted Nordic machine.",
+        "Breathe out slowly as you lower."
+      ],
+      "ru": [
+        "Напрягите ягодицы и держите таз выпрямленным: движение происходит только в коленях.",
+        "Наклоняйтесь вперёд как можно медленнее (3–5 с), тормозя задней поверхностью бедра.",
+        "Когда удерживать уже не получается, поймайте себя руками, как в отжимании, и слегка оттолкнитесь обратно.",
+        "Прогрессируйте: сначала больше подконтрольной амплитуды, потом повторений; на старте помогут резинка, закреплённая сзади вокруг груди, или диски на тренажёре с поддержкой.",
+        "Медленно выдыхайте на опускании."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bending at the hips (bottom sticking out), which shortens the lever and takes the hamstrings out of it.",
+        "Dropping through the last part of the range instead of controlling it.",
+        "Doing many hard sets in the first weeks; start with 1–2 sets of 3–5 once a week, because the soreness is severe at first.",
+        "Kneeling on a hard floor with no padding."
+      ],
+      "ru": [
+        "Сгибание в тазобедренном суставе (таз уходит назад): рычаг укорачивается, и задняя поверхность бедра выключается.",
+        "Падение в конце амплитуды вместо контроля.",
+        "Много тяжёлых подходов в первые недели: начните с 1–2 подходов по 3–5 повторений раз в неделю — поначалу крепатура сильная.",
+        "Колени на жёстком полу без подкладки."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Body weight; start with 1–2 sets of 3–5 slow reps once a week (Petersen 2011 began with one session in week 1 and built up over 10 weeks)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Including the Nordic hamstring exercise in injury prevention programmes halves the rate of hamstring injuries — Br J Sports Med, 2019. https://doi.org/10.1136/bjsports-2018-100045",
+      "Preventive effect of eccentric training on acute hamstring injuries in men's soccer: a cluster-randomized controlled trial — Am J Sports Med, 2011. https://doi.org/10.1177/0363546511419277"
+    ]
+  },
+  {
+    "id": "trap-bar-deadlift",
+    "name": {
+      "en": "Trap-bar deadlift",
+      "ru": "Становая тяга с трэп-грифом"
+    },
+    "aka": [
+      "Hex bar deadlift",
+      "Hexagonal bar deadlift",
+      "Trap bar lift"
+    ],
+    "equipment": "barbell",
+    "pattern": "hip-hinge",
+    "class": "hip-hinge",
+    "primary": [
+      "glute-max",
+      "quads"
+    ],
+    "secondary": [
+      "hamstrings",
+      "erectors",
+      "adductors",
+      "forearm-flexors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "conventional-deadlift",
+      "cable-pull-through",
+      "kettlebell-swing",
+      "barbell-rdl",
+      "dumbbell-rdl",
+      "back-extension-45"
+    ],
+    "setup": {
+      "en": "Step into the centre of the bar with feet hip-width and the handles in line with the middle of your feet. Use the raised handles while you learn — they shorten the pull.",
+      "ru": "Встаньте в центр грифа, стопы на ширине таза, рукоятки на одной линии с серединой стоп. Пока осваиваете движение, берите высокие рукоятки — амплитуда короче."
+    },
+    "cues": {
+      "en": [
+        "Push your hips back and bend your knees to grip the middle of the handles; back flat, chest up, arms long.",
+        "Breathe into your belly, brace, and pull the slack out of the bar before it leaves the floor.",
+        "Push the floor away with your legs; hips and shoulders rise together.",
+        "Finish standing tall with the glutes squeezed — don't lean back.",
+        "Lower by pushing the hips back first, then bending the knees; set the bar down, don't drop it.",
+        "Re-brace before every rep and end the set as soon as your back position changes."
+      ],
+      "ru": [
+        "Отведите таз назад и согните колени, чтобы взяться за середину рукояток; спина ровная, грудь раскрыта, руки прямые.",
+        "Наберите воздух в живот, напрягите корпус и выберите люфт грифа, прежде чем оторвать его от пола.",
+        "Отталкивайте пол ногами; таз и плечи поднимаются одновременно.",
+        "Вверху встаньте прямо, напрягая ягодицы, — без отклонения назад.",
+        "Опускайте, сначала отводя таз назад, затем сгибая колени; ставьте гриф, а не бросайте.",
+        "Перед каждым повторением заново напрягайте корпус и заканчивайте подход, как только меняется положение спины."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding the lower back to reach the handles.",
+        "Jerking the bar off the floor instead of building tension first.",
+        "Hips shooting up first, turning the lift into a stiff-legged pull.",
+        "Leaning back or shrugging hard at the top.",
+        "Standing off-centre so the bar tilts or hits your legs."
+      ],
+      "ru": [
+        "Округление поясницы, чтобы дотянуться до рукояток.",
+        "Рывок грифа с пола без предварительного напряжения.",
+        "Таз уходит вверх первым — тяга превращается в тягу на прямых ногах.",
+        "Отклонение назад или сильное пожимание плечами вверху.",
+        "Стойка не по центру: гриф перекашивается или бьёт по ногам."
+      ]
+    },
+    "startLoad": {
+      "kg": 60,
+      "source": "≈0.6 × Strength Level Beginner 1RM (99 kg at 80 kg body weight), bar included — trap bars weigh 20–30 kg"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Hex Bar Deadlift Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/trap-bar-deadlift/kg",
+      "A biomechanical analysis of straight and hexagonal barbell deadlifts using submaximal loads — J Strength Cond Res, 2011. https://doi.org/10.1519/JSC.0b013e3181e73f87",
+      "An examination of muscle activation and power characteristics while performing the deadlift exercise with straight and hexagonal barbells — J Strength Cond Res, 2016. https://doi.org/10.1519/JSC.0000000000001352",
+      "A comparison of bone-targeted exercise strategies to reduce fracture risk in middle-aged and older men with osteopenia and osteoporosis (LIFTMOR-M) — J Bone Miner Res, 2020. https://doi.org/10.1002/jbmr.4008"
+    ]
+  },
+  {
+    "id": "dumbbell-rdl",
+    "name": {
+      "en": "Dumbbell Romanian deadlift",
+      "ru": "Румынская тяга с гантелями"
+    },
+    "aka": [
+      "Dumbbell RDL",
+      "DB Romanian deadlift",
+      "Dumbbell hip hinge"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "hip-hinge",
+    "class": "hip-hinge",
+    "primary": [
+      "hamstrings",
+      "glute-max"
+    ],
+    "secondary": [
+      "erectors",
+      "adductors",
+      "forearm-flexors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "barbell-rdl",
+      "cable-pull-through",
+      "back-extension-45",
+      "kettlebell-swing",
+      "trap-bar-deadlift",
+      "seated-leg-curl",
+      "lying-leg-curl"
+    ],
+    "setup": {
+      "en": "Stand tall with feet hip-width and a dumbbell in each hand in front of your thighs, knees unlocked (slightly bent).",
+      "ru": "Встаньте прямо, стопы на ширине таза, гантели в руках перед бёдрами, колени слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Brace, then push your hips straight back; the dumbbells slide down close to your thighs and shins.",
+        "Keep the knee bend almost fixed and your back flat from head to tailbone.",
+        "Lower (2–3 s) until you feel a strong hamstring stretch, usually around mid-shin, and stop before your back starts to round.",
+        "Drive the hips forward to stand up, squeezing the glutes; breathe out at the top.",
+        "Keep the shoulders down and back, dumbbells under the shoulders."
+      ],
+      "ru": [
+        "Напрягите корпус и отводите таз строго назад; гантели скользят вниз вплотную к бёдрам и голеням.",
+        "Сгиб в коленях почти не меняется, спина ровная от головы до копчика.",
+        "Опускайтесь (2–3 с) до сильного растяжения задней поверхности бедра — обычно до середины голени — и остановитесь раньше, чем начнёт округляться спина.",
+        "Поднимайтесь, подавая таз вперёд и напрягая ягодицы; выдох вверху.",
+        "Плечи опущены и отведены назад, гантели под плечами."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding the lower back to reach lower.",
+        "Turning it into a squat by bending the knees more on the way down.",
+        "Letting the dumbbells drift forward, away from the legs.",
+        "Over-arching the lower back at the top instead of finishing with the glutes."
+      ],
+      "ru": [
+        "Округление поясницы ради большей глубины.",
+        "Тяга превращается в присед: колени сгибаются всё сильнее по ходу опускания.",
+        "Гантели уходят вперёд от ног.",
+        "Переразгибание поясницы вверху вместо дожима ягодицами."
+      ]
+    },
+    "startLoad": {
+      "kg": 12,
+      "source": "≈0.6 × Strength Level Beginner 1RM (19 kg per dumbbell at 80 kg body weight); per hand"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Dumbbell Romanian Deadlift Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/dumbbell-romanian-deadlift/kg",
+      "Muscle activation during various hamstring exercises — J Strength Cond Res, 2014. https://doi.org/10.1519/JSC.0000000000000302",
+      "Romanian Deadlift — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/317/romanian-deadlift/"
+    ]
+  },
+  {
+    "id": "barbell-rdl",
+    "name": {
+      "en": "Barbell Romanian deadlift",
+      "ru": "Румынская тяга со штангой"
+    },
+    "aka": [
+      "Romanian deadlift",
+      "RDL",
+      "Barbell RDL"
+    ],
+    "equipment": "barbell",
+    "pattern": "hip-hinge",
+    "class": "hip-hinge",
+    "primary": [
+      "hamstrings",
+      "glute-max"
+    ],
+    "secondary": [
+      "erectors",
+      "adductors",
+      "forearm-flexors"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      10
+    ],
+    "alternatives": [
+      "dumbbell-rdl",
+      "conventional-deadlift",
+      "trap-bar-deadlift",
+      "cable-pull-through",
+      "back-extension-45",
+      "kettlebell-swing",
+      "seated-leg-curl",
+      "lying-leg-curl"
+    ],
+    "setup": {
+      "en": "Take the bar from a rack set at mid-thigh height (not off the floor) with an overhand grip just outside your thighs; stand tall, feet hip-width, knees slightly bent.",
+      "ru": "Снимите штангу со стоек на уровне середины бедра (не с пола) прямым хватом чуть шире бёдер; встаньте прямо, стопы на ширине таза, колени слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Brace and set the shoulders back; keep the bar touching your thighs as you push the hips back.",
+        "Keep the knees softly bent and the shins nearly vertical.",
+        "Lower (2–3 s) to just below the knees or mid-shin — only as far as you can keep your back flat.",
+        "Stand up by driving the hips forward with the bar close; breathe out at the top.",
+        "Keep your neck in line with your back: look at the floor a couple of metres ahead."
+      ],
+      "ru": [
+        "Напрягите корпус, сведите лопатки; отводя таз назад, ведите гриф вплотную по бёдрам.",
+        "Колени слегка согнуты, голени почти вертикальны.",
+        "Опускайте (2–3 с) чуть ниже колен или до середины голени — только пока спина остаётся ровной.",
+        "Поднимайтесь, подавая таз вперёд, гриф у ног; выдох вверху.",
+        "Шея продолжает линию спины: смотрите в пол в паре метров впереди."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Rounding the lower back at the bottom — the main injury risk on this lift.",
+        "Bar drifting forward away from the legs, which multiplies the load on the lower back.",
+        "Bending the knees into a squat, or locking them straight.",
+        "Leaning back at the top, or adding load before the hinge is consistent."
+      ],
+      "ru": [
+        "Округление поясницы внизу — главный риск травмы в этом упражнении.",
+        "Гриф уходит вперёд от ног — нагрузка на поясницу резко растёт.",
+        "Сгибание коленей до приседа или полностью прямые, заблокированные колени.",
+        "Отклонение назад вверху или прибавка веса раньше, чем наклон стал стабильным."
+      ]
+    },
+    "startLoad": {
+      "kg": 40,
+      "source": "≈0.6 × Strength Level Beginner 1RM (65 kg at 80 kg body weight), 20 kg bar included"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Romanian Deadlift Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/romanian-deadlift/kg",
+      "Romanian Deadlift — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/317/romanian-deadlift/",
+      "Muscle activation during various hamstring exercises — J Strength Cond Res, 2014. https://doi.org/10.1519/JSC.0000000000000302",
+      "Exercise Technique Manual for Resistance Training, 4th ed. — NSCA / Human Kinetics, 2021. https://us.humankinetics.com/products/exercise-technique-manual-for-resistance-training-4th-edition-with-hkpropel-online-video"
+    ]
+  },
+  {
+    "id": "cable-pull-through",
+    "name": {
+      "en": "Cable pull-through",
+      "ru": "Тяга нижнего блока между ног (пулл-тру)"
+    },
+    "aka": [
+      "Pull-through",
+      "Rope pull-through",
+      "Cable hip hinge"
+    ],
+    "equipment": "cable",
+    "pattern": "hip-hinge",
+    "class": "hip-hinge",
+    "primary": [
+      "glute-max",
+      "hamstrings"
+    ],
+    "secondary": [
+      "erectors",
+      "adductors"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      15
+    ],
+    "alternatives": [
+      "kettlebell-swing",
+      "trap-bar-deadlift",
+      "conventional-deadlift",
+      "dumbbell-rdl",
+      "back-extension-45",
+      "barbell-rdl",
+      "machine-hip-thrust",
+      "barbell-hip-thrust"
+    ],
+    "setup": {
+      "en": "Attach a rope to a low pulley. Face away from the stack, straddle the cable and take the rope with both hands between your legs, then walk forward one or two steps; feet slightly wider than the hips, knees soft.",
+      "ru": "Закрепите канат на нижнем блоке. Встаньте спиной к стойке, перешагните трос и возьмите канат обеими руками между ног, затем отойдите на 1–2 шага; стопы чуть шире таза, колени слегка согнуты."
+    },
+    "cues": {
+      "en": [
+        "Hinge: push the hips back and let the rope travel back between your legs, back flat, arms long.",
+        "Go down until you feel the hamstrings stretch, torso around 45° or lower — never by rounding.",
+        "Snap the hips forward to stand tall and squeeze the glutes hard for a second.",
+        "Your arms are just hooks — don't pull with them.",
+        "Breathe out as you stand; finish upright, not leaning back."
+      ],
+      "ru": [
+        "Наклон за счёт таза: отводите таз назад, канат уходит назад между ног; спина ровная, руки прямые.",
+        "Опускайтесь до растяжения задней поверхности бедра (корпус примерно под 45° или ниже) — только без округления спины.",
+        "Мощно подайте таз вперёд, встаньте прямо и на секунду сильно напрягите ягодицы.",
+        "Руки — просто крюки: не тяните ими.",
+        "Выдох на подъёме; вверху стойте прямо, без отклонения назад."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Squatting down instead of hinging back.",
+        "Pulling the rope with the arms.",
+        "Leaning back and arching the lower back at the top.",
+        "Standing so close to the stack that the plates rest at the bottom and the tension disappears."
+      ],
+      "ru": [
+        "Приседание вместо наклона с отведением таза.",
+        "Тяга каната руками.",
+        "Отклонение назад с прогибом поясницы в верхней точке.",
+        "Стойка слишком близко к блоку: внизу грузы ложатся на стопку, и напряжение пропадает."
+      ]
+    },
+    "startLoad": {
+      "kg": 10,
+      "source": "≈0.6 × Strength Level Beginner 1RM (15 kg at 80 kg body weight); stack weight — pulley ratios differ between gyms"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Cable Pull Through Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/cable-pull-through/kg",
+      "Hip Hinge — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/33/hip-hinge/"
+    ]
+  },
+  {
+    "id": "conventional-deadlift",
+    "name": {
+      "en": "Conventional deadlift",
+      "ru": "Классическая становая тяга"
+    },
+    "aka": [
+      "Deadlift",
+      "Barbell deadlift",
+      "Conventional barbell deadlift"
+    ],
+    "equipment": "barbell",
+    "pattern": "hip-hinge",
+    "class": "hip-hinge",
+    "primary": [
+      "glute-max",
+      "hamstrings"
+    ],
+    "secondary": [
+      "erectors",
+      "quads",
+      "adductors",
+      "forearm-flexors"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "high",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      4,
+      8
+    ],
+    "alternatives": [
+      "trap-bar-deadlift",
+      "cable-pull-through",
+      "kettlebell-swing",
+      "barbell-rdl",
+      "dumbbell-rdl",
+      "back-extension-45"
+    ],
+    "setup": {
+      "en": "Stand with the bar over your mid-foot (2–3 cm from the shins), feet hip-width, toes slightly out, and full-size plates so the bar starts at standard height. Grip it overhand just outside your legs; use straps or a mixed grip only when the grip, not the back, is what fails.",
+      "ru": "Встаньте так, чтобы гриф был над серединой стопы (2–3 см от голеней), стопы на ширине таза, носки чуть врозь; диски полноразмерные, чтобы гриф стоял на стандартной высоте. Хват сверху чуть шире ног; лямки или разнохват — только когда подводит хват, а не спина."
+    },
+    "cues": {
+      "en": [
+        "Bend the knees until the shins touch the bar: chest up, back flat, shoulders slightly in front of the bar.",
+        "Tighten the lats ('bend the bar around your legs'), breathe into your belly and brace.",
+        "Pull the slack out, then push the floor away; the bar travels straight up, brushing your legs.",
+        "Hips and shoulders rise together; finish tall with the glutes, no lean back.",
+        "Lower by pushing the hips back until the bar passes the knees, then bend the knees; start every rep from the floor.",
+        "Training alone: end the set at the first sign of your back rounding — never grind out a rep with a rounded back."
+      ],
+      "ru": [
+        "Согните колени, чтобы голени коснулись грифа: грудь раскрыта, спина ровная, плечи чуть впереди грифа.",
+        "Напрягите широчайшие («согните гриф вокруг ног»), наберите воздух в живот и напрягите корпус.",
+        "Выберите люфт грифа, затем отталкивайте пол: гриф идёт строго вверх, касаясь ног.",
+        "Таз и плечи поднимаются одновременно; вверху встаньте прямо за счёт ягодиц, без отклонения назад.",
+        "Опускайте, отводя таз назад, пока гриф не пройдёт колени, затем сгибайте колени; каждое повторение — с пола.",
+        "В одиночку заканчивайте подход при первом признаке округления спины — никогда не дожимайте повторение с круглой спиной."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Lifting with a rounded lower back.",
+        "Bar starting too far from the shins or swinging forward on the way up.",
+        "Jerking the bar off the floor.",
+        "Hips rising before the bar moves (stiff-legging the start).",
+        "Over-arching the lower back at lockout, or bouncing reps off the floor."
+      ],
+      "ru": [
+        "Тяга с округлённой поясницей.",
+        "Гриф далеко от голеней на старте или уходит вперёд по ходу подъёма.",
+        "Рывок грифа с пола.",
+        "Таз поднимается раньше, чем гриф отрывается от пола (старт на прямых ногах).",
+        "Переразгибание поясницы в верхней точке или отбив повторений от пола."
+      ]
+    },
+    "startLoad": {
+      "kg": 50,
+      "source": "≈0.6 × Strength Level Beginner 1RM (89 kg at 80 kg body weight), rounded down; 20 kg bar included"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Deadlift Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/deadlift/kg",
+      "Deadlift — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/6/deadlift/",
+      "A biomechanical analysis of straight and hexagonal barbell deadlifts using submaximal loads — J Strength Cond Res, 2011. https://doi.org/10.1519/JSC.0b013e3181e73f87",
+      "A comparison of bone-targeted exercise strategies to reduce fracture risk in middle-aged and older men with osteopenia and osteoporosis (LIFTMOR-M) — J Bone Miner Res, 2020. https://doi.org/10.1002/jbmr.4008"
+    ]
+  },
+  {
+    "id": "kettlebell-swing",
+    "name": {
+      "en": "Kettlebell swing",
+      "ru": "Махи гирей двумя руками"
+    },
+    "aka": [
+      "Two-hand kettlebell swing",
+      "Russian kettlebell swing",
+      "Hardstyle swing"
+    ],
+    "equipment": "kettlebell",
+    "pattern": "hip-hinge",
+    "class": "hip-hinge",
+    "primary": [
+      "glute-max",
+      "hamstrings"
+    ],
+    "secondary": [
+      "erectors",
+      "quads",
+      "forearm-flexors"
+    ],
+    "difficulty": 3,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": false,
+    "increment": 4,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "cable-pull-through",
+      "trap-bar-deadlift",
+      "conventional-deadlift",
+      "dumbbell-rdl",
+      "back-extension-45",
+      "barbell-rdl"
+    ],
+    "setup": {
+      "en": "Set the kettlebell about 30 cm in front of you, feet shoulder-width. Hinge back, grip the handle with both hands and tilt the bell toward you.",
+      "ru": "Поставьте гирю примерно в 30 см перед собой, стопы на ширине плеч. Наклонитесь, отводя таз назад, возьмитесь за дужку двумя руками и наклоните гирю к себе."
+    },
+    "cues": {
+      "en": [
+        "Hike the bell back high between your thighs like passing a ball back between your legs: back flat, forearms against the inner thighs.",
+        "Snap the hips forward hard; the bell floats up to chest height on straight, relaxed arms.",
+        "At the top stand tall like a plank — glutes and abs tight, no lean back.",
+        "Let the bell fall, wait for it, then hinge as it passes your hips; keep it above the knees.",
+        "Breathe out sharply at the top of every rep.",
+        "End the set by hiking the bell back and parking it on the floor in front of you."
+      ],
+      "ru": [
+        "Заведите гирю назад высоко между бёдер, будто отдаёте мяч назад между ног: спина ровная, предплечья у внутренней поверхности бёдер.",
+        "Резко подайте таз вперёд: гиря взлетает до уровня груди на прямых расслабленных руках.",
+        "Вверху стойте прямо, как в планке: ягодицы и пресс напряжены, без отклонения назад.",
+        "Дайте гире упасть, дождитесь её и наклонитесь, когда она пройдёт таз; держите её выше колен.",
+        "Резкий выдох в верхней точке каждого повторения.",
+        "Заканчивайте подход, заводя гирю назад и ставя её на пол перед собой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Squatting the swing (knees forward, hips down) instead of hinging.",
+        "Lifting the bell with the arms and shoulders.",
+        "Rounding the lower back at the bottom or letting the bell drop below the knees.",
+        "Leaning back and over-arching at the top.",
+        "Carrying on when tired and the form breaks — swings are crisp sets of 10–20."
+      ],
+      "ru": [
+        "Махи «приседом» (колени вперёд, таз вниз) вместо наклона с отведением таза.",
+        "Подъём гири руками и плечами.",
+        "Округление поясницы внизу или гиря проваливается ниже колен.",
+        "Отклонение назад с прогибом в верхней точке.",
+        "Продолжение подхода, когда устали и техника развалилась: махи — это чёткие подходы по 10–20."
+      ]
+    },
+    "startLoad": {
+      "kg": 16,
+      "source": "Lake & Lauder 2012 used a 16 kg bell for men over 70 kg; the usual first swing bell for an average man"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Kettlebell swing training improves maximal and explosive strength — J Strength Cond Res, 2012. https://doi.org/10.1519/JSC.0b013e31825c2c9b",
+      "Kettlebell swing, snatch, and bottoms-up carry: back and hip muscle activation, motion, and low back loads — J Strength Cond Res, 2012. https://doi.org/10.1519/JSC.0b013e31823a4063",
+      "Swing — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/391/swing/"
+    ]
+  },
+  {
+    "id": "machine-hip-thrust",
+    "name": {
+      "en": "Hip thrust machine",
+      "ru": "Ягодичный мост в тренажёре (хип-траст)"
+    },
+    "aka": [
+      "Glute drive",
+      "Glute bridge machine",
+      "Hammer Strength Plate-Loaded Glute Drive",
+      "Technogym Pure Hip Thrust",
+      "Life Fitness Insignia Glute Bridge"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "hip-extension",
+    "class": "hip-thrust",
+    "primary": [
+      "glute-max"
+    ],
+    "secondary": [
+      "hamstrings"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      8,
+      12
+    ],
+    "alternatives": [
+      "glute-kickback-machine",
+      "barbell-hip-thrust",
+      "cable-pull-through",
+      "back-extension-45",
+      "bulgarian-split-squat",
+      "leg-press-45"
+    ],
+    "setup": {
+      "en": "Sit with your upper back (just below the shoulder blades) against the back pad and the padded lever or belt across your hips, just below the hip bones. Feet flat and hip-width, placed so your shins are vertical at the top.",
+      "ru": "Сядьте так, чтобы верх спины (чуть ниже лопаток) упирался в подушку, а валик или ремень лежал поперёк таза чуть ниже тазовых костей. Стопы на ширине таза, поставьте их так, чтобы вверху голени были вертикальны."
+    },
+    "cues": {
+      "en": [
+        "Keep the chin slightly tucked and the ribs down; your gaze follows your torso.",
+        "Drive through the heels and midfoot until the hips are fully extended — torso and thighs in one line.",
+        "Squeeze the glutes for a second at the top with a slight backward tilt of the pelvis, not an arch in the lower back.",
+        "Lower under control (2 s) until the plates almost touch down.",
+        "Breathe out as you drive up."
+      ],
+      "ru": [
+        "Подбородок слегка прижат, рёбра опущены: взгляд следует за корпусом.",
+        "Давите пятками и серединой стопы, пока таз полностью не разогнётся: корпус и бёдра на одной линии.",
+        "Вверху на секунду напрягите ягодицы, слегка подкрутив таз назад, — без прогиба в пояснице.",
+        "Опускайте подконтрольно (2 с), пока диски почти не коснутся упора.",
+        "Выдох на подъёме."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Arching the lower back to fake the top position.",
+        "Feet too far out (the hamstrings take over) or too close (the quads take over).",
+        "Pushing through the toes so the heels lift.",
+        "Throwing the head back."
+      ],
+      "ru": [
+        "Прогиб в пояснице вместо полного разгибания таза.",
+        "Стопы слишком далеко (работает задняя поверхность бедра) или слишком близко (работают квадрицепсы).",
+        "Толчок носками с отрывом пяток.",
+        "Запрокидывание головы."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "Estimate: no machine standard; ≈0.55 × Strength Level barbell hip-thrust Beginner 1RM (56 kg at 80 kg). Lever ratios differ, so adjust after the first set"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Hip thrust and back squat training elicit similar gluteus muscle hypertrophy and transfer similarly to the deadlift — Front Physiol, 2023. https://doi.org/10.3389/fphys.2023.1279170",
+      "A comparison of gluteus maximus, biceps femoris, and vastus lateralis EMG activity in the back squat and barbell hip thrust — J Appl Biomech, 2015. https://doi.org/10.1123/jab.2014-0301",
+      "Hip Thrust Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/hip-thrust/kg"
+    ]
+  },
+  {
+    "id": "barbell-hip-thrust",
+    "name": {
+      "en": "Barbell hip thrust",
+      "ru": "Хип-траст со штангой (ягодичный мост от скамьи)"
+    },
+    "aka": [
+      "Hip thrust",
+      "Bench hip thrust",
+      "Barbell glute bridge from a bench"
+    ],
+    "equipment": "barbell",
+    "pattern": "hip-extension",
+    "class": "hip-thrust",
+    "primary": [
+      "glute-max"
+    ],
+    "secondary": [
+      "hamstrings"
+    ],
+    "difficulty": 2,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      6,
+      12
+    ],
+    "alternatives": [
+      "machine-hip-thrust",
+      "glute-kickback-machine",
+      "cable-pull-through",
+      "back-extension-45",
+      "bulgarian-split-squat",
+      "leg-press-45"
+    ],
+    "setup": {
+      "en": "Sit with the lower edge of your shoulder blades against a stable bench about knee height, roll a padded bar into your hip crease and plant your feet hip-width so the shins are vertical at the top. Use full-diameter (bumper) plates so the bar clears your hips.",
+      "ru": "Сядьте, уперевшись нижним краем лопаток в устойчивую скамью высотой примерно до колена, закатите штангу с мягкой накладкой на сгиб таза, стопы на ширине таза так, чтобы вверху голени были вертикальны. Используйте полноразмерные (бамперные) диски, чтобы гриф проходил над тазом."
+    },
+    "cues": {
+      "en": [
+        "Hold the bar with both hands to keep it centred; chin slightly tucked, ribs down.",
+        "Drive through the heels until the torso is parallel to the floor and the hips are fully extended.",
+        "Pause for a second at the top and squeeze the glutes — tilt the pelvis back slightly instead of arching.",
+        "Lower the hips under control until the plates nearly touch the floor.",
+        "Breathe out as you drive up; breathe in and brace before the next rep."
+      ],
+      "ru": [
+        "Держите гриф обеими руками, чтобы он оставался по центру; подбородок слегка прижат, рёбра опущены.",
+        "Давите пятками, пока корпус не станет параллелен полу, а таз полностью не разогнётся.",
+        "Секундная пауза вверху с сильным напряжением ягодиц: таз слегка подкручен назад, без прогиба в пояснице.",
+        "Опускайте таз подконтрольно, пока диски почти не коснутся пола.",
+        "Выдох на подъёме; перед следующим повторением вдох и напряжение корпуса."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Over-arching the lower back instead of extending the hips.",
+        "A bench that slides away or is too high.",
+        "Bar rolling toward the stomach because it isn't held or padded.",
+        "Feet too far out or too close, or pushing through the toes."
+      ],
+      "ru": [
+        "Переразгибание поясницы вместо разгибания таза.",
+        "Скамья уезжает или стоит слишком высоко.",
+        "Гриф скатывается к животу, потому что его не придерживают и не подложили накладку.",
+        "Стопы слишком далеко или слишком близко либо толчок носками."
+      ]
+    },
+    "startLoad": {
+      "kg": 40,
+      "source": "≈0.7 × Strength Level Beginner 1RM (56 kg at 80 kg body weight): the 20 kg bar plus two 10 kg bumper plates, the lightest load that clears the hips"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Hip Thrust Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/hip-thrust/kg",
+      "A comparison of gluteus maximus, biceps femoris, and vastus lateralis EMG activity in the back squat and barbell hip thrust — J Appl Biomech, 2015. https://doi.org/10.1123/jab.2014-0301",
+      "Hip thrust and back squat training elicit similar gluteus muscle hypertrophy and transfer similarly to the deadlift — Front Physiol, 2023. https://doi.org/10.3389/fphys.2023.1279170",
+      "Gluteus maximus activation during common strength and hypertrophy exercises: a systematic review — J Sports Sci Med, 2020. https://pmc.ncbi.nlm.nih.gov/articles/PMC7039033/"
+    ]
+  },
+  {
+    "id": "glute-kickback-machine",
+    "name": {
+      "en": "Glute kickback machine",
+      "ru": "Отведение ноги назад в тренажёре"
+    },
+    "aka": [
+      "Glute machine",
+      "Rear kick machine",
+      "Life Fitness Insignia Glute",
+      "Cybex Eagle NX Glute",
+      "Nautilus Inspiration Glute Press"
+    ],
+    "equipment": "selectorized",
+    "pattern": "hip-extension",
+    "class": "hip-thrust",
+    "primary": [
+      "glute-max"
+    ],
+    "secondary": [
+      "hamstrings"
+    ],
+    "difficulty": 1,
+    "unilateral": true,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      10,
+      15
+    ],
+    "alternatives": [
+      "machine-hip-thrust",
+      "barbell-hip-thrust",
+      "cable-pull-through",
+      "back-extension-45",
+      "bulgarian-split-squat"
+    ],
+    "setup": {
+      "en": "Set the chest or elbow pad so your torso is supported and the hips stay level; put the working foot on the footplate (or the pad behind your thigh) and stand or kneel on the other leg (depending on the machine), knee soft. Hold the handles.",
+      "ru": "Отрегулируйте упор для груди или локтей так, чтобы корпус опирался на него, а таз оставался ровным; рабочую стопу поставьте на платформу (или заведите валик за бедро); опорная нога — на полу или на колене (зависит от тренажёра), колено мягкое. Возьмитесь за рукоятки."
+    },
+    "cues": {
+      "en": [
+        "Brace your abs and keep the pelvis square — the movement comes only from the hip.",
+        "Push back and up until the thigh is in line with your torso, then squeeze the glute for a second.",
+        "Stop before the lower back arches: the range ends where your hip extension ends.",
+        "Return slowly (2 s) to a deep hip bend without letting the stack rest.",
+        "Do all reps on your weaker side first; breathe out as you push."
+      ],
+      "ru": [
+        "Напрягите пресс и держите таз ровно: движение только в тазобедренном суставе.",
+        "Отводите ногу назад-вверх, пока бедро не окажется на одной линии с корпусом, и на секунду напрягите ягодицу.",
+        "Останавливайтесь до прогиба в пояснице: амплитуда заканчивается там, где заканчивается разгибание бедра.",
+        "Возвращайте медленно (2 с) до глубокого сгибания в тазобедренном суставе, не опуская грузы на стопку.",
+        "Начинайте со слабой стороны; выдох на усилии."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Arching the lower back to kick the leg higher.",
+        "Rotating the pelvis open toward the working side.",
+        "Swinging the weight with momentum.",
+        "A load so heavy that the support leg and the back do the work."
+      ],
+      "ru": [
+        "Прогиб в пояснице, чтобы закинуть ногу выше.",
+        "Разворот таза в сторону рабочей ноги.",
+        "Махи с инерцией.",
+        "Вес настолько большой, что работают опорная нога и спина."
+      ]
+    },
+    "startLoad": {
+      "kg": 15,
+      "source": "Estimate: no published standard; start light and find the working weight with 10–15 controlled reps"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Glute Press — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/293/glute-press/",
+      "Quadruped Bent-knee Hip Extensions — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/270/quadruped-bent-knee-hip-extensions/"
+    ]
+  },
+  {
+    "id": "hip-abduction-machine",
+    "name": {
+      "en": "Hip abduction machine",
+      "ru": "Разведение ног сидя в тренажёре"
+    },
+    "aka": [
+      "Seated hip abduction",
+      "Outer-thigh machine",
+      "Technogym Selection 700 Dual Abductor/Adductor",
+      "Life Fitness Insignia Hip Abduction/Adduction",
+      "Cybex Eagle NX Hip AB/AD",
+      "Nautilus One Hip Ab/Ad"
+    ],
+    "equipment": "selectorized",
+    "pattern": "hip-abduction",
+    "class": "hip-abduction",
+    "primary": [
+      "glute-med"
+    ],
+    "secondary": [
+      "glute-max"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "glute-kickback-machine",
+      "side-plank",
+      "bulgarian-split-squat"
+    ],
+    "setup": {
+      "en": "Sit with your back against the pad and the pads on the outside of your knees; set the start position with the legs together (or only slightly apart) and the feet on the footrests.",
+      "ru": "Сядьте, прижав спину к спинке, валики — снаружи коленей; исходное положение — ноги вместе (или чуть врозь), стопы на подставках."
+    },
+    "cues": {
+      "en": [
+        "Push the knees apart as far as is comfortable and pause for a second at the widest point.",
+        "Bring them back slowly (2 s) and stop just before the plates touch.",
+        "Keep the hips on the seat and the torso still — no rocking.",
+        "Breathe out as you push out."
+      ],
+      "ru": [
+        "Разводите колени настолько широко, насколько комфортно, с паузой в секунду в крайней точке.",
+        "Сводите медленно (2 с), останавливаясь чуть раньше, чем грузы коснутся стопки.",
+        "Таз на сиденье, корпус неподвижен — без раскачки.",
+        "Выдох при разведении."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bouncing the legs out with momentum and letting the stack crash.",
+        "Rocking the torso forward and back to move the weight.",
+        "Partial reps with too much weight."
+      ],
+      "ru": [
+        "Резкое разведение с инерцией и бросок грузов на стопку.",
+        "Раскачивание корпуса вперёд-назад ради веса.",
+        "Неполная амплитуда со слишком большим весом."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "≈0.6 × Strength Level Beginner 1RM (38 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Hip Abduction Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/hip-abduction/kg",
+      "An examination of the gluteal muscle activity associated with dynamic hip abduction and hip external rotation exercise: a systematic review — Int J Sports Phys Ther, 2015. https://pmc.ncbi.nlm.nih.gov/articles/PMC4595911/"
+    ]
+  },
+  {
+    "id": "hip-adduction-machine",
+    "name": {
+      "en": "Hip adduction machine",
+      "ru": "Сведение ног сидя в тренажёре"
+    },
+    "aka": [
+      "Seated hip adduction",
+      "Inner-thigh machine",
+      "Technogym Selection Adductor",
+      "Technogym Selection 700 Dual Abductor/Adductor",
+      "Life Fitness Insignia Hip Adduction",
+      "Nautilus One Hip Ab/Ad"
+    ],
+    "equipment": "selectorized",
+    "pattern": "hip-adduction",
+    "class": "hip-adduction",
+    "primary": [
+      "adductors"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 5,
+    "repRange": [
+      10,
+      15
+    ],
+    "alternatives": [
+      "copenhagen-adduction",
+      "leg-press-45",
+      "goblet-squat",
+      "bulgarian-split-squat"
+    ],
+    "setup": {
+      "en": "Sit with your back against the pad and the pads on the inside of your knees. Set the start width to a mild stretch only — narrower in the first sessions, then widen it gradually over weeks.",
+      "ru": "Сядьте, прижав спину к спинке, валики — с внутренней стороны коленей. Исходную ширину выставьте до лёгкого растяжения: в первые занятия — уже, затем расширяйте постепенно, неделя за неделей."
+    },
+    "cues": {
+      "en": [
+        "Squeeze the knees together smoothly and pause for a second.",
+        "Open back slowly (2–3 s) to the set width — never let the weight yank your legs apart.",
+        "Keep the hips back on the seat and the torso tall.",
+        "Breathe out as you squeeze in."
+      ],
+      "ru": [
+        "Плавно сводите колени и задержитесь на секунду.",
+        "Разводите медленно (2–3 с) до выставленной ширины — не позволяйте грузу рывком растаскивать ноги.",
+        "Таз прижат к спинке, корпус ровный.",
+        "Выдох при сведении."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Setting the start too wide in the first sessions — a common way to strain the groin.",
+        "Jerking the first rep out of the stretched position.",
+        "Letting the stack crash between reps."
+      ],
+      "ru": [
+        "Слишком широкая исходная позиция в первые занятия — частая причина растяжения паховых мышц.",
+        "Рывок на первом повторении из растянутого положения.",
+        "Грузы падают на стопку между повторениями."
+      ]
+    },
+    "startLoad": {
+      "kg": 25,
+      "source": "≈0.6 × Strength Level Beginner 1RM (41 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Hip Adduction Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/hip-adduction/kg",
+      "The Adductor Strengthening Programme prevents groin problems among male football players: a cluster-randomised controlled trial — Br J Sports Med, 2019. https://doi.org/10.1136/bjsports-2017-098937"
+    ]
+  },
+  {
+    "id": "copenhagen-adduction",
+    "name": {
+      "en": "Copenhagen adduction",
+      "ru": "Копенгагенское приведение (копенгагенская планка)"
+    },
+    "aka": [
+      "Copenhagen plank",
+      "Copenhagen adductor exercise",
+      "Side-lying bench adduction"
+    ],
+    "equipment": "bodyweight",
+    "pattern": "hip-adduction",
+    "class": "hip-adduction",
+    "primary": [
+      "adductors"
+    ],
+    "secondary": [
+      "obliques",
+      "quadratus-lumborum"
+    ],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 0,
+    "repRange": [
+      6,
+      15
+    ],
+    "alternatives": [
+      "hip-adduction-machine",
+      "side-plank",
+      "goblet-squat",
+      "bulgarian-split-squat"
+    ],
+    "setup": {
+      "en": "Lie on your side next to a flat bench, propped on the forearm under your shoulder. Rest the inside of your top knee on the bench (easier) or the inside of your ankle (harder, long lever); the bottom leg starts under the bench.",
+      "ru": "Лягте на бок рядом с горизонтальной скамьёй, опираясь на предплечье под плечом. Положите на скамью внутреннюю сторону колена верхней ноги (легче) или внутреннюю сторону голеностопа (тяжелее, длинный рычаг); нижняя нога в начале под скамьёй."
+    },
+    "cues": {
+      "en": [
+        "Press the top leg down into the bench to lift your hips until your body is one straight line.",
+        "Bring the bottom leg up to meet the bench, then lower hips and leg together under control (2–3 s).",
+        "Keep the hips stacked and the body in one plane — don't roll forward or let the hips sag.",
+        "Progress through three levels: side-lying leg lifts on the floor, then the knee on the bench, then the ankle on the bench.",
+        "Breathe steadily, and stop at any sharp groin pain."
+      ],
+      "ru": [
+        "Давите верхней ногой в скамью и поднимайте таз, пока тело не вытянется в одну прямую линию.",
+        "Подтяните нижнюю ногу к скамье, затем подконтрольно (2–3 с) опустите таз и ногу вместе.",
+        "Таз «стопкой», тело в одной плоскости — не заваливайтесь вперёд и не проваливайте таз.",
+        "Прогрессия в три ступени: подъёмы ноги лёжа на боку на полу, затем опора коленом на скамью, затем опора голеностопом.",
+        "Дышите ровно; при острой боли в паху остановитесь."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Starting straight on the long-lever (ankle) version — groin soreness is common in the first weeks.",
+        "Hips sagging or rotating forward.",
+        "Dropping down fast: the slow lowering phase is what built eccentric adductor strength in the trials."
+      ],
+      "ru": [
+        "Старт сразу с длинного рычага (опора голеностопом): в первые недели пах часто болит.",
+        "Таз проваливается или разворачивается вперёд.",
+        "Быстрое опускание: именно медленная уступающая фаза развивала эксцентрическую силу приводящих мышц в исследованиях."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Body weight; start around 2 × 6 per side on the knee version and add reps — Ishøi 2016 built up to 3 sets of 15 per side over 8 weeks"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "The Adductor Strengthening Programme prevents groin problems among male football players: a cluster-randomised controlled trial — Br J Sports Med, 2019. https://doi.org/10.1136/bjsports-2017-098937",
+      "Large eccentric strength increase using the Copenhagen Adduction exercise in football: a randomized controlled trial — Scand J Med Sci Sports, 2016. https://doi.org/10.1111/sms.12585",
+      "The neuromuscular effects of the Copenhagen adductor exercise: a systematic review — Int J Sports Phys Ther, 2021. https://doi.org/10.26603/001c.27975"
+    ]
+  },
+  {
+    "id": "standing-calf-raise-machine",
+    "name": {
+      "en": "Standing calf raise machine",
+      "ru": "Подъём на носки стоя в тренажёре"
+    },
+    "aka": [
+      "Standing calf machine",
+      "Machine calf raise",
+      "Hammer Strength Select Standing Calf"
+    ],
+    "equipment": "selectorized",
+    "pattern": "calf-raise",
+    "class": "calf-straight",
+    "primary": [
+      "gastrocnemius",
+      "soleus"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": false,
+    "lowerBackLoad": "moderate",
+    "lengthenedBias": true,
+    "increment": 5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "leg-press-calf-raise",
+      "single-leg-dumbbell-calf-raise",
+      "seated-calf-raise-machine"
+    ],
+    "setup": {
+      "en": "Set the shoulder pads so you have to bend your knees slightly to get under them; stand with the balls of your feet on the edge of the step, heels free, feet hip-width.",
+      "ru": "Выставьте плечевые валики так, чтобы под них приходилось заходить с чуть согнутыми коленями; встаньте подушечками стоп на край ступени, пятки свободно свисают, стопы на ширине таза."
+    },
+    "cues": {
+      "en": [
+        "Stand tall with the knees straight but not locked — a straight knee keeps the gastrocnemius on stretch.",
+        "Lower the heels slowly (2–3 s) into a deep stretch and pause 1–2 s at the bottom — no bounce.",
+        "Rise as high as you can onto the big toe and pause for a second.",
+        "Keep the body still; don't bend the knees or hips to push the weight.",
+        "Breathe out on the way up."
+      ],
+      "ru": [
+        "Стойте прямо, колени выпрямлены, но не заблокированы: прямое колено держит икроножную мышцу в растяжении.",
+        "Медленно (2–3 с) опускайте пятки до глубокого растяжения и задержитесь внизу на 1–2 с — без пружинки.",
+        "Поднимайтесь как можно выше на большой палец стопы и задержитесь на секунду.",
+        "Корпус неподвижен: не помогайте коленями и тазом.",
+        "Выдох на подъёме."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bouncing at the bottom so the Achilles tendon, not the muscle, does the work.",
+        "Short, fast half reps with the whole stack (ego loading).",
+        "Bending the knees to push the weight up.",
+        "Rolling onto the outer edge of the foot."
+      ],
+      "ru": [
+        "Пружинящие движения внизу: работу делает ахиллово сухожилие, а не мышца.",
+        "Короткие быстрые полуповторения со всей стопкой — погоня за весом.",
+        "Сгибание коленей, чтобы вытолкнуть вес.",
+        "Заваливание стопы на внешний край."
+      ]
+    },
+    "startLoad": {
+      "kg": 30,
+      "source": "≈0.6 × Strength Level Beginner 1RM for the machine calf raise (49 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs",
+      "longevity"
+    ],
+    "images": [],
+    "sources": [
+      "Machine Calf Raise Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/machine-calf-raise/kg",
+      "Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training — Front Physiol, 2023. https://doi.org/10.3389/fphys.2023.1272106",
+      "Calf Raises — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/51/calf-raises/"
+    ]
+  },
+  {
+    "id": "leg-press-calf-raise",
+    "name": {
+      "en": "Leg press calf raise",
+      "ru": "Подъём на носки в тренажёре для жима ногами"
+    },
+    "aka": [
+      "Calf press",
+      "Sled calf press",
+      "Toe press",
+      "Life Fitness Insignia Calf Extension"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "calf-raise",
+    "class": "calf-straight",
+    "primary": [
+      "gastrocnemius",
+      "soleus"
+    ],
+    "secondary": [],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "standing-calf-raise-machine",
+      "single-leg-dumbbell-calf-raise",
+      "seated-calf-raise-machine"
+    ],
+    "setup": {
+      "en": "Sit in the leg press with your back flat on the pad and only the balls of your feet on the bottom edge of the platform, feet hip-width. Press the platform up with straight (not locked) knees and keep a hand near the safety handles.",
+      "ru": "Сядьте в тренажёр для жима ногами, спина на спинке; на нижний край платформы поставьте только подушечки стоп на ширине таза. Выжмите платформу прямыми, но не заблокированными ногами и держите руку рядом со страховочными рукоятками."
+    },
+    "cues": {
+      "en": [
+        "Keep the knees straight and still — only the ankles move.",
+        "Let the platform come down slowly (2–3 s) into a deep calf stretch and pause 1–2 s.",
+        "Press through the big toe as far as you can and pause for a second.",
+        "Use a moderate load and shoes with grip: your feet must never slip off the edge.",
+        "Turn the safety handles back in before you move your feet."
+      ],
+      "ru": [
+        "Колени прямые и неподвижные — работают только голеностопы.",
+        "Медленно (2–3 с) опускайте платформу до глубокого растяжения икр и задержитесь на 1–2 с.",
+        "Выжимайте платформу через большой палец стопы как можно дальше и задержитесь на секунду.",
+        "Умеренный вес и нескользкая обувь: стопы ни в коем случае не должны соскользнуть с края.",
+        "Прежде чем переставить ноги, закройте страховочные рукоятки."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bending the knees, which turns it into a mini leg press.",
+        "Feet so low on the edge that they can slip off under a loaded sled.",
+        "Bouncing short reps."
+      ],
+      "ru": [
+        "Сгибание коленей: упражнение превращается в мини-жим ногами.",
+        "Стопы так низко на краю, что могут соскользнуть с платформы под весом.",
+        "Короткие пружинящие повторения."
+      ]
+    },
+    "startLoad": {
+      "kg": 50,
+      "source": "≈0.6 × Strength Level Beginner 1RM for the sled calf press (84 kg at 80 kg body weight); count plates only, not the sled"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Sled Press Calf Raise Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/sled-press-calf-raise/kg",
+      "Calf Raise (machine) — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/294/calf-raise/",
+      "Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training — Front Physiol, 2023. https://doi.org/10.3389/fphys.2023.1272106"
+    ]
+  },
+  {
+    "id": "single-leg-dumbbell-calf-raise",
+    "name": {
+      "en": "Single-leg dumbbell calf raise",
+      "ru": "Подъём на носок одной ноги с гантелью"
+    },
+    "aka": [
+      "One-leg calf raise",
+      "Single-leg standing calf raise",
+      "Step calf raise"
+    ],
+    "equipment": "dumbbell",
+    "pattern": "calf-raise",
+    "class": "calf-straight",
+    "primary": [
+      "gastrocnemius",
+      "soleus"
+    ],
+    "secondary": [],
+    "difficulty": 2,
+    "unilateral": true,
+    "supported": false,
+    "lowerBackLoad": "low",
+    "lengthenedBias": true,
+    "increment": 2,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "leg-press-calf-raise",
+      "standing-calf-raise-machine",
+      "seated-calf-raise-machine"
+    ],
+    "setup": {
+      "en": "Stand on the ball of one foot on a step or a plate with the heel hanging off; hold a dumbbell in the same-side hand and a rail or rack with the other hand for balance.",
+      "ru": "Встаньте подушечкой одной стопы на ступеньку или диск, пятка свисает; гантель в руке со стороны рабочей ноги, другой рукой держитесь за поручень или стойку для равновесия."
+    },
+    "cues": {
+      "en": [
+        "Keep the working knee straight but soft — that keeps the gastrocnemius long.",
+        "Lower the heel slowly (2–3 s) into a deep stretch and pause 1–2 s.",
+        "Rise as high as you can onto the big toe and pause for a second.",
+        "Use the support hand for balance only, not to pull yourself up.",
+        "Train the weaker calf first and match the reps on the other side."
+      ],
+      "ru": [
+        "Колено рабочей ноги прямое, но не заблокированное: так икроножная мышца остаётся растянутой.",
+        "Медленно (2–3 с) опускайте пятку до глубокого растяжения, пауза 1–2 с.",
+        "Поднимайтесь как можно выше на большой палец стопы и задержитесь на секунду.",
+        "Опорная рука — только для равновесия, не подтягивайтесь ею.",
+        "Начинайте со слабой икры и повторите то же число повторений другой ногой."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bouncing out of the bottom.",
+        "Bending the knee to help the rep.",
+        "Pulling on the rail to lift yourself."
+      ],
+      "ru": [
+        "Пружинящий отбив из нижней точки.",
+        "Сгибание колена, чтобы помочь себе.",
+        "Подтягивание рукой за поручень."
+      ]
+    },
+    "startLoad": {
+      "kg": 0,
+      "source": "Start with body weight only — one leg already carries the whole body; add a dumbbell once 20 slow full-range reps are easy"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training — Front Physiol, 2023. https://doi.org/10.3389/fphys.2023.1272106",
+      "Calf Raises — ACE Exercise Library, n.d. https://www.acefitness.org/resources/everyone/exercise-library/51/calf-raises/"
+    ]
+  },
+  {
+    "id": "seated-calf-raise-machine",
+    "name": {
+      "en": "Seated calf raise machine",
+      "ru": "Подъём на носки сидя в тренажёре"
+    },
+    "aka": [
+      "Seated calf machine",
+      "Hammer Strength Plate-Loaded Seated Calf Raise",
+      "Soleus raise"
+    ],
+    "equipment": "plate-loaded",
+    "pattern": "calf-raise",
+    "class": "calf-bent",
+    "primary": [
+      "soleus"
+    ],
+    "secondary": [
+      "gastrocnemius"
+    ],
+    "difficulty": 1,
+    "unilateral": false,
+    "supported": true,
+    "lowerBackLoad": "low",
+    "lengthenedBias": false,
+    "increment": 2.5,
+    "repRange": [
+      10,
+      20
+    ],
+    "alternatives": [
+      "leg-press-calf-raise",
+      "standing-calf-raise-machine",
+      "single-leg-dumbbell-calf-raise"
+    ],
+    "setup": {
+      "en": "Sit with the balls of your feet on the footplate, heels free, and the knee pad snug on your lower thighs just above the knees. Lift your heels slightly and release the safety lever.",
+      "ru": "Сядьте, поставив подушечки стоп на подставку (пятки свободны), валик плотно на нижней части бёдер чуть выше коленей. Слегка поднимите пятки и откиньте стопорный рычаг."
+    },
+    "cues": {
+      "en": [
+        "Lower the heels slowly (2–3 s) into a deep stretch and pause 1–2 s at the bottom.",
+        "Rise as high as you can and pause for a second at the top.",
+        "With the knees bent this trains mainly the soleus; pair it with a straight-knee calf raise for the gastrocnemius.",
+        "Keep the torso still and don't push the pad with your hands.",
+        "Lock the safety lever before you take your feet off."
+      ],
+      "ru": [
+        "Медленно (2–3 с) опускайте пятки до глубокого растяжения и задержитесь внизу на 1–2 с.",
+        "Поднимайтесь как можно выше с паузой в секунду вверху.",
+        "С согнутыми коленями работает в основном камбаловидная мышца — для икроножной добавляйте подъёмы на носки с прямыми ногами.",
+        "Корпус неподвижен, не помогайте себе руками, давя на валик.",
+        "Прежде чем убрать ноги, закройте стопорный рычаг."
+      ]
+    },
+    "mistakes": {
+      "en": [
+        "Bouncing quick half reps.",
+        "Pushing the pad up with the hands or rocking the torso.",
+        "Forgetting the safety lever when getting out."
+      ],
+      "ru": [
+        "Быстрые пружинящие полуповторения.",
+        "Помощь руками или раскачивание корпусом.",
+        "Забыть закрыть стопорный рычаг, выходя из тренажёра."
+      ]
+    },
+    "startLoad": {
+      "kg": 17.5,
+      "source": "≈0.6 × Strength Level Beginner 1RM (31 kg at 80 kg body weight)"
+    },
+    "tags": [
+      "legs"
+    ],
+    "images": [],
+    "sources": [
+      "Seated Calf Raise Standards (kg) — Strength Level, 2026. https://strengthlevel.com/strength-standards/seated-calf-raise/kg",
+      "Triceps surae muscle hypertrophy is greater after standing versus seated calf-raise training — Front Physiol, 2023. https://doi.org/10.3389/fphys.2023.1272106",
+      "Hammer Strength Plate-Loaded Seated Calf Raise — Life Fitness, n.d. https://www.lifefitness.com/en-be/catalog/strength-training/plate-loaded/plate-loaded-seated-calf-raise"
+    ]
+  }
+]

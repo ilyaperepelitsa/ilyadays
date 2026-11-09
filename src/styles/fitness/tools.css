@@ -1,0 +1,50 @@
+/* ---------- /fitness/tools calculators (master-owned) */
+.fit-tools { display: grid; gap: 16px; }
+.fit-calc { display: grid; gap: 14px; }
+.fit-calc h2 { margin: 0; }
+.fit-calc > p { margin: 0; }
+.fit-calc-field { display: grid; gap: 6px; min-width: 0; }
+.fit-calc-label { font: 600 .88rem var(--sans); color: var(--muted); }
+.fit-calc-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 12px; }
+.fit-calc-stepper { display: flex; align-items: center; gap: 6px; }
+.fit-calc-step {
+  flex: none; width: 48px; height: 48px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2);
+  color: var(--ink); font: 700 1.3rem var(--sans); cursor: pointer; touch-action: manipulation;
+}
+.fit-calc-step:hover { border-color: var(--accent); }
+.fit-calc-step:focus-visible, .fit-calc-input:focus-visible, .fit-calc-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-calc-input {
+  min-width: 0; width: 100%; height: 48px; padding: 0 10px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); font: 700 1.15rem var(--sans); text-align: center;
+}
+.fit-calc-unit { flex: none; color: var(--muted); font-size: .9rem; }
+.fit-calc-select {
+  width: 100%; min-height: 48px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); font: inherit;
+}
+.fit-calc-last { justify-self: start; }
+.fit-calc-result { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin: 0; }
+.fit-calc-big { font: 700 1.9rem var(--serif, var(--sans)); color: var(--accent); }
+.fit-calc-scroll { overflow-x: auto; margin: 0 -16px; padding: 0 16px; overscroll-behavior-x: contain; }
+.fit-calc-table { width: 100%; min-width: 300px; border-collapse: collapse; font-size: .95rem; }
+.fit-calc-table caption { caption-side: bottom; text-align: left; padding-top: 8px; font-size: .85rem; }
+.fit-calc-table th, .fit-calc-table td { padding: 8px 5px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.fit-calc-table thead th { font: 600 .8rem var(--sans); color: var(--muted); }
+.fit-calc-table th[scope="row"] { text-align: left; }
+.fit-calc-table tr.in-range { background: var(--accent-soft); }
+.fit-calc-table tr.in-range th[scope="row"] { color: var(--accent); }
+.fit-calc-table td.rough { color: var(--muted); font-style: italic; }
+.fit-calc-ramp h3 { margin: 0 0 6px; font-size: 1rem; }
+.fit-calc-ramp ol { margin: 0; padding-left: 1.4em; display: grid; gap: 4px; }
+.fit-calc-plates ul { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 8px; padding: 0; list-style: none; }
+.fit-plate {
+  display: inline-grid; place-items: center; min-width: 44px; height: calc(88px * var(--plate, .6)); padding: 0 8px;
+  border-radius: 8px; background: var(--ink); color: var(--bg); font: 700 .9rem var(--sans);
+}
+.fit-calc-more ul { margin: 0; padding-left: 1.2em; display: grid; gap: 0; }
+.fit-calc-more a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+.fit-calc .fit-seg button { min-width: 48px; text-align: center; }
+/* RIR choices: one row from 360 px (the «4» chip wrapped alone in EN and RU); 44 px number chips share the spare width */
+.fit-calc .fit-seg.fit-calc-rir { gap: 6px; }
+.fit-calc .fit-seg.fit-calc-rir button { flex: 1 0 auto; min-width: 44px; padding-inline: 10px; white-space: nowrap; }
+.fit-calc-pct { display: block; font: 400 .75rem var(--sans); color: var(--muted); }

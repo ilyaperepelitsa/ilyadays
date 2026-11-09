@@ -1,0 +1,185 @@
+/* fitness: program stream — owned by plans/fitness; see 00-master-plan.md */
+/* /fitness/program (stream 10, plans/fitness/10-ai-advisor.md): fpr-* classes. Phone first (360–430 px), tokens only. */
+
+.fpr { display: grid; gap: 16px; }
+.fpr-section h2, .fpr-summary h2 { margin: 0 0 10px; font-size: 1.2rem; }
+.fpr-small { font-size: .88rem; }
+.fpr-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- summary */
+.fpr-summary { display: grid; gap: 8px; }
+.fpr-summary > * { margin: 0; }
+.fpr-eyebrow { color: var(--muted); font: 600 .8rem var(--sans); text-transform: uppercase; letter-spacing: .04em; }
+.fpr-summary .fpr-title { margin: 0; font-size: 1.35rem; }
+.fpr-next a { color: var(--accent); font-weight: 600; }
+
+/* ---------- shared bits */
+.fpr-kv { margin: 12px 0; }
+/* phones: half and half, so a value such as "10 → 13 → 16" or "5 weeks + deload week" is not squeezed into a third */
+@media (max-width: 480px) { .fit-kv.fpr-kv { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fpr-kv-row { display: contents; }
+.fpr-details { margin-top: 8px; }
+.fpr-details > summary {
+  display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-weight: 600; color: var(--ink);
+  list-style: none;
+}
+.fpr-details > summary::-webkit-details-marker { display: none; }
+.fpr-details > summary::before { content: "›"; display: inline-block; width: 1em; color: var(--muted); transition: transform .15s; }
+.fpr-details[open] > summary::before { transform: rotate(90deg); }
+.fpr-scroll { overflow-x: auto; margin: 0 -16px; padding: 0 16px; overscroll-behavior-x: contain; }
+.fpr-table { border-collapse: collapse; font-size: .88rem; }
+.fpr-scroll .fpr-table { min-width: 560px; }
+.fpr-table th, .fpr-table td { padding: 7px 6px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.fpr-table thead th { font: 600 .8rem var(--sans); color: var(--muted); }
+.fpr-table .on { background: var(--accent-soft); color: var(--ink); }
+.fpr-sources { margin: 8px 0 0; padding-left: 1.3em; display: grid; gap: 6px; font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
+.fpr-sources a { color: var(--cool); }
+.fpr-mode-summary { margin: 12px 0 0; }
+.fpr-goals button, .fpr-chips button { text-align: center; }
+.fpr-goals button { flex: 1 1 auto; }
+.fpr-section > p, .fpr-section > .fpr-legs, .fpr-section > dl + p { margin: 10px 0 0; }
+.fpr-section > h2 + p { margin-top: 0; }
+.fpr-chips button { min-width: 48px; }
+
+/* ---------- weekly volume */
+.fpr-volume { width: 100%; max-width: 420px; }
+.fpr-volume td { text-align: right; font-weight: 600; }
+.fpr-volume tr.low td { color: var(--cool); }
+.fpr-volume tr.high td { color: var(--accent); }
+
+/* ---------- days per week, legs */
+.fpr-day-count button { display: grid; justify-items: center; gap: 0; min-width: 84px; flex: 1 1 0; }
+.fpr-day-count strong { font-size: 1.3rem; line-height: 1.1; }
+.fpr-day-count span { font-size: .78rem; color: var(--muted); }
+.fpr-day-count button[aria-pressed="true"] span { color: inherit; }
+.fpr-legs { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.fpr-legs h3, .fpr-legs p { margin: 0; }
+.fpr-legs h3 { font-size: 1rem; }
+.fpr-legs-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- days and slots */
+.fpr-days-list { display: grid; gap: 16px; }
+.fpr-day-head { display: grid; gap: 2px; margin-bottom: 10px; }
+.fpr-day-head h3 { margin: 0; font-size: 1.1rem; }
+.fpr-slots { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.fpr-slot { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.fpr-slot-head {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: start; width: 100%;
+  min-height: 56px; padding: 10px 12px; border: 0; border-radius: 12px; background: none; color: var(--ink);
+  font: inherit; text-align: left; cursor: pointer; touch-action: manipulation;
+}
+.fpr-slot-head:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fpr-slot-id {
+  display: grid; place-items: center; min-width: 36px; height: 28px; padding: 0 6px; border-radius: 8px;
+  background: var(--surface-2); font: 700 .85rem var(--sans); color: var(--ink);
+}
+.fpr-slot-main { display: grid; gap: 2px; min-width: 0; }
+.fpr-slot-name { font-weight: 650; overflow-wrap: anywhere; }
+.fpr-slot-rx { color: var(--muted); font-size: .86rem; }
+.fpr-slot-next { color: var(--accent); font-size: .9rem; font-weight: 600; }
+.fpr-slot-sub { color: var(--cool); font-size: .85rem; }
+.fpr-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.fpr-tags:empty { display: none; }
+.fpr-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+  font: 600 .74rem var(--sans);
+}
+.fpr-tag.cool { background: var(--cool-soft); color: var(--cool); }
+.fpr-chevron {
+  align-self: center; width: 9px; height: 9px; margin: 0 4px; border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted); transform: rotate(-45deg); transition: transform .15s;
+}
+.fpr-slot-head[aria-expanded="true"] .fpr-chevron { transform: rotate(45deg); }
+.fpr-slot-body { display: grid; gap: 12px; padding: 12px; border-top: 1px solid var(--line); }
+.fpr-slot-body > p { margin: 0; }
+.fpr-slot-body a { color: var(--accent); }
+.fpr-slot-body > p > a:only-child { display: inline-flex; align-items: center; min-height: 44px; }
+.fpr-engine-note { padding: 8px 10px; border-radius: 10px; background: var(--cool-soft); color: var(--ink); font-size: .9rem; }
+.fpr-finisher { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--surface-2); font-size: .9rem; }
+
+/* ---------- steppers and fields */
+.fpr-steppers { display: grid; grid-template-columns: repeat(auto-fit, minmax(136px, 1fr)); gap: 10px 12px; }
+.fpr-stepper.wide { grid-column: 1 / -1; }
+.fpr-stepper { display: grid; gap: 4px; min-width: 0; }
+.fpr-stepper-label { font: 600 .82rem var(--sans); color: var(--muted); }
+.fpr-stepper-row { display: flex; align-items: center; gap: 4px; }
+.fpr-step {
+  flex: none; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2);
+  color: var(--ink); font: 700 1.3rem var(--sans); cursor: pointer; touch-action: manipulation;
+}
+.fpr-step:hover:not(:disabled) { border-color: var(--accent); }
+.fpr-step:disabled { opacity: .4; cursor: default; }
+.fpr-step:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fpr-stepper-value { flex: 1 1 auto; min-width: 0; text-align: center; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fpr-field { display: grid; gap: 6px; }
+.fpr-input {
+  width: 100%; min-height: 48px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 16px;
+}
+.fpr-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+/* swap on its own row (the main action), then ↑ ↓ on the left and Remove on the right */
+.fpr-slot-actions { display: grid; grid-template-columns: auto auto minmax(0, 1fr); gap: 8px; }
+.fpr-slot-actions > .fpr-swap-toggle { grid-column: 1 / -1; }
+.fpr-icon { min-width: 48px; padding: 10px; }
+.fpr-remove { justify-self: end; }
+.fpr-swaps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; max-height: 50vh; overflow-y: auto; }
+.fpr-swap {
+  display: grid; gap: 2px; width: 100%; min-height: 48px; padding: 8px 12px; border: 1px solid var(--line);
+  border-radius: 10px; background: var(--surface-2); color: var(--ink); font: inherit; text-align: left; cursor: pointer;
+}
+.fpr-swap:hover { border-color: var(--accent); }
+.fpr-swap:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fpr-swap-name { font-weight: 600; overflow-wrap: anywhere; }
+.fpr-add { width: 100%; margin-top: 12px; }
+.fpr-add-box { margin-top: 12px; display: grid; gap: 10px; }
+
+/* ---------- progression, templates */
+.fpr-example { margin: 0 0 12px; padding: 10px 12px; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; background: var(--surface-2); }
+.fpr-progression > p:last-child { margin-bottom: 0; }
+.fpr-templates > summary {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; align-items: center; min-height: 44px;
+  cursor: pointer; list-style: none;
+}
+.fpr-templates > summary::-webkit-details-marker { display: none; }
+.fpr-templates > summary::after { content: "›"; grid-column: 2; grid-row: 1 / span 2; font-size: 1.4rem; color: var(--muted); transition: transform .15s; }
+.fpr-templates[open] > summary::after { transform: rotate(90deg); }
+.fpr-templates > summary h2 { margin: 0; }
+.fpr-template-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; }
+.fpr-template-list li { display: grid; gap: 6px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; }
+.fpr-template-list li.on { border-color: var(--accent); }
+.fpr-template-list h3 { margin: 0; font-size: 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.fpr-template-list p { margin: 0; }
+.fpr-template-list .fit-button { justify-self: start; }
+
+/* ---------- save bar (thumb zone) */
+.fpr-savebar {
+  position: sticky; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 5; display: grid; gap: 8px;
+  padding: 10px 12px; border: 1.5px solid var(--accent); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow);
+}
+.fpr-savebar .fpr-savebar-lines { margin: 0; }
+.fpr-savebar-lines > summary { flex-wrap: wrap; gap: 4px; min-height: 44px; }
+.fpr-savebar-lines ul { max-height: 30vh; overflow-y: auto; margin: 4px 0 0; padding-left: 1.2em; font-size: .88rem; display: grid; gap: 4px; }
+.fpr-savebar-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.fpr-flash { margin: 0; }
+
+@media (min-width: 900px) {
+  .fpr-days-list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .fpr-savebar { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+  .fpr-savebar-actions { grid-template-columns: auto auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fpr-chevron, .fpr-details > summary::before, .fpr-templates > summary::after { transition: none; }
+}
+
+/* Personal plan construction uses the existing program-editor fields and tokens. */
+.fpr-choice-field { border: 0; padding: 0; margin: 1.25rem 0; min-width: 0; }
+.fpr-choice-field legend { font-weight: 650; margin-bottom: .6rem; }
+.fpr-checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .35rem .8rem; margin-top: .6rem; }
+.fpr-checks label { display: flex; align-items: center; gap: .55rem; min-height: 44px; }
+.fpr-checks input { width: 1.1rem; height: 1.1rem; flex: 0 0 auto; accent-color: var(--accent); }
+.fpr-scope { flex-wrap: wrap; }
+.fpr-scope button { min-height: 48px; white-space: normal; }
+.fpr-builder-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: .6rem 0; }
+.fpr-day-tools { margin-bottom: 1rem; }
+.fpr-constructor textarea { resize: vertical; }

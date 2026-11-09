@@ -1,0 +1,87 @@
+{
+  "currency": "USD",
+  "checkedAt": "2026-11-08",
+  "model": "gpt-image-2",
+  "fallbackModel": "gpt-image-1-mini",
+  "models": {
+    "gpt-image-2": {
+      "status": "current",
+      "snapshot": "gpt-image-2-2026-04-21",
+      "qualities": ["low", "medium", "high"],
+      "sizes": ["1024x1024", "1024x1536", "1536x1024"],
+      "perImage": {
+        "low": { "1024x1024": 0.006, "1024x1536": 0.005, "1536x1024": 0.005 },
+        "medium": { "1024x1024": 0.053, "1024x1536": 0.041, "1536x1024": 0.041 },
+        "high": { "1024x1024": 0.211, "1024x1536": 0.165, "1536x1024": 0.165 }
+      },
+      "perMillionTokens": {
+        "textInput": 5.0,
+        "textCachedInput": 1.25,
+        "imageInput": 8.0,
+        "imageCachedInput": 2.0,
+        "imageOutput": 30.0
+      },
+      "observedOutputImageTokens": {
+        "medium": { "1536x1024": 1372, "1024x1024": 1756 },
+        "high": { "1536x1024": 5488 }
+      },
+      "inputTokensPerReferenceImage": 1536
+    },
+    "gpt-image-1-mini": {
+      "status": "deprecated",
+      "qualities": ["low", "medium", "high"],
+      "sizes": ["1024x1024", "1024x1536", "1536x1024"],
+      "perImage": {
+        "low": { "1024x1024": 0.005, "1024x1536": 0.006, "1536x1024": 0.006 },
+        "medium": { "1024x1024": 0.011, "1024x1536": 0.015, "1536x1024": 0.015 },
+        "high": { "1024x1024": 0.036, "1024x1536": 0.052, "1536x1024": 0.052 }
+      },
+      "perMillionTokens": {
+        "textInput": 2.0,
+        "textCachedInput": 0.2,
+        "imageInput": 2.5,
+        "imageCachedInput": 0.25,
+        "imageOutput": 8.0
+      },
+      "inputTokensPerReferenceImage": 1536
+    }
+  },
+  "notes": [
+    "perImage is OpenAI's per-image OUTPUT price table (image output tokens only). The text prompt (~chars/4 tokens at the textInput rate) and every reference image passed to /v1/images/edits (inputTokensPerReferenceImage at the imageInput rate) are billed on top; scripts/fitness-images.py estimates all three and records the actual cost from the response `usage` field.",
+    "Validated against 2,961 real gpt-image-2 calls logged by the sibling recipe generator (../recipes/generated/**/usage.jsonl): medium 1536x1024 = 1372 output image tokens = $0.0412 (table says $0.041); medium 1024x1024 = 1756 = $0.0527 ($0.053); high 1536x1024 = 5488 = $0.165; every 1536x1024 reference image = 1536 input image tokens; text prompts of ~5,000 characters = ~1,300 input tokens.",
+    "gpt-image-1 was shut down on 2026-10-23 (OpenAI model page), so the fallback is gpt-image-1-mini (listed as deprecated, still priced). Its per-image table is OpenAI's.",
+    "Cached-input rates apply only to the Responses API image tool, not to direct /v1/images requests. Batch API prices are half the standard token rates but are not used here."
+  ],
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/guides/image-generation",
+      "title": "OpenAI — Image generation guide, section 'Cost and latency' (per-image output price table for GPT Image 2 / 1.5 / 1 / 1 Mini; quality options; output formats)",
+      "checkedAt": "2026-11-08",
+      "usedFor": ["models.gpt-image-2.perImage", "models.gpt-image-1-mini.perImage"]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "title": "OpenAI — API pricing, section 'Image generation' (per-1M-token rates: image input $8, cached $2, image output $30, text input $5, cached $1.25 for gpt-image-2; gpt-image-1-mini $2.50 / $0.25 / $8 / $2 / $0.20)",
+      "checkedAt": "2026-11-08",
+      "usedFor": ["models.gpt-image-2.perMillionTokens", "models.gpt-image-1-mini.perMillionTokens"]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-1-mini",
+      "title": "OpenAI — GPT Image 1 Mini model page (per-image price table, deprecated status)",
+      "checkedAt": "2026-11-08",
+      "usedFor": ["models.gpt-image-1-mini"]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-1",
+      "title": "OpenAI — GPT Image 1 model page ('shut down on October 23, 2026')",
+      "checkedAt": "2026-11-08",
+      "usedFor": ["fallbackModel"]
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-image-2",
+      "title": "OpenAI — GPT Image 2 model page (snapshot gpt-image-2-2026-04-21, endpoints generations + edits)",
+      "checkedAt": "2026-11-08",
+      "usedFor": ["models.gpt-image-2.snapshot"]
+    }
+  ]
+}

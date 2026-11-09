@@ -130,6 +130,40 @@ test("five kilometres is the edge, and a picture with no coordinates stays", asy
   }
 });
 
+test("a sight moves onto its named article's coordinates only when they are within a kilometre", async () => {
+  const close = wiki((url) => (url.hostname.startsWith("en.") ? article("Castle", { lat: 38.713, lon: -9.1335 }) : null));
+  try {
+    const sight = await enrichStop(stop("castle", "sight", 38.71), sightFacts(""), "Lisbon");
+    assert.equal(sight.lat, 38.713);
+    assert.equal(sight.lon, -9.1335);
+    const meal = await enrichStop(stop("lunch", "food", 38.71), { ...sightFacts(""), notes: [{ kind: "build", en: "Old.", ru: "Старое." }] }, "Lisbon");
+    assert.equal(meal.lat, 38.71);
+    assert.equal(meal.lon, -9.14);
+  } finally {
+    close();
+  }
+  const away = wiki((url) => (url.hostname.startsWith("en.") ? article("Castle", { lat: 38.74 }) : null));
+  try {
+    const place = await enrichStop(stop("castle", "sight", 38.71), sightFacts(""), "Lisbon");
+    assert.equal(place.lat, 38.71);
+  } finally {
+    away();
+  }
+  const searched = wiki((url) => {
+    if (!url.hostname.startsWith("en.")) return null;
+    if (url.searchParams.get("list") === "search") return { query: { search: [{ title: "Castle Hill" }] } };
+    if (url.searchParams.get("titles") === "Castle") return article("Castle", { missing: true });
+    return article("Castle Hill", { lat: 38.713 });
+  });
+  try {
+    const place = await enrichStop(stop("castle", "sight", 38.71), sightFacts(""), "Lisbon");
+    assert.match(place.wiki.en, /Castle_Hill$/);
+    assert.equal(place.lat, 38.71);
+  } finally {
+    searched();
+  }
+});
+
 test("a meal does not search Commons", async () => {
   const seen = [];
   const restore = wiki((url) => {
@@ -231,4 +265,15 @@ test("a missing article is searched, and a failed lookup still returns the stop"
     globalThis.fetch = previous;
   }
 });
+});
+
+test("Commons thumbnails shrink to a standard width and other URLs stay", async () => {
+  const { commonsWidth } = await import("../../src/lib/trips/enrich.mjs");
+  const big = "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia.jpeg/960px-Hagia_Sophia.jpeg";
+  assert.equal(commonsWidth(big, 500), "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia.jpeg/500px-Hagia_Sophia.jpeg");
+  assert.equal(commonsWidth(big.replace("thumb.wikimedia", "upload.wikimedia"), 250).endsWith("/250px-Hagia_Sophia.jpeg"), true);
+  const small = big.replace("960px", "250px");
+  assert.equal(commonsWidth(small, 500), small);
+  const original = "https://upload.wikimedia.org/wikipedia/commons/2/26/Bucoleon.JPG";
+  assert.equal(commonsWidth(original, 250), original);
 });

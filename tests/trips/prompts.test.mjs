@@ -27,6 +27,7 @@ test("theme and outline prompts carry the counts, pace and spine", () => {
   assert.equal(stopSchema.minItems, 3);
   assert.equal(stopSchema.maxItems, 3);
   assert.ok(stopSchema.items.required.includes("wish"));
+  assert.ok(stopSchema.items.required.includes("search"));
 });
 
 test("preferences and wishes are copied into both calls", () => {
@@ -49,4 +50,7 @@ test("preferences and wishes are copied into both calls", () => {
   assert.equal(JSON.parse(notes.user).stops[0].wish, "");
   assert.equal(notes.schema.properties.places.minItems, 1);
   assert.equal(notes.schema.properties.places.maxItems, 1);
+  // A sight is asked for a real set of facts, not a token pair.
+  assert.match(notes.developer, /five to seven facts/);
+  assert.equal(notes.schema.properties.places.items.properties.notes.maxItems, 8);
 });

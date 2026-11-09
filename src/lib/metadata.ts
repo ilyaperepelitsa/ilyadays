@@ -12,15 +12,17 @@ type PageMeta = {
   description: string;
   /** Link-preview picture (1200×630), an absolute site path like "/share/home.jpg". */
   image: string;
+  /** Size of `image` when it is not a 1200×630 card (fitness exercise diagrams are 1200×800). */
+  imageSize?: { width: number; height: number };
   type?: "website" | "article";
   /** Use the title as is, without the " · ilyadays" suffix. */
   absoluteTitle?: boolean;
 };
 
 /** Canonical URL, EN/RU alternates and a link-preview card (Open Graph + Twitter) for one page. */
-export function pageMetadata({ lang, path, title, description, image, type = "website", absoluteTitle }: PageMeta): Metadata {
+export function pageMetadata({ lang, path, title, description, image, imageSize, type = "website", absoluteTitle }: PageMeta): Metadata {
   const url = localPath(lang, path);
-  const images = [{ url: image, width: 1200, height: 630, alt: title }];
+  const images = [{ url: image, width: imageSize?.width ?? 1200, height: imageSize?.height ?? 630, alt: title }];
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,

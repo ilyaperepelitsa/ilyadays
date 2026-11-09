@@ -99,3 +99,11 @@ test("an unusable id is replaced by a slug of the name", () => {
   const parsed = parseOutline(raw, brief);
   assert.equal(parsed.routes[0][0].id, "sao-jorge");
 });
+
+test("a stop keeps the model's map search, without links, and an older stop has an empty one", () => {
+  const raw = outline();
+  raw.routes[0].stops[0].search = "  Castelo de São Jorge,   R. de Santa Cruz do Castelo, Lisbon https://maps.example/x ";
+  const parsed = parseOutline(raw, brief);
+  assert.equal(parsed.routes[0][0].search, "Castelo de São Jorge, R. de Santa Cruz do Castelo, Lisbon");
+  assert.equal(parsed.routes[0][1].search, "");
+});

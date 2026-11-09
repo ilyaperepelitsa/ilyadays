@@ -1,4 +1,5 @@
 /** Generated trips and the API key live in this browser only. */
+import { validateCommitments } from "./events.mjs";
 
 const TRIPS = "ilyadays-trips-v1";
 const AI_KEY = "cdays-ai-key";
@@ -100,6 +101,37 @@ let tripRaw = "";
 /** @type {import("./types").SavedTrip[]} */
 let tripList = [];
 
+/** @param {unknown} value */
+const isObject = (value) => typeof value === "object" && value !== null;
+
+/**
+ * A trip the pages can draw. Anything else in storage (an older format, a half-written value) is skipped: one bad
+ * entry must not take down the travel pages, and reloading would not fix it.
+ *
+ * @param {any} value
+ * @returns {value is import("./types").SavedTrip}
+ */
+export function isSavedTrip(value) {
+  if (value?.commitments !== undefined) {
+    try { validateCommitments(value.commitments, value.brief); } catch { return false; }
+  }
+  return (
+    isObject(value) &&
+    typeof value.id === "string" &&
+    typeof value.city === "string" &&
+    Array.isArray(value.routes) &&
+    value.routes.every(
+      (/** @type {any} */ route) =>
+        isObject(route) &&
+        isObject(route.theme) &&
+        typeof route.theme.title === "string" &&
+        (route.schedule === undefined || (Array.isArray(route.schedule) && route.schedule.every((s) => typeof s?.stopId === "string" && typeof s?.start === "string" && typeof s?.end === "string"))) &&
+        Array.isArray(route.stops) &&
+        route.stops.every((/** @type {any} */ stop) => isObject(stop) && typeof stop.id === "string"),
+    )
+  );
+}
+
 /** @returns {import("./types").SavedTrip[]} */
 export function listTrips() {
   const raw = read(TRIPS) || "[]";
@@ -107,7 +139,7 @@ export function listTrips() {
   tripRaw = raw;
   try {
     const parsed = JSON.parse(raw);
-    tripList = Array.isArray(parsed) ? parsed : [];
+    tripList = Array.isArray(parsed) ? parsed.filter(isSavedTrip) : [];
   } catch {
     tripList = [];
   }
@@ -126,8 +158,10 @@ export function loadTrip(id) {
  */
 export function saveTrip(trip) {
   const rest = listTrips().filter((item) => item.id !== trip.id);
-  write(TRIPS, JSON.stringify([trip, ...rest].slice(0, 20)));
+  const serialized = JSON.stringify([trip, ...rest].slice(0, 20));
+  write(TRIPS, serialized);
   bump("ilyadays-trips");
+  return read(TRIPS) === serialized;
 }
 
 /**

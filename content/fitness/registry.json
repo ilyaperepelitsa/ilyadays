@@ -1,0 +1,2267 @@
+{
+ "version": "2026-11-08.1",
+ "note": "Single source of truth for ids shared by every fitness work stream. Exercise objects live in content/fitness/exercises.json (merged from content/fitness/exercises/<slice>.json). Ids and class membership come from plans/fitness/research/04-exercise-and-machine-catalog.partial.md section 3.6.",
+ "slices": [
+  "chest-shoulders",
+  "back-neck",
+  "arms-grip",
+  "core",
+  "legs"
+ ],
+ "groups": [
+  {
+   "id": "chest",
+   "name": {
+    "en": "Chest",
+    "ru": "Грудь"
+   },
+   "region": "front",
+   "order": 0
+  },
+  {
+   "id": "back",
+   "name": {
+    "en": "Back",
+    "ru": "Спина"
+   },
+   "region": "back",
+   "order": 1
+  },
+  {
+   "id": "shoulders",
+   "name": {
+    "en": "Shoulders",
+    "ru": "Плечи"
+   },
+   "region": "front",
+   "order": 2
+  },
+  {
+   "id": "biceps",
+   "name": {
+    "en": "Biceps",
+    "ru": "Бицепс"
+   },
+   "region": "front",
+   "order": 3
+  },
+  {
+   "id": "triceps",
+   "name": {
+    "en": "Triceps",
+    "ru": "Трицепс"
+   },
+   "region": "back",
+   "order": 4
+  },
+  {
+   "id": "forearms",
+   "name": {
+    "en": "Forearms & grip",
+    "ru": "Предплечья и хват"
+   },
+   "region": "front",
+   "order": 5
+  },
+  {
+   "id": "abs",
+   "name": {
+    "en": "Abs & core",
+    "ru": "Пресс и кор"
+   },
+   "region": "front",
+   "order": 6
+  },
+  {
+   "id": "lower-back",
+   "name": {
+    "en": "Lower back",
+    "ru": "Поясница"
+   },
+   "region": "back",
+   "order": 7
+  },
+  {
+   "id": "glutes",
+   "name": {
+    "en": "Glutes",
+    "ru": "Ягодицы"
+   },
+   "region": "back",
+   "order": 8
+  },
+  {
+   "id": "quads",
+   "name": {
+    "en": "Quads & hip flexors",
+    "ru": "Квадрицепсы и сгибатели бедра"
+   },
+   "region": "front",
+   "order": 9
+  },
+  {
+   "id": "hamstrings",
+   "name": {
+    "en": "Hamstrings",
+    "ru": "Задняя поверхность бедра"
+   },
+   "region": "back",
+   "order": 10
+  },
+  {
+   "id": "calves",
+   "name": {
+    "en": "Calves",
+    "ru": "Икры"
+   },
+   "region": "back",
+   "order": 11
+  },
+  {
+   "id": "adductors",
+   "name": {
+    "en": "Adductors",
+    "ru": "Приводящие мышцы"
+   },
+   "region": "front",
+   "order": 12
+  },
+  {
+   "id": "neck",
+   "name": {
+    "en": "Neck",
+    "ru": "Шея"
+   },
+   "region": "front",
+   "order": 13
+  }
+ ],
+ "muscles": [
+  {
+   "id": "pec-clavicular",
+   "name": {
+    "en": "Upper chest (clavicular pec)",
+    "ru": "Верх груди (ключичная часть)"
+   },
+   "group": "chest",
+   "region": "front",
+   "function": {
+    "en": "Raises the arm forward and up; works hardest on incline presses and low-to-high flies.",
+    "ru": "Поднимает руку вперёд и вверх; сильнее всего работает в жимах на наклонной скамье и сведениях снизу вверх."
+   }
+  },
+  {
+   "id": "pec-sternal",
+   "name": {
+    "en": "Mid chest (sternal pec)",
+    "ru": "Середина груди (грудинная часть)"
+   },
+   "group": "chest",
+   "region": "front",
+   "function": {
+    "en": "Brings the arm across the body; the main mover of presses and flies.",
+    "ru": "Приводит руку к центру тела; главный двигатель жимов и сведений."
+   }
+  },
+  {
+   "id": "pec-costal",
+   "name": {
+    "en": "Lower chest (costal pec)",
+    "ru": "Низ груди (рёберная часть)"
+   },
+   "group": "chest",
+   "region": "front",
+   "function": {
+    "en": "Pulls the arm down and across; loaded by dips and high-to-low flies.",
+    "ru": "Тянет руку вниз и к центру; нагружается в отжиманиях на брусьях и сведениях сверху вниз."
+   }
+  },
+  {
+   "id": "serratus-anterior",
+   "name": {
+    "en": "Serratus anterior",
+    "ru": "Передняя зубчатая мышца"
+   },
+   "group": "chest",
+   "region": "front",
+   "function": {
+    "en": "Holds the shoulder blade against the ribs and pushes it forward; protects the shoulder in pressing.",
+    "ru": "Прижимает лопатку к рёбрам и выводит её вперёд; защищает плечо в жимах."
+   }
+  },
+  {
+   "id": "lats",
+   "name": {
+    "en": "Lats",
+    "ru": "Широчайшие"
+   },
+   "group": "back",
+   "region": "back",
+   "function": {
+    "en": "Pull the arm down and back; the main movers of pulldowns, pull-ups and rows.",
+    "ru": "Тянут руку вниз и назад; главные мышцы тяг сверху, подтягиваний и тяг к поясу."
+   }
+  },
+  {
+   "id": "teres-major",
+   "name": {
+    "en": "Teres major",
+    "ru": "Большая круглая мышца"
+   },
+   "group": "back",
+   "region": "back",
+   "function": {
+    "en": "Helps the lats pull the arm down and in.",
+    "ru": "Помогает широчайшим опускать и приводить руку."
+   }
+  },
+  {
+   "id": "rhomboids",
+   "name": {
+    "en": "Rhomboids",
+    "ru": "Ромбовидные"
+   },
+   "group": "back",
+   "region": "back",
+   "function": {
+    "en": "Pull the shoulder blades together; key for posture and rows.",
+    "ru": "Сводят лопатки; важны для осанки и тяг."
+   }
+  },
+  {
+   "id": "traps-upper",
+   "name": {
+    "en": "Upper traps",
+    "ru": "Верх трапеции"
+   },
+   "group": "back",
+   "region": "back",
+   "function": {
+    "en": "Lift the shoulders toward the ears and steady the neck under load.",
+    "ru": "Поднимают плечи к ушам и стабилизируют шею под нагрузкой."
+   }
+  },
+  {
+   "id": "traps-mid",
+   "name": {
+    "en": "Middle traps",
+    "ru": "Середина трапеции"
+   },
+   "group": "back",
+   "region": "back",
+   "function": {
+    "en": "Pull the shoulder blades back; loaded by rows and face pulls.",
+    "ru": "Отводят лопатки назад; нагружаются в тягах и тяге к лицу."
+   }
+  },
+  {
+   "id": "traps-lower",
+   "name": {
+    "en": "Lower traps",
+    "ru": "Низ трапеции"
+   },
+   "group": "back",
+   "region": "back",
+   "function": {
+    "en": "Pull the shoulder blades down; keep the shoulder healthy overhead.",
+    "ru": "Опускают лопатки; берегут плечо при работе над головой."
+   }
+  },
+  {
+   "id": "delt-front",
+   "name": {
+    "en": "Front delts",
+    "ru": "Передние дельты"
+   },
+   "group": "shoulders",
+   "region": "front",
+   "function": {
+    "en": "Raise the arm forward; work in every press.",
+    "ru": "Поднимают руку вперёд; работают в каждом жиме."
+   }
+  },
+  {
+   "id": "delt-side",
+   "name": {
+    "en": "Side delts",
+    "ru": "Средние дельты"
+   },
+   "group": "shoulders",
+   "region": "front",
+   "function": {
+    "en": "Raise the arm out to the side; give the shoulders their width.",
+    "ru": "Отводят руку в сторону; дают плечам ширину."
+   }
+  },
+  {
+   "id": "delt-rear",
+   "name": {
+    "en": "Rear delts",
+    "ru": "Задние дельты"
+   },
+   "group": "shoulders",
+   "region": "back",
+   "function": {
+    "en": "Pull the arm back and out; balance pressing and protect posture.",
+    "ru": "Отводят руку назад; уравновешивают жимы и берегут осанку."
+   }
+  },
+  {
+   "id": "rotator-cuff",
+   "name": {
+    "en": "Rotator cuff",
+    "ru": "Вращательная манжета плеча"
+   },
+   "group": "shoulders",
+   "region": "back",
+   "function": {
+    "en": "Four small muscles that centre the ball of the shoulder in its socket and rotate the arm.",
+    "ru": "Четыре небольшие мышцы, которые центрируют головку плеча в суставе и вращают руку."
+   }
+  },
+  {
+   "id": "biceps",
+   "name": {
+    "en": "Biceps",
+    "ru": "Бицепс плеча"
+   },
+   "group": "biceps",
+   "region": "front",
+   "function": {
+    "en": "Bends the elbow and turns the palm up.",
+    "ru": "Сгибает локоть и разворачивает ладонь вверх."
+   }
+  },
+  {
+   "id": "brachialis",
+   "name": {
+    "en": "Brachialis",
+    "ru": "Плечевая мышца"
+   },
+   "group": "biceps",
+   "region": "front",
+   "function": {
+    "en": "The strongest pure elbow flexor; works in every curl, most in hammer and reverse curls.",
+    "ru": "Самый сильный сгибатель локтя; работает в любом сгибании, больше всего — в «молотках» и обратных сгибаниях."
+   }
+  },
+  {
+   "id": "triceps-long",
+   "name": {
+    "en": "Triceps long head",
+    "ru": "Длинная головка трицепса"
+   },
+   "group": "triceps",
+   "region": "back",
+   "function": {
+    "en": "Straightens the elbow and pulls the arm down; works hardest with the arm overhead.",
+    "ru": "Разгибает локоть и опускает руку; сильнее всего работает, когда рука поднята над головой."
+   }
+  },
+  {
+   "id": "triceps-lateral",
+   "name": {
+    "en": "Triceps lateral & medial heads",
+    "ru": "Латеральная и медиальная головки трицепса"
+   },
+   "group": "triceps",
+   "region": "back",
+   "function": {
+    "en": "Straighten the elbow; carry most of the load in pushdowns and presses.",
+    "ru": "Разгибают локоть; берут основную нагрузку в разгибаниях на блоке и жимах."
+   }
+  },
+  {
+   "id": "forearm-flexors",
+   "name": {
+    "en": "Forearm flexors (grip)",
+    "ru": "Сгибатели предплечья (хват)"
+   },
+   "group": "forearms",
+   "region": "front",
+   "function": {
+    "en": "Close the hand and bend the wrist; grip strength.",
+    "ru": "Сжимают кисть и сгибают запястье; сила хвата."
+   }
+  },
+  {
+   "id": "forearm-extensors",
+   "name": {
+    "en": "Forearm extensors",
+    "ru": "Разгибатели предплечья"
+   },
+   "group": "forearms",
+   "region": "back",
+   "function": {
+    "en": "Open the hand and lift the wrist back; balance the grip muscles and protect the elbow.",
+    "ru": "Раскрывают кисть и разгибают запястье; уравновешивают сгибатели и берегут локоть."
+   }
+  },
+  {
+   "id": "brachioradialis",
+   "name": {
+    "en": "Brachioradialis",
+    "ru": "Плечелучевая мышца"
+   },
+   "group": "forearms",
+   "region": "front",
+   "function": {
+    "en": "Bends the elbow with the thumb up; the thick muscle on top of the forearm.",
+    "ru": "Сгибает локоть, когда большой палец смотрит вверх; толстая мышца сверху предплечья."
+   }
+  },
+  {
+   "id": "rectus-abdominis",
+   "name": {
+    "en": "Rectus abdominis",
+    "ru": "Прямая мышца живота"
+   },
+   "group": "abs",
+   "region": "front",
+   "function": {
+    "en": "Curls the ribs toward the pelvis and resists the lower back arching.",
+    "ru": "Подтягивает рёбра к тазу и не даёт пояснице прогибаться."
+   }
+  },
+  {
+   "id": "obliques",
+   "name": {
+    "en": "Obliques",
+    "ru": "Косые мышцы живота"
+   },
+   "group": "abs",
+   "region": "front",
+   "function": {
+    "en": "Rotate and side-bend the trunk, and resist both.",
+    "ru": "Поворачивают и наклоняют корпус в сторону и сопротивляются этим движениям."
+   }
+  },
+  {
+   "id": "transverse-abdominis",
+   "name": {
+    "en": "Transverse abdominis",
+    "ru": "Поперечная мышца живота"
+   },
+   "group": "abs",
+   "region": "front",
+   "function": {
+    "en": "The deep corset muscle: braces the trunk before you lift.",
+    "ru": "Глубокая мышца-корсет: стабилизирует корпус перед подъёмом веса."
+   }
+  },
+  {
+   "id": "erectors",
+   "name": {
+    "en": "Spinal erectors",
+    "ru": "Разгибатели спины"
+   },
+   "group": "lower-back",
+   "region": "back",
+   "function": {
+    "en": "Straighten the spine and hold it neutral under load.",
+    "ru": "Разгибают позвоночник и удерживают его ровным под нагрузкой."
+   }
+  },
+  {
+   "id": "quadratus-lumborum",
+   "name": {
+    "en": "Quadratus lumborum",
+    "ru": "Квадратная мышца поясницы"
+   },
+   "group": "lower-back",
+   "region": "back",
+   "function": {
+    "en": "Side-bends the lower back and steadies the pelvis when you carry on one side.",
+    "ru": "Наклоняет поясницу в сторону и стабилизирует таз при переноске груза в одной руке."
+   }
+  },
+  {
+   "id": "glute-max",
+   "name": {
+    "en": "Gluteus maximus",
+    "ru": "Большая ягодичная"
+   },
+   "group": "glutes",
+   "region": "back",
+   "function": {
+    "en": "Extends the hip: standing up, climbing, hinging.",
+    "ru": "Разгибает бедро: вставание, подъём, наклоны."
+   }
+  },
+  {
+   "id": "glute-med",
+   "name": {
+    "en": "Gluteus medius",
+    "ru": "Средняя ягодичная"
+   },
+   "group": "glutes",
+   "region": "back",
+   "function": {
+    "en": "Holds the pelvis level on one leg and moves the leg out to the side.",
+    "ru": "Удерживает таз ровно на одной ноге и отводит ногу в сторону."
+   }
+  },
+  {
+   "id": "quads",
+   "name": {
+    "en": "Quadriceps",
+    "ru": "Квадрицепс"
+   },
+   "group": "quads",
+   "region": "front",
+   "function": {
+    "en": "Straighten the knee; the main muscles of squats and leg presses.",
+    "ru": "Разгибают колено; главные мышцы приседаний и жима ногами."
+   }
+  },
+  {
+   "id": "hip-flexors",
+   "name": {
+    "en": "Hip flexors",
+    "ru": "Сгибатели бедра"
+   },
+   "group": "quads",
+   "region": "front",
+   "function": {
+    "en": "Lift the knee toward the chest; work in hanging knee raises.",
+    "ru": "Подтягивают колено к груди; работают в подъёмах коленей в висе."
+   }
+  },
+  {
+   "id": "hamstrings",
+   "name": {
+    "en": "Hamstrings",
+    "ru": "Мышцы задней поверхности бедра"
+   },
+   "group": "hamstrings",
+   "region": "back",
+   "function": {
+    "en": "Bend the knee and extend the hip; loaded by leg curls and hinges.",
+    "ru": "Сгибают колено и разгибают бедро; нагружаются в сгибаниях ног и наклонах."
+   }
+  },
+  {
+   "id": "gastrocnemius",
+   "name": {
+    "en": "Gastrocnemius",
+    "ru": "Икроножная"
+   },
+   "group": "calves",
+   "region": "back",
+   "function": {
+    "en": "Points the foot with the knee straight; standing calf raises.",
+    "ru": "Поднимает на носки при прямом колене; подъёмы на носки стоя."
+   }
+  },
+  {
+   "id": "soleus",
+   "name": {
+    "en": "Soleus",
+    "ru": "Камбаловидная"
+   },
+   "group": "calves",
+   "region": "back",
+   "function": {
+    "en": "Points the foot with the knee bent; seated calf raises.",
+    "ru": "Поднимает на носки при согнутом колене; подъёмы на носки сидя."
+   }
+  },
+  {
+   "id": "adductors",
+   "name": {
+    "en": "Adductors",
+    "ru": "Приводящие мышцы бедра"
+   },
+   "group": "adductors",
+   "region": "front",
+   "function": {
+    "en": "Bring the legs together and steady the hips in squats.",
+    "ru": "Сводят ноги и стабилизируют таз в приседаниях."
+   }
+  },
+  {
+   "id": "neck-flexors",
+   "name": {
+    "en": "Neck flexors",
+    "ru": "Сгибатели шеи"
+   },
+   "group": "neck",
+   "region": "front",
+   "function": {
+    "en": "Bring the chin toward the chest and hold the head steady.",
+    "ru": "Наклоняют голову вперёд и удерживают её устойчиво."
+   }
+  },
+  {
+   "id": "neck-extensors",
+   "name": {
+    "en": "Neck extensors",
+    "ru": "Разгибатели шеи"
+   },
+   "group": "neck",
+   "region": "back",
+   "function": {
+    "en": "Lift the head back and hold it upright.",
+    "ru": "Отклоняют голову назад и держат её прямо."
+   }
+  }
+ ],
+ "classes": [
+  {
+   "id": "horizontal-press",
+   "pattern": "horizontal-push",
+   "slice": "chest-shoulders",
+   "members": [
+    "machine-chest-press",
+    "converging-chest-press",
+    "plate-loaded-chest-press",
+    "smith-bench-press",
+    "dumbbell-bench-press",
+    "barbell-bench-press",
+    "push-up"
+   ]
+  },
+  {
+   "id": "incline-press",
+   "pattern": "incline-push",
+   "slice": "chest-shoulders",
+   "members": [
+    "machine-incline-press",
+    "plate-loaded-incline-press",
+    "smith-incline-press",
+    "incline-dumbbell-press",
+    "incline-barbell-press",
+    "low-to-high-cable-fly"
+   ]
+  },
+  {
+   "id": "decline-press",
+   "pattern": "decline-push",
+   "slice": "chest-shoulders",
+   "members": [
+    "triceps-press-machine",
+    "decline-chest-press-machine",
+    "assisted-dip",
+    "dip",
+    "high-to-low-cable-fly"
+   ]
+  },
+  {
+   "id": "chest-fly",
+   "pattern": "chest-fly",
+   "slice": "chest-shoulders",
+   "members": [
+    "pec-deck",
+    "cable-fly",
+    "dumbbell-fly",
+    "low-to-high-cable-fly",
+    "high-to-low-cable-fly"
+   ]
+  },
+  {
+   "id": "vertical-press",
+   "pattern": "vertical-push",
+   "slice": "chest-shoulders",
+   "members": [
+    "machine-shoulder-press",
+    "plate-loaded-shoulder-press",
+    "smith-shoulder-press",
+    "seated-dumbbell-shoulder-press",
+    "landmine-press",
+    "standing-barbell-overhead-press"
+   ]
+  },
+  {
+   "id": "lateral-raise",
+   "pattern": "lateral-raise",
+   "slice": "chest-shoulders",
+   "members": [
+    "machine-lateral-raise",
+    "cable-lateral-raise",
+    "dumbbell-lateral-raise",
+    "band-lateral-raise"
+   ]
+  },
+  {
+   "id": "rear-delt",
+   "pattern": "rear-delt",
+   "slice": "chest-shoulders",
+   "members": [
+    "reverse-pec-deck",
+    "rear-delt-dumbbell-fly",
+    "cable-rear-delt-fly",
+    "face-pull",
+    "band-pull-apart"
+   ]
+  },
+  {
+   "id": "external-rotation",
+   "pattern": "external-rotation",
+   "slice": "chest-shoulders",
+   "members": [
+    "cable-external-rotation",
+    "side-lying-external-rotation",
+    "band-external-rotation",
+    "face-pull"
+   ]
+  },
+  {
+   "id": "shrug",
+   "pattern": "shrug",
+   "slice": "chest-shoulders",
+   "members": [
+    "machine-shrug",
+    "dumbbell-shrug"
+   ]
+  },
+  {
+   "id": "vertical-pull",
+   "pattern": "vertical-pull",
+   "slice": "back-neck",
+   "members": [
+    "vertical-traction",
+    "lat-pulldown",
+    "plate-loaded-pulldown",
+    "neutral-grip-pulldown",
+    "assisted-pull-up",
+    "single-arm-cable-pulldown",
+    "band-assisted-pull-up",
+    "pull-up",
+    "chin-up"
+   ]
+  },
+  {
+   "id": "lat-isolation",
+   "pattern": "pullover",
+   "slice": "back-neck",
+   "members": [
+    "machine-pullover",
+    "straight-arm-pulldown",
+    "dumbbell-pullover"
+   ]
+  },
+  {
+   "id": "horizontal-pull",
+   "pattern": "horizontal-pull",
+   "slice": "back-neck",
+   "members": [
+    "machine-row",
+    "plate-loaded-row",
+    "t-bar-row",
+    "chest-supported-dumbbell-row",
+    "high-row-machine",
+    "seated-cable-row",
+    "inverted-row",
+    "single-arm-cable-row",
+    "single-arm-dumbbell-row",
+    "barbell-row"
+   ]
+  },
+  {
+   "id": "spinal-extension",
+   "pattern": "spinal-extension",
+   "slice": "back-neck",
+   "members": [
+    "lower-back-machine",
+    "back-extension-45",
+    "reverse-hyperextension"
+   ]
+  },
+  {
+   "id": "neck",
+   "pattern": "neck",
+   "slice": "back-neck",
+   "members": [
+    "four-way-neck-machine",
+    "neck-extension",
+    "neck-flexion",
+    "neck-isometrics"
+   ]
+  },
+  {
+   "id": "biceps-curl",
+   "pattern": "elbow-flexion",
+   "slice": "arms-grip",
+   "members": [
+    "machine-preacher-curl",
+    "incline-dumbbell-curl",
+    "bayesian-cable-curl",
+    "ez-bar-preacher-curl",
+    "cable-curl",
+    "dumbbell-curl",
+    "barbell-curl"
+   ]
+  },
+  {
+   "id": "brachialis-curl",
+   "pattern": "elbow-flexion",
+   "slice": "arms-grip",
+   "members": [
+    "hammer-curl",
+    "reverse-curl"
+   ]
+  },
+  {
+   "id": "triceps-extension",
+   "pattern": "elbow-extension",
+   "slice": "arms-grip",
+   "members": [
+    "overhead-cable-triceps-extension",
+    "machine-triceps-extension",
+    "dumbbell-overhead-triceps-extension",
+    "skull-crusher",
+    "cable-pushdown"
+   ]
+  },
+  {
+   "id": "triceps-press",
+   "pattern": "decline-push",
+   "slice": "arms-grip",
+   "members": [
+    "triceps-press-machine",
+    "close-grip-bench-press",
+    "dip",
+    "assisted-dip",
+    "diamond-push-up"
+   ]
+  },
+  {
+   "id": "wrist",
+   "pattern": "forearm-flexion",
+   "slice": "arms-grip",
+   "members": [
+    "wrist-curl",
+    "reverse-wrist-curl"
+   ]
+  },
+  {
+   "id": "grip",
+   "pattern": "grip",
+   "slice": "arms-grip",
+   "members": [
+    "farmers-carry",
+    "dead-hang",
+    "gripper",
+    "plate-pinch",
+    "suitcase-carry"
+   ]
+  },
+  {
+   "id": "spine-stability",
+   "pattern": "anti-extension",
+   "slice": "core",
+   "members": [
+    "bird-dog",
+    "dead-bug",
+    "plank",
+    "side-plank"
+   ]
+  },
+  {
+   "id": "trunk-flexion",
+   "pattern": "trunk-flexion",
+   "slice": "core",
+   "members": [
+    "machine-crunch",
+    "cable-crunch",
+    "decline-sit-up",
+    "bicycle-crunch",
+    "mcgill-curl-up"
+   ]
+  },
+  {
+   "id": "lower-ab-flexion",
+   "pattern": "hip-flexion",
+   "slice": "core",
+   "members": [
+    "captains-chair-knee-raise",
+    "reverse-crunch",
+    "hanging-leg-raise"
+   ]
+  },
+  {
+   "id": "anti-extension",
+   "pattern": "anti-extension",
+   "slice": "core",
+   "members": [
+    "ab-wheel-rollout",
+    "plank",
+    "dead-bug"
+   ]
+  },
+  {
+   "id": "anti-rotation",
+   "pattern": "anti-rotation",
+   "slice": "core",
+   "members": [
+    "pallof-press",
+    "single-arm-cable-row",
+    "bird-dog"
+   ]
+  },
+  {
+   "id": "rotation",
+   "pattern": "rotation",
+   "slice": "core",
+   "members": [
+    "cable-woodchop",
+    "rotary-torso-machine"
+   ]
+  },
+  {
+   "id": "anti-lateral-flexion",
+   "pattern": "lateral-flexion",
+   "slice": "core",
+   "members": [
+    "side-plank",
+    "suitcase-carry"
+   ]
+  },
+  {
+   "id": "squat",
+   "pattern": "squat",
+   "slice": "legs",
+   "members": [
+    "leg-press-45",
+    "seated-leg-press",
+    "hack-squat",
+    "v-squat",
+    "belt-squat",
+    "goblet-squat",
+    "bulgarian-split-squat",
+    "smith-squat",
+    "barbell-back-squat"
+   ]
+  },
+  {
+   "id": "knee-extension",
+   "pattern": "knee-extension",
+   "slice": "legs",
+   "members": [
+    "leg-extension"
+   ]
+  },
+  {
+   "id": "knee-flexion",
+   "pattern": "knee-flexion",
+   "slice": "legs",
+   "members": [
+    "seated-leg-curl",
+    "lying-leg-curl",
+    "nordic-hamstring-curl"
+   ]
+  },
+  {
+   "id": "hip-hinge",
+   "pattern": "hip-hinge",
+   "slice": "legs",
+   "members": [
+    "trap-bar-deadlift",
+    "dumbbell-rdl",
+    "barbell-rdl",
+    "cable-pull-through",
+    "back-extension-45",
+    "conventional-deadlift",
+    "kettlebell-swing"
+   ]
+  },
+  {
+   "id": "hip-thrust",
+   "pattern": "hip-extension",
+   "slice": "legs",
+   "members": [
+    "machine-hip-thrust",
+    "barbell-hip-thrust",
+    "glute-kickback-machine"
+   ]
+  },
+  {
+   "id": "hip-abduction",
+   "pattern": "hip-abduction",
+   "slice": "legs",
+   "members": [
+    "hip-abduction-machine"
+   ]
+  },
+  {
+   "id": "hip-adduction",
+   "pattern": "hip-adduction",
+   "slice": "legs",
+   "members": [
+    "hip-adduction-machine",
+    "copenhagen-adduction"
+   ]
+  },
+  {
+   "id": "calf-straight",
+   "pattern": "calf-raise",
+   "slice": "legs",
+   "members": [
+    "standing-calf-raise-machine",
+    "leg-press-calf-raise",
+    "single-leg-dumbbell-calf-raise"
+   ]
+  },
+  {
+   "id": "calf-bent",
+   "pattern": "calf-raise",
+   "slice": "legs",
+   "members": [
+    "seated-calf-raise-machine"
+   ]
+  }
+ ],
+ "exercises": {
+  "machine-chest-press": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "converging-chest-press": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "plate-loaded-chest-press": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "smith-bench-press": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "dumbbell-bench-press": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "barbell-bench-press": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "push-up": {
+   "class": "horizontal-press",
+   "classes": [
+    "horizontal-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "horizontal-push"
+  },
+  "machine-incline-press": {
+   "class": "incline-press",
+   "classes": [
+    "incline-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "incline-push"
+  },
+  "plate-loaded-incline-press": {
+   "class": "incline-press",
+   "classes": [
+    "incline-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "incline-push"
+  },
+  "smith-incline-press": {
+   "class": "incline-press",
+   "classes": [
+    "incline-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "incline-push"
+  },
+  "incline-dumbbell-press": {
+   "class": "incline-press",
+   "classes": [
+    "incline-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "incline-push"
+  },
+  "incline-barbell-press": {
+   "class": "incline-press",
+   "classes": [
+    "incline-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "incline-push"
+  },
+  "low-to-high-cable-fly": {
+   "class": "incline-press",
+   "classes": [
+    "incline-press",
+    "chest-fly"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "chest-fly"
+  },
+  "triceps-press-machine": {
+   "class": "decline-press",
+   "classes": [
+    "decline-press",
+    "triceps-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "decline-push"
+  },
+  "decline-chest-press-machine": {
+   "class": "decline-press",
+   "classes": [
+    "decline-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "decline-push"
+  },
+  "assisted-dip": {
+   "class": "decline-press",
+   "classes": [
+    "decline-press",
+    "triceps-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "decline-push"
+  },
+  "dip": {
+   "class": "decline-press",
+   "classes": [
+    "decline-press",
+    "triceps-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "decline-push"
+  },
+  "high-to-low-cable-fly": {
+   "class": "decline-press",
+   "classes": [
+    "decline-press",
+    "chest-fly"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "chest-fly"
+  },
+  "pec-deck": {
+   "class": "chest-fly",
+   "classes": [
+    "chest-fly"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "chest-fly"
+  },
+  "cable-fly": {
+   "class": "chest-fly",
+   "classes": [
+    "chest-fly"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "chest-fly"
+  },
+  "dumbbell-fly": {
+   "class": "chest-fly",
+   "classes": [
+    "chest-fly"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "chest-fly"
+  },
+  "machine-shoulder-press": {
+   "class": "vertical-press",
+   "classes": [
+    "vertical-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "vertical-push"
+  },
+  "plate-loaded-shoulder-press": {
+   "class": "vertical-press",
+   "classes": [
+    "vertical-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "vertical-push"
+  },
+  "smith-shoulder-press": {
+   "class": "vertical-press",
+   "classes": [
+    "vertical-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "vertical-push"
+  },
+  "seated-dumbbell-shoulder-press": {
+   "class": "vertical-press",
+   "classes": [
+    "vertical-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "vertical-push"
+  },
+  "landmine-press": {
+   "class": "vertical-press",
+   "classes": [
+    "vertical-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "vertical-push"
+  },
+  "standing-barbell-overhead-press": {
+   "class": "vertical-press",
+   "classes": [
+    "vertical-press"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "vertical-push"
+  },
+  "machine-lateral-raise": {
+   "class": "lateral-raise",
+   "classes": [
+    "lateral-raise"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "lateral-raise"
+  },
+  "cable-lateral-raise": {
+   "class": "lateral-raise",
+   "classes": [
+    "lateral-raise"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "lateral-raise"
+  },
+  "dumbbell-lateral-raise": {
+   "class": "lateral-raise",
+   "classes": [
+    "lateral-raise"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "lateral-raise"
+  },
+  "band-lateral-raise": {
+   "class": "lateral-raise",
+   "classes": [
+    "lateral-raise"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "lateral-raise"
+  },
+  "reverse-pec-deck": {
+   "class": "rear-delt",
+   "classes": [
+    "rear-delt"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "rear-delt"
+  },
+  "rear-delt-dumbbell-fly": {
+   "class": "rear-delt",
+   "classes": [
+    "rear-delt"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "rear-delt"
+  },
+  "cable-rear-delt-fly": {
+   "class": "rear-delt",
+   "classes": [
+    "rear-delt"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "rear-delt"
+  },
+  "face-pull": {
+   "class": "rear-delt",
+   "classes": [
+    "rear-delt",
+    "external-rotation"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "rear-delt"
+  },
+  "band-pull-apart": {
+   "class": "rear-delt",
+   "classes": [
+    "rear-delt"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "rear-delt"
+  },
+  "cable-external-rotation": {
+   "class": "external-rotation",
+   "classes": [
+    "external-rotation"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "external-rotation"
+  },
+  "side-lying-external-rotation": {
+   "class": "external-rotation",
+   "classes": [
+    "external-rotation"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "external-rotation"
+  },
+  "band-external-rotation": {
+   "class": "external-rotation",
+   "classes": [
+    "external-rotation"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "external-rotation"
+  },
+  "machine-shrug": {
+   "class": "shrug",
+   "classes": [
+    "shrug"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "shrug"
+  },
+  "dumbbell-shrug": {
+   "class": "shrug",
+   "classes": [
+    "shrug"
+   ],
+   "slice": "chest-shoulders",
+   "pattern": "shrug"
+  },
+  "vertical-traction": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "lat-pulldown": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "plate-loaded-pulldown": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "neutral-grip-pulldown": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "assisted-pull-up": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "single-arm-cable-pulldown": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "band-assisted-pull-up": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "pull-up": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "chin-up": {
+   "class": "vertical-pull",
+   "classes": [
+    "vertical-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "vertical-pull"
+  },
+  "machine-pullover": {
+   "class": "lat-isolation",
+   "classes": [
+    "lat-isolation"
+   ],
+   "slice": "back-neck",
+   "pattern": "pullover"
+  },
+  "straight-arm-pulldown": {
+   "class": "lat-isolation",
+   "classes": [
+    "lat-isolation"
+   ],
+   "slice": "back-neck",
+   "pattern": "pullover"
+  },
+  "dumbbell-pullover": {
+   "class": "lat-isolation",
+   "classes": [
+    "lat-isolation"
+   ],
+   "slice": "back-neck",
+   "pattern": "pullover"
+  },
+  "machine-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "plate-loaded-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "t-bar-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "chest-supported-dumbbell-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "high-row-machine": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "seated-cable-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "inverted-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "single-arm-cable-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull",
+    "anti-rotation"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "single-arm-dumbbell-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "barbell-row": {
+   "class": "horizontal-pull",
+   "classes": [
+    "horizontal-pull"
+   ],
+   "slice": "back-neck",
+   "pattern": "horizontal-pull"
+  },
+  "lower-back-machine": {
+   "class": "spinal-extension",
+   "classes": [
+    "spinal-extension"
+   ],
+   "slice": "back-neck",
+   "pattern": "spinal-extension"
+  },
+  "back-extension-45": {
+   "class": "spinal-extension",
+   "classes": [
+    "spinal-extension",
+    "hip-hinge"
+   ],
+   "slice": "back-neck",
+   "pattern": "spinal-extension"
+  },
+  "reverse-hyperextension": {
+   "class": "spinal-extension",
+   "classes": [
+    "spinal-extension"
+   ],
+   "slice": "back-neck",
+   "pattern": "hip-extension"
+  },
+  "four-way-neck-machine": {
+   "class": "neck",
+   "classes": [
+    "neck"
+   ],
+   "slice": "back-neck",
+   "pattern": "neck"
+  },
+  "neck-extension": {
+   "class": "neck",
+   "classes": [
+    "neck"
+   ],
+   "slice": "back-neck",
+   "pattern": "neck"
+  },
+  "neck-flexion": {
+   "class": "neck",
+   "classes": [
+    "neck"
+   ],
+   "slice": "back-neck",
+   "pattern": "neck"
+  },
+  "neck-isometrics": {
+   "class": "neck",
+   "classes": [
+    "neck"
+   ],
+   "slice": "back-neck",
+   "pattern": "neck"
+  },
+  "machine-preacher-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "incline-dumbbell-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "bayesian-cable-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "ez-bar-preacher-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "cable-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "dumbbell-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "barbell-curl": {
+   "class": "biceps-curl",
+   "classes": [
+    "biceps-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "hammer-curl": {
+   "class": "brachialis-curl",
+   "classes": [
+    "brachialis-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "reverse-curl": {
+   "class": "brachialis-curl",
+   "classes": [
+    "brachialis-curl"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-flexion"
+  },
+  "overhead-cable-triceps-extension": {
+   "class": "triceps-extension",
+   "classes": [
+    "triceps-extension"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-extension"
+  },
+  "machine-triceps-extension": {
+   "class": "triceps-extension",
+   "classes": [
+    "triceps-extension"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-extension"
+  },
+  "dumbbell-overhead-triceps-extension": {
+   "class": "triceps-extension",
+   "classes": [
+    "triceps-extension"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-extension"
+  },
+  "skull-crusher": {
+   "class": "triceps-extension",
+   "classes": [
+    "triceps-extension"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-extension"
+  },
+  "cable-pushdown": {
+   "class": "triceps-extension",
+   "classes": [
+    "triceps-extension"
+   ],
+   "slice": "arms-grip",
+   "pattern": "elbow-extension"
+  },
+  "close-grip-bench-press": {
+   "class": "triceps-press",
+   "classes": [
+    "triceps-press"
+   ],
+   "slice": "arms-grip",
+   "pattern": "horizontal-push"
+  },
+  "diamond-push-up": {
+   "class": "triceps-press",
+   "classes": [
+    "triceps-press"
+   ],
+   "slice": "arms-grip",
+   "pattern": "horizontal-push"
+  },
+  "wrist-curl": {
+   "class": "wrist",
+   "classes": [
+    "wrist"
+   ],
+   "slice": "arms-grip",
+   "pattern": "forearm-flexion"
+  },
+  "reverse-wrist-curl": {
+   "class": "wrist",
+   "classes": [
+    "wrist"
+   ],
+   "slice": "arms-grip",
+   "pattern": "forearm-extension"
+  },
+  "farmers-carry": {
+   "class": "grip",
+   "classes": [
+    "grip"
+   ],
+   "slice": "arms-grip",
+   "pattern": "carry"
+  },
+  "dead-hang": {
+   "class": "grip",
+   "classes": [
+    "grip"
+   ],
+   "slice": "arms-grip",
+   "pattern": "grip"
+  },
+  "gripper": {
+   "class": "grip",
+   "classes": [
+    "grip"
+   ],
+   "slice": "arms-grip",
+   "pattern": "grip"
+  },
+  "plate-pinch": {
+   "class": "grip",
+   "classes": [
+    "grip"
+   ],
+   "slice": "arms-grip",
+   "pattern": "grip"
+  },
+  "suitcase-carry": {
+   "class": "grip",
+   "classes": [
+    "grip",
+    "anti-lateral-flexion"
+   ],
+   "slice": "arms-grip",
+   "pattern": "carry"
+  },
+  "bird-dog": {
+   "class": "spine-stability",
+   "classes": [
+    "spine-stability",
+    "anti-rotation"
+   ],
+   "slice": "core",
+   "pattern": "anti-rotation"
+  },
+  "dead-bug": {
+   "class": "spine-stability",
+   "classes": [
+    "spine-stability",
+    "anti-extension"
+   ],
+   "slice": "core",
+   "pattern": "anti-extension"
+  },
+  "plank": {
+   "class": "spine-stability",
+   "classes": [
+    "spine-stability",
+    "anti-extension"
+   ],
+   "slice": "core",
+   "pattern": "anti-extension"
+  },
+  "side-plank": {
+   "class": "spine-stability",
+   "classes": [
+    "spine-stability",
+    "anti-lateral-flexion"
+   ],
+   "slice": "core",
+   "pattern": "lateral-flexion"
+  },
+  "machine-crunch": {
+   "class": "trunk-flexion",
+   "classes": [
+    "trunk-flexion"
+   ],
+   "slice": "core",
+   "pattern": "trunk-flexion"
+  },
+  "cable-crunch": {
+   "class": "trunk-flexion",
+   "classes": [
+    "trunk-flexion"
+   ],
+   "slice": "core",
+   "pattern": "trunk-flexion"
+  },
+  "decline-sit-up": {
+   "class": "trunk-flexion",
+   "classes": [
+    "trunk-flexion"
+   ],
+   "slice": "core",
+   "pattern": "trunk-flexion"
+  },
+  "bicycle-crunch": {
+   "class": "trunk-flexion",
+   "classes": [
+    "trunk-flexion"
+   ],
+   "slice": "core",
+   "pattern": "trunk-flexion"
+  },
+  "mcgill-curl-up": {
+   "class": "trunk-flexion",
+   "classes": [
+    "trunk-flexion"
+   ],
+   "slice": "core",
+   "pattern": "trunk-flexion"
+  },
+  "captains-chair-knee-raise": {
+   "class": "lower-ab-flexion",
+   "classes": [
+    "lower-ab-flexion"
+   ],
+   "slice": "core",
+   "pattern": "hip-flexion"
+  },
+  "reverse-crunch": {
+   "class": "lower-ab-flexion",
+   "classes": [
+    "lower-ab-flexion"
+   ],
+   "slice": "core",
+   "pattern": "hip-flexion"
+  },
+  "hanging-leg-raise": {
+   "class": "lower-ab-flexion",
+   "classes": [
+    "lower-ab-flexion"
+   ],
+   "slice": "core",
+   "pattern": "hip-flexion"
+  },
+  "ab-wheel-rollout": {
+   "class": "anti-extension",
+   "classes": [
+    "anti-extension"
+   ],
+   "slice": "core",
+   "pattern": "anti-extension"
+  },
+  "pallof-press": {
+   "class": "anti-rotation",
+   "classes": [
+    "anti-rotation"
+   ],
+   "slice": "core",
+   "pattern": "anti-rotation"
+  },
+  "cable-woodchop": {
+   "class": "rotation",
+   "classes": [
+    "rotation"
+   ],
+   "slice": "core",
+   "pattern": "rotation"
+  },
+  "rotary-torso-machine": {
+   "class": "rotation",
+   "classes": [
+    "rotation"
+   ],
+   "slice": "core",
+   "pattern": "rotation"
+  },
+  "leg-press-45": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "seated-leg-press": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "hack-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "v-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "belt-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "goblet-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "bulgarian-split-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "lunge"
+  },
+  "smith-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "barbell-back-squat": {
+   "class": "squat",
+   "classes": [
+    "squat"
+   ],
+   "slice": "legs",
+   "pattern": "squat"
+  },
+  "leg-extension": {
+   "class": "knee-extension",
+   "classes": [
+    "knee-extension"
+   ],
+   "slice": "legs",
+   "pattern": "knee-extension"
+  },
+  "seated-leg-curl": {
+   "class": "knee-flexion",
+   "classes": [
+    "knee-flexion"
+   ],
+   "slice": "legs",
+   "pattern": "knee-flexion"
+  },
+  "lying-leg-curl": {
+   "class": "knee-flexion",
+   "classes": [
+    "knee-flexion"
+   ],
+   "slice": "legs",
+   "pattern": "knee-flexion"
+  },
+  "nordic-hamstring-curl": {
+   "class": "knee-flexion",
+   "classes": [
+    "knee-flexion"
+   ],
+   "slice": "legs",
+   "pattern": "knee-flexion"
+  },
+  "trap-bar-deadlift": {
+   "class": "hip-hinge",
+   "classes": [
+    "hip-hinge"
+   ],
+   "slice": "legs",
+   "pattern": "hip-hinge"
+  },
+  "dumbbell-rdl": {
+   "class": "hip-hinge",
+   "classes": [
+    "hip-hinge"
+   ],
+   "slice": "legs",
+   "pattern": "hip-hinge"
+  },
+  "barbell-rdl": {
+   "class": "hip-hinge",
+   "classes": [
+    "hip-hinge"
+   ],
+   "slice": "legs",
+   "pattern": "hip-hinge"
+  },
+  "cable-pull-through": {
+   "class": "hip-hinge",
+   "classes": [
+    "hip-hinge"
+   ],
+   "slice": "legs",
+   "pattern": "hip-hinge"
+  },
+  "conventional-deadlift": {
+   "class": "hip-hinge",
+   "classes": [
+    "hip-hinge"
+   ],
+   "slice": "legs",
+   "pattern": "hip-hinge"
+  },
+  "kettlebell-swing": {
+   "class": "hip-hinge",
+   "classes": [
+    "hip-hinge"
+   ],
+   "slice": "legs",
+   "pattern": "hip-hinge"
+  },
+  "machine-hip-thrust": {
+   "class": "hip-thrust",
+   "classes": [
+    "hip-thrust"
+   ],
+   "slice": "legs",
+   "pattern": "hip-extension"
+  },
+  "barbell-hip-thrust": {
+   "class": "hip-thrust",
+   "classes": [
+    "hip-thrust"
+   ],
+   "slice": "legs",
+   "pattern": "hip-extension"
+  },
+  "glute-kickback-machine": {
+   "class": "hip-thrust",
+   "classes": [
+    "hip-thrust"
+   ],
+   "slice": "legs",
+   "pattern": "hip-extension"
+  },
+  "hip-abduction-machine": {
+   "class": "hip-abduction",
+   "classes": [
+    "hip-abduction"
+   ],
+   "slice": "legs",
+   "pattern": "hip-abduction"
+  },
+  "hip-adduction-machine": {
+   "class": "hip-adduction",
+   "classes": [
+    "hip-adduction"
+   ],
+   "slice": "legs",
+   "pattern": "hip-adduction"
+  },
+  "copenhagen-adduction": {
+   "class": "hip-adduction",
+   "classes": [
+    "hip-adduction"
+   ],
+   "slice": "legs",
+   "pattern": "hip-adduction"
+  },
+  "standing-calf-raise-machine": {
+   "class": "calf-straight",
+   "classes": [
+    "calf-straight"
+   ],
+   "slice": "legs",
+   "pattern": "calf-raise"
+  },
+  "leg-press-calf-raise": {
+   "class": "calf-straight",
+   "classes": [
+    "calf-straight"
+   ],
+   "slice": "legs",
+   "pattern": "calf-raise"
+  },
+  "single-leg-dumbbell-calf-raise": {
+   "class": "calf-straight",
+   "classes": [
+    "calf-straight"
+   ],
+   "slice": "legs",
+   "pattern": "calf-raise"
+  },
+  "seated-calf-raise-machine": {
+   "class": "calf-bent",
+   "classes": [
+    "calf-bent"
+   ],
+   "slice": "legs",
+   "pattern": "calf-raise"
+  }
+ },
+ "ownerTemplate": {
+  "id": "owner-3day-upper",
+  "days": [
+   {
+    "key": "A",
+    "name": {
+     "en": "A · Chest focus",
+     "ru": "A · Акцент на грудь"
+    },
+    "slots": [
+     [
+      "A1",
+      "machine-chest-press"
+     ],
+     [
+      "A2",
+      "lat-pulldown"
+     ],
+     [
+      "A3",
+      "pec-deck"
+     ],
+     [
+      "A4",
+      "machine-row"
+     ],
+     [
+      "A5",
+      "machine-shoulder-press"
+     ],
+     [
+      "A6",
+      "machine-crunch"
+     ]
+    ]
+   },
+   {
+    "key": "B",
+    "name": {
+     "en": "B · Back focus",
+     "ru": "B · Акцент на спину"
+    },
+    "slots": [
+     [
+      "B1",
+      "assisted-pull-up"
+     ],
+     [
+      "B2",
+      "machine-incline-press"
+     ],
+     [
+      "B3",
+      "seated-cable-row"
+     ],
+     [
+      "B4",
+      "cable-fly"
+     ],
+     [
+      "B5",
+      "face-pull"
+     ],
+     [
+      "B6",
+      "lower-back-machine"
+     ],
+     [
+      "B7",
+      "pallof-press"
+     ]
+    ]
+   },
+   {
+    "key": "C",
+    "name": {
+     "en": "C · Arms, shoulders, core",
+     "ru": "C · Руки, плечи, кор"
+    },
+    "slots": [
+     [
+      "C1",
+      "triceps-press-machine"
+     ],
+     [
+      "C2",
+      "machine-preacher-curl"
+     ],
+     [
+      "C3",
+      "cable-pushdown"
+     ],
+     [
+      "C4",
+      "machine-lateral-raise"
+     ],
+     [
+      "C5",
+      "hammer-curl"
+     ],
+     [
+      "C6",
+      "captains-chair-knee-raise"
+     ],
+     [
+      "C7",
+      "farmers-carry"
+     ]
+    ]
+   }
+  ],
+  "legsAddon": [
+   [
+    "L1",
+    "leg-press-45"
+   ],
+   [
+    "L2",
+    "seated-leg-curl"
+   ],
+   [
+    "L3",
+    "leg-extension"
+   ],
+   [
+    "L4",
+    "standing-calf-raise-machine"
+   ],
+   [
+    "L5",
+    "trap-bar-deadlift"
+   ]
+  ]
+ }
+}

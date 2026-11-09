@@ -3,11 +3,12 @@ import { foodHref } from "@/lib/paths";
 import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt } from "./parts";
 
-export function Card({ lang, r, badge }: { lang: Lang; r: RecipeSummary; badge?: string }) {
+/** `eager`: a card above the fold, whose picture is the page's largest paint. */
+export function Card({ lang, r, badge, eager }: { lang: Lang; r: RecipeSummary; badge?: string; eager?: boolean }) {
   return (
     <a className="card" href={foodHref(lang, r.slug)}>
       <div className="card-art">
-        <HeroArt hero={r.hero} />
+        <HeroArt hero={r.hero} card eager={eager} />
       </div>
       <div className="card-text">
         <h3>{r.title}</h3>

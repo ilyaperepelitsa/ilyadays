@@ -15,7 +15,7 @@ export function BriefFields({ brief, copy, onChange }: { brief: TripBrief; copy:
         <h2>{copy.tripSectionShape}</h2>
         <label className="trip-field trip-city">
           <span>{copy.tripCity}</span>
-          <input value={brief.city} placeholder={copy.tripCityPh} onChange={(e) => set({ city: e.target.value })} autoComplete="off" />
+          <input data-testid="trip-city" value={brief.city} placeholder={copy.tripCityPh} onChange={(e) => set({ city: e.target.value })} autoComplete="off" />
         </label>
         <div className="trip-metrics">
           <Slider label={copy.tripRoutes} hint={copy.tripRoutesHint} value={brief.routes} min={LIMITS.routes[0]} max={LIMITS.routes[1]} onChange={(routes) => set({ routes, sharedSpine: routes < 2 ? false : brief.sharedSpine })} />

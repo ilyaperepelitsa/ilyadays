@@ -1,13 +1,13 @@
 -- ============================================================================
 -- ilyadays.com travel progress: public.trip_state
--- Date: 2026-10-06 · Project: TypeKana's Supabase project (shared)
+-- Date: 2026-10-06 · Project: dedicated ilyadays Supabase project
 -- ============================================================================
 --
 -- One row per (trip, key): the Istanbul app saves each top-level piece of the owner's progress separately
 -- (visited, ideas, dayOrder, days, tripStart) as JSON. Everyone — signed in or not — can READ it, so visitors
--- see the progress. Only `public.is_admin()` (TypeKana's admin check, backed by `admin_users`) can WRITE it.
+-- see the progress. Only `public.is_admin()` (backed by `ilyadays_admins`) can WRITE it.
 --
--- Requires: public.is_admin() from TypeKana's admin-hardening migration (SECURITY DEFINER, reads admin_users).
+-- Requires: 20261006110000_ilyadays_admin.sql, installed in the NEW project first.
 -- Safe to re-run: every statement is idempotent.
 
 BEGIN;

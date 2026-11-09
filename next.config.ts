@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 import mediaAliases from "./art/media/aliases.json";
 import { ONIGIRI_RECIPES, ONIGIRI_METHODS, integratedDestination } from "./src/lib/food/integrated-recipes.mjs";
+import { fileVersion } from "./scripts/file-version.mjs";
+
+// The Istanbul bundle keeps its file names; each URL carries its content hash so browsers can keep it for a year
+// (scripts/write-offline-catalog.mjs saves the same URLs for offline use).
+const istanbul = (file: string) => fileVersion(`${process.cwd()}/public/apps/istanbul/${file}`);
 
 // Old static-site URLs (ilyadays.com/food/*.html etc.) keep working: permanent 301s to the new routes.
 const legacy = [
@@ -39,6 +44,11 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   poweredByHeader: false,
   images: { unoptimized: true },
+  env: {
+    NEXT_PUBLIC_ISTANBUL_JS_V: istanbul("app.js"),
+    NEXT_PUBLIC_ISTANBUL_CSS_V: istanbul("app.css"),
+    NEXT_PUBLIC_ISTANBUL_MAP_V: istanbul("mapdata.json"),
+  },
   experimental: {
     globalNotFound: true,
     optimizePackageImports: ["@supabase/supabase-js"],
@@ -62,17 +72,24 @@ const nextConfig: NextConfig = {
       { key: "X-Content-Type-Options", value: "nosniff" },
       { key: "X-Frame-Options", value: "SAMEORIGIN" },
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-      { key: "Permissions-Policy", value: "camera=(), geolocation=(), microphone=()" },
+      { key: "Permissions-Policy", value: "camera=(), geolocation=(self), microphone=()" },
       { key: "X-DNS-Prefetch-Control", value: "on" },
+      // Only the parts that cannot break the static pages' inline scripts: no <base> hijack, no plugins, no framing.
+      { key: "Content-Security-Policy", value: "base-uri 'self'; object-src 'none'; frame-ancestors 'self'" },
     ];
-    // Pictures keep their names when regenerated, so cache them for a day, not forever.
+    // A URL with `?v=<content hash>` never changes, so a phone keeps it for a year and never asks again (no data on
+    // roaming). The same file without `?v=` keeps its name when regenerated, so it is cached for a day.
     const media = [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }];
+    const forever = [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }];
+    const versioned = [{ type: "query" as const, key: "v" }];
     return [
       { source: "/(.*)", headers: security },
       { source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-cache" }] },
       { source: "/offline-catalog.json", headers: [{ key: "Cache-Control", value: "no-cache" }] },
       { source: "/offline-assets.js", headers: [{ key: "Cache-Control", value: "no-cache" }] },
       { source: "/media/:path*", headers: media },
+      { source: "/media/:path*", has: versioned, headers: forever },
+      { source: "/apps/:path*", has: versioned, headers: forever },
       { source: "/covers/:path*", headers: media },
       { source: "/share/:path*", headers: media },
       { source: "/icons/:path*", headers: media },

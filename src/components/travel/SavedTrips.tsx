@@ -22,11 +22,15 @@ export function SavedTrips({ lang }: { lang: Lang }) {
       <div className="recent-head"><h2>{copy.tripSavedHere}</h2></div>
       <div className="tiles tiles-fill">
         {trips.map((trip) => (
-          <Link key={trip.id} className="tile tile-plain" href={localPath(lang, `/travel/made/${trip.id}`)}>
+          <Link prefetch={false} key={trip.id} className="tile tile-plain" href={localPath(lang, `/travel/made/${trip.id}`)}>
             <div className="tile-body">
               <h2>{trip.city}</h2>
               <p>{title(lang, trip)}</p>
-              <span className="tile-go">{copy.tripRoutes} · {trip.routes.length}</span>
+              <span className="tile-go">
+                {copy.tripCounts
+                  .replace("{routes}", String(trip.routes.length))
+                  .replace("{stops}", String(new Set(trip.routes.flatMap((route) => route.stops.map((stop) => stop.id))).size))}
+              </span>
             </div>
           </Link>
         ))}

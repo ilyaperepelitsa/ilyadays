@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { extractAssetUrls, sameOriginPath } from "../../src/lib/offline/assets.mjs";
-import { buildCatalog, formatBytes, savedTripUrls, skipPublicFile } from "../../src/lib/offline/catalog.mjs";
+import { buildCatalog, fitnessPages, formatBytes, savedTripUrls, skipPublicFile } from "../../src/lib/offline/catalog.mjs";
 
 describe("offline catalog", () => {
   it("lists both languages and skips the duplicate food export", () => {
@@ -30,6 +30,18 @@ describe("offline catalog", () => {
     const grown = buildCatalog(["nigiri"], [{ rel: "icons/icon-192.png", bytes: 800 }]);
     assert.equal(first.id, again.id);
     assert.notEqual(first.id, grown.id);
+  });
+
+  it("keeps every fitness exercise and science page in both languages", () => {
+    const extra = fitnessPages(["pec-deck", "../etc", "Bad Id"], ["safety"]);
+    assert.deepEqual(extra, ["/fitness/exercises/pec-deck", "/fitness/science/safety"]);
+    const catalog = buildCatalog(["nigiri"], [], new Map(), [...extra, "/fitness", "javascript:alert(1)"]);
+    assert.ok(catalog.pages.includes("/fitness"));
+    assert.ok(catalog.pages.includes("/fitness/exercises/pec-deck"));
+    assert.ok(catalog.pages.includes("/ru/fitness/exercises/pec-deck"));
+    assert.ok(catalog.pages.includes("/ru/fitness/science/safety"));
+    assert.equal(catalog.pages.filter((page) => page === "/fitness").length, 1);
+    assert.ok(!catalog.pages.some((page) => page.includes("javascript")));
   });
 
   it("adds saved trips and refuses odd ids", () => {
@@ -62,5 +74,22 @@ describe("offline asset urls", () => {
     assert.deepEqual(extractAssetUrls(script), ["/_next/static/chunks/food/page-abc.js"]);
     assert.equal(sameOriginPath("https://www.ilyadays.com/food/nigiri"), "/food/nigiri");
     assert.equal(sameOriginPath("https://evil.example/food"), "");
+  });
+});
+
+describe("versioned offline copies", () => {
+  it("lists a file under the exact ?v= URL pages request, and changes the id when the version does", () => {
+    const files = [{ rel: "media/illustrations/nigiri/hero.webp", bytes: 1000 }, { rel: "icons/icon-192.png", bytes: 500 }];
+    const v1 = buildCatalog(["nigiri"], files, new Map([["media/illustrations/nigiri/hero.webp", "abc1234567"]]));
+    const v2 = buildCatalog(["nigiri"], files, new Map([["media/illustrations/nigiri/hero.webp", "def7654321"]]));
+    assert.deepEqual(v1.files, ["/media/illustrations/nigiri/hero.webp?v=abc1234567", "/icons/icon-192.png"]);
+    assert.notEqual(v1.id, v2.id);
+  });
+
+  it("keeps a page's ?v= so the save does not fetch the same picture twice", () => {
+    const html = '<img src="/media/thumbs/illustrations/ramen/4.webp?v=78533e3347&x=1"><img src="/covers/food.webp?utm=1">';
+    assert.deepEqual(extractAssetUrls(html).sort(), ["/covers/food.webp", "/media/thumbs/illustrations/ramen/4.webp?v=78533e3347"]);
+    assert.equal(sameOriginPath("https://ilyadays.com/apps/istanbul/app.js?v=0123456789"), "/apps/istanbul/app.js?v=0123456789");
+    assert.equal(sameOriginPath("/media/a.webp?v=<script>"), "/media/a.webp");
   });
 });

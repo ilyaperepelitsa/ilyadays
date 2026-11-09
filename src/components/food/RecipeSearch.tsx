@@ -108,8 +108,8 @@ function FilteredIndex({
       <section className="group" aria-live="polite">
         <h2>{countLabel}</h2>
         <div className="cards">
-          {recipes.map((recipe) => (
-            <Card key={recipe.slug} lang={lang} r={recipe} />
+          {recipes.map((recipe, index) => (
+            <Card key={recipe.slug} lang={lang} r={recipe} eager={index < 2} />
           ))}
         </div>
       </section>
@@ -124,8 +124,8 @@ function FilteredIndex({
             <h2 id="recent-title">{t.recentTitle}</h2>
           </div>
           <div className="cards">
-            {recentCards.map((recipe) => (
-              <Card key={recipe.slug} lang={lang} r={recipe} badge={badges[recipe.slug] || undefined} />
+            {recentCards.map((recipe, index) => (
+              <Card key={recipe.slug} lang={lang} r={recipe} badge={badges[recipe.slug] || undefined} eager={index < 2} />
             ))}
           </div>
         </section>

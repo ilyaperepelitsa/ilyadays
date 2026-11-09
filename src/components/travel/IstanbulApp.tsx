@@ -2,20 +2,48 @@
 // Mounts the Istanbul trip app (public/apps/istanbul, copied from ../istanbul_trip/dist by sync-content.sh).
 // Everyone sees the owner's progress from Supabase; only the admin (rpc is_admin) gets editable mode.
 import { useEffect, useRef, useState } from "react";
+import { preconnect, preload, preloadModule } from "react-dom";
 import type { Lang as TripLang, TripHandle } from "@/types/istanbul";
 import { type Lang, localPath } from "@/lib/i18n";
 import { tripStorage } from "@/lib/tripStorage";
 import { useAuth } from "@/components/site/AuthProvider";
 
-const APP_JS = "/apps/istanbul/app.js";
-const APP_CSS = "/apps/istanbul/app.css";
+// Versioned by content (next.config.ts), so each file is downloaded once and then kept for a year: an app update
+// re-downloads app.js (~115 KB compressed), not the map data (~400 KB).
+const APP_JS = `/apps/istanbul/app.js?v=${process.env.NEXT_PUBLIC_ISTANBUL_JS_V}`;
+const APP_CSS = `/apps/istanbul/app.css?v=${process.env.NEXT_PUBLIC_ISTANBUL_CSS_V}`;
+/** The map graph (1.5 MB): app.js fetches this exact URL itself, so it survives app updates in the cache. */
+const MAP_DATA = `/apps/istanbul/mapdata.json?v=${process.env.NEXT_PUBLIC_ISTANBUL_MAP_V}`;
 const FONTS =
   "https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&family=Marcellus&display=swap";
 
 type Text = { loading: string; failed: string; readOnlySignedIn: string; editing: string };
 type TripModule = { mount: (el: HTMLElement, options: object) => TripHandle };
 
+/** Adds a stylesheet without holding back the page's first paint; settles once it applies or fails. */
+function addStylesheet(href: string): Promise<void> {
+  const existing = document.querySelector<HTMLLinkElement>(`link[rel="stylesheet"][href="${href}"]`);
+  if (existing?.sheet) return Promise.resolve();
+  const link = existing ?? Object.assign(document.createElement("link"), { rel: "stylesheet", href });
+  const ready = new Promise<void>((resolve) => {
+    link.addEventListener("load", () => resolve(), { once: true });
+    link.addEventListener("error", () => {
+      link.remove(); // so the next visit asks again instead of waiting on a dead link
+      resolve();
+    }, { once: true });
+  });
+  if (!existing) document.head.append(link);
+  return ready;
+}
+
 export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
+  // Start the bundle, its stylesheet and the font hosts with the page's own HTML, not after hydration runs the
+  // effect below. Neither stylesheet blocks the first paint: the app draws nothing until it mounts anyway.
+  preloadModule(APP_JS);
+  preload(APP_CSS, { as: "style" });
+  preload(MAP_DATA, { as: "fetch", crossOrigin: "anonymous", fetchPriority: "low" }); // after the page's own CSS
+  preconnect("https://fonts.googleapis.com");
+  preconnect("https://fonts.gstatic.com", { crossOrigin: "anonymous" });
   const mountRef = useRef<HTMLDivElement>(null);
   const noteRef = useRef<HTMLParagraphElement>(null);
   const handleRef = useRef<TripHandle | null>(null);
@@ -39,7 +67,11 @@ export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
     let cancelled = false;
     (async () => {
       try {
-        const mod = (await import(/* webpackIgnore: true */ /* turbopackIgnore: true */ APP_JS)) as TripModule;
+        void addStylesheet(FONTS); // display=swap: the app's fallback fonts until these arrive
+        const [mod] = await Promise.all([
+          import(/* webpackIgnore: true */ /* turbopackIgnore: true */ APP_JS) as Promise<TripModule>,
+          addStylesheet(APP_CSS),
+        ]);
         if (cancelled) return;
         handleRef.current = mod.mount(el, {
           lang: lang as TripLang,
@@ -92,8 +124,6 @@ export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
 
   return (
     <>
-      <link rel="stylesheet" href={APP_CSS} precedence="default" />
-      <link rel="stylesheet" href={FONTS} precedence="default" />
       {note && (
         <p ref={noteRef} className={`trip-note${editable ? " editing" : ""}`} aria-live="polite">
           {note}

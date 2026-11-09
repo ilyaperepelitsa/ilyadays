@@ -1,0 +1,355 @@
+{
+  "version": "2026-11-08",
+  "note": "Stream 09 (plans/fitness/09-nutrition.md). Every number carries `source` ids from `sources`. Research basis: plans/fitness/research/06-nutrition-recomposition.md. Foods: per 100 g (per 100 ml when unit is ml), as eaten unless the name says raw; carbs are total carbohydrate by difference (fibre included, the USDA and MEXT convention); fibre null = not reported. USDA values come from the SR Legacy CSV, FDC ids in each row.",
+  "energy": {
+    "bmr": {
+      "mifflin": {
+        "male": "10*kg + 6.25*cm - 5*age + 5",
+        "female": "10*kg + 6.25*cm - 5*age - 161",
+        "source": ["mifflin-1990","frankenfield-2005"]
+      },
+      "katch": {"formula":"370 + 21.6*ffmKg","source":["cunningham-1980"]},
+      "withBodyFat": {
+        "rule": "mean of Mifflin–St Jeor and Katch–McArdle when body fat is entered",
+        "source": ["cunningham-1980","frankenfield-2005"]
+      }
+    },
+    "activity": [
+      {"key":"sedentary","factor":1.2,"name":{"en":"Sedentary","ru":"Сидячий"},"hint":{"en":"Desk job, under 5,000 steps, no training","ru":"Сидячая работа, меньше 5000 шагов, без тренировок"}},
+      {"key":"light","factor":1.375,"name":{"en":"Light","ru":"Лёгкая"},"hint":{"en":"5–8k steps a day or 3 workouts a week","ru":"5–8 тыс. шагов в день или 3 тренировки в неделю"}},
+      {"key":"moderate","factor":1.55,"name":{"en":"Moderate","ru":"Средняя"},"hint":{"en":"8–12k steps and 3 workouts a week","ru":"8–12 тыс. шагов и 3 тренировки в неделю"}},
+      {"key":"active","factor":1.725,"name":{"en":"High","ru":"Высокая"},"hint":{"en":"12k+ steps or a physical job, plus training","ru":"Больше 12 тыс. шагов или физическая работа, плюс тренировки"}},
+      {"key":"very","factor":1.9,"name":{"en":"Very high","ru":"Очень высокая"},"hint":{"en":"Physical job and hard training every day","ru":"Физическая работа и тяжёлые тренировки каждый день"}}
+    ],
+    "activityNote": {
+      "en": "Activity multipliers are rough. After 2–3 weeks of logging intake and daily weight, the trend tells you your real expenditure.",
+      "ru": "Коэффициенты активности приблизительны. Через 2–3 недели учёта еды и ежедневного взвешивания тренд веса покажет реальный расход."
+    },
+    "activitySource": ["sbs-macrofactor","rosenbaum-2010"],
+    "kcalPerKgLoss": 7700,
+    "kcalPerKgGain": 5500,
+    "energyDensitySource": ["hall-2008"],
+    "adaptationFactor": 1.1,
+    "dietBreakEveryWeeks": 7,
+    "timelineSource": ["rosenbaum-2010","peos-2021"]
+  },
+  "goals": {
+    "recomp": {
+      "name": {"en":"Fat loss & recomposition","ru":"Похудение и рекомпозиция"},
+      "short": {"en":"Fat loss","ru":"Похудение"},
+      "summary": {
+        "en": "A moderate deficit, high protein and heavy lifting: lose fat, keep (or gain a little) muscle.",
+        "ru": "Умеренный дефицит, много белка и тяжёлые тренировки: уходит жир, мышцы сохраняются или немного растут."
+      },
+      "protein": {
+        "gPerKg": [1.6,2.2],
+        "target": 2.2,
+        "ffm": {"gPerKg":[2.5,3.1],"target":2.8},
+        "source": ["morton-2018","helms-2014","refalo-2025","longland-2016"]
+      },
+      "energy": {
+        "direction": "loss",
+        "rate": {"min":0.25,"max":1,"step":0.05,"default":0.5,"recommended":[0.5,0.75]},
+        "typicalDeltaPctTdee": [-25,-15],
+        "maxDeficitKcal": 500,
+        "maxDeficitPctTdee": 25,
+        "source": ["murphy-koehler-2022","garthe-2011"]
+      },
+      "fatFloorGPerKg": 0.5,
+      "carbFloorGPerKg": 2,
+      "floorSource": ["whittaker-2021","iraki-2019","henselmans-2022"]
+    },
+    "strength": {
+      "name": {"en":"Strength","ru":"Сила"},
+      "short": {"en":"Strength","ru":"Сила"},
+      "summary": {
+        "en": "Maintenance to a small surplus: strength comes from training, extra calories mostly add fat.",
+        "ru": "От поддержания до небольшого профицита: сила растёт от тренировок, лишние калории в основном идут в жир."
+      },
+      "protein": {
+        "gPerKg": [1.6,2.2],
+        "target": 1.8,
+        "ffm": {"gPerKg":[2,2.5],"target":2.2},
+        "source": ["morton-2018","iraki-2019"]
+      },
+      "energy": {
+        "direction": "gain",
+        "rate": {"min":0.1,"max":0.5,"step":0.05,"default":0.1,"recommended":[0.1,0.15]},
+        "typicalDeltaPctTdee": [0,5],
+        "source": ["iraki-2019","helms-2023"]
+      },
+      "fatFloorGPerKg": 0.5,
+      "carbFloorGPerKg": 3,
+      "floorSource": ["whittaker-2021","iraki-2019","henselmans-2022"]
+    },
+    "hypertrophy": {
+      "name": {"en":"Muscle growth","ru":"Рост мышц"},
+      "short": {"en":"Muscle","ru":"Рост мышц"},
+      "summary": {
+        "en": "A small surplus with plenty of volume; gaining faster than about 0.25 % a week mostly adds fat.",
+        "ru": "Небольшой профицит и большой объём; набор быстрее ~0,25 % в неделю в основном добавляет жир."
+      },
+      "protein": {
+        "gPerKg": [1.6,2.2],
+        "target": 1.8,
+        "ffm": {"gPerKg":[2,2.5],"target":2.2},
+        "source": ["morton-2018","iraki-2019"]
+      },
+      "energy": {
+        "direction": "gain",
+        "rate": {"min":0.1,"max":0.5,"step":0.05,"default":0.25,"recommended":[0.1,0.25]},
+        "typicalDeltaPctTdee": [5,10],
+        "source": ["iraki-2019","helms-2023"]
+      },
+      "fatFloorGPerKg": 0.5,
+      "carbFloorGPerKg": 3,
+      "floorSource": ["whittaker-2021","iraki-2019","henselmans-2022"]
+    },
+    "endurance": {
+      "name": {"en":"Muscular endurance","ru":"Силовая выносливость"},
+      "short": {"en":"Endurance","ru":"Выносливость"},
+      "summary": {
+        "en": "Eat at maintenance with enough carbohydrate for long, high-rep sessions.",
+        "ru": "Питание на поддержание и достаточно углеводов для длинных многоповторных тренировок."
+      },
+      "protein": {"gPerKg":[1.4,2],"target":1.6,"ffm":null,"source":["jager-2017","thomas-2016"]},
+      "energy": {"direction":"maintain","rate":null,"typicalDeltaPctTdee":[0,0],"source":["thomas-2016"]},
+      "fatFloorGPerKg": 0.5,
+      "carbFloorGPerKg": 3,
+      "floorSource": ["whittaker-2021","thomas-2016","henselmans-2022"]
+    },
+    "maintenance": {
+      "name": {"en":"Health & maintenance","ru":"Здоровье и поддержание"},
+      "short": {"en":"Maintain","ru":"Поддержание"},
+      "summary": {
+        "en": "Eat at maintenance (± 100 kcal), keep protein high and let slow recomposition happen.",
+        "ru": "Питание на поддержание (± 100 ккал), белка много — медленная рекомпозиция идёт сама."
+      },
+      "protein": {
+        "gPerKg": [1.8,2.2],
+        "target": 2,
+        "ffm": {"gPerKg":[2.3,2.6],"target":2.4},
+        "source": ["morton-2018","barakat-2020"]
+      },
+      "energy": {
+        "direction": "maintain",
+        "rate": null,
+        "typicalDeltaPctTdee": [0,0],
+        "toleranceKcal": 100,
+        "source": ["barakat-2020"]
+      },
+      "fatFloorGPerKg": 0.5,
+      "carbFloorGPerKg": 3,
+      "floorSource": ["whittaker-2021","iraki-2019","henselmans-2022"]
+    }
+  },
+  "daily": {
+    "proteinCapGPerKg": 2.6,
+    "proteinCapSource": ["refalo-2025","antonio-2016"],
+    "perMeal": {
+      "gPerKg": 0.4,
+      "minG": 30,
+      "meals": [3,4,5],
+      "defaultMeals": 4,
+      "source": ["schoenfeld-aragon-2018","trommelen-2023","kerksick-2017"]
+    },
+    "fat": {
+      "defaultGPerKg": 0.8,
+      "floorGPerKg": 0.5,
+      "floorPctKcal": 20,
+      "ceilingPctKcal": 40,
+      "lowerToGPerKg": 0.6,
+      "source": ["helms-2014","iraki-2019","whittaker-2021"]
+    },
+    "fibre": {"gPer1000Kcal":14,"minG":25,"maxG":50,"source":["iom-2005-macro"]},
+    "creatine": {
+      "gPerDay": [3,5],
+      "gPerDayAbove90Kg": 5,
+      "loading": {"gPerDay":20,"days":[5,7]},
+      "waterGainKg": [1,2],
+      "source": ["kreider-2017"]
+    },
+    "caffeine": {
+      "mgPerKg": [3,6],
+      "startMgPerKg": [2,3],
+      "maxMgPerDay": 400,
+      "minutesBefore": [45,60],
+      "cutoffHoursBeforeBed": [9,13],
+      "coffeeMgPer240ml": 95,
+      "source": ["guest-2021","gardiner-2023","efsa-2015"]
+    },
+    "hydration": {
+      "mlPerKgPerDay": 35,
+      "extraMlPerTrainingHour": [500,1000],
+      "maxSweatLossPctBw": 2,
+      "totalWaterL": {"male":3.7,"female":2.7},
+      "source": ["iom-2005-water","sawka-2007"]
+    },
+    "kcalPerG": {"protein":4,"fat":9,"carbs":4,"alcohol":7}
+  },
+  "heartRate": {
+    "hrMax": {"formula":"208 - 0.7*age","source":["tanaka-2001"]},
+    "zones": [
+      {"zone":1,"pct":[50,60],"name":{"en":"Recovery","ru":"Восстановление"},"feel":{"en":"Very easy; you could chat for hours","ru":"Очень легко; можно болтать часами"}},
+      {"zone":2,"pct":[60,70],"name":{"en":"Endurance base (zone 2)","ru":"Базовая выносливость (зона 2)"},"feel":{"en":"Easy to steady; you can still talk in full sentences","ru":"Спокойно; ещё можно говорить полными фразами"}},
+      {"zone":3,"pct":[70,80],"name":{"en":"Tempo","ru":"Темп"},"feel":{"en":"Comfortably hard; short phrases only","ru":"Ощутимо; только короткие фразы"}},
+      {"zone":4,"pct":[80,90],"name":{"en":"Threshold","ru":"Порог"},"feel":{"en":"Hard; a few words at a time","ru":"Тяжело; по нескольку слов"}},
+      {"zone":5,"pct":[90,100],"name":{"en":"Maximum (VO2max intervals)","ru":"Максимум (интервалы на МПК)"},"feel":{"en":"Very hard; no talking; 1–4 minute efforts","ru":"Очень тяжело; не до разговоров; отрезки по 1–4 минуты"}}
+    ],
+    "zonesNote": {
+      "en": "Karvonen: target = resting HR + % × (max HR − resting HR). Formula maxima can be far off for one person: if the talk test disagrees, trust the talk test.",
+      "ru": "Карвонен: цель = пульс покоя + % × (макс. пульс − пульс покоя). Расчётный максимум может сильно отличаться от вашего: если разговорный тест не совпадает с зоной, верьте тесту."
+    },
+    "zonesSource": ["karvonen-1957","garber-2011","foster-2008"],
+    "zone2": {
+      "startPctHrr": [60,65],
+      "bandBelowCeilingBpm": 10,
+      "stageMinutes": 2,
+      "repeatWeeks": [8,12],
+      "source": ["iannetta-2020","persinger-2004","foster-2008"]
+    },
+    "acsm": {"moderatePctHrr":[40,59],"vigorousPctHrr":[60,89],"source":["garber-2011"]},
+    "cooper": {"formula":"(metres - 504.9) / 44.73","minMetres":1000,"maxMetres":5000,"source":["cooper-1968"]},
+    "uth": {"formula":"15.3 * hrMax / hrRest","source":["uth-2004"]},
+    "mlPerMet": 3.5,
+    "perMetMortalityPct": 13,
+    "fitnessSource": ["kodama-2009","mandsager-2018"]
+  },
+  "rules": [
+    {"en":"Hit the protein target first; spread it over 3–5 meals of 30–50 g (about 0.4 g/kg each).","ru":"Сначала добирайте белок: 3–5 приёмов пищи по 30–50 г (около 0,4 г/кг за раз).","source":["morton-2018","schoenfeld-aragon-2018"]},
+    {"en":"Cutting: stay under about 500 kcal a day below maintenance and 0.5–0.75 % of bodyweight a week. Gaining for strength: 0.1–0.25 % a week; bigger surpluses mostly add fat.","ru":"Похудение: дефицит не больше ~500 ккал в день и 0,5–0,75 % веса в неделю. Набор ради силы: 0,1–0,25 % в неделю; больший профицит в основном добавляет жир.","source":["murphy-koehler-2022","garthe-2011","helms-2023"]},
+    {"en":"Fat at least 0.6 g/kg (never below 0.5 g/kg or 20 % of calories for long); carbohydrate fills the rest.","ru":"Жиров не меньше 0,6 г/кг (надолго — не ниже 0,5 г/кг и 20 % калорий); остальное — углеводы.","source":["whittaker-2021","henselmans-2022"]},
+    {"en":"Fibre 14 g per 1,000 kcal (at least 25 g): vegetables or legumes at two meals.","ru":"Клетчатка — 14 г на 1000 ккал (не меньше 25 г): овощи или бобовые в двух приёмах пищи.","source":["iom-2005-macro"]},
+    {"en":"Creatine monohydrate 3–5 g every day with any meal; expect 1–2 kg of water weight in the first weeks.","ru":"Креатин моногидрат 3–5 г каждый день с любой едой; в первые недели вес вырастет на 1–2 кг за счёт воды.","source":["kreider-2017"]},
+    {"en":"Caffeine 3–6 mg/kg 45–60 minutes before training (start at 2–3 mg/kg), none within 9–13 hours of bedtime, at most 400 mg a day.","ru":"Кофеин 3–6 мг/кг за 45–60 минут до тренировки (начните с 2–3 мг/кг), не позже чем за 9–13 часов до сна, не больше 400 мг в день.","source":["guest-2021","gardiner-2023","efsa-2015"]},
+    {"en":"Water: about 35 ml/kg a day plus 0.5–1 L per training hour; sweating off more than 2 % of bodyweight costs performance.","ru":"Вода: около 35 мл/кг в день плюс 0,5–1 л на час тренировки; потеря с потом больше 2 % веса снижает работоспособность.","source":["iom-2005-water","sawka-2007"]},
+    {"en":"Alcohol: nothing for about 4 hours after training and no more than 2 drinks at a time; large doses blunt muscle protein synthesis.","ru":"Алкоголь: не раньше чем через ~4 часа после тренировки и не больше 2 порций за раз; большие дозы подавляют синтез мышечного белка.","source":["parr-2014"]},
+    {"en":"Weigh every morning and judge the 1–2-week trend; change intake by 100–150 kcal only after two off-target weeks, and take 1–2 weeks at maintenance after every 6–8 weeks of cutting.","ru":"Взвешивайтесь каждое утро и смотрите на тренд за 1–2 недели; меняйте калорийность на 100–150 ккал, только если две недели подряд темп не тот, а после 6–8 недель дефицита — 1–2 недели на поддержании.","source":["zheng-2015","sbs-macrofactor","peos-2021"]}
+  ],
+  "foodGroups": [
+    {"id":"meat","name":{"en":"Meat","ru":"Мясо"}},
+    {"id":"fish","name":{"en":"Fish & seafood","ru":"Рыба и морепродукты"}},
+    {"id":"dairy","name":{"en":"Eggs & dairy","ru":"Яйца и молочное"}},
+    {"id":"plant","name":{"en":"Plant protein","ru":"Растительный белок"}},
+    {"id":"grains","name":{"en":"Grains & staples","ru":"Крупы и гарниры"}},
+    {"id":"nuts","name":{"en":"Nuts & seeds","ru":"Орехи и семечки"}},
+    {"id":"supplement","name":{"en":"Supplements","ru":"Добавки"}}
+  ],
+  "cuisines": [
+    {"id":"tr","name":{"en":"Turkish","ru":"Турецкое"}},
+    {"id":"jp","name":{"en":"Japanese","ru":"Японское"}},
+    {"id":"ru","name":{"en":"Russian","ru":"Русское"}}
+  ],
+  "foods": [
+    {"id":"chicken-breast","name":{"en":"Chicken breast, skinless, raw","ru":"Куриная грудка без кожи, сырая"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":120,"protein":22.5,"fat":2.6,"carbs":0,"fibre":0},"proteinPer100kcal":18.8,"serving":{"grams":150,"label":{"en":"150 g raw (≈ 110 g cooked)","ru":"150 г сырой (≈ 110 г готовой)"},"kcal":180,"protein":33.8},"source":"USDA FoodData Central, SR Legacy 171077: Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw","ref":"usda-fdc"},
+    {"id":"chicken-breast-cooked","name":{"en":"Chicken breast, roasted","ru":"Куриная грудка, запечённая"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":165,"protein":31,"fat":3.6,"carbs":0,"fibre":0},"proteinPer100kcal":18.8,"serving":{"grams":120,"label":{"en":"120 g cooked","ru":"120 г готовой"},"kcal":198,"protein":37.2},"source":"USDA FoodData Central, SR Legacy 171477: Chicken, broilers or fryers, breast, meat only, cooked, roasted","ref":"usda-fdc"},
+    {"id":"chicken-thigh","name":{"en":"Chicken thigh, skinless, raw","ru":"Куриное бедро без кожи, сырое"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":121,"protein":19.7,"fat":4.1,"carbs":0,"fibre":0},"proteinPer100kcal":16.3,"serving":{"grams":150,"label":{"en":"150 g raw","ru":"150 г сырого"},"kcal":182,"protein":29.6},"source":"USDA FoodData Central, SR Legacy 173627: Chicken, broilers or fryers, dark meat, thigh, meat only, raw","ref":"usda-fdc"},
+    {"id":"turkey-breast","name":{"en":"Turkey breast, skinless, raw","ru":"Грудка индейки без кожи, сырая"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":114,"protein":23.7,"fat":1.5,"carbs":0.1,"fibre":0},"proteinPer100kcal":20.8,"serving":{"grams":150,"label":{"en":"150 g raw","ru":"150 г сырой"},"kcal":171,"protein":35.6},"source":"USDA FoodData Central, SR Legacy 171098: Turkey, whole, breast, meat only, raw","ref":"usda-fdc"},
+    {"id":"beef-sirloin","name":{"en":"Beef, lean sirloin steak, raw","ru":"Говядина, постный стейк (сирлойн), сырая"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":131,"protein":22.1,"fat":4.1,"carbs":0,"fibre":0},"proteinPer100kcal":16.9,"serving":{"grams":150,"label":{"en":"150 g raw steak","ru":"150 г сырого стейка"},"kcal":197,"protein":33.2},"source":"USDA FoodData Central, SR Legacy 174055: Beef, top sirloin, steak, separable lean only, trimmed to 1/8\" fat, all grades, raw","ref":"usda-fdc"},
+    {"id":"beef-mince-90","name":{"en":"Beef mince 90/10, raw","ru":"Говяжий фарш 90/10, сырой"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":176,"protein":20,"fat":10,"carbs":0,"fibre":0},"proteinPer100kcal":11.4,"serving":{"grams":150,"label":{"en":"150 g raw","ru":"150 г сырого"},"kcal":264,"protein":30},"source":"USDA FoodData Central, SR Legacy 174030: Beef, ground, 90% lean meat / 10% fat, raw","ref":"usda-fdc"},
+    {"id":"pork-tenderloin","name":{"en":"Pork tenderloin, lean, raw","ru":"Свиная вырезка, постная, сырая"},"group":"meat","cuisine":null,"unit":"g","per100":{"kcal":109,"protein":21,"fat":2.2,"carbs":0,"fibre":0},"proteinPer100kcal":19.3,"serving":{"grams":150,"label":{"en":"150 g raw","ru":"150 г сырой"},"kcal":164,"protein":31.5},"source":"USDA FoodData Central, SR Legacy 168249: Pork, fresh, loin, tenderloin, separable lean only, raw","ref":"usda-fdc"},
+    {"id":"kofte","name":{"en":"Köfte, grilled (beef/lamb with onion and bread)","ru":"Кёфте на гриле (говядина/баранина с луком и хлебом)"},"group":"meat","cuisine":"tr","unit":"g","per100":{"kcal":235,"protein":18.5,"fat":16,"carbs":4.5,"fibre":0.5},"proteinPer100kcal":7.9,"serving":{"grams":120,"label":{"en":"4 pieces (≈ 120 g)","ru":"4 штуки (≈ 120 г)"},"kcal":282,"protein":22.2},"source":"Estimate, recipe-dependent (±15 %): research 06 food table; cross-check USDA SR Legacy 174032, beef 85 % lean patty, broiled: 250 kcal, 25.9 g protein per 100 g","ref":"estimate"},
+    {"id":"salmon","name":{"en":"Salmon, Atlantic, farmed, raw","ru":"Лосось атлантический (фермерский), сырой"},"group":"fish","cuisine":null,"unit":"g","per100":{"kcal":208,"protein":20.4,"fat":13.4,"carbs":0,"fibre":0},"proteinPer100kcal":9.8,"serving":{"grams":150,"label":{"en":"150 g fillet","ru":"филе 150 г"},"kcal":312,"protein":30.6},"source":"USDA FoodData Central, SR Legacy 175167: Fish, salmon, Atlantic, farmed, raw","ref":"usda-fdc"},
+    {"id":"tuna-canned","name":{"en":"Tuna, light, canned in water, drained","ru":"Тунец светлый в собственном соку, без жидкости"},"group":"fish","cuisine":null,"unit":"g","per100":{"kcal":86,"protein":19.4,"fat":1,"carbs":0,"fibre":0},"proteinPer100kcal":22.6,"serving":{"grams":120,"label":{"en":"1 can, drained (≈ 120 g)","ru":"1 банка без жидкости (≈ 120 г)"},"kcal":103,"protein":23.3},"source":"USDA FoodData Central, SR Legacy 173709: Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)","ref":"usda-fdc"},
+    {"id":"tuna-sashimi","name":{"en":"Tuna (maguro), yellowfin, raw — sashimi","ru":"Тунец (магуро) желтопёрый, сырой — сашими"},"group":"fish","cuisine":"jp","unit":"g","per100":{"kcal":109,"protein":24.4,"fat":0.5,"carbs":0,"fibre":0},"proteinPer100kcal":22.4,"serving":{"grams":100,"label":{"en":"≈ 7 slices of sashimi (100 g)","ru":"≈ 7 ломтиков сашими (100 г)"},"kcal":109,"protein":24.4},"source":"USDA FoodData Central, SR Legacy 175159: Fish, tuna, fresh, yellowfin, raw","ref":"usda-fdc"},
+    {"id":"cod","name":{"en":"Cod, Atlantic, raw","ru":"Треска атлантическая, сырая"},"group":"fish","cuisine":null,"unit":"g","per100":{"kcal":82,"protein":17.8,"fat":0.7,"carbs":0,"fibre":0},"proteinPer100kcal":21.7,"serving":{"grams":150,"label":{"en":"150 g fillet","ru":"филе 150 г"},"kcal":123,"protein":26.7},"source":"USDA FoodData Central, SR Legacy 171955: Fish, cod, Atlantic, raw","ref":"usda-fdc"},
+    {"id":"shrimp","name":{"en":"Shrimp, peeled, raw","ru":"Креветки очищенные, сырые"},"group":"fish","cuisine":null,"unit":"g","per100":{"kcal":85,"protein":20.1,"fat":0.5,"carbs":0,"fibre":0},"proteinPer100kcal":23.6,"serving":{"grams":120,"label":{"en":"120 g peeled","ru":"120 г очищенных"},"kcal":102,"protein":24.1},"source":"USDA FoodData Central, SR Legacy 175179: Crustaceans, shrimp, raw","ref":"usda-fdc"},
+    {"id":"mackerel","name":{"en":"Mackerel (saba), raw","ru":"Скумбрия (саба), сырая"},"group":"fish","cuisine":"jp","unit":"g","per100":{"kcal":211,"protein":20.6,"fat":16.8,"carbs":0.3,"fibre":0},"proteinPer100kcal":9.8,"serving":{"grams":120,"label":{"en":"1 fillet (≈ 120 g)","ru":"1 филе (≈ 120 г)"},"kcal":253,"protein":24.7},"source":"Standard Tables of Food Composition in Japan 2020 (8th ed.), masaba (chub mackerel), raw; USDA SR Legacy 175119, Atlantic mackerel: 205 kcal, 18.6 g protein","ref":"mext-2020"},
+    {"id":"sea-bass-grilled","name":{"en":"Sea bass / sea bream (levrek, çupra), grilled","ru":"Сибас / дорада (леврек, чупра) на гриле"},"group":"fish","cuisine":"tr","unit":"g","per100":{"kcal":124,"protein":23.6,"fat":2.6,"carbs":0,"fibre":0},"proteinPer100kcal":19,"serving":{"grams":150,"label":{"en":"flesh of one ≈ 300 g fish (≈ 150 g)","ru":"мякоть одной рыбы ≈ 300 г (≈ 150 г)"},"kcal":186,"protein":35.4},"source":"USDA FoodData Central, SR Legacy 173694: Fish, sea bass, mixed species, cooked, dry heat","ref":"usda-fdc"},
+    {"id":"sardines-canned","name":{"en":"Sardines, canned in oil, drained","ru":"Сардины в масле, без масла"},"group":"fish","cuisine":null,"unit":"g","per100":{"kcal":208,"protein":24.6,"fat":11.5,"carbs":0,"fibre":0},"proteinPer100kcal":11.8,"serving":{"grams":90,"label":{"en":"1 tin, drained (≈ 90 g)","ru":"1 банка без масла (≈ 90 г)"},"kcal":187,"protein":22.1},"source":"USDA FoodData Central, SR Legacy 175139: Fish, sardine, Atlantic, canned in oil, drained solids with bone","ref":"usda-fdc"},
+    {"id":"hamsi","name":{"en":"Anchovy (hamsi), raw","ru":"Хамса (анчоус), сырая"},"group":"fish","cuisine":"tr","unit":"g","per100":{"kcal":131,"protein":20.4,"fat":4.8,"carbs":0,"fibre":0},"proteinPer100kcal":15.6,"serving":{"grams":150,"label":{"en":"150 g cleaned","ru":"150 г разделанной"},"kcal":197,"protein":30.6},"source":"USDA FoodData Central, SR Legacy 174182: Fish, anchovy, european, raw","ref":"usda-fdc"},
+    {"id":"egg","name":{"en":"Egg, whole","ru":"Яйцо куриное, целое"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":143,"protein":12.6,"fat":9.5,"carbs":0.7,"fibre":0},"proteinPer100kcal":8.8,"serving":{"grams":100,"label":{"en":"2 large eggs (≈ 100 g)","ru":"2 крупных яйца (≈ 100 г)"},"kcal":143,"protein":12.6},"source":"USDA FoodData Central, SR Legacy 171287: Egg, whole, raw, fresh","ref":"usda-fdc"},
+    {"id":"egg-white","name":{"en":"Egg white","ru":"Яичный белок"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":52,"protein":10.9,"fat":0.2,"carbs":0.7,"fibre":0},"proteinPer100kcal":21,"serving":{"grams":132,"label":{"en":"4 large whites (≈ 130 g)","ru":"белки 4 крупных яиц (≈ 130 г)"},"kcal":69,"protein":14.4},"source":"USDA FoodData Central, SR Legacy 172183: Egg, white, raw, fresh","ref":"usda-fdc"},
+    {"id":"greek-yogurt-0","name":{"en":"Greek yogurt, plain, 0 %","ru":"Греческий йогурт без добавок, 0 %"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":59,"protein":10.2,"fat":0.4,"carbs":3.6,"fibre":0},"proteinPer100kcal":17.3,"serving":{"grams":170,"label":{"en":"1 pot (170 g)","ru":"1 стаканчик (170 г)"},"kcal":100,"protein":17.3},"source":"USDA FoodData Central, SR Legacy 170894: Yogurt, Greek, plain, nonfat (Includes foods for USDA's Food Distribution Program)","ref":"usda-fdc"},
+    {"id":"greek-yogurt-5","name":{"en":"Greek yogurt, plain, whole milk (5 %)","ru":"Греческий йогурт из цельного молока (5 %)"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":97,"protein":9,"fat":5,"carbs":4,"fibre":0},"proteinPer100kcal":9.3,"serving":{"grams":170,"label":{"en":"1 pot (170 g)","ru":"1 стаканчик (170 г)"},"kcal":165,"protein":15.3},"source":"USDA FoodData Central, SR Legacy 171304: Yogurt, Greek, plain, whole milk","ref":"usda-fdc"},
+    {"id":"skyr","name":{"en":"Skyr, plain, 0 %","ru":"Скир без добавок, 0 %"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":63,"protein":11,"fat":0.2,"carbs":4,"fibre":0},"proteinPer100kcal":17.5,"serving":{"grams":150,"label":{"en":"1 pot (150 g)","ru":"1 стаканчик (150 г)"},"kcal":95,"protein":16.5},"source":"Typical labels of plain 0 % skyr (±10 %): research 06 food table","ref":"label"},
+    {"id":"cottage-cheese","name":{"en":"Cottage cheese, 2 %","ru":"Зернёный творог, 2 %"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":81,"protein":10.5,"fat":2.3,"carbs":4.8,"fibre":0},"proteinPer100kcal":13,"serving":{"grams":200,"label":{"en":"200 g","ru":"200 г"},"kcal":162,"protein":21},"source":"USDA FoodData Central, SR Legacy 172182: Cheese, cottage, lowfat, 2% milkfat","ref":"usda-fdc"},
+    {"id":"tvorog-5","name":{"en":"Tvorog (quark), 5 %","ru":"Творог 5 %"},"group":"dairy","cuisine":"ru","unit":"g","per100":{"kcal":121,"protein":17.2,"fat":5,"carbs":1.8,"fibre":0},"proteinPer100kcal":14.2,"serving":{"grams":180,"label":{"en":"1 pack (180 g)","ru":"1 пачка (180 г)"},"kcal":218,"protein":31},"source":"Russian food composition tables (Skurikhin & Tutelyan 2002), tvorog 5 %; brands vary ±10 %","ref":"skurikhin-2002"},
+    {"id":"tvorog-9","name":{"en":"Tvorog (quark), 9 %","ru":"Творог 9 %"},"group":"dairy","cuisine":"ru","unit":"g","per100":{"kcal":159,"protein":16.7,"fat":9,"carbs":2,"fibre":0},"proteinPer100kcal":10.5,"serving":{"grams":180,"label":{"en":"1 pack (180 g)","ru":"1 пачка (180 г)"},"kcal":286,"protein":30.1},"source":"Russian food composition tables (Skurikhin & Tutelyan 2002), tvorog 9 %; brands vary ±10 %","ref":"skurikhin-2002"},
+    {"id":"milk","name":{"en":"Milk, 2 %","ru":"Молоко 2 %"},"group":"dairy","cuisine":null,"unit":"ml","per100":{"kcal":50,"protein":3.3,"fat":2,"carbs":4.8,"fibre":0},"proteinPer100kcal":6.6,"serving":{"grams":250,"label":{"en":"1 glass (250 ml)","ru":"1 стакан (250 мл)"},"kcal":125,"protein":8.3},"source":"USDA FoodData Central, SR Legacy 171267: Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D","ref":"usda-fdc"},
+    {"id":"kefir","name":{"en":"Kefir, low-fat, plain","ru":"Кефир нежирный (1 %)"},"group":"dairy","cuisine":"ru","unit":"ml","per100":{"kcal":43,"protein":3.8,"fat":1,"carbs":4.8,"fibre":0},"proteinPer100kcal":8.8,"serving":{"grams":250,"label":{"en":"1 glass (250 ml)","ru":"1 стакан (250 мл)"},"kcal":108,"protein":9.5},"source":"USDA FoodData Central, SR Legacy 170904: Kefir, lowfat, plain, LIFEWAY","ref":"usda-fdc"},
+    {"id":"ayran","name":{"en":"Ayran","ru":"Айран"},"group":"dairy","cuisine":"tr","unit":"ml","per100":{"kcal":37,"protein":1.8,"fat":1.8,"carbs":2.6,"fibre":0},"proteinPer100kcal":4.9,"serving":{"grams":300,"label":{"en":"1 glass (300 ml)","ru":"1 стакан (300 мл)"},"kcal":111,"protein":5.4},"source":"Typical Turkish labels per 100 ml (±15 %): research 06 food table; ≈ whole-milk yogurt (USDA SR Legacy 171284) diluted 1:1","ref":"label"},
+    {"id":"lor","name":{"en":"Lor (Turkish whey cheese)","ru":"Лор (турецкий сывороточный сыр)"},"group":"dairy","cuisine":"tr","unit":"g","per100":{"kcal":98,"protein":12,"fat":4,"carbs":3.5,"fibre":0},"proteinPer100kcal":12.2,"serving":{"grams":100,"label":{"en":"100 g","ru":"100 г"},"kcal":98,"protein":12},"source":"Turkish labels and databases, protein 11–14 g per 100 g (±15 %): research 06 food table","ref":"label"},
+    {"id":"beyaz-peynir","name":{"en":"Beyaz peynir (Turkish white cheese), full-fat","ru":"Беяз пейнир (турецкий белый сыр), жирный"},"group":"dairy","cuisine":"tr","unit":"g","per100":{"kcal":270,"protein":17,"fat":22,"carbs":1.5,"fibre":0},"proteinPer100kcal":6.3,"serving":{"grams":50,"label":{"en":"2 slices (≈ 50 g)","ru":"2 ломтика (≈ 50 г)"},"kcal":135,"protein":8.5},"source":"Typical full-fat labels (±15 %): research 06 food table; TürKomp semi-fat entry 202 kcal, 15.6 g protein; USDA SR Legacy 173420 (feta): 265 kcal, 14.2 g protein","ref":"turkomp"},
+    {"id":"mozzarella","name":{"en":"Mozzarella, part-skim","ru":"Моцарелла пониженной жирности"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":254,"protein":24.3,"fat":15.9,"carbs":2.8,"fibre":0},"proteinPer100kcal":9.6,"serving":{"grams":60,"label":{"en":"½ ball (≈ 60 g)","ru":"½ шарика (≈ 60 г)"},"kcal":152,"protein":14.6},"source":"USDA FoodData Central, SR Legacy 170847: Cheese, mozzarella, part skim milk","ref":"usda-fdc"},
+    {"id":"parmesan","name":{"en":"Parmesan","ru":"Пармезан"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":392,"protein":35.8,"fat":25,"carbs":3.2,"fibre":0},"proteinPer100kcal":9.1,"serving":{"grams":30,"label":{"en":"a 30 g piece","ru":"кусочек 30 г"},"kcal":118,"protein":10.7},"source":"USDA FoodData Central, SR Legacy 170848: Cheese, parmesan, hard","ref":"usda-fdc"},
+    {"id":"gouda","name":{"en":"Gouda","ru":"Гауда"},"group":"dairy","cuisine":null,"unit":"g","per100":{"kcal":356,"protein":24.9,"fat":27.4,"carbs":2.2,"fibre":0},"proteinPer100kcal":7,"serving":{"grams":40,"label":{"en":"2 slices (≈ 40 g)","ru":"2 ломтика (≈ 40 г)"},"kcal":142,"protein":10},"source":"USDA FoodData Central, SR Legacy 171241: Cheese, gouda","ref":"usda-fdc"},
+    {"id":"menemen","name":{"en":"Menemen (eggs with tomato and pepper)","ru":"Менемен (яйца с помидорами и перцем)"},"group":"dairy","cuisine":"tr","unit":"g","per100":{"kcal":97,"protein":5.3,"fat":6.9,"carbs":3.8,"fibre":1.1},"proteinPer100kcal":5.5,"serving":{"grams":200,"label":{"en":"½ of a 3-egg pan (≈ 200 g)","ru":"½ сковороды на 3 яйца (≈ 200 г)"},"kcal":194,"protein":10.6},"source":"Recipe estimate from USDA SR Legacy ingredients: 3 eggs (171287, 150 g), tomatoes (170457, 250 g), green peppers (170427, 100 g), 1 tbsp olive oil (171413, 13.5 g); ≈ 20 % water lost in cooking (410 g)","ref":"usda-fdc"},
+    {"id":"tofu","name":{"en":"Tofu, firm","ru":"Тофу плотный"},"group":"plant","cuisine":"jp","unit":"g","per100":{"kcal":85,"protein":10.9,"fat":4.2,"carbs":1,"fibre":0.9},"proteinPer100kcal":12.8,"serving":{"grams":150,"label":{"en":"150 g","ru":"150 г"},"kcal":128,"protein":16.4},"source":"USDA FoodData Central, SR Legacy 173788: HOUSE FOODS Premium Firm Tofu","ref":"usda-fdc"},
+    {"id":"tempeh","name":{"en":"Tempeh","ru":"Темпе"},"group":"plant","cuisine":null,"unit":"g","per100":{"kcal":192,"protein":20.3,"fat":10.8,"carbs":7.6,"fibre":null},"proteinPer100kcal":10.6,"serving":{"grams":100,"label":{"en":"100 g","ru":"100 г"},"kcal":192,"protein":20.3},"source":"USDA FoodData Central, SR Legacy 174272: Tempeh (fibre not reported)","ref":"usda-fdc"},
+    {"id":"edamame","name":{"en":"Edamame, shelled, cooked","ru":"Эдамаме очищенные, варёные"},"group":"plant","cuisine":"jp","unit":"g","per100":{"kcal":121,"protein":11.9,"fat":5.2,"carbs":8.9,"fibre":5.2},"proteinPer100kcal":9.8,"serving":{"grams":100,"label":{"en":"100 g shelled","ru":"100 г очищенных"},"kcal":121,"protein":11.9},"source":"USDA FoodData Central, SR Legacy 168411: Edamame, frozen, prepared","ref":"usda-fdc"},
+    {"id":"natto","name":{"en":"Natto","ru":"Натто"},"group":"plant","cuisine":"jp","unit":"g","per100":{"kcal":190,"protein":16.5,"fat":10,"carbs":12.1,"fibre":6.7},"proteinPer100kcal":8.7,"serving":{"grams":45,"label":{"en":"1 pack (45 g)","ru":"1 упаковка (45 г)"},"kcal":86,"protein":7.4},"source":"Standard Tables of Food Composition in Japan 2020 (8th ed.), itohiki natto; USDA SR Legacy 172443: 211 kcal, 19.4 g protein","ref":"mext-2020"},
+    {"id":"lentils","name":{"en":"Lentils, cooked","ru":"Чечевица варёная"},"group":"plant","cuisine":null,"unit":"g","per100":{"kcal":116,"protein":9,"fat":0.4,"carbs":20.1,"fibre":7.9},"proteinPer100kcal":7.8,"serving":{"grams":200,"label":{"en":"200 g cooked (≈ 1 cup)","ru":"200 г варёной (≈ 1 стакан)"},"kcal":232,"protein":18},"source":"USDA FoodData Central, SR Legacy 172421: Lentils, mature seeds, cooked, boiled, without salt","ref":"usda-fdc"},
+    {"id":"chickpeas","name":{"en":"Chickpeas, cooked","ru":"Нут варёный"},"group":"plant","cuisine":null,"unit":"g","per100":{"kcal":164,"protein":8.9,"fat":2.6,"carbs":27.4,"fibre":7.6},"proteinPer100kcal":5.4,"serving":{"grams":150,"label":{"en":"150 g cooked","ru":"150 г варёного"},"kcal":246,"protein":13.4},"source":"USDA FoodData Central, SR Legacy 173757: Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt","ref":"usda-fdc"},
+    {"id":"black-beans","name":{"en":"Black beans, cooked","ru":"Фасоль чёрная, варёная"},"group":"plant","cuisine":null,"unit":"g","per100":{"kcal":132,"protein":8.9,"fat":0.5,"carbs":23.7,"fibre":8.7},"proteinPer100kcal":6.7,"serving":{"grams":150,"label":{"en":"150 g cooked","ru":"150 г варёной"},"kcal":198,"protein":13.4},"source":"USDA FoodData Central, SR Legacy 173735: Beans, black, mature seeds, cooked, boiled, without salt","ref":"usda-fdc"},
+    {"id":"seitan","name":{"en":"Seitan (wheat gluten)","ru":"Сейтан (пшеничный белок)"},"group":"plant","cuisine":null,"unit":"g","per100":{"kcal":140,"protein":24,"fat":2,"carbs":6,"fibre":null},"proteinPer100kcal":17.1,"serving":{"grams":100,"label":{"en":"100 g","ru":"100 г"},"kcal":140,"protein":24},"source":"Typical labels, protein 20–30 g per 100 g (±15 %): research 06 food table","ref":"label"},
+    {"id":"soy-milk","name":{"en":"Soy milk, unsweetened","ru":"Соевое молоко без сахара"},"group":"plant","cuisine":null,"unit":"ml","per100":{"kcal":33,"protein":2.9,"fat":1.6,"carbs":1.7,"fibre":0.5},"proteinPer100kcal":8.8,"serving":{"grams":250,"label":{"en":"1 glass (250 ml)","ru":"1 стакан (250 мл)"},"kcal":83,"protein":7.3},"source":"USDA FoodData Central, SR Legacy 175215: Soymilk (all flavors), unsweetened, with added calcium, vitamins A and D","ref":"usda-fdc"},
+    {"id":"hummus","name":{"en":"Hummus","ru":"Хумус"},"group":"plant","cuisine":null,"unit":"g","per100":{"kcal":237,"protein":7.8,"fat":17.8,"carbs":15,"fibre":5.5},"proteinPer100kcal":3.3,"serving":{"grams":60,"label":{"en":"4 tbsp (≈ 60 g)","ru":"4 ст. ложки (≈ 60 г)"},"kcal":142,"protein":4.7},"source":"USDA FoodData Central, SR Legacy 174289: Hummus, commercial","ref":"usda-fdc"},
+    {"id":"mercimek","name":{"en":"Mercimek çorbası (red lentil soup)","ru":"Мерджимек чорбасы (суп из красной чечевицы)"},"group":"plant","cuisine":"tr","unit":"ml","per100":{"kcal":51,"protein":2.5,"fat":1.5,"carbs":7.2,"fibre":1.3},"proteinPer100kcal":4.9,"serving":{"grams":300,"label":{"en":"1 bowl (300 ml)","ru":"1 тарелка (300 мл)"},"kcal":153,"protein":7.5},"source":"Recipe estimate from USDA SR Legacy ingredients: red lentils (174284, 200 g dry), onion (170000, 100 g), carrot (170393, 60 g), olive oil (171413, 25 g), tomato paste (170459, 15 g), water to 2 L; recipes vary ±20 %","ref":"usda-fdc"},
+    {"id":"oats","name":{"en":"Oats, rolled, dry","ru":"Овсяные хлопья, сухие"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":379,"protein":13.2,"fat":6.5,"carbs":67.7,"fibre":10.1},"proteinPer100kcal":3.5,"serving":{"grams":50,"label":{"en":"50 g dry (a bowl of porridge)","ru":"50 г сухих (тарелка каши)"},"kcal":190,"protein":6.6},"source":"USDA FoodData Central, SR Legacy 173904: Cereals, oats, regular and quick, not fortified, dry","ref":"usda-fdc"},
+    {"id":"rice","name":{"en":"Rice, white, cooked","ru":"Рис белый, варёный"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":130,"protein":2.7,"fat":0.3,"carbs":28.2,"fibre":0.4},"proteinPer100kcal":2.1,"serving":{"grams":150,"label":{"en":"150 g cooked","ru":"150 г варёного"},"kcal":195,"protein":4.1},"source":"USDA FoodData Central, SR Legacy 168878: Rice, white, long-grain, regular, enriched, cooked","ref":"usda-fdc"},
+    {"id":"bread-wholewheat","name":{"en":"Bread, whole-wheat","ru":"Хлеб цельнозерновой"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":252,"protein":12.5,"fat":3.5,"carbs":42.7,"fibre":6},"proteinPer100kcal":5,"serving":{"grams":60,"label":{"en":"2 slices (≈ 60 g)","ru":"2 ломтика (≈ 60 г)"},"kcal":151,"protein":7.5},"source":"USDA FoodData Central, SR Legacy 172688: Bread, whole-wheat, commercially prepared","ref":"usda-fdc"},
+    {"id":"bread-white","name":{"en":"Bread, white","ru":"Хлеб белый"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":266,"protein":8.9,"fat":3.3,"carbs":49.4,"fibre":2.7},"proteinPer100kcal":3.3,"serving":{"grams":60,"label":{"en":"2 slices (≈ 60 g)","ru":"2 ломтика (≈ 60 г)"},"kcal":160,"protein":5.3},"source":"USDA FoodData Central, SR Legacy 174924: Bread, white, commercially prepared (includes soft bread crumbs)","ref":"usda-fdc"},
+    {"id":"bulgur","name":{"en":"Bulgur, cooked","ru":"Булгур варёный"},"group":"grains","cuisine":"tr","unit":"g","per100":{"kcal":83,"protein":3.1,"fat":0.2,"carbs":18.6,"fibre":4.5},"proteinPer100kcal":3.7,"serving":{"grams":150,"label":{"en":"150 g cooked (a side of pilav)","ru":"150 г варёного (гарнир, пилав)"},"kcal":125,"protein":4.7},"source":"USDA FoodData Central, SR Legacy 170287: Bulgur, cooked","ref":"usda-fdc"},
+    {"id":"buckwheat","name":{"en":"Buckwheat (grechka), cooked","ru":"Гречка варёная"},"group":"grains","cuisine":"ru","unit":"g","per100":{"kcal":92,"protein":3.4,"fat":0.6,"carbs":19.9,"fibre":2.7},"proteinPer100kcal":3.7,"serving":{"grams":150,"label":{"en":"150 g cooked","ru":"150 г варёной"},"kcal":138,"protein":5.1},"source":"USDA FoodData Central, SR Legacy 170686: Buckwheat groats, roasted, cooked","ref":"usda-fdc"},
+    {"id":"potatoes","name":{"en":"Potatoes, boiled, peeled","ru":"Картофель отварной, без кожуры"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":86,"protein":1.7,"fat":0.1,"carbs":20,"fibre":1.8},"proteinPer100kcal":2,"serving":{"grams":200,"label":{"en":"2 medium potatoes (≈ 200 g)","ru":"2 средние картофелины (≈ 200 г)"},"kcal":172,"protein":3.4},"source":"USDA FoodData Central, SR Legacy 170440: Potatoes, boiled, cooked without skin, flesh, without salt","ref":"usda-fdc"},
+    {"id":"pasta","name":{"en":"Pasta, cooked","ru":"Макароны варёные"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":158,"protein":5.8,"fat":0.9,"carbs":30.9,"fibre":1.8},"proteinPer100kcal":3.7,"serving":{"grams":180,"label":{"en":"180 g cooked (≈ 80 g dry)","ru":"180 г варёных (≈ 80 г сухих)"},"kcal":284,"protein":10.4},"source":"USDA FoodData Central, SR Legacy 169737: Pasta, cooked, enriched, without added salt","ref":"usda-fdc"},
+    {"id":"quinoa","name":{"en":"Quinoa, cooked","ru":"Киноа варёная"},"group":"grains","cuisine":null,"unit":"g","per100":{"kcal":120,"protein":4.4,"fat":1.9,"carbs":21.3,"fibre":2.8},"proteinPer100kcal":3.7,"serving":{"grams":150,"label":{"en":"150 g cooked","ru":"150 г варёной"},"kcal":180,"protein":6.6},"source":"USDA FoodData Central, SR Legacy 168917: Quinoa, cooked","ref":"usda-fdc"},
+    {"id":"soba","name":{"en":"Soba noodles, cooked","ru":"Лапша соба, варёная"},"group":"grains","cuisine":"jp","unit":"g","per100":{"kcal":99,"protein":5.1,"fat":0.1,"carbs":21.4,"fibre":null},"proteinPer100kcal":5.2,"serving":{"grams":200,"label":{"en":"1 bowl (≈ 200 g cooked)","ru":"1 порция (≈ 200 г варёной)"},"kcal":198,"protein":10.2},"source":"USDA FoodData Central, SR Legacy 168907: Noodles, japanese, soba, cooked (fibre not reported)","ref":"usda-fdc"},
+    {"id":"almonds","name":{"en":"Almonds","ru":"Миндаль"},"group":"nuts","cuisine":null,"unit":"g","per100":{"kcal":579,"protein":21.2,"fat":49.9,"carbs":21.6,"fibre":12.5},"proteinPer100kcal":3.7,"serving":{"grams":30,"label":{"en":"a handful (30 g)","ru":"горсть (30 г)"},"kcal":174,"protein":6.4},"source":"USDA FoodData Central, SR Legacy 170567: Nuts, almonds","ref":"usda-fdc"},
+    {"id":"peanut-butter","name":{"en":"Peanut butter","ru":"Арахисовая паста"},"group":"nuts","cuisine":null,"unit":"g","per100":{"kcal":598,"protein":22.2,"fat":51.4,"carbs":22.3,"fibre":5},"proteinPer100kcal":3.7,"serving":{"grams":32,"label":{"en":"2 tbsp (32 g)","ru":"2 ст. ложки (32 г)"},"kcal":191,"protein":7.1},"source":"USDA FoodData Central, SR Legacy 172470: Peanut butter, smooth style, without salt","ref":"usda-fdc"},
+    {"id":"pumpkin-seeds","name":{"en":"Pumpkin seeds, shelled","ru":"Тыквенные семечки, очищенные"},"group":"nuts","cuisine":null,"unit":"g","per100":{"kcal":559,"protein":30.2,"fat":49.1,"carbs":10.7,"fibre":6},"proteinPer100kcal":5.4,"serving":{"grams":30,"label":{"en":"a handful (30 g)","ru":"горсть (30 г)"},"kcal":168,"protein":9.1},"source":"USDA FoodData Central, SR Legacy 170556: Seeds, pumpkin and squash seed kernels, dried","ref":"usda-fdc"},
+    {"id":"whey","name":{"en":"Whey protein powder","ru":"Сывороточный протеин (порошок)"},"group":"supplement","cuisine":null,"unit":"g","per100":{"kcal":380,"protein":80,"fat":4,"carbs":6,"fibre":0},"proteinPer100kcal":21.1,"serving":{"grams":30,"label":{"en":"1 scoop (30 g)","ru":"1 мерная ложка (30 г)"},"kcal":114,"protein":24},"source":"Typical labels of concentrate/isolate blends (isolates 85–90 g protein per 100 g): research 06 food table","ref":"label"}
+  ],
+  "sources": [
+    {"id":"mifflin-1990","text":"Mifflin MD, St Jeor ST, Hill LA, et al. A new predictive equation for resting energy expenditure in healthy individuals. Am J Clin Nutr 51(2):241–247 (1990).","url":"https://pubmed.ncbi.nlm.nih.gov/2305711/"},
+    {"id":"frankenfield-2005","text":"Frankenfield D, Roth-Yousey L, Compher C. Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults: a systematic review. J Am Diet Assoc 105(5):775–789 (2005).","url":"https://pubmed.ncbi.nlm.nih.gov/15883556/"},
+    {"id":"cunningham-1980","text":"Cunningham JJ. Body composition as a determinant of energy expenditure: a synthetic review and a proposed general prediction equation (370 + 21.6 × fat-free mass, the Katch–McArdle form). Am J Clin Nutr 54(6):963–969 (1991).","url":"https://doi.org/10.1093/ajcn/54.6.963"},
+    {"id":"hall-2008","text":"Hall KD. What is the required energy deficit per unit weight loss? Int J Obes 32(3):573–576 (2008).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC2376744/"},
+    {"id":"rosenbaum-2010","text":"Rosenbaum M, Leibel RL. Adaptive thermogenesis in humans. Int J Obes 34(Suppl 1):S47–S55 (2010).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC3673773/"},
+    {"id":"sbs-macrofactor","text":"Nuckols G / Stronger by Science. MacroFactor's algorithms and core philosophy: adaptive expenditure from logged intake and trend weight (2021, updated).","url":"https://www.strongerbyscience.com/macrofactor-algorithms-philosophy/"},
+    {"id":"morton-2018","text":"Morton RW, Murphy KT, McKellar SR, et al. A systematic review, meta-analysis and meta-regression of the effect of protein supplementation on resistance training-induced gains in muscle mass and strength in healthy adults. Br J Sports Med 52:376–384 (2018).","url":"https://bjsm.bmj.com/content/52/6/376"},
+    {"id":"helms-2014","text":"Helms ER, Zinn C, Rowlands DS, Brown SR. A systematic review of dietary protein during caloric restriction in resistance trained lean athletes: a case for higher intakes. Int J Sport Nutr Exerc Metab 24(2):127–138 (2014).","url":"https://pubmed.ncbi.nlm.nih.gov/24092765/"},
+    {"id":"refalo-2025","text":"Refalo MC, Trexler ET, Helms ER. Effect of dietary protein on fat-free mass in energy restricted, resistance-trained individuals: an updated systematic review with meta-regression. Strength Cond J (2025).","url":"https://journals.lww.com/nsca-scj/fulltext/9900/effect_of_dietary_protein_on_fat_free_mass_in.179.aspx"},
+    {"id":"longland-2016","text":"Longland TM, Oikawa SY, Mitchell CJ, Devries MC, Phillips SM. Higher compared with lower dietary protein during an energy deficit combined with intense exercise promotes greater lean mass gain and fat mass loss: a randomized trial. Am J Clin Nutr 103(3):738–746 (2016).","url":"https://pubmed.ncbi.nlm.nih.gov/26817506/"},
+    {"id":"antonio-2016","text":"Antonio J, Ellerbroek A, Silver T, et al. A high protein diet has no harmful effects: a one-year crossover study in resistance-trained males. J Nutr Metab 2016:9104792 (2016).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5078648/"},
+    {"id":"jager-2017","text":"Jäger R, Kerksick CM, Campbell BI, et al. International Society of Sports Nutrition position stand: protein and exercise. J Int Soc Sports Nutr 14:20 (2017).","url":"https://doi.org/10.1186/s12970-017-0177-8"},
+    {"id":"thomas-2016","text":"Thomas DT, Erdman KA, Burke LM. American College of Sports Medicine joint position statement: nutrition and athletic performance. Med Sci Sports Exerc 48(3):543–568 (2016).","url":"https://doi.org/10.1249/MSS.0000000000000852"},
+    {"id":"schoenfeld-aragon-2018","text":"Schoenfeld BJ, Aragon AA. How much protein can the body use in a single meal for muscle-building? Implications for daily protein distribution. J Int Soc Sports Nutr 15:10 (2018).","url":"https://jissn.biomedcentral.com/articles/10.1186/s12970-018-0215-1"},
+    {"id":"trommelen-2023","text":"Trommelen J, van Lieshout GAA, Nyakayiru J, et al. The anabolic response to protein ingestion during recovery from exercise has no upper limit in magnitude and duration in vivo in humans. Cell Rep Med 4(12):101324 (2023).","url":"https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(23)00540-2"},
+    {"id":"kerksick-2017","text":"Kerksick CM, Arent S, Schoenfeld BJ, et al. International Society of Sports Nutrition position stand: nutrient timing. J Int Soc Sports Nutr 14:33 (2017).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5596471/"},
+    {"id":"murphy-koehler-2022","text":"Murphy C, Koehler K. Energy deficiency impairs resistance training gains in lean mass but not strength: a meta-analysis and meta-regression. Scand J Med Sci Sports 32(1):125–137 (2022).","url":"https://onlinelibrary.wiley.com/doi/10.1111/sms.14075"},
+    {"id":"garthe-2011","text":"Garthe I, Raastad T, Refsnes PE, Koivisto A, Sundgot-Borgen J. Effect of two different weight-loss rates on body composition and strength and power-related performance in elite athletes. Int J Sport Nutr Exerc Metab 21(2):97–104 (2011).","url":"https://journals.humankinetics.com/view/journals/ijsnem/21/2/article-p97.xml"},
+    {"id":"iraki-2019","text":"Iraki J, Fitschen P, Espinar S, Helms E. Nutrition recommendations for bodybuilders in the off-season: a narrative review. Sports 7(7):154 (2019).","url":"https://doi.org/10.3390/sports7070154"},
+    {"id":"helms-2023","text":"Helms ER, Spence A-J, Sousa C, et al. Effect of small and large energy surpluses on strength, muscle, and skinfold thickness in resistance-trained individuals: a parallel groups design. Sports Med Open 9:102 (2023).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC10620361/"},
+    {"id":"barakat-2020","text":"Barakat C, Pearson J, Escalante G, Campbell B, De Souza EO. Body recomposition: can trained individuals build muscle and lose fat at the same time? Strength Cond J 42(5):7–21 (2020).","url":"https://doi.org/10.1519/SSC.0000000000000584"},
+    {"id":"whittaker-2021","text":"Whittaker J, Wu K. Low-fat diets and testosterone in men: systematic review and meta-analysis of intervention studies. J Steroid Biochem Mol Biol 210:105878 (2021).","url":"https://doi.org/10.1016/j.jsbmb.2021.105878"},
+    {"id":"henselmans-2022","text":"Henselmans M, Bjørnsen T, Hedderman R, Vårvik FT. The effect of carbohydrate intake on strength and resistance training performance: a systematic review. Nutrients 14(4):856 (2022).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC8878406/"},
+    {"id":"iom-2005-macro","text":"Institute of Medicine. Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids. National Academies Press (2005).","url":"https://nap.nationalacademies.org/catalog/10490"},
+    {"id":"kreider-2017","text":"Kreider RB, Kalman DS, Antonio J, et al. International Society of Sports Nutrition position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine. J Int Soc Sports Nutr 14:18 (2017).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5469049/"},
+    {"id":"guest-2021","text":"Guest NS, VanDusseldorp TA, Nelson MT, et al. International Society of Sports Nutrition position stand: caffeine and exercise performance. J Int Soc Sports Nutr 18:1 (2021).","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7777221/"},
+    {"id":"gardiner-2023","text":"Gardiner C, Weakley J, Burke LM, et al. The effect of caffeine on subsequent sleep: a systematic review and meta-analysis. Sleep Med Rev 69:101764 (2023).","url":"https://doi.org/10.1016/j.smrv.2023.101764"},
+    {"id":"efsa-2015","text":"EFSA Panel on Dietetic Products, Nutrition and Allergies. Scientific opinion on the safety of caffeine. EFSA Journal 13(5):4102 (2015).","url":"https://doi.org/10.2903/j.efsa.2015.4102"},
+    {"id":"iom-2005-water","text":"Institute of Medicine. Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate. National Academies Press (2005).","url":"https://nap.nationalacademies.org/catalog/10925"},
+    {"id":"sawka-2007","text":"Sawka MN, Burke LM, Eichner ER, et al. American College of Sports Medicine position stand: exercise and fluid replacement. Med Sci Sports Exerc 39(2):377–390 (2007).","url":"https://pubmed.ncbi.nlm.nih.gov/17277604/"},
+    {"id":"parr-2014","text":"Parr EB, Camera DM, Areta JL, et al. Alcohol ingestion impairs maximal post-exercise rates of myofibrillar protein synthesis following a single bout of concurrent training. PLoS ONE 9(2):e88384 (2014).","url":"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0088384"},
+    {"id":"zheng-2015","text":"Zheng Y, Klem ML, Sereika SM, et al. Self-weighing in weight management: a systematic literature review. Obesity 23(2):256–265 (2015).","url":"https://onlinelibrary.wiley.com/doi/full/10.1002/oby.20946"},
+    {"id":"peos-2021","text":"Peos JJ, Helms ER, Fournier PA, et al. Continuous versus intermittent dieting for fat loss and fat-free mass retention in resistance-trained adults: the ICECAP trial. Med Sci Sports Exerc 53(8):1685–1698 (2021).","url":"https://research-repository.uwa.edu.au/en/publications/continuous-versus-intermittent-dieting-for-fat-loss-and-fat-free-"},
+    {"id":"tanaka-2001","text":"Tanaka H, Monahan KD, Seals DR. Age-predicted maximal heart rate revisited. J Am Coll Cardiol 37(1):153–156 (2001).","url":"https://doi.org/10.1016/S0735-1097(00)01054-8"},
+    {"id":"karvonen-1957","text":"Karvonen MJ, Kentala E, Mustala O. The effects of training on heart rate; a longitudinal study. Ann Med Exp Biol Fenn 35(3):307–315 (1957).","url":"https://pubmed.ncbi.nlm.nih.gov/13470504/"},
+    {"id":"garber-2011","text":"Garber CE, Blissmer B, Deschenes MR, et al. American College of Sports Medicine position stand. Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness in apparently healthy adults. Med Sci Sports Exerc 43(7):1334–1359 (2011).","url":"https://doi.org/10.1249/MSS.0b013e318213fefb"},
+    {"id":"foster-2008","text":"Foster C, Porcari JP, Anderson J, et al. The talk test as a marker of exercise training intensity. J Cardiopulm Rehabil Prev 28(1):24–30 (2008).","url":"https://doi.org/10.1097/01.HCR.0000311504.41775.78"},
+    {"id":"persinger-2004","text":"Persinger R, Foster C, Gibson M, Fater DC, Porcari JP. Consistency of the talk test for exercise prescription. Med Sci Sports Exerc 36(9):1632–1636 (2004).","url":"https://pubmed.ncbi.nlm.nih.gov/15354048/"},
+    {"id":"iannetta-2020","text":"Iannetta D, Inglis EC, Mattu AT, et al. A critical evaluation of current methods for exercise prescription in women and men. Med Sci Sports Exerc 52(2):466–473 (2020).","url":"https://doi.org/10.1249/MSS.0000000000002147"},
+    {"id":"cooper-1968","text":"Cooper KH. A means of assessing maximal oxygen intake: correlation between field and treadmill testing. JAMA 203(3):201–204 (1968).","url":"https://doi.org/10.1001/jama.1968.03140030033008"},
+    {"id":"uth-2004","text":"Uth N, Sørensen H, Overgaard K, Pedersen PK. Estimation of VO2max from the ratio between HRmax and HRrest — the Heart Rate Ratio Method. Eur J Appl Physiol 91(1):111–115 (2004).","url":"https://doi.org/10.1007/s00421-003-0988-y"},
+    {"id":"kodama-2009","text":"Kodama S, Saito K, Tanaka S, et al. Cardiorespiratory fitness as a quantitative predictor of all-cause mortality and cardiovascular events in healthy men and women: a meta-analysis. JAMA 301(19):2024–2035 (2009).","url":"https://doi.org/10.1001/jama.2009.681"},
+    {"id":"mandsager-2018","text":"Mandsager K, Harb S, Cremer P, et al. Association of cardiorespiratory fitness with long-term mortality among adults undergoing exercise treadmill testing. JAMA Netw Open 1(6):e183605 (2018).","url":"https://doi.org/10.1001/jamanetworkopen.2018.3605"},
+    {"id":"usda-fdc","text":"USDA Agricultural Research Service. FoodData Central, SR Legacy (April 2018 release); values per 100 g, FDC id per food.","url":"https://fdc.nal.usda.gov/"},
+    {"id":"mext-2020","text":"MEXT (Japan). Standard Tables of Food Composition in Japan 2020 (Eighth Revised Edition).","url":"https://www.mext.go.jp/en/policy/science_technology/policy/title01/detail01/1374030.htm"},
+    {"id":"turkomp","text":"TürKomp — Turkish National Food Composition Database, Ministry of Agriculture and Forestry.","url":"https://turkomp.tarimorman.gov.tr/"},
+    {"id":"skurikhin-2002","text":"Skurikhin IM, Tutelyan VA (eds). Khimicheskiy sostav rossiyskikh pishchevykh produktov [Chemical composition of Russian food products]. Moscow: DeLi print (2002).","url":null},
+    {"id":"label","text":"Typical manufacturer labels (values vary by brand, about ±10–15 %); see each food's note.","url":null},
+    {"id":"estimate","text":"Recipe-dependent estimate (about ±15 %); see the food's note for the cross-check.","url":null}
+  ]
+}

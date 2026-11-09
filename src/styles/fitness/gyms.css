@@ -1,0 +1,145 @@
+/* fitness: gyms stream — owned by plans/fitness/05-gym-profiles.md. Phone first (360–430 px): one column, rows and
+   chips >= 44 px, 16 px inputs (no iOS zoom), long names wrap so nothing scrolls sideways. Colours only through the
+   food.css tokens (dark mode); shared .fit-card / .fit-button / .fit-seg / .fit-note come from fitness.css. This file is
+   @imported BEFORE those shared rules, so an override of a shared class needs a more specific selector. */
+
+.fit-gyms { display: grid; gap: 20px; max-width: 860px; }
+.fit-gyms h2 { margin: 0; overflow-wrap: anywhere; }
+.fit-gym-hint { margin: 0; color: var(--muted); font-size: .9rem; }
+.fit-gym-summary { margin: 0; font-weight: 600; }
+
+/* ---------- gym list + create */
+.fit-gym-list { display: grid; gap: 12px; }
+.fit-gym-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.fit-gym-card {
+  display: grid; gap: 4px; width: 100%; min-height: 60px; padding: 10px 14px; border: 1px solid var(--line);
+  border-radius: 14px; background: var(--surface); color: var(--ink); font: inherit; text-align: left; cursor: pointer;
+  box-shadow: var(--shadow); touch-action: manipulation;
+}
+.fit-gym-card:hover { border-color: var(--accent); }
+.fit-gym-card[aria-current="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent), var(--shadow); }
+.fit-gym-card[data-active="true"] { border-left: 5px solid var(--accent); padding-left: 10px; }
+.fit-gym-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.fit-gym-card-name { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-weight: 700; overflow-wrap: anywhere; }
+.fit-gym-card-meta { color: var(--muted); font-size: .85rem; }
+.fit-gym-badge {
+  display: inline-flex; align-items: center; min-height: 22px; padding: 1px 9px; border-radius: 999px;
+  background: var(--accent); color: var(--on-accent); font: 700 .75rem var(--sans); letter-spacing: .02em;
+}
+.fit-gym-add { justify-self: start; }
+.fit-gym-form { display: grid; gap: 10px; }
+.fit-gym-field { display: grid; gap: 6px; min-width: 0; }
+.fit-gym-field > span { font: 600 .88rem var(--sans); color: var(--muted); }
+.fit-gym-field input, .fit-gym-search, .fit-gym-notes {
+  width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--surface); color: var(--ink); font: 16px/1.4 var(--sans);
+}
+.fit-gym-field input:focus-visible, .fit-gym-search:focus-visible, .fit-gym-notes:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-gym-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 420px) { .fit-gym-actions .fit-button { flex: 1 1 8rem; } }
+
+/* ---------- editor */
+.fit-card.fit-gym-editor { display: grid; gap: 24px; padding: 16px 14px; }
+@media (min-width: 640px) { .fit-card.fit-gym-editor { padding: 20px 22px; } }
+.fit-gym-jump { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; margin-top: -12px; font-weight: 600; }
+.fit-gym-head { display: grid; gap: 10px; }
+.fit-gym-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.fit-gym-link {
+  min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--accent); font: 600 .92rem var(--sans);
+  text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
+}
+.fit-gym-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-gym-active { margin: 0; color: var(--ok); font-weight: 600; font-size: .95rem; }
+.fit-gym-use { justify-self: start; }
+@media (max-width: 420px) { .fit-gym-use { justify-self: stretch; } }
+.fit-gym-block { display: grid; gap: 10px; min-width: 0; }
+.fit-gym-block h3 { margin: 0; font-size: 1.2rem; }
+.fit-gym-block h4 { margin: 0; font: 700 1rem/1.3 var(--sans); }
+
+/* ---------- quick setup: green tick = here, orange cross = not here (same language as the machine chips) */
+.fit-gym-types button { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+.fit-seg.fit-gym-types button[aria-pressed="true"] { border-color: var(--ok); background: var(--surface); color: var(--ok); box-shadow: none; }
+.fit-seg.fit-gym-types button[aria-pressed="false"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.fit-gym-tick { font-weight: 700; }
+.fit-gyms .fit-seg button:disabled { cursor: default; }
+.fit-gyms .fit-seg button:disabled:hover { border-color: var(--line); }
+.fit-gyms .fit-seg button[aria-pressed="true"]:disabled:hover { border-color: var(--accent); }
+
+/* ---------- equipment list */
+.fit-gym-group { display: grid; min-width: 0; }
+.fit-gym-group-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px;
+  border-bottom: 2px solid var(--line);
+}
+.fit-gym-count { color: var(--muted); font-weight: 500; font-size: .85rem; }
+.fit-gym-more {
+  flex: none; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--ink); font: 600 .85rem var(--sans); cursor: pointer; touch-action: manipulation;
+}
+.fit-gym-more:hover { border-color: var(--accent); }
+.fit-gym-more[aria-expanded="true"] { background: var(--surface-2); }
+.fit-gym-change {
+  flex: none; min-height: 44px; padding: 0 6px; border: 0; background: none; color: var(--accent);
+  font: 600 .88rem var(--sans); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; touch-action: manipulation;
+}
+.fit-gym-change[aria-expanded="true"] { text-decoration: none; }
+.fit-gym-more:focus-visible, .fit-gym-change:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-gym-eq h5 { margin: 12px 0 0; font: 700 .76rem var(--sans); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.fit-gym-rows { margin: 0; padding: 0; list-style: none; }
+.fit-gym-row { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.fit-gym-row-text { display: grid; gap: 2px; flex: 1 1 auto; min-width: 0; }
+.fit-gym-row-name { font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.fit-gym-row-meta { color: var(--muted); font-size: .8rem; line-height: 1.3; overflow-wrap: anywhere; }
+.fit-gym-row[data-state="missing"] .fit-gym-row-name { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent); }
+.fit-gym-chip {
+  flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 6.9rem;
+  min-height: 44px; padding: 6px 12px; border: 1.5px solid var(--line); border-radius: 999px; background: var(--surface);
+  color: var(--ink); font: 700 .9rem var(--sans); cursor: pointer; touch-action: manipulation; white-space: nowrap;
+}
+.fit-gym-chip[data-state="here"] { border-color: var(--ok); color: var(--ok); }
+.fit-gym-chip[data-state="missing"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.fit-gym-chip[data-state="unknown"] { border-style: dashed; background: var(--surface-2); color: var(--muted); }
+.fit-gym-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.fit-gym-chip:disabled { cursor: default; }
+.fit-gym-mode { display: grid; gap: 8px; padding-top: 12px; border-top: 1px dashed var(--line); }
+
+/* ---------- plan at this gym + preferences */
+.fit-gym-day { display: grid; gap: 2px; }
+.fit-gym-day h4 { padding-top: 6px; }
+.fit-gym-slots { margin: 0; padding: 0; list-style: none; }
+.fit-gym-slot { border-bottom: 1px solid var(--line); }
+.fit-gym-slot-line { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 4px 0; }
+.fit-gym-slot-id {
+  flex: none; min-width: 2.5em; padding: 4px 6px; border-radius: 8px; background: var(--surface-2); color: var(--muted);
+  font: 700 .82rem var(--sans); text-align: center;
+}
+.fit-gym-slot[data-status="swapped"] .fit-gym-slot-id, .fit-gym-slot[data-status="stuck"] .fit-gym-slot-id { background: var(--accent-soft); color: var(--accent); }
+.fit-gym-slot[data-status="preferred"] .fit-gym-slot-id { background: var(--cool-soft); color: var(--cool); }
+.fit-gym-slot-text { display: grid; gap: 2px; flex: 1 1 auto; min-width: 0; }
+.fit-gym-slot-name { font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.fit-gym-slot-note { color: var(--muted); font-size: .82rem; line-height: 1.3; overflow-wrap: anywhere; }
+.fit-gym-slot[data-status="swapped"] .fit-gym-slot-note, .fit-gym-slot[data-status="stuck"] .fit-gym-slot-note { color: var(--accent); }
+.fit-gym-slot[data-status="preferred"] .fit-gym-slot-note { color: var(--cool); }
+.fit-gym-choices { display: grid; gap: 8px; padding: 4px 0 12px; }
+.fit-seg.fit-gym-options { display: grid; gap: 8px; }
+.fit-seg.fit-gym-options button { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 10px; width: 100%; }
+.fit-gym-options small { color: var(--muted); font-weight: 500; font-size: .8rem; }
+
+/* ---------- weight steps */
+.fit-gym-steps { display: grid; margin: 0; padding: 0; list-style: none; }
+.fit-gym-step {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; min-height: 56px;
+  padding: 6px 0; border-bottom: 1px solid var(--line);
+}
+.fit-gym-step > .fit-gym-row-name { flex: 1 1 8.5rem; min-width: 0; }
+.fit-seg.fit-gym-step-seg { flex: none; flex-wrap: nowrap; gap: 6px; }
+.fit-seg.fit-gym-step-seg button { display: inline-grid; justify-items: center; align-content: center; min-width: 4.4rem; padding: 4px 8px; text-align: center; }
+.fit-gym-step-seg small { color: var(--muted); font-weight: 500; font-size: .7rem; line-height: 1.1; }
+.fit-gym-step-seg button[aria-pressed="true"] small { color: var(--accent); }
+
+/* ---------- notes + delete */
+.fit-gym-notes { min-height: 96px; resize: vertical; }
+.fit-gym-notes-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.fit-gym-danger { padding-top: 16px; border-top: 1px solid var(--line); }
+.fit-note.fit-gym-confirm { display: grid; gap: 10px; margin: 0; }
+.fit-gym-confirm p { margin: 0; }

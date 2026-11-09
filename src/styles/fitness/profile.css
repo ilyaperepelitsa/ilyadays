@@ -1,0 +1,39 @@
+.fprofile { display:grid; gap:16px; }
+.fprofile form { display:grid; gap:16px; }
+.fprofile h2, .fprofile p { margin:0; }
+.fprofile label { display:grid; gap:6px; min-width:0; }
+.fprofile input:not([type=checkbox]), .fprofile select { width:100%; min-width:0; min-height:48px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); font:inherit; }
+.fprofile fieldset { display:grid; gap:16px; margin:0; padding:16px; min-width:0; border:1px solid var(--line); border-radius:12px; }
+.fprofile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr)); gap:12px; }
+.fprofile .fprofile-check { display:flex; align-items:center; min-height:44px; gap:10px; }
+.fprofile input[type=checkbox] { width:20px; height:20px; flex:0 0 auto; accent-color:var(--accent); }
+.fprofile-actions, .fprofile-options { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+.fmeasure { display:grid; gap:14px; }
+.fmeasure h2, .fmeasure p { margin:0; }
+.fmeasure form { display:grid; gap:14px; }
+.fmeasure label { display:grid; gap:6px; min-width:0; }
+.fmeasure input, .fmeasure select { width:100%; min-width:0; min-height:48px; padding:10px; font:inherit; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.fmeasure-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr)); gap:12px; }
+.fmeasure-history { padding:0; list-style:none; display:grid; gap:12px; }
+.fmeasure-history li { display:flex; flex-wrap:wrap; align-items:center; gap:10px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+.fmeasure-history li > span { flex:1 1 240px; overflow-wrap:anywhere; }
+
+/* Profile and measurement forms share the quiet surface hierarchy of the constructor. */
+.fprofile { max-width:920px; }
+.fprofile form { padding:clamp(18px,3vw,28px); gap:20px; }
+.fprofile form > h2 { font-size:1.6rem; line-height:1.2; }
+.fprofile fieldset { padding:20px; gap:18px; background:color-mix(in srgb,var(--surface-2) 55%,var(--surface)); }
+.fprofile legend { padding:0 8px; font-weight:700; }
+.fprofile label, .fmeasure label { font-size:.91rem; font-weight:600; }
+.fprofile input:not([type=checkbox]), .fprofile select, .fmeasure input, .fmeasure select { font-weight:400; transition:border-color .15s ease,box-shadow .15s ease; }
+.fprofile input:focus-visible, .fprofile select:focus-visible, .fmeasure input:focus-visible, .fmeasure select:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-color:var(--accent); }
+.fprofile-options { column-gap:20px; row-gap:4px; }
+.fprofile-check { font-weight:500 !important; }
+.fprofile-actions { border-top:1px solid var(--line); padding-top:20px; }
+.fprofile .fit-note { margin:0; line-height:1.55; }
+.fmeasure { padding:clamp(18px,3vw,28px); }
+.fmeasure details { padding:12px 14px; border:1px solid var(--line); border-radius:12px; background:var(--surface-2); }
+.fmeasure summary { cursor:pointer; font-weight:600; min-height:28px; }
+.fmeasure details[open] .fmeasure-grid { padding-top:14px; }
+@media(max-width:430px) { .fprofile fieldset { padding:16px; } .fprofile-actions > .fit-button { width:100%; } }
+@media(prefers-reduced-motion:reduce) { .fprofile input, .fprofile select, .fmeasure input, .fmeasure select { transition:none; } }

@@ -1,0 +1,974 @@
+{
+  "version": "2026-11-08.1",
+  "note": "Stream 03 (plans/fitness/03-program-engine-and-progression.md). Goal modes, engine rules and split templates. Template slots name a role; the explicit sets/repRange/rir/restSec equal the template goal's role prescription (+1 set on priority slots, setsAdj, rirAdj; superset members rest max(60, role rest / 2)) and are re-derived for other goals by src/lib/fitness/templates.mjs. All exercise ids come from content/fitness/registry.json.",
+  "goalModes": {
+    "strength": {
+      "name": { "en": "Strength", "ru": "Сила" },
+      "summary": {
+        "en": "Heavy and low-rep: 3–6 reps on the main lifts with 2 reps in reserve, 3 min rests, fewer sets. Builds maximal strength on the machines you actually train on.",
+        "ru": "Тяжело и мало повторений: 3–6 повторений в основных упражнениях с запасом 2 повторения, отдых 3 минуты, меньше подходов. Развивает максимальную силу именно на тех тренажёрах, на которых вы тренируетесь."
+      },
+      "repRange": [3, 6],
+      "rir": 2,
+      "setsPerMuscleWeek": { "start": 4, "target": 8, "max": 12, "unit": "direct sets per main lift (accessories 6–10 per muscle)" },
+      "restSec": { "compound": 180, "isolation": 90 },
+      "frequency": [2, 3],
+      "blockWeeks": 5,
+      "deloadRule": {
+        "en": "Every 5 weeks a lighter week: 40 % fewer sets at the same weights, 2 fewer reps and 2 more reps in reserve. After 3 failed sessions in a row on an exercise, its weight drops 10 %.",
+        "ru": "Каждые 5 недель — облегчённая неделя: на 40 % меньше подходов с теми же весами, на 2 повторения меньше и на 2 больше в запасе. После 3 неудачных тренировок подряд вес в упражнении снижается на 10 %."
+      },
+      "progression": { "rule": "double", "repRange": [3, 6], "rir": 2, "stepPct": 2.5, "failsBeforeDeload": 3, "deloadPct": 10, "overshootReps": 2 },
+      "roles": {
+        "primary": { "sets": 4, "repRange": [3, 6], "rir": 2, "restSec": 180 },
+        "secondary": { "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150 },
+        "isolation": { "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 90 },
+        "small": { "sets": 2, "repRange": [10, 15], "rir": 2, "restSec": 75 },
+        "trunk": { "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 90 },
+        "hold": { "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 60, "unit": "reps", "byUnit": { "seconds": [20, 40], "meters": [20, 30] } },
+        "carry": { "sets": 2, "repRange": [20, 30], "rir": 2, "restSec": 120, "unit": "meters", "byUnit": { "seconds": [20, 30], "reps": [6, 10] } }
+      },
+      "sources": [
+        "research/01 Table 1 (a), Table 5, Table 10; research/02 §B2, §C",
+        "Currier BS, Mcleod JC, Banfield L, et al. Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis. Br J Sports Med 2023;57(18):1211–1220. https://doi.org/10.1136/bjsports-2023-106807",
+        "Pelland JC, Remmert JF, Robinson ZP, Hinson SR, Zourdos MC. The resistance training dose response: meta-regressions exploring the effects of weekly volume and frequency on muscle hypertrophy and strength gain. Sports Med 2026;56(2):481–505. https://doi.org/10.1007/s40279-025-02344-w",
+        "Robinson ZP, Pelland JC, Remmert JF, et al. Exploring the dose–response relationship between estimated resistance training proximity to failure, strength gain, and muscle hypertrophy: a series of meta-regressions. Sports Med 2024;54(9):2209–2231. https://doi.org/10.1007/s40279-024-02069-2",
+        "Ralston GW, Kilgore L, Wyatt FB, Baker JS. The effect of weekly set volume on strength gain: a meta-analysis. Sports Med 2017;47(12):2585–2601. https://doi.org/10.1007/s40279-017-0762-7",
+        "Androulakis-Korakakis P, Fisher JP, Steele J. The minimum effective training dose required to increase 1RM strength in resistance-trained men: a systematic review and meta-analysis. Sports Med 2020;50(4):751–765. https://doi.org/10.1007/s40279-019-01236-0",
+        "Moesgaard L, Beck MM, Christiansen L, Aagaard P, Lundbye-Jensen J. Effects of periodization on strength and muscle hypertrophy in volume-equated resistance training programs: a systematic review and meta-analysis. Sports Med 2022;52(7):1647–1666. https://doi.org/10.1007/s40279-021-01636-1",
+        "StrongLifts. StrongLifts 5×5: how to overcome failure (repeat after a miss, −10 % after three). https://stronglifts.com/stronglifts-5x5/failure/",
+        "American College of Sports Medicine. Position stand: progression models in resistance training for healthy adults. Med Sci Sports Exerc 2009;41(3):687–708. https://doi.org/10.1249/MSS.0b013e3181915670"
+      ]
+    },
+    "hypertrophy": {
+      "name": { "en": "Muscle growth", "ru": "Рост мышц" },
+      "summary": {
+        "en": "More sets per muscle (10 → 16, up to 22 a week), 8–12 reps on presses and rows, 12–20 on isolation work, close to failure (1–2 reps in reserve) on machines. Works best at maintenance calories or a small surplus.",
+        "ru": "Больше подходов на мышцу (10 → 16, до 22 в неделю), 8–12 повторений в жимах и тягах, 12–20 в изолирующих упражнениях, близко к отказу (запас 1–2 повторения) на тренажёрах. Лучше всего работает при питании на поддержание или с небольшим профицитом."
+      },
+      "repRange": [8, 12],
+      "rir": 2,
+      "setsPerMuscleWeek": { "start": 10, "target": 16, "max": 22, "unit": "fractional sets per muscle (direct 1, synergist 0.5)" },
+      "restSec": { "compound": 150, "isolation": 75 },
+      "frequency": [2, 3],
+      "blockWeeks": 5,
+      "deloadRule": {
+        "en": "Every 5 weeks a lighter week: 40 % fewer sets at the same weights, 2 fewer reps and 2 more reps in reserve. After 2 failed sessions in a row on an exercise, its weight drops 10 %.",
+        "ru": "Каждые 5 недель — облегчённая неделя: на 40 % меньше подходов с теми же весами, на 2 повторения меньше и на 2 больше в запасе. После 2 неудачных тренировок подряд вес в упражнении снижается на 10 %."
+      },
+      "progression": { "rule": "double", "repRange": [8, 12], "rir": 2, "stepPct": 2.5, "failsBeforeDeload": 2, "deloadPct": 10, "overshootReps": 2 },
+      "roles": {
+        "primary": { "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 150 },
+        "secondary": { "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 120 },
+        "isolation": { "sets": 3, "repRange": [12, 20], "rir": 1, "restSec": 75 },
+        "small": { "sets": 3, "repRange": [15, 25], "rir": 1, "restSec": 60 },
+        "trunk": { "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 75 },
+        "hold": { "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "unit": "reps", "byUnit": { "seconds": [30, 45], "meters": [30, 40] } },
+        "carry": { "sets": 2, "repRange": [30, 40], "rir": 1, "restSec": 90, "unit": "meters", "byUnit": { "seconds": [30, 45], "reps": [10, 15] } }
+      },
+      "sources": [
+        "research/01 Table 1 (b), Table 2, Table 4, Table 5; research/02 §L",
+        "Schoenfeld BJ, Ogborn D, Krieger JW. Dose-response relationship between weekly resistance training volume and increases in muscle mass: a systematic review and meta-analysis. J Sports Sci 2017;35(11):1073–1082. https://doi.org/10.1080/02640414.2016.1210197",
+        "Pelland JC, Remmert JF, Robinson ZP, Hinson SR, Zourdos MC. The resistance training dose response: meta-regressions exploring the effects of weekly volume and frequency on muscle hypertrophy and strength gain. Sports Med 2026;56(2):481–505. https://doi.org/10.1007/s40279-025-02344-w",
+        "Baz-Valle E, Balsalobre-Fernández C, Alix-Fages C, Santos-Concejero J. A systematic review of the effects of different resistance training volumes on muscle hypertrophy. J Hum Kinet 2022;81:199–210. https://doi.org/10.2478/hukin-2022-0017",
+        "Refalo MC, Helms ER, Trexler ET, Hamilton DL, Fyfe JJ. Influence of resistance training proximity-to-failure on skeletal muscle hypertrophy: a systematic review with meta-analysis. Sports Med 2023;53(3):649–665. https://doi.org/10.1007/s40279-022-01784-y",
+        "Schoenfeld BJ, Grgic J, Van Every DW, Plotkin DL. Loading recommendations for muscle strength, hypertrophy, and local endurance: a re-examination of the repetition continuum. Sports (Basel) 2021;9(2):32. https://doi.org/10.3390/sports9020032",
+        "Singer A, Wolf M, Generoso L, et al. Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy. Front Sports Act Living 2024;6:1429789. https://doi.org/10.3389/fspor.2024.1429789",
+        "Schoenfeld BJ, Grgic J, Krieger J. How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis. J Sports Sci 2019;37(11):1286–1295. https://doi.org/10.1080/02640414.2018.1555906",
+        "Coleman M, Burke R, Augustin F, et al. Gaining more from doing less? The effects of a one-week deload period during supervised resistance training on muscular adaptations. PeerJ 2024;12:e16777. https://doi.org/10.7717/peerj.16777"
+      ]
+    },
+    "recomp": {
+      "name": { "en": "Fat loss & recomposition", "ru": "Похудение и рекомпозиция" },
+      "summary": {
+        "en": "The default for a calorie deficit: keep the weights heavy (6–10 reps on the main lifts with 2 in reserve), moderate volume (10–16 sets per muscle a week), progress reps before weight, and count holding your strength as a win. Eat no more than 500 kcal/day below maintenance, with about 2.2 g of protein per kg of body weight.",
+        "ru": "Режим для дефицита калорий: веса остаются тяжёлыми (6–10 повторений в основных упражнениях с запасом 2), умеренный объём (10–16 подходов на мышцу в неделю), сначала растут повторения, потом вес, а сохранённая сила — уже успех. Дефицит не больше 500 ккал в день и около 2,2 г белка на кг массы тела."
+      },
+      "repRange": [6, 10],
+      "rir": 2,
+      "setsPerMuscleWeek": { "start": 10, "target": 13, "max": 16, "unit": "fractional sets per muscle (direct 1, synergist 0.5)" },
+      "restSec": { "compound": 150, "isolation": 75 },
+      "frequency": [2, 3],
+      "blockWeeks": 5,
+      "deloadRule": {
+        "en": "Every 5 weeks (or at a diet break) a lighter week: 40 % fewer sets at the same weights, 2 fewer reps and 2 more reps in reserve. After 2 failed sessions in a row on an exercise, its weight drops 10 %.",
+        "ru": "Каждые 5 недель (или в перерыв от диеты) — облегчённая неделя: на 40 % меньше подходов с теми же весами, на 2 повторения меньше и на 2 больше в запасе. После 2 неудачных тренировок подряд вес в упражнении снижается на 10 %."
+      },
+      "progression": { "rule": "double", "repRange": [6, 10], "rir": 2, "stepPct": 2.5, "failsBeforeDeload": 2, "deloadPct": 10, "overshootReps": 2 },
+      "roles": {
+        "primary": { "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150 },
+        "secondary": { "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120 },
+        "isolation": { "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75 },
+        "small": { "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60 },
+        "trunk": { "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90 },
+        "hold": { "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "unit": "reps", "byUnit": { "seconds": [20, 40], "meters": [20, 40] } },
+        "carry": { "sets": 2, "repRange": [20, 40], "rir": 2, "restSec": 90, "unit": "meters", "byUnit": { "seconds": [30, 45], "reps": [8, 12] } }
+      },
+      "sources": [
+        "research/01 Table 1 (c), Table 10 and the owner profile section; research/02 §K, §L (DP-RIR-4)",
+        "Murphy C, Koehler K. Energy deficiency impairs resistance training gains in lean mass but not strength: a meta-analysis and meta-regression. Scand J Med Sci Sports 2022;32(1):125–137. https://doi.org/10.1111/sms.14075",
+        "Roth C, Schwiete C, Happ K, Rettenmaier L, Schoenfeld BJ, Behringer M. Resistance training volume does not influence lean mass preservation during energy restriction in trained males. Scand J Med Sci Sports 2023;33(1):20–35. https://doi.org/10.1111/sms.14237",
+        "Helms ER, Zinn C, Rowlands DS, Brown SR. A systematic review of dietary protein during caloric restriction in resistance trained lean athletes: a case for higher intakes. Int J Sport Nutr Exerc Metab 2014;24(2):127–138. https://doi.org/10.1123/ijsnem.2013-0054",
+        "Garthe I, Raastad T, Refsnes PE, Koivisto A, Sundgot-Borgen J. Effect of two different weight-loss rates on body composition and strength and power-related performance in elite athletes. Int J Sport Nutr Exerc Metab 2011;21(2):97–104. https://doi.org/10.1123/ijsnem.21.2.97",
+        "Plotkin D, Coleman M, Van Every D, et al. Progressive overload without progressing load? The effects of load or repetition progression on muscular adaptations. PeerJ 2022;10:e14142. https://doi.org/10.7717/peerj.14142",
+        "Schumann M, Feuerbacher JF, Sünkeler M, et al. Compatibility of concurrent aerobic and strength training for skeletal muscle size and function: an updated systematic review and meta-analysis. Sports Med 2022;52(3):601–612. https://doi.org/10.1007/s40279-021-01587-7",
+        "Robinson ZP, Pelland JC, Remmert JF, et al. Exploring the dose–response relationship between estimated resistance training proximity to failure, strength gain, and muscle hypertrophy: a series of meta-regressions. Sports Med 2024;54(9):2209–2231. https://doi.org/10.1007/s40279-024-02069-2"
+      ]
+    },
+    "endurance": {
+      "name": { "en": "Muscular endurance", "ru": "Силовая выносливость" },
+      "summary": {
+        "en": "Light loads for 15–25 reps taken close to failure, short rests (45–75 s) and 8–15 sets per muscle a week. Expect maximal strength to drift down a few per cent.",
+        "ru": "Лёгкие веса на 15–25 повторений близко к отказу, короткий отдых (45–75 секунд) и 8–15 подходов на мышцу в неделю. Максимальная сила может немного снизиться."
+      },
+      "repRange": [15, 20],
+      "rir": 2,
+      "setsPerMuscleWeek": { "start": 8, "target": 12, "max": 15, "unit": "fractional sets per muscle (direct 1, synergist 0.5)" },
+      "restSec": { "compound": 75, "isolation": 45 },
+      "frequency": [2, 3],
+      "blockWeeks": 5,
+      "deloadRule": {
+        "en": "Every 5 weeks a lighter week: 40 % fewer sets at the same weights, 2 fewer reps and 2 more reps in reserve. After 2 failed sessions in a row on an exercise, its weight drops 10 %.",
+        "ru": "Каждые 5 недель — облегчённая неделя: на 40 % меньше подходов с теми же весами, на 2 повторения меньше и на 2 больше в запасе. После 2 неудачных тренировок подряд вес в упражнении снижается на 10 %."
+      },
+      "progression": { "rule": "double", "repRange": [15, 20], "rir": 2, "stepPct": 5, "failsBeforeDeload": 2, "deloadPct": 10, "overshootReps": 3 },
+      "roles": {
+        "primary": { "sets": 2, "repRange": [15, 20], "rir": 2, "restSec": 75 },
+        "secondary": { "sets": 2, "repRange": [15, 20], "rir": 1, "restSec": 60 },
+        "isolation": { "sets": 2, "repRange": [15, 25], "rir": 1, "restSec": 45 },
+        "small": { "sets": 2, "repRange": [20, 30], "rir": 1, "restSec": 45 },
+        "trunk": { "sets": 2, "repRange": [15, 20], "rir": 1, "restSec": 45 },
+        "hold": { "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 45, "unit": "reps", "byUnit": { "seconds": [40, 60], "meters": [40, 60] } },
+        "carry": { "sets": 2, "repRange": [40, 60], "rir": 1, "restSec": 60, "unit": "meters", "byUnit": { "seconds": [45, 60], "reps": [12, 20] } }
+      },
+      "sources": [
+        "research/01 Table 1 (d), Table 5 (endurance evidence is equivocal; ACSM numbers are the default)",
+        "Schoenfeld BJ, Grgic J, Van Every DW, Plotkin DL. Loading recommendations for muscle strength, hypertrophy, and local endurance: a re-examination of the repetition continuum. Sports (Basel) 2021;9(2):32. https://doi.org/10.3390/sports9020032",
+        "Lopez P, Radaelli R, Taaffe DR, et al. Resistance training load effects on muscle hypertrophy and strength gain: systematic review and network meta-analysis. Med Sci Sports Exerc 2021;53(6):1206–1216. https://doi.org/10.1249/MSS.0000000000002585",
+        "American College of Sports Medicine. Position stand: progression models in resistance training for healthy adults. Med Sci Sports Exerc 2009;41(3):687–708. https://doi.org/10.1249/MSS.0b013e3181915670"
+      ]
+    },
+    "maintenance": {
+      "name": { "en": "Health & maintenance", "ru": "Здоровье и поддержание" },
+      "summary": {
+        "en": "The minimum that keeps strength and muscle: 2 sets per exercise, 5–8 reps on the main lifts and 8–20 elsewhere with 2 in reserve — about 30–60 min of lifting a week — plus 2–3 cardio sessions, one of them intervals.",
+        "ru": "Минимум, который сохраняет силу и мышцы: 2 подхода на упражнение, 5–8 повторений в основных упражнениях и 8–20 в остальных с запасом 2 — около 30–60 минут силовой работы в неделю — плюс 2–3 кардиотренировки, одна из них интервальная."
+      },
+      "repRange": [5, 8],
+      "rir": 2,
+      "setsPerMuscleWeek": { "start": 6, "target": 9, "max": 12, "unit": "fractional sets per muscle (direct 1, synergist 0.5)" },
+      "restSec": { "compound": 150, "isolation": 75 },
+      "frequency": [2, 2],
+      "blockWeeks": 8,
+      "deloadRule": {
+        "en": "Every 8 weeks a lighter week: 40 % fewer sets at the same weights, 2 fewer reps and 2 more reps in reserve. After 2 failed sessions in a row on an exercise, its weight drops 10 %.",
+        "ru": "Каждые 8 недель — облегчённая неделя: на 40 % меньше подходов с теми же весами, на 2 повторения меньше и на 2 больше в запасе. После 2 неудачных тренировок подряд вес в упражнении снижается на 10 %."
+      },
+      "progression": { "rule": "double", "repRange": [5, 8], "rir": 2, "stepPct": 2.5, "failsBeforeDeload": 2, "deloadPct": 10, "overshootReps": 2 },
+      "roles": {
+        "primary": { "sets": 2, "repRange": [5, 8], "rir": 2, "restSec": 150 },
+        "secondary": { "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 120 },
+        "isolation": { "sets": 2, "repRange": [10, 15], "rir": 2, "restSec": 75 },
+        "small": { "sets": 2, "repRange": [12, 20], "rir": 2, "restSec": 60 },
+        "trunk": { "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 90 },
+        "hold": { "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "unit": "reps", "byUnit": { "seconds": [20, 40], "meters": [20, 40] } },
+        "carry": { "sets": 2, "repRange": [20, 40], "rir": 2, "restSec": 90, "unit": "meters", "byUnit": { "seconds": [30, 45], "reps": [8, 12] } }
+      },
+      "sources": [
+        "research/01 Table 1 (e), Table 10 (any → health/longevity maintenance)",
+        "Momma H, Kawakami R, Honda T, Sawada SS. Muscle-strengthening activities are associated with lower risk and mortality in major non-communicable diseases: a systematic review and meta-analysis of cohort studies. Br J Sports Med 2022;56(13):755–763. https://doi.org/10.1136/bjsports-2021-105061",
+        "Shailendra P, Baldock KL, Li LSK, Bennie JA, Boyle T. Resistance training and mortality risk: a systematic review and meta-analysis. Am J Prev Med 2022;63(2):277–285. https://doi.org/10.1016/j.amepre.2022.03.020",
+        "Androulakis-Korakakis P, Fisher JP, Steele J. The minimum effective training dose required to increase 1RM strength in resistance-trained men: a systematic review and meta-analysis. Sports Med 2020;50(4):751–765. https://doi.org/10.1007/s40279-019-01236-0",
+        "Watson SL, Weeks BK, Weis LJ, et al. High-intensity resistance and impact training improves bone mineral density and physical function in postmenopausal women with osteopenia and osteoporosis: the LIFTMOR randomized controlled trial. J Bone Miner Res 2018;33(2):211–220. https://doi.org/10.1002/jbmr.3284",
+        "Bull FC, Al-Ansari SS, Biddle S, et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med 2020;54(24):1451–1462. https://doi.org/10.1136/bjsports-2020-102955",
+        "Helgerud J, Høydal K, Wang E, et al. Aerobic high-intensity intervals improve VO2max more than moderate training. Med Sci Sports Exerc 2007;39(4):665–671. https://doi.org/10.1249/mss.0b013e3180304570"
+      ]
+    }
+  },
+  "repMaxPercent": {
+    "1": 100, "2": 95, "3": 93, "4": 90, "5": 87, "6": 85, "7": 83, "8": 80, "9": 77, "10": 75,
+    "11": 72.5, "12": 70, "13": 68, "14": 67, "15": 65, "16": 64, "17": 63, "18": 62, "19": 61, "20": 60
+  },
+  "repMaxPercentSource": "Load as % of 1RM for a set taken to failure (RIR shift rule: n reps at k RIR = an (n + k)-rep max). 1–10: NSCA training load chart (Landers 1984) https://www.nsca.com/contentassets/61d813865e264c6e852cadfe247eae52/nsca_training_load_chart.pdf ; 11–16 Epley-consistent interpolation from research/02 §A; 17–20 extrapolated by this stream to Epley's 60 % at 20 reps. Above 20 the engine uses Epley × a fading 0.9 factor (research/01 Table 10). Individuals vary (SD ≈ 2.5 reps at 80 % 1RM: Nuzzo JL et al. Sports Med 2024;54(2):303–321 https://doi.org/10.1007/s40279-023-01937-7), so each exercise's own history overrides the table.",
+  "warmup": {
+    "general": {
+      "en": "5 min of easy cardio (bike, rower or brisk incline walk) until you are warm and breathing a little faster, then lighter ramp sets before the first working set of each big exercise.",
+      "ru": "5 минут лёгкого кардио (велотренажёр, гребля или быстрая ходьба в горку), пока не согреетесь и дыхание не участится, затем облегчённые разминочные подходы перед первым рабочим подходом каждого базового упражнения."
+    },
+    "minutes": 5,
+    "heavyPctE1rm": 80,
+    "heavyTotalReps": 8,
+    "sources": [
+      "McGowan CJ, Pyne DB, Thompson KG, Rattray B. Warm-up strategies for sport and exercise: mechanisms and applications. Sports Med 2015;45(11):1523–1546. https://doi.org/10.1007/s40279-015-0376-x",
+      "research/02 §E (ramp before a test set); content/fitness/safety.json (stream 08) uses the same 50/70/85 % ladder. The exact ladder is coaching practice, not a trial-tested protocol."
+    ]
+  },
+  "warmupRamp": [
+    { "pct": 50, "reps": 8, "when": "always" },
+    { "pct": 70, "reps": 4, "when": "heavy" },
+    { "pct": 85, "reps": 2, "when": "heavy" }
+  ],
+  "rules": {
+    "rirTolerance": 1,
+    "reliableTotalReps": 12,
+    "unitStep": { "reps": 1, "seconds": 5, "meters": 5 },
+    "maxWidenReps": 2,
+    "doubleStepCapPct": 10,
+    "repCeiling": { "compound": 15, "isolation": 20 },
+    "calibrationExtraRir": 1,
+    "startLoadFactor": 0.85,
+    "bodyweightRefKg": 80,
+    "bodyweightExponent": 0.67,
+    "prioritySetsBonus": 1,
+    "superset": { "restDivisor": 2, "minRestSec": 60 },
+    "gap": { "keepBelowDays": 14, "shortPct": [5, 10], "longFromDays": 28, "longPct": [10, 15], "longFullAtDays": 90 },
+    "gapCut": { "maxMultiple": 2, "repsMinus": 2 },
+    "plateau": { "maxSessions": 3, "spareReps": 2 },
+    "conversion": { "firstSessionFactor": 0.95 },
+    "deload": { "setsMultiplier": 0.6, "loadMultiplier": 1, "rirBonus": 2, "repsMinus": 2 },
+    "substitution": {
+      "base": 0.85,
+      "differentPattern": 0.6,
+      "families": { "barbell": "barbell", "smith": "smith", "selectorized": "machine", "plate-loaded": "machine", "cable": "machine", "dumbbell": "dumbbell", "kettlebell": "dumbbell" },
+      "familyRatio": { "barbell": 1, "smith": 0.97, "machine": 0.8, "dumbbell": 0.42 }
+    },
+    "minutes": { "setSec": 40, "transitionSec": 60, "rampSetSec": 60, "finisherDefaultMin": 12 },
+    "sources": {
+      "rirTolerance": "Logged RIR is treated as ±1: lifters under-predict reps in reserve by ≈1 rep (Halperin I, et al. Sports Med 2022;52(2):377–390. https://doi.org/10.1007/s40279-021-01559-x); research/02 §C progress condition 'mean RIR ≥ target − 1'.",
+      "reliableTotalReps": "e1RM only from sets with reps + RIR ≤ 12 (Reynolds JM, et al. J Strength Cond Res 2006;20(3):584–592. https://doi.org/10.1519/R-15304.1; research/02 §A).",
+      "unitStep": "Holds and carries progress by +5 s / +5 m, then load (design default; research/04 §3.5 ranges 20–60 s, 20–40 m).",
+      "maxWidenReps": "Kept for holds and carries only (their targets never pass the top by more than this many steps); rep exercises use repCeiling (master plan §16 rule 2).",
+      "doubleStepCapPct": "Big jumps (a first set past the top by overshootReps, or every set at the top with RIR ≥ target + 1, which jumps to the load the weakest set implies for the bottom of the range at the target RIR) are capped at +10 % (research/02 §C big_jump cap_pct; master plan §16 rule 3).",
+      "repCeiling": "Capacity guard (master plan §16 rule 2; research/02 §C post-increase guard and §D): the load goes up only when the weakest working set still allows the bottom of the range at the target RIR at the new load, by Epley's equation: new ÷ old (effective kg) ≤ (30 + reps + RIR of that set) ÷ (30 + bottom + target RIR) — the maxStepFraction formula with the reps and RIR actually logged, in whole reps. Until then the rep target keeps rising past the top, up to 15 reps for compounds and 20 for isolation and small muscles (research/02 §D: dumbbell jumps of 20–33 % at light loads are handled with wider ranges of 12–20 or micro add-ons, not by jumping and failing). At the ceiling the load stays and the exercise is flagged for a variant with smaller steps or micro-plates.",
+      "calibrationExtraRir": "First working load from the test set uses one extra rep in reserve (research/02 §E).",
+      "startLoadFactor": "Start at 85 % of the catalog's novice starting load (task spec; research/04 §3.9 seeds at ≈60 % of the Strength Level Beginner 1RM).",
+      "bodyweightExponent": "Strength scales with body mass to the 0.67 power (Jaric S. Muscle strength testing: use of normalisation for body size. Sports Med 2002;32(10):615–631. https://doi.org/10.2165/00007256-200232100-00002).",
+      "superset": "Agonist–antagonist supersets keep (even raise) reps and volume while shortening sessions (Zhang X, Weakley J, Li H, Li Z, García-Ramos A. Sports Med 2025;55:953–975. https://doi.org/10.1007/s40279-025-02176-8); each member rests half its normal rest, at least 60 s.",
+      "gap": "Strength losses are trivial for ≤ 28 days off and accelerate after (Bosquet L, et al. Scand J Med Sci Sports 2013;23(3):e140–e149. https://doi.org/10.1111/sms.12047); reductions are for re-calibrating effort, not lost strength (research/02 §I). Tiers per the stream 03 task: < 14 d keep, 14–27 d −5…−10 %, ≥ 28 d −10…−15 % and a test session.",
+      "gapCut": "Breaks (master plan §16 rule 1): the gap cut is rounded to the NEAREST machine step and applied once; when the steps are too coarse for it (the nearest step leaves the load unchanged, or would cut more than twice the intended %), the load stays and that session's rep target drops by 2 (10 s or 10 m for holds and carries) instead. The cut recalibrates effort; strength losses are trivial for ≤ 28 days (research/02 §I).",
+      "plateau": "Plateau memory (master plan §16 rule 5, 2026-11-09): a reactive deload that lowers the load remembers the load it came down from; a step from below back to that load waits for min(maxSessions, 1 + times) sessions in a row with every working set at the top of the range whose weakest set carries that load by the capacity guard (times = deloads from that load; from the second deload spareReps more reps in hand, earned with reps first, except at the rep ceiling; test sessions count like any other, but neither their re-anchor nor a ramp that reached that load ends there before the confirmation), so one good day (±4 % daily form in the 52-week simulation) no longer starts a fail → deload → retry cycle. Two sessions in a row is the ACSM hand-off for adding load (ACSM position stand, Med Sci Sports Exerc 2009;41(3):687–708. https://pubmed.ncbi.nlm.nih.gov/19204579/); three and the 2 spare reps after a second deload (about one good day: ±4 % form is ±1.6 reps at 10 reps by Epley) are design defaults, tuned on 230 simulated stalled lifters and checked on 400 others: an exercise deloaded 3 or more times from one load in 19 of the 400 (4.75 %) and a fourth time in 1 (0.25 %, a face pull whose range top is the rep ceiling, so no spare reps), so repeats are rarer, not impossible. The spare reps count at the failed load: at the current one they take up to ceil(2 × failed ÷ current) sessions of reps (3 for any step up to +50 %).",
+      "conversion": "First session after a goal switch at 95 % of the converted load (research/01 Table 10).",
+      "deload": "Planned deload week: 40 % fewer sets at the same load with 2 more reps in reserve; volume is cut, intensity and frequency kept (research/02 §G; Bell L, et al. Sports Med Open 2023;9:87. https://doi.org/10.1186/s40798-023-00633-0; Coleman M, et al. PeerJ 2024;12:e16777. https://doi.org/10.7717/peerj.16777).",
+      "substitution": "New exercise starts at 85 % of the equivalent load at the same reps; 0.6 when the movement pattern differs (research/02 §F). Equipment families: machine ≈ 0.8 × barbell, dumbbell per hand ≈ 0.42 × barbell, Smith ≈ 0.97 × barbell (research/04 §3.8).",
+      "minutes": "≈40 s per set plus the prescribed rest, 1 min per exercise change, 1 min per ramp set (research/01 Table 3: 2.5 min per compound set with rest, 1.5 min per isolation set)."
+    }
+  },
+  "patternGroups": {
+    "horizontal-push": { "chest": 1, "triceps": 0.5, "shoulders": 0.5 },
+    "incline-push": { "chest": 1, "shoulders": 0.5, "triceps": 0.5 },
+    "decline-push": { "triceps": 1, "chest": 1, "shoulders": 0.5 },
+    "vertical-push": { "shoulders": 1, "triceps": 0.5 },
+    "chest-fly": { "chest": 1 },
+    "vertical-pull": { "back": 1, "biceps": 0.5 },
+    "horizontal-pull": { "back": 1, "biceps": 0.5, "shoulders": 0.5 },
+    "pullover": { "back": 1 },
+    "rear-delt": { "shoulders": 1, "back": 0.5 },
+    "lateral-raise": { "shoulders": 1 },
+    "front-raise": { "shoulders": 1 },
+    "external-rotation": { "shoulders": 1 },
+    "shrug": { "back": 1 },
+    "elbow-flexion": { "biceps": 1, "forearms": 0.5 },
+    "elbow-extension": { "triceps": 1 },
+    "forearm-flexion": { "forearms": 1 },
+    "forearm-extension": { "forearms": 1 },
+    "grip": { "forearms": 1 },
+    "trunk-flexion": { "abs": 1 },
+    "anti-extension": { "abs": 1 },
+    "anti-rotation": { "abs": 1 },
+    "rotation": { "abs": 1 },
+    "lateral-flexion": { "abs": 1 },
+    "hip-flexion": { "abs": 1, "quads": 0.5 },
+    "spinal-extension": { "lower-back": 1, "glutes": 0.5 },
+    "hip-extension": { "glutes": 1, "hamstrings": 0.5 },
+    "hip-hinge": { "hamstrings": 1, "glutes": 1, "lower-back": 0.5 },
+    "squat": { "quads": 1, "glutes": 0.5, "adductors": 0.5 },
+    "lunge": { "quads": 1, "glutes": 1 },
+    "knee-flexion": { "hamstrings": 1 },
+    "knee-extension": { "quads": 1 },
+    "hip-abduction": { "glutes": 1 },
+    "hip-adduction": { "adductors": 1 },
+    "calf-raise": { "calves": 1 },
+    "carry": { "forearms": 1, "back": 0.5, "abs": 0.5 },
+    "neck": { "neck": 1 }
+  },
+  "patternGroupsSource": "Fallback when the catalog has no muscles for an exercise: direct = 1, synergist = 0.5 (research/01 synergist_fraction_map, extended to every MovementPattern). With the catalog, primary-muscle groups count 1 and secondary-only groups 0.5.",
+  "templates": [
+    {
+      "id": "owner-3day-upper",
+      "name": { "en": "Upper body · 3 days (A/B/C)", "ru": "Верх тела · 3 дня (A/B/C)" },
+      "description": {
+        "en": "Your program: three machine-based upper-body days — chest focus, back focus, then arms, shoulders and core. Pecs are trained three times a week and the back gets the most volume; loaded ab work, the lower-back machine and carries build strength for the long run, and every day ends with 10–15 min of cardio. Add the legs day later.",
+        "ru": "Ваша программа: три дня на верх тела в тренажёрах — акцент на грудь, акцент на спину, затем руки, плечи и кор. Грудь работает три раза в неделю, спина получает наибольший объём; пресс с отягощением, тренажёр для поясницы и переноски развивают силу на долгие годы, а каждая тренировка заканчивается 10–15 минутами кардио. День ног добавляется позже."
+      },
+      "daysPerWeek": 3,
+      "goal": "recomp",
+      "days": [
+        {
+          "key": "A",
+          "name": { "en": "A · Chest focus", "ru": "A · Акцент на грудь" },
+          "focus": ["chest", "back", "shoulders", "abs"],
+          "finisher": {
+            "en": "Finisher · 12 min zone 2: bike, rower or incline walk at a pace where you can still talk in full sentences (about 60–70 % of max heart rate).",
+            "ru": "Финиш · 12 мин в зоне 2: велотренажёр, гребля или ходьба в горку в темпе, при котором можно говорить полными предложениями (около 60–70 % от максимального пульса)."
+          },
+          "slots": [
+            {
+              "slotId": "A1", "exerciseId": "machine-chest-press", "role": "primary", "priority": true,
+              "sets": 4, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Day A opens with your main chest lift while you are fresh: whatever is trained first gains the most strength. These are the heaviest sets of the day.",
+                "ru": "День A начинается с главного упражнения на грудь, пока вы свежи: то, что идёт первым, сильнее всего прибавляет в силе. Это самые тяжёлые подходы дня."
+              }
+            },
+            {
+              "slotId": "A2", "exerciseId": "lat-pulldown", "role": "primary",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Vertical pull to balance the press: builds the lats (back width) and pulling strength in the biceps.",
+                "ru": "Вертикальная тяга для баланса с жимом: развивает широчайшие (ширину спины) и силу бицепса в тяге."
+              }
+            },
+            {
+              "slotId": "A3", "exerciseId": "pec-deck", "role": "isolation", "priority": true, "superset": "sA1",
+              "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Second chest exercise: the pec deck loads the pecs without the triceps giving out first, and a machine makes hard sets close to failure safe when you train alone.",
+                "ru": "Второе упражнение на грудь: «бабочка» нагружает грудные, не упираясь в усталость трицепса, а тренажёр позволяет безопасно работать близко к отказу без страховщика."
+              }
+            },
+            {
+              "slotId": "A4", "exerciseId": "machine-row", "role": "primary", "superset": "sA1",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Chest-supported row: a strong upper back with no load on the lower back. Alternated with the pec deck — one muscle rests while its opposite works, so the session is shorter with the same reps.",
+                "ru": "Тяга в тренажёре с упором грудью: сильный верх спины без нагрузки на поясницу. Чередуется с «бабочкой» — одна мышца отдыхает, пока работает её антагонист, поэтому тренировка короче при том же числе повторений."
+              }
+            },
+            {
+              "slotId": "A5", "exerciseId": "machine-shoulder-press", "role": "secondary",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "Overhead press for the front and side delts and the triceps; the machine's fixed path is easy on the shoulder joints.",
+                "ru": "Жим вверх для передней и средней дельты и трицепса; фиксированная траектория тренажёра бережёт плечевые суставы."
+              }
+            },
+            {
+              "slotId": "A6", "exerciseId": "machine-crunch", "role": "trunk",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Loaded crunch for ab strength: add weight like on any other lift instead of chasing high reps.",
+                "ru": "Скручивания с отягощением для силы пресса: прибавляйте вес, как в любом другом упражнении, а не гонитесь за количеством повторений."
+              }
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "name": { "en": "B · Back focus", "ru": "B · Акцент на спину" },
+          "focus": ["back", "chest", "shoulders", "lower-back", "abs"],
+          "finisher": {
+            "en": "Finisher · 14 min intervals: 2 min easy, then 4 rounds of 1 min hard (you can only say a few words) and 2 min easy, on a bike or rower.",
+            "ru": "Финиш · 14 мин интервалов: 2 мин легко, затем 4 раунда — 1 мин тяжело (можно сказать лишь пару слов) и 2 мин легко на велотренажёре или гребном тренажёре."
+          },
+          "slots": [
+            {
+              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true,
+              "sets": 4, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "Back day starts with the pull-up pattern. The machine's assistance is the load: less assistance means progress, all the way to unassisted pull-ups.",
+                "ru": "День спины начинается с подтягиваний. Нагрузка здесь — помощь гравитрона: чем меньше помощь, тем больше прогресс, вплоть до подтягиваний без помощи."
+              }
+            },
+            {
+              "slotId": "B2", "exerciseId": "machine-incline-press", "role": "secondary", "superset": "sB1",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Incline press for the upper chest — the second of three chest sessions this week. Alternated with the cable row.",
+                "ru": "Жим под углом на верх груди — вторая из трёх тренировок груди за неделю. Чередуется с тягой блока."
+              }
+            },
+            {
+              "slotId": "B3", "exerciseId": "seated-cable-row", "role": "primary", "superset": "sB1",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Horizontal pull for the mid-back and rear delts; pairing it with the incline press (push and pull) saves time without costing reps.",
+                "ru": "Горизонтальная тяга для середины спины и задней дельты; пара с жимом под углом (жим и тяга) экономит время без потери повторений."
+              }
+            },
+            {
+              "slotId": "B4", "exerciseId": "cable-fly", "role": "isolation", "superset": "sB2",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "The cable fly keeps tension on the pecs in the stretched position — the third chest exercise of the week.",
+                "ru": "Сведение рук в кроссовере держит грудные в напряжении в растянутом положении — третье упражнение на грудь за неделю."
+              }
+            },
+            {
+              "slotId": "B5", "exerciseId": "face-pull", "role": "small", "superset": "sB2",
+              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Rear delts and rotator cuff: balances all the pressing and keeps the shoulders healthy. Paired with the fly, the opposite movement.",
+                "ru": "Задняя дельта и вращательная манжета: уравновешивают все жимы и берегут плечи. В паре со сведением — противоположным движением."
+              }
+            },
+            {
+              "slotId": "B6", "exerciseId": "lower-back-machine", "role": "trunk", "setsAdj": -1,
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Lumbar extension on the machine: the back exercise with clinical evidence for a more resilient lower back; once a week is enough.",
+                "ru": "Разгибание поясницы в тренажёре: упражнение с клиническими данными в пользу более крепкой поясницы; одного раза в неделю достаточно."
+              }
+            },
+            {
+              "slotId": "B7", "exerciseId": "pallof-press", "role": "hold", "unit": "reps",
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Anti-rotation: the core's real job is to stop the spine from twisting, and this trains it with no load on the spine.",
+                "ru": "Антиротация: главная задача кора — не дать позвоночнику скручиваться, и это упражнение тренирует её без нагрузки на позвоночник."
+              }
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "name": { "en": "C · Arms, shoulders, core", "ru": "C · Руки, плечи, кор" },
+          "focus": ["triceps", "biceps", "shoulders", "abs", "forearms"],
+          "finisher": {
+            "en": "Finisher · 15 min zone 2 (bike, rower or incline walk at a conversational pace). On a rest day this week add the big one for VO2max: 4 × 4 min at 90–95 % of max heart rate with 3 min easy in between.",
+            "ru": "Финиш · 15 мин в зоне 2 (велотренажёр, гребля или ходьба в горку в разговорном темпе). В день отдыха на этой неделе добавьте главную тренировку для МПК: 4 × 4 мин на 90–95 % от максимального пульса с 3 мин лёгкой работы между ними."
+          },
+          "slots": [
+            {
+              "slotId": "C1", "exerciseId": "triceps-press-machine", "role": "secondary", "superset": "sC1",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "The seated dip machine is the heavy triceps press and also works the lower chest — the week's third chest exposure. Alternated with the curl.",
+                "ru": "Отжимания в тренажёре сидя — тяжёлый жим на трицепс, который также нагружает низ груди — третья нагрузка на грудь за неделю. Чередуется со сгибаниями на бицепс."
+              }
+            },
+            {
+              "slotId": "C2", "exerciseId": "machine-preacher-curl", "role": "isolation", "setsAdj": 1, "superset": "sC1",
+              "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Main biceps exercise, with one extra set for arm strength: the preacher pad stops any swinging, so the biceps do all the work.",
+                "ru": "Главное упражнение на бицепс с дополнительным подходом для силы рук: упор на скамью Скотта исключает раскачку, и работает только бицепс."
+              }
+            },
+            {
+              "slotId": "C3", "exerciseId": "cable-pushdown", "role": "isolation",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Triceps isolation to finish the arms; the cable stack lets you add weight in small steps.",
+                "ru": "Изоляция трицепса в завершение тренировки рук; на блоке легко прибавлять вес маленькими шагами."
+              }
+            },
+            {
+              "slotId": "C4", "exerciseId": "machine-lateral-raise", "role": "small",
+              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "The side delts give the shoulders their width; they respond best to higher reps and short rests.",
+                "ru": "Средняя дельта даёт ширину плеч; лучше всего она отвечает на большое число повторений с коротким отдыхом."
+              }
+            },
+            {
+              "slotId": "C5", "exerciseId": "hammer-curl", "role": "isolation",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Neutral-grip curl for the brachialis and forearms: thicker arms and a stronger grip.",
+                "ru": "Сгибания «молот» нейтральным хватом для брахиалиса и предплечий: руки толще, хват сильнее."
+              }
+            },
+            {
+              "slotId": "C6", "exerciseId": "captains-chair-knee-raise", "role": "trunk",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Lower abs and hip flexors; in EMG comparisons the captain's chair ranks among the most demanding ab exercises.",
+                "ru": "Нижняя часть пресса и сгибатели бедра; по данным ЭМГ подъёмы коленей в упоре на локтях — одно из самых нагружающих упражнений на пресс."
+              }
+            },
+            {
+              "slotId": "C7", "exerciseId": "farmers-carry", "role": "carry", "unit": "meters",
+              "sets": 2, "repRange": [20, 40], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Heavy carries: grip strength (a marker of healthy ageing), traps and core while you walk.",
+                "ru": "Переноска тяжестей: сила хвата (маркер здорового старения), трапеции и кор в ходьбе."
+              }
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "content/fitness/registry.json ownerTemplate (exercise per slot); research/01 Table 3 (3 days, upper ×3 with daily emphasis) and the owner profile section",
+        "Nunes JP, Grgic J, Cunha PM, et al. What influence does resistance exercise order have on muscular strength gains and muscle hypertrophy? A systematic review and meta-analysis. Eur J Sport Sci 2021;21(2):149–157. https://doi.org/10.1080/17461391.2020.1733672",
+        "Zhang X, Weakley J, Li H, Li Z, García-Ramos A. Superset versus traditional resistance training prescriptions: a systematic review and meta-analysis exploring acute and chronic effects on mechanical, metabolic, and perceptual variables. Sports Med 2025;55:953–975. https://doi.org/10.1007/s40279-025-02176-8",
+        "Iversen VM, Norum M, Schoenfeld BJ, Fimland MS. No time to lift? Designing time-efficient training programs for strength and hypertrophy: a narrative review. Sports Med 2021;51(10):2079–2095. https://doi.org/10.1007/s40279-021-01490-1",
+        "Roth C, Schwiete C, Happ K, Rettenmaier L, Schoenfeld BJ, Behringer M. Resistance training volume does not influence lean mass preservation during energy restriction in trained males. Scand J Med Sci Sports 2023;33(1):20–35. https://doi.org/10.1111/sms.14237",
+        "Schumann M, Feuerbacher JF, Sünkeler M, et al. Compatibility of concurrent aerobic and strength training for skeletal muscle size and function: an updated systematic review and meta-analysis. Sports Med 2022;52(3):601–612. https://doi.org/10.1007/s40279-021-01587-7",
+        "Weston M, Taylor KL, Batterham AM, Hopkins WG. Effects of low-volume high-intensity interval training (HIT) on fitness in adults: a meta-analysis of controlled and non-controlled trials. Sports Med 2014;44(7):1005–1017. https://doi.org/10.1007/s40279-014-0180-z",
+        "Helgerud J, Høydal K, Wang E, et al. Aerobic high-intensity intervals improve VO2max more than moderate training. Med Sci Sports Exerc 2007;39(4):665–671. https://doi.org/10.1249/mss.0b013e3180304570",
+        "research/04 §2 (supported rows, lumbar-extension machine, captain's chair EMG, grip and mortality) and §3.5 (rep ranges by exercise type)"
+      ]
+    },
+    {
+      "id": "upper-2day",
+      "name": { "en": "Upper body · 2 days (A/B)", "ru": "Верх тела · 2 дня (A/B)" },
+      "description": {
+        "en": "For busy weeks: the same exercises merged into two longer days, horizontal and vertical. The priority lifts keep their extra set so weekly volume stays near 85 % of the 3-day plan; the second chest fly, the pushdown, the Pallof press and the carries are dropped first.",
+        "ru": "Для загруженных недель: те же упражнения в двух более длинных тренировках — горизонтальные и вертикальные движения. Приоритетные упражнения сохраняют дополнительный подход, чтобы недельный объём остался около 85 % от трёхдневной программы; в первую очередь убраны второе сведение на грудь, разгибания на блоке, жим Паллофа и переноски."
+      },
+      "daysPerWeek": 2,
+      "goal": "recomp",
+      "days": [
+        {
+          "key": "A",
+          "name": { "en": "A · Chest & back, horizontal", "ru": "A · Грудь и спина, горизонтальные движения" },
+          "focus": ["chest", "back", "triceps", "biceps", "abs", "lower-back"],
+          "finisher": {
+            "en": "Finisher · 10 min zone 2: bike, rower or incline walk at a pace where you can still talk in full sentences.",
+            "ru": "Финиш · 10 мин в зоне 2: велотренажёр, гребля или ходьба в горку в темпе, при котором можно говорить полными предложениями."
+          },
+          "slots": [
+            {
+              "slotId": "A1", "exerciseId": "machine-chest-press", "role": "primary", "priority": true,
+              "sets": 4, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Main chest lift first while you are fresh; with two days a week each session carries more of the chest work.",
+                "ru": "Главное упражнение на грудь — первым, пока вы свежи; при двух тренировках в неделю каждая берёт на себя больше работы на грудь."
+              }
+            },
+            {
+              "slotId": "A2", "exerciseId": "machine-row", "role": "primary",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Chest-supported row right after the press: a push–pull pair that keeps back work level with chest work, with no load on the lower back.",
+                "ru": "Тяга с упором грудью сразу после жима: пара «жим–тяга» держит работу на спину наравне с работой на грудь и не нагружает поясницу."
+              }
+            },
+            {
+              "slotId": "A3", "exerciseId": "pec-deck", "role": "isolation", "priority": true,
+              "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "The pec deck stays: chest is the priority even in a short week.",
+                "ru": "«Бабочка» остаётся: грудь в приоритете даже в короткую неделю."
+              }
+            },
+            {
+              "slotId": "A4", "exerciseId": "lat-pulldown", "role": "primary",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Vertical pull, so the back is trained from both angles on this day.",
+                "ru": "Вертикальная тяга, чтобы спина в этот день получила нагрузку под двумя углами."
+              }
+            },
+            {
+              "slotId": "A5", "exerciseId": "triceps-press-machine", "role": "secondary", "superset": "sA1",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Triceps press alternated with the curl: both arm muscles in about half the time.",
+                "ru": "Жим на трицепс чередуется со сгибаниями: обе мышцы рук примерно за половину времени."
+              }
+            },
+            {
+              "slotId": "A6", "exerciseId": "machine-preacher-curl", "role": "isolation", "superset": "sA1",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Biceps curl paired with the triceps press (opposite muscles).",
+                "ru": "Сгибания на бицепс в паре с жимом на трицепс (мышцы-антагонисты)."
+              }
+            },
+            {
+              "slotId": "A7", "exerciseId": "machine-crunch", "role": "trunk", "superset": "sA2",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Loaded crunch alternated with the lower-back machine: the front and back of the trunk in one block.",
+                "ru": "Скручивания с отягощением чередуются с тренажёром для поясницы: передняя и задняя поверхность корпуса в одном блоке."
+              }
+            },
+            {
+              "slotId": "A8", "exerciseId": "lower-back-machine", "role": "trunk", "setsAdj": -1, "superset": "sA2",
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Lumbar extension once a week, paired with the crunch.",
+                "ru": "Разгибание поясницы раз в неделю, в паре со скручиваниями."
+              }
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "name": { "en": "B · Back & shoulders, vertical", "ru": "B · Спина и плечи, вертикальные движения" },
+          "focus": ["back", "chest", "shoulders", "biceps", "abs"],
+          "finisher": {
+            "en": "Finisher · 14 min intervals: 2 min easy, then 4 rounds of 1 min hard and 2 min easy, on a bike or rower. Once a week on a rest day: 4 × 4 min at 90–95 % of max heart rate.",
+            "ru": "Финиш · 14 мин интервалов: 2 мин легко, затем 4 раунда — 1 мин тяжело и 2 мин легко на велотренажёре или гребном тренажёре. Раз в неделю в день отдыха: 4 × 4 мин на 90–95 % от максимального пульса."
+          },
+          "slots": [
+            {
+              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true,
+              "sets": 4, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "The vertical day opens with pull-ups: here the back is the priority.",
+                "ru": "День вертикальных движений начинается с подтягиваний: здесь в приоритете спина."
+              }
+            },
+            {
+              "slotId": "B2", "exerciseId": "machine-incline-press", "role": "secondary", "superset": "sB1",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Incline press for the upper chest — the week's second chest session — alternated with the cable row.",
+                "ru": "Жим под углом на верх груди — вторая тренировка груди за неделю — чередуется с тягой блока."
+              }
+            },
+            {
+              "slotId": "B3", "exerciseId": "seated-cable-row", "role": "primary", "superset": "sB1",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Cable row paired with the incline press: push and pull without losing reps.",
+                "ru": "Тяга блока в паре с жимом под углом: жим и тяга без потери повторений."
+              }
+            },
+            {
+              "slotId": "B4", "exerciseId": "machine-shoulder-press", "role": "secondary",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "Overhead press for the delts and triceps.",
+                "ru": "Жим вверх для дельт и трицепса."
+              }
+            },
+            {
+              "slotId": "B5", "exerciseId": "machine-lateral-raise", "role": "small",
+              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Side delts for shoulder width.",
+                "ru": "Средняя дельта для ширины плеч."
+              }
+            },
+            {
+              "slotId": "B6", "exerciseId": "face-pull", "role": "small",
+              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Rear delts and rotator cuff to balance the pressing.",
+                "ru": "Задняя дельта и вращательная манжета для баланса с жимами."
+              }
+            },
+            {
+              "slotId": "B7", "exerciseId": "hammer-curl", "role": "isolation",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Second arm exercise: brachialis, forearms and grip.",
+                "ru": "Второе упражнение на руки: брахиалис, предплечья и хват."
+              }
+            },
+            {
+              "slotId": "B8", "exerciseId": "captains-chair-knee-raise", "role": "trunk",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Lower-ab strength to finish.",
+                "ru": "Сила нижней части пресса в завершение."
+              }
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "research/02 §J (3 → 2 days: keep ≥ 85 % of weekly hard sets, primaries 3 → 4 sets, drop the second accessory first, session ≤ 75 min); research/01 Table 3 (upper A horizontal / upper B vertical)",
+        "Schoenfeld BJ, Grgic J, Krieger J. How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis. J Sports Sci 2019;37(11):1286–1295. https://doi.org/10.1080/02640414.2018.1555906",
+        "Grgic J, Schoenfeld BJ, Davies TB, et al. Effect of resistance training frequency on gains in muscular strength: a systematic review and meta-analysis. Sports Med 2018;48(5):1207–1220. https://doi.org/10.1007/s40279-018-0872-x",
+        "Zhang X, Weakley J, Li H, Li Z, García-Ramos A. Superset versus traditional resistance training prescriptions: a systematic review and meta-analysis exploring acute and chronic effects on mechanical, metabolic, and perceptual variables. Sports Med 2025;55:953–975. https://doi.org/10.1007/s40279-025-02176-8",
+        "Iversen VM, Norum M, Schoenfeld BJ, Fimland MS. No time to lift? Designing time-efficient training programs for strength and hypertrophy: a narrative review. Sports Med 2021;51(10):2079–2095. https://doi.org/10.1007/s40279-021-01490-1"
+      ]
+    },
+    {
+      "id": "upper-4day",
+      "name": { "en": "Upper body · 4 days (push/pull)", "ru": "Верх тела · 4 дня (жимы/тяги)" },
+      "description": {
+        "en": "The same 20 exercises spread over four shorter days: push, pull, push, pull. Weekly volume matches the 3-day plan, sessions drop to about 40–55 min, and every muscle is still trained twice a week.",
+        "ru": "Те же 20 упражнений, разложенные на четыре более короткие тренировки: жимы, тяги, жимы, тяги. Недельный объём как в трёхдневной программе, тренировки сокращаются примерно до 40–55 минут, а каждая мышца по-прежнему работает дважды в неделю."
+      },
+      "daysPerWeek": 4,
+      "goal": "recomp",
+      "days": [
+        {
+          "key": "A",
+          "name": { "en": "A · Push, heavy", "ru": "A · Жимы, тяжёлый день" },
+          "focus": ["chest", "shoulders", "triceps", "abs"],
+          "finisher": {
+            "en": "Finisher · 10 min zone 2: bike or incline walk at a conversational pace.",
+            "ru": "Финиш · 10 мин в зоне 2: велотренажёр или ходьба в горку в разговорном темпе."
+          },
+          "slots": [
+            {
+              "slotId": "A1", "exerciseId": "machine-chest-press", "role": "primary", "priority": true,
+              "sets": 4, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "The heavy push day opens with the main chest lift.",
+                "ru": "Тяжёлый жимовой день начинается с главного упражнения на грудь."
+              }
+            },
+            {
+              "slotId": "A2", "exerciseId": "machine-shoulder-press", "role": "secondary",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "Overhead press while the shoulders are still fresh.",
+                "ru": "Жим вверх, пока плечи ещё свежие."
+              }
+            },
+            {
+              "slotId": "A3", "exerciseId": "pec-deck", "role": "isolation", "priority": true,
+              "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Chest isolation: the priority muscle gets a second exercise.",
+                "ru": "Изоляция груди: приоритетная мышца получает второе упражнение."
+              }
+            },
+            {
+              "slotId": "A4", "exerciseId": "triceps-press-machine", "role": "secondary",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "Heavy triceps press after the chest work.",
+                "ru": "Тяжёлый жим на трицепс после работы на грудь."
+              }
+            },
+            {
+              "slotId": "A5", "exerciseId": "machine-crunch", "role": "trunk",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Loaded abs.",
+                "ru": "Пресс с отягощением."
+              }
+            }
+          ]
+        },
+        {
+          "key": "B",
+          "name": { "en": "B · Pull, heavy", "ru": "B · Тяги, тяжёлый день" },
+          "focus": ["back", "biceps", "shoulders", "lower-back", "forearms"],
+          "finisher": {
+            "en": "Finisher · 14 min intervals: 2 min easy, then 4 rounds of 1 min hard and 2 min easy, on a bike or rower.",
+            "ru": "Финиш · 14 мин интервалов: 2 мин легко, затем 4 раунда — 1 мин тяжело и 2 мин легко на велотренажёре или гребном тренажёре."
+          },
+          "slots": [
+            {
+              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true,
+              "sets": 4, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "The heavy pull day opens with pull-ups.",
+                "ru": "Тяжёлый день тяг начинается с подтягиваний."
+              }
+            },
+            {
+              "slotId": "B2", "exerciseId": "machine-row", "role": "primary",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Chest-supported row: back thickness with no load on the lower back.",
+                "ru": "Тяга с упором грудью: толщина спины без нагрузки на поясницу."
+              }
+            },
+            {
+              "slotId": "B3", "exerciseId": "face-pull", "role": "small",
+              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Rear delts and rotator cuff.",
+                "ru": "Задняя дельта и вращательная манжета."
+              }
+            },
+            {
+              "slotId": "B4", "exerciseId": "machine-preacher-curl", "role": "isolation", "setsAdj": 1,
+              "sets": 3, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Main biceps exercise, with an extra set.",
+                "ru": "Главное упражнение на бицепс с дополнительным подходом."
+              }
+            },
+            {
+              "slotId": "B5", "exerciseId": "lower-back-machine", "role": "trunk", "setsAdj": -1,
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Lumbar extension once a week.",
+                "ru": "Разгибание поясницы раз в неделю."
+              }
+            },
+            {
+              "slotId": "B6", "exerciseId": "farmers-carry", "role": "carry", "unit": "meters",
+              "sets": 2, "repRange": [20, 40], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Carries for grip and posture to finish the pull day.",
+                "ru": "Переноски для хвата и осанки в конце дня тяг."
+              }
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "name": { "en": "C · Push, volume", "ru": "C · Жимы, объёмный день" },
+          "focus": ["chest", "shoulders", "triceps", "abs"],
+          "finisher": {
+            "en": "Finisher · 12 min zone 2: bike, rower or incline walk at a conversational pace.",
+            "ru": "Финиш · 12 мин в зоне 2: велотренажёр, гребля или ходьба в горку в разговорном темпе."
+          },
+          "slots": [
+            {
+              "slotId": "C1", "exerciseId": "machine-incline-press", "role": "secondary",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "why": {
+                "en": "The second push day starts with the upper chest.",
+                "ru": "Второй жимовой день начинается с верха груди."
+              }
+            },
+            {
+              "slotId": "C2", "exerciseId": "cable-fly", "role": "isolation",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Cable fly: chest work in the stretched position.",
+                "ru": "Сведение в кроссовере: нагрузка на грудь в растянутом положении."
+              }
+            },
+            {
+              "slotId": "C3", "exerciseId": "machine-lateral-raise", "role": "small",
+              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Side delts for shoulder width.",
+                "ru": "Средняя дельта для ширины плеч."
+              }
+            },
+            {
+              "slotId": "C4", "exerciseId": "cable-pushdown", "role": "isolation",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Triceps isolation.",
+                "ru": "Изоляция трицепса."
+              }
+            },
+            {
+              "slotId": "C5", "exerciseId": "pallof-press", "role": "hold", "unit": "reps",
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Anti-rotation core work.",
+                "ru": "Антиротационная работа на кор."
+              }
+            }
+          ]
+        },
+        {
+          "key": "D",
+          "name": { "en": "D · Pull, volume", "ru": "D · Тяги, объёмный день" },
+          "focus": ["back", "biceps", "abs"],
+          "finisher": {
+            "en": "Finisher · 15 min zone 2 (conversational pace). Once a week on a rest day: 4 × 4 min at 90–95 % of max heart rate with 3 min easy in between.",
+            "ru": "Финиш · 15 мин в зоне 2 (разговорный темп). Раз в неделю в день отдыха: 4 × 4 мин на 90–95 % от максимального пульса с 3 мин лёгкой работы между ними."
+          },
+          "slots": [
+            {
+              "slotId": "D1", "exerciseId": "lat-pulldown", "role": "primary", "setsAdj": 1,
+              "sets": 4, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "The second pull day opens with the pulldown, plus one set so the back keeps the most volume.",
+                "ru": "Второй день тяг начинается с вертикальной тяги, плюс один подход, чтобы спина сохранила наибольший объём."
+              }
+            },
+            {
+              "slotId": "D2", "exerciseId": "seated-cable-row", "role": "primary",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Cable row for the mid-back.",
+                "ru": "Тяга блока для середины спины."
+              }
+            },
+            {
+              "slotId": "D3", "exerciseId": "hammer-curl", "role": "isolation",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
+              "why": {
+                "en": "Brachialis, forearms and grip.",
+                "ru": "Брахиалис, предплечья и хват."
+              }
+            },
+            {
+              "slotId": "D4", "exerciseId": "captains-chair-knee-raise", "role": "trunk",
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
+              "why": {
+                "en": "Lower-ab strength.",
+                "ru": "Сила нижней части пресса."
+              }
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "research/01 Table 3 (4 days: push / pull / push / pull, 5–8 sets per muscle per session)",
+        "Schoenfeld BJ, Grgic J, Krieger J. How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis. J Sports Sci 2019;37(11):1286–1295. https://doi.org/10.1080/02640414.2018.1555906",
+        "Iversen VM, Norum M, Schoenfeld BJ, Fimland MS. No time to lift? Designing time-efficient training programs for strength and hypertrophy: a narrative review. Sports Med 2021;51(10):2079–2095. https://doi.org/10.1007/s40279-021-01490-1"
+      ]
+    },
+    {
+      "id": "legs-addon",
+      "name": { "en": "Legs add-on", "ru": "Дополнительный день ног" },
+      "description": {
+        "en": "A legs day for later: trap-bar deadlift and leg press for strength and bone loading, leg curl and leg extension as a superset, standing calf raises. Added to any program as a day in the rotation, or spread over the existing days.",
+        "ru": "День ног на потом: тяга с трэп-грифом и жим ногами для силы и нагрузки на кости, сгибания и разгибания ног суперсетом, подъёмы на носки стоя. Добавляется к любой программе отдельным днём в ротации или распределяется по существующим дням."
+      },
+      "daysPerWeek": 1,
+      "addon": true,
+      "goal": "recomp",
+      "distribution": { "A": ["L1", "L4"], "B": ["L2", "L3"], "C": ["L5"] },
+      "days": [
+        {
+          "key": "L",
+          "name": { "en": "L · Legs", "ru": "L · Ноги" },
+          "focus": ["quads", "hamstrings", "glutes", "calves"],
+          "finisher": {
+            "en": "Finisher · 10 min easy zone 2 walk or bike to cool down.",
+            "ru": "Финиш · 10 мин спокойной ходьбы или велотренажёра в зоне 2 для заминки."
+          },
+          "slots": [
+            {
+              "slotId": "L5", "exerciseId": "trap-bar-deadlift", "role": "primary", "rirAdj": 1,
+              "sets": 3, "repRange": [6, 10], "rir": 3, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "First, while you are fresh: the trap bar keeps the torso more upright, making it the safest heavy hinge, and it loads the hips and spine for bone strength. One extra rep in reserve while the technique settles.",
+                "ru": "Первым, пока вы свежи: трэп-гриф держит корпус вертикальнее, поэтому это самая безопасная тяжёлая тяга, и она нагружает таз и позвоночник для крепости костей. Один дополнительный повтор в запасе, пока техника не устоится."
+              }
+            },
+            {
+              "slotId": "L1", "exerciseId": "leg-press-45", "role": "primary",
+              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "why": {
+                "en": "Heavy leg press for the quads and glutes without a bar on the spine.",
+                "ru": "Тяжёлый жим ногами для квадрицепсов и ягодиц без штанги на позвоночнике."
+              }
+            },
+            {
+              "slotId": "L2", "exerciseId": "seated-leg-curl", "role": "isolation", "superset": "sL1",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "The seated leg curl grows the hamstrings more than the lying one; alternated with the leg extension.",
+                "ru": "Сгибание ног сидя растит заднюю поверхность бедра сильнее, чем лёжа; чередуется с разгибанием ног."
+              }
+            },
+            {
+              "slotId": "L3", "exerciseId": "leg-extension", "role": "isolation", "superset": "sL1",
+              "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Quads in isolation, paired with the leg curl (opposite muscles).",
+                "ru": "Изоляция квадрицепсов в паре со сгибанием ног (мышцы-антагонисты)."
+              }
+            },
+            {
+              "slotId": "L4", "exerciseId": "standing-calf-raise-machine", "role": "small", "setsAdj": 1,
+              "sets": 3, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "why": {
+                "en": "Standing calf raises train the gastrocnemius far better than the seated version.",
+                "ru": "Подъёмы на носки стоя тренируют икроножную мышцу намного лучше, чем сидя."
+              }
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "content/fitness/registry.json ownerTemplate.legsAddon; research/01 owner profile (heavy leg press or hack squat at 5–8 reps and ≥ 80 % 1RM for bone) and Table 4 (order: priority and multi-joint first)",
+        "Watson SL, Weeks BK, Weis LJ, et al. High-intensity resistance and impact training improves bone mineral density and physical function in postmenopausal women with osteopenia and osteoporosis: the LIFTMOR randomized controlled trial. J Bone Miner Res 2018;33(2):211–220. https://doi.org/10.1002/jbmr.3284",
+        "research/04 §2 (seated > lying leg curl for hamstring volume; standing > seated calf raise for the gastrocnemius) and §3.4 (lower-back load: technique load for ≥ 2 weeks before progressing a high-load hinge)",
+        "Zhang X, Weakley J, Li H, Li Z, García-Ramos A. Superset versus traditional resistance training prescriptions: a systematic review and meta-analysis exploring acute and chronic effects on mechanical, metabolic, and perceptual variables. Sports Med 2025;55:953–975. https://doi.org/10.1007/s40279-025-02176-8"
+      ]
+    }
+  ]
+}

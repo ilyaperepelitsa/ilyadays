@@ -19,3 +19,13 @@ public/offline-assets.js
 
 # local project-memory tooling
 .codex-memory/
+
+# generated fitness diagram originals (optimized copies live in public/media/fitness) and the generator's run lock
+art/fitness/originals/
+art/fitness/.run.lock
+
+# local QA screenshots, logs and one-off browser scripts (scripts/fitness-qa.py and the browser checks)
+output/
+
+# Supabase CLI version/cache files
+supabase/.temp/

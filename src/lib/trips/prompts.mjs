@@ -96,9 +96,10 @@ export function themeCall(brief) {
  * @param {import("./types").TripBrief} brief
  * @param {import("./types").Theme[]} themes
  */
-export function outlineCall(brief, themes) {
+export function outlineCall(brief, themes, commitments = []) {
   const developer = [
     `Plan ${brief.routes} walking routes in ${brief.city}.`,
+    ...(brief.stayStart ? [`Stay is ${brief.stayStart} through ${brief.stayEnd}, inclusive, in destination local dates. Route 1 is the arrival date, route 2 is the next date, and so on. Respect the weekday and dates.`, `Accepted events are fixed appointments, saved and scheduled separately by the app. Do not duplicate them as ordinary stops, drop them, move their venue/date/time, or claim they are booked. Leave enough time for their durations plus 30 minutes transition each within the ${brief.hours}-hour day. Keep walking routes compact and allow 15 minutes between stops. Accepted appointments: ${JSON.stringify(commitments.map((c) => ({ name: c.event.name, venue: c.event.venue, date: c.date, time: c.visitTime, minutes: c.durationMinutes, source: c.event.sourceUrl })))}`] : []),
     `Each route has exactly ${brief.placesPerRoute} sights and exactly ${brief.foodBreaks} food stops, in walking order.`,
     "Return the routes in the same order as the themes. Do not rename the themes.",
     "A sight is a real place a visitor can find. A food stop is a real café, market or simple local restaurant on that walk, not a chain.",
@@ -111,6 +112,7 @@ export function outlineCall(brief, themes) {
     tasteLine(brief),
     "why and whyRu are one sentence each: why this stop is on this route.",
     "local is the name in the city's own language, or an empty string.",
+    "search is what to type into Google Maps or Yandex Maps to land on this exact place: the name as signposted, then the street or neighbourhood, then the city, for example \"Pastéis de Belém, Rua de Belém, Lisbon\". No URL.",
     "id is a short ascii slug.",
   ].join(" ");
   const stop = obj(
@@ -118,6 +120,7 @@ export function outlineCall(brief, themes) {
       id: str,
       name: str,
       local: str,
+      search: str,
       lat: { type: "number" },
       lon: { type: "number" },
       minutes: { type: "integer" },
@@ -126,7 +129,7 @@ export function outlineCall(brief, themes) {
       whyRu: str,
       wish: str,
     },
-    ["id", "name", "local", "lat", "lon", "minutes", "kind", "why", "whyRu", "wish"],
+    ["id", "name", "local", "search", "lat", "lon", "minutes", "kind", "why", "whyRu", "wish"],
   );
   const schema = obj(
     {
@@ -173,8 +176,9 @@ export function notesCall(brief, stops) {
     "Use only the ids you are given, once each.",
     "access says whether a visitor can go in. days says the usual pattern. hours is a short sentence, not a promise.",
     "If you are not sure a monument is open, say to ask that day.",
-    "A sight needs at least two facts, and one of them is keeps. A meal needs one.",
-    "Kinds: build (how it was made), events (what happened there), literature (a real book), film (a real film), keeps (what to go and look at).",
+    "A sight gets five to seven facts: at least two keeps, at least one build and one events. A meal gets two or three: what the place or dish is known for, what to order, and its history if it has one.",
+    "Kinds: build (who made it, when, how, from what), events (what happened there, who lived, prayed, ruled or died there), literature (a real book), film (a real film), keeps (what to go and look at, and exactly where: above the door, the third column, the left aisle).",
+    "Each fact is one or two short sentences with something specific in it — a name, a year, a number, a material, a position — that a good guide would point out. No brochure words (stunning, must-see, hidden gem), and do not repeat the stop's why.",
     "Do not invent a book, a film, or a closure. If you have no book or film, use build and keeps.",
     "For a sight, one keeps fact names a specific thing to locate — a column, a tomb, a mosaic, a doorway — and spotSearch is a short Commons search for a photograph of that thing, including the city.",
     "If there is nothing particular to find, spotSearch is an empty string. A meal always has an empty spotSearch.",
@@ -196,7 +200,7 @@ export function notesCall(brief, stops) {
       hours: str,
       wikiTitle: str,
       spotSearch: str,
-      notes: { type: "array", minItems: 1, maxItems: 4, items: note },
+      notes: { type: "array", minItems: 1, maxItems: 8, items: note },
     },
     ["id", "accessEn", "accessRu", "daysEn", "daysRu", "hours", "wikiTitle", "spotSearch", "notes"],
   );

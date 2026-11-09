@@ -18,7 +18,7 @@ export function NewTripView({ lang }: { lang: Lang }) {
         <TripComposer lang={lang} />
       </main>
       <SiteFooter>
-        <Link href={localPath(lang, "/travel")}>{t.tripBack}</Link>
+        <Link prefetch={false} href={localPath(lang, "/travel")}>{t.tripBack}</Link>
       </SiteFooter>
     </AuthProvider>
   );
@@ -33,7 +33,7 @@ export function MadeTripView({ lang, id }: { lang: Lang; id: string }) {
         <TripReader lang={lang} id={id} />
       </main>
       <SiteFooter>
-        <Link href={localPath(lang, "/travel")}>{t.tripBack}</Link>
+        <Link prefetch={false} href={localPath(lang, "/travel")}>{t.tripBack}</Link>
       </SiteFooter>
     </AuthProvider>
   );

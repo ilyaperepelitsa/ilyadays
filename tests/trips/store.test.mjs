@@ -51,6 +51,23 @@ test("a broken store reads as empty and a refused write does not throw", () => {
   assert.deepEqual(listTrips().map((item) => item.id), ["kept"]);
 });
 
+test("entries the pages cannot draw are skipped, the good ones kept", () => {
+  empty();
+  const day = { theme: { title: "Hills", description: "", titleRu: "", descriptionRu: "" }, stops: [{ id: "s1" }] };
+  const good = { ...trip("good"), routes: [day] };
+  localStorage.setItem("ilyadays-trips-v1", JSON.stringify([
+    null,
+    7,
+    { id: "no-routes", city: "Porto" },
+    { ...trip("no-theme"), routes: [{ stops: [] }] },
+    { ...trip("bad-stop"), routes: [{ ...day, stops: [null] }] },
+    good,
+    trip("empty"),
+  ]));
+  assert.deepEqual(listTrips().map((item) => item.id), ["good", "empty"]);
+  assert.equal(loadTrip("no-routes"), null);
+});
+
 function bagWriteOff() {
   localStorage.removeItem("__throwWrite");
   localStorage.removeItem("__throwRead");
@@ -90,4 +107,11 @@ test("a save tells subscribers and an unsubscribe stops that", () => {
   assert.equal(trips, 1);
   assert.equal(prefs, 1);
 });
+});
+
+test('save reports a refused write instead of allowing the creation UI to navigate to a missing trip', () => {
+  empty(); denyWrites();
+  assert.equal(saveTrip(trip('not-saved')), false);
+  empty();
+  assert.equal(saveTrip(trip('saved')), true);
 });

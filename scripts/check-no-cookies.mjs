@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // No-cookie audit of the production build. Run after `npm run build`:
 //   npm run check:cookies            scan the browser bundles + prerendered pages
-//   npm run check:cookies -- --live  also request every page from `next start` (localhost:3000) and check headers
+//   npm run check:cookies -- --live  also request representative routes from `next start` and check headers
+// COOKIE_AUDIT_BASE overrides http://localhost:3000.
 //
 // Fails if code that ships to the browser WRITES document.cookie, or if any response sends Set-Cookie.
 // Reads of document.cookie inside library code are listed so they can be reviewed, but don't fail the check.
@@ -40,9 +41,11 @@ console.log(`${mentions.length} mention(s) of document.cookie / Set-Cookie in th
 mentions.forEach((m) => console.log("  " + m));
 
 if (process.argv.includes("--live")) {
-  const base = "http://localhost:3000";
-  const pages = ["/", "/ru", "/food", "/food/oyakodon", "/food/sous-vide", "/travel", "/travel/istanbul", "/ru/food/ramen",
-    "/food/oyakodon.html", "/nope", "/manifest.webmanifest", "/media/share/oyakodon.jpg", "/apps/istanbul/app.js"];
+  const base = process.env.COOKIE_AUDIT_BASE || "http://localhost:3000";
+  const pages = ["/", "/ru", "/food", "/food/oyakodon", "/food/sous-vide", "/travel", "/travel/new", "/ru/travel/new", "/travel/istanbul", "/ru/food/ramen",
+    "/food/oyakodon.html", "/nope", "/manifest.webmanifest", "/media/share/oyakodon.jpg", "/apps/istanbul/app.js",
+    ...["", "/train", "/program", "/profile", "/gyms", "/progress", "/nutrition", "/tools", "/exercises", "/exercises/pec-deck", "/science", "/science/safety"]
+      .flatMap((p) => [`/fitness${p}`, `/ru/fitness${p}`])];
   for (const p of pages) {
     const res = await fetch(base + p, { redirect: "manual" });
     const sc = res.headers.get("set-cookie");

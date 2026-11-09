@@ -63,7 +63,8 @@ function parseStop(row, used, known) {
   if (!Number.isInteger(minutes) || minutes < 10 || minutes > 180) throw new TripShapeError("minutes");
   const id = /^[a-z0-9-]{2,48}$/.test(given) && !used.has(given) ? given : slugId(name, used);
   if (!used.has(id)) used.add(id);
-  const stop = { id, name, local: text(row.local), lat, lon, minutes, kind, why, whyRu, wish: text(row.wish).slice(0, 80) };
+  const search = text(row.search).replace(/https?:\/\/\S+/gi, "").replace(/\s+/g, " ").trim().slice(0, 140);
+  const stop = { id, name, local: text(row.local), search, lat, lon, minutes, kind, why, whyRu, wish: text(row.wish).slice(0, 80) };
   known.set(id, stop);
   return stop;
 }
@@ -199,16 +200,4 @@ export function parseNotes(raw, stops) {
     if (stop.kind === "food") facts.spotSearch = "";
   }
   return byId;
-}
-
-/**
- * @param {{ lat: number, lon: number }[]} stops
- */
-export function mapsUrl(stops) {
-  if (stops.length === 0) return "";
-  const at = (stop) => `${stop.lat},${stop.lon}`;
-  if (stops.length === 1) return `https://www.google.com/maps/search/?api=1&query=${at(stops[0])}`;
-  const via = stops.slice(1, -1).map(at).join("|");
-  const tail = via ? `&waypoints=${encodeURIComponent(via)}` : "";
-  return `https://www.google.com/maps/dir/?api=1&origin=${at(stops[0])}&destination=${at(stops[stops.length - 1])}${tail}`;
 }

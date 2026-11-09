@@ -1,0 +1,299 @@
+/* fitness: train stream — plans/fitness/04-session-tracker-ui.md. The session tracker (/fitness/train): trk-* classes.
+   Phone first (360–430 px): set rows >= 64 px, Done >= 56 px, steppers and chips >= 44–48 px, sticky bars above the
+   safe area. Colours only through food.css tokens; motion off under prefers-reduced-motion. */
+
+.trk-start, .trk-session, .trk-summary, .trk-loading { display: grid; gap: 14px; max-width: 720px; }
+/* no double-tap zoom anywhere on the running session (a double tap between rows must not zoom the page) */
+.trk-start button, .trk-session, .trk-session button, .trk-summary button, .trk-sheet button { touch-action: manipulation; }
+.trk-kicker { margin: 0; font: 700 .76rem var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.trk-small { font-size: .85rem; }
+.trk-note { margin: 6px 0; font-size: .88rem; color: var(--muted); }
+.trk-slot { flex: none; font-weight: 700; font-size: .9rem; color: var(--accent); }
+.trk-tag {
+  display: inline-flex; align-items: center; margin-left: 6px; padding: 1px 8px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--ink); font: 600 .76rem var(--sans); vertical-align: middle;
+}
+.trk-tag.soft { background: var(--surface-2); color: var(--muted); }
+.trk-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.trk-tags .trk-tag { margin-left: 0; }
+/* fitness.css (the shared .fit-* rules) is imported after this file: equal specificity would lose to it */
+.fit-button.trk-wide { width: 100%; min-height: 56px; font-size: 1.05rem; }
+
+/* ---------- loading */
+.trk-skeleton {
+  min-height: 220px;
+  background: linear-gradient(90deg, var(--surface) 0%, var(--surface-2) 50%, var(--surface) 100%);
+  background-size: 200% 100%; animation: trk-shimmer 1.4s ease-in-out infinite;
+}
+@keyframes trk-shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+
+/* ---------- start panel */
+.trk-plan h2 { margin: 2px 0 4px; }
+.trk-days { margin: 12px 0 4px; }
+.fit-seg.trk-days button { min-width: 56px; text-align: center; font-weight: 700; }
+.trk-day-next { font-weight: 500; color: var(--muted); }
+.trk-plan-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; }
+.trk-plan-list li {
+  display: grid; grid-template-columns: 34px minmax(0, 1fr); column-gap: 8px; row-gap: 2px; padding: 9px 0;
+  border-top: 1px solid var(--line);
+}
+.trk-plan-list .trk-plan-name { font-weight: 600; overflow-wrap: anywhere; }
+.trk-plan-list .trk-plan-target { grid-column: 2; color: var(--muted); font-size: .92rem; }
+.trk-plan-list li.is-superset { box-shadow: inset 3px 0 0 var(--cool); padding-left: 8px; }
+/* back-to-back supersets (B2+B3, B4+B5) read as two pairs, not one long bar */
+.trk-plan-list li.is-superset + li.is-superset:not(:has(.trk-tag)) { margin-top: 8px; }
+.trk-plan-list .trk-plan-hold { grid-column: 2; font-size: .85rem; font-weight: 600; color: var(--cool); }
+.trk-note.trk-hold { color: var(--cool); font-weight: 600; }
+.trk-setup h3, .trk-warmup h3 { margin: 4px 0 8px; font-size: 1rem; }
+.trk-setup h3:not(:first-child) { margin-top: 16px; }
+.trk-bw { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 8px; align-items: center; max-width: 320px; }
+.trk-bw .trk-step { border: 1px solid var(--line); background: var(--surface); }
+.trk-bw-field {
+  display: flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 12px; border: 1px solid var(--line);
+  border-radius: 12px; background: var(--surface); color: var(--muted);
+}
+.trk-bw-field:focus-within { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px; }
+/* the field fills the 48 px box (a 25 px input inside it before), like the nutrition fields */
+.trk-bw-field input {
+  align-self: stretch; width: 100%; min-width: 0; border: 0; outline: none; background: transparent; color: var(--ink);
+  font: 700 1.2rem var(--sans); font-variant-numeric: tabular-nums;
+}
+.trk-bw-field input[aria-invalid="true"] { color: var(--accent); }
+.trk-setup details, .trk-warmup details, .trk-safety { margin-top: 10px; }
+.trk-setup summary, .trk-warmup summary, .trk-safety summary {
+  min-height: 44px; display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 600; color: var(--ink);
+  list-style: none;
+}
+/* a flex summary loses the native disclosure triangle: the chevron of the science contents (science.css) instead */
+.trk-setup summary::-webkit-details-marker, .trk-warmup summary::-webkit-details-marker, .trk-safety summary::-webkit-details-marker { display: none; }
+.trk-setup summary::after, .trk-warmup summary::after, .trk-safety summary::after {
+  content: ""; flex: none; width: 8px; height: 8px; margin: 0 6px 4px auto; border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .2s ease;
+}
+.trk-setup details[open] > summary::after, .trk-warmup details[open] > summary::after, .trk-safety[open] > summary::after {
+  margin-bottom: -4px; transform: rotate(-135deg);
+}
+.trk-scale { display: grid; gap: 6px; margin: 10px 0 14px; }
+.trk-scale-label { font-weight: 600; }
+.trk-dots { display: flex; gap: 8px; flex-wrap: wrap; }
+/* the empty ring is the button's only edge: 3:1 against the card (--line alone is 1.3:1) */
+.trk-dot {
+  width: 44px; height: 44px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--muted) 70%, var(--surface)); background: var(--surface);
+  cursor: pointer; padding: 0;
+}
+.trk-dot.is-on { background: var(--accent); border-color: var(--accent); }
+.trk-dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.trk-pain { margin: 6px 0 0; padding-left: 1.2em; font-size: .92rem; }
+.trk-pain li { margin: 4px 0; }
+.trk-pain li.is-amber { color: var(--ink); }
+.trk-pain li.is-red { color: var(--accent); }
+.fit-note.trk-notice { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0; }
+.trk-notice span { flex: 1 1 14rem; }
+
+/* ---------- running session */
+.trk-session-head h2 { margin: 2px 0; }
+.trk-session-head p { margin: 0; }
+.trk-safety { padding: 4px 14px 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+
+.trk-card, .trk-superset {
+  padding: 14px 16px 10px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow);
+}
+.trk-card.is-skipped { opacity: .75; }
+.trk-superset { display: grid; box-shadow: var(--shadow), inset 4px 0 0 var(--cool); }
+.trk-ss-label { margin: 0 0 4px; font-size: .88rem; color: var(--muted); }
+.trk-ss-label strong { color: var(--cool); }
+/* superset partners: each exercise stays one element, its parts are laid out by `order` (rows interleave) */
+.trk-card.in-superset { display: contents; }
+.trk-card.in-superset .trk-card-head { padding-top: 10px; border-top: 1px dashed var(--line); }
+.trk-card.in-superset:first-of-type .trk-card-head { padding-top: 0; border-top: 0; }
+
+.trk-card-title { display: flex; align-items: baseline; gap: 10px; }
+.trk-card-title h3 { flex: 1; min-width: 0; margin: 0; font-size: 1.1rem; overflow-wrap: anywhere; }
+.trk-card-title h3 a { color: var(--ink); text-decoration: none; }
+.trk-card-title h3 a:hover { color: var(--accent); text-decoration: underline; }
+.trk-count { flex: none; color: var(--muted); font-size: .9rem; font-weight: 600; }
+.trk-swapped { margin: 2px 0 0; font-size: .85rem; color: var(--cool); }
+.trk-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; }
+.trk-act {
+  min-height: 44px; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); font: 600 .9rem var(--sans); cursor: pointer;
+}
+.trk-act:hover { border-color: var(--accent); }
+.trk-act[aria-expanded="true"], .trk-act[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.trk-act:focus-visible, .trk-done:focus-visible, .trk-row-body:focus-visible, .trk-step:focus-visible, .trk-chip:focus-visible,
+.trk-warm-toggle:focus-visible, .trk-option:focus-visible, .trk-rest-adj:focus-visible, .trk-rest-close:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+.trk-tech { display: grid; gap: 8px; margin: 6px 0 8px; }
+.trk-tech img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: 12px; background: var(--surface-2); }
+.trk-tech-note { margin: -4px 0 0; font-size: .85rem; }
+.trk-cues { margin: 0; padding-left: 1.3em; font-size: .95rem; }
+.trk-cues li { margin: 4px 0; }
+.trk-more { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--accent); }
+
+.trk-group { display: grid; }
+.trk-group-label { margin: 8px 0 0; font-size: .85rem; color: var(--muted); }
+.trk-warm-toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; min-height: 44px; padding: 6px 2px;
+  border: 0; border-top: 1px solid var(--line); background: none; color: var(--muted); font: 600 .9rem var(--sans); cursor: pointer;
+  text-align: left;
+}
+
+/* set rows */
+.trk-row { border-top: 1px solid var(--line); scroll-margin-top: 120px; scroll-margin-bottom: 170px; }
+.trk-row-line { display: flex; align-items: center; gap: 8px; min-height: 64px; }
+.trk-row-body {
+  flex: 1; min-width: 0; min-height: 64px; display: flex; align-items: center; gap: 12px; padding: 8px 2px;
+  border: 0; border-radius: 12px; background: none; color: inherit; font: inherit; text-align: left;
+}
+button.trk-row-body { cursor: pointer; }
+.trk-badge {
+  flex: none; min-width: 34px; height: 34px; padding: 0 7px; display: inline-grid; place-items: center; border-radius: 999px;
+  background: var(--surface-2); color: var(--muted); font: 700 .82rem var(--sans); white-space: nowrap;
+}
+.trk-row-text { display: grid; gap: 2px; min-width: 0; }
+.trk-row-load { font-size: 1.2rem; font-weight: 700; line-height: 1.25; color: var(--ink); overflow-wrap: anywhere; }
+.trk-row-sub { font-size: .84rem; color: var(--muted); overflow-wrap: anywhere; }
+.trk-row.is-warmup .trk-row-load { font-size: 1.05rem; font-weight: 600; }
+.trk-row.is-done .trk-badge, .trk-row.is-failed .trk-badge { background: var(--accent-soft); color: var(--ink); }
+.trk-row.is-skipped .trk-row-load { text-decoration: line-through; color: var(--muted); font-weight: 500; }
+.trk-row.is-current {
+  margin: 4px -10px; padding: 0 10px; border-top-color: transparent; border-radius: 14px;
+  background: var(--accent-soft); box-shadow: inset 0 0 0 1.5px var(--accent);
+}
+.trk-row.is-current + .trk-row { border-top-color: transparent; }
+.trk-row.is-current .trk-badge { background: var(--accent); color: var(--on-accent); }
+.trk-done {
+  flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 56px; min-height: 56px;
+  padding: 0 14px; border-radius: 14px; border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent);
+  font: 700 1rem var(--sans); cursor: pointer;
+}
+.trk-done span[aria-hidden] { font-size: 1.2rem; }
+/* the next set's Done just after a set is logged (double-tap shield, under a second): visibly waiting, then armed */
+.trk-done { transition: opacity .2s ease; }
+.trk-done:disabled { opacity: .5; cursor: default; }
+.trk-row.is-current .trk-done { background: var(--accent); color: var(--on-accent); min-width: 88px; }
+.trk-check { flex: none; width: 56px; text-align: center; font-size: 1.45rem; font-weight: 700; color: var(--ok); }
+.trk-check.is-miss { color: var(--accent); }
+
+/* steppers and RIR chips */
+.trk-edit { display: grid; gap: 10px; padding: 2px 0 12px; }
+.trk-steppers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 10px; }
+.trk-stepper { display: grid; gap: 4px; min-width: 0; }
+.trk-stepper-label { font-size: .8rem; color: var(--muted); }
+.trk-stepper-row {
+  display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; border: 1px solid var(--line);
+  border-radius: 12px; background: var(--surface);
+}
+.trk-step {
+  min-width: 48px; min-height: 48px; padding: 0; border: 0; border-radius: 12px; background: transparent; color: var(--accent);
+  font: 700 1.5rem var(--sans); line-height: 1; cursor: pointer;
+}
+.trk-step:disabled { color: var(--muted); opacity: .4; cursor: default; }
+.trk-stepper-value { text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.trk-rir { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+/* the label takes its own line, so the five chips share one row at 360 px (RU «В запасе» pushed «4+» onto a row alone) */
+.trk-rir-label { flex: 1 0 100%; margin: 0; font-size: .8rem; color: var(--muted); }
+.trk-rir .trk-chip { flex: 1 1 0; }
+.trk-chip {
+  min-width: 44px; min-height: 44px; padding: 0 8px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); font: 700 1rem var(--sans); cursor: pointer;
+}
+.trk-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.trk-edit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.trk-edit-actions .fit-button { min-height: 44px; padding: 8px 14px; font-size: .92rem; }
+
+.trk-finisher h3, .trk-orphans h3 { margin: 0 0 6px; font-size: 1rem; }
+.trk-finisher p { margin: 0; }
+.trk-orphans ul { margin: 0; padding-left: 1.2em; }
+
+/* ---------- sticky bottom bar: Start, rest timer, elapsed, End */
+.trk-bar {
+  position: sticky; bottom: 0; z-index: 8; display: grid; gap: 8px; margin: 4px -16px 0;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+}
+.trk-rest { display: grid; grid-template-columns: 64px minmax(0, 1fr) 64px 44px; align-items: center; gap: 8px; }
+.trk-rest-adj {
+  min-height: 48px; padding: 0 4px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font: 600 .92rem var(--sans); cursor: pointer; white-space: nowrap;
+}
+.trk-rest-time { display: grid; justify-items: center; line-height: 1.1; }
+.trk-rest-label { font: 700 .72rem var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.trk-rest-clock { font-size: 2.1rem; font-weight: 800; color: var(--ink); }
+.trk-rest.is-over .trk-rest-clock, .trk-rest.is-over .trk-rest-label { color: var(--accent); }
+.trk-rest-close {
+  min-width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 12px; background: transparent; color: var(--muted);
+  font: 400 1.6rem var(--sans); cursor: pointer;
+}
+.trk-bar-main { display: flex; align-items: center; gap: 14px; min-height: 48px; }
+.trk-bar-stat { color: var(--muted); font-weight: 700; white-space: nowrap; }
+.trk-end-button { margin-left: auto; min-width: 104px; }
+.trk-live { margin-left: auto; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .85rem; }
+
+/* ---------- bottom sheets (<dialog>) */
+.trk-sheet {
+  inset: auto 0 0; margin: auto 0 0; width: 100%; max-width: 100%; max-height: 88dvh; padding: 0; border: 0;
+  border-radius: 18px 18px 0 0; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); overflow: hidden;
+}
+.trk-sheet::backdrop { background: color-mix(in srgb, var(--ink) 45%, transparent); }
+.trk-sheet-body {
+  display: grid; gap: 12px; max-height: 88dvh; overflow-y: auto; overscroll-behavior: contain;
+  padding: 18px 16px calc(16px + env(safe-area-inset-bottom, 0px));
+}
+.trk-sheet-title { margin: 0; font-size: 1.2rem; }
+.trk-sheet-lede { margin: 0; }
+.trk-options { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.trk-option {
+  width: 100%; min-height: 56px; display: grid; gap: 3px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--surface); color: var(--ink); font: inherit; text-align: left; cursor: pointer;
+}
+.trk-option:hover { border-color: var(--accent); }
+.trk-option-name { font-weight: 700; overflow-wrap: anywhere; }
+.trk-option-meta { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
+.trk-option-start { font-size: .9rem; font-weight: 600; color: var(--accent); }
+.trk-remember { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; }
+.trk-remember input { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--accent); }
+.trk-sheet-actions { display: grid; gap: 8px; }
+@media (min-width: 700px) {
+  .trk-sheet { inset: 0; margin: auto; width: min(560px, calc(100% - 32px)); border-radius: 18px; }
+}
+
+/* ---------- summary */
+.trk-summary h2 { margin: 2px 0 8px; }
+.trk-summary h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.trk-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 10px 0 0; }
+.trk-stats div { padding: 10px 12px; border-radius: 12px; background: var(--surface-2); }
+.trk-stats dt { font-size: .8rem; color: var(--muted); }
+.trk-stats dd { margin: 0; font-size: 1.35rem; font-weight: 800; }
+.trk-prs ul { margin: 0; padding-left: 1.2em; }
+.trk-prs li { margin: 4px 0; }
+.trk-sum-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.trk-sum-item { padding: 10px 0; border-top: 1px solid var(--line); }
+.trk-sum-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 10px; }
+.trk-sum-head a { font-weight: 700; color: var(--ink); }
+.trk-sum-meta { margin: 4px 0 2px; font-size: .9rem; color: var(--muted); }
+.trk-badge-out {
+  padding: 3px 10px; border-radius: 999px; background: var(--surface-2); color: var(--ink); font: 700 .82rem var(--sans);
+}
+/* plain --ok text is 4.2:1 on its own tint in light mode; a touch of ink lifts it to 5:1 (and lightens it in dark mode) */
+.trk-badge-out.is-up { background: color-mix(in srgb, var(--ok) 16%, var(--surface)); color: color-mix(in srgb, var(--ok) 85%, var(--ink)); }
+.trk-badge-out.is-down, .trk-badge-out.is-deload { background: var(--cool-soft); color: var(--cool); }
+.trk-reopen { display: grid; gap: 10px; justify-items: start; }
+.trk-reopen p { margin: 0; }
+
+/* ---------- a screen that failed to render (ErrorGuard) */
+.fit-note.trk-crash { display: grid; gap: 10px; justify-items: start; max-width: 720px; }
+.trk-crash p { margin: 0; }
+
+@media (max-width: 400px) {
+  .trk-row:not(.is-current) .trk-done-text { display: none; }
+  .trk-rest { grid-template-columns: 58px minmax(0, 1fr) 58px 44px; gap: 6px; }
+  .trk-rest-clock { font-size: 1.85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trk-skeleton { animation: none; }
+  .trk-start *, .trk-session *, .trk-summary *, .trk-sheet { transition: none !important; scroll-behavior: auto !important; }
+  .trk-setup summary::after, .trk-warmup summary::after, .trk-safety summary::after { transition: none; }
+}

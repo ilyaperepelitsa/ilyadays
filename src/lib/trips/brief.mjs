@@ -1,4 +1,5 @@
 /** Validate the trip template before any model call. */
+import { canonicalTimeZone, stayDates } from "./dates.mjs";
 
 export class TripShapeError extends Error {
   /**
@@ -95,7 +96,15 @@ export function parseBrief(input) {
   const wishes = parseWishes(row.wishes);
   const slots = routes * (placesPerRoute + foodBreaks);
   if (wishes.length > slots) throw new TripShapeError("wishes");
-  return { city, routes, hours, placesPerRoute, foodBreaks, pace, sharedSpine, preferences, wishes };
+  const stayStart = String(row.stayStart ?? "").trim();
+  const stayEnd = String(row.stayEnd ?? "").trim();
+  try {
+    const dates = stayDates(stayStart, stayEnd);
+    if (dates.length && routes > dates.length) throw new RangeError("more routes than dates");
+  } catch { throw new TripShapeError("dates"); }
+  const timeZone = row.timeZone ? canonicalTimeZone(row.timeZone) : null;
+  if (row.timeZone && !timeZone) throw new TripShapeError("timezone");
+  return { city, routes, hours, placesPerRoute, foodBreaks, pace, sharedSpine, preferences, wishes, ...(stayStart ? { stayStart, stayEnd } : {}), ...(timeZone ? { timeZone } : {}) };
 }
 
 /**

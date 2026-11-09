@@ -10,7 +10,7 @@ export default function GlobalNotFound() {
     <html lang="en">
       <body>
         <header className="site-header">
-          <Link className="brand" href="/">
+          <Link prefetch={false} className="brand" href="/">
             <span className="brand-mark" aria-hidden="true" />
             ilyadays
           </Link>
@@ -20,7 +20,7 @@ export default function GlobalNotFound() {
             <h1>Page not found</h1>
             <p className="lede">There&apos;s nothing at this address. · По этому адресу ничего нет.</p>
             <p>
-              <Link href="/">← Home</Link> · <Link href="/ru">← На главную</Link>
+              <Link prefetch={false} href="/">← Home</Link> · <Link prefetch={false} href="/ru">← На главную</Link>
             </p>
           </section>
         </main>

@@ -57,8 +57,9 @@ def main():
         if not image.is_file() or image.suffix not in (".webp", ".jpg", ".png"):
             continue
         relative = image.relative_to(MEDIA).as_posix()
-        # Keep reviewed nigiri filenames stable for the anatomy review manifest.
-        if relative.startswith("illustrations/nigiri/"):
+        # Keep reviewed nigiri filenames stable for the anatomy review manifest; card thumbnails mirror hero paths.
+        # Fitness pictures are versioned by content/fitness/images.json, which this rewrite does not update.
+        if relative.startswith(("illustrations/nigiri/", "thumbs/", "fitness/")):
             continue
         key = (image.suffix, digest(image))
         if key in unique:

@@ -7,8 +7,9 @@
 # Sources (siblings of this repo):
 #   ../recipes        missing illustrations generated (imagegen/auto.py), then recipes + pictures → content/{en,ru}, content/svg-defs.svg, public/media; style.css → src/styles/food.css;
 #                     static/units.js (portions + units, shared with the local site) → src/lib/units.js; the site icon → public/icons
-#   ../istanbul_trip  dist/app.js + app.css → public/apps/istanbul; dist/app.d.ts → src/types/istanbul.d.ts
-#   art/covers        home-page covers → public/covers (1200 px webp) and 1200×630 link previews → public/share
+#   ../istanbul_trip  dist/app.js + app.css + mapdata.json → public/apps/istanbul; dist/app.d.ts → src/types/istanbul.d.ts
+#   art/covers        home-page covers → public/covers (800 px webp) and 1200×630 link previews → public/share
+#   (content/fitness and public/media/fitness are authored in this repo and are kept; see plans/fitness/)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 RECIPES="${RECIPES_DIR:-../recipes}"
@@ -26,17 +27,18 @@ if [[ "${SKIP_IMAGES:-}" != 1 ]]; then
 fi
 
 # Recipes: JSON for both languages + every picture they reference.
-# Travel proposals are authored here, rather than in the recipe source repo.
+# Travel proposals and the fitness section are authored here, rather than in the recipe source repo.
 # Keep their content and media when replacing the exported recipe trees.
 shopt -s nullglob
 for root in content public/media; do
   for item in "$root"/*; do
-    [[ "$item" == "$root/travel" ]] || rm -rf -- "$item"
+    [[ "$item" == "$root/travel" || "$item" == "$root/fitness" ]] || rm -rf -- "$item"
   done
 done
 shopt -u nullglob
 python3 "$RECIPES/export_json.py" --out content --images-out public/media
 python3 scripts/optimize-media.py
+python3 scripts/card-thumbnails.py
 mkdir -p src/styles public/icons
 cp "$RECIPES/static/style.css" src/styles/food.css
 cp "$RECIPES/static/units.js" src/lib/units.js
@@ -44,12 +46,13 @@ cp "$RECIPES"/static/icons/*.png public/icons/
 
 # Istanbul trip app (embeddable build).
 mkdir -p public/apps/istanbul src/types
-cp "$TRIP/dist/app.js" "$TRIP/dist/app.css" public/apps/istanbul/
+cp "$TRIP/dist/app.js" "$TRIP/dist/app.css" "$TRIP/dist/mapdata.json" public/apps/istanbul/
 cp "$TRIP/dist/app.d.ts" src/types/istanbul.d.ts
 
 # Home-page covers and link-preview pictures.
 mkdir -p public/covers public/share
-for c in art/covers/*.webp; do cwebp -quiet -q 80 -resize 1200 0 "$c" -o "public/covers/$(basename "$c")"; done
+# Covers are only shown as ~360 px tiles, so 800 px is plenty (and a third of the bytes on a phone).
+for c in art/covers/*.webp; do cwebp -quiet -q 80 -m 6 -resize 800 0 "$c" -o "public/covers/$(basename "$c")"; done
 share() {  # share <cover.webp> <name>: 1200×630 JPEG, centre crop
   local png; png="$(mktemp -t share).png"
   dwebp -quiet "$1" -o "$png"
@@ -59,5 +62,6 @@ share() {  # share <cover.webp> <name>: 1200×630 JPEG, centre crop
 }
 share art/covers/food.webp home
 share art/covers/travel.webp travel
+share art/covers/fitness.webp fitness
 
 echo "synced: $(ls content/en/recipes | wc -l | tr -d ' ') recipes/lang, media $(du -sh public/media | cut -f1)"

@@ -5,8 +5,9 @@
   --ink: #2a2622;
   --muted: #6f665c;
   --line: #e6ddcf;
-  --accent: #c2410c;
+  --accent: #b83d0b;
   --accent-soft: #fbe3d3;
+  --on-accent: #fff;
   --cool: #3d6f8f;
   --cool-soft: #dfecf3;
   --ok: #3f7a32;
@@ -32,6 +33,7 @@
     --line: #3b362f;
     --accent: #f08a4b;
     --accent-soft: #4a2c1c;
+    --on-accent: #1b1916;
     --cool: #8cbfe0;
     --cool-soft: #1f3340;
     --ok: #8fcf7c;
@@ -97,7 +99,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px 16px; }
 .chip.time::before { content: "◷"; font-weight: 400; }
 .meta, .chips { display: flex; gap: 6px; flex-wrap: wrap; }
 
-.button { display: inline-block; padding: 9px 16px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; }
+.button { display: inline-block; padding: 9px 16px; border-radius: 10px; background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 600; font-size: .95rem; }
 .button.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
 
 .note { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 18px; }
@@ -146,7 +148,8 @@ svg.art { display: block; width: 100%; height: auto; border-radius: 14px; }
 /* ---------- recipe hero */
 .recipe-hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px; align-items: center; margin: 8px 0 32px; }
 .eyebrow { margin: 0 0 6px; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; font-weight: 700; }
-.eyebrow a { text-decoration: none; }
+.eyebrow a { text-decoration: underline 1px; text-underline-offset: 3px; }
+.eyebrow a:hover { text-decoration-thickness: 2px; }
 .recipe-hero .meta { margin: 4px 0 16px; }
 .hero-art { margin: 0; box-shadow: var(--shadow); border-radius: 16px; }
 .jump { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -173,7 +176,7 @@ svg.art { display: block; width: 100%; height: auto; border-radius: 14px; }
 .ingredients li.done { color: var(--muted); }
 .ingredients li.done .ing-name { text-decoration: line-through; }
 .ingredients li.done::before { background: var(--ok); border-color: var(--ok); opacity: 1; }
-.ingredients li.done::after { content: "✓"; position: absolute; left: 3px; top: 6px; color: #fff; font-size: .8rem; font-weight: 700; }
+.ingredients li.done::after { content: "✓"; position: absolute; left: 3px; top: 6px; color: var(--on-accent); font-size: .8rem; font-weight: 700; }
 .ing-name { font-weight: 600; flex: 1 1 45%; min-width: 0; }
 .ing-amt { color: var(--muted); text-align: right; font-size: .88rem; flex: 0 1 55%; }
 .equipment li { font-size: .9rem; color: var(--muted); padding: 3px 0 3px 16px; position: relative; }
@@ -243,7 +246,7 @@ span.q { white-space: nowrap; }
 }
 .mise > li::before {
   content: counter(m); position: absolute; top: 8px; left: 8px; width: 24px; height: 24px; border-radius: 50%;
-  background: var(--accent); color: #fff; font: 700 .8rem/24px var(--sans); z-index: 1;
+  background: var(--accent); color: var(--on-accent); font: 700 .8rem/24px var(--sans); z-index: 1;
 }
 .mise figure { margin: 0 auto; width: 96px; }
 .mise figure .art { border-radius: 50%; }
@@ -336,7 +339,7 @@ ul.ing:has(.amt) > li { display: flex; }
 ul.ing > li::before { content: ""; position: absolute; left: .1em; top: .62em; width: .4em; height: .4em;
   border-radius: 50%; border: 1.5px solid var(--accent); box-sizing: border-box; }
 .step.done { opacity: .5; }
-.step.done .step-n { background: var(--ok); color: #fff; font-size: 0; }
+.step.done .step-n { background: var(--ok); color: var(--on-accent); font-size: 0; }
 .step.done .step-n::after { content: "✓"; font-size: 1rem; }
 .part { padding: 14px 0 0; }
 .part h3 {
