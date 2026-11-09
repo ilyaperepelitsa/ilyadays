@@ -542,8 +542,9 @@ def test_visitor_cannot_log(phone, fake_backend, base_url):
         page.wait_for_timeout(300)
         seen[path] = write_controls(page)
         if path == "/fitness/program":
+            tid(page, "program-settings-toggle").click()
             expect(tid(page, "goal-select")).to_be_visible()
-            pressable = page.locator("[data-testid='goal-select'] button:enabled, [data-testid='days-select'] button:enabled").count()
+            pressable = page.locator("[data-testid='goal-select'] input:enabled, [data-testid='days-select'] button:enabled").count()
             if pressable:
                 seen[path]["goal / days buttons"] = pressable
     assert not any(seen.values()), f"a visitor sees logging controls: {seen}"
@@ -762,6 +763,7 @@ def test_goal_and_days_survive_a_reload(phone, fake_backend, base_url):
     fake_backend.state = "missing"
     block_realtime(page)
     page.goto(base_url + "/fitness/program")
+    tid(page, "program-settings-toggle").click()
     expect(tid(page, "mode-note")).to_have_attribute("data-mode", "local")
     summary, goal, days = tid(page, "program-summary"), tid(page, "goal-select"), tid(page, "days-select")
     expect(summary).to_have_attribute("data-editable", "true")
@@ -773,6 +775,7 @@ def test_goal_and_days_survive_a_reload(phone, fake_backend, base_url):
     tid(page, "program-save").tap()
     expect(tid(page, "program-saved")).to_be_visible()
     page.reload()
+    tid(page, "program-settings-toggle").click()
     expect(summary).to_have_attribute("data-editable", "true")
     expect(goal).to_have_attribute("data-value", "strength")
 
@@ -781,6 +784,7 @@ def test_goal_and_days_survive_a_reload(phone, fake_backend, base_url):
     tid(page, "program-save").tap()
     expect(tid(page, "program-saved")).to_be_visible()
     page.reload()
+    tid(page, "program-settings-toggle").click()
     expect(summary).to_have_attribute("data-editable", "true")
     expect(days).to_have_attribute("data-value", "2")
     expect(goal).to_have_attribute("data-value", "strength")

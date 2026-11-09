@@ -12,6 +12,8 @@ import { defaultSettings } from "@/lib/fitness/store-core.mjs";
 import { displayNameOf, isSyncedStore } from "@/lib/fitness/store";
 import { profileErrors, profileName, profilePreferences, profilePlanDraft } from "@/lib/fitness/profile-core.mjs";
 import type { GoalMode, Lang, TrainingPreferences } from "@/lib/fitness/types";
+import { GoalPicker } from "../GoalPicker";
+import { PlanPreview } from "./PlanPreview";
 
 export function ProfilePanel({ lang }: { lang: Lang }) {
   const { auth, mode } = useFitness();
@@ -81,29 +83,34 @@ function ProfileForm({ lang }: { lang: Lang }) {
     finally { setBusy(false); }
   };
   return <div className="fprofile" data-testid="profile-panel">
-    {!auth.user ? <div className="fit-note"><p>{pick(lang, "You can use a profile on this device. Sign in to create a private account and sync across devices.", "Можно пользоваться профилем на этом устройстве. Войдите, чтобы создать приватный аккаунт и синхронизировать данные.")}</p>
+    {!auth.user ? <div className="fprofile-auth"><p>{pick(lang, "Private by default. Sign in to sync across devices.", "Приватно по умолчанию. Войдите для синхронизации.")}</p>
       {auth.configured ? <button type="button" className="fit-button quiet" onClick={() => void auth.signIn()}>{pick(lang, "Sign in with Google", "Войти через Google")}</button> : null}</div> : null}
-    <form className="fit-card" onSubmit={(e) => { e.preventDefault(); void save(); }}>
-      <h2>{pick(lang, "Your profile", "Ваш профиль")}</h2>
+    <form className="fprofile-form" onSubmit={(e) => { e.preventDefault(); void save(); }}>
+      <div className="fprofile-workspace"><div className="fprofile-fields">
+      <section className="fprofile-section"><h2>{pick(lang, "About you", "О вас")}</h2>
       {auth.user?.email ? <p>{auth.user.email}</p> : null}
-      <label>{pick(lang, "Display name", "Имя")}<input data-testid="profile-name" value={name} onChange={(e) => setName(e.target.value)} maxLength={80} required autoComplete="name" /></label>
+      <div className="fprofile-basics-grid"><label>{pick(lang, "Display name", "Имя")}<input data-testid="profile-name" value={name} onChange={(e) => setName(e.target.value)} maxLength={80} required autoComplete="name" /></label>
       <div className="fprofile-grid">
         <label>{pick(lang, "Bodyweight (kg, optional)", "Вес тела (кг, необязательно)")}<input data-testid="profile-weight" inputMode="decimal" value={weight} onChange={(e) => setWeight(e.target.value)} /></label>
         <label>{pick(lang, "Height (cm, optional)", "Рост (см, необязательно)")}<input inputMode="decimal" value={height} onChange={(e) => setHeight(e.target.value)} /></label>
-      </div>
-      <p className="fit-muted">{pick(lang, "This weight sets your profile context. Record dated weigh-ins and waist/arm measurements on Progress; exercise weights are logged with each set.", "Этот вес задаёт контекст профиля. Взвешивания и замеры талии/рук с датами записывайте в «Прогрессе»; веса упражнений — в каждом подходе.")}</p>
-      {mode === "synced" && status?.profile === "present" ? <label className="fprofile-check"><input data-testid="profile-public" type="checkbox" checked={isPublic} onChange={(e) => setPublic(e.target.checked)} />{pick(lang, "Make my fitness log public", "Открыть мой фитнес-журнал для всех")}</label> : <p className="fit-note">{pick(lang, "New accounts are private. Sharing is optional after your profile is created.", "Новые аккаунты приватны. Открыть данные можно после создания профиля.")}</p>}
+      </div></div>
+      <p className="fit-muted fprofile-helper">{pick(lang, "Optional starting measurements. Dated weigh-ins and body measurements go on Progress.", "Необязательные начальные измерения. Взвешивания и замеры с датами — в «Прогрессе».")}</p>
+      {mode === "synced" && status?.profile === "present" ? <label className="fprofile-check"><input data-testid="profile-public" type="checkbox" checked={isPublic} onChange={(e) => setPublic(e.target.checked)} />{pick(lang, "Make my fitness log public", "Открыть мой фитнес-журнал для всех")}</label> : <p className="fprofile-helper fit-muted">{pick(lang, "New accounts are private. Sharing is optional.", "Новые аккаунты приватны. Публичный доступ необязателен.")}</p>}
       {isPublic ? <p className="fit-note">{pick(lang, "Public means your programs, workouts, bodyweight, body measurements, gyms and profile settings can be read by other people. Turn this off to keep them private.", "Публичный доступ открывает программы, тренировки, вес тела, замеры, залы и настройки другим людям. Отключите его для приватности.")}</p> : null}
-      <label className="fprofile-check"><input data-testid="profile-apply-plan" type="checkbox" checked={applyPlan} onChange={(e) => setApplyPlan(e.target.checked)} />{saved ? pick(lang, "Apply these goals to a new version of my plan", "Применить эти цели в новой версии программы") : pick(lang, "Create my first plan", "Создать первую программу")}</label>
-      <fieldset disabled={!applyPlan || busy}>
+      </section>
+      <label className="fprofile-check fprofile-apply"><input data-testid="profile-apply-plan" type="checkbox" checked={applyPlan} onChange={(e) => setApplyPlan(e.target.checked)} />{saved ? pick(lang, "Apply these goals to a new version of my plan", "Применить эти цели в новой версии программы") : pick(lang, "Create my first plan", "Создать первую программу")}</label>
+      <fieldset className="fprofile-section fprofile-preferences" disabled={!applyPlan || busy}>
         <legend>{pick(lang, "Training preferences", "Предпочтения тренировок")}</legend>
-        <label>{pick(lang, "Primary goal", "Главная цель")}<select data-testid="profile-goal" value={goal} onChange={(e) => { const value = e.target.value as GoalMode; setPrimary(value); setSecondary((s) => s.filter((g) => g !== value)); }}>{GOAL_IDS.map((g) => <option key={g} value={g}>{t2(lang, GOAL_MODES[g].name)}</option>)}</select></label>
-        <p className="fit-muted">{pick(lang, "The primary goal sets reps, rest and progression. Up to two supporting goals record your priorities without mixing incompatible prescriptions.", "Главная цель задаёт повторения, отдых и прогрессию. До двух дополнительных целей фиксируют приоритеты без смешивания противоречащих режимов.")}</p>
+        <h3>{pick(lang, "Primary goal", "Главная цель")}</h3>
+        <GoalPicker lang={lang} value={goal} testId="profile-goal" disabled={!applyPlan || busy} onChange={(value) => { setPrimary(value); setSecondary((s) => s.filter((g) => g !== value)); }} />
+        <p className="fit-muted fprofile-helper">{pick(lang, "These are the main-lift targets. RIR means clean reps left in reserve when you stop.", "Это цели для основных упражнений. RIR — сколько чистых повторений остаётся в запасе.")}</p>
+        <h3>{pick(lang, "Supporting goals · choose up to two", "Дополнительные цели · до двух")}</h3>
         <div className="fprofile-options">{GOAL_IDS.filter((g) => g !== goal).map((g) => <label className="fprofile-check" key={g}><input type="checkbox" data-testid={`profile-secondary-${g}`} checked={secondary.includes(g)} disabled={!secondary.includes(g) && secondary.length >= 2} onChange={(e) => setSecondary((s) => e.target.checked ? [...s, g] : s.filter((v) => v !== g))} />{t2(lang, GOAL_MODES[g].name)}</label>)}</div>
-        <label>{pick(lang, "Training days per week", "Тренировок в неделю")}<select data-testid="profile-days" value={days} onChange={(e) => setFrequency(Number(e.target.value) as 2 | 3 | 4)}>{[2, 3, 4].map((d) => <option key={d}>{d}</option>)}</select></label>
-        <label>{pick(lang, "Body scope", "Что тренировать")}<select data-testid="profile-scope" value={scope} onChange={(e) => setScope(e.target.value as TrainingPreferences["bodyScope"])}><option value="upper">{pick(lang, "Upper body — no legs", "Верх тела — без ног")}</option><option value="full">{pick(lang, "Full body", "Всё тело")}</option><option value="custom">{pick(lang, "Custom — choose muscles in the constructor", "Свои группы — выбрать в конструкторе")}</option></select></label>
+        <div className="fprofile-grid"><label>{pick(lang, "Training days per week", "Тренировок в неделю")}<select data-testid="profile-days" value={days} onChange={(e) => setFrequency(Number(e.target.value) as 2 | 3 | 4)}>{[2, 3, 4].map((d) => <option key={d}>{d}</option>)}</select></label>
+        <label>{pick(lang, "Body scope", "Что тренировать")}<select data-testid="profile-scope" value={scope} onChange={(e) => setScope(e.target.value as TrainingPreferences["bodyScope"])}><option value="upper">{pick(lang, "Upper body — no legs", "Верх тела — без ног")}</option><option value="full">{pick(lang, "Full body", "Всё тело")}</option><option value="custom">{pick(lang, "Custom — choose muscles in the constructor", "Свои группы — выбрать в конструкторе")}</option></select></label></div>
       </fieldset>
-      {preview ? <div className="fit-note" data-testid="profile-plan-preview"><strong>{pick(lang, "Plan preview", "Предпросмотр программы")}</strong><p>{preview.days.map((d) => `${t2(lang, d.name)}: ${d.slots.length} ${pick(lang, "exercises", "упражнений")}`).join(" · ")}</p><p>{pick(lang, "Saving archives the previous plan. Your logged sets, baselines and any running workout stay intact.", "Сохранение архивирует предыдущую программу. Подходы, базовые веса и текущая тренировка сохраняются.")}</p></div> : null}
+      <p className="fit-muted fprofile-helper">{pick(lang, "A new plan keeps your past workouts, baselines and any session already in progress.", "Новая программа сохраняет прошлые тренировки, базовые веса и уже начатую тренировку.")}</p>
+      </div><PlanPreview lang={lang} program={preview ?? saved} isDraft={applyPlan} /></div>
       {error ? <p role="alert">{error}</p> : null}{message ? <p role="status">{message}</p> : null}
       <div className="fprofile-actions"><button type="submit" className="fit-button" data-testid="profile-save" disabled={!canSave || busy || status?.syncing}>{busy ? pick(lang, "Saving…", "Сохраняем…") : pick(lang, "Save profile", "Сохранить профиль")}</button><Link prefetch={false} className="fit-button quiet" href={localPath(lang, "/fitness/program")}>{pick(lang, "Open plan constructor", "Открыть конструктор")}</Link><Link prefetch={false} href={localPath(lang, "/fitness/progress")}>{pick(lang, "Weigh-ins and measurements", "Взвешивания и замеры")}</Link></div>
     </form>

@@ -58,18 +58,63 @@ main.fit { padding-bottom: 96px; }
 .fit-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 @media (max-width: 640px) { .fit-grid-2 { grid-template-columns: minmax(0, 1fr); } }
 
-/* ---------- fitness sub-navigation (master plan) */
-.fit-nav { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 4px -16px 18px; padding: 2px 16px 6px; overscroll-behavior-x: contain; }
-.fit-nav::-webkit-scrollbar { display: none; }
-.fit-nav a { flex: none; min-height: 40px; display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font: 600 .88rem var(--sans); white-space: nowrap; }
-.fit-nav a[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-.fit-nav a:hover { border-color: var(--accent); }
+/* Core actions stay visible. A native disclosure keeps every other section a tap away. */
+.fit-nav { position:relative; z-index:3; display:flex; gap:4px; width:fit-content; max-width:100%; margin:4px 0 24px; padding:4px; border:1px solid var(--line); border-radius:13px; background:var(--surface-2); }
+.fit-nav > a, .fit-nav summary { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:9px 18px; border:1px solid transparent; border-radius:9px; color:var(--muted); text-decoration:none; font:600 .86rem var(--sans); cursor:pointer; }
+.fit-nav > a:hover, .fit-nav summary:hover { color:var(--ink); }
+.fit-nav > a[aria-current="page"], .fit-nav summary.is-current { color:var(--ink); border-color:var(--line); background:var(--surface); box-shadow:0 1px 3px color-mix(in srgb,var(--ink) 6%,transparent); }
+.fit-nav-more { min-width:0; }
+.fit-nav summary { list-style:none; }
+.fit-nav summary::-webkit-details-marker { display:none; }
+.fit-nav summary span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.fit-nav summary svg { flex-shrink:0; transition:transform .15s ease; }
+.fit-nav-more[open] summary svg { transform:rotate(180deg); }
+.fit-nav-menu { position:absolute; right:0; top:calc(100% + 8px); display:grid; width:min(290px,calc(100vw - 32px)); max-height:min(420px,60dvh); overflow-y:auto; padding:6px; border:1px solid var(--line); border-radius:14px; background:var(--surface); box-shadow:0 12px 36px color-mix(in srgb,var(--ink) 14%,transparent); }
+.fit-nav-menu a { display:flex; align-items:center; min-height:44px; padding:10px 14px; border-radius:8px; color:var(--ink); font-size:.9rem; text-decoration:none; }
+.fit-nav-menu a:hover { background:var(--surface-2); }
+.fit-nav-menu a[aria-current="page"] { background:var(--accent-soft); color:var(--accent); font-weight:600; }
+.fit-nav :is(a,summary):focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media(max-width:640px) {
+  .fit-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); width:100%; gap:2px; }
+  .fit-nav > a, .fit-nav summary { padding:8px 3px; font-size:.77rem; }
+  .fit-nav > a { text-align:center; overflow-wrap:anywhere; }
+  .fit-nav summary { gap:4px; }
+}
+@media(prefers-reduced-motion:reduce) { .fit-nav summary svg { transition:none; } }
 
 /* ---------- phone ergonomics pass (mobile-ux review, 2026-11-09): appended, so it overrides the shell rules above */
 /* 44 px touch targets for the sub-nav pills; tiles in a stretched grid row keep their text at the top */
-.fit-nav a { min-height: 44px; }
 .fit-tile { align-content: start; }
 /* no one-word last lines at 360 px (EN and RU). The text-wrap-style longhand leaves any white-space: nowrap alone.
    Prose only: on short data values (dd) the rebalancing can split a number from its unit ("400 / mg"). */
 main.fit :is(h1, h2, h3), main.fit .fit-button { text-wrap-style: balance; }
 main.fit :is(p, li) { text-wrap-style: pretty; }
+
+/* Working screens use the shared interface face; editorial pages keep their serif headings. */
+.fit :is(h1,h2,h3) { font-family:var(--sans); font-weight:650; letter-spacing:-.025em; }
+.fit .hello h1 { font-size:clamp(1.9rem,3.4vw,2.75rem); line-height:1.15; margin-bottom:12px; }
+.fit .hello .lede { font-size:1rem; line-height:1.65; max-width:72ch; }
+.fit .fh-hero h1 { font-size:clamp(2.4rem,5vw,3.8rem); letter-spacing:-.045em; }
+.fit .fh-hero .lede { font-size:clamp(1rem,1.5vw,1.12rem); }
+.fit .fit-card { box-shadow:0 1px 3px color-mix(in srgb,var(--ink) 4%,transparent); }
+.fit .fit-button { transition:background-color .15s ease,border-color .15s ease; }
+.fit .fit-button:not(:disabled):hover { background:color-mix(in srgb,var(--accent) 88%,var(--ink)); border-color:var(--accent); }
+.fit .fit-button:is(.quiet,.ghost):not(:disabled):hover { background:var(--accent-soft); color:var(--accent); }
+.fit .fh-welcome h2 { font-size:clamp(1.45rem,2.5vw,2rem); line-height:1.2; }
+@media(prefers-reduced-motion:reduce) { .fit .fit-button { transition:none; } }
+
+/* Shared selection and recognition aids for profile creation and the plan editor. */
+.fit-action-icon { flex-shrink:0; }
+.fit-exercise-thumb { display:grid; place-items:center; flex-shrink:0; width:48px; height:48px; overflow:hidden; border-radius:8px; background:var(--surface-2); color:var(--muted); font-size:.75rem; font-weight:600; }
+.fit-exercise-thumb img { display:block; width:100%; height:100%; object-fit:cover; }
+.fit-goal-picker { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.fit-goal-picker label { display:flex; align-items:start; gap:9px; min-height:66px; padding:12px; border:1px solid var(--line); border-radius:9px; background:var(--surface); cursor:pointer; }
+.fit-goal-picker label.is-selected { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); background:var(--accent-soft); }
+.fit-goal-picker label:has(:disabled) { cursor:default; }
+.fit-goal-picker input[type=radio] { width:16px; height:16px; min-height:0; flex-shrink:0; margin:3px 0 0; padding:0; accent-color:var(--accent); }
+.fit-goal-picker label > span { display:grid; gap:5px; min-width:0; }
+.fit-goal-picker strong { font-size:.84rem; font-weight:600; line-height:1.35; }
+.fit-goal-picker small { color:var(--muted); font-size:.73rem; font-weight:400; line-height:1.4; }
+.fit-goal-picker label:focus-within { outline:2px solid var(--accent); outline-offset:3px; }
+@media(prefers-color-scheme:dark) { .fit-exercise-thumb img { filter:brightness(.92); } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

@@ -12,8 +12,8 @@ export function ProgramView({ lang }: { lang: Lang }) {
         <p className="lede">
           {pick(
             lang,
-            "What you train each day, how hard, and how the weights go up. Change the goal or the number of days and the numbers follow; the AI coach proposes changes you review first.",
-            "Что вы тренируете в каждый день, насколько тяжело и как растут веса. Смените цель или число дней — числа пересчитаются; ИИ-тренер предлагает изменения, которые вы сначала проверяете.",
+            "Choose what to train, edit each day and review your changes before saving.",
+            "Выбирайте, что тренировать, редактируйте дни и проверяйте изменения перед сохранением.",
           )}
         </p>
       </section>

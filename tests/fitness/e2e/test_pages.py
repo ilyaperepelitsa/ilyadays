@@ -41,6 +41,34 @@ def test_fitness_is_in_the_site_navigation(phone, base_url):
     probe.assert_clean()
 
 
+@pytest.mark.parametrize("lang", ["en", "ru"])
+def test_fitness_section_menu_supports_keyboard_and_navigation(small_phone, base_url, lang):
+    page, probe = small_phone
+    prefix = "" if lang == "en" else "/ru"
+    page.goto(base_url + prefix + "/fitness", wait_until="networkidle")
+    nav = page.locator(".fit-nav")
+    summary = nav.locator("summary")
+    summary.focus()
+    page.keyboard.press("Enter")
+    expect(nav.locator("details")).to_have_attribute("open", "")
+    for path in ["profile", "progress", "exercises", "gyms", "nutrition", "tools", "science"]:
+        expect(nav.locator(f"a[href='{prefix}/fitness/{path}']")).to_be_visible()
+    no_horizontal_scroll(page)
+    page.keyboard.press("Escape")
+    expect(nav.locator("details")).not_to_have_attribute("open", "")
+    expect(summary).to_be_focused()
+    summary.click()
+    page.locator("h1").click()
+    expect(nav.locator("details")).not_to_have_attribute("open", "")
+    summary.click()
+    nav.locator(f"a[href='{prefix}/fitness/progress']").click()
+    expect(page).to_have_url(base_url + prefix + "/fitness/progress")
+    expect(page.locator(".fit-nav summary")).to_have_class("is-current")
+    expect(page.locator(".fit-nav summary")).to_contain_text("Progress" if lang == "en" else "Прогресс")
+    no_horizontal_scroll(page)
+    probe.assert_clean()
+
+
 def test_exercise_page_shows_alternatives_and_muscles(phone, base_url):
     page, probe = phone
     page.goto(base_url + "/fitness/exercises/pec-deck", wait_until="networkidle")

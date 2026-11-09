@@ -31,6 +31,7 @@ import { ProgressionSettings } from "./ProgressionSettings";
 import type { Edit } from "./SlotRow";
 import { PlanConstructor } from "./PlanConstructor";
 import { TemplatePicker } from "./TemplatePicker";
+import { ActionIcon } from "../ActionIcon";
 
 const EPOCH = "1970-01-01T00:00:00.000Z";
 
@@ -104,6 +105,7 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
 
   const [draft, setDraft] = useState<Draft | null>(null);
   const [flash, setFlash] = useState("");
+  const [showSettings, setShowSettings] = useState(false);
   const program = draft?.program ?? saved;
   const lines = useMemo(() => (draft ? programDiff(draft.base, draft.program) : []), [draft]);
   const dirty = lines.length > 0;
@@ -204,17 +206,18 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
         data-saved={isSaved && !dirty}
         data-editable={editable}
       >
-        <p className="fpr-eyebrow">{t2(lang, program.name)}</p>
+        <p className="fpr-eyebrow">{dirty ? pick(lang, "Unsaved draft", "Несохранённый черновик") : isSaved ? pick(lang, "Saved program", "Сохранённая программа") : editable ? pick(lang, "Starting program", "Стартовая программа") : pick(lang, "Example program", "Пример программы")}</p>
         <h2 id="fpr-summary-h" className="fpr-title">
-          {t2(lang, goal.name)} · {program.daysPerWeek} {pick(lang, "days a week", "дня в неделю")}
+          {t2(lang, program.name)}
         </h2>
+        <p className="fpr-summary-meta">{t2(lang, goal.name)}</p>
         {nextDay ? (
           <p className="fpr-next">
-            {pick(lang, "Next workout", "Следующая тренировка")}: <strong>{t2(lang, nextDay.name, nextDay.key)}</strong>
+            {!isSaved && !editable ? pick(lang, "First example day", "Первый день примера") : pick(lang, "Next workout", "Следующая тренировка")}: <strong>{t2(lang, nextDay.name, nextDay.key)}</strong>
             {nextPlan ? <span className="fit-num"> · ≈ {nextPlan.estimatedMinutes} {pick(lang, "min", "мин")}</span> : null}
             {" · "}
             <Link prefetch={false} href={localPath(lang, "/fitness/train")}>
-              {pick(lang, "Train →", "К тренировке →")}
+              {pick(lang, "Train", "К тренировке")}
             </Link>
           </p>
         ) : null}
@@ -231,12 +234,13 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
         {canWrite && !settled ? (
           <p className="fit-note" data-testid="program-loading">{pick(lang, "Loading your program from your account…", "Загружаем программу из аккаунта…")}</p>
         ) : null}
-        <Volume lang={lang} program={program} />
       </section>
-
+      <button type="button" className="fit-button quiet fpr-settings-toggle" data-testid="program-settings-toggle" aria-expanded={showSettings} aria-controls="fpr-settings" onClick={() => setShowSettings(!showSettings)}><ActionIcon name="edit" />{showSettings ? pick(lang, "Close plan settings", "Закрыть настройки плана") : pick(lang, "Plan settings", "Настройки плана")}</button>
+      {emptyDays.length ? <p className="fit-note warn" role="status" data-testid="empty-plan-days">{pick(lang, `Add an exercise to each empty day before saving: ${emptyDays.map((d) => d.key).join(", ")}.`, `Добавьте упражнение в каждый пустой день перед сохранением: ${emptyDays.map((d) => d.key).join(", ")}.`)}</p> : null}
+      <div className="fpr-workspace">
+      <div className="fpr-settings" id="fpr-settings" data-open={showSettings}>
       <ModeSwitch lang={lang} goal={program.goal} editable={editable} onGoal={(g) => edit((p, at) => setGoal(p, g, states, at).program)} />
       <PlanConstructor lang={lang} program={program} editable={editable} onEdit={edit} />
-      {emptyDays.length ? <p className="fit-note warn" role="status" data-testid="empty-plan-days">{pick(lang, `Add an exercise to each empty day before saving: ${emptyDays.map((d) => d.key).join(", ")}.`, `Добавьте упражнение в каждый пустой день перед сохранением: ${emptyDays.map((d) => d.key).join(", ")}.`)}</p> : null}
       <DaysSwitch
         lang={lang}
         program={program}
@@ -244,7 +248,8 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
         onDays={(n) => edit((p, at) => setDays(p, n, at))}
         onLegs={(as) => edit((p, at) => (as ? addLegs(p, at, { as }) : removeLegs(p, at)))}
       />
-
+      <Volume lang={lang} program={program} />
+      </div>
       <div className="fpr-days-list">
         {program.days.map((day) => (
           <DayCard
@@ -261,6 +266,7 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
             onHold={hold}
           />
         ))}
+      </div>
       </div>
 
       <ProgressionSettings lang={lang} program={program} states={states} now={now} editable={editable} onEdit={edit} />

@@ -6,6 +6,7 @@ import type { GoalMode, Lang } from "@/lib/fitness/types";
 import { fmtClock, pick, t2 } from "@/lib/fitness/i18n";
 import { GOAL_IDS, GOAL_MODES } from "@/lib/fitness/templates.mjs";
 import { fmtNum } from "./format";
+import { GoalPicker } from "../GoalPicker";
 
 type Mode = (typeof GOAL_MODES)[GoalMode];
 
@@ -47,22 +48,19 @@ export function ModeSwitch({ lang, goal, editable, onGoal }: { lang: Lang; goal:
   return (
     <section className="fit-card fpr-section fpr-mode" aria-labelledby="fpr-mode-h">
       <h2 id="fpr-mode-h">{pick(lang, "Goal", "Цель")}</h2>
-      <div className="fit-seg fpr-goals" role="group" aria-label={pick(lang, "Goal mode", "Режим цели")} data-testid="goal-select" data-value={goal}>
-        {GOAL_IDS.map((id: GoalMode) => (
-          <button key={id} type="button" aria-pressed={id === goal} data-value={id} disabled={!editable} onClick={() => editable && id !== goal && onGoal(id)}>
-            {t2(lang, GOAL_MODES[id].name)}
-          </button>
-        ))}
-      </div>
-      <p className="fpr-mode-summary">{t2(lang, mode.summary)}</p>
+      <GoalPicker lang={lang} value={goal} testId="goal-select" disabled={!editable} onChange={onGoal} />
       <dl className="fit-kv fpr-kv">
-        {table.map(([label, value]) => (
+        {table.slice(0, 6).map(([label, value]) => (
           <div key={label} className="fpr-kv-row">
             <dt>{label}</dt>
             <dd className="fit-num">{value(mode)}</dd>
           </div>
         ))}
       </dl>
+      <details className="fpr-details">
+      <summary>{pick(lang, "Why these numbers", "Почему такие числа")}</summary>
+      <p className="fpr-mode-summary">{t2(lang, mode.summary)}</p>
+      <dl className="fit-kv fpr-kv">{table.slice(6).map(([label, value]) => <div key={label} className="fpr-kv-row"><dt>{label}</dt><dd className="fit-num">{value(mode)}</dd></div>)}</dl>
       <p className="fit-muted fpr-small">{t2(lang, mode.deloadRule)}</p>
       {editable ? (
         <p className="fit-muted fpr-small">
@@ -73,6 +71,7 @@ export function ModeSwitch({ lang, goal, editable, onGoal }: { lang: Lang; goal:
           )}
         </p>
       ) : null}
+      </details>
       <details className="fpr-details">
         <summary>{pick(lang, "Compare all goals", "Сравнить все цели")}</summary>
         <div className="fpr-scroll">

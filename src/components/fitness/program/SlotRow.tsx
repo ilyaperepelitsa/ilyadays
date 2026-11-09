@@ -16,6 +16,8 @@ import { exerciseAllowed } from "@/lib/fitness/plan-preferences.mjs";
 import { holdOf, holdText, noteHasHold } from "@/lib/fitness/tracker.mjs";
 import { prescriptionText, rangeLabels, restText, targetText, unitOfExercise } from "./format";
 import { Stepper } from "./Stepper";
+import { ExerciseThumbnail } from "../ExerciseThumbnail";
+import { ActionIcon } from "../ActionIcon";
 
 export type Edit = (fn: (program: Program, at: string) => Program) => void;
 /** Set (weeks) or clear (null) the weight hold of an exercise: written to its exercise state at once. */
@@ -88,15 +90,13 @@ export function SlotRow({
   return (
     <li className="fpr-slot" data-testid="slot-row" data-slot-id={slot.slotId} data-exercise-id={slot.exerciseId} data-hold-until={hold ?? undefined}>
       <button type="button" className="fpr-slot-head" aria-expanded={open} aria-controls={bodyId} data-testid="slot-edit" onClick={() => setOpen(!open)}>
-        <span className="fpr-slot-id" aria-hidden="true">
-          {slot.slotId}
-        </span>
+        <span className="fpr-slot-visual"><ExerciseThumbnail id={slot.exerciseId} /><span className="fpr-slot-id" aria-hidden="true">{slot.slotId}</span></span>
         <span className="fpr-slot-main">
           <span className="fpr-slot-name">{name(slot.exerciseId, lang)}</span>
           <span className="fpr-slot-rx fit-num">{prescriptionText(slot, unit, lang)}</span>
           {target ? (
             <span className="fpr-slot-next fit-num">
-              {pick(lang, "Next", "Дальше")}: {target}
+              {planned?.calibration ? pick(lang, "Calibrate first", "Сначала калибровка") : <>{pick(lang, "Next", "Дальше")}: {target}</>}
             </span>
           ) : null}
           {hold && !(open && noteHasHold(planned?.note, hold, lang)) ? <span className="fpr-slot-hold fit-num">{holdText(hold, lang)}</span> : null}
@@ -215,13 +215,13 @@ export function SlotRow({
 
               <div className="fpr-slot-actions">
                 <button type="button" className="fit-button quiet fpr-swap-toggle" aria-expanded={swapping} data-testid="slot-swap-open" onClick={() => setSwapping(!swapping)}>
-                  {pick(lang, "Swap exercise", "Заменить упражнение")}
+                  <ActionIcon name="swap" />{pick(lang, "Swap exercise", "Заменить упражнение")}
                 </button>
                 <button type="button" className="fit-button quiet fpr-icon" disabled={!canUp} data-testid="slot-up" aria-label={pick(lang, "Move up", "Выше")} onClick={() => onEdit((p, at) => moveSlot(p, day.key, slot.slotId, -1, at))}>
-                  ↑
+                  <ActionIcon name="up" />
                 </button>
                 <button type="button" className="fit-button quiet fpr-icon" disabled={!canDown} data-testid="slot-down" aria-label={pick(lang, "Move down", "Ниже")} onClick={() => onEdit((p, at) => moveSlot(p, day.key, slot.slotId, 1, at))}>
-                  ↓
+                  <ActionIcon name="down" />
                 </button>
                 <button type="button" className="fit-button quiet fpr-remove" disabled={!canRemove} data-testid="slot-remove" onClick={() => onEdit((p, at) => removeSlot(p, day.key, slot.slotId, at))}>
                   {pick(lang, "Remove", "Убрать")}
@@ -245,6 +245,7 @@ export function SlotRow({
                             setSwapping(false);
                           }}
                         >
+                          <ExerciseThumbnail id={c.id} />
                           <span className="fpr-swap-name">{name(c.id, lang)}</span>
                           <span className="fit-muted fpr-small">
                             {ex ? equipmentLabel(ex.equipment, lang) : ""}

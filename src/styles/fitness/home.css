@@ -30,7 +30,7 @@
 .fh-hero .lede { margin-bottom:16px; max-width:620px; }
 .fh-hero-art { min-height:195px; height:100%; max-height:245px; border-radius:20px; border:1px solid var(--line); background:var(--surface-2) url('/covers/fitness.webp') center 54%/cover no-repeat; }
 .fh-hero-tags { display:flex; flex-wrap:wrap; gap:8px; }
-.fh-hero-tags span { padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-size:.76rem; font-weight:600; background:var(--surface); }
+.fh-hero-tags span { padding:0; font-size:.8rem; color:var(--muted); }
 .fh-welcome { padding:clamp(20px,3vw,32px); display:grid; gap:20px; border-color:color-mix(in srgb,var(--accent) 20%,var(--line)); }
 .fh-welcome-heading { max-width:740px; }
 .fh-welcome h2 { margin:0 0 10px; font-size:clamp(1.45rem,3vw,2rem); line-height:1.15; }
@@ -59,7 +59,7 @@
 }
 @media(max-width:430px) {
   .fh-hero-tags { gap:6px; }
-  .fh-hero-tags span { font-size:.71rem; padding:5px 8px; }
+  .fh-hero-tags span { font-size:.74rem; }
   .fh-welcome-actions { display:grid; }
   .fh-welcome-actions .fit-button { width:100%; }
   .fh-setup { padding:16px; }

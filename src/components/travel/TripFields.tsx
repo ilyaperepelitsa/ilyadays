@@ -11,7 +11,7 @@ export function BriefFields({ brief, copy, onChange }: { brief: TripBrief; copy:
   const set = (patch: Partial<TripBrief>) => onChange({ ...brief, ...patch });
   return (
     <>
-      <section className="trip-panel">
+      <section className="trip-panel" id="trip-basics">
         <h2>{copy.tripSectionShape}</h2>
         <label className="trip-field trip-city">
           <span>{copy.tripCity}</span>
@@ -158,7 +158,7 @@ export function EffortPicker({ value, copy, onChange }: { value: string; copy: C
 export function ThemeFields({ themes, copy, onChange }: { themes: Theme[]; copy: Copy; onChange: (next: Theme[]) => void }) {
   const set = (index: number, patch: Partial<Theme>) => onChange(themes.map((theme, i) => (i === index ? { ...theme, ...patch } : theme)));
   return (
-    <section className="trip-panel">
+    <section className="trip-panel" id="trip-themes">
       <h2>{copy.tripThemes}</h2>
       <p>{copy.tripThemesHint}</p>
       <div className="trip-days">

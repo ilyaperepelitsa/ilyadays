@@ -26,7 +26,7 @@ export function TripDates({ lang, brief, onChange }: { lang: Lang; brief: TripBr
     } catch { /* incomplete date fields remain editable */ }
     onChange(next);
   };
-  return <section className="trip-panel" data-testid="trip-dates">
+  return <section className="trip-panel" id="trip-dates" data-testid="trip-dates">
     <h2>{p(lang, 'Dates of your stay', 'Даты поездки')}</h2>
     <p>{p(lang, 'Optional. Dates are local to your destination. Each walking route uses one day, starting on arrival.', 'Необязательно. Даты — по местному времени города. Каждый маршрут занимает день, начиная с приезда.')}</p>
     <div className="trip-metrics">

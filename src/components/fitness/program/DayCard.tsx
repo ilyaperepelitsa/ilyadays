@@ -8,6 +8,8 @@ import { renameDay, moveDay } from "@/lib/fitness/plan-builder.mjs";
 import { exerciseAllowed } from "@/lib/fitness/plan-preferences.mjs";
 import { addSlot, slotBlocks } from "@/lib/fitness/program-edit.mjs";
 import { SlotRow, type Edit, type Hold } from "./SlotRow";
+import { ExerciseThumbnail } from "../ExerciseThumbnail";
+import { ActionIcon } from "../ActionIcon";
 
 function AddExercise({ lang, day, program, onEdit }: { lang: Lang; day: ProgramDay; program: Program; onEdit: Edit }) {
   const [open, setOpen] = useState(false);
@@ -19,7 +21,7 @@ function AddExercise({ lang, day, program, onEdit }: { lang: Lang; day: ProgramD
   if (!open) {
     return (
       <button type="button" className="fit-button ghost fpr-add" data-testid="day-add" data-day-key={day.key} onClick={() => setOpen(true)}>
-        {pick(lang, `+ Add an exercise to day ${day.key}`, `+ Добавить упражнение в день ${day.key}`)}
+        <ActionIcon name="plus" />{pick(lang, `Add an exercise to day ${day.key}`, `Добавить упражнение в день ${day.key}`)}
       </button>
     );
   }
@@ -51,6 +53,7 @@ function AddExercise({ lang, day, program, onEdit }: { lang: Lang; day: ProgramD
                 setOpen(false);
               }}
             >
+              <ExerciseThumbnail id={e.id} />
               <span className="fpr-swap-name">{t2(lang, e.name)}</span>
               <span className="fit-muted fpr-small">
                 {equipmentLabel(e.equipment, lang)}
@@ -98,16 +101,17 @@ export function DayCard({
   return (
     <section className="fit-card fpr-day" aria-labelledby={`fpr-day-${day.key}`} data-testid="program-day" data-day-key={day.key}>
       <header className="fpr-day-head">
+        <span className="fpr-day-key" aria-hidden="true">{day.key}</span>
         <h3 id={`fpr-day-${day.key}`}>{t2(lang, day.name, day.key)}</h3>
         <span className="fit-muted fpr-small fit-num">
           ≈ {minutes} {pick(lang, "min", "мин")}
           {focus ? ` · ${focus}` : ""}
         </span>
       </header>
-      {editable ? <div className="fpr-day-tools">
+      {editable ? <details className="fpr-day-tools"><summary><ActionIcon name="edit" />{pick(lang, 'Edit day name and order', 'Изменить название и порядок дня')}</summary>
         <label className="fpr-field"><span className="fpr-small">{pick(lang, 'Day name', 'Название дня')}</span><input className="fpr-input" data-testid="day-name" key={day.name.en} defaultValue={t2(lang, day.name)} maxLength={80} onBlur={(e) => { const title = e.currentTarget.value; onEdit((p, at) => renameDay(p, day.key, title, at)); }} /></label>
-        <div className="fpr-builder-actions"><button type="button" className="fit-button quiet" data-testid="day-move-up" disabled={program.days[0]?.key === day.key} onClick={() => onEdit((p, at) => moveDay(p, day.key, -1, at))}>{pick(lang, '↑ Earlier', '↑ Раньше')}</button><button type="button" className="fit-button quiet" data-testid="day-move-down" disabled={program.days.at(-1)?.key === day.key} onClick={() => onEdit((p, at) => moveDay(p, day.key, 1, at))}>{pick(lang, '↓ Later', '↓ Позже')}</button></div>
-      </div> : null}
+        <div className="fpr-builder-actions"><button type="button" className="fit-button quiet" data-testid="day-move-up" disabled={program.days[0]?.key === day.key} onClick={() => onEdit((p, at) => moveDay(p, day.key, -1, at))}><ActionIcon name="up" />{pick(lang, 'Earlier', 'Раньше')}</button><button type="button" className="fit-button quiet" data-testid="day-move-down" disabled={program.days.at(-1)?.key === day.key} onClick={() => onEdit((p, at) => moveDay(p, day.key, 1, at))}><ActionIcon name="down" />{pick(lang, 'Later', 'Позже')}</button></div>
+      </details> : null}
       {day.slots.length === 0 ? <p className="fit-muted">{pick(lang, 'No exercises yet. Add the first one below.', 'Пока нет упражнений. Добавьте первое ниже.')}</p> : null}
       {minutes > 90 ? <p className="fit-note warn">{pick(lang, 'This day may take over 90 minutes. Consider fewer sets or moving exercises to another day.', 'Этот день может занять больше 90 минут. Подумайте о меньшем числе подходов или переносе упражнений на другой день.')}</p> : null}
       <ol className="fpr-slots">

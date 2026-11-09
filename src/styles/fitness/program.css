@@ -183,3 +183,49 @@
 .fpr-builder-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: .6rem 0; }
 .fpr-day-tools { margin-bottom: 1rem; }
 .fpr-constructor textarea { resize: vertical; }
+
+/* The exercises are the main work area; settings remain alongside them on a laptop. */
+.fpr-summary-meta { font-size:.87rem; color:var(--muted); }
+.fpr-eyebrow { font-size:.74rem; text-transform:none; letter-spacing:0; }
+.fpr-workspace { display:grid; grid-template-columns:340px minmax(0,1fr); gap:20px; align-items:start; }
+.fpr-settings { display:grid; gap:20px; padding:18px; border:1px solid var(--line); border-radius:12px; background:var(--surface); min-width:0; }
+.fit .fpr-settings > .fit-card { border:0; border-radius:0; box-shadow:none; padding:0; background:none; }
+.fpr-settings > .fit-card:not(:last-child) { border-bottom:1px solid var(--line); padding-bottom:20px; }
+.fpr-settings .fpr-section h2 { font-size:1rem; }
+.fpr-settings .fpr-small, .fpr-settings .fpr-mode-summary { font-size:.8rem; line-height:1.55; max-width:68ch; }
+.fpr-settings .fpr-kv { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.fpr-settings .fpr-kv-row { display:grid; align-content:start; gap:4px; padding:8px; background:var(--surface-2); border-radius:8px; }
+.fpr-settings .fpr-kv dt { font-size:.72rem; line-height:1.35; }
+.fpr-settings .fpr-kv dd { font-size:.81rem; }
+.fpr-settings .fpr-details summary { font-size:.8rem; }
+.fpr-settings .fpr-field > span { font-size:.8rem; font-weight:600; }
+.fpr-settings .fpr-input { min-height:44px; padding:8px 10px; }
+.fpr-settings .fpr-checks { grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 10px; font-size:.78rem; }
+.fpr-settings .fpr-scope { display:grid; grid-template-columns:minmax(0,1fr); }
+.fpr-settings .fpr-scope button { font-size:.83rem; min-height:44px; }
+.fpr-settings .fpr-choice-field { margin:16px 0; }
+.fpr-settings .fpr-choice-field legend { font-size:.83rem; }
+.fpr .fpr-settings-toggle { display:none; }
+.fpr-workspace .fpr-days-list { grid-template-columns:minmax(0,1fr); }
+.fpr-day { min-width:0; }
+.fpr-day-head { grid-template-columns:34px minmax(0,1fr); gap:2px 10px; align-items:center; }
+.fpr-day-head h3, .fpr-day-head > .fit-muted { grid-column:2; }
+.fpr-day-key { grid-column:1; grid-row:1 / span 2; align-self:start; display:grid; place-items:center; height:34px; background:var(--accent-soft); color:var(--accent); border-radius:9px; font-size:.88rem; font-weight:700; }
+.fpr-day-tools { margin:0 0 8px; }
+.fpr-day-tools summary { display:flex; align-items:center; gap:8px; min-height:44px; font-size:.78rem; color:var(--muted); cursor:pointer; list-style:none; }
+.fpr-day-tools summary::-webkit-details-marker { display:none; }
+.fpr-day-tools[open] { padding-bottom:12px; border-bottom:1px solid var(--line); }
+.fpr-slot-head { grid-template-columns:48px minmax(0,1fr) auto; align-items:center; gap:12px; padding:10px; }
+.fpr-slot-visual { position:relative; align-self:start; }
+.fpr-slot-visual .fpr-slot-id { position:absolute; bottom:-3px; right:-3px; min-width:22px; height:18px; padding:0 4px; border:1px solid var(--line); border-radius:5px; background:var(--surface); font-size:.6rem; }
+.fpr-slot-name { font-size:.9rem; }
+.fpr-slot-rx, .fpr-slot-next, .fpr-slot-sub { font-size:.77rem; }
+.fpr-swap { grid-template-columns:40px minmax(0,1fr); gap:3px 10px; align-items:center; }
+.fpr-swap .fit-exercise-thumb { width:40px; height:40px; grid-column:1; grid-row:1 / span 2; }
+.fpr-swap > :not(.fit-exercise-thumb) { grid-column:2; }
+@media(max-width:1000px) and (min-width:901px) { .fpr-workspace { grid-template-columns:300px minmax(0,1fr); gap:16px; } }
+@media(max-width:900px) {
+  .fpr-workspace { grid-template-columns:minmax(0,1fr); }
+  .fpr-settings:not([data-open="true"]) { display:none; }
+  .fpr .fpr-settings-toggle { display:inline-flex; justify-self:start; min-height:44px; padding:8px 14px; font-size:.85rem; }
+}

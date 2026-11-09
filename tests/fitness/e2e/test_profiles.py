@@ -83,13 +83,13 @@ def test_private_registration_preserves_submitted_choices_and_builds_personal_pl
     expect(tid(page, "profile-save")).to_be_enabled()
     tid(page, "profile-name").fill("My personal training")
     tid(page, "profile-weight").fill("85.5")
-    tid(page, "profile-goal").select_option("strength")
+    tid(page, "profile-goal").locator("input[value='strength']").check()
     tid(page, "profile-secondary-hypertrophy").check()
     tid(page, "profile-days").select_option("2")
     tid(page, "profile-scope").select_option("upper")
     tid(page, "profile-save").click()
     expect(tid(page, "mode-note")).to_have_attribute("data-mode", "synced")
-    expect(tid(page, "profile-goal")).to_have_value("strength")
+    expect(tid(page, "profile-goal")).to_have_attribute("data-value", "strength")
     expect(tid(page, "profile-weight")).to_have_value("85.5")
     expect(tid(page, "profile-name")).to_have_value("My personal training")
     expect(tid(page, "profile-secondary-hypertrophy")).to_be_checked()
@@ -102,7 +102,47 @@ def test_private_registration_preserves_submitted_choices_and_builds_personal_pl
     assert "hypertrophy" in active["preferences"]["secondaryGoals"]
     assert backend.profile["is_public"] is False and backend.profile["is_owner"] is False
     page.reload()
-    expect(tid(page, "profile-goal")).to_have_value("strength")
+    expect(tid(page, "profile-goal")).to_have_attribute("data-value", "strength")
+    no_horizontal_scroll(page)
+    probe.assert_clean()
+
+
+def test_profile_goal_keyboard_and_mobile_plan_preview(phone, fake_backend, base_url):
+    page, probe = phone
+    page.goto(base_url + "/fitness/profile", wait_until="networkidle")
+    goals = tid(page, "profile-goal")
+    goals.locator("input[value='recomp']").focus()
+    page.keyboard.press("ArrowRight")
+    expect(goals).to_have_attribute("data-value", "endurance")
+    tid(page, "profile-days").select_option("2")
+    bar = page.locator(".fprofile-mobile-preview")
+    expect(bar).to_contain_text("2 days/week")
+    bar.locator("button").click()
+    dialog = page.get_by_role("dialog")
+    expect(dialog).to_be_visible()
+    expect(dialog.locator(".fprofile-preview-days > section")).to_have_count(2)
+    expect(dialog.locator("img").first).to_be_visible()
+    page.wait_for_function("() => document.querySelector('dialog img')?.naturalWidth > 0")
+    page.keyboard.press("Escape")
+    expect(dialog).not_to_be_visible()
+    expect(bar.locator("button")).to_be_focused()
+    no_horizontal_scroll(page)
+    probe.assert_clean()
+
+
+def test_desktop_profile_and_plan_keep_real_exercise_pictures_visible(desktop_page, base_url):
+    page, probe = desktop_page
+    FakeBackend(page)
+    page.goto(base_url + "/fitness/profile", wait_until="networkidle")
+    preview = page.locator("aside.fprofile-preview")
+    expect(preview).to_be_visible()
+    expect(preview.locator(".fprofile-preview-days > section")).to_have_count(3)
+    expect(preview.locator("img").first).to_be_visible()
+    page.goto(base_url + "/fitness/program", wait_until="networkidle")
+    expect(tid(page, "goal-select")).to_be_visible()
+    row = tid(page, "slot-row").first
+    expect(row.locator("img")).to_be_visible()
+    assert row.bounding_box()["y"] < 800, "exercise editing must be visible in the first desktop viewport"
     no_horizontal_scroll(page)
     probe.assert_clean()
 
@@ -137,6 +177,7 @@ def test_private_unsaved_drafts_are_removed_when_signing_out(phone, base_url):
     tid(page, "profile-save").click()
     expect(tid(page, "mode-note")).to_have_attribute("data-mode", "synced")
     page.goto(base_url + "/fitness/program")
+    tid(page, "program-settings-toggle").click()
     tid(page, "plan-name").fill("PRIVATE DRAFT SHOULD DISAPPEAR")
     tid(page, "plan-name").blur()
     page.get_by_role("button", name="Sign out", exact=True).click()
@@ -150,6 +191,7 @@ def test_constructor_persists_no_legs_supporting_goals_and_pivot_history(phone, 
     page, probe = phone
     fake_backend.state = "missing"
     page.goto(base_url + "/fitness/program")
+    tid(page, "program-settings-toggle").click()
     page.locator("[data-testid='plan-scope'] [data-value='upper']").click()
     page.locator("[data-testid='secondary-goal'][data-value='hypertrophy']").check()
     tid(page, "plan-name").fill("Upper body personal plan")
@@ -158,6 +200,7 @@ def test_constructor_persists_no_legs_supporting_goals_and_pivot_history(phone, 
     tid(page, "pivot-reason").blur()
     tid(page, "program-save").click()
     page.reload()
+    tid(page, "program-settings-toggle").click()
     expect(page.locator("[data-testid='plan-scope'] [data-value='upper']")).to_have_attribute("aria-pressed", "true")
     expect(page.locator("[data-testid='secondary-goal'][data-value='hypertrophy']")).to_be_checked()
     page.locator("[data-testid='goal-select'] [data-value='strength']").click()
@@ -177,6 +220,7 @@ def test_empty_custom_days_cannot_be_saved(phone, fake_backend, base_url):
     page, probe = phone
     fake_backend.state = "missing"
     page.goto(base_url + "/fitness/program")
+    tid(page, "program-settings-toggle").click()
     button = tid(page, "plan-custom")
     button.locator("xpath=ancestor::details[1]/summary").click()
     button.click()
