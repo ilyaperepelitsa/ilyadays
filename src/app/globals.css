@@ -12,4 +12,7 @@
 @import "../styles/food.css" layer(recipes);
 @import "../styles/pose.css" layer(recipes);
 @import "../styles/site.css" layer(recipes);
+@import "../styles/modern.css" layer(recipes);
 @import "../styles/fitness.css" layer(recipes);
+/* The host controls the appearance of the dynamically loaded Istanbul stylesheet. */
+@import "../styles/trip-appearance.css";

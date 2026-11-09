@@ -15,7 +15,7 @@ function FoodShell({ lang, path, children }: { lang: Lang; path: string; childre
   return (
     <>
       <SiteHeader lang={lang} path={path} section="food" groups={index.groups} />
-      <main>{children}</main>
+      <main className={path === "/food" ? "food-main food-index-page" : "food-main"}>{children}</main>
       <SiteFooter>{index.footer}</SiteFooter>
     </>
   );

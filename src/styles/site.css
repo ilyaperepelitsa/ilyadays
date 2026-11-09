@@ -498,7 +498,6 @@
   color: var(--muted); font-size: .9rem; font-weight: 600; white-space: nowrap;
 }
 .site-header .site-primary-nav a:hover { color: var(--ink); background: var(--surface-2); }
-.site-header .site-primary-nav .nav-fitness { border-color: var(--line); color: var(--ink); }
 .site-header .site-primary-nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); border-color: transparent; }
 .site-header .header-end { grid-column: 3; grid-row: 1; order: 0; margin-left: 0; gap: 12px; min-width: 0; }
 .site-header .header-end .lang { flex-wrap: nowrap; gap: 5px; font-size: .75rem; }

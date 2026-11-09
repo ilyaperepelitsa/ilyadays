@@ -188,6 +188,7 @@ function Shot({ image, credit }: { image: { thumb: string; page: string; author:
       <a href={image.page} target="_blank" rel="noopener noreferrer" title={byline}>
         {/* eslint-disable-next-line @next/next/no-img-element -- hotlinked Commons thumbnail */}
         <img
+          crossOrigin="anonymous"
           src={commonsWidth(image.thumb, credit ? PHOTO_WIDTH : SPOT_WIDTH)}
           alt=""
           loading="lazy"

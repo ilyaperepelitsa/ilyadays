@@ -1,24 +1,31 @@
 import Link from "next/link";
-import yachtFood from "../../content/travel/turkey-yacht-food.json";
 import { type Lang, localPath, strings } from "@/lib/i18n";
 import { SiteFooter, SiteHeader } from "@/components/site/SiteHeader";
 import { AuthProvider } from "@/components/site/AuthProvider";
 import { SavedTrips } from "@/components/travel/SavedTrips";
+import { ActionIcon } from "@/components/site/ActionIcon";
 
 export function TravelView({ lang }: { lang: Lang }) {
   const t = strings(lang);
   return (
     <AuthProvider>
       <SiteHeader lang={lang} path="/travel" section="travel" auth />
-      <main>
-        <section className="hello">
-          <h1>{t.travelTitle}</h1>
-          <p className="lede">{t.travelLede}</p>
+      <main className="travel-main">
+        <section className="hello travel-intro">
+          <div><h1>{t.travelTitle}</h1>
+          <p className="lede">{lang === "ru" ? "Спланируйте следующую поездку или выберите готовый путеводитель с маршрутами, местами и едой." : "Plan your next trip or explore a guide with walking routes, places and food."}</p></div>
+          <Link prefetch={false} className="button travel-create-action" href={localPath(lang, "/travel/new")}><ActionIcon name="plus" />{t.makeTripTitle}</Link>
         </section>
-        <div className="tiles tiles-fill">
+        <SavedTrips lang={lang} />
+        <section className="travel-guides"><h2>{lang === "ru" ? "Путеводители" : "Field guides"}</h2>
+        <div className="tiles travel-guide-grid">
           <Link prefetch={false} className="tile" href={localPath(lang, "/travel/turkey-yacht-food")}>
-            {/* eslint-disable-next-line @next/next/no-img-element -- small static cover */}
-            <img src={yachtFood.cards[0].image} alt={t.yachtTileAlt} width={600} height={400} />
+            <div className="travel-guide-collage" role="img" aria-label={lang === "ru" ? "Турецкие блюда для камбуза" : "Turkish dishes for the galley"}>
+              {['menemen', 'kabak-mucver', 'palamut-tava'].map((dish) => (
+                // eslint-disable-next-line @next/next/no-img-element -- existing illustrated dishes in a small guide collage
+                <img key={dish} src={`/media/travel/turkey-yacht-food/${dish}.webp`} alt="" width={600} height={400} loading="lazy" />
+              ))}
+            </div>
             <div className="tile-body">
               <h2>{t.yachtTileTitle}</h2>
               <p>{t.yachtTileText}</p>
@@ -34,15 +41,8 @@ export function TravelView({ lang }: { lang: Lang }) {
               <span className="tile-go">{t.istanbulGo}</span>
             </div>
           </Link>
-          <Link prefetch={false} className="tile tile-plain" href={localPath(lang, "/travel/new")}>
-            <div className="tile-body">
-              <h2>{t.makeTripTitle}</h2>
-              <p>{t.makeTripCard}</p>
-              <span className="tile-go">{t.makeTripGo}</span>
-            </div>
-          </Link>
         </div>
-        <SavedTrips lang={lang} />
+        </section>
       </main>
       <SiteFooter>
         <Link prefetch={false} href={localPath(lang, "/")}>{t.backHome}</Link>

@@ -22,7 +22,7 @@ describe("site header", () => {
   });
 
   it("does not prefetch the home and travel pages from recipe pages", () => {
-    assert.match(header, /className="home-link" href=\{home\} prefetch=\{false\}/);
+    assert.match(header, /className="brand" href=\{home\} prefetch=\{false\}/);
     assert.match(header, /className="nav-section" prefetch=\{false\}/);
   });
 

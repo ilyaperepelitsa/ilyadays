@@ -6,7 +6,7 @@ import { type Lang, strings } from "@/lib/i18n";
 import { Card } from "./Card";
 import { IngredientBubbles } from "./IngredientBubbles";
 import { Html } from "./parts";
-import { SearchDisclosure } from "./SearchDisclosure";
+import { ActionIcon } from "../site/ActionIcon";
 import { useRecipeFilters } from "./useRecipeFilters";
 
 function fill(template: string, n: number) {
@@ -33,19 +33,10 @@ export function RecipeSearch({
   return (
     <>
       <div className="search-tools">
-        <SearchDisclosure
-          searchLabel={t.searchLabel}
-          ingredientsLabel={t.ingredientSearch}
-          searchOpen={filters.searchOpen}
-          ingredientsOpen={filters.ingredientsOpen}
-          queryActive={Boolean(filters.needle)}
-          ingredientCount={filters.selected.length}
-          onToggleSearch={filters.toggleSearch}
-          onToggleIngredients={filters.toggleIngredients}
-        />
-        {filters.searchOpen && (
+        <div className="catalog-search-row">
           <label className="recipe-search" id="recipe-search-panel">
             <span className="sr-only">{t.searchLabel}</span>
+            <ActionIcon name="search" />
             <input
               type="search"
               value={filters.query}
@@ -54,7 +45,9 @@ export function RecipeSearch({
               enterKeyHint="search"
             />
           </label>
-        )}
+          <button type="button" className="catalog-filter" aria-label={t.ingredientSearch} title={t.ingredientSearch} aria-expanded={filters.ingredientsOpen} aria-controls="ingredient-search-panel" onClick={filters.toggleIngredients}><ActionIcon name="filter" /><span>{t.ingredientSearch}</span>{filters.selected.length > 0 && <span className="count">{filters.selected.length}</span>}</button>
+        </div>
+        {filters.selected.length > 0 && !filters.needle ? <p className="catalog-results" role="status">{fill(t.searchCount, filters.visible.length)}</p> : null}
         {filters.ingredientsOpen && (
           <div id="ingredient-search-panel">
             <IngredientBubbles labels={t} facets={filters.facets} onToggle={filters.onToggle} />

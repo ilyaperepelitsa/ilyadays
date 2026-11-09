@@ -2,6 +2,7 @@ import Link from "next/link";
 import { type Lang, localPath, strings } from "@/lib/i18n";
 import { SiteFooter, SiteHeader } from "@/components/site/SiteHeader";
 import { RecentlyAdded } from "@/components/food/RecentlyAdded";
+import { ActionIcon } from "@/components/site/ActionIcon";
 
 export function HomeView({ lang }: { lang: Lang }) {
   const t = strings(lang);
@@ -14,9 +15,9 @@ export function HomeView({ lang }: { lang: Lang }) {
           <h1>{t.homeTitle}</h1>
           <p className="lede">{t.homeLede}</p>
           <div className="home-actions" aria-label={lang === "ru" ? "С чего начать" : "Start here"}>
-            <Link prefetch={false} className="home-action primary" href={localPath(lang, "/fitness")}>{lang === "ru" ? "Настроить тренировки" : "Make a training plan"}<span aria-hidden="true">↗</span></Link>
-            <Link prefetch={false} className="home-action" href={localPath(lang, "/travel/new")}>{lang === "ru" ? "Спланировать поездку" : "Plan a trip"}<span aria-hidden="true">↗</span></Link>
-            <Link prefetch={false} className="home-action text" href={localPath(lang, "/food")}>{lang === "ru" ? "Выбрать рецепт" : "Find a recipe"}<span aria-hidden="true">→</span></Link>
+            <Link prefetch={false} className="home-action primary" href={localPath(lang, "/fitness")}>{lang === "ru" ? "Настроить тренировки" : "Make a training plan"}<ActionIcon name="arrow" /></Link>
+            <Link prefetch={false} className="home-action" href={localPath(lang, "/travel/new")}>{lang === "ru" ? "Спланировать поездку" : "Plan a trip"}<ActionIcon name="arrow" /></Link>
+            <Link prefetch={false} className="home-action" href={localPath(lang, "/food")}>{lang === "ru" ? "Выбрать рецепт" : "Find a recipe"}<ActionIcon name="arrow" /></Link>
           </div>
         </section>
         <section className="home-sections" aria-labelledby="home-sections-title">

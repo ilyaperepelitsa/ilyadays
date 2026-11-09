@@ -1,0 +1,174 @@
+/* Site-owned presentation: survives recipe and embedded-app content syncs. */
+@media screen {
+  .action-icon { flex-shrink:0; vertical-align:middle; }
+  .site-header > .brand { min-height:40px; }
+  .site-header .header-end { min-height:40px; }
+  .site-header .group-nav { scroll-padding-inline:16px; }
+  .home-hello h1 { font-family:var(--sans); font-weight:650; letter-spacing:-.055em; }
+  .home-main .recent-head h2, .home-main .about h2 { font-family:var(--sans); font-size:1.25rem; letter-spacing:-.025em; }
+  .home-main .home-tiles h3 { font-family:var(--sans); font-weight:650; font-size:1.5rem; }
+  .home-main .card { box-shadow:none; border-radius:12px; }
+  .home-main .card h3 { font:650 1rem/1.35 var(--sans); letter-spacing:-.015em; }
+  :is(.food-main,.travel-main,.yacht-food,.made-trip) :is(a,button,input,select,textarea,summary):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  :is(.food-main,.travel-main,.yacht-food,.made-trip) :is(input,select,textarea) { font-variant-numeric:tabular-nums; }
+  :is(.food-main,.travel-main,.yacht-food,.made-trip) .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; font-family:var(--sans); }
+
+  /* Search is the catalog's primary action; filters are secondary. */
+  .food-index-page { padding-top:32px; }
+  .food-index-page .intro { margin:0 0 24px; max-width:780px; }
+  .food-index-page h1, .travel-main h1 { font:650 clamp(2rem,4vw,3rem)/1.12 var(--sans); letter-spacing:-.04em; margin-bottom:12px; }
+  .food-index-page .intro .lede { font-size:1rem; line-height:1.6; }
+  .food-intro-short { display:none; }
+  .catalog-search-row { display:flex; align-items:stretch; gap:10px; }
+  .catalog-search-row .recipe-search { position:relative; flex:1; max-width:none; }
+  .catalog-search-row .recipe-search > .action-icon { position:absolute; top:15px; left:14px; color:var(--muted); pointer-events:none; }
+  .catalog-search-row .recipe-search input { min-height:48px; padding-left:42px; border-width:1px; border-radius:10px; }
+  .catalog-filter { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); font:600 .84rem var(--sans); cursor:pointer; }
+  .catalog-filter[aria-expanded="true"] { border-color:var(--accent); color:var(--accent); background:var(--accent-soft); }
+  .catalog-filter .count { min-width:22px; padding:1px 6px; border-radius:6px; color:var(--accent); background:var(--accent-soft); font-variant-numeric:tabular-nums; }
+  .catalog-results { margin:0; color:var(--muted); font-size:.82rem; }
+  .food-index-page .search-tools { gap:12px; margin-bottom:28px; }
+  .food-index-page .group { margin-bottom:36px; scroll-margin-top:150px; }
+  .food-index-page .group > h2, .food-index-page .recent-head h2 { margin-bottom:16px; padding-bottom:12px; font:650 1.2rem/1.3 var(--sans); letter-spacing:-.02em; }
+  .food-index-page .recent { margin-top:0; }
+  .food-index-page .recent-head { margin-bottom:0; }
+  .food-index-page .cards { grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+  .food-index-page .card { min-width:0; border-radius:12px; box-shadow:none; }
+  .food-index-page .card:hover { transform:none; border-color:var(--accent); box-shadow:none; }
+  .food-index-page .card-art { padding:8px 8px 0; }
+  .food-index-page .card-art .art { border-radius:8px; aspect-ratio:4 / 3; object-fit:cover; }
+  .food-index-page .card-text { padding:14px; gap:8px; }
+  .food-index-page .card h3 { font:650 1rem/1.35 var(--sans); letter-spacing:-.015em; }
+  .food-index-page .card p { font-size:.84rem; line-height:1.5; }
+  .food-index-page .card .meta { gap:3px; }
+  .food-index-page .card .meta :is(.chip,.when) { font-size:.74rem; }
+  :is(.food-index-page,.home-main) .card .meta .chip { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%; }
+
+  /* Cooking: readable artwork, a steady ingredients rail and quiet working controls. */
+  .food-main .recipe-hero { grid-template-columns:minmax(0,1fr) minmax(0,.9fr); gap:36px; margin:12px 0 28px; }
+  .food-main .recipe-hero h1 { font-size:clamp(2rem,3.5vw,2.9rem); letter-spacing:-.025em; }
+  .food-main .recipe-hero .lede { max-width:62ch; font-size:1rem; line-height:1.65; }
+  .food-main .recipe-hero .eyebrow { font-size:.78rem; text-transform:none; letter-spacing:0; color:var(--muted); }
+  .food-main .recipe-hero .eyebrow a { color:var(--muted); }
+  .food-main .hero-art { box-shadow:none; border:1px solid var(--line); overflow:hidden; border-radius:14px; }
+  .food-main .recipe-hero img.art.illo { border-radius:0; aspect-ratio:auto; object-fit:contain; }
+  .food-main .recipe-hero .meta { gap:6px; margin:14px 0; }
+  .food-main .recipe-hero .chip { font-size:.75rem; padding:5px 9px; }
+  .food-main .recipe-hero .chip.time { background:var(--surface-2); color:var(--ink); }
+  :is(.food-main,.yacht-food,.made-trip) .jump { flex-wrap:nowrap; overflow-x:auto; padding:4px 2px 8px; scrollbar-width:thin; overscroll-behavior-x:contain; }
+  :is(.food-main,.yacht-food,.made-trip) .jump a { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; min-height:44px; padding:8px 12px; border-radius:8px; font:600 .8rem/1.4 var(--sans); white-space:nowrap; }
+  .food-main .recipe-body { grid-template-columns:300px minmax(0,1fr); gap:28px; }
+  .food-main .ingredients-panel { top:80px; max-height:calc(100dvh - 96px); border-radius:12px; padding:18px; box-shadow:none; }
+  .food-main .ingredients-panel h2 { font:650 1.1rem var(--sans); letter-spacing:-.02em; }
+  .food-main .ingredients-panel h3 { text-transform:none; letter-spacing:0; font-size:.84rem; color:var(--ink); }
+  .food-main .ingredients li { min-height:40px; align-items:center; border-bottom-style:solid; font-size:.86rem; }
+  .food-main .ingredients li::before { top:12px; }
+  .food-main .ing-amt { font-size:.8rem; }
+  .food-main .portions { background:var(--surface-2); border-radius:9px; padding:10px; }
+  .food-main .portions .stepper :is(button,input), .food-main .portions .seg button { min-height:44px; }
+  .food-main .recipe-main :is(h2,h3), .food-main .recipe > .block h2 { font-family:var(--sans); letter-spacing:-.02em; font-weight:650; }
+  .food-main .recipe-main h2 { font-size:1.25rem; }
+  .food-main .step { border-radius:12px; padding:16px; gap:20px; box-shadow:none; }
+  .food-main .step-text h3 { font-size:1.05rem; }
+  .food-main .step-text { top:80px; }
+  .food-main .step-body { max-width:68ch; font-size:.93rem; line-height:1.65; }
+  .food-main :is(.step-art,.how figure) img.art.illo { aspect-ratio:auto; object-fit:contain; height:auto; }
+  .food-main .recipe-text { margin-bottom:24px; padding:0 16px; border-radius:10px; background:var(--surface); font-size:.84rem; }
+  .food-main .recipe-text > summary { padding:12px 0; font-weight:600; }
+  .food-main .sv-buttons button { min-height:44px; }
+  .food-main .sv-planner { box-shadow:none; border-radius:12px; }
+
+  /* Travel has a clear creation action followed by compact, illustrated guides. */
+  .travel-main { padding-top:40px; }
+  .travel-intro { display:flex; justify-content:space-between; align-items:center; gap:28px; padding-bottom:28px; border-bottom:1px solid var(--line); margin-bottom:28px; }
+  .travel-intro .lede { max-width:630px; font-size:1rem; line-height:1.65; margin-bottom:0; }
+  .travel-create-action { flex-shrink:0; min-height:48px !important; padding:12px 18px; }
+  .travel-guides > h2, .saved-trips .recent-head h2 { margin:0 0 16px; font:650 1.2rem var(--sans); letter-spacing:-.02em; }
+  .travel-guide-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .travel-guide-grid .tile { display:grid; grid-template-columns:140px minmax(0,1fr); min-width:0; border-radius:12px; box-shadow:none; }
+  .travel-guide-grid .tile > img, .travel-guide-collage { width:140px; height:100%; min-height:190px; object-fit:cover; }
+  .travel-guide-collage { display:grid; grid-template-rows:repeat(3,minmax(0,1fr)); overflow:hidden; background:var(--surface-2); }
+  .travel-guide-collage img { display:block; width:100%; height:100%; max-height:90px; object-fit:cover; }
+  .travel-guide-grid .tile-body { padding:18px 16px; }
+  .travel-guide-grid h2 { font:650 1.05rem/1.35 var(--sans); letter-spacing:-.015em; }
+  .travel-guide-grid p { font-size:.83rem; line-height:1.55; }
+  .travel-guide-grid .tile-go { font-size:.8rem; }
+  .saved-trips { margin:0 0 32px; }
+  .saved-trip-card { border-radius:12px; box-shadow:none; }
+  .saved-trip-card .tile-body { padding:18px; }
+  .saved-trip-card h2 { font:650 1.1rem var(--sans); }
+  .saved-trip-card .saved-trip-dates { margin:6px 0; font-size:.78rem; font-variant-numeric:tabular-nums; }
+  .saved-trip-card p, .saved-trip-card .tile-go { font-size:.84rem; }
+  .yacht-food :is(h1,h2,h3), .made-trip :is(h1,h2,h3) { font-family:var(--sans); font-weight:650; letter-spacing:-.025em; }
+  .yacht-food .hello .lede { max-width:72ch; font-size:1rem; line-height:1.65; }
+  .yacht-food .yacht-card { border-radius:12px; box-shadow:none; }
+  .yacht-food .yacht-card h3 { font-size:1.08rem; line-height:1.35; }
+  .yacht-food .yacht-card-body { padding:16px; }
+  .made-trip .hello .lede, .made-stop-body { max-width:72ch; font-size:.95rem; line-height:1.65; }
+  .made-trip .made-route { margin-top:28px; }
+  .made-trip .made-route-head h2 { font-size:1.3rem; }
+  .site-footer { padding-top:24px; }
+  @media(min-width:761px) {
+    .site-header { grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); }
+    .site-header > .brand { justify-self:start; }
+    .site-header .header-end { justify-self:end; }
+  }
+  @media(min-width:901px) {
+    .made-stop:has(> .made-shot) { grid-template-columns:minmax(0,1fr) 200px; align-items:start; gap:24px; }
+    .made-stop .made-shot { width:100%; }
+  }
+  @media(max-width:1000px) {
+    .travel-guide-grid { grid-template-columns:minmax(0,1fr); }
+  }
+  @media(max-width:900px) {
+    .food-main .recipe-hero { grid-template-columns:minmax(0,1fr); gap:12px; }
+    .food-main .recipe-hero > div { display:contents; }
+    .food-main .recipe-hero .eyebrow { order:1; margin:0; }
+    .food-main .recipe-hero h1 { order:2; margin:0; }
+    .food-main .recipe-hero .meta { order:3; margin:0; }
+    .food-main .recipe-hero .hero-art { order:4; }
+    .food-main .recipe-hero .lede { order:5; margin:0; }
+    .food-main .recipe-hero .jump { order:6; }
+    .food-main .recipe-body { grid-template-columns:minmax(0,1fr); }
+    .food-main .ingredients-panel { position:static; max-height:none; }
+    .food-main .step-text { position:static; }
+    .food-index-page .cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+  @media(max-width:640px) {
+    .food-index-page, .travel-main { padding-top:28px; }
+    .food-intro-full { display:none; }
+    .food-intro-short { display:block; margin:0; }
+    .catalog-search-row .recipe-search { min-width:0; }
+    .catalog-filter { min-height:48px; padding:10px 14px; }
+    .catalog-filter > span:not(.count) { display:none; }
+    .food-index-page .cards { grid-template-columns:minmax(0,1fr); gap:10px; }
+    .food-index-page .card { display:grid; grid-template-columns:106px minmax(0,1fr); align-items:start; }
+    .food-index-page .card-art { padding:8px 0 8px 8px; }
+    .food-index-page .card-art .art { aspect-ratio:1; }
+    .food-index-page .card-text { padding:12px; gap:6px; }
+    .food-index-page .card h3 { font-size:.92rem; }
+    .food-index-page .card p { font-size:.78rem; -webkit-line-clamp:2; }
+    .food-index-page .card .meta { gap:2px; }
+    :is(.food-index-page,.home-main) .recent .cards { display:grid; grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:62%; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x proximity; gap:12px; padding-bottom:10px; }
+    :is(.food-index-page,.home-main) .recent .card { display:flex; flex-direction:column; scroll-snap-align:start; }
+    :is(.food-index-page,.home-main) .recent .card-art { padding:8px 8px 0; }
+    :is(.food-index-page,.home-main) .recent .card-art .art { aspect-ratio:16 / 9; }
+    :is(.food-index-page,.home-main) .recent .card-text { width:100%; min-width:0; padding:12px; }
+    :is(.food-index-page,.home-main) .recent .card-text p { display:none; }
+    .food-index-page .group { scroll-margin-top:160px; }
+    .food-main .recipe-hero h1 { font-size:1.9rem; }
+    .food-main .recipe-hero .lede { font-size:.94rem; }
+    .food-main .recipe-hero .chip { font-size:.7rem; }
+    .travel-intro { align-items:stretch; flex-direction:column; gap:20px; padding-bottom:24px; }
+    .travel-guide-grid .tile { grid-template-columns:105px minmax(0,1fr); }
+    .travel-guide-grid .tile > img, .travel-guide-collage { width:105px; min-height:180px; }
+    .travel-guide-grid .tile-body { padding:14px 12px; }
+    .travel-guide-grid h2 { font-size:1rem; }
+    .travel-guide-grid p { font-size:.8rem; }
+    .home-actions .home-action { gap:10px; }
+  }
+  @media(prefers-reduced-motion:reduce) {
+    .card, .tile { transition:none; }
+    .card:hover, .tile:hover { transform:none; }
+  }
+}

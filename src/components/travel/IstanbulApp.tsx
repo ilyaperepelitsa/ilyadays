@@ -2,7 +2,7 @@
 // Mounts the Istanbul trip app (public/apps/istanbul, copied from ../istanbul_trip/dist by sync-content.sh).
 // Everyone sees the owner's progress from Supabase; only the admin (rpc is_admin) gets editable mode.
 import { useEffect, useRef, useState } from "react";
-import { preconnect, preload, preloadModule } from "react-dom";
+import { preload, preloadModule } from "react-dom";
 import type { Lang as TripLang, TripHandle } from "@/types/istanbul";
 import { type Lang, localPath } from "@/lib/i18n";
 import { tripStorage } from "@/lib/tripStorage";
@@ -14,8 +14,6 @@ const APP_JS = `/apps/istanbul/app.js?v=${process.env.NEXT_PUBLIC_ISTANBUL_JS_V}
 const APP_CSS = `/apps/istanbul/app.css?v=${process.env.NEXT_PUBLIC_ISTANBUL_CSS_V}`;
 /** The map graph (1.5 MB): app.js fetches this exact URL itself, so it survives app updates in the cache. */
 const MAP_DATA = `/apps/istanbul/mapdata.json?v=${process.env.NEXT_PUBLIC_ISTANBUL_MAP_V}`;
-const FONTS =
-  "https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&family=Marcellus&display=swap";
 
 type Text = { loading: string; failed: string; readOnlySignedIn: string; editing: string };
 type TripModule = { mount: (el: HTMLElement, options: object) => TripHandle };
@@ -42,8 +40,6 @@ export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
   preloadModule(APP_JS);
   preload(APP_CSS, { as: "style" });
   preload(MAP_DATA, { as: "fetch", crossOrigin: "anonymous", fetchPriority: "low" }); // after the page's own CSS
-  preconnect("https://fonts.googleapis.com");
-  preconnect("https://fonts.gstatic.com", { crossOrigin: "anonymous" });
   const mountRef = useRef<HTMLDivElement>(null);
   const noteRef = useRef<HTMLParagraphElement>(null);
   const handleRef = useRef<TripHandle | null>(null);
@@ -67,7 +63,6 @@ export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
     let cancelled = false;
     (async () => {
       try {
-        void addStylesheet(FONTS); // display=swap: the app's fallback fonts until these arrive
         const [mod] = await Promise.all([
           import(/* webpackIgnore: true */ /* turbopackIgnore: true */ APP_JS) as Promise<TripModule>,
           addStylesheet(APP_CSS),
@@ -84,6 +79,7 @@ export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
             if (!authRef.current.user) void authRef.current.signIn();
           },
         });
+        el.querySelector<HTMLInputElement>("#trip-start")?.setAttribute("lang", lang);
         setMounted(true);
       } catch (e) {
         console.error("Istanbul app failed to load", e);
@@ -132,7 +128,7 @@ export function IstanbulApp({ lang, text }: { lang: Lang; text: Text }) {
       {failed ? (
         <p className="trip-status">{text.failed}</p>
       ) : (
-        <div ref={mountRef} className="trip-mount" data-loading={text.loading} />
+        <div ref={mountRef} className="trip-mount" lang={lang} data-loading={text.loading} />
       )}
     </>
   );

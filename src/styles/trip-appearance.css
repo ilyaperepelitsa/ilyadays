@@ -1,0 +1,27 @@
+/* Host tokens are resolved here, before the embedded app defines its own token names. */
+.trip-page {
+  --trip-host-bg:var(--bg); --trip-host-surface:var(--surface); --trip-host-subtle:var(--surface-2);
+  --trip-host-ink:var(--ink); --trip-host-muted:var(--muted); --trip-host-line:var(--line);
+  --trip-host-accent:var(--accent); --trip-host-on-accent:var(--on-accent);
+}
+/* Explicit host scope wins over both light and dark rules in the later-loaded vendor CSS. */
+:root .trip-page .trip-mount .cdays-root {
+  --bg:var(--trip-host-bg); --surface:var(--trip-host-surface); --surface-2:var(--trip-host-subtle);
+  --ink:var(--trip-host-ink); --ink-2:var(--trip-host-muted); --line:var(--trip-host-line);
+  --accent:var(--trip-host-accent); --accent-ink:var(--trip-host-on-accent);
+  --f-body:var(--sans); --f-display:var(--sans); --f-mono:var(--sans);
+  --r:12px; font-size:15px; line-height:1.55;
+}
+.trip-page .cdays-root .brand h1 { font-weight:650; font-size:1.5rem; letter-spacing:-.035em; line-height:1.15; }
+.trip-page .cdays-root .brand h1 small { letter-spacing:0; text-transform:none; line-height:1.5; }
+.trip-page .cdays-root :is(h2,h3) { font-weight:650; letter-spacing:-.02em; }
+.trip-page .cdays-root .masthead { gap:10px; padding:16px 20px; }
+.trip-page .cdays-root :is(.btn,.seg button,.daytab) { min-height:44px; }
+.trip-page .cdays-root .btn { border-radius:9px; font-weight:600; }
+.trip-page .cdays-root .stats b { font-weight:650; font-variant-numeric:tabular-nums; }
+.trip-page .cdays-root .stats span, .trip-page .cdays-root .daytab .dt-n { text-transform:none; letter-spacing:0; }
+.trip-page .cdays-root .daycard { border-left-width:3px; box-shadow:none; }
+.trip-page .cdays-root .daycard p { font-size:.88rem; }
+/* The host header already supplies these same actions. Standalone controls remain intact. */
+.trip-page .cdays-root #lang, .trip-page .cdays-root #ro-signin { display:none; }
+@media(max-width:860px) { .trip-page .cdays-root .masthead { padding:14px 16px; } }

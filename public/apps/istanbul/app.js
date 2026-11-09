@@ -104,6 +104,7 @@ function loadLeaflet() {
   if (!leafletLoading) {
     leafletLoading = new Promise((resolve, reject) => {
       const s = document.createElement("script");
+      s.crossOrigin = "anonymous";
       s.src = LEAFLET_JS;
       s.async = true;
       s.onload = () => resolve(window.L);
@@ -166,6 +167,8 @@ function createTrip(el, options, env) {
   const PHONE = () => window.matchMedia("(max-width: 860px)").matches;
   function h(tag, attrs, ...kids) {
     const e = document.createElement(tag);
+    // Set the request mode before src: third-party photos must not send or save cookies.
+    if (tag === "img") { e.crossOrigin = "anonymous"; e.referrerPolicy = "no-referrer"; }
     if (attrs) {
       for (const [k, v] of Object.entries(attrs)) {
         if (v == null || v === false) continue;
@@ -773,11 +776,12 @@ function createTrip(el, options, env) {
     // without spending a tile on the check; the standalone/artifact page probes with one tile first.
     if (!STANDALONE) { $("#tiles-toggle").hidden = false; return; }
     const img = new Image();
+    img.crossOrigin = "anonymous";
     img.onload = () => { $("#tiles-toggle").hidden = false; };
     img.src = "https://tile.openstreetmap.org/14/9506/6127.png";
   }
   function toggleTiles(on) {
-    if (on && !tileLayer) tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, pane: "base", opacity: 0.85 });
+    if (on && !tileLayer) tileLayer = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, pane: "base", opacity: 0.85, crossOrigin: true });
     if (on) tileLayer.addTo(map); else if (tileLayer) map.removeLayer(tileLayer);
   }
 

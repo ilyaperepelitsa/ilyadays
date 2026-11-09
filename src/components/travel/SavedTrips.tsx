@@ -18,13 +18,14 @@ export function SavedTrips({ lang }: { lang: Lang }) {
   const trips = useSyncExternalStore(subscribeTrips, listTrips, () => NONE);
   if (!trips.length) return null;
   return (
-    <section className="recent">
+    <section className="recent saved-trips">
       <div className="recent-head"><h2>{copy.tripSavedHere}</h2></div>
       <div className="tiles tiles-fill">
         {trips.map((trip) => (
-          <Link prefetch={false} key={trip.id} className="tile tile-plain" href={localPath(lang, `/travel/made/${trip.id}`)}>
+          <Link prefetch={false} key={trip.id} className="tile saved-trip-card" href={localPath(lang, `/travel/made/${trip.id}`)}>
             <div className="tile-body">
               <h2>{trip.city}</h2>
+              {trip.brief?.stayStart && trip.brief.stayEnd ? <p className="saved-trip-dates"><time>{trip.brief.stayStart}</time> — <time>{trip.brief.stayEnd}</time></p> : null}
               <p>{title(lang, trip)}</p>
               <span className="tile-go">
                 {copy.tripCounts

@@ -27,18 +27,10 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
   const fitness = localPath(lang, "/fitness");
   return (
     <header className="site-header">
-      {section === "food" ? (
-        <span className="brand-group">
-          <Link className="home-link" href={home} prefetch={false}>ilyadays</Link>
-          <span className="crumb" aria-hidden="true">/</span>
-          <Link className="brand" href={food}>{t.recipes}</Link>
-        </span>
-      ) : (
-        <Link className="brand" href={home} prefetch={section !== "home" ? false : undefined}>
+        <Link className="brand" href={home} prefetch={false}>
           <span className="brand-mark" aria-hidden="true" />
           ilyadays
         </Link>
-      )}
       <nav className="site-primary-nav" aria-label={lang === "ru" ? "Разделы сайта" : "Site sections"}>
         <Link href={food} aria-current={section === "food" ? "page" : undefined}>{t.food}</Link>
         <Link href={travel} className="nav-section" prefetch={false}
@@ -50,7 +42,7 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
         <LangSwitch lang={lang} path={path} label={t.language} />
         {auth && <AuthButton signInLabel={t.signIn} signOutLabel={t.signOut} />}
       </div>
-      {section === "food" && groups?.length ? (
+      {section === "food" && path === "/food" && groups?.length ? (
         <nav className="group-nav" aria-label={t.recipes}>
           {groups.map((g) => <a key={g.id} href={`${food}#${g.id}`}>{g.name}</a>)}
         </nav>

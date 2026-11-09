@@ -20,7 +20,8 @@ export function FoodIndexView({ lang, index }: { lang: Lang; index: FoodIndex })
       {hasSvg && <SvgDefs svg={getSvgDefs()} />}
       <div className="intro">
         <h1>{index.title}</h1>
-        <Html as="p" className="lede" html={index.lede_html} />
+        <p className="lede food-intro-short">{lang === "ru" ? "Иллюстрированные рецепты: от ингредиентов до готового блюда." : "Illustrated recipes, from ingredients to the finished dish."}</p>
+        <Html as="p" className="lede food-intro-full" html={index.lede_html} />
       </div>
       <RecipeSearch lang={lang} recipes={findableRecipes(lang, index)} groups={index.groups} recent={index.recent} badges={badges} />
     </>
