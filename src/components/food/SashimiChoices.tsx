@@ -46,7 +46,7 @@ export function SashimiChoices({base, variants, lang, ui, sourcing}: {
     <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
     <div className="recipe-body" key={selected.slug} data-sashimi-selection={id}>
       <Ingredients r={selected} t={t} lang={lang}/>
-      <div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t}/><NotesAndSources r={selected} t={t}/>{sourcing}</div>
+      <div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t} lang={lang}/><NotesAndSources r={selected} t={t} lang={lang}/>{sourcing}</div>
     </div>
   </article>;
 }

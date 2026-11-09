@@ -22,8 +22,8 @@ export const rootMetadata: Metadata = {
 
 export const rootViewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#faf6ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#1b1916" },
+    { media: "(prefers-color-scheme: light)", color: "#f5f7fa" },
+    { media: "(prefers-color-scheme: dark)", color: "#101318" },
   ],
 };
 
@@ -33,6 +33,7 @@ export function RootShell({ lang, children }: { lang: Lang; children: React.Reac
     <html lang={lang}>
       {/* eslint-disable-next-line @next/next/no-head-element -- App Router root layout; the script must run first */}
       <head>
+        <link rel="preload" href="/fonts/manrope/manrope-variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Before first paint: follow the reader's saved language (localStorage, never a cookie). */}
         <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />
       </head>

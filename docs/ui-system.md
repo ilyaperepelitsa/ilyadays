@@ -1,6 +1,6 @@
 # Shared UI foundation
 
-Tailwind CSS 4 provides utilities. The site retains its warm palette, automatic light/dark scheme, density and authored layouts. No Tailwind preflight reset is applied: recipes and the embedded itinerary bring existing base styles.
+Tailwind CSS 4 provides utilities. The shared screen theme uses cool mineral surfaces, graphite actions, a persimmon accent and locally hosted Manrope, with automatic light/dark schemes and dense authored layouts. See [the visual system](visual-style-system.md). No Tailwind preflight reset is applied: recipes and the embedded itinerary bring existing base styles.
 
 `components.json` configures shadcn/ui with the New York Radix components, React Server Components and `@/` aliases. `src/components/ui/toggle.tsx` and `toggle-group.tsx` come from the official registry; local adaptations add border style/font inheritance without preflight, reduced-motion handling and 44px selection targets. `cn` merges Tailwind classes, and class-variance-authority defines variants. Dependencies are pinned in package-lock.json.
 

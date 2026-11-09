@@ -1,0 +1,94 @@
+/* Readable reference tables; authored values, quantities and units remain unchanged. */
+@media screen {
+  .food-main .notes { grid-template-columns:minmax(0,1fr); }
+  .food-main :is(.note,.recipe-main,.step-text) { min-width:0; }
+  .food-main ul.ing .amt { min-width:0; white-space:normal; }
+  .cooking-table-hint { display:none; margin:12px 0 -6px; color:var(--muted); font-size:.72rem; }
+  .cooking-table-frame, .food-main .cooking-reference-frame {
+    width:100%; max-width:100%; min-width:0; margin:14px 0; overflow:auto;
+    border:1px solid var(--line); border-radius:12px; background:var(--surface);
+    box-shadow:0 1px 3px rgb(20 30 45 / .025); overscroll-behavior:contain;
+    scrollbar-width:thin; scrollbar-color:var(--muted) var(--surface-2);
+  }
+  .cooking-table-frame:focus-visible, .cooking-reference-frame:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  .cooking-table-frame table.mini, .food-main .cook-reference-table {
+    display:table; width:100%; margin:0; border-collapse:separate; border-spacing:0;
+    font:400 .82rem/1.6 var(--sans); letter-spacing:-.01em; overflow-wrap:normal;
+  }
+  .cooking-table-wide table.mini { table-layout:fixed; min-width:640px; }
+  .cooking-table-frame :is(th,td), .food-main .cook-reference-table :is(th,td) {
+    display:table-cell; width:auto; padding:13px 16px; vertical-align:top; text-align:left;
+    border:0; border-bottom:1px solid var(--line); background:var(--row-surface,var(--surface));
+  }
+  .cooking-table-frame thead th, .food-main .cook-reference-table thead th {
+    position:sticky; top:0; z-index:2; background:var(--surface-2); color:var(--ink);
+    font-size:.74rem; font-weight:750; text-transform:none; letter-spacing:0;
+    border-bottom:1px solid var(--field-line); white-space:normal;
+  }
+  .cooking-table-frame tbody tr, .food-main .cook-reference-table tbody tr { --row-surface:var(--surface); }
+  .cooking-table-frame tbody tr:nth-child(even), .food-main .cook-reference-table tbody tr:nth-child(even) { --row-surface:var(--field); }
+  .cooking-table-frame tbody tr:hover, .food-main .cook-reference-table tbody tr:hover { --row-surface:color-mix(in srgb,var(--accent-soft) 55%,var(--surface)); }
+  .cooking-table-frame tbody tr:last-child > *, .food-main .cook-reference-table tbody tr:last-child > * { border-bottom:0; }
+  .cooking-table-frame tbody td:first-child, .food-main .cook-reference-table tbody th { font-size:inherit; font-weight:650; text-transform:none; letter-spacing:inherit; color:var(--ink); }
+  .cooking-table-frame .cooking-number, .food-main .cook-reference-table .num { text-align:right; white-space:nowrap; font-weight:700; font-variant-numeric:tabular-nums; }
+  .cooking-table-frame .q { white-space:nowrap; }
+  .cooking-table-frame .qalt { color:var(--muted); font-size:.9em; }
+  .cooking-table-wide :is(td,th):first-child { position:sticky; left:0; z-index:1; width:150px; min-width:150px; max-width:150px; box-shadow:1px 0 0 var(--line); }
+  .cooking-table-wide thead th:first-child { z-index:3; }
+
+  .food-main .sv-reference { padding:20px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+  .food-main .sv-reference > summary { min-height:44px; padding:8px 0; font-weight:750; font-size:1rem; color:var(--ink); }
+  .sv-reference-toolbar { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:start; gap:16px 24px; padding:16px 0 22px; margin-bottom:20px; border-bottom:1px solid var(--line); }
+  .sv-reference-toolbar :is(.sv-filter,.sv-table-layout) { display:flex; flex-wrap:wrap; gap:7px; border:0; padding:0; margin:0; min-width:0; }
+  .sv-reference-toolbar legend { margin-bottom:9px; padding:0; color:var(--muted); font-size:.72rem; font-weight:650; }
+  .sv-reference-toolbar label { display:inline-flex; align-items:center; gap:7px; min-height:44px; padding:8px 11px; border:1px solid var(--line); border-radius:8px; font-size:.74rem; cursor:pointer; background:var(--field); }
+  .sv-reference-toolbar label:has(:checked) { background:var(--action); border-color:var(--action); color:var(--on-action); }
+  .sv-reference-toolbar input { width:14px; height:14px; margin:0; accent-color:var(--accent); }
+  .sv-reference-toolbar label:focus-within { outline:2px solid var(--accent); outline-offset:3px; }
+  .sv-table-section { padding:0; margin:0 0 30px; }
+  .sv-table-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+  .sv-table-heading > div { min-width:0; }
+  .food-main .sv-table-heading h2 { font:750 1.18rem/1.35 var(--sans); letter-spacing:-.035em; margin:0 0 6px; }
+  .sv-table-count { color:var(--muted); font-size:.74rem; margin:0; font-variant-numeric:tabular-nums; }
+  .sv-table-heading .sv-art { flex:0 0 100px; width:100px; margin:0; overflow:hidden; border:1px solid var(--line); border-radius:10px; }
+  .sv-table-heading .sv-art img { width:100%; height:72px; border-radius:0; object-fit:cover; }
+  .sv-scroll-hint { display:none; align-items:center; gap:7px; color:var(--muted); font-size:.7rem; margin:12px 0 0; }
+  .sv-scroll-hint .action-icon { width:14px; height:14px; }
+  .food-main .cooking-reference-frame { max-height:520px; margin-top:10px; }
+  .food-main .cook-reference-table { min-width:720px; }
+  .food-main .cook-reference-table thead { display:table-header-group; }
+  .food-main .cook-reference-table tbody { display:table-row-group; }
+  .food-main .cook-reference-table tr { display:table-row; width:auto; padding:0; border:0; }
+  .food-main .cook-reference-table :is(th,td)::before { display:none; }
+  .food-main .cook-reference-table :is(th,td):first-child { position:sticky; left:0; z-index:1; min-width:155px; max-width:200px; box-shadow:1px 0 0 var(--line); }
+  .food-main .cook-reference-table thead th:first-child { z-index:4; }
+  .food-main .cook-reference-table td:last-child:not(.num) { min-width:230px; max-width:340px; color:var(--muted); font-size:.77rem; }
+  .cooking-state { display:inline-block; border:1px solid var(--line); border-radius:5px; padding:2px 6px; background:var(--surface-2); color:var(--ink); font-size:.69rem; font-weight:600; white-space:nowrap; }
+  .cook-reference[data-layout=cards] .sv-scroll-hint { display:none; }
+  .cook-reference[data-layout=cards] .cooking-state { min-width:0; white-space:normal; overflow-wrap:anywhere; }
+  .cook-reference[data-layout=cards] .cooking-reference-frame { max-height:none; border:0; background:transparent; box-shadow:none; overflow:visible; }
+  .food-main .cook-reference[data-layout=cards] table { display:block; min-width:0; }
+  .food-main .cook-reference[data-layout=cards] thead { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+  .food-main .cook-reference[data-layout=cards] tbody { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:12px; }
+  .food-main .cook-reference[data-layout=cards] tr { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 14px; padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--field); }
+  .food-main .cook-reference[data-layout=cards] tbody :is(th,td) { display:grid; grid-column:1 / -1; grid-template-columns:minmax(80px,.65fr) minmax(0,1fr); gap:12px; width:100%; min-width:0; max-width:none; padding:7px 0; position:static; border:0; border-bottom:1px solid var(--line); background:transparent; box-shadow:none; white-space:normal; text-align:left; }
+  .food-main .cook-reference[data-layout=cards] tbody :is(th,td)::before { display:block; content:attr(data-label); color:var(--muted); font-size:.7rem; font-weight:500; text-transform:none; letter-spacing:0; }
+  .food-main .cook-reference[data-layout=cards] tbody th:first-child { display:block; padding-bottom:10px; font-weight:750; font-size:.9rem; }
+  .food-main .cook-reference[data-layout=cards] tbody th:first-child::before { display:none; }
+  .food-main .cook-reference[data-layout=cards] tbody td.num { grid-column:auto; display:flex; flex-direction:column; gap:3px; font-size:1rem; }
+  .food-main .cook-reference[data-layout=cards] tbody tr > :last-child { border-bottom:0; }
+  @media(max-width:900px) { .sv-scroll-hint { display:flex; } .cooking-table-hint { display:block; } }
+  @media(max-width:640px) {
+    .food-main .sv-reference { padding:14px; }
+    .sv-reference-toolbar { display:grid; gap:16px; }
+    .food-main .sv-table-heading h2 { font-size:1rem; }
+    .sv-table-heading .sv-art { flex-basis:75px; width:75px; }
+    .sv-table-heading .sv-art img { height:60px; }
+    .cooking-table-frame :is(th,td), .food-main .cook-reference-table :is(th,td) { padding:11px 13px; }
+    .food-main .cook-reference-table :is(th,td):first-child { min-width:130px; max-width:160px; }
+    .cooking-table-frame table.mini { font-size:.77rem; }
+    .cooking-table-wide table.mini { min-width:540px; }
+    .cooking-table-wide :is(td,th):first-child { width:130px; min-width:130px; max-width:130px; }
+    .cooking-table-wide .qalt { display:block; }
+  }
+}

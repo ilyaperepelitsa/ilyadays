@@ -1,5 +1,7 @@
 """Food discovery and cooking still work through the sitewide presentation changes."""
 import os
+import json
+from pathlib import Path
 import re
 
 import pytest
@@ -119,3 +121,60 @@ def test_offline_help_is_optional_and_does_not_start_a_download(page, lang):
     expect(save).to_be_enabled()
     help_box.locator("summary").click()
     expect(help_box).not_to_have_attribute("open", "")
+
+
+ROOT = Path(__file__).resolve().parents[3]
+
+
+@pytest.mark.parametrize('lang', ['en', 'ru'])
+def test_all_sous_vide_rows_match_the_source_in_each_filter_and_view(page, lang):
+    prefix = '' if lang == 'en' else '/ru'
+    tables = json.loads((ROOT / 'content' / lang / 'sous-vide.json').read_text())['tables']
+    page.goto(BASE + prefix + '/food/sous-vide#reference', wait_until='networkidle')
+    reference = page.locator('#reference')
+    expect(reference).to_have_attribute('open', '')
+    expect(reference.locator('input[name=sv-layout][value=table]')).to_be_checked()
+    first = reference.locator('.cooking-reference-frame').first
+    first.scroll_into_view_if_needed()
+    first.focus()
+    pinned = first.locator('thead th').first.bounding_box()['x']
+    page.keyboard.press('ArrowRight')
+    page.wait_for_function("() => document.querySelector('.cooking-reference-frame').scrollLeft > 0")
+    assert abs(first.locator('thead th').first.bounding_box()['x'] - pinned) < 2, 'identifying column stays pinned'
+    for layout in ['cards', 'table']:
+        reference.locator(f'input[name=sv-layout][value={layout}]').check()
+        expect(reference).to_have_attribute('data-layout', layout)
+        if layout == 'cards':
+            assert reference.locator('.cooking-state').evaluate_all("badges => badges.every(el => el.getBoundingClientRect().right <= el.closest('tr').getBoundingClientRect().right + 1)"), 'state labels fit within their cards'
+        for state in ['all', 'frozen', 'chilled']:
+            reference.locator(f'input[name=sv-state][value={state}]').check()
+            actual = reference.locator('.sv-table-section').evaluate_all("""sections => Object.fromEntries(sections.map(section => [section.id,
+                [...section.querySelectorAll('tbody tr[data-starting-state]')].map(row => [...row.cells].map(cell => cell.textContent.trim()))]))""")
+            for table in tables:
+                expected = [row for i, row in enumerate(table['rows']) if state == 'all' or table['states'][i] in [state, 'both']]
+                assert actual[table['id']] == expected, (lang, table['id'], state, layout)
+    assert reference.locator('.cook-reference-table').first.evaluate("table => getComputedStyle(table).display") == 'table'
+
+
+@pytest.mark.parametrize('lang', ['en', 'ru'])
+def test_recipe_table_quantities_still_follow_servings_and_unit_controls(page, lang):
+    prefix = '' if lang == 'en' else '/ru'
+    page.goto(BASE + prefix + '/food/cucumber-sunomono', wait_until='networkidle')
+    frame = page.locator('.cooking-table-frame')
+    expect(frame).to_have_count(1)
+    frame.scroll_into_view_if_needed()
+    expect(frame).to_have_attribute('tabindex', '0')
+    assert frame.evaluate('el => el.scrollWidth > el.clientWidth'), 'wide comparison scrolls inside its frame'
+    amount = frame.locator('tbody .q[data-k="mass"]').first
+    original = amount.inner_text()
+    ingredient = page.locator('.ingredients .ing-amt .q').first
+    ingredient_original = ingredient.inner_text()
+    portions = page.locator('.portions')
+    portions.locator('button[data-step="1"]').click()
+    expect(ingredient).not_to_have_text(ingredient_original)
+    expect(amount).to_have_text(original)  # fixed reference ratios do not scale with servings
+    metric = amount.inner_text()
+    portions.locator('button[data-units=us]').click()
+    expect(amount).not_to_have_text(metric)
+    expect(frame.locator('thead th.cooking-number')).to_have_count(3)
+    assert frame.locator('tbody tr').count() >= 3

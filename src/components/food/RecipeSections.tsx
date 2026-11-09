@@ -4,6 +4,7 @@ import { media } from "@/lib/paths";
 import type { Lang } from "@/lib/i18n";
 import { Html, Illo, Svg } from "./parts";
 import { Portions } from "./Portions";
+import { CookingHtml } from "./CookingHtml";
 
 type T = (key: string) => string;
 
@@ -121,7 +122,7 @@ export function TimelineChart({ tl, t }: { tl: Timeline; t: T }) {
   );
 }
 
-function StepCard({ s, t }: { s: Step; t: T }) {
+function StepCard({ s, t, lang }: { s: Step; t: T; lang: Lang }) {
   const im = s.images;
   const hasArt = !!(im.photo || im.how.length || im.illustration || im.svg_fallback || im.diagram);
   return (
@@ -179,7 +180,7 @@ function StepCard({ s, t }: { s: Step; t: T }) {
             </ul>
           </div>
         )}
-        <Html as="div" className="step-body" html={s.body_html} />
+        <CookingHtml className="step-body" html={s.body_html} lang={lang} />
         {im.how.length > 0 && im.result && !im.how.some(h => h.src === im.result) && (
           <figure className="result">
             <Illo src={im.result} alt={s.title} />
@@ -191,7 +192,7 @@ function StepCard({ s, t }: { s: Step; t: T }) {
   );
 }
 
-export function Steps({ r, t }: { r: Recipe; t: T }) {
+export function Steps({ r, t, lang }: { r: Recipe; t: T; lang: Lang }) {
   const cards: React.ReactNode[] = [];
   let part: string | null = null;
   for (const s of r.steps) {
@@ -203,7 +204,7 @@ export function Steps({ r, t }: { r: Recipe; t: T }) {
         </li>,
       );
     }
-    cards.push(<StepCard key={s.id} s={s} t={t} />);
+    cards.push(<StepCard key={s.id} s={s} t={t} lang={lang} />);
   }
   return (
     <section className="block" id="steps">
@@ -213,7 +214,7 @@ export function Steps({ r, t }: { r: Recipe; t: T }) {
   );
 }
 
-export function NotesAndSources({ r, t }: { r: Recipe; t: T }) {
+export function NotesAndSources({ r, t, lang }: { r: Recipe; t: T; lang: Lang }) {
   return (
     <>
       {r.notes.length > 0 && (
@@ -221,7 +222,7 @@ export function NotesAndSources({ r, t }: { r: Recipe; t: T }) {
           {r.notes.map((n, i) => (
             <aside className="note" key={i}>
               <Html as="h3" html={n.title_html} />
-              <Html as="div" html={n.html} />
+              <CookingHtml html={n.html} lang={lang} />
             </aside>
           ))}
         </section>

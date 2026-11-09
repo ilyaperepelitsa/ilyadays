@@ -52,7 +52,7 @@ export function OnigiriChoices({base,fillings,methods,wrappings,lang,ui}:{base:R
   </section>
   <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
   <div className="recipe-body" key={`${choice.recipe}:${choice.method}:${choice.wrapping}`} data-onigiri-selection={`${choice.recipe}:${choice.method}:${choice.wrapping}`}>
-   <Ingredients r={selected} t={t} lang={lang}/><div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t}/><NotesAndSources r={selected} t={t}/></div>
+   <Ingredients r={selected} t={t} lang={lang}/><div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t} lang={lang}/><NotesAndSources r={selected} t={t} lang={lang}/></div>
   </div>
  </article>;
 }

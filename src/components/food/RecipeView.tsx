@@ -47,9 +47,9 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
           <div className="recipe-main">
             <Mise r={r} t={t} />
             {r.timeline && <TimelineChart tl={r.timeline} t={t} />}
-            <Steps r={r} t={t} />
+            <Steps r={r} t={t} lang={lang} />
             {r.batch && r.vinegar_options && <BatchCalc batch={r.batch} options={r.vinegar_options} lang={lang} />}
-            <NotesAndSources r={r} t={t} />
+            <NotesAndSources r={r} t={t} lang={lang} />
             {r.siblings.length > 0 && (
               <nav className="more">
                 <span>{r.more_label}</span>
