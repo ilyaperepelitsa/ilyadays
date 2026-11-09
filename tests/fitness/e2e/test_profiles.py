@@ -130,6 +130,11 @@ def test_profile_goal_keyboard_and_mobile_plan_preview(phone, fake_backend, base
     page.keyboard.press("Escape")
     expect(dialog).not_to_be_visible()
     expect(bar.locator("button")).to_be_focused()
+    footer_save = page.locator(".site-footer .offline-actions button")
+    page.locator(".site-footer").scroll_into_view_if_needed()
+    expect(footer_save).to_be_visible()
+    page.evaluate("() => window.scrollTo({top:document.documentElement.scrollHeight,behavior:'instant'})")
+    assert footer_save.bounding_box()["y"] + footer_save.bounding_box()["height"] <= bar.bounding_box()["y"], "offline save must clear the mobile plan dock"
     no_horizontal_scroll(page)
     probe.assert_clean()
 
@@ -179,9 +184,12 @@ def test_private_unsaved_drafts_are_removed_when_signing_out(phone, base_url):
     page.goto(base_url + "/fitness/profile")
     tid(page, "profile-name").fill("Private athlete")
     tid(page, "profile-save").click()
+    expect(page.get_by_text("Profile saved. Your plan and training history are ready.", exact=True)).to_be_visible()
     expect(tid(page, "mode-note")).to_have_attribute("data-mode", "synced")
     page.goto(base_url + "/fitness/program")
+    expect(tid(page, "mode-note")).to_have_attribute("data-mode", "synced")
     tid(page, "program-settings-toggle").click()
+    expect(tid(page, "plan-name")).to_be_enabled()
     tid(page, "plan-name").fill("PRIVATE DRAFT SHOULD DISAPPEAR")
     tid(page, "plan-name").blur()
     page.get_by_role("button", name="Sign out", exact=True).click()
@@ -249,6 +257,7 @@ def test_easy_set_guidance_uses_reported_effort_and_keeps_the_same_weight(phone,
     guide.locator("summary").click()
     expect(guide).to_contain_text("13")
     row.locator("[data-testid='rir-choice'][data-value='4']").click()
+    expect(row.locator("[data-testid='rir-choice'][data-value='4']")).to_have_attribute("aria-pressed", "true")
     expect(tid(row, "set-effort-feedback")).to_be_visible()
     log_current(page)
     pending = card(page, first["slot"]).locator("[data-kind='working'][data-state='planned']").first
@@ -257,6 +266,7 @@ def test_easy_set_guidance_uses_reported_effort_and_keeps_the_same_weight(phone,
     actual = next(s for s in stored(page, "sets").values() if s["sessionId"] == session_id and s["kind"] == "working")
     assert actual["plannedReps"] == first["reps"]
     assert actual["prescription"]["rirReported"] is True
+    assert actual["rir"] == 4
     no_horizontal_scroll(page)
     probe.assert_clean()
 

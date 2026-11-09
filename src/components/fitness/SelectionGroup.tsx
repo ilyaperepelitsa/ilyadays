@@ -16,9 +16,9 @@ export function SelectionGroup<T extends string>({ label, values, options, disab
     aria-label={label} value={values} disabled={disabled} data-testid={testId}
     onValueChange={(next) => onChange(next.filter((id): id is T => options.some((o) => o.id === id)))}>
     {options.map((option) => <ToggleGroupItem key={option.id} value={option.id} data-value={option.id}
-      className="h-auto min-h-11 max-w-full px-3 py-2 text-left leading-snug data-[state=on]:border-ring disabled:border-dashed disabled:opacity-70"
+      className="fit-choice h-auto min-h-11 max-w-full px-3 py-2 text-left leading-snug data-[state=on]:border-ring disabled:border-dashed"
       disabled={option.disabled} title={option.description}>
-      <span aria-hidden="true" className="inline-flex size-3.5 shrink-0">{values.includes(option.id) ? <ActionIcon name="check" /> : null}</span>
+      <span aria-hidden="true" className="fit-choice-indicator">{values.includes(option.id) ? <ActionIcon name="check" /> : null}</span>
       {option.label}{option.count === undefined ? null : <span className="text-xs tabular-nums opacity-70">{option.count}</span>}
     </ToggleGroupItem>)}
   </ToggleGroup>;

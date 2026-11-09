@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { type Lang, strings } from "@/lib/i18n";
 import { formatBytes, savedTripUrls } from "@/lib/offline/catalog.mjs";
 import { listTrips } from "@/lib/trips/store.mjs";
+import { ActionIcon } from "./ActionIcon";
 
 const SAVED = "ilyadays-offline";
 
@@ -148,10 +149,13 @@ export function OfflineSave() {
 
   return (
     <div className="offline-save">
-      <button type="button" onClick={onSave} disabled={progress !== null}>{label}</button>
+      <div className="offline-actions"><button type="button" onClick={onSave} disabled={progress !== null}><ActionIcon name={saved ? "check" : "download"} />{label}</button><span className="offline-size">{formatBytes(list.bytes)}</span></div>
       {progress ? <span className="offline-bar" aria-hidden="true"><span style={{ width: `${pct}%` }} /></span> : null}
-      <p>{failed ? t.offlineFail : fill(onFitness() ? t.offlineHintFitness : t.offlineHint, { size: formatBytes(list.bytes) })}</p>
-      <p>{t.offlineIphone}</p>
+      {failed ? <p role="alert">{t.offlineFail}</p> : null}
+      <details className="offline-help"><summary>{lang === "ru" ? "Как пользоваться без сети" : "How offline works"}</summary>
+        <p>{fill(onFitness() ? t.offlineHintFitness : t.offlineHint, { size: formatBytes(list.bytes) })}</p>
+        <p>{t.offlineIphone}</p>
+      </details>
     </div>
   );
 }

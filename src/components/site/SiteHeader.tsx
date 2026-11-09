@@ -3,6 +3,7 @@ import { OfflineSave } from "./OfflineSave";
 import { type Lang, localPath, strings } from "@/lib/i18n";
 import { LangSwitch } from "./LangSwitch";
 import { AuthButton } from "./AuthButton";
+import { ActionIcon } from "./ActionIcon";
 
 type Props = {
   lang: Lang;
@@ -32,11 +33,11 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
           ilyadays
         </Link>
       <nav className="site-primary-nav" aria-label={lang === "ru" ? "Разделы сайта" : "Site sections"}>
-        <Link href={food} aria-current={section === "food" ? "page" : undefined}>{t.food}</Link>
+        <Link href={food} aria-current={section === "food" ? "page" : undefined}><ActionIcon name="food" /><span>{t.food}</span></Link>
         <Link href={travel} className="nav-section" prefetch={false}
-          aria-current={section === "travel" ? "page" : undefined}>{t.travel}</Link>
+          aria-current={section === "travel" ? "page" : undefined}><ActionIcon name="travel" /><span>{lang === "ru" ? "Поездки" : t.travel}</span></Link>
         <Link href={fitness} className="nav-section nav-fitness" prefetch={false}
-          aria-current={section === "fitness" ? "page" : undefined}>{t.fitness}</Link>
+          aria-current={section === "fitness" ? "page" : undefined}><ActionIcon name="fitness" /><span>{t.fitness}</span></Link>
       </nav>
       <div className="header-end">
         <LangSwitch lang={lang} path={path} label={t.language} />
@@ -54,8 +55,10 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
 export function SiteFooter({ children }: { children?: React.ReactNode }) {
   return (
     <footer className="site-footer">
-      <OfflineSave />
-      {children ?? "ilyadays.com"}
+      <div className="site-footer-inner">
+        <div className="site-footer-context">{children ?? <span className="site-footer-wordmark">ilyadays.com</span>}</div>
+        <OfflineSave />
+      </div>
     </footer>
   );
 }

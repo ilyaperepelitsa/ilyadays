@@ -97,3 +97,25 @@ def test_shared_header_identifies_one_current_section(page, path, section):
         action = page.locator(".travel-create-action")
         expect(action).to_have_attribute("href", "/travel/new")
         assert action.bounding_box()["y"] < 500
+
+
+@pytest.mark.parametrize("lang", ["en", "ru"])
+def test_offline_help_is_optional_and_does_not_start_a_download(page, lang):
+    prefix = "" if lang == "en" else "/ru"
+    page.goto(BASE + prefix + "/food", wait_until="networkidle")
+    footer = page.locator(".site-footer")
+    footer.scroll_into_view_if_needed()
+    save = footer.locator(".offline-actions button")
+    expect(save).to_be_visible()
+    expect(footer.locator(".offline-size")).to_contain_text(re.compile(r"\d"))
+    help_box = footer.locator(".offline-help")
+    expect(help_box).not_to_have_attribute("open", "")
+    registrations = page.evaluate("async () => (await navigator.serviceWorker.getRegistrations()).length")
+    help_box.locator("summary").focus()
+    page.keyboard.press("Enter")
+    expect(help_box).to_have_attribute("open", "")
+    expect(help_box.locator("p").last).to_be_visible()
+    assert page.evaluate("async () => (await navigator.serviceWorker.getRegistrations()).length") == registrations
+    expect(save).to_be_enabled()
+    help_box.locator("summary").click()
+    expect(help_box).not_to_have_attribute("open", "")

@@ -5,6 +5,7 @@ import { pick } from "@/lib/fitness/i18n";
 import { FitnessNav, FitnessShell } from "@/components/fitness/Shell";
 import { HomePanel } from "@/components/fitness/home/HomePanel";
 import { ErrorGuard } from "@/components/fitness/train/ErrorGuard";
+import { ActionIcon, type ActionIconName } from "@/components/site/ActionIcon";
 
 const TILES: [string, string, string, string, string][] = [
   ["/fitness/profile", "Your profile", "Ваш профиль", "Private by default. Your goals, preferences and starting plan.", "Приватный по умолчанию. Ваши цели, предпочтения и первая программа."],
@@ -16,6 +17,11 @@ const TILES: [string, string, string, string, string][] = [
   ["/fitness/science", "Science", "Наука", "Why the plan looks like this: the evidence, with sources.", "Почему план такой: исследования и источники."],
   ["/fitness/tools", "Calculators", "Калькуляторы", "One-rep max, the weight for any reps, warm-up sets, plates per side.", "Разовый максимум, вес на любые повторы, разминка, блины на сторону."],
 ];
+
+const TILE_ICONS: Record<string, ActionIconName> = {
+  "/fitness/profile": "profile", "/fitness/program": "program", "/fitness/exercises": "fitness", "/fitness/gyms": "gym",
+  "/fitness/progress": "progress", "/fitness/nutrition": "food", "/fitness/science": "science", "/fitness/tools": "tools",
+};
 
 /** /fitness: the hub (stream 04). Static parts render on the server; the data cards are a client island. */
 export function FitnessHomeView({ lang }: { lang: Lang }) {
@@ -44,7 +50,7 @@ export function FitnessHomeView({ lang }: { lang: Lang }) {
       <nav className="fit-tiles fh-hub-tiles" aria-label={pick(lang, "Fitness pages", "Страницы фитнеса")}>
         {TILES.map(([path, en, ru, textEn, textRu]) => (
           <Link key={path} prefetch={false} className="fit-tile" href={localPath(lang, path)}>
-            <h2>{pick(lang, en, ru)}</h2>
+            <span className="fh-tile-heading"><span className="fh-tile-icon"><ActionIcon name={TILE_ICONS[path]} /></span><h2>{pick(lang, en, ru)}</h2><ActionIcon name="arrow" /></span>
             <p>{pick(lang, textEn, textRu)}</p>
           </Link>
         ))}

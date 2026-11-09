@@ -146,3 +146,29 @@ def test_nutrition_keeps_quantities_whole_on_a_small_phone(small_phone, base_url
     assert found["runs"] > 200, f"only {found['runs']} runs of text: did the page render?"
     assert not found["hits"], f"{len(found['hits'])} quantities can break:\n" + "\n".join(found["hits"])
     assert found["dashes"] >= 10 and found["slashes"] >= 3, f"keepUnits did not run: {found['dashes']} ranges, {found['slashes']} slashes joined"
+
+
+@pytest.mark.parametrize("lang", ["en", "ru"])
+def test_fitness_navigation_adapts_without_duplicate_or_unreachable_links(desktop_page, base_url, lang):
+    page, probe = desktop_page
+    prefix = "" if lang == "en" else "/ru"
+    page.goto(base_url + prefix + "/fitness/profile", wait_until="networkidle")
+    nav = page.locator(".fit-nav")
+    expect(nav).to_have_attribute("data-wide", "true")
+    expect(nav.locator("a")).to_have_count(10)
+    for link in nav.locator("a").all():
+        expect(link).to_be_visible()
+    expect(nav.locator("[aria-current=page]")).to_have_attribute("href", prefix + "/fitness/profile")
+    expect(nav.locator("summary")).to_have_count(0)
+    page.set_viewport_size({"width": 360, "height": 800})
+    summary = nav.locator("summary")
+    expect(summary).to_be_visible()
+    expect(nav.locator("details")).not_to_have_attribute("open", "")
+    summary.focus()
+    page.keyboard.press("Enter")
+    expect(nav.locator(f"a[href='{prefix}/fitness/progress']")).to_be_visible()
+    page.keyboard.press("Escape")
+    expect(nav.locator("details")).not_to_have_attribute("open", "")
+    expect(summary).to_be_focused()
+    no_horizontal_scroll(page)
+    probe.assert_clean()

@@ -11,6 +11,7 @@ import type { Lang } from "@/lib/fitness/types";
 import { pick } from "@/lib/fitness/i18n";
 import { isSyncedStore, type LocalReason, type StoreStatus } from "@/lib/fitness/store";
 import { useFitness } from "./Provider";
+import { ActionIcon } from "../site/ActionIcon";
 
 const noSubscribe = () => () => {};
 const noStatus = () => null;
@@ -113,6 +114,13 @@ export function ModeNote({ lang, current }: { lang: Lang; current?: string }) {
   }
 
   if (mode === "viewer") {
+    if (current === "/fitness/exercises" && !auth.isAdmin) return (
+      <div className="fit-mode fit-catalog-mode" data-testid="mode-note" data-mode="viewer">
+        <span>{pick(lang, "Explore the exercise library", "Изучайте каталог упражнений")}</span>
+        {offlineBadge}
+        <Link prefetch={false} href={localPath(lang, "/fitness/profile")}>{pick(lang, "Build your plan", "Создать программу")}<ActionIcon name="arrow" /></Link>
+      </div>
+    );
     return (
       <div className={`fit-note fit-mode${problem && auth.isAdmin ? " warn" : ""}`} data-testid="mode-note" data-mode="viewer">
         <span className="fit-mode-text">
