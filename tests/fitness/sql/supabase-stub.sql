@@ -1,5 +1,6 @@
 -- Minimal stand-in for the parts of a Supabase project the ilyadays migrations rely on.
 -- Used only by scripts/fitness-sql-check.sh against a throwaway local Postgres.
+CREATE ROLE service_role NOLOGIN BYPASSRLS;
 CREATE ROLE anon NOLOGIN;
 CREATE ROLE authenticated NOLOGIN;
 CREATE SCHEMA auth;

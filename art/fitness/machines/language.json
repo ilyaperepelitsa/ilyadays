@@ -1,0 +1,83 @@
+{
+  "version": "machine-language-2.0",
+  "policySource": "art/image-requirements.json",
+  "policyScope": "Inherit the site's thin warm contours, muted matte cel shading, ivory ground and no-text/no-arrow rendering lock. Fitness explicitly replaces culinary subject/hand-only framing with a whole adult mannequin and commercial gym equipment. No food props, ingredient rules, manufacturer identity or photorealism.",
+  "styleReference": "public/media/illustrations/nigiri/technique-4.webp",
+  "styleReferenceRole": "Palette and linework only; never use food geometry as machine geometry.",
+  "rendering": "Scientific educational gym illustration in the site's hand-drawn Japanese-animation visual language. Thin even warm-brown contours, smooth matte two-tone cel shading, no gradients, grain, gloss or photographic texture. Plain warm ivory background edge to edge, one restrained ground shadow. No environment, typography, numbers, logos, arrows, diagrams, borders or insets. One scene and one camera per image.",
+  "palette": {
+    "background": "#faf6ef",
+    "outline": "#4a3a2a",
+    "frame": "#3b3632",
+    "upholstery": "#efe6d6",
+    "hardware": "#c9c3b8",
+    "adjustmentControls": "#b83d0b",
+    "actorBase": "#d8cfc3",
+    "actorShadow": "#b9ad9e"
+  },
+  "actor": "One neutral adult training mannequin, consistent athletic proportions and scale in all views; smooth faceless head, warm-grey body, no sexual anatomy, hair or clothing changes. Anatomically plausible joints and five digits per hand with natural occlusion, thumb opposing fingers around the grip; no mittens, fused digits or extra limbs. Keep the same limb lengths, handedness, stance and supporting contacts across phases. No painted muscle overlays; muscle maps are a separate asset family.",
+  "machineLock": "Preserve the approved machine's frame silhouette, frame feet, weld topology, pad dimensions, upholstery, pivot positions, rail angle, cable routing, adjustment controls and attachment family. Moving handles, lever arms, sled and cable endpoints move as one physically connected mechanism. Never move fixed pads or invent a second mechanism to accommodate a pose. Use a generic training station, not an unverified branded model.",
+  "cameraLock": "Body views use a 50mm-equivalent orthographic-like view without wide-angle distortion, camera level, same camera/scale/crop across setup, start and end; adult and full working mechanism visible with 8% outer margin. Changing camera is permitted only for the named adjustment/alignment detail views. Camera settings are prompt constraints, not OpenAI API parameters.",
+  "api": {
+    "model": "gpt-image-2-2026-04-21",
+    "n": 1,
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "opaque",
+    "output_format": "png",
+    "moderation": "auto"
+  },
+  "requiredViews": [
+    "identity",
+    "adjustment",
+    "setup",
+    "start",
+    "end",
+    "alignment"
+  ],
+  "review": {
+    "initialStatus": "unreviewed",
+    "requiredEvidence": [
+      "reviewer",
+      "reviewedAt",
+      "imageSha256",
+      "promptSha256",
+      "actualModel",
+      "requestId",
+      "allCheckpointDecisions",
+      "referenceAssetHashes"
+    ],
+    "checkpointEvidence": "Each checkpoint needs an explicit pass/fail, an observation, and at least one normalized bounding box marking the relevant part. Inspect at original resolution and at the delivered thumbnail size. Any failed, missing or hidden required contact blocks approval.",
+    "nonDeterminism": "A model snapshot and exact prompts improve traceability; neither seeds nor deterministic image reproduction are promised. No seed or input_fidelity parameter is sent. Actual requests/responses, reference hashes and output hashes must be recorded."
+  },
+  "machineNames": {
+    "single-cable-tower": {
+      "en": "Adjustable cable tower",
+      "ru": "Регулируемая блочная стойка"
+    },
+    "dual-cable-crossover": {
+      "en": "Dual cable crossover",
+      "ru": "Двойной кроссовер"
+    },
+    "smith-vertical-rack": {
+      "en": "Vertical Smith rack",
+      "ru": "Вертикальная машина Смита"
+    },
+    "assisted-dip-chin-station": {
+      "en": "Assisted dip and pull-up station",
+      "ru": "Гравитрон для подтягиваний и отжиманий"
+    },
+    "seated-lat-pulldown": {
+      "en": "Lat pulldown station",
+      "ru": "Станция вертикальной тяги"
+    },
+    "reversible-pec-rear-delt": {
+      "en": "Pec deck and rear delt machine",
+      "ru": "Бабочка и обратная бабочка"
+    },
+    "sled-leg-press-45": {
+      "en": "45-degree sled leg press",
+      "ru": "Жим ногами под 45 градусов"
+    }
+  }
+}

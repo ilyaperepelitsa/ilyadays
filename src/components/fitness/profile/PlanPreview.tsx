@@ -2,7 +2,8 @@
 
 import { useId, useRef } from "react";
 import type { Lang, Program } from "@/lib/fitness/types";
-import { exerciseById } from "@/lib/fitness/catalog.mjs";
+import { exerciseById, GROUPS } from "@/lib/fitness/catalog.mjs";
+import { uncoveredFocus } from "@/lib/fitness/plan-preferences.mjs";
 import { estimateMinutes } from "@/lib/fitness/templates.mjs";
 import { pick, t2 } from "@/lib/fitness/i18n";
 import { ExerciseThumbnail } from "../ExerciseThumbnail";
@@ -21,9 +22,11 @@ export function PlanPreview({ lang, program, isDraft }: { lang: Lang; program: P
   const dialog = useRef<HTMLDialogElement>(null);
   const titleId = useId();
   const minutes = program?.days.map((day) => estimateMinutes(day)) ?? [];
+  const missingFocus = program ? uncoveredFocus(program) : [];
   const summary = program ? `${program.days.length} ${pick(lang, "days/week", "дн./нед.")} / ~${Math.round(minutes.reduce((a, b) => a + b, 0) / Math.max(1, minutes.length))} ${pick(lang, "min/session", "мин/трен.")}` : pick(lang, "No plan selected", "Программа не выбрана");
   const content = <>
     <p className="fprofile-preview-state">{isDraft ? pick(lang, "Preview · save to apply", "Предпросмотр · сохраните для применения") : pick(lang, "Current program", "Текущая программа")}</p>
+    {missingFocus.length ? <p className="fit-note">{pick(lang, "No direct exercise for:", "Нет прямого упражнения для:")} {missingFocus.map((g) => t2(lang, GROUPS.find((v) => v.id === g)?.name, g)).join(", ")}. {pick(lang, "Adjust the draft in the constructor or change these focus choices.", "Измените черновик в конструкторе или выберите другие приоритеты.")}</p> : null}
     {program ? <><PreviewDays lang={lang} program={program} /><p className="fprofile-preview-note">{pick(lang, "Start light. Your logged reps and effort establish a separate baseline for each exercise.", "Начните с лёгкого веса. Фактические повторы и усилие зададут базовый вес отдельно для каждого упражнения.")}</p></> : <p className="fit-muted">{pick(lang, "Choose to create a plan to see your training days here.", "Выберите создание программы, чтобы увидеть тренировочные дни.")}</p>}
   </>;
   return <>

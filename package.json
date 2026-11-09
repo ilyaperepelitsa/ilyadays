@@ -12,12 +12,17 @@
     "sync": "bash scripts/sync-content.sh",
     "check:cookies": "node scripts/check-no-cookies.mjs",
     "test:fitness:sql": "bash scripts/fitness-sql-check.sh",
-    "test:fitness:e2e": "bash scripts/fitness-e2e.sh"
+    "test:fitness:e2e": "bash scripts/fitness-e2e.sh",
+    "check:fitness:catalog": "node scripts/fitness-machine-specs.mjs check && node scripts/fitness-catalog-seed.mjs --check"
   },
   "dependencies": {
+    "@radix-ui/react-toggle": "1.2.1",
+    "@radix-ui/react-toggle-group": "1.2.1",
     "@supabase/supabase-js": "^2.89.0",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.3.1",
+    "class-variance-authority": "0.7.1",
+    "cn": "0.5.2",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"

@@ -12,6 +12,10 @@ from test_gym_session import block_realtime, stored, tid
 UID = "33333333-3333-4333-8333-333333333333"
 
 
+def choice(page, group, value):
+    return tid(page, group).locator(f"[data-value='{value}']")
+
+
 class PersonalBackend(FakeBackend):
     def __init__(self, page):
         self.profile = None
@@ -84,7 +88,7 @@ def test_private_registration_preserves_submitted_choices_and_builds_personal_pl
     tid(page, "profile-name").fill("My personal training")
     tid(page, "profile-weight").fill("85.5")
     tid(page, "profile-goal").locator("input[value='strength']").check()
-    tid(page, "profile-secondary-hypertrophy").check()
+    tid(page, "profile-secondary").locator("[data-value=hypertrophy]").click()
     tid(page, "profile-days").select_option("2")
     tid(page, "profile-scope").select_option("upper")
     tid(page, "profile-save").click()
@@ -92,7 +96,7 @@ def test_private_registration_preserves_submitted_choices_and_builds_personal_pl
     expect(tid(page, "profile-goal")).to_have_attribute("data-value", "strength")
     expect(tid(page, "profile-weight")).to_have_value("85.5")
     expect(tid(page, "profile-name")).to_have_value("My personal training")
-    expect(tid(page, "profile-secondary-hypertrophy")).to_be_checked()
+    expect(tid(page, "profile-secondary").locator("[data-value=hypertrophy]")).to_have_attribute("aria-pressed", "true")
     expect(tid(page, "profile-public")).not_to_be_checked()
     expect(page.get_by_text("Profile saved. Your plan and training history are ready.", exact=True)).to_be_visible()
     programs = stored(page, "programs")
@@ -193,7 +197,7 @@ def test_constructor_persists_no_legs_supporting_goals_and_pivot_history(phone, 
     page.goto(base_url + "/fitness/program")
     tid(page, "program-settings-toggle").click()
     page.locator("[data-testid='plan-scope'] [data-value='upper']").click()
-    page.locator("[data-testid='secondary-goal'][data-value='hypertrophy']").check()
+    tid(page, "plan-secondary").locator("[data-value=hypertrophy]").click()
     tid(page, "plan-name").fill("Upper body personal plan")
     tid(page, "plan-name").blur()
     tid(page, "pivot-reason").fill("No leg training; focus shoulders and arms")
@@ -202,7 +206,7 @@ def test_constructor_persists_no_legs_supporting_goals_and_pivot_history(phone, 
     page.reload()
     tid(page, "program-settings-toggle").click()
     expect(page.locator("[data-testid='plan-scope'] [data-value='upper']")).to_have_attribute("aria-pressed", "true")
-    expect(page.locator("[data-testid='secondary-goal'][data-value='hypertrophy']")).to_be_checked()
+    expect(tid(page, "plan-secondary").locator("[data-value=hypertrophy]")).to_have_attribute("aria-pressed", "true")
     page.locator("[data-testid='goal-select'] [data-value='strength']").click()
     page.locator("[data-testid='days-select'] [data-value='4']").click()
     tid(page, "program-save").click()
@@ -268,5 +272,65 @@ def test_fitness_without_a_published_owner_guides_visitors_to_their_own_profile(
     expect(tid(page, "next-session")).to_have_count(0)
     expect(tid(page, "start-session")).to_have_count(0)
     expect(tid(page, "mode-note")).to_have_count(0)
+    no_horizontal_scroll(page)
+    probe.assert_clean()
+
+
+def test_explorer_multiple_goals_muscles_handoff_and_profile_persistence(phone, base_url):
+    page, probe = phone
+    PersonalBackend(page)
+    page.goto(base_url + "/fitness/exercises?mf=0")
+    tid(page, "explorer-muscle-options").locator("summary").click()
+    choice(page, "explorer-muscles", "shoulders").click()
+    choice(page, "explorer-muscles", "biceps").click()
+    tid(page, "explorer-goal-options").locator("summary").click()
+    choice(page, "explorer-goals", "strength").click()
+    choice(page, "explorer-goals", "hypertrophy").click()
+    choice(page, "explorer-goals", "maintenance").click()
+    choice(page, "explorer-goals", "endurance").click()
+    page.reload()
+    tid(page, "explorer-muscle-options").locator("summary").click()
+    tid(page, "explorer-goal-options").locator("summary").click()
+    for value in ["shoulders", "biceps"]:
+        expect(choice(page, "explorer-muscles", value)).to_have_attribute("aria-pressed", "true")
+    for value in ["strength", "hypertrophy", "maintenance", "endurance"]:
+        expect(choice(page, "explorer-goals", value)).to_have_attribute("aria-pressed", "true")
+    tid(page, "explorer-use-choices").click()
+    expect(tid(page, "profile-goal")).to_have_attribute("data-value", "strength")
+    expect(choice(page, "profile-focus", "shoulders")).to_have_attribute("aria-pressed", "true")
+    expect(choice(page, "profile-focus", "biceps")).to_have_attribute("aria-pressed", "true")
+    tid(page, "profile-save").click()
+    expect(page.get_by_text("Profile saved. Your plan and training history are ready.", exact=True)).to_be_visible()
+    active = next(p for p in stored(page, "programs").values() if p.get("active") is not False)
+    assert active["preferences"]["focusGroups"] == ["shoulders", "biceps"]
+    assert active["preferences"]["secondaryGoals"] == ["hypertrophy", "maintenance", "endurance"]
+    page.goto(base_url + "/fitness/profile")
+    expect(choice(page, "profile-focus", "biceps")).to_have_attribute("aria-pressed", "true")
+    no_horizontal_scroll(page)
+    probe.assert_clean()
+
+
+def test_shadcn_multiselect_keyboard_and_excluded_focus_conflict(phone, base_url):
+    page, probe = phone
+    PersonalBackend(page)
+    page.goto(base_url + "/fitness/profile")
+    tid(page, "profile-save").click()
+    expect(page.get_by_text("Profile saved. Your plan and training history are ready.", exact=True)).to_be_visible()
+    page.goto(base_url + "/fitness/profile?from=explorer&goals=strength&focus=quads,shoulders")
+    expect(tid(page, "profile-scope")).to_have_value("upper")
+    expect(choice(page, "profile-focus", "quads")).to_have_attribute("aria-pressed", "true")
+    expect(choice(page, "profile-focus", "quads")).to_be_enabled()
+    tid(page, "profile-save").click()
+    expect(tid(page, "profile-panel").get_by_role("alert").last).to_contain_text("excluded")
+    choice(page, "profile-focus", "quads").click()
+    expect(choice(page, "profile-focus", "quads")).to_be_disabled()
+    shoulder = choice(page, "profile-focus", "shoulders")
+    shoulder.focus()
+    page.keyboard.press("ArrowRight")
+    expect(choice(page, "profile-focus", "biceps")).to_be_focused()
+    page.keyboard.press("Space")
+    expect(choice(page, "profile-focus", "biceps")).to_have_attribute("aria-pressed", "true")
+    tid(page, "profile-save").click()
+    expect(page.get_by_text("Profile saved. Your plan and training history are ready.", exact=True)).to_be_visible()
     no_horizontal_scroll(page)
     probe.assert_clean()

@@ -14,7 +14,7 @@ export function GoalPicker({ lang, value, disabled = false, testId, onChange }: 
       const mode = GOAL_MODES[goal];
       return <label key={goal} className={value === goal ? "is-selected" : undefined}>
         <input type="radio" name={name} value={goal} data-value={goal} checked={value === goal} disabled={disabled} onChange={() => onChange(goal)} />
-        <span><strong>{t2(lang, mode.name)}</strong><small className="fit-num">{mode.repRange[0]}–{mode.repRange[1]} {pick(lang, "reps", "повт.")} / {mode.rir} RIR</small></span>
+        <span><strong>{t2(lang, mode.name)}</strong><small className="fit-num">{mode.repRange[0]}–{mode.repRange[1]} {pick(lang, "reps", "повт.")} / <span className="whitespace-nowrap">{mode.rir} RIR</span></small></span>
       </label>;
     })}
   </div>;

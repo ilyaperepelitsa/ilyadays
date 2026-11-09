@@ -13,6 +13,8 @@ export type TrainingPreferences = {
   secondaryGoals: GoalMode[];
   bodyScope: "upper" | "full" | "custom";
   excludedGroups: string[];
+  /** Ordered training priorities; excluded groups can never be focus groups. */
+  focusGroups?: string[];
 };
 
 export type GoalMode = "strength" | "hypertrophy" | "recomp" | "endurance" | "maintenance";

@@ -15,7 +15,7 @@
 /** @typedef {{ id: MovementPattern, name: Text2, short: Text2 }} PatternInfo */
 /** @typedef {{ id: string, name: Text2, aka?: readonly string[] }} Searchable */
 /** @typedef {{ id: string, equipment: string, pattern: string, groups: readonly string[] }} Facetable */
-/** @typedef {{ group?: string | null, equipment?: string | null, pattern?: string | null }} Filters */
+/** @typedef {{ group?: string | readonly string[] | null, equipment?: string | null, pattern?: string | null }} Filters */
 /** @typedef {{ slots: readonly ({ slotId: string, exerciseId: string } | readonly [string, string])[] }} SlotDay */
 
 /** @param {string} en @param {string} ru @returns {Text2} */
@@ -267,7 +267,8 @@ export function searchItems(items, query, lang) {
 
 /** @param {Facetable} item @param {Filters} f @param {"group" | "equipment" | "pattern" | null} [skip] */
 function passes(item, f, skip = null) {
-  if (skip !== "group" && f.group && !item.groups.includes(f.group)) return false;
+  const groups = typeof f.group === "string" ? [f.group] : f.group ?? [];
+  if (skip !== "group" && groups.length && !groups.some((group) => item.groups.includes(group))) return false;
   if (skip !== "equipment" && f.equipment && item.equipment !== f.equipment) return false;
   if (skip !== "pattern" && f.pattern && item.pattern !== f.pattern) return false;
   return true;

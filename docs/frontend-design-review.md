@@ -20,3 +20,12 @@ Verify private registration with submitted goals, persisted exclusions and plan 
 Browser checks use `FITNESS_E2E_BASE=http://localhost:3001` and the existing Python Playwright suites. Do not rebuild `.next` while the production test server is serving it; restart the server after each build.
 
 Validated before release: 1,015 automated tests, typecheck, production build, lint, 90 fitness page/profile browser checks, three additional plan regressions, seven trip-creation browser scenarios, 88 responsive light/dark views, and the local no-cookie audit. Claude's final review of four finished screenshots returned PASS; keyboard, dialog and save/reload behavior were verified separately in the browser tests.
+
+
+## Shared controls and personal focus — 2026-11-09 follow-up
+
+Installed actual shadcn/ui Radix toggle primitives and Tailwind semantic tokens. The rest of the site retains authored CSS; see `docs/ui-system.md` for the migration boundary. Explorer now has expandable multi-muscle and goal choices, compact selected summaries and an explicit plan handoff. Profile and constructor share checked selection chips with strong borders, keyboard navigation and readable disabled states. Scope exclusions and sign-in requirements explain unavailable actions. New focused plans use neutral day names rather than the starting template's old muscle emphasis; existing saved/custom names remain intact.
+
+Claude consultation used the full installed official frontend-design skill and four local screenshots with read-only tools. The first review found no blocking layout break and identified seven useful fixes. Addressed disabled Save explanation, excluded-muscle explanation/contrast, non-colour selection cues, filter/goal ordering, label casing, personal-day naming and narrow Russian field alignment. RIR values remain together. Secondary panel-heading and footer-spacing suggestions do not affect the current interaction flow.
+
+Final browser evidence is in ignored `output/fitness-machine-specs/`: 16 EN/RU × 390/1280px × light/dark views across explorer/profile, with 44px controls, no horizontal overflow, no page errors and zero browser cookies. Eleven browser scenarios additionally prove URL persistence, several goals, handoff, saved profile preferences, exclusions, keyboard navigation, account boundaries and history preservation. Typecheck, build, lint and 1,030 unit tests pass. These checks do not claim every existing site component was converted to shadcn.

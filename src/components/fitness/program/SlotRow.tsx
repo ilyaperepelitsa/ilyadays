@@ -8,7 +8,7 @@ import Link from "next/link";
 import type { ExerciseSlot, ExerciseState, Gym, Lang, PlannedExercise, Program, ProgramDay, ProgressionRuleId } from "@/lib/fitness/types";
 import { localPath } from "@/lib/i18n";
 import { pick, t2 } from "@/lib/fitness/i18n";
-import { equipmentLabel, exerciseById } from "@/lib/fitness/catalog.mjs";
+import { equipmentLabel, exerciseById, groupOfMuscle } from "@/lib/fitness/catalog.mjs";
 import {
   REST_STEP_SEC, moveSlot, removeSlot, setSlot, slotBounds, swapCandidates, swapSlot, templateSlotOf,
 } from "@/lib/fitness/program-edit.mjs";
@@ -106,6 +106,7 @@ export function SlotRow({
             </span>
           ) : null}
           <span className="fpr-tags">
+            {exercise?.primary.some((m) => program.preferences?.focusGroups?.includes(groupOfMuscle(m))) ? <span className="fpr-tag cool">{pick(lang, "Your focus", "Ваш приоритет")}</span> : null}
             {slot.priority ? <span className="fpr-tag">{pick(lang, "Priority", "Приоритет")}</span> : null}
             {partner ? <span className="fpr-tag cool">{pick(lang, `Superset with ${partner.slotId}`, `Суперсет с ${partner.slotId}`)}</span> : null}
           </span>

@@ -25,4 +25,10 @@ echo "migrations applied (fitness and calibration twice)"
 "${PSQL[@]}" -f "$ROOT/supabase/migrations/20261109142245_fitness_profiles_self_service.sql"
 "${PSQL[@]}" -f "$ROOT/supabase/migrations/20261109142245_fitness_profiles_self_service.sql"
 "${PSQL[@]}" -f "$ROOT/tests/fitness/sql/fitness-profiles.sql" 2>&1 | sed -n -e 's/^.*NOTICE:  //p' -e '/ERROR/p' -e '/FAIL/p'
+"${PSQL[@]}" -f "$ROOT/supabase/migrations/20261109172530_fitness_reference_catalog.sql"
+"${PSQL[@]}" -f "$ROOT/supabase/migrations/20261109172530_fitness_reference_catalog.sql"
+"${PSQL[@]}" -f "$ROOT/supabase/seed/fitness-reference-catalog.sql"
+"${PSQL[@]}" -f "$ROOT/supabase/seed/fitness-reference-catalog.sql"
+"${PSQL[@]}" -f "$ROOT/tests/fitness/sql/fitness-catalog.sql" 2>&1 | sed -n -e 's/^.*NOTICE:  //p' -e '/ERROR/p' -e '/FAIL/p'
+"${PSQL[@]}" -f "$ROOT/supabase/migrations/20261109174108_fitness_set_session_owner_index.sql"
 echo "fitness SQL checks passed"

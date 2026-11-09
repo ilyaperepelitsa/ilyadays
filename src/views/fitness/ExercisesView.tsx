@@ -1,7 +1,8 @@
 // /fitness/exercises (stream 02): the catalog with search and filters. Server view: trims the catalog to what the
 // cards need, so the client bundle never carries exercises.json.
 import { type Lang } from "@/lib/i18n";
-import { pick } from "@/lib/fitness/i18n";
+import { GOAL_IDS, GOAL_MODES } from "@/lib/fitness/templates.mjs";
+import { pick, t2 } from "@/lib/fitness/i18n";
 import { EXERCISES, GROUPS, OWNER_TEMPLATE, groupsOf, muscleNames, thumbUrl } from "@/lib/fitness/catalog.mjs";
 import { FitnessNav, FitnessShell } from "@/components/fitness/Shell";
 import { ExercisesBrowser, type BrowserGroup, type BrowserItem } from "@/components/fitness/exercises/ExercisesBrowser";
@@ -37,7 +38,7 @@ export function ExercisesView({ lang }: { lang: Lang }) {
           `${EXERCISES.length} упражнений. На каждой странице — схемы техники, подсказки, частые ошибки и ближайшие замены, если тренажёр занят или его нет.`,
         )}
       </p>
-      <ExercisesBrowser lang={lang} items={browserItems(lang)} groups={groups} template={OWNER_TEMPLATE.days as unknown as TemplateDays} />
+      <ExercisesBrowser lang={lang} items={browserItems(lang)} groups={groups} goals={GOAL_IDS.map((id) => ({ id, label: t2(lang, GOAL_MODES[id].name) }))} template={OWNER_TEMPLATE.days as unknown as TemplateDays} />
     </FitnessShell>
   );
 }

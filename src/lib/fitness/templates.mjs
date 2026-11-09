@@ -8,6 +8,7 @@
  * template's exercises, so switching goals never changes what you train, only how.
  */
 import { enforcePlanPreferences, exerciseAllowed } from "./plan-preferences.mjs";
+import { GOAL_IDS } from "./goal-ids.mjs";
 import data from "../../../content/fitness/templates.json" with { type: "json" };
 import registry from "../../../content/fitness/registry.json" with { type: "json" };
 import { exerciseById as catalogExerciseById, groupOfMuscle } from "./catalog.mjs";
@@ -84,7 +85,7 @@ import { exerciseById as catalogExerciseById, groupOfMuscle } from "./catalog.mj
 const raw = data;
 
 /** @type {GoalMode[]} */
-export const GOAL_IDS = ["strength", "hypertrophy", "recomp", "endurance", "maintenance"];
+export { GOAL_IDS } from "./goal-ids.mjs";
 /** @type {ProgressionRuleId[]} */
 export const PROGRESSION_RULE_IDS = ["double", "linear", "rpe", "rep-target"];
 /** @type {SlotRole[]} */

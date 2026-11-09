@@ -16,11 +16,40 @@ const LOWER_PATTERNS = new Set(['squat', 'lunge', 'hip-hinge', 'knee-flexion', '
 /** @param {Partial<TrainingPreferences> | null | undefined} input @param {GoalMode} [primary] @returns {TrainingPreferences} */
 export function trainingPreferences(input, primary = 'recomp') {
   const bodyScope = input?.bodyScope === 'full' || input?.bodyScope === 'custom' ? input.bodyScope : 'upper';
-  const secondaryGoals = [...new Set(input?.secondaryGoals ?? [])].filter((g) => GOALS.has(g) && g !== primary).slice(0, 2);
+  const secondaryGoals = [...new Set(input?.secondaryGoals ?? [])].filter((g) => GOALS.has(g) && g !== primary);
   // Older callers used the broad 'legs' label; persist actual catalog groups instead.
   const excludedGroups = [...new Set((input?.excludedGroups ?? []).flatMap((g) => g === 'legs' ? [...LOWER_BODY_GROUPS] : [g]))].filter((g) => GROUP_IDS.has(g));
   if (bodyScope === 'upper') for (const g of LOWER) if (!excludedGroups.includes(g)) excludedGroups.push(g);
-  return { secondaryGoals, bodyScope, excludedGroups };
+  const focusGroups = [...new Set(input?.focusGroups ?? [])].filter((g) => GROUP_IDS.has(g) && !excludedGroups.includes(g));
+  return { secondaryGoals, bodyScope, excludedGroups, focusGroups };
+}
+
+/** Put chosen muscles first without adding sets or splitting supersets. Explicit manual reordering stays possible.
+ * @param {Program} program @param {{exerciseById:(id:string)=>Exercise|undefined}} [catalog] @returns {Program} */
+export function prioritizeFocus(program, catalog = { exerciseById }) {
+  const selected = program.preferences?.focusGroups ?? [];
+  if (!selected.length) return program;
+  const score = (/** @type {import('./types').ExerciseSlot[]} */ slots) => Math.min(1000, ...slots.flatMap((slot) =>
+    (catalog.exerciseById(slot.exerciseId)?.primary ?? []).map((m) => {
+      const i = selected.indexOf(groupOfMuscle(m)); return i < 0 ? 1000 : i;
+    })));
+  return { ...program, days: program.days.map((day) => {
+    const seen = new Set();
+    const blocks = day.slots.flatMap((slot) => {
+      if (!slot.superset) return [[slot]];
+      if (seen.has(slot.superset)) return [];
+      seen.add(slot.superset); return [day.slots.filter((s) => s.superset === slot.superset)];
+    });
+    return { ...day, slots: blocks.sort((a, b) => score(a) - score(b)).flat() };
+  }) };
+}
+
+/** Surface a requested target that the current draft does not train directly (for example after a manual removal).
+ * @param {Program} program @param {{exerciseById:(id:string)=>Exercise|undefined}} [catalog] */
+export function uncoveredFocus(program, catalog = { exerciseById }) {
+  const direct = new Set(program.days.flatMap((day) => day.slots.flatMap((slot) =>
+    (catalog.exerciseById(slot.exerciseId)?.primary ?? []).map(groupOfMuscle))));
+  return (program.preferences?.focusGroups ?? []).filter((group) => !direct.has(group));
 }
 
 /** Explicit exclusions concern target muscles, rather than every stabilizer involved in a movement.

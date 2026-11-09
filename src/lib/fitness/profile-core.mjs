@@ -15,15 +15,15 @@ export function profileErrors(name, weight, height) {
 }
 
 import { trainingPreferences } from './plan-preferences.mjs';
-import { buildPersonalProgram, setPlanPreferences } from './plan-builder.mjs';
+import { buildPersonalProgram, ensureFocusCoverage, setPlanPreferences } from './plan-builder.mjs';
 import { addLegs, setDays, setGoal } from './program-edit.mjs';
 /** Profile edits preserve explicit exclusions; only an explicit switch to full-body releases lower-body exclusions.
  * @param {import('./types').TrainingPreferences|undefined} existing @param {import('./types').TrainingPreferences['bodyScope']} scope
- * @param {import('./types').GoalMode[]} secondary @param {import('./types').GoalMode} goal */
-export function profilePreferences(existing, scope, secondary, goal) {
+ * @param {import('./types').GoalMode[]} secondary @param {import('./types').GoalMode} goal @param {string[]} [focusGroups] */
+export function profilePreferences(existing, scope, secondary, goal, focusGroups = existing?.focusGroups ?? []) {
   let excludedGroups = [...(existing?.excludedGroups ?? [])];
   if (scope === 'full' && existing?.bodyScope !== 'full') excludedGroups = excludedGroups.filter((g) => !['legs','glutes','calves','quads','hamstrings','adductors'].includes(g));
-  return trainingPreferences({ bodyScope:scope, secondaryGoals:secondary, excludedGroups },goal);
+  return trainingPreferences({ bodyScope:scope, secondaryGoals:secondary, excludedGroups, focusGroups },goal);
 }
 /** @param {import('./types').Program|null} saved
  * @param {{goal:import('./types').GoalMode,days:2|3|4,preferences:import('./types').TrainingPreferences,title?:string}} input
@@ -32,5 +32,5 @@ export function profilePlanDraft(saved,{goal,days,preferences,title},states,at) 
   if (!saved) return buildPersonalProgram({goal,daysPerWeek:days,...preferences,title,now:at});
   let next = setPlanPreferences(setDays(setGoal(saved,goal,states,at).program,days,at),{...preferences,pivotReason:'Profile training preferences'},at);
   if (preferences.bodyScope === 'full' && saved.preferences?.bodyScope !== 'full') next=addLegs(next,at,{as:'slots'});
-  return next;
+  return ensureFocusCoverage(next, at);
 }

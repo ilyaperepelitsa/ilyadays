@@ -14,11 +14,11 @@ const assertScope = (p) => { for (const s of slots(p)) assert.equal(exerciseAllo
 test('one primary goal controls prescriptions; secondary priorities are ordered, unique and distinct', () => {
   const p = buildPersonalProgram({ goal: 'strength', secondaryGoals: ['strength', 'hypertrophy', 'hypertrophy', 'maintenance', 'endurance'], now: NOW });
   assert.equal(p.goal, 'strength');
-  assert.deepEqual(p.preferences.secondaryGoals, ['hypertrophy', 'maintenance']);
+  assert.deepEqual(p.preferences.secondaryGoals, ['hypertrophy', 'maintenance', 'endurance']);
   const primaryOnly = buildPersonalProgram({ goal: 'strength', now: NOW });
   assert.deepEqual(p.days, primaryOnly.days, 'supporting goals do not silently apply contradictory prescriptions');
   const switched = setGoal(p, 'hypertrophy', {}, later).program;
-  assert.deepEqual(switched.preferences.secondaryGoals, ['maintenance']);
+  assert.deepEqual(switched.preferences.secondaryGoals, ['maintenance', 'endurance']);
 });
 
 test('upper-body preference really excludes all lower-body movements including loaded carries', () => {

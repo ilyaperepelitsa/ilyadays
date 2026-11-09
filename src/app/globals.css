@@ -16,3 +16,15 @@
 @import "../styles/fitness.css" layer(recipes);
 /* The host controls the appearance of the dynamically loaded Istanbul stylesheet. */
 @import "../styles/trip-appearance.css";
+
+/* Semantic shadcn tokens share the host palette; keep its automatic dark mode and no-reset setup. */
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--muted);
+  --color-accent: var(--accent-soft);
+  --color-accent-foreground: var(--accent);
+  --color-input: var(--line);
+  --color-ring: var(--accent);
+}

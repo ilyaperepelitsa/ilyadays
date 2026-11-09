@@ -13,7 +13,7 @@ import {
   convertProgram, deriveSlot, newId, progressionRecord, rangeForUnit, roleParams, slotRole, templateById, toIso, toMs,
   unitOf, withLegs,
 } from "./templates.mjs";
-import { enforcePlanPreferences, exerciseAllowed } from "./plan-preferences.mjs";
+import { enforcePlanPreferences, exerciseAllowed, prioritizeFocus } from "./plan-preferences.mjs";
 import { classMates, exerciseById as catalogExerciseById, isAvailable as catalogIsAvailable } from "./catalog.mjs";
 
 /** @typedef {import("./types").Exercise} Exercise */
@@ -373,7 +373,7 @@ export function setDays(program, days, now, { catalog } = {}) {
   }
   if (custom.legs) next = withLegs(next, now, { as: custom.legs, id: program.id, catalog: lookup });
   return {
-    ...enforcePlanPreferences(next, lookup),
+    ...prioritizeFocus(enforcePlanPreferences(next, lookup), lookup),
     id: program.id,
     progression: copyProgression(program),
     deloadEveryWeeks: program.deloadEveryWeeks,
@@ -738,7 +738,7 @@ export function programDiff(before, after, { catalog } = {}) {
   /** @type {DiffLine[]} */
   const out = [];
   if (before.templateId === after.templateId && before.daysPerWeek === after.daysPerWeek && (before.name.en !== after.name.en || before.name.ru !== after.name.ru)) out.push({ kind: "template", text: { en: `Plan name: ${after.name.en}`, ru: `Название плана: ${after.name.ru}` } });
-  if (JSON.stringify(before.preferences) !== JSON.stringify(after.preferences)) out.push({ kind: "goal", text: { en: `Training preferences: ${after.preferences?.bodyScope ?? 'custom'}; supporting goals: ${(after.preferences?.secondaryGoals ?? []).join(', ') || 'none'}; exclusions: ${(after.preferences?.excludedGroups ?? []).join(', ') || 'none'}`, ru: `Настройки плана: ${after.preferences?.bodyScope ?? 'custom'}; дополнительные цели: ${(after.preferences?.secondaryGoals ?? []).join(', ') || 'нет'}; исключения: ${(after.preferences?.excludedGroups ?? []).join(', ') || 'нет'}` } });
+  if (JSON.stringify(before.preferences) !== JSON.stringify(after.preferences)) out.push({ kind: "goal", text: { en: `Training preferences: ${after.preferences?.bodyScope ?? 'custom'}; supporting goals: ${(after.preferences?.secondaryGoals ?? []).join(', ') || 'none'}; focus: ${(after.preferences?.focusGroups ?? []).join(', ') || 'none'}; exclusions: ${(after.preferences?.excludedGroups ?? []).join(', ') || 'none'}`, ru: `Настройки плана: ${after.preferences?.bodyScope ?? 'custom'}; дополнительные цели: ${(after.preferences?.secondaryGoals ?? []).join(', ') || 'нет'}; акценты: ${(after.preferences?.focusGroups ?? []).join(', ') || 'нет'}; исключения: ${(after.preferences?.excludedGroups ?? []).join(', ') || 'нет'}` } });
   if (before.pivotReason !== after.pivotReason) out.push({ kind: "goal", text: { en: `Reason for change: ${after.pivotReason || 'not specified'}`, ru: `Причина изменения: ${after.pivotReason || 'не указана'}` } });
   for (const day of after.days) {
     const old = before.days.find((d) => d.key === day.key);

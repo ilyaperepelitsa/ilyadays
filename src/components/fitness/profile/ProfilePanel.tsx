@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { useFitness } from "../Provider";
 import { useStoreStatus } from "../ModeNote";
 import { localPath } from "@/lib/i18n";
@@ -14,15 +14,23 @@ import { profileErrors, profileName, profilePreferences, profilePlanDraft } from
 import type { GoalMode, Lang, TrainingPreferences } from "@/lib/fitness/types";
 import { GoalPicker } from "../GoalPicker";
 import { PlanPreview } from "./PlanPreview";
+import { SelectionGroup } from "../SelectionGroup";
+import { GROUPS } from "@/lib/fitness/catalog.mjs";
+import { LOWER_BODY_GROUPS } from "@/lib/fitness/plan-preferences.mjs";
+import { profileSelection } from "@/lib/fitness/selection-query.mjs";
+
+const subscribeNothing = () => () => {};
 
 export function ProfilePanel({ lang }: { lang: Lang }) {
   const { auth, mode } = useFitness();
   const status = useStoreStatus();
+  const search = useSyncExternalStore(subscribeNothing, () => location.search, () => "");
+  const preset = profileSelection(search, GROUPS.map((g) => g.id));
   if (mode === "loading" || (mode === "synced" && status?.profile === "unknown")) return <p role="status">{pick(lang, "Loading your profile…", "Загружаем ваш профиль…")}</p>;
-  return <ProfileForm key={auth.user?.id ?? "local"} lang={lang} />;
+  return <ProfileForm key={`${auth.user?.id ?? "local"}:${JSON.stringify(preset)}`} lang={lang} preset={preset} />;
 }
 
-function ProfileForm({ lang }: { lang: Lang }) {
+function ProfileForm({ lang, preset }: { lang: Lang; preset: ReturnType<typeof profileSelection> }) {
   const { auth, snapshot, store, mode, canWrite } = useFitness();
   const status = useStoreStatus();
   const own = canWrite ? snapshot : null;
@@ -31,23 +39,26 @@ function ProfileForm({ lang }: { lang: Lang }) {
   const prefs = saved?.preferences ?? initial?.trainingPreferences;
   const [name, setName] = useState(status?.profileDetails?.displayName ?? initial?.profileName ?? displayNameOf(auth.user));
   const [isPublic, setPublic] = useState(status?.profileDetails?.isPublic ?? false);
-  const [goal, setPrimary] = useState<GoalMode>(saved?.goal ?? initial?.goal ?? "recomp");
-  const [secondary, setSecondary] = useState<GoalMode[]>(prefs?.secondaryGoals ?? []);
-  const [scope, setScope] = useState<TrainingPreferences["bodyScope"]>(prefs?.bodyScope ?? "upper");
+  const [goal, setPrimary] = useState<GoalMode>(preset?.goals[0] ?? saved?.goal ?? initial?.goal ?? "recomp");
+  const [secondary, setSecondary] = useState<GoalMode[]>(preset?.goals.length ? preset.goals.slice(1) : prefs?.secondaryGoals ?? []);
+  const [scope, setScope] = useState<TrainingPreferences["bodyScope"]>(prefs?.bodyScope ?? (preset?.focusGroups.some((g) => LOWER_BODY_GROUPS.includes(g)) ? "full" : "upper"));
+  const [focus, setFocus] = useState(preset?.focusGroups.length ? preset.focusGroups : prefs?.focusGroups ?? []);
   const [days, setFrequency] = useState<2 | 3 | 4>(saved?.daysPerWeek ?? initial?.daysPerWeek ?? 3);
   const [weight, setWeight] = useState(initial?.bodyweightKg == null ? "" : String(initial.bodyweightKg));
   const [height, setHeight] = useState(initial?.heightCm == null ? "" : String(initial.heightCm));
-  const [applyPlan, setApplyPlan] = useState(!saved);
+  const [applyPlan, setApplyPlan] = useState(Boolean(preset) || !saved);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const preferences = useMemo(() => profilePreferences(prefs, scope, secondary, goal), [prefs, scope, secondary, goal]);
+  const preferences = useMemo(() => profilePreferences(prefs, scope, secondary, goal, focus), [prefs, scope, secondary, goal, focus]);
+  const conflict = focus.filter((g) => preferences.excludedGroups.includes(g));
   const preview = useMemo(() => applyPlan ? profilePlanDraft(saved, {goal,days,preferences,title:pick(lang,"My program","Моя программа")}, own?.exerciseState ?? {}, new Date().toISOString()) : null,
     [applyPlan,saved,goal,days,preferences,lang,own?.exerciseState]);
   const canSave = canWrite || Boolean(auth.user);
   const parse = (text: string) => text.trim() ? Number(text.trim().replace(",", ".")) : null;
   const save = async () => {
     setError(""); setMessage("");
+    if (applyPlan && conflict.length) { setError(pick(lang, "Some focus muscles are excluded. Change your training scope or remove those focus choices before saving.", "Некоторые приоритетные мышцы исключены. Измените охват тренировки или снимите эти приоритеты перед сохранением.")); return; }
     if (applyPlan && (!preview || preview.days.some((d) => !d.slots.length))) {
       setError(pick(lang, "Every training day needs an exercise. Adjust the plan in the constructor, or save your profile without applying a new plan.", "В каждом тренировочном дне нужно упражнение. Измените план в конструкторе или сохраните профиль без новой программы.")); return;
     }
@@ -104,14 +115,21 @@ function ProfileForm({ lang }: { lang: Lang }) {
         <h3>{pick(lang, "Primary goal", "Главная цель")}</h3>
         <GoalPicker lang={lang} value={goal} testId="profile-goal" disabled={!applyPlan || busy} onChange={(value) => { setPrimary(value); setSecondary((s) => s.filter((g) => g !== value)); }} />
         <p className="fit-muted fprofile-helper">{pick(lang, "These are the main-lift targets. RIR means clean reps left in reserve when you stop.", "Это цели для основных упражнений. RIR — сколько чистых повторений остаётся в запасе.")}</p>
-        <h3>{pick(lang, "Supporting goals · choose up to two", "Дополнительные цели · до двух")}</h3>
-        <div className="fprofile-options">{GOAL_IDS.filter((g) => g !== goal).map((g) => <label className="fprofile-check" key={g}><input type="checkbox" data-testid={`profile-secondary-${g}`} checked={secondary.includes(g)} disabled={!secondary.includes(g) && secondary.length >= 2} onChange={(e) => setSecondary((s) => e.target.checked ? [...s, g] : s.filter((v) => v !== g))} />{t2(lang, GOAL_MODES[g].name)}</label>)}</div>
+        <h3>{pick(lang, "Supporting goals · choose several", "Дополнительные цели · выберите несколько")}</h3>
+        <SelectionGroup label={pick(lang, "Supporting goals", "Дополнительные цели")} values={secondary} testId="profile-secondary" options={GOAL_IDS.filter((g) => g !== goal).map((g) => ({ id: g, label: t2(lang, GOAL_MODES[g].name) }))} onChange={setSecondary} />
         <div className="fprofile-grid"><label>{pick(lang, "Training days per week", "Тренировок в неделю")}<select data-testid="profile-days" value={days} onChange={(e) => setFrequency(Number(e.target.value) as 2 | 3 | 4)}>{[2, 3, 4].map((d) => <option key={d}>{d}</option>)}</select></label>
         <label>{pick(lang, "Body scope", "Что тренировать")}<select data-testid="profile-scope" value={scope} onChange={(e) => setScope(e.target.value as TrainingPreferences["bodyScope"])}><option value="upper">{pick(lang, "Upper body — no legs", "Верх тела — без ног")}</option><option value="full">{pick(lang, "Full body", "Всё тело")}</option><option value="custom">{pick(lang, "Custom — choose muscles in the constructor", "Свои группы — выбрать в конструкторе")}</option></select></label></div>
+        <h3>{pick(lang, "Focus muscles · choose several", "Приоритетные мышцы · выберите несколько")}</h3>
+        {preferences.excludedGroups.length ? <p className="fit-muted fprofile-helper">{pick(lang, "Unavailable muscles are excluded by your training scope. Choose Full body to include legs; custom exclusions can be changed in the constructor.", "Недоступные мышцы исключены настройками тренировки. Для ног выберите «Всё тело»; свои исключения можно изменить в конструкторе.")}</p> : null}
+        <SelectionGroup label={pick(lang, "Focus muscles", "Приоритетные мышцы")} values={focus} testId="profile-focus" onChange={setFocus}
+          options={GROUPS.map((g) => ({ id: g.id, label: t2(lang, g.name), disabled: preferences.excludedGroups.includes(g.id) && !focus.includes(g.id), description: preferences.excludedGroups.includes(g.id) ? pick(lang, "Excluded by your training scope", "Исключено настройками тренировки") : undefined }))} />
+        <p className="fit-muted fprofile-helper">{pick(lang, "Focus exercises come first. Missing targets can be added to the preview within the plan’s volume range. Review the week before saving; supporting goals do not change your primary prescription.", "Приоритетные упражнения идут первыми. Недостающие группы могут добавляться в предпросмотр в пределах объёма программы. Проверьте неделю перед сохранением: дополнительные цели не меняют основное предписание.")}</p>
+        {conflict.length ? <p role="alert">{pick(lang, "Change the training scope or remove excluded focus muscles:", "Измените охват тренировки или снимите исключённые приоритеты:")} {conflict.map((g) => t2(lang, GROUPS.find((v) => v.id === g)?.name, g)).join(", ")}</p> : null}
       </fieldset>
       <p className="fit-muted fprofile-helper">{pick(lang, "A new plan keeps your past workouts, baselines and any session already in progress.", "Новая программа сохраняет прошлые тренировки, базовые веса и уже начатую тренировку.")}</p>
       </div><PlanPreview lang={lang} program={preview ?? saved} isDraft={applyPlan} /></div>
       {error ? <p role="alert">{error}</p> : null}{message ? <p role="status">{message}</p> : null}
+      {!canSave ? <p className="fit-muted">{pick(lang, "Sign in to save your profile. You can explore the plan preview before signing in.", "Войдите, чтобы сохранить профиль. До входа можно настроить и посмотреть программу.")}</p> : null}
       <div className="fprofile-actions"><button type="submit" className="fit-button" data-testid="profile-save" disabled={!canSave || busy || status?.syncing}>{busy ? pick(lang, "Saving…", "Сохраняем…") : pick(lang, "Save profile", "Сохранить профиль")}</button><Link prefetch={false} className="fit-button quiet" href={localPath(lang, "/fitness/program")}>{pick(lang, "Open plan constructor", "Открыть конструктор")}</Link><Link prefetch={false} href={localPath(lang, "/fitness/progress")}>{pick(lang, "Weigh-ins and measurements", "Взвешивания и замеры")}</Link></div>
     </form>
   </div>;

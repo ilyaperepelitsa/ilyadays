@@ -118,3 +118,18 @@ main.fit :is(p, li) { text-wrap-style: pretty; }
 .fit-goal-picker label:focus-within { outline:2px solid var(--accent); outline-offset:3px; }
 @media(prefers-color-scheme:dark) { .fit-exercise-thumb img { filter:brightness(.92); } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+
+/* Explorer-to-plan handoff: compact choices share shadcn controls with profile and constructor. */
+.fx-plan-choices { padding:12px 0; border-top:1px solid var(--line); }
+.fx-plan-choices summary { margin-bottom:12px; font-weight:600; cursor:pointer; }
+.fx-plan-choices p { margin:12px 0 0; font-size:.83rem; max-width:78ch; }
+.fx-primary { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:12px; font-size:.86rem; }
+.fx-primary select { padding:8px 12px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); font:inherit; }
+.fx-plan-choices summary { min-height:44px; margin-bottom:0; line-height:1.4; }
+.fx-plan-choices[open] summary { margin-bottom:12px; }
+.fx-choice-summary { display:block; margin:3px 0 0 16px; color:var(--muted); font-size:.8rem; font-weight:400; }
+.fx-selection-clear { min-height:44px; margin-top:4px; }
+
+.fx-browser .fx-row-label { text-transform:none; letter-spacing:0; }
+.fx-plan-apply { justify-self:start; max-width:100%; }
+@media (max-width:430px) { .fprofile-preferences .fprofile-grid { grid-template-columns:1fr; } }
