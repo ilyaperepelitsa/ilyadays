@@ -102,7 +102,7 @@ def analyze_embeddings(corpus, vectors, embedding_configuration):
     artifact = {'schema_version': 1, 'pipeline_version': pipeline,
                 'run_id': f'source-pca-{run_hash[:16]}', 'corpus_kind': corpus['corpus_kind'],
                 'corpus_hash': identity, 'vector_origin': 'openai',
-                'vector_description': 'OpenAI text-embedding-3-large, full 3072-dimensional cached source vectors',
+                'vector_description': 'OpenAI text-embedding-3-large, full 3072-dimensional cached source vectors'+(' via Vercel production AI Gateway (Azure endpoint)' if embedding_configuration.get('transport')=='vercel_ai_gateway_production' else ''),
                 'embedding_configuration': embedding_configuration, 'configuration_hash': config_hash,
                 'edition': edition, 'dimensions': DIMENSIONS, 'vector_hash': vector_hash,
                 'sampled': False, 'chunk_count': len(passages), 'excluded_chunks': [],

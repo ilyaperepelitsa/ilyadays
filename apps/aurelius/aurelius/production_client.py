@@ -1,6 +1,7 @@
 """Use protected production OIDC inference; no provider key is copied onto this machine."""
 import base64
 import json
+import re
 from pathlib import Path
 from types import SimpleNamespace
 from urllib.parse import urljoin, urlparse
@@ -11,8 +12,10 @@ import numpy as np
 
 
 class ProductionRequestError(RuntimeError):
-    def __init__(self, status_code):
+    def __init__(self, status_code, provider_error=None, provider_detail=None):
         self.status_code = status_code
+        self.provider_error = provider_error
+        self.provider_detail = provider_detail
         super().__init__('Protected production embedding request failed')
 
 
@@ -54,7 +57,13 @@ class ProductionClient:
         except httpx.RequestError:
             raise ConnectionError('Production response outcome is unknown') from None
         if response.status_code != 200:
-            raise ProductionRequestError(response.status_code)
+            reason=None;detail=None
+            try:
+                payload=response.json();value=payload.get('error')
+                if isinstance(value,str) and re.fullmatch(r'[a-z_]{1,80}',value):reason=value
+                if reason=='no_providers_available' and isinstance(payload.get('diagnostic'),str):detail=payload['diagnostic']
+            except (ValueError,AttributeError):pass
+            raise ProductionRequestError(response.status_code,reason,detail)
         data = response.json()
         rows=[]
         for index, encoded in enumerate(data['vectors_f32_base64']):

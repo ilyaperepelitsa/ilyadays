@@ -19,7 +19,7 @@ CONFIG = {'provider': 'openai', 'model': MODEL, 'dimensions': DIMENSIONS,
           'encoding_format': 'float', 'endpoint': 'https://api.openai.com/v1/embeddings'}
 PRODUCTION_CONFIG = {**CONFIG, 'transport': 'vercel_ai_gateway_production',
                      'endpoint': 'https://ai-gateway.vercel.sh/v1/embeddings',
-                     'wire_model': 'openai/text-embedding-3-large', 'provider_allowlist': ['openai']}
+                     'wire_model': 'openai/text-embedding-3-large', 'provider_allowlist': ['azure']}
 PRICE_PER_MILLION = .13  # Official model page checked 2026-11-10; recorded with each run.
 MAX_INPUT_TOKENS = 8191  # Conservative boundary below the documented 8192 maximum.
 BATCH_TOKENS = 16000
@@ -154,7 +154,11 @@ class EmbeddingCache:
         cost = tokens*PRICE_PER_MILLION/1e6
         with self.connect() as db:
             db.execute('BEGIN IMMEDIATE')
-            used_tokens, used_cost = db.execute('SELECT coalesce(sum(reserved_tokens),0),coalesce(sum(reserved_usd),0) FROM requests WHERE run_id=?', (run_id,)).fetchone()
+            scope=metadata.get('approval',{}).get('corpus_hash')
+            if scope:
+                used_tokens, used_cost = db.execute("SELECT coalesce(sum(reserved_tokens),0),coalesce(sum(reserved_usd),0) FROM requests WHERE json_extract(metadata_json,'$.approval.corpus_hash')=?", (scope,)).fetchone()
+            else:
+                used_tokens, used_cost = db.execute('SELECT coalesce(sum(reserved_tokens),0),coalesce(sum(reserved_usd),0) FROM requests WHERE run_id=?', (run_id,)).fetchone()
             if used_tokens+tokens > token_cap or used_cost+cost > cost_cap+1e-12:
                 raise ValueError('Approved embedding budget exhausted; no request was made')
             request_id = uuid.uuid4().hex
@@ -193,13 +197,14 @@ class EmbeddingCache:
                 except Exception as error:
                     status = getattr(error, 'status_code', None)
                     unknown = status is None or status >= 500
-                    self.complete_request(request_id, 'outcome_unknown' if unknown else 'failed', {**meta, 'status_code': status, 'error_type': type(error).__name__, 'billing_outcome': 'unknown' if unknown else 'request_rejected'})
+                    provider_error=getattr(error,'provider_error',None)
+                    self.complete_request(request_id, 'outcome_unknown' if unknown else 'failed', {**meta, 'status_code': status, 'error_type': type(error).__name__, 'provider_error':provider_error, 'provider_detail':getattr(error,'provider_detail',None), 'billing_outcome': 'unknown' if unknown else 'request_rejected'})
                     # Network failures can be billed even though no vector arrived. Expose
                     # that uncertainty and require an operator resume, rather than promise exactly-once billing.
                     if status == 429 and attempt < 2:
                         sleep(2**attempt)
                         continue
-                    raise RuntimeError(f'Embedding request stopped ({type(error).__name__}); billing outcome {"unknown" if unknown else "rejected"}. Cached successes are retained.') from None
+                    raise RuntimeError(f'Embedding request stopped ({type(error).__name__}{": "+provider_error if provider_error else ""}); billing outcome {"unknown" if unknown else "rejected"}. Cached successes are retained.') from None
                 try:
                     if response.model != self.wire_model or len(response.data) != len(batch):
                         raise ValueError('Unexpected embedding model or response count')

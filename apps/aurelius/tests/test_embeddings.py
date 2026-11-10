@@ -155,3 +155,12 @@ def test_production_transport_has_its_own_immutable_configuration_and_restart_ca
     assert len(client.calls)==1 and np.array_equal(cache.matrix(items),vectors)
     assert cache.plan(items)['configuration']['transport']=='vercel_ai_gateway_production'
     assert EmbeddingCache(tmp_path).plan(items)['cached_chunks']==0
+
+
+def test_changing_transport_does_not_reset_the_approved_corpus_budget(tmp_path):
+    items=passages();direct=EmbeddingCache(tmp_path);tokens=direct.plan(items)['input_tokens']
+    direct.embed(items,MockClient(),approval(items,token_budget=tokens))
+    production=EmbeddingCache(tmp_path,PRODUCTION_CONFIG);client=MockClient()
+    with pytest.raises(ValueError,match='budget exhausted'):
+        production.embed(items,client,approval(items,token_budget=tokens))
+    assert not client.calls
