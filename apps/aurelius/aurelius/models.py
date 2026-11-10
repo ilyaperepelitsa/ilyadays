@@ -42,6 +42,8 @@ class SourceSpan(StrictModel):
 
 class Workspace(StrictModel):
     fixture_revision: int = 1
+    study_revision: int = 0
+    source_arguments: list[dict[str, Any]] = Field(default_factory=list)
     target_mappings: list[dict[str, Any]] = Field(default_factory=list)
     import_audit: dict[str, Any] | None = None
     schema_version: Literal[1]

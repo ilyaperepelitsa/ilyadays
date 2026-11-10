@@ -1,6 +1,7 @@
 import copy
 import json
 import pytest
+import sqlite3
 from aurelius.models import Command
 from aurelius.store import ROOT, Store, validate_workspace
 from aurelius.study import manual_study
@@ -42,3 +43,38 @@ def test_real_edition_identity_cannot_be_obtained_by_flipping_the_corpus_tag():
     corpus={**copy.deepcopy(w),'editions':[{'id':'hays','translator':'Gregory Hays'}]}
     # Full modern translation study export is blocked independently of source claims.
     with pytest.raises(ValueError,match='cannot be bundled'):manual_study(corpus,'hash',public_slice=True)
+
+
+def test_source_reasons_preserve_an_objection_and_an_unexplained_prescription():
+    w=validate_workspace(backup())
+    assert {r['kind'] for r in w['source_arguments']}=={'explicit_reason','analogy','reason_not_stated'}
+    assert any('objection-and-reply' in r['limits'] for r in w['source_arguments'])
+    assert any('does not explain why' in r['summary'] for r in w['source_arguments'])
+    explanatory=next(e for e in w['expressions'] if e['title']=='Explanation with source reasons')
+    text=next(r['text'] for r in w['revisions'] if r['id']==explanatory['current'])
+    assert 'vine image' in text and 'this suggests' in text
+
+
+def test_adding_reasons_keeps_old_editorial_revisions_locks_and_reviews(tmp_path):
+    seed=backup();legacy=copy.deepcopy(seed)
+    legacy['study_revision']=0;legacy['source_arguments']=[]
+    legacy['expressions']=legacy['expressions'][:2];legacy['revisions']=legacy['revisions'][:3]
+    legacy['assessments']={k:v for k,v in legacy['assessments'].items() if k in {r['id'] for r in legacy['revisions']}}
+    legacy['conclusions'][0]['locked']=True
+    legacy['assessments'][legacy['conclusions'][0]['current']]={'state':'approved','notes':'Preserve this reviewed revision.'}
+    legacy['version']=10
+    source=tmp_path/'seed.json';source.write_text(json.dumps(legacy))
+    Store(tmp_path/'data',source)
+    source.write_text(json.dumps(seed))
+    store=Store(tmp_path/'data',source);upgraded=store.state()
+    assert upgraded['version']==11 and upgraded['study_revision']==1
+    assert upgraded['conclusions']==legacy['conclusions']
+    assert upgraded['revisions'][:3]==legacy['revisions']
+    assert upgraded['assessments'][legacy['conclusions'][0]['current']]==legacy['assessments'][legacy['conclusions'][0]['current']]
+    assert len(upgraded['source_arguments'])==4
+    assert all(a['status']=='proposed' for a in upgraded['source_arguments'])
+    assert Store(tmp_path/'data',source).state()==upgraded
+    with store.connect() as db:
+        assert db.execute('SELECT count(*) FROM source_argument_spans').fetchone()[0]==4
+        with pytest.raises(sqlite3.IntegrityError,match='immutable'):
+            db.execute('UPDATE source_arguments SET payload_json=?',('{}',))

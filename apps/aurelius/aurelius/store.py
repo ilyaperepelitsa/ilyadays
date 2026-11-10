@@ -36,6 +36,10 @@ def validate_workspace(value):
         if revision['id'] in seen or any(source not in seen for source in revision['dependencies']):
             raise ValueError('Lineage must reference earlier immutable revisions')
         seen.add(revision['id'])
+    for argument in workspace['source_arguments']:
+        target = next((r for r in workspace['revisions'] if r['id'] == argument['target_revision']), None)
+        if not target or target['kind'] != 'conclusion' or argument['kind'] not in ['explicit_reason','analogy','reason_not_stated'] or not argument['source_span_ids'] or any(sid not in {s['id'] for s in workspace['spans']} for sid in argument['source_span_ids']):
+            raise ValueError('Invalid source reasoning references')
     for mapping in workspace['target_mappings']:
         target = next((r for r in workspace['revisions'] if r['id'] == mapping['target_revision']), None)
         block = next((b for b in target['doc']['content'] if b['attrs']['id'] == mapping['block_id']), None) if target else None
@@ -70,6 +74,15 @@ class Store:
             elif self.state(db)['corpus_kind'] == 'synthetic':
                 current = self.state(db)
                 result = subprocess.run([self.node, str(ROOT / 'scripts/aurelius-upgrade.mjs')], input=encode(current), text=True, capture_output=True, timeout=10, cwd=ROOT, env={'PATH': os.defpath})
+                if result.returncode:
+                    raise ValueError(result.stderr[:500])
+                upgraded = validate_workspace(json.loads(result.stdout))
+                if upgraded['version'] != current['version']:
+                    self.persist(db, upgraded)
+            elif workspace_file:
+                current = self.state(db)
+                seed = validate_workspace(json.loads(workspace_file.read_text()))
+                result = subprocess.run([self.node, str(ROOT / 'scripts/aurelius-upgrade.mjs')], input=encode({'mode':'study','workspace':current,'seed':seed}), text=True, capture_output=True, timeout=10, cwd=ROOT, env={'PATH':os.defpath})
                 if result.returncode:
                     raise ValueError(result.stderr[:500])
                 upgraded = validate_workspace(json.loads(result.stdout))
@@ -170,6 +183,10 @@ class Store:
             db.execute('INSERT OR IGNORE INTO concepts VALUES (?,?)', (c['id'], encode(c)))
         for p in w.get('propositions', []):
             db.execute('INSERT OR IGNORE INTO propositions VALUES (?,?,?)', (p['id'], p['revision_id'], encode(p)))
+        for a in w.get('source_arguments', []):
+            db.execute('INSERT OR IGNORE INTO source_arguments VALUES (?,?,?,?,?)', (a['id'], a['revision_id'], a['target_revision'], a['kind'], encode(a)))
+            for sid in a['source_span_ids']:
+                db.execute('INSERT OR IGNORE INTO source_argument_spans VALUES (?,?)', (a['id'], sid))
         for m in w['memberships']:
             source = next((p['revision_id'] for p in w['passages'] if p['id'] == m.get('passage_id')), None)
             db.execute('INSERT OR IGNORE INTO memberships(id,concept_id,payload_json,passage_revision,proposition_revision) VALUES (?,?,?,?,?)', (m['id'], m['concept_id'], encode(m), source, m.get('proposition_revision')))

@@ -6,10 +6,12 @@ export type SynthesisNotes = {method:string;meaning_revision:string;premises:{cl
 export type Revision = {id:string;entity_id:string;kind:'conclusion'|'expression';sequence:number;text:string;doc:JSONContent;scope:string;qualifications:string;assumptions:string;practical_implication:string;interpretation:string;dependencies:string[];created_at:string;synthesis?:SynthesisNotes};
 export type EvidenceLink = {id:string;source_span:string;target_revision:string;bundle_id:string;relation:string;justification:string;review_state:string;reviewer:string|null;active:boolean};
 export type TargetMapping={id:string;target_revision:string;block_id:string;start:number;end:number;exact:string;source_span_ids:string[];granularity:'clause'|'whole_statement';justification:string;active:boolean};
+export type SourceArgument={id:string;revision_id:string;target_revision:string;kind:'explicit_reason'|'analogy'|'reason_not_stated';summary:string;source_span_ids:string[];limits:string;status:'proposed'};
 export type Workspace = {
-  schema_version:1;fixture_revision?:number;target_mappings?:TargetMapping[];import_audit?:{source_chunk_count:number;parser_version:string;status:string;warnings:{kind:string;book:number;section?:string;raw_label?:string;decision?:string}[];excluded_ranges:number};version:number;corpus_kind:'synthetic'|'hays'|'public_domain_backup';offset_convention:string;
+  schema_version:1;fixture_revision?:number;study_revision?:number;source_arguments?:SourceArgument[];target_mappings?:TargetMapping[];import_audit?:{source_chunk_count:number;parser_version:string;status:string;warnings:{kind:string;book:number;section?:string;raw_label?:string;decision?:string}[];excluded_ranges:number};version:number;corpus_kind:'synthetic'|'hays'|'public_domain_backup';offset_convention:string;
   editions:{id:string;work:string;translator:string|null;publisher:string;isbn:string|null;edition:string;acquisition_status:string;source_location:string;available_format:string;importability:string;rights_notes:string;file_hash:string|null;parser_version:string}[];
   passages:Passage[];spans:SourceSpan[];conclusions:EditorialEntity[];expressions:EditorialEntity[];revisions:Revision[];links:EvidenceLink[];
+  propositions?:{id:string;revision_id:string;statement:string;source_span_ids:string[]}[];
   bundles:{id:string;target_revision:string;mode:string;explanation:string}[];
   assessments:Record<string,{state:string;notes:string}>;
   concepts:{id:string;name:string;definition:string;inclusion:string;exclusion:string;parents:string[]}[];

@@ -1,5 +1,56 @@
 {
   "fixture_revision": 0,
+  "study_revision": 1,
+  "source_arguments": [
+    {
+      "id": "casaubon-gutenberg-2680-source-reason-0",
+      "revision_id": "casaubon-gutenberg-2680-source-reason-0:r1",
+      "target_revision": "casaubon-gutenberg-2680-cooperation:r1",
+      "kind": "explicit_reason",
+      "summary": "Marcus accepts that rational, social beings should understand their social action, while disputing the move from that awareness to treating a good turn as a debt.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-0"
+      ],
+      "limits": "This is an objection-and-reply. His assent to conscious social action is not agreement with every part of the objection about recognition.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-source-reason-1",
+      "revision_id": "casaubon-gutenberg-2680-source-reason-1:r1",
+      "target_revision": "casaubon-gutenberg-2680-cooperation:r1",
+      "kind": "analogy",
+      "summary": "The vine bearing fruit explains the proposed attitude toward helping: perform the social function and continue, without making repayment what completes the act.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-0"
+      ],
+      "limits": "This is an analogy and a functional view of human nature, not a demonstrated law about every practical situation.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-source-reason-2",
+      "revision_id": "casaubon-gutenberg-2680-source-reason-2:r1",
+      "target_revision": "casaubon-gutenberg-2680-cooperation:r1",
+      "kind": "reason_not_stated",
+      "summary": "The revenge reminder directs the response away from imitation, but this short cited passage does not explain why that is the best revenge.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-1"
+      ],
+      "limits": "No additional justification is attributed to Marcus here. A further reason would need another cited passage or an explicit editorial label.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-source-reason-3",
+      "revision_id": "casaubon-gutenberg-2680-source-reason-3:r1",
+      "target_revision": "casaubon-gutenberg-2680-cooperation:r1",
+      "kind": "analogy",
+      "summary": "The bee/hive comparison presents individual and shared good as connected.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-2"
+      ],
+      "limits": "The line supplies an analogy, not an argument that every demand by a community is just.",
+      "status": "proposed"
+    }
+  ],
   "target_mappings": [
     {
       "id": "casaubon-gutenberg-2680-clause-0",
@@ -219,6 +270,12 @@
       "title": "Deliberate unsupported addition",
       "current": "casaubon-gutenberg-2680-cooperation-expression:overreach-r1",
       "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-cooperation-explanation",
+      "title": "Explanation with source reasons",
+      "current": "casaubon-gutenberg-2680-cooperation-explanation:r1",
+      "locked": false
     }
   ],
   "revisions": [
@@ -360,6 +417,53 @@
         "casaubon-gutenberg-2680-cooperation:r1"
       ],
       "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-cooperation-explanation:r1",
+      "entity_id": "casaubon-gutenberg-2680-cooperation-explanation",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "A good act need not wait for gratitude to become worthwhile. Marcus’s vine image treats helping as the fulfillment of a social function, rather than a loan awaiting repayment. Read alongside the hive analogy and the instruction not to imitate wrongdoing, this suggests a practical test: what response serves our shared life without reproducing the wrong?",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-explanation-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "A good act need not wait for gratitude to become worthwhile. Marcus’s vine image treats helping as the fulfillment of a social function, rather than a loan awaiting repayment. Read alongside the hive analogy and the instruction not to imitate wrongdoing, this suggests a practical test: what response serves our shared life without reproducing the wrong?",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-cooperation:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-0",
+                        "casaubon-gutenberg-2680-evidence-1",
+                        "casaubon-gutenberg-2680-evidence-2"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "Choosing a response after an unacknowledged favor or another person’s wrongdoing; a three-passage interpretation, not a rule about every conflict.",
+      "qualifications": "This does not establish that every favor serves the common good, that harm must be endured, or that one must keep helping a dangerous person. These passages do not supply a complete rule for setting boundaries.",
+      "assumptions": "The functional analogy belongs to the source; the combined practical test is an explicitly signaled editorial inference.",
+      "practical_implication": "Separate the wish to be repaid from what fair cooperation now requires. Concrete safety or boundary-setting tactics would be labeled modern applications and need their own review.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-cooperation:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
     }
   ],
   "propositions": [
@@ -452,6 +556,10 @@
     "casaubon-gutenberg-2680-cooperation-expression:overreach-r1": {
       "state": "unsupported",
       "notes": "Introduces unlimited obligation and invulnerability; neither is supported."
+    },
+    "casaubon-gutenberg-2680-cooperation-explanation:r1": {
+      "state": "awaiting_review",
+      "notes": "Check the source reasoning separately from the combined editorial decision rule."
     }
   },
   "concepts": [

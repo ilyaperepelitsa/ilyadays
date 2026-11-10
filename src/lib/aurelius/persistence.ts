@@ -3,6 +3,7 @@ import fixture from '../../../content/aurelius/fixture.json';
 import backupStudy from '../../../content/aurelius/backup-study.json';
 import realMap from '../../../content/aurelius/real-map.json';
 import { upgradeFixture } from './upgrade.mjs';
+import { upgradeStudy } from './study-upgrade.mjs';
 import { applyCommand } from './domain.mjs';
 import type { WorkCommand, Workspace } from './types';
 
@@ -20,7 +21,7 @@ async function localState(corpus:BrowserCorpus):Promise<Workspace>{
   return new Promise((resolve,reject)=>{
     const tx=db.transaction('workspace','readwrite'),request=tx.objectStore('workspace').get('current');
     let loaded:Workspace;
-    request.onsuccess=()=>{try{const saved=request.result??structuredClone(corpus.seed);loaded=(corpus.seed.corpus_kind==='synthetic'?upgradeFixture(saved,corpus.seed):saved) as Workspace;if(loaded.corpus_kind!==corpus.seed.corpus_kind)throw Error('Stored edition identity conflict; source data retained');if(loaded!==request.result)tx.objectStore('workspace').put(loaded,'current');}catch(error){tx.abort();reject(error);}};
+    request.onsuccess=()=>{try{const saved=request.result??structuredClone(corpus.seed);loaded=(corpus.seed.corpus_kind==='synthetic'?upgradeFixture(saved,corpus.seed):upgradeStudy(saved,corpus.seed)) as Workspace;if(loaded.corpus_kind!==corpus.seed.corpus_kind)throw Error('Stored edition identity conflict; source data retained');if(loaded!==request.result)tx.objectStore('workspace').put(loaded,'current');}catch(error){tx.abort();reject(error);}};
     request.onerror=()=>reject(request.error);tx.oncomplete=()=>{db.close();resolve(loaded);};tx.onabort=()=>{db.close();reject(Error('Could not upgrade the saved workspace; existing data retained.'));};
   });
 }
@@ -52,7 +53,7 @@ export async function connectStorage():Promise<WorkStorage>{
   }
   const demo=new URLSearchParams(window.location.search).get('corpus')==='demo';
   const corpus:BrowserCorpus=demo?{name:DB,seed:fixture as Workspace}:{name:'aurelius-casaubon-study-v1',seed:backupStudy as Workspace};
-  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;if(!realMap)throw Error('Full-corpus OpenAI embeddings have not been run yet. The real imports are extracted; a server API key and approved budget are needed. No lexical vectors are shown as real embeddings.');return realMap as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
+  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;if(!realMap)throw Error('Full-corpus OpenAI embeddings have not been run yet. The real imports are extracted; production model access and an approved processing run are needed. No lexical vectors are shown as real embeddings.');return realMap as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
 }
 export function downloadSyntheticProject(workspace:Workspace){
   if(workspace.corpus_kind==='hays')throw Error('Modern translation export is private-only and not implemented');

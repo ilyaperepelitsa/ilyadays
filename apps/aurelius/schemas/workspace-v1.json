@@ -132,6 +132,19 @@
       "title": "Fixture Revision",
       "type": "integer"
     },
+    "study_revision": {
+      "default": 0,
+      "title": "Study Revision",
+      "type": "integer"
+    },
+    "source_arguments": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Source Arguments",
+      "type": "array"
+    },
     "target_mappings": {
       "items": {
         "additionalProperties": true,
