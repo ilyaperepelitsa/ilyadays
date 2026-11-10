@@ -7,17 +7,17 @@
     "normalization": "identity-v1",
     "input": "exact_source_text_utf8",
     "encoding_format": "float",
-    "endpoint": "https://ai-gateway.vercel.sh/v1/embeddings",
-    "transport": "vercel_ai_gateway_production",
-    "wire_model": "openai/text-embedding-3-large",
+    "endpoint": "https://api.openai.com/v1/embeddings",
+    "transport": "vercel_production_openai_direct",
+    "wire_model": "text-embedding-3-large",
     "provider_allowlist": [
-      "azure"
+      "openai"
     ]
   },
   "combined_cap_usd": 0.1,
   "max_batch_tokens": 16000,
   "max_batch_items": 32,
-  "execution_enabled": false,
+  "execution_enabled": true,
   "expires_at": "2026-11-11T00:00:00Z",
   "corpora": [
     {
@@ -3661,5 +3661,5 @@
       "bytes": 1563
     }
   },
-  "id": "623f83561385decf431a022da09dea2f3c71bcdf3c633baa44d6c19b9af81f47"
+  "id": "9f7061cb03c11059a2094f6e1a829281ef1d70f59900a86f81207a972db5f81a"
 }
