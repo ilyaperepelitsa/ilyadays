@@ -128,3 +128,16 @@ Open **Annotations**, or select exact source text and use **Annotate this piece*
 - PC1+PC2 retain 8.040857% / 9.515743% of variance; clustering uses the full 3,072 dimensions. Numerical checks verify the saved transforms, variance and a full-space cluster cut.
 
 Full private data lives under ignored .aurelius/. Only references, hashes, projection coordinates and numerical metadata are published. The hosted Hays map cannot display private full-source text; the backup’s selected source passages link to the editorial workbench. Remaining synthesis/ontology/manuscript stages still need their own implementation and review.
+
+### Hierarchy and neighborhood exploration
+
+Open `/stoicism?view=hierarchy#discovery` to inspect the actual stored merge tree. Branches can be expanded, traced upward, selected from a global cut, or opened around a selected passage. Switch between the original average-linkage tree and a complete-linkage comparison. Both use full-space cosine distance; the PCA map and its coordinates are unchanged. A comparison table reports geometric diagnostics without treating balance or silhouette as philosophical fidelity. Eight nearest source neighbors are ranked in the full vector space, independently of the current tree cut.
+
+To enrich an existing private projection from its unchanged cached vectors, with no API requests:
+
+```sh
+npm run aurelius:corpus -- hierarchy --production --corpus-dir IMPORT_DIR
+npm run aurelius:corpus -- export-map --corpus-dir IMPORT_DIR
+```
+
+For the backup export, pass `--output content/aurelius/backup-map.json`. Private hierarchy files are versioned by their own run IDs. The original computational baseline and all editorial memberships/decisions remain separate.

@@ -11,7 +11,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'apps/aurelius'))
-from aurelius.analysis import analyze_embeddings, corpus_identity
+from aurelius.analysis import analyze_embeddings, analyze_hierarchy, corpus_identity
 from aurelius.embeddings import CONFIG, PRODUCTION_CONFIG, EmbeddingCache
 from aurelius.importer import import_file
 
@@ -71,7 +71,7 @@ def main():
     imp = sub.add_parser('import')
     imp.add_argument('--source', required=True)
     imp.add_argument('--edition', choices=EDITIONS, required=True)
-    for name in ['preview', 'embed', 'embed-production', 'project', 'export-map', 'study']:
+    for name in ['preview', 'embed', 'embed-production', 'project', 'hierarchy', 'export-map', 'study']:
         item = sub.add_parser(name)
         item.add_argument('--corpus-dir', required=True)
         if name in ['embed', 'embed-production']:
@@ -80,7 +80,7 @@ def main():
             item.add_argument('--corpus-hash', required=True)
             item.add_argument('--token-budget', type=int, required=True)
             item.add_argument('--cost-budget-usd', type=float, required=True)
-        if name in ['preview','project']:
+        if name in ['preview','project','hierarchy']:
             item.add_argument('--production',action='store_true')
         if name == 'embed-production':
             item.add_argument('--deployment-url',required=True)
@@ -144,6 +144,20 @@ def main():
         (directory/'projection.json').write_text(json.dumps(artifact, indent=2)+'\n')
         np.savez_compressed(directory/'projection-arrays.npz', **arrays)
         print(json.dumps({'run_id': artifact['run_id'], 'chunks': artifact['chunk_count'], 'model': configuration['model'], 'dimensions': configuration['dimensions'], 'excluded': 0, 'sampled': False}, indent=2))
+    elif args.action == 'hierarchy':
+        import numpy as np
+        artifact=json.loads((directory/'projection.json').read_text())
+        matrix=cache.matrix(corpus['passages'])
+        if artifact['corpus_hash']!=corpus_identity(corpus['passages']) or artifact['vector_hash']!=hashlib.sha256(matrix.tobytes()).hexdigest():
+            raise ValueError('Hierarchy input differs from the existing PCA source matrix')
+        hierarchy=analyze_hierarchy(matrix,artifact['clustering'])
+        target=directory/'hierarchy'/f"{hierarchy['run_id']}.json";target.parent.mkdir(exist_ok=True)
+        encoded=json.dumps(hierarchy,indent=2)+'\n'
+        if target.exists() and target.read_text()!=encoded:raise ValueError('Versioned hierarchy identity conflict')
+        target.write_text(encoded)
+        artifact['hierarchy']=hierarchy
+        (directory/'projection.json').write_text(json.dumps(artifact,indent=2)+'\n')
+        print(json.dumps({'run_id':hierarchy['run_id'],'chunks':len(matrix),'dimensions':3072,'methods':list(hierarchy['methods']),'embedding_requests':0},indent=2))
     elif args.action == 'study':
         from aurelius.study import manual_study
         from aurelius.store import validate_workspace
@@ -165,6 +179,7 @@ def main():
                        'vector_origin','vector_description','embedding_configuration','configuration_hash',
                        'dimensions','vector_hash','sampled','chunk_count','excluded_chunks',
                        'preprocessing','pca','clustering','software','points']
+        if 'hierarchy' in artifact:public_keys.append('hierarchy')
         artifact = {k: artifact[k] for k in public_keys}
         artifact['share_mode'] = 'references_and_projection_only'
         artifact['edition'] = {k: corpus['editions'][0].get(k) for k in ['id', 'work', 'translator', 'publisher', 'isbn', 'source_location']}

@@ -126,3 +126,30 @@
 .au-annotation-grid blockquote { margin: 12px 0; padding-left: 12px; border-left: 2px solid var(--line); font-family: var(--font-serif), serif; }
 .au-annotation-grid aside { max-height: 1000px; overflow: auto; scrollbar-width: thin; }
 @media (max-width: 760px) { .au-annotation-grid { grid-template-columns: minmax(0, 1fr); } .au-annotations { padding: 14px; } }
+.au-cluster-comparison { margin: 14px 0 20px; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); }
+.au-cluster-comparison td { font-variant-numeric: tabular-nums; }
+.au-cluster-comparison tr[aria-current=true] { background: var(--surface-2); }
+.au-hierarchy { padding: 16px; margin: 16px 0 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.au-hierarchy h3 { margin: 0; font-size: 1.1rem; }
+.au-hierarchy .au-discovery-heading p { margin-bottom: 0; font-size: .75rem; }
+.au-hierarchy label { display: flex; align-items: center; gap: 7px; font-size: .72rem; }
+.au-hierarchy select { width: 60px; }
+.au-tree-breadcrumbs { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin: 14px 0; }
+.au-tree-breadcrumbs button[aria-current] { background: var(--action); color: var(--on-action); }
+.au-tree-scroll { overflow: auto; max-height: 520px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); }
+.au-tree-canvas { min-width: 720px; position: relative; }
+.au-tree-canvas svg { position: absolute; width: 100%; height: 100%; inset: 0; }
+.au-tree-canvas path { fill: none; stroke: var(--muted); stroke-width: 1.2; opacity: .5; }
+.au-main button.au-tree-node { position: absolute; transform: translate(-50%,-50%); width: 126px; min-height: 32px; flex-direction: column; padding: 5px 8px; gap: 1px; font-size: .68rem; background: var(--surface); }
+.au-tree-node small { font-size: .6rem; color: var(--muted); }
+.au-main button.au-tree-node.is-root { border-color: var(--accent); }
+.au-main button.au-tree-node.is-frontier { border-style: dashed; }
+.au-tree-cut > strong { font-size: .75rem; display: block; margin-bottom: 8px; }
+.au-tree-cut button span { color: var(--muted); font-variant-numeric: tabular-nums; }
+.au-neighbors { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 8px; }
+.au-neighbors h4 { font-size: .8rem; }
+.au-neighbors ol { list-style: none; margin: 0; padding: 0; }
+.au-neighbors li { display: flex; justify-content: space-between; align-items: center; margin: 4px 0; }
+.au-neighbors li > span { font-size: .72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.au-discovery-view { display: flex; gap: 6px; margin: 14px 0; }
+.au-discovery-view button[aria-pressed=true] { background: var(--action); color: var(--on-action); }

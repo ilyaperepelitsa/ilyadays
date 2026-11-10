@@ -8,9 +8,88 @@ import sklearn
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import HashingVectorizer, TfidfTransformer
+from sklearn.metrics import pairwise_distances, silhouette_score
 
 PIPELINE_VERSION = 'aurelius-local-discovery-v1'
 DIMENSIONS = 3072
+
+
+def cut_hierarchy(children, n, k):
+    if not 1 <= k <= n:
+        raise ValueError('Invalid hierarchy cut')
+    active = {2*n-2}
+    while len(active) < k:
+        node = max(active)
+        active.remove(node)
+        active.update(children[node-n])
+    labels = np.empty(n, dtype=int)
+    for group, node in enumerate(sorted(active)):
+        todo = [node]
+        while todo:
+            current = todo.pop()
+            if current < n:
+                labels[current] = group
+            else:
+                todo.extend(children[current-n])
+    canonical = {}
+    return [canonical.setdefault(int(label), len(canonical)) for label in labels]
+
+
+def analyze_hierarchy(vectors, baseline):
+    """Compare full-space trees without refitting PCA or changing cached embeddings."""
+    original = np.asarray(vectors, dtype=np.float32)
+    if original.ndim != 2 or len(original) < 3 or original.shape[1] != DIMENSIONS:
+        raise ValueError('Hierarchy comparison requires the complete 3072-dimensional matrix')
+    if not np.isfinite(original).all() or np.any(np.linalg.norm(original, axis=1) == 0):
+        raise ValueError('Invalid source vectors')
+    if baseline.get('linkage')!='average' or baseline.get('distance')!='cosine' or baseline.get('input_dimensions')!=DIMENSIONS:
+        raise ValueError('The original full-dimensional average/cosine baseline is required')
+    x = original.astype(np.float64)
+    n = len(x)
+    distance = np.maximum(0, pairwise_distances(x, metric='cosine'))
+    np.fill_diagonal(distance, 0)
+    methods = {}
+    for method in ['average', 'complete']:
+        if method == 'average':
+            children = baseline['children']
+            distances = baseline['distances']
+        else:
+            fit = AgglomerativeClustering(n_clusters=None, distance_threshold=0,
+                                         metric='cosine', linkage=method, compute_distances=True).fit(x)
+            children, distances = fit.children_.tolist(), fit.distances_.tolist()
+        if len(children) != n-1 or len(distances) != n-1:
+            raise ValueError('Incomplete hierarchy')
+        members = [[i] for i in range(n)]
+        representatives = list(range(n))
+        used_children=set()
+        for i, pair in enumerate(children):
+            if len(pair) != 2 or pair[0] == pair[1] or any(not isinstance(child,int) or not 0 <= child < n+i or child in used_children for child in pair):
+                raise ValueError('Invalid hierarchy merge')
+            used_children.update(pair)
+            leaves = sorted(members[pair[0]]+members[pair[1]])
+            members.append(leaves)
+            representatives.append(leaves[int(np.argmin(distance[np.ix_(leaves, leaves)].mean(axis=1)))])
+        if len(members[-1])!=n or len(set(members[-1]))!=n:
+            raise ValueError('Hierarchy loses source leaves')
+        assignments, diagnostics = {}, {}
+        for k in range(2, min(24, n-1)+1):
+            labels = cut_hierarchy(children, n, k)
+            sizes = np.bincount(labels).tolist()
+            assignments[str(k)] = labels
+            diagnostics[str(k)] = {'sizes': sizes, 'largest_fraction': max(sizes)/n,
+                                    'singletons': sizes.count(1),
+                                    'cosine_silhouette': float(silhouette_score(distance, labels, metric='precomputed'))}
+        methods[method] = {'linkage': method, 'distance': 'cosine', 'input_dimensions': DIMENSIONS,
+                           'input_space': 'full_feature_space', 'children': children, 'distances': distances,
+                           'representatives': representatives, 'labels_by_k': assignments,
+                           'diagnostics_by_k': diagnostics}
+    neighbors = [[{'index': int(j), 'cosine_similarity': float(np.clip(1-distance[i, j], -1, 1))}
+                  for j in np.argsort(distance[i], kind='stable') if j != i][:8] for i in range(n)]
+    vector_hash = hashlib.sha256(original.tobytes()).hexdigest()
+    version = 'source-hierarchy-explorer-v1'
+    identity = hashlib.sha256((vector_hash+version+np.__version__+sklearn.__version__).encode()).hexdigest()
+    return {'version': version, 'run_id': f'source-hierarchy-{identity[:16]}', 'vector_hash': vector_hash,
+            'evaluation_space': 'full_3072_cosine', 'methods': methods, 'neighbors': neighbors}
 
 
 def corpus_identity(passages):
@@ -113,4 +192,5 @@ def analyze_embeddings(corpus, vectors, embedding_configuration):
                 'points': [{'passage_id': p['id'], 'revision_id': p['revision_id'], 'text_hash': p['text_hash'], 'reference': f"{p['book']}.{p['section']}", 'x': float(coords[i, 0]), 'y': float(coords[i, 1])} for i, p in enumerate(passages)]}
     arrays = {'vectors': x, 'components': fit.components_, 'mean': fit.mean_,
               'coordinates': coords, 'row_ids': np.array([p['revision_id'] for p in passages])}
+    artifact['hierarchy'] = analyze_hierarchy(x, artifact['clustering'])
     return artifact, arrays

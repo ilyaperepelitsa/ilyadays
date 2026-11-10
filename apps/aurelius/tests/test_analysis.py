@@ -69,3 +69,37 @@ def test_private_analysis_is_cached_and_recorded_without_external_calls(tmp_path
     with store.connect() as db:
         assert db.execute('SELECT count(*) FROM analysis_runs').fetchone()[0]==1
     assert first['chunk_count']==len(store.state()['passages'])
+
+
+def test_hierarchy_comparisons_follow_full_vector_trees_without_reprojecting_or_changing_inputs(monkeypatch):
+    from aurelius.analysis import analyze_hierarchy,cut_hierarchy
+    from sklearn.cluster import AgglomerativeClustering
+    from sklearn.metrics import pairwise_distances,silhouette_score
+    rng=np.random.default_rng(43)
+    x=rng.normal(0,.005,(10,3072)).astype(np.float32)
+    x[:5,0]+=1;x[5:,1]+=1
+    original=x.copy()
+    fit=AgglomerativeClustering(n_clusters=None,distance_threshold=0,metric='cosine',linkage='average',compute_distances=True).fit(x.astype(np.float64))
+    baseline={'linkage':'average','distance':'cosine','input_dimensions':3072,'children':fit.children_.tolist(),'distances':fit.distances_.tolist()}
+    def no_projection(*_,**__):raise AssertionError('Hierarchy exploration must reuse the original PCA')
+    monkeypatch.setattr('aurelius.analysis.PCA',no_projection)
+    result=analyze_hierarchy(x,baseline)
+    assert np.array_equal(x,original)
+    assert result['vector_hash']==hashlib.sha256(x.tobytes()).hexdigest()
+    assert result['methods']['average']['children']==baseline['children']
+    distance=np.maximum(0,pairwise_distances(x.astype(np.float64),metric='cosine'));np.fill_diagonal(distance,0)
+    for method,run in result['methods'].items():
+        for k in [2,4,8]:
+            labels=run['labels_by_k'][str(k)]
+            expected=AgglomerativeClustering(n_clusters=k,linkage=method,metric='cosine').fit_predict(x.astype(np.float64))
+            assert np.array_equal(np.equal.outer(labels,labels),np.equal.outer(expected,expected))
+            assert labels==cut_hierarchy(run['children'],len(x),k)
+            assert run['diagnostics_by_k'][str(k)]['cosine_silhouette']==pytest.approx(silhouette_score(distance,labels,metric='precomputed'))
+    for i,rows in enumerate(result['neighbors']):
+        assert i not in {r['index'] for r in rows}
+        assert len(rows)==8
+        assert rows[0]['index']==next(int(j) for j in np.argsort(distance[i],kind='stable') if j!=i)
+        for row in rows:assert row['cosine_similarity']==pytest.approx(1-distance[i,row['index']])
+    with pytest.raises(ValueError):analyze_hierarchy(x[:,:2],baseline)
+    wrong={**baseline,'children':[[0,1],[0,2]]+baseline['children'][2:]}
+    with pytest.raises(ValueError,match='merge'):analyze_hierarchy(x,wrong)

@@ -141,7 +141,7 @@ class Store:
             w = self.state()
             if w['corpus_kind'] != 'synthetic':
                 from .embeddings import CONFIG, PRODUCTION_CONFIG, EmbeddingCache, fingerprint
-                from .analysis import analyze_embeddings
+                from .analysis import analyze_embeddings,analyze_hierarchy
                 manifest_file=ROOT/'content/aurelius/production-inputs.json'
                 configuration = json.loads(manifest_file.read_text())['configuration'] if manifest_file.exists() else PRODUCTION_CONFIG
                 try:
@@ -155,13 +155,22 @@ class Store:
                 directory = self.path.parent / 'analysis' / key
                 metadata = directory / 'projection.json'
                 if metadata.exists():
-                    return json.loads(metadata.read_text())
+                    result=json.loads(metadata.read_text())
+                    if 'hierarchy' not in result:
+                        if hashlib.sha256(vectors.tobytes()).hexdigest()!=result['vector_hash']:
+                            raise ValueError('Cached PCA and hierarchy source matrices differ')
+                        result['hierarchy']=analyze_hierarchy(vectors,result['clustering'])
+                        metadata.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+                        with self.connect() as db:
+                            db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)',(result['hierarchy']['run_id'],'hierarchy_compare',encode({'vector_hash':result['vector_hash']}),encode(result['hierarchy'])))
+                    return result
                 result, arrays = analyze_embeddings(w, vectors, configuration)
                 directory.mkdir(parents=True, exist_ok=True, mode=0o700)
                 np.savez_compressed(directory / 'arrays.npz', **arrays)
                 metadata.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
                 with self.connect() as db:
                     db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)', (result['run_id'], 'pca_cluster', encode(configuration), encode(result)))
+                    db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)',(result['hierarchy']['run_id'],'hierarchy_compare',encode({'vector_hash':result['vector_hash']}),encode(result['hierarchy'])))
                 return result
             key = hashlib.sha256((corpus_identity(w['passages']) + PIPELINE_VERSION + np.__version__ + sklearn.__version__).encode()).hexdigest()
             directory = self.path.parent / 'analysis' / key

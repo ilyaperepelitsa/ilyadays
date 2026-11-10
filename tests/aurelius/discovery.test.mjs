@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { upgradeFixture } from '../../src/lib/aurelius/upgrade.mjs';
 import { sourceIntervals,targetIntervals,sourceGradient } from '../../src/lib/aurelius/provenance.mjs';
 import { applyCommand,plainDoc } from '../../src/lib/aurelius/domain.mjs';
+import {hierarchyIndex,hierarchyCut,hierarchyFrontier,validateReferenceDiscovery} from '../../src/lib/aurelius/discovery.mjs';
 const seed=()=>JSON.parse(fs.readFileSync(new URL('../../content/aurelius/fixture.json',import.meta.url),'utf8'));
 const artifact=JSON.parse(fs.readFileSync(new URL('../../content/aurelius/analysis.json',import.meta.url),'utf8'));
 const command=(w,type,payload,id='discovery-command')=>({id,type,payload,expected_version:w.version,at:'2026-11-10T00:00:00Z'});
@@ -17,3 +18,22 @@ test('right-side intervals resolve only exact stored mappings with the complete 
 test('mapping a new meaning clause validates exact text and source identities and invalidates review',async()=>{const w=seed(),r=w.revisions[0];const next=await applyCommand(w,command(w,'map_target',{entity_id:'c1',block_id:r.doc.content[0].attrs.id,start:0,end:5,exact:r.text.slice(0,5),source_span_ids:['span-1'],justification:'Manual selected-clause proposal.'}));assert.equal(next.assessments[r.id].state,'stale');await assert.rejects(applyCommand(w,command(w,'map_target',{entity_id:'c1',block_id:r.doc.content[0].attrs.id,start:0,end:5,exact:'fake',source_span_ids:['span-1'],justification:'bad'})),/does not match/);});
 
 test('deployment rejects missing, changed and non-finite map rows rather than claiming full coverage',async()=>{const {validateDiscoveryArtifact}=await import('../../src/lib/aurelius/discovery.mjs');const w=seed();assert.equal(validateDiscoveryArtifact(w,artifact),true);assert.throws(()=>validateDiscoveryArtifact(w,{...artifact,points:artifact.points.slice(1)}),/every source/);const bad=structuredClone(artifact);bad.points[0].text_hash='changed';assert.throws(()=>validateDiscoveryArtifact(w,bad),/hash mismatch/);});
+
+test('stored hierarchies expose nested branches and depth-limited views without losing source leaves',()=>{
+ const run={children:[[0,1],[2,3],[4,5]],distances:[.1,.2,.7]},nodes=hierarchyIndex(run,4);
+ assert.deepEqual(nodes[6].members,[0,1,2,3]);assert.equal(nodes[0].parent,4);assert.deepEqual(hierarchyCut(nodes,2),[4,5]);assert.deepEqual(hierarchyCut(nodes,3),[4,2,3]);
+ const view=hierarchyFrontier(nodes,6,1);assert.deepEqual(view.frontier,[4,5]);assert.deepEqual(view.frontier.flatMap(id=>nodes[id].members),[0,1,2,3]);
+ assert.deepEqual(hierarchyFrontier(nodes,4,1).frontier,[0,1]);
+ for(const bad of [{...run,children:[[0,1],[0,2],[4,5]]},{...run,children:[[0,5],[2,3],[4,5]]},{...run,distances:[.1,.2,.05]}])assert.throws(()=>hierarchyIndex(bad,4));
+});
+
+test('real comparison artifacts retain the original baseline and reject fabricated branches, cuts or neighbors',()=>{
+ for(const name of ['real-map.json','backup-map.json']){
+  const a=JSON.parse(fs.readFileSync(new URL('../../content/aurelius/'+name,import.meta.url),'utf8'));assert.equal(validateReferenceDiscovery(a),true);
+  assert.deepEqual(a.hierarchy.methods.average.children,a.clustering.children);
+  const rounded=structuredClone(a);rounded.hierarchy.methods.average.diagnostics_by_k['6'].largest_fraction+=Number.EPSILON;assert.equal(validateReferenceDiscovery(rounded),true);
+  for(const [k,labels]of Object.entries(a.clustering.labels_by_k))assert.deepEqual(a.hierarchy.methods.average.labels_by_k[k],labels);
+  const invalid=structuredClone(a);invalid.hierarchy.methods.complete.children[0][1]=invalid.hierarchy.methods.complete.children[0][0];assert.throws(()=>validateReferenceDiscovery(invalid),/merge/);
+  const bad=structuredClone(a);bad.hierarchy.neighbors[0][0].index=0;assert.throws(()=>validateReferenceDiscovery(bad),/neighbors/);
+ }
+});
