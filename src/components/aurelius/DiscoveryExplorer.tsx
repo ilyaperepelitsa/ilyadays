@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Workspace,Passage } from '@/lib/aurelius/types';
 import { validateReferenceDiscovery } from '@/lib/aurelius/discovery.mjs';
 import type { DiscoveryArtifact } from '@/lib/aurelius/persistence';
+import { DiscoveryStatus } from './DiscoveryStatus';
 const CLUSTER_COLORS=['#487fb7','#bd7040','#4b957c','#9c78b3','#b65877','#718f3b','#4d9baf','#aa9344','#817cbb','#9d6c53','#507a76','#ad7b9d'];
 export function DiscoveryExplorer({workspace,loadAnalysis,onOpenChunk,referencesOnly=false}:{workspace:Workspace;referencesOnly?:boolean;loadAnalysis:()=>Promise<DiscoveryArtifact>;onOpenChunk:(passage:Passage)=>void}){
  const [analysis,setAnalysis]=useState<DiscoveryArtifact|null>(null),[error,setError]=useState(''),[clusterCount,setClusterCount]=useState('6'),[selected,setSelected]=useState<string|null>(null),[filter,setFilter]=useState<number|null>(null),[query,setQuery]=useState('');
@@ -11,7 +12,7 @@ export function DiscoveryExplorer({workspace,loadAnalysis,onOpenChunk,references
   if(!analysis)return false;if(referencesOnly){try{return validateReferenceDiscovery(analysis);}catch{return false;}}const map=new Map(analysis.points.map(p=>[p.revision_id,p]));
   return analysis.chunk_count===workspace.passages.length&&analysis.points.length===workspace.passages.length&&map.size===workspace.passages.length&&workspace.passages.every(p=>map.get(p.revision_id)?.text_hash===p.text_hash);
  },[workspace.passages,analysis,referencesOnly]);
- if(error)return <section className="au-section"><h2>Discovery unavailable</h2><p role="alert">{error}</p></section>;
+ if(error)return referencesOnly?<DiscoveryStatus/>:<section className="au-section"><h2>Discovery unavailable</h2><p role="alert">{error}</p></section>;
  if(!analysis)return <section className="au-section" role="status">Loading the fitted all-chunk PCA map…</section>;
  if(!coverage)return <section className="au-section"><h2>Map needs recomputation</h2><p role="alert">The stored projection does not cover every current chunk revision. No partial map is being presented as complete. Recompute the active corpus in the local workspace.</p></section>;
  const labels=analysis.clustering.labels_by_k[clusterCount]??analysis.clustering.labels_by_k['2'];

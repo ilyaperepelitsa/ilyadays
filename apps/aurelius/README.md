@@ -114,3 +114,7 @@ npm run aurelius:corpus -- project --production --corpus-dir IMPORT_DIR
 ```
 
 The two source corpora share the stated $0.10 combined envelope, with at most $0.05 per corpus. Changing hosting transport does not reset the per-corpus reservation ledger. Exact-input cache keys include the selected endpoint/routing configuration; vectors are immutable. Authentication remains server-side. Direct-key production mode uses the same full OpenAI model and no Gateway model fallback. After completing a one-off job, disable its manifest and remove temporary local deployment access. Publish only reference/coordinate artifacts; full modern text and vectors stay private.
+
+### Manual argument annotations
+
+Open **Annotations**, or select exact source text and use **Annotate this piece**. The editable aurelius-annotations-v1 JSON sidecar marks source pieces, speakers, relations and joint premises without editing the translation. Validate exact anchors before saving/exporting. Each save is an immutable proposed revision and makes affected support stale; evidence links and human approvals are not manufactured. See [the language specification](../../docs/aurelius/annotation-language.md). Native inline role editing and automated extraction are later increments.

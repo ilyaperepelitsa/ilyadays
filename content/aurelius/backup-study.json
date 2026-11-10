@@ -1,6 +1,18 @@
 {
   "fixture_revision": 0,
-  "study_revision": 1,
+  "study_revision": 2,
+  "study_catalog": {
+    "default_id": "casaubon-gutenberg-2680-social-purpose",
+    "current_ids": [
+      "casaubon-gutenberg-2680-social-purpose",
+      "casaubon-gutenberg-2680-non-imitation",
+      "casaubon-gutenberg-2680-shared-good"
+    ],
+    "previous_ids": [
+      "casaubon-gutenberg-2680-cooperation"
+    ],
+    "revision_note": "The first proposal forced reciprocity, revenge and common good into one rule. It is retained for comparison; the revised studies separate their evidential roles."
+  },
   "source_arguments": [
     {
       "id": "casaubon-gutenberg-2680-source-reason-0",
@@ -49,6 +61,66 @@
       ],
       "limits": "The line supplies an analogy, not an argument that every demand by a community is just.",
       "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-reason-0",
+      "revision_id": "casaubon-gutenberg-2680-social-purpose-reason-0:r1",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "kind": "explicit_reason",
+      "summary": "Marcus treats human beings as fellow-workers by nature. This supplies a reason for cooperation, rather than merely an instruction to be helpful.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-fellow-workers"
+      ],
+      "limits": "The surrounding passage invokes shared reason and a share in the divine. This is his philosophical premise, not an empirically established biological law.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-reason-1",
+      "revision_id": "casaubon-gutenberg-2680-social-purpose-reason-1:r1",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "kind": "analogy",
+      "summary": "The vine’s fruit illustrates a good act fulfilling its function without an extra reward being owed.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-vine"
+      ],
+      "limits": "A functional analogy motivates the attitude. It does not establish that every favor is wise or owed.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-reason-2",
+      "revision_id": "casaubon-gutenberg-2680-social-purpose-reason-2:r1",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "kind": "explicit_reason",
+      "summary": "The objection-and-reply retains the importance of knowing that one acts socially; the criticism concerns how that awareness is understood.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-objection"
+      ],
+      "limits": "Marcus disputes a probable appearance of reason. His assent is not agreement with every demand for the recipient’s recognition.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-reason-0",
+      "revision_id": "casaubon-gutenberg-2680-non-imitation-reason-0:r1",
+      "target_revision": "casaubon-gutenberg-2680-non-imitation:r1",
+      "kind": "reason_not_stated",
+      "summary": "Marcus calls non-imitation the best revenge, but this cited sentence does not explain why it is best.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-1"
+      ],
+      "limits": "A further reason requires further evidence. It is not silently supplied by nearby social-duty passages.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-reason-0",
+      "revision_id": "casaubon-gutenberg-2680-shared-good-reason-0:r1",
+      "target_revision": "casaubon-gutenberg-2680-shared-good:r1",
+      "kind": "analogy",
+      "summary": "The bee depends on a hive; Marcus uses their linked good to express the relation between a part and its whole.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-2"
+      ],
+      "limits": "The comparison alone supplies no procedure for deciding which institution or demand represents the common good.",
+      "status": "proposed"
     }
   ],
   "target_mappings": [
@@ -94,6 +166,77 @@
       ],
       "granularity": "clause",
       "justification": "The first passage removes repayment as the criterion of a good action. The second places a limit on a retaliatory response. The third supplies a social criterion. Together they suggest how to choose the next action after ingratitude: cooperation without imitation of wrongdoing.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-clause-0",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "block_id": "casaubon-gutenberg-2680-social-purpose-meaning-block",
+      "start": 0,
+      "end": 52,
+      "exact": "Cooperation belongs to our nature as fellow-workers.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-fellow-workers"
+      ],
+      "granularity": "clause",
+      "justification": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-clause-1",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "block_id": "casaubon-gutenberg-2680-social-purpose-meaning-block",
+      "start": 53,
+      "end": 136,
+      "exact": "A good turn fulfills that social work; it need not leave its recipient in our debt.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-fellow-workers",
+        "casaubon-gutenberg-2680-focused-vine"
+      ],
+      "granularity": "clause",
+      "justification": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-clause-2",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "block_id": "casaubon-gutenberg-2680-social-purpose-meaning-block",
+      "start": 137,
+      "end": 269,
+      "exact": "This is not a demand for mindless action: Marcus retains conscious social action while challenging the wish to keep a moral account.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-objection"
+      ],
+      "granularity": "clause",
+      "justification": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-clause-0",
+      "target_revision": "casaubon-gutenberg-2680-non-imitation:r1",
+      "block_id": "casaubon-gutenberg-2680-non-imitation-meaning-block",
+      "start": 0,
+      "end": 76,
+      "exact": "When answering wrongdoing, do not make the wrongdoer’s character your model.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-1"
+      ],
+      "granularity": "clause",
+      "justification": "This is a close paraphrase of a single prescription. It does not derive an obligation to help the offender.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-clause-0",
+      "target_revision": "casaubon-gutenberg-2680-shared-good:r1",
+      "block_id": "casaubon-gutenberg-2680-shared-good-meaning-block",
+      "start": 0,
+      "end": 110,
+      "exact": "Marcus treats the individual’s good as connected to the good of the community to which the individual belongs.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-2"
+      ],
+      "granularity": "clause",
+      "justification": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference.",
       "active": true
     }
   ],
@@ -213,6 +356,19 @@
       "text_hash": "edd4eba33287b9addb234239cc589f7eec3916442b263d716498481fc3efabcf",
       "normalization": "identity-v1",
       "authorship": "Marcus Aurelius; translated by Meric Casaubon"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-1-15",
+      "revision_id": "casaubon-gutenberg-2680-1-15:2fe512aeb1cc2f40",
+      "edition_id": "casaubon-gutenberg-2680",
+      "book": "1",
+      "section": "15",
+      "locator": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt#book-1-section-XV;scalar=50582:51745",
+      "text": "In the country of the Quadi at Granua, these. Betimes in the morning\r\nsay to thyself, This day I shalt have to do with an idle curious man,\r\nwith an unthankful man, a railer, a crafty, false, or an envious man; an\r\nunsociable uncharitable man. All these ill qualities have happened unto\r\nthem, through ignorance of that which is truly good and truly bad. But I\r\nthat understand the nature of that which is good, that it only is to\r\nbe desired, and of that which is bad, that it only is truly odious and\r\nshameful: who know moreover, that this transgressor, whosoever he be, is\r\nmy kinsman, not by the same blood and seed, but by participation of the\r\nsame reason, and of the same divine particle; How can I either be\r\nhurt by any of those, since it is not in their power to make me incur\r\nanything that is truly reproachful? or angry, and ill affected towards\r\nhim, who by nature is so near unto me? for we are all born to be\r\nfellow-workers, as the feet, the hands, and the eyelids; as the rows of\r\nthe upper and under teeth: for such therefore to be in opposition, is\r\nagainst nature; and what is it to chafe at, and to be averse from, but\r\nto be in opposition?",
+      "raw_text": "In the country of the Quadi at Granua, these. Betimes in the morning\r\nsay to thyself, This day I shalt have to do with an idle curious man,\r\nwith an unthankful man, a railer, a crafty, false, or an envious man; an\r\nunsociable uncharitable man. All these ill qualities have happened unto\r\nthem, through ignorance of that which is truly good and truly bad. But I\r\nthat understand the nature of that which is good, that it only is to\r\nbe desired, and of that which is bad, that it only is truly odious and\r\nshameful: who know moreover, that this transgressor, whosoever he be, is\r\nmy kinsman, not by the same blood and seed, but by participation of the\r\nsame reason, and of the same divine particle; How can I either be\r\nhurt by any of those, since it is not in their power to make me incur\r\nanything that is truly reproachful? or angry, and ill affected towards\r\nhim, who by nature is so near unto me? for we are all born to be\r\nfellow-workers, as the feet, the hands, and the eyelids; as the rows of\r\nthe upper and under teeth: for such therefore to be in opposition, is\r\nagainst nature; and what is it to chafe at, and to be averse from, but\r\nto be in opposition?",
+      "text_hash": "2fe512aeb1cc2f407f5ad6e67a78becc4830d31d1ccfce37a4cb386420dbc001",
+      "normalization": "identity-v1",
+      "authorship": "Marcus Aurelius; translated by Meric Casaubon"
     }
   ],
   "spans": [
@@ -248,9 +404,60 @@
       "suffix": "",
       "text_hash": "edd4eba33287b9addb234239cc589f7eec3916442b263d716498481fc3efabcf",
       "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-focused-fellow-workers",
+      "passage_revision": "casaubon-gutenberg-2680-1-15:2fe512aeb1cc2f40",
+      "start": 900,
+      "end": 1163,
+      "exact": "for we are all born to be\r\nfellow-workers, as the feet, the hands, and the eyelids; as the rows of\r\nthe upper and under teeth: for such therefore to be in opposition, is\r\nagainst nature; and what is it to chafe at, and to be averse from, but\r\nto be in opposition?",
+      "prefix": "o by nature is so near unto me? ",
+      "suffix": "",
+      "text_hash": "2fe512aeb1cc2f407f5ad6e67a78becc4830d31d1ccfce37a4cb386420dbc001",
+      "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-focused-vine",
+      "passage_revision": "casaubon-gutenberg-2680-5-6:ffd6e212cc5a2558",
+      "start": 341,
+      "end": 1145,
+      "exact": "Others again\r\nthere be, who when they have done any such thing, do not so much as\r\nknow what they have done; but are like unto the vine, which beareth her\r\ngrapes, and when once she hath borne her own proper fruit, is contented\r\nand seeks for no further recompense. As a horse after a race, and a\r\nhunting dog when he hath hunted, and a bee when she hath made her honey,\r\nlook not for applause and commendation; so neither doth that man that\r\nrightly doth understand his own nature when he hath done a good turn:\r\nbut from one doth proceed to do another, even as the vine after she hath\r\nonce borne fruit in her own proper season, is ready for another time.\r\nThou therefore must be one of them, who what they do, barely do it\r\nwithout any further thought, and are in a manner insensible of what they\r\ndo.",
+      "prefix": "ir word is what they have done. ",
+      "suffix": " 'Nay but,' will some reply perc",
+      "text_hash": "ffd6e212cc5a2558529a137329ac71806298a918c5a3f89a8c0de16525dee254",
+      "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-focused-objection",
+      "passage_revision": "casaubon-gutenberg-2680-5-6:ffd6e212cc5a2558",
+      "start": 1146,
+      "end": 1874,
+      "exact": "'Nay but,' will some reply perchance, 'this very thing a rational\r\nman is bound unto, to understand what it is, that he doeth.' For it\r\nis the property, say they, of one that is naturally sociable, to be\r\nsensible, that he doth operate sociably: nay, and to desire, that the\r\nparty him self that is sociably dealt with, should be sensible of it\r\ntoo. I answer, That which thou sayest is true indeed, but the true\r\nmeaning of that which is said, thou dost not understand. And therefore\r\nart thou one of those first, whom I mentioned. For they also are led by\r\na probable appearance of reason. But if thou dost desire to understand\r\ntruly what it is that is said, fear not that thou shalt therefore give\r\nover any sociable action.",
+      "prefix": "er insensible of what they\r\ndo. ",
+      "suffix": "",
+      "text_hash": "ffd6e212cc5a2558529a137329ac71806298a918c5a3f89a8c0de16525dee254",
+      "validation": "valid"
     }
   ],
   "conclusions": [
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose",
+      "title": "Cooperation without a debt",
+      "current": "casaubon-gutenberg-2680-social-purpose:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation",
+      "title": "Answer wrongdoing without imitation",
+      "current": "casaubon-gutenberg-2680-non-imitation:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good",
+      "title": "The part and the shared good",
+      "current": "casaubon-gutenberg-2680-shared-good:r1",
+      "locked": false
+    },
     {
       "id": "casaubon-gutenberg-2680-cooperation",
       "title": "Cooperate without becoming a creditor or an imitator",
@@ -259,6 +466,36 @@
     }
   ],
   "expressions": [
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-expression",
+      "title": "Explanation with source reasons",
+      "current": "casaubon-gutenberg-2680-social-purpose-expression:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-overreach",
+      "title": "Deliberate unsupported addition",
+      "current": "casaubon-gutenberg-2680-social-purpose-overreach:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-maxim",
+      "title": "Concise formulation",
+      "current": "casaubon-gutenberg-2680-social-purpose-maxim:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-expression",
+      "title": "Explanation with source reasons",
+      "current": "casaubon-gutenberg-2680-non-imitation-expression:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-expression",
+      "title": "Explanation with source reasons",
+      "current": "casaubon-gutenberg-2680-shared-good-expression:r1",
+      "locked": false
+    },
     {
       "id": "casaubon-gutenberg-2680-cooperation-expression",
       "title": "Character in the next act",
@@ -464,6 +701,437 @@
         "casaubon-gutenberg-2680-cooperation:r1"
       ],
       "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose:r1",
+      "entity_id": "casaubon-gutenberg-2680-social-purpose",
+      "kind": "conclusion",
+      "sequence": 1,
+      "text": "Cooperation belongs to our nature as fellow-workers. A good turn fulfills that social work; it need not leave its recipient in our debt. This is not a demand for mindless action: Marcus retains conscious social action while challenging the wish to keep a moral account.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-social-purpose-meaning-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Cooperation belongs to our nature as fellow-workers. A good turn fulfills that social work; it need not leave its recipient in our debt. This is not a demand for mindless action: Marcus retains conscious social action while challenging the wish to keep a moral account."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "qualifications": "Marcus’s account relies on a normative view of human nature and, in the surrounding fellow-worker passage, shared reason and the divine. The analogy does not prove that every request deserves help, or that one must keep helping a dangerous person. It is not a universal rule about boundaries.",
+      "assumptions": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "practical_implication": "The passages do not themselves state this combined explanation. The reconstruction connects a reason for cooperation to an attitude toward doing good, while keeping the rational-awareness qualification.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [],
+      "created_at": "2026-11-10T00:00:00Z",
+      "synthesis": {
+        "method": "manual_editorial_study",
+        "meaning_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+        "premises": [
+          {
+            "claim": "People are fellow-workers by nature; Marcus illustrates this with parts of a body working together.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-focused-fellow-workers"
+            ]
+          },
+          {
+            "claim": "The vine comparison presents a good act as the exercise of a natural function, without a further claim for repayment.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-focused-vine"
+            ]
+          },
+          {
+            "claim": "The objection-and-reply prevents reading the image as a demand for unconscious or thoughtless helping.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-focused-objection"
+            ]
+          }
+        ],
+        "interpretive_step": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+        "what_changes": "The passages do not themselves state this combined explanation. The reconstruction connects a reason for cooperation to an attitude toward doing good, while keeping the rational-awareness qualification.",
+        "not_claimed": "Marcus’s account relies on a normative view of human nature and, in the surrounding fellow-worker passage, shared reason and the divine. The analogy does not prove that every request deserves help, or that one must keep helping a dangerous person. It is not a universal rule about boundaries.",
+        "expression_choice": "The expression explains the social-purpose premise and the vine comparison before giving the editorial connection. It does not add revenge as a second conclusion."
+      }
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-expression:r1",
+      "entity_id": "casaubon-gutenberg-2680-social-purpose-expression",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Cooperation is part of what Marcus thinks a human being is for. A vine completes its work by bearing fruit, not by collecting thanks; his image asks us to see a good act in that spirit. Read together, these passages make gratitude a possible response to kindness, rather than the payment that completes it. The objection about rational awareness remains: acting without keeping score need not mean acting without understanding.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-social-purpose-expression-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Cooperation is part of what Marcus thinks a human being is for. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-social-purpose:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-focused-fellow-workers"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "A vine completes its work by bearing fruit, not by collecting thanks; his image asks us to see a good act in that spirit. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-social-purpose:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-focused-vine"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Read together, these passages make gratitude a possible response to kindness, rather than the payment that completes it. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-social-purpose:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-focused-fellow-workers",
+                        "casaubon-gutenberg-2680-focused-vine"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "The objection about rational awareness remains: acting without keeping score need not mean acting without understanding.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-social-purpose:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-focused-objection"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "qualifications": "Marcus’s account relies on a normative view of human nature and, in the surrounding fellow-worker passage, shared reason and the divine. The analogy does not prove that every request deserves help, or that one must keep helping a dangerous person. It is not a universal rule about boundaries.",
+      "assumptions": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "practical_implication": "The passages do not themselves state this combined explanation. The reconstruction connects a reason for cooperation to an attitude toward doing good, while keeping the rational-awareness qualification.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-social-purpose:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation:r1",
+      "entity_id": "casaubon-gutenberg-2680-non-imitation",
+      "kind": "conclusion",
+      "sequence": 1,
+      "text": "When answering wrongdoing, do not make the wrongdoer’s character your model.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-non-imitation-meaning-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "When answering wrongdoing, do not make the wrongdoer’s character your model."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "A reminder about responding to wrongdoing, not a general instruction about giving or communal duty.",
+      "qualifications": "The aphorism does not define every forbidden response or supply a complete account of punishment, protection or reconciliation.",
+      "assumptions": "This is a close paraphrase of a single prescription. It does not derive an obligation to help the offender.",
+      "practical_implication": "A response can be assessed for imitation of the wrongdoer without making this passage support a theory of gratitude.",
+      "interpretation": "close_paraphrase",
+      "dependencies": [],
+      "created_at": "2026-11-10T00:00:00Z",
+      "synthesis": {
+        "method": "manual_editorial_study",
+        "meaning_revision": "casaubon-gutenberg-2680-non-imitation:r1",
+        "premises": [
+          {
+            "claim": "The brief prescription identifies non-imitation as the best revenge.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-evidence-1"
+            ]
+          }
+        ],
+        "interpretive_step": "This is a close paraphrase of a single prescription. It does not derive an obligation to help the offender.",
+        "what_changes": "A response can be assessed for imitation of the wrongdoer without making this passage support a theory of gratitude.",
+        "not_claimed": "The aphorism does not define every forbidden response or supply a complete account of punishment, protection or reconciliation.",
+        "expression_choice": "The explanation keeps the absence of an argument visible, instead of borrowing the vine or hive as if Marcus supplied them here."
+      }
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-expression:r1",
+      "entity_id": "casaubon-gutenberg-2680-non-imitation-expression",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "An injury does not provide a model for your next act. Marcus calls refusing that imitation the best revenge; this brief passage gives no further argument for the ranking.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-non-imitation-expression-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "An injury does not provide a model for your next act. Marcus calls refusing that imitation the best revenge; this brief passage gives no further argument for the ranking.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-non-imitation:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-1"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "A reminder about responding to wrongdoing, not a general instruction about giving or communal duty.",
+      "qualifications": "The aphorism does not define every forbidden response or supply a complete account of punishment, protection or reconciliation.",
+      "assumptions": "This is a close paraphrase of a single prescription. It does not derive an obligation to help the offender.",
+      "practical_implication": "A response can be assessed for imitation of the wrongdoer without making this passage support a theory of gratitude.",
+      "interpretation": "close_paraphrase",
+      "dependencies": [
+        "casaubon-gutenberg-2680-non-imitation:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good:r1",
+      "entity_id": "casaubon-gutenberg-2680-shared-good",
+      "kind": "conclusion",
+      "sequence": 1,
+      "text": "Marcus treats the individual’s good as connected to the good of the community to which the individual belongs.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-shared-good-meaning-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Marcus treats the individual’s good as connected to the good of the community to which the individual belongs."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The relationship between individual and shared good, expressed through an analogy.",
+      "qualifications": "The line does not demonstrate that every collective demand is just, or explain how to resolve a disagreement about the community’s good.",
+      "assumptions": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference.",
+      "practical_implication": "The question becomes whether an alleged individual benefit undermines the shared whole, rather than whether an individual must repay a favor.",
+      "interpretation": "close_paraphrase",
+      "dependencies": [],
+      "created_at": "2026-11-10T00:00:00Z",
+      "synthesis": {
+        "method": "manual_editorial_study",
+        "meaning_revision": "casaubon-gutenberg-2680-shared-good:r1",
+        "premises": [
+          {
+            "claim": "The bee/hive comparison connects the good of the part to that of its whole.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-evidence-2"
+            ]
+          }
+        ],
+        "interpretive_step": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference.",
+        "what_changes": "The question becomes whether an alleged individual benefit undermines the shared whole, rather than whether an individual must repay a favor.",
+        "not_claimed": "The line does not demonstrate that every collective demand is just, or explain how to resolve a disagreement about the community’s good.",
+        "expression_choice": "The formulation keeps the analogy and its unanswered question together; it does not turn the line into a slogan for unconditional obedience."
+      }
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-expression:r1",
+      "entity_id": "casaubon-gutenberg-2680-shared-good-expression",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "A bee’s good cannot be severed from its hive’s good: this is Marcus’s image of part and whole. It leaves open how the common good is identified, and who may claim to speak for it.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-shared-good-expression-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "A bee’s good cannot be severed from its hive’s good: this is Marcus’s image of part and whole. It leaves open how the common good is identified, and who may claim to speak for it.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-shared-good:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-2"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The relationship between individual and shared good, expressed through an analogy.",
+      "qualifications": "The line does not demonstrate that every collective demand is just, or explain how to resolve a disagreement about the community’s good.",
+      "assumptions": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference.",
+      "practical_implication": "The question becomes whether an alleged individual benefit undermines the shared whole, rather than whether an individual must repay a favor.",
+      "interpretation": "close_paraphrase",
+      "dependencies": [
+        "casaubon-gutenberg-2680-shared-good:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-overreach:r1",
+      "entity_id": "casaubon-gutenberg-2680-social-purpose-overreach",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Always help everyone, without thought or boundaries, and expect no harm.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-social-purpose-overreach-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Always help everyone, without thought or boundaries, and expect no harm."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "qualifications": "Marcus’s account relies on a normative view of human nature and, in the surrounding fellow-worker passage, shared reason and the divine. The analogy does not prove that every request deserves help, or that one must keep helping a dangerous person. It is not a universal rule about boundaries.",
+      "assumptions": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "practical_implication": "The passages do not themselves state this combined explanation. The reconstruction connects a reason for cooperation to an attitude toward doing good, while keeping the rational-awareness qualification.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-social-purpose:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-maxim:r1",
+      "entity_id": "casaubon-gutenberg-2680-social-purpose-maxim",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Cooperate because you are a fellow-worker. Let a good act bear its fruit without leaving a debt behind.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-social-purpose-maxim-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Cooperate because you are a fellow-worker. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-social-purpose:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-focused-fellow-workers"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Let a good act bear its fruit without leaving a debt behind.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-social-purpose:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-focused-vine"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "qualifications": "Marcus’s account relies on a normative view of human nature and, in the surrounding fellow-worker passage, shared reason and the divine. The analogy does not prove that every request deserves help, or that one must keep helping a dangerous person. It is not a universal rule about boundaries.",
+      "assumptions": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference.",
+      "practical_implication": "The passages do not themselves state this combined explanation. The reconstruction connects a reason for cooperation to an attitude toward doing good, while keeping the rational-awareness qualification.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-social-purpose:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
     }
   ],
   "propositions": [
@@ -499,6 +1167,61 @@
       "scope": "Choosing a response after an unacknowledged favor or another person’s wrongdoing; a three-passage interpretation, not a rule about every conflict.",
       "modality": "editorial extraction of a recommendation/analogy",
       "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-proposition-0",
+      "revision_id": "casaubon-gutenberg-2680-social-purpose-proposition-0:r1",
+      "statement": "People are fellow-workers by nature; Marcus illustrates this with parts of a body working together.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-fellow-workers"
+      ],
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-proposition-1",
+      "revision_id": "casaubon-gutenberg-2680-social-purpose-proposition-1:r1",
+      "statement": "The vine comparison presents a good act as the exercise of a natural function, without a further claim for repayment.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-vine"
+      ],
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-proposition-2",
+      "revision_id": "casaubon-gutenberg-2680-social-purpose-proposition-2:r1",
+      "statement": "The objection-and-reply prevents reading the image as a demand for unconscious or thoughtless helping.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-focused-objection"
+      ],
+      "scope": "The motivation and self-understanding of social action, especially after an unacknowledged good turn.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-proposition-0",
+      "revision_id": "casaubon-gutenberg-2680-non-imitation-proposition-0:r1",
+      "statement": "The brief prescription identifies non-imitation as the best revenge.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-1"
+      ],
+      "scope": "A reminder about responding to wrongdoing, not a general instruction about giving or communal duty.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-proposition-0",
+      "revision_id": "casaubon-gutenberg-2680-shared-good-proposition-0:r1",
+      "statement": "The bee/hive comparison connects the good of the part to that of its whole.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-evidence-2"
+      ],
+      "scope": "The relationship between individual and shared good, expressed through an analogy.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
     }
   ],
   "bundles": [
@@ -507,6 +1230,24 @@
       "target_revision": "casaubon-gutenberg-2680-cooperation:r1",
       "mode": "joint",
       "explanation": "The first passage removes repayment as the criterion of a good action. The second places a limit on a retaliatory response. The third supplies a social criterion. Together they suggest how to choose the next action after ingratitude: cooperation without imitation of wrongdoing."
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-bundle",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "mode": "joint",
+      "explanation": "The fellow-worker passage supplies the social-purpose premise. The vine passage applies a functional comparison to giving. Together they support a reason not to make repayment the completion of a good act. Neither revenge nor the hive aphorism is needed for this inference."
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-bundle",
+      "target_revision": "casaubon-gutenberg-2680-non-imitation:r1",
+      "mode": "independent",
+      "explanation": "This is a close paraphrase of a single prescription. It does not derive an obligation to help the offender."
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-bundle",
+      "target_revision": "casaubon-gutenberg-2680-shared-good:r1",
+      "mode": "independent",
+      "explanation": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference."
     }
   ],
   "links": [
@@ -542,6 +1283,61 @@
       "review_state": "proposed",
       "reviewer": null,
       "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-link-0-0",
+      "source_span": "casaubon-gutenberg-2680-focused-fellow-workers",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "bundle_id": "casaubon-gutenberg-2680-social-purpose-bundle",
+      "relation": "supports",
+      "justification": "People are fellow-workers by nature; Marcus illustrates this with parts of a body working together.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-link-1-0",
+      "source_span": "casaubon-gutenberg-2680-focused-vine",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "bundle_id": "casaubon-gutenberg-2680-social-purpose-bundle",
+      "relation": "supports",
+      "justification": "The vine comparison presents a good act as the exercise of a natural function, without a further claim for repayment.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-link-2-0",
+      "source_span": "casaubon-gutenberg-2680-focused-objection",
+      "target_revision": "casaubon-gutenberg-2680-social-purpose:r1",
+      "bundle_id": "casaubon-gutenberg-2680-social-purpose-bundle",
+      "relation": "qualifies",
+      "justification": "The objection-and-reply prevents reading the image as a demand for unconscious or thoughtless helping.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-link-0-0",
+      "source_span": "casaubon-gutenberg-2680-evidence-1",
+      "target_revision": "casaubon-gutenberg-2680-non-imitation:r1",
+      "bundle_id": "casaubon-gutenberg-2680-non-imitation-bundle",
+      "relation": "supports",
+      "justification": "The brief prescription identifies non-imitation as the best revenge.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-link-0-0",
+      "source_span": "casaubon-gutenberg-2680-evidence-2",
+      "target_revision": "casaubon-gutenberg-2680-shared-good:r1",
+      "bundle_id": "casaubon-gutenberg-2680-shared-good-bundle",
+      "relation": "supports",
+      "justification": "The bee/hive comparison connects the good of the part to that of its whole.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
     }
   ],
   "assessments": {
@@ -560,6 +1356,38 @@
     "casaubon-gutenberg-2680-cooperation-explanation:r1": {
       "state": "awaiting_review",
       "notes": "Check the source reasoning separately from the combined editorial decision rule."
+    },
+    "casaubon-gutenberg-2680-social-purpose:r1": {
+      "state": "awaiting_review",
+      "notes": "Revised hand-authored proposal. Exact anchors are validated; philosophical fidelity still needs human review."
+    },
+    "casaubon-gutenberg-2680-social-purpose-expression:r1": {
+      "state": "awaiting_review",
+      "notes": "Editorial wording, not a Marcus quotation. Check each clause and the stated limits separately."
+    },
+    "casaubon-gutenberg-2680-non-imitation:r1": {
+      "state": "awaiting_review",
+      "notes": "Revised hand-authored proposal. Exact anchors are validated; philosophical fidelity still needs human review."
+    },
+    "casaubon-gutenberg-2680-non-imitation-expression:r1": {
+      "state": "awaiting_review",
+      "notes": "Editorial wording, not a Marcus quotation. Check each clause and the stated limits separately."
+    },
+    "casaubon-gutenberg-2680-shared-good:r1": {
+      "state": "awaiting_review",
+      "notes": "Revised hand-authored proposal. Exact anchors are validated; philosophical fidelity still needs human review."
+    },
+    "casaubon-gutenberg-2680-shared-good-expression:r1": {
+      "state": "awaiting_review",
+      "notes": "Editorial wording, not a Marcus quotation. Check each clause and the stated limits separately."
+    },
+    "casaubon-gutenberg-2680-social-purpose-overreach:r1": {
+      "state": "unsupported",
+      "notes": "Adds universal obligation, thoughtlessness and invulnerability; no mapped support."
+    },
+    "casaubon-gutenberg-2680-social-purpose-maxim:r1": {
+      "state": "awaiting_review",
+      "notes": "An editorial maxim, not a quotation. The longer explanation retains the functional premise and conscious-action qualification."
     }
   },
   "concepts": [
@@ -569,6 +1397,14 @@
       "definition": "How social duty and the quality of a response constrain each other.",
       "inclusion": "A claim about repayment, response or shared good.",
       "exclusion": "Shared vocabulary alone is not evidence.",
+      "parents": []
+    },
+    {
+      "id": "casaubon-gutenberg-2680-social-purpose-theme",
+      "name": "Social purpose and giving",
+      "definition": "Cooperation as a natural function and the motivation of a good turn.",
+      "inclusion": "A claim about cooperation, giving or conscious social action.",
+      "exclusion": "Revenge and shared-good analogies need their own evidential roles.",
       "parents": []
     }
   ],
@@ -592,6 +1428,13 @@
       "passage_id": "casaubon-gutenberg-2680-6-49",
       "concept_id": "casaubon-gutenberg-2680-social-conduct",
       "rationale": "Topical association; evidential role is stored separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-fellow-membership",
+      "passage_id": "casaubon-gutenberg-2680-1-15",
+      "concept_id": "casaubon-gutenberg-2680-social-purpose-theme",
+      "rationale": "Source premise about cooperation.",
       "review_state": "proposed"
     }
   ],

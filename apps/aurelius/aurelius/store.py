@@ -40,6 +40,18 @@ def validate_workspace(value):
         target = next((r for r in workspace['revisions'] if r['id'] == argument['target_revision']), None)
         if not target or target['kind'] != 'conclusion' or argument['kind'] not in ['explicit_reason','analogy','reason_not_stated'] or not argument['source_span_ids'] or any(sid not in {s['id'] for s in workspace['spans']} for sid in argument['source_span_ids']):
             raise ValueError('Invalid source reasoning references')
+    for run in workspace['annotation_runs']:
+        if run['target_revision'] not in seen or run['document']['markup']['target_revision'] != run['target_revision']:
+            raise ValueError('Invalid annotation target revision')
+        markup=run['document']['markup'];anchors=run['document']['anchors']
+        if markup['format']!='aurelius-annotations-v1' or set(anchors)!={p['id'] for p in markup['pieces']}:
+            raise ValueError('Invalid annotation piece identities')
+        for piece in markup['pieces']:
+            anchor=anchors[piece['id']]
+            if piece['quote']!=anchor['exact'] or any(piece[k]!=anchor[k] for k in ['passage_revision','prefix','suffix']):
+                raise ValueError('Annotation markup does not match its exact anchor')
+        for anchor in run['document']['anchors'].values():
+            validate_anchor(passages[anchor['passage_revision']],anchor)
     for mapping in workspace['target_mappings']:
         target = next((r for r in workspace['revisions'] if r['id'] == mapping['target_revision']), None)
         block = next((b for b in target['doc']['content'] if b['attrs']['id'] == mapping['block_id']), None) if target else None
@@ -198,6 +210,11 @@ class Store:
         for m in w['memberships']:
             source = next((p['revision_id'] for p in w['passages'] if p['id'] == m.get('passage_id')), None)
             db.execute('INSERT OR IGNORE INTO memberships(id,concept_id,payload_json,passage_revision,proposition_revision) VALUES (?,?,?,?,?)', (m['id'], m['concept_id'], encode(m), source, m.get('proposition_revision')))
+        for a in w.get('annotation_runs', []):
+            db.execute('INSERT OR IGNORE INTO annotation_runs VALUES (?,?,?)',(a['id'],a['target_revision'],encode(a)))
+            for piece in a['document']['markup']['pieces']:
+                s=a['document']['anchors'][piece['id']]
+                db.execute('INSERT OR IGNORE INTO annotation_pieces VALUES (?,?,?,?,?,?,?)',(a['id'],piece['id'],s['passage_revision'],s['start'],s['end'],s['exact'],encode(piece)))
         for e in w['events']:
             db.execute('INSERT OR IGNORE INTO events VALUES (?,?,?)', (e['id'], w['version'], encode(e)))
         payload = encode(w)

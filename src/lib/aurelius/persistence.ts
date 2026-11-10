@@ -42,6 +42,7 @@ async function localCommand(command:WorkCommand,corpus:BrowserCorpus):Promise<Wo
 }
 export type DiscoveryArtifact={schema_version:number;pipeline_version:string;run_id:string;corpus_kind:string;corpus_hash:string;vector_origin:string;vector_description:string;dimensions:number;chunk_count:number;excluded_chunks:string[];sampled:boolean;share_mode?:string;edition?:{id:string;translator:string;work:string;source_location:string};embedding_configuration?:{model:string;dimensions:number};pca:{explained_variance:number[];explained_variance_ratio:number[];singular_values:number[]};clustering:{linkage:string;distance:string;input_dimensions:number;input_space:string;labels_by_k:Record<string,number[]>;children:number[][];distances:number[]};software:{numpy:string;scikit_learn:string};points:{passage_id:string;revision_id:string;text_hash:string;reference:string;x:number;y:number}[]};
 export type WorkStorage = {analysis:()=>Promise<DiscoveryArtifact>;mode:'browser'|'sqlite';load:()=>Promise<Workspace>;command:(c:WorkCommand)=>Promise<Workspace>};
+export function publicMapPending(){return !(new URLSearchParams(window.location.search).get('map')==='backup'?backupMap:realMap);}
 export async function connectStorage():Promise<WorkStorage>{
   // Public builds never probe a private service. This flag is set by the loopback dev launcher only.
   if(process.env.NODE_ENV==='development'&&process.env.NEXT_PUBLIC_AURELIUS_LOCAL==='1'){
@@ -54,7 +55,7 @@ export async function connectStorage():Promise<WorkStorage>{
   }
   const demo=new URLSearchParams(window.location.search).get('corpus')==='demo';
   const corpus:BrowserCorpus=demo?{name:DB,seed:fixture as Workspace}:{name:'aurelius-casaubon-study-v1',seed:backupStudy as Workspace};
-  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;const selected=new URLSearchParams(window.location.search).get('map')==='backup'?backupMap:realMap;if(!selected)throw Error('Full-corpus OpenAI embeddings have not been run yet. The real imports are extracted; production model access and an approved processing run are needed. No lexical vectors are shown as real embeddings.');return selected as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
+  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;const selected=new URLSearchParams(window.location.search).get('map')==='backup'?backupMap:realMap;if(!selected)throw Error('Real-source embeddings are blocked by production model access. Import and bounded processing authorization are recorded; no real vectors or PCA have been generated.');return selected as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
 }
 export function downloadSyntheticProject(workspace:Workspace){
   if(workspace.corpus_kind==='hays')throw Error('Modern translation export is private-only and not implemented');

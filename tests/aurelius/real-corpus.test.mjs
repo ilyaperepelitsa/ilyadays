@@ -3,10 +3,35 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {applyCommand,validateAnchor,plainDoc} from '../../src/lib/aurelius/domain.mjs';
 import {validateReferenceDiscovery} from '../../src/lib/aurelius/discovery.mjs';
+import {upgradeStudy} from '../../src/lib/aurelius/study-upgrade.mjs';
 const study=()=>JSON.parse(fs.readFileSync(new URL('../../content/aurelius/backup-study.json',import.meta.url),'utf8'));
 const command=(w,type,payload,id)=>({id,type,payload,expected_version:w.version,at:'2026-11-10T00:00:00Z'});
 
-test('real backup preserves edition-specific references and exact source anchors without fabricated attribution',async()=>{const w=study();assert.equal(w.corpus_kind,'public_domain_backup');assert.equal(w.editions[0].translator,'Meric Casaubon');for(const span of w.spans)await validateAnchor(w.passages.find(p=>p.revision_id===span.passage_revision),span);assert.deepEqual(w.passages.map(p=>`${p.book}.${p.section}`),['5.6','6.5','6.49']);assert.equal(w.revisions[0].synthesis.method,'manual_editorial_study');assert.ok(w.revisions[0].synthesis.not_claimed.includes('dangerous person'));assert.ok(w.import_audit.source_chunk_count>w.passages.length);});
+test('revised study uses social-purpose premises and keeps revenge and common-good claims separate',()=>{
+ const w=study(),current=w.study_catalog.current_ids;assert.equal(current.length,3);
+ const sources=id=>w.links.filter(l=>l.target_revision===w.conclusions.find(c=>c.id===id).current).map(l=>{const span=w.spans.find(s=>s.id===l.source_span);const p=w.passages.find(p=>p.revision_id===span.passage_revision);return `${p.book}.${p.section}`;});
+ assert.deepEqual(new Set(sources(current[0])),new Set(['1.15','5.6']));assert.deepEqual(sources(current[1]),['6.5']);assert.deepEqual(sources(current[2]),['6.49']);
+ const main=w.conclusions.find(c=>c.id===current[0]);assert.ok(w.links.some(l=>l.target_revision===main.current&&l.relation==='qualifies'));
+ assert.ok(w.spans.some(s=>s.start>0&&s.end<w.passages.find(p=>p.revision_id===s.passage_revision).text.length));
+ const expr=w.expressions.find(e=>w.revisions.find(r=>r.id===e.current).dependencies.includes(main.current));
+ const contributorSets=w.revisions.find(r=>r.id===expr.current).doc.content[0].content.map(n=>n.marks[0].attrs.sourceSpanIds);
+ assert.ok(contributorSets.some(ids=>ids.length===2));assert.ok(contributorSets.some(ids=>ids.length===1));
+});
+
+test('the shipped previous study upgrades additively and retains user revisions, decisions and selection identity',async()=>{
+ const old=JSON.parse(fs.readFileSync(new URL('./fixtures/legacy-backup-study-v1.json',import.meta.url),'utf8')),id=old.conclusions[0].id;
+ let saved=await applyCommand(old,command(old,'edit',{entity_id:id,doc:plainDoc('My interpretation, kept for later review.','user-block')},'my-study-edit'));
+ saved=await applyCommand(saved,command(saved,'lock',{entity_id:id,locked:true},'my-study-lock'));
+ const before=structuredClone(saved),upgraded=upgradeStudy(saved,study());
+ assert.deepEqual(upgraded.conclusions.find(c=>c.id===id),before.conclusions[0]);
+ for(const key of ['revisions','links','target_mappings','source_arguments'])for(const item of before[key])assert.deepEqual(upgraded[key].find(v=>v.id===item.id),item);
+ assert.deepEqual(upgraded.assessments[before.conclusions[0].current],before.assessments[before.conclusions[0].current]);
+ assert.equal(upgraded.passages.length,4);assert.equal(upgraded.study_revision,2);assert.ok(upgraded.study_catalog.previous_ids.includes(id));
+ assert.equal(upgradeStudy(upgraded,study()),upgraded);
+ const wrong=study();wrong.passages[0].text_hash='changed';assert.throws(()=>upgradeStudy(before,wrong),/identity/);
+});
+
+test('real backup preserves edition-specific references and exact source anchors without fabricated attribution',async()=>{const w=study();assert.equal(w.corpus_kind,'public_domain_backup');assert.equal(w.editions[0].translator,'Meric Casaubon');for(const span of w.spans)await validateAnchor(w.passages.find(p=>p.revision_id===span.passage_revision),span);assert.deepEqual(w.passages.map(p=>`${p.book}.${p.section}`),['5.6','6.5','6.49','1.15']);assert.equal(w.revisions.find(r=>r.id===w.conclusions[0].current).synthesis.method,'manual_editorial_study');assert.ok(w.revisions.find(r=>r.id===w.conclusions[0].current).synthesis.not_claimed.includes('dangerous person'));assert.ok(w.import_audit.source_chunk_count>w.passages.length);});
 
 test('synthesis and resonant wording require separate reviews; the universal overreach remains rejectable',async()=>{let w=study();const meaning=w.conclusions[0],expression=w.expressions[0],unsupported=w.expressions[1];await assert.rejects(applyCommand(w,command(w,'review',{entity_id:meaning.id,decision:'approved',notes:'Not enough yet.'},'premature-review')));for(const [i,link] of w.links.entries())w=await applyCommand(w,command(w,'link_review',{link_id:link.id},`review-premise-${i}`));w=await applyCommand(w,command(w,'review',{entity_id:meaning.id,decision:'approved',notes:'Checked each premise and the explicit bridge and scope.'},'review-real-meaning'));assert.equal(w.assessments[expression.current].state,'stale');w=await applyCommand(w,command(w,'review',{entity_id:expression.id,decision:'approved',notes:'Checked the new wording against the approved meaning.'},'review-expression'));assert.equal(w.assessments[expression.current].state,'approved');await assert.rejects(applyCommand(w,command(w,'review',{entity_id:unsupported.id,decision:'approved',notes:'The universal promise is unsupported.'},'overreach-review')));});
 

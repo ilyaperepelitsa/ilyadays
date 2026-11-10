@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-10",
+  "state": "blocked_model_access",
+  "model": "text-embedding-3-large",
+  "dimensions": 3072,
+  "provider_status": 403,
+  "provider_error": "no_providers_available",
+  "provider_reason": "Free tier users do not have access to this model.",
+  "requests_rejected": 3,
+  "processing_authorized": true,
+  "combined_budget_usd": 0.1,
+  "corpora": {
+    "primary": {"translator": "Gregory Hays", "sections": 488, "cached_vectors": 0},
+    "backup": {"translator": "Meric Casaubon", "sections": 418, "cached_vectors": 0}
+  }
+}

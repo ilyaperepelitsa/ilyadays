@@ -146,9 +146,57 @@ export async function applyCommand(input,command) {
       for(const sid of a.source_span_ids){const span=w.spans.find(s=>s.id===sid);await validateAnchor(w.passages.find(p=>p.revision_id===span.passage_revision),span);}
       w.target_mappings??=[];w.target_mappings.push({id:`${op}-mapping`,target_revision:r.id,block_id:a.block_id,start:a.start,end:a.end,exact:a.exact,source_span_ids:[...new Set(a.source_span_ids)],granularity:a.granularity==='whole_statement'?'whole_statement':'clause',justification:requireText(a.justification,'Mapping justification'),active:true});invalidate(w,r.id);break;
     }
+    case 'annotate': {
+      const r=editable(w,e);if(r.kind!=='conclusion')throw Error('Annotate the selected meaning and its sources');
+      const document=await parseAnnotations(w,a.document,r.id);
+      w.annotation_runs??=[];w.annotation_runs.push({id:`${op}-annotations`,target_revision:r.id,created_at:command.at,document});
+      invalidate(w,r.id);break;
+    }
     case 'lock':if(!e)throw Error('Unknown item');e.locked=!!a.locked;break;
     case 'preference':if(!w.passages.some(p=>p.id===a.passage_id))throw Error('Unknown passage');w.preferences[a.passage_id]={...(w.preferences[a.passage_id]??{}),...a.preference};break;
     default:throw Error('Unknown command');
   }
   w.version++;w.events.push({id:op,type:command.type,at:command.at,entity_id:a.entity_id??null});return w;
+}
+
+export const ANNOTATION_ROLES=['claim','reason','analogy','objection','reply','qualification','question','argument'];
+export const ANNOTATION_VOICES=['author','interlocutor','editor','mixed'];
+const ANNOTATION_RELATIONS=[...RELATIONS,'answers'];
+/** Portable stand-off markup. A valid quotation is not an approved interpretation. */
+export async function parseAnnotations(w,input,targetRevision){
+ const d=typeof input==='string'?JSON.parse(input):structuredClone(input);
+ const keys=(o,allowed)=>{if(!o||typeof o!=='object'||Array.isArray(o)||Object.keys(o).some(k=>!allowed.includes(k)))throw Error('Unknown annotation field');};
+ keys(d,['format','target_revision','pieces','relations','inference']);
+ if(d.format!=='aurelius-annotations-v1'||d.target_revision!==targetRevision||revision(w,targetRevision)?.kind!=='conclusion')throw Error('Annotation target revision mismatch');
+ if(!Array.isArray(d.pieces)||!d.pieces.length||d.pieces.length>100||!Array.isArray(d.relations)||d.relations.length>300)throw Error('Use 1–100 source pieces and at most 300 relations');
+ const ids=new Set(),anchors={};
+ for(const p of d.pieces){
+  keys(p,['id','passage_revision','quote','prefix','suffix','role','voice','note']);
+  if(typeof p.id!=='string'||!/^[a-zA-Z][a-zA-Z0-9_-]{0,79}$/.test(p.id)||ids.has(p.id)||p.id===targetRevision)throw Error('Source piece IDs must be unique');ids.add(p.id);
+  if(!ANNOTATION_ROLES.includes(p.role)||!ANNOTATION_VOICES.includes(p.voice))throw Error('Unknown piece role or voice');
+  for(const key of ['quote','prefix','suffix','note'])if(typeof p[key]!=='string'||p[key].length>50000)throw Error(`Invalid annotation ${key}`);
+  if(!p.note.trim())throw Error('Explain the proposed role of each piece');
+  const source=w.passages.find(s=>s.revision_id===p.passage_revision);if(!source)throw Error('Unknown source revision');
+  const position=locateQuote(source.text,p.quote,p.prefix,p.suffix);
+  const anchor={...position,passage_revision:source.revision_id,text_hash:source.text_hash,exact:p.quote,prefix:p.prefix,suffix:p.suffix};
+  await validateAnchor(source,anchor);anchors[p.id]=anchor;
+ }
+ const adjacency=new Map([...ids].map(id=>[id,[]]));adjacency.set(targetRevision,[]);
+ for(const r of d.relations){
+  keys(r,['from','to','relation','rationale']);
+  if(!ids.has(r.from)||!adjacency.has(r.to)||r.from===r.to||!ANNOTATION_RELATIONS.includes(r.relation)||typeof r.rationale!=='string'||!r.rationale.trim()||r.rationale.length>5000)throw Error('Invalid proposed annotation relation');
+  adjacency.get(r.from).push(r.to);
+ }
+ const visiting=new Set(),done=new Set();const visit=id=>{if(visiting.has(id))throw Error('Argument annotations must be acyclic');if(done.has(id))return;visiting.add(id);for(const to of adjacency.get(id))visit(to);visiting.delete(id);done.add(id);};for(const id of adjacency.keys())visit(id);
+ keys(d.inference,['premises','rationale']);
+ if(!Array.isArray(d.inference.premises)||new Set(d.inference.premises).size!==d.inference.premises.length||d.inference.premises.some(id=>!ids.has(id))||typeof d.inference.rationale!=='string'||!d.inference.rationale.trim()||d.inference.rationale.length>10000)throw Error('Explain the joint inference with known source pieces');
+ return {markup:d,anchors,validation:'exact_anchors_validated',review_state:'proposed',offset_convention:'unicode-scalar-half-open-v1'};
+}
+
+export function annotationDraft(w,targetRevision){
+ const latest=(w.annotation_runs??[]).filter(a=>a.target_revision===targetRevision).at(-1);
+ if(latest)return JSON.stringify(latest.document.markup,null,2);
+ const links=currentLinks(w,targetRevision),unique=[...new Set(links.map(l=>l.source_span))];
+ const pieces=unique.map((id,i)=>{const s=w.spans.find(s=>s.id===id),argument=(w.source_arguments??[]).find(a=>a.target_revision===targetRevision&&a.source_span_ids.includes(id));return {id:`piece${i+1}`,passage_revision:s.passage_revision,quote:s.exact,prefix:s.prefix,suffix:s.suffix,role:argument?.kind==='analogy'?'analogy':argument?.kind==='explicit_reason'?'reason':'claim',voice:/Nay but|—Yes\./.test(s.exact)?'mixed':'author',note:argument?.summary??links.find(l=>l.source_span===id).justification};});
+ return JSON.stringify({format:'aurelius-annotations-v1',target_revision:targetRevision,pieces,relations:links.map(l=>({from:`piece${unique.indexOf(l.source_span)+1}`,to:targetRevision,relation:l.relation,rationale:l.justification})),inference:{premises:pieces.map(p=>p.id),rationale:w.bundles.find(b=>b.target_revision===targetRevision)?.explanation??'Explain why these premises belong in one inference.'}},null,2);
 }

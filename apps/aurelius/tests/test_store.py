@@ -45,7 +45,7 @@ def test_sqlite_restart_persists_links_preferences_and_review_events(tmp_path):
     with reopened.connect() as db:
         assert db.execute('SELECT count(*) FROM evidence_links').fetchone()[0] == len(w['links'])
         assert db.execute('SELECT count(*) FROM events').fetchone()[0] == 2
-        assert [r[0] for r in db.execute('SELECT version FROM schema_migrations ORDER BY version')] == [1, 2, 3, 4]
+        assert [r[0] for r in db.execute('SELECT version FROM schema_migrations ORDER BY version')] == [1, 2, 3, 4, 5]
         for payload, digest in db.execute('SELECT payload_json,content_hash FROM workspace_snapshots'):
             assert hashlib.sha256(payload.encode()).hexdigest() == digest
 
