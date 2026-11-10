@@ -174,3 +174,7 @@ The protected fixed-input production adapter is deployed and tested; its publish
 ### Editorial repair checkpoint — 2026-11-10
 
 Default study now joins social purpose with giving without a debt; revenge and part/whole good are independent studies. Prior proposal and user edits/reviews remain. Source view defaults to linked evidence, with all sections reachable. The real PCA blocker is visible with both edition counts, zero vectors, actual last provider diagnostic and concrete production setup links. All current code/test checks pass; see implementation-log.md for exact runs. Do not call the missing real map complete. Next step remains owner-side paid Gateway access or a production OpenAI key, followed by the existing bounded job.
+
+### Real embedding/PCA completion — 2026-11-11
+
+The production model-access blocker is resolved through a server-only production OpenAI key. Both full source matrices are cached: 488 Hays + 418 Casaubon, each 3,072 dimensions, 30 successful requests, 122,089 observed tokens, $0.01587157 calculated usage cost. Zero new embedding requests on restart. Both real PCA/full-space cosine cluster artifacts are exported reference-only and checked by the frontend build; one-off executor disabled. Full text/vectors stay private. Do not ask for a key or rerun unchanged embeddings. Next meaningful corpus work is reviewed retrieval/proposition evaluation and concept/argument curation, with separate generation budgets before model-assisted synthesis. See the implementation log for tests and actual run identifiers.

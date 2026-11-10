@@ -1,7 +1,7 @@
 'use client';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Workspace, SourceSpan, Revision, EvidenceLink, Passage } from '@/lib/aurelius/types';
-import { currentLinks, revision, scalarSlice, utf16ToScalar, RELATIONS } from '@/lib/aurelius/domain.mjs';
+import { currentLinks, revision, scalarSlice, utf16ToScalar, RELATIONS, preferredSourceLink } from '@/lib/aurelius/domain.mjs';
 import { connectStorage, downloadSyntheticProject, type WorkStorage } from '@/lib/aurelius/persistence';
 import editions from '../../../content/aurelius/editions.json';
 import { SourceText, sourceColor } from './SourceText';
@@ -64,7 +64,13 @@ export function AureliusWorkbench({lang}:{lang:'en'|'ru'}){
     return [...workspace.passages].filter(p=>(sourceScope==='all'||linked.size===0||linked.has(p.revision_id))&&(showExcluded||!workspace.preferences[p.id]?.excluded||linked.has(p.revision_id))&&(!search||`${p.book}.${p.section} ${p.text}`.toLowerCase().includes(search.toLowerCase()))&&(concept==='all'||linked.has(p.revision_id)||workspace.memberships.some(m=>m.passage_id===p.id&&m.concept_id===concept))).sort((a,b)=>Number(linked.has(b.revision_id))-Number(linked.has(a.revision_id))||Number(!!workspace.preferences[b.id]?.pinned)-Number(!!workspace.preferences[a.id]?.pinned));
   },[workspace,links,search,concept,showExcluded,sourceScope]);
 
-  const openChunk=(p:Passage)=>{if(dirtyIds.length){setError('Save or discard your drafts before opening another chunk.');return;}setSearch(`${p.book}.${p.section}`);setConcept('all');setShowExcluded(true);setTab('workbench');setSelectedSources(null);const span=workspace?.spans.find(s=>s.passage_revision===p.revision_id),link=workspace?.links.find(l=>l.active&&l.source_span===span?.id&&workspace.conclusions.some(c=>c.current===l.target_revision));if(link){const r=revision(workspace,link.target_revision) as Revision;chooseMeaning(r.entity_id);}if(span)setSelectedSpan(span.id);setSearch(`${p.book}.${p.section}`);setSourceScope('all');};
+  const openChunk=(p:Passage)=>{
+    if(!workspace)return;
+    if(dirtyIds.length){setError('Save or discard your drafts before opening another chunk.');return;}
+    const link=preferredSourceLink(workspace,p.revision_id,meaningRevision?.id??''),span=workspace.spans.find(s=>s.id===link?.source_span)??workspace.spans.find(s=>s.passage_revision===p.revision_id);
+    if(link){const r=revision(workspace,link.target_revision) as Revision;chooseMeaning(r.entity_id);}
+    setSearch(`${p.book}.${p.section}`);setConcept('all');setShowExcluded(true);setSourceScope('all');setTab('workbench');setSelectedSources(null);setSelectedSpan(span?.id??null);
+  };
   if(!workspace||!meaning||!expression||!meaningRevision||!expressionRevision)return <div className="au-load" role="status">{error||'Opening your local workbench…'}{error&&<button type="button" onClick={()=>window.location.reload()}>Retry</button>}</div>;
   const previousIds=new Set(workspace.study_catalog?.previous_ids??[]),currentTeachings=workspace.conclusions.filter(c=>!previousIds.has(c.id));
   const mapPending=storage?.mode==='browser'&&workspace.corpus_kind!=='synthetic'&&publicMapPending();

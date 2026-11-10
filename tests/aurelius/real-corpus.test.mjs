@@ -1,11 +1,33 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {applyCommand,validateAnchor,plainDoc} from '../../src/lib/aurelius/domain.mjs';
+import {applyCommand,validateAnchor,plainDoc,preferredSourceLink} from '../../src/lib/aurelius/domain.mjs';
 import {validateReferenceDiscovery} from '../../src/lib/aurelius/discovery.mjs';
 import {upgradeStudy} from '../../src/lib/aurelius/study-upgrade.mjs';
 const study=()=>JSON.parse(fs.readFileSync(new URL('../../content/aurelius/backup-study.json',import.meta.url),'utf8'));
 const command=(w,type,payload,id)=>({id,type,payload,expected_version:w.version,at:'2026-11-10T00:00:00Z'});
+
+test('map source navigation preserves the selected study and prefers revised studies over previous proposals',()=>{
+ const w=study(),main=w.conclusions.find(c=>c.id===w.study_catalog.default_id),previous=w.conclusions.find(c=>w.study_catalog.previous_ids.includes(c.id));
+ const giving=w.passages.find(p=>p.book==='5'&&p.section==='6'),revenge=w.passages.find(p=>p.book==='6'&&p.section==='5');
+ assert.equal(preferredSourceLink(w,giving.revision_id,main.current).target_revision,main.current);
+ assert.equal(preferredSourceLink(w,giving.revision_id,previous.current).target_revision,previous.current);
+ const chosen=preferredSourceLink(w,revenge.revision_id,main.current);assert.equal(w.conclusions.find(c=>c.current===chosen.target_revision).id,'casaubon-gutenberg-2680-non-imitation');
+ assert.equal(preferredSourceLink(w,'a-source-with-no-evidence',main.current),undefined);
+});
+
+test('published real maps match both complete inspected editions and exclude private text, full vectors and credentials',()=>{
+ const read=name=>JSON.parse(fs.readFileSync(new URL('../../content/aurelius/'+name,import.meta.url),'utf8'));
+ const manifest=read('production-inputs.json'),status=read('processing-status.json');
+ assert.equal(manifest.execution_enabled,false);assert.equal(status.state,'complete');assert.equal(status.network_requests_on_restart,0);
+ for(const [file,key,kind]of [['real-map.json','primary','hays'],['backup-map.json','backup','public_domain_backup']]){
+  const a=read(file);assert.equal(validateReferenceDiscovery(a),true);assert.equal(a.corpus_kind,kind);
+  const imported=manifest.corpora.find(c=>c.edition_id===a.edition.id);assert.equal(a.chunk_count,imported.sections);assert.equal(a.corpus_hash,imported.corpus_hash);
+  assert.equal(status.corpora[key].cached_vectors,a.chunk_count);assert.equal(status.corpora[key].vector_hash,a.vector_hash);
+  assert.equal(a.pca.explained_variance_ratio.length,2);assert.ok(a.pca.explained_variance_ratio.every(v=>v>0&&v<1));
+  const inspect=value=>{if(value&&typeof value==='object')for(const [name,v]of Object.entries(value)){assert.ok(!['text','raw_text','source_text','input_text','vectors','components','mean','vector_f32','api_key','credential','secret'].includes(name),`Private field in public artifact: ${name}`);inspect(v);}};inspect(a);
+ }
+});
 
 test('revised study uses social-purpose premises and keeps revenge and common-good claims separate',()=>{
  const w=study(),current=w.study_catalog.current_ids;assert.equal(current.length,3);

@@ -4,6 +4,7 @@ import status from '../../../content/aurelius/processing-status.json';
 export function DiscoveryStatus({compact=false,onOpen}:{compact?:boolean;onOpen?:()=>void}){
  const backup=typeof window!=='undefined'&&new URLSearchParams(window.location.search).get('map')==='backup';
  const corpus=backup?status.corpora.backup:status.corpora.primary;
+ if(status.state==='complete')return <section className="au-discovery-status" role="alert"><h2>The map artifact could not be loaded</h2><p>{corpus.translator}: all {corpus.cached_vectors} source vectors are cached and the PCA run is complete. This page could not load its published projection. Reload the page; model access and another embedding run are not required.</p><button type="button" onClick={()=>window.location.reload()}>Reload map</button></section>;
  if(compact)return <aside className="au-discovery-status is-compact" aria-label="Real-source PCA status"><div><strong>PCA blocked · {corpus.cached_vectors} / {corpus.sections} real vectors</strong><p>{corpus.translator} · the production provider refused the required embedding model.</p></div><button type="button" onClick={onOpen}>PCA status & next step ↗</button></aside>;
  return <section className="au-discovery-status" data-testid="real-pca-blocked" aria-labelledby="au-map-blocked-title">
   <nav className="au-corpus-choice" aria-label="Map edition"><a href="?map=primary#discovery" aria-current={!backup?'page':undefined}>Gregory Hays · primary</a><a href="?map=backup#discovery" aria-current={backup?'page':undefined}>Meric Casaubon · backup</a></nav>

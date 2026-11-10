@@ -1,16 +1,44 @@
 {
-  "checked_at": "2026-11-10",
-  "state": "blocked_model_access",
+  "checked_at": "2026-11-11",
+  "completed_at": "2026-11-10T20:19:39.803627+00:00",
+  "state": "complete",
   "model": "text-embedding-3-large",
   "dimensions": 3072,
-  "provider_status": 403,
-  "provider_error": "no_providers_available",
-  "provider_reason": "Free tier users do not have access to this model.",
-  "requests_rejected": 3,
+  "provider_status": 200,
+  "provider_error": null,
+  "provider_reason": "Completed through direct OpenAI access on protected production",
+  "requests_rejected": 0,
+  "historical_gateway_requests_rejected": 3,
+  "successful_requests": 30,
+  "observed_input_tokens": 122089,
+  "usage_based_cost_usd": 0.01587157,
   "processing_authorized": true,
   "combined_budget_usd": 0.1,
+  "network_requests_on_restart": 0,
   "corpora": {
-    "primary": {"translator": "Gregory Hays", "sections": 488, "cached_vectors": 0},
-    "backup": {"translator": "Meric Casaubon", "sections": 418, "cached_vectors": 0}
+    "primary": {
+      "translator": "Gregory Hays",
+      "sections": 488,
+      "cached_vectors": 488,
+      "pca_run_id": "source-pca-9ba05533297a2777",
+      "explained_variance_ratio": [
+        0.04545395659400339,
+        0.034954613577294846
+      ],
+      "corpus_hash": "8100e4577609286a4a1fb31e73a84339f212d1a662920deb8ee1f47e2182dc0b",
+      "vector_hash": "a7839683a9e5317f21eaf44a7983a52bcd12ac31eeecd57ae2e5982db872eb08"
+    },
+    "backup": {
+      "translator": "Meric Casaubon",
+      "sections": 418,
+      "cached_vectors": 418,
+      "pca_run_id": "source-pca-eb142833b8e73ff4",
+      "explained_variance_ratio": [
+        0.051163504971659626,
+        0.043993924671872374
+      ],
+      "corpus_hash": "9fc9c67e0c213ba8cc30016ed9a2fb67ea2facf2f7688d971b9a96c0a61edf17",
+      "vector_hash": "e4f33fda9e55e1e60711e28b03720d0ed4c73a39764d5d27107463433bdecbae"
+    }
   }
 }

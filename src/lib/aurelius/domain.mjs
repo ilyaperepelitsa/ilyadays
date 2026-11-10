@@ -16,6 +16,13 @@ export const sha256 = async (text) => [...new Uint8Array(await crypto.subtle.dig
 export const revision = (w,id) => w.revisions.find(r=>r.id===id);
 export const entity = (w,id) => [...w.conclusions,...w.expressions].find(r=>r.id===id);
 export const currentLinks = (w,rid) => w.links.filter(l=>l.target_revision===rid&&l.active);
+/** Opening a source keeps the selected teaching, then prefers current studies over retained proposals. */
+export function preferredSourceLink(w,passageRevision,preferredTarget=''){
+ const spans=new Set(w.spans.filter(s=>s.passage_revision===passageRevision).map(s=>s.id));
+ const candidates=w.links.filter(l=>l.active&&spans.has(l.source_span)&&w.conclusions.some(c=>c.current===l.target_revision));
+ const previous=new Set(w.study_catalog?.previous_ids??[]);
+ return candidates.find(l=>l.target_revision===preferredTarget)??candidates.find(l=>!previous.has(w.conclusions.find(c=>c.current===l.target_revision).id))??candidates[0];
+}
 export const docText = (doc) => (doc?.content??[]).map(block=>(block.content??[]).map(n=>n.text??'').join('')).join('\n');
 export const plainDoc = (text,id) => ({type:'doc',content:text.split('\n').map((line,i)=>({type:'paragraph',attrs:{id:`${id}-block-${i}`},...(line?{content:[{type:'text',text:line}]}:{})}))});
 export function validateDoc(doc) {
