@@ -2,11 +2,12 @@ import type { JSONContent } from '@tiptap/react';
 export type Passage = {id:string;revision_id:string;edition_id:string;book:string;section:string;locator:string;text:string;raw_text:string;text_hash:string;normalization:string;authorship:string};
 export type SourceSpan = {id:string;passage_revision:string;start:number;end:number;exact:string;prefix:string;suffix:string;text_hash:string;validation:string};
 export type EditorialEntity = {id:string;title:string;current:string;locked:boolean};
-export type Revision = {id:string;entity_id:string;kind:'conclusion'|'expression';sequence:number;text:string;doc:JSONContent;scope:string;qualifications:string;assumptions:string;practical_implication:string;interpretation:string;dependencies:string[];created_at:string};
+export type SynthesisNotes = {method:string;meaning_revision:string;premises:{claim:string;source_span_ids:string[]}[];interpretive_step:string;what_changes:string;not_claimed:string;expression_choice:string};
+export type Revision = {id:string;entity_id:string;kind:'conclusion'|'expression';sequence:number;text:string;doc:JSONContent;scope:string;qualifications:string;assumptions:string;practical_implication:string;interpretation:string;dependencies:string[];created_at:string;synthesis?:SynthesisNotes};
 export type EvidenceLink = {id:string;source_span:string;target_revision:string;bundle_id:string;relation:string;justification:string;review_state:string;reviewer:string|null;active:boolean};
 export type TargetMapping={id:string;target_revision:string;block_id:string;start:number;end:number;exact:string;source_span_ids:string[];granularity:'clause'|'whole_statement';justification:string;active:boolean};
 export type Workspace = {
-  schema_version:1;fixture_revision?:number;target_mappings?:TargetMapping[];version:number;corpus_kind:'synthetic';offset_convention:string;
+  schema_version:1;fixture_revision?:number;target_mappings?:TargetMapping[];import_audit?:{source_chunk_count:number;parser_version:string;status:string;warnings:{kind:string;book:number;section?:string;raw_label?:string;decision?:string}[];excluded_ranges:number};version:number;corpus_kind:'synthetic'|'hays'|'public_domain_backup';offset_convention:string;
   editions:{id:string;work:string;translator:string|null;publisher:string;isbn:string|null;edition:string;acquisition_status:string;source_location:string;available_format:string;importability:string;rights_notes:string;file_hash:string|null;parser_version:string}[];
   passages:Passage[];spans:SourceSpan[];conclusions:EditorialEntity[];expressions:EditorialEntity[];revisions:Revision[];links:EvidenceLink[];
   bundles:{id:string;target_revision:string;mode:string;explanation:string}[];

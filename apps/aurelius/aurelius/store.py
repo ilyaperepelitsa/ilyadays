@@ -21,6 +21,12 @@ def encode(value):
 
 def validate_workspace(value):
     workspace = Workspace.model_validate(value).model_dump()
+    if workspace['corpus_kind'] != 'synthetic':
+        expected = 'Gregory Hays' if workspace['corpus_kind'] == 'hays' else 'Meric Casaubon'
+        if not workspace['editions'] or any(e.get('translator') != expected for e in workspace['editions']):
+            raise ValueError('Real corpus edition/translator identity is required')
+        if workspace['corpus_kind'] == 'hays' and any(e.get('isbn') != '9781588361738' for e in workspace['editions']):
+            raise ValueError('Selected Hays ebook identity is required')
     passages = {p['revision_id']: p for p in workspace['passages']}
     for span in workspace['spans']:
         validate_anchor(passages[span['passage_revision']], span)
@@ -42,7 +48,7 @@ def validate_workspace(value):
 
 
 class Store:
-    def __init__(self, directory: Path):
+    def __init__(self, directory: Path, workspace_file: Path | None = None):
         directory = directory.resolve()
         if any(directory.is_relative_to(ROOT / name) for name in ['public', 'src', 'content']):
             raise ValueError('Private data must be outside published source and assets')
@@ -59,9 +65,9 @@ class Store:
                 if not db.execute('SELECT 1 FROM schema_migrations WHERE version=?', (version,)).fetchone():
                     db.executescript(migration.read_text())
             if not db.execute('SELECT 1 FROM workspace_snapshots LIMIT 1').fetchone():
-                fixture = validate_workspace(json.loads((ROOT / 'content/aurelius/fixture.json').read_text()))
+                fixture = validate_workspace(json.loads((workspace_file or ROOT / 'content/aurelius/fixture.json').read_text()))
                 self.persist(db, fixture)
-            else:
+            elif self.state(db)['corpus_kind'] == 'synthetic':
                 current = self.state(db)
                 result = subprocess.run([self.node, str(ROOT / 'scripts/aurelius-upgrade.mjs')], input=encode(current), text=True, capture_output=True, timeout=10, cwd=ROOT, env={'PATH': os.defpath})
                 if result.returncode:
@@ -108,6 +114,22 @@ class Store:
         import sklearn
         with self.analysis_lock:
             w = self.state()
+            if w['corpus_kind'] != 'synthetic':
+                from .embeddings import CONFIG, CONFIG_HASH, EmbeddingCache
+                from .analysis import analyze_embeddings
+                vectors = EmbeddingCache(ROOT / '.aurelius/vectors').matrix(w['passages'])
+                key = hashlib.sha256((corpus_identity(w['passages']) + CONFIG_HASH + np.__version__ + sklearn.__version__).encode()).hexdigest()
+                directory = self.path.parent / 'analysis' / key
+                metadata = directory / 'projection.json'
+                if metadata.exists():
+                    return json.loads(metadata.read_text())
+                result, arrays = analyze_embeddings(w, vectors, CONFIG)
+                directory.mkdir(parents=True, exist_ok=True, mode=0o700)
+                np.savez_compressed(directory / 'arrays.npz', **arrays)
+                metadata.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
+                with self.connect() as db:
+                    db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)', (result['run_id'], 'pca_cluster', encode(CONFIG), encode(result)))
+                return result
             key = hashlib.sha256((corpus_identity(w['passages']) + PIPELINE_VERSION + np.__version__ + sklearn.__version__).encode()).hexdigest()
             directory = self.path.parent / 'analysis' / key
             metadata = directory / 'projection.json'
@@ -146,6 +168,8 @@ class Store:
             db.execute('INSERT OR IGNORE INTO reviews VALUES (?,?,?)', (r['id'], r['revision_id'], encode(r)))
         for c in w['concepts']:
             db.execute('INSERT OR IGNORE INTO concepts VALUES (?,?)', (c['id'], encode(c)))
+        for p in w.get('propositions', []):
+            db.execute('INSERT OR IGNORE INTO propositions VALUES (?,?,?)', (p['id'], p['revision_id'], encode(p)))
         for m in w['memberships']:
             source = next((p['revision_id'] for p in w['passages'] if p['id'] == m.get('passage_id')), None)
             db.execute('INSERT OR IGNORE INTO memberships(id,concept_id,payload_json,passage_revision,proposition_revision) VALUES (?,?,?,?,?)', (m['id'], m['concept_id'], encode(m), source, m.get('proposition_revision')))

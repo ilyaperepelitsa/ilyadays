@@ -43,9 +43,10 @@ class SourceSpan(StrictModel):
 class Workspace(StrictModel):
     fixture_revision: int = 1
     target_mappings: list[dict[str, Any]] = Field(default_factory=list)
+    import_audit: dict[str, Any] | None = None
     schema_version: Literal[1]
     version: int = Field(ge=0)
-    corpus_kind: Literal['synthetic']
+    corpus_kind: Literal['synthetic', 'hays', 'public_domain_backup']
     offset_convention: Literal['unicode-scalar-half-open-v1']
     editions: list[dict[str, Any]]
     passages: list[Passage]
@@ -53,6 +54,7 @@ class Workspace(StrictModel):
     conclusions: list[dict[str, Any]]
     expressions: list[dict[str, Any]]
     revisions: list[dict[str, Any]]
+    propositions: list[dict[str, Any]] = Field(default_factory=list)
     bundles: list[dict[str, Any]]
     links: list[dict[str, Any]]
     assessments: dict[str, dict[str, str]]

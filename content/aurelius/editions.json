@@ -1,4 +1,56 @@
 [
- {"id":"hays-2002","role":"Primary edition","work":"Meditations: A New Translation","translator":"Gregory Hays","publisher":"Modern Library / Random House Publishing Group","edition":"2002 ebook","isbn":"9781588361738","source_location":"https://www.penguinrandomhouse.com/books/6367/meditations-by-marcus-aurelius/9781588361738/","retailer_location":"https://www.kobo.com/gr/en/ebook/meditations-20","acquisition_status":"Not acquired","available_format":"EPUB3 (Adobe DRM), per Kobo","importability":"No unrestricted, text-readable file verified. This listing is not an import recommendation.","access_restrictions":"Adobe DRM; territory-dependent availability. No circumvention.","checked_at":"2026-11-10","file_hash":null,"parser_version":null},
- {"id":"waterfield-2021","role":"Optional comparison","work":"Meditations: The Annotated Edition","translator":"Robin Waterfield","publisher":"Basic Books","edition":"2021 ebook","isbn":"9781541675605","source_location":"https://www.hachettebookgroup.com/titles/marcus-aurelius/meditations/9781541675605/","retailer_location":"https://www.kobo.com/ww/en/ebook/meditations-207","acquisition_status":"Not acquired; not required","available_format":"EPUB3 (Adobe DRM), per Kobo","importability":"No unrestricted, text-readable file verified.","access_restrictions":"Adobe DRM; retailer date differs from publisher date.","checked_at":"2026-11-10","file_hash":null,"parser_version":null}
+  {
+    "id": "hays-2002",
+    "role": "Primary edition",
+    "work": "Meditations: A New Translation",
+    "translator": "Gregory Hays",
+    "publisher": "Modern Library / Random House Publishing Group",
+    "edition": "2002 ebook",
+    "isbn": "9781588361738",
+    "source_location": "https://www.penguinrandomhouse.com/books/6367/meditations-by-marcus-aurelius/9781588361738/",
+    "retailer_location": "https://www.kobo.com/gr/en/ebook/meditations-20",
+    "acquisition_status": "User-supplied OCR privately parsed: 488 passages; import review pending",
+    "available_format": "Supplied UTF-8 DjVuOCR text; retail Kobo EPUB3 uses Adobe DRM",
+    "importability": "Numbered text imported privately with exact offsets; no DRM removal. Archive is not publisher-authenticated.",
+    "access_restrictions": "Adobe DRM; territory-dependent availability. No circumvention.",
+    "checked_at": "2026-11-10",
+    "file_hash": "ab14978781d3f7367387be9aaf577fe95eda6c05a98ec574d342b908aea36789",
+    "parser_version": "numbered-text-v2"
+  },
+  {
+    "id": "waterfield-2021",
+    "role": "Optional comparison",
+    "work": "Meditations: The Annotated Edition",
+    "translator": "Robin Waterfield",
+    "publisher": "Basic Books",
+    "edition": "2021 ebook",
+    "isbn": "9781541675605",
+    "source_location": "https://www.hachettebookgroup.com/titles/marcus-aurelius/meditations/9781541675605/",
+    "retailer_location": "https://www.kobo.com/ww/en/ebook/meditations-207",
+    "acquisition_status": "Not acquired; not required",
+    "available_format": "EPUB3 (Adobe DRM), per Kobo",
+    "importability": "No unrestricted, text-readable file verified.",
+    "access_restrictions": "Adobe DRM; retailer date differs from publisher date.",
+    "checked_at": "2026-11-10",
+    "file_hash": null,
+    "parser_version": null
+  },
+  {
+    "id": "casaubon-gutenberg-2680",
+    "role": "User-selected backup · separate corpus",
+    "work": "Meditations",
+    "translator": "Meric Casaubon",
+    "publisher": "Project Gutenberg",
+    "edition": "eBook 2680; updated July 13, 2026",
+    "isbn": null,
+    "source_location": "https://www.gutenberg.org/ebooks/2680",
+    "retailer_location": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt",
+    "acquisition_status": "Privately parsed: 418 canonical passages; three selected for the public editorial study",
+    "available_format": "UTF-8 plain text",
+    "importability": "Imported separately; Roman and inline section labels audited. Numbering is not equated to Hays.",
+    "access_restrictions": "Public domain in USA per Project Gutenberg. Source and license retained; no unrestricted-redistribution assumption for Hays.",
+    "checked_at": "2026-11-10",
+    "file_hash": "6977474f82a39dd88a4af31a59504821658174d33c177732c54357e4d680b96c",
+    "parser_version": "numbered-text-v2"
+  }
 ]

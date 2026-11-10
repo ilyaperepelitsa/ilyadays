@@ -16,7 +16,8 @@
     "check:fitness:catalog": "node scripts/fitness-machine-specs.mjs check && node scripts/fitness-catalog-seed.mjs --check",
     "aurelius:dev": "node scripts/aurelius-dev.mjs",
     "test:aurelius": "node scripts/aurelius-test.mjs",
-    "aurelius:analysis": "apps/aurelius/.venv/bin/python scripts/aurelius-analysis.py"
+    "aurelius:analysis": "apps/aurelius/.venv/bin/python scripts/aurelius-analysis.py",
+    "aurelius:corpus": "apps/aurelius/.venv/bin/python scripts/aurelius-corpus.py"
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.2.1",

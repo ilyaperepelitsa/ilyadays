@@ -11,7 +11,12 @@ from .store import ROOT, Store
 
 
 def create_app(directory=None):
-    store = Store(Path(directory or os.environ.get('AURELIUS_DATA_DIR', ROOT / '.aurelius')))
+    workspace_file = os.environ.get('AURELIUS_WORKSPACE_FILE')
+    workspace_path = ROOT / workspace_file if workspace_file else None
+    data_path = Path(directory or os.environ.get('AURELIUS_DATA_DIR', ROOT / '.aurelius'))
+    if not data_path.is_absolute():
+        data_path = ROOT / data_path
+    store = Store(data_path, workspace_path)
     ui_port = int(os.environ.get('AURELIUS_UI_PORT', '3150'))
     app = FastAPI(title='Aurelius local workbench', docs_url=None, redoc_url=None, openapi_url=None)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=['127.0.0.1', 'localhost', 'testserver'])
@@ -30,7 +35,7 @@ def create_app(directory=None):
 
     @app.get('/health')
     def health():
-        return {'storage': 'sqlite', 'corpus': 'synthetic', 'external_processing': False, 'real_import': False, 'schema_version': 1}
+        return {'storage': 'sqlite', 'corpus': store.state()['corpus_kind'], 'external_processing': False, 'real_import': store.state()['corpus_kind'] != 'synthetic', 'schema_version': 1}
 
     @app.get('/state')
     def state():
@@ -38,7 +43,10 @@ def create_app(directory=None):
 
     @app.get('/analysis')
     def analysis():
-        return store.analysis()
+        try:
+            return store.analysis()
+        except ValueError as error:
+            raise HTTPException(status_code=409, detail=str(error)) from error
 
     @app.post('/commands')
     def command(value: Command):

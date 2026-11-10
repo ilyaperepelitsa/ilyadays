@@ -207,13 +207,27 @@ def test_edition_corpus_lock_and_private_export(page):
     page.get_by_role('button', name='Edition & import', exact=True).last.click()
     expect(page.locator('.au-section')).to_contain_text('9781588361738')
     expect(page.locator('.au-section')).to_contain_text('Adobe DRM')
-    expect(page.locator('.au-section')).to_contain_text('External processing is off')
+    expect(page.locator('.au-section')).to_contain_text('explicit import/external-processing approval and budget')
     with page.expect_download() as download:
         page.get_by_role('button', name='Export demo project').click()
     exported = json.loads(Path(download.value.path()).read_text())
     assert exported['manifest']['not_a_translation'] is True
     assert exported['manifest']['model_runs'] == []
     assert exported['workspace']['corpus_kind'] == 'synthetic'
+
+
+def test_edit_default_before_selecting_any_variant_keeps_reload_usable(page):
+    page.evaluate("Object.keys(localStorage).filter(k=>k.startsWith('aurelius-')).forEach(k=>localStorage.removeItem(k))")
+    page.reload(wait_until='domcontentloaded')
+    editor=page.get_by_role('textbox',name='Conclusion text',exact=True)
+    expect(editor).to_be_visible()
+    editor.fill('The default teaching was edited before selecting an expression.')
+    page.get_by_test_id('meaning-card').get_by_role('button',name='Save revision',exact=True).click()
+    wait_saved(page)
+    page.reload(wait_until='domcontentloaded')
+    expect(editor).to_have_text('The default teaching was edited before selecting an expression.')
+    page.get_by_role('button',name='Add expression pane',exact=True).click()
+    expect(page.get_by_test_id('expression-card')).to_have_attribute('data-status','stale')
 
 
 @pytest.mark.parametrize('width,lang,scheme', [(360,'en','light'),(390,'ru','dark'),(768,'en','dark')])

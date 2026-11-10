@@ -16,4 +16,4 @@ for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>stop());
 const backend=spawn(python,['-m','uvicorn','aurelius.api:create_app','--factory','--host','127.0.0.1','--port',String(apiPort)],{cwd:resolve(root,'apps/aurelius'),env:process.env,stdio:'inherit'});children.push(backend);
 const frontend=spawn(process.execPath,['node_modules/next/dist/bin/next','dev','--hostname','127.0.0.1','--port',String(uiPort)],{cwd:root,env:{...process.env,AURELIUS_LOCAL_SERVICE:'1',NEXT_PUBLIC_AURELIUS_LOCAL:'1'},stdio:'inherit'});children.push(frontend);
 for(const child of children){child.on('error',error=>{console.error(error.message);stop(1);});child.on('exit',code=>{if(!closing)stop(code??1);});}
-console.log(`Aurelius: http://127.0.0.1:${uiPort}/stoicism — private loopback workspace; synthetic corpus until Stage 2.`);
+console.log(`Aurelius: http://127.0.0.1:${uiPort}/stoicism — private loopback workspace; ${process.env.AURELIUS_WORKSPACE_FILE?'selected private import':'original synthetic fixtures'}.`);

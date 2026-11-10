@@ -140,6 +140,19 @@
       "title": "Target Mappings",
       "type": "array"
     },
+    "import_audit": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Import Audit"
+    },
     "schema_version": {
       "const": 1,
       "title": "Schema Version",
@@ -151,7 +164,11 @@
       "type": "integer"
     },
     "corpus_kind": {
-      "const": "synthetic",
+      "enum": [
+        "synthetic",
+        "hays",
+        "public_domain_backup"
+      ],
       "title": "Corpus Kind",
       "type": "string"
     },
@@ -204,6 +221,14 @@
         "type": "object"
       },
       "title": "Revisions",
+      "type": "array"
+    },
+    "propositions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Propositions",
       "type": "array"
     },
     "bundles": {

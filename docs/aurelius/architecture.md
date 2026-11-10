@@ -35,3 +35,13 @@ Test exact/invented/repeated quotes, Unicode conversion, source immutability, jo
 External blockers: an authorized text-readable Hays file and import/segmentation approval; separate source-processing consent, credentials and bounded budget for external inference. No automatic purchases or DRM removal.
 
 Source-linked writing should remain usable before paid inference. The initial API deliberately accepts the checked-in synthetic fixture only; a later authorized-file importer must not reuse the synthetic-only validation bypass. Real EPUB ingestion, archive defenses, model adapters, ontology editing and manuscript export remain separate work items.
+
+## Real source import and vector cache increment
+
+The deterministic plain-text importer stores immutable edition-specific corpora plus source bytes and an offset/segmentation inspection report under ignored `.aurelius/corpora/`. The local service may seed a new dedicated workspace from an explicitly selected private `workspace.json`; existing workspaces remain separate. Real imported corpora skip synthetic fixture upgrades. Hays and the user-selected Casaubon backup retain independent section IDs, editorial links and assessments.
+
+Full OpenAI float32 vectors live in a separate private `embedding-cache.sqlite3`, content-addressed by exact input and the complete fixed configuration. Source-revision associations are many-to-many; identical inputs may reuse a vector, without merging textual identities or independent-evidence judgments. An immutable-vector guard prevents overwriting prior results. Request reservations and observed/uncertain outcomes are durable. This small shared cache is separate from editorial snapshots so conclusion edits and new workspace instances cannot invalidate unchanged source vectors.
+
+The explicit CLI is the only paid-processing entry point in this increment. It verifies the exact imported source ranges, requires exact-corpus/import/external-processing approval and bounded token/USD caps, disables SDK automatic retries and uses the official OpenAI endpoint. It never invokes an unconfigured generation model. The ordinary local browser does not initiate provider calls.
+
+A real projection consumes a complete cached source matrix and records its full configuration and vector/corpus/software identities. A public map export contains references, hashes and coordinates only. Full modern source text and source vectors remain private. The hosted default three-passage Casaubon study has its own IndexedDB database; original synthetic projects remain accessible separately. A missing real-map artifact produces an explicit pending state rather than a synthetic fallback.

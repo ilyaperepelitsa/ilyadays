@@ -77,3 +77,40 @@ def write_fixture_analysis(workspace, metadata_path: Path, arrays_path: Path):
     metadata_path.write_text(json.dumps(artifact, ensure_ascii=False, indent=2) + '\n')
     np.savez_compressed(arrays_path, **arrays)
     return artifact
+
+
+def analyze_embeddings(corpus, vectors, embedding_configuration):
+    """Real source vectors only. This entry point never invokes lexical feature extraction."""
+    if corpus.get('corpus_kind') not in {'hays', 'public_domain_backup'}:
+        raise ValueError('A real edition corpus is required')
+    if embedding_configuration.get('model') != 'text-embedding-3-large' or embedding_configuration.get('dimensions') != DIMENSIONS:
+        raise ValueError('The selected full embedding model/dimensions must be preserved')
+    passages = corpus['passages']
+    x = np.asarray(vectors, dtype=np.float32)
+    if x.shape != (len(passages), DIMENSIONS) or len({p['revision_id'] for p in passages}) != len(passages):
+        raise ValueError('Exactly one full vector per canonical chunk is required')
+    for p in passages:
+        if hashlib.sha256(p['text'].encode()).hexdigest() != p['text_hash']:
+            raise ValueError('Source/hash mismatch')
+    fit, coords, hierarchy, assignments = project_vectors(x)
+    vector_hash = hashlib.sha256(x.tobytes()).hexdigest()
+    identity = corpus_identity(passages)
+    pipeline = 'aurelius-source-embedding-discovery-v1'
+    config_hash = hashlib.sha256(json.dumps(embedding_configuration, sort_keys=True).encode()).hexdigest()
+    run_hash = hashlib.sha256((identity+pipeline+vector_hash+config_hash+np.__version__+sklearn.__version__).encode()).hexdigest()
+    edition = corpus['editions'][0]
+    artifact = {'schema_version': 1, 'pipeline_version': pipeline,
+                'run_id': f'source-pca-{run_hash[:16]}', 'corpus_kind': corpus['corpus_kind'],
+                'corpus_hash': identity, 'vector_origin': 'openai',
+                'vector_description': 'OpenAI text-embedding-3-large, full 3072-dimensional cached source vectors',
+                'embedding_configuration': embedding_configuration, 'configuration_hash': config_hash,
+                'edition': edition, 'dimensions': DIMENSIONS, 'vector_hash': vector_hash,
+                'sampled': False, 'chunk_count': len(passages), 'excluded_chunks': [],
+                'preprocessing': {'input': 'exact_source_text', 'centered_for_pca': True, 'feature_standardization': False},
+                'pca': {'solver': 'full', 'explained_variance': fit.explained_variance_.tolist(), 'explained_variance_ratio': fit.explained_variance_ratio_.tolist(), 'singular_values': fit.singular_values_.tolist()},
+                'clustering': {'linkage': 'average', 'distance': 'cosine', 'input_dimensions': DIMENSIONS, 'input_space': 'full_feature_space', 'labels_by_k': assignments, 'children': hierarchy.children_.tolist(), 'distances': hierarchy.distances_.tolist()},
+                'software': {'numpy': np.__version__, 'scikit_learn': sklearn.__version__},
+                'points': [{'passage_id': p['id'], 'revision_id': p['revision_id'], 'text_hash': p['text_hash'], 'reference': f"{p['book']}.{p['section']}", 'x': float(coords[i, 0]), 'y': float(coords[i, 1])} for i, p in enumerate(passages)]}
+    arrays = {'vectors': x, 'components': fit.components_, 'mean': fit.mean_,
+              'coordinates': coords, 'row_ids': np.array([p['revision_id'] for p in passages])}
+    return artifact, arrays
