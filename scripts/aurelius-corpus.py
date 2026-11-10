@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'apps/aurelius'))
 from aurelius.analysis import analyze_embeddings, corpus_identity
-from aurelius.embeddings import CONFIG, EmbeddingCache
+from aurelius.embeddings import CONFIG, PRODUCTION_CONFIG, EmbeddingCache
 from aurelius.importer import import_file
 
 EDITIONS = {
@@ -71,15 +71,20 @@ def main():
     imp = sub.add_parser('import')
     imp.add_argument('--source', required=True)
     imp.add_argument('--edition', choices=EDITIONS, required=True)
-    for name in ['preview', 'embed', 'project', 'export-map', 'study']:
+    for name in ['preview', 'embed', 'embed-production', 'project', 'export-map', 'study']:
         item = sub.add_parser(name)
         item.add_argument('--corpus-dir', required=True)
-        if name == 'embed':
+        if name in ['embed', 'embed-production']:
             item.add_argument('--review-import', action='store_true')
             item.add_argument('--allow-openai', action='store_true')
             item.add_argument('--corpus-hash', required=True)
             item.add_argument('--token-budget', type=int, required=True)
             item.add_argument('--cost-budget-usd', type=float, required=True)
+        if name in ['preview','project']:
+            item.add_argument('--production',action='store_true')
+        if name == 'embed-production':
+            item.add_argument('--deployment-url',required=True)
+            item.add_argument('--access-file',required=True)
         if name == 'export-map':
             item.add_argument('--output', default=str(ROOT/'content/aurelius/real-map.json'))
         if name == 'study':
@@ -91,42 +96,54 @@ def main():
         print(json.dumps({'directory': str(target.relative_to(ROOT)), 'chunks': report['chunk_count'], 'warnings': report['warnings'], 'status': report['segmentation_status']}, indent=2))
         return
     directory, corpus, report = read_import(args.corpus_dir)
-    cache = EmbeddingCache(ROOT/'.aurelius/vectors')
+    configuration = PRODUCTION_CONFIG if args.action=='embed-production' or getattr(args,'production',False) else CONFIG
+    cache = EmbeddingCache(ROOT/'.aurelius/vectors', configuration)
     if args.action == 'preview':
         plan = cache.plan(corpus['passages'])
         plan.pop('batches')
         print(json.dumps({**plan, 'edition': corpus['editions'][0], 'inspection': {'file_hash': report['file_hash'], 'books': report['books'], 'warnings': report['warnings'], 'book_front_matter': report['book_front_matter'], 'status': report['segmentation_status']}, 'api_requests_made': 0}, indent=2))
-    elif args.action == 'embed':
+    elif args.action in ['embed','embed-production']:
         if args.corpus_hash != corpus_identity(corpus['passages']):
             raise ValueError('Approval refers to a different corpus revision')
         if any(w['kind'] in {'duplicate_section', 'section_sequence', 'missing_initial_section', 'empty_section'} for w in report['warnings']):
             raise ValueError('Unresolved canonical section boundaries; repair/review import before approval')
         if not args.review_import or not args.allow_openai:
             raise ValueError('Review inspection.json and explicitly approve import and external processing')
-        key = server_api_key()
-        if not key:
+        key = server_api_key() if args.action=='embed' else None
+        if args.action=='embed' and not key:
             raise ValueError('Set OPENAI_API_KEY in the server environment or ignored .env.local; never paste it into chat or source code')
         approval = {'corpus_hash': args.corpus_hash, 'source_file_hash': report['file_hash'],
                     'parser_version': report['parser_version'], 'segmentation_reviewed': args.review_import,
                     'external_processing_approved': args.allow_openai, 'token_budget': args.token_budget,
                     'cost_budget_usd': args.cost_budget_usd, 'reviewer': 'explicit CLI operator approval'}
-        (directory/'processing-approval.json').write_text(json.dumps(approval, indent=2)+'\n')
+        if args.action=='embed-production':
+            from aurelius.production_client import ProductionClient
+            manifest=json.loads((ROOT/'content/aurelius/production-inputs.json').read_text())
+            if not any(c['corpus_hash']==args.corpus_hash for c in manifest['corpora']):
+                raise ValueError('Corpus is not in the production allowlist')
+            if args.cost_budget_usd>manifest['combined_cap_usd']/len(manifest['corpora']):
+                raise ValueError('Per-corpus production cap would exceed the disclosed combined budget')
+            client=ProductionClient(args.deployment_url,private_path(args.access_file),manifest['id'])
+            approval['processing_environment']='protected_vercel_production'
+        else:
+            from openai import OpenAI
+            client=OpenAI(api_key=key,base_url='https://api.openai.com/v1',max_retries=0,timeout=60)
+        (directory/'processing-approval.json').write_text(json.dumps(approval,indent=2)+'\n')
         (directory/'processing-approval.json').chmod(0o600)
-        from openai import OpenAI
         canceled = False
         def stop(*_):
             nonlocal canceled
             canceled = True
         signal.signal(signal.SIGINT, stop)
         signal.signal(signal.SIGTERM, stop)
-        result = cache.embed(corpus['passages'], OpenAI(api_key=key, base_url='https://api.openai.com/v1', max_retries=0, timeout=60), approval, cancel=lambda: canceled)
+        result = cache.embed(corpus['passages'], client, approval, cancel=lambda: canceled)
         print(json.dumps(result, indent=2))
     elif args.action == 'project':
         import numpy as np
-        artifact, arrays = analyze_embeddings(corpus, cache.matrix(corpus['passages']), CONFIG)
+        artifact, arrays = analyze_embeddings(corpus, cache.matrix(corpus['passages']), configuration)
         (directory/'projection.json').write_text(json.dumps(artifact, indent=2)+'\n')
         np.savez_compressed(directory/'projection-arrays.npz', **arrays)
-        print(json.dumps({'run_id': artifact['run_id'], 'chunks': artifact['chunk_count'], 'model': CONFIG['model'], 'dimensions': CONFIG['dimensions'], 'excluded': 0, 'sampled': False}, indent=2))
+        print(json.dumps({'run_id': artifact['run_id'], 'chunks': artifact['chunk_count'], 'model': configuration['model'], 'dimensions': configuration['dimensions'], 'excluded': 0, 'sampled': False}, indent=2))
     elif args.action == 'study':
         from aurelius.study import manual_study
         from aurelius.store import validate_workspace

@@ -3,7 +3,7 @@ import hashlib
 from types import SimpleNamespace
 import numpy as np
 import pytest
-from aurelius.embeddings import CONFIG, DIMENSIONS, MODEL, EmbeddingCache, input_key
+from aurelius.embeddings import CONFIG, PRODUCTION_CONFIG, DIMENSIONS, MODEL, EmbeddingCache, input_key
 from aurelius.analysis import corpus_identity, analyze_embeddings
 
 
@@ -140,3 +140,18 @@ def test_real_pca_requires_complete_full_vectors_and_does_not_publish_text(tmp_p
     assert all('text' not in point and 'raw_text' not in point for point in artifact['points'])
     assert np.allclose((arrays['vectors']-arrays['mean'])@arrays['components'].T,arrays['coordinates'])
     with pytest.raises(ValueError,match='one full vector'):analyze_embeddings(corpus,cache.matrix(items)[:,:2],CONFIG)
+
+
+def test_production_transport_has_its_own_immutable_configuration_and_restart_cache(tmp_path):
+    items=passages();cache=EmbeddingCache(tmp_path,PRODUCTION_CONFIG);original=MockClient()
+    class ProductionMock:
+        def __init__(self):self.embeddings=self;self.calls=[]
+        def create(self,**kwargs):
+            self.calls.append(kwargs);assert kwargs['model']=='openai/text-embedding-3-large'
+            response=original.create(**{**kwargs,'model':MODEL});response.model=kwargs['model'];return response
+    client=ProductionMock();cache.embed(items,client,approval(items))
+    vectors=cache.matrix(items).copy()
+    cache=EmbeddingCache(tmp_path,PRODUCTION_CONFIG);cache.embed(items,client,approval(items))
+    assert len(client.calls)==1 and np.array_equal(cache.matrix(items),vectors)
+    assert cache.plan(items)['configuration']['transport']=='vercel_ai_gateway_production'
+    assert EmbeddingCache(tmp_path).plan(items)['cached_chunks']==0

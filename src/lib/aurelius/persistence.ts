@@ -2,6 +2,7 @@ import analysis from '../../../content/aurelius/analysis.json';
 import fixture from '../../../content/aurelius/fixture.json';
 import backupStudy from '../../../content/aurelius/backup-study.json';
 import realMap from '../../../content/aurelius/real-map.json';
+import backupMap from '../../../content/aurelius/backup-map.json';
 import { upgradeFixture } from './upgrade.mjs';
 import { upgradeStudy } from './study-upgrade.mjs';
 import { applyCommand } from './domain.mjs';
@@ -53,7 +54,7 @@ export async function connectStorage():Promise<WorkStorage>{
   }
   const demo=new URLSearchParams(window.location.search).get('corpus')==='demo';
   const corpus:BrowserCorpus=demo?{name:DB,seed:fixture as Workspace}:{name:'aurelius-casaubon-study-v1',seed:backupStudy as Workspace};
-  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;if(!realMap)throw Error('Full-corpus OpenAI embeddings have not been run yet. The real imports are extracted; production model access and an approved processing run are needed. No lexical vectors are shown as real embeddings.');return realMap as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
+  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;const selected=new URLSearchParams(window.location.search).get('map')==='backup'?backupMap:realMap;if(!selected)throw Error('Full-corpus OpenAI embeddings have not been run yet. The real imports are extracted; production model access and an approved processing run are needed. No lexical vectors are shown as real embeddings.');return selected as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
 }
 export function downloadSyntheticProject(workspace:Workspace){
   if(workspace.corpus_kind==='hays')throw Error('Modern translation export is private-only and not implemented');

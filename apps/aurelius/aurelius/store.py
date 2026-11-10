@@ -128,20 +128,27 @@ class Store:
         with self.analysis_lock:
             w = self.state()
             if w['corpus_kind'] != 'synthetic':
-                from .embeddings import CONFIG, CONFIG_HASH, EmbeddingCache
+                from .embeddings import CONFIG, PRODUCTION_CONFIG, EmbeddingCache, fingerprint
                 from .analysis import analyze_embeddings
-                vectors = EmbeddingCache(ROOT / '.aurelius/vectors').matrix(w['passages'])
-                key = hashlib.sha256((corpus_identity(w['passages']) + CONFIG_HASH + np.__version__ + sklearn.__version__).encode()).hexdigest()
+                configuration = PRODUCTION_CONFIG
+                try:
+                    vectors = EmbeddingCache(ROOT / '.aurelius/vectors', configuration).matrix(w['passages'])
+                except ValueError as error:
+                    if not str(error).startswith('Real embeddings incomplete.'):
+                        raise
+                    configuration = CONFIG
+                    vectors = EmbeddingCache(ROOT / '.aurelius/vectors', configuration).matrix(w['passages'])
+                key = hashlib.sha256((corpus_identity(w['passages']) + fingerprint(configuration) + np.__version__ + sklearn.__version__).encode()).hexdigest()
                 directory = self.path.parent / 'analysis' / key
                 metadata = directory / 'projection.json'
                 if metadata.exists():
                     return json.loads(metadata.read_text())
-                result, arrays = analyze_embeddings(w, vectors, CONFIG)
+                result, arrays = analyze_embeddings(w, vectors, configuration)
                 directory.mkdir(parents=True, exist_ok=True, mode=0o700)
                 np.savez_compressed(directory / 'arrays.npz', **arrays)
                 metadata.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
                 with self.connect() as db:
-                    db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)', (result['run_id'], 'pca_cluster', encode(CONFIG), encode(result)))
+                    db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)', (result['run_id'], 'pca_cluster', encode(configuration), encode(result)))
                 return result
             key = hashlib.sha256((corpus_identity(w['passages']) + PIPELINE_VERSION + np.__version__ + sklearn.__version__).encode()).hexdigest()
             directory = self.path.parent / 'analysis' / key

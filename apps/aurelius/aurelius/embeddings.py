@@ -17,6 +17,9 @@ DIMENSIONS = 3072
 CONFIG = {'provider': 'openai', 'model': MODEL, 'dimensions': DIMENSIONS,
           'normalization': 'identity-v1', 'input': 'exact_source_text_utf8',
           'encoding_format': 'float', 'endpoint': 'https://api.openai.com/v1/embeddings'}
+PRODUCTION_CONFIG = {**CONFIG, 'transport': 'vercel_ai_gateway_production',
+                     'endpoint': 'https://ai-gateway.vercel.sh/v1/embeddings',
+                     'wire_model': 'openai/text-embedding-3-large', 'provider_allowlist': ['openai']}
 PRICE_PER_MILLION = .13  # Official model page checked 2026-11-10; recorded with each run.
 MAX_INPUT_TOKENS = 8191  # Conservative boundary below the documented 8192 maximum.
 BATCH_TOKENS = 16000
@@ -34,8 +37,8 @@ def fingerprint(value):
 CONFIG_HASH = fingerprint(CONFIG)
 
 
-def input_key(text):
-    return fingerprint({'text': text, 'configuration': CONFIG})
+def input_key(text, configuration=CONFIG):
+    return fingerprint({'text': text, 'configuration': configuration})
 
 
 def valid_vector(value):
@@ -46,7 +49,12 @@ def valid_vector(value):
 
 
 class EmbeddingCache:
-    def __init__(self, directory: Path):
+    def __init__(self, directory: Path, configuration=None):
+        self.configuration = dict(configuration or CONFIG)
+        if self.configuration not in [CONFIG, PRODUCTION_CONFIG]:
+            raise ValueError('Only the fixed full-dimensional OpenAI configurations are permitted')
+        self.config_hash = fingerprint(self.configuration)
+        self.wire_model = self.configuration.get('wire_model', MODEL)
         directory.mkdir(parents=True, exist_ok=True, mode=0o700)
         self.path = directory/'embedding-cache.sqlite3'
         with self.connect() as db:
@@ -83,19 +91,19 @@ class EmbeddingCache:
             db.close()
 
     def get(self, text):
-        key = input_key(text)
+        key = input_key(text, self.configuration)
         with self.connect() as db:
             row = db.execute('SELECT vector_f32,vector_hash,configuration_hash FROM vectors WHERE cache_key=?', (key,)).fetchone()
         if not row:
             return None
-        if hashlib.sha256(row[0]).hexdigest() != row[1] or row[2] != CONFIG_HASH:
+        if hashlib.sha256(row[0]).hexdigest() != row[1] or row[2] != self.config_hash:
             raise ValueError('Cached embedding integrity failure; refusing silent replacement')
         return valid_vector(np.frombuffer(row[0], dtype='<f4')).copy()
 
     def put(self, passage, vector, metadata):
         vector = valid_vector(vector)
         raw = vector.tobytes()
-        key = input_key(passage['text'])
+        key = input_key(passage['text'], self.configuration)
         text_hash = hashlib.sha256(passage['text'].encode()).hexdigest()
         if passage['text_hash'] != text_hash:
             raise ValueError('Embedding source/hash mismatch')
@@ -104,7 +112,7 @@ class EmbeddingCache:
             if prior and prior[0] != hashlib.sha256(raw).hexdigest():
                 raise ValueError('Existing vectors cannot be overwritten by a repeated API result')
             db.execute('INSERT OR IGNORE INTO vectors(cache_key,input_hash,configuration_hash,dimensions,vector_f32,vector_hash,metadata_json) VALUES(?,?,?,?,?,?,?)',
-                       (key, text_hash, CONFIG_HASH, DIMENSIONS, raw, hashlib.sha256(raw).hexdigest(), canonical({**metadata, 'configuration': CONFIG})))
+                       (key, text_hash, self.config_hash, DIMENSIONS, raw, hashlib.sha256(raw).hexdigest(), canonical({**metadata, 'configuration': self.configuration})))
             db.execute('INSERT OR IGNORE INTO source_vectors VALUES(?,?,?)', (passage['revision_id'], key, text_hash))
 
     def plan(self, passages):
@@ -120,7 +128,7 @@ class EmbeddingCache:
             if self.get(p['text']) is not None:
                 cached += 1
                 continue
-            key = input_key(p['text'])
+            key = input_key(p['text'], self.configuration)
             if key not in seen:
                 pending.append((p, tokens))
                 seen.add(key)
@@ -134,7 +142,7 @@ class EmbeddingCache:
         if current:
             batches.append(current)
         total = sum(n for _, n in pending)
-        return {'configuration': CONFIG, 'configuration_hash': CONFIG_HASH,
+        return {'configuration': self.configuration, 'configuration_hash': self.config_hash,
                 'corpus_hash': corpus_identity(passages), 'chunks': len(passages),
                 'cached_chunks': cached, 'uncached_unique_inputs': len(pending),
                 'input_tokens': total, 'estimated_usd': total*PRICE_PER_MILLION/1e6,
@@ -170,18 +178,18 @@ class EmbeddingCache:
             raise ValueError('Unresolved over-limit/empty chunks; nothing was silently truncated')
         if plan['input_tokens'] > token_cap or plan['estimated_usd'] > cost_cap:
             raise ValueError('Approved budget is below the remaining run estimate; no request was made')
-        run_id = fingerprint({'corpus_hash': plan['corpus_hash'], 'configuration_hash': CONFIG_HASH})
+        run_id = fingerprint({'corpus_hash': plan['corpus_hash'], 'configuration_hash': self.config_hash})
         for batch in plan['batches']:
             texts = [p['text'] for p, _ in batch]
             tokens = sum(n for _, n in batch)
             for attempt in range(3):
                 if cancel():
                     return {'state': 'canceled', 'run_id': run_id}
-                meta = {'run_id': run_id, 'configuration': CONFIG, 'source_revisions': [p['revision_id'] for p, _ in batch], 'attempt': attempt+1,
+                meta = {'run_id': run_id, 'configuration': self.configuration, 'source_revisions': [p['revision_id'] for p, _ in batch], 'attempt': attempt+1,
                         'approval': approval, 'billing_outcome': 'unconfirmed'}
                 request_id = self.reserve(run_id, tokens, token_cap, cost_cap, meta)
                 try:
-                    response = client.embeddings.create(model=MODEL, dimensions=DIMENSIONS, input=texts, encoding_format='float')
+                    response = client.embeddings.create(model=self.wire_model, dimensions=DIMENSIONS, input=texts, encoding_format='float')
                 except Exception as error:
                     status = getattr(error, 'status_code', None)
                     unknown = status is None or status >= 500
@@ -193,7 +201,7 @@ class EmbeddingCache:
                         continue
                     raise RuntimeError(f'Embedding request stopped ({type(error).__name__}); billing outcome {"unknown" if unknown else "rejected"}. Cached successes are retained.') from None
                 try:
-                    if response.model != MODEL or len(response.data) != len(batch):
+                    if response.model != self.wire_model or len(response.data) != len(batch):
                         raise ValueError('Unexpected embedding model or response count')
                     ordered = sorted(response.data, key=lambda row: row.index)
                     if [row.index for row in ordered] != list(range(len(batch))):
@@ -202,9 +210,10 @@ class EmbeddingCache:
                     usage = response.usage.total_tokens
                     if not isinstance(usage, int) or usage < 0:
                         raise ValueError('Invalid observed token usage')
+                    provider_metadata = getattr(response, 'provider_metadata', None)
                     for (passage, _), vector in zip(batch, vectors):
-                        self.put(passage, vector, {'request_id': getattr(response, '_request_id', None), 'returned_model': response.model, 'run_id': run_id, 'input_tokens_batch': usage})
-                    self.complete_request(request_id, 'succeeded', {**meta, 'returned_model': response.model, 'request_id': getattr(response, '_request_id', None), 'billing_outcome': 'observed'}, usage)
+                        self.put(passage, vector, {'request_id': getattr(response, '_request_id', None), 'returned_model': response.model, 'run_id': run_id, 'input_tokens_batch': usage, 'provider_metadata':provider_metadata})
+                    self.complete_request(request_id, 'succeeded', {**meta, 'returned_model': response.model, 'request_id': getattr(response, '_request_id', None), 'billing_outcome': 'observed', 'provider_metadata':provider_metadata}, usage)
                 except (ValueError, TypeError, AttributeError) as error:
                     self.complete_request(request_id, 'validation_failed', {**meta, 'error_type': type(error).__name__, 'billing_outcome': 'response_received; usage may be billable'})
                     raise
@@ -215,7 +224,7 @@ class EmbeddingCache:
             if vector is None:
                 raise ValueError('Embedding run is incomplete')
             with self.connect() as db:
-                db.execute('INSERT OR IGNORE INTO source_vectors VALUES(?,?,?)', (passage['revision_id'], input_key(passage['text']), passage['text_hash']))
+                db.execute('INSERT OR IGNORE INTO source_vectors VALUES(?,?,?)', (passage['revision_id'], input_key(passage['text'], self.configuration), passage['text_hash']))
         return {'state': 'complete', 'run_id': run_id, 'plan': {k: v for k, v in self.plan(passages).items() if k != 'batches'}}
 
     def matrix(self, passages):
