@@ -137,6 +137,15 @@ export async function applyCommand(input,command) {
       w.reviews.push({id:`${op}-review`,revision_id:r.id,decision:a.decision,notes:a.notes,reviewer:'local-user',at:command.at});w.assessments[r.id]={state:a.decision,notes:a.notes};
       for(const dep of w.revisions.filter(d=>d.dependencies.includes(r.id)))invalidate(w,dep.id);break;
     }
+    case 'map_target': {
+      const r=editable(w,e);if(r.kind!=='conclusion')throw Error('Map source evidence to a conclusion');
+      const block=r.doc.content.find(b=>b.attrs.id===a.block_id),text=(block?.content??[]).map(n=>n.text??'').join('');
+      if(!block||!Number.isInteger(a.start)||!Number.isInteger(a.end)||a.start<0||a.end<=a.start||a.end>scalarLength(text)||scalarSlice(text,a.start,a.end)!==a.exact)throw Error('Target clause does not match the saved revision');
+      const available=new Set(currentLinks(w,r.id).map(l=>l.source_span));
+      if(!Array.isArray(a.source_span_ids)||!a.source_span_ids.length||a.source_span_ids.some(id=>!available.has(id)))throw Error('Target mapping needs current source evidence');
+      for(const sid of a.source_span_ids){const span=w.spans.find(s=>s.id===sid);await validateAnchor(w.passages.find(p=>p.revision_id===span.passage_revision),span);}
+      w.target_mappings??=[];w.target_mappings.push({id:`${op}-mapping`,target_revision:r.id,block_id:a.block_id,start:a.start,end:a.end,exact:a.exact,source_span_ids:[...new Set(a.source_span_ids)],granularity:a.granularity==='whole_statement'?'whole_statement':'clause',justification:requireText(a.justification,'Mapping justification'),active:true});invalidate(w,r.id);break;
+    }
     case 'lock':if(!e)throw Error('Unknown item');e.locked=!!a.locked;break;
     case 'preference':if(!w.passages.some(p=>p.id===a.passage_id))throw Error('Unknown passage');w.preferences[a.passage_id]={...(w.preferences[a.passage_id]??{}),...a.preference};break;
     default:throw Error('Unknown command');

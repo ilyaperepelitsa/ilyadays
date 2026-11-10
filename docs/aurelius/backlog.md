@@ -10,3 +10,5 @@
 8. Stage 7 — bounded jobs, reservation before requests, checkpoints, cancellation, retry/unknown-outcome audit, held-out human evaluation and quality report. Limits cannot be raised by a model. No claim of corpus completion while unresolved items remain.
 
 Real-corpus human-reviewed retrieval/fidelity examples cannot be created before the authorized edition is imported. Synthetic regression cases are scaffolding, not scholarly evaluation. Maintain separate citation validity, fidelity, recall, coverage, redundancy and clarity measures.
+
+Detailed execution plans, current UX/PCA gaps and requirement acceptance matrices: [plan/stoicism](../../plan/stoicism/README.md). These plans describe future work; they do not mark unimplemented capabilities complete.

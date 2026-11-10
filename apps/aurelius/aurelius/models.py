@@ -8,7 +8,7 @@ class StrictModel(BaseModel):
 
 class Command(StrictModel):
     id: str = Field(pattern=r'^[a-zA-Z0-9_-]{1,100}$')
-    type: Literal['create', 'edit', 'link', 'unlink', 'link_edit', 'link_review', 'bundle', 'review', 'lock', 'preference']
+    type: Literal['create', 'edit', 'link', 'unlink', 'link_edit', 'link_review', 'bundle', 'review', 'lock', 'preference', 'map_target']
     expected_version: int = Field(ge=0)
     at: str = Field(max_length=64)
     payload: dict[str, Any]
@@ -41,6 +41,8 @@ class SourceSpan(StrictModel):
 
 
 class Workspace(StrictModel):
+    fixture_revision: int = 1
+    target_mappings: list[dict[str, Any]] = Field(default_factory=list)
     schema_version: Literal[1]
     version: int = Field(ge=0)
     corpus_kind: Literal['synthetic']

@@ -69,6 +69,7 @@ def page(browser, service):
     p.on('pageerror', lambda error: errors.append(str(error)))
     p.goto(BASE + '/stoicism', wait_until='domcontentloaded')
     expect(p.get_by_role('textbox', name='Conclusion text', exact=True)).to_be_visible(timeout=30000)
+    p.get_by_role('combobox',name='Selected teaching').select_option('c1')
     yield p
     assert not errors, errors
     assert context.cookies() == []
@@ -202,7 +203,7 @@ def test_edition_corpus_lock_and_private_export(page):
     page.get_by_role('button', name='Unlock decision', exact=True).click()
     wait_saved(page)
     page.get_by_role('button', name='Corpus inspection', exact=True).click()
-    expect(page.locator('tbody tr')).to_have_count(5)
+    expect(page.locator('tbody tr')).to_have_count(len(state(page)['passages']))
     page.get_by_role('button', name='Edition & import', exact=True).last.click()
     expect(page.locator('.au-section')).to_contain_text('9781588361738')
     expect(page.locator('.au-section')).to_contain_text('Adobe DRM')
@@ -245,7 +246,7 @@ def test_unsaved_evidence_blocks_review_and_discard_restores_saved_revision(page
     expect(page.get_by_role('textbox',name='Conclusion text',exact=True)).to_have_text(original)
     page.get_by_role('button',name='Review history',exact=True).click()
     expect(page.get_by_role('heading',name='Immutable revisions & review history')).to_be_visible()
-    assert len(state(page)['revisions']) == 3
+    assert len(state(page)['revisions']) == len(json.loads((ROOT/'content/aurelius/fixture.json').read_text())['revisions'])
 
 
 def test_expression_clickthrough_and_inserted_words_do_not_inherit_provenance(page):
@@ -268,3 +269,49 @@ def test_expression_clickthrough_and_inserted_words_do_not_inherit_provenance(pa
     r = next(r for r in w['revisions'] if r['id'] == rid)
     assert r['dependencies'] == []
     assert w['assessments'][rid]['state'] == 'stale'
+
+
+def test_all_chunk_pca_map_cluster_cuts_and_exact_point_clickthrough(page):
+    w=state(page)
+    page.get_by_role('button',name='PCA map · all chunks',exact=True).click()
+    explorer=page.get_by_test_id('discovery-explorer')
+    expect(explorer).to_be_visible(timeout=30000)
+    expect(page.get_by_test_id('map-coverage')).to_have_text(f"{len(w['passages'])} / {len(w['passages'])} chunks mapped")
+    expect(page.locator('[data-map-chunk]')).to_have_count(len(w['passages']))
+    assert set(page.locator('[data-map-chunk]').evaluate_all('els=>els.map(el=>el.dataset.mapChunk)'))=={p['id'] for p in w['passages']}
+    expect(explorer).to_contain_text('not OpenAI embeddings')
+    page.get_by_role('combobox',name='Cluster count').select_option('4')
+    expect(page.locator('.au-cluster-legend button')).to_have_count(4)
+    page.locator('.au-cluster-legend button').first.click()
+    expect(page.locator('[data-map-chunk]')).to_have_count(len(w['passages']))
+    p=w['passages'][-1]
+    page.locator(f'[data-map-chunk="{p["id"]}"]').click()
+    expect(page.get_by_role('complementary',name='Selected map chunk')).to_contain_text(p['text'])
+    page.get_by_role('button',name='Open chunk in workbench ↗',exact=True).click()
+    expect(page.locator(f'[data-passage="{p["id"]}"]')).to_contain_text(p['text'])
+    expect(page.get_by_role('combobox',name='Selected teaching')).to_have_value('c-discipline')
+
+
+def test_default_meaning_and_overlapping_source_gradients_are_visible_and_inspectable(page):
+    page.get_by_role('combobox',name='Selected teaching').select_option('c-duty')
+    overlap=page.locator('.au-source-text mark[data-contributor-ids="span-duty-1 span-duty-4"]')
+    expect(overlap).to_have_count(1)
+    assert 'linear-gradient' in overlap.evaluate('el=>getComputedStyle(el).backgroundImage')
+    clause=page.locator('.au-meaning-evidence[data-source-span-ids="span-duty-1 span-duty-4"]')
+    expect(clause).to_have_count(1)
+    assert 'linear-gradient' in clause.evaluate('el=>getComputedStyle(el).backgroundImage')
+    clause.focus()
+    expect(page.get_by_role('region',name='Selected clause evidence')).to_contain_text('Demo F.1')
+    expect(page.get_by_role('region',name='Selected clause evidence')).to_contain_text('supports')
+    page.get_by_role('combobox',name='Color mode').select_option('plain')
+    assert clause.evaluate('el=>getComputedStyle(el).backgroundImage')=='none'
+
+
+def test_editing_meaning_does_not_leave_source_colors_on_new_words(page):
+    page.get_by_role('combobox',name='Selected teaching').select_option('c-duty')
+    expect(page.locator('.au-meaning-evidence')).to_have_count(3)
+    page.get_by_role('textbox',name='Conclusion text',exact=True).fill('This new universal promise has no established source mapping.')
+    expect(page.locator('.au-meaning-evidence')).to_have_count(0)
+    expect(page.locator('.au-meaning .au-unmapped')).to_contain_text('new universal promise')
+    page.get_by_test_id('meaning-card').get_by_role('button',name='Discard draft',exact=True).click()
+    expect(page.locator('.au-meaning-evidence')).to_have_count(3)

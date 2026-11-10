@@ -127,6 +127,19 @@
   },
   "additionalProperties": false,
   "properties": {
+    "fixture_revision": {
+      "default": 1,
+      "title": "Fixture Revision",
+      "type": "integer"
+    },
+    "target_mappings": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Target Mappings",
+      "type": "array"
+    },
     "schema_version": {
       "const": 1,
       "title": "Schema Version",

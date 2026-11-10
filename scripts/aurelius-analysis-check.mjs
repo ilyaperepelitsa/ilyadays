@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {validateDiscoveryArtifact} from '../src/lib/aurelius/discovery.mjs';
+const w=JSON.parse(fs.readFileSync(new URL('../content/aurelius/fixture.json',import.meta.url),'utf8'));
+const a=JSON.parse(fs.readFileSync(new URL('../content/aurelius/analysis.json',import.meta.url),'utf8'));
+validateDiscoveryArtifact(w,a);
+for(const p of w.passages)if(crypto.createHash('sha256').update(p.text).digest('hex')!==p.text_hash)throw Error('Source hash mismatch; do not deploy stale discovery data');
+const hash=crypto.createHash('sha256').update(JSON.stringify(w.passages.map(p=>[p.revision_id,p.text_hash]))).digest('hex');
+if(hash!==a.corpus_hash||a.fixture_revision!==w.fixture_revision)throw Error('PCA artifact is stale; run npm run aurelius:analysis locally');
+console.log(`Aurelius analysis verified: ${a.chunk_count}/${w.passages.length} synthetic chunks, actual PCA and full-space clusters.`);

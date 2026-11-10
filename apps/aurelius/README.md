@@ -47,3 +47,11 @@ This one test command runs pure command/anchoring tests, FastAPI/SQLite integrat
 - [Implementation log / next executable step](../../docs/aurelius/implementation-log.md)
 
 Stage 2 requires an authorized text-readable Hays file, rights/processing notes and segmentation approval. The checked Kobo EPUB3 is Adobe-DRM restricted; a purchase does not establish importability. No purchase or DRM removal is automated. Before any real source is sent to OpenAI, obtain separate explicit processing consent, credentials and a bounded budget. Do not infer runtime model access from the Codex session.
+
+Detailed planning dossier: [plan/stoicism](../../plan/stoicism/README.md), including visible source/target gradients, substantive content, PCA/clusters and non-destructive workspace upgrades.
+
+## Hosted initial discovery
+
+The hosted workbench includes nine original teaching studies, visible source/meaning gradients and a PCA/cluster explorer covering all 29 current canonical demonstration chunks. Open `/stoicism#discovery` for the map. Existing saved projects receive additive examples without resetting user edits.
+
+`npm run aurelius:analysis` reproduces the actual local PCA/full-space clustering artifact; numerical dependencies are hash-locked. Public demonstration inputs are explicitly local word/bigram TF-IDF features, not OpenAI embeddings. The full modern translation is not silently replaced by these examples. A build fails if the checked-in projection no longer covers every chunk revision.

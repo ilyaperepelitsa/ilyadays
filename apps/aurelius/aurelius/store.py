@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import sqlite3
 import subprocess
+import threading
 
 from .anchors import validate_anchor
 from .models import Command, Workspace
@@ -29,6 +30,14 @@ def validate_workspace(value):
         if revision['id'] in seen or any(source not in seen for source in revision['dependencies']):
             raise ValueError('Lineage must reference earlier immutable revisions')
         seen.add(revision['id'])
+    for mapping in workspace['target_mappings']:
+        target = next((r for r in workspace['revisions'] if r['id'] == mapping['target_revision']), None)
+        block = next((b for b in target['doc']['content'] if b['attrs']['id'] == mapping['block_id']), None) if target else None
+        text = ''.join(n.get('text', '') for n in block.get('content', [])) if block else ''
+        if not block or not 0 <= mapping['start'] < mapping['end'] <= len(text) or text[mapping['start']:mapping['end']] != mapping['exact']:
+            raise ValueError('Invalid exact target mapping')
+        if not mapping['source_span_ids'] or any(sid not in {s['id'] for s in workspace['spans']} for sid in mapping['source_span_ids']):
+            raise ValueError('Unknown target-mapping source')
     return workspace
 
 
@@ -39,6 +48,7 @@ class Store:
             raise ValueError('Private data must be outside published source and assets')
         directory.mkdir(parents=True, exist_ok=True, mode=0o700)
         self.path = directory / 'aurelius.sqlite3'
+        self.analysis_lock = threading.Lock()
         self.node = shutil.which('node')
         if not self.node:
             raise RuntimeError('Node.js from the existing frontend is required')
@@ -51,6 +61,14 @@ class Store:
             if not db.execute('SELECT 1 FROM workspace_snapshots LIMIT 1').fetchone():
                 fixture = validate_workspace(json.loads((ROOT / 'content/aurelius/fixture.json').read_text()))
                 self.persist(db, fixture)
+            else:
+                current = self.state(db)
+                result = subprocess.run([self.node, str(ROOT / 'scripts/aurelius-upgrade.mjs')], input=encode(current), text=True, capture_output=True, timeout=10, cwd=ROOT, env={'PATH': os.defpath})
+                if result.returncode:
+                    raise ValueError(result.stderr[:500])
+                upgraded = validate_workspace(json.loads(result.stdout))
+                if upgraded['version'] != current['version']:
+                    self.persist(db, upgraded)
         self.path.chmod(0o600)
 
     @contextmanager
@@ -84,6 +102,22 @@ class Store:
             self.persist(db, fresh)
             return fresh
 
+    def analysis(self):
+        from .analysis import PIPELINE_VERSION, corpus_identity, write_fixture_analysis
+        import numpy as np
+        import sklearn
+        with self.analysis_lock:
+            w = self.state()
+            key = hashlib.sha256((corpus_identity(w['passages']) + PIPELINE_VERSION + np.__version__ + sklearn.__version__).encode()).hexdigest()
+            directory = self.path.parent / 'analysis' / key
+            metadata = directory / 'projection.json'
+            if metadata.exists():
+                return json.loads(metadata.read_text())
+            result = write_fixture_analysis(w, metadata, directory / 'arrays.npz')
+            with self.connect() as db:
+                db.execute('INSERT OR IGNORE INTO analysis_runs VALUES (?,?,?,?)', (result['run_id'], 'pca_cluster', encode({'corpus_hash':result['corpus_hash'],'pipeline':PIPELINE_VERSION}), encode(result)))
+            return result
+
     def persist(self, db, w):
         for e in w['editions']:
             db.execute('INSERT OR IGNORE INTO editions VALUES (?,?)', (e['id'], encode(e)))
@@ -102,6 +136,10 @@ class Store:
             db.execute('INSERT INTO evidence_bundles VALUES (?,?,?,?) ON CONFLICT(id) DO UPDATE SET explanation=excluded.explanation', (b['id'], b['target_revision'], b['mode'], b['explanation']))
         for l in w['links']:
             db.execute('INSERT INTO evidence_links VALUES (?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET payload_json=excluded.payload_json,relation=excluded.relation', (l['id'], l['source_span'], l['target_revision'], l['bundle_id'], l['relation'], encode(l)))
+        for m in w.get('target_mappings', []):
+            db.execute('INSERT OR IGNORE INTO target_mappings VALUES (?,?,?,?,?,?,?)', (m['id'], m['target_revision'], m['block_id'], m['start'], m['end'], m['exact'], encode(m)))
+            for sid in m['source_span_ids']:
+                db.execute('INSERT OR IGNORE INTO target_mapping_sources VALUES (?,?)', (m['id'], sid))
         for rid, a in w['assessments'].items():
             db.execute('INSERT INTO assessments VALUES (?,?,?) ON CONFLICT(revision_id) DO UPDATE SET state=excluded.state,notes=excluded.notes', (rid, a['state'], a['notes']))
         for r in w['reviews']:

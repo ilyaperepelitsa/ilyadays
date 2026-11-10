@@ -1,13 +1,13 @@
 'use client';
+import type { ReactNode } from 'react';
 import type { Passage, SourceSpan } from '@/lib/aurelius/types';
-import { scalarSlice } from '@/lib/aurelius/domain.mjs';
-
-export const SOURCE_COLORS=['#4779ba','#a86c15','#35856d','#8864b1','#b35f79'];
-export function sourceColor(id:string){return SOURCE_COLORS[[...id].reduce((v,c)=>v+c.charCodeAt(0),0)%SOURCE_COLORS.length];}
+import { sourceIntervals,sourceColor,sourceGradient } from '@/lib/aurelius/provenance.mjs';
+export {sourceColor} from '@/lib/aurelius/provenance.mjs';
 export function SourceText({passage,spans,selected,onSelect,contributors}:{passage:Passage;spans:SourceSpan[];selected:string|null;onSelect:(id:string)=>void;contributors:string[]}){
-  const bounds=[...new Set([0,Array.from(passage.text).length,...spans.flatMap(s=>[s.start,s.end])])].sort((a,b)=>a-b);
-  return <>{bounds.slice(0,-1).map((start,i)=>{
-    const end=bounds[i+1],text=scalarSlice(passage.text,start,end),cover=spans.filter(s=>s.start<=start&&s.end>=end),span=cover.find(s=>s.id===selected)??cover.find(s=>contributors.includes(s.id))??cover[0];
-    return span?<mark key={start} data-source-anchor={span.id} className={`${selected===span.id?'is-selected ':''}${contributors.includes(span.id)?'is-contributor':''}`} style={{'--source-color':sourceColor(span.id)} as React.CSSProperties} role="button" tabIndex={0} aria-label={`Inspect excerpt ${passage.book}.${passage.section}`} onFocus={()=>onSelect(span.id)} onClick={()=>onSelect(span.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(span.id);}}}>{text}</mark>:<span key={start}>{text}</span>;
-  })}</>;
+ return <>{sourceIntervals(passage.text,spans,contributors).map((part:{start:number;text:string;cover:SourceSpan[];contributors:string[]})=>{
+  const span=part.cover.find(s=>s.id===selected)??part.cover.find(s=>part.contributors.includes(s.id))??part.cover[0];
+  if(!span)return <span key={part.start}>{part.text}</span>;
+  const content=part.cover.filter(s=>s.id!==span.id).reduce<ReactNode>((child,s)=><span key={s.id} data-source-anchor={s.id}>{child}</span>,part.text);
+  return <mark key={part.start} data-source-anchor={span.id} data-contributor-ids={part.contributors.join(' ')} className={`${selected===span.id?'is-selected ':''}${part.contributors.length?'is-contributor':''}`} style={{'--source-color':sourceColor(span.id),'--au-provenance':sourceGradient(part.contributors)} as React.CSSProperties} role="button" tabIndex={0} title={`Demo ${passage.book}.${passage.section} · ${part.contributors.length?part.contributors.join(' + '):'candidate excerpt'} · exact source ranges`} aria-label={`Inspect excerpt ${passage.book}.${passage.section}`} onFocus={()=>onSelect(span.id)} onClick={()=>onSelect(span.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(span.id);}}}>{content}</mark>;
+ })}</>;
 }

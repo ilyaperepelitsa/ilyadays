@@ -43,9 +43,9 @@ def test_sqlite_restart_persists_links_preferences_and_review_events(tmp_path):
     reopened = Store(tmp_path)
     assert reopened.state() == w
     with reopened.connect() as db:
-        assert db.execute('SELECT count(*) FROM evidence_links').fetchone()[0] == 3
+        assert db.execute('SELECT count(*) FROM evidence_links').fetchone()[0] == len(w['links'])
         assert db.execute('SELECT count(*) FROM events').fetchone()[0] == 2
-        assert [r[0] for r in db.execute('SELECT version FROM schema_migrations ORDER BY version')] == [1, 2]
+        assert [r[0] for r in db.execute('SELECT version FROM schema_migrations ORDER BY version')] == [1, 2, 3]
         for payload, digest in db.execute('SELECT payload_json,content_hash FROM workspace_snapshots'):
             assert hashlib.sha256(payload.encode()).hexdigest() == digest
 
@@ -100,7 +100,7 @@ def test_api_is_private_cookie_free_and_uses_explicit_commands(tmp_path):
 def test_relationship_tables_keep_membership_separate_and_reject_cycles(tmp_path):
     store = Store(tmp_path)
     with store.connect() as db:
-        assert db.execute('SELECT count(*) FROM memberships WHERE passage_revision IS NOT NULL').fetchone()[0] == 5
+        assert db.execute('SELECT count(*) FROM memberships WHERE passage_revision IS NOT NULL').fetchone()[0] == len(store.state()['memberships'])
         db.execute('INSERT INTO concept_parents VALUES (?,?)', ('judgment', 'fairness'))
         with pytest.raises(sqlite3.IntegrityError, match='acyclic'):
             db.execute('INSERT INTO concept_parents VALUES (?,?)', ('fairness', 'judgment'))
@@ -111,3 +111,37 @@ def test_relationship_tables_keep_membership_separate_and_reject_cycles(tmp_path
 def test_data_directory_cannot_become_a_published_asset():
     with pytest.raises(ValueError, match='Private data'):
         Store(ROOT / 'public' / 'private-aurelius')
+
+
+def test_existing_v1_database_upgrades_without_replacing_editorial_decisions(tmp_path):
+    legacy = json.loads((ROOT / 'content/aurelius/fixture.json').read_text())
+    for field, count in [('passages', 5), ('spans', 5), ('conclusions', 1),
+                         ('expressions', 2), ('revisions', 3), ('links', 3),
+                         ('bundles', 1), ('concepts', 2), ('memberships', 5)]:
+        legacy[field] = legacy[field][:count]
+    legacy['fixture_revision'] = 1
+    legacy['target_mappings'] = []
+    legacy['assessments'] = {k: v for k, v in legacy['assessments'].items()
+                             if k in {'c1:r1', 'e1:r1', 'e2:r1'}}
+    legacy['conclusions'][0]['locked'] = True
+    legacy['preferences']['demo-p1'] = {'pinned': True, 'excluded': True}
+    legacy['assessments']['e2:r1'] = {'state': 'rejected', 'notes': 'Preserve my decision.'}
+    legacy['version'] = 42
+    old_store = Store.__new__(Store)
+    old_store.path = tmp_path / 'aurelius.sqlite3'
+    with old_store.connect() as db:
+        db.execute('CREATE TABLE schema_migrations(version INTEGER PRIMARY KEY, applied_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)')
+        for migration in sorted((ROOT / 'apps/aurelius/migrations').glob('00[12]_*.sql')):
+            db.executescript(migration.read_text())
+        old_store.persist(db, validate_workspace(legacy))
+    upgraded = Store(tmp_path).state()
+    assert len(upgraded['passages']) == 29
+    assert upgraded['version'] == 43
+    assert upgraded['conclusions'][0]['locked'] is True
+    assert upgraded['preferences'] == legacy['preferences']
+    assert upgraded['assessments']['e2:r1'] == legacy['assessments']['e2:r1']
+    assert upgraded['revisions'][:3] == legacy['revisions']
+    assert Store(tmp_path).state() == upgraded
+    with old_store.connect() as db:
+        assert db.execute('SELECT count(*) FROM target_mapping_sources').fetchone()[0] > 0
+        assert db.execute('SELECT count(*) FROM workspace_snapshots').fetchone()[0] == 2

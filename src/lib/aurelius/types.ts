@@ -4,8 +4,9 @@ export type SourceSpan = {id:string;passage_revision:string;start:number;end:num
 export type EditorialEntity = {id:string;title:string;current:string;locked:boolean};
 export type Revision = {id:string;entity_id:string;kind:'conclusion'|'expression';sequence:number;text:string;doc:JSONContent;scope:string;qualifications:string;assumptions:string;practical_implication:string;interpretation:string;dependencies:string[];created_at:string};
 export type EvidenceLink = {id:string;source_span:string;target_revision:string;bundle_id:string;relation:string;justification:string;review_state:string;reviewer:string|null;active:boolean};
+export type TargetMapping={id:string;target_revision:string;block_id:string;start:number;end:number;exact:string;source_span_ids:string[];granularity:'clause'|'whole_statement';justification:string;active:boolean};
 export type Workspace = {
-  schema_version:1;version:number;corpus_kind:'synthetic';offset_convention:string;
+  schema_version:1;fixture_revision?:number;target_mappings?:TargetMapping[];version:number;corpus_kind:'synthetic';offset_convention:string;
   editions:{id:string;work:string;translator:string|null;publisher:string;isbn:string|null;edition:string;acquisition_status:string;source_location:string;available_format:string;importability:string;rights_notes:string;file_hash:string|null;parser_version:string}[];
   passages:Passage[];spans:SourceSpan[];conclusions:EditorialEntity[];expressions:EditorialEntity[];revisions:Revision[];links:EvidenceLink[];
   bundles:{id:string;target_revision:string;mode:string;explanation:string}[];

@@ -36,6 +36,10 @@ def create_app(directory=None):
     def state():
         return store.state()
 
+    @app.get('/analysis')
+    def analysis():
+        return store.analysis()
+
     @app.post('/commands')
     def command(value: Command):
         try:

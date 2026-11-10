@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/fitness-image-index.mjs && node scripts/write-offline-catalog.mjs && next build",
+    "build": "node scripts/fitness-image-index.mjs && node scripts/write-offline-catalog.mjs && node scripts/aurelius-analysis-check.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
@@ -15,7 +15,8 @@
     "test:fitness:e2e": "bash scripts/fitness-e2e.sh",
     "check:fitness:catalog": "node scripts/fitness-machine-specs.mjs check && node scripts/fitness-catalog-seed.mjs --check",
     "aurelius:dev": "node scripts/aurelius-dev.mjs",
-    "test:aurelius": "node scripts/aurelius-test.mjs"
+    "test:aurelius": "node scripts/aurelius-test.mjs",
+    "aurelius:analysis": "apps/aurelius/.venv/bin/python scripts/aurelius-analysis.py"
   },
   "dependencies": {
     "@radix-ui/react-toggle": "1.2.1",

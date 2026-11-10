@@ -69,3 +69,37 @@
  .site-header .site-primary-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); width:100%; gap:3px; }.site-header .site-primary-nav a { padding:7px 3px; font-size:.67rem; gap:5px; }.site-primary-nav .action-icon { width:15px; height:15px; flex-shrink:0; }
 }
 @media(prefers-reduced-motion:reduce) { .au-main * { scroll-behavior:auto !important; } }
+
+/* Visible evidence is part of the default two-pane reading experience. */
+.au-main { --au-highlight-strength:30%; }
+.au-source-text mark.is-contributor,.au-meaning-evidence,.au-grounded { background-image:var(--au-provenance); background-size:auto; background-position:initial; background-repeat:repeat; padding:2px 0; border-radius:2px; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.au-source-text mark.is-contributor { background-color:transparent; }
+.au-meaning-evidence { cursor:pointer; border-bottom:2px solid color-mix(in srgb,var(--cool) 65%,transparent); }
+.au-meaning-evidence:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.au-editorial-card[data-status=stale] .au-meaning-evidence { border-bottom-style:dashed; filter:saturate(.55); }
+.au-workspace:is([data-mode=theme],[data-mode=plain]) :is(.au-source-text mark,.au-meaning-evidence,.au-grounded) { background-image:none; background-color:transparent; border-bottom-color:var(--muted); }
+.au-corpus-summary { display:flex; align-items:center; flex-wrap:wrap; gap:12px 25px; padding:12px 0 16px; font-size:.74rem; color:var(--muted); }
+.au-corpus-summary strong { color:var(--ink); font-variant-numeric:tabular-nums; }.au-corpus-summary button { margin-left:auto; }
+.au-teaching-strip { display:flex; gap:8px; overflow:auto; padding:1px 0 13px; margin-bottom:6px; scrollbar-width:thin; }
+.au-teaching-strip button { flex-shrink:0; max-width:235px; text-align:left; justify-content:start; white-space:normal; }
+.au-teaching-strip button[aria-pressed=true] { color:var(--on-action); background:var(--action); border-color:var(--action); }
+.au-clause-inspector { border:1px solid var(--line); border-radius:8px; padding:14px; margin-top:16px; background:var(--cool-soft); }
+.au-clause-inspector blockquote { margin:10px 0; font:400 .85rem/1.7 Georgia,serif; }
+.au-discovery { padding:22px; border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+.au-discovery-heading { display:flex; justify-content:space-between; align-items:start; gap:16px; }.au-discovery-heading h2 { margin:0 0 8px; font-size:1.65rem; }.au-discovery-heading p { margin:0; color:var(--muted); font-size:.8rem; }
+.au-map-method { margin:17px 0; padding:12px 14px; border-left:3px solid var(--cool); border-radius:7px; background:var(--cool-soft); font-size:.75rem; line-height:1.75; }
+.au-map-controls { display:flex; flex-wrap:wrap; align-items:end; gap:12px; margin-bottom:18px; }.au-map-controls label { display:block; font-size:.69rem; color:var(--muted); min-width:170px; }.au-map-controls label:nth-child(2) { flex:1; }.au-map-controls :is(input,select) { display:block; margin-top:5px; }
+.au-map-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(250px,330px); gap:20px; align-items:start; }
+.au-map-plot { position:relative; height:480px; background:var(--field); border:1px solid var(--line); border-radius:9px; overflow:hidden; }
+.au-map-plot > svg { position:absolute; inset:0; width:100%; height:100%; }.au-map-plot line { stroke:var(--line); stroke-width:1; stroke-dasharray:3 4; }.au-map-plot path { fill:none; stroke:var(--muted); stroke-width:1; }
+.au-map-axis-x { position:absolute; bottom:9px; left:0; right:0; text-align:center; font-size:.68rem; color:var(--muted); }.au-map-axis-y { position:absolute; top:10px; left:12px; color:var(--muted); font-size:.68rem; }
+.au-main button.au-map-point { position:absolute; transform:translate(-50%,-50%); width:27px; height:27px; min-height:27px; padding:0; border:2px solid var(--surface); border-radius:50%; background:var(--cluster-color); color:#fff; box-shadow:0 1px 5px rgb(0 0 0 / .2); font-size:.57rem; font-weight:800; transition:opacity .12s; }
+.au-main button.au-map-point:hover,.au-main button.au-map-point.is-selected { z-index:2; outline:2px solid var(--ink); outline-offset:2px; background:var(--cluster-color); }
+.au-main button.au-map-point.is-dimmed { opacity:.23; }.au-main button.au-map-point:focus-visible { z-index:3; outline:3px solid var(--accent); outline-offset:3px; }
+.au-cluster-legend { display:flex; flex-wrap:wrap; gap:7px; padding:12px 0; }.au-cluster-legend button { gap:6px; min-height:32px; font-size:.65rem; }.au-cluster-legend i { display:inline-block; width:9px; height:9px; border-radius:50%; }.au-cluster-legend span { color:var(--muted); }.au-cluster-legend [aria-pressed=true] { border-color:var(--ink); background:var(--surface-2); }
+.au-map-inspector { padding:16px; border:1px solid var(--line); border-radius:9px; background:var(--field); min-width:0; }.au-map-inspector h3 { margin:20px 0 10px; font-size:.9rem; }.au-map-source { font:400 1rem/1.85 Georgia,serif; }.au-map-inspector details { color:var(--muted); font-size:.67rem; margin-top:18px; }.au-map-inspector code { font-size:.61rem; }
+.au-map-run { margin:15px 0; font-size:.75rem; }.au-map-run dl { display:grid; grid-template-columns:170px minmax(0,1fr); gap:8px 15px; }.au-map-run dt { color:var(--muted); }.au-map-run dd { margin:0; overflow-wrap:anywhere; }.au-map-table summary { font-size:.8rem; margin:18px 0 12px; font-weight:700; cursor:pointer; }
+@media(prefers-color-scheme:dark) { .au-main { --au-highlight-strength:38%; } }
+@media(max-width:1050px) { .au-map-grid { grid-template-columns:minmax(0,1fr) 270px; }.au-map-plot { height:400px; } }
+@media(max-width:760px) { .au-discovery { padding:14px; }.au-map-grid { grid-template-columns:minmax(0,1fr); }.au-map-plot { height:360px; }.au-discovery-heading { flex-wrap:wrap; }.au-discovery-heading h2 { font-size:1.35rem; }.au-map-controls label { min-width:0; }.au-map-controls label:first-child { flex-basis:100%; }.au-map-run dl { grid-template-columns:100px minmax(0,1fr); }.au-corpus-summary { gap:8px 14px; }.au-corpus-summary button { margin-left:0; width:100%; }.au-main button.au-map-point { min-height:29px; width:29px; height:29px; } }
+.au-selected-evidence { display:flex; align-items:center; flex-wrap:wrap; gap:8px; border:1px solid var(--line); border-radius:8px; padding:10px; margin-bottom:12px; background:var(--cool-soft); font-size:.69rem; }.au-selected-evidence > span { color:var(--muted); }.au-selected-evidence button { min-height:30px; font-size:.64rem; }
