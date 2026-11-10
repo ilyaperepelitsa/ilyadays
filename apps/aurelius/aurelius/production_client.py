@@ -20,12 +20,15 @@ class ProductionRequestError(RuntimeError):
 
 
 class ProductionClient:
-    def __init__(self, deployment_url, access_file: Path, manifest_id):
+    def __init__(self, deployment_url, access_file: Path, manifest_id, wire_model='openai/text-embedding-3-large'):
         parsed = urlparse(deployment_url)
         if parsed.scheme != 'https' or not parsed.hostname or not parsed.hostname.endswith('.vercel.app') or parsed.username or parsed.query or parsed.fragment:
             raise ValueError('Use the exact protected HTTPS production deployment URL')
         self.origin = f'https://{parsed.netloc}'
         self.manifest_id = manifest_id
+        if wire_model not in ['openai/text-embedding-3-large','text-embedding-3-large']:
+            raise ValueError('The production embedding model is fixed')
+        self.wire_model=wire_model
         self.client = httpx.Client(timeout=65, follow_redirects=False)
         self.embeddings = self
         access = json.loads(access_file.read_text())['url']
@@ -50,7 +53,7 @@ class ProductionClient:
             raise RuntimeError('Too many production authorization redirects')
 
     def create(self, *, model, dimensions, input, encoding_format):
-        if model != 'openai/text-embedding-3-large' or dimensions != 3072 or encoding_format != 'float':
+        if model != self.wire_model or dimensions != 3072 or encoding_format != 'float':
             raise ValueError('The production model/configuration is fixed')
         try:
             response = self.client.post(self.origin+'/api/aurelius/production/embed', json={'manifest_id':self.manifest_id,'request_id':uuid.uuid4().hex,'input':input})

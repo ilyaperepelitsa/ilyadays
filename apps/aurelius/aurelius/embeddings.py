@@ -20,6 +20,8 @@ CONFIG = {'provider': 'openai', 'model': MODEL, 'dimensions': DIMENSIONS,
 PRODUCTION_CONFIG = {**CONFIG, 'transport': 'vercel_ai_gateway_production',
                      'endpoint': 'https://ai-gateway.vercel.sh/v1/embeddings',
                      'wire_model': 'openai/text-embedding-3-large', 'provider_allowlist': ['azure']}
+PRODUCTION_OPENAI_CONFIG = {**CONFIG, 'transport': 'vercel_production_openai_direct',
+                            'wire_model': MODEL, 'provider_allowlist': ['openai']}
 PRICE_PER_MILLION = .13  # Official model page checked 2026-11-10; recorded with each run.
 MAX_INPUT_TOKENS = 8191  # Conservative boundary below the documented 8192 maximum.
 BATCH_TOKENS = 16000
@@ -51,7 +53,7 @@ def valid_vector(value):
 class EmbeddingCache:
     def __init__(self, directory: Path, configuration=None):
         self.configuration = dict(configuration or CONFIG)
-        if self.configuration not in [CONFIG, PRODUCTION_CONFIG]:
+        if self.configuration not in [CONFIG, PRODUCTION_CONFIG, PRODUCTION_OPENAI_CONFIG]:
             raise ValueError('Only the fixed full-dimensional OpenAI configurations are permitted')
         self.config_hash = fingerprint(self.configuration)
         self.wire_model = self.configuration.get('wire_model', MODEL)

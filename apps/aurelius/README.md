@@ -1,6 +1,6 @@
 # Aurelius — source-linked editorial workbench
 
-A source-linked editorial workbench for reconstructing Meditations. The user-supplied Gregory Hays text is privately parsed; the hosted default is a clearly labeled Meric Casaubon backup study with an actual multi-passage synthesis. Paid real embeddings require an API key, import review and an approved budget. This is a working editorial slice, not a finished manuscript.
+A source-linked editorial workbench for reconstructing Meditations. The user-supplied Gregory Hays text is privately parsed; the hosted default is a clearly labeled Meric Casaubon backup study with an actual multi-passage synthesis. Paid real embeddings require production model access, import review and an approved budget. This is a working editorial slice, not a finished manuscript.
 
 From the repository root, with the existing Node/npm dependencies installed:
 
@@ -95,3 +95,22 @@ The SDK has automatic retries disabled; the job reserves budget before each boun
 PCA is fitted to all complete real vectors; average-linkage cosine clustering uses the full 3072-dimensional space. An incomplete cache yields an explicit error, with no lexical fallback. `export-map` publishes references/hashes/coordinates only, excluding modern source text and full vectors. The next frontend build verifies real-map coverage and configuration. Until an approved real run finishes, `real-map.json` is null and the real map visibly reports that it is pending.
 
 Model/limit/price references checked 2026-11-10: [OpenAI embeddings guide](https://developers.openai.com/api/docs/guides/embeddings), [create embeddings](https://developers.openai.com/api/reference/resources/embeddings/methods/create), [model pricing](https://developers.openai.com/api/docs/models/text-embedding-3-large). Conservative limits are 8191 tokens per input, 32 inputs/16000 tokens per batch, below the documented API maxima. Preview shows estimated costs; the audit stores observed usage separately. Tokenizer assets are downloaded once by tiktoken; tests use mocked model adapters, with no credentials or paid requests.
+
+## Production processing
+
+The ilyadays production deployment supports fresh Vercel OIDC authentication through AI Gateway, so a local OpenAI key is not needed for that path. Read-only `/api/aurelius/production` checks are restricted to the protected immutable Vercel deployment hostname; the public custom-domain route returns 404. A positive Gateway free-credit balance does **not** prove model eligibility. The actual required-model requests currently fail with the provider's explicit free-tier restriction. Paid Gateway credits or a server-only OpenAI key in production are needed; no credit purchase is automated.
+
+`scripts/aurelius-production-manifest.py` prepares a hash-only allowlist for the exact inspected source inputs. Production POST batches accept only that manifest and its known text hashes, with fixed model/dimensions, source-size/token limits and a bounded expiry. The one-off executor is currently disabled while paid-model access is unavailable. Native deployment protection must remain enabled (`all_except_custom_domains`); no public paid-inference endpoint is provided.
+
+For an operator-authorized Gateway run, the transport is `gateway-azure` (the same OpenAI text-embedding-3-large hosted through the catalog's Azure endpoint); `--transport direct-openai` selects an OPENAI_API_KEY stored in production, without copying it locally. Prepare and deploy the selected manifest before using `embed-production`. Temporary deployment access is obtained through the connected Vercel tool and stored only under ignored private storage, never in a command argument or repository file.
+
+```sh
+npm run aurelius:corpus -- embed-production --corpus-dir IMPORT_DIR \
+  --deployment-url https://EXACT-PROTECTED-DEPLOYMENT.vercel.app \
+  --access-file .aurelius/production-access.json \
+  --review-import --allow-openai --corpus-hash HASH_FROM_PREVIEW \
+  --token-budget APPROVED_TOKEN_CAP --cost-budget-usd APPROVED_USD_CAP
+npm run aurelius:corpus -- project --production --corpus-dir IMPORT_DIR
+```
+
+The two source corpora share the stated $0.10 combined envelope, with at most $0.05 per corpus. Changing hosting transport does not reset the per-corpus reservation ledger. Exact-input cache keys include the selected endpoint/routing configuration; vectors are immutable. Authentication remains server-side. Direct-key production mode uses the same full OpenAI model and no Gateway model fallback. After completing a one-off job, disable its manifest and remove temporary local deployment access. Publish only reference/coordinate artifacts; full modern text and vectors stay private.

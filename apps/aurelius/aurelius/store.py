@@ -130,7 +130,8 @@ class Store:
             if w['corpus_kind'] != 'synthetic':
                 from .embeddings import CONFIG, PRODUCTION_CONFIG, EmbeddingCache, fingerprint
                 from .analysis import analyze_embeddings
-                configuration = PRODUCTION_CONFIG
+                manifest_file=ROOT/'content/aurelius/production-inputs.json'
+                configuration = json.loads(manifest_file.read_text())['configuration'] if manifest_file.exists() else PRODUCTION_CONFIG
                 try:
                     vectors = EmbeddingCache(ROOT / '.aurelius/vectors', configuration).matrix(w['passages'])
                 except ValueError as error:

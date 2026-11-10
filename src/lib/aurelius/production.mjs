@@ -11,6 +11,6 @@ export async function productionEmbeddingPreflight({credential,authentication,fe
   const payload=await response.json();
   if(!response.ok){const raw=payload?.error?.type??payload?.error?.code??'gateway_access_unavailable';const allowed=['customer_verification_required','insufficient_funds','quota_for_entity_exceeded','authentication_error','invalid_api_key'];return {...base,status:allowed.includes(raw)?raw:'gateway_access_unavailable',http_status:response.status};}
   const balance=Number(payload.balance??payload.credits?.balance);
-  return {...base,status:Number.isFinite(balance)?balance>0?'ready':'insufficient_funds':'credit_check_succeeded',http_status:response.status,credit_available:Number.isFinite(balance)?balance>0:null};
+  return {...base,status:Number.isFinite(balance)?balance>0?'credit_available_model_access_unverified':'insufficient_funds':'credit_check_succeeded',model_access:'unverified',http_status:response.status,credit_available:Number.isFinite(balance)?balance>0:null};
  }catch{return {...base,status:'gateway_check_failed'};}
 }

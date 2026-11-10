@@ -96,7 +96,7 @@ def main():
         print(json.dumps({'directory': str(target.relative_to(ROOT)), 'chunks': report['chunk_count'], 'warnings': report['warnings'], 'status': report['segmentation_status']}, indent=2))
         return
     directory, corpus, report = read_import(args.corpus_dir)
-    configuration = PRODUCTION_CONFIG if args.action=='embed-production' or getattr(args,'production',False) else CONFIG
+    configuration = json.loads((ROOT/'content/aurelius/production-inputs.json').read_text())['configuration'] if args.action=='embed-production' or getattr(args,'production',False) else CONFIG
     cache = EmbeddingCache(ROOT/'.aurelius/vectors', configuration)
     if args.action == 'preview':
         plan = cache.plan(corpus['passages'])
@@ -123,7 +123,7 @@ def main():
                 raise ValueError('Corpus is not in the production allowlist')
             if args.cost_budget_usd>manifest['combined_cap_usd']/len(manifest['corpora']):
                 raise ValueError('Per-corpus production cap would exceed the disclosed combined budget')
-            client=ProductionClient(args.deployment_url,private_path(args.access_file),manifest['id'])
+            client=ProductionClient(args.deployment_url,private_path(args.access_file),manifest['id'],configuration['wire_model'])
             approval['processing_environment']='protected_vercel_production'
         else:
             from openai import OpenAI
