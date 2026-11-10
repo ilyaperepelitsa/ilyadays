@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "version": 0,
+  "corpus_kind": "synthetic",
+  "offset_convention": "unicode-scalar-half-open-v1",
+  "editions": [
+    {
+      "id": "synthetic-v1",
+      "work": "Original synthetic test passages",
+      "translator": null,
+      "publisher": "Project fixture",
+      "isbn": null,
+      "edition": "Synthetic v1",
+      "acquisition_status": "fixture_only",
+      "source_location": "content/aurelius/fixture.json",
+      "available_format": "JSON",
+      "importability": "synthetic_fixture_only",
+      "rights_notes": "Original demonstration text; not Meditations or a translation.",
+      "file_hash": null,
+      "parser_version": "fixture-v1"
+    }
+  ],
+  "passages": [
+    {
+      "id": "demo-p1",
+      "revision_id": "demo-p1:r1",
+      "edition_id": "synthetic-v1",
+      "book": "A",
+      "section": "1",
+      "locator": "fixture.json#passage-1",
+      "text": "When a remark wounds your pride, pause before answering. Examine the judgment you added to what was said.",
+      "raw_text": "When a remark wounds your pride, pause before answering. Examine the judgment you added to what was said.",
+      "text_hash": "3a4fa2f43a2ec5654a5f3c807fc7eaa6c123cde8f64a648c7cc038a7440978e3",
+      "normalization": "identity-v1",
+      "authorship": "Synthetic fixture author — not Marcus Aurelius"
+    },
+    {
+      "id": "demo-p2",
+      "revision_id": "demo-p2:r1",
+      "edition_id": "synthetic-v1",
+      "book": "B",
+      "section": "2",
+      "locator": "fixture.json#passage-2",
+      "text": "An insult does not decide the next act. Answer with fairness when an answer is required.",
+      "raw_text": "An insult does not decide the next act. Answer with fairness when an answer is required.",
+      "text_hash": "e18b0b0a1d4b60cccef2b7acdb7ebf45bd0f119578103ce0908d5b2462fdfa38",
+      "normalization": "identity-v1",
+      "authorship": "Synthetic fixture author — not Marcus Aurelius"
+    },
+    {
+      "id": "demo-p3",
+      "revision_id": "demo-p3:r1",
+      "edition_id": "synthetic-v1",
+      "book": "C",
+      "section": "3",
+      "locator": "fixture.json#passage-3",
+      "text": "A calm response need not mean accepting injustice. Sometimes duty requires a firm objection.",
+      "raw_text": "A calm response need not mean accepting injustice. Sometimes duty requires a firm objection.",
+      "text_hash": "9c6f10f750d989aeae4966edcdee435fa0e1ce68a566fad0097a708449fc98e8",
+      "normalization": "identity-v1",
+      "authorship": "Synthetic fixture author — not Marcus Aurelius"
+    },
+    {
+      "id": "demo-p4",
+      "revision_id": "demo-p4:r1",
+      "edition_id": "synthetic-v1",
+      "book": "D",
+      "section": "4",
+      "locator": "fixture.json#passage-4",
+      "text": "Quiet is useful before a reply, but silence is not always a duty.",
+      "raw_text": "Quiet is useful before a reply, but silence is not always a duty.",
+      "text_hash": "f802a22e3624aef5f2aaf0d88bbd9dbcb6d1dcc96798b8c0b3a305d7cdc63428",
+      "normalization": "identity-v1",
+      "authorship": "Synthetic fixture author — not Marcus Aurelius"
+    },
+    {
+      "id": "demo-p5",
+      "revision_id": "demo-p5:r1",
+      "edition_id": "synthetic-v1",
+      "book": "E",
+      "section": "1",
+      "locator": "fixture.json#passage-5",
+      "text": "A thought can recur: wait, then look again. Another reminder says: wait, then look again. A café sign and a 🏛️ mark test exact positions.",
+      "raw_text": "A thought can recur: wait, then look again. Another reminder says: wait, then look again. A café sign and a 🏛️ mark test exact positions.",
+      "text_hash": "2b652fb8f6e4bbf9abb3be6a58c660852cf5c2a793df114595ffda9efe8f59f1",
+      "normalization": "identity-v1",
+      "authorship": "Synthetic fixture author — not Marcus Aurelius"
+    }
+  ],
+  "spans": [
+    {
+      "id": "span-1",
+      "passage_revision": "demo-p1:r1",
+      "start": 33,
+      "end": 105,
+      "exact": "pause before answering. Examine the judgment you added to what was said.",
+      "prefix": "mark wounds your pride, ",
+      "suffix": "",
+      "text_hash": "3a4fa2f43a2ec5654a5f3c807fc7eaa6c123cde8f64a648c7cc038a7440978e3",
+      "validation": "valid"
+    },
+    {
+      "id": "span-2",
+      "passage_revision": "demo-p2:r1",
+      "start": 40,
+      "end": 88,
+      "exact": "Answer with fairness when an answer is required.",
+      "prefix": "ot decide the next act. ",
+      "suffix": "",
+      "text_hash": "e18b0b0a1d4b60cccef2b7acdb7ebf45bd0f119578103ce0908d5b2462fdfa38",
+      "validation": "valid"
+    },
+    {
+      "id": "span-3",
+      "passage_revision": "demo-p3:r1",
+      "start": 51,
+      "end": 92,
+      "exact": "Sometimes duty requires a firm objection.",
+      "prefix": "an accepting injustice. ",
+      "suffix": "",
+      "text_hash": "9c6f10f750d989aeae4966edcdee435fa0e1ce68a566fad0097a708449fc98e8",
+      "validation": "valid"
+    },
+    {
+      "id": "span-4",
+      "passage_revision": "demo-p4:r1",
+      "start": 36,
+      "end": 65,
+      "exact": "silence is not always a duty.",
+      "prefix": "ful before a reply, but ",
+      "suffix": "",
+      "text_hash": "f802a22e3624aef5f2aaf0d88bbd9dbcb6d1dcc96798b8c0b3a305d7cdc63428",
+      "validation": "valid"
+    },
+    {
+      "id": "span-5",
+      "passage_revision": "demo-p5:r1",
+      "start": 21,
+      "end": 43,
+      "exact": "wait, then look again.",
+      "prefix": "A thought can recur: ",
+      "suffix": " Another reminder says: ",
+      "text_hash": "2b652fb8f6e4bbf9abb3be6a58c660852cf5c2a793df114595ffda9efe8f59f1",
+      "validation": "valid"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "c1",
+      "title": "A pause is not surrender",
+      "current": "c1:r1",
+      "locked": false
+    }
+  ],
+  "expressions": [
+    {
+      "id": "e1",
+      "title": "Reflective formulation",
+      "current": "e1:r1",
+      "locked": false
+    },
+    {
+      "id": "e2",
+      "title": "Deliberate overreach",
+      "current": "e2:r1",
+      "locked": false
+    }
+  ],
+  "revisions": [
+    {
+      "id": "c1:r1",
+      "entity_id": "c1",
+      "kind": "conclusion",
+      "sequence": 1,
+      "text": "Pause before answering an insult, then choose a fair response; fairness may require a firm objection.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "c1-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Pause before answering an insult, then choose a fair response; fairness may require a firm objection."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "Responding to an insult when some response is called for.",
+      "qualifications": "Calm does not require passive acceptance of injustice.",
+      "assumptions": "A pause can create room to reconsider the next response.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [],
+      "created_at": "2026-11-10T00:00:00Z",
+      "practical_implication": "Pause before replying, reconsider your judgment, and choose a fair response—including a firm objection when appropriate."
+    },
+    {
+      "id": "e1:r1",
+      "entity_id": "e1",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Let the first surge pass. Then respond fairly—even when fairness calls for a firm objection.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "e1-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Let the first surge pass. Then respond fairly—even when fairness calls for a firm objection.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "c1:r1",
+                      "sourceSpanIds": [
+                        "span-1",
+                        "span-2",
+                        "span-3"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "",
+      "qualifications": "",
+      "assumptions": "",
+      "interpretation": "close_paraphrase",
+      "dependencies": [
+        "c1:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z",
+      "practical_implication": ""
+    },
+    {
+      "id": "e2:r1",
+      "entity_id": "e2",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "If you do this, you will never feel anger again.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "e2-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "If you do this, you will never feel anger again."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "",
+      "qualifications": "",
+      "assumptions": "Unsupported universal prediction: none of the fixture passages promises freedom from anger.",
+      "interpretation": "editorial_inference",
+      "dependencies": [
+        "c1:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z",
+      "practical_implication": ""
+    }
+  ],
+  "bundles": [
+    {
+      "id": "bundle-c1",
+      "target_revision": "c1:r1",
+      "mode": "joint",
+      "explanation": "A.1 proposes a pause; B.2 supplies the standard of fairness; C.3 limits any inference that calm requires submission. They jointly support this conditional teaching; none alone establishes the whole statement."
+    }
+  ],
+  "links": [
+    {
+      "id": "link-1",
+      "source_span": "span-1",
+      "target_revision": "c1:r1",
+      "bundle_id": "bundle-c1",
+      "relation": "supports",
+      "justification": "The pause is an opportunity to examine the added judgment.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "link-2",
+      "source_span": "span-2",
+      "target_revision": "c1:r1",
+      "bundle_id": "bundle-c1",
+      "relation": "supports",
+      "justification": "The next response should be fair, when a response is required.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "link-3",
+      "source_span": "span-3",
+      "target_revision": "c1:r1",
+      "bundle_id": "bundle-c1",
+      "relation": "qualifies",
+      "justification": "A firm objection may be consistent with calm.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    }
+  ],
+  "assessments": {
+    "c1:r1": {
+      "state": "awaiting_review",
+      "notes": "Synthetic proposal. Review each link, then the joint inference."
+    },
+    "e1:r1": {
+      "state": "awaiting_review",
+      "notes": "Editorial formulation, not a quotation."
+    },
+    "e2:r1": {
+      "state": "unsupported",
+      "notes": "The sources do not promise that anger will never return."
+    }
+  },
+  "concepts": [
+    {
+      "id": "judgment",
+      "name": "Judgment",
+      "definition": "The assessment added to an event.",
+      "inclusion": "Explicit judgment or reconsideration.",
+      "exclusion": "Mere shared vocabulary.",
+      "parents": []
+    },
+    {
+      "id": "fairness",
+      "name": "Fair response",
+      "definition": "The standard and limits of a response to another person.",
+      "inclusion": "A duty, response, objection or qualification.",
+      "exclusion": "A promise of emotional immunity.",
+      "parents": []
+    }
+  ],
+  "memberships": [
+    {
+      "id": "member-1",
+      "passage_id": "demo-p1",
+      "concept_id": "judgment",
+      "rationale": "Synthetic topical assignment; not evidential support.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "member-2",
+      "passage_id": "demo-p2",
+      "concept_id": "fairness",
+      "rationale": "Synthetic topical assignment; not evidential support.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "member-3",
+      "passage_id": "demo-p3",
+      "concept_id": "fairness",
+      "rationale": "Synthetic topical assignment; not evidential support.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "member-4",
+      "passage_id": "demo-p4",
+      "concept_id": "fairness",
+      "rationale": "Synthetic topical assignment; not evidential support.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "member-5",
+      "passage_id": "demo-p5",
+      "concept_id": "judgment",
+      "rationale": "Synthetic topical assignment; not evidential support.",
+      "review_state": "proposed"
+    }
+  ],
+  "preferences": {},
+  "reviews": [],
+  "events": []
+}

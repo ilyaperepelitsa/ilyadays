@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "data_directory": ".aurelius",
+  "primary_isbn": "9781588361738",
+  "source_processing_approved": false,
+  "external_processing_approved": false,
+  "embedding": {"provider": "openai", "model": "text-embedding-3-large", "dimensions": 3072, "similarity": "cosine", "cache": true, "enabled": false},
+  "generation": {"provider": "openai", "model": null, "api": "responses", "structured_outputs": true, "enabled": false},
+  "limits": {"items": 1, "max_repair_attempts": 1, "token_budget": 0, "cost_budget_usd": 0}
+}

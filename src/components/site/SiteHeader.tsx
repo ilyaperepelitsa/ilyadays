@@ -9,7 +9,7 @@ type Props = {
   lang: Lang;
   /** This page's path without the language prefix — the EN · RU switch links to the same page. */
   path: string;
-  section: "home" | "food" | "travel" | "fitness";
+  section: "home" | "food" | "travel" | "fitness" | "stoicism";
   /** Food pages: the recipe groups, shown as the recipe site's own nav. */
   groups?: { id: string; name: string }[];
   /** Travel pages: the small Google sign-in in the top bar. */
@@ -38,6 +38,7 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
           aria-current={section === "travel" ? "page" : undefined}><ActionIcon name="travel" /><span>{lang === "ru" ? "Поездки" : t.travel}</span></Link>
         <Link href={fitness} className="nav-section nav-fitness" prefetch={false}
           aria-current={section === "fitness" ? "page" : undefined}><ActionIcon name="fitness" /><span>{t.fitness}</span></Link>
+        <Link href={localPath(lang, "/stoicism")} className="nav-section nav-stoicism" prefetch={false} aria-current={section === "stoicism" ? "page" : undefined}><ActionIcon name="science"/><span>{lang === "ru" ? "Стоицизм" : "Stoicism"}</span></Link>
       </nav>
       <div className="header-end">
         <LangSwitch lang={lang} path={path} label={t.language} />

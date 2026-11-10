@@ -1,6 +1,6 @@
 /** The list of URLs a phone stores so the site opens with no connection. */
 
-const FIXED = ["/", "/food", "/food/sous-vide", "/travel", "/travel/turkey-yacht-food", "/travel/istanbul", "/travel/new", "/fitness", "/fitness/train", "/fitness/program", "/fitness/profile", "/fitness/exercises", "/fitness/gyms", "/fitness/progress", "/fitness/science", "/fitness/nutrition", "/fitness/tools"];
+const FIXED = ["/", "/food", "/food/sous-vide", "/travel", "/travel/turkey-yacht-food", "/travel/istanbul", "/travel/new", "/fitness", "/fitness/train", "/fitness/program", "/fitness/profile", "/fitness/exercises", "/fitness/gyms", "/fitness/progress", "/fitness/science", "/fitness/nutrition", "/fitness/tools", "/stoicism"];
 
 /**
  * @param {string[]} parts

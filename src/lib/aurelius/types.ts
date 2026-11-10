@@ -1,0 +1,19 @@
+import type { JSONContent } from '@tiptap/react';
+export type Passage = {id:string;revision_id:string;edition_id:string;book:string;section:string;locator:string;text:string;raw_text:string;text_hash:string;normalization:string;authorship:string};
+export type SourceSpan = {id:string;passage_revision:string;start:number;end:number;exact:string;prefix:string;suffix:string;text_hash:string;validation:string};
+export type EditorialEntity = {id:string;title:string;current:string;locked:boolean};
+export type Revision = {id:string;entity_id:string;kind:'conclusion'|'expression';sequence:number;text:string;doc:JSONContent;scope:string;qualifications:string;assumptions:string;practical_implication:string;interpretation:string;dependencies:string[];created_at:string};
+export type EvidenceLink = {id:string;source_span:string;target_revision:string;bundle_id:string;relation:string;justification:string;review_state:string;reviewer:string|null;active:boolean};
+export type Workspace = {
+  schema_version:1;version:number;corpus_kind:'synthetic';offset_convention:string;
+  editions:{id:string;work:string;translator:string|null;publisher:string;isbn:string|null;edition:string;acquisition_status:string;source_location:string;available_format:string;importability:string;rights_notes:string;file_hash:string|null;parser_version:string}[];
+  passages:Passage[];spans:SourceSpan[];conclusions:EditorialEntity[];expressions:EditorialEntity[];revisions:Revision[];links:EvidenceLink[];
+  bundles:{id:string;target_revision:string;mode:string;explanation:string}[];
+  assessments:Record<string,{state:string;notes:string}>;
+  concepts:{id:string;name:string;definition:string;inclusion:string;exclusion:string;parents:string[]}[];
+  memberships:{id:string;passage_id:string;concept_id:string;rationale:string;review_state:string}[];
+  preferences:Record<string,{pinned?:boolean;excluded?:boolean}>;
+  reviews:{id:string;revision_id:string;decision:string;notes:string;reviewer:string;at:string}[];
+  events:{id:string;type:string;at:string;entity_id:string|null}[];
+};
+export type WorkCommand = {id:string;type:string;expected_version:number;at:string;payload:Record<string,unknown>};

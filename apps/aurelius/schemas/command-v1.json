@@ -1,0 +1,50 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "pattern": "^[a-zA-Z0-9_-]{1,100}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "create",
+        "edit",
+        "link",
+        "unlink",
+        "link_edit",
+        "link_review",
+        "bundle",
+        "review",
+        "lock",
+        "preference"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "expected_version": {
+      "minimum": 0,
+      "title": "Expected Version",
+      "type": "integer"
+    },
+    "at": {
+      "maxLength": 64,
+      "title": "At",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "expected_version",
+    "at",
+    "payload"
+  ],
+  "title": "Command",
+  "type": "object"
+}

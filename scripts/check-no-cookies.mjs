@@ -42,7 +42,7 @@ mentions.forEach((m) => console.log("  " + m));
 
 if (process.argv.includes("--live")) {
   const base = process.env.COOKIE_AUDIT_BASE || "http://localhost:3000";
-  const pages = ["/", "/ru", "/food", "/food/oyakodon", "/food/sous-vide", "/travel", "/travel/new", "/ru/travel/new", "/travel/istanbul", "/ru/food/ramen",
+  const pages = ["/", "/stoicism", "/ru/stoicism", "/ru", "/food", "/food/oyakodon", "/food/sous-vide", "/travel", "/travel/new", "/ru/travel/new", "/travel/istanbul", "/ru/food/ramen",
     "/food/oyakodon.html", "/nope", "/manifest.webmanifest", "/media/share/oyakodon.jpg", "/apps/istanbul/app.js",
     ...["", "/train", "/program", "/profile", "/gyms", "/progress", "/nutrition", "/tools", "/exercises", "/exercises/pec-deck", "/science", "/science/safety"]
       .flatMap((p) => [`/fitness${p}`, `/ru/fitness${p}`])];

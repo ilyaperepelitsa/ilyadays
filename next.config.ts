@@ -41,6 +41,7 @@ const supersededFillings = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  distDir: process.env.NODE_ENV === "development" && process.env.AURELIUS_LOCAL_SERVICE === "1" ? (process.env.AURELIUS_TEST === "1" ? ".next-aurelius-test" : ".next-aurelius") : ".next",
   productionBrowserSourceMaps: false,
   poweredByHeader: false,
   images: { unoptimized: true },
@@ -52,6 +53,12 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
     optimizePackageImports: ["@supabase/supabase-js"],
+  },
+
+  async rewrites() {
+    // Explicit loopback development mode only; private text can never be proxied by a production build.
+    return process.env.NODE_ENV === "development" && process.env.AURELIUS_LOCAL_SERVICE === "1"
+      ? [{ source: "/api/aurelius/:path*", destination: `http://127.0.0.1:${Number(process.env.AURELIUS_API_PORT || 8766)}/:path*` }] : [];
   },
 
   async redirects() {

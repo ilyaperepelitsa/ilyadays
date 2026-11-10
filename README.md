@@ -162,3 +162,7 @@ npm run check:cookies   # after a build; add -- --live with `npm run start` runn
 ```
 
 The sashimi page uses `SashimiChoices` with nine complete recipe variants exported together as `content/{en,ru}/sashimi.json`. Author variants in `../recipes/src/sashimi_variants.json` and `sashimi_recipes.py`; they are not registered as separate Food routes. Shared cold-storage/dip art is deduplicated, while each seafood has a distinct raw preview, technique and plated picture. The `seafood` query parameter survives EN/RU switching and isolates cooking checkmarks. Turkish recipes use the standard mise and per-step ingredients; `Step.amounts` supports measured ingredients split between steps. Source snapshots live under `art/turkey-recipes/source/`.
+
+## Aurelius / Stoicism
+
+`/stoicism` is a provenance-first editorial workbench for Meditations. The public page uses original synthetic fixtures; private SQLite development runs with `npm run aurelius:dev` on loopback. See [setup, scope and tests](apps/aurelius/README.md) and the [implementation log](docs/aurelius/implementation-log.md). Real translation import and external processing require separate approvals.

@@ -1,0 +1,285 @@
+{
+  "$defs": {
+    "Passage": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "revision_id": {
+          "title": "Revision Id",
+          "type": "string"
+        },
+        "edition_id": {
+          "title": "Edition Id",
+          "type": "string"
+        },
+        "book": {
+          "title": "Book",
+          "type": "string"
+        },
+        "section": {
+          "title": "Section",
+          "type": "string"
+        },
+        "locator": {
+          "title": "Locator",
+          "type": "string"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "raw_text": {
+          "title": "Raw Text",
+          "type": "string"
+        },
+        "text_hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Text Hash",
+          "type": "string"
+        },
+        "normalization": {
+          "const": "identity-v1",
+          "title": "Normalization",
+          "type": "string"
+        },
+        "authorship": {
+          "title": "Authorship",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "revision_id",
+        "edition_id",
+        "book",
+        "section",
+        "locator",
+        "text",
+        "raw_text",
+        "text_hash",
+        "normalization",
+        "authorship"
+      ],
+      "title": "Passage",
+      "type": "object"
+    },
+    "SourceSpan": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "passage_revision": {
+          "title": "Passage Revision",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "exact": {
+          "minLength": 1,
+          "title": "Exact",
+          "type": "string"
+        },
+        "prefix": {
+          "title": "Prefix",
+          "type": "string"
+        },
+        "suffix": {
+          "title": "Suffix",
+          "type": "string"
+        },
+        "text_hash": {
+          "title": "Text Hash",
+          "type": "string"
+        },
+        "validation": {
+          "const": "valid",
+          "title": "Validation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "passage_revision",
+        "start",
+        "end",
+        "exact",
+        "prefix",
+        "suffix",
+        "text_hash",
+        "validation"
+      ],
+      "title": "SourceSpan",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "title": "Schema Version",
+      "type": "integer"
+    },
+    "version": {
+      "minimum": 0,
+      "title": "Version",
+      "type": "integer"
+    },
+    "corpus_kind": {
+      "const": "synthetic",
+      "title": "Corpus Kind",
+      "type": "string"
+    },
+    "offset_convention": {
+      "const": "unicode-scalar-half-open-v1",
+      "title": "Offset Convention",
+      "type": "string"
+    },
+    "editions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Editions",
+      "type": "array"
+    },
+    "passages": {
+      "items": {
+        "$ref": "#/$defs/Passage"
+      },
+      "title": "Passages",
+      "type": "array"
+    },
+    "spans": {
+      "items": {
+        "$ref": "#/$defs/SourceSpan"
+      },
+      "title": "Spans",
+      "type": "array"
+    },
+    "conclusions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Conclusions",
+      "type": "array"
+    },
+    "expressions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Expressions",
+      "type": "array"
+    },
+    "revisions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Revisions",
+      "type": "array"
+    },
+    "bundles": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Bundles",
+      "type": "array"
+    },
+    "links": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Links",
+      "type": "array"
+    },
+    "assessments": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "type": "object"
+      },
+      "title": "Assessments",
+      "type": "object"
+    },
+    "concepts": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Concepts",
+      "type": "array"
+    },
+    "memberships": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Memberships",
+      "type": "array"
+    },
+    "preferences": {
+      "additionalProperties": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Preferences",
+      "type": "object"
+    },
+    "reviews": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Reviews",
+      "type": "array"
+    },
+    "events": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Events",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "version",
+    "corpus_kind",
+    "offset_convention",
+    "editions",
+    "passages",
+    "spans",
+    "conclusions",
+    "expressions",
+    "revisions",
+    "bundles",
+    "links",
+    "assessments",
+    "concepts",
+    "memberships",
+    "preferences",
+    "reviews",
+    "events"
+  ],
+  "title": "Workspace",
+  "type": "object"
+}

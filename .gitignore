@@ -29,3 +29,12 @@ output/
 
 # Supabase CLI version/cache files
 supabase/.temp/
+
+# Aurelius: private books, text, SQLite, exports and local Python environment
+.aurelius/
+apps/aurelius/.venv/
+.pytest_cache/
+
+.next-aurelius/
+
+.next-aurelius-test/

@@ -9,6 +9,10 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    ".next-aurelius/**",
+    ".next-aurelius-test/**",
+    ".aurelius/**",
+    "apps/aurelius/.venv/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

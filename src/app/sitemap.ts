@@ -13,7 +13,7 @@ function scienceTopics(): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["/", "/food", "/food/sous-vide", ...recipeSlugs().map((s) => `/food/${s}`), "/travel", "/travel/turkey-yacht-food", "/travel/istanbul", "/travel/new", "/fitness", "/fitness/train", "/fitness/program", "/fitness/profile", "/fitness/exercises", "/fitness/gyms", "/fitness/progress", "/fitness/science", "/fitness/nutrition", "/fitness/tools",
+  const paths = ["/", "/stoicism", "/food", "/food/sous-vide", ...recipeSlugs().map((s) => `/food/${s}`), "/travel", "/travel/turkey-yacht-food", "/travel/istanbul", "/travel/new", "/fitness", "/fitness/train", "/fitness/program", "/fitness/profile", "/fitness/exercises", "/fitness/gyms", "/fitness/progress", "/fitness/science", "/fitness/nutrition", "/fitness/tools",
     ...(EXERCISES as { id: string }[]).map((e) => `/fitness/exercises/${e.id}`), ...scienceTopics().map((t) => `/fitness/science/${t}`)];
   return paths.map((p) => ({
     url: `${SITE_URL}${localPath("en", p)}`,
