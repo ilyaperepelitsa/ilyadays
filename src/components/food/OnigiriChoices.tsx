@@ -9,7 +9,7 @@ import { ONIGIRI_RECIPES, ONIGIRI_METHODS, ONIGIRI_WRAPPINGS, FIXED_ONIGIRI_FORM
 import { composeOnigiriSelection, onigiriLabel } from '@/lib/food/onigiri-selection.mjs';
 import { useUrlChoice } from './useUrlChoice';
 import { HeroArt } from './parts';
-import { Ingredients, Mise, Steps, NotesAndSources } from './RecipeSections';
+import { Ingredients, Mise, Steps, NotesAndSources, RecipeVariations } from './RecipeSections';
 
 export function OnigiriChoices({base,fillings,methods,wrappings,lang,ui}:{base:Recipe;fillings:Recipe[];methods:Recipe[];wrappings:OnigiriWrapping[];lang:Lang;ui:Record<string,string>}) {
  const text=(en:string,ru:string)=>lang==='ru'?ru:en,t=(key:string)=>ui[key]??key;
@@ -50,6 +50,7 @@ export function OnigiriChoices({base,fillings,methods,wrappings,lang,ui}:{base:R
     <p className="sources"><a href="https://www.justonecookbook.com/onigiri-rice-balls/" target="_blank" rel="noopener">{text('Hand-shaping technique · Just One Cookbook','Лепка руками · Just One Cookbook')}</a></p>
    </aside>
   </section>
+  <RecipeVariations r={selected} lang={lang}/>
   <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
   <div className="recipe-body" key={`${choice.recipe}:${choice.method}:${choice.wrapping}`} data-onigiri-selection={`${choice.recipe}:${choice.method}:${choice.wrapping}`}>
    <Ingredients r={selected} t={t} lang={lang}/><div className="recipe-main"><Mise r={selected} t={t}/><Steps r={selected} t={t} lang={lang}/><NotesAndSources r={selected} t={t} lang={lang}/></div>

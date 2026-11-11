@@ -3,6 +3,10 @@
 .uses .condition-value { min-width:0; overflow-wrap:anywhere; }
 .step-condition-detail { display:block; }
 .step-condition-detail + .step-condition-detail { margin-top:6px; }
+.recipe-variations > .notes { display:grid; gap:12px; }
+.recipe-variations .note { margin:0; }
+.step-variations { display:grid; gap:12px; margin-top:14px; }
+.step-variations h4 { margin:0 0 8px; font-size:.95rem; }
 
 @media screen {
   .food-main .notes { grid-template-columns:minmax(0,1fr); }

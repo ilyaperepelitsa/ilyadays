@@ -9,7 +9,7 @@ import { foodHref } from '@/lib/paths';
 import { useUrlChoice } from './useUrlChoice';
 import { SASHIMI_SPECIES } from '@/lib/food/sashimi.mjs';
 import { Html, HeroArt, Illo } from './parts';
-import { Ingredients, Mise, Steps, NotesAndSources } from './RecipeSections';
+import { Ingredients, Mise, Steps, NotesAndSources, RecipeVariations } from './RecipeSections';
 
 export function SashimiChoices({base, variants, lang, ui, sourcing}: {
   base: Recipe; variants: Recipe[]; lang: Lang; ui: Record<string,string>; sourcing: ReactNode;
@@ -43,6 +43,7 @@ export function SashimiChoices({base, variants, lang, ui, sourcing}: {
       <p className="onigiri-selection" role="status" aria-live="polite" aria-atomic="true"><b>{selected.title}</b></p>
       <Html as="p" className="sv-help" html={selected.intro_html}/>
     </section>
+    <RecipeVariations r={selected} lang={lang}/>
     <RecipeText title={selected.title} yields={selected.yields} total={selected.total} lang={lang}/>
     <div className="recipe-body" key={selected.slug} data-sashimi-selection={id}>
       <Ingredients r={selected} t={t} lang={lang}/>

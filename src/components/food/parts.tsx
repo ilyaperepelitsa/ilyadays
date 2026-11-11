@@ -3,7 +3,7 @@
 import type { Hero } from "@/lib/content";
 import { media } from "@/lib/paths";
 
-type Tag = "span" | "div" | "p" | "b" | "h3" | "small" | "em" | "li";
+type Tag = "span" | "div" | "p" | "b" | "h3" | "h4" | "small" | "em" | "li";
 
 /** Trusted HTML from the recipe export (our own content, built from the recipes repo). */
 export function Html({ as: As = "span", html, className }: { as?: Tag; html: string; className?: string }) {

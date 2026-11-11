@@ -13,7 +13,7 @@ const ROOT = path.join(process.cwd(), "content");
 
 export type Chip = { text: string; html?: string; kind: "" | "time" };
 export type Hero = { image: string | null; svg_fallback: string | null; alt: string };
-export type Note = { title_html: string; html: string };
+export type Note = { title_html: string; html: string; placement?: "start" | "step"; step?: number };
 
 export type RecipeSummary = {
   slug: string;

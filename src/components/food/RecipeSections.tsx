@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import type { Recipe, Step, Timeline } from "@/lib/content";
+import type { Note, Recipe, Step, Timeline } from "@/lib/content";
 import { media } from "@/lib/paths";
 import type { Lang } from "@/lib/i18n";
 import { Html, Illo, Svg } from "./parts";
@@ -123,9 +123,23 @@ export function TimelineChart({ tl, t }: { tl: Timeline; t: T }) {
   );
 }
 
-function StepCard({ s, t, lang }: { s: Step; t: T; lang: Lang }) {
+export function RecipeVariations({ r, lang }: { r: Recipe; lang: Lang }) {
+  const notes = r.notes.filter(note => note.placement === "start");
+  if (!notes.length) return null;
+  return <section className="block recipe-variations" aria-labelledby="recipe-variations-title">
+    <h2 id="recipe-variations-title">{lang === "ru" ? "Варианты и замены" : "Variations & alternatives"}</h2>
+    <div className="notes">
+      {notes.map((note, i) => <aside className="note" key={i}>
+        <Html as="h3" html={note.title_html} />
+        <CookingHtml html={note.html} lang={lang} />
+      </aside>)}
+    </div>
+  </section>;
+}
+
+function StepCard({ s, notes, t, lang }: { s: Step; notes: Note[]; t: T; lang: Lang }) {
   const im = s.images;
-  const conditions = stepConditions(s);
+  const conditions = stepConditions({ ...s, body_html: s.body_html + notes.map(note => note.html).join("") });
   const hasArt = !!(im.photo || im.how.length || im.illustration || im.svg_fallback || im.diagram);
   return (
     <li className={`step${hasArt ? "" : " text-only"}`} id={s.id}>
@@ -188,6 +202,12 @@ function StepCard({ s, t, lang }: { s: Step; t: T; lang: Lang }) {
           </div>
         )}
         <CookingHtml className="step-body" html={s.body_html} lang={lang} />
+        {notes.length > 0 && <div className="step-variations">
+          {notes.map((note, i) => <aside className="note" key={i}>
+            <Html as="h4" html={note.title_html} />
+            <CookingHtml html={note.html} lang={lang} />
+          </aside>)}
+        </div>}
         {im.how.length > 0 && im.result && !im.how.some(h => h.src === im.result) && (
           <figure className="result">
             <Illo src={im.result} alt={s.title} />
@@ -211,7 +231,7 @@ export function Steps({ r, t, lang }: { r: Recipe; t: T; lang: Lang }) {
         </li>,
       );
     }
-    cards.push(<StepCard key={s.id} s={s} t={t} lang={lang} />);
+    cards.push(<StepCard key={s.id} s={s} notes={r.notes.filter(note => note.placement === "step" && note.step === s.n)} t={t} lang={lang} />);
   }
   return (
     <section className="block" id="steps">
@@ -222,11 +242,12 @@ export function Steps({ r, t, lang }: { r: Recipe; t: T; lang: Lang }) {
 }
 
 export function NotesAndSources({ r, t, lang }: { r: Recipe; t: T; lang: Lang }) {
+  const notes = r.notes.filter(note => !note.placement);
   return (
     <>
-      {r.notes.length > 0 && (
+      {notes.length > 0 && (
         <section className="block notes">
-          {r.notes.map((n, i) => (
+          {notes.map((n, i) => (
             <aside className="note" key={i}>
               <Html as="h3" html={n.title_html} />
               <CookingHtml html={n.html} lang={lang} />

@@ -1,6 +1,7 @@
 /** A readable, plain-text post: no HTML, pictures or page controls. */
-export function formatRecipeText({title, metadata=[], ingredients=[], equipment=[], steps=[], notes=[], sources=[]}) {
+export function formatRecipeText({title, metadata=[], variations=[], ingredients=[], equipment=[], steps=[], notes=[], sources=[]}) {
  const blocks=[title,metadata.filter(Boolean).join('\n')];
+ for(const variation of variations) blocks.push(`${variation.title}\n\n${variation.body}`);
  const group=(heading,items)=>items.length?`${heading}\n\n${items.join('\n')}`:'';
  for(const section of ingredients) blocks.push(group(section.title,section.items.map(x=>`- ${x}`)));
  if(equipment.length) blocks.push(group(equipment[0],equipment.slice(1).map(x=>`- ${x}`)));
@@ -42,9 +43,11 @@ export function recipeTextFromPage(article,{title,yields,total,lang}) {
  const equipment=all(ingredientRoot,'.equipment li').map(text);
  const steps=all(article,'#steps li.step').map(li=>{
   const uses=all(li,'.uses li').map(row=>'- '+[...row.children].map(text).join(' — '));
-  return {title:text(li.querySelector('.step-text h3')),meta:all(li,'.chips .chip').map(text).join(' · '),body:[uses.length?text(li.querySelector('.uses h4'))+'\n'+uses.join('\n'):'',text(li.querySelector('.step-body'))].filter(Boolean).join('\n\n')};
+  return {title:text(li.querySelector('.step-text h3')),meta:all(li,'.chips .chip').map(text).join(' · '),body:[uses.length?text(li.querySelector('.uses h4'))+'\n'+uses.join('\n'):'',text(li.querySelector('.step-body')),...all(li,'.step-variations .note').map(text)].filter(Boolean).join('\n\n')};
  });
- const notes=all(article,'.notes .note').map(n=>({title:text(n.querySelector('h3')),body:text(n.querySelector('h3')?.nextElementSibling)}));
+ const readNote=n=>({title:text(n.querySelector('h3')),body:text(n.querySelector('h3')?.nextElementSibling)});
+ const variations=all(article,'.recipe-variations .note').map(readNote);
+ const notes=all(article,'.notes .note').filter(n=>!n.closest('.recipe-variations')).map(readNote);
  const sources=all(article,'.sources a, .sv-sources a').map(a=>`${text(a)}: ${a.href}`);
  const batch=article.querySelector('#batch');
  if(batch)notes.unshift({title:text(batch.querySelector('h2')),body:[batch.querySelector('select')?.selectedOptions[0]?.textContent,all(batch,'.batch-out li').map(li=>'- '+[...li.children].map(text).join(' — ')).join('\n'),text(batch.querySelector('.batch-use')),text(batch.querySelector('.batch-store'))].filter(Boolean).join('\n\n')});
@@ -57,5 +60,5 @@ export function recipeTextFromPage(article,{title,yields,total,lang}) {
    notes.push(...all(planner,'.sv-help, .sv-calculator > p').map(n=>({title:'',body:text(n)})).filter(n=>n.body));
   }
  }
- return formatRecipeText({title,metadata,ingredients,equipment:equipment.length?[t('EQUIPMENT','ОБОРУДОВАНИЕ'),...equipment]:[],steps,notes,sources:sources.length?[t('SOURCES','ИСТОЧНИКИ'),...sources]:[]});
+ return formatRecipeText({title,metadata,variations,ingredients,equipment:equipment.length?[t('EQUIPMENT','ОБОРУДОВАНИЕ'),...equipment]:[],steps,notes,sources:sources.length?[t('SOURCES','ИСТОЧНИКИ'),...sources]:[]});
 }

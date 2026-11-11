@@ -5,7 +5,7 @@ import type { Lang } from "@/lib/i18n";
 import { Html, HeroArt, SvgDefs } from "./parts";
 import { BatchCalc } from "./BatchCalc";
 import { VinegarPicker } from "./VinegarPicker";
-import { Ingredients, Mise, TimelineChart, Steps, NotesAndSources } from "./RecipeSections";
+import { Ingredients, Mise, TimelineChart, Steps, NotesAndSources, RecipeVariations } from "./RecipeSections";
 
 export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
   const t = getUi(lang);
@@ -41,6 +41,7 @@ export function RecipeView({ lang, r }: { lang: Lang; r: Recipe }) {
             <HeroArt hero={r.hero} eager />
           </figure>
         </div>
+        <RecipeVariations r={r} lang={lang} />
         <RecipeText title={r.title} yields={r.yields} total={r.total} lang={lang}/>
         <div className="recipe-body">
           <Ingredients r={r} t={t} lang={lang} />

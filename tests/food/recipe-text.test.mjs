@@ -14,3 +14,10 @@ it('formats a complete recipe as a readable plain-text post with distinct steps 
 it('omits empty sections and supports Russian and selected calculator results',()=>{
  assert.equal(formatRecipeText({title:'Лосось',notes:[{title:'ВЫБРАННЫЙ РЕЖИМ',body:'25 мм\n50 °C\n30 минут'}]}),'Лосось\n\nВЫБРАННЫЙ РЕЖИМ\n\n25 мм\n50 °C\n30 минут\n');
 });
+
+it('puts variations before ingredients and keeps storage after the instructions',()=>{
+ const output=formatRecipeText({title:'Potato tempura',variations:[{title:'No packet mix?',body:'Use flour, starch and cold water instead.'}],ingredients:[{title:'Ingredients',items:['Potatoes — 500 g']}],steps:[{title:'Fry',body:'Use cold batter.'}],notes:[{title:'Storage',body:'Serve freshly fried.'}]});
+ assert.ok(output.indexOf('No packet mix?')<output.indexOf('Ingredients'));
+ assert.ok(output.indexOf('Storage')>output.indexOf('1. Fry'));
+ assert.equal(output.split('No packet mix?').length,2);
+});
