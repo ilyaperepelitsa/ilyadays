@@ -200,15 +200,15 @@ test('planSession: progression memory, substitutes, goal switches, gaps', () => 
   // goal switch: 60 × 8 @ 2 in 6–10 → strength 3–6 through the %1RM table, 5 % lighter, one rounding
   plan = planSession({ program: convertProgram(p, 'strength', NOW, { catalog: CATALOG }), dayKey: 'A', states, settings, now: NOW, catalog: CATALOG });
   a1 = plan.exercises[0];
-  assert.deepEqual([working(a1).length, working(a1)[0].weightKg, working(a1)[0].reps, working(a1)[0].rir, a1.restSec], [5, 65, 3, 2, 180]);
+  assert.deepEqual([working(a1).length, working(a1)[0].weightKg, working(a1)[0].reps, working(a1)[0].rir, a1.restSec], [4, 65, 3, 2, 180]);
   assert.match(a1.note?.en ?? '', /^New range 3–6: 65 kg × 3 reps \(converted through your 1RM, 5 % lighter/);
-  // 20 days off: −7.1 %; 40 days off: −11 % (60 → 53.4 kg, the nearest pin 55 kg), reset to the bottom of the range with a test
+  // 20 days off: −6.8 % (60 → 55.9 kg, the nearest pin 55 kg); 40 days off: −20 % (60 → 48 kg, the nearest pin 50 kg), reset to the bottom of the range with a test
   const at = (days) => ({ ...states, 'machine-chest-press': { ...states['machine-chest-press'], lastAt: iso(Date.parse(NOW) - days * D) } });
   a1 = planSession({ program: p, dayKey: 'A', states: at(20), settings, now: NOW, catalog: CATALOG }).exercises[0];
   assert.deepEqual([working(a1)[0].weightKg, working(a1)[0].reps], [55, 8]);
   assert.match(a1.note?.en ?? '', /^20 days since last time/);
   a1 = planSession({ program: p, dayKey: 'A', states: at(40), settings, now: NOW, catalog: CATALOG }).exercises[0];
-  assert.deepEqual([working(a1)[0].weightKg, working(a1)[0].reps], [55, 6]);
+  assert.deepEqual([working(a1)[0].weightKg, working(a1)[0].reps], [50, 6]);
   assert.match(a1.note?.en ?? '', /^40 days since you last did this.*First time on this exercise/);
   // an unknown day key plans the first day
   assert.equal(planSession({ program: p, dayKey: 'Z', states, now: NOW, catalog: CATALOG }).dayKey, 'A');
@@ -225,15 +225,15 @@ test('planSession: deload weeks cut sets 40 %, keep the load, add 2 RIR — not 
   const fresh = Object.fromEntries(Object.entries(states).map(([k, v]) => [k, { ...v, lastAt: iso(Date.parse(wk6) - 3 * D) }]));
   const plan = planSession({ program: p, dayKey: 'A', states: fresh, settings, now: wk6, catalog: CATALOG });
   assert.equal(working(plan.exercises[0]).length, 2);
-  assert.equal(working(plan.exercises[1]).length, 2);
+  assert.equal(working(plan.exercises[1]).length, 1, 'lat pulldown: 2 sets, 1 in a deload week');
   // the chest press is back from a month off: the break was the deload
   const mixed = { ...fresh, 'machine-chest-press': { ...fresh['machine-chest-press'], lastAt: iso(Date.parse(wk6) - 31 * D) } };
   const plan2 = planSession({ program: p, dayKey: 'A', states: mixed, settings, now: wk6, catalog: CATALOG });
   assert.equal(working(plan2.exercises[0]).length, 4);
   assert.doesNotMatch(plan2.exercises[0].note?.en ?? '', /Deload week/);
-  assert.equal(working(plan2.exercises[1]).length, 2);
+  assert.equal(working(plan2.exercises[1]).length, 1);
   // not a deload week one week later
-  assert.equal(working(planSession({ program: p, dayKey: 'A', states: fresh, settings, now: iso(Date.parse(wk6) + 7 * D), catalog: CATALOG }).exercises[1]).length, 3);
+  assert.equal(working(planSession({ program: p, dayKey: 'A', states: fresh, settings, now: iso(Date.parse(wk6) + 7 * D), catalog: CATALOG }).exercises[1]).length, 2);
 });
 
 test('planSession works on an empty catalog (registry fallbacks)', () => {

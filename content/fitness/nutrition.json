@@ -188,7 +188,7 @@
     "kcalPerG": {"protein":4,"fat":9,"carbs":4,"alcohol":7}
   },
   "heartRate": {
-    "hrMax": {"formula":"208 - 0.7*age","source":["tanaka-2001"]},
+    "hrMax": {"formula":"208 - 0.7*age","sdBpm":10,"source":["tanaka-2001"]},
     "zones": [
       {"zone":1,"pct":[50,60],"name":{"en":"Recovery","ru":"Восстановление"},"feel":{"en":"Very easy; you could chat for hours","ru":"Очень легко; можно болтать часами"}},
       {"zone":2,"pct":[60,70],"name":{"en":"Endurance base (zone 2)","ru":"Базовая выносливость (зона 2)"},"feel":{"en":"Easy to steady; you can still talk in full sentences","ru":"Спокойно; ещё можно говорить полными фразами"}},

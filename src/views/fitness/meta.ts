@@ -6,6 +6,13 @@ import { pick } from "@/lib/fitness/i18n";
 
 const IMAGE = "/share/fitness.jpg";
 
+/** Shorten to ≤ max characters at a word boundary (link-preview descriptions). */
+export function clip(text: string, max = 158) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), max - 30)).replace(/[\s,.;:—–-]+$/, "")}…`;
+}
+
 const page = (lang: Lang, path: string, en: [string, string], ru: [string, string], image = IMAGE): Metadata =>
   pageMetadata({ lang, path, title: pick(lang, en[0], ru[0]), description: pick(lang, en[1], ru[1]), image });
 

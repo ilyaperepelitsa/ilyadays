@@ -387,7 +387,7 @@ test('planDiff lists exactly the slots that change between two gyms', () => {
     const a = randomGym(rand);
     const b = randomGym(rand);
     const diff = planDiff(PROGRAM, a, b);
-    const expected = slotsOf(PROGRAM).filter((s) => resolveExercise(s, a) !== resolveExercise(s, b)).map((s) => s.slotId);
+    const expected = slotsOf(PROGRAM).filter((s) => resolveExercise(s, a, undefined, PROGRAM) !== resolveExercise(s, b, undefined, PROGRAM)).map((s) => s.slotId);
     assert.deepEqual(diff.map((d) => d.slotId), expected);
   }
   assert.deepEqual(planDiff(undefined, null, noPecDeck), []);

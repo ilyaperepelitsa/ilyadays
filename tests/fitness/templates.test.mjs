@@ -7,7 +7,7 @@ import {
   REP_MAX_PERCENT_SOURCE, RULES, SLOT_ROLES, TEMPLATES, WARMUP, WARMUP_RAMP, buildProgram, convertProgram,
   deriveSlot, estimateMinutes, finisherMinutes, modeParams, roleParams, slotParams, slotRole, templateById, withLegs,
 } from '../../src/lib/fitness/templates.mjs';
-import { weeklySets, weeklySetsTarget } from '../../src/lib/fitness/progression.mjs';
+import { groupWeights, weeklySets, weeklySetsTarget } from '../../src/lib/fitness/progression.mjs';
 import { CATALOG } from './engine-fixtures.mjs';
 
 const NOW = '2026-11-10T18:00:00.000Z';
@@ -74,9 +74,12 @@ test('%1RM table, warm-up ramp and rules are sane', () => {
   }
   assert.ok(WARMUP_RAMP.every((s) => s.pct < 100));
   assert.deepEqual(RULES.gap.shortPct, [5, 10]);
-  assert.deepEqual(RULES.gap.longPct, [10, 15]);
-  assert.equal(RULES.gap.keepBelowDays, 14);
-  assert.equal(RULES.gap.longFromDays, 28);
+  // research/02 §I: one missed week (14 days) is no break; 29–90 days restart at 80 %, beyond 90 days at 70 % as new
+  assert.deepEqual(RULES.gap.longPct, [20, 20]);
+  assert.equal(RULES.gap.keepBelowDays, 15);
+  assert.equal(RULES.gap.longFromDays, 29);
+  assert.deepEqual([RULES.gap.newFromDays, RULES.gap.newPct], [91, 30]);
+  assert.deepEqual(RULES.bigStep, { sessionsAtCeiling: 2, maxSessions: 8, maxKg: 5, maxPct: 25 });
   assert.equal(RULES.deload.setsMultiplier, 0.6);
   assert.equal(RULES.deload.loadMultiplier, 1);
   for (const key of ['rirTolerance', 'gap', 'deload', 'substitution', 'startLoadFactor', 'bodyweightExponent', 'conversion']) assert.ok(RULES.sources[key], `rules source ${key}`);
@@ -118,7 +121,8 @@ test('every template slot is well formed, from the registry, with a reason', () 
         ids.add(s.slotId);
         assert.ok(REG[s.exerciseId], `${tpl.id}/${s.slotId}: ${s.exerciseId} not in the registry`);
         assert.ok(SLOT_ROLES.includes(s.role), `${tpl.id}/${s.slotId}: role`);
-        assert.ok(s.sets >= 2 && s.sets <= 4, `${tpl.id}/${s.slotId}: sets ${s.sets}`);
+        // (1 set: a small-muscle slot trimmed so the goal's weekly volume band holds, see the bands test below)
+        assert.ok(s.sets >= 1 && s.sets <= 4, `${tpl.id}/${s.slotId}: sets ${s.sets}`);
         assert.ok(isRange(s.repRange) && s.rir >= 0 && s.rir <= 5 && s.restSec >= 45, `${tpl.id}/${s.slotId}: prescription`);
         assert.ok(PROGRESSION_RULE_IDS.includes(s.progression), `${tpl.id}/${s.slotId}: progression`);
         assert.ok(hasText2(s.why), `${tpl.id}/${s.slotId}: why`);
@@ -198,7 +202,8 @@ test('buildProgram: the owner default, contract fields, all goals', () => {
   }
   const strength = buildProgram({ goal: 'strength', now: NOW, catalog: CATALOG });
   const s1 = strength.days[0].slots[0];
-  assert.deepEqual([s1.sets, s1.repRange, s1.rir, s1.restSec], [5, [3, 6], 2, 180]);
+  // strength: no priority bonus (a main lift is 2–4 sets), full rests
+  assert.deepEqual([s1.sets, s1.repRange, s1.rir, s1.restSec], [4, [3, 6], 2, 180]);
 });
 
 test('buildProgram: day counts pick the 2- and 4-day templates; bad input throws', () => {
@@ -229,10 +234,17 @@ test('convertProgram: same exercises, re-derived prescription, new row with vers
   assert.equal(s.createdAt, later);
   assert.equal(s.deloadEveryWeeks, GOAL_MODES.strength.blockWeeks);
   assert.equal(s.progression.double.failsBeforeDeload, GOAL_MODES.strength.progression.failsBeforeDeload);
-  const ids = (/** @type {any} */ q) => q.days.map((d) => d.slots.map((x) => `${x.slotId}:${x.exerciseId}:${x.superset ?? ''}:${x.priority ?? ''}`));
+  const ids = (/** @type {any} */ q) => q.days.map((d) => d.slots.map((x) => `${x.slotId}:${x.exerciseId}:${x.priority ?? ''}`));
   assert.deepEqual(ids(s), ids(p));
   assert.deepEqual(s.days[0].slots[0].repRange, [3, 6]);
-  assert.equal(s.days[0].slots[0].sets, 5);
+  assert.equal(s.days[0].slots[0].sets, 4);
+  // a heavy 3–6-rep slot is never supersetted: the pairs with a strength primary (A3 + A4, B2 + B3) rest in full,
+  // the others stay; going back to recomp pairs them again (asserted below: back.days equals p.days)
+  const pairs = (/** @type {any} */ q) => q.days.flatMap((d) => d.slots.filter((x) => x.superset).map((x) => `${x.slotId}:${x.superset}:${x.restSec}`));
+  assert.deepEqual(pairs(p), ['A3:sA1:60', 'A4:sA1:75', 'B2:sB1:60', 'B3:sB1:75', 'B4:sB2:60', 'B5:sB2:60', 'C1:sC1:60', 'C2:sC1:60']);
+  assert.deepEqual(pairs(s), ['B4:sB2:60', 'B5:sB2:60', 'C1:sC1:75', 'C2:sC1:60']);
+  const rest = (/** @type {string} */ id) => s.days.flatMap((d) => d.slots).find((x) => x.slotId === id)?.restSec;
+  assert.deepEqual([rest('A3'), rest('A4'), rest('B2'), rest('B3')], [90, 180, 150, 180]);
   // the strength rebuild equals a fresh strength program (same derivation)
   const fresh = buildProgram({ goal: 'strength', now: later, catalog: CATALOG });
   assert.deepEqual(s.days, fresh.days);
@@ -284,14 +296,70 @@ test('session length estimates stay within 75 min, and the finisher counts', () 
   assert.equal(finisherMinutes({ en: 'Easy cool-down', ru: '' }), RULES.minutes.finisherDefaultMin);
 });
 
-test('weekly volume of the owner program: priority muscles at or above the recomp target, nothing extreme', () => {
+test('weekly volume of the owner program: inside the recomp band, priority muscles at or above the target', () => {
   const p = buildProgram({ now: NOW, catalog: CATALOG });
-  const target = weeklySetsTarget('recomp');
-  // fixture muscles and the merged catalog (fractional sets: direct 1, synergist 0.5 — pressing inflates shoulders)
+  const band = weeklySetsTarget('recomp');
+  // fixture muscles and the merged catalog (fractional sets: direct 1, synergist 0.5)
   for (const lookup of [CATALOG, undefined]) {
     const w = weeklySets(p, lookup);
-    for (const g of ['chest', 'back']) assert.ok(w[g] >= target.target && w[g] <= target.max * 1.25, `${g}: ${w[g]}`);
-    for (const [g, v] of Object.entries(w)) assert.ok(v <= target.max * 1.4, `${g}: ${v} sets/week`);
-    assert.ok(w.biceps >= target.start && w.triceps >= target.start, `arms: ${w.biceps} / ${w.triceps}`);
+    // shoulders may pass the band by one set: their count is mostly half-sets from presses and rows, which train the
+    // front and rear of the shoulder; the side has only the lateral raise, and one set a week is too little for it
+    for (const [g, v] of Object.entries(w)) assert.ok(v <= band.max + (g === 'shoulders' ? 1 : 0), `${g}: ${v} sets/week, the band ends at ${band.max}`);
+    for (const g of ['chest', 'back']) assert.ok(w[g] >= band.start, `${g}: ${w[g]}`);
+    // arms: mostly indirect work from the presses and pulls, which went from 3 to 2 sets for the band's sake
+    assert.ok(w.biceps >= 8 && w.triceps >= 8, `arms: ${w.biceps} / ${w.triceps}`);
+  }
+  const w = weeklySets(p);
+  assert.ok(w.chest >= band.target && w.back >= band.target, `priority muscles: chest ${w.chest}, back ${w.back}`);
+  assert.equal(p.days.reduce((n, d) => n + d.slots.reduce((k, x) => k + x.sets, 0), 0), 47);
+});
+
+test('every goal × days program the builder offers stays inside its own volume band', () => {
+  const sum = (/** @type {{ sets: number }[]} */ slots) => slots.reduce((n, x) => n + x.sets, 0);
+  for (const goal of GOAL_IDS) {
+    const mode = GOAL_MODES[goal];
+    const band = mode.setsPerMuscleWeek;
+    for (const daysPerWeek of [2, 3, 4]) {
+      for (const p of [buildProgram({ goal, daysPerWeek, now: NOW }), convertProgram(buildProgram({ daysPerWeek, now: NOW }), goal, NOW)]) {
+        const at = `${goal} × ${daysPerWeek} days`;
+        const slots = p.days.flatMap((d) => d.slots);
+        const w = weeklySets(p);
+        // the owner's mandatory chest lifts are never trimmed away, and nobody gets legs unasked
+        for (const id of ['machine-chest-press', 'pec-deck']) assert.ok(slots.some((x) => x.exerciseId === id && x.sets >= 2), `${at}: ${id}`);
+        assert.ok(!p.days.some((d) => d.key === 'L') && (w.quads ?? 0) < 3 && (w.hamstrings ?? 0) < 3, `${at}: no legs`);
+        // no 3–6-rep slot in a superset, under any goal
+        for (const x of slots) assert.ok(!(x.superset && x.repRange[1] <= 6), `${at}: ${x.slotId} ${x.repRange} is supersetted`);
+        for (const d of p.days) {
+          const groups = new Map();
+          for (const x of d.slots) if (x.superset) groups.set(x.superset, (groups.get(x.superset) ?? 0) + 1);
+          for (const [id, n] of groups) assert.equal(n, 2, `${at}: superset ${id} on day ${d.key} has ${n} member(s)`);
+        }
+        if (goal === 'strength') {
+          // the band counts direct sets per main lift (the unit says so): 4 → 12 a week, 2–4 sets a session; accessories
+          // at most 10 direct sets per muscle; and no session beyond 75 min
+          assert.match(band.unit ?? '', /direct sets per main lift/);
+          const role = (/** @type {any} */ x) => slotRole(p, x);
+          const main = new Map();
+          for (const x of slots.filter((y) => role(y) === 'primary')) {
+            assert.ok(x.sets >= 2 && x.sets <= 4, `${at}: ${x.slotId} ${x.sets} sets`);
+            main.set(x.exerciseId, (main.get(x.exerciseId) ?? 0) + x.sets);
+          }
+          for (const [id, n] of main) assert.ok(n >= band.start && n <= band.max, `${at}: ${id} ${n} direct sets a week`);
+          /** @type {Record<string, number>} */
+          const accessory = {};
+          for (const x of slots.filter((y) => role(y) !== 'primary')) {
+            for (const [g, weight] of Object.entries(groupWeights(x.exerciseId))) if (weight === 1) accessory[g] = (accessory[g] ?? 0) + x.sets;
+          }
+          for (const [g, n] of Object.entries(accessory)) assert.ok(n <= 10, `${at}: ${n} accessory sets for ${g}`);
+          for (const d of p.days) assert.ok(estimateMinutes(d) <= 75, `${at}: day ${d.key} takes ${estimateMinutes(d)} min`);
+          // "fewer sets" than the same days of muscle growth, and A1 is not 5 × 3–6
+          assert.ok(sum(slots) <= sum(buildProgram({ goal: 'hypertrophy', daysPerWeek, now: NOW }).days.flatMap((d) => d.slots)), `${at}: ${sum(slots)} sets a week`);
+        } else {
+          // fractional sets per muscle (direct 1, synergist 0.5): nothing above the band, chest and back inside it
+          for (const [g, v] of Object.entries(w)) assert.ok(v <= band.max + (g === 'shoulders' && goal === 'recomp' ? 1 : 0), `${at}: ${g} ${v} sets/week, the band ends at ${band.max}`);
+          for (const g of ['chest', 'back']) assert.ok(w[g] >= band.start, `${at}: ${g} ${w[g]} sets/week, the band starts at ${band.start}`);
+        }
+      }
+    }
   }
 });

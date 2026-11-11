@@ -1,6 +1,6 @@
 {
  "currency": "USD",
- "total": 16.4757,
+ "total": 18.5391,
  "images": [
   {
    "key": "machine-chest-press/sequence",
@@ -8243,7 +8243,1125 @@
    "status": "ok",
    "at": "2026-11-09T01:49:08+0400",
    "out": "public/media/fitness/exercises/dead-hang/sequence.webp"
+  },
+  {
+   "key": "pallof-press/side",
+   "kind": "side",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1480,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1480
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2852
+   },
+   "cost": 0.0486,
+   "estimated": 0.0496,
+   "status": "ok",
+   "at": "2026-11-12T01:06:05+0400",
+   "out": "public/media/fitness/exercises/pallof-press/side.webp"
+  },
+  {
+   "key": "pallof-press/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1648,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1648
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 3020
+   },
+   "cost": 0.0494,
+   "estimated": 0.0506,
+   "status": "ok",
+   "at": "2026-11-12T01:06:06+0400",
+   "out": "public/media/fitness/exercises/pallof-press/sequence.webp"
+  },
+  {
+   "key": "cable-fly/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1503,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1503
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2875
+   },
+   "cost": 0.0487,
+   "estimated": 0.0497,
+   "status": "ok",
+   "at": "2026-11-12T01:06:08+0400",
+   "out": "public/media/fitness/exercises/cable-fly/sequence.webp"
+  },
+  {
+   "key": "machine-lateral-raise/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1443,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1443
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2815
+   },
+   "cost": 0.0484,
+   "estimated": 0.0494,
+   "status": "ok",
+   "at": "2026-11-12T01:06:09+0400",
+   "out": "public/media/fitness/exercises/machine-lateral-raise/sequence.webp"
+  },
+  {
+   "key": "incline-dumbbell-press/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1320,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1320
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2692
+   },
+   "cost": 0.0478,
+   "estimated": 0.0485,
+   "status": "ok",
+   "at": "2026-11-12T01:06:29+0400",
+   "out": "public/media/fitness/exercises/incline-dumbbell-press/sequence.webp"
+  },
+  {
+   "key": "reverse-pec-deck/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1534,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1534
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2906
+   },
+   "cost": 0.0488,
+   "estimated": 0.0499,
+   "status": "ok",
+   "at": "2026-11-12T01:06:36+0400",
+   "out": "public/media/fitness/exercises/reverse-pec-deck/sequence.webp"
+  },
+  {
+   "key": "hip-abduction-machine/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1389,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1389
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2761
+   },
+   "cost": 0.0481,
+   "estimated": 0.049,
+   "status": "ok",
+   "at": "2026-11-12T01:06:36+0400",
+   "out": "public/media/fitness/exercises/hip-abduction-machine/sequence.webp"
+  },
+  {
+   "key": "decline-chest-press-machine/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1410,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1410
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2782
+   },
+   "cost": 0.0482,
+   "estimated": 0.0493,
+   "status": "ok",
+   "at": "2026-11-12T01:06:37+0400",
+   "out": "public/media/fitness/exercises/decline-chest-press-machine/sequence.webp"
+  },
+  {
+   "key": "copenhagen-adduction/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1441,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1441
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2813
+   },
+   "cost": 0.0484,
+   "estimated": 0.0493,
+   "status": "ok",
+   "at": "2026-11-12T01:06:54+0400",
+   "out": "public/media/fitness/exercises/copenhagen-adduction/sequence.webp"
+  },
+  {
+   "key": "leg-press-calf-raise/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1480,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1480
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2852
+   },
+   "cost": 0.0486,
+   "estimated": 0.0495,
+   "status": "ok",
+   "at": "2026-11-12T01:07:02+0400",
+   "out": "public/media/fitness/exercises/leg-press-calf-raise/sequence.webp"
+  },
+  {
+   "key": "dumbbell-overhead-triceps-extension/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1323,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1323
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2695
+   },
+   "cost": 0.0478,
+   "estimated": 0.0486,
+   "status": "ok",
+   "at": "2026-11-12T01:07:41+0400",
+   "out": "public/media/fitness/exercises/dumbbell-overhead-triceps-extension/sequence.webp"
+  },
+  {
+   "key": "dumbbell-fly/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1405,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1405
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2777
+   },
+   "cost": 0.0482,
+   "estimated": 0.049,
+   "status": "ok",
+   "at": "2026-11-12T01:07:43+0400",
+   "out": "public/media/fitness/exercises/dumbbell-fly/sequence.webp"
+  },
+  {
+   "key": "incline-dumbbell-curl/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1369,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1369
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2741
+   },
+   "cost": 0.048,
+   "estimated": 0.0489,
+   "status": "ok",
+   "at": "2026-11-12T01:07:44+0400",
+   "out": "public/media/fitness/exercises/incline-dumbbell-curl/sequence.webp"
+  },
+  {
+   "key": "plate-loaded-shoulder-press/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1391,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1391
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2763
+   },
+   "cost": 0.0481,
+   "estimated": 0.0491,
+   "status": "ok",
+   "at": "2026-11-12T01:07:45+0400",
+   "out": "public/media/fitness/exercises/plate-loaded-shoulder-press/sequence.webp"
+  },
+  {
+   "key": "rotary-torso-machine/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1424,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1424
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2796
+   },
+   "cost": 0.0483,
+   "estimated": 0.0493,
+   "status": "ok",
+   "at": "2026-11-12T01:08:11+0400",
+   "out": "public/media/fitness/exercises/rotary-torso-machine/sequence.webp"
+  },
+  {
+   "key": "machine-pullover/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1584,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1584
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2956
+   },
+   "cost": 0.0491,
+   "estimated": 0.05,
+   "status": "ok",
+   "at": "2026-11-12T01:08:11+0400",
+   "out": "public/media/fitness/exercises/machine-pullover/sequence.webp"
+  },
+  {
+   "key": "belt-squat/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1418,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1418
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2790
+   },
+   "cost": 0.0483,
+   "estimated": 0.0492,
+   "status": "ok",
+   "at": "2026-11-12T01:08:11+0400",
+   "out": "public/media/fitness/exercises/belt-squat/sequence.webp"
+  },
+  {
+   "key": "close-grip-bench-press/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1390,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1390
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2762
+   },
+   "cost": 0.0481,
+   "estimated": 0.049,
+   "status": "ok",
+   "at": "2026-11-12T01:08:12+0400",
+   "out": "public/media/fitness/exercises/close-grip-bench-press/sequence.webp"
+  },
+  {
+   "key": "single-leg-dumbbell-calf-raise/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1400,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1400
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2772
+   },
+   "cost": 0.0482,
+   "estimated": 0.0489,
+   "status": "ok",
+   "at": "2026-11-12T01:08:37+0400",
+   "out": "public/media/fitness/exercises/single-leg-dumbbell-calf-raise/sequence.webp"
+  },
+  {
+   "key": "barbell-back-squat/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1449,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1449
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2821
+   },
+   "cost": 0.0484,
+   "estimated": 0.0493,
+   "status": "ok",
+   "at": "2026-11-12T01:08:39+0400",
+   "out": "public/media/fitness/exercises/barbell-back-squat/sequence.webp"
+  },
+  {
+   "key": "machines/machine-shoulder-press",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 756,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 756
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2128
+   },
+   "cost": 0.0449,
+   "estimated": 0.0453,
+   "status": "ok",
+   "at": "2026-11-12T01:09:12+0400",
+   "out": "public/media/fitness/machines/machine-shoulder-press.webp"
+  },
+  {
+   "key": "machines/converging-chest-press",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 761,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 761
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2133
+   },
+   "cost": 0.045,
+   "estimated": 0.0454,
+   "status": "ok",
+   "at": "2026-11-12T01:09:25+0400",
+   "out": "public/media/fitness/machines/converging-chest-press.webp"
+  },
+  {
+   "key": "cable-fly/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1566,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1566
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2938
+   },
+   "cost": 0.049,
+   "estimated": 0.0501,
+   "status": "ok",
+   "at": "2026-11-12T01:09:27+0400",
+   "out": "public/media/fitness/exercises/cable-fly/sequence.webp"
+  },
+  {
+   "key": "machine-lateral-raise/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1548,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1548
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2920
+   },
+   "cost": 0.0489,
+   "estimated": 0.05,
+   "status": "ok",
+   "at": "2026-11-12T01:09:29+0400",
+   "out": "public/media/fitness/exercises/machine-lateral-raise/sequence.webp"
+  },
+  {
+   "key": "machines/smith-incline-press",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 717,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 717
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2089
+   },
+   "cost": 0.0447,
+   "estimated": 0.0451,
+   "status": "ok",
+   "at": "2026-11-12T01:09:44+0400",
+   "out": "public/media/fitness/machines/smith-incline-press.webp"
+  },
+  {
+   "key": "machines/cable-lateral-raise",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 791,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 791
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2163
+   },
+   "cost": 0.0451,
+   "estimated": 0.0455,
+   "status": "ok",
+   "at": "2026-11-12T01:09:50+0400",
+   "out": "public/media/fitness/machines/cable-lateral-raise.webp"
+  },
+  {
+   "key": "machines/reverse-pec-deck",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 768,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 768
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2140
+   },
+   "cost": 0.045,
+   "estimated": 0.0454,
+   "status": "ok",
+   "at": "2026-11-12T01:10:04+0400",
+   "out": "public/media/fitness/machines/reverse-pec-deck.webp"
+  },
+  {
+   "key": "machines/plate-loaded-row",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 766,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 766
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2138
+   },
+   "cost": 0.045,
+   "estimated": 0.0454,
+   "status": "ok",
+   "at": "2026-11-12T01:10:10+0400",
+   "out": "public/media/fitness/machines/plate-loaded-row.webp"
+  },
+  {
+   "key": "machines/decline-chest-press-machine",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 749,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 749
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2121
+   },
+   "cost": 0.0449,
+   "estimated": 0.0453,
+   "status": "ok",
+   "at": "2026-11-12T01:10:22+0400",
+   "out": "public/media/fitness/machines/decline-chest-press-machine.webp"
+  },
+  {
+   "key": "machines/cable-curl",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 775,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 775
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2147
+   },
+   "cost": 0.045,
+   "estimated": 0.0455,
+   "status": "ok",
+   "at": "2026-11-12T01:10:23+0400",
+   "out": "public/media/fitness/machines/cable-curl.webp"
+  },
+  {
+   "key": "machines/machine-shrug",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 744,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 744
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2116
+   },
+   "cost": 0.0449,
+   "estimated": 0.0452,
+   "status": "ok",
+   "at": "2026-11-12T01:10:31+0400",
+   "out": "public/media/fitness/machines/machine-shrug.webp"
+  },
+  {
+   "key": "machines/four-way-neck-machine",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 748,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 748
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2120
+   },
+   "cost": 0.0449,
+   "estimated": 0.0453,
+   "status": "ok",
+   "at": "2026-11-12T01:10:35+0400",
+   "out": "public/media/fitness/machines/four-way-neck-machine.webp"
+  },
+  {
+   "key": "machines/smith-squat",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 719,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 719
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2091
+   },
+   "cost": 0.0448,
+   "estimated": 0.0451,
+   "status": "ok",
+   "at": "2026-11-12T01:10:48+0400",
+   "out": "public/media/fitness/machines/smith-squat.webp"
+  },
+  {
+   "key": "muscles/adductors",
+   "kind": "muscle-map",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1024x1024",
+   "refs": 1,
+   "usage": {
+    "input_tokens": 1974,
+    "input_tokens_details": {
+     "image_tokens": 1024,
+     "text_tokens": 950
+    },
+    "output_tokens": 1756,
+    "output_tokens_details": {
+     "image_tokens": 1756,
+     "text_tokens": 0
+    },
+    "total_tokens": 3730
+   },
+   "cost": 0.0656,
+   "estimated": 0.0708,
+   "status": "ok",
+   "at": "2026-11-12T01:10:54+0400",
+   "out": "public/media/fitness/muscles/adductors.webp"
+  },
+  {
+   "key": "single-leg-dumbbell-calf-raise/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1464,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1464
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2836
+   },
+   "cost": 0.0485,
+   "estimated": 0.0493,
+   "status": "ok",
+   "at": "2026-11-12T01:11:24+0400",
+   "out": "public/media/fitness/exercises/single-leg-dumbbell-calf-raise/sequence.webp"
+  },
+  {
+   "key": "machines/assisted-pull-up",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 1,
+   "usage": {
+    "input_tokens": 2380,
+    "input_tokens_details": {
+     "image_tokens": 1536,
+     "text_tokens": 844
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 3752
+   },
+   "cost": 0.0577,
+   "estimated": 0.0582,
+   "status": "ok",
+   "at": "2026-11-12T01:11:51+0400",
+   "out": "public/media/fitness/machines/assisted-pull-up.webp"
+  },
+  {
+   "key": "machines/four-way-neck-machine",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 788,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 788
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2160
+   },
+   "cost": 0.0451,
+   "estimated": 0.0455,
+   "status": "ok",
+   "at": "2026-11-12T01:13:28+0400",
+   "out": "public/media/fitness/machines/four-way-neck-machine.webp"
+  },
+  {
+   "key": "machines/machine-shrug",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 776,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 776
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2148
+   },
+   "cost": 0.045,
+   "estimated": 0.0454,
+   "status": "ok",
+   "at": "2026-11-12T01:13:30+0400",
+   "out": "public/media/fitness/machines/machine-shrug.webp"
+  },
+  {
+   "key": "machines/smith-incline-press",
+   "kind": "machine",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 743,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 743
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2115
+   },
+   "cost": 0.0449,
+   "estimated": 0.0452,
+   "status": "ok",
+   "at": "2026-11-12T01:13:30+0400",
+   "out": "public/media/fitness/machines/smith-incline-press.webp"
+  },
+  {
+   "key": "plate-loaded-shoulder-press/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1475,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1475
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2847
+   },
+   "cost": 0.0485,
+   "estimated": 0.0496,
+   "status": "ok",
+   "at": "2026-11-12T01:13:31+0400",
+   "out": "public/media/fitness/exercises/plate-loaded-shoulder-press/sequence.webp"
+  },
+  {
+   "key": "machine-pullover/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1608,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1608
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2980
+   },
+   "cost": 0.0492,
+   "estimated": 0.0502,
+   "status": "ok",
+   "at": "2026-11-12T01:13:31+0400",
+   "out": "public/media/fitness/exercises/machine-pullover/sequence.webp"
+  },
+  {
+   "key": "pallof-press/sequence",
+   "kind": "sequence",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1776,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1776
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 3148
+   },
+   "cost": 0.05,
+   "estimated": 0.0513,
+   "status": "ok",
+   "at": "2026-11-12T01:20:13+0400",
+   "out": "public/media/fitness/exercises/pallof-press/sequence.webp"
+  },
+  {
+   "key": "pallof-press/side",
+   "kind": "side",
+   "model": "gpt-image-2",
+   "quality": "medium",
+   "size": "1536x1024",
+   "refs": 0,
+   "usage": {
+    "input_tokens": 1624,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 1624
+    },
+    "output_tokens": 1372,
+    "output_tokens_details": {
+     "image_tokens": 1372,
+     "text_tokens": 0
+    },
+    "total_tokens": 2996
+   },
+   "cost": 0.0493,
+   "estimated": 0.0504,
+   "status": "ok",
+   "at": "2026-11-12T01:20:15+0400",
+   "out": "public/media/fitness/exercises/pallof-press/side.webp"
   }
  ],
- "updatedAt": "2026-11-09T01:49:08+0400"
+ "updatedAt": "2026-11-12T01:20:15+0400"
 }

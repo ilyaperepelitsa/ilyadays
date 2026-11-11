@@ -42,6 +42,7 @@ import {
   overlayOutbox,
   parseAuthSession,
   parseOutbox,
+  isUnreadableSnapshot,
   parseSnapshot,
   remoteProblem,
   rowId,
@@ -399,31 +400,78 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
       return false;
     }
   };
-  const writeKey = (key: string, value: string) => {
-    if (!writeQuiet(key, value) && storage) setStatus({ lastError: "storage: this browser refused to save (full or blocked)" });
+  const writeKey = (key: string, value: string): boolean => {
+    if (writeQuiet(key, value)) return true;
+    if (storage) setStatus({ lastError: "storage: this browser refused to save (full or blocked)" });
+    return false;
   };
   const keys = () => storageKeys(storageProject);
   /** Serialise and save; a row that cannot be serialised becomes a status, never an exception in a click handler. */
-  const persist = (key: string, serialize: () => string) => {
+  const persist = (key: string, serialize: () => string): string | null => {
     let raw: string;
     try {
       raw = serialize();
     } catch (error) {
       setStatus({ lastError: `storage: ${errorMessage(error)}` });
-      return;
+      return null;
     }
-    writeKey(key, raw);
+    return writeKey(key, raw) ? raw : null;
   };
-  const persistSnapshot = () => persist(keys().snapshot, () => serializeSnapshot(snapshot, snapshotUser));
-  const persistOutbox = () => persist(keys().outbox, () => serializeOutbox(outbox));
+  /** What this tab last read from or wrote to storage: a different stored value means another tab saved since. */
+  let storedSnapshotRaw: string | null = null;
+  let storedOutboxRaw: string | null = null;
+  const persistSnapshot = () => {
+    const raw = persist(keys().snapshot, () => serializeSnapshot(snapshot, snapshotUser));
+    if (raw !== null) storedSnapshotRaw = raw;
+  };
+  const persistOutbox = () => {
+    const raw = persist(keys().outbox, () => serializeOutbox(outbox));
+    if (raw !== null) storedOutboxRaw = raw;
+  };
+  /**
+   * Take what another tab saved when its storage event never arrived here (a suspended or restored tab gets none):
+   * every tab saves the whole copy on every change, so writing from a stale memory copy would erase the other tab's rows.
+   * A failed save leaves the stored value as this tab last saw it, so memory that is ahead of storage is never replaced.
+   */
+  function catchUp(): boolean {
+    if (!storage) return false;
+    const k = keys();
+    let changed = false;
+    const rawOutbox = read(k.outbox);
+    if (rawOutbox !== storedOutboxRaw) {
+      storedOutboxRaw = rawOutbox;
+      outbox = parseOutbox(rawOutbox);
+      changed = true;
+    }
+    const raw = read(k.snapshot);
+    if (raw && raw !== storedSnapshotRaw) {
+      const other = parseSnapshot(raw);
+      if (other.user === snapshotUser) {
+        storedSnapshotRaw = raw;
+        snapshot = withPending(other.snapshot, snapshot.pending);
+        changed = true;
+      }
+    }
+    return changed;
+  }
 
   function load(project: string) {
     storageProject = project;
-    const parsed = parseSnapshot(read(storageKeys(project).snapshot));
+    const k = storageKeys(project);
+    const raw = read(k.snapshot);
+    const parsed = parseSnapshot(raw);
     snapshot = parsed.snapshot;
     snapshotUser = parsed.user;
-    outbox = parseOutbox(read(storageKeys(project).outbox));
+    storedSnapshotRaw = raw;
+    storedOutboxRaw = read(k.outbox);
+    outbox = parseOutbox(storedOutboxRaw);
     status = { ...status, storageProject: project };
+    if (isUnreadableSnapshot(raw)) {
+      // The next save replaces the stored log with what could be read (nothing): keep the damaged text for recovery.
+      const kept = writeQuiet(k.corrupt, raw);
+      warn(`the saved log could not be read${kept ? `; a copy was kept under ${k.corrupt}` : ""}`);
+      status = { ...status, lastError: "storage: the saved log could not be read" };
+    }
   }
   const switchCopy = (project: string) => {
     if (project !== storageProject) load(project);
@@ -546,6 +594,7 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
       setStatus({ lastError: `invalid: a ${table} row was not saved` });
       return;
     }
+    catchUp();
     if (mode === "synced" && user) queue(makeUpsert(table, row, user.id, nowIso()));
     commit(applyUpsert(snapshot, table, row));
   }
@@ -559,15 +608,26 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
       warn(`cannot remove ${String(table)} ${String(id)}`);
       return;
     }
+    catchUp();
     if (mode === "synced" && user) queue(makeRemove(table, id, user.id, nowIso()));
     commit(applyRemove(snapshot, table, id));
   }
 
-  function closeStale(): Session[] {
+  /**
+   * Close sessions left open past the limit. In synced mode the cached copy may predate what another device did to the
+   * session (finished it an hour in), and a queued change always beats the server's row: so when the server can answer
+   * and has not been asked lately, pull first; the pull closes what is still stale (`afterPull`).
+   */
+  function closeStale(afterPull = false): Session[] {
     if (!canWrite()) return [];
+    catchUp();
     const at = nowIso();
     const { snapshot: next, closed } = closeStaleSessions(snapshot, at, snapshot.settings?.autoCloseHours ?? 6);
     if (!closed.length) return closed;
+    if (mode === "synced" && !afterPull && isOnline() && !status.awaitingSession && now() - lastPullAt > STALE_PULL_MS) {
+      void refresh();
+      return [];
+    }
     if (mode === "synced" && user) for (const session of closed) queue(makeUpsert("sessions", session, user.id, at));
     commit(next);
     return closed;
@@ -756,7 +816,10 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
     settledOnce = true;
     const previousUser = user?.id ?? null;
     user = auth.user;
-    if ((previousUser !== (user?.id ?? null) && snapshotUser !== user?.id) || (mode !== "viewer" && snapshotUser !== null && snapshotUser !== user?.id)) {
+    // Signed out only because the expired token could not be refreshed: the device's confirmed writer is still the
+    // account (see below), and its cached log must not be taken for another account's and emptied.
+    const account = user?.id ?? storedWriter()?.id;
+    if ((previousUser !== (account ?? null) && snapshotUser !== account) || (mode !== "viewer" && snapshotUser !== null && snapshotUser !== account)) {
       stopLive();
       snapshot = emptySnapshot();
       snapshotUser = null;
@@ -1014,6 +1077,12 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
 
   /** Pull `target`'s rows (incremental by the server's updated_at; full when there is no cursor or once a day). */
   async function pull(gen: number, target: string, kind: "synced" | "viewer"): Promise<void> {
+    await pullRows(gen, target, kind);
+    // Answered or not, what is still open past the limit closes now (see closeStale).
+    if (kind === "synced" && gen === generation && mode === "synced") closeStale(true);
+  }
+
+  async function pullRows(gen: number, target: string, kind: "synced" | "viewer"): Promise<void> {
     const db = await client();
     if (!db || gen !== generation) return;
     if (kind === "synced") {
@@ -1378,8 +1447,12 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
     const k = keys();
     if (key === k.snapshot && value) {
       const other = parseSnapshot(value);
-      if (other.user === snapshotUser) commit(other.snapshot, false);
+      if (other.user === snapshotUser) {
+        storedSnapshotRaw = value;
+        commit(other.snapshot, false);
+      }
     } else if (key === k.outbox) {
+      storedOutboxRaw = value;
       outbox = parseOutbox(value);
       commit(snapshot, false);
     } else if ((key === authKey || key === null) && mode === "synced" && lastAuth && !lastAuth.loading && !lastAuth.user) {
@@ -1410,6 +1483,7 @@ export function createFitnessStore(options: CreateFitnessStoreOptions): SyncedFi
       const onOffline = () => setStatus({ online: false });
       const onVisibility = () => {
         if (document.visibilityState !== "visible") return;
+        if (catchUp()) commit(snapshot, false);
         closeStale();
         if (redecidable()) scheduleRedecide();
         else if (now() - lastPullAt > STALE_PULL_MS) void refresh();

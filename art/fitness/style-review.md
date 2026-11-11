@@ -427,3 +427,80 @@ Spend: **$16.48 of the $20 cap**. This review cost $1.62 and kept the $19 stop.
    bar 90°. A three-quarter front view shows both.
 7. **Follow every cable at full size.** Cables ending at the shoulders, a cable strung across the gap and a handle
    hanging from the wrong pulley all passed on contact sheets.
+
+## Review 2026-11-12 (polish pass after the three-reviewer audit of all 242 pictures)
+
+Three reviewers rated 33 pictures REDO or FIX. Each correction went into the picture's brief in `scenes.json`
+(`start`, `end`, `path`, `seqNote`, `machineNote`, `pair`, `fresh`, `eq`), the picture was regenerated alone with
+`--only … --force --budget-usd 19.8`, and the result was viewed with Read at 1100 px (machines two to a sheet at
+820 px). At most two paid tries per picture. 41 requests cost $1.96; every replaced original is in
+`art/fitness/originals/_previous/`.
+
+Data fixes: `decline-chest-press-machine` and `four-way-neck-machine` are now `"eq": "plate-loaded"` with a
+plate-loaded `machine` text (they were "pin-loaded" against the catalog); `dumbbell-fly`, `reverse-pec-deck` and
+`hip-abduction-machine` are `"pair": true`; the redrawn seated machines are `fresh` for `machine` (no pec-deck
+reference); the Pallof press has its own camera, `front, column at the right edge`; the `adductors` muscle text
+names the upper two-thirds of the inner thigh.
+
+| picture | defect | brief change | tries | verdict |
+| --- | --- | --- | --- | --- |
+| pallof-press/sequence | arms pressed away from the column, along the cable | front view from slightly above, column at the right edge; cable a straight line across the picture to the handle; arms foreshortened toward the viewer; arrow down the picture | 1 | accepted |
+| pallof-press/side | same | same camera and `hard`; cable visible end to end | 1 | accepted |
+| reverse-pec-deck/sequence | START one arm out, one folded; both levers on one side; arrow from the waist | `pair`; START both arms straight ahead past the pad, one lever per side; END a T seen from behind | 1 | accepted (in START the far arm is mostly hidden by the body) |
+| incline-dumbbell-press/sequence | third arm stub in END | exactly two arms, each from its own shoulder to its own dumbbell | 1 | accepted |
+| machine-lateral-raise/sequence | levers were stubs attached to nothing; END arms straight | each lever one bar from a pivot behind its shoulder to the pad above the bent elbow | 2 | accepted, try 1 kept, marginal: levers join the frame pivots in both panels, but in END the pads sit near the hands and the arms are almost straight. Try 2 (pads "at the ELBOWS, each arm an L") put the pads right and detached the levers again, so it was not kept; the brief is back at try 1's text |
+| leg-press-calf-raise/sequence | orange on the hamstring, feet flat | orange only between knee and ankle; balls of the feet on the lower edge, heels below it in START | 1 | accepted |
+| hip-abduction-machine/sequence | START pads between the legs | `pair`; each pad on the outer side of its knee in both panels | 1 | accepted (two stack blocks on one rail) |
+| copenhagen-adduction/sequence | top leg ended at the knee; straight-arm support | forearm on the floor, elbow under the shoulder; top leg complete with shin and foot on the bench | 1 | accepted (toes drawn; in START the bottom leg lies in front of the bench) |
+| cable-fly/sequence | a second cable ended on the shoulder | exactly two cables; one pulley per column at shoulder height; each cable reaches its hand from the outside | 2 | accepted, try 2 (try 1 moved the pulleys between panels and ran a cable to the shoulder) |
+| decline-chest-press-machine/sequence | stack plus plates, no downward path | plate-loaded, no stack; END hands at navel height; `fresh` | 1 | accepted |
+| dumbbell-fly/sequence | START asymmetric | `pair`; arms as mirror images, dumbbells level with the chest | 1 | accepted (the near arm is foreshortened and reads a little short) |
+| incline-dumbbell-curl/sequence | arrow curved up and back | arrow in front of the hanging hand, bulging toward the right of the picture, head at the front of the shoulder | 1 | accepted |
+| plate-loaded-shoulder-press/sequence | the machine changed between panels | same frame, two rear uprights with a hinge each, only the levers rotate | 2 | accepted, try 2, marginal: both hinges show in both panels, but the right upright still stands further out in END |
+| machine-pullover/sequence | pivot moved; lever read as a strap across the chest | one hub at shoulder height in both panels; lever alongside the upper arm | 2 | accepted, try 2: hub fixed, lever along the arm; START has one stray thin rod from the frame top to the bar |
+| belt-squat/sequence | END grew a plate horn behind the legs | one lever, one horn, one chain in both panels | 1 | accepted |
+| single-leg-dumbbell-calf-raise/sequence | START foot flat on the block | only the front third of the foot on the step's left edge; free foot held up behind | 2 | accepted, try 2, marginal: the heel is off the step but about level with it, not clearly below; a stray weight stack behind the post |
+| rotary-torso-machine/sequence | arrow against the knee movement | knees to the picture's left in START and right in END; arrow under the knees, left to right | 1 | accepted (the turn is still small) |
+| barbell-back-squat/sequence | one plate in START | a plate on both ends in both panels | 1 | accepted (three-quarter rear view, stray stack in the rack as before) |
+| dumbbell-overhead-triceps-extension/sequence | arrow in front of the chest | short arrow behind the head beside the dumbbell | 1 | accepted (a stray pulley and stack behind the bench) |
+| close-grip-bench-press/sequence | bar over the neck, one elbow flared | bar on the lower chest, both elbows tucked | 1 | accepted (in START the forearm hides the head) |
+| machines/plate-loaded-row | read as a chest press | seat facing a chest pad on its own post, levers and handles beyond the pad, no back pad | 1 | accepted (the near handle sits beside the pad rather than past it) |
+| machines/decline-chest-press-machine | drawn with a selector stack | plate-loaded, two levers with low handles and a horn each, orange only on the seat pin | 1 | accepted |
+| machines/four-way-neck-machine | stack; head pad off to the side | plate-loaded; head pad upright like a headrest above the seat, one horn | 2 | accepted, try 2 (in try 1 the pad lay flat like a roof above the seat) |
+| machines/cable-curl | orange pop-pin on an empty bracket mid-rail | one carriage at the lowest hole with the pop-pin on it | 1 | accepted |
+| machines/cable-lateral-raise | same | same | 1 | accepted |
+| machines/reverse-pec-deck | indistinguishable from the pec deck | arms turned to the tower, handles together in front of the chest pad; orange on range, seat and selector pins | 1 | accepted |
+| machines/machine-shoulder-press | copy of the chest press | levers pivot behind the top of the back pad, handles at shoulder height beside it | 1 | accepted |
+| machines/converging-chest-press | read as a pec deck | two rigid arms on angled top pivots, handles at mid-chest | 1 | accepted |
+| machines/smith-squat | a selector stack inside the rack | Smith rack only; orange only on the two safety stops | 1 | accepted |
+| machines/smith-incline-press | bench at 55–60° | "almost flat, about 30°, head end only knee height above the seat end" | 2 | accepted, try 2 (try 1 was about 40–45°); plate-storage pegs on the frame |
+| machines/machine-shrug | plates plus a stack plus a head pad | plate-loaded standing shrug, side bars with handles and horns, nothing above the platform | 2 | accepted, try 2, marginal: no stack, pad or centre post, but the handles are short pegs and the platform is cream |
+| machines/assisted-pull-up | stray pads, cable tangle, orange knob on the frame | generated with `--ref art/fitness/originals/machines/assisted-dip.webp` and "the reference shows this very machine"; steps added; orange on the selector pin and the platform pin | 1 | accepted: the same chassis as the dip picture |
+| muscles/adductors | orange read as inner quad above the knee | upper two-thirds of both inner thighs from the groin, tapering above the knee | 1 | accepted |
+
+Nothing was restored to the committed original, nothing is unresolved and nothing was skipped for budget.
+
+Note on `prompts.json`: the last logged request for `machine-lateral-raise/sequence` is try 2, but the published
+file is try 1 (the entry before it).
+
+Pallof arrow, second try (same day): in both kept Pallof pictures the arrow lies on the belly pointing straight
+down, which can read as "push the handle down". One more request each, with the camera turned about 30° and "one
+short thick foreshortened arrow floating beside the hands, toward the lower left and the viewer, never on the body,
+never vertical".
+- pallof-press/sequence, try 2: the arrow left the body, but the arms pressed away from the column along the cable
+  again (the original defect). Not kept; try 1 and its brief restored. Unresolved: arrow on the belly.
+- pallof-press/side, try 2: same result. Not kept; try 1 and its brief restored. Unresolved: arrow on the belly.
+  For both, the last `prompts.json` entry is the rejected try; the published file is the entry before it.
+  Any turn of the camera off the straight front view brings the sideways press back; a later fix should keep the
+  front camera and change only the arrow.
+
+Spend: **$18.54 of the $20 cap** ($16.48 before; this pass $2.06, under its $19.80 stop).
+
+**Lessons, continued:**
+
+8. **A reference can be used to copy a machine on purpose.** The assisted pull-up drawn with the dip picture as the
+   reference and a note saying "this very machine" came back on the same chassis at the first try.
+9. **Fixing one part can undo another.** The lateral raise got pads at the elbows only by losing the lever pivots;
+   keep the first try's original before the second request so the better one can be put back.
+10. **Angles need a physical comparison.** "About 30 degrees" drew 45; "the head end only knee height above the seat
+    end, far closer to flat than to 45" drew 30.

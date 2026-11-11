@@ -15,7 +15,7 @@ import {
 import { exerciseAllowed } from "@/lib/fitness/plan-preferences.mjs";
 import { holdOf, holdText, noteHasHold } from "@/lib/fitness/tracker.mjs";
 import { prescriptionText, rangeLabels, restText, targetText, unitOfExercise } from "./format";
-import { Stepper } from "./Stepper";
+import { Stepper } from "../train/Stepper";
 import { ExerciseThumbnail } from "../ExerciseThumbnail";
 import { ActionIcon } from "../ActionIcon";
 
@@ -98,6 +98,9 @@ export function SlotRow({
             <span className="fpr-slot-next fit-num">
               {planned?.calibration ? pick(lang, "Calibrate first", "Сначала калибровка") : <>{pick(lang, "Next", "Дальше")}: {target}</>}
             </span>
+          ) : now == null ? (
+            /* the target arrives with the page clock: its line is kept, so the row does not grow under the thumb */
+            <span className="fpr-slot-next" aria-hidden="true">{"\u00a0"}</span>
           ) : null}
           {hold && !(open && noteHasHold(planned?.note, hold, lang)) ? <span className="fpr-slot-hold fit-num">{holdText(hold, lang)}</span> : null}
           {used ? (
@@ -133,7 +136,7 @@ export function SlotRow({
             <>
               <div className="fpr-steppers">
                 <Stepper testid="slot-sets" label={pick(lang, "Sets", "Подходы")} value={slot.sets} min={b.sets[0]} max={b.sets[1]} onChange={(v) => set({ sets: v })} />
-                <Stepper testid="slot-rest" label={pick(lang, "Rest", "Отдых")} text={restText(slot.restSec)} value={slot.restSec} min={b.restSec[0]} max={b.restSec[1]} step={REST_STEP_SEC} onChange={(v) => set({ restSec: v })} />
+                <Stepper testid="slot-rest" label={pick(lang, "Rest", "Отдых")} format={restText} value={slot.restSec} min={b.restSec[0]} max={b.restSec[1]} step={REST_STEP_SEC} onChange={(v) => set({ restSec: v })} />
                 <Stepper
                   testid="slot-reps-from"
                   label={rangeLabels(unit, lang)[0]}

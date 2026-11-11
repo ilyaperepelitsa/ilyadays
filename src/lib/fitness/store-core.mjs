@@ -521,6 +521,20 @@ export function parseSnapshot(raw) {
 }
 
 /**
+ * A stored snapshot that holds text but cannot be read (cut short, not JSON, not an object): parseSnapshot gives an
+ * empty log for it, and the caller keeps the text aside before anything overwrites it.
+ * @param {unknown} raw
+ */
+export function isUnreadableSnapshot(raw) {
+  if (typeof raw !== "string" || !raw.trim()) return false;
+  try {
+    return !isObj(JSON.parse(raw));
+  } catch {
+    return true;
+  }
+}
+
+/**
  * localStorage keys of one Supabase project's copy ("unconfigured" when Supabase is not set up).
  * @param {string} project
  */
@@ -541,6 +555,8 @@ export function storageKeys(project) {
     backendAt: `${base}:backend-at`,
     /** changes taken out of the outbox for good (refused by the database, or refused MAX_TRIES times): a capped log */
     dead: `${base}:dead`,
+    /** the text of a snapshot that could not be read, kept before the next save replaces it */
+    corrupt: `${base}:snapshot-unreadable`,
   };
 }
 
@@ -682,8 +698,10 @@ export function adoptLocalData(storage, fromProject, toProject, opts = {}) {
     adopted += 1;
   }
   try {
-    storage.setItem(to.snapshot, serializeSnapshot(withPending(merged, outbox.length), target.user));
+    // The queue first: it carries every adopted row, so a save that fails halfway (a full storage) leaves either
+    // nothing or rows that still upload, and the retry queues them again. The other order stranded them unsent.
     storage.setItem(to.outbox, serializeOutbox(outbox));
+    storage.setItem(to.snapshot, serializeSnapshot(withPending(merged, outbox.length), target.user));
   } catch (error) {
     return { adopted: 0, rows: rows.length, error: error instanceof Error ? error.message : String(error) };
   }

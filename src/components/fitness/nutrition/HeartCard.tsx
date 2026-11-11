@@ -7,7 +7,7 @@
  */
 import type { Lang } from "@/lib/fitness/types";
 import { keepUnits, pick, t2 } from "@/lib/fitness/i18n";
-import { HEART, ZONES, hrMaxTanaka, hrZones, vo2maxCooper, vo2maxUth, zone2Range, zoneOf } from "@/lib/fitness/nutrition.mjs";
+import { HEART, HR_MAX_FORMULA_SD, ZONES, hrMaxTanaka, hrZones, vo2maxCooper, vo2maxUth, vo2maxUthRange, zone2Range, zoneOf } from "@/lib/fitness/nutrition.mjs";
 import { useFitness } from "@/components/fitness/Provider";
 import { toNum, useNutritionInputs } from "./inputs";
 import { NumberField, Refs, fmt, fmtUpTo } from "./ui";
@@ -39,6 +39,9 @@ export function HeartCard({ lang }: { lang: Lang }) {
   const cooperR = cooperN != null ? vo2maxCooper(cooperN) : null;
   // The ratio method needs the person's own resting heart rate, not the example value.
   const uth = z && hrRest.source !== "default" ? vo2maxUth(z.hrMax, z.hrRest) : null;
+  // With a formula maximum (not measured) the ratio is only good for a range, in whole numbers.
+  const uthRangeR = z && !z.measured && hrRest.source !== "default" ? vo2maxUthRange(z.hrMax, z.hrRest) : null;
+  const uthRange = uthRangeR && !("error" in uthRangeR) ? uthRangeR : null;
   const zone2 = z?.zones.find((x) => x.zone === 2);
   const z2Own = z && ceilingN != null ? zone2Range(z, ceilingN) : null;
   const ceilingBad = z2Own != null && "error" in z2Own;
@@ -114,8 +117,8 @@ export function HeartCard({ lang }: { lang: Lang }) {
             <p className="nut-small fit-muted fit-num">
               {z.measured
                 ? T(`Max ${fmt(z.hrMax, lang)} bpm (measured)`, `Максимум ${fmt(z.hrMax, lang)} уд/мин (измерен)`)
-                : T(`Max ≈ ${fmtUpTo(z.hrMax, lang, 1)} bpm (Tanaka: 208 − 0.7 × age)`, `Максимум ≈ ${fmtUpTo(z.hrMax, lang, 1)} уд/мин (Танака: 208 − 0,7 × возраст)`)}{" "}
-              <Refs ids={HEART.hrMax.source} lang={lang} /> · {T(`reserve ${fmtUpTo(z.reserve, lang, 1)} bpm`, `резерв ${fmtUpTo(z.reserve, lang, 1)} уд/мин`)}
+                : T(`Max ≈ ${fmt(z.hrMax, lang)} bpm (Tanaka: 208 − 0.7 × age; ±${HR_MAX_FORMULA_SD} bpm for one person)`, `Максимум ≈ ${fmt(z.hrMax, lang)} уд/мин (Танака: 208 − 0,7 × возраст; ±${HR_MAX_FORMULA_SD} уд/мин для одного человека)`)}{" "}
+              <Refs ids={HEART.hrMax.source} lang={lang} /> · {T(`reserve ${fmt(z.reserve, lang)} bpm`, `резерв ${fmt(z.reserve, lang)} уд/мин`)}
             </p>
             <table className="nut-zones fit-num">
               <caption className="sr-only">{T("Karvonen heart-rate zones", "Пульсовые зоны по Карвонену")}</caption>
@@ -252,10 +255,15 @@ export function HeartCard({ lang }: { lang: Lang }) {
           </dd>
           <dt>{T("Heart-rate ratio", "По пульсу")}</dt>
           <dd>
-            {uth && !("error" in uth)
+            {uthRange
               ? T(
-                  `≈ ${fmtUpTo(uth.vo2max, lang, 1)} ml/kg/min · ${fmtUpTo(uth.mets, lang, 1)} METs (rough: derived in well-trained men)`,
-                  `≈ ${fmtUpTo(uth.vo2max, lang, 1)} мл/кг/мин · ${fmtUpTo(uth.mets, lang, 1)} МЕТ (грубо: выведено на тренированных мужчинах)`,
+                  `about ${uthRange.lo}–${uthRange.hi} ml/kg/min · ${uthRange.metsLo}–${uthRange.metsHi} METs (a range: your max heart rate here is the age formula, which can be off by ${HR_MAX_FORMULA_SD} bpm or more; enter a measured one for a single number)`,
+                  `примерно ${uthRange.lo}–${uthRange.hi} мл/кг/мин · ${uthRange.metsLo}–${uthRange.metsHi} МЕТ (диапазон: максимальный пульс здесь взят из формулы по возрасту, а она может ошибаться на ${HR_MAX_FORMULA_SD} уд/мин и больше; введите измеренный, чтобы получить одно число)`,
+                )
+              : uth && !("error" in uth)
+              ? T(
+                  `≈ ${fmt(uth.vo2max, lang)} ml/kg/min · ${fmt(uth.mets, lang)} METs (rough: derived in well-trained men)`,
+                  `≈ ${fmt(uth.vo2max, lang)} мл/кг/мин · ${fmt(uth.mets, lang)} МЕТ (грубо: выведено на тренированных мужчинах)`,
                 )
               : T("Enter your resting heart rate above.", "Введите свой пульс покоя выше.")}{" "}
             <Refs ids={HEART.uth.source} lang={lang} />

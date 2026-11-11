@@ -154,6 +154,14 @@ describe("citations", () => {
     assert.deepEqual(renderBody("`[3]` and \\[4]").cites, []);
   });
 
+  it("stays text inside a link label: no <a> nested in <a>", () => {
+    const out = renderBody("See [the review [2]](https://example.org/r) and [2].");
+    assert.equal(out.html,
+      '<p>See <a href="https://example.org/r" rel="noopener noreferrer" target="_blank">the review [2]</a> and <sup class="fit-cite"><a href="#src-2" aria-label="Source 2">2</a></sup>.</p>');
+    assert.deepEqual(out.cites, [2]);
+    assert.doesNotMatch(html("[**bold [1]** label](/fitness/science)"), /<a[^>]*>(?:(?!<\/a>).)*<a/);
+  });
+
   it("reports citations without a source", () => {
     const { errors } = renderMarkdown(`${FM}Fine [1][2], missing [3].`);
     assert.deepEqual(errors, ["citation [3] has no source"]);

@@ -26,7 +26,7 @@ import assert from 'node:assert/strict';
 import { RULES, buildProgram, slotParams } from '../../src/lib/fitness/templates.mjs';
 import { DEFAULT_CATALOG, applySession, nextDayKey, planSession } from '../../src/lib/fitness/session.mjs';
 import {
-  deloadSets, e1rmFactor, holdActive, holdDay, incrementFor, isAssisted, isCompound, maxStepFraction, pctOf1rm,
+  calendarDaysBetween, deloadSets, deloadWeek, e1rmFactor, holdActive, holdDay, incrementFor, isAssisted, isCompound, maxStepFraction, pctOf1rm,
   repCeiling, roundLoad, unitOf,
 } from '../../src/lib/fitness/progression.mjs';
 import { setHold } from '../../src/lib/fitness/program-edit.mjs';
@@ -160,8 +160,9 @@ function simulate({ name, profile, weeks, seed, gym: firstGym = null, swap = nul
   const lifter = makeLifter(profile, seed, holiday);
   const program = buildProgram({ goal: 'recomp', daysPerWeek: 3, now: iso(CREATED), id: `sim-${name}` });
   const settings = { goal: 'recomp', daysPerWeek: 3, bodyweightKg: BODYWEIGHT, activeGymId: gym?.id ?? null, unit: 'kg', restTimer: true, autoCloseHours: 6, updatedAt: iso(CREATED) };
-  // the documented calendar: blockWeeks accumulation weeks from program.createdAt, then one deload week
-  const deloadDue = (t) => Math.floor((t - Date.parse(program.createdAt)) / (7 * DAY)) % (program.deloadEveryWeeks + 1) === program.deloadEveryWeeks;
+  // the documented calendar: blockWeeks accumulation weeks (local calendar weeks from the Monday of the week the
+  // program was made in), then one deload week
+  const deloadDue = (t) => deloadWeek(program, t).due;
   let states = {};
   const sessions = [];
   const plans = [];
@@ -207,7 +208,8 @@ function simulate({ name, profile, weeks, seed, gym: firstGym = null, swap = nul
       const base = slotParams(program, slot);
       const params = unitOf(ex) !== unitOf(exerciseOf(slot.exerciseId)) ? { ...base, repRange: [ex.repRange[0], ex.repRange[1]] } : base;
       const before = states[pe.exerciseId] ?? null;
-      const daysSince = before?.lastAt ? (now - Date.parse(before.lastAt)) / DAY : null;
+      // local calendar days, as the engine counts a break (one missed week is 14, whatever the clock times)
+      const daysSince = before?.lastAt ? calendarDaysBetween(before.lastAt, now) : null;
       const test = !before || before.sessions === 0 || (daysSince ?? 0) >= RULES.gap.longFromDays;
       // slotState: the slot exercise's memory, which a substitute is seeded from
       const slotState = pe.exerciseId !== slot.exerciseId ? states[slot.exerciseId] ?? null : null;
@@ -330,6 +332,14 @@ const held = (e) => e.deload && !gapped(e) && Boolean(e.before?.sessions);
 const calibrating = (e) => !e.before || e.before.sessions === 0 || gapped(e);
 /** When an entry's last working set was done (the engine judges a hold against it); the session start for plans. */
 const lastSet = (e) => Math.max(e.now, ...(e.sets ?? []).map((s) => Date.parse(s.doneAt)));
+/**
+ * Rule 2, coarse steps: the step the engine takes after sessions in a row with every set at the rep ceiling, though
+ * the capacity guard does not carry it (the note says so), and the first session at that load, whose shortfall does
+ * not count as a miss.
+ */
+const BIG_STEP = /The step is big for this weight: the first session at it may fall short/;
+const bigStep = (e) => BIG_STEP.test(e.note?.en ?? '');
+const graced = (e) => !calibrating(e) && e.before?.bigStep?.graceKg != null && e.before.bigStep.graceKg === e.used && e.used === working(e.pe)[0].weightKg;
 /** Entries per exercise, in time order. */
 function byExercise(list) {
   const m = new Map();
@@ -351,7 +361,7 @@ function gapPlan(ex, before, days, gym) {
   const long = days >= g.longFromDays;
   const t = long ? Math.min(1, (days - g.longFromDays) / (g.longFullAtDays - g.longFromDays)) : (days - g.keepBelowDays) / (g.longFromDays - g.keepBelowDays);
   const [a, b] = long ? g.longPct : g.shortPct;
-  const pct = Math.round((a + (b - a) * t) * 10) / 10;
+  const pct = days >= g.newFromDays ? g.newPct : Math.round((a + (b - a) * t) * 10) / 10;
   const kg = before.workingKg;
   let next = isAssisted(ex)
     ? Math.min(BODYWEIGHT, roundLoad(BODYWEIGHT - (BODYWEIGHT - kg) * (1 - pct / 100), ex, gym, 'nearest'))
@@ -443,7 +453,7 @@ function checkPlans(sim) {
       assert.ok(cut >= -1e-9 && cut <= (RULES.gapCut.maxMultiple * g.pct) / 100 + 1e-9, `${off}: −${(100 * cut).toFixed(1)} % for −${g.pct} %`);
     } else {
       assert.doesNotMatch(note, /days since/, `${at}: ${r.daysSince.toFixed(1)} days off, note "${note}"`);
-      assert.equal(w[0].weightKg, r.before.workingKg, `${at}: planned ${w[0].weightKg} kg, the memory says ${r.before.workingKg}`);
+      assert.equal(w[0].weightKg, roundLoad(r.before.workingKg, r.ex, r.gym, 'easier'), `${at}: planned ${w[0].weightKg} kg, the memory says ${r.before.workingKg}`);
       assert.equal(w[0].reps, r.deload ? Math.max(u, r.before.targetReps - RULES.deload.repsMinus * u) : r.before.targetReps, `${at}: reps`);
       assert.equal(w.length, r.deload ? deloadSets(r.slot.sets) : r.slot.sets, `${at}: sets (deload week ${r.deload})`);
       assert.equal(w[0].rir, r.deload ? Math.min(5, r.slot.rir + RULES.deload.rirBonus) : r.slot.rir, `${at}: RIR`);
@@ -491,6 +501,16 @@ function checkSteps(sim) {
       const delta = Math.abs(e.after.workingKg - e.used);
       // double progression: more load only after every working set reached the top (or the widened target)
       assert.ok(e.sets.every((s) => s.kg === e.used && s.reps >= top && (s.rir == null || s.rir >= R - RULES.rirTolerance)), `${at}: load up without every set at ${top}`);
+      if (bigStep(e)) {
+        // the step at the rep ceiling: one increment, at most 5 kg or +25 %, after at least two sessions in a row with
+        // every set at the ceiling and the target reps in reserve; the guard does not carry it (else it is no big step)
+        const ceiling = repCeiling(ex, hi);
+        assert.ok(top >= ceiling && e.sets.every((s) => s.reps >= ceiling && (s.rir ?? R) >= R), `${at}: a big step short of the ceiling`);
+        assert.ok((e.before.bigStep?.streak ?? 0) >= RULES.bigStep.sessionsAtCeiling - 1, `${at}: a big step after ${(e.before.bigStep?.streak ?? 0) + 1} session(s) at the ceiling`);
+        assert.ok(Math.abs(delta - inc) < 1e-9 && (inc <= RULES.bigStep.maxKg || effective(ex, e.after.workingKg) <= base * (1 + RULES.bigStep.maxPct / 100)), `${at}: a big step of ${delta} kg`);
+        assert.deepEqual([e.after.targetReps, e.after.bigStep], [lo, { graceKg: e.after.workingKg }], `${at}: from the bottom of the range, with the first session graced`);
+        return;
+      }
       // the documented maximum: one increment, or +doubleStepCapPct % (the big-jump cap)
       assert.ok(delta <= Math.max(inc, (base * RULES.doubleStepCapPct) / 100) + 1e-9, `${at}: +${delta} kg on ${base} kg is more than one ${inc} kg step and more than +${RULES.doubleStepCapPct} %`);
       // the capacity guard (§16 rule 2): by Epley the weakest set still allows the bottom of the range at the target RIR
@@ -517,7 +537,9 @@ function checkFailures(sim) {
       const at = where(sim, e);
       const [lo] = e.params.repRange;
       const miss = e.sets.some((s) => s.reps < lo);
-      if (miss && !calibrating(e)) assert.ok(e.outcome === 'failed' || e.outcome === 'deloaded', `${at}: a set below ${lo} gave '${e.outcome}'`);
+      // (the first session after a big step at the rep ceiling may fall short: announced, not a miss)
+      if (miss && graced(e)) assert.deepEqual([e.outcome, e.after.fails, e.after.workingKg], ['held', e.before.fails, e.used], `${at}: the graced first session after a big step`);
+      else if (miss && !calibrating(e)) assert.ok(e.outcome === 'failed' || e.outcome === 'deloaded', `${at}: a set below ${lo} gave '${e.outcome}'`);
       if (!miss) assert.ok(e.outcome !== 'failed' && e.outcome !== 'deloaded', `${at}: '${e.outcome}' with every set in the range`);
       failed = e.outcome === 'failed' ? failed + 1 : 0;
       assert.ok(failed <= N - 1, `${at}: ${failed} failed sessions in a row without a deload (failsBeforeDeload ${N})`);
@@ -641,7 +663,7 @@ function checkIncomplete(sim) {
     const at = `${where(sim, e)}: ${e.sets.length} of ${working(e.pe).length} sets`;
     const [lo] = e.params.repRange;
     if (e.sets.some((s) => s.reps < lo)) {
-      assert.ok(e.outcome === 'failed' || e.outcome === 'deloaded', `${at}: a set below ${lo} gave '${e.outcome}'`);
+      assert.ok(graced(e) ? e.outcome === 'held' : e.outcome === 'failed' || e.outcome === 'deloaded', `${at}: a set below ${lo} gave '${e.outcome}'`);
       continue;
     }
     assert.equal(e.outcome, 'held', at);
@@ -695,8 +717,9 @@ function checkCycles(sim) {
     }
     for (const [key, when] of seen) {
       const at = `${sim.name} ${id}: deloaded ${key} kg ${when.length} times (${when.map((ms) => iso(ms).slice(0, 10)).join(', ')})`;
-      if (id === 'hammer-curl') assert.equal(when.length, 1, at);
-      else assert.ok(when.length <= 2, at);
+      // (the hammer curl used to be held to once: it sat at its rep ceiling for good, which was the defect — two
+      // sessions in a row at the ceiling now take the step, and 4 more after a deload from it retry it)
+      assert.ok(when.length <= 2, at);
     }
   }
 }
@@ -756,7 +779,12 @@ function checkPlateau(sim) {
         const before = e.used === plan.weightKg ? memo.streak : 0;
         if (complete || below) memo.streak = allTop && complete && carries ? before + 1 : 0;
         const need = Math.min(3, 1 + memo.times);
-        if (back(e.after.workingKg)) assert.ok(memo.streak >= need, `${at}: back to ${memo.kg} kg (deloaded from it ${memo.times}×) after ${memo.streak} sessions at the top, ${need} needed${test ? ' (a test session)' : ''}`);
+        if (back(e.after.workingKg) && bigStep(e)) {
+          // a step the guard never carries (rule 2 at the rep ceiling): twice as many sessions in a row at the ceiling
+          // each time that load has ended in a deload (4 after the first, 8 after the second)
+          const sessions = Math.min(RULES.bigStep.maxSessions, RULES.bigStep.sessionsAtCeiling * 2 ** memo.times);
+          assert.ok((e.before.bigStep?.streak ?? 0) + 1 >= sessions, `${at}: back to ${memo.kg} kg (deloaded from it ${memo.times}×) by a big step after ${(e.before.bigStep?.streak ?? 0) + 1} sessions at the ceiling, ${sessions} needed`);
+        } else if (back(e.after.workingKg)) assert.ok(memo.streak >= need, `${at}: back to ${memo.kg} kg (deloaded from it ${memo.times}×) after ${memo.streak} sessions at the top, ${need} needed${test ? ' (a test session)' : ''}`);
         if (PLATEAU_HOLD.test(note) || PLATEAU_EARN.test(note) || PLATEAU_BELOW.test(note)) {
           assert.ok(note.includes(`${memo.kg} kg`) && harder(ex, memo.kg, e.after.workingKg), `${at}: "${note}" (${memo.kg} kg remembered)`);
           if (test && /^Test done/.test(note)) {
@@ -798,8 +826,12 @@ function checkTests(sim) {
     const at = where(sim, e);
     const [lo, hi] = e.params.repRange;
     const R = e.params.rir;
-    const X = e.used;
     const target = working(e.pe)[0].reps;
+    // a test done as a ramp (every set at another load): the hardest load whose set was made is the load found, and
+    // the heavier attempt that ended the ramp is not a miss of the plan
+    const ramp = e.sets.length > 1 && new Set(e.sets.map((s) => s.kg)).size === e.sets.length;
+    const good = ramp ? e.sets.filter((s) => s.reps >= lo && (s.rir == null || s.rir >= R - RULES.rirTolerance)) : [];
+    const X = good.length ? good.reduce((kg, s) => (harder(e.ex, s.kg, kg) ? s.kg : kg), good[0].kg) : e.used;
     const atX = e.sets.filter((s) => s.kg === X);
     const below = atX.some((s) => s.reps < lo);
     const made = atX.every((s) => s.reps >= target && (s.rir == null || s.rir >= R - RULES.rirTolerance));
@@ -810,7 +842,7 @@ function checkTests(sim) {
     for (const s of e.sets) {
       const eff = effective(e.ex, s.kg);
       const total = s.reps + (s.rir ?? R);
-      if (eff > 0 && s.reps >= 1 && total <= RULES.reliableTotalReps) best = Math.max(best, eff * e1rmFactor(total));
+      if (eff > 0 && s.reps >= 1) best = Math.max(best, eff * e1rmFactor(total)); // a test anchors on any rep count
     }
     const load = best * loadFraction(lo + R + RULES.calibrationExtraRir);
     let implied = best > 0 ? roundLoad(isAssisted(e.ex) ? Math.max(0, BODYWEIGHT - load) : load, e.ex, e.gym, 'easier') : X;
@@ -829,7 +861,7 @@ function checkTests(sim) {
     const weakest = Math.min(...atX.map((s) => s.reps + (s.rir ?? R)));
     const carries = effective(e.ex, implied) * (30 + lo + R) <= effective(e.ex, X) * (30 + weakest) + 1e-9;
     let expected = below ? (harder(e.ex, implied, X) ? X : implied) : harder(e.ex, implied, X) && carries ? implied : reached ?? X;
-    const missed = e.sets.some((s) => s.reps < Math.max(lo, s.plannedReps || target) || (s.rir ?? R) < R - RULES.rirTolerance);
+    const missed = e.sets.filter((s) => !good.length || !harder(e.ex, s.kg, X)).some((s) => s.reps < Math.max(lo, s.plannedReps || target) || (s.rir ?? R) < R - RULES.rirTolerance);
     const incomplete = e.sets.length < working(e.pe).length;
     if ((missed || incomplete) && harder(e.ex, expected, planned)) expected = planned;
     assert.equal(e.after.workingKg, expected, `${at}: test session ${e.sets.map((s) => `${s.kg}×${s.reps}@${s.rir}`).join(' ')} (e1RM ${best.toFixed(3)} → ${implied} kg) → next ${e.after.workingKg} kg (${e.outcome}${e.deload ? ', deload week' : ''})`);
@@ -970,7 +1002,7 @@ for (const run of RUNS) {
     it('test sessions (first time, substitutes, ≥ 28 days off) re-anchor on what was lifted, even in a deload week', () => checkTests(sim));
     it('incomplete logs hold (§16 rule 4): 1 of 4 sets is no progress, and no miss unless a set fell below the range', () => checkIncomplete(sim));
     it('weight holds: no heavier load and no target past the top before the date, cleared after it', () => checkHolds(sim));
-    it('no fail → deload cycles in this run: the hammer curl never repeats a deload; others at most twice a year, the stalled lifter too', () => checkCycles(sim));
+    it('no fail → deload cycles in this run: no exercise is deloaded from the same load more than twice a year, the stalled lifter too', () => checkCycles(sim));
     it('plateau memory (§16 rule 5): back to a load that failed only after 2 (then 3) sessions in a row at the top', () => checkPlateau(sim));
     if (PLATEAU_COMPARISON_RUNS.has(run.name)) {
       it('plateau memory costs a responding or average lifter nothing: no more deloads, week-52 loads within one step', () => {
@@ -1039,7 +1071,7 @@ describe('simulation: 20 more stalled lifters, 52 weeks', () => {
   it('plateau memory (§16 rule 5) holds for each of them', () => {
     for (const sim of sims) checkPlateau(sim);
   });
-  it('an exercise deloaded 3 times from one load: at most 2 of the 20 lifters, none of them 4 times', () => {
+  it('an exercise deloaded 3 times from one load: at most 5 of the 20 lifters, none of them 4 times', () => {
     const worst = sims.map((sim) => {
       let most = { n: 0, at: sim.name };
       for (const [id, list] of byExercise(sim.entries)) {
@@ -1050,7 +1082,10 @@ describe('simulation: 20 more stalled lifters, 52 weeks', () => {
       return most;
     });
     const three = worst.filter((w) => w.n >= 3).map((w) => `${w.at} × ${w.n}`);
-    assert.ok(three.length <= 2, three.join(', '));
+    // 4 of the 20 since coarse steps are no dead end any more (2026-11-12): a load whose step the guard never
+    // carries is retried after 2, then 4, then 8 sessions in a row at the rep ceiling (cable fly 5 → 7.5 kg, face
+    // pull 10 → 12.5 kg), where it used to stay at the ceiling for good
+    assert.ok(three.length <= 5, three.join(', '));
     assert.ok(worst.every((w) => w.n <= 3), three.join(', '));
   });
 });
@@ -1165,7 +1200,7 @@ describe('master plan §16 in the loop: planSession → logged sets → applySes
       // every loadable slot of the day at its i-th load on its own grid, all planned together
       const slots = day.slots.map((slot) => ({ slot, ex: exerciseOf(slot.exerciseId) })).filter(({ ex }) => incrementFor(ex, null) > 0);
       for (let i = 0; i < 24; i++) {
-        for (const days of [14, 17, 21, 27]) {
+        for (const days of [15, 17, 21, 28]) {
           /** @type {Record<string, any>} */
           const states = {};
           for (const { slot, ex } of slots) {
@@ -1177,7 +1212,7 @@ describe('master plan §16 in the loop: planSession → logged sets → applySes
           for (const { slot, ex } of slots) {
             const before = states[ex.id];
             const w = working(plan.exercises.find((e) => e.slotId === slot.slotId))[0];
-            const intended = 5 + (5 * (days - 14)) / 14;
+            const intended = 5 + (5 * (days - 15)) / 14;
             const cut = cutOf(ex, before.workingKg, w.weightKg);
             const at = `${ex.id} ${before.workingKg} kg × ${before.targetReps}, ${days} days: ${w.weightKg} kg × ${w.reps}`;
             assert.ok(cut >= -1e-9 && cut <= (2 * intended + 0.1) / 100 + 1e-9, `${at} (−${(100 * cut).toFixed(1)} % for −${intended.toFixed(1)} %)`);

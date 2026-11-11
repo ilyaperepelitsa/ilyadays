@@ -2,8 +2,11 @@
 /** Everything the progress sections derive from the snapshot, memoized once per snapshot change (stream 06). */
 import { useMemo } from "react";
 import type { BodyweightEntry, LoggedSet, Session, Snapshot } from "@/lib/fitness/types";
-import { bodyweightLookup, effectiveLoad, toMs } from "@/lib/fitness/analytics.mjs";
+import { bodyweightTrendLookup, effectiveLoad, toMs } from "@/lib/fitness/analytics.mjs";
 import type { ProgressCatalog } from "./types";
+
+/** A record on a bodyweight or assisted exercise must beat the old one by this much (the scale's noise is ≈ 0.5 %). */
+const BODYWEIGHT_PR_GAIN = 0.01;
 
 export type LoadFlag = "no-bodyweight" | "unknown-fraction" | null;
 
@@ -22,6 +25,10 @@ export type ProgressData = {
   tonnageOf: (s: LoggedSet) => number | null;
   flagOf: (s: LoggedSet) => LoadFlag;
   unitOf: (exerciseId: string) => string;
+  /** Margin a record must beat the old one by: 1 % where the load includes the (noisy) body weight, else 0 */
+  prGainOf: (exerciseId: string) => number;
+  /** The gym a set was done at (its session's), null when unknown: records are kept per gym */
+  gymOf: (s: Pick<LoggedSet, "sessionId">) => string | null;
   daysPerWeek: number;
 };
 
@@ -33,7 +40,8 @@ export function useProgressData(snapshot: Snapshot, catalog: ProgressCatalog): P
     const sets = Object.values(setRows).filter((s) => byId.get(s.sessionId)?.status !== "abandoned");
     const entries = Object.values(bodyweight).sort((a, b) => toMs(a.at) - toMs(b.at));
     const fallbackKg = settings?.bodyweightKg ?? null;
-    const lookup = bodyweightLookup(entries, fallbackKg);
+    // the smoothed trend, not single weigh-ins: scale noise must not move a pull-up's load
+    const lookup = bodyweightTrendLookup(entries, fallbackKg);
     const timeOf = (s: LoggedSet) => {
       const t = toMs(byId.get(s.sessionId)?.startedAt ?? s.doneAt);
       return Number.isFinite(t) ? t : toMs(s.doneAt);
@@ -60,6 +68,8 @@ export function useProgressData(snapshot: Snapshot, catalog: ProgressCatalog): P
       },
       flagOf: (s) => load(s).flag,
       unitOf: (id) => catalog[id]?.unit ?? "reps",
+      prGainOf: (id) => (effectiveLoad({ kg: 0 }, facts(id), 1).kind === "external" ? 0 : BODYWEIGHT_PR_GAIN),
+      gymOf: (s) => byId.get(s.sessionId)?.gymId ?? null,
       daysPerWeek: settings?.daysPerWeek ?? 3,
     };
   }, [sessionRows, setRows, bodyweight, settings, catalog]);

@@ -13,7 +13,7 @@ import { nextState, roundLoad } from "@/lib/fitness/progression.mjs";
 import { DELOAD_EVERY_BOUNDS, PROGRESSION_BOUNDS, setDeloadEvery, setProgressionParams } from "@/lib/fitness/program-edit.mjs";
 import { holdOf, holdText, noteHasHold } from "@/lib/fitness/tracker.mjs";
 import { fmtNum, loadText } from "./format";
-import { Stepper } from "./Stepper";
+import { Stepper } from "../train/Stepper";
 import type { Edit } from "./SlotRow";
 
 const EPOCH = "1970-01-01T00:00:00.000Z";
@@ -101,7 +101,8 @@ export function ProgressionSettings({
   const patch = (change: Parameters<typeof setProgressionParams>[2]) =>
     onEdit((prog, at) => PROGRESSION_RULE_IDS.reduce((acc: Program, rule) => setProgressionParams(acc, rule, change, at), prog));
   const every = program.deloadEveryWeeks;
-  const everyText = every ? pick(lang, `every ${every} weeks`, `каждые ${every} нед.`) : pick(lang, "only when needed", "только по сигналам");
+  const everyLabel = (weeks: number) => (weeks ? pick(lang, `every ${weeks} weeks`, `каждые ${weeks} нед.`) : pick(lang, "only when needed", "только по сигналам"));
+  const everyText = everyLabel(every);
   const onEvery = (v: number) => {
     const next = v < DELOAD_EVERY_BOUNDS[0] ? (every > 0 && v < every ? 0 : DELOAD_EVERY_BOUNDS[0]) : v;
     onEdit((prog, at) => setDeloadEvery(prog, next, at));
@@ -120,11 +121,11 @@ export function ProgressionSettings({
       {example ? <p className="fpr-example">{example}</p> : null}
       {editable ? (
         <div className="fpr-steppers">
-          <Stepper testid="progression-step" label={pick(lang, "Weight step", "Шаг веса")} text={`${fmtNum(p.stepPct, lang)} %`} value={p.stepPct} min={B.stepPct[0]} max={B.stepPct[1]} step={0.5} onChange={(v) => patch({ stepPct: v })} />
+          <Stepper testid="progression-step" label={pick(lang, "Weight step", "Шаг веса")} format={(v) => `${fmtNum(v, lang)} %`} value={p.stepPct} min={B.stepPct[0]} max={B.stepPct[1]} step={0.5} onChange={(v) => patch({ stepPct: v })} />
           <Stepper testid="progression-fails" label={pick(lang, "Misses before a deload", "Неудач до разгрузки")} value={p.failsBeforeDeload} min={B.failsBeforeDeload[0]} max={B.failsBeforeDeload[1]} onChange={(v) => patch({ failsBeforeDeload: v })} />
-          <Stepper testid="progression-deload" label={pick(lang, "Deload size", "Размер разгрузки")} text={`${p.deloadPct} %`} value={p.deloadPct} min={B.deloadPct[0]} max={B.deloadPct[1]} step={5} onChange={(v) => patch({ deloadPct: v })} />
-          <Stepper testid="progression-overshoot" label={pick(lang, "Double step at top +", "Двойной шаг: верх +")} text={`+${p.overshootReps}`} value={p.overshootReps} min={B.overshootReps[0]} max={B.overshootReps[1]} onChange={(v) => patch({ overshootReps: v })} />
-          <Stepper wide testid="deload-every" label={pick(lang, "Planned deload week", "Плановая разгрузка")} text={everyText} value={every} min={0} max={DELOAD_EVERY_BOUNDS[1]} onChange={onEvery} />
+          <Stepper testid="progression-deload" label={pick(lang, "Deload size", "Размер разгрузки")} format={(v) => `${v} %`} value={p.deloadPct} min={B.deloadPct[0]} max={B.deloadPct[1]} step={5} onChange={(v) => patch({ deloadPct: v })} />
+          <Stepper testid="progression-overshoot" label={pick(lang, "Double step at top +", "Двойной шаг: верх +")} format={(v) => `+${v}`} value={p.overshootReps} min={B.overshootReps[0]} max={B.overshootReps[1]} onChange={(v) => patch({ overshootReps: v })} />
+          <Stepper wide testid="deload-every" label={pick(lang, "Planned deload week", "Плановая разгрузка")} format={everyLabel} value={every} min={0} max={DELOAD_EVERY_BOUNDS[1]} onChange={onEvery} />
         </div>
       ) : (
         <dl className="fit-kv fpr-kv">

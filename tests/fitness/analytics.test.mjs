@@ -85,13 +85,14 @@ describe("e1rm", () => {
     assert.ok(b.kg > e1rm(80, 5, null, "brzycki").kg && b.kg < e1rm(80, 5, null, "epley").kg);
   });
 
-  it("is reliable up to 12 effective reps and RIR ≤ 4, Epley-only far above", () => {
+  it("is reliable up to 12 effective reps and RIR ≤ 4; far above it follows the %1RM table (Epley / 0.9), bounded", () => {
     assert.equal(e1rm(50, 12).reliable, true);
     assert.equal(e1rm(50, 13).reliable, false);
     assert.equal(e1rm(50, 10, 3).reliable, false, "10 reps + 3 RIR = 13");
     assert.equal(e1rm(50, 5, 5).reliable, false, "RIR 5 is too far from failure");
     assert.equal(e1rm(50, 5, 4).reliable, true);
-    near(e1rm(10, 40).kg, 10 * (1 + 40 / 30), 1e-9);
+    near(e1rm(10, 40).kg, (10 * (1 + 40 / 30)) / 0.9, 1e-9);
+    assert.ok(e1rm(10, 35).kg < 25, "no Brzycki explosion near 37 reps");
   });
 
   it("carries ≈ 4 % noise at 5 reps and more far from failure", () => {
@@ -283,7 +284,8 @@ describe("body weight: EWMA, weekly rate, forecast", () => {
     const ttt = timeToTarget(fc, 88);
     assert.equal(ttt.status, "on-track");
     assert.ok(ttt.earliestDays < ttt.days && ttt.days < ttt.latestDays);
-    assert.equal(timeToTarget(fc, 89).status, "reached", "already below a target under the start");
+    assert.equal(timeToTarget(fc, 89).status, "away", "already past a target and still falling: not 'reached'");
+    assert.equal(timeToTarget(fc, fc.current + 0.1).status, "reached", "within 0.15 kg of the target");
     assert.equal(timeToTarget(fc, 95).status, "away", "target above the start while losing");
     assert.equal(timeToTarget(fc, 70).status, "beyond");
     const rising = forecast(pts.map((p, d) => ({ ...p, value: 80 + 0.08 * d + noise[d % 10] })), 30);

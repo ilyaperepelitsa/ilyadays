@@ -106,7 +106,7 @@ main.fit :is(p, li) { text-wrap-style: pretty; }
 /* Shared selection and recognition aids for profile creation and the plan editor. */
 .fit-action-icon { flex-shrink:0; }
 .fit-exercise-thumb { display:grid; place-items:center; flex-shrink:0; width:48px; height:48px; overflow:hidden; border-radius:8px; background:var(--surface-2); color:var(--muted); font-size:.75rem; font-weight:600; }
-.fit-exercise-thumb img { display:block; width:100%; height:100%; object-fit:cover; }
+.fit-exercise-thumb img { display:block; width:100%; height:100%; }
 .fit-goal-picker { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
 .fit-goal-picker label { display:flex; align-items:start; gap:9px; min-height:66px; padding:12px; border:1px solid var(--line); border-radius:9px; background:var(--surface); cursor:pointer; }
 .fit-goal-picker label.is-selected { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); background:var(--accent-soft); }
@@ -116,7 +116,11 @@ main.fit :is(p, li) { text-wrap-style: pretty; }
 .fit-goal-picker strong { font-size:.84rem; font-weight:600; line-height:1.35; }
 .fit-goal-picker small { color:var(--muted); font-size:.73rem; font-weight:400; line-height:1.4; }
 .fit-goal-picker label:focus-within { outline:2px solid var(--accent); outline-offset:3px; }
-@media(prefers-color-scheme:dark) { .fit-exercise-thumb img { filter:brightness(.92); } }
+/* The pictures are drawn on white paper: in the dark theme they are dimmed a little so they do not glare. The site
+   switches themes by prefers-color-scheme alone (theme.css); there is no data attribute to cover. */
+@media(prefers-color-scheme:dark) {
+  :is(.fit-exercise-thumb, .fx-figure, .fx-thumb, .fx-machine, .trk-tech, .fx-alt, .fit-gym-machine) img { filter:brightness(.82) saturate(.9); }
+}
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 
 /* Explorer-to-plan handoff: compact choices share shadcn controls with profile and constructor. */
@@ -162,3 +166,35 @@ main.fit :is(p, li) { text-wrap-style: pretty; }
 .fit-catalog-mode { justify-content:space-between; gap:6px 18px; padding:0 0 12px; margin:0 0 14px; border-bottom:1px solid var(--line); color:var(--muted); font-size:.8rem; }
 .fit-catalog-mode > a { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; color:var(--accent); font-weight:600; text-decoration:none; }
 .fit-catalog-mode .action-icon { width:16px; height:16px; }
+
+/* ---------- one stepper (− value +) for the whole section: a white pill with 48 px buttons. Used by the session
+   steppers and the program editor (train/Stepper.tsx), the body-weight fields and the calculators (the value is a
+   typed field there: .fit-stepper-field). Defined once, here. */
+.fit-stepper { display:grid; gap:4px; min-width:0; }
+.fit-stepper.wide { grid-column:1 / -1; }
+.fit-stepper-label { font:600 .8rem var(--sans); color:var(--muted); }
+.fit-stepper-row { display:grid; grid-template-columns:48px minmax(0,1fr) 48px; align-items:center; min-width:0; border:1px solid var(--field-line,var(--line)); border-radius:12px; background:var(--surface); }
+.fit-step { min-width:48px; min-height:48px; padding:0; border:0; border-radius:12px; background:transparent; color:var(--accent); font:700 1.5rem var(--sans); line-height:1; cursor:pointer; touch-action:manipulation; }
+.fit-step:disabled { color:var(--muted); opacity:.4; cursor:default; }
+.fit-step:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.fit-stepper-value { min-width:0; text-align:center; font-size:1.25rem; font-weight:700; color:var(--ink); white-space:nowrap; }
+.fit-stepper-field { display:flex; align-items:center; justify-content:center; gap:4px; min-width:0; align-self:stretch; padding:0 4px; color:var(--muted); font-size:.9rem; }
+.fit .fit-stepper-row .fit-stepper-field input { flex:1 1 auto; align-self:stretch; width:100%; min-width:0; min-height:46px; padding:0; border:0; border-radius:8px; outline:none; background:transparent; color:var(--ink); font:700 1.25rem var(--sans); font-variant-numeric:tabular-nums; text-align:center; appearance:textfield; -moz-appearance:textfield; }
+.fit-stepper-field input::-webkit-outer-spin-button, .fit-stepper-field input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+.fit-stepper-row:has(.fit-stepper-field:focus-within) { border-color:var(--accent); outline:2px solid var(--accent); outline-offset:2px; }
+
+/* Checkbox chips share the shape of .fit-seg buttons: solid border, 10 px corners, 44 px tall. A chip that cannot be
+   changed keeps a solid outline too (a dashed one made every chip on the profile page look switched off). */
+.fit .fit-choice { min-height:44px; padding:8px 14px; border:1px solid var(--field-line,var(--line)); border-radius:10px; }
+.fit .fit-choice[data-state=on] { border-color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent); }
+.fit .fit-choice { color:var(--ink); }
+.fit .fit-choice:disabled { border-style:solid; color:var(--muted); }
+.fit .fit-choice:disabled .fit-choice-indicator { border-style:solid; }
+
+/* Phone: "More" is laid out like its neighbours (mark above, name below), so the name of the current page gets the
+   whole column and is never cut ("Прогресс", "Nutrition"). */
+@media(max-width:640px) {
+  .fit-nav .fit-nav-more > summary { flex-direction:column-reverse; gap:3px; min-height:52px; padding:7px 3px; font-size:.69rem; line-height:1.25; text-align:center; }
+  .fit-nav .fit-nav-more > summary span { overflow:visible; text-overflow:clip; white-space:normal; overflow-wrap:anywhere; }
+  .fit-nav .fit-nav-more > summary svg { width:16px; height:16px; }
+}

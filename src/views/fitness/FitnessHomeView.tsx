@@ -3,6 +3,7 @@ import type { Lang } from "@/lib/fitness/types";
 import { localPath, strings } from "@/lib/i18n";
 import { pick } from "@/lib/fitness/i18n";
 import { FitnessNav, FitnessShell } from "@/components/fitness/Shell";
+import { HomeHero } from "@/components/fitness/home/HomeHero";
 import { HomePanel } from "@/components/fitness/home/HomePanel";
 import { ErrorGuard } from "@/components/fitness/train/ErrorGuard";
 import { ActionIcon, type ActionIconName } from "@/components/site/ActionIcon";
@@ -28,21 +29,7 @@ export function FitnessHomeView({ lang }: { lang: Lang }) {
   const t = strings(lang);
   return (
     <FitnessShell lang={lang} path="/fitness">
-      <section className="hello fh-hero">
-        <div>
-        <p className="fh-eyebrow">{pick(lang, "Your pace. Your priorities.", "Ваш темп. Ваши приоритеты.")}</p>
-        <h1>{t.fitnessTitle}</h1>
-        <p className="lede">
-          {pick(
-            lang,
-            "Build a plan around what you want to train. Find your starting weights, log what you actually do, and make the next session fit your progress.",
-            "Соберите программу под свои задачи. Подберите стартовые веса, записывайте фактический результат и корректируйте следующую тренировку по прогрессу.",
-          )}
-        </p>
-        <div className="fh-hero-tags"><span>{pick(lang, "Flexible plans", "Гибкая программа")}</span><span>{pick(lang, "Personal baselines", "Личные стартовые веса")}</span><span>{pick(lang, "Private profiles", "Приватный профиль")}</span></div>
-        </div>
-        <div className="fh-hero-art" aria-hidden="true" />
-      </section>
+      <HomeHero lang={lang} title={t.fitnessTitle} />
       <FitnessNav lang={lang} current="/fitness" />
       <ErrorGuard lang={lang}>
         <HomePanel lang={lang} />

@@ -18,6 +18,7 @@ import {
   GOAL_KEYS,
   LIMITS,
   nutritionPlan,
+  recommendedRateFor,
   type ActivityKey,
   type NutritionPlan,
 } from "@/lib/fitness/nutrition.mjs";
@@ -91,13 +92,16 @@ export function NutritionCalc({ lang }: { lang: Lang }) {
   const activity = (ACTIVITY.some((a) => a.key === activityV) ? activityV : "light") as ActivityKey;
   const rateRule = rule.energy.rate;
   const rateField = rateRule ? (`rate-${goal}` as Field) : null;
-  const rateTyped = rateField && rateRule ? toNum(get(rateField, String(rateRule.default)).value) : undefined;
-  const rate = rateRule ? (rateTyped != null && rateTyped >= rateRule.min && rateTyped <= rateRule.max ? rateTyped : rateRule.default) : undefined;
+  const kgN = toNum(kg.value);
+  // the recommended pace depends on the person: a % of bodyweight is more kcal for a heavier one
+  const recommended = recommendedRateFor({ kg: kgN, cm: toNum(cm.value), age: toNum(age.value), sex, bodyFatPct: toNum(bodyFat.value) ?? null, activity, goal });
+  const rateDefault = recommended?.default ?? rateRule?.default;
+  const rateTyped = rateField && rateRule ? toNum(get(rateField, String(rateDefault)).value) : undefined;
+  const rate = rateRule ? (rateTyped != null && rateTyped >= rateRule.min && rateTyped <= rateRule.max ? rateTyped : rateDefault) : undefined;
   const mealsTyped = toNum(get("meals", String(DAILY.perMeal.defaultMeals)).value);
   const meals = MEALS.find((m) => m === mealsTyped) ?? 4;
   const target = get("targetKg", "");
 
-  const kgN = toNum(kg.value);
   const cmN = toNum(cm.value);
   const ageN = toNum(age.value);
   const bodyFatN = toNum(bodyFat.value);
@@ -173,7 +177,7 @@ export function NutritionCalc({ lang }: { lang: Lang }) {
             </p>
           ) : null}
           {ok ? (
-            <Results lang={lang} plan={ok} goal={goal} meals={meals} onMeals={(m) => edit({ meals: String(m) })} />
+            <Results lang={lang} plan={ok} goal={goal} meals={meals} onMeals={(m) => edit({ meals: String(m) })} recommendedMax={ok.energy.recommended?.max ?? null} />
           ) : (
             <p className="fit-note warn" role="status">{keepUnits(errorText(lang, "error" in plan ? plan.error : ""))}</p>
           )}
@@ -282,10 +286,7 @@ export function NutritionCalc({ lang }: { lang: Lang }) {
               <div className="nut-range-ends fit-num">
                 <span>{fmtUpTo(rateRule.min, lang, 2)}{"\u00a0"}%</span>
                 <span>
-                  {T(
-                    `recommended ${fmtUpTo(rateRule.recommended[0], lang, 2)}–${fmtUpTo(rateRule.recommended[1], lang, 2)} %`,
-                    `рекомендуется ${fmtUpTo(rateRule.recommended[0], lang, 2)}–${fmtUpTo(rateRule.recommended[1], lang, 2)} %`,
-                  )}
+                  {recRange(recommended ?? { min: rateRule.recommended[0], max: rateRule.recommended[1] }, lang, T)}
                 </span>
                 <span>{fmtUpTo(rateRule.max, lang, 2)}{"\u00a0"}%</span>
               </div>
@@ -330,7 +331,18 @@ export function NutritionCalc({ lang }: { lang: Lang }) {
 
 /* ------------------------------------------------------------------ results */
 
-function Results({ lang, plan, goal, meals, onMeals }: { lang: Lang; plan: NutritionPlan; goal: GoalMode; meals: number; onMeals: (m: number) => void }) {
+/** Rounded down to the 0.01 % the page prints, so the printed top of the range is never above the real one. */
+const recTop = (max: number) => Math.floor(max * 100 + 1e-6) / 100;
+
+/** "recommended 0.5–0.56 %" (or "up to 0.41 %" when the weight leaves no range), for the slider and the warning. */
+function recRange(r: { min: number; max: number }, lang: Lang, T: (en: string, ru: string) => string): string {
+  const top = recTop(r.max);
+  return r.min < top
+    ? T(`recommended ${fmtUpTo(r.min, lang, 2)}–${fmtUpTo(top, lang, 2)} %`, `рекомендуется ${fmtUpTo(r.min, lang, 2)}–${fmtUpTo(top, lang, 2)} %`)
+    : T(`recommended up to ${fmtUpTo(top, lang, 2)} %`, `рекомендуется до ${fmtUpTo(top, lang, 2)} %`);
+}
+
+function Results({ lang, plan, goal, meals, onMeals, recommendedMax }: { lang: Lang; plan: NutritionPlan; goal: GoalMode; meals: number; onMeals: (m: number) => void; recommendedMax: number | null }) {
   const T = (en: string, ru: string) => keepUnits(pick(lang, en, ru));
   const { energy, protein, perMeal, macros, bmr, tdee } = plan;
   const rule = GOALS[goal];
@@ -350,7 +362,7 @@ function Results({ lang, plan, goal, meals, onMeals }: { lang: Lang; plan: Nutri
     <>
       <p className="nut-summary" role="status">
         <span className="nut-big fit-num">
-          {fmt(energy.kcal, lang)}{"\u00a0"}<small>{T("kcal a day", "ккал в день")}</small>
+          {fmt(energy.kcal, lang)}{"\u00a0"}<small>{energy.feasible ? T("kcal a day", "ккал в день") : T("kcal a day at least", "ккал в день\u00a0— не меньше")}</small>
         </span>
         <span className="nut-sub fit-num">
           {maintain
@@ -361,6 +373,15 @@ function Results({ lang, plan, goal, meals, onMeals }: { lang: Lang; plan: Nutri
               )}
         </span>
       </p>
+
+      {!energy.feasible ? (
+        <p className="fit-note warn" role="status">
+          {T(
+            `This pace is not feasible for you. ${fmtUpTo(energy.ratePctPerWeek, lang, 2)} % a week would mean ${fmt(energy.requestedKcal, lang)} kcal a day, less than your body burns at rest (${fmt(bmr.kcal, lang)} kcal). The plan below uses ${fmt(energy.kcal, lang)} kcal, which gives about ${fmtSigned(energy.weeklyChangeKg, lang, 2)} kg a week. Choose a slower pace.`,
+            `Такой темп вам не подходит. ${fmtUpTo(energy.ratePctPerWeek, lang, 2)} % в неделю\u00a0— это ${fmt(energy.requestedKcal, lang)} ккал в день: меньше, чем организм тратит в покое (${fmt(bmr.kcal, lang)} ккал). План ниже рассчитан на ${fmt(energy.kcal, lang)} ккал\u00a0— это примерно ${fmtSigned(energy.weeklyChangeKg, lang, 2)} кг в неделю. Выберите темп медленнее.`,
+          )}
+        </p>
+      ) : null}
 
       <div className="nut-protein">
         <p className="nut-line">
@@ -409,7 +430,12 @@ function Results({ lang, plan, goal, meals, onMeals }: { lang: Lang; plan: Nutri
         </dd>
         <dt>{T("Carbs", "Углеводы")}</dt>
         <dd>
-          {fmt(macros.carbs.g, lang)}{"\u00a0"}{g}
+          {macros.overBudgetKcal > 0
+            ? T(
+                `none left: protein and the minimum fat are already ${fmt(macros.overBudgetKcal, lang)} kcal over these calories`,
+                `не остаётся: белок и минимум жиров уже на ${fmt(macros.overBudgetKcal, lang)} ккал больше этой калорийности`,
+              )
+            : `${fmt(macros.carbs.g, lang)}\u00a0${g}`}
         </dd>
         <dt>{T("Fibre", "Клетчатка")}</dt>
         <dd>
@@ -428,7 +454,7 @@ function Results({ lang, plan, goal, meals, onMeals }: { lang: Lang; plan: Nutri
         </dd>
       </dl>
 
-      <Warnings lang={lang} plan={plan} goal={goal} />
+      <Warnings lang={lang} plan={plan} goal={goal} recommendedMax={recommendedMax} />
       <HowItWorks lang={lang} plan={plan} goal={goal} />
     </>
   );
@@ -454,7 +480,7 @@ function MacroBar({ lang, plan }: { lang: Lang; plan: NutritionPlan }) {
         {parts.map((p) => (
           <span key={p.key}>
             <i className={`nut-dot nut-bar-${p.key}`} aria-hidden="true" />
-            {p.label} {fmt(p.part.g, lang)}{"\u00a0"}{T("g", "г")} · {p.part.pct}{"\u00a0"}%
+            {p.key === "carbs" && plan.macros.overBudgetKcal > 0 ? `${p.label}: ${T("none left", "не остаётся")}` : <>{p.label} {fmt(p.part.g, lang)}{"\u00a0"}{T("g", "г")} · {p.part.pct}{"\u00a0"}%</>}
           </span>
         ))}
       </figcaption>
@@ -462,9 +488,10 @@ function MacroBar({ lang, plan }: { lang: Lang; plan: NutritionPlan }) {
   );
 }
 
-function Warnings({ lang, plan, goal }: { lang: Lang; plan: NutritionPlan; goal: GoalMode }) {
+function Warnings({ lang, plan, goal, recommendedMax }: { lang: Lang; plan: NutritionPlan; goal: GoalMode; recommendedMax: number | null }) {
   const T = (en: string, ru: string) => keepUnits(pick(lang, en, ru));
-  const rate = GOALS[goal].energy.rate;
+  const rule = GOALS[goal].energy.rate;
+  const rate = rule ? { recommended: [rule.recommended[0], recTop(recommendedMax ?? rule.recommended[1])] } : null;
   const loss = plan.energy.direction === "loss";
   const items: { key: string; text: string; refs: string[] }[] = [];
   for (const w of plan.warnings) {
@@ -474,8 +501,8 @@ function Warnings({ lang, plan, goal }: { lang: Lang; plan: NutritionPlan; goal:
           ? {
               key: w,
               text: T(
-                `Faster than ${fmtUpTo(rate.recommended[1], lang, 2)} % a week puts muscle at risk unless body fat is above about 25 %.`,
-                `Быстрее ${fmtUpTo(rate.recommended[1], lang, 2)} % в неделю — риск потерять мышцы, если жира меньше ~25 %.`,
+                `Faster than ${fmtUpTo(rate.recommended[1], lang, 2)} % a week at your weight puts muscle at risk unless body fat is above about 25 %.`,
+                `Быстрее ${fmtUpTo(rate.recommended[1], lang, 2)} % в неделю при вашем весе — риск потерять мышцы, если жира меньше ~25 %.`,
               ),
               refs: ["garthe-2011", "helms-2014"],
             }
@@ -498,8 +525,9 @@ function Warnings({ lang, plan, goal }: { lang: Lang; plan: NutritionPlan; goal:
       items.push({ key: w, text: T("A deficit over 500 kcal a day stopped lean-mass gains in the meta-analysis.", "При дефиците больше 500 ккал в день прирост мышц в метаанализе прекращался."), refs: ["murphy-koehler-2022"] });
     if (w === "deficit-over-max-pct")
       items.push({ key: w, text: T("The deficit is over 25 % of maintenance: hard to sustain and to train on.", "Дефицит больше 25 % от поддержания: трудно выдержать и тренироваться."), refs: ["garthe-2011"] });
-    if (w === "below-bmr")
-      items.push({ key: w, text: T("Intake is below your resting expenditure (BMR): slow the pace.", "Калорийность ниже основного обмена (BMR): уменьшите темп."), refs: [] });
+    // a loss pace under the BMR is floored and explained above the results; this line is for maintenance goals
+    if (w === "below-bmr" && plan.energy.feasible)
+      items.push({ key: w, text: T("Intake is below your resting expenditure (BMR): check the activity level.", "Калорийность ниже основного обмена (BMR): проверьте уровень активности."), refs: [] });
     if (w === "carbs-below-floor")
       items.push({
         key: w,

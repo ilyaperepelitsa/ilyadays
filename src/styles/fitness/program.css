@@ -35,8 +35,7 @@
 .fpr-sources { margin: 8px 0 0; padding-left: 1.3em; display: grid; gap: 6px; font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
 .fpr-sources a { color: var(--cool); }
 .fpr-mode-summary { margin: 12px 0 0; }
-.fpr-goals button, .fpr-chips button { text-align: center; }
-.fpr-goals button { flex: 1 1 auto; }
+.fpr-chips button { text-align: center; }
 .fpr-section > p, .fpr-section > .fpr-legs, .fpr-section > dl + p { margin: 10px 0 0; }
 .fpr-section > h2 + p { margin-top: 0; }
 .fpr-chips button { min-width: 48px; }
@@ -76,12 +75,13 @@
 .fpr-slot-main { display: grid; gap: 2px; min-width: 0; }
 .fpr-slot-name { font-weight: 650; overflow-wrap: anywhere; }
 .fpr-slot-rx { color: var(--muted); font-size: .86rem; }
-.fpr-slot-next { color: var(--accent); font-size: .9rem; font-weight: 600; }
+/* a fact, not an action: ink (accent red is for actions) */
+.fpr-slot-next { color: var(--ink); font-size: .9rem; font-weight: 600; }
 .fpr-slot-sub { color: var(--cool); font-size: .85rem; }
 .fpr-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .fpr-tags:empty { display: none; }
 .fpr-tag {
-  display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+  display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--ink);
   font: 600 .74rem var(--sans);
 }
 .fpr-tag.cool { background: var(--cool-soft); color: var(--cool); }
@@ -98,19 +98,16 @@
 .fpr-finisher { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--surface-2); font-size: .9rem; }
 
 /* ---------- steppers and fields */
-.fpr-steppers { display: grid; grid-template-columns: repeat(auto-fit, minmax(136px, 1fr)); gap: 10px 12px; }
-.fpr-stepper.wide { grid-column: 1 / -1; }
-.fpr-stepper { display: grid; gap: 4px; min-width: 0; }
-.fpr-stepper-label { font: 600 .82rem var(--sans); color: var(--muted); }
-.fpr-stepper-row { display: flex; align-items: center; gap: 4px; }
-.fpr-step {
-  flex: none; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface-2);
-  color: var(--ink); font: 700 1.3rem var(--sans); cursor: pointer; touch-action: manipulation;
+/* − value + is the shared stepper (fitness.css .fit-stepper). Sets / Rest / Reps from / Reps to sit two by two. */
+.fpr-steppers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 8px; align-items: end; }
+@media (min-width: 560px) { .fpr-steppers { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 12px; } }
+/* two pills side by side on a 360 px phone: 44 px wide (still 48 px tall) buttons leave the value "2:30" its room */
+@media (max-width: 400px) {
+  .fpr-steppers .fit-stepper-row { grid-template-columns: 44px minmax(0, 1fr) 44px; }
+  .fpr-steppers .fit-step { min-width: 44px; }
+  .fpr-steppers .fit-stepper-value { font-size: 1.1rem; }
 }
-.fpr-step:hover:not(:disabled) { border-color: var(--accent); }
-.fpr-step:disabled { opacity: .4; cursor: default; }
-.fpr-step:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.fpr-stepper-value { flex: 1 1 auto; min-width: 0; text-align: center; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fpr-stepper-label { font: 600 .82rem var(--sans); color: var(--muted); }
 .fpr-field { display: grid; gap: 6px; }
 .fpr-input {
   width: 100%; min-height: 48px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line);
@@ -217,7 +214,7 @@
 .fpr-day-tools[open] { padding-bottom:12px; border-bottom:1px solid var(--line); }
 .fpr-slot-head { grid-template-columns:48px minmax(0,1fr) auto; align-items:center; gap:12px; padding:10px; }
 .fpr-slot-visual { position:relative; align-self:start; }
-.fpr-slot-visual .fpr-slot-id { position:absolute; bottom:-3px; right:-3px; min-width:22px; height:18px; padding:0 4px; border:1px solid var(--line); border-radius:5px; background:var(--surface); font-size:.6rem; }
+.fpr-slot-visual .fpr-slot-id { position:absolute; bottom:-3px; right:-3px; min-width:24px; height:18px; padding:0 4px; border:1px solid var(--line); border-radius:5px; background:var(--surface); font-size:.6875rem; }
 .fpr-slot-name { font-size:.9rem; }
 .fpr-slot-rx, .fpr-slot-next, .fpr-slot-sub { font-size:.77rem; }
 .fpr-swap { grid-template-columns:40px minmax(0,1fr); gap:3px 10px; align-items:center; }

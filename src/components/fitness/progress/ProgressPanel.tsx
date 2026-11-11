@@ -4,6 +4,7 @@
  * and the fitness–fatigue model from the local-first snapshot. Writes (weigh-ins) only when the store can write.
  * Before hydration (no clock yet) the sections render their titles only.
  */
+import { useEffect, useRef } from "react";
 import type { Lang } from "@/lib/fitness/types";
 import { pick } from "@/lib/fitness/i18n";
 import { useFitness } from "../Provider";
@@ -22,14 +23,27 @@ export function ProgressPanel({ lang, catalog, groups }: { lang: Lang; catalog: 
   const { snapshot, store, canWrite } = useFitness();
   const now = useNow();
   const data = useProgressData(snapshot, catalog);
+  // The section chips stick right under the site header: its real height (it wraps differently per width and language).
+  const root = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>(".site-header");
+    const el = root.current;
+    if (!header || !el) return;
+    const apply = () => el.style.setProperty("--fit-header-h", `${getComputedStyle(header).position === "sticky" ? Math.round(header.getBoundingClientRect().height) : 0}px`);
+    apply();
+    const watch = new ResizeObserver(apply);
+    watch.observe(header);
+    return () => watch.disconnect();
+  }, []);
   return (
-    <div className="fitp">
+    <div className="fitp" ref={root}>
       <nav className="fitp-jump" aria-label={pick(lang, "Progress sections", "Разделы прогресса")}>
         {SECTIONS.map((s) => (
           <a key={s.id} href={`#${s.id}`}>
             {pick(lang, s.short[0], s.short[1])}
           </a>
         ))}
+        <a href="#measurements">{pick(lang, "Measurements", "Замеры")}</a>
       </nav>
       {now == null ? (
         SECTIONS.map((s) => (
@@ -40,11 +54,11 @@ export function ProgressPanel({ lang, catalog, groups }: { lang: Lang; catalog: 
       ) : (
         <>
           <BodyweightSection lang={lang} data={data} now={now} canWrite={canWrite} store={store} defaultKg={snapshot.settings?.bodyweightKg ?? null} goal={snapshot.settings?.goal ?? null} />
-          <MeasurementsPanel lang={lang} now={now} />
           <StrengthSection lang={lang} data={data} catalog={catalog} now={now} />
           <VolumeSection lang={lang} data={data} catalog={catalog} groups={groups} now={now} />
           <AdherenceSection lang={lang} data={data} now={now} />
           <ModelSection lang={lang} data={data} now={now} />
+          <MeasurementsPanel lang={lang} now={now} />
         </>
       )}
     </div>

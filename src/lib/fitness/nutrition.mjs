@@ -210,17 +210,50 @@ export function proteinTarget({ kg, bodyFatPct, goal } = {}) {
 }
 
 /**
+ * The pace range to recommend for a goal at a bodyweight, % of bodyweight per week, and the default pace. For a loss
+ * goal with a maximum daily deficit (recomp: 500 kcal) the top is the pace whose deficit is exactly that maximum when
+ * it is lower than the goal's own top (0.75 %): a percentage of bodyweight means more kcal for a heavier person, so a
+ * fixed 0.75 % would recommend deficits the same rules warn about. With a TDEE the goal's maximum deficit as a share
+ * of it (25 %) caps the top the same way. Never under the slider minimum. The default is the goal's default, lowered
+ * to the slider step at or below that top. Without a valid weight: the goal's own range.
+ * @param {unknown} goal @param {unknown} [kg] @param {unknown} [tdeeKcal]
+ * @returns {{ min: number, max: number, default: number } | null} null for maintenance goals
+ */
+export function recommendedRate(goal, kg, tdeeKcal) {
+  const rule = ruleOf(goal);
+  const rate = rule?.energy.rate;
+  if (!rule || !rate) return null;
+  let [min, max] = rate.recommended;
+  let preset = rate.default;
+  if (rule.energy.direction === "loss" && isNum(rule.energy.maxDeficitKcal) && within(kg, LIMITS.kg)) {
+    const share = isNum(tdeeKcal) && isNum(rule.energy.maxDeficitPctTdee) ? (tdeeKcal * rule.energy.maxDeficitPctTdee) / 100 : Infinity;
+    const atMaxDeficit = ((Math.min(rule.energy.maxDeficitKcal, share) * 7) / ENERGY.kcalPerKgLoss / kg) * 100;
+    max = Math.max(rate.min, Math.min(max, atMaxDeficit));
+    min = Math.min(min, max);
+    const onStep = Math.round(Math.floor(max / rate.step + 1e-9) * rate.step * 1000) / 1000;
+    preset = Math.max(rate.min, Math.min(preset, onStep));
+  }
+  return { min, max, default: preset };
+}
+
+/**
  * @typedef {"pace-above-recommended" | "deficit-over-max-kcal" | "deficit-over-max-pct" | "below-bmr"} EnergyWarning
  * @typedef {{
  *   kcal: number, deltaKcal: number, deltaPctTdee: number, weeklyChangeKg: number, weeklyChangePct: number,
- *   ratePctPerWeek: number, direction: Direction, warnings: EnergyWarning[]
+ *   ratePctPerWeek: number, direction: Direction, warnings: EnergyWarning[],
+ *   feasible: boolean, floorKcal: number | null, requestedKcal: number,
+ *   recommended: { min: number, max: number, default: number } | null
  * }} EnergyTarget
+ *   recommended: the pace range `recommendedRate` gives for this weight and TDEE (null for maintenance).
+ *   feasible false: the chosen loss pace would put intake under the BMR; `kcal` is then the floor (`floorKcal`, the
+ *   BMR rounded up), `requestedKcal` what the pace asked for, and deltaKcal / weeklyChange* what the floor gives.
  */
 
 /**
  * Daily intake for a goal. Loss/gain goals take a pace in % of bodyweight per week (the goal's slider range; default
- * from the goal) and convert it with 7,700 kcal/kg lost or 5,500 kcal/kg gained (Hall 2008). Maintenance goals eat
- * at TDEE. Limits produce warnings, never silent clamps.
+ * `recommendedRate`) and convert it with 7,700 kcal/kg lost or 5,500 kcal/kg gained (Hall 2008). Maintenance goals
+ * eat at TDEE. Limits produce warnings, never silent clamps — except one floor: a loss pace never takes the intake
+ * under the BMR (when it is given); the result then carries the floor with `feasible: false` and "below-bmr".
  * @param {{ tdee?: number | { kcal: number } | Invalid | null, goal?: unknown, kg?: unknown, ratePctPerWeek?: unknown, bmr?: number | { kcal: number } | null }} [input]
  * @returns {EnergyTarget | Invalid}
  */
@@ -236,30 +269,44 @@ export function energyTarget({ tdee: total, goal, kg, ratePctPerWeek, bmr } = {}
     const kcal = Math.round(tdeeKcal);
     /** @type {EnergyWarning[]} */
     const warnings = isNum(bmrKcal) && kcal < bmrKcal ? ["below-bmr"] : [];
-    return { kcal, deltaKcal: 0, deltaPctTdee: 0, weeklyChangeKg: 0, weeklyChangePct: 0, ratePctPerWeek: 0, direction: "maintain", warnings };
+    return { kcal, deltaKcal: 0, deltaPctTdee: 0, weeklyChangeKg: 0, weeklyChangePct: 0, ratePctPerWeek: 0, direction: "maintain", warnings, feasible: true, floorKcal: null, requestedKcal: kcal, recommended: null };
   }
-  const pace = ratePctPerWeek ?? rate.default;
+  const recommended = /** @type {{ min: number, max: number, default: number }} */ (recommendedRate(goal, kg, tdeeKcal));
+  const pace = ratePctPerWeek ?? recommended.default;
   if (!within(pace, [rate.min, rate.max])) return { error: "ratePctPerWeek" };
   const sign = direction === "loss" ? -1 : 1;
-  const weeklyChangeKg = (sign * pace * kg) / 100;
   const kcalPerKg = direction === "loss" ? ENERGY.kcalPerKgLoss : ENERGY.kcalPerKgGain;
-  const deltaKcal = Math.round((weeklyChangeKg * kcalPerKg) / 7);
-  const kcal = Math.round(tdeeKcal) + deltaKcal;
+  let weeklyChangeKg = (sign * pace * kg) / 100;
+  let deltaKcal = Math.round((weeklyChangeKg * kcalPerKg) / 7);
+  const requestedKcal = Math.round(tdeeKcal) + deltaKcal;
+  let kcal = requestedKcal;
+  // The one floor: a loss pace that would go under the BMR is not feasible — show the BMR and what it gives.
+  const belowBmr = isNum(bmrKcal) && requestedKcal < bmrKcal;
+  const floorKcal = belowBmr && direction === "loss" ? Math.ceil(bmrKcal) : null;
+  if (floorKcal != null) {
+    kcal = floorKcal;
+    deltaKcal = kcal - Math.round(tdeeKcal);
+    weeklyChangeKg = (deltaKcal * 7) / kcalPerKg;
+  }
   /** @type {EnergyWarning[]} */
   const warnings = [];
-  if (pace > rate.recommended[1] + 1e-9) warnings.push("pace-above-recommended");
+  if (pace > recommended.max + 1e-9) warnings.push("pace-above-recommended");
   if (direction === "loss" && isNum(rule.energy.maxDeficitKcal) && -deltaKcal > rule.energy.maxDeficitKcal) warnings.push("deficit-over-max-kcal");
   if (direction === "loss" && isNum(rule.energy.maxDeficitPctTdee) && -deltaKcal > (tdeeKcal * rule.energy.maxDeficitPctTdee) / 100) warnings.push("deficit-over-max-pct");
-  if (isNum(bmrKcal) && kcal < bmrKcal) warnings.push("below-bmr");
+  if (belowBmr) warnings.push("below-bmr");
   return {
     kcal,
     deltaKcal,
     deltaPctTdee: (deltaKcal / tdeeKcal) * 100,
     weeklyChangeKg,
-    weeklyChangePct: sign * pace,
+    weeklyChangePct: floorKcal != null ? (weeklyChangeKg / kg) * 100 : sign * pace,
     ratePctPerWeek: pace,
     direction,
     warnings,
+    feasible: floorKcal == null,
+    floorKcal,
+    requestedKcal,
+    recommended,
   };
 }
 
@@ -298,15 +345,17 @@ export const fibreTarget = (kcal) => clamp(Math.round((DAILY.fibre.gPer1000Kcal 
  * @typedef {"carbs-below-floor" | "over-budget"} MacroWarning
  * @typedef {{
  *   protein: MacroPart, fat: MacroPart, carbs: MacroPart, fatFloorG: number, carbFloorG: number, fibreG: number,
- *   fatLowered: boolean, warnings: MacroWarning[]
+ *   fatLowered: boolean, overBudgetKcal: number, warnings: MacroWarning[]
  * }} Macros
+ *   overBudgetKcal: kcal by which protein + fat alone exceed the day's kcal (0 unless "over-budget"); carbs are then
+ *   0 g because nothing is left, not because 0 g is the plan.
  */
 
 /**
  * Splits a day's kcal: protein first (as given), fat 0.8 g/kg within [max(0.5 g/kg, 20 % kcal), 40 % kcal],
  * carbohydrate fills the rest. When carbs fall under the goal's floor, fat is lowered toward 0.6 g/kg (never under its
  * floor) just enough to restore them; if that is not enough the result warns ("carbs-below-floor"), and if protein +
- * fat floor exceed the kcal, carbs are 0 with "over-budget".
+ * fat floor exceed the kcal, carbs are 0 with "over-budget" and `overBudgetKcal` says by how much.
  * @param {{ kcal?: unknown, proteinG?: unknown, kg?: unknown, goal?: unknown }} [input]
  * @returns {Macros | Invalid}
  */
@@ -337,9 +386,11 @@ export function macroSplit({ kcal, proteinG, kg, goal } = {}) {
   const fatLowered = fatG < defaultFatG - 0.5;
   /** @type {MacroWarning[]} */
   const warnings = [];
+  let overBudgetKcal = 0;
   if (carbsG < 0) {
     warnings.push("over-budget");
     carbsG = 0;
+    overBudgetKcal = Math.round(Math.round(proteinG) * K.protein + Math.round(fatG) * K.fat - kcal);
   } else if (carbsG < carbFloorG - 1) warnings.push("carbs-below-floor");
   /** @param {number} g @param {number} perG @returns {MacroPart} */
   const part = (g, perG) => ({ g: Math.round(g), kcal: Math.round(g * perG), pct: Math.round(((g * perG) / kcal) * 100) });
@@ -351,6 +402,7 @@ export function macroSplit({ kcal, proteinG, kg, goal } = {}) {
     carbFloorG: Math.round(carbFloorG),
     fibreG: fibreTarget(kcal),
     fatLowered,
+    overBudgetKcal,
     warnings,
   };
 }
@@ -385,6 +437,16 @@ export function dailyExtras(kg) {
  *   warnings: (EnergyWarning | MacroWarning)[]
  * }} NutritionPlan
  */
+
+/**
+ * The recommended pace range for a person before a pace is chosen (the slider's default and its "recommended" label):
+ * `recommendedRate` with the TDEE from the same inputs when they are complete, else from the weight alone.
+ * @param {PlanInput} [input]
+ */
+export function recommendedRateFor(input = {}) {
+  const plan = nutritionPlan({ ...input, ratePctPerWeek: undefined, targetKg: undefined });
+  return "error" in plan ? recommendedRate(input.goal, input.kg) : plan.energy.recommended;
+}
 
 /**
  * Everything the calculator shows, from one input object. BMR is Mifflin–St Jeor, or the mean of Mifflin and
@@ -519,6 +581,26 @@ export function vo2maxUth(hrMax, hrRest) {
   if (hrMax <= hrRest) return { error: "hrMax" };
   const vo2max = (15.3 * hrMax) / hrRest;
   return { vo2max, mets: vo2max / HEART.mlPerMet };
+}
+
+/** 1-σ error of the age-predicted maximum heart rate, bpm (Tanaka 2001: the formula's standard deviation ≈ 10). */
+export const HR_MAX_FORMULA_SD = HEART.hrMax.sdBpm;
+
+/**
+ * VO2max by the heart-rate ratio when the maximum heart rate is the age formula, not a measurement: the range from
+ * HRmax ± `sdBpm`, in whole ml/kg/min and whole METs — a single decimal would promise a precision the formula does
+ * not have.
+ * @param {unknown} hrMax  the age-predicted maximum
+ * @param {unknown} hrRest
+ * @param {number} [sdBpm]
+ * @returns {{ lo: number, hi: number, metsLo: number, metsHi: number } | Invalid}
+ */
+export function vo2maxUthRange(hrMax, hrRest, sdBpm = HR_MAX_FORMULA_SD) {
+  const mid = vo2maxUth(hrMax, hrRest);
+  if ("error" in mid) return mid;
+  const lo = (15.3 * Math.max(/** @type {number} */ (hrRest), /** @type {number} */ (hrMax) - sdBpm)) / /** @type {number} */ (hrRest);
+  const hi = (15.3 * (/** @type {number} */ (hrMax) + sdBpm)) / /** @type {number} */ (hrRest);
+  return { lo: Math.round(lo), hi: Math.round(hi), metsLo: Math.round(lo / HEART.mlPerMet), metsHi: Math.round(hi / HEART.mlPerMet) };
 }
 
 /* ------------------------------------------------------------------ food table */

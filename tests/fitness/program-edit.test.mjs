@@ -133,7 +133,14 @@ test('swapSlot: keeps the prescription and the why, drops the slot increment, re
   const p = owner();
   const s = swapSlot(p, 'A', 'A3', 'cable-fly', NOW);
   assert.equal(slot(s, 'A', 'A3').exerciseId, 'cable-fly');
-  assert.deepEqual(slot(s, 'A', 'A3'), { ...slot(p, 'A', 'A3'), exerciseId: 'cable-fly' }, 'only the exercise changes');
+  assert.deepEqual(slot(s, 'A', 'A3'), { ...slot(p, 'A', 'A3'), exerciseId: 'cable-fly', replaces: ['pec-deck'] }, 'only the exercise changes, and the slot remembers what it held');
+  // the history chain: newest first, at most 3; swapping back to the original forgets it
+  const twice = swapSlot(s, 'A', 'A3', 'dumbbell-fly', NOW);
+  assert.deepEqual(slot(twice, 'A', 'A3').replaces, ['cable-fly', 'pec-deck']);
+  assert.equal('replaces' in slot(swapSlot(s, 'A', 'A3', 'pec-deck', NOW), 'A', 'A3'), false);
+  assert.deepEqual(slot(swapSlot(twice, 'A', 'A3', 'cable-fly', NOW), 'A', 'A3').replaces, ['dumbbell-fly', 'pec-deck']);
+  // a goal switch keeps it
+  assert.deepEqual(slot(setGoal(s, 'hypertrophy', {}, NOW).program, 'A', 'A3').replaces, ['pec-deck']);
   assert.equal(s.version, p.version + 1);
   assert.equal(s.updatedAt, NOW);
 

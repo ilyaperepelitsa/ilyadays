@@ -2,12 +2,14 @@
  * Load calculator for /fitness/tools (master-owned). Pure: no DOM, no store.
  * One-rep max from a set you did, the load for any other reps × reps-in-reserve rounded to what the machine can do,
  * and plates per side. It uses the engine's e1RM definition (progression.mjs: mean of Epley and Brzycki) and the
- * planner's load fraction (the same equations up to 12 total reps, the %1RM table above), so the plan, the progress
- * charts and this calculator always give the same numbers.
+ * planner's load fraction (the same equations up to 12 total reps, the %1RM table above — of which the e1RM factor
+ * is the exact inverse at every whole rep count), so the plan, the progress charts and this calculator always give
+ * the same numbers.
  * @typedef {import("./types").Exercise} Exercise
  * @typedef {import("./types").Gym} Gym
  * @typedef {import("./types").LoggedSet} LoggedSet
  */
+import { setEffort } from "./analytics.mjs";
 import { e1rmOf, incrementFor, isAssisted, loadFraction, roundLoad, warmupRamp } from "./progression.mjs";
 
 /** Rep targets shown in the table. */
@@ -142,4 +144,14 @@ export function lastWorkingSet(sets, exerciseId) {
     if (!best || s.doneAt > best.doneAt) best = s;
   }
   return best;
+}
+
+/**
+ * The calculator inputs for a logged set ("use my last set"), with the progress charts' reps-in-reserve convention
+ * (analytics.mjs `setEffort`): a reported RIR as logged, none = to failure, an unreported one = the planned RIR when
+ * the planned reps were made and 0 when they were not. So the calculator's 1RM equals the chart's.
+ * @param {LoggedSet} set @returns {{ kg: number, reps: number, rir: number }}
+ */
+export function lastSetInputs(set) {
+  return { kg: set.kg, reps: set.reps, rir: setEffort(set).rir };
 }

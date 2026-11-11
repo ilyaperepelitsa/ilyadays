@@ -7,7 +7,7 @@
 import { useMemo, useState } from "react";
 import type { Lang } from "@/lib/fitness/types";
 import { pick } from "@/lib/fitness/i18n";
-import { TARGET_SETS_PER_WEEK, weeklyTonnage, weeklyVolumeByGroup } from "@/lib/fitness/analytics.mjs";
+import { TARGET_SETS_PER_WEEK, firstActiveWeek, weeklyTonnage, weeklyVolumeByGroup } from "@/lib/fitness/analytics.mjs";
 import { Bars, Heatmap, Sparkline } from "./charts";
 import { fmtDay, fmtNum } from "./scales";
 import { Caveat, Empty, Section, Stat, groupName } from "./shared";
@@ -32,10 +32,12 @@ export function VolumeSection({ lang, data, catalog, groups, now }: { lang: Lang
   const anySets = vol.hard.some((v) => v > 0);
   const name = (g: string) => groupName(groups, g, lang);
   const thisWeek = vol.hard[vol.hard.length - 1];
-  const done = vol.hard.slice(0, -1);
+  // full weeks since training began: weeks before the first session are not zeros to average in
+  const firstWeek = firstActiveWeek(vol.weeks, data.sessions.length ? data.sessions[0].startedAt : data.sets.length ? Math.min(...data.sets.map(data.timeOf)) : null);
+  const done = vol.hard.slice(firstWeek, -1);
   const avg = done.length ? done.reduce((a, b) => a + b, 0) / done.length : 0;
   const tonsThis = tons.values[tons.values.length - 1];
-  const tonsDone = tons.values.slice(0, -1);
+  const tonsDone = tons.values.slice(firstWeek, -1);
 
   if (!anySets) {
     return (
@@ -51,7 +53,7 @@ export function VolumeSection({ lang, data, catalog, groups, now }: { lang: Lang
   return (
     <Section id="volume" title={sectionTitle("volume", lang)} lede={pick(lang, "Hard sets per muscle group per week, against the 10–\u206020 range.", "Тяжёлые подходы на группу мышц в неделю\u00a0— против диапазона 10–\u206020.")}>
       <div className="fitp-stats">
-        <Stat label={pick(lang, "Hard sets this week so far", "Тяжёлых подходов за неделю (пока)")} value={fmtNum(thisWeek, lang, 0)} sub={pick(lang, `previous ${done.length} weeks: avg ${fmtNum(avg, lang, 1)}`, `прошлые ${done.length} нед.: в среднем ${fmtNum(avg, lang, 1)}`)}>
+        <Stat label={pick(lang, "Hard sets this week so far", "Тяжёлых подходов за неделю (пока)")} value={fmtNum(thisWeek, lang, 0)} sub={done.length ? pick(lang, `previous ${done.length} ${done.length === 1 ? "week" : "weeks"}: avg ${fmtNum(avg, lang, 1)}`, `прошлые ${done.length} нед.: в среднем ${fmtNum(avg, lang, 1)}`) : pick(lang, "your first week: no average yet", "первая неделя: среднего пока нет")}>
           {done.length >= 2 ? <Sparkline values={done} summary={pick(lang, `Hard sets per full week, last ${done.length} weeks: ${done.join(", ")}`, `Тяжёлые подходы по полным неделям за ${done.length} недель: ${done.join(", ")}`)} /> : null}
         </Stat>
         <Stat label={pick(lang, "Tonnage this week so far", "Тоннаж за неделю (пока)")} value={`${fmtNum(tonsThis / 1000, lang, 1)} ${pick(lang, "t", "т")}`} sub={pick(lang, "kg × reps, rep sets only", "кг × повторы, без удержаний")}>

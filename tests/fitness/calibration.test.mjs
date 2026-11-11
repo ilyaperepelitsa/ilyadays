@@ -80,8 +80,23 @@ test('baseline confirmation needs complete work and reported effort; partial and
   assert.equal(r.state.sessions, 1);
   const unreported = complete.map((s) => ({ ...s, prescription: { version: 1, targetRir: 2, rirReported: false, suggestedKg: 60, suggestedReps: 10 } }));
   r = nextState(initial, unreported, params(), ex, NOW, { plannedSets: 3 });
-  assert.equal(r.state.baseline.status, 'learning');
-  assert.ok(r.state.workingKg <= 60, 'assumed effort cannot earn a heavier calibration');
+  // one-tap logging (no RIR chip): the effort counts as planned. Every set at the top earns the ordinary step, never
+  // the calibration re-anchor (that raises the load FROM effort, which nobody reported); the baseline stays
+  // provisional after one such session and is confirmed by the same load completed in a second one
+  assert.deepEqual([r.state.baseline.status, r.state.baseline.kg, r.outcome, r.state.workingKg], ['learning', 60, 'progressed', 62.5]);
+  const easy = complete.map((s) => ({ ...s, rir: 4, prescription: { version: 1, targetRir: 2, rirReported: false, suggestedKg: 60, suggestedReps: 10 } }));
+  assert.equal(nextState(initial, easy, params(), ex, NOW, { plannedSets: 3 }).state.workingKg, 62.5, 'a pre-filled reserve is not evidence: one step, not the re-anchor');
+  assert.equal(nextState(initial, complete.map((s) => ({ ...s, rir: 4 })), params(), ex, NOW, { plannedSets: 3 }).state.workingKg, 67.5, 'a reported reserve of 4 re-anchors');
+  const below = before({ sessions: 0, targetReps: 6, baseline: { status: 'learning' } });
+  const tap = (reps, sessionId) => work(60, reps).map((s) => ({ ...s, sessionId, plannedReps: reps[0], prescription: { version: 1, targetRir: 2, rirReported: false, suggestedKg: 60, suggestedReps: reps[0] } }));
+  r = nextState(below, tap([6, 6, 6], 'one'), params(), ex, NOW, { plannedSets: 3 });
+  assert.deepEqual([r.outcome, r.state.targetReps, r.state.baseline.status, r.state.baseline.kg], ['progressed', 7, 'learning', 60]);
+  r = nextState(r.state, tap([7, 7, 7], 'two'), params(), ex, NOW, { plannedSets: 3 });
+  assert.deepEqual([r.outcome, r.state.targetReps, r.state.baseline], ['progressed', 8, { status: 'established', kg: 60, reps: 7, rir: 2, at: r.state.lastAt, sessionId: 'two', sets: 3 }]);
+  // an established baseline is never demoted: a later test session (back from a break) without reported effort keeps it
+  const kept = nextState(r.state, tap([8, 8, 8], 'three'), params(), ex, NOW, { plannedSets: 3, calibration: true });
+  assert.equal(kept.state.baseline.status, 'established');
+  assert.equal(kept.state.baseline.sessionId, 'two');
 });
 
 test('frozen workout context and prescription provenance survive remote mappings and reloads', () => {

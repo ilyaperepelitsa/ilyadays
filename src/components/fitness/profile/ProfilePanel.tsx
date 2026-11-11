@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useFitness } from "../Provider";
-import { useStoreStatus } from "../ModeNote";
+import { problemText, useStoreStatus } from "../ModeNote";
+import { usePullBlocked, useSettled } from "../train/hooks";
 import { localPath } from "@/lib/i18n";
 import { pick, t2 } from "@/lib/fitness/i18n";
 import { GOAL_MODES, GOAL_IDS } from "@/lib/fitness/templates.mjs";
@@ -21,16 +22,34 @@ import { profileSelection } from "@/lib/fitness/selection-query.mjs";
 
 const subscribeNothing = () => () => {};
 
+/** Store problems worth their own sentence when saving the profile fails; anything else gets the general one. */
+const SAVE_PROBLEMS = /^(offline|auth|permission|schema):/;
+
+/**
+ * The form copies the snapshot once, when it mounts, so in synced mode it waits for a complete pull (useSettled): a form
+ * filled from half-pulled data would offer "Create my first plan" over the real program and save empty weight/height
+ * over the real ones. With no connection (or a failed pull) it shows the copy cached in this browser instead of
+ * waiting forever — "cached": saving is off, and the form is filled again once the pull has landed.
+ */
 export function ProfilePanel({ lang }: { lang: Lang }) {
-  const { auth, mode } = useFitness();
+  const { mode } = useFitness();
   const status = useStoreStatus();
+  const settled = useSettled();
+  const blocked = usePullBlocked();
   const search = useSyncExternalStore(subscribeNothing, () => location.search, () => "");
   const preset = profileSelection(search, GROUPS.map((g) => g.id));
-  if (mode === "loading" || (mode === "synced" && status?.profile === "unknown")) return <p role="status">{pick(lang, "Loading your profile…", "Загружаем ваш профиль…")}</p>;
-  return <ProfileForm key={`${auth.user?.id ?? "local"}:${JSON.stringify(preset)}`} lang={lang} preset={preset} />;
+  // what the form on screen was filled from; latched, so a background sync never refills a form being edited
+  const [seed, setSeed] = useState<"full" | "cached" | null>(null);
+  const complete = mode !== "loading" && (mode !== "synced" || (settled && status?.profile !== "unknown"));
+  const next = complete ? "full" : mode === "synced" && blocked ? "cached" : null;
+  if (next && (seed === null || (seed === "cached" && next === "full"))) setSeed(next);
+  const shown = mode === "loading" ? null : seed ?? next;
+  if (!shown) return <p role="status">{pick(lang, "Loading your profile…", "Загружаем ваш профиль…")}</p>;
+  // account changes remount the page content (AccountBoundary), so the key only needs the preset and the data source
+  return <ProfileForm key={`${shown}:${JSON.stringify(preset)}`} lang={lang} preset={preset} cached={shown === "cached"} />;
 }
 
-function ProfileForm({ lang, preset }: { lang: Lang; preset: ReturnType<typeof profileSelection> }) {
+function ProfileForm({ lang, preset, cached }: { lang: Lang; preset: ReturnType<typeof profileSelection>; cached: boolean }) {
   const { auth, snapshot, store, mode, canWrite } = useFitness();
   const status = useStoreStatus();
   const own = canWrite ? snapshot : null;
@@ -58,6 +77,7 @@ function ProfileForm({ lang, preset }: { lang: Lang; preset: ReturnType<typeof p
   const parse = (text: string) => text.trim() ? Number(text.trim().replace(",", ".")) : null;
   const save = async () => {
     setError(""); setMessage("");
+    if (cached) return;
     if (applyPlan && conflict.length) { setError(pick(lang, "Some focus muscles are excluded. Change your training scope or remove those focus choices before saving.", "Некоторые приоритетные мышцы исключены. Измените охват тренировки или снимите эти приоритеты перед сохранением.")); return; }
     if (applyPlan && (!preview || preview.days.some((d) => !d.slots.length))) {
       setError(pick(lang, "Every training day needs an exercise. Adjust the plan in the constructor, or save your profile without applying a new plan.", "В каждом тренировочном дне нужно упражнение. Измените план в конструкторе или сохраните профиль без новой программы.")); return;
@@ -72,7 +92,11 @@ function ProfileForm({ lang, preset }: { lang: Lang; preset: ReturnType<typeof p
         const result = mode === "synced" && status?.profile === "present"
           ? await cloud.updateProfile({ displayName: profileName(name), isPublic })
           : await cloud.registerProfile(profileName(name));
-        if (!result.ok) throw new Error(result.error ?? "Profile could not be saved");
+        if (!result.ok) {
+          throw new Error(result.error && SAVE_PROBLEMS.test(result.error)
+            ? problemText(lang, result.error)
+            : pick(lang, "Your profile could not be saved. Try again in a moment.", "Не удалось сохранить профиль. Повторите попытку чуть позже."));
+        }
         if (cloud.getStatus().userId !== account || cloud.mode() !== "synced") throw new Error(pick(lang, "Your account changed. Reload and try again.", "Аккаунт изменился. Обновите страницу и повторите."));
       }
       if (!store.canWrite()) throw new Error(pick(lang, "Sign in to create your profile.", "Войдите, чтобы создать профиль."));
@@ -129,8 +153,9 @@ function ProfileForm({ lang, preset }: { lang: Lang; preset: ReturnType<typeof p
       <p className="fit-muted fprofile-helper">{pick(lang, "A new plan keeps your past workouts, baselines and any session already in progress.", "Новая программа сохраняет прошлые тренировки, базовые веса и уже начатую тренировку.")}</p>
       </div><PlanPreview lang={lang} program={preview ?? saved} isDraft={applyPlan} /></div>
       {error ? <p role="alert">{error}</p> : null}{message ? <p role="status">{message}</p> : null}
+      {cached ? <p className="fit-note" role="status" data-testid="profile-cached">{pick(lang, "No connection to your account: this is the copy saved in this browser. Saving is available once your data has loaded.", "Нет связи с аккаунтом: показана копия из этого браузера. Сохранение станет доступно, когда данные загрузятся.")}</p> : null}
       {!canSave ? <p className="fit-muted">{pick(lang, "Sign in to save your profile. You can explore the plan preview before signing in.", "Войдите, чтобы сохранить профиль. До входа можно настроить и посмотреть программу.")}</p> : null}
-      <div className="fprofile-actions"><button type="submit" className="fit-button" data-testid="profile-save" disabled={!canSave || busy || status?.syncing}>{busy ? pick(lang, "Saving…", "Сохраняем…") : pick(lang, "Save profile", "Сохранить профиль")}</button><Link prefetch={false} className="fit-button quiet" href={localPath(lang, "/fitness/program")}>{pick(lang, "Open plan constructor", "Открыть конструктор")}</Link><Link prefetch={false} href={localPath(lang, "/fitness/progress")}>{pick(lang, "Weigh-ins and measurements", "Взвешивания и замеры")}</Link></div>
+      <div className="fprofile-actions"><button type="submit" className="fit-button" data-testid="profile-save" disabled={!canSave || busy || status?.syncing || cached}>{busy ? pick(lang, "Saving…", "Сохраняем…") : pick(lang, "Save profile", "Сохранить профиль")}</button><Link prefetch={false} className="fit-button quiet" href={localPath(lang, "/fitness/program")}>{pick(lang, "Open plan constructor", "Открыть конструктор")}</Link><Link prefetch={false} href={localPath(lang, "/fitness/progress")}>{pick(lang, "Weigh-ins and measurements", "Взвешивания и замеры")}</Link></div>
     </form>
   </div>;
 }

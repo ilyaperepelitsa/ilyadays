@@ -101,9 +101,12 @@ describe("loadTable", () => {
     const t = loadTable({ kg: 50, reps: 8, rir: 1 });
     const e1rm = e1rmOf(50, 8, 1).kg;
     assert.equal(t.e1rm, e1rm);
-    // 15 reps at RIR 2 = 17 total: 63.0 % from the table, against 59.4 % from the Epley/Brzycki inverse
+    // 15 reps at RIR 2 = 17 total: 63.0 % from the table (the raw Epley/Brzycki inverse would say 59.4 %)
     assert.equal(cell(t, 15, 2).exactKg, Math.round(e1rm * loadFraction(17) * 100) / 100);
-    assert.ok(cell(t, 15, 2).exactKg - loadForE1rm(e1rm, 15, 2) > 1.5);
+    assert.ok(cell(t, 15, 2).exactKg - e1rm / ((1 + 17 / 30 + 36 / 20) / 2) > 1.5);
+    // … and the engine's e1RM factor is that table's inverse there, so a high-rep set maps back to itself
+    assert.equal(cell(t, 15, 2).exactKg, Math.round(loadForE1rm(e1rm, 15, 2) * 100) / 100);
+    assert.equal(cell(loadTable({ kg: 60, reps: 20, rir: 0 }), 20, 0).exactKg, 60);
     // up to 12 total reps both agree
     assert.equal(cell(t, 10, 2).exactKg, Math.round(loadForE1rm(e1rm, 10, 2) * 100) / 100);
     assert.equal(t.rows.find((r) => r.reps === 20).pct, 60);

@@ -29,6 +29,11 @@
 
 /* ---------- start panel */
 .trk-plan h2 { margin: 2px 0 4px; }
+/* day title with its length at the right: "~66 min" never ends up alone on a line behind a dot */
+.trk-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+.trk-title-row h2 { min-width: 0; }
+.trk-title-row + p { margin: 0; }
+.trk-time { flex: none; color: var(--muted); font-size: .9rem; font-weight: 600; white-space: nowrap; }
 .trk-days { margin: 12px 0 4px; }
 .fit-seg.trk-days button { min-width: 56px; text-align: center; font-weight: 700; }
 .trk-day-next { font-weight: 500; color: var(--muted); }
@@ -46,19 +51,9 @@
 .trk-note.trk-hold { color: var(--cool); font-weight: 600; }
 .trk-setup h3, .trk-warmup h3 { margin: 4px 0 8px; font-size: 1rem; }
 .trk-setup h3:not(:first-child) { margin-top: 16px; }
-.trk-bw { display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; gap: 8px; align-items: center; max-width: 320px; }
-.trk-bw .trk-step { border: 1px solid var(--line); background: var(--surface); }
-.trk-bw-field {
-  display: flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 12px; border: 1px solid var(--line);
-  border-radius: 12px; background: var(--surface); color: var(--muted);
-}
-.trk-bw-field:focus-within { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 2px; }
-/* the field fills the 48 px box (a 25 px input inside it before), like the nutrition fields */
-.trk-bw-field input {
-  align-self: stretch; width: 100%; min-width: 0; border: 0; outline: none; background: transparent; color: var(--ink);
-  font: 700 1.2rem var(--sans); font-variant-numeric: tabular-nums;
-}
-.trk-bw-field input[aria-invalid="true"] { color: var(--accent); }
+/* body weight: the shared stepper pill (fitness.css .fit-stepper-row) with a typed value */
+.trk-bw { max-width: 320px; }
+.trk-bw input[aria-invalid="true"] { color: var(--accent); }
 .trk-setup details, .trk-warmup details, .trk-safety { margin-top: 10px; }
 .trk-setup summary, .trk-warmup summary, .trk-safety summary {
   min-height: 44px; display: flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 600; color: var(--ink);
@@ -120,7 +115,7 @@
 }
 .trk-act:hover { border-color: var(--accent); }
 .trk-act[aria-expanded="true"], .trk-act[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
-.trk-act:focus-visible, .trk-done:focus-visible, .trk-row-body:focus-visible, .trk-step:focus-visible, .trk-chip:focus-visible,
+.trk-act:focus-visible, .trk-tick:focus-visible, .trk-row-body:focus-visible, .trk-chip:focus-visible,
 .trk-warm-toggle:focus-visible, .trk-option:focus-visible, .trk-rest-adj:focus-visible, .trk-rest-close:focus-visible {
   outline: 2px solid var(--accent); outline-offset: 2px;
 }
@@ -140,7 +135,7 @@
 }
 
 /* set rows */
-.trk-row { border-top: 1px solid var(--line); scroll-margin-top: 120px; scroll-margin-bottom: 170px; }
+.trk-row { border-top: 1px solid var(--line); scroll-margin-top: 16px; scroll-margin-bottom: 96px; }
 .trk-row-line { display: flex; align-items: center; gap: 8px; min-height: 64px; }
 .trk-row-body {
   flex: 1; min-width: 0; min-height: 64px; display: flex; align-items: center; gap: 12px; padding: 8px 2px;
@@ -155,42 +150,39 @@ button.trk-row-body { cursor: pointer; }
 .trk-row-load { font-size: 1.2rem; font-weight: 700; line-height: 1.25; color: var(--ink); overflow-wrap: anywhere; }
 .trk-row-sub { font-size: .84rem; color: var(--muted); overflow-wrap: anywhere; }
 .trk-row.is-warmup .trk-row-load { font-size: 1.05rem; font-weight: 600; }
-.trk-row.is-done .trk-badge, .trk-row.is-failed .trk-badge { background: var(--accent-soft); color: var(--ink); }
+.trk-row.is-done .trk-badge, .trk-row.is-failed .trk-badge { color: var(--ink); }
 .trk-row.is-skipped .trk-row-load { text-decoration: line-through; color: var(--muted); font-weight: 500; }
+/* the current set is a card in the order it is used: the set, steppers, effort chips, Done */
 .trk-row.is-current {
-  margin: 4px -10px; padding: 0 10px; border-top-color: transparent; border-radius: 14px;
+  margin: 4px -10px; padding: 0 10px 12px; border-top-color: transparent; border-radius: 14px;
   background: var(--accent-soft); box-shadow: inset 0 0 0 1.5px var(--accent);
 }
 .trk-row.is-current + .trk-row { border-top-color: transparent; }
 .trk-row.is-current .trk-badge { background: var(--accent); color: var(--on-accent); }
-.trk-done {
-  flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 56px; min-height: 56px;
-  padding: 0 14px; border-radius: 14px; border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent);
-  font: 700 1rem var(--sans); cursor: pointer;
-}
+.trk-row.is-current .trk-row-load { font-size: 1.35rem; }
+/* Done: the section's primary button (.fit-button.trk-wide, 56 px, full width) at the bottom of the current card.
+   It waits a moment after the previous set is logged (double-tap shield): visibly waiting, then armed. */
 .trk-done span[aria-hidden] { font-size: 1.2rem; }
-/* the next set's Done just after a set is logged (double-tap shield, under a second): visibly waiting, then armed */
-.trk-done { transition: opacity .2s ease; }
-.trk-done:disabled { opacity: .5; cursor: default; }
-.trk-row.is-current .trk-done { background: var(--accent); color: var(--on-accent); min-width: 88px; }
+.fit .fit-button.trk-done { transition: opacity .2s ease, background-color .15s ease, border-color .15s ease; }
+/* the end of a row that is not the current set. To do: an empty ring (tap to log it out of order); done: a green
+   tick; reps missed: "4/6" in the cool tone. Accent red stays with actions. */
+.trk-tick { flex: none; display: grid; place-items: center; width: 56px; height: 56px; padding: 0; border: 0; border-radius: 14px; background: none; cursor: pointer; }
+.trk-tick-ring { width: 26px; height: 26px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--muted) 70%, var(--surface)); background: var(--surface); }
+.trk-tick:hover .trk-tick-ring { border-color: var(--ink); }
+.trk-tick:disabled { opacity: .5; cursor: default; }
 .trk-check { flex: none; width: 56px; text-align: center; font-size: 1.45rem; font-weight: 700; color: var(--ok); }
-.trk-check.is-miss { color: var(--accent); }
+.trk-check.is-miss { font-size: 1rem; color: var(--cool); }
+/* "When should I stop?" (current set only) and "Find your starting load": 44 px to tap, native disclosure marker */
+.trk-guide > summary, .trk-baseline > summary { min-height: 44px; padding: 10px 0; line-height: 24px; cursor: pointer; font-weight: 600; }
+.trk-guide { margin: 0; }
+.trk-guide > p, .trk-baseline > p { margin: 0 0 8px; }
+.fit-note.trk-baseline { margin: 8px 0; padding: 0 14px; }
+.fit-note.trk-baseline[open] { padding-bottom: 10px; }
+.trk-baseline > a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
 
-/* steppers and RIR chips */
+/* steppers (the shared .fit-stepper of fitness.css) and RIR chips */
 .trk-edit { display: grid; gap: 10px; padding: 2px 0 12px; }
 .trk-steppers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 10px; }
-.trk-stepper { display: grid; gap: 4px; min-width: 0; }
-.trk-stepper-label { font-size: .8rem; color: var(--muted); }
-.trk-stepper-row {
-  display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; align-items: center; border: 1px solid var(--line);
-  border-radius: 12px; background: var(--surface);
-}
-.trk-step {
-  min-width: 48px; min-height: 48px; padding: 0; border: 0; border-radius: 12px; background: transparent; color: var(--accent);
-  font: 700 1.5rem var(--sans); line-height: 1; cursor: pointer;
-}
-.trk-step:disabled { color: var(--muted); opacity: .4; cursor: default; }
-.trk-stepper-value { text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--ink); }
 .trk-rir { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 /* the label takes its own line, so the five chips share one row at 360 px (RU «В запасе» pushed «4+» onto a row alone) */
 .trk-rir-label { flex: 1 0 100%; margin: 0; font-size: .8rem; color: var(--muted); }
@@ -207,30 +199,39 @@ button.trk-row-body { cursor: pointer; }
 .trk-finisher p { margin: 0; }
 .trk-orphans ul { margin: 0; padding-left: 1.2em; }
 
-/* ---------- sticky bottom bar: Start, rest timer, elapsed, End */
+/* ---------- bottom bars. Start panel: a sticky Start. Running session: one fixed row of about 64 px — the rest
+   countdown with the session figures under it (or the figures alone), then End — above the phone's safe area. Fixed,
+   not sticky: at the end of the page it stays on the bottom edge instead of floating above the footer. */
 .trk-bar {
   position: sticky; bottom: 0; z-index: 8; display: grid; gap: 8px; margin: 4px -16px 0;
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
   background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px);
   border-top: 1px solid var(--line);
 }
-.trk-rest { display: grid; grid-template-columns: 64px minmax(0, 1fr) 64px 44px; align-items: center; gap: 8px; }
-.trk-rest-adj {
-  min-height: 48px; padding: 0 4px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
-  font: 600 .92rem var(--sans); cursor: pointer; white-space: nowrap;
+.trk-bar.is-session {
+  position: fixed; left: 0; right: 0; margin: 0;
+  padding: 8px max(16px, calc((100vw - 1180px) / 2 + 16px)) calc(8px + env(safe-area-inset-bottom, 0px));
 }
-.trk-rest-time { display: grid; justify-items: center; line-height: 1.1; }
-.trk-rest-label { font: 700 .72rem var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.trk-rest-clock { font-size: 2.1rem; font-weight: 800; color: var(--ink); }
-.trk-rest.is-over .trk-rest-clock, .trk-rest.is-over .trk-rest-label { color: var(--accent); }
+.trk-bar-row { display: flex; align-items: center; gap: 8px; min-height: 48px; max-width: 720px; }
+.trk-bar-stats { flex: 1; min-width: 0; color: var(--muted); font-weight: 700; white-space: nowrap; }
+.trk-rest { flex: 1; min-width: 0; display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px 44px; align-items: center; gap: 4px; }
+.trk-rest-adj {
+  min-width: 44px; min-height: 44px; padding: 0; border-radius: 10px; border: 1px solid var(--field-line, var(--line)); background: var(--surface); color: var(--ink);
+  font: 600 .86rem var(--sans); cursor: pointer; white-space: nowrap;
+}
+.trk-rest-time { display: grid; justify-items: center; min-width: 0; line-height: 1.1; }
+.trk-rest-clock { font-size: 1.6rem; font-weight: 800; color: var(--ink); }
+.trk-rest .trk-bar-stats { flex: none; font-size: .72rem; font-weight: 600; }
+.trk-rest.is-over .trk-rest-clock { color: var(--accent); }
 .trk-rest-close {
   min-width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 12px; background: transparent; color: var(--muted);
   font: 400 1.6rem var(--sans); cursor: pointer;
 }
-.trk-bar-main { display: flex; align-items: center; gap: 14px; min-height: 48px; }
-.trk-bar-stat { color: var(--muted); font-weight: 700; white-space: nowrap; }
-.trk-end-button { margin-left: auto; min-width: 104px; }
-.trk-live { margin-left: auto; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .85rem; }
+.fit-button.trk-end-button { flex: none; min-height: 48px; padding: 8px 16px; }
+.trk-live { flex: none; padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: .85rem; }
+/* while a session runs the site header scrolls away with the page, and the footer keeps clear of the fixed bar */
+[data-session-active] .site-header { position: static; }
+[data-session-active] .site-footer { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
 
 /* ---------- bottom sheets (<dialog>) */
 .trk-sheet {
@@ -238,6 +239,8 @@ button.trk-row-body { cursor: pointer; }
   border-radius: 18px 18px 0 0; background: var(--surface); color: var(--ink); box-shadow: var(--shadow); overflow: hidden;
 }
 .trk-sheet::backdrop { background: color-mix(in srgb, var(--ink) 45%, transparent); }
+/* the page behind an open sheet does not scroll */
+html:has(dialog.trk-sheet[open]) { overflow: hidden; }
 .trk-sheet-body {
   display: grid; gap: 12px; max-height: 88dvh; overflow-y: auto; overscroll-behavior: contain;
   padding: 18px 16px calc(16px + env(safe-area-inset-bottom, 0px));
@@ -252,7 +255,7 @@ button.trk-row-body { cursor: pointer; }
 .trk-option:hover { border-color: var(--accent); }
 .trk-option-name { font-weight: 700; overflow-wrap: anywhere; }
 .trk-option-meta { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
-.trk-option-start { font-size: .9rem; font-weight: 600; color: var(--accent); }
+.trk-option-start { font-size: .9rem; font-weight: 600; color: var(--ink); }
 .trk-remember { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; }
 .trk-remember input { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--accent); }
 .trk-sheet-actions { display: grid; gap: 8px; }
@@ -288,9 +291,9 @@ button.trk-row-body { cursor: pointer; }
 .trk-crash p { margin: 0; }
 
 @media (max-width: 400px) {
-  .trk-row:not(.is-current) .trk-done-text { display: none; }
-  .trk-rest { grid-template-columns: 58px minmax(0, 1fr) 58px 44px; gap: 6px; }
-  .trk-rest-clock { font-size: 1.85rem; }
+  .trk-bar-row { gap: 6px; }
+  .trk-rest { gap: 2px; }
+  .fit-button.trk-end-button { padding: 8px 12px; font-size: .95rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .trk-skeleton { animation: none; }

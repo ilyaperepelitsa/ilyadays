@@ -1,12 +1,15 @@
 /**
- * One set on the session screen (stream 04): the planned (or logged) set on the left, a 56 px Done button on the
- * right that logs exactly what the row shows. Tapping the row opens steppers (reps, kg) and RIR chips; the current
- * set has them open. A logged row edits in place or is undone. Test hooks: set-row, set-done, reps-/kg-minus/plus.
+ * One set on the session screen (stream 04). The current set is a card laid out in the order it is used: the planned
+ * set, the steppers (reps, kg), the effort chips, then a full-width 56 px Done that logs exactly what the card shows
+ * (effort is optional: one tap on Done is enough). Other rows stay one compact line: a set still to do ends in an
+ * empty circle (tap it to log the set out of order), a logged one in a tick, a set that missed its reps in "4/6".
+ * Tapping a row opens its steppers; a logged row edits in place or is undone.
+ * Test hooks: set-row, set-done, set-row-done, reps-/kg-minus/plus, rir-choice, set-effort-guide.
  * Right after a set is logged the next set's Done waits ("arming", under a second) so a double tap cannot log it.
  */
 import type { CSSProperties } from "react";
 import type { Exercise, Lang } from "@/lib/fitness/types";
-import { pick } from "@/lib/fitness/i18n";
+import { fmtKg, pick } from "@/lib/fitness/i18n";
 import { RIR_CHOICES, amountText, kgStepLabel, repsLabel, setEffortCoaching, setHint, setText, type Row } from "@/lib/fitness/tracker.mjs";
 import { Stepper } from "./Stepper";
 
@@ -23,7 +26,7 @@ export type RowActions = {
 const rirText = (lang: Lang, rir: number | null) =>
   rir == null ? "" : pick(lang, `RIR ${rir >= 4 ? "4+" : rir}`, `в запасе ${rir >= 4 ? "4+" : rir}`);
 
-export function SetRow({ lang, row, exercise, label, steps, current, arming = false, open, draft, readOnly, actions, style }: {
+export function SetRow({ lang, row, exercise, label, steps, current, arming = false, intro = false, open, draft, readOnly, actions, style }: {
   lang: Lang;
   row: Row;
   exercise: Exercise | undefined;
@@ -32,6 +35,8 @@ export function SetRow({ lang, row, exercise, label, steps, current, arming = fa
   current: boolean;
   /** the previous set was logged a moment ago: Done waits (double-tap shield) */
   arming?: boolean;
+  /** no working set is logged in this session yet: the effort chips come with their one-time explanation */
+  intro?: boolean;
   open: boolean;
   draft: Draft | undefined;
   readOnly: boolean;
@@ -104,20 +109,25 @@ export function SetRow({ lang, row, exercise, label, steps, current, arming = fa
           <div className="trk-row-body">{body}</div>
         )}
         {logged ? (
-          <span className={`trk-check${row.state === "failed" ? " is-miss" : ""}`} role="img" aria-label={pick(lang, "logged", "записано")}>
-            ✓
-          </span>
-        ) : editable ? (
+          row.state === "failed" ? (
+            <span className="trk-check is-miss fit-num" role="img" aria-label={pick(lang, `logged: ${logged.reps} of ${row.planned.reps}`, `записано: ${logged.reps} из ${row.planned.reps}`)}>
+              {fmtKg(logged.reps, lang)}/{fmtKg(row.planned.reps, lang)}
+            </span>
+          ) : (
+            <span className="trk-check" role="img" aria-label={pick(lang, "logged", "записано")}>
+              ✓
+            </span>
+          )
+        ) : editable && !current ? (
           <button
             type="button"
-            className="trk-done"
+            className="trk-tick"
             onClick={() => actions.done(row)}
             disabled={arming}
-            data-testid={current ? "set-done" : "set-row-done"}
+            data-testid="set-row-done"
             aria-label={`${pick(lang, "Done", "Готово")}: ${text}`}
           >
-            <span aria-hidden="true">✓</span>
-            <span className="trk-done-text">{pick(lang, "Done", "Готово")}</span>
+            <span className="trk-tick-ring" aria-hidden="true" />
           </button>
         ) : null}
       </div>
@@ -126,7 +136,7 @@ export function SetRow({ lang, row, exercise, label, steps, current, arming = fa
         : row.adaptation === "easy"
         ? pick(lang, "You reported a comfortable set with extra reserve. After a full rest, try one more rep at the same weight, keeping the target reserve. You can change this suggestion.", "Вы указали лёгкий подход с дополнительным запасом. После полного отдыха попробуйте на одно повторение больше с тем же весом, сохраняя целевой запас. Рекомендацию можно изменить.")
         : pick(lang, "Fewer reps last set: rest fully and try this manageable target. Adjust to what you actually do.", "В прошлом подходе было меньше повторений: полностью отдохните и попробуйте эту цель. Запишите фактический результат.")}</p> : null}
-      {!warm && !row.history ? <details className="trk-note" data-testid="set-effort-guide">
+      {current && !warm && !row.history ? <details className="trk-note trk-guide" data-testid="set-effort-guide">
         <summary>{pick(lang, coaching.title.en, coaching.title.ru)}</summary>
         <p>{pick(lang, coaching.guidance.en, coaching.guidance.ru)}</p>
         {coaching.example ? <p>{pick(lang, coaching.example.en, coaching.example.ru)}</p> : null}
@@ -136,28 +146,32 @@ export function SetRow({ lang, row, exercise, label, steps, current, arming = fa
         <div className="trk-edit">
           <div className="trk-steppers">
             <Stepper
-              lang={lang}
+              look="train"
               label={repsLabel(exercise, lang)}
               value={values.reps}
               step={steps.reps}
-              onStep={(d) => actions.adjust(row, { repsDelta: d })}
+              format={(v) => fmtKg(v, lang)}
+              stepText={fmtKg(steps.reps, lang)}
+              onChange={(_, d) => actions.adjust(row, { repsDelta: d })}
               testid={current ? "reps" : undefined}
             />
             {steps.kg > 0 ? (
               <Stepper
-                lang={lang}
+                look="train"
                 label={kgStepLabel(exercise, lang)}
                 value={values.kg}
                 step={steps.kg}
-                onStep={(d) => actions.adjust(row, { kgDelta: d })}
+                format={(v) => fmtKg(v, lang)}
+                stepText={fmtKg(steps.kg, lang)}
+                onChange={(_, d) => actions.adjust(row, { kgDelta: d })}
                 testid={current ? "kg" : undefined}
               />
             ) : null}
           </div>
-          {!warm ? <p className="trk-note">{pick(lang, "How many more clean reps could you have done? Tap your estimate after the set. The displayed RIR is a target until you report it.", "Сколько ещё повторений с хорошей техникой вы могли бы сделать? Укажите оценку после подхода. До этого запас — лишь цель.")}</p> : null}
+          {!warm && intro && current ? <p className="trk-note">{pick(lang, "How many more clean reps could you have done? Tap your estimate after the set. The displayed RIR is a target until you report it.", "Сколько ещё повторений с хорошей техникой вы могли бы сделать? Укажите оценку после подхода. До этого запас — лишь цель.")}</p> : null}
           {!warm ? (
             <div className="trk-rir" role="group" aria-label={pick(lang, "Reps in reserve", "Повторов в запасе")}>
-              <span className="trk-rir-label">{pick(lang, "RIR", "В запасе")}</span>
+              <span className="trk-rir-label">{pick(lang, "Reps left in reserve (optional)", "Повторов в запасе (необязательно)")}</span>
               {RIR_CHOICES.map((v) => (
                 <button
                   key={v}
@@ -190,6 +204,19 @@ export function SetRow({ lang, row, exercise, label, steps, current, arming = fa
             </div>
           ) : null}
         </div>
+      ) : null}
+      {current && editable && !logged ? (
+        <button
+          type="button"
+          className="fit-button trk-wide trk-done"
+          onClick={() => actions.done(row)}
+          disabled={arming}
+          data-testid="set-done"
+          aria-label={`${pick(lang, "Done", "Готово")}: ${text}`}
+        >
+          <span aria-hidden="true">✓</span>
+          <span className="trk-done-text">{pick(lang, "Done", "Готово")}</span>
+        </button>
       ) : null}
     </div>
   );

@@ -18,6 +18,7 @@ import {
 import { useFitness } from "../Provider";
 import { useStoreStatus } from "../ModeNote";
 import { markSeen, scrollBehavior, useSeen } from "./hooks";
+import { useTapShield } from "./tapShield";
 
 type Scale = "sleep" | "energy" | "soreness";
 const SCALES: [Scale, string, string, string, string][] = [
@@ -44,6 +45,7 @@ export function StartPanel({ lang, program, created, readOnly, now }: {
   const [dayChoice, setDayChoice] = useState<string | null>(null);
   const [readiness, setReadiness] = useState<Readiness>({});
   const [bwText, setBwText] = useState<string | null>(null);
+  const shield = useTapShield();
 
   const latest = latestBodyweight(snapshot);
   const defaultBw = latest?.kg ?? snapshot.settings?.bodyweightKg ?? null;
@@ -87,6 +89,7 @@ export function StartPanel({ lang, program, created, readOnly, now }: {
   const start = () => {
     if (readOnly || !plan.exercises.length) return;
     const at = new Date();
+    shield.arm(); // the session's End button takes this button's place
     if (created) store.upsert("programs", program);
     const weighIn = bwValid ? bodyweightRow({ snapshot, kg: bwKg, now: at }) : null;
     if (weighIn) store.upsert("bodyweight", weighIn);
@@ -106,7 +109,7 @@ export function StartPanel({ lang, program, created, readOnly, now }: {
   }
 
   return (
-    <div className="trk-start">
+    <div className="trk-start" onClickCapture={shield.onClickCapture}>
       {notice && !seen && !readOnly ? (
         <div className="fit-note warn trk-notice" role="status" data-testid="auto-closed" data-session-id={notice.id}>
           <span>
@@ -130,11 +133,11 @@ export function StartPanel({ lang, program, created, readOnly, now }: {
               ? pick(lang, "Next in the rotation", "Следующая по очереди")
               : pick(lang, "Chosen day", "Выбранный день")}
         </p>
-        <h2>{t2(lang, plan.dayName)}</h2>
-        <p className="fit-muted">
-          {day ? focusText(day.focus, lang) : null}
-          <span className="fit-num"> · ~{plan.estimatedMinutes}{"\u00a0"}{pick(lang, "min", "мин")}</span>
-        </p>
+        <div className="trk-title-row">
+          <h2>{t2(lang, plan.dayName)}</h2>
+          <span className="trk-time fit-num">~{plan.estimatedMinutes}{"\u00a0"}{pick(lang, "min", "мин")}</span>
+        </div>
+        {day ? <p className="fit-muted">{focusText(day.focus, lang)}</p> : null}
         {program.days.length > 1 && !readOnly ? (
           <div className="fit-seg trk-days" role="group" aria-label={pick(lang, "Training day", "Тренировочный день")}>
             {program.days.map((d) => (
@@ -189,9 +192,9 @@ export function StartPanel({ lang, program, created, readOnly, now }: {
           )}
 
           <h3>{pick(lang, "Body weight", "Вес тела")}</h3>
-          <div className="trk-bw">
-            <button type="button" className="trk-step" onClick={() => stepBw(-0.1)} aria-label={pick(lang, "Body weight −0.1 kg", "Вес −0,1 кг")}>−</button>
-            <label className="trk-bw-field">
+          <div className="fit-stepper-row trk-bw">
+            <button type="button" className="fit-step" onClick={() => stepBw(-0.1)} aria-label={pick(lang, "Body weight −0.1 kg", "Вес −0,1 кг")}>−</button>
+            <label className="fit-stepper-field">
               <span className="sr-only">{pick(lang, "Body weight, kg", "Вес тела, кг")}</span>
               <input
                 className="fit-num"
@@ -205,7 +208,7 @@ export function StartPanel({ lang, program, created, readOnly, now }: {
               />
               <span aria-hidden="true">{pick(lang, "kg", "кг")}</span>
             </label>
-            <button type="button" className="trk-step" onClick={() => stepBw(0.1)} aria-label={pick(lang, "Body weight +0.1 kg", "Вес +0,1 кг")}>+</button>
+            <button type="button" className="fit-step" onClick={() => stepBw(0.1)} aria-label={pick(lang, "Body weight +0.1 kg", "Вес +0,1 кг")}>+</button>
           </div>
           <p className="fit-muted trk-small">
             {latest

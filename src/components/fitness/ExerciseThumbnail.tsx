@@ -7,7 +7,7 @@ export function ExerciseThumbnail({ id }: { id: string }) {
   return <span className="fit-exercise-thumb" aria-hidden="true">
     {image ? (
       // eslint-disable-next-line @next/next/no-img-element -- existing pre-sized static thumbnail, no image proxy
-      <img src={thumbUrl(image.src)} alt="" width={48} height={48} loading="lazy" decoding="async" />
+      <img src={thumbUrl(image.src)} alt="" width={216} height={216} loading="lazy" decoding="async" />
     ) : <span>{exercise?.name.en.slice(0, 2).toUpperCase() ?? "—"}</span>}
   </span>;
 }

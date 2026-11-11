@@ -484,7 +484,7 @@ describe("progression explainer", () => {
     assert.equal(R.calibrationExtraRir, 1);
     assert.equal(R.startLoadFactor, 0.85);
     assert.equal(R.bodyweightExponent, 0.67);
-    assert.deepEqual(R.gap, { keepBelowDays: 14, shortPct: [5, 10], longFromDays: 28, longPct: [10, 15], longFullAtDays: 90 });
+    assert.deepEqual(R.gap, { keepBelowDays: 15, shortPct: [5, 10], longFromDays: 29, longPct: [20, 20], longFullAtDays: 90, newFromDays: 91, newPct: 30 });
     assert.equal(R.conversion.firstSessionFactor, 0.95);
     assert.deepEqual(R.deload, { setsMultiplier: 0.6, loadMultiplier: 1, rirBonus: 2, repsMinus: 2 });
     assert.equal(R.substitution.base, 0.85);

@@ -1,13 +1,13 @@
 "use client";
 /**
  * 5 · Fitness–fatigue (stream 06): the Banister impulse–response model on daily tonnage (textbook constants, shown
- * as an index) with training days as ticks, and the uncoupled EWMA acute:chronic ratio with its 0.8–1.3 band. Both
+ * as an index) with training days as ticks, and the uncoupled whole-week acute:chronic ratio with its 0.8–1.3 band. Both
  * descriptive, both captioned with their caveats (research/07 §C, §D).
  */
 import { useMemo } from "react";
 import type { Lang } from "@/lib/fitness/types";
 import { pick, pluralRu } from "@/lib/fitness/i18n";
-import { ACWR_ZONES, DAY_MS, acwrEwma, banister, banisterTiming, dailyLoads } from "@/lib/fitness/analytics.mjs";
+import { ACWR_ZONES, DAY_MS, acwr, banister, banisterTiming, dailyLoads } from "@/lib/fitness/analytics.mjs";
 import { LineChart } from "./charts";
 import { fmtDay, fmtNum } from "./scales";
 import { Caveat, Empty, Section, Stat } from "./shared";
@@ -16,14 +16,15 @@ import type { ProgressData } from "./useProgressData";
 
 const WINDOW_DAYS = 84;
 const MODEL_FULL_DAYS = 56;
-const ACWR_WARMUP = 50;
+/** Days of history the ratio needs: the last 7 days against the four weeks before them. */
+const ACWR_WARMUP = 35;
 const timing = banisterTiming();
 const daysWord = (n: number, lang: Lang) => (lang === "ru" ? pluralRu(n, ["день", "дня", "дней"]) : n === 1 ? "day" : "days");
 
 export function ModelSection({ lang, data, now }: { lang: Lang; data: ProgressData; now: number }) {
   const loads = useMemo(() => dailyLoads(data.sets, { loadOf: data.tonnageOf, unitOf: data.unitOf, timeOf: data.timeOf }), [data]);
   const model = useMemo(() => banister(loads, { until: now }), [loads, now]);
-  const ratio = useMemo(() => acwrEwma(loads, { until: now, warmup: ACWR_WARMUP }), [loads, now]);
+  const ratio = useMemo(() => acwr(loads, { until: now }), [loads, now]);
   const title = sectionTitle("model", lang);
   const lede = pick(lang, "A model of how training builds up and wears off\u00a0— a picture of your load, not a prediction.", "Модель того, как тренировки накапливаются и выветриваются: картина нагрузки, а не прогноз.");
   if (loads.length < 2) {
@@ -101,8 +102,8 @@ export function ModelSection({ lang, data, now }: { lang: Lang; data: ProgressDa
           kind="acwr"
           lang={lang}
           title={pick(lang, "Acute : chronic load ratio", "Соотношение острой и хронической нагрузки")}
-          summary={pick(lang, `Uncoupled EWMA ratio of the last week's load to the last month's; today ${fmtNum(lastRatio?.ratio ?? 0, lang, 2)}.`, `Разнесённое EWMA-соотношение нагрузки последней недели к последнему месяцу; сегодня ${fmtNum(lastRatio?.ratio ?? 0, lang, 2)}.`)}
-          lines={[{ key: "acwr", label: pick(lang, "ACWR (7 d / 28 d, EWMA)", "ACWR (7 дн / 28 дн, EWMA)"), role: "you", points: ratioShown.map((d) => ({ x: d.at, y: d.ratio ?? 0 })) }]}
+          summary={pick(lang, `Load of the last 7 days against the average week of the four weeks before; today ${fmtNum(lastRatio?.ratio ?? 0, lang, 2)}.`, `Нагрузка за последние 7 дней к средней неделе за четыре недели до них; сегодня ${fmtNum(lastRatio?.ratio ?? 0, lang, 2)}.`)}
+          lines={[{ key: "acwr", label: pick(lang, "ACWR (last 7 d / 4 weeks before)", "ACWR (7 дн / 4 нед. до них)"), role: "you", points: ratioShown.map((d) => ({ x: d.at, y: d.ratio ?? 0 })) }]}
           refBands={[{ key: "steady", label: pick(lang, "0.8–\u20601.3 steady (heuristic)", "0,8–\u20601,3 ровно (эвристика)"), lo: ACWR_ZONES.dip, hi: ACWR_ZONES.steady, role: "ok" }]}
           refs={[{ key: "spike", label: pick(lang, "1.5 spike", "1,5 скачок"), y: ACWR_ZONES.ramping }]}
           yDomain={[Math.min(0.5, ...ratioShown.map((d) => d.ratio ?? 1)), Math.max(1.7, ...ratioShown.map((d) => d.ratio ?? 1))]}
@@ -116,14 +117,14 @@ export function ModelSection({ lang, data, now }: { lang: Lang; data: ProgressDa
         />
       ) : (
         <Empty>
-          {pick(lang, `The load ratio appears after ${ACWR_WARMUP} days of history\u00a0— the averages need that long to forget their start (you have ${history}).`, `Соотношение нагрузок появится после ${ACWR_WARMUP} дней истории\u00a0— столько нужно средним, чтобы забыть старт (сейчас ${history}).`)}
+          {pick(lang, `The load ratio appears after ${ACWR_WARMUP} days of history\u00a0— one week to compare and four weeks to compare it with (you have ${history}).`, `Соотношение нагрузок появится после ${ACWR_WARMUP} дней истории\u00a0— неделя для сравнения и четыре недели, с которыми её сравнивают (сейчас ${history}).`)}
         </Empty>
       )}
       <Caveat>
         {pick(
           lang,
-          "Descriptive only: no study shows that steering this ratio prevents injuries (Impellizzeri et al. 2020), and the 0.8–\u20601.3 band comes from team sports. Uncoupled EWMA: this week is not divided by itself. Use it to notice sudden jumps in load, not to plan.",
-          "Только описание: ни одно исследование не показало, что управление этим соотношением предотвращает травмы (Impellizzeri et al. 2020), а диапазон 0,8–\u20601,3 взят из командных видов спорта. Разнесённое EWMA: эта неделя не делится сама на себя. Используйте, чтобы заметить резкий скачок нагрузки, а не для планирования.",
+          "Descriptive only: no study shows that steering this ratio prevents injuries (Impellizzeri et al. 2020), and the 0.8–\u20601.3 band comes from team sports. It compares the tonnage of the last 7 days with the average week of the four weeks before them, so this week is not divided by itself and a steady plan reads 1.0 on every day of the week. Use it to notice sudden jumps in load, not to plan.",
+          "Только описание: ни одно исследование не показало, что управление этим соотношением предотвращает травмы (Impellizzeri et al. 2020), а диапазон 0,8–\u20601,3 взят из командных видов спорта. Сравнивается тоннаж последних 7 дней со средней неделей за четыре недели до них: эта неделя не делится сама на себя, а при ровном плане значение равно 1,0 в любой день недели. Используйте, чтобы заметить резкий скачок нагрузки, а не для планирования.",
         )}
       </Caveat>
     </Section>

@@ -1,7 +1,7 @@
 /**
  * Client helpers for the train and home pages (stream 04 — plans/fitness/04-session-tracker-ui.md): a clock that is
  * null during the server render, the per-device UI state of a running session (localStorage), the end-of-session
- * summary (sessionStorage, survives a reload in this tab), the screen wake lock, the program bootstrap and the
+ * summary (sessionStorage, survives a reload in this tab), the screen wake lock, the program to train and the
  * close-out of auto-closed sessions. Every storage access is wrapped: private windows and blocked storage still work.
  */
 import { useEffect, useMemo, useSyncExternalStore } from "react";
@@ -282,20 +282,30 @@ export function useSettled(): boolean {
   return mode === "synced" && Boolean(snapshot.syncedAt) && !status?.syncing && !(status?.lastError && !HARMLESS_ERRORS.test(status.lastError));
 }
 
-/** The program to train; the owner template is saved on the first visit once the store is settled. */
+/**
+ * Synced mode only: the pull that would complete the snapshot cannot finish now (no connection, or it failed and is
+ * not running). Pages that wait for useSettled() fall back to the copy cached in this browser, read-only.
+ */
+export function usePullBlocked(): boolean {
+  const { mode, online } = useFitness();
+  const status = useStoreStatus();
+  if (mode !== "synced" || status?.syncing) return false;
+  return !online || Boolean(status?.lastError && !HARMLESS_ERRORS.test(status.lastError));
+}
+
+/**
+ * The program to train: the saved one, else the owner template built for the saved goal and days (`created`). The
+ * template is NOT written here: it is saved when the first session starts (StartPanel), by the program page on the
+ * first edit, or by the profile page — until then the hub keeps offering "Make this plan yours".
+ */
 export function useProgram(now: number | null): { program: Program; created: boolean } {
-  const { snapshot, store } = useFitness();
-  const settled = useSettled();
+  const { snapshot } = useFitness();
   const { programs, activeProgramId, settings } = snapshot;
   // only the program rows and the settings matter (not every logged set)
-  const result = useMemo(
+  return useMemo(
     () => ensureProgram({ ...EMPTY_SNAPSHOT, programs, activeProgramId, settings }, now ?? undefined),
     [programs, activeProgramId, settings, now],
   );
-  useEffect(() => {
-    if (result.created && settled) store.upsert("programs", result.program);
-  }, [result, settled, store]);
-  return result;
 }
 
 /** Apply the progression of sessions the store closed after 6 h, and mark empty ones abandoned (writers only). */

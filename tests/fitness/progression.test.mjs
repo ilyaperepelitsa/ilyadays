@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  convertState, deloadPlan, deloadSets, deloadWeek, e1rmFactor, e1rmOf, firstSessionTestProtocol, gapAdjust,
+  calendarDaysBetween, convertState, deloadPlan, deloadSets, deloadWeek, e1rmFactor, e1rmOf, firstSessionTestProtocol, gapAdjust,
   initialState, loadForE1rm, loadFraction, maxStepFraction, nextState, pctOf1rm, repCeiling, roundLoad, startingLoad,
   substituteState, warmupRamp,
 } from '../../src/lib/fitness/progression.mjs';
@@ -58,7 +58,7 @@ test('e1RM: Epley/Brzycki blend, reliability cut-off, exact inverse, %1RM table'
   assert.equal(e1rmOf(100, 1, 0).kg, 100);
   close(loadForE1rm(e1rmOf(80, 8, 2).kg, 8, 2), 80);
   for (let r = 2; r <= 35; r++) assert.ok(e1rmFactor(r) > e1rmFactor(r - 1), `monotonic at ${r}`);
-  close(e1rmFactor(36), 1 + 36 / 30, 1e-9); // Epley alone from 36 (Brzycki explodes near 37), as analytics defines it
+  close(e1rmFactor(36), 100 / pctOf1rm(36), 1e-9); // above 12 total reps: the inverse of the %1RM table (bounded; Brzycki explodes near 37)
   assert.equal(pctOf1rm(1), 100);
   assert.equal(pctOf1rm(10), 75);
   assert.equal(pctOf1rm(10.5), 73.75);
@@ -101,10 +101,10 @@ test('warm-up ramp: isolation feeler set, none for holds/carries/bodyweight, ass
 
 /* ------------------------------------------------------------------ first loads */
 
-test('starting loads: conservative, bodyweight-scaled, rounded to the easier side', () => {
+test('starting loads: conservative, bodyweight-scaled, rounded to the nearest step (a tie goes easier), never the lightest pin by rounding', () => {
   const m50 = fx('machine-chest-press', { startLoad: { kg: 50, source: 'test' } });
   assert.equal(startingLoad(m50), 40, '50 × 0.85 → 40');
-  assert.equal(startingLoad(m50, { bodyweightKg: 100 }), 45);
+  assert.equal(startingLoad(m50, { bodyweightKg: 100 }), 50, '49.3 kg → the nearest pin');
   assert.equal(startingLoad(m50, { bodyweightKg: 60 }), 35);
   // assisted: more assistance for a heavier or lighter lifter as needed; never above bodyweight
   assert.equal(startingLoad(assisted), 55);
@@ -114,6 +114,13 @@ test('starting loads: conservative, bodyweight-scaled, rounded to the easier sid
   assert.equal(startingLoad(carry), 16, '20 kg per hand × 0.85 → 16');
   assert.equal(startingLoad(fx('barbell-bench-press', { equipment: 'barbell', increment: 2.5 })), 20, 'the empty bar');
   assert.equal(startingLoad(bwEx), 0);
+  // the nearest step, not the one below: 5 kg × 0.85 = 4.25 kg is 5 kg on 2.5 kg pins (2.5 kg was a trap: one step
+  // is +100 %), and a light lifter does not land on the lightest pin unless the catalog's start load is that pin
+  const fly = ex('cable-fly');
+  assert.equal(startingLoad(fx('cable-fly', { equipment: 'cable', increment: 2.5, startLoad: { kg: 5, source: 'test' } })), 5);
+  assert.equal(startingLoad(fx('cable-fly', { equipment: 'cable', increment: 2.5, startLoad: { kg: 5, source: 'test' } }), { bodyweightKg: 50 }), 5);
+  assert.equal(startingLoad(fx('cable-fly', { equipment: 'cable', increment: 2.5, startLoad: { kg: 2.5, source: 'test' } })), 2.5, "the catalog's own start load is the lightest pin");
+  assert.equal(startingLoad(fly), 7.5, '7.5 kg × 0.85 = 6.4 kg → 7.5 kg');
 });
 
 test('initialState: bottom of the range, sessions 0, test protocol note', () => {
@@ -204,10 +211,29 @@ test('capacity guard: isolation reps go up to 20 (compounds 15), then a flag for
   assert.deepEqual([r.outcome, r.state.workingKg, r.state.targetReps, r.state.variant, r.state.fails], ['held', 7.5, 20, 'smaller-steps', 0]);
   assert.match(r.note.en, /too big/);
   assert.match(r.note.ru, /слишком/);
-  // even "4+" in reserve (the most the tracker logs) does not carry +33 %: still flagged
+  assert.deepEqual(r.state.bigStep, { streak: 1 });
+  // no load is a dead end: a second session in a row with every set at the ceiling takes the step anyway, from the
+  // bottom of the range (this was `held` forever: even "4+" in reserve does not carry +33 % by the guard)
   const flagged = r.state;
-  r = nextState(flagged, sets(7.5, [20, 20], 4), Q, fp, NOW);
-  assert.deepEqual([r.outcome, r.state.workingKg, r.state.targetReps, r.state.variant], ['held', 7.5, 20, 'smaller-steps']);
+  r = nextState(flagged, sets(7.5, [20, 20], 1), Q, fp, NOW);
+  assert.deepEqual([r.outcome, r.state.workingKg, r.state.targetReps, r.state.variant, r.state.bigStep], ['progressed', 10, 12, null, { graceKg: 10 }]);
+  assert.match(r.note.en, /^\+2\.5 kg next time \(10 kg × 12 reps\): every set reached 20 reps 2 sessions in a row\. The step is big for this weight: the first session at it may fall short, and that will not count as a miss\.$/);
+  assert.match(r.note.ru, /^\+2,5 кг в следующий раз \(10 кг × 12 повторений\): все подходы 2 тренировки подряд дошли до 20 повторений\. Шаг для этого веса крупный/);
+  // the first session at the new load falls below the range: announced, so not a miss; the second one counts
+  const stepped = r.state;
+  r = nextState(stepped, sets(10, [10, 9], 0), Q, fp, NOW);
+  assert.deepEqual([r.outcome, r.state.workingKg, r.state.targetReps, r.state.fails, r.state.bigStep], ['held', 10, 12, 0, null]);
+  assert.match(r.note.en, /^First session after a big step: a set below 12 reps does not count as a miss\. Keep 10 kg and aim for 12 reps\.$/);
+  r = nextState(r.state, sets(10, [10, 9], 0), Q, fp, NOW);
+  assert.deepEqual([r.outcome, r.state.fails], ['failed', 1]);
+  // a session at the ceiling that is not followed by another one starts the count over
+  r = nextState(flagged, sets(7.5, [20, 18], 1), Q, fp, NOW);
+  assert.deepEqual([r.outcome, r.state.workingKg, r.state.bigStep], ['held', 7.5, null]);
+  r = nextState(r.state, sets(7.5, [20, 20], 1), Q, fp, NOW);
+  assert.deepEqual([r.outcome, r.state.workingKg, r.state.bigStep], ['held', 7.5, { streak: 1 }]);
+  // effort harder than the target at the ceiling does not count towards the step
+  r = nextState(flagged, sets(7.5, [20, 20], 0), Q, fp, NOW);
+  assert.deepEqual([r.outcome, r.state.workingKg, r.state.bigStep], ['held', 7.5, null]);
   // micro-plates at this gym make the step small enough; the flag clears with the step
   r = nextState(flagged, sets(7.5, [20, 20], 1), Q, fp, NOW, { gym: gym({ increments: { 'face-pull': 1.25 } }) });
   assert.deepEqual([r.outcome, r.state.workingKg, r.state.targetReps, r.state.variant], ['progressed', 8.75, 12, null]);
@@ -245,7 +271,7 @@ test('fails below the range: failed, then a deload after failsBeforeDeload sessi
   assert.match(r.note.en, /miss 1 of 2/);
   r = nextState(r.state, sets(60, [5, 4, 4]), params(), plate, NOW);
   assert.deepEqual([r.outcome, r.state.workingKg, r.state.fails], ['deloaded', 52.5, 0]);
-  assert.match(r.note.en, /−10 %/);
+  assert.match(r.note.en, /drop to 52\.5 kg \(−12\.5 %\)/, 'the cut applied, not the rule');
   // strength mode waits for three
   let s = state({ exerciseId: plate.id, workingKg: 60, targetReps: 3, repRange: [3, 6] });
   const out = [];
@@ -465,15 +491,15 @@ test('notes on assisted machines and bodyweight with added load read naturally i
   assert.equal(r.note.ru, 'Тест пройден: рабочая помощь 45 кг × 8 повторений. Пока легче, чем с помощью 40 кг: в прошлый раз эта нагрузка закончилась разгрузкой.');
   // a deload adds assistance: "увеличьте помощь до", not "снизьте до помощь"
   r = run(a({ workingKg: 40, targetReps: 8, fails: 1 }), sets(40, [6, 5, 5]), assisted);
-  assert.equal(r.note.en, '2 sessions in a row below 8 reps: drop to assistance 45 kg (−10 %) and build back up.');
-  assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: увеличьте помощь до 45 кг (−10 % нагрузки) и наберите заново.');
+  assert.equal(r.note.en, '2 sessions in a row below 8 reps: drop to assistance 45 kg (−12.5 %) and build back up.');
+  assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: увеличьте помощь до 45 кг (−12,5 % нагрузки) и наберите заново.');
   // reps before a step too big (rule 2), and at the rep ceiling: "с помощью", not "с помощь"
   r = run(a({ workingKg: 40, targetReps: 12 }), sets(40, [12, 12, 12]), assisted);
   assert.equal(r.note.en, 'The next step (5 kg) is a big jump at this weight: earn it with 13 reps at assistance 40 kg first.');
   assert.equal(r.note.ru, 'Следующий шаг (5 кг) — большой скачок для этой нагрузки: сначала сделайте 13 повторений с помощью 40 кг.');
   r = run(a({ workingKg: 60, targetReps: 15 }), sets(60, [15, 15, 15]), assisted);
   assert.deepEqual([r.outcome, r.state.variant], ['held', 'smaller-steps']);
-  assert.equal(r.note.ru, 'Следующий шаг (5 кг) слишком велик даже после 15 повторений с помощью 60 кг: оставьте эту нагрузку и возьмите вариант с меньшим шагом или микроблины.');
+  assert.equal(r.note.ru, 'Следующий шаг (5 кг) слишком велик даже после 15 повторений с помощью 60 кг: сделайте так же ещё 1 тренировку (15 повторений в каждом подходе), и нагрузка всё равно вырастет. Мягче — вариант с меньшим шагом или микроблины.');
   // more reps at the same setting: "Та же нагрузка (помощь 40 кг)", not "Тот же вес (помощь 40 кг)"
   r = run(a({ workingKg: 40, targetReps: 8 }), sets(40, [8, 8, 8]), assisted);
   assert.equal(r.note.en, 'Same load (assistance 40 kg), aim for 9 reps on every set: all sets reached 8 reps.');
@@ -489,7 +515,7 @@ test('notes on assisted machines and bodyweight with added load read naturally i
   assert.equal(g.note?.en, '20 days since last time: start at assistance 45 kg (−12.5 %) to find your groove again.');
   assert.equal(g.note?.ru, '20 дней с прошлого раза: начните с помощью 45 кг (−12,5 % нагрузки), чтобы вернуться в ритм.');
   g = gapAdjust(a({ workingKg: 40, targetReps: 8 }), 40, NOW, { exercise: assisted, ...bw });
-  assert.equal(g.note?.ru, '40 дней без этого упражнения: начните заново с помощью 45 кг (−12,5 % нагрузки) от нижней границы диапазона; первая тренировка — тестовая.');
+  assert.equal(g.note?.ru, '40 дней без этого упражнения: начните заново с помощью 50 кг (−25 % нагрузки) от нижней границы диапазона; первая тренировка — тестовая.');
   // bodyweight + added load (45° back extension): "рабочее отягощение", "снизьте отягощение до", "с отягощением",
   // "со своим весом", not "рабочий вес свой вес", "снизьте до свой вес" or "с свой вес"
   const be = ex('back-extension-45');
@@ -499,14 +525,14 @@ test('notes on assisted machines and bodyweight with added load read naturally i
   assert.equal(r.note.en, 'Test done: working load bodyweight + 12.5 kg × 8 reps from your best set.');
   assert.equal(r.note.ru, 'Тест пройден: рабочее отягощение 12,5 кг × 8 повторений по лучшему подходу.');
   r = run(b({ workingKg: 10, targetReps: 8, fails: 1 }), sets(10, [6, 5, 5]), be);
-  assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: снизьте отягощение до 7,5 кг (−10 %) и наберите заново.');
+  assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: снизьте отягощение до 7,5 кг (−2,8 %) и наберите заново.');
   r = run(b({ workingKg: 2.5, targetReps: 8, fails: 1 }), sets(2.5, [6, 5, 5]), be);
-  assert.equal(r.note.en, '2 sessions in a row below 8 reps: drop to bodyweight (−10 %) and build back up.');
-  assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: уберите отягощение (−10 %) и наберите заново.');
+  assert.equal(r.note.en, '2 sessions in a row below 8 reps: drop to bodyweight (−3 %) and build back up.');
+  assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: уберите отягощение (−3 %) и наберите заново.');
   r = run(b({ workingKg: 40, targetReps: 12 }), sets(40, [12, 12, 12]), be, g40);
   assert.equal(r.note.ru, 'Следующий шаг (40 кг) — большой скачок для этой нагрузки: сначала сделайте 13 повторений с отягощением 40 кг.');
   r = run(b({ workingKg: 0, targetReps: 20 }), sets(0, [20, 20, 20]), be, g40);
-  assert.equal(r.note.ru, 'Следующий шаг (40 кг) слишком велик даже после 20 повторений со своим весом: оставьте эту нагрузку и возьмите вариант с меньшим шагом или микроблины.');
+  assert.equal(r.note.ru, 'Следующий шаг (40 кг) слишком велик даже после 20 повторений со своим весом: оставьте эту нагрузку и возьмите вариант с меньшим шагом или микроблины.', 'a 40 kg step on body weight is never taken by the two-sessions rule (unsafe jump)');
   r = run(b({ workingKg: 0, targetReps: 8 }), sets(0, [8, 8, 8]), be);
   assert.equal(r.note.en, 'Same load (bodyweight), aim for 9 reps on every set: all sets reached 8 reps.');
   assert.equal(r.note.ru, 'Та же нагрузка (свой вес), цель — 9 повторений в каждом подходе: все подходы дошли до 8 повторений.');
@@ -527,7 +553,7 @@ test('notes on assisted machines and bodyweight with added load read naturally i
   assert.equal(r.note.ru, 'Следующий шаг (5 кг) — большой скачок для этого веса: сначала сделайте 11 повторений с 25 кг.');
   const fp = ex('face-pull');
   r = run(state({ exerciseId: fp.id, workingKg: 7.5, targetReps: 20, repRange: [12, 20], rir: 1 }), sets(7.5, [20, 20], 1), fp, {}, params({ repRange: [12, 20], rir: 1 }));
-  assert.equal(r.note.ru, 'Следующий шаг (2,5 кг) слишком велик даже после 20 повторений с 7,5 кг: оставьте этот вес и возьмите вариант с меньшим шагом или микроблины.');
+  assert.equal(r.note.ru, 'Следующий шаг (2,5 кг) слишком велик даже после 20 повторений с 7,5 кг: сделайте так же ещё 1 тренировку (20 повторений в каждом подходе), и вес всё равно вырастет. Мягче — вариант с меньшим шагом или микроблины.');
   r = run(state({ workingKg: 60, targetReps: 8 }), sets(60, [8, 8, 8]), mcp, {}, params());
   assert.equal(r.note.ru, 'Тот же вес (60 кг), цель — 9 повторений в каждом подходе: все подходы дошли до 8 повторений.');
   r = run(state({ workingKg: 60, targetReps: 8 }), sets(60, [8, 7, 7]), mcp, {}, params());
@@ -547,31 +573,48 @@ test('a deload with no lighter load to go to (bodyweight only) keeps the load an
   let r = nextState(state({ exerciseId: be.id, workingKg: 0, targetReps: 8, repRange: [8, 12], fails: 1 }), sets(0, [6, 5, 5]), params({ repRange: [8, 12] }), be, NOW, { bodyweightKg: 80 });
   assert.deepEqual([r.outcome, r.state.workingKg], ['deloaded', 0]);
   assert.equal(r.note.ru, '2 тренировки подряд меньше 8 повторений: оставайтесь со своим весом и наберите заново.');
-  // added load still comes off: "уберите отягощение (−10 %)" is right at 2.5 kg
+  // added load still comes off; the percentage is the cut of the whole load (80 + 2.5 kg → 80 kg), not the rule's 10 %
   r = nextState(state({ exerciseId: be.id, workingKg: 2.5, targetReps: 8, repRange: [8, 12], fails: 1 }), sets(2.5, [6, 5, 5]), params({ repRange: [8, 12] }), be, NOW, { bodyweightKg: 80 });
-  assert.deepEqual([r.outcome, r.state.workingKg, r.note.ru], ['deloaded', 0, '2 тренировки подряд меньше 8 повторений: уберите отягощение (−10 %) и наберите заново.']);
+  assert.deepEqual([r.outcome, r.state.workingKg, r.note.ru], ['deloaded', 0, '2 тренировки подряд меньше 8 повторений: уберите отягощение (−3 %) и наберите заново.']);
 });
 
 /* ------------------------------------------------------------------ gaps */
 
-test('gap rules: < 14 days keep, 14–27 days −5→−10 %, ≥ 28 days −10→−15 % and reset', () => {
+test('gap rules: < 15 days keep, 15–28 days −5→−10 %, 29–90 days −20 % and reset, beyond 90 days −30 % as a new exercise', () => {
   // an id the catalog does not know: the load is scaled exactly (no equipment rounding)
-  const s = state({ exerciseId: 'not-in-the-catalog', workingKg: 60, targetReps: 8, fails: 1 });
+  const s = state({ exerciseId: 'not-in-the-catalog', workingKg: 60, targetReps: 8, fails: 1, baseline: { status: 'established', kg: 60 } });
   const g = (d, o) => gapAdjust(s, d, NOW, o);
-  assert.deepEqual([g(13.9).outcome, g(13.9).pct, g(13.9).state], [null, 0, s]);
-  assert.deepEqual([g(14).outcome, g(14).pct, g(14).state.workingKg, g(14).state.targetReps, g(14).state.fails], ['deloaded', 5, 57, 8, 1]);
-  assert.equal(g(21).pct, 7.5);
-  assert.equal(g(27).pct, 9.6);
-  assert.deepEqual([g(28).outcome, g(28).pct, g(28).state.workingKg, g(28).state.targetReps, g(28).state.fails], ['reset', 10, 54, 6, 0]);
-  assert.equal(g(59).pct, 12.5);
-  assert.equal(g(90).pct, 15);
-  assert.equal(g(400).pct, 15);
-  assert.match(g(21).note?.en ?? '', /^21 days since last time/);
+  // one missed week is 14 days: never a break
+  assert.deepEqual([g(14).outcome, g(14).pct, g(14).state], [null, 0, s]);
+  assert.deepEqual([g(15).outcome, g(15).pct, g(15).state.workingKg, g(15).state.targetReps, g(15).state.fails], ['deloaded', 5, 57, 8, 1]);
+  assert.equal(g(22).pct, 7.5);
+  assert.equal(g(28).pct, 9.6);
+  // research/02 §I: 29–90 days restart at 80 % with a test; beyond 90 days 70 % and the baseline is learned again
+  assert.deepEqual([g(29).outcome, g(29).pct, g(29).state.workingKg, g(29).state.targetReps, g(29).state.fails, g(29).state.baseline?.status], ['reset', 20, 48, 6, 0, 'established']);
+  assert.equal(g(59).pct, 20);
+  assert.equal(g(90).pct, 20);
+  assert.deepEqual([g(91).outcome, g(91).pct, g(91).state.workingKg, g(91).state.targetReps, g(91).state.baseline], ['reset', 30, 42, 6, { status: 'learning' }]);
+  assert.equal(g(400).pct, 30);
+  assert.match(g(22).note?.en ?? '', /^22 days since last time/);
   assert.match(g(30).note?.en ?? '', /first session counts as a test/);
   // rounded to the NEAREST step (§16 rule 1)
-  assert.equal(g(14, { exercise: mcp }).state.workingKg, 55);
-  assert.equal(gapAdjust(state({ exerciseId: assisted.id, workingKg: 40 }), 30, NOW, { exercise: assisted }).state.workingKg, 45, 'more assistance');
-  assert.equal(gapAdjust(state({ exerciseId: assisted.id, workingKg: 40 }), 30, NOW, { exercise: assisted, bodyweightKg: 80 }).state.workingKg, 45);
+  assert.equal(g(15, { exercise: mcp }).state.workingKg, 55);
+  assert.equal(g(60, { exercise: mcp }).state.workingKg, 50, '48 kg → 50 kg');
+  assert.equal(g(200, { exercise: mcp }).state.workingKg, 40, '42 kg → 40 kg');
+  assert.equal(gapAdjust(state({ exerciseId: assisted.id, workingKg: 40 }), 30, NOW, { exercise: assisted }).state.workingKg, 50, 'more assistance');
+  assert.equal(gapAdjust(state({ exerciseId: assisted.id, workingKg: 40 }), 30, NOW, { exercise: assisted, bodyweightKg: 80 }).state.workingKg, 50);
+  // the coarse-step memory (sessions in a row at the rep ceiling) ends with a break
+  assert.equal(gapAdjust(state({ workingKg: 20, targetReps: 15, bigStep: { streak: 1 } }), 20, NOW, { exercise: mcp }).state.bigStep, null);
+});
+
+test('calendarDaysBetween counts local calendar days, whatever the clock time', () => {
+  const at = (/** @type {number} */ d, /** @type {number} */ h, /** @type {number} */ m = 0) => new Date(2026, 9, d, h, m);
+  assert.equal(calendarDaysBetween(at(19, 20, 40), at(19 + 14, 7)), 14, 'Monday evening → Monday morning two weeks later');
+  assert.equal(calendarDaysBetween(at(19, 7), at(19 + 14, 21)), 14, 'Monday morning → Monday evening two weeks later');
+  assert.equal(calendarDaysBetween(at(19, 23, 59), at(20, 0, 1)), 1);
+  assert.equal(calendarDaysBetween(at(19, 0, 1), at(19, 23, 59)), 0);
+  assert.equal(calendarDaysBetween(at(20, 7), at(19, 7)), 0, 'never negative');
+  assert.equal(calendarDaysBetween(at(19, 7).toISOString(), at(19 + 15, 7).getTime()), 15, 'ISO strings and ms');
 });
 
 /* ------------------------------------------------------------------ conversion and substitution */
@@ -631,16 +674,23 @@ test('planned deload: −40 % sets at the same load, RIR + 2, every blockWeeks +
   assert.deepEqual(p, before, 'input untouched');
   assert.equal(d.loadMultiplier, 1);
   assert.equal(d.repsMinus, 2);
-  assert.deepEqual(d.program.days[0].slots.map((s) => s.sets), [2, 2, 2, 2, 2, 2]);
+  assert.deepEqual(p.days[0].slots.map((s) => s.sets), [4, 2, 3, 2, 2, 3]);
+  assert.deepEqual(d.program.days[0].slots.map((s) => s.sets), [2, 1, 2, 1, 1, 2]);
   assert.deepEqual(d.program.days[0].slots.map((s) => s.rir), p.days[0].slots.map((s) => Math.min(5, s.rir + 2)));
   assert.ok(d.note.en.startsWith('Deload week'));
-  const at = (days) => deloadWeek(p, Date.parse(p.createdAt) + days * 86_400_000);
-  assert.deepEqual(at(0), { due: false, week: 1, cycle: 6 });
-  assert.equal(at(34).due, false);
-  assert.deepEqual(at(35), { due: true, week: 6, cycle: 6 });
-  assert.equal(at(41).due, true);
-  assert.deepEqual(at(42), { due: false, week: 1, cycle: 6 });
-  assert.equal(at(77).due, true);
+  // weeks are local calendar weeks from the Monday of the week the program was made in: a program made on Wednesday
+  // 11 Nov at 17:40 has its deload week from Monday 14 Dec 00:00 to Sunday 20 Dec, whatever the clock time
+  const made = { ...p, createdAt: new Date(2026, 10, 11, 17, 40).toISOString() };
+  const at = (/** @type {number} */ day, /** @type {number} */ hour) => deloadWeek(made, new Date(2026, 10, day, hour));
+  assert.deepEqual(at(11, 18), { due: false, week: 1, cycle: 6 });
+  assert.deepEqual(at(9, 6), { due: false, week: 1, cycle: 6 }, 'the Monday before it was made');
+  assert.deepEqual(at(16, 0), { due: false, week: 2, cycle: 6 });
+  assert.equal(at(30 + 13, 23).due, false, 'Sunday 13 Dec, late');
+  assert.deepEqual(at(30 + 14, 0), { due: true, week: 6, cycle: 6 });
+  assert.equal(at(30 + 16, 17).due, true, 'the same clock time as the program was made at: still the deload week');
+  assert.equal(at(30 + 20, 23).due, true);
+  assert.deepEqual(at(30 + 21, 0), { due: false, week: 1, cycle: 6 });
+  assert.equal(deloadWeek(made, new Date(2027, 0, 25, 12)).due, true, '6 weeks later again');
   assert.equal(deloadWeek({ ...p, deloadEveryWeeks: 0 }, '2027-06-01T00:00:00.000Z').due, false);
 });
 
@@ -773,32 +823,38 @@ test('bodyweight reps with no load step: at the top the state is flagged for a h
 test('breaks (§16 rule 1): the cut goes to the NEAREST step, once; a step too coarse for it costs 2 reps instead', () => {
   const fly = ex('cable-fly');
   const cf = state({ exerciseId: fly.id, workingKg: 7.5, targetReps: 12, repRange: [10, 15], rir: 1 });
-  // 14 days: −5 % of 7.5 kg is 0.4 kg; the next pin down is −33 % → keep 7.5 kg, 10 reps instead of 12
-  let g = gapAdjust(cf, 14, NOW, { exercise: fly });
+  // 15 days: −5 % of 7.5 kg is 0.4 kg; the next pin down is −33 % → keep 7.5 kg, 10 reps instead of 12
+  let g = gapAdjust(cf, 15, NOW, { exercise: fly });
   assert.deepEqual([g.outcome, g.state.workingKg, g.state.targetReps], ['deloaded', 7.5, 10]);
-  assert.match(g.note?.en ?? '', /^14 days since last time: same 7\.5 kg, 2 fewer reps/);
-  assert.match(g.note?.ru ?? '', /^14 дней с прошлого раза: те же 7,5 кг, на 2 повторения меньше/);
-  // ≥ 28 days: back to the bottom of the range (a test session); the load stays when it cannot be cut sensibly
+  assert.match(g.note?.en ?? '', /^15 days since last time: same 7\.5 kg, 2 fewer reps/);
+  assert.match(g.note?.ru ?? '', /^15 дней с прошлого раза: те же 7,5 кг, на 2 повторения меньше/);
+  // 29+ days: back to the bottom of the range (a test session), −20 %: 7.5 → 6 kg, the nearest pin is 5 kg (−33 % ≤ 2 × 20 %)
   g = gapAdjust(cf, 35, NOW, { exercise: fly });
-  assert.deepEqual([g.outcome, g.state.workingKg, g.state.targetReps], ['reset', 7.5, 10]);
-  // a step that fits: 40 kg, 21 days, −7.5 % → 37 kg → the nearest pin is 35 kg (−12.5 % ≤ 2 × 7.5 %)
+  assert.deepEqual([g.outcome, g.state.workingKg, g.state.targetReps], ['reset', 5, 10]);
+  // … and the load stays when it cannot be cut sensibly (2.5 kg is the lightest pin)
+  g = gapAdjust({ ...cf, workingKg: 2.5 }, 35, NOW, { exercise: fly });
+  assert.deepEqual([g.outcome, g.state.workingKg, g.state.targetReps], ['reset', 2.5, 10]);
+  // a step that fits: 40 kg, 22 days, −7.5 % → 37 kg → the nearest pin is 35 kg (−12.5 % ≤ 2 × 7.5 %)
   const cp = state({ workingKg: 40, targetReps: 8 });
-  g = gapAdjust(cp, 21, NOW, { exercise: mcp });
+  g = gapAdjust(cp, 22, NOW, { exercise: mcp });
   assert.deepEqual([g.state.workingKg, g.state.targetReps], [35, 8]);
-  assert.match(g.note?.en ?? '', /^21 days since last time: start at 35 kg \(−12\.5 %\)/);
-  // 14 days on the same machine: 38 kg → the nearest pin is 40 kg → 2 fewer reps
-  g = gapAdjust(cp, 14, NOW, { exercise: mcp });
+  assert.match(g.note?.en ?? '', /^22 days since last time: start at 35 kg \(−12\.5 %\)/);
+  // 15 days on the same machine: 38 kg → the nearest pin is 40 kg → 2 fewer reps
+  g = gapAdjust(cp, 15, NOW, { exercise: mcp });
   assert.deepEqual([g.state.workingKg, g.state.targetReps], [40, 6]);
-  g = gapAdjust(state({ workingKg: 40, targetReps: 7 }), 14, NOW, { exercise: mcp });
+  g = gapAdjust(state({ workingKg: 40, targetReps: 7 }), 15, NOW, { exercise: mcp });
   assert.equal(g.state.targetReps, 6, 'never below the bottom of the range');
+  // one missed week (14 days) changes nothing
+  g = gapAdjust(cp, 14, NOW, { exercise: mcp });
+  assert.deepEqual([g.outcome, g.state], [null, cp]);
   // assisted: in effective terms (bodyweight − assistance), more assistance
-  g = gapAdjust(state({ exerciseId: assisted.id, workingKg: 40, targetReps: 10, repRange: [8, 12] }), 21, NOW, { exercise: assisted, bodyweightKg: 80 });
+  g = gapAdjust(state({ exerciseId: assisted.id, workingKg: 40, targetReps: 10, repRange: [8, 12] }), 22, NOW, { exercise: assisted, bodyweightKg: 80 });
   assert.deepEqual([g.state.workingKg, g.state.targetReps], [45, 10]);
   // never more than twice the intended cut, at any load, step and break length; never heavier
   for (const inc of [1, 2, 2.5, 5]) {
     const e = fx('machine-chest-press', { increment: inc });
     for (let kg = inc; kg <= 120; kg += inc) {
-      for (const days of [14, 17, 21, 27, 28, 45, 90, 200]) {
+      for (const days of [15, 17, 21, 27, 28, 29, 45, 90, 91, 200]) {
         const r = gapAdjust(state({ workingKg: kg, targetReps: 9 }), days, NOW, { exercise: e });
         const cut = (kg - r.state.workingKg) / kg;
         assert.ok(cut >= -1e-9 && cut <= (2 * r.pct) / 100 + 1e-9, `${kg} kg (+${inc}), ${days} d: −${(100 * cut).toFixed(1)} % for −${r.pct} %`);
@@ -1120,14 +1176,14 @@ test('plateau memory: cleared once a complete session past that load stays in th
 
 test('plateau memory: a new rep range and a swap start fresh; a break keeps it (a cut to another load starts the streak over)', () => {
   const s = state({ workingKg: 50, targetReps: 10, plateau: at55({ streak: 1 }) });
-  for (const days of [5, 13]) assert.deepEqual(gapAdjust(s, days, NOW, { exercise: mcp }).state.plateau, at55({ streak: 1 }), `${days} days`);
+  for (const days of [5, 14]) assert.deepEqual(gapAdjust(s, days, NOW, { exercise: mcp }).state.plateau, at55({ streak: 1 }), `${days} days`);
   // 50 → 45 kg after 20, 30 and 120 days: the streak counts sessions at one load, so it starts over
   for (const days of [20, 30, 120]) {
     const g = gapAdjust(s, days, NOW, { exercise: mcp }).state;
     assert.deepEqual([g.workingKg < 50, g.plateau], [true, at55()], `${days} days`);
   }
   // a step too coarse for the cut (20 kg − 5 % is still 20 kg): the load stays, 2 reps fewer, and so does the streak
-  const c = gapAdjust(state({ workingKg: 20, targetReps: 10, plateau: { kg: 25, times: 1, streak: 1 } }), 14, NOW, { exercise: mcp }).state;
+  const c = gapAdjust(state({ workingKg: 20, targetReps: 10, plateau: { kg: 25, times: 1, streak: 1 } }), 15, NOW, { exercise: mcp }).state;
   assert.deepEqual([c.workingKg, c.targetReps, c.plateau], [20, 8, { kg: 25, times: 1, streak: 1 }]);
   assert.equal(gapAdjust({ ...s, plateau: /** @type {any} */ ({ kg: '55' }) }, 20, NOW, { exercise: mcp }).state.plateau, null);
   assert.equal('plateau' in gapAdjust(state({ workingKg: 50 }), 30, NOW, { exercise: mcp }).state, false);

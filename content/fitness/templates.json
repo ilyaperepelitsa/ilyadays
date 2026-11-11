@@ -10,6 +10,7 @@
       },
       "repRange": [3, 6],
       "rir": 2,
+      "prioritySetsBonus": 0,
       "setsPerMuscleWeek": { "start": 4, "target": 8, "max": 12, "unit": "direct sets per main lift (accessories 6–10 per muscle)" },
       "restSec": { "compound": 180, "isolation": 90 },
       "frequency": [2, 3],
@@ -220,10 +221,11 @@
     "bodyweightRefKg": 80,
     "bodyweightExponent": 0.67,
     "prioritySetsBonus": 1,
-    "superset": { "restDivisor": 2, "minRestSec": 60 },
-    "gap": { "keepBelowDays": 14, "shortPct": [5, 10], "longFromDays": 28, "longPct": [10, 15], "longFullAtDays": 90 },
+    "superset": { "restDivisor": 2, "minRestSec": 60, "heavyTopReps": 6 },
+    "gap": { "keepBelowDays": 15, "shortPct": [5, 10], "longFromDays": 29, "longPct": [20, 20], "longFullAtDays": 90, "newFromDays": 91, "newPct": 30 },
     "gapCut": { "maxMultiple": 2, "repsMinus": 2 },
     "plateau": { "maxSessions": 3, "spareReps": 2 },
+    "bigStep": { "sessionsAtCeiling": 2, "maxSessions": 8, "maxKg": 5, "maxPct": 25 },
     "conversion": { "firstSessionFactor": 0.95 },
     "deload": { "setsMultiplier": 0.6, "loadMultiplier": 1, "rirBonus": 2, "repsMinus": 2 },
     "substitution": {
@@ -243,8 +245,9 @@
       "calibrationExtraRir": "First working load from the test set uses one extra rep in reserve (research/02 §E).",
       "startLoadFactor": "Start at 85 % of the catalog's novice starting load (task spec; research/04 §3.9 seeds at ≈60 % of the Strength Level Beginner 1RM).",
       "bodyweightExponent": "Strength scales with body mass to the 0.67 power (Jaric S. Muscle strength testing: use of normalisation for body size. Sports Med 2002;32(10):615–631. https://doi.org/10.2165/00007256-200232100-00002).",
-      "superset": "Agonist–antagonist supersets keep (even raise) reps and volume while shortening sessions (Zhang X, Weakley J, Li H, Li Z, García-Ramos A. Sports Med 2025;55:953–975. https://doi.org/10.1007/s40279-025-02176-8); each member rests half its normal rest, at least 60 s.",
-      "gap": "Strength losses are trivial for ≤ 28 days off and accelerate after (Bosquet L, et al. Scand J Med Sci Sports 2013;23(3):e140–e149. https://doi.org/10.1111/sms.12047); reductions are for re-calibrating effort, not lost strength (research/02 §I). Tiers per the stream 03 task: < 14 d keep, 14–27 d −5…−10 %, ≥ 28 d −10…−15 % and a test session.",
+      "superset": "Agonist–antagonist supersets keep (even raise) reps and volume while shortening sessions (Zhang X, Weakley J, Li H, Li Z, García-Ramos A. Sports Med 2025;55:953–975. https://doi.org/10.1007/s40279-025-02176-8); each member rests half its normal rest, at least 60 s. A heavy low-rep slot (top of the range ≤ 6 reps) is never supersetted: maximal-strength sets need their full rest (research/01, strength mode: 3 min).",
+      "gap": "Strength losses are trivial for ≤ 28 days off and accelerate after (Bosquet L, et al. Scand J Med Sci Sports 2013;23(3):e140–e149. https://doi.org/10.1111/sms.12047); reductions are for re-calibrating effort, not lost strength (research/02 §I). Days are local calendar days, so one missed week (14 days) never counts as a break: < 15 d keep, 15–28 d −5…−10 %, 29–90 d a test session from 80 % of the old load, > 90 d treated as new from 70 % (research/02 §I).",
+      "bigStep": "Coarse pin steps (2026-11-12): where one step is too big for the capacity guard even at the rep ceiling, two sessions in a row with every set at the ceiling and the target reps in reserve earn one step anyway, from the bottom of the range, and the first session at it may fall short without counting as a miss, so no load is a dead end; only for a step of at most 5 kg or +25 % (never an unsafe jump when training alone), and after twice as many sessions each time that load has already ended in a deload (2, 4, at most 8). Two sessions in a row is the ACSM hand-off for adding load (ACSM position stand, Med Sci Sports Exerc 2009;41(3):687–708. https://pubmed.ncbi.nlm.nih.gov/19204579/).",
       "gapCut": "Breaks (master plan §16 rule 1): the gap cut is rounded to the NEAREST machine step and applied once; when the steps are too coarse for it (the nearest step leaves the load unchanged, or would cut more than twice the intended %), the load stays and that session's rep target drops by 2 (10 s or 10 m for holds and carries) instead. The cut recalibrates effort; strength losses are trivial for ≤ 28 days (research/02 §I).",
       "plateau": "Plateau memory (master plan §16 rule 5, 2026-11-09): a reactive deload that lowers the load remembers the load it came down from; a step from below back to that load waits for min(maxSessions, 1 + times) sessions in a row with every working set at the top of the range whose weakest set carries that load by the capacity guard (times = deloads from that load; from the second deload spareReps more reps in hand, earned with reps first, except at the rep ceiling; test sessions count like any other, but neither their re-anchor nor a ramp that reached that load ends there before the confirmation), so one good day (±4 % daily form in the 52-week simulation) no longer starts a fail → deload → retry cycle. Two sessions in a row is the ACSM hand-off for adding load (ACSM position stand, Med Sci Sports Exerc 2009;41(3):687–708. https://pubmed.ncbi.nlm.nih.gov/19204579/); three and the 2 spare reps after a second deload (about one good day: ±4 % form is ±1.6 reps at 10 reps by Epley) are design defaults, tuned on 230 simulated stalled lifters and checked on 400 others: an exercise deloaded 3 or more times from one load in 19 of the 400 (4.75 %) and a fourth time in 1 (0.25 %, a face pull whose range top is the rep ceiling, so no spare reps), so repeats are rarer, not impossible. The spare reps count at the failed load: at the current one they take up to ceil(2 × failed ÷ current) sessions of reps (3 for any step up to +50 %).",
       "conversion": "First session after a goal switch at 95 % of the converted load (research/01 Table 10).",
@@ -321,8 +324,8 @@
               }
             },
             {
-              "slotId": "A2", "exerciseId": "lat-pulldown", "role": "primary",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "slotId": "A2", "exerciseId": "lat-pulldown", "role": "primary", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
               "why": {
                 "en": "Vertical pull to balance the press: builds the lats (back width) and pulling strength in the biceps.",
                 "ru": "Вертикальная тяга для баланса с жимом: развивает широчайшие (ширину спины) и силу бицепса в тяге."
@@ -337,23 +340,23 @@
               }
             },
             {
-              "slotId": "A4", "exerciseId": "machine-row", "role": "primary", "superset": "sA1",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
+              "slotId": "A4", "exerciseId": "machine-row", "role": "primary", "superset": "sA1", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
               "why": {
                 "en": "Chest-supported row: a strong upper back with no load on the lower back. Alternated with the pec deck — one muscle rests while its opposite works, so the session is shorter with the same reps.",
                 "ru": "Тяга в тренажёре с упором грудью: сильный верх спины без нагрузки на поясницу. Чередуется с «бабочкой» — одна мышца отдыхает, пока работает её антагонист, поэтому тренировка короче при том же числе повторений."
               }
             },
             {
-              "slotId": "A5", "exerciseId": "machine-shoulder-press", "role": "secondary",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "A5", "exerciseId": "machine-shoulder-press", "role": "secondary", "setsAdjByGoal": { "strength": -1, "recomp": -1, "maintenance": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "Overhead press for the front and side delts and the triceps; the machine's fixed path is easy on the shoulder joints.",
                 "ru": "Жим вверх для передней и средней дельты и трицепса; фиксированная траектория тренажёра бережёт плечевые суставы."
               }
             },
             {
-              "slotId": "A6", "exerciseId": "machine-crunch", "role": "trunk",
+              "slotId": "A6", "exerciseId": "machine-crunch", "role": "trunk", "setsAdjByGoal": { "strength": -2 },
               "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
               "why": {
                 "en": "Loaded crunch for ab strength: add weight like on any other lift instead of chasing high reps.",
@@ -372,31 +375,31 @@
           },
           "slots": [
             {
-              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true,
-              "sets": 4, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true, "setsAdjByGoal": { "hypertrophy": -1, "recomp": -1, "endurance": -1, "maintenance": -1 },
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "Back day starts with the pull-up pattern. The machine's assistance is the load: less assistance means progress, all the way to unassisted pull-ups.",
                 "ru": "День спины начинается с подтягиваний. Нагрузка здесь — помощь гравитрона: чем меньше помощь, тем больше прогресс, вплоть до подтягиваний без помощи."
               }
             },
             {
-              "slotId": "B2", "exerciseId": "machine-incline-press", "role": "secondary", "superset": "sB1",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "slotId": "B2", "exerciseId": "machine-incline-press", "role": "secondary", "superset": "sB1", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Incline press for the upper chest — the second of three chest sessions this week. Alternated with the cable row.",
                 "ru": "Жим под углом на верх груди — вторая из трёх тренировок груди за неделю. Чередуется с тягой блока."
               }
             },
             {
-              "slotId": "B3", "exerciseId": "seated-cable-row", "role": "primary", "superset": "sB1",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
+              "slotId": "B3", "exerciseId": "seated-cable-row", "role": "primary", "superset": "sB1", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
               "why": {
                 "en": "Horizontal pull for the mid-back and rear delts; pairing it with the incline press (push and pull) saves time without costing reps.",
                 "ru": "Горизонтальная тяга для середины спины и задней дельты; пара с жимом под углом (жим и тяга) экономит время без потери повторений."
               }
             },
             {
-              "slotId": "B4", "exerciseId": "cable-fly", "role": "isolation", "superset": "sB2",
+              "slotId": "B4", "exerciseId": "cable-fly", "role": "isolation", "superset": "sB2", "setsAdjByGoal": { "maintenance": -1 },
               "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "The cable fly keeps tension on the pecs in the stretched position — the third chest exercise of the week.",
@@ -404,7 +407,7 @@
               }
             },
             {
-              "slotId": "B5", "exerciseId": "face-pull", "role": "small", "superset": "sB2",
+              "slotId": "B5", "exerciseId": "face-pull", "role": "small", "superset": "sB2", "setsAdjByGoal": { "hypertrophy": -1, "maintenance": -1 },
               "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Rear delts and rotator cuff: balances all the pressing and keeps the shoulders healthy. Paired with the fly, the opposite movement.",
@@ -439,8 +442,8 @@
           },
           "slots": [
             {
-              "slotId": "C1", "exerciseId": "triceps-press-machine", "role": "secondary", "superset": "sC1",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "slotId": "C1", "exerciseId": "triceps-press-machine", "role": "secondary", "superset": "sC1", "setsAdjByGoal": { "recomp": -1, "maintenance": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
               "why": {
                 "en": "The seated dip machine is the heavy triceps press and also works the lower chest — the week's third chest exposure. Alternated with the curl.",
                 "ru": "Отжимания в тренажёре сидя — тяжёлый жим на трицепс, который также нагружает низ груди — третья нагрузка на грудь за неделю. Чередуется со сгибаниями на бицепс."
@@ -463,7 +466,7 @@
               }
             },
             {
-              "slotId": "C4", "exerciseId": "machine-lateral-raise", "role": "small",
+              "slotId": "C4", "exerciseId": "machine-lateral-raise", "role": "small", "setsAdjByGoal": { "hypertrophy": -1, "endurance": -1, "maintenance": -1 },
               "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "The side delts give the shoulders their width; they respond best to higher reps and short rests.",
@@ -537,8 +540,8 @@
               }
             },
             {
-              "slotId": "A2", "exerciseId": "machine-row", "role": "primary",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "slotId": "A2", "exerciseId": "machine-row", "role": "primary", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
               "why": {
                 "en": "Chest-supported row right after the press: a push–pull pair that keeps back work level with chest work, with no load on the lower back.",
                 "ru": "Тяга с упором грудью сразу после жима: пара «жим–тяга» держит работу на спину наравне с работой на грудь и не нагружает поясницу."
@@ -553,23 +556,23 @@
               }
             },
             {
-              "slotId": "A4", "exerciseId": "lat-pulldown", "role": "primary",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "slotId": "A4", "exerciseId": "lat-pulldown", "role": "primary", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
               "why": {
                 "en": "Vertical pull, so the back is trained from both angles on this day.",
                 "ru": "Вертикальная тяга, чтобы спина в этот день получила нагрузку под двумя углами."
               }
             },
             {
-              "slotId": "A5", "exerciseId": "triceps-press-machine", "role": "secondary", "superset": "sA1",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "slotId": "A5", "exerciseId": "triceps-press-machine", "role": "secondary", "superset": "sA1", "setsAdjByGoal": { "strength": -1, "recomp": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Triceps press alternated with the curl: both arm muscles in about half the time.",
                 "ru": "Жим на трицепс чередуется со сгибаниями: обе мышцы рук примерно за половину времени."
               }
             },
             {
-              "slotId": "A6", "exerciseId": "machine-preacher-curl", "role": "isolation", "superset": "sA1",
+              "slotId": "A6", "exerciseId": "machine-preacher-curl", "role": "isolation", "superset": "sA1", "setsAdjByGoal": { "strength": -1 },
               "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Biceps curl paired with the triceps press (opposite muscles).",
@@ -577,7 +580,7 @@
               }
             },
             {
-              "slotId": "A7", "exerciseId": "machine-crunch", "role": "trunk", "superset": "sA2",
+              "slotId": "A7", "exerciseId": "machine-crunch", "role": "trunk", "superset": "sA2", "setsAdjByGoal": { "strength": -2 },
               "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Loaded crunch alternated with the lower-back machine: the front and back of the trunk in one block.",
@@ -585,7 +588,7 @@
               }
             },
             {
-              "slotId": "A8", "exerciseId": "lower-back-machine", "role": "trunk", "setsAdj": -1, "superset": "sA2",
+              "slotId": "A8", "exerciseId": "lower-back-machine", "role": "trunk", "setsAdj": -1, "superset": "sA2", "setsAdjByGoal": { "strength": -1 },
               "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Lumbar extension once a week, paired with the crunch.",
@@ -604,39 +607,39 @@
           },
           "slots": [
             {
-              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true,
-              "sets": 4, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true, "setsAdjByGoal": { "strength": -1, "hypertrophy": -1, "recomp": -1, "endurance": -1, "maintenance": -1 },
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "The vertical day opens with pull-ups: here the back is the priority.",
                 "ru": "День вертикальных движений начинается с подтягиваний: здесь в приоритете спина."
               }
             },
             {
-              "slotId": "B2", "exerciseId": "machine-incline-press", "role": "secondary", "superset": "sB1",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
+              "slotId": "B2", "exerciseId": "machine-incline-press", "role": "secondary", "superset": "sB1", "setsAdjByGoal": { "strength": -1, "recomp": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Incline press for the upper chest — the week's second chest session — alternated with the cable row.",
                 "ru": "Жим под углом на верх груди — вторая тренировка груди за неделю — чередуется с тягой блока."
               }
             },
             {
-              "slotId": "B3", "exerciseId": "seated-cable-row", "role": "primary", "superset": "sB1",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
+              "slotId": "B3", "exerciseId": "seated-cable-row", "role": "primary", "superset": "sB1", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 75, "progression": "double",
               "why": {
                 "en": "Cable row paired with the incline press: push and pull without losing reps.",
                 "ru": "Тяга блока в паре с жимом под углом: жим и тяга без потери повторений."
               }
             },
             {
-              "slotId": "B4", "exerciseId": "machine-shoulder-press", "role": "secondary",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "B4", "exerciseId": "machine-shoulder-press", "role": "secondary", "setsAdjByGoal": { "recomp": -1, "maintenance": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "Overhead press for the delts and triceps.",
                 "ru": "Жим вверх для дельт и трицепса."
               }
             },
             {
-              "slotId": "B5", "exerciseId": "machine-lateral-raise", "role": "small",
+              "slotId": "B5", "exerciseId": "machine-lateral-raise", "role": "small", "setsAdjByGoal": { "maintenance": -1 },
               "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Side delts for shoulder width.",
@@ -644,7 +647,7 @@
               }
             },
             {
-              "slotId": "B6", "exerciseId": "face-pull", "role": "small",
+              "slotId": "B6", "exerciseId": "face-pull", "role": "small", "setsAdjByGoal": { "maintenance": -1 },
               "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Rear delts and rotator cuff to balance the pressing.",
@@ -660,7 +663,7 @@
               }
             },
             {
-              "slotId": "B8", "exerciseId": "captains-chair-knee-raise", "role": "trunk",
+              "slotId": "B8", "exerciseId": "captains-chair-knee-raise", "role": "trunk", "setsAdjByGoal": { "strength": -1 },
               "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 90, "progression": "double",
               "why": {
                 "en": "Lower-ab strength to finish.",
@@ -706,8 +709,8 @@
               }
             },
             {
-              "slotId": "A2", "exerciseId": "machine-shoulder-press", "role": "secondary",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "A2", "exerciseId": "machine-shoulder-press", "role": "secondary", "setsAdjByGoal": { "recomp": -1, "maintenance": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "Overhead press while the shoulders are still fresh.",
                 "ru": "Жим вверх, пока плечи ещё свежие."
@@ -722,8 +725,8 @@
               }
             },
             {
-              "slotId": "A4", "exerciseId": "triceps-press-machine", "role": "secondary",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "A4", "exerciseId": "triceps-press-machine", "role": "secondary", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "Heavy triceps press after the chest work.",
                 "ru": "Тяжёлый жим на трицепс после работы на грудь."
@@ -749,23 +752,23 @@
           },
           "slots": [
             {
-              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true,
-              "sets": 4, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "B1", "exerciseId": "assisted-pull-up", "role": "secondary", "priority": true, "setsAdjByGoal": { "hypertrophy": -1, "recomp": -1, "endurance": -1, "maintenance": -1 },
+              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "The heavy pull day opens with pull-ups.",
                 "ru": "Тяжёлый день тяг начинается с подтягиваний."
               }
             },
             {
-              "slotId": "B2", "exerciseId": "machine-row", "role": "primary",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "slotId": "B2", "exerciseId": "machine-row", "role": "primary", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
               "why": {
                 "en": "Chest-supported row: back thickness with no load on the lower back.",
                 "ru": "Тяга с упором грудью: толщина спины без нагрузки на поясницу."
               }
             },
             {
-              "slotId": "B3", "exerciseId": "face-pull", "role": "small",
+              "slotId": "B3", "exerciseId": "face-pull", "role": "small", "setsAdjByGoal": { "hypertrophy": -1, "maintenance": -1 },
               "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Rear delts and rotator cuff.",
@@ -808,15 +811,15 @@
           },
           "slots": [
             {
-              "slotId": "C1", "exerciseId": "machine-incline-press", "role": "secondary",
-              "sets": 3, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
+              "slotId": "C1", "exerciseId": "machine-incline-press", "role": "secondary", "setsAdjByGoal": { "recomp": -1 },
+              "sets": 2, "repRange": [8, 12], "rir": 2, "restSec": 120, "progression": "double",
               "why": {
                 "en": "The second push day starts with the upper chest.",
                 "ru": "Второй жимовой день начинается с верха груди."
               }
             },
             {
-              "slotId": "C2", "exerciseId": "cable-fly", "role": "isolation",
+              "slotId": "C2", "exerciseId": "cable-fly", "role": "isolation", "setsAdjByGoal": { "maintenance": -1 },
               "sets": 2, "repRange": [10, 15], "rir": 1, "restSec": 75, "progression": "double",
               "why": {
                 "en": "Cable fly: chest work in the stretched position.",
@@ -824,8 +827,8 @@
               }
             },
             {
-              "slotId": "C3", "exerciseId": "machine-lateral-raise", "role": "small",
-              "sets": 2, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
+              "slotId": "C3", "exerciseId": "machine-lateral-raise", "role": "small", "setsAdjByGoal": { "hypertrophy": -1, "recomp": -1, "endurance": -1, "maintenance": -1 },
+              "sets": 1, "repRange": [12, 20], "rir": 1, "restSec": 60, "progression": "double",
               "why": {
                 "en": "Side delts for shoulder width.",
                 "ru": "Средняя дельта для ширины плеч."
@@ -859,16 +862,16 @@
           },
           "slots": [
             {
-              "slotId": "D1", "exerciseId": "lat-pulldown", "role": "primary", "setsAdj": 1,
-              "sets": 4, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "slotId": "D1", "exerciseId": "lat-pulldown", "role": "primary", "setsAdj": 1, "setsAdjByGoal": { "strength": -1, "hypertrophy": -1, "recomp": -2, "endurance": -1, "maintenance": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
               "why": {
                 "en": "The second pull day opens with the pulldown, plus one set so the back keeps the most volume.",
                 "ru": "Второй день тяг начинается с вертикальной тяги, плюс один подход, чтобы спина сохранила наибольший объём."
               }
             },
             {
-              "slotId": "D2", "exerciseId": "seated-cable-row", "role": "primary",
-              "sets": 3, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
+              "slotId": "D2", "exerciseId": "seated-cable-row", "role": "primary", "setsAdjByGoal": { "recomp": -1, "maintenance": -1 },
+              "sets": 2, "repRange": [6, 10], "rir": 2, "restSec": 150, "progression": "double",
               "why": {
                 "en": "Cable row for the mid-back.",
                 "ru": "Тяга блока для середины спины."

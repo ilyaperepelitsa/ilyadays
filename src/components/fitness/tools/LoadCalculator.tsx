@@ -7,7 +7,7 @@ import { useId, useMemo, useState } from "react";
 import type { Exercise, Lang } from "@/lib/fitness/types";
 import { fmtKg, kgLabel, pick, t2 } from "@/lib/fitness/i18n";
 import { EXERCISES, OWNER_TEMPLATE, exerciseById } from "@/lib/fitness/catalog.mjs";
-import { BARS_KG, PLATES_KG, TABLE_RIR, calculable, lastWorkingSet, loadTable, platesPerSide, warmupFor } from "@/lib/fitness/tools.mjs";
+import { BARS_KG, PLATES_KG, TABLE_RIR, calculable, lastSetInputs, lastWorkingSet, loadTable, platesPerSide, warmupFor } from "@/lib/fitness/tools.mjs";
 import { useFitness } from "../Provider";
 
 const DEFAULT_EXERCISE = "machine-chest-press";
@@ -22,8 +22,9 @@ function NumberStepper({ label, value, step, min, max, unit, onChange, testid }:
   return (
     <div className="fit-calc-field">
       <label className="fit-calc-label" htmlFor={id}>{label}</label>
-      <span className="fit-calc-stepper">
-        <button type="button" className="fit-calc-step" aria-label={`${label} −`} data-testid={`${testid}-minus`} onClick={() => onChange(clampTo(value - step))}>−</button>
+      <span className="fit-stepper-row">
+        <button type="button" className="fit-step" aria-label={`${label} −`} data-testid={`${testid}-minus`} onClick={() => onChange(clampTo(value - step))}>−</button>
+        <span className="fit-stepper-field">
         <input
           id={id}
           className="fit-calc-input fit-num"
@@ -37,8 +38,9 @@ function NumberStepper({ label, value, step, min, max, unit, onChange, testid }:
           onChange={(e) => onChange(e.target.value === "" ? Number.NaN : Number(e.target.value))}
           onBlur={() => onChange(Number.isFinite(value) ? clampTo(value) : min)}
         />
-        <button type="button" className="fit-calc-step" aria-label={`${label} +`} data-testid={`${testid}-plus`} onClick={() => onChange(clampTo((Number.isFinite(value) ? value : min) + step))}>+</button>
-        {unit ? <span className="fit-calc-unit">{unit}</span> : null}
+        {unit ? <span className="fit-calc-unit" aria-hidden="true">{unit}</span> : null}
+        </span>
+        <button type="button" className="fit-step" aria-label={`${label} +`} data-testid={`${testid}-plus`} onClick={() => onChange(clampTo((Number.isFinite(value) ? value : min) + step))}>+</button>
       </span>
     </div>
   );
@@ -82,9 +84,10 @@ export function LoadCalculator({ lang }: { lang: Lang }) {
     const next = exerciseById(id) as Exercise | undefined;
     const prev = lastWorkingSet(Object.values(snapshot.sets), id);
     if (prev) {
-      setKg(prev.kg);
-      setReps(prev.reps);
-      setRir(prev.rir ?? 2);
+      const from = lastSetInputs(prev);
+      setKg(from.kg);
+      setReps(from.reps);
+      setRir(from.rir);
     } else if (next) {
       setKg(next.startLoad?.kg ?? 40);
       setReps(Math.min(12, Math.max(1, next.repRange?.[0] ?? 8)));
@@ -122,7 +125,7 @@ export function LoadCalculator({ lang }: { lang: Lang }) {
       </label>
 
       {last ? (
-        <button type="button" className="fit-button quiet fit-calc-last" onClick={() => { setKg(last.kg); setReps(last.reps); setRir(last.rir ?? 2); }}>
+        <button type="button" className="fit-button quiet fit-calc-last" onClick={() => { const from = lastSetInputs(last); setKg(from.kg); setReps(from.reps); setRir(from.rir); }}>
           {pick(lang, `Use my last set: ${fmtKg(last.kg, lang)} ${kgWord} × ${last.reps}`, `Мой последний подход: ${fmtKg(last.kg, lang)} ${kgWord} × ${last.reps}`)}
         </button>
       ) : null}

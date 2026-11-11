@@ -36,6 +36,12 @@ export function SwapSheet({ lang, planned, ctx, onPick, onSkip, onClose }: {
 }) {
   const titleId = useId();
   const [remember, setRemember] = useState(false);
+  // The sheet stays mounted between uses (so the <dialog> closes properly and focus returns to the Swap button):
+  // "remember" is per use and goes back to off whenever it closes.
+  const close = () => {
+    setRemember(false);
+    onClose();
+  };
   const choices = useMemo(() => (planned ? swapChoices(planned, ctx.gym) : { options: [], missing: [] }), [planned, ctx.gym]);
   const options = useMemo(() => {
     if (!planned) return [];
@@ -65,7 +71,7 @@ export function SwapSheet({ lang, planned, ctx, onPick, onSkip, onClose }: {
   const missingNames = choices.missing.map((id) => exerciseName(id, lang));
 
   return (
-    <Sheet open={planned != null} onClose={onClose} labelledBy={titleId} className="trk-swap">
+    <Sheet open={planned != null} onClose={close} labelledBy={titleId} className="trk-swap">
       {planned ? (
         <>
           <h2 id={titleId} className="trk-sheet-title">
@@ -81,7 +87,10 @@ export function SwapSheet({ lang, planned, ctx, onPick, onSkip, onClose }: {
               <ul className="trk-options">
                 {options.map((o) => (
                   <li key={o.id}>
-                    <button type="button" className="trk-option" data-testid="swap-option" data-exercise-id={o.id} onClick={() => onPick(planned.slotId, o.id, remember)}>
+                    <button type="button" className="trk-option" data-testid="swap-option" data-exercise-id={o.id} onClick={() => {
+                      setRemember(false);
+                      onPick(planned.slotId, o.id, remember);
+                    }}>
                       <span className="trk-option-name">
                         {o.name}
                         {o.original ? <span className="trk-tag">{pick(lang, "in the plan", "по плану")}</span> : null}
@@ -129,7 +138,10 @@ export function SwapSheet({ lang, planned, ctx, onPick, onSkip, onClose }: {
           <div className="trk-sheet-actions">
             {!options.length ? (
               <>
-                <button type="button" className="fit-button" data-testid="swap-skip" onClick={() => onSkip(planned.slotId)}>
+                <button type="button" className="fit-button" data-testid="swap-skip" onClick={() => {
+                  setRemember(false);
+                  onSkip(planned.slotId);
+                }}>
                   {pick(lang, "Skip it today", "Пропустить сегодня")}
                 </button>
                 <Link prefetch={false} className="fit-button quiet" href={localPath(lang, "/fitness/gyms")}>
@@ -137,7 +149,7 @@ export function SwapSheet({ lang, planned, ctx, onPick, onSkip, onClose }: {
                 </Link>
               </>
             ) : null}
-            <button type="button" className="fit-button quiet" onClick={onClose}>
+            <button type="button" className="fit-button quiet" onClick={close}>
               {pick(lang, "Cancel", "Отмена")}
             </button>
           </div>

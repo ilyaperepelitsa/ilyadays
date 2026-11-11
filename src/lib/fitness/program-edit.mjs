@@ -171,13 +171,14 @@ const sameRange = (a, b) => a[0] === b[0] && a[1] === b[1];
 /** @param {ExerciseSlot} a @param {ExerciseSlot} b */
 const sameSlot = (a, b) =>
   a.exerciseId === b.exerciseId && a.sets === b.sets && sameRange(a.repRange, b.repRange) && a.rir === b.rir &&
-  a.restSec === b.restSec && a.progression === b.progression && a.increment === b.increment;
+  a.restSec === b.restSec && a.progression === b.progression;
 
 /** A copy of a slot with its own arrays (so edits never share a repRange with the input). @param {ExerciseSlot} s @returns {ExerciseSlot} */
 const copySlot = (s) => {
   /** @type {ExerciseSlot} */
   const out = { ...s, repRange: [s.repRange[0], s.repRange[1]] };
   if (s.why) out.why = { en: s.why.en, ru: s.why.ru };
+  if (Array.isArray(s.replaces)) out.replaces = [...s.replaces];
   return out;
 };
 
@@ -284,7 +285,7 @@ function customizations(program, lookup) {
   const tpl = templateById(program.templateId);
   /** @type {Map<string, string>} */
   const swaps = new Map();
-  /** @type {Map<string, SlotPatch & { increment?: number }>} */
+  /** @type {Map<string, SlotPatch>} */
   const overrides = new Map();
   /** @type {Set<string>} */
   const removed = new Set();
@@ -304,14 +305,13 @@ function customizations(program, lookup) {
       const exercise = lookup.exerciseById(slot.exerciseId) ?? null;
       const unit = exercise ? unitOf(exercise) : (tslot.unit ?? "reps");
       const derived = deriveSlot(tslot, program.goal, unit, exercise);
-      /** @type {SlotPatch & { increment?: number }} */
+      /** @type {SlotPatch} */
       const diff = {};
       if (slot.sets !== derived.sets) diff.sets = slot.sets;
       if (!sameRange(slot.repRange, derived.repRange)) diff.repRange = [slot.repRange[0], slot.repRange[1]];
       if (slot.rir !== derived.rir) diff.rir = slot.rir;
       if (slot.restSec !== derived.restSec) diff.restSec = slot.restSec;
       if (slot.progression !== derived.progression) diff.progression = slot.progression;
-      if (slot.increment !== derived.increment && typeof slot.increment === "number") diff.increment = slot.increment;
       if (Object.keys(diff).length && !overrides.has(key)) overrides.set(key, diff);
     }
   }
@@ -322,7 +322,7 @@ function customizations(program, lookup) {
 /**
  * Change the days per week: rebuild from the template for that day count (2 → upper-2day, 3 → the owner's A/B/C,
  * 4 → upper-4day) and carry the owner's edits where exercise ids match: swaps, overrides (sets, reps, RIR, rest,
- * rule, increment, clamped to the goal's bounds), removals, added slots (same day key or the last day, new ids),
+ * rule, clamped to the goal's bounds), removals, added slots (same day key or the last day, new ids),
  * the legs add-on, the progression parameters and the block calendar (`createdAt`).
  * @param {Program} program @param {number} days @param {TimeLike} [now] @param {{ catalog?: ExerciseLookup }} [opts]
  * @returns {Program}
@@ -398,8 +398,10 @@ function copyProgression(program) {
 /* ------------------------------------------------------------------ slots */
 
 /**
- * A slot with another exercise: same prescription; a slot-level increment is dropped (it belonged to the old
- * machine); when the rep unit changes (a carry for a hold) the range is re-derived for the new unit.
+ * A slot with another exercise: same prescription; a legacy slot-level increment is dropped (never read: the step is
+ * the gym's or the exercise's); when the rep unit changes (a carry for a hold) the range is re-derived for the new
+ * unit. The slot remembers what it held (`replaces`, newest first, at most 3; swapping back forgets), so the planner
+ * seeds the new exercise from that history instead of starting it as never trained.
  * @param {Program} program @param {ExerciseSlot} slot @param {Exercise} to @param {ExerciseLookup} lookup
  * @returns {ExerciseSlot}
  */
@@ -407,6 +409,10 @@ function swappedSlot(program, slot, to, lookup) {
   const from = lookup.exerciseById(slot.exerciseId);
   const next = { ...copySlot(slot), exerciseId: to.id };
   delete next.increment;
+  const before = [slot.exerciseId, ...(Array.isArray(slot.replaces) ? slot.replaces : [])].filter((id) => id !== to.id);
+  const back = Array.isArray(slot.replaces) && slot.replaces.includes(to.id);
+  if (back && before.length <= 1) delete next.replaces;
+  else next.replaces = [...new Set(before)].slice(0, 3);
   if (unitOf(from) !== unitOf(to)) {
     const role = slotRole(program, slot, lookup);
     const b = slotBounds(program.goal, unitOf(to));
@@ -417,7 +423,7 @@ function swappedSlot(program, slot, to, lookup) {
 
 /**
  * A slot with a patch applied and clamped to the goal's bounds for its unit.
- * @param {ExerciseSlot} slot @param {SlotPatch & { increment?: number }} patch @param {GoalMode} goal @param {RepUnit} unit
+ * @param {ExerciseSlot} slot @param {SlotPatch} patch @param {GoalMode} goal @param {RepUnit} unit
  * @returns {ExerciseSlot}
  */
 function patched(slot, patch, goal, unit) {
@@ -428,7 +434,6 @@ function patched(slot, patch, goal, unit) {
   if (typeof patch.rir === "number" && Number.isFinite(patch.rir)) next.rir = clampInt(patch.rir, b.rir);
   if (typeof patch.restSec === "number" && Number.isFinite(patch.restSec)) next.restSec = clamp(Math.round(patch.restSec / 5) * 5, b.restSec[0], b.restSec[1]);
   if (patch.progression && PROGRESSION_RULE_IDS.includes(patch.progression)) next.progression = patch.progression;
-  if (typeof patch.increment === "number" && patch.increment > 0) next.increment = patch.increment;
   return next;
 }
 

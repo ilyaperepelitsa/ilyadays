@@ -33,6 +33,10 @@ export type BlockView = {
   gym: Gym | null;
   /** A set was logged a moment ago: the current set's Done waits (double-tap shield, SessionTracker) */
   arming: boolean;
+  /** No working set is logged yet: the first one explains the effort chips (once per session) */
+  intro: boolean;
+  /** The one exercise whose "Find your starting load" guide starts open: the first uncalibrated one with no work done */
+  guideSlotId: string | null;
   /** Weight holds (ExerciseState.holdUntil) of today's exercises, by exercise id */
   holds: Record<string, string>;
 };
@@ -90,6 +94,7 @@ function ExerciseCard({ lang, e, idx, inSuperset, view, actions }: {
       steps={steps}
       current={r.key === view.currentKey}
       arming={view.arming && r.key === view.currentKey}
+      intro={view.intro}
       open={isOpen(r)}
       draft={view.drafts[r.key]}
       readOnly={view.readOnly}
@@ -115,7 +120,7 @@ function ExerciseCard({ lang, e, idx, inSuperset, view, actions }: {
           <h3>
             <Link prefetch={false} href={localPath(lang, `/fitness/exercises/${p.exerciseId}`)}>{name}</Link>
           </h3>
-          <span className="trk-count fit-num" aria-label={pick(lang, `${doneWork} of ${plannedWork} working sets`, `${doneWork} из ${plannedWork} рабочих подходов`)}>
+          <span className="trk-count fit-num" role="img" aria-label={pick(lang, `${doneWork} of ${plannedWork} working sets`, `${doneWork} из ${plannedWork} рабочих подходов`)}>
             {doneWork}/{plannedWork}
           </span>
         </div>
@@ -128,7 +133,7 @@ function ExerciseCard({ lang, e, idx, inSuperset, view, actions }: {
             {tags.secondary.map((t) => <span key={t} className="trk-tag soft">{t}</span>)}
           </p>
         ) : null}
-        {p.calibration ? <details className="fit-note" data-testid="baseline-guide" open={doneWork === 0}>
+        {p.calibration ? <details className="fit-note trk-baseline" data-testid="baseline-guide" open={p.slotId === view.guideSlotId}>
           <summary>{pick(lang, "Find your starting load", "Подберите стартовый вес")}</summary>
           <p>{pick(lang, "Calibrate each exercise separately. The suggested weight is a starting estimate, not a strength test. Warm up light, then adjust the weight before logging your first working set.", "Подбирайте вес отдельно для каждого упражнения. Предложенный вес — ориентир, а не тест силы. Начните с лёгкой разминки, затем измените вес перед записью первого рабочего подхода.")}</p>
           <p>{pick(lang, "Aim for the bottom of the rep range with about 2–3 clean reps left. Too easy? Move up one small step after resting. Too hard? Move down. No maximum attempt is needed. Record actual reps and your reps-in-reserve estimate on the working sets.", "Ориентир — нижняя граница диапазона с запасом примерно 2–3 повторения с хорошей техникой. Слишком легко? После отдыха добавьте небольшой шаг. Тяжело? Уменьшите вес. Максимальная попытка не нужна. Записывайте фактические повторения и запас в рабочих подходах.")}</p>

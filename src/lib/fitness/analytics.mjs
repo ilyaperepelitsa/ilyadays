@@ -152,14 +152,22 @@ export function normalQuantile(p) {
 }
 
 /**
- * Student-t quantile: exact for 1 and 2 degrees of freedom, Cornish–Fisher expansion above (Abramowitz & Stegun
- * 26.7.5; within 0.1 % of the table from 3 df at the 97.5 % point).
- * @param {number} p @param {number} df
+ * Student-t quantile: exact for 1 and 2 degrees of freedom, Cornish–Fisher expansion from 3 (Abramowitz & Stegun
+ * 26.7.5; within 0.1 % of the table at the 97.5 % point). `df` may be fractional; below 1 it is treated as 1.
+ * @param {number} p @param {number} df @returns {number}
  */
 export function tQuantile(p, df) {
   if (!(df > 0)) return NaN;
+  if (df < 1) df = 1;
   if (df === 1) return Math.tan(Math.PI * (p - 0.5));
   if (df === 2) return (2 * p - 1) / Math.sqrt(2 * p * (1 - p));
+  if (df < 3) {
+    // fractional df below 3 (effective sample sizes): interpolate in 1/df between the whole-number neighbours
+    const lo = Math.max(1, Math.floor(df));
+    const a = tQuantile(p, lo);
+    const b = tQuantile(p, lo + 1);
+    return b + ((a - b) * (1 / df - 1 / (lo + 1))) / (1 / lo - 1 / (lo + 1));
+  }
   const z = normalQuantile(p);
   const z2 = z * z;
   const z3 = z2 * z;
@@ -177,6 +185,66 @@ export function tQuantile(p, df) {
 
 /* ------------------------------------------------------------------ A. estimated 1RM */
 
+/** 1-σ error of a reported RIR, in reps (R07 §A rule E4 [10]). */
+export const RIR_SIGMA_REPS = 0.8;
+/** Extra 1-σ error, in reps, when the RIR was not reported and the planned RIR stands in for it. */
+export const UNREPORTED_RIR_SIGMA_REPS = 1.5;
+
+/**
+ * % of 1RM for a 13–20-rep maximum: content/fitness/templates.json `repMaxPercent`, copied because this module is
+ * import-free (tests/fitness/analytics-review.test.mjs pins it to progression.mjs `e1rmFactor` for 1–60 reps).
+ */
+const REP_MAX_PERCENT_13_20 = [68, 67, 65, 64, 63, 62, 61, 60];
+
+/**
+ * Load → 1RM multiplier of the blend for `t` total reps; identical to progression.mjs `e1rmFactor`. Up to 12: mean of
+ * Epley and Brzycki. From 13: 100 / (%1RM table), above 20 Epley over a factor fading to 0.9 at 30 reps (research/01
+ * Table 10). A straight line joins 12 and 13. Rising and bounded for every rep count.
+ * @param {number} t
+ */
+function blendFactor(t) {
+  if (!(t > 1)) return 1;
+  /** @param {number} r */
+  const mean = (r) => (1 + r / 30 + 36 / (37 - r)) / 2;
+  /** @param {number} r  ≥ 13 */
+  const table = (r) => {
+    if (r > 20) return (1 + r / 30) / (1 - 0.1 * Math.min(1, (r - 20) / 10));
+    const lo = Math.floor(r);
+    const a = REP_MAX_PERCENT_13_20[lo - 13];
+    const b = REP_MAX_PERCENT_13_20[Math.ceil(r) - 13];
+    return 100 / (a + (b - a) * (r - lo));
+  };
+  if (t <= RELIABLE_TOTAL_REPS) return mean(t);
+  if (t >= RELIABLE_TOTAL_REPS + 1) return table(t);
+  const a = mean(RELIABLE_TOTAL_REPS);
+  return a + (table(RELIABLE_TOTAL_REPS + 1) - a) * (t - RELIABLE_TOTAL_REPS);
+}
+
+/**
+ * The effort of a logged set for e1RM (one convention for the charts, the records and the load calculator).
+ * A reported RIR is used as logged; no RIR at all = taken to failure (conservative). When the lifter did NOT report
+ * it (`prescription.rirReported === false`) the logged RIR is only the plan's target: if the set fell short of its
+ * planned reps it was a set to failure (RIR 0); if it made them, the planned RIR stands with `UNREPORTED_RIR_SIGMA_REPS`
+ * more error.
+ * @param {Pick<LoggedSet, "reps" | "rir" | "plannedReps" | "prescription">} set
+ * @returns {{ rir: number, rirSigmaReps: number }}
+ */
+export function setEffort(set) {
+  const rir = typeof set.rir === "number" && Number.isFinite(set.rir) && set.rir > 0 ? set.rir : 0;
+  if (set.prescription?.rirReported !== false || rir === 0) return { rir, rirSigmaReps: RIR_SIGMA_REPS };
+  if (set.reps < set.plannedReps) return { rir: 0, rirSigmaReps: RIR_SIGMA_REPS };
+  return { rir, rirSigmaReps: Math.hypot(RIR_SIGMA_REPS, UNREPORTED_RIR_SIGMA_REPS) };
+}
+
+/**
+ * e1RM of a logged set at an effective load, with `setEffort`'s RIR convention.
+ * @param {LoggedSet} set @param {number} loadKg @param {"blend" | "epley" | "brzycki"} [formula]
+ */
+export function setE1rm(set, loadKg, formula = "blend") {
+  const { rir, rirSigmaReps } = setEffort(set);
+  return e1rm(loadKg, set.reps, rir, formula, { rirSigmaReps });
+}
+
 /**
  * @typedef {object} E1rm
  * @property {number} kg  estimated one-repetition maximum
@@ -189,26 +257,29 @@ export function tQuantile(p, df) {
 /**
  * Estimated 1RM from one set (R07 §A). Effective reps T = reps + RIR (a set of r reps with RIR left is a set of
  * r + RIR reps to failure, the RIR-based RPE construction [7][12]); T ≤ 1 → the load itself. Epley `kg(1 + T/30)`,
- * Brzycki `36·kg/(37 − T)`, "blend" = their mean (they coincide at 10 reps and bracket the classic equations from 3
- * to 10 [1]); Epley alone from T ≥ 36 where Brzycki diverges — the same definition as stream 03's `e1rmOf`.
+ * Brzycki `36·kg/(37 − T)`, "blend" = their mean up to 12 total reps (they coincide at 10 reps and bracket the
+ * classic equations from 3 to 10 [1]) and the inverse of the planner's %1RM table above (`blendFactor`: bounded and
+ * rising, where Brzycki diverges near 37 reps) — the same definition as stream 03's `e1rmOf`.
  * `reliable`: T ≤ 12 (linear equations lose validity past 10–12 reps [2]) and RIR ≤ 4 when logged (effort guesses
  * are off by more than a rep further from failure [8][11]). `sigmaRel` (rule E4): 1RM test–retest CV 3.3 % [4] ⊕ an
- * RIR error of 0.8 rep (each rep moves Epley by kg/30) [10]; +2 % above 10 reps, +3 % at RIR ≥ 4.
+ * RIR error of `rirSigmaReps` (0.8 rep; each rep moves Epley by kg/30) [10]; +2 % above 10 reps, +3 % at RIR ≥ 4.
  * @param {number} kg load lifted (use the effective load for assisted / bodyweight exercises)
  * @param {number} reps
  * @param {number | null} [rir] reps in reserve; null/undefined = taken to failure (conservative)
  * @param {"blend" | "epley" | "brzycki"} [formula]
+ * @param {{ rirSigmaReps?: number }} [opts]  1-σ error of the RIR in reps (see `setEffort`)
  * @returns {E1rm | null} null for kg ≤ 0 or reps < 1
  */
-export function e1rm(kg, reps, rir = null, formula = "blend") {
+export function e1rm(kg, reps, rir = null, formula = "blend", opts = {}) {
   if (!(Number.isFinite(kg) && kg > 0) || !(Number.isFinite(reps) && reps >= 1)) return null;
+  const { rirSigmaReps = RIR_SIGMA_REPS } = opts;
   const extra = typeof rir === "number" && Number.isFinite(rir) && rir > 0 ? rir : 0;
   const t = reps + extra;
   const epley = kg * (1 + t / 30);
   const brzycki = t < 36 ? (kg * 36) / (37 - t) : epley;
-  const value = t <= 1 ? kg : formula === "epley" ? epley : formula === "brzycki" ? brzycki : (epley + brzycki) / 2;
+  const value = t <= 1 ? kg : formula === "epley" ? epley : formula === "brzycki" ? brzycki : kg * blendFactor(t);
   const v = Math.max(value, kg);
-  let sigmaRel = Math.hypot(0.033, (0.8 * kg) / 30 / v);
+  let sigmaRel = Math.hypot(0.033, (rirSigmaReps * kg) / 30 / v);
   if (t > 10) sigmaRel = Math.hypot(sigmaRel, 0.02);
   if (extra >= 4) sigmaRel = Math.hypot(sigmaRel, 0.03);
   return { kg: v, reliable: t <= RELIABLE_TOTAL_REPS && !(extra > HARD_SET_RIR_MAX), reps: t, sigmaRel, formula };
@@ -291,6 +362,19 @@ export function bodyweightLookup(entries, fallbackKg = null) {
   };
 }
 
+/**
+ * Body weight at a time from the smoothed trend (EWMA of the daily means) instead of single weigh-ins, so a
+ * ±0.5 kg scale wobble does not move the effective load of a pull-up or an assisted dip (and invent records).
+ * Same lookup rule as `bodyweightLookup`.
+ * @param {{ at: TimeLike, kg: number }[]} entries
+ * @param {number | null} [fallbackKg]
+ * @returns {(t: TimeLike) => number | null}
+ */
+export function bodyweightTrendLookup(entries, fallbackKg = null) {
+  const daily = dailyMean(entries.filter((e) => e.kg > 0).map((e) => ({ at: e.at, value: e.kg })));
+  return bodyweightLookup(ewma(daily).map((p) => ({ at: p.at, kg: p.trend })), fallbackKg);
+}
+
 /** @type {LoadOf} */
 const loggedLoad = (s) => (Number.isFinite(s.kg) && s.kg > 0 ? s.kg : null);
 /** @type {TimeOf} */
@@ -336,7 +420,7 @@ export function sessionBestE1rm(sets, opts = {}) {
     if (s.kind === "warmup" || !(s.reps >= 1) || unitOf(s.exerciseId) !== "reps") continue;
     const load = loadOf(s);
     if (load == null || !(load > 0)) continue;
-    const e = e1rm(load, s.reps, s.rir, formula);
+    const e = setE1rm(s, load, formula);
     const at = timeOf(s);
     if (!e || !Number.isFinite(at)) continue;
     const key = `${s.sessionId}\u0000${s.exerciseId}`;
@@ -581,8 +665,15 @@ export function ewma(points, alpha = WEIGHT_ALPHA) {
 }
 
 /**
- * Residual scatter around a line, in x order: σ (n − 2 df), lag-1 autocorrelation ρ (clamped to [0, 0.9]) and the
- * variance inflation √((1 + ρ)/(1 − ρ)) that an AR(1) error process implies for a regression slope.
+ * Residual scatter around a line, in x order (x in days): σ (n − 2 df) and what an AR(1) error process implies for
+ * the slope. The lag-1 autocorrelation of the residuals is biased low in short series, so it is corrected by
+ * (1 + 4ρ)/n (Marriott & Pope 1954 for a detrended series) and clamped to [0, 0.9]. It is then expressed PER DAY —
+ * the ρ that gives the same mean correlation ρ^Δ over the actual gaps Δ — so twice-a-week weigh-ins are not treated
+ * like daily ones. `inflation` = √(Σᵢⱼ (xᵢ − x̄)(xⱼ − x̄) ρ^|xᵢ − xⱼ| / Sxx), the exact widening of the slope's standard
+ * error (→ √((1 + ρ)/(1 − ρ)) for a long daily series). `df` = n/inflation² − 2 (effective sample size, at least 1,
+ * at most n − 2) is what the t-quantile of a band should use. `sigmaAr` is σ without the downward bias correlated
+ * errors give the residual sum of squares: E[SS] = σ²(n − Σᵢⱼρ^|xᵢ − xⱼ|/n − inflation²), which is n − 2 only when
+ * ρ = 0; `seSlope` uses it.
  * @param {XY[]} xy @param {number} slope @param {number} intercept
  */
 function residualStats(xy, slope, intercept) {
@@ -596,9 +687,38 @@ function residualStats(xy, slope, intercept) {
   const sigma = Math.sqrt(ss / (n - 2));
   let lag = 0;
   for (let i = 1; i < n; i++) lag += r[i] * r[i - 1];
-  const rho = ss > 0 ? Math.min(0.9, Math.max(0, lag / ss)) : 0;
-  const inflation = Math.sqrt((1 + rho) / (1 - rho));
-  return { n, xbar, sxx, sigma, rho, inflation, seSlope: (sigma / Math.sqrt(sxx)) * inflation };
+  const raw = ss > 0 ? lag / ss : 0;
+  const perStep = ss > 0 ? Math.min(0.9, Math.max(0, raw + (1 + 4 * raw) / n)) : 0;
+  // per-day ρ: mean over the gaps of ρ^Δ = perStep (bisection; the left side rises with ρ)
+  const gaps = xy.slice(1).map((p, i) => p.x - xy[i].x).filter((d) => d > 0);
+  let rho = perStep;
+  if (perStep > 0 && gaps.some((d) => Math.abs(d - 1) > 1e-6)) {
+    let lo = 0;
+    let hi = 1;
+    for (let k = 0; k < 40; k++) {
+      const mid = (lo + hi) / 2;
+      if (gaps.reduce((a, d) => a + mid ** d, 0) / gaps.length < perStep) lo = mid;
+      else hi = mid;
+    }
+    rho = (lo + hi) / 2;
+  }
+  let quad = sxx;
+  let total = n;
+  if (rho > 0) {
+    quad = 0;
+    total = 0;
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        const c = rho ** Math.abs(xy[i].x - xy[j].x);
+        total += c;
+        quad += (xy[i].x - xbar) * (xy[j].x - xbar) * c;
+      }
+    }
+  }
+  const inflation = Math.sqrt(Math.max(1, quad / sxx));
+  const df = Math.max(1, Math.min(n - 2, n / inflation ** 2 - 2));
+  const sigmaAr = Math.sqrt(ss / Math.max(1, Math.min(n - 2, n - total / n - inflation ** 2)));
+  return { n, xbar, sxx, sigma, sigmaAr, rho, inflation, df, seSlope: (sigmaAr / Math.sqrt(sxx)) * inflation };
 }
 
 /**
@@ -610,7 +730,7 @@ function residualStats(xy, slope, intercept) {
  * @property {number} n  weigh-ins in the window
  * @property {number} spanDays
  * @property {number} sigma  residual SD (kg)
- * @property {number} rho  lag-1 autocorrelation of the residuals
+ * @property {number} rho  autocorrelation of the residuals per day (bias-corrected)
  * @property {number} confidence
  * @property {boolean} reliable  ≥ `minDays` of data and ≥ 8 weigh-ins (R07 §E: 14 days minimum, 28 preferred)
  */
@@ -618,8 +738,8 @@ function residualStats(xy, slope, intercept) {
 /**
  * Weekly rate of body-weight change with a residual band (R07 §E). The slope is Theil–Sen on the RAW weigh-ins of
  * the last `days` days (robust to a salty-dinner spike; the EWMA trend is for reading, not for slopes). Band =
- * slope ± t(n − 2) · σ_res/√Sxx, widened by √((1+ρ)/(1−ρ)) for lag-1 autocorrelated residuals (water retention
- * comes in spells, so independent-error bands are too narrow).
+ * slope ± t(df) · σ_res/√Sxx, widened for autocorrelated residuals with the t-quantile at the effective degrees of
+ * freedom (`residualStats`: water retention comes in spells, so independent-error bands are too narrow).
  * @param {{ at: number, value: number, trend?: number }[]} trend  ewma() output (or any sorted weigh-in series)
  * @param {{ days?: number, minDays?: number, confidence?: number }} [opts]
  * @returns {WeeklyRate | null} null with fewer than 3 weigh-ins in the window
@@ -635,7 +755,7 @@ export function weeklyRate(trend, opts = {}) {
   const fit = theilSen(xy);
   const rs = fit && residualStats(xy, fit.slope, fit.intercept);
   if (!fit || !rs) return null;
-  const half = tQuantile(1 - (1 - confidence) / 2, xy.length - 2) * rs.seSlope;
+  const half = tQuantile(1 - (1 - confidence) / 2, rs.df) * rs.seSlope;
   const current = Number.isFinite(last.trend) ? /** @type {number} */ (last.trend) : last.value;
   const kgPerWeek = fit.slope * 7;
   /** @type {[number, number]} */
@@ -760,6 +880,7 @@ export function theilSen(points, opts = {}) {
  * @property {[number, number]} slopeCI  per day
  * @property {number} start  fitted value at the window start
  * @property {number} current  fitted value at the last observation
+ * @property {number} seLevel  standard error of `current` (kg)
  * @property {number} lastAt
  * @property {number} n
  * @property {number} spanDays
@@ -770,8 +891,9 @@ export function theilSen(points, opts = {}) {
 
 /**
  * Straight-line forecast with an honest band (R07 §H). Theil–Sen line through the last `windowDays` of points; the
- * band is a cone from the last observation: the slope's residual band (as in `weeklyRate`, AR(1)-widened) times the
- * horizon, plus the uncertainty of the current level, t·σ·√(1/n + (x_L − x̄)²/Sxx). The horizon is capped at twice
+ * band is a cone from the last observation: the slope's residual band (as in `weeklyRate`, AR(1)-widened, t at the
+ * effective degrees of freedom) times the horizon, plus the uncertainty of the current level,
+ * t·σ·√(1/n + (x_L − x̄)²/Sxx), widened the same way. The horizon is capped at twice
  * the data span and 26 weeks — progress is not linear for long.
  * @param {{ at: TimeLike, value: number }[]} points
  * @param {number} horizonDays
@@ -794,11 +916,11 @@ export function forecast(points, horizonDays, opts = {}) {
   const fit = span > 0 ? theilSen(xy) : null;
   const rs = fit && residualStats(xy, fit.slope, fit.intercept);
   if (!fit || !rs) return null;
-  const tq = tQuantile(1 - (1 - confidence) / 2, xy.length - 2);
+  const tq = tQuantile(1 - (1 - confidence) / 2, rs.df);
   /** @type {[number, number]} */
   const slopeCI = [fit.slope - tq * rs.seSlope, fit.slope + tq * rs.seSlope];
   const current = fit.intercept + fit.slope * span;
-  const seLevel = rs.sigma * rs.inflation * Math.sqrt(1 / xy.length + (span - rs.xbar) ** 2 / rs.sxx);
+  const seLevel = rs.sigmaAr * rs.inflation * Math.sqrt(1 / xy.length + (span - rs.xbar) ** 2 / rs.sxx);
   const capDays = Math.min(maxMultiple * span, maxDays);
   const H = Math.max(0, Math.min(horizonDays, capDays));
   const line = [];
@@ -822,6 +944,7 @@ export function forecast(points, horizonDays, opts = {}) {
     slopeCI,
     start: fit.intercept,
     current,
+    seLevel,
     lastAt,
     n: xy.length,
     spanDays: span,
@@ -834,35 +957,55 @@ export function forecast(points, horizonDays, opts = {}) {
 /**
  * @typedef {object} TimeToTarget
  * @property {"reached" | "on-track" | "beyond" | "away"} status  beyond = estimable only past the forecast cap
- * @property {number | null} days  at the point slope (null when moving away)
+ * @property {number | null} days  at the point slope, counted from the LAST WEIGH-IN (null when moving away)
  * @property {number | null} earliestDays  at the fast end of the slope band
  * @property {number | null} latestDays  at the slow end; Infinity when the band includes "no progress"
+ * @property {number | null} at  epoch ms of `days` (last weigh-in + days), null when not estimable
+ * @property {number | null} earliestAt
+ * @property {number | null} latestAt  null when `latestDays` is null or Infinity
  * @property {number} capDays
  */
 
+/** "Reached" means within this many kg of the target, or within the level's standard error if that is larger. */
+export const TARGET_TOLERANCE_KG = 0.15;
+
 /**
  * Days until the trend line reaches `target` (R07 §H): distance / speed, with the range from the slope band; the
- * latest date is "not estimable" (Infinity) when the band includes zero progress.
- * @param {Forecast | null} fc @param {number} target @returns {TimeToTarget | null}
+ * latest date is "not estimable" (Infinity) when the band includes zero progress. The direction is where the target
+ * lies from the CURRENT level: a trend that has passed the target and keeps going is "away", and "reached" is only
+ * within `TARGET_TOLERANCE_KG` (or the level's standard error). Days count from the last weigh-in (`fc.lastAt`).
+ * @param {Pick<Forecast, "current" | "slope" | "slopeCI" | "capDays"> & { lastAt?: number, seLevel?: number } | null} fc
+ * @param {number} target @returns {TimeToTarget | null}
  */
 export function timeToTarget(fc, target) {
   if (!fc || !Number.isFinite(target)) return null;
-  const want = Math.sign(target - fc.start) || Math.sign(target - fc.current);
+  const lastAt = typeof fc.lastAt === "number" ? fc.lastAt : NaN;
+  /** @param {number | null} d */
+  const when = (d) => (d != null && Number.isFinite(d) && Number.isFinite(lastAt) ? lastAt + d * DAY_MS : null);
+  /** @param {TimeToTarget["status"]} status @param {number | null} days @param {number | null} earliestDays @param {number | null} latestDays @returns {TimeToTarget} */
+  const out = (status, days, earliestDays, latestDays) => ({ status, days, earliestDays, latestDays, at: when(days), earliestAt: when(earliestDays), latestAt: when(latestDays), capDays: fc.capDays });
   const gap = target - fc.current;
-  if (want === 0 || gap * want <= 0) return { status: "reached", days: 0, earliestDays: 0, latestDays: 0, capDays: fc.capDays };
   const dist = Math.abs(gap);
+  if (dist <= Math.max(TARGET_TOLERANCE_KG, Number.isFinite(fc.seLevel) ? /** @type {number} */ (fc.seLevel) : 0)) return out("reached", 0, 0, 0);
+  const want = Math.sign(gap);
   const speed = fc.slope * want;
   const fast = Math.max(fc.slopeCI[0] * want, fc.slopeCI[1] * want);
   const slow = Math.min(fc.slopeCI[0] * want, fc.slopeCI[1] * want);
-  if (!(speed > 0)) return { status: "away", days: null, earliestDays: fast > 0 ? dist / fast : null, latestDays: null, capDays: fc.capDays };
+  if (!(speed > 0)) return out("away", null, fast > 0 ? dist / fast : null, null);
   const days = dist / speed;
-  return {
-    status: days <= fc.capDays ? "on-track" : "beyond",
-    days,
-    earliestDays: dist / fast,
-    latestDays: slow > 0 ? dist / slow : Infinity,
-    capDays: fc.capDays,
-  };
+  return out(days <= fc.capDays ? "on-track" : "beyond", days, dist / fast, slow > 0 ? dist / slow : Infinity);
+}
+
+/** Past this many days since the last weigh-in the rate and the forecast describe the past, not now. */
+export const STALE_WEIGH_IN_DAYS = 10;
+
+/**
+ * How old the last weigh-in is, in whole calendar days, and whether that is too old to read as current.
+ * @param {TimeLike} lastAt @param {TimeLike} now @param {number} [maxDays]
+ */
+export function weighInAge(lastAt, now, maxDays = STALE_WEIGH_IN_DAYS) {
+  const days = Math.max(0, daysBetween(lastAt, now));
+  return { days, stale: days > maxDays };
 }
 
 /* ------------------------------------------------------------------ F. strength trend */
@@ -883,9 +1026,11 @@ export function timeToTarget(fc, target) {
  * @property {number} ciCoverage
  * @property {{ at: number, kg: number }[]} line
  * @property {{ at: number, lo: number, hi: number }[]} band  ±z·σ: where one session's e1RM falls if nothing changed
- * @property {number} n
- * @property {number} spanDays
+ * @property {number} n  sessions the line is fitted to
+ * @property {number} spanDays  of those sessions
  * @property {number} sigma  log units (≈ relative)
+ * @property {boolean} windowed  true when only the last `windowWeeks` weeks were fitted
+ * @property {number} windowWeeks
  */
 /** @typedef {TrendCollecting | TrendOk} E1rmTrend */
 
@@ -893,19 +1038,26 @@ export function timeToTarget(fc, target) {
  * Trend of strength (R07 §F): Theil–Sen on (days, ln e1RM) of the reliable sessions, so the slope is a percent per
  * week comparable across exercises, with Sen's rank CI once there are `ciPoints` points. No line under `minPoints`
  * points over `minDays` days (R07 §K: a curve through 3 points is noise). The band is the measurement noise around
- * the line, σ = max(4 % (rule E4), residual RMS).
+ * the line, σ = max(4 % (rule E4), residual RMS). Progress decelerates, so once the history spans `longWeeks` (24)
+ * the slope, line and band are fitted to the last `windowWeeks` (12) only (R07 §H "Decay") — an old climb must not
+ * hide a recent plateau; if that window is too thin for a line the whole history is used.
  * @param {{ at: number, kg: number, reliable: boolean }[]} series  sessionBestE1rm / e1rmSeries output
- * @param {{ minPoints?: number, minDays?: number, ciPoints?: number, sigmaRel?: number, z?: number, confidence?: number, steps?: number }} [opts]
+ * @param {{ minPoints?: number, minDays?: number, ciPoints?: number, sigmaRel?: number, z?: number, confidence?: number, steps?: number, windowWeeks?: number, longWeeks?: number }} [opts]
  * @returns {E1rmTrend}
  */
 export function e1rmTrend(series, opts = {}) {
-  const { minPoints = 5, minDays = 21, ciPoints = 8, sigmaRel = 0.04, z = 1.96, confidence = 0.95, steps = 16 } = opts;
-  const pts = series.filter((p) => p.reliable && p.kg > 0 && Number.isFinite(p.at)).sort((a, b) => a.at - b.at);
-  const n = pts.length;
-  const spanDays = n ? (pts[n - 1].at - pts[0].at) / DAY_MS : 0;
+  const { minPoints = 5, minDays = 21, ciPoints = 8, sigmaRel = 0.04, z = 1.96, confidence = 0.95, steps = 16, windowWeeks = 12, longWeeks = 24 } = opts;
+  const all = series.filter((p) => p.reliable && p.kg > 0 && Number.isFinite(p.at)).sort((a, b) => a.at - b.at);
+  /** @param {typeof all} ps */
+  const spanOf = (ps) => (ps.length ? (ps[ps.length - 1].at - ps[0].at) / DAY_MS : 0);
   /** @type {TrendCollecting} */
-  const collecting = { status: "collecting", n, spanDays, needPoints: minPoints, needDays: minDays };
-  if (n < minPoints || spanDays < minDays) return collecting;
+  const collecting = { status: "collecting", n: all.length, spanDays: spanOf(all), needPoints: minPoints, needDays: minDays };
+  if (all.length < minPoints || spanOf(all) < minDays) return collecting;
+  const recent = spanOf(all) >= longWeeks * 7 ? all.filter((p) => p.at >= all[all.length - 1].at - windowWeeks * 7 * DAY_MS) : all;
+  const windowed = recent.length < all.length && recent.length >= minPoints && spanOf(recent) >= minDays;
+  const pts = windowed ? recent : all;
+  const n = pts.length;
+  const spanDays = spanOf(pts);
   const at0 = pts[0].at;
   const xy = pts.map((p) => ({ x: (p.at - at0) / DAY_MS, y: Math.log(p.kg) }));
   const fit = theilSen(xy, { confidence });
@@ -933,6 +1085,8 @@ export function e1rmTrend(series, opts = {}) {
     n,
     spanDays,
     sigma,
+    windowed,
+    windowWeeks,
   };
 }
 
@@ -957,34 +1111,42 @@ export function e1rmTrend(series, opts = {}) {
  * @property {TimeOf} [timeOf]
  * @property {UnitOf} [unitOf]
  * @property {number} [minGain]  relative margin an e1RM must beat the record by (default 0: any improvement)
+ * @property {(exerciseId: string) => number} [minGainOf]  per-exercise margin, also applied to load and rep records:
+ *   pass ≈ 0.01 for exercises whose load includes the body weight (bodyweight, assisted), where the scale's noise
+ *   would otherwise set records; wins over `minGain`
+ * @property {(set: LoggedSet) => string | null | undefined} [gymOf]  records are kept per gym: a set is compared only
+ *   with earlier sessions at the same gym (machines differ); null/undefined everywhere = one pool
  */
 
 /**
  * Personal-record events per exercise, oldest first. The first session of an exercise only sets baselines. Kinds:
  * `e1rm` (best reliable session e1RM), `load` (heaviest load lifted for ≥ 1 rep), `reps` (more reps than ever at
  * this load or any heavier one — a real rep PR, not one dominated by an earlier heavier set). At most one event of
- * each kind per exercise and session.
+ * each kind per exercise and session. With `gymOf`, "first session" and "record" are per exercise AND gym.
  * @param {LoggedSet[]} sets @param {PrOptions} [opts] @returns {PrEvent[]}
  */
 export function prs(sets, opts = {}) {
-  const { loadOf = loggedLoad, timeOf = setTime, unitOf = repsUnit, minGain = 0 } = opts;
-  /** @type {Map<string, Map<string, { at: number, rows: { set: LoggedSet, kg: number, e: E1rm | null }[] }>>} */
+  const { loadOf = loggedLoad, timeOf = setTime, unitOf = repsUnit, minGain = 0, minGainOf, gymOf } = opts;
+  /** @type {Map<string, { exerciseId: string, sessions: Map<string, { at: number, rows: { set: LoggedSet, kg: number, e: E1rm | null }[] }> }>} */
   const byExercise = new Map();
   for (const s of sets) {
     if (s.kind === "warmup" || !(s.reps >= 1) || unitOf(s.exerciseId) !== "reps") continue;
     const kg = loadOf(s);
     const at = timeOf(s);
     if (kg == null || !(kg > 0) || !Number.isFinite(at)) continue;
-    let sessions = byExercise.get(s.exerciseId);
-    if (!sessions) byExercise.set(s.exerciseId, (sessions = new Map()));
+    const key = `${s.exerciseId}\u0000${(gymOf ? gymOf(s) : null) ?? ""}`;
+    let pool = byExercise.get(key);
+    if (!pool) byExercise.set(key, (pool = { exerciseId: s.exerciseId, sessions: new Map() }));
+    const sessions = pool.sessions;
     let g = sessions.get(s.sessionId);
     if (!g) sessions.set(s.sessionId, (g = { at, rows: [] }));
     g.at = Math.min(g.at, at);
-    g.rows.push({ set: s, kg, e: e1rm(kg, s.reps, s.rir) });
+    g.rows.push({ set: s, kg, e: setE1rm(s, kg) });
   }
   /** @type {PrEvent[]} */
   const events = [];
-  for (const [exerciseId, sessions] of byExercise) {
+  for (const { exerciseId, sessions } of byExercise.values()) {
+    const gain = minGainOf ? Math.max(0, minGainOf(exerciseId)) : minGain;
     const ordered = [...sessions.entries()].sort((a, b) => a[1].at - b[1].at);
     let bestE = -Infinity;
     let bestLoad = -Infinity;
@@ -996,16 +1158,16 @@ export function prs(sets, opts = {}) {
       const topLoad = g.rows.reduce((a, b) => (b.kg > a.kg || (b.kg === a.kg && b.set.reps > a.set.reps) ? b : a));
       if (index > 0) {
         const topEkg = topE?.e?.kg ?? -Infinity;
-        if (topE && bestE > 0 && topEkg > bestE * (1 + minGain) + 1e-9) {
+        if (topE && bestE > 0 && topEkg > bestE * (1 + gain) + 1e-9) {
           events.push({ exerciseId, kind: "e1rm", value: topEkg, previous: bestE, at: g.at, sessionId, setId: topE.set.id, kg: topE.kg, reps: topE.set.reps });
         }
-        if (bestLoad > 0 && topLoad.kg > bestLoad + 1e-9) {
+        if (bestLoad > 0 && topLoad.kg > bestLoad * (1 + (minGainOf ? gain : 0)) + 1e-9) {
           events.push({ exerciseId, kind: "load", value: topLoad.kg, previous: bestLoad, at: g.at, sessionId, setId: topLoad.set.id, kg: topLoad.kg, reps: topLoad.set.reps });
         }
         /** @type {PrEvent | null} */
         let repPr = null;
         for (const r of g.rows) {
-          const before = history.filter((h) => h.kg >= r.kg - 1e-9);
+          const before = history.filter((h) => h.kg >= r.kg * (1 - (minGainOf ? gain : 0)) - 1e-9);
           if (!before.length) continue;
           const prev = Math.max(...before.map((h) => h.reps));
           if (r.set.reps > prev && (!repPr || r.kg > repPr.kg)) {
@@ -1190,7 +1352,8 @@ export const acwrZone = (ratio) => (ratio < ACWR_ZONES.dip ? "dip" : ratio <= AC
  * divided by itself (the coupling that manufactures correlation [34]). The ratio is null for the first `warmup` days
  * (the EWMA needs ≈ 50 days to forget its start [33]). Descriptive only: no study shows that steering this ratio
  * prevents injuries [36]; the zones (< 0.8 dip, 0.8–1.3 steady, 1.3–1.5 ramping, ≥ 1.5 spike) are team-sport
- * heuristics [37].
+ * heuristics [37]. A 7-day EWMA still swings with the weekday pattern of a 3-day plan; the progress page uses the
+ * whole-week `acwr` below for that reason.
  * @param {{ date?: string, at?: TimeLike, load: number }[]} dailyLoadsInput
  * @param {{ acute?: number, chronic?: number, uncoupled?: boolean, warmup?: number, from?: TimeLike, until?: TimeLike }} [opts]
  */
@@ -1210,6 +1373,31 @@ export function acwrEwma(dailyLoadsInput, opts = {}) {
   });
 }
 
+/**
+ * Acute:chronic workload ratio on whole weeks (R07 §D), uncoupled: acute = the load of the trailing `acute` (7)
+ * days; chronic = the mean of the `chronic / acute` (4) seven-day sums before that. Whole-week windows always hold
+ * the same weekdays, so a steady Mon/Wed/Fri plan reads exactly 1.0 on every day (the EWMA version swings 0.77–1.18
+ * through such a week and reads "dip" every Sunday). The ratio is null until the windows are full (35 days) and when
+ * the chronic load is 0. Same caveats and zones as `acwrEwma`: descriptive only.
+ * @param {{ date?: string, at?: TimeLike, load: number }[]} dailyLoadsInput
+ * @param {{ acute?: number, chronic?: number, from?: TimeLike, until?: TimeLike }} [opts]
+ */
+export function acwr(dailyLoadsInput, opts = {}) {
+  const { acute = 7, chronic = 28, from, until } = opts;
+  const grid = dailyGrid(dailyLoadsInput, from, until);
+  /** @type {number[]} */
+  const cum = [0];
+  for (const d of grid) cum.push(cum[cum.length - 1] + d.load);
+  /** Sum of days a..b inclusive. @param {number} a @param {number} b */
+  const sum = (a, b) => cum[b + 1] - cum[Math.max(0, a)];
+  return grid.map((d, i) => {
+    const a = sum(i - acute + 1, i);
+    const c = (sum(i - acute - chronic + 1, i - acute) * acute) / chronic;
+    const ratio = i >= acute + chronic - 1 && c > 0 ? a / c : null;
+    return { date: d.date, at: d.at, load: d.load, acute: a, chronic: c, ratio, zone: ratio == null ? /** @type {AcwrZone} */ ("warmup") : acwrZone(ratio) };
+  });
+}
+
 /* ------------------------------------------------------------------ adherence */
 
 /**
@@ -1217,9 +1405,9 @@ export function acwrEwma(dailyLoadsInput, opts = {}) {
  * @property {number} start
  * @property {number} end
  * @property {string} key  Monday "YYYY-MM-DD"
- * @property {number} planned  0 before the first session's week
+ * @property {number} planned  0 before the first session's week; in that week at most the days left in it
  * @property {number} done  sessions started this week
- * @property {boolean} met  done ≥ daysPerWeek
+ * @property {boolean} met  done ≥ planned
  * @property {boolean} current
  * @property {boolean} beforeStart
  * @property {number} missed  planned − done for completed weeks (0 for the current week)
@@ -1228,7 +1416,8 @@ export function acwrEwma(dailyLoadsInput, opts = {}) {
 
 /**
  * Sessions per week against the plan, 12 weeks by default (counted: active, finished, auto_closed — not abandoned).
- * Weeks before the first session are not "missed". Streak = consecutive met weeks counted back from the last
+ * Weeks before the first session are not "missed", and the first session's own week plans only
+ * min(daysPerWeek, days left in it, the start day included) — starting on a Saturday is not two missed sessions. Streak = consecutive met weeks counted back from the last
  * complete week, over the whole history; the current week adds one once it is met and never breaks it. `rate` =
  * Σ min(done, planned) / Σ planned over the completed weeks in the window.
  * @param {Pick<Session, "startedAt" | "status">[]} sessions
@@ -1243,6 +1432,11 @@ export function adherence(sessions, opts = {}) {
     .filter((t) => Number.isFinite(t) && t <= nowMs + DAY_MS)
     .sort((a, b) => a - b);
   const firstWeek = times.length ? startOfWeek(times[0]) : null;
+  /** Sessions planned in the week starting at `weekStart` (0 before the first session's week). @param {number} weekStart */
+  const plannedIn = (weekStart) => {
+    if (firstWeek == null || weekStart < firstWeek) return 0;
+    return weekStart === firstWeek ? Math.min(daysPerWeek, 7 - daysBetween(firstWeek, times[0])) : daysPerWeek;
+  };
   /** @type {Map<string, number>} */
   const perDay = new Map();
   /** @type {Map<string, number>} */
@@ -1265,17 +1459,18 @@ export function adherence(sessions, opts = {}) {
     }
     const current = nowMs >= w.start && nowMs < w.end;
     const beforeStart = firstWeek == null || w.start < firstWeek;
-    const met = done >= daysPerWeek;
+    const planned = plannedIn(w.start);
+    const met = !beforeStart && done >= planned;
     return {
       start: w.start,
       end: w.end,
       key: w.key,
-      planned: beforeStart ? 0 : daysPerWeek,
+      planned,
       done,
       met,
       current,
       beforeStart,
-      missed: beforeStart || current ? 0 : Math.max(0, daysPerWeek - done),
+      missed: beforeStart || current ? 0 : Math.max(0, planned - done),
       days,
     };
   });
@@ -1283,10 +1478,10 @@ export function adherence(sessions, opts = {}) {
   if (firstWeek != null) {
     const thisWeek = startOfWeek(nowMs);
     for (let w = addDays(thisWeek, -7); w >= firstWeek; w = addDays(w, -7)) {
-      if ((perWeek.get(dayKey(w)) ?? 0) >= daysPerWeek) streak += 1;
+      if ((perWeek.get(dayKey(w)) ?? 0) >= plannedIn(dayStart(w))) streak += 1;
       else break;
     }
-    if ((perWeek.get(dayKey(thisWeek)) ?? 0) >= daysPerWeek) streak += 1;
+    if ((perWeek.get(dayKey(thisWeek)) ?? 0) >= plannedIn(thisWeek)) streak += 1;
   }
   const completed = grid.filter((w) => !w.current && !w.beforeStart);
   const totalPlanned = completed.reduce((a, w) => a + w.planned, 0);
@@ -1299,9 +1494,22 @@ export function adherence(sessions, opts = {}) {
     totalDone,
     totalPlanned,
     rate: totalPlanned > 0 ? totalDone / totalPlanned : null,
-    thisWeek: { done: currentWeek.done, planned: daysPerWeek },
+    thisWeek: { done: currentWeek.done, planned: currentWeek.beforeStart ? daysPerWeek : currentWeek.planned },
     lastAt,
     daysSinceLast: lastAt == null ? null : daysBetween(lastAt, nowMs),
     daysPerWeek,
   };
+}
+
+/**
+ * Index of the first week of a `weekGrid` that is not before the week of `firstAt` (the first session): averages
+ * over "previous weeks" should start there, not at weeks before training began. `weeks.length` without a first time.
+ * @param {{ start: number, end: number }[]} weeks @param {TimeLike | null | undefined} firstAt
+ */
+export function firstActiveWeek(weeks, firstAt) {
+  const t = toMs(firstAt);
+  if (!Number.isFinite(t)) return weeks.length;
+  const first = startOfWeek(t);
+  const i = weeks.findIndex((w) => w.start >= first);
+  return i < 0 ? weeks.length : i;
 }

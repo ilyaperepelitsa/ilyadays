@@ -7,6 +7,7 @@ import { fmtClock, pick, t2 } from "@/lib/fitness/i18n";
 import { GOAL_IDS, GOAL_MODES } from "@/lib/fitness/templates.mjs";
 import { fmtNum } from "./format";
 import { GoalPicker } from "../GoalPicker";
+import { SourceText } from "./SourceText";
 
 type Mode = (typeof GOAL_MODES)[GoalMode];
 
@@ -24,22 +25,6 @@ function rows(lang: Lang): [string, (m: Mode) => string][] {
     [pick(lang, "Weight step", "Шаг веса"), (m) => `+${fmtNum(m.progression.stepPct, lang)} %`],
     [pick(lang, "After missed sessions", "После неудачных тренировок"), (m) => pick(lang, `−${m.progression.deloadPct} % after ${m.progression.failsBeforeDeload}`, `−${m.progression.deloadPct} % после ${m.progression.failsBeforeDeload}`)],
   ];
-}
-
-/** A citation with its URL as a link. */
-export function SourceText({ text }: { text: string }) {
-  const m = /https?:\/\/\S+/.exec(text);
-  if (!m) return <>{text}</>;
-  const url = m[0].replace(/[.,;)]+$/, "");
-  return (
-    <>
-      {text.slice(0, m.index)}
-      <a href={url} rel="noreferrer" target="_blank">
-        {url.replace(/^https?:\/\//, "")}
-      </a>
-      {text.slice(m.index + url.length)}
-    </>
-  );
 }
 
 export function ModeSwitch({ lang, goal, editable, onGoal }: { lang: Lang; goal: GoalMode; editable: boolean; onGoal: (goal: GoalMode) => void }) {

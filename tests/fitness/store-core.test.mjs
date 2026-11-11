@@ -576,6 +576,7 @@ describe("settings, snapshot storage and keys", () => {
       backend: "ilyadays-fitness:abc.supabase.co:backend",
       backendAt: "ilyadays-fitness:abc.supabase.co:backend-at",
       dead: "ilyadays-fitness:abc.supabase.co:dead",
+      corrupt: "ilyadays-fitness:abc.supabase.co:snapshot-unreadable",
     });
     assert.equal(storageKeys("").snapshot, "ilyadays-fitness:unconfigured:snapshot");
   });

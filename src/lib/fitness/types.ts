@@ -126,8 +126,11 @@ export type ExerciseSlot = {
   superset?: string;
   /** Why this slot exists (shown on tap) */
   why?: Text2;
-  /** Optional: slot-level override of the exercise's own increment */
+  /** Legacy, never read: older stored programs may carry a slot-level increment. The step is the gym's or the exercise's. */
   increment?: number;
+  /** The exercises this slot held before program-level swaps (editor or adviser), newest first, at most 3: a new
+   *  exercise with no history of its own is seeded from the first of them that has progression memory. Added 2026-11-12. */
+  replaces?: string[];
 };
 
 export type ProgramDay = {
@@ -210,6 +213,11 @@ export type ExerciseState = {
    *  at a load harder than `kg` with no set below the range, or after a goal or range conversion; a swap starts
    *  without it. Lives in the row's spec jsonb. Added 2026-11-09, master plan section 16 rule 5. */
   plateau?: { kg: number; times: number; streak: number } | null;
+  /** Coarse-step memory (the next load step is too big for the capacity guard even at the rep ceiling): `streak` =
+   *  sessions in a row at this load with every set at the rep ceiling and the target reps in reserve (two earn one
+   *  step anyway); `graceKg` = the load reached by such a step, whose first session may fall below the range without
+   *  counting as a miss. Null once used. Lives in the row's spec jsonb. Added 2026-11-12. */
+  bigStep?: { streak?: number; graceKg?: number } | null;
   /** Per-exercise observed baseline; never inferred from another muscle or exercise. In spec JSONB. */
   baseline?: { status: "learning" | "established"; kg?: number; reps?: number; rir?: number; at?: string; sessionId?: string; sets?: number };
   updatedAt: string;

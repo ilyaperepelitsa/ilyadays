@@ -39,7 +39,7 @@
  * @property {boolean} available  whether the planner may use it here
  * @property {boolean} assumed  unmarked and counted as here (the gym is not a checklist)
  */
-/** @typedef {{ slotId: string, exerciseId: string }} PlanSlot */
+/** @typedef {{ slotId: string, exerciseId: string, repRange?: readonly number[], rir?: number }} PlanSlot */
 /** @typedef {{ key: string, name?: Text2, slots: readonly PlanSlot[] }} PlanDay */
 /** @typedef {{ days: readonly PlanDay[] }} PlanLike */
 /** @typedef {"plan" | "preferred" | "swapped" | "stuck"} SlotStatus */
@@ -406,8 +406,11 @@ export function alternativesAt(id, gym, catalog) {
   return ex.alternatives.filter((alt) => alt !== id && Boolean(catalog.exerciseById(alt)) && isAvailableAt(gym, alt));
 }
 
-/** @param {PlanSlot} slot @param {Gym | null | undefined} gym @param {GymCatalog} catalog */
-function resolveDetail(slot, gym, catalog) {
+/** Two slots prescribe differently (rep range or RIR): one exercise in both would share one progression memory. @param {PlanSlot} a @param {PlanSlot} b */
+const differs = (a, b) => Boolean(a.repRange && b.repRange) && (a.repRange?.[0] !== b.repRange?.[0] || a.repRange?.[1] !== b.repRange?.[1] || a.rir !== b.rir);
+
+/** @param {PlanSlot} slot @param {Gym | null | undefined} gym @param {GymCatalog} catalog @param {PlanLike | null} [program] */
+function resolveDetail(slot, gym, catalog, program) {
   /** @param {unknown} id @returns {id is string} */
   const fits = (id) => typeof id === "string" && id !== "" && Boolean(catalog.exerciseById(id))
     && isAvailableAt(gym, id) && compatible(slot.exerciseId, id, catalog);
@@ -417,18 +420,23 @@ function resolveDetail(slot, gym, catalog) {
   const applied = fits(bySlot) ? bySlot : fits(byExercise) ? byExercise : null;
   const stored = idOrNull(bySlot) ?? idOrNull(byExercise);
   const programAvailable = isAvailableAt(gym, slot.exerciseId);
+  // the first alternative that is here and that no other slot of the program uses at another prescription, else the
+  // first that is here (session.mjs resolveExercise)
+  const options = programAvailable || applied ? [] : alternativesAt(slot.exerciseId, gym, catalog);
+  const taken = new Set((program?.days ?? []).flatMap((d) => d.slots).filter((s) => s.slotId !== slot.slotId && differs(s, slot)).map((s) => s.exerciseId));
   const exerciseId = applied
-    ?? (programAvailable ? slot.exerciseId : (alternativesAt(slot.exerciseId, gym, catalog)[0] ?? slot.exerciseId));
+    ?? (programAvailable ? slot.exerciseId : (options.find((id) => !taken.has(id)) ?? options[0] ?? slot.exerciseId));
   return { exerciseId, applied, stored, programAvailable };
 }
 
 /**
  * The exercise the planner uses for a slot at this gym — the same rule as session.mjs resolveExercise:
  * preferred[slotId] → preferred[exerciseId] (each only when it is here and in the slot exercise's class or
- * alternatives) → the slot's exercise when it is here → its first alternative that is here → the slot's exercise.
- * @param {PlanSlot} slot @param {Gym | null | undefined} gym @param {GymCatalog} catalog @returns {string}
+ * alternatives) → the slot's exercise when it is here → its first alternative that is here (one that no other slot of
+ * `program` uses at a different rep range or RIR first) → the slot's exercise.
+ * @param {PlanSlot} slot @param {Gym | null | undefined} gym @param {GymCatalog} catalog @param {PlanLike | null} [program] @returns {string}
  */
-export const resolveSlot = (slot, gym, catalog) => resolveDetail(slot, gym, catalog).exerciseId;
+export const resolveSlot = (slot, gym, catalog, program) => resolveDetail(slot, gym, catalog, program).exerciseId;
 
 /**
  * Exercises a preference for this slot may name here (exactly those resolveSlot would accept): the slot's exercise
@@ -460,7 +468,7 @@ export function planAtGym(program, gym, catalog) {
     key: day.key,
     name: day.name ? { en: day.name.en, ru: day.name.ru } : { en: day.key, ru: day.key },
     slots: day.slots.map((slot) => {
-      const { exerciseId, applied, stored, programAvailable } = resolveDetail(slot, gym, catalog);
+      const { exerciseId, applied, stored, programAvailable } = resolveDetail(slot, gym, catalog, program);
       /** @type {SlotStatus} */
       const status = applied && applied !== slot.exerciseId
         ? "preferred"
@@ -498,8 +506,8 @@ export function planDiff(program, gymA, gymB, catalog) {
   const out = [];
   for (const day of program?.days ?? []) {
     for (const slot of day.slots) {
-      const from = resolveSlot(slot, gymA, catalog);
-      const to = resolveSlot(slot, gymB, catalog);
+      const from = resolveSlot(slot, gymA, catalog, program);
+      const to = resolveSlot(slot, gymB, catalog, program);
       if (from !== to) out.push({ dayKey: day.key, slotId: slot.slotId, programExerciseId: slot.exerciseId, from, to });
     }
   }

@@ -86,11 +86,20 @@ export function HomePanel({ lang }: { lang: Lang }) {
       ) : (
         <section className="fit-card fh-next" data-testid="next-session" data-day-key={next.dayKey}>
           <p className="trk-kicker">{canWrite ? pick(lang, "Next session", "Следующая тренировка") : pick(lang, "Ilya's next session", "Следующая тренировка Ильи")}</p>
-          <h2>{t2(lang, next.plan.dayName)}</h2>
-          <p className="fit-muted">
-            {day ? focusText(day.focus, lang) : null}
-            <span className="fit-num"> · ~{next.plan.estimatedMinutes}{"\u00a0"}{pick(lang, "min", "мин")}</span>
-          </p>
+          <div className="trk-title-row">
+            <h2>{t2(lang, next.plan.dayName)}</h2>
+            <span className="trk-time fit-num">~{next.plan.estimatedMinutes}{"\u00a0"}{pick(lang, "min", "мин")}</span>
+          </div>
+          {day ? <p className="fit-muted">{focusText(day.focus, lang)}</p> : null}
+          {canWrite ? (
+            <Link prefetch={false} className="fit-button trk-wide" href={trainHref} data-testid="start-session">
+              {pick(lang, "Open today's plan", "Открыть план на сегодня")}
+            </Link>
+          ) : (
+            <Link prefetch={false} className="fit-button ghost trk-wide" href={trainHref}>
+              {pick(lang, "See the plan", "Посмотреть план")}
+            </Link>
+          )}
           <ol className="trk-plan-list">
             {blocksOf(next.plan.exercises).flatMap((b) =>
               b.items.map((p, i) => {
@@ -109,15 +118,6 @@ export function HomePanel({ lang }: { lang: Lang }) {
               }),
             )}
           </ol>
-          {canWrite ? (
-            <Link prefetch={false} className="fit-button trk-wide" href={trainHref} data-testid="start-session">
-              {pick(lang, "Start", "Начать")} · {t2(lang, next.plan.dayName)}
-            </Link>
-          ) : (
-            <Link prefetch={false} className="fit-button ghost trk-wide" href={trainHref}>
-              {pick(lang, "See the plan", "Посмотреть план")}
-            </Link>
-          )}
         </section>
       )}
 

@@ -5,11 +5,13 @@
  * every 12 hours, warms the "gym copy": the hub, the log, the program, gyms, calculators, the exercise list and the
  * program's exercise pages in the current language, with the files they load (a few MB). Pages stay network-first,
  * so the copy only answers when the network does not. Visitors download nothing extra. Renders nothing.
+ *
+ * On every fitness page, so it must stay small: the default program's exercise ids come from the server as a prop
+ * (Shell.tsx) — never import the catalog here.
  */
 import { useEffect } from "react";
 import type { Lang } from "@/lib/fitness/types";
 import { localPath } from "@/lib/i18n";
-import { OWNER_TEMPLATE } from "@/lib/fitness/catalog.mjs";
 import { useFitness } from "./Provider";
 
 const WARM_KEY = "ilyadays-fitness-warm";
@@ -54,13 +56,15 @@ async function warm(pages: string[]): Promise<boolean> {
   });
 }
 
-export function GymOffline({ lang }: { lang: Lang }) {
+export function GymOffline({ lang, templateExerciseIds }: {
+  lang: Lang;
+  /** Exercise ids of the default program: the pages to keep while no program is saved */
+  templateExerciseIds: string[];
+}) {
   const { mode, snapshot } = useFitness();
   const trains = mode === "synced" || (mode === "local" && Object.keys(snapshot.sessions).length > 0);
   const program = snapshot.activeProgramId ? snapshot.programs[snapshot.activeProgramId] ?? null : null;
-  const ids = program
-    ? program.days.flatMap((d) => d.slots.map((s) => s.exerciseId))
-    : OWNER_TEMPLATE.days.flatMap((d: { slots: string[][] }) => d.slots.map((slot) => slot[1]));
+  const ids = program ? program.days.flatMap((d) => d.slots.map((s) => s.exerciseId)) : templateExerciseIds;
   const idsKey = [...new Set(ids)].join(",");
 
   useEffect(() => {

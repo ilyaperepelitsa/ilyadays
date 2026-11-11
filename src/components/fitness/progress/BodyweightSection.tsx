@@ -6,8 +6,8 @@
  */
 import { useMemo, useState } from "react";
 import type { FitnessStore, GoalMode, Lang } from "@/lib/fitness/types";
-import { kgLabel, pick } from "@/lib/fitness/i18n";
-import { DAY_MS, dailyMean, ewma, forecast, timeToTarget, weeklyRate } from "@/lib/fitness/analytics.mjs";
+import { kgLabel, pick, pluralRu } from "@/lib/fitness/i18n";
+import { DAY_MS, dailyMean, ewma, forecast, timeToTarget, weeklyRate, weighInAge } from "@/lib/fitness/analytics.mjs";
 import { LineChart, type LineSeries } from "./charts";
 import { fmtDay, fmtNum, fmtSigned } from "./scales";
 import { Caveat, Empty, Section, Stat, useTargets } from "./shared";
@@ -18,18 +18,29 @@ import { WeighIn } from "./WeighIn";
 type Rate = NonNullable<ReturnType<typeof weeklyRate>>;
 type Ttt = NonNullable<ReturnType<typeof timeToTarget>>;
 
+/** "12 days ago" / "12 дней назад". */
+const agoWords = (days: number, lang: Lang) => pick(lang, `${days} ${days === 1 ? "day" : "days"} ago`, `${days} ${pluralRu(days, ["день", "дня", "дней"])} назад`);
+
 /**
  * The weekly rate and its band, in words, with a pace verdict for a fat-loss phase (research/07 §E [49][50]): the
  * verdict is firm only when the whole 95 % band agrees; when only the point estimate does it says "most likely" and
- * names the side the band still reaches.
+ * names the side the band still reaches. With a stale last weigh-in (`staleDays`) there is no verdict: the rate
+ * describes the weeks before it, not now.
  */
-function rateWords(lang: Lang, rate: Rate | null, losing: boolean): string {
+function rateWords(lang: Lang, rate: Rate | null, losing: boolean, staleDays: number | null): string {
   if (!rate) return pick(lang, "Weigh in on at least 3 different days to see a weekly rate.", "Взвесьтесь хотя бы в 3 разных дня, чтобы увидеть скорость за неделю.");
   const kg = fmtSigned(rate.kgPerWeek, lang, 2);
   const band = `${fmtSigned(rate.band[0], lang, 2)} … ${fmtSigned(rate.band[1], lang, 2)}`;
   const pct = fmtSigned(rate.pctPerWeek, lang, 2);
   const head = pick(lang, `Rate ${kg} kg/week (95\u00a0% band ${band}), ${pct}\u00a0% of body weight a week.`, `Скорость ${kg} кг/нед (95\u00a0% диапазон ${band}), ${pct}\u00a0% веса тела в неделю.`);
   const days = Math.round(rate.spanDays) + 1;
+  if (staleDays != null) {
+    return `${head} ${pick(
+      lang,
+      `That was ${agoWords(staleDays, lang)}: it describes the weeks before your last weigh-in, not now. Weigh in again to see where you are.`,
+      `Это было ${agoWords(staleDays, lang)}: скорость описывает недели до последнего взвешивания, а не сегодняшний день. Взвесьтесь снова, чтобы увидеть, где вы сейчас.`,
+    )}`;
+  }
   if (!rate.reliable) {
     return `${head} ${pick(
       lang,
@@ -57,29 +68,34 @@ function rateWords(lang: Lang, rate: Rate | null, losing: boolean): string {
   return say(`Most likely inside the 0.5–\u20601\u00a0% a week pace that keeps muscle, but the band (${pBand}) still allows ${side}: keep weighing in before changing anything.`, `Скорее всего, в пределах 0,5–\u20601\u00a0% в неделю\u00a0— темпа, при котором сохраняются мышцы,\u00a0— но диапазон (${pBand}) допускает темп ${side}: продолжайте взвешиваться, прежде чем что-то менять.`);
 }
 
-function targetWords(lang: Lang, ttt: Ttt | null, target: number, now: number, currentKg: number | null, hasForecast: boolean): string {
+function targetWords(lang: Lang, ttt: Ttt | null, target: number, now: number, currentKg: number | null, hasForecast: boolean, staleDays: number | null): string {
   const t = `${fmtNum(target, lang, 1)} ${kgLabel(lang)}`;
+  if (staleDays != null) return pick(lang, `Target ${t}: your last weigh-in was ${agoWords(staleDays, lang)}, too long ago to forecast from. Weigh in again.`, `Цель ${t}: последнее взвешивание было ${agoWords(staleDays, lang)}\u00a0— слишком давно для прогноза. Взвесьтесь снова.`);
   if (!hasForecast || !ttt) return pick(lang, `Target ${t}: the forecast appears after 4 weigh-ins over several days.`, `Цель ${t}: прогноз появится после 4 взвешиваний в разные дни.`);
-  const date = (days: number) => {
-    const at = now + days * DAY_MS;
+  // dates count from the last weigh-in (where the forecast line starts), not from today
+  const date = (at: number | null) => {
+    if (at == null) return "—";
     return fmtDay(at, lang, new Date(at).getFullYear() === new Date(now).getFullYear() ? { day: "numeric", month: "short" } : { day: "numeric", month: "short", year: "numeric" });
   };
   switch (ttt.status) {
     case "reached":
       return pick(lang, `Target ${t} reached: the trend is at ${fmtNum(currentKg ?? target, lang, 1)}.`, `Цель ${t} достигнута: тренд\u00a0— ${fmtNum(currentKg ?? target, lang, 1)}.`);
     case "away":
-      return pick(lang, `Target ${t}: the trend is moving away from it.`, `Цель ${t}: тренд удаляется от неё.`);
+      return pick(lang, `Target ${t}: the trend is at ${fmtNum(currentKg ?? target, lang, 1)} and moving away from it.`, `Цель ${t}: тренд\u00a0— ${fmtNum(currentKg ?? target, lang, 1)} и удаляется от неё.`);
     case "beyond":
       return pick(lang, `Target ${t}: more than ${Math.round(ttt.capDays)} days away at this pace\u00a0— beyond what this much data can forecast.`, `Цель ${t}: дальше ${Math.round(ttt.capDays)} дней при этом темпе\u00a0— за пределами того, что можно прогнозировать по этим данным.`);
     case "on-track": {
-      const late = ttt.latestDays != null && Number.isFinite(ttt.latestDays) ? date(ttt.latestDays) : null;
+      const late = ttt.latestAt != null ? date(ttt.latestAt) : null;
       const range = late
-        ? pick(lang, `90\u00a0%: ${date(ttt.earliestDays ?? 0)} – ${late}`, `90\u00a0%: ${date(ttt.earliestDays ?? 0)} – ${late}`)
-        : pick(lang, `earliest ${date(ttt.earliestDays ?? 0)}; the latest date is not estimable\u00a0— the band includes no change`, `не раньше ${date(ttt.earliestDays ?? 0)}; позднюю дату оценить нельзя\u00a0— диапазон допускает отсутствие изменений`);
-      return pick(lang, `Target ${t}: around ${date(ttt.days ?? 0)} at this pace (${range}).`, `Цель ${t}: примерно ${date(ttt.days ?? 0)} при этом темпе (${range}).`);
+        ? pick(lang, `90\u00a0%: ${date(ttt.earliestAt)} – ${late}`, `90\u00a0%: ${date(ttt.earliestAt)} – ${late}`)
+        : pick(lang, `earliest ${date(ttt.earliestAt)}; the latest date is not estimable\u00a0— the band includes no change`, `не раньше ${date(ttt.earliestAt)}; позднюю дату оценить нельзя\u00a0— диапазон допускает отсутствие изменений`);
+      return pick(lang, `Target ${t}: around ${date(ttt.at)} at this pace (${range}).`, `Цель ${t}: примерно ${date(ttt.at)} при этом темпе (${range}).`);
     }
   }
 }
+
+/** Every how many forecast steps the table prints a row: about one a week (at least every step). */
+const forecastStride = (horizonDays: number, steps: number) => Math.max(1, Math.round((7 * steps) / Math.max(7, horizonDays)));
 
 function TargetInput({ lang, target, onSave }: { lang: Lang; target: number | null; onSave: (kg: number | null) => void }) {
   const [text, setText] = useState<string | null>(null);
@@ -119,12 +135,17 @@ export function BodyweightSection({ lang, data, now, canWrite, store, defaultKg,
   const daily = useMemo(() => dailyMean(data.entries.map((e) => ({ at: e.at, value: e.kg }))), [data.entries]);
   const trend = useMemo(() => ewma(daily), [daily]);
   const rate = useMemo(() => weeklyRate(trend), [trend]);
-  const fc = useMemo(() => forecast(daily, target != null ? 182 : 28, { windowDays: 28, confidence: 0.9 }), [daily, target]);
+  const fit = useMemo(() => forecast(daily, target != null ? 182 : 28, { windowDays: 28, confidence: 0.9 }), [daily, target]);
   const last = trend.length ? trend[trend.length - 1] : null;
+  // more than 10 days since the last weigh-in: say so, and show neither a pace verdict nor a forecast
+  const age = last ? weighInAge(last.at, now) : null;
+  const staleDays = age?.stale ? age.days : null;
+  const fc = staleDays == null ? fit : null;
   const ttt = target != null ? timeToTarget(fc, target) : null;
   const losing = target != null && last ? target < last.trend : goal === "recomp";
   const kg = kgLabel(lang);
-  const from = Math.max(daily.length ? daily[0].at : now, now - 120 * DAY_MS);
+  // the last 120 days — counted back from the last weigh-in when that is stale, so the chart is not left empty
+  const from = Math.max(daily.length ? daily[0].at : now, (staleDays != null && last ? last.at : now) - 120 * DAY_MS);
   const shown = trend.filter((p) => p.at >= from);
 
   const lines: LineSeries[] = [];
@@ -152,9 +173,13 @@ export function BodyweightSection({ lang, data, now, canWrite, store, defaultKg,
       {canWrite ? <WeighIn lang={lang} entries={data.entries} store={store} now={now} defaultKg={defaultKg} /> : null}
       {last ? (
         <div className="fitp-stats">
-          <Stat label={pick(lang, "Trend", "Тренд")} value={`${fmtNum(last.trend, lang, 1)} ${kg}`} sub={pick(lang, `last weigh-in ${fmtNum(last.value, lang, 1)}`, `последнее ${fmtNum(last.value, lang, 1)}`)} />
           <Stat
-            label={pick(lang, "Per week", "За неделю")}
+            label={staleDays != null ? pick(lang, "Trend at the last weigh-in", "Тренд на последнее взвешивание") : pick(lang, "Trend", "Тренд")}
+            value={`${fmtNum(last.trend, lang, 1)} ${kg}`}
+            sub={staleDays != null ? pick(lang, `last weigh-in ${agoWords(staleDays, lang)}`, `последнее взвешивание ${agoWords(staleDays, lang)}`) : pick(lang, `last weigh-in ${fmtNum(last.value, lang, 1)}`, `последнее ${fmtNum(last.value, lang, 1)}`)}
+          />
+          <Stat
+            label={staleDays != null ? pick(lang, "Per week, back then", "За неделю, тогда") : pick(lang, "Per week", "За неделю")}
             value={rate ? `${fmtSigned(rate.kgPerWeek, lang, 2)} ${kg}` : "—"}
             sub={rate ? `${fmtSigned(rate.band[0], lang, 2)} … ${fmtSigned(rate.band[1], lang, 2)}` : pick(lang, "needs 3 days", "нужно 3 дня")}
           />
@@ -173,9 +198,19 @@ export function BodyweightSection({ lang, data, now, canWrite, store, defaultKg,
           format={(v) => fmtNum(v, lang, 1)}
           unit={kg}
           table={{
-            caption: pick(lang, "Weigh-ins and trend", "Взвешивания и тренд"),
-            columns: [pick(lang, "Date", "Дата"), pick(lang, "Weigh-in", "Вес"), pick(lang, "Trend", "Тренд")],
-            rows: [...trend].reverse().slice(0, 60).map((p) => [fmtDay(p.at, lang, { day: "numeric", month: "short", year: "2-digit" }), fmtNum(p.value, lang, 1), fmtNum(p.trend, lang, 2)]),
+            caption: fc ? pick(lang, "Weigh-ins, trend and forecast", "Взвешивания, тренд и прогноз") : pick(lang, "Weigh-ins and trend", "Взвешивания и тренд"),
+            columns: [pick(lang, "Date", "Дата"), pick(lang, "Weigh-in", "Вес"), pick(lang, "Trend", "Тренд"), ...(fc ? [pick(lang, "Forecast (90\u00a0% band)", "Прогноз (90\u00a0% диапазон)")] : [])],
+            rows: [
+              // the forecast as numbers, latest date first: about one row a week, always the last one
+              ...(fc
+                ? fc.line
+                    .map((p, i) => ({ p, b: fc.band[i], i }))
+                    .filter(({ i }) => i > 0 && (i === fc.line.length - 1 || i % forecastStride(fc.horizonDays, fc.line.length - 1) === 0))
+                    .reverse()
+                    .map(({ p, b }) => [fmtDay(p.at, lang, { day: "numeric", month: "short", year: "2-digit" }), "—", "—", `${fmtNum(p.value, lang, 1)} (${fmtNum(b.lo, lang, 1)}–\u2060${fmtNum(b.hi, lang, 1)})`])
+                : []),
+              ...[...trend].reverse().slice(0, 60).map((p) => [fmtDay(p.at, lang, { day: "numeric", month: "short", year: "2-digit" }), fmtNum(p.value, lang, 1), fmtNum(p.trend, lang, 2), ...(fc ? ["—"] : [])]),
+            ],
           }}
         />
       ) : (
@@ -185,14 +220,14 @@ export function BodyweightSection({ lang, data, now, canWrite, store, defaultKg,
             : pick(lang, "No weigh-ins yet. Weigh yourself in the morning, after the toilet and before breakfast, and log it here.", "Взвешиваний пока нет. Взвешивайтесь утром, после туалета и до завтрака, и записывайте здесь.")}
         </Empty>
       )}
-      {daily.length ? <p className="fitp-words">{rateWords(lang, rate, losing)}</p> : null}
+      {daily.length ? <p className="fitp-words">{rateWords(lang, rate, losing, staleDays)}</p> : null}
       <TargetInput lang={lang} target={target} onSave={(v) => saveTargets(v == null ? {} : { targetWeightKg: v })} />
-      {target != null ? <p className="fitp-words">{targetWords(lang, ttt, target, now, fc?.current ?? last?.trend ?? null, Boolean(fc))}</p> : null}
+      {target != null ? <p className="fitp-words">{targetWords(lang, ttt, target, now, fc?.current ?? last?.trend ?? null, Boolean(fc), staleDays)}</p> : null}
       <Caveat>
         {pick(
           lang,
-          "Day-to-day weight swings by about 0.5\u00a0% of body mass (water, salt, glycogen)\u00a0— more than a week of fat loss. The trend (EWMA, α 0.1, about 9 days of lag) is the signal; the rate is a robust (Theil–Sen) slope of the raw weigh-ins over the last 28 days, its band widened for runs of water retention. Because of that lag the EWMA runs above the fitted line while weight is falling; the forecast starts from the fit. The forecast is a straight line whose band covers the trend, not single weigh-ins, and stops at twice the data span: real loss slows as the body adapts. Target pace for keeping muscle: 0.5–\u20601\u00a0% of body weight a week (Helms et al. 2014; Garthe et al. 2011).",
-          "Вес от дня ко дню колеблется примерно на 0,5\u00a0% массы тела (вода, соль, гликоген)\u00a0— больше, чем неделя жиросжигания. Сигнал\u00a0— тренд (EWMA, α 0,1, запаздывание около 9 дней); скорость\u00a0— устойчивый (Тейл–Сен) наклон сырых взвешиваний за последние 28 дней, диапазон расширен с учётом задержек воды. Из-за запаздывания EWMA при снижении веса идёт выше линии подгонки; прогноз начинается от подгонки. Прогноз\u00a0— прямая; его диапазон описывает тренд, а не отдельные взвешивания, и обрывается на удвоенном сроке данных: на практике похудение замедляется. Темп, сохраняющий мышцы: 0,5–\u20601\u00a0% веса в неделю (Helms et al. 2014; Garthe et al. 2011).",
+          "Day-to-day weight swings by about 0.5\u00a0% of body mass (water, salt, glycogen)\u00a0— more than a week of fat loss. The trend (EWMA, α 0.1, about 9 days of lag) is the signal; the rate is a robust (Theil–Sen) slope of the raw weigh-ins over the last 28 days, its band widened for runs of water retention. Because of that lag the EWMA runs above the fitted line while weight is falling; the forecast starts from the fit. The forecast is a straight line whose band covers the trend, not single weigh-ins, and stops at twice the data span: real loss slows as the body adapts. Dates for a target count from your last weigh-in; after more than 10 days without one there is no forecast and no verdict on the pace. Target pace for keeping muscle: 0.5–\u20601\u00a0% of body weight a week (Helms et al. 2014; Garthe et al. 2011).",
+          "Вес от дня ко дню колеблется примерно на 0,5\u00a0% массы тела (вода, соль, гликоген)\u00a0— больше, чем неделя жиросжигания. Сигнал\u00a0— тренд (EWMA, α 0,1, запаздывание около 9 дней); скорость\u00a0— устойчивый (Тейл–Сен) наклон сырых взвешиваний за последние 28 дней, диапазон расширен с учётом задержек воды. Из-за запаздывания EWMA при снижении веса идёт выше линии подгонки; прогноз начинается от подгонки. Прогноз\u00a0— прямая; его диапазон описывает тренд, а не отдельные взвешивания, и обрывается на удвоенном сроке данных: на практике похудение замедляется. Даты для цели считаются от последнего взвешивания; если его не было больше 10 дней, прогноза и оценки темпа нет. Темп, сохраняющий мышцы: 0,5–\u20601\u00a0% веса в неделю (Helms et al. 2014; Garthe et al. 2011).",
         )}
       </Caveat>
     </Section>

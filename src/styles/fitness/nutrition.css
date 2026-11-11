@@ -7,7 +7,7 @@
 .nut-lede { margin: 0; color: var(--muted); max-width: 720px; }
 .nut-small { margin: 6px 0 0; font-size: .86rem; }
 .nut-warn-text { color: var(--accent); }
-.nut-refs { font-size: .72em; line-height: 0; white-space: nowrap; color: var(--muted); }
+.nut-refs { font-size: max(11px, .72em); line-height: 0; white-space: nowrap; color: var(--muted); }
 .nut-refs a { color: var(--accent); text-decoration: none; padding: 0 1px; }
 .nut-refs a:hover, .nut-refs a:focus-visible { text-decoration: underline; }
 .nut h3 { margin: 0 0 10px; font-size: 1.15rem; }

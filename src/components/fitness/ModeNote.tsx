@@ -1,6 +1,6 @@
 "use client";
 /**
- * One line at the top of fitness pages saying where data goes (stream 01 — plans/fitness/01-database-and-sync.md):
+ * The store status under the fitness sub-navigation, saying where data goes (stream 01 — plans/fitness/01-database-and-sync.md):
  * this browser only, the owner's account (with what is still waiting to upload), or read-only for visitors. The site
  * admin gets a "Create my fitness profile" button while the store cannot write for them yet.
  */
@@ -24,7 +24,7 @@ export function useStoreStatus(): StoreStatus | null {
 }
 
 /** `lastError` is "kind: detail"; the kind picks the sentence, the detail goes into the tooltip. */
-function problemText(lang: Lang, lastError: string): string {
+export function problemText(lang: Lang, lastError: string): string {
   switch (lastError.slice(0, lastError.indexOf(":"))) {
     case "offline":
       return pick(lang, "No connection: changes are kept here and upload later.", "Нет связи: изменения сохранены здесь и отправятся позже.");
@@ -100,6 +100,17 @@ export function ModeNote({ lang, current }: { lang: Lang; current?: string }) {
     const reason = status?.localReason;
     const text = localText(lang, reason, Boolean(auth.user));
     const localProblem = reason === "backend-missing" ? null : problem;
+    // Everywhere but the profile page this is one quiet line; the full sentence (and the sign-in) lives on /profile.
+    // A problem (storage refused, a rejected change) keeps the prominent note on every page.
+    if (!localProblem && current !== "/fitness/profile") {
+      return (
+        <p className="fit-mode-chip" data-testid="mode-note" data-mode="local" data-reason={reason ?? ""} title={text}>
+          <span className="fit-mode-dot" aria-hidden="true" />
+          {pick(lang, "On this phone only", "Только на этом телефоне")}
+          <span className="sr-only">. {text}</span>
+        </p>
+      );
+    }
     return (
       <div className={`fit-note fit-mode${localProblem ? " warn" : ""}`} data-testid="mode-note" data-mode="local" data-reason={reason ?? ""}>
         <span className="fit-mode-text">{text}</span>

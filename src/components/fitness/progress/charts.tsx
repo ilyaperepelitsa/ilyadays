@@ -276,8 +276,10 @@ export function LineChart(props: LineChartProps) {
       x0 -= 3 * 86_400_000;
       x1 += 3 * 86_400_000;
     }
+    // hollow dots are flagged as unreliable: they are drawn (pinned to the edge if outside) but never set the scale,
+    // unless a series has nothing else to show
     const ys = [
-      ...dots.flatMap((d) => d.points.map((p) => p.y)),
+      ...dots.flatMap((d) => (d.points.some((p) => !p.hollow) ? d.points.filter((p) => !p.hollow) : d.points).map((p) => p.y)),
       ...lines.flatMap((l) => l.points.map((p) => p.y)),
       ...bands.flatMap((b) => b.points.flatMap((p) => [p.lo, p.hi])),
       ...refs.map((r) => r.y),
@@ -297,7 +299,11 @@ export function LineChart(props: LineChartProps) {
       2,
       W - 2,
     );
-    const anchors = [...new Set((dots.length ? dots.flatMap((d) => d.points.map((p) => p.x)) : lines.flatMap((l) => l.points.map((p) => p.x))).filter(Number.isFinite))].sort((a, b) => a - b);
+    // readout stops: every dot, plus the line and band points past the last dot (a forecast has no dots of its own)
+    const dotXs = dots.flatMap((d) => d.points.map((p) => p.x)).filter(Number.isFinite);
+    const lastDot = dotXs.length ? Math.max(...dotXs) : -Infinity;
+    const modelXs = [...lines.flatMap((l) => l.points.map((p) => p.x)), ...bands.flatMap((b) => b.points.map((p) => p.x))].filter((v) => Number.isFinite(v) && v > lastDot);
+    const anchors = [...new Set([...dotXs, ...modelXs])].sort((a, b) => a - b);
     // end labels: keep those ≥ 13 px apart vertically (the legend carries the rest)
     const placed: { key: string; label: string; x: number; y: number }[] = [];
     for (const l of [...ends].sort((a, b) => y.map(a.points[a.points.length - 1].y) - y.map(b.points[b.points.length - 1].y))) {
@@ -359,7 +365,7 @@ export function LineChart(props: LineChartProps) {
       {d.points.map((p, i) => (
         <g key={`${p.x}-${i}`}>
           {p.ring ? <circle className="fitc-pr" cx={x(p.x)} cy={y.map(p.y)} r={dotR(d) + 3.5} /> : null}
-          <circle className={`fitc-dot${p.hollow ? " hollow" : ""}${d.small ? " small" : ""}${p.x === ax ? " on" : ""}`} cx={x(p.x)} cy={y.map(p.y)} r={p.x === ax ? dotR(d) + 1 : dotR(d)} />
+          <circle className={`fitc-dot${p.hollow ? " hollow" : ""}${d.small ? " small" : ""}${p.x === ax ? " on" : ""}`} cx={x(p.x)} cy={p.hollow ? Math.max(top, Math.min(bottom, y.map(p.y))) : y.map(p.y)} r={p.x === ax ? dotR(d) + 1 : dotR(d)} />
         </g>
       ))}
     </g>
@@ -669,7 +675,7 @@ export type HeatmapProps = {
 const TINT_STEPS = [54, 70, 74, 87];
 const tintClass = (level: number) => TINT_STEPS.filter((t) => level > t / 100).map((t) => ` t${t}`).join("");
 
-/** Weeks × groups grid: one hue, darker = more, number in the cell when it fits, ring when inside the target band. */
+/** Weeks × groups grid: one hue, darker = more, a number in every cell with work, ring when inside the target band. */
 export function Heatmap(props: HeatmapProps) {
   const { lang, title, summary, columns, rows, band } = props;
   const [measure, W] = useMeasuredWidth();
@@ -734,15 +740,21 @@ export function Heatmap(props: HeatmapProps) {
                 const w = cellW - 2;
                 const h = cellH - 2;
                 const level = v > 0 ? 0.16 + 0.84 * Math.min(1, v / max) : 0;
-                const label = fmtNum(Math.round(v), lang, 0);
+                // a cell is never blank: half sets (indirect work counts 0.5) keep their decimal where it fits, a narrow cell
+                // shows the rounded whole number (a size smaller if it must); the readout and the table keep the exact value
+                const exact = fmtNum(v, lang, Number.isInteger(v) ? 0 : 1);
+                const whole = fmtNum(Math.round(v), lang, 0);
+                const ringed = v >= band[0] && v <= band[1]; // the ring takes 3.5 px of each side
+                const label = textWidth(exact, 10.5) <= w - (ringed ? 7 : 4) ? exact : whole;
+                const tight = textWidth(label, 10.5) > w - 2;
                 const on = cell != null && cell[0] === r && cell[1] === c;
                 return (
                   <g key={columns[c]?.key ?? c} className="fitc-r-you">
                     {v > 0 ? <rect className="fitc-cell" x={x0} y={y0} width={w} height={h} rx="4" style={{ fillOpacity: level }} /> : <rect className="fitc-cell empty" x={x0} y={y0} width={w} height={h} rx="4" />}
-                    {v >= band[0] && v <= band[1] ? <rect className="fitc-cell-ring" x={x0 + 1.5} y={y0 + 1.5} width={w - 3} height={h - 3} rx="3" /> : null}
+                    {ringed ? <rect className="fitc-cell-ring" x={x0 + 1.5} y={y0 + 1.5} width={w - 3} height={h - 3} rx="3" /> : null}
                     {on ? <rect className="fitc-cell-on" x={x0 - 0.5} y={y0 - 0.5} width={w + 1} height={h + 1} rx="4.5" /> : null}
-                    {v > 0 && textWidth(label, 10.5) <= w - 4 ? (
-                      <text className={`fitc-cell-value${tintClass(level)}`} x={x0 + w / 2} y={y0 + h / 2 + 3.5} textAnchor="middle">
+                    {v > 0 ? (
+                      <text className={`fitc-cell-value${tight ? " tight" : ""}${tintClass(level)}`} x={x0 + w / 2} y={y0 + h / 2 + 3.5} textAnchor="middle">
                         {label}
                       </text>
                     ) : null}

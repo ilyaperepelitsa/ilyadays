@@ -1,8 +1,9 @@
 "use client";
 /**
  * 2 · Strength (stream 06): per exercise, the session-best estimated 1RM (hollow when > 12 total reps), a Theil–Sen
- * trend in % per week with Sen's CI and the ±1.96σ session-noise band, PR markers, recent records and a plateau
- * flag with its false-alarm odds. Maths: analytics.mjs; research/07 §A, §F, §G, §K.
+ * trend in % per week with Sen's CI and the ±1.96σ session-noise band (over the last 12 weeks once there are 24),
+ * PR markers, recent records and a plateau flag with its false-alarm odds. Records and the plateau flag are per gym
+ * (machines differ); the chart stays one. Maths: analytics.mjs; research/07 §A, §F, §G, §H, §K.
  */
 import { useMemo, useState } from "react";
 import type { Lang } from "@/lib/fitness/types";
@@ -35,7 +36,7 @@ function prText(p: Pr, name: string, lang: Lang): string {
 }
 
 export function StrengthSection({ lang, data, catalog, now }: { lang: Lang; data: ProgressData; catalog: ProgressCatalog; now: number }) {
-  const opts = useMemo(() => ({ loadOf: data.loadOf, timeOf: data.timeOf, unitOf: data.unitOf }), [data]);
+  const opts = useMemo(() => ({ loadOf: data.loadOf, timeOf: data.timeOf, unitOf: data.unitOf, minGainOf: data.prGainOf, gymOf: data.gymOf }), [data]);
   const all = useMemo(() => sessionBestE1rm(data.sets, opts), [data.sets, opts]);
   const byExercise = useMemo(() => {
     const m = new Map<string, Series>();
@@ -56,7 +57,11 @@ export function StrengthSection({ lang, data, catalog, now }: { lang: Lang; data
   const selected = picked && byExercise.some(([id]) => id === picked) ? picked : (byExercise[0]?.[0] ?? null);
   const series = useMemo(() => (selected ? (byExercise.find(([id]) => id === selected)?.[1] ?? NO_SERIES) : NO_SERIES), [selected, byExercise]);
   const trend = useMemo(() => e1rmTrend(series), [series]);
-  const flat = useMemo(() => plateau(series, { sessions: 4 }), [series]);
+  // the plateau flag reads only the sessions at the gym of the latest one: another gym's machine is another scale
+  const flat = useMemo(() => {
+    const gym = series.length ? data.gymOf(series[series.length - 1]) : null;
+    return plateau(series.filter((p) => data.gymOf(p) === gym), { sessions: 4 });
+  }, [series, data]);
   const prSessions = new Set(events.filter((e) => e.exerciseId === selected && e.kind === "e1rm").map((e) => e.sessionId));
   const name = selected ? exerciseName(catalog, selected, lang) : "";
   const reliable = series.filter((p) => p.reliable);
@@ -65,15 +70,20 @@ export function StrengthSection({ lang, data, catalog, now }: { lang: Lang; data
   const lines: LineSeries[] = [];
   const bands: BandSeries[] = [];
   if (trend.status === "ok") {
-    lines.push({ key: "trend", label: pick(lang, "Trend (Theil–Sen)", "Тренд (Тейл–Сен)"), role: "model", points: trend.line.map((p) => ({ x: p.at, y: p.kg })), endLabel: `${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0%/${pick(lang, "wk", "нед")}` });
+    lines.push({ key: "trend", label: trend.windowed ? pick(lang, `Trend, last ${trend.windowWeeks} weeks (Theil–Sen)`, `Тренд за последние ${trend.windowWeeks} нед. (Тейл–Сен)`) : pick(lang, "Trend (Theil–Sen)", "Тренд (Тейл–Сен)"), role: "model", points: trend.line.map((p) => ({ x: p.at, y: p.kg })), endLabel: `${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0%/${pick(lang, "wk", "нед")}` });
     bands.push({ key: "noise", label: pick(lang, `Session noise ±${fmtNum(196 * trend.sigma, lang, 0)}\u00a0%`, `Шум тренировки ±${fmtNum(196 * trend.sigma, lang, 0)}\u00a0%`), role: "model", points: trend.band.map((b) => ({ x: b.at, lo: b.lo, hi: b.hi })) });
   }
 
+  // once the history is long the trend is fitted to the last 12 weeks only: say which span the numbers describe
+  const span =
+    trend.status === "ok" && trend.windowed
+      ? { en: `the last ${trend.windowWeeks} weeks`, ru: `последние ${trend.windowWeeks} нед.` }
+      : { en: `${trend.status === "ok" ? Math.round(trend.spanDays / 7) : 0} weeks`, ru: `${trend.status === "ok" ? Math.round(trend.spanDays / 7) : 0} нед.` };
   const trendWords =
     trend.status === "ok"
       ? trend.ci
-        ? pick(lang, `Trend ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% a week (95\u00a0% CI ${fmtSigned(trend.ci[0], lang, 1)} … ${fmtSigned(trend.ci[1], lang, 1)}), ${trend.n} sessions over ${Math.round(trend.spanDays / 7)} weeks.`, `Тренд ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% в неделю (95\u00a0% ДИ ${fmtSigned(trend.ci[0], lang, 1)} … ${fmtSigned(trend.ci[1], lang, 1)}), ${trend.n} ${sessionsWord(trend.n, lang)} за ${Math.round(trend.spanDays / 7)} нед.`)
-        : pick(lang, `Trend ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% a week from ${trend.n} sessions; the confidence interval needs 8.`, `Тренд ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% в неделю по ${trend.n} ${sessionsWord(trend.n, lang)}; доверительному интервалу нужно 8.`)
+        ? pick(lang, `Trend ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% a week (95\u00a0% CI ${fmtSigned(trend.ci[0], lang, 1)} … ${fmtSigned(trend.ci[1], lang, 1)}), ${trend.n} sessions over ${span.en}.`, `Тренд ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% в неделю (95\u00a0% ДИ ${fmtSigned(trend.ci[0], lang, 1)} … ${fmtSigned(trend.ci[1], lang, 1)}), ${trend.n} ${sessionsWord(trend.n, lang)} за ${span.ru}.`)
+        : pick(lang, `Trend ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% a week from ${trend.n} sessions${trend.windowed ? ` in ${span.en}` : ""}; the confidence interval needs 8.`, `Тренд ${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0% в неделю по ${trend.n} ${sessionsWord(trend.n, lang)}${trend.windowed ? ` за ${span.ru}` : ""}; доверительному интервалу нужно 8.`)
       : series.length
         ? pick(
             lang,
@@ -115,7 +125,7 @@ export function StrengthSection({ lang, data, catalog, now }: { lang: Lang; data
           sub={best ? `${fmtDay(best.at, lang)} · ${best.reps} × ${fmtNum(best.weightKg, lang, 1)}` : pick(lang, "only > 12-rep sets", "только подходы > 12 повт.")}
         />
         <Stat
-          label={pick(lang, "Trend", "Тренд")}
+          label={trend.status === "ok" && trend.windowed ? pick(lang, `Trend, last ${trend.windowWeeks} weeks`, `Тренд за ${trend.windowWeeks} нед.`) : pick(lang, "Trend", "Тренд")}
           value={trend.status === "ok" ? `${fmtSigned(trend.pctPerWeek, lang, 1)}\u00a0%/${pick(lang, "wk", "нед")}` : "—"}
           sub={trend.status === "ok" ? (trend.ci ? `${fmtSigned(trend.ci[0], lang, 1)} … ${fmtSigned(trend.ci[1], lang, 1)}` : pick(lang, "CI needs 8 sessions", "ДИ\u00a0— от 8 тренировок")) : pick(lang, `${trend.n} of 5 sessions`, `${trend.n} из 5 тренировок`)}
         />
@@ -163,7 +173,7 @@ export function StrengthSection({ lang, data, catalog, now }: { lang: Lang; data
       ) : null}
       {selected && catalog[selected]?.assistance ? (
         <p className="fitp-hint">
-          {pick(lang, "Assisted machine: the effective load is body weight − assistance, using your nearest weigh-in.", "Гравитрон: рабочий вес = вес тела − помощь, по ближайшему взвешиванию.")}
+          {pick(lang, "Assisted machine: the effective load is body weight − assistance, using your body-weight trend on that day.", "Гравитрон: рабочий вес = вес тела − помощь, по тренду веса тела на тот день.")}
         </p>
       ) : null}
       {flagged.size ? (
@@ -214,8 +224,8 @@ export function StrengthSection({ lang, data, catalog, now }: { lang: Lang; data
       <Caveat>
         {pick(
           lang,
-          "e1RM = mean of the Epley and Brzycki formulas on reps + reps in reserve. Only sets with ≤\u00a012 total reps and RIR ≤\u00a04 count; hollow points are above that and do not move the trend. One estimate carries about 4\u00a0% noise, so a single session up or down means little. Machines are their own instruments: compare an exercise only with itself, at the same gym.",
-          "1ПМ\u00a0— среднее формул Эпли и Бжицки по повторам + повторам в запасе. Учитываются подходы с ≤\u00a012 повторами всего и запасом ≤\u00a04; полые точки\u00a0— выше этого и на тренд не влияют. У одной оценки шум около 4\u00a0%, поэтому одна тренировка вверх или вниз мало что значит. Тренажёр\u00a0— свой измерительный прибор: сравнивайте упражнение только с ним самим и в том же зале.",
+          "e1RM = mean of the Epley and Brzycki formulas on reps + reps in reserve. Only sets with ≤\u00a012 total reps and RIR ≤\u00a04 count; hollow points are above that and do not move the trend. One estimate carries about 4\u00a0% noise, so a single session up or down means little. With 24 weeks of history or more, the trend line covers the last 12 weeks only, because progress slows with time. Machines are their own instruments: records and the plateau warning compare an exercise only with itself at the same gym, and a record on a bodyweight or assisted exercise must beat the old one by 1\u00a0%, more than the scale's own wobble.",
+          "1ПМ\u00a0— среднее формул Эпли и Бжицки по повторам + повторам в запасе. Учитываются подходы с ≤\u00a012 повторами всего и запасом ≤\u00a04; полые точки\u00a0— выше этого и на тренд не влияют. У одной оценки шум около 4\u00a0%, поэтому одна тренировка вверх или вниз мало что значит. Когда истории 24 недели и больше, линия тренда строится только по последним 12 неделям: со временем прогресс замедляется. Тренажёр\u00a0— свой измерительный прибор: рекорды и предупреждение о плато сравнивают упражнение только с ним самим в том же зале, а рекорд в упражнении с собственным весом или в гравитроне должен превысить прошлый на 1\u00a0%\u00a0— больше, чем колебания весов.",
         )}
       </Caveat>
     </Section>

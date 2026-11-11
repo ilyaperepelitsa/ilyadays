@@ -13,6 +13,7 @@ import {
 } from "@/lib/fitness/catalog.mjs";
 import { startingLoad, warmupRamp } from "@/lib/fitness/progression.mjs";
 import { RULES, WARMUP } from "@/lib/fitness/templates.mjs";
+import { SourceText } from "../program/SourceText";
 import { MuscleMap } from "./MuscleMap";
 import { AlternativesList, ExerciseHistory, ProgramStatus, type AltItem } from "./ExerciseLive";
 import type { TemplateDays } from "./useActive";
@@ -29,22 +30,6 @@ const BACK_LOAD: Record<string, [string, string]> = {
   moderate: ["Moderate", "Умеренная"],
   high: ["High", "Высокая"],
 };
-
-/** "Title — outlet, year. https://…" → text with the URL as a link. */
-function Source({ text }: { text: string }) {
-  const match = text.match(/https?:\/\/\S+/);
-  if (!match || match.index === undefined) return <>{text}</>;
-  const url = match[0].replace(/[).,;]+$/, "");
-  const before = text.slice(0, match.index).trim();
-  return (
-    <>
-      {before}{" "}
-      <a href={url} target="_blank" rel="noopener noreferrer" className="fx-url">
-        {url.replace(/^https?:\/\/(www\.)?/, "")}
-      </a>
-    </>
-  );
-}
 
 function caption(lang: Lang, angle: string) {
   if (angle === "sequence") return pick(lang, "Start → end: the arrow shows the working path.", "Начало → конец: стрелка показывает рабочую траекторию.");
@@ -284,7 +269,7 @@ export function ExerciseDetail({ lang, ex }: { lang: Lang; ex: Exercise }) {
           <ol>
             {ex.sources.map((s, i) => (
               <li key={i}>
-                <Source text={s} />
+                <SourceText text={s} className="fx-url" />
               </li>
             ))}
           </ol>

@@ -160,6 +160,7 @@ def test_circumferences_are_independent_dated_records_with_separate_sides(phone,
     page, probe = phone
     fake_backend.state = "missing"
     page.goto(base_url + "/fitness/progress")
+    tid(page, "measurement-record").locator("summary").first.click()  # the form sits behind a closed disclosure
     tid(page, "measurement-waist").fill("88.2")
     tid(page, "measurement-left-biceps").fill("33.1")
     tid(page, "measurement-right-biceps").fill("34")
@@ -170,6 +171,7 @@ def test_circumferences_are_independent_dated_records_with_separate_sides(phone,
     assert not stored(page, "bodyweight"), "circumference-only record never invents a scale weight"
     page.reload()
     expect(tid(page, "measurement-entry")).to_have_count(1)
+    tid(page, "measurement-record").locator("summary").first.click()  # closed again after the reload
     tid(page, "measurement-waist").fill("87.4")
     tid(page, "measurement-save").click()
     expect(tid(page, "measurement-entry")).to_have_count(2)

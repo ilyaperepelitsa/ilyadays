@@ -5,12 +5,12 @@
  * open resumes exactly (planned at its start, every action saved at once); one older than 6 h is closed and its
  * progression applied once. Visitors see the plan, and the owner's running session live, read-only.
  *
- * Double taps: logging a set moves the screen (the next row opens, the rest timer appears, the view scrolls), so the
- * second tap of a double tap would land on whatever slid under the thumb. For SHIELD_MS after a set is logged a tap on
- * the same spot is dropped and the next set's Done waits; set ids are per row (setIdFor), so a row logged twice is still
- * one set.
+ * Double taps: logging a set, Start, Swap and End move the screen under the thumb, so the second tap of a double tap
+ * would land on whatever arrived there (the next set's Done, End, a swap option, "End session"). tapShield.ts drops a
+ * tap on the same spot for a moment after each of them, and the next set's Done waits meanwhile; set ids are per row
+ * (setIdFor), so a row logged twice is still one set.
  */
-import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Lang, Program, Session } from "@/lib/fitness/types";
 import { fmtTime, pick, t2 } from "@/lib/fitness/i18n";
 import { exerciseById } from "@/lib/fitness/catalog.mjs";
@@ -27,6 +27,7 @@ import { SessionSummary } from "./SessionSummary";
 import { StartPanel } from "./StartPanel";
 import { SwapSheet, type SwapContext } from "./SwapSheet";
 import type { Draft } from "./SetRow";
+import { useTapShield } from "./tapShield";
 import {
   buzz, leaveSummary, revealRow, scrollBehavior, setSummary, updateSessionUi, useClock, useCloseOuts, useProgram, useSessionUi,
   useSummary, useSummaryUntilLeave, useWakeLock,
@@ -34,17 +35,6 @@ import {
 
 /** How long the summary stays up in this tab when "Done" is not tapped (a tab kept open until the next gym day). */
 const SUMMARY_KEEP_MS = 3 * 3600_000;
-/**
- * After a set is logged, a tap on the same spot of the screen is dropped for this long: the second tap of a double tap
- * must not log the next set, change its weight or shorten the rest timer that slid under the thumb (the rehearsal's
- * probe: 7 of 18 double taps 80–300 ms apart logged two sets).
- */
-const SHIELD_MS = 700;
-/** "The same spot": a thumb's second tap lands within this many px of the first. */
-const SHIELD_PX = 48;
-/** The next set's Done waits a little longer than the shield, so the tap that finds it enabled is never dropped. */
-const ARM_MS = SHIELD_MS + 60;
-
 export function SessionTracker({ lang }: { lang: Lang }) {
   const { snapshot, store, mode, canWrite } = useFitness();
   const minute = useClock(60_000);
@@ -100,17 +90,8 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
   const [techOpen, setTechOpen] = useState<Record<string, boolean>>({});
   const [swapSlot, setSwapSlot] = useState<string | null>(null);
   const [ending, setEnding] = useState(false);
-  // the double-tap shield: the last tap's spot, the spot and time a set was logged, and the next Done waiting meanwhile
-  const lastTap = useRef<{ x: number; y: number } | null>(null);
-  const shield = useRef<{ t: number; x: number; y: number } | null>(null);
-  const [arming, setArming] = useState<number | null>(null);
+  const shield = useTapShield();
   useWakeLock(!readOnly);
-
-  useEffect(() => {
-    if (arming == null) return;
-    const id = window.setTimeout(() => setArming((a) => (a === arming ? null : a)), ARM_MS);
-    return () => window.clearTimeout(id);
-  }, [arming]);
 
   const plan = useMemo(() => activePlan({ snapshot, session, program, swaps: ui.swaps }), [snapshot, session, program, ui.swaps]);
   const sets = useMemo(() => setsOfSession(snapshot.sets, session.id), [snapshot.sets, session.id]);
@@ -129,6 +110,16 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
     return out;
   }, [plan, snapshot.exerciseState, session.startedAt]);
 
+  // While a session runs the site header scrolls away with the page and the footer keeps clear of the fixed bar
+  // (train.css: [data-session-active]); both come back when the session screen goes.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.dataset.sessionActive = "";
+    return () => {
+      delete root.dataset.sessionActive;
+    };
+  }, []);
+
   // keep the next set in view after each logged set (and when a session resumes)
   useEffect(() => {
     if (!currentKey || readOnly) return;
@@ -139,17 +130,6 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
     return () => cancelAnimationFrame(frame);
   }, [currentKey, readOnly]);
 
-  /** Capture phase of every tap in the session (bottom bar and sheets included): drop the second tap of a double tap. */
-  const onClickCapture = (e: MouseEvent) => {
-    const s = shield.current;
-    if (s && e.detail > 0 && performance.now() - s.t < SHIELD_MS && Math.hypot(e.clientX - s.x, e.clientY - s.y) < SHIELD_PX) {
-      e.preventDefault();
-      e.stopPropagation();
-      return;
-    }
-    lastTap.current = e.detail > 0 ? { x: e.clientX, y: e.clientY } : null;
-  };
-
   const exerciseOfSlot = (slotId: string) => model.blocks.flatMap((b) => b.exercises).find((e) => e.planned.slotId === slotId);
   const nowIso = () => new Date().toISOString();
 
@@ -159,9 +139,7 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
       const draft = drafts[row.key] ?? row.suggest;
       const set = logPlannedSet({ session, planned: row.planned, exerciseId: row.exerciseId, slotId: row.slotId, index: row.index, now: new Date(), overrides: draft, prescription: { version: 1, targetRir: row.planned.rir ?? null, rirReported: draft.rirReported === true, suggestedKg: row.suggest.kg, suggestedReps: row.suggest.reps, reason: row.adaptation, basedOnSetId: row.basedOnSetId } });
       store.upsert("sets", set);
-      const t = performance.now();
-      shield.current = { t, x: lastTap.current?.x ?? Number.NaN, y: lastTap.current?.y ?? Number.NaN };
-      setArming(t);
+      shield.arm(true);
       buzz(15);
       setDrafts((d) => omit(d, row.key));
       setOpenRows((o) => omit(o, row.key));
@@ -195,6 +173,7 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
       updateSessionUi(session.id, (u) => ({ ...u, extra: { ...u.extra, [slotId]: Math.max(u.extra?.[slotId] ?? 0, floor) + 1 } }));
     },
     openSwap(slotId) {
+      shield.arm(); // the sheet's options slide up under the thumb
       setSwapSlot(slotId);
     },
     toggleWarmups(slotId, open) {
@@ -225,8 +204,11 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
   const pickSwap = (slotId: string, exerciseId: string, remember: boolean) => {
     setSwapSlot(null);
     if (readOnly) return;
+    // only this slot's unlogged edits belong to the exercise being replaced; other rows keep theirs
+    const swapped = exerciseOfSlot(slotId);
+    const stale = new Set([...(swapped?.warmups ?? []), ...(swapped?.working ?? [])].map((r) => r.key));
     updateSessionUi(session.id, (u) => ({ ...u, swaps: { ...u.swaps, [slotId]: exerciseId } }));
-    setDrafts({});
+    setDrafts((d) => (Object.keys(d).some((k) => stale.has(k)) ? Object.fromEntries(Object.entries(d).filter(([k]) => !stale.has(k))) : d));
     if (remember) rememberSwap(slotId, exerciseId);
   };
 
@@ -264,13 +246,16 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
     firstSlotId: plan.exercises[0]?.slotId ?? null,
     readOnly,
     gym,
-    arming: arming != null,
+    arming: shield.holding,
+    intro: model.completion.done === 0,
+    guideSlotId:
+      model.blocks.flatMap((b) => b.exercises).find((e) => e.planned.calibration && !e.skipped && !e.history.length && !e.working.some((r) => r.logged))?.planned.slotId ?? null,
     holds,
   };
   const minutes = Math.max(0, Math.round((Date.parse(model.lastSet?.doneAt ?? session.startedAt) - Date.parse(session.startedAt)) / 60_000));
 
   return (
-    <section className="trk-session" data-testid="session" data-session-id={session.id} data-status={session.status} onClickCapture={onClickCapture}>
+    <section className="trk-session" data-testid="session" data-session-id={session.id} data-status={session.status} onClickCapture={shield.onClickCapture}>
       <header className="trk-session-head">
         <p className="trk-kicker">
           {readOnly ? pick(lang, "Ilya is training now", "Илья сейчас тренируется") : pick(lang, "Session in progress", "Идёт тренировка")}
@@ -321,7 +306,7 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
       {plan.finisher ? (
         <div className="fit-card trk-finisher">
           <h3>{pick(lang, "Finisher", "Финишер")}</h3>
-          <p>{t2(lang, plan.finisher)}</p>
+          <p>{t2(lang, plan.finisher).replace(/^(finisher|finish|финишер|финиш)\s*[·:—–-]\s*/i, "")}</p>
         </div>
       ) : null}
 
@@ -338,13 +323,15 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
         onDismiss={(setId) =>
           updateSessionUi(session.id, (u) => ({ ...u, rest: { setId, adjust: u.rest?.setId === setId ? u.rest.adjust : 0, dismissed: true } }))
         }
-        onEnd={() => setEnding(true)}
+        onEnd={() => {
+          shield.arm(); // "End session" slides up under the thumb
+          setEnding(true);
+        }}
       />
 
       {!readOnly ? (
         <>
           <SwapSheet
-            key={swapSlot ?? "closed"}
             lang={lang}
             planned={swapPlanned}
             ctx={swapCtx}

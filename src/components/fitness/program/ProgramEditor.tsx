@@ -5,10 +5,11 @@
  * AI coach and the history of plan changes.
  *
  * Edits go to a local draft; the sticky bar saves it as a new program version (the old one is archived) or discards
- * it. Viewers and the loading state see the program read-only; in synced mode editing waits for the first pull.
+ * it. The draft is also kept in this tab's sessionStorage (draftStore.ts), so following a link out of the page (an
+ * exercise's technique page, Train) or reloading does not lose it; saving, discarding and signing out forget it. Viewers and the loading state see the program read-only; in synced mode editing waits for the first pull.
  * A weight hold (master plan §16) is not a program edit: it writes the exercise state at once, plus a history line.
  */
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { Lang, PlannedSession, Program, Text2 } from "@/lib/fitness/types";
 import { localPath } from "@/lib/i18n";
@@ -23,6 +24,9 @@ import {
 import { manualAdjustmentRow } from "@/lib/fitness/advisor.mjs";
 import { holdText } from "@/lib/fitness/tracker.mjs";
 import { useFitness } from "../Provider";
+import { useStoreStatus } from "../ModeNote";
+import { useClock } from "../train/hooks";
+import { clearProgramDraft, readProgramDraft, writeProgramDraft } from "./draftStore";
 import { AdvisorPanel, PlanHistory } from "./AdvisorPanel";
 import { DayCard } from "./DayCard";
 import { DaysSwitch } from "./DaysSwitch";
@@ -34,23 +38,6 @@ import { TemplatePicker } from "./TemplatePicker";
 import { ActionIcon } from "../ActionIcon";
 
 const EPOCH = "1970-01-01T00:00:00.000Z";
-
-/* ------------------------------------------------------------------ clock (null during the server render) */
-
-const subscribeMinute = (onChange: () => void) => {
-  const id = window.setInterval(onChange, 60_000);
-  const onVisible = () => {
-    if (document.visibilityState === "visible") onChange();
-  };
-  document.addEventListener("visibilitychange", onVisible);
-  return () => {
-    window.clearInterval(id);
-    document.removeEventListener("visibilitychange", onVisible);
-  };
-};
-const minuteNow = () => Math.floor(Date.now() / 60_000) * 60_000;
-const serverNow = () => null;
-const useClock = (): number | null => useSyncExternalStore(subscribeMinute, minuteNow, serverNow);
 
 /* ------------------------------------------------------------------ the editor */
 
@@ -91,7 +78,8 @@ function Volume({ lang, program }: { lang: Lang; program: Program }) {
 
 export function ProgramEditor({ lang }: { lang: Lang }) {
   const { snapshot, store, mode, canWrite } = useFitness();
-  const now = useClock();
+  const status = useStoreStatus();
+  const now = useClock(60_000);
   const settings = snapshot.settings;
   const goalSetting = settings?.goal;
   const daysSetting = settings?.daysPerWeek;
@@ -111,6 +99,23 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
   const dirty = lines.length > 0;
   const emptyDays = program.days.filter((d) => d.slots.length === 0);
   const stale = draft != null && dirty && draft.base.id !== saved.id;
+
+  // The draft this tab kept (see draftStore.ts). Whose it is: this browser's local log, or the signed-in account.
+  const account = mode === "local" ? "local" : mode === "synced" ? (status?.userId ?? null) : null;
+  const [restored, setRestored] = useState(false);
+  if (editable && account && !restored) {
+    // once, when the page can first edit: state derived during render, so the draft is there on the first editable paint
+    setRestored(true);
+    const kept = readProgramDraft(account, saved);
+    if (kept) setDraft({ base: saved, program: kept });
+  }
+  useEffect(() => {
+    if (mode === "loading") return;
+    if (!account) clearProgramDraft(); // read-only (signed out): nobody's draft stays behind in this tab
+    else if (!restored) return; // not looked at yet: keep what is stored
+    else if (draft && dirty) writeProgramDraft(account, draft.base, draft.program);
+    else clearProgramDraft(); // saved, discarded, or the stored one no longer fits this account / program
+  }, [mode, account, restored, draft, dirty]);
 
   const states = snapshot.exerciseState;
   const gymId = settings?.activeGymId ?? null;

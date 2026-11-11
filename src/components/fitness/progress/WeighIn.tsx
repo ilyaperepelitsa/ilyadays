@@ -77,11 +77,11 @@ export function WeighIn({ lang, entries, store, now, defaultKg }: { lang: Lang; 
           save();
         }}
       >
-        <div className="fitp-weigh-row">
-          <button type="button" className="fit-button quiet fitp-step" onClick={() => bump(-0.1)} aria-label={pick(lang, "Minus 0.1 kg", "Минус 0,1 кг")}>
+        <div className="fit-stepper-row fitp-weigh-kg">
+          <button type="button" className="fit-step" onClick={() => bump(-0.1)} aria-label={pick(lang, "Minus 0.1 kg", "Минус 0,1 кг")}>
             −
           </button>
-          <label className="fitp-weigh-kg">
+          <label className="fit-stepper-field">
             <span className="sr-only">{pick(lang, "Body weight, kg", "Вес тела, кг")}</span>
             <input
               inputMode="decimal"
@@ -96,7 +96,7 @@ export function WeighIn({ lang, entries, store, now, defaultKg }: { lang: Lang; 
             />
             <span aria-hidden="true">{kgUnit}</span>
           </label>
-          <button type="button" className="fit-button quiet fitp-step" onClick={() => bump(0.1)} aria-label={pick(lang, "Plus 0.1 kg", "Плюс 0,1 кг")}>
+          <button type="button" className="fit-step" onClick={() => bump(0.1)} aria-label={pick(lang, "Plus 0.1 kg", "Плюс 0,1 кг")}>
             +
           </button>
         </div>

@@ -104,9 +104,10 @@ These exact next-set choices, the ±1 RIR tolerance, and the confirmation thresh
 
 | Situation | What the planner does |
 | --- | --- |
-| Under 14 days since the exercise | Nothing changes |
-| 14–27 days | 5 % lighter at two weeks, rising to 10 % at four |
-| 28 days or more | 10 % lighter, rising to 15 % at 90 days; target back to the bottom; a test session |
+| Under 15 days since the exercise | Nothing changes: one missed week costs nothing |
+| 15–28 days | 5 % lighter, rising to 10 % at four weeks |
+| 29–90 days | 20 % lighter; target back to the bottom; a test session |
+| More than 90 days | 30 % lighter and treated as a new exercise: the baseline is found again |
 | Planned deload week | 40 % fewer sets (rounded, at least one), the same weights, 2 more reps in reserve and 2 fewer reps; no progression |
 | Swapping in another exercise | 85 % of the equivalent weight (60 % if the movement differs), converted between machines, dumbbells and barbells; then a test session |
 | Switching goal mode | Weights carried to the new rep range through the percentage table, 5 % lighter for the first session, which runs as a test |
@@ -124,7 +125,7 @@ Break cuts are rounded once; coarse steps use fewer reps instead. Short breaks n
 
 ## Caveats
 
-- The specific numbers — two misses before −10 %, two or three top sessions before a failed weight, the 14- and 28-day break tiers, the 85 % start, 40 % fewer sets in a deload, the swap ratios — are conservative design defaults built on the evidence, not measured optima.
+- The specific numbers — two misses before −10 %, two or three top sessions before a failed weight, the 15-, 29- and 91-day break tiers, the 85 % start, 40 % fewer sets in a deload, the swap ratios — are conservative design defaults built on the evidence, not measured optima.
 - RIR is a judgement, and early on it is often off by a rep or more [5]; the first weeks of numbers are the least reliable.
 - The one-rep-max equations come from free-weight lifts; machine strength curves differ, and individuals vary widely at the same percentage [10].
 - The planner sees only what is logged: sleep, stress and soreness do not change the plan yet.

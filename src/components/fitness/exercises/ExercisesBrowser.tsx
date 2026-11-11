@@ -202,7 +202,7 @@ export function ExercisesBrowser({ lang, items, groups, goals, template }: { lan
                 <span className="fx-thumb">
                   {item.image ? (
                     // eslint-disable-next-line @next/next/no-img-element -- pre-sized static webp with a ?v= hash
-                    <img src={item.image} alt="" width={360} height={240} loading="lazy" decoding="async" />
+                    <img src={item.image} alt="" width={216} height={216} loading="lazy" decoding="async" />
                   ) : (
                     <MuscleMap compact primary={item.primary} secondary={item.secondary} lang={lang} />
                   )}

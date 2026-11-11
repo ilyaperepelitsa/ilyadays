@@ -44,9 +44,9 @@ export function SessionSummary({ lang, summary, onDone, onReopen }: {
           <p className="fit-muted">{pick(lang, "Nothing was logged, so the plan and the rotation stay as they were.", "Ничего не записано, поэтому план и очередь дней не изменились.")}</p>
         ) : (
           <dl className="trk-stats">
-            <div><dt>{pick(lang, "Time", "Время")}</dt><dd className="fit-num">{summary.minutes} {pick(lang, "min", "мин")}</dd></div>
+            <div><dt>{pick(lang, "Time", "Время")}</dt><dd className="fit-num">{summary.minutes}{"\u00a0"}{pick(lang, "min", "мин")}</dd></div>
             <div><dt>{pick(lang, "Working sets", "Рабочие подходы")}</dt><dd className="fit-num">{summary.working.done}/{summary.working.total}</dd></div>
-            <div><dt>{pick(lang, "Tonnage", "Тоннаж")}</dt><dd className="fit-num">{fmtKg(Math.round(summary.tonnage), lang)} {kgLabel(lang)}</dd></div>
+            <div><dt>{pick(lang, "Tonnage", "Тоннаж")}</dt><dd className="fit-num">{fmtKg(Math.round(summary.tonnage), lang)}{"\u00a0"}{kgLabel(lang)}</dd></div>
             <div><dt>{pick(lang, "Hard sets", "Тяжёлые подходы")}</dt><dd className="fit-num">{summary.hardSets}</dd></div>
           </dl>
         )}
@@ -80,7 +80,7 @@ export function SessionSummary({ lang, summary, onDone, onReopen }: {
                   </div>
                   <p className="trk-sum-meta fit-num">
                     {e.topSet ? `${pick(lang, "Top set", "Лучший подход")} ${setText(e.topSet, ex, lang)}` : null}
-                    {e.e1rm > 0 ? ` · e1RM ${fmtKg(e.e1rm, lang)} ${kgLabel(lang)}` : ""}
+                    {e.e1rm > 0 ? ` · e1RM\u00a0${fmtKg(e.e1rm, lang)}\u00a0${kgLabel(lang)}` : ""}
                     {` · ${setsWord(e.sets, lang)}`}
                     {e.after ? ` · ${pick(lang, "next", "далее")} ${setText(e.after, ex, lang)}` : ""}
                     {hint && (e.topSet || e.after) ? ` · ${hint}` : ""}

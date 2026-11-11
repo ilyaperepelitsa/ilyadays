@@ -88,7 +88,7 @@
   :is(.button,.home-action.primary,.fit-button):not(.quiet,.ghost,.danger,.warn):not(:disabled):hover { background:var(--action-hover); color:var(--on-action); border-color:var(--action-hover); }
   :is(.home-action,.fit-button.quiet,.catalog-filter) { border-radius:9px; box-shadow:none; }
   :is(.food-main,.trip-create,.fit) :is(input,select,textarea):not([type=checkbox],[type=radio],[type=range]) { background:var(--field); border-color:var(--field-line); border-radius:8px; }
-  :is(.food-main,.trip-create,.fit) :is(input,textarea)::placeholder { color:var(--muted); opacity:.72; }
+  :is(.food-main,.trip-create,.fit) :is(input,textarea)::placeholder { color:var(--muted); opacity:1; }
   .fit-choice { background:var(--surface); box-shadow:none; border-radius:8px; font-weight:600; }
   .fit-choice[data-state=on] { color:var(--ink); border-color:var(--accent); background:var(--accent-soft); }
   .fit-choice:disabled { color:var(--muted); border-color:var(--field-line); }

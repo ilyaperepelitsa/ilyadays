@@ -18,8 +18,8 @@ import { enforcePlanPreferences, exerciseAllowed } from "./plan-preferences.mjs"
 import { effectiveLoad } from "./analytics.mjs";
 import { RULES, WARMUP, directGroups, finisherMinutes, slotParams, toIso, toMs, unitOf } from "./templates.mjs";
 import {
-  convertState, deloadSets, deloadWeek, e1rmOf, firstSessionTestProtocol, gapAdjust, holdActive, holdDay, incrementFor,
-  initialState, isAssisted, isCompound, joinText, nextState, substituteState, warmupRamp,
+  calendarDaysBetween, convertState, deloadSets, deloadWeek, e1rmOf, firstSessionTestProtocol, gapAdjust, holdActive, holdDay, incrementFor,
+  initialState, isAssisted, isCompound, joinText, nextState, roundLoad, substituteState, warmupRamp,
 } from "./progression.mjs";
 
 /** @typedef {import("./types").Exercise} Exercise */
@@ -48,7 +48,6 @@ import {
 /** Hours after which an active session counts as auto-closed (master plan §1, Settings.autoCloseHours). */
 export const AUTO_CLOSE_HOURS = 6;
 const HOUR_MS = 3_600_000;
-const DAY_MS = 86_400_000;
 
 /** @type {Record<string, { class: string, classes: string[], slice: string, pattern: string }>} */
 const REGISTRY_EXERCISES = /** @type {any} */ (registry.exercises);
@@ -170,6 +169,9 @@ export function nextDayKey(program, sessions, now) {
 
 /* ------------------------------------------------------------------ exercise resolution */
 
+/** @param {[number, number]} a @param {[number, number]} b */
+const sameRange = (a, b) => a[0] === b[0] && a[1] === b[1];
+
 /** Same registry class, or listed as an alternative: safe to stand in for the slot's exercise. @param {string} a @param {string} b @param {Catalog} catalog */
 function compatible(a, b, catalog) {
   if (a === b) return true;
@@ -196,38 +198,113 @@ export function resolveExercise(slot, gym, catalog = DEFAULT_CATALOG, program) {
   if (fits(prefs[slot.slotId])) return prefs[slot.slotId];
   if (fits(prefs[slot.exerciseId])) return prefs[slot.exerciseId];
   if (catalog.isAvailable(slot.exerciseId, gym)) return slot.exerciseId;
-  return catalog.alternativesFor(slot.exerciseId, gym).find((id) => !program || exerciseAllowed(program, catalog.exerciseById(id))) ?? slot.exerciseId;
+  const options = catalog.alternativesFor(slot.exerciseId, gym).filter((id) => !program || exerciseAllowed(program, catalog.exerciseById(id)));
+  // one exercise in two slots shares one progression memory: an alternative that no other slot of the program uses at
+  // a different rep range or RIR goes first
+  const taken = new Set(program
+    ? program.days.flatMap((d) => d.slots).filter((s) => s.slotId !== slot.slotId && (!sameRange(s.repRange, slot.repRange) || s.rir !== slot.rir)).map((s) => s.exerciseId)
+    : []);
+  return options.find((id) => !taken.has(id)) ?? options[0] ?? slot.exerciseId;
 }
+
+/**
+ * The prescription that owns the progression memory of an exercise standing in two slots of a program with different
+ * rep ranges or RIR (a gym fallback that could not avoid another slot's exercise): the slot whose own exercise it is,
+ * else the slot the stored state already follows. Null when `slot` is the only one, or is that owner. The other
+ * ("guest") slot derives its targets from the shared state and never rewrites it, so the two do not reset each other
+ * every session.
+ * @param {Program} program @param {ExerciseSlot | undefined} slot @param {string} exerciseId
+ * @param {ExerciseState | undefined} state @param {Gym | null | undefined} gym @param {Catalog} catalog
+ * @returns {{ repRange: [number, number], rir: number } | null}
+ */
+function sharedOwner(program, slot, exerciseId, state, gym, catalog) {
+  /** @type {{ repRange: [number, number], rir: number, native: boolean }[]} */
+  const others = [];
+  for (const day of program.days) {
+    for (const s of day.slots) {
+      if (slot && s.slotId === slot.slotId) continue;
+      if (s.exerciseId !== exerciseId && (!gym || resolveExercise(s, gym, catalog, program) !== exerciseId)) continue;
+      const own = catalog.exerciseById(s.exerciseId) ?? fallbackExercise(s.exerciseId, s);
+      const used = catalog.exerciseById(exerciseId) ?? fallbackExercise(exerciseId, s);
+      if (unitOf(own) !== unitOf(used)) continue;
+      others.push({ repRange: [s.repRange[0], s.repRange[1]], rir: s.rir, native: s.exerciseId === exerciseId });
+    }
+  }
+  if (!others.length) return null;
+  /** @param {{ repRange: [number, number], rir: number }} o */
+  const differs = (o) => !slot || !sameRange(o.repRange, slot.repRange) || o.rir !== slot.rir;
+  const mine = Boolean(slot && slot.exerciseId === exerciseId);
+  if (state) {
+    // the stored state already follows another slot's prescription
+    // (a slot's own exercise gives way only to another slot that has it as its own)
+    const follows = others.find((o) => (!mine || o.native) && sameRange(o.repRange, state.repRange) && o.rir === state.rir && differs(o));
+    return follows ? { repRange: follows.repRange, rir: follows.rir } : null;
+  }
+  if (mine) return null;
+  const native = others.find((o) => o.native && differs(o));
+  return native ? { repRange: native.repRange, rir: native.rir } : null;
+}
+
+/** @param {[number, number]} range @returns {Text2} */
+const sharedNote = (range) => ({
+  en: `This exercise also stands in another slot of the plan (${range[0]}–${range[1]}), and its progress is counted there: the targets here follow it.`,
+  ru: `Это упражнение стоит и в другом слоте плана (${range[0]}–${range[1]}), прогресс считается там: цели здесь идут за ним.`,
+});
 
 /* ------------------------------------------------------------------ planning */
 
-/** @param {[number, number]} a @param {[number, number]} b */
-const sameRange = (a, b) => a[0] === b[0] && a[1] === b[1];
+/**
+ * A state for an exercise with no progression memory of its own: seeded from the exercise it stands in for — the
+ * slot's own exercise at a gym that lacks it, else the exercise the slot held before a program-level swap
+ * (`slot.replaces`) — through substituteState, else a new one.
+ * @param {{ slot: ExerciseSlot | undefined, exercise: Exercise, range: [number, number], rir: number, states: Record<string, ExerciseState>, gym: Gym | null, bodyweightKg: number | null, goal: Program["goal"], now: Date | string | number | undefined, catalog: Catalog }} p
+ * @returns {ExerciseState}
+ */
+function seedState({ slot, exercise, range, rir, states, gym, bodyweightKg, goal, now, catalog }) {
+  for (const id of slot ? [slot.exerciseId, ...(Array.isArray(slot.replaces) ? slot.replaces : [])] : []) {
+    if (!id || id === exercise.id || !states[id]) continue;
+    const fromExercise = lookup(catalog, id, slot);
+    if (unitOf(exercise) !== unitOf(fromExercise)) continue;
+    return substituteState(states[id], fromExercise, exercise, { bodyweightKg, goal, now, gym, repRange: range, rir });
+  }
+  return initialState(exercise, { bodyweightKg, goal, now, repRange: range, rir, gym });
+}
+
+/** The state with its load on this gym's pin grid, rounded the easier way (42.5 kg earned on 2.5 kg steps is 40 kg on a 5 kg stack). @param {ExerciseState} state @param {Exercise} exercise @param {Gym | null} gym */
+function onGrid(state, exercise, gym) {
+  const kg = roundLoad(state.workingKg, exercise, gym, "easier");
+  return Math.abs(kg - state.workingKg) < 0.005 ? state : { ...state, workingKg: kg };
+}
 
 /**
- * The state the planner starts from for a slot: own state → substitute seeded from the slot exercise's state → new.
- * Ranges/RIR are converted when the slot changed (goal switch; the first session runs 5 % lighter, one rounding),
- * gaps are applied.
- * @param {{ slot: ExerciseSlot, exercise: Exercise, programExercise: Exercise, range: [number, number], states: Record<string, ExerciseState>, gym: Gym | null, bodyweightKg: number | null, goal: Program["goal"], now: Date | string | number | undefined, at: number }} p
+ * The state the planner starts from for a slot: own state → substitute seeded from the slot exercise's state (or the
+ * one a program-level swap replaced) → new. Ranges/RIR are converted when the slot changed (goal switch; the first
+ * session runs 5 % lighter, one rounding) — or, for an exercise that another slot of the program owns at a different
+ * prescription, derived from the shared state with no first-session cut — gaps are applied (local calendar days), and
+ * the load is snapped to this gym's pin grid.
+ * @param {{ program: Program, slot: ExerciseSlot, exercise: Exercise, range: [number, number], states: Record<string, ExerciseState>, gym: Gym | null, bodyweightKg: number | null, goal: Program["goal"], now: Date | string | number | undefined, at: number, catalog: Catalog }} p
  */
-function startingState({ slot, exercise, programExercise, range, states, gym, bodyweightKg, goal, now, at }) {
+function startingState({ program, slot, exercise, range, states, gym, bodyweightKg, goal, now, at, catalog }) {
   /** @type {Text2[]} */
   const notes = [];
   const rir = slot.rir;
   let state = states[exercise.id];
+  const owner = sharedOwner(program, slot, exercise.id, state, gym, catalog);
   if (!state) {
-    const from = exercise.id !== slot.exerciseId ? states[slot.exerciseId] : undefined;
-    state = from && unitOf(exercise) === unitOf(programExercise)
-      ? substituteState(from, programExercise, exercise, { bodyweightKg, goal, now, gym, repRange: range, rir })
-      : initialState(exercise, { bodyweightKg, goal, now, repRange: range, rir, gym });
+    state = seedState({ slot, exercise, range: owner?.repRange ?? range, rir: owner?.rir ?? rir, states, gym, bodyweightKg, goal, now, catalog });
   }
+  let shared = false;
   if (!sameRange(state.repRange, range) || state.rir !== rir) {
-    state = convertState(state, state.repRange, range, { rir, exercise, gym, bodyweightKg, now, factor: RULES.conversion.firstSessionFactor });
+    shared = owner != null;
+    const stored = state;
+    state = convertState(state, state.repRange, range, { rir, exercise, gym, bodyweightKg, now, factor: shared ? 1 : RULES.conversion.firstSessionFactor });
+    if (shared) state = { ...state, lastOutcome: stored.lastOutcome, note: sharedNote(stored.repRange) };
   }
   let gap = false;
   let gapReset = false;
   if (state.lastAt) {
-    const days = (at - toMs(state.lastAt)) / DAY_MS;
+    // local calendar days: one missed week is 14 whatever the clock time, and the break rule starts at 15
+    const days = calendarDaysBetween(state.lastAt, at);
     const g = gapAdjust(state, days, now, { exercise, gym, bodyweightKg });
     if (g.outcome && g.note) {
       state = g.state;
@@ -236,7 +313,7 @@ function startingState({ slot, exercise, programExercise, range, states, gym, bo
       gapReset = g.outcome === "reset";
     }
   }
-  return { state, notes, gap, gapReset };
+  return { state: onGrid(state, exercise, gym), notes, gap, gapReset };
 }
 
 /** @param {PlannedExercise[]} exercises @param {ProgramDay} day @param {Catalog} catalog */
@@ -357,7 +434,7 @@ export function planSession({ program, dayKey, states, gym = null, settings = nu
     /** @type {[number, number]} */
     const range = unitChanged ? [exercise.repRange[0], exercise.repRange[1]] : [slot.repRange[0], slot.repRange[1]];
     const { state, notes, gap, gapReset } = startingState({
-      slot, exercise, programExercise, range, states: stateMap, gym, bodyweightKg, goal: program.goal, now, at,
+      program, slot, exercise, range, states: stateMap, gym, bodyweightKg, goal: program.goal, now, at, catalog: cat,
     });
     const workingKg = state.workingKg;
     // a break already unloaded this exercise, and a first session is its test: no planned deload on top of either
@@ -579,22 +656,30 @@ export function applySession({ program, session, sets, states, catalog, now, set
     prev = session.plan ? session.plan.states[exerciseId] : prev;
     // An explicit hold set/cleared during the workout remains the owner's latest instruction.
     if (prev && live && "holdUntil" in live) prev = { ...prev, holdUntil: live.holdUntil };
+    const owner = sharedOwner(program, slot, exerciseId, prev, gym, cat);
     if (!prev) {
-      const from = slot && exerciseId !== slot.exerciseId ? prevStates[slot.exerciseId] : undefined;
-      prev = from && unitOf(exercise) === unitOf(programExercise)
-        ? substituteState(from, programExercise, exercise, { bodyweightKg, goal: program.goal, now, gym, repRange: params.repRange, rir: params.rir })
-        : initialState(exercise, { bodyweightKg, goal: program.goal, now, repRange: params.repRange, rir: params.rir, gym });
+      prev = seedState({ slot, exercise, range: owner?.repRange ?? params.repRange, rir: owner?.rir ?? params.rir, states: prevStates, gym, bodyweightKg, goal: program.goal, now, catalog: cat });
     }
-    let converted = false;
-    if (!sameRange(prev.repRange, params.repRange) || prev.rir !== params.rir) {
-      prev = convertState(prev, prev.repRange, params.repRange, { rir: params.rir, exercise, gym, bodyweightKg, now });
-      converted = true;
-    }
-    const gapDays = prev.lastAt ? (start - toMs(prev.lastAt)) / DAY_MS : 0;
+    const gapDays = prev.lastAt ? calendarDaysBetween(prev.lastAt, start) : 0;
     const gap = gapDays >= RULES.gap.keepBelowDays;
-    // judge the session against what planSession prescribed after the break (the reduced load; after ≥ 28 days the
-    // bottom of the range), not against the numbers from before it
-    if (gap) prev = gapAdjust(prev, gapDays, now, { exercise, gym, bodyweightKg }).state;
+    // the state as stored (its own range), which a planned deload week and a slot that only borrows the exercise keep
+    let stored = prev;
+    let converted = false;
+    let shared = false;
+    if (!sameRange(prev.repRange, params.repRange) || prev.rir !== params.rir) {
+      // another slot of the program owns this exercise at a different prescription: this session is judged against the
+      // targets derived from the shared state, and the state itself is not rewritten (no reset every session)
+      shared = owner != null;
+      prev = convertState(prev, prev.repRange, params.repRange, { rir: params.rir, exercise, gym, bodyweightKg, now });
+      converted = !shared;
+    }
+    // judge the session against what planSession prescribed after the break (the reduced load; after 29+ days the
+    // bottom of the range) on this gym's pin grid, not against the numbers from before it
+    if (gap) {
+      prev = gapAdjust(prev, gapDays, now, { exercise, gym, bodyweightKg }).state;
+      stored = gapAdjust(stored, gapDays, now, { exercise, gym, bodyweightKg }).state;
+    }
+    prev = onGrid(prev, exercise, gym);
     const times = group.sets.map((s) => s.doneAt).filter(Boolean).sort();
     const lastSet = times[times.length - 1];
     const at = lastSet && toMs(lastSet) >= start ? lastSet : toIso(start);
@@ -602,9 +687,12 @@ export function applySession({ program, session, sets, states, catalog, now, set
       /** @type {Text2} */
       const note = { en: "Deload week: no progression change — same targets next week.", ru: "Разгрузочная неделя: прогрессия на паузе — те же цели на следующей неделе." };
       /** @type {ExerciseState} */
-      const state = { ...prev, sessions: (prev.sessions ?? 0) + 1, lastAt: at, note, updatedAt };
+      // a slot that only borrows the exercise never rewrites its state, in a deload week either
+      const kept = shared ? stored : prev;
+      /** @type {ExerciseState} */
+      const state = { ...kept, sessions: (kept.sessions ?? 0) + 1, lastAt: at, note, updatedAt };
       // a weight hold that has passed is cleared, as nextState clears it
-      if (prev.holdUntil != null && !holdActive(prev, at)) state.holdUntil = null;
+      if (kept.holdUntil != null && !holdActive(kept, at)) state.holdUntil = null;
       next[exerciseId] = state;
       changed.push(state);
       outcomes.push({ exerciseId, slotId: group.slotId, outcome: "held", note });
@@ -626,6 +714,17 @@ export function applySession({ program, session, sets, states, catalog, now, set
     }
     // after a break or a goal switch the first session re-anchors the load, and misses do not count
     const r = nextState(prev, group.sets, params, exercise, now, { bodyweightKg, gym, calibration: gap || converted, at, plannedSets: planned > 0 ? planned : null });
+    if (shared) {
+      // a borrowed exercise: the session counts (date, best e1RM, a passed hold), the targets stay with their slot
+      const note = sharedNote(stored.repRange);
+      /** @type {ExerciseState} */
+      const state = { ...stored, e1rm: Math.max(stored.e1rm || 0, r.state.e1rm || 0), sessions: (stored.sessions ?? 0) + 1, lastAt: at, updatedAt };
+      if (stored.holdUntil != null && !holdActive(stored, at)) state.holdUntil = null;
+      next[exerciseId] = state;
+      changed.push(state);
+      outcomes.push({ exerciseId, slotId: group.slotId, outcome: "held", note });
+      continue;
+    }
     next[exerciseId] = r.state;
     changed.push(r.state);
     outcomes.push({ exerciseId, slotId: group.slotId, outcome: r.outcome, note: r.note });

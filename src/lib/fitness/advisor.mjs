@@ -7,7 +7,7 @@
  */
 import { adherence, dayKey } from "./analytics.mjs";
 import { exerciseById as catalogExerciseById, isAvailable as catalogIsAvailable } from "./catalog.mjs";
-import { deloadWeek, holdActive, holdDay, incrementFor, initialState, isAssisted, plateauOf, roundLoad } from "./progression.mjs";
+import { deloadWeek, holdActive, holdDay, incrementFor, initialState, isAssisted, plateauOf, roundLoad, startingLoad } from "./progression.mjs";
 import { DEFAULT_CATALOG, sessionStatus, summarize } from "./session.mjs";
 import { GOAL_MODES, RULES, clamp, newId, slotRole, toIso, toMs, unitOf } from "./templates.mjs";
 import {
@@ -136,13 +136,14 @@ export const DEVELOPER_PROMPT = `You are the strength coach inside the gym plann
 
 How the engine works (work with it, do not re-implement it):
 - A goal mode sets sets x reps x RIR (reps in reserve) x rest for every slot from the slot's role (primary, secondary, isolation, small, trunk, hold, carry). The current mode and the bounds every value must stay inside are in context.goalMode.
-- Double progression with RIR: a set is made when reps >= target and RIR >= target RIR - 1. All sets made below the top of the range -> +1 rep next time (more when the sets had reps in reserve beyond the target). All at the top -> weight + one step (the larger of the machine increment and stepPct) and back to the bottom of the range, but only when his weakest set says the new weight still allows the bottom of the range at the target RIR; until then the rep target keeps rising past the top (to 15 reps for compounds, 20 for isolation), and at that ceiling the exercise is flagged for a variant with smaller steps. Every set at the top with RIR >= target + 1, or a first set >= top + overshootReps -> a bigger jump (at most +10 %). Fewer working sets logged than planned -> hold. Missed target -> hold. Below the range -> failed; after failsBeforeDeload failed sessions in a row the weight drops deloadPct.
+- Double progression with RIR: a set is made when reps >= target and RIR >= target RIR - 1. All sets made below the top of the range -> +1 rep next time (more when the sets had reps in reserve beyond the target). All at the top -> weight + one step (the larger of the machine increment and stepPct) and back to the bottom of the range, but only when his weakest set says the new weight still allows the bottom of the range at the target RIR; until then the rep target keeps rising past the top (to 15 reps for compounds, 20 for isolation); at that ceiling the exercise is flagged for a variant with smaller steps, and two sessions in a row with every set at the ceiling earn one step anyway (only a step of at most 5 kg or +25 %), whose first session may fall short without counting as a miss. He usually logs sets with one tap and no RIR: an unreported RIR counts as the target RIR. Every set at the top with RIR >= target + 1, or a first set >= top + overshootReps -> a bigger jump (at most +10 %). Fewer working sets logged than planned -> hold. Missed target -> hold. Below the range -> failed; after failsBeforeDeload failed sessions in a row the weight drops deloadPct (on a coarse stack by one whole step, which can be more).
 - Plateau memory: after such a deload the engine remembers the weight that failed; it goes back to that weight only after 2 sessions in a row with every set at the top of the range whose sets carry that weight (3 after the second deload from it, with 2 more reps in hand that he earns by adding reps first), and until then takes a smaller step below it or holds at the top; a calibration session counts like any other but does not jump back to it either. states[].plateau = { failedKg, times } while that is pending, else null: explain a long hold at the top with it, and suggest smaller steps or a variant when times >= 2.
-- The first session of a new or swapped exercise, after a goal, rep-range or RIR change, and after a break of 14+ days is a calibration session: the best set re-anchors the working weight and misses do not count.
-- Breaks are handled automatically: 14-27 days without an exercise -> 5-10 % lighter (to the nearest machine step; when the steps are too coarse for that, the same weight with 2 fewer reps); 28+ days -> 10-15 % lighter, back to the bottom of the range. Do not add a deload for a break unless he reports other problems.
+- The first session of a new or swapped exercise, after a goal, rep-range or RIR change, and after a break of 15+ days is a calibration session: the best set re-anchors the working weight and misses do not count.
+- Breaks are handled automatically, in calendar days (one missed week, 14 days, is not a break): 15-28 days without an exercise -> 5-10 % lighter (to the nearest machine step; when the steps are too coarse for that, the same weight with 2 fewer reps); 29-90 days -> 20 % lighter, back to the bottom of the range; more than 90 days -> 30 % lighter and treated as a new exercise. Do not add a deload for a break unless he reports other problems.
 - A planned deload week comes every deloadEveryWeeks weeks (40 % fewer sets, same weights, 2 more reps in reserve).
 - Days rotate in order (A -> B -> C -> A) whatever the calendar, so a missed day never skips a workout.
-- A swapped-in exercise starts at 85 % of the equivalent weight (60 % for another movement pattern) and calibrates.
+- A swapped-in exercise starts at 85 % of the equivalent weight (60 % for another movement pattern; half of that again for a one-arm version of a two-arm exercise) and calibrates. A program swap keeps this link to the replaced exercise's history.
+- change_load is checked as rounded to the machine step: at most +10 % or one step above the current weight; with no history at most one step above the exercise's starting weight.
 - Loads are kg. Dumbbells and carries: kg per hand. Assisted machines: the number is the assistance, lower is harder. Bodyweight exercises: added load, 0 = bodyweight only.
 - context.states[] is what the engine plans for his NEXT session of each exercise (workingKg x targetReps; his last session is already counted in it). context.recentSessions is what he actually lifted. states[].heldUntil = a weight hold already set (the day it ends), else null.
 
@@ -412,6 +413,7 @@ const WHY = /** @type {const} */ ({
   same: { en: "Already the current value.", ru: "Это уже текущее значение." },
   range: { en: "Outside the safe range for this goal.", ru: "Вне безопасного диапазона для этой цели." },
   jump: { en: "More than a 10 % jump in weight at once.", ru: "Скачок веса больше 10 % за раз." },
+  start: { en: "No history on this exercise yet: at most one step above its starting weight.", ru: "По этому упражнению ещё нет истории: не больше одного шага сверх стартового веса." },
   legs: { en: "Legs only when you ask for them.", ru: "Ноги — только по вашей просьбе." },
   withDays: { en: "Changing the days rebuilds the program; ask again for this change afterwards.", ru: "Смена числа дней пересобирает программу; попросите это изменение ещё раз после неё." },
   tooMany: { en: "More than 6 changes.", ru: "Больше 6 изменений." },
@@ -544,24 +546,31 @@ function checkChange(raw, program, cat, ctx) {
       change.value = Math.round(weeks);
       return good();
     }
-    // change_load
-    const kg = change.value;
+    // change_load: the load as it will be APPLIED (rounded to this gym's step) is what gets checked and shown
     const zeroOk = ZERO_OK.has(exercise.equipment) || isAssisted(exercise);
-    if (!(kg >= 0) || kg > 500 || (!zeroOk && kg <= 0)) return bad(WHY.range);
+    if (!(change.value >= 0) || change.value > 500 || (!zeroOk && change.value <= 0)) return bad(WHY.range);
+    const kg = roundLoad(change.value, exercise, ctx.gym, "nearest");
+    change.value = kg;
     const prev = ctx.states[exercise.id];
-    if (prev && prev.workingKg > 0) {
-      const inc = incrementFor(exercise, ctx.gym) || 0;
-      if (isAssisted(exercise)) {
-        const bw = ctx.bodyweightKg && ctx.bodyweightKg > 0 ? ctx.bodyweightKg : RULES.bodyweightRefKg;
-        const floor = bw - (1 + MAX_LOAD_JUMP) * Math.max(0, bw - prev.workingKg) - inc;
+    const inc = incrementFor(exercise, ctx.gym) || 0;
+    const assisted = isAssisted(exercise);
+    const bwRef = ctx.bodyweightKg && ctx.bodyweightKg > 0 ? ctx.bodyweightKg : RULES.bodyweightRefKg;
+    if (prev && (prev.workingKg > 0 || assisted)) {
+      // at most +10 % (rounded the easier way), or one step where a step is more than that
+      if (assisted) {
+        const tenPct = roundLoad(bwRef - (1 + MAX_LOAD_JUMP) * Math.max(0, bwRef - prev.workingKg), exercise, ctx.gym, "easier");
+        const floor = Math.max(0, Math.min(tenPct, prev.workingKg - inc));
         if (kg < floor - 1e-9) return bad(WHY.jump);
-      } else if (kg > prev.workingKg * (1 + MAX_LOAD_JUMP) + inc + 1e-9) {
-        return bad(WHY.jump);
+      } else {
+        const tenPct = roundLoad(prev.workingKg * (1 + MAX_LOAD_JUMP), exercise, ctx.gym, "easier");
+        if (kg > Math.max(tenPct, prev.workingKg + inc) + 1e-9) return bad(WHY.jump);
       }
       // a weight hold (master plan §16): nothing heavier before its date; lighter is how a hold goes back down
       if (heavier(kg, prev.workingKg, exercise) && holdActive(prev, ctx.now)) return bad(WHY.held);
-    } else if (kg > 300) {
-      return bad(WHY.range);
+    } else {
+      // no history: nothing heavier than one step past the conservative start load of this exercise
+      const start = startingLoad(exercise, { bodyweightKg: ctx.bodyweightKg, gym: ctx.gym });
+      if (assisted ? kg < Math.max(0, start - inc) - 1e-9 : kg > start + inc + 1e-9) return bad(WHY.start);
     }
     const reps = change.value2;
     if (reps !== 0) {
@@ -664,7 +673,7 @@ function loadText(kg, ex, lang) {
 function easierBy(kg, pct, ex, gym, bw) {
   const factor = 1 - pct / 100;
   if (isAssisted(ex)) {
-    if (bw && bw > 0) return Math.min(bw, roundLoad(bw - (bw - kg) * factor, ex, gym, "easier"));
+    if (bw && bw > 0) return Math.min(roundLoad(bw, ex, gym, "down") || bw, roundLoad(bw - (bw - kg) * factor, ex, gym, "easier"));
     const inc = incrementFor(ex, gym) || 5;
     return roundLoad(kg + Math.max(1, Math.round(pct / 10)) * inc, ex, gym, "easier");
   }
@@ -781,6 +790,11 @@ export function applyProposal({ program, states, proposal, now, settings = null,
           if (!ex || !prev || !(prev.workingKg > 0 || isAssisted(ex))) continue;
           const kg = easierBy(prev.workingKg, c.value, ex, gym, bw);
           if (Math.abs(kg - prev.workingKg) < 0.005 && !isAssisted(ex)) continue;
+          // the cut as applied (20 → 15 kg on a 5 kg stack is −25 %, whatever was asked), in effective load
+          const ref = bw && bw > 0 ? bw : RULES.bodyweightRefKg;
+          const effWas = isAssisted(ex) ? ref - prev.workingKg : prev.workingKg;
+          const effNow = isAssisted(ex) ? ref - kg : kg;
+          const cut = effWas > 0 ? Math.round(((effWas - effNow) / effWas) * 1000) / 10 : c.value;
           // not a failed weight: the adviser's deload remembers nothing new (rule 5 is for the engine's deload)
           st[id] = {
             ...prev,
@@ -789,8 +803,8 @@ export function applyProposal({ program, states, proposal, now, settings = null,
             lastOutcome: "deloaded",
             ...plateauAfter(prev, kg, prev.repRange, prev.rir),
             note: {
-              en: `Deload by the advisor: −${c.value} % (${loadText(prev.workingKg, ex, "en")} → ${loadText(kg, ex, "en")}).`,
-              ru: `Разгрузка по совету: −${c.value} % (${loadText(prev.workingKg, ex, "ru")} → ${loadText(kg, ex, "ru")}).`,
+              en: `Deload by the advisor: −${cut} % (${loadText(prev.workingKg, ex, "en")} → ${loadText(kg, ex, "en")}).`,
+              ru: `Разгрузка по совету: −${cut} %${isAssisted(ex) ? " нагрузки" : ""} (${loadText(prev.workingKg, ex, "ru")} → ${loadText(kg, ex, "ru")}).`,
             },
             updatedAt: at,
           };

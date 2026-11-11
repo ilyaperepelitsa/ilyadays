@@ -56,8 +56,8 @@ export function AdherenceSection({ lang, data, now }: { lang: Lang; data: Progre
       <Caveat>
         {pick(
           lang,
-          `Counts started sessions (finished, still open or auto-closed after 6 h; abandoned ones do not count). The plan is your current ${a.daysPerWeek} days a week for every week shown. The streak counts back from the last complete week; this week extends it once it is met and never breaks it.`,
-          `Считаются начатые тренировки (завершённые, открытые и закрытые автоматически через 6 ч; брошенные не считаются). План\u00a0— нынешние ${a.daysPerWeek} дня в неделю для всех показанных недель. Серия считается от последней полной недели; текущая неделя продлевает её, когда план выполнен, и никогда не обрывает.`,
+          `Counts started sessions (finished, still open or auto-closed after 6 h; abandoned ones do not count). The plan is your current ${a.daysPerWeek} days a week for every week shown; the week of your first session plans only the days that were left in it. The streak counts back from the last complete week; this week extends it once it is met and never breaks it.`,
+          `Считаются начатые тренировки (завершённые, открытые и закрытые автоматически через 6 ч; брошенные не считаются). План\u00a0— нынешние ${a.daysPerWeek} дня в неделю для всех показанных недель; в неделю первой тренировки в план идут только оставшиеся в ней дни. Серия считается от последней полной недели; текущая неделя продлевает её, когда план выполнен, и никогда не обрывает.`,
         )}
       </Caveat>
     </Section>

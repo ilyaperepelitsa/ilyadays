@@ -606,7 +606,7 @@ describe('reopening a session from its summary (master plan §16)', () => {
 
 describe('planned working sets per exercise (plannedCounts, plannedOf; master plan §16 rule 4)', () => {
   /** Day A of the owner template with every machine: what End tells the engine was planned. */
-  const DAY_A = { 'machine-chest-press': 4, 'lat-pulldown': 3, 'pec-deck': 3, 'machine-row': 3, 'machine-shoulder-press': 3, 'machine-crunch': 3 };
+  const DAY_A = { 'machine-chest-press': 4, 'lat-pulldown': 2, 'pec-deck': 3, 'machine-row': 2, 'machine-shoulder-press': 2, 'machine-crunch': 3 };
   const GYM_ID = '33333333-3333-4333-8333-333333333333';
 
   it('counts the planned working rows of each exercise; added sets never count, skipped or removed ones change nothing', () => {

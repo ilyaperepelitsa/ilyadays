@@ -6,17 +6,10 @@ import { t2 } from "@/lib/fitness/i18n";
 import { EXERCISES, exerciseById } from "@/lib/fitness/catalog.mjs";
 import { FitnessNav, FitnessShell } from "@/components/fitness/Shell";
 import { ExerciseDetail } from "@/components/fitness/exercises/ExerciseDetail";
-import { exerciseMeta } from "./meta";
+import { clip, exerciseMeta } from "./meta";
 
 /** Every catalog id, for generateStaticParams. */
 export const exerciseParams = () => EXERCISES.map((e) => ({ id: e.id }));
-
-/** Shorten to ≤ max characters at a word boundary. */
-function clip(text: string, max = 158) {
-  if (text.length <= max) return text;
-  const cut = text.slice(0, max - 1);
-  return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), max - 30)).replace(/[\s,.;:—–-]+$/, "")}…`;
-}
 
 /** Title = exercise name, description = its setup text, link preview = its technique picture when there is one. */
 export function exerciseMetadata(lang: Lang, id: string): Metadata {

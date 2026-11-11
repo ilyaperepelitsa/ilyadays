@@ -40,6 +40,7 @@ import { exerciseById as catalogExerciseById, groupOfMuscle } from "./catalog.mj
  * @property {[number, number]} repRange  main-lift range
  * @property {number} rir
  * @property {{ start: number, target: number, max: number, unit?: string }} setsPerMuscleWeek
+ * @property {number} [prioritySetsBonus]  sets a priority slot gets on top of its role under this goal (default rules.prioritySetsBonus)
  * @property {{ compound: number, isolation: number }} restSec
  * @property {[number, number]} frequency  sessions per muscle per week
  * @property {number} blockWeeks  accumulation weeks before a planned deload week
@@ -57,6 +58,8 @@ import { exerciseById as catalogExerciseById, groupOfMuscle } from "./catalog.mj
  * @property {boolean} [priority]  +1 set, first in the day
  * @property {string} [superset]
  * @property {number} [setsAdj]
+ * @property {Partial<Record<GoalMode, number>>} [setsAdjByGoal]  sets taken off (or added) under one goal, so each goal's program stays inside its own weekly volume band
+ * @property {SlotRole[]} [partnerRoles]  roles of the other superset members, for a slot that is not a template row (convertProgram)
  * @property {number} [rirAdj]
  * @property {number} sets
  * @property {[number, number]} repRange
@@ -64,7 +67,6 @@ import { exerciseById as catalogExerciseById, groupOfMuscle } from "./catalog.mj
  * @property {number} restSec
  * @property {ProgressionRuleId} progression
  * @property {Text2} why
- * @property {number} [increment]  slot-level override of the exercise's increment
  */
 /** @typedef {{ key: string, name: Text2, focus: string[], finisher?: Text2, slots: TemplateSlot[] }} TemplateDay */
 /**
@@ -113,8 +115,9 @@ export const WARMUP_RAMP = raw.warmupRamp;
  *   repCeiling: { compound: number, isolation: number }, gapCut: { maxMultiple: number, repsMinus: number },
  *   plateau: { maxSessions: number, spareReps: number },
  *   doubleStepCapPct: number, calibrationExtraRir: number, startLoadFactor: number, bodyweightRefKg: number,
- *   bodyweightExponent: number, prioritySetsBonus: number, superset: { restDivisor: number, minRestSec: number },
- *   gap: { keepBelowDays: number, shortPct: [number, number], longFromDays: number, longPct: [number, number], longFullAtDays: number },
+ *   bodyweightExponent: number, prioritySetsBonus: number, superset: { restDivisor: number, minRestSec: number, heavyTopReps: number },
+ *   gap: { keepBelowDays: number, shortPct: [number, number], longFromDays: number, longPct: [number, number], longFullAtDays: number, newFromDays: number, newPct: number },
+ *   bigStep: { sessionsAtCeiling: number, maxSessions: number, maxKg: number, maxPct: number },
  *   conversion: { firstSessionFactor: number },
  *   deload: { setsMultiplier: number, loadMultiplier: number, rirBonus: number, repsMinus: number },
  *   substitution: { base: number, differentPattern: number, families: Record<string, string>, familyRatio: Record<string, number> },
@@ -246,9 +249,24 @@ export function progressionRecord(goal) {
   return out;
 }
 
+/** The other members of each template slot's superset (same day, same superset id). @type {WeakMap<object, SlotRole[]>} */
+const PARTNER_ROLES = new WeakMap();
+for (const tpl of TEMPLATES) {
+  for (const day of tpl.days) {
+    for (const slot of day.slots) {
+      if (slot.superset) PARTNER_ROLES.set(slot, day.slots.filter((o) => o !== slot && o.superset === slot.superset).map((o) => o.role));
+    }
+  }
+}
+
+/** A heavy low-rep prescription (top of the range ≤ rules.superset.heavyTopReps reps): it rests in full, never in a superset. @param {RolePrescription} role */
+const heavyRole = (role) => (role.unit ?? "reps") === "reps" && role.repRange[1] <= RULES.superset.heavyTopReps;
+
 /**
- * One program slot from a template slot under a goal: role prescription, +1 set when priority, setsAdj / rirAdj,
- * superset members rest max(60, rest ÷ 2).
+ * One program slot from a template slot under a goal: role prescription, the goal's priority bonus when priority
+ * (rules.prioritySetsBonus; a goal mode may set its own, strength 0), setsAdj and the goal's own setsAdjByGoal, rirAdj,
+ * superset members rest max(60, rest ÷ 2). A superset whose own or partner's range is heavy under this goal (3–6
+ * reps) is dropped: both rest in full.
  * @param {Pick<TemplateSlot, "slotId" | "exerciseId" | "role"> & Partial<TemplateSlot>} tslot
  * @param {GoalMode} goal
  * @param {RepUnit} [unit]
@@ -258,8 +276,11 @@ export function progressionRecord(goal) {
 export function deriveSlot(tslot, goal, unit, exercise) {
   const role = roleParams(goal, tslot.role);
   const u = unit ?? tslot.unit ?? role.unit ?? "reps";
-  const sets = clamp(role.sets + (tslot.priority ? RULES.prioritySetsBonus : 0) + (tslot.setsAdj ?? 0), 1, 5);
-  const restSec = tslot.superset
+  const bonus = modeParams(goal).prioritySetsBonus ?? RULES.prioritySetsBonus;
+  const sets = clamp(role.sets + (tslot.priority ? bonus : 0) + (tslot.setsAdj ?? 0) + (tslot.setsAdjByGoal?.[goal] ?? 0), 1, 5);
+  const partners = tslot.partnerRoles ?? PARTNER_ROLES.get(tslot) ?? [];
+  const paired = Boolean(tslot.superset) && !(u === "reps" && heavyRole(role)) && !partners.some((r) => heavyRole(roleParams(goal, r)));
+  const restSec = paired
     ? Math.max(RULES.superset.minRestSec, round5(role.restSec / RULES.superset.restDivisor))
     : role.restSec;
   /** @type {ExerciseSlot} */
@@ -273,9 +294,8 @@ export function deriveSlot(tslot, goal, unit, exercise) {
     progression: tslot.progression ?? "double",
   };
   if (tslot.priority) slot.priority = true;
-  if (tslot.superset) slot.superset = tslot.superset;
+  if (paired && tslot.superset) slot.superset = tslot.superset;
   if (tslot.why) slot.why = { en: tslot.why.en, ru: tslot.why.ru };
-  if (typeof tslot.increment === "number") slot.increment = tslot.increment;
   return slot;
 }
 
@@ -399,6 +419,17 @@ export function convertProgram(program, newGoal, now, { id, catalog } = {}) {
   if (!GOAL_IDS.includes(newGoal)) throw new Error(`Unknown goal mode "${newGoal}"`);
   const lookup = catalog ?? DEFAULT_LOOKUP;
   const at = toIso(now);
+  /**
+   * A slot's superset: its own, or the template's when the program's goal is why it has none (a heavy 3–6-rep slot is
+   * never supersetted, so a switch away from that goal pairs the slots again) @param {ExerciseSlot} slot
+   */
+  const supersetOf = (slot) => {
+    if (slot.superset) return slot.superset;
+    const tslot = templateSlotFor(program, slot.slotId);
+    if (!tslot?.superset) return undefined;
+    const heavy = [tslot.role, ...(PARTNER_ROLES.get(tslot) ?? [])].some((r) => heavyRole(roleParams(program.goal, r)));
+    return heavy ? tslot.superset : undefined;
+  };
   return enforcePlanPreferences({
     ...program,
     id: id ?? newId(),
@@ -411,18 +442,21 @@ export function convertProgram(program, newGoal, now, { id, catalog } = {}) {
         const exercise = lookup.exerciseById(slot.exerciseId) ?? null;
         const role = tslot?.role ?? slotRole(program, slot, lookup);
         const unit = exercise ? unitOf(exercise) : (tslot?.unit ?? roleParams(newGoal, role).unit ?? "reps");
+        const superset = supersetOf(slot);
         const next = deriveSlot({
           slotId: slot.slotId,
           exerciseId: slot.exerciseId,
           role,
           priority: slot.priority,
-          superset: slot.superset,
+          superset,
+          partnerRoles: superset ? day.slots.filter((o) => o !== slot && supersetOf(o) === superset).map((o) => templateSlotFor(program, o.slotId)?.role ?? slotRole(program, o, lookup)) : [],
           setsAdj: tslot?.setsAdj,
+          setsAdjByGoal: tslot?.setsAdjByGoal,
           rirAdj: tslot?.rirAdj,
           progression: slot.progression,
           why: slot.why,
-          increment: slot.increment,
         }, newGoal, unit, exercise);
+        if (Array.isArray(slot.replaces) && slot.replaces.length) next.replaces = [...slot.replaces];
         return next;
       }),
     })),

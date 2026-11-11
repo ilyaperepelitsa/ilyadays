@@ -261,7 +261,8 @@ function inline(src, ctx) {
       continue;
     }
     if (c === "[") {
-      const cite = citationAt(src, i);
+      // a link label is already inside <a>: "[1]" there stays text (a citation link would nest <a> in <a>)
+      const cite = ctx.links ? citationAt(src, i) : null;
       if (cite) {
         flush();
         out += citeHtml(cite.ids, ctx);

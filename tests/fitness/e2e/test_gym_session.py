@@ -187,6 +187,10 @@ def log_current(page, taps=None, reps_plus=0):
     session_id = tid(page, "session").get_attribute("data-session-id")
     row = row_at(page, s["slot"], s["kind"], s["index"])
     tap = taps.tap if taps else (lambda loc: loc.tap())
+    if reps_plus:
+        # Done sits at the bottom of the current card, so the next card's steppers can arrive where the thumb just
+        # tapped: the double-tap shield drops a tap there for a moment. Done is enabled again once the shield is over.
+        expect(tid(row, "set-done")).to_be_enabled()
     for i in range(reps_plus):
         tap(tid(row, "reps-plus"))
         expect(row).to_have_attribute("data-reps", num(s["reps"] + i + 1))

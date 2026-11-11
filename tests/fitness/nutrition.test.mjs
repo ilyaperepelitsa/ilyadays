@@ -155,8 +155,10 @@ describe("energy target", () => {
     assert.deepEqual(fast.warnings, ["pace-above-recommended", "deficit-over-max-kcal", "deficit-over-max-pct"]);
     const small = ok(energyTarget({ tdee: 1600, goal: "recomp", kg: 60, ratePctPerWeek: 1, bmr: 1300 }));
     assert.ok(small.warnings.includes("below-bmr"));
-    assert.deepEqual(ok(energyTarget({ tdee: T, goal: "recomp", kg: 80, ratePctPerWeek: 0.6 })).warnings, ["deficit-over-max-kcal"], "528 kcal: over 500, under 25 %");
-    assert.deepEqual(ok(energyTarget({ tdee: T, goal: "recomp", kg: 80, ratePctPerWeek: 0.75 })).warnings, ["deficit-over-max-kcal", "deficit-over-max-pct"]);
+    // at 80 kg the recommended pace tops out at 0.568 % (the 500 kcal deficit), so both warnings come together
+    assert.deepEqual(ok(energyTarget({ tdee: T, goal: "recomp", kg: 80, ratePctPerWeek: 0.6 })).warnings, ["pace-above-recommended", "deficit-over-max-kcal"], "528 kcal: over 500, under 25 %");
+    assert.deepEqual(ok(energyTarget({ tdee: T, goal: "recomp", kg: 80, ratePctPerWeek: 0.75 })).warnings, ["pace-above-recommended", "deficit-over-max-kcal", "deficit-over-max-pct"]);
+    assert.deepEqual(ok(energyTarget({ tdee: T, goal: "recomp", kg: 80, ratePctPerWeek: 0.55 })).warnings, []);
   });
 
   it("gain goals use 5,500 kcal per kg; maintenance goals eat at TDEE", () => {
@@ -280,9 +282,11 @@ describe("daily extras and the full plan", () => {
     assert.equal(withFat.timeline, null);
   });
 
-  it("an aggressive plan for a small person still computes, with warnings instead of an error", () => {
+  it("an aggressive plan for a small person still computes: floored at the BMR, marked not feasible", () => {
     const small = ok(nutritionPlan({ kg: 42, cm: 150, age: 70, sex: "female", activity: "sedentary", goal: "recomp", ratePctPerWeek: 1 }));
-    assert.ok(small.energy.kcal < 800);
+    assert.ok(small.energy.requestedKcal < 800);
+    assert.equal(small.energy.kcal, Math.ceil(small.bmr.kcal));
+    assert.equal(small.energy.feasible, false);
     assert.ok(small.warnings.includes("below-bmr"));
   });
 
@@ -548,13 +552,14 @@ describe("calculator inputs (inputs-core.mjs)", async () => {
 });
 
 describe("edge cases the calculator page meets", () => {
-  it("a pace that leaves under 500 kcal is an error the page explains ('slow it down'); a gentler pace computes", () => {
+  it("a pace that would leave under 500 kcal is floored at the BMR instead of failing; so is a gentler one under it", () => {
     const small = { kg: 30, cm: 120, age: 42, sex: "female", activity: "sedentary", goal: "recomp" };
     assert.equal(ok(bmrMifflin(small)).kcal, 679);
-    assert.deepEqual(nutritionPlan({ ...small, ratePctPerWeek: 1 }), { error: "kcal" });
+    const fast = ok(nutritionPlan({ ...small, ratePctPerWeek: 1 }));
+    assert.deepEqual([fast.energy.requestedKcal, fast.energy.kcal, fast.energy.feasible], [485, 679, false]);
     const gentle = ok(nutritionPlan({ ...small, ratePctPerWeek: 0.5 }));
-    assert.equal(gentle.energy.kcal, 650);
-    assert.deepEqual(gentle.warnings, ["below-bmr", "carbs-below-floor"]);
+    assert.deepEqual([gentle.energy.requestedKcal, gentle.energy.kcal, gentle.energy.feasible], [650, 679, false]);
+    assert.deepEqual(gentle.warnings, ["below-bmr"]);
     assert.deepEqual(nutritionPlan({ ...MAN, activity: "light", goal: "recomp", ratePctPerWeek: 2 }), { error: "ratePctPerWeek" });
   });
 
