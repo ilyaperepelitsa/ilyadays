@@ -1,4 +1,9 @@
 /* Readable reference tables; authored values, quantities and units remain unchanged. */
+.uses li.step-condition { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); }
+.uses .condition-value { min-width:0; overflow-wrap:anywhere; }
+.step-condition-detail { display:block; }
+.step-condition-detail + .step-condition-detail { margin-top:6px; }
+
 @media screen {
   .food-main .notes { grid-template-columns:minmax(0,1fr); }
   .food-main :is(.note,.recipe-main,.step-text) { min-width:0; }

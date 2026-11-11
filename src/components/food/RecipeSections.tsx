@@ -5,6 +5,7 @@ import type { Lang } from "@/lib/i18n";
 import { Html, Illo, Svg } from "./parts";
 import { Portions } from "./Portions";
 import { CookingHtml } from "./CookingHtml";
+import { stepConditions } from "@/lib/food/step-conditions.mjs";
 
 type T = (key: string) => string;
 
@@ -124,6 +125,7 @@ export function TimelineChart({ tl, t }: { tl: Timeline; t: T }) {
 
 function StepCard({ s, t, lang }: { s: Step; t: T; lang: Lang }) {
   const im = s.images;
+  const conditions = stepConditions(s);
   const hasArt = !!(im.photo || im.how.length || im.illustration || im.svg_fallback || im.diagram);
   return (
     <li className={`step${hasArt ? "" : " text-only"}`} id={s.id}>
@@ -163,11 +165,8 @@ function StepCard({ s, t, lang }: { s: Step; t: T; lang: Lang }) {
           <span className="step-n">{s.n}</span>
           {s.title}
         </h3>
-        <div className="chips">
-          {s.heat && <Html className={`chip ${s.heat.off ? "heat-off" : "heat"}`} html={s.heat.label_html} />}
-          {s.time_html && <Html className="chip time" html={s.time_html} />}
-        </div>
-        {s.uses_rows.length > 0 && (
+        {s.time_html && <div className="chips"><Html className="chip time" html={s.time_html} /></div>}
+        {(s.uses_rows.length > 0 || conditions.length > 0) && (
           <div className="uses">
             <h4>{t("For this step")}</h4>
             <ul>
@@ -175,6 +174,14 @@ function StepCard({ s, t, lang }: { s: Step; t: T; lang: Lang }) {
                 <li key={i}>
                   <Html html={u.name_html} />
                   <Html className="amt" html={u.amount_html} />
+                </li>
+              ))}
+              {conditions.map(condition => (
+                <li className="step-condition" key={condition.kind}>
+                  <span>{condition.kind === "heat"
+                    ? lang === "ru" ? "Нагрев / температура" : "Heat / temperature"
+                    : lang === "ru" ? "Температура" : "Temperature"}</span>
+                  <Html className="condition-value" html={condition.html} />
                 </li>
               ))}
             </ul>
