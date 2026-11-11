@@ -16,11 +16,19 @@ export function hierarchyCut(nodes,k){
  const active=new Set([nodes.length-1]);while(active.size<k){const id=Math.max(...active);active.delete(id);for(const child of nodes[id].children)active.add(child);}
  return [...active].sort((a,b)=>nodes[a].members[0]-nodes[b].members[0]);
 }
+/** A distance cut includes every merge at or below the threshold, including ties. */
+export function hierarchyCutAtDistance(nodes,threshold){
+ if(typeof threshold!=='number'||Number.isNaN(threshold))throw Error('Invalid cut distance');
+ const active=[],walk=id=>{const node=nodes[id];if(!node.children.length||node.distance<=threshold)active.push(id);else node.children.forEach(walk);};
+ walk(nodes.length-1);return active.sort((a,b)=>nodes[a].members[0]-nodes[b].members[0]);
+}
 export function hierarchyFrontier(nodes,root,depth=3){
  if(!nodes[root]||!Number.isInteger(depth)||depth<1||depth>5)throw Error('Invalid hierarchy viewport');
  const visible=[],edges=[],frontier=[];let row=0;
+ // Give every visible label its own row; near-equal merge distances otherwise
+ // stack ancestor labels over their children. Vertical spacing is layout only.
  const walk=(id,level)=>{const node=nodes[id];let y;
-  if(level===depth||!node.children.length){y=row++;frontier.push(id);}else{const children=node.children.map(child=>{const position=walk(child,level+1);edges.push({from:id,to:child});return position;});y=(children[0]+children[1])/2;}
+  if(level===depth||!node.children.length){y=row++;frontier.push(id);}else{walk(node.children[0],level+1);y=row++;walk(node.children[1],level+1);for(const child of node.children)edges.push({from:id,to:child});}
   visible.push({id,y});return y;
  };walk(root,0);return {visible,edges,frontier,rows:row};
 }

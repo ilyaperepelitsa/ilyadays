@@ -1,5 +1,8 @@
 # Master product and delivery plan
 
+**Current direction, 2026-11-11:** prioritize [the personal-constitution pilot](26-personal-constitution-and-theme-to-lesson-pilot.md), [Luna/Terra delegation and user-run batches](24-delivery-delegation-and-user-run-batches.md), and [constitutional/dataset research](25-constitutional-structure-and-comparison-corpora.md). This supersedes older fixture-only status descriptions below. Real embeddings already cover 488 Hays and 418 Casaubon numbered sections; Hays text stays private. The public pilot now contains eight Casaubon passages and five proposed lessons. Hierarchical discovery uses a merge-distance slider; editorial chapters and overlapping lessons remain separate. Deliver small reviewed slices; the user launches long jobs.
+
+
 ## Product outcome
 
 Aurelius should make an editorial argument inspectable. A reader selects a principle, sees what it means, sees what wording expresses it, and follows every substantive assertion back through reviewed reasoning to exact source passages. The result is a concentrated book of teachings reconstructed from Meditations, with limits and tensions retained.

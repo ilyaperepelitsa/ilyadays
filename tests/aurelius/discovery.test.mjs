@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import { upgradeFixture } from '../../src/lib/aurelius/upgrade.mjs';
 import { sourceIntervals,targetIntervals,sourceGradient } from '../../src/lib/aurelius/provenance.mjs';
 import { applyCommand,plainDoc } from '../../src/lib/aurelius/domain.mjs';
-import {hierarchyIndex,hierarchyCut,hierarchyFrontier,validateReferenceDiscovery} from '../../src/lib/aurelius/discovery.mjs';
+import {hierarchyIndex,hierarchyCut,hierarchyCutAtDistance,hierarchyFrontier,validateReferenceDiscovery} from '../../src/lib/aurelius/discovery.mjs';
 const seed=()=>JSON.parse(fs.readFileSync(new URL('../../content/aurelius/fixture.json',import.meta.url),'utf8'));
 const artifact=JSON.parse(fs.readFileSync(new URL('../../content/aurelius/analysis.json',import.meta.url),'utf8'));
 const command=(w,type,payload,id='discovery-command')=>({id,type,payload,expected_version:w.version,at:'2026-11-10T00:00:00Z'});
@@ -23,6 +23,7 @@ test('stored hierarchies expose nested branches and depth-limited views without 
  const run={children:[[0,1],[2,3],[4,5]],distances:[.1,.2,.7]},nodes=hierarchyIndex(run,4);
  assert.deepEqual(nodes[6].members,[0,1,2,3]);assert.equal(nodes[0].parent,4);assert.deepEqual(hierarchyCut(nodes,2),[4,5]);assert.deepEqual(hierarchyCut(nodes,3),[4,2,3]);
  const view=hierarchyFrontier(nodes,6,1);assert.deepEqual(view.frontier,[4,5]);assert.deepEqual(view.frontier.flatMap(id=>nodes[id].members),[0,1,2,3]);
+ assert.equal(new Set(view.visible.map(n=>n.y)).size,view.visible.length);assert.equal(view.rows,view.visible.length);
  assert.deepEqual(hierarchyFrontier(nodes,4,1).frontier,[0,1]);
  for(const bad of [{...run,children:[[0,1],[0,2],[4,5]]},{...run,children:[[0,5],[2,3],[4,5]]},{...run,distances:[.1,.2,.05]}])assert.throws(()=>hierarchyIndex(bad,4));
 });
@@ -37,3 +38,11 @@ test('real comparison artifacts retain the original baseline and reject fabricat
   const bad=structuredClone(a);bad.hierarchy.neighbors[0][0].index=0;assert.throws(()=>validateReferenceDiscovery(bad),/neighbors/);
  }
 });
+
+ test('distance cuts include tied merges atomically and preserve all leaves',()=>{
+ const nodes=hierarchyIndex({children:[[0,1],[2,3],[4,5]],distances:[.2,.2,.7]},4);
+ assert.deepEqual(hierarchyCutAtDistance(nodes,-Infinity),[0,1,2,3]);
+ assert.deepEqual(hierarchyCutAtDistance(nodes,.2),[4,5]);
+ assert.deepEqual(hierarchyCutAtDistance(nodes,.7),[6]);
+ assert.throws(()=>hierarchyCutAtDistance(nodes,NaN));
+ });

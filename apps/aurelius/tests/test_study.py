@@ -15,8 +15,9 @@ def test_actual_backup_study_has_joint_premises_a_visible_bridge_and_no_automati
     w=validate_workspace(backup())
     assert w['corpus_kind']=='public_domain_backup'
     assert w['editions'][0]['translator']=='Meric Casaubon'
-    assert {(p['book'],p['section']) for p in w['passages']}=={('5','6'),('6','5'),('6','49'),('1','15')}
-    current=next(r for r in w['revisions'] if r['id']==w['study_catalog']['default_id']+':r1')
+    assert {(p['book'],p['section']) for p in w['passages']}=={('5','6'),('6','5'),('6','49'),('1','15'),('8','12'),('9','13'),('5','16'),('5','20')}
+    assert w['study_catalog']['default_id']=='casaubon-gutenberg-2680-ordinary-impressions'
+    current=next(r for r in w['revisions'] if r['id']=='casaubon-gutenberg-2680-social-purpose:r1')
     assert len(current['synthesis']['premises'])==3
     assert current['synthesis']['interpretive_step']
     assert 'do not themselves state' in current['synthesis']['what_changes']
@@ -51,13 +52,13 @@ def test_source_reasons_preserve_an_objection_and_an_unexplained_prescription():
     assert {r['kind'] for r in w['source_arguments']}=={'explicit_reason','analogy','reason_not_stated'}
     assert any('objection-and-reply' in r['limits'] for r in w['source_arguments'])
     assert any('does not explain why' in r['summary'] for r in w['source_arguments'])
-    explanatory=next(e for e in w['expressions'] if e['title']=='Explanation with source reasons')
+    explanatory=next(e for e in w['expressions'] if e['id']=='casaubon-gutenberg-2680-social-purpose-expression')
     text=next(r['text'] for r in w['revisions'] if r['id']==explanatory['current'])
     assert 'vine' in text and 'Read together' in text and 'rational awareness' in text
 
 
 def test_revised_core_preserves_the_functional_reason_and_its_limits():
-    w=validate_workspace(backup());primary=w['study_catalog']['default_id']
+    w=validate_workspace(backup());primary='casaubon-gutenberg-2680-social-purpose'
     target=next(c['current'] for c in w['conclusions'] if c['id']==primary)
     current=next(r for r in w['revisions'] if r['id']==target)
     arguments=[a for a in w['source_arguments'] if a['target_revision']==target]
@@ -82,16 +83,16 @@ def test_adding_reasons_keeps_old_editorial_revisions_locks_and_reviews(tmp_path
     Store(tmp_path/'data',source)
     source.write_text(json.dumps(seed))
     store=Store(tmp_path/'data',source);upgraded=store.state()
-    assert upgraded['version']==11 and upgraded['study_revision']==2
+    assert upgraded['version']==11 and upgraded['study_revision']==3
     assert all(c in upgraded['conclusions'] for c in legacy['conclusions'])
     assert upgraded['study_catalog']['default_id'] in {c['id'] for c in upgraded['conclusions']}
     assert upgraded['revisions'][:3]==legacy['revisions']
     assert upgraded['assessments'][legacy['conclusions'][0]['current']]==legacy['assessments'][legacy['conclusions'][0]['current']]
-    assert len(upgraded['source_arguments'])==9
+    assert len(upgraded['source_arguments'])==len(seed['source_arguments'])
     assert all(a['status']=='proposed' for a in upgraded['source_arguments'])
     assert Store(tmp_path/'data',source).state()==upgraded
     with store.connect() as db:
-        assert db.execute('SELECT count(*) FROM source_argument_spans').fetchone()[0]==9
+        assert db.execute('SELECT count(*) FROM source_argument_spans').fetchone()[0]==len(seed['source_arguments'])
         with pytest.raises(sqlite3.IntegrityError,match='immutable'):
             db.execute('UPDATE source_arguments SET payload_json=?',('{}',))
 

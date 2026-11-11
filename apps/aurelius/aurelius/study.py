@@ -191,4 +191,5 @@ def manual_study(corpus, file_hash, public_slice=False):
                         'revision_note':'The first proposal forced reciprocity, revenge and common good into one rule. It is retained for comparison; the revised studies separate their evidential roles.'}
     w['concepts'].extend([{'id':f'{prefix}-social-purpose-theme','name':'Social purpose and giving','definition':'Cooperation as a natural function and the motivation of a good turn.','inclusion':'A claim about cooperation, giving or conscious social action.','exclusion':'Revenge and shared-good analogies need their own evidential roles.','parents':[]}])
     w['memberships'].append({'id':f'{prefix}-fellow-membership','passage_id':fellow['id'],'concept_id':f'{prefix}-social-purpose-theme','rationale':'Source premise about cooperation.','review_state':'proposed'})
-    return w
+    from .book_study import extend_book_study
+    return extend_book_study(w, corpus)

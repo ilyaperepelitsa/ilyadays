@@ -153,3 +153,8 @@
 .au-neighbors li > span { font-size: .72rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .au-discovery-view { display: flex; gap: 6px; margin: 14px 0; }
 .au-discovery-view button[aria-pressed=true] { background: var(--action); color: var(--on-action); }
+
+.au-cut-control { flex: 1; min-width: 220px; }
+.au-cut-control strong, .au-cut-control small { display: block; }
+.au-cut-control input[type="range"] { width: 100%; }
+.au-tree-canvas .au-tree-cut-line { stroke: var(--accent, #487fb7); stroke-width: 2; stroke-dasharray: 6 4; }

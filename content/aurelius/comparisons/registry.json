@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-11",
+  "purpose": "Metadata-only registry of constitutional structure comparators and existing embedding datasets. Locally cached text samples are excluded from version control under .aurelius/comparisons/.",
+  "source_policy": "Do not redistribute cached legal texts or third-party datasets based on this registry. Verify source version and rights before processing or publishing.",
+  "constitutional_texts": [
+    {
+      "id": "germany-basic-law-en",
+      "title": "Basic Law for the Federal Republic of Germany",
+      "jurisdiction": "Germany",
+      "language": "English translation",
+      "source_url": "https://www.gesetze-im-internet.de/englisch_gg/index.html",
+      "source_authority": "Federal Ministry of Justice / Federal Office of Justice; translation in cooperation with German Bundestag Language Service",
+      "version_note": "English translation includes amendments through 2025-03-22; source warns German text may be more current.",
+      "structure": "Preamble and article-structured HTML; rights section includes application, limits and remedies; amendment provision Article 79.",
+      "cached_sample": ".aurelius/comparisons/germany-basic-law-english.html",
+      "cached_at": "2026-11-11",
+      "rights_note": "Official translation; terms for use are linked from the source's Translations notice and were not independently confirmed for redistribution. Local inspection copy only.",
+      "reuse_status": "inspect_only"
+    },
+    {
+      "id": "south-africa-constitution-ch1-en",
+      "title": "Constitution of the Republic of South Africa, 1996, Chapter 1: Founding Provisions",
+      "jurisdiction": "South Africa",
+      "language": "English",
+      "source_url": "https://www.justice.gov.za/constitution/chp01.html",
+      "source_authority": "Department of Justice and Constitutional Development",
+      "version_note": "Source page states text as at 2026-05-07; consult the Department's chapter index for other sections. A separate full-text translation/PDF page notes image-PDF format for its downloads.",
+      "structure": "Readable HTML with numbered sections and subsections; part of a chapter-organized constitution.",
+      "cached_sample": ".aurelius/comparisons/south-africa-chapter-1.html",
+      "cached_at": "2026-11-11",
+      "rights_note": "Source page carries Department of Justice copyright notice. Local inspection copy only; no reuse/redistribution permission inferred.",
+      "reuse_status": "inspect_only"
+    },
+    {
+      "id": "india-constitution-en-2025",
+      "title": "The Constitution of India",
+      "jurisdiction": "India",
+      "language": "English/Kannada diglot edition; the English text is article structured",
+      "source_url": "https://www.legislative.gov.in/static/uploads/2025/07/359f70a69695affb9d72f8393102bd2e.pdf",
+      "source_authority": "Government of India, Ministry of Law and Justice, Legislative Department; the edition preface says the text was vetted by the Official Languages Wing and updated through the 106th Amendment.",
+      "version_note": "Edition states as on 2025-11-11.",
+      "structure": "Parts and numbered articles, including Part III fundamental rights, Part IVA fundamental duties, and Part XX amendment procedure.",
+      "cached_sample": null,
+      "rights_note": "Official government edition; PDF shows Government of India copyright. No redistribution or open license reviewed.",
+      "reuse_status": "metadata_only"
+    }
+  ],
+  "embedding_datasets": [
+    {
+      "id": "byu-idaho-contextual-embeddings",
+      "title": "Standard Works — Contextual Retrieval Embeddings",
+      "url": "https://huggingface.co/datasets/BYU-Idaho/Contextual-Embeddings",
+      "kind": "religious_text",
+      "corpus": "Bible Old and New Testaments, Book of Mormon, Doctrine and Covenants, Pearl of Great Price",
+      "rows": 41995,
+      "model": "text-embedding-3-large",
+      "dimensions": 3072,
+      "chunking": "Verse rows embed contextual_text: generated chapter summary/context plus verse; not bare verse text.",
+      "license": "CC BY 4.0 for chapter summaries, embeddings and dataset arrangement; source card describes verse editions as public domain.",
+      "compatibility": "same published model and full dimension; input construction differs from bare canonical passages",
+      "artifact_status": "downloadable Hugging Face dataset; not downloaded into this repository",
+      "verification_note": "Published card gives model, width, granularity, context recipe and license. Exact OpenAI API request/version metadata was not independently verified."
+    },
+    {
+      "id": "promehedi-quran-embeddings",
+      "title": "Quran Embeddings Dataset",
+      "url": "https://huggingface.co/datasets/promehedi/quran_embeddings",
+      "kind": "religious_text",
+      "corpus": "Quran, 6236 ayah rows with Arabic and English text fields",
+      "rows": 6236,
+      "model": "OpenAI embedding model (exact model identifier unknown)",
+      "dimensions": 1536,
+      "chunking": "One vector per ayah per dataset card; exact input construction unknown.",
+      "license": "Unresolved: dataset card declares MIT; README restricts use to research, education and non-commercial purposes.",
+      "compatibility": "not compatible with full 3072-dimensional text-embedding-3-large configuration; model/provenance and license conflict need resolution",
+      "artifact_status": "public Hugging Face dataset; not downloaded into this repository",
+      "verification_note": "Embedding sequence width is shown as 1536. README says OpenAI without naming the model."
+    },
+    {
+      "id": "dhlak-legal-chroma-embeddings",
+      "title": "US & Iowa Legal Embeddings (RAG-Optimized)",
+      "url": "https://huggingface.co/datasets/dhlak/legal_chroma_embeddings",
+      "kind": "constitution_and_legal_text",
+      "corpus": "Includes US Constitution (129 chunks) and Iowa Constitution (288 chunks), plus other US/Iowa law",
+      "model": "bge-m3",
+      "dimensions": "not specified in reviewed card",
+      "chunking": "Chunk-level; Iowa law segmented with Gemini 2.0 Flash; other collections use structure-aware headings/sections/boundaries.",
+      "license": "Hugging Face card labels license other; README says source materials are government publications and most content public domain. Exact dataset reuse terms unknown.",
+      "compatibility": "not compatible: different embedding model; equal dimensionality would not make vectors comparable",
+      "artifact_status": "public Hugging Face dataset; large Chroma artifact, not downloaded into this repository",
+      "verification_note": "The dataset includes constitution corpora, but is not a model-space match for OpenAI text-embedding-3-large."
+    },
+    {
+      "id": "clarus-sacred-text-rag",
+      "title": "Clarus sacred-text RAG project",
+      "url": "https://github.com/aliozdenisik/Clarus",
+      "kind": "religious_text_project",
+      "corpus": "README reports Quran and Bible collections across English and Turkish editions",
+      "rows": "about 123000 vectors claimed in README",
+      "model": "text-embedding-3-large (README claim)",
+      "dimensions": 3072,
+      "chunking": "Semantic grouping of verses that preserves scripture boundaries (README claim).",
+      "license": "Code MIT; upstream text/data rights remain distinct and are not comprehensively established by code license.",
+      "compatibility": "same published model and full dimensions claimed; not cleared because a distributable vector artifact and per-vector input provenance were not verified",
+      "artifact_status": "project describes a Qdrant runtime index; reusable downloadable vector artifact not verified",
+      "verification_note": "Research lead only; do not treat README model statement as sufficient provenance for imported vectors."
+    }
+  ],
+  "comparison_caveat": "Do not compare vectors from different embedding models. Matching model name and width are necessary but not sufficient: preserve model/version/configuration, input construction, chunk boundaries, preprocessing, and source/license provenance."
+}

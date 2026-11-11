@@ -1,5 +1,8 @@
 # Executable backlog, dependencies and session continuity
 
+**Current direction, 2026-11-11:** prioritize [the personal-constitution pilot](26-personal-constitution-and-theme-to-lesson-pilot.md), [Luna/Terra delegation and user-run batches](24-delivery-delegation-and-user-run-batches.md), and [constitutional/dataset research](25-constitutional-structure-and-comparison-corpora.md). This supersedes older fixture-only status descriptions below. Real embeddings already cover 488 Hays and 418 Casaubon numbered sections; Hays text stays private. The public pilot now contains eight Casaubon passages and five proposed lessons. Hierarchical discovery uses a merge-distance slider; editorial chapters and overlapping lessons remain separate. Deliver small reviewed slices; the user launches long jobs.
+
+
 ## Planning status
 
 These are implementation work packages, not completed features. The current deliverable is the planning dossier. Use the requirement IDs in plan 01 and the acceptance gates in each specialist plan when implementing them.

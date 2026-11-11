@@ -49,3 +49,14 @@ A real projection consumes a complete cached source matrix and records its full 
 ## ADR 006 — Completed production embedding boundary
 
 The authorized source job executed through a protected immutable Vercel production deployment with a sensitive production-only OpenAI key. Direct OpenAI access bypasses the earlier Gateway free-tier model restriction without substituting the model. A hash-only source allowlist, fixed model/dimensions, per-request limits, durable local budget reservations and a fixed expiry bound execution. The executor is disabled after completion. Native deployment protection remains enabled and custom-domain paid routes return 404. Full source/vector arrays stay in ignored private storage; public maps contain references and 2D coordinates. The actual full matrices and fitted transforms are audited independently of model mocks.
+
+
+## ADR: editorial book independent of similarity partitions (2026-11-11)
+
+A distance-cut dendrogram explores the full stored cosine hierarchy, with atomic ties. Complete linkage is the initial exploratory method; average remains visible. Start below the root rather than selecting an arbitrary six groups. A unique display row per visible node prevents label collisions; horizontal positions retain actual merge distances. Computational group membership never changes evidence or theme decisions.
+
+The separate book constructor groups stable lesson entities into ordered, editable chapters, allowing repeated placements. A saved manuscript revision freezes conclusion and expression revisions; saving never approves content. `manuscript` commands pass through the shared browser/SQLite domain validator, optimistic concurrency and immutable history. Migration 006 adds immutable manuscript records and relational lesson references. Source or expression edits leave frozen book wording intact with an explicit older-revision status; refreshing a placement is deliberate and requires review.
+
+The eight-passage public Casaubon pilot demonstrates ordinary judgment versus judgment in distress, shared evidence, independent theme memberships, author-given reasons, editorial bridges and directive variants. Hays remains private and is not relabeled with Casaubon numbering. This is a manually authored pilot, not automated full-corpus coverage.
+
+External constitutions/scripture stay separate from Marcus's evidence. Their registry records source/rights and model/input compatibility; matched dimensions alone are insufficient. Long runs belong to the user-launched shell runner. It orchestrates local stages with tqdm/checkpoints; bounded paid synthesis stages remain to be implemented under explicit budgets.

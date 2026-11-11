@@ -1,3 +1,4 @@
+import { saveBook } from './book.mjs';
 /** Pure Stage 1 rules. Browser demo uses these; the local service enforces the same command contract. */
 export const RELATIONS = ['supports','qualifies','challenges','illustrates','depends_on','paraphrases','editorial_extrapolation'];
 export const INTERPRETATIONS = ['direct_statement','close_paraphrase','multi_passage_synthesis','editorial_inference','modern_application'];
@@ -78,6 +79,7 @@ export async function applyCommand(input,command) {
   const w=structuredClone(input),a=command.payload??{},op=command.id;
   const e=a.entity_id?entity(w,a.entity_id):null;
   switch(command.type){
+    case 'manuscript':saveBook(w,a,command);break;
     case 'create': {
       requireText(a.title,'Title');requireText(a.text,'Statement');
       const id=`${op}-conclusion`,rid=`${op}-revision`,doc=plainDoc(a.text,op);

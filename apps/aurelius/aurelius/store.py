@@ -60,6 +60,27 @@ def validate_workspace(value):
             raise ValueError('Invalid exact target mapping')
         if not mapping['source_span_ids'] or any(sid not in {s['id'] for s in workspace['spans']} for sid in mapping['source_span_ids']):
             raise ValueError('Unknown target-mapping source')
+    book_seen=set()
+    for book in workspace['manuscript_revisions']:
+        if book['id'] in book_seen or (book['parent_id'] and book['parent_id'] not in book_seen) or book['status']!='draft':
+            raise ValueError('Invalid manuscript revision lineage')
+        book_seen.add(book['id'])
+        chapters=set()
+        for chapter in book['chapters']:
+            if chapter['id'] in chapters:
+                raise ValueError('Duplicate manuscript chapter')
+            chapters.add(chapter['id']);lessons=set()
+            for lesson in chapter['lessons']:
+                r=next((r for r in workspace['revisions'] if r['id']==lesson['conclusion_revision']),None)
+                if not r or r['kind']!='conclusion' or r['entity_id']!=lesson['conclusion_id'] or r['entity_id'] in lessons:
+                    raise ValueError('Invalid manuscript lesson reference')
+                lessons.add(r['entity_id'])
+                if lesson['expression_revision']:
+                    e=next((e for e in workspace['revisions'] if e['id']==lesson['expression_revision']),None)
+                    if not e or e['kind']!='expression' or r['id'] not in e['dependencies']:
+                        raise ValueError('Invalid manuscript expression reference')
+    if workspace['manuscript_current'] and workspace['manuscript_current'] not in book_seen:
+        raise ValueError('Unknown current manuscript revision')
     return workspace
 
 
@@ -224,6 +245,11 @@ class Store:
             for piece in a['document']['markup']['pieces']:
                 s=a['document']['anchors'][piece['id']]
                 db.execute('INSERT OR IGNORE INTO annotation_pieces VALUES (?,?,?,?,?,?,?)',(a['id'],piece['id'],s['passage_revision'],s['start'],s['end'],s['exact'],encode(piece)))
+        for book in w.get('manuscript_revisions', []):
+            db.execute('INSERT OR IGNORE INTO manuscript_revisions VALUES (?,?,?)',(book['id'],book['parent_id'],encode(book)))
+            for chapter in book['chapters']:
+                for position,lesson in enumerate(chapter['lessons']):
+                    db.execute('INSERT OR IGNORE INTO manuscript_lessons VALUES (?,?,?,?,?)',(book['id'],chapter['id'],position,lesson['conclusion_revision'],lesson['expression_revision']))
         for e in w['events']:
             db.execute('INSERT OR IGNORE INTO events VALUES (?,?,?)', (e['id'], w['version'], encode(e)))
         payload = encode(w)

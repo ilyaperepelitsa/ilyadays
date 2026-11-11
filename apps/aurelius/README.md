@@ -13,7 +13,7 @@ Open **http://127.0.0.1:3150/stoicism**. The launcher uses [uv](https://docs.ast
 
 The private database is `.aurelius/aurelius.sqlite3`. Books belong under `.aurelius/imports/`; extracted full text and private exports must also remain inside ignored storage. The numbered plain-text importer is implemented; EPUB/PDF import is future work. `config.example.json` records disabled-by-default processing. The explicit CLI can run approved cached embeddings; ordinary setup, editing and tests need no credentials or paid API calls.
 
-The regular site build serves a browser-only, four-passage Casaubon study with three current teachings and a retained previous proposal with IndexedDB persistence; the original synthetic demonstration remains at `?corpus=demo`. It has no private API proxy and cannot import a private book. The local service does not silently fall back to browser storage after a connection failure. SQLite commits commands with optimistic concurrency, relational provenance tables, immutable source/revision records and versioned recovery snapshots. One local Node command engine is shared with the browser demo; Python independently checks exact scalar anchors and derivation order. Node receives text over a private stdin pipe, never shell arguments.
+The regular site build serves a browser-only, eight-passage Casaubon study with five current teachings and a retained previous proposal with IndexedDB persistence; the original synthetic demonstration remains at `?corpus=demo`. It has no private API proxy and cannot import a private book. The local service does not silently fall back to browser storage after a connection failure. SQLite commits commands with optimistic concurrency, relational provenance tables, immutable source/revision records and versioned recovery snapshots. One local Node command engine is shared with the browser demo; Python independently checks exact scalar anchors and derivation order. Node receives text over a private stdin pipe, never shell arguments.
 
 ## First demonstration
 
@@ -141,3 +141,12 @@ npm run aurelius:corpus -- export-map --corpus-dir IMPORT_DIR
 ```
 
 For the backup export, pass `--output content/aurelius/backup-map.json`. Private hierarchy files are versioned by their own run IDs. The original computational baseline and all editorial memberships/decisions remain separate.
+
+
+## Book and hierarchy pilot
+
+Open `/stoicism#book` for the personal-constitution outline. Chapters contain distinct lessons with shared evidence, directive formulations, author-given reasons, limits and provenance. Rename/add/reorder chapters and assign a lesson to several chapters. Saving creates an immutable structural revision with exact meaning/wording references. Later edits show an older-revision status until deliberately refreshed. The pilot is hand-authored and unapproved; full-corpus synthesis is not implemented.
+
+Open `/stoicism?view=hierarchy#discovery` for the source dendrogram and merge-distance slider. It starts just below the root merge, uses complete linkage initially and retains average as a baseline. Equal heights merge together; sliding does not recompute vectors or PCA. Theme membership, evidence support and manuscript placement remain independent.
+
+Inspect local stages with `scripts/aurelius-run.sh --action hierarchy` (dry-run). Add `--run --max-items 1` for one imported corpus, or select it explicitly with `--corpus-dir .aurelius/corpora/IMPORT_ID`. Use `--full` for all discovered imports. Resume using the printed `--resume RUN_ID` and the same action/mode. The runner shows per-corpus tqdm progress and checkpoints failures/cancellation; unchanged completed stages are skipped. It never calls a model or bypasses embedding consent. The `study` stage prepares the manual seed; it is not synthesis. See [delivery policy](../../plan/stoicism/24-delivery-delegation-and-user-run-batches.md) and [chapter/lesson plan](../../plan/stoicism/26-personal-constitution-and-theme-to-lesson-pilot.md).

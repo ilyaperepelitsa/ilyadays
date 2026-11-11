@@ -294,8 +294,12 @@ def test_all_chunk_pca_map_cluster_cuts_and_exact_point_clickthrough(page):
     expect(page.locator('[data-map-chunk]')).to_have_count(len(w['passages']))
     assert set(page.locator('[data-map-chunk]').evaluate_all('els=>els.map(el=>el.dataset.mapChunk)'))=={p['id'] for p in w['passages']}
     expect(explorer).to_contain_text('not OpenAI embeddings')
-    page.get_by_role('combobox',name='Cluster count').select_option('4')
-    expect(page.locator('.au-cluster-legend button')).to_have_count(4)
+    cut=page.get_by_role('slider',name='Merge distance cut')
+    cut.focus()
+    page.keyboard.press('Home')
+    expect(page.locator('.au-cluster-legend button')).to_have_count(len(w['passages']))
+    page.keyboard.press('End')
+    expect(page.locator('.au-cluster-legend button')).to_have_count(1)
     page.locator('.au-cluster-legend button').first.click()
     expect(page.locator('[data-map-chunk]')).to_have_count(len(w['passages']))
     p=w['passages'][-1]
@@ -329,3 +333,29 @@ def test_editing_meaning_does_not_leave_source_colors_on_new_words(page):
     expect(page.locator('.au-meaning .au-unmapped')).to_contain_text('new universal promise')
     page.get_by_test_id('meaning-card').get_by_role('button',name='Discard draft',exact=True).click()
     expect(page.locator('.au-meaning-evidence')).to_have_count(3)
+
+
+def test_book_outline_persists_overlapping_placements_and_stable_lesson_revisions(page):
+    w=state(page)
+    page.get_by_role('button',name='Book · chapters & lessons',exact=True).click()
+    book=page.get_by_role('region',name='Personal constitution editor')
+    expect(book).to_be_visible()
+    title=book.get_by_role('textbox',name='Book title',exact=True)
+    title.fill('My considered commitments')
+    book.get_by_role('textbox',name='New chapter',exact=True).fill('Daily attention')
+    book.get_by_role('button',name='Add chapter',exact=True).click()
+    chapter=book.locator('.au-book-chapter').filter(has=page.get_by_role('heading',name='Daily attention',exact=True))
+    chapter.get_by_text('Edit chapter & lesson membership',exact=True).click()
+    chapter.get_by_role('checkbox').first.check()
+    book.get_by_role('button',name='Save book structure',exact=True).click()
+    expect(book.get_by_text('1 saved structural revision(s)',exact=True)).to_be_visible()
+    saved=state(page)
+    assert len(saved['manuscript_revisions'])==1
+    assert saved['assessments']==w['assessments']
+    chapters=saved['manuscript_revisions'][0]['chapters']
+    selected=chapters[-1]['lessons'][0]
+    assert any(l['conclusion_id']==selected['conclusion_id'] for c in chapters[:-1] for l in c['lessons'])
+    page.reload()
+    page.get_by_role('button',name='Book · chapters & lessons',exact=True).click()
+    expect(page.get_by_role('textbox',name='Book title',exact=True)).to_have_value('My considered commitments')
+    expect(page.get_by_role('heading',name='Daily attention',exact=True)).to_be_visible()

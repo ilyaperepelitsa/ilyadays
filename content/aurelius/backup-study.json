@@ -1,9 +1,13 @@
 {
+  "manuscript_current": null,
+  "manuscript_revisions": [],
   "fixture_revision": 0,
-  "study_revision": 2,
+  "study_revision": 3,
   "study_catalog": {
-    "default_id": "casaubon-gutenberg-2680-social-purpose",
+    "default_id": "casaubon-gutenberg-2680-ordinary-impressions",
     "current_ids": [
+      "casaubon-gutenberg-2680-ordinary-impressions",
+      "casaubon-gutenberg-2680-distress-and-threat",
       "casaubon-gutenberg-2680-social-purpose",
       "casaubon-gutenberg-2680-non-imitation",
       "casaubon-gutenberg-2680-shared-good"
@@ -13,6 +17,7 @@
     ],
     "revision_note": "The first proposal forced reciprocity, revenge and common good into one rule. It is retained for comparison; the revised studies separate their evidential roles."
   },
+  "annotation_runs": [],
   "source_arguments": [
     {
       "id": "casaubon-gutenberg-2680-source-reason-0",
@@ -120,6 +125,66 @@
         "casaubon-gutenberg-2680-evidence-2"
       ],
       "limits": "The comparison alone supplies no procedure for deciding which institution or demand represents the common good.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-reason-0",
+      "revision_id": "casaubon-gutenberg-2680-distress-and-threat-reason-0:r1",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "kind": "reason_not_stated",
+      "summary": "Marcus asks the reader to examine each impression where possible.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-examine"
+      ],
+      "limits": "The brief instruction does not itself explain how to evaluate a threat.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-reason-1",
+      "revision_id": "casaubon-gutenberg-2680-distress-and-threat-reason-1:r1",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "kind": "explicit_reason",
+      "summary": "Marcus argues that external things do not themselves move the soul, which responds according to its opinions.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-opinion"
+      ],
+      "limits": "This rests on his theory of the soul; it does not establish a clinical account of distress.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-reason-2",
+      "revision_id": "casaubon-gutenberg-2680-distress-and-threat-reason-2:r1",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "kind": "explicit_reason",
+      "summary": "Marcus says feeling naturally reaches the mind in a united body, while distinguishing it from an added judgment of good or bad.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-feeling"
+      ],
+      "limits": "This distinction does not show that pain or fear can always be removed by judgment.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-reason-0",
+      "revision_id": "casaubon-gutenberg-2680-ordinary-impressions-reason-0:r1",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "kind": "reason_not_stated",
+      "summary": "Marcus advises examining the nature and qualities of an impression, if possible.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-examine"
+      ],
+      "limits": "The short instruction does not give a detailed procedure or its full justification.",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-reason-1",
+      "revision_id": "casaubon-gutenberg-2680-ordinary-impressions-reason-1:r1",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "kind": "explicit_reason",
+      "summary": "Marcus distinguishes things outside from the understanding that passes judgment on them.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-verdict"
+      ],
+      "limits": "His division between things and judgment is a philosophical account, not a claim that external events have no effects.",
       "status": "proposed"
     }
   ],
@@ -237,6 +302,63 @@
       ],
       "granularity": "clause",
       "justification": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-clause-0",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "block_id": "casaubon-gutenberg-2680-distress-and-threat-meaning-block",
+      "start": 0,
+      "end": 89,
+      "exact": "When a distressing impression arises, examine it before treating its judgment as settled.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-examine",
+        "casaubon-gutenberg-2680-judgment-opinion"
+      ],
+      "granularity": "clause",
+      "justification": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-clause-1",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "block_id": "casaubon-gutenberg-2680-distress-and-threat-meaning-block",
+      "start": 90,
+      "end": 174,
+      "exact": "Recognize bodily feeling as natural rather than assuming that examination erases it.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-feeling"
+      ],
+      "granularity": "clause",
+      "justification": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-clause-0",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "block_id": "casaubon-gutenberg-2680-ordinary-impressions-meaning-block",
+      "start": 0,
+      "end": 83,
+      "exact": "Consider an impression and its qualities before accepting the judgment it suggests.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-examine"
+      ],
+      "granularity": "clause",
+      "justification": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-clause-1",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "block_id": "casaubon-gutenberg-2680-ordinary-impressions-meaning-block",
+      "start": 84,
+      "end": 145,
+      "exact": "The understanding supplies a verdict about things outside it.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-verdict"
+      ],
+      "granularity": "clause",
+      "justification": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
       "active": true
     }
   ],
@@ -369,6 +491,58 @@
       "text_hash": "2fe512aeb1cc2f407f5ad6e67a78becc4830d31d1ccfce37a4cb386420dbc001",
       "normalization": "identity-v1",
       "authorship": "Marcus Aurelius; translated by Meric Casaubon"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-8-12",
+      "revision_id": "casaubon-gutenberg-2680-8-12:45a8ae641522cdfd",
+      "edition_id": "casaubon-gutenberg-2680",
+      "book": "8",
+      "section": "12",
+      "locator": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt#book-8-section-XII;scalar=217115:217286",
+      "text": "As every fancy and imagination presents itself unto thee, consider\r\n(if it be possible) the true nature, and the proper qualities of it, and\r\nreason with thyself about it.",
+      "raw_text": "As every fancy and imagination presents itself unto thee, consider\r\n(if it be possible) the true nature, and the proper qualities of it, and\r\nreason with thyself about it.",
+      "text_hash": "45a8ae641522cdfd92aba4d909a16d685847790a2489687145a72f697cc4d11f",
+      "normalization": "identity-v1",
+      "authorship": "Marcus Aurelius; translated by Meric Casaubon"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-9-13",
+      "revision_id": "casaubon-gutenberg-2680-9-13:2181b632bcf8e166",
+      "edition_id": "casaubon-gutenberg-2680",
+      "book": "9",
+      "section": "13",
+      "locator": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt#book-9-section-XIII;scalar=253974:254204",
+      "text": "The things themselves that affect us, they stand without doors,\r\nneither knowing anything themselves nor able to utter anything unto\r\nothers concerning themselves. What then is it, that passeth verdict on\r\nthem? The understanding.",
+      "raw_text": "The things themselves that affect us, they stand without doors,\r\nneither knowing anything themselves nor able to utter anything unto\r\nothers concerning themselves. What then is it, that passeth verdict on\r\nthem? The understanding.",
+      "text_hash": "2181b632bcf8e166e0c566a9496f340134a2c43eaf424a408977064d347c8b9e",
+      "normalization": "identity-v1",
+      "authorship": "Marcus Aurelius; translated by Meric Casaubon"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-5-16",
+      "revision_id": "casaubon-gutenberg-2680-5-16:7fb5126952ca3099",
+      "edition_id": "casaubon-gutenberg-2680",
+      "book": "5",
+      "section": "16",
+      "locator": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt#book-5-section-XVI;scalar=134306:135331",
+      "text": "To desire things impossible is the part of a mad man. But it is a\r\nthing impossible, that wicked man should not commit some such things.\r\nNeither doth anything happen to any man, which in the ordinary course\r\nof nature as natural unto him doth not happen. Again, the same things\r\nhappen unto others also. And truly, if either he that is ignorant that\r\nsuch a thing hath happened unto him, or he that is ambitious to be\r\ncommended for his magnanimity, can be patient, and is not grieved: is it\r\nnot a grievous thing, that either ignorance, or a vain desire to please\r\nand to be commended, should be more powerful and effectual than true\r\nprudence? As for the things themselves, they touch not the soul, neither\r\ncan they have any access unto it: neither can they of themselves any\r\nways either affect it, or move it. For she herself alone can affect and\r\nmove herself, and according as the dogmata and opinions are, which she\r\ndoth vouchsafe herself; so are those things which, as accessories, have\r\nany co-existence with her.",
+      "raw_text": "To desire things impossible is the part of a mad man. But it is a\r\nthing impossible, that wicked man should not commit some such things.\r\nNeither doth anything happen to any man, which in the ordinary course\r\nof nature as natural unto him doth not happen. Again, the same things\r\nhappen unto others also. And truly, if either he that is ignorant that\r\nsuch a thing hath happened unto him, or he that is ambitious to be\r\ncommended for his magnanimity, can be patient, and is not grieved: is it\r\nnot a grievous thing, that either ignorance, or a vain desire to please\r\nand to be commended, should be more powerful and effectual than true\r\nprudence? As for the things themselves, they touch not the soul, neither\r\ncan they have any access unto it: neither can they of themselves any\r\nways either affect it, or move it. For she herself alone can affect and\r\nmove herself, and according as the dogmata and opinions are, which she\r\ndoth vouchsafe herself; so are those things which, as accessories, have\r\nany co-existence with her.",
+      "text_hash": "7fb5126952ca30997af6e84ae464b425fb27cd754b06c95a6fa31274cdd68532",
+      "normalization": "identity-v1",
+      "authorship": "Marcus Aurelius; translated by Meric Casaubon"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-5-20",
+      "revision_id": "casaubon-gutenberg-2680-5-20:e13b32b4e91ac03e",
+      "edition_id": "casaubon-gutenberg-2680",
+      "book": "5",
+      "section": "20",
+      "locator": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt#book-5-section-XX;scalar=138523:139212",
+      "text": "Let not that chief commanding part of thy soul be ever subject to\r\nany variation through any corporal either pain or pleasure, neither\r\nsuffer it to be mixed with these, but let it both circumscribe itself,\r\nand confine those affections to their own proper parts and members.\r\nBut if at any time they do reflect and rebound upon the mind and\r\nunderstanding (as in an united and compacted body it must needs;) then\r\nmust thou not go about to resist sense and feeling, it being natural.\r\nHowever let not thy understanding to this natural sense and feeling,\r\nwhich whether unto our flesh pleasant or painful, is unto us nothing\r\nproperly, add an opinion of either good or bad and all is well.",
+      "raw_text": "Let not that chief commanding part of thy soul be ever subject to\r\nany variation through any corporal either pain or pleasure, neither\r\nsuffer it to be mixed with these, but let it both circumscribe itself,\r\nand confine those affections to their own proper parts and members.\r\nBut if at any time they do reflect and rebound upon the mind and\r\nunderstanding (as in an united and compacted body it must needs;) then\r\nmust thou not go about to resist sense and feeling, it being natural.\r\nHowever let not thy understanding to this natural sense and feeling,\r\nwhich whether unto our flesh pleasant or painful, is unto us nothing\r\nproperly, add an opinion of either good or bad and all is well.",
+      "text_hash": "e13b32b4e91ac03eb018a3dd72cdcbdcbfd7e8d8fe60d93d5207cd9f557748ca",
+      "normalization": "identity-v1",
+      "authorship": "Marcus Aurelius; translated by Meric Casaubon"
     }
   ],
   "spans": [
@@ -437,9 +611,65 @@
       "suffix": "",
       "text_hash": "ffd6e212cc5a2558529a137329ac71806298a918c5a3f89a8c0de16525dee254",
       "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-examine",
+      "passage_revision": "casaubon-gutenberg-2680-8-12:45a8ae641522cdfd",
+      "start": 0,
+      "end": 171,
+      "exact": "As every fancy and imagination presents itself unto thee, consider\r\n(if it be possible) the true nature, and the proper qualities of it, and\r\nreason with thyself about it.",
+      "prefix": "",
+      "suffix": "",
+      "text_hash": "45a8ae641522cdfd92aba4d909a16d685847790a2489687145a72f697cc4d11f",
+      "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-verdict",
+      "passage_revision": "casaubon-gutenberg-2680-9-13:2181b632bcf8e166",
+      "start": 0,
+      "end": 230,
+      "exact": "The things themselves that affect us, they stand without doors,\r\nneither knowing anything themselves nor able to utter anything unto\r\nothers concerning themselves. What then is it, that passeth verdict on\r\nthem? The understanding.",
+      "prefix": "",
+      "suffix": "",
+      "text_hash": "2181b632bcf8e166e0c566a9496f340134a2c43eaf424a408977064d347c8b9e",
+      "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-opinion",
+      "passage_revision": "casaubon-gutenberg-2680-5-16:7fb5126952ca3099",
+      "start": 647,
+      "end": 1025,
+      "exact": "As for the things themselves, they touch not the soul, neither\r\ncan they have any access unto it: neither can they of themselves any\r\nways either affect it, or move it. For she herself alone can affect and\r\nmove herself, and according as the dogmata and opinions are, which she\r\ndoth vouchsafe herself; so are those things which, as accessories, have\r\nany co-existence with her.",
+      "prefix": " effectual than true\r\nprudence? ",
+      "suffix": "",
+      "text_hash": "7fb5126952ca30997af6e84ae464b425fb27cd754b06c95a6fa31274cdd68532",
+      "validation": "valid"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-feeling",
+      "passage_revision": "casaubon-gutenberg-2680-5-20:e13b32b4e91ac03e",
+      "start": 277,
+      "end": 689,
+      "exact": "But if at any time they do reflect and rebound upon the mind and\r\nunderstanding (as in an united and compacted body it must needs;) then\r\nmust thou not go about to resist sense and feeling, it being natural.\r\nHowever let not thy understanding to this natural sense and feeling,\r\nwhich whether unto our flesh pleasant or painful, is unto us nothing\r\nproperly, add an opinion of either good or bad and all is well.",
+      "prefix": " own proper parts and members.\r\n",
+      "suffix": "",
+      "text_hash": "e13b32b4e91ac03eb018a3dd72cdcbdcbfd7e8d8fe60d93d5207cd9f557748ca",
+      "validation": "valid"
     }
   ],
   "conclusions": [
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions",
+      "title": "Examine an ordinary impression",
+      "current": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat",
+      "title": "When an impression brings distress or threat",
+      "current": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "locked": false
+    },
     {
       "id": "casaubon-gutenberg-2680-social-purpose",
       "title": "Cooperation without a debt",
@@ -466,6 +696,30 @@
     }
   ],
   "expressions": [
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-constitution-voice",
+      "title": "Personal constitution formulation",
+      "current": "casaubon-gutenberg-2680-distress-and-threat-constitution-voice:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-constitution-voice",
+      "title": "Personal constitution formulation",
+      "current": "casaubon-gutenberg-2680-ordinary-impressions-constitution-voice:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-expression",
+      "title": "Explanation with source reasons",
+      "current": "casaubon-gutenberg-2680-ordinary-impressions-expression:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-expression",
+      "title": "Explanation with source reasons",
+      "current": "casaubon-gutenberg-2680-distress-and-threat-expression:r1",
+      "locked": false
+    },
     {
       "id": "casaubon-gutenberg-2680-social-purpose-expression",
       "title": "Explanation with source reasons",
@@ -1132,6 +1386,399 @@
         "casaubon-gutenberg-2680-social-purpose:r1"
       ],
       "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "entity_id": "casaubon-gutenberg-2680-distress-and-threat",
+      "kind": "conclusion",
+      "sequence": 1,
+      "text": "When a distressing impression arises, examine it before treating its judgment as settled. Recognize bodily feeling as natural rather than assuming that examination erases it.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-distress-and-threat-meaning-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "When a distressing impression arises, examine it before treating its judgment as settled. Recognize bodily feeling as natural rather than assuming that examination erases it."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "A proposed response to distressing or threatening impressions, including bodily pain.",
+      "qualifications": "Marcus’s account of the mind and its power over distress is a philosophical claim, not proof that distress is voluntary or easily stopped. This is not a reason to ignore danger, pain, or needed care.",
+      "assumptions": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "practical_implication": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [],
+      "created_at": "2026-11-10T00:00:00Z",
+      "synthesis": {
+        "method": "manual_editorial_study",
+        "meaning_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+        "premises": [
+          {
+            "claim": "Marcus asks the reader to examine each impression where possible.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-judgment-examine"
+            ]
+          },
+          {
+            "claim": "Marcus argues that external things do not themselves move the soul, which responds according to its opinions.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-judgment-opinion"
+            ]
+          },
+          {
+            "claim": "Marcus says feeling naturally reaches the mind in a united body, while distinguishing it from an added judgment of good or bad.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-judgment-feeling"
+            ]
+          }
+        ],
+        "interpretive_step": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+        "what_changes": "The connection between these separate passages is an editorial reconstruction.",
+        "not_claimed": "Marcus’s account of the mind and its power over distress is a philosophical claim, not proof that distress is voluntary or easily stopped. This is not a reason to ignore danger, pain, or needed care.",
+        "expression_choice": "The explanation distinguishes Marcus’s reasons from the editorial connection."
+      }
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-expression:r1",
+      "entity_id": "casaubon-gutenberg-2680-distress-and-threat-expression",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Marcus asks us to examine an impression, and holds that the mind’s opinions shape its response to events. Read together, these suggest pausing over the judgment attached to a frightening impression. He also says bodily sensations naturally reach the mind; the exercise is not a denial that pain is felt.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-distress-and-threat-expression-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Marcus asks us to examine an impression, and holds that the mind’s opinions shape its response to events. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine",
+                        "casaubon-gutenberg-2680-judgment-opinion"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Read together, these suggest pausing over the judgment attached to a frightening impression. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine",
+                        "casaubon-gutenberg-2680-judgment-opinion"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "He also says bodily sensations naturally reach the mind; the exercise is not a denial that pain is felt.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-feeling"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "A proposed response to distressing or threatening impressions, including bodily pain.",
+      "qualifications": "Marcus’s account of the mind and its power over distress is a philosophical claim, not proof that distress is voluntary or easily stopped. This is not a reason to ignore danger, pain, or needed care.",
+      "assumptions": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "practical_implication": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-distress-and-threat:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "entity_id": "casaubon-gutenberg-2680-ordinary-impressions",
+      "kind": "conclusion",
+      "sequence": 1,
+      "text": "Consider an impression and its qualities before accepting the judgment it suggests. The understanding supplies a verdict about things outside it.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-ordinary-impressions-meaning-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Consider an impression and its qualities before accepting the judgment it suggests. The understanding supplies a verdict about things outside it."
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "Ordinary impressions and the judgments attached to them.",
+      "qualifications": "Not every impression can be examined at leisure, and the passages give no complete method for deciding which judgment is correct. External facts still matter.",
+      "assumptions": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "practical_implication": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [],
+      "created_at": "2026-11-10T00:00:00Z",
+      "synthesis": {
+        "method": "manual_editorial_study",
+        "meaning_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+        "premises": [
+          {
+            "claim": "Marcus advises examining the nature and qualities of an impression, if possible.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-judgment-examine"
+            ]
+          },
+          {
+            "claim": "Marcus distinguishes things outside from the understanding that passes judgment on them.",
+            "source_span_ids": [
+              "casaubon-gutenberg-2680-judgment-verdict"
+            ]
+          }
+        ],
+        "interpretive_step": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+        "what_changes": "The connection between these separate passages is an editorial reconstruction.",
+        "not_claimed": "Not every impression can be examined at leisure, and the passages give no complete method for deciding which judgment is correct. External facts still matter.",
+        "expression_choice": "The explanation distinguishes Marcus’s reasons from the editorial connection."
+      }
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-expression:r1",
+      "entity_id": "casaubon-gutenberg-2680-ordinary-impressions-expression",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Marcus tells himself to examine each impression, if possible, and reason about its nature. He also distinguishes external things from the understanding that gives a verdict on them. Taken together, these passages suggest making the judgment visible for examination rather than letting the first appearance settle it.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-ordinary-impressions-expression-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Marcus tells himself to examine each impression, if possible, and reason about its nature. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "He also distinguishes external things from the understanding that gives a verdict on them. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-verdict"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Taken together, these passages suggest making the judgment visible for examination rather than letting the first appearance settle it.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine",
+                        "casaubon-gutenberg-2680-judgment-verdict"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "Ordinary impressions and the judgments attached to them.",
+      "qualifications": "Not every impression can be examined at leisure, and the passages give no complete method for deciding which judgment is correct. External facts still matter.",
+      "assumptions": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "practical_implication": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-ordinary-impressions:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-constitution-voice:r1",
+      "entity_id": "casaubon-gutenberg-2680-ordinary-impressions-constitution-voice",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "When you can, examine what appears before you. Do not let the first appearance settle your judgment: the thing before you and the verdict you give it are not the same.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-ordinary-impressions-constitution-voice-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "When you can, examine what appears before you. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Do not let the first appearance settle your judgment: the thing before you and the verdict you give it are not the same.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine",
+                        "casaubon-gutenberg-2680-judgment-verdict"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "Ordinary impressions and the judgments attached to them.",
+      "qualifications": "Not every impression can be examined at leisure, and the passages give no complete method for deciding which judgment is correct. External facts still matter.",
+      "assumptions": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "practical_implication": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-ordinary-impressions:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-constitution-voice:r1",
+      "entity_id": "casaubon-gutenberg-2680-distress-and-threat-constitution-voice",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "When an impression frightens you, examine the judgment within it where you can. Pain may still be felt. Do not mistake that feeling for a settled verdict on what is good or bad.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-distress-and-threat-constitution-voice-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "When an impression frightens you, examine the judgment within it where you can. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-examine",
+                        "casaubon-gutenberg-2680-judgment-opinion"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "Pain may still be felt. Do not mistake that feeling for a settled verdict on what is good or bad.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-judgment-feeling"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "A proposed response to distressing or threatening impressions, including bodily pain.",
+      "qualifications": "Marcus’s account of the mind and its power over distress is a philosophical claim, not proof that distress is voluntary or easily stopped. This is not a reason to ignore danger, pain, or needed care.",
+      "assumptions": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "practical_implication": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument.",
+      "interpretation": "multi_passage_synthesis",
+      "dependencies": [
+        "casaubon-gutenberg-2680-distress-and-threat:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
     }
   ],
   "propositions": [
@@ -1222,6 +1869,61 @@
       "scope": "The relationship between individual and shared good, expressed through an analogy.",
       "modality": "proposed source interpretation",
       "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-proposition-0",
+      "revision_id": "casaubon-gutenberg-2680-distress-and-threat-proposition-0:r1",
+      "statement": "Marcus asks the reader to examine each impression where possible.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-examine"
+      ],
+      "scope": "A proposed response to distressing or threatening impressions, including bodily pain.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-proposition-1",
+      "revision_id": "casaubon-gutenberg-2680-distress-and-threat-proposition-1:r1",
+      "statement": "Marcus argues that external things do not themselves move the soul, which responds according to its opinions.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-opinion"
+      ],
+      "scope": "A proposed response to distressing or threatening impressions, including bodily pain.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-proposition-2",
+      "revision_id": "casaubon-gutenberg-2680-distress-and-threat-proposition-2:r1",
+      "statement": "Marcus says feeling naturally reaches the mind in a united body, while distinguishing it from an added judgment of good or bad.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-feeling"
+      ],
+      "scope": "A proposed response to distressing or threatening impressions, including bodily pain.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-proposition-0",
+      "revision_id": "casaubon-gutenberg-2680-ordinary-impressions-proposition-0:r1",
+      "statement": "Marcus advises examining the nature and qualities of an impression, if possible.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-examine"
+      ],
+      "scope": "Ordinary impressions and the judgments attached to them.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-proposition-1",
+      "revision_id": "casaubon-gutenberg-2680-ordinary-impressions-proposition-1:r1",
+      "statement": "Marcus distinguishes things outside from the understanding that passes judgment on them.",
+      "source_span_ids": [
+        "casaubon-gutenberg-2680-judgment-verdict"
+      ],
+      "scope": "Ordinary impressions and the judgments attached to them.",
+      "modality": "proposed source interpretation",
+      "status": "proposed"
     }
   ],
   "bundles": [
@@ -1248,6 +1950,18 @@
       "target_revision": "casaubon-gutenberg-2680-shared-good:r1",
       "mode": "independent",
       "explanation": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference."
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-bundle",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "mode": "joint",
+      "explanation": "The application to a frightening impression connects the instruction to examine appearances with Marcus’s account of opinion and feeling; it is an editorial bridge, not a single source argument."
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-bundle",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "mode": "joint",
+      "explanation": "The instruction to examine an impression and the account of judgment are read together as an editorial practice; neither passage states this combined procedure."
     }
   ],
   "links": [
@@ -1338,6 +2052,61 @@
       "review_state": "proposed",
       "reviewer": null,
       "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-link-0",
+      "source_span": "casaubon-gutenberg-2680-judgment-examine",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "bundle_id": "casaubon-gutenberg-2680-distress-and-threat-bundle",
+      "relation": "supports",
+      "justification": "Marcus asks the reader to examine each impression where possible.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-link-1",
+      "source_span": "casaubon-gutenberg-2680-judgment-opinion",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "bundle_id": "casaubon-gutenberg-2680-distress-and-threat-bundle",
+      "relation": "supports",
+      "justification": "Marcus argues that external things do not themselves move the soul, which responds according to its opinions.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-distress-and-threat-link-2",
+      "source_span": "casaubon-gutenberg-2680-judgment-feeling",
+      "target_revision": "casaubon-gutenberg-2680-distress-and-threat:r1",
+      "bundle_id": "casaubon-gutenberg-2680-distress-and-threat-bundle",
+      "relation": "supports",
+      "justification": "Marcus says feeling naturally reaches the mind in a united body, while distinguishing it from an added judgment of good or bad.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-link-0",
+      "source_span": "casaubon-gutenberg-2680-judgment-examine",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "bundle_id": "casaubon-gutenberg-2680-ordinary-impressions-bundle",
+      "relation": "supports",
+      "justification": "Marcus advises examining the nature and qualities of an impression, if possible.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
+    },
+    {
+      "id": "casaubon-gutenberg-2680-ordinary-impressions-link-1",
+      "source_span": "casaubon-gutenberg-2680-judgment-verdict",
+      "target_revision": "casaubon-gutenberg-2680-ordinary-impressions:r1",
+      "bundle_id": "casaubon-gutenberg-2680-ordinary-impressions-bundle",
+      "relation": "supports",
+      "justification": "Marcus distinguishes things outside from the understanding that passes judgment on them.",
+      "review_state": "proposed",
+      "reviewer": null,
+      "active": true
     }
   ],
   "assessments": {
@@ -1388,6 +2157,30 @@
     "casaubon-gutenberg-2680-social-purpose-maxim:r1": {
       "state": "awaiting_review",
       "notes": "An editorial maxim, not a quotation. The longer explanation retains the functional premise and conscious-action qualification."
+    },
+    "casaubon-gutenberg-2680-distress-and-threat:r1": {
+      "state": "awaiting_review",
+      "notes": "Hand-authored interpretation and bridge require human review; no approval is seeded."
+    },
+    "casaubon-gutenberg-2680-distress-and-threat-expression:r1": {
+      "state": "awaiting_review",
+      "notes": "Editorial explanation, not a quotation; review its reasoning and limits."
+    },
+    "casaubon-gutenberg-2680-ordinary-impressions:r1": {
+      "state": "awaiting_review",
+      "notes": "Hand-authored interpretation and bridge require human review; no approval is seeded."
+    },
+    "casaubon-gutenberg-2680-ordinary-impressions-expression:r1": {
+      "state": "awaiting_review",
+      "notes": "Editorial explanation, not a quotation; review its reasoning and limits."
+    },
+    "casaubon-gutenberg-2680-ordinary-impressions-constitution-voice:r1": {
+      "state": "awaiting_review",
+      "notes": "Firm editorial voice; not Marcus’s words. Review scope, qualifications and fidelity independently of resonance."
+    },
+    "casaubon-gutenberg-2680-distress-and-threat-constitution-voice:r1": {
+      "state": "awaiting_review",
+      "notes": "Firm editorial voice; not Marcus’s words. Review scope, qualifications and fidelity independently of resonance."
     }
   },
   "concepts": [
@@ -1405,6 +2198,22 @@
       "definition": "Cooperation as a natural function and the motivation of a good turn.",
       "inclusion": "A claim about cooperation, giving or conscious social action.",
       "exclusion": "Revenge and shared-good analogies need their own evidential roles.",
+      "parents": []
+    },
+    {
+      "id": "casaubon-gutenberg-2680-attention-theme",
+      "name": "Judgment and attention",
+      "definition": "Examining impressions and the judgments attached to them.",
+      "inclusion": "An impression, assessment or exercise of attention.",
+      "exclusion": "A shared word alone is not evidence.",
+      "parents": []
+    },
+    {
+      "id": "casaubon-gutenberg-2680-adversity-theme",
+      "name": "Distress and adversity",
+      "definition": "Responses to pain, distress and difficult events.",
+      "inclusion": "A claim about feelings or responses to adversity.",
+      "exclusion": "Not a substitute for safety or care.",
       "parents": []
     }
   ],
@@ -1435,6 +2244,55 @@
       "passage_id": "casaubon-gutenberg-2680-1-15",
       "concept_id": "casaubon-gutenberg-2680-social-purpose-theme",
       "rationale": "Source premise about cooperation.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-8-12-attention",
+      "passage_id": "casaubon-gutenberg-2680-8-12",
+      "concept_id": "casaubon-gutenberg-2680-attention-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-8-12-adversity",
+      "passage_id": "casaubon-gutenberg-2680-8-12",
+      "concept_id": "casaubon-gutenberg-2680-adversity-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-9-13-attention",
+      "passage_id": "casaubon-gutenberg-2680-9-13",
+      "concept_id": "casaubon-gutenberg-2680-attention-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-5-16-attention",
+      "passage_id": "casaubon-gutenberg-2680-5-16",
+      "concept_id": "casaubon-gutenberg-2680-attention-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-5-16-adversity",
+      "passage_id": "casaubon-gutenberg-2680-5-16",
+      "concept_id": "casaubon-gutenberg-2680-adversity-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-5-20-attention",
+      "passage_id": "casaubon-gutenberg-2680-5-20",
+      "concept_id": "casaubon-gutenberg-2680-attention-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
+      "review_state": "proposed"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-judgment-membership-5-20-adversity",
+      "passage_id": "casaubon-gutenberg-2680-5-20",
+      "concept_id": "casaubon-gutenberg-2680-adversity-theme",
+      "rationale": "Proposed topical association; evidence is linked separately.",
       "review_state": "proposed"
     }
   ],

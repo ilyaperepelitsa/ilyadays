@@ -7,7 +7,10 @@ export type Revision = {id:string;entity_id:string;kind:'conclusion'|'expression
 export type EvidenceLink = {id:string;source_span:string;target_revision:string;bundle_id:string;relation:string;justification:string;review_state:string;reviewer:string|null;active:boolean};
 export type TargetMapping={id:string;target_revision:string;block_id:string;start:number;end:number;exact:string;source_span_ids:string[];granularity:'clause'|'whole_statement';justification:string;active:boolean};
 export type SourceArgument={id:string;revision_id:string;target_revision:string;kind:'explicit_reason'|'analogy'|'reason_not_stated';summary:string;source_span_ids:string[];limits:string;status:'proposed'};
+export type BookLesson={conclusion_id:string;conclusion_revision:string;expression_revision:string|null};
+export type BookDraft={id:string|null;parent_id:string|null;title:string;status:'draft';created_at:string|null;chapters:{id:string;title:string;lessons:BookLesson[]}[]};
 export type Workspace = {
+  manuscript_current?:string|null;manuscript_revisions?:BookDraft[];
   annotation_runs?:{id:string;target_revision:string;created_at:string;document:{markup:unknown;anchors:Record<string,Omit<SourceSpan,'id'|'validation'>>;validation:string;review_state:string;offset_convention:string}}[];
   study_catalog?:{default_id:string;current_ids:string[];previous_ids:string[];revision_note:string}|null;
   schema_version:1;fixture_revision?:number;study_revision?:number;source_arguments?:SourceArgument[];target_mappings?:TargetMapping[];import_audit?:{source_chunk_count:number;parser_version:string;status:string;warnings:{kind:string;book:number;section?:string;raw_label?:string;decision?:string}[];excluded_ranges:number};version:number;corpus_kind:'synthetic'|'hays'|'public_domain_backup';offset_convention:string;

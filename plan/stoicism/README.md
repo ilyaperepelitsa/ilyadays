@@ -1,5 +1,8 @@
 # Aurelius — implementation planning dossier
 
+**Current direction, 2026-11-11:** prioritize [the personal-constitution pilot](26-personal-constitution-and-theme-to-lesson-pilot.md), [Luna/Terra delegation and user-run batches](24-delivery-delegation-and-user-run-batches.md), and [constitutional/dataset research](25-constitutional-structure-and-comparison-corpora.md). This supersedes older fixture-only status descriptions below. Real embeddings already cover 488 Hays and 418 Casaubon numbered sections; Hays text stays private. The public pilot now contains eight Casaubon passages and five proposed lessons. Hierarchical discovery uses a merge-distance slider; editorial chapters and overlapping lessons remain separate. Deliver small reviewed slices; the user launches long jobs.
+
+
 This directory is the detailed execution plan for the source-linked Meditations workbench. It expands the initial design into independently actionable workstreams. It records what the repository actually does, what the current demonstration fails to communicate, and the evidence required before calling a future increment complete.
 
 The immediate product correction is concrete: source provenance should be visibly readable in the left text, the meaning on the right should visibly show its contributors in the default two-pane view, the material should demonstrate substantial philosophical distinctions, and discovery should include a real PCA two-dimensional map with computational cluster proposals. A thin example and subtle underlines do not satisfy that experience.
@@ -14,6 +17,9 @@ Do not read a checked box as permission to run a paid batch. Do not read an inst
 
 | File | Purpose |
 |---|---|
+| [24-delivery-delegation-and-user-run-batches.md](24-delivery-delegation-and-user-run-batches.md) | Cheap-model routing, small pilots and resumable user-launched tqdm commands |
+| [25-constitutional-structure-and-comparison-corpora.md](25-constitutional-structure-and-comparison-corpora.md) | Official constitutional structures and religious/legal vector compatibility |
+| [26-personal-constitution-and-theme-to-lesson-pilot.md](26-personal-constitution-and-theme-to-lesson-pilot.md) | Chapter/lesson structure, explicit overlap, voice and next experiment |
 | [00-master-plan.md](00-master-plan.md) | Product definition, sequencing, delivery gates and scope boundaries |
 | [01-current-state-requirements-and-acceptance.md](01-current-state-requirements-and-acceptance.md) | Repository evidence, current gaps and observable acceptance requirements |
 | [02-edition-acquisition-rights-and-privacy.md](02-edition-acquisition-rights-and-privacy.md) | Hays acquisition, actual file restrictions, rights assumptions and consent |
