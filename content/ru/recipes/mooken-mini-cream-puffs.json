@@ -1,0 +1,660 @@
+{
+ "added": "2026-11-11T10:33:37Z",
+ "batch": null,
+ "before_ingredients_html": "<b>План партии:</b> из указанных количеств получится около 24 шу. Кракелин рассчитан с запасом на вырезание дисков, крем — с небольшим запасом на отсаживание. Все температуры духовки ниже указаны для <b>режима «верх-низ» без конвекции</b>; для вентилятора смотрите примечание.",
+ "blurb_html": "Маленькие шу с хрустящей карамельной корочкой и нежным ванильным кремом, который отсаживают через донышко. Подробная домашняя версия осакских мини-пирожных.",
+ "chips": [
+  {
+   "html": "<span>24 мини-шу · 6 порций</span>",
+   "kind": "",
+   "text": "24 мини-шу · 6 порций"
+  },
+  {
+   "html": "~2½–3 ч; ~60–75 мин активной работы",
+   "kind": "time",
+   "text": "~2½–3 ч; ~60–75 мин активной работы"
+  }
+ ],
+ "description": "Маленькие шу с хрустящей карамельной корочкой и нежным ванильным кремом, который отсаживают через донышко. Подробная домашняя версия осакских мини-пирожных.",
+ "equipment_html": [
+  "Электронные весы; яйца взвешивать без скорлупы",
+  "Небольшой толстостенный сотейник и венчик",
+  "Жаропрочная миска, неглубокий лоток и ледяная баня",
+  "Пищевая плёнка, подходящая для горячих продуктов",
+  "Силиконовый коврик или качественный пергамент",
+  "Скалка и круглая вырубка <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span>",
+  "Противень около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"30\" data-b=\"40\" data-x=\"1\" data-s=\"0\">30 × 40 см</span>",
+  "Термометр для духовки и щуп",
+  "Кондитерские мешки; круглая насадка <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"10\" data-s=\"0\">10 мм</span> и насадка для начинки <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"4\" data-b=\"5\" data-s=\"0\">4–5 мм</span>",
+  "Решётка для остывания"
+ ],
+ "group": {
+  "id": "japanese-sweets",
+  "name": "Японские сладости"
+ },
+ "hero": {
+  "alt": "Мини-шу с карамельной корочкой в стиле MooKEN",
+  "image": "illustrations/mooken-mini-cream-puffs/12.webp?v=157e57a4c8",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"250\">250 мл</span>",
+     "name_html": "Цельное молоко (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"54\">54 г</span> (около <span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> крупных желтков)",
+     "name_html": "Яичные желтки (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 г</span>",
+     "name_html": "Мелкий сахар (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Кукурузный крахмал (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Несолёное сливочное масло (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Ванильный экстракт"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"0.5\">0,5 г</span>",
+     "name_html": "Мелкая соль (для крема)"
+    }
+   ],
+   "name": "Ванильный крем — приготовить первым"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>",
+     "name_html": "Мелкий сахар (для карамели)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\">15 мл</span>",
+     "name_html": "Вода (для карамели)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>",
+     "name_html": "Мягкое несолёное масло (для кракелина)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"35\">35 г</span>",
+     "name_html": "Пшеничная мука (для кракелина)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Мелкий сахар (для кракелина)"
+    }
+   ],
+   "name": "Карамельный кракелин"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"115\">115 мл</span>",
+     "name_html": "Вода (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"55\">55 г</span>",
+     "name_html": "Несолёное масло (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\">75 г</span>",
+     "name_html": "Пшеничная мука (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1\">1 г</span>",
+     "name_html": "Мелкая соль (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-b=\"115\">100–115 г</span>; подготовьте немного больше",
+     "name_html": "Взбитые целые яйца без скорлупы"
+    }
+   ],
+   "name": "Заварное тесто"
+  }
+ ],
+ "intro_html": "Вдохновлено <a href=\"https://www.reddit.com/r/ThaiGoJapan/comments/1xt9ddp/\">фотографией MooKEN из Осаки</a>: маленькие шу, ломкая масляная корочка и щедрая мягкая ванильная начинка. Здесь измельчённая карамель запекается в тонком кракелине. Это <b>домашняя адаптация, а не опубликованный рецепт кондитерской</b>. Сначала приготовьте крем, хорошо просушите оболочки и начиняйте незадолго до подачи.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/mooken-mini-cream-puffs/mise1.webp?v=adb0d2eda4",
+   "items": [
+    "молоко",
+    "желтки",
+    "сахар",
+    "крахмал",
+    "масло",
+    "ваниль",
+    "соль"
+   ],
+   "items_html": "молоко · желтки · сахар · крахмал · масло · ваниль · соль",
+   "name": "Ингредиенты для крема",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаги 3–4",
+   "image": "illustrations/mooken-mini-cream-puffs/mise2.webp?v=03e1c38591",
+   "items": [
+    "сахар",
+    "вода",
+    "мягкое масло",
+    "мука"
+   ],
+   "items_html": "сахар · вода · мягкое масло · мука",
+   "name": "Карамельная корочка",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаги 5–6",
+   "image": "illustrations/mooken-mini-cream-puffs/mise3.webp?v=e85197ef41",
+   "items": [
+    "вода",
+    "масло",
+    "мука",
+    "соль",
+    "взбитое яйцо"
+   ],
+   "items_html": "вода · масло · мука · соль · взбитое яйцо",
+   "name": "Ингредиенты для теста",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  }
+ ],
+ "more_label": "Ещё — Японские сладости:",
+ "next": {
+  "slug": "anko",
+  "title": "Анко: сладкая паста из красной фасоли (цубуан)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Ориентир — маленькие ванильные шу MooKEN с карамельной корочкой.</li><li>Публичные фотографии и описания показывают результат, а не технологию кондитерской.</li><li>Здесь карамельный кракелин даёт запечённый масляный хруст без окунания готовых шу в леденцовую карамель.</li><li>Состав, мини-размер и режим выпечки адаптированы для дома; рецепт пока не проверен на кухне.</li></ul>",
+   "title_html": "Что именно воспроизводим"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Основное расписание рассчитано на <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span> → <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"160\" data-s=\"0\">160 °C</span>, верх-низ</b>.</li><li>Если доступен только вентилятор, начальный ориентир — <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"160\" data-s=\"0\">160 °C</span> → <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"140\" data-s=\"0\">140 °C</span></b>; время может отличаться, поэтому проверяйте плотность оболочки и сухость внутри.</li><li>Для большой партии сохраняйте размер горок и пеките в несколько заходов.</li><li>Изменение порций меняет количества ингредиентов, а не температуру, толщину дисков или размер каждой шу.</li></ul>",
+   "title_html": "Конвекция и большие партии"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Жидкое тесто обычно означает избыток яйца или недостаточно подсушенную заварку; не исправляйте это сырой мукой.</li><li>Прекращайте вводить яйцо, как только получился V-образный язычок.</li><li>Шу могут стать плоскими или опасть из-за раннего открытия духовки или недопекания.</li><li>Проверяйте реальную температуру и выпускайте пар лишь после укрепления боков.</li><li>Берите обычную пшеничную муку, не самоподнимающуюся; разрыхлитель не нужен.</li></ul>",
+   "title_html": "Если тесто растекается или шу опадают"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Небольшие комочки можно протереть через мелкое сито, пока крем ещё тёплый.</li><li>Холодный крем, который просто застыл, нужно размешать, а не разбавлять молоком.</li><li>Если он так и не загустел или был снят до пузырей, верните ещё не использованный крем в сотейник, доварите и снова охладите.</li><li>Не отсаживайте в оболочки тёплый или текучий крем.</li></ul>",
+   "title_html": "Если крем комковатый или жидкий"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Храните крем в холодильнике до <b>2 дней</b>, прижав плёнку к поверхности.</li><li>Полностью остывшие пустые оболочки держите герметично при комнатной температуре <b>1 день</b> или заморозьте на срок до <b>1 месяца</b>.</li><li>Верните хруст пустым оболочкам при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"150\" data-s=\"0\">150 °C</span> за 5–8 минут</b>, дольше для ещё замороженных, и полностью остудите перед начинением.</li><li>Лишние диски кракелина замораживайте через пергамент.</li><li>Начинённые шу храните в холодильнике и съедайте в тот же день; корочка постепенно размягчится.</li></ul>",
+   "title_html": "Как подготовить заранее и сохранить хруст"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "shrimp-poke-bowl",
+  "title": "Поке с креветками"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 6,
+  "size": "6",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/mooken-mini-cream-puffs.jpg?v=e44136b32a",
+ "siblings": [
+  {
+   "slug": "anko",
+   "title": "Анко: сладкая паста из красной фасоли (цубуан)"
+  },
+  {
+   "slug": "daifuku",
+   "title": "Дайфуку (моти с красной фасолью)"
+  },
+  {
+   "slug": "strawberry-daifuku",
+   "title": "Клубничные дайфуку (итиго дайфуку)"
+  },
+  {
+   "slug": "mame-daifuku",
+   "title": "Мамэ дайфуку (моти с солёным красным горохом)"
+  },
+  {
+   "slug": "yomogi-daifuku",
+   "title": "Ёмоги дайфуку (моти с полынью)"
+  }
+ ],
+ "slug": "mooken-mini-cream-puffs",
+ "sources": [
+  {
+   "label": "MooKEN reference — источник: the linked Reddit photo",
+   "url": "https://www.reddit.com/r/ThaiGoJapan/comments/1xt9ddp/"
+  },
+  {
+   "label": "MooKEN tasting notes and cross-section — источник: Yossy",
+   "url": "https://gourmetyossy-blog.com/2025/01/26/53010/"
+  },
+  {
+   "label": "Phol Tantasathien — источник: caramel-cookie Osaka cream puffs (chocolate version)",
+   "url": "https://www.pholfoodmafia.com/recipe/chocolate-osaka-cream-puffs-%E0%B8%8A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B9%82%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B8%95%E0%B9%82%E0%B8%AD%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B5/"
+  },
+  {
+   "label": "King Arthur Baking — источник: mini choux pastry",
+   "url": "https://www.kingarthurbaking.com/recipes/easy-mini-puffs-recipe"
+  },
+  {
+   "label": "King Arthur Baking — источник: pastry cream",
+   "url": "https://www.kingarthurbaking.com/recipes/pastry-cream-creme-patissiere-recipe"
+  },
+  {
+   "label": "Just One Cookbook — источник: custard cooking and cooling",
+   "url": "https://www.justonecookbook.com/custard-cream-pastry-cream/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Смешайте венчиком желтки, сахар для крема, крахмал и соль. Отдельно нагрейте молоко до появления пара. Подмешайте немного горячего молока, затем остальное и верните смесь в сотейник.</li><li>Готовьте на среднем огне, проходя венчиком по дну и углам. Когда крем загустеет и начнут лопаться крупные медленные пузыри, продолжайте мешать при слабом кипении ещё <b>1 минуту</b>. Одного загустения недостаточно. Снимите с огня и вмешайте масло для крема и ваниль. Крем должен блестеть и сохранять широкий след от венчика.</li></ul>",
+   "heat": {
+    "label": "средний; слабое кипение",
+    "label_html": "<span>средний; слабое кипение</span>",
+    "off": false
+   },
+   "id": "step-1",
+   "images": {
+    "alt": "Сварите ванильный крем",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/1.webp?v=14bb782aac",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10–15 мин",
+   "time_html": "<span>~10–15 мин</span>",
+   "title": "Сварите ванильный крем",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"250\">250 мл</span>",
+     "name_html": "Цельное молоко (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"54\">54 г</span>",
+     "name_html": "Яичные желтки (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"50\">50 г</span>",
+     "name_html": "Мелкий сахар (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Кукурузный крахмал (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"0.5\">0,5 г</span>",
+     "name_html": "Мелкая соль (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Несолёное сливочное масло (для крема)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Ванильный экстракт"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Распределите в чистом неглубоком лотке слоем примерно <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 см</span></b>. Прижмите подходящую для горячего пищевую плёнку прямо к поверхности. Поставьте лоток на ледяную баню, чтобы быстро убрать первоначальный жар, затем охладите в холодильнике до холодной середины, желательно <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"4\" data-s=\"0\">4 °C</span> или ниже</b>; заложите около <b>2 часов</b>. Вода не должна попасть в крем. Пока он остывает, готовьте кракелин и тесто.</li></ul>",
+   "heat": {
+    "label": "холодильник 4 °C или ниже",
+    "label_html": "<span>холодильник <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"4\" data-s=\"0\">4 °C</span> или ниже</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Охладите крем, пока готовите оболочки",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/2.webp?v=e516432784",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~2 ч, параллельно",
+   "time_html": "<span>~2 ч, параллельно</span>",
+   "title": "Охладите крем, пока готовите оболочки",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Положите силиконовый коврик на жаропрочный противень. В небольшом толстостенном сотейнике растворите сахар для карамели в воде на слабом огне. Увеличьте до среднего и варите без перемешивания, при необходимости осторожно покачивая сотейник, до <b>янтарного цвета</b>, примерно 4–7 минут. При таком небольшом количестве ориентируйтесь на цвет; не доводите до тёмно-коричневого.</li><li>Вылейте тонким слоем на коврик и оставьте до полного затвердевания и остывания примерно на <b>10 минут</b>. Не касайтесь горячего сахара. Холодную карамель разломите и измельчите в прочном закрытом пакете в мелкую крошку, преимущественно меньше <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"1\" data-s=\"0\">1 мм</span></b>. Берегите от влаги.</li></ul>",
+   "heat": {
+    "label": "слабый → средний",
+    "label_html": "<span>слабый → средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Приготовьте и остудите карамель",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/3.webp?v=3bff5e382b",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~15–20 мин, включая остывание",
+   "time_html": "<span>~15–20 мин, включая остывание</span>",
+   "title": "Приготовьте и остудите карамель",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"40\">40 г</span>",
+     "name_html": "Мелкий сахар (для карамели)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"15\">15 мл</span>",
+     "name_html": "Вода (для карамели)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разотрите мягкое масло для кракелина с сахаром для кракелина, затем вмешайте муку для кракелина и всю холодную карамельную крошку. Доведите до связного мягкого теста; не взбивайте до пышности.</li><li>Раскатайте между листами пергамента до <b><span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"2\" data-s=\"0\">2 мм</span></b>. Заморозьте на 10–15 минут, вырежьте <b>диски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span></b> и верните в морозильник. Соберите обрезки и раскатайте ещё раз. На каждую шу нужен один диск; лишние заморозьте для следующей партии. Начните разогревать духовку до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></b>, режим «верх-низ».</li></ul>",
+   "heat": {
+    "label": "заморозка; разогрев духовки до 180 °C",
+    "label_html": "<span>заморозка; разогрев духовки до <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Раскатайте и заморозьте тонкие диски кракелина",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/4.webp?v=f2a21dd86f",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~20 мин, включая заморозку",
+   "time_html": "<span>~20 мин, включая заморозку</span>",
+   "title": "Раскатайте и заморозьте тонкие диски кракелина",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"25\">25 г</span>",
+     "name_html": "Мягкое несолёное масло (для кракелина)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"15\">15 г</span>",
+     "name_html": "Мелкий сахар (для кракелина)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"35\">35 г</span>",
+     "name_html": "Пшеничная мука (для кракелина)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Просейте муку для заварного теста. Сложите в сотейник воду, масло и соль для теста. Нагрейте до полного растапливания масла, затем доведите до уверенного кипения. Снимите с огня, всыпьте всю муку для теста сразу и энергично перемешайте.</li><li>Верните на умеренно слабый огонь и мешайте <b>1–2 минуты</b>. Тесто должно собраться в гладкий ком, оставить тонкую плёнку на дне и прогреться примерно до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"75\" data-b=\"80\" data-s=\"0\">75–80 °C</span></b>; не поджигайте. Переложите в миску и перемешивайте, пока температура не опустится примерно ниже <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"55\" data-s=\"0\">55 °C</span></b>, прежде чем вводить яйцо.</li></ul>",
+   "heat": {
+    "label": "умеренно слабый; остудить ниже 55 °C",
+    "label_html": "<span>умеренно слабый; остудить ниже <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"55\" data-s=\"0\">55 °C</span></span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Заварите гладкое тесто",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/5.webp?v=d29482d3ad",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "~8–10 мин",
+   "time_html": "<span>~8–10 мин</span>",
+   "title": "Заварите гладкое тесто",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"115\">115 мл</span>",
+     "name_html": "Вода (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"55\">55 г</span>",
+     "name_html": "Несолёное масло (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"1\">1 г</span>",
+     "name_html": "Мелкая соль (для заварного теста)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"75\">75 г</span>",
+     "name_html": "Пшеничная мука (для заварного теста)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разболтайте целые яйца и взвесьте без скорлупы. Введите в тёплое тесто около <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-s=\"0\">100 г</span></b> за четыре приёма, полностью вмешивая каждую порцию. Сначала смесь может выглядеть расслоившейся; продолжайте мешать.</li><li>Поднимите лопатку: блестящее тесто должно медленно спадать, оставляя на краю широкий <b>V-образный язычок</b>. Остальное яйцо добавляйте только при необходимости, <b>по <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"5\" data-s=\"0\">5 г</span></b>, обычно не больше <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"115\" data-s=\"0\">115 г</span> всего. Останавливайтесь по консистенции, а не когда закончится яйцо. Отсаженная горка должна сохранять форму.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Введите яйцо до нужной консистенции",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/6.webp?v=3b9d71e76a",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "~5 мин",
+   "time_html": "<span>~5 мин</span>",
+   "title": "Введите яйцо до нужной консистенции",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\" data-b=\"115\">100–115 г</span>; подготовьте немного больше",
+     "name_html": "Взбитые целые яйца без скорлупы"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Застелите противень качественным пергаментом или силиконовым ковриком. Переложите тесто в мешок с <b>круглой насадкой <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"10\" data-s=\"0\">10 мм</span></b>. Держите вертикально и отсадите около <b>24 горок диаметром <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2.5\" data-b=\"3\" data-s=\"0\">2,5–3 см</span></b>, оставляя примерно <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"3\" data-s=\"0\">3 см</span> свободного места между ними. Для исходной партии ориентир — <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\" data-b=\"14\" data-s=\"0\">12–14 г</span> теста на горку; важнее одинаковый размер и правильная консистенция.</li><li>Заканчивайте отсаживание движением насадки в сторону; острые хвостики пригладьте едва влажным пальцем. Не размазывайте тесто в плоские лепёшки. Пробная маленькая горка должна держать округлую форму, а не растекаться.</li></ul>",
+   "heat": null,
+   "id": "step-7",
+   "images": {
+    "alt": "Отсадите 24 небольшие одинаковые горки",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/7.webp?v=d92e19e903",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 7,
+   "part": null,
+   "part_id": null,
+   "time": "~5–8 мин",
+   "time_html": "<span>~5–8 мин</span>",
+   "title": "Отсадите 24 небольшие одинаковые горки",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Положите на каждую горку <b>один замороженный диск кракелина</b>, ровно по центру, не вдавливая. Работайте быстро, чтобы диски оставались твёрдыми. До выпечки больше не добавляйте сахар, соус или крем. Убедитесь, что духовка полностью разогрелась до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></b>.</li></ul>",
+   "heat": {
+    "label": "духовка разогрета до 180 °C",
+    "label_html": "<span>духовка разогрета до <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span></span>",
+    "off": false
+   },
+   "id": "step-8",
+   "images": {
+    "alt": "Положите на каждую горку один замороженный диск",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/8.webp?v=7ede637081",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 8,
+   "part": null,
+   "part_id": null,
+   "time": "~3 мин",
+   "time_html": "<span>~3 мин</span>",
+   "title": "Положите на каждую горку один замороженный диск",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выпекайте на среднем уровне при <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span> 20 минут</b>. Не открывая дверцу, уменьшите температуру до <b><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"160\" data-s=\"0\">160 °C</span></b> и продолжайте примерно <b>15–20 минут</b>. Первые 30 минут дверцу не открывайте: неокрепшие оболочки могут опасть. Для этого расписания выпекайте по одному противню.</li><li>Готовые оболочки хорошо поднимутся, станут золотисто-янтарными и плотными по бокам. Карамель может потемнеть раньше, чем тесто высохнет, поэтому одного цвета недостаточно. Пробная шу должна быть лёгкой, полой и сухой внутри, без влажного пояса теста. Если оболочки ещё мягкие, дайте ещё 5 минут при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"150\" data-b=\"160\" data-s=\"0\">150–160 °C</span>.</li></ul>",
+   "heat": {
+    "label": "180 °C → 160 °C, верх-низ",
+    "label_html": "<span><span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"180\" data-s=\"0\">180 °C</span> → <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"160\" data-s=\"0\">160 °C</span>, верх-низ</span>",
+    "off": false
+   },
+   "id": "step-9",
+   "images": {
+    "alt": "Выпекайте, затем уменьшите нагрев для просушивания",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/9.webp?v=86bd0ba92f",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 9,
+   "part": null,
+   "part_id": null,
+   "time": "~35–40 мин",
+   "time_html": "<span>~35–40 мин</span>",
+   "title": "Выпекайте, затем уменьшите нагрев для просушивания",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Когда оболочки окрепнут, выньте противень и проделайте <b>небольшое отверстие в донышке</b> каждой шу шпажкой или узкой насадкой. Верните на <b>5 минут</b> в выключенную тёплую духовку с приоткрытой дверцей, затем переложите на решётку.</li><li>Остудите до полного исчезновения тепла, примерно <b>20–30 минут</b>. Разломите одну пробную оболочку: внутри должна быть пустая полость с тонкой сухой стенкой. Не начиняйте тёплые шу: от тепла крем разжижается, а конденсат размягчает корочку.</li></ul>",
+   "heat": {
+    "label": "духовка выключена, затем комнатная температура",
+    "label_html": "<span>духовка выключена, затем комнатная температура</span>",
+    "off": false
+   },
+   "id": "step-10",
+   "images": {
+    "alt": "Выпустите пар, подсушите и полностью остудите",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/10.webp?v=e8334ef138",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 10,
+   "part": null,
+   "part_id": null,
+   "time": "~25–35 мин",
+   "time_html": "<span>~25–35 мин</span>",
+   "title": "Выпустите пар, подсушите и полностью остудите",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Размешайте холодный крем венчиком до гладкости и пластичности, не добавляя молоко. Переложите в чистый мешок с <b>круглой насадкой для начинки <span class=\"q\" data-k=\"len\" data-u=\"mm\" data-a=\"4\" data-b=\"5\" data-s=\"0\">4–5 мм</span></b>. Вставьте в отверстие снизу и осторожно выдавливайте, пока шу не станет ощутимо тяжелее и не заполнится; остановитесь, пока оболочка не треснула. Для этого размера ориентир — <b><span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"12\" data-b=\"14\" data-s=\"0\">12–14 г</span> крема на штуку</b>.</li><li>Оставляйте верхушки целыми, не разрезая шу на сэндвичи. Начините одну пробную, разломите и убедитесь, что крем дошёл до краёв полости. Оставшийся крем сразу верните в холодильник.</li></ul>",
+   "heat": null,
+   "id": "step-11",
+   "images": {
+    "alt": "Размешайте холодный крем и наполните через донышко",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/11.webp?v=ac3d943e67",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 11,
+   "part": null,
+   "part_id": null,
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Размешайте холодный крем и наполните через донышко",
+   "uses_rows": []
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Начиняйте только то, что скоро съедите; для лучшего контраста подавайте в течение <b>30–60 минут</b>. Нужна лёгкая оболочка, которая ломается при укусе, и прохладный мягкий крем внутри. Карамельный соус не требуется. Это печёное заварное тесто, а не жареный десерт.</li></ul>",
+   "heat": null,
+   "id": "step-12",
+   "images": {
+    "alt": "Подавайте, пока корочка хрустит",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/mooken-mini-cream-puffs/12.webp?v=157e57a4c8",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 12,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Подавайте, пока корочка хрустит",
+   "uses_rows": []
+  }
+ ],
+ "timeline": null,
+ "title": "Мини-шу с карамельной корочкой в стиле MooKEN",
+ "total": "~2½–3 ч; ~60–75 мин активной работы",
+ "vinegar_options": null,
+ "yields": "24 мини-шу · 6 порций"
+}

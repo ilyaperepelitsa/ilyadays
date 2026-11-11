@@ -3,6 +3,15 @@
  "footer": "Tap ingredients and steps to tick them off while you cook.",
  "groups": [
   {
+   "id": "potatoes",
+   "items": [
+    "crispy-potato-wedges",
+    "potato-wedge-tempura"
+   ],
+   "name": "Potatoes",
+   "notes": []
+  },
+  {
    "id": "turkish--coastal",
    "items": [
     "yacht-sashimi",
@@ -104,6 +113,7 @@
   {
    "id": "japanese-sweets",
    "items": [
+    "mooken-mini-cream-puffs",
     "anko",
     "daifuku",
     "strawberry-daifuku",
@@ -187,6 +197,9 @@
  ],
  "lede_html": "Illustrated recipes for everyday cooking and bigger projects: Turkish dishes and coastal seafood, Japanese basics and sushi, Korean, noodles, Indian, cheese and sous vide. Start with ingredients, then follow the preparation pictures.",
  "recent": [
+  "mooken-mini-cream-puffs",
+  "crispy-potato-wedges",
+  "potato-wedge-tempura",
   "yacht-sashimi",
   "lemon-caper-dorada",
   "garlic-chilli-shrimp",
@@ -195,10 +208,7 @@
   "ali-nazik",
   "gavurdagi-salad",
   "pomegranate-salad",
-  "cilbir",
-  "kabak-mucver",
-  "cokertme",
-  "menemen"
+  "cilbir"
  ],
  "recipes": [
   {
@@ -228,6 +238,66 @@
    "title": "Sous vide calculator",
    "total": null,
    "yields": null
+  },
+  {
+   "added": "2026-11-11T10:33:36Z",
+   "blurb_html": "Thin wedges with a crisp potato crust and fluffy centre: simmer, lightly roughen, dry, fry, cool and fry again.",
+   "chips": [
+    {
+     "html": "<span>2 generous side portions</span>",
+     "kind": "",
+     "text": "2 generous side portions"
+    },
+    {
+     "html": "~1½–2 h, including cooling and batches",
+     "kind": "time",
+     "text": "~1½–2 h, including cooling and batches"
+    }
+   ],
+   "description": "Thin wedges with a crisp potato crust and fluffy centre: simmer, lightly roughen, dry, fry, cool and fry again.",
+   "group": "Potatoes",
+   "group_id": "potatoes",
+   "hero": {
+    "alt": "Crispy twice-fried potato wedges",
+    "image": "illustrations/crispy-potato-wedges/6.webp?v=c76953e1e0",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/crispy-potato-wedges.jpg?v=4e8da29232",
+   "slug": "crispy-potato-wedges",
+   "title": "Crispy twice-fried potato wedges",
+   "total": "~1½–2 h, including cooling and batches",
+   "yields": "2 generous side portions"
+  },
+  {
+   "added": "2026-11-11T10:33:36Z",
+   "blurb_html": "Precooked slender potato wedges in a light tempura shell, with oregano and basil added after frying. Works with packaged shrimp tempura mix.",
+   "chips": [
+    {
+     "html": "<span>2 generous side portions</span>",
+     "kind": "",
+     "text": "2 generous side portions"
+    },
+    {
+     "html": "~1–1¼ h, including drying and frying in batches",
+     "kind": "time",
+     "text": "~1–1¼ h, including drying and frying in batches"
+    }
+   ],
+   "description": "Precooked slender potato wedges in a light tempura shell, with oregano and basil added after frying. Works with packaged shrimp tempura mix.",
+   "group": "Potatoes",
+   "group_id": "potatoes",
+   "hero": {
+    "alt": "Potato wedge tempura with oregano and basil",
+    "image": "illustrations/potato-wedge-tempura/5.webp?v=b1d883f6c1",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/potato-wedge-tempura.jpg?v=f279c1175d",
+   "slug": "potato-wedge-tempura",
+   "title": "Potato wedge tempura with oregano and basil",
+   "total": "~1–1¼ h, including drying and frying in batches",
+   "yields": "2 generous side portions"
   },
   {
    "added": "2026-10-13 18:00",
@@ -1908,6 +1978,36 @@
    "title": "Shrimp poke bowl",
    "total": "~25 min (with sushi rice made ahead)",
    "yields": "2 bowls"
+  },
+  {
+   "added": "2026-11-11T10:33:37Z",
+   "blurb_html": "Small crisp caramel-cookie choux shells, filled through the base with silky vanilla custard. A detailed home recreation of the Osaka cream-puff idea.",
+   "chips": [
+    {
+     "html": "<span>24 mini puffs · 6 portions</span>",
+     "kind": "",
+     "text": "24 mini puffs · 6 portions"
+    },
+    {
+     "html": "~2½–3 h; ~60–75 min active",
+     "kind": "time",
+     "text": "~2½–3 h; ~60–75 min active"
+    }
+   ],
+   "description": "Small crisp caramel-cookie choux shells, filled through the base with silky vanilla custard. A detailed home recreation of the Osaka cream-puff idea.",
+   "group": "Japanese sweets",
+   "group_id": "japanese-sweets",
+   "hero": {
+    "alt": "MooKEN-inspired caramel mini cream puffs",
+    "image": "illustrations/mooken-mini-cream-puffs/12.webp?v=157e57a4c8",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/mooken-mini-cream-puffs.jpg?v=e44136b32a",
+   "slug": "mooken-mini-cream-puffs",
+   "title": "MooKEN-inspired caramel mini cream puffs",
+   "total": "~2½–3 h; ~60–75 min active",
+   "yields": "24 mini puffs · 6 portions"
   },
   {
    "added": "2026-10-10 03:41",

@@ -5,6 +5,7 @@ import path from "node:path";
 import { type Lang } from "./i18n";
 import { foodHref, media } from "./paths";
 import { consolidatedIndex, integratedDestination } from "./food/integrated-recipes.mjs";
+import { recipeCatalog } from "./food/catalog.mjs";
 
 export { foodHref, media };
 
@@ -27,7 +28,7 @@ export type RecipeSummary = {
   chips: Chip[];
   hero: Hero;
   share_image: string;
-  /** When it went up ("2026-10-07 12:00"), from ../recipes content.ADDED. */
+  /** Publication date; legacy records fall back to the exported summary date. */
   added: string | null;
 };
 
@@ -111,6 +112,7 @@ export type Scale = {
 
 export type Recipe = {
   slug: string;
+  added?: string | null;
   title: string;
   description: string;
   blurb_html: string;
@@ -188,7 +190,16 @@ function load<T>(lang: Lang, file: string): T {
   return cache.get(key) as T;
 }
 
-export const getFoodIndex = (lang: Lang) => consolidatedIndex(load<FoodIndex>(lang, "index.json"));
+export function getFoodIndex(lang: Lang): FoodIndex {
+  const key = `${lang}/recipe-catalog`;
+  if (!cache.has(key)) {
+    const recipes = fs.readdirSync(path.join(ROOT, lang, "recipes"))
+      .filter(file => file.endsWith(".json")).sort()
+      .map(file => load<Recipe>(lang, `recipes/${file}`));
+    cache.set(key, consolidatedIndex(recipeCatalog(load<FoodIndex>(lang, "index.json"), recipes)));
+  }
+  return cache.get(key) as FoodIndex;
+}
 export const getSousVide = (lang: Lang) => load<SousVide>(lang, "sous-vide.json");
 export const getSashimi = (lang: Lang) => load<Recipe[]>(lang, "sashimi.json");
 export type OnigiriWrapping = { id:string; title:string; body_html:string; image:string };

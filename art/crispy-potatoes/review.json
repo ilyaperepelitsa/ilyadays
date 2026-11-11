@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-11",
+  "kitchen_tested": false,
+  "research": {
+    "recipes_compared": 15,
+    "supplementary_references": 1,
+    "record": "research.json"
+  },
+  "content": {
+    "languages": [
+      "en",
+      "ru"
+    ],
+    "group": "Potatoes / Картофель",
+    "slugs": [
+      "crispy-potato-wedges",
+      "potato-wedge-tempura"
+    ],
+    "step_counts": [
+      6,
+      5
+    ],
+    "checks": [
+      "15 mm thickness controls the cut rather than a fixed wedge count",
+      "Tenderness and colour cues accompany all cooking times",
+      "Two frying stages for bare wedges; one for precooked tempura",
+      "Cooling, surface drying, batch sizes and oil recovery explicit",
+      "Optional small soda dose only for bare wedges",
+      "Packet tempura hydration and a measured homemade alternative distinguished",
+      "Tempura mix, cooked tenkasu and panko explained separately",
+      "Measured ingredient rows on every step; servings initialized to two",
+      "Russian export reports zero untranslated strings",
+      "All referenced images exist",
+      "Troubleshooting for soft crust, broken wedges and slipping tempura",
+      "Packet-water wording follows the scaled mix amount",
+      "Fryer must support the stated 130 °C first-fry temperature"
+    ],
+    "limitation": "Source-based adaptations have not been cooked and tested; times are guides with explicit doneness checks."
+  },
+  "art": {
+    "tool": "built-in image_gen",
+    "policy": "2026-10-13.4",
+    "accepted_distinct_scenes": 14,
+    "full_size_review": true,
+    "reference": "public/media/illustrations/nigiri/technique-4.webp",
+    "repairs": [
+      "Replaced a tempura ingredient image that copied the reference sushi subject",
+      "Changed fresh herb sprigs to sparse dried herb flakes on tempura hero",
+      "Thin starch dusting and smooth thin batter film replace heavy powder patches and thick ridges"
+    ],
+    "stage_review": "Raw wedges, gentle simmer, roughened drying, pale first fry, golden second fry, intact dry tempura wedges, cold batter, single tempura fry and finished dishes are distinct and consistent.",
+    "shared_images": "Raw cuts and raw ingredient preview shared; simmer image shared with the tempura result; final pictures reused as heroes. First-fry action 4-how1 precedes a separate pale cooling result 4.",
+    "instruction_order": "Tempura step 1 shows raw cutting as the technique picture and simmered wedges as the resulting state."
+  },
+  "verification": {
+    "typecheck": "npm run typecheck — passed",
+    "food_tests": "node --test tests/food/*.test.mjs — 63 passed",
+    "production_build": "npm run build — passed; 462 generated pages after the cream-puff addition",
+    "diff_check": "git diff --check — passed",
+    "integrity": "15 potato research comparisons and 14 accepted potato image hashes checked; both languages retain all preparation images",
+    "browser": "Playwright CLI; production preview on localhost:3012",
+    "desktop": "1440×1000 English crispy-wedge page visually inspected",
+    "interaction": "More button changes servings from 2 to 3 and potatoes from 500 g to 750 g; US switch changes 185 °C to 365 °F",
+    "mobile": "390×844 Russian tempura page visually inspected; all nine images decoded, no horizontal overflow; metric switch displays 175 °C and 500 г.",
+    "local_console": "Only the expected local 404/MIME failures for the two Vercel analytics scripts; no recipe runtime error observed",
+    "screenshots": [
+      "output/playwright/crispy-potatoes-desktop.png",
+      "output/playwright/potato-tempura-mobile-ru.png"
+    ],
+    "http_routes": "All four English/Russian recipe routes returned HTTP 200 from the production preview.",
+    "preview": "http://localhost:3013/food/crispy-potato-wedges",
+    "quality_revision": "Separate first-fry and cooling art; thinner coating art; added troubleshooting and corrected scalable packet-water wording",
+    "quality_browser": "Phone-width production preview: no broken images or horizontal overflow; first-fry action and cooled result both present. Tempura scaling checked separately.",
+    "catalog": "Server discovers recipe records, derives recency from publication metadata, and ignores the exported recent list; covered in tests/food/catalog.test.mjs.",
+    "recent_pages": "Fresh production build: /, /food, /ru, /ru/food all render the three new recipes inside the Recently Added section; six recipe routes HTTP 200."
+  },
+  "publication": "Production release authorized; deployed by pushing main through the Vercel Git integration. Live verification is performed after deployment."
+}

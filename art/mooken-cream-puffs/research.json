@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-11",
+  "request": "Recreate the MooKEN Osaka mini cream puff in the linked Reddit post, with detailed instructions and original illustrations matching the site's style.",
+  "identity": {
+    "shop": "MooKEN, Shinsaibashi, Osaka",
+    "dish": "Small caramel-crusted choux puffs with vanilla custard",
+    "target": "Bite-sized golden buttery shell with brittle caramelized texture; soft pale vanilla filling piped into an intact puff.",
+    "photo_review": "Viewed the actual Reddit image and a separate published cross-section. The Reddit tool's generated image alt text called the filling molten cheese; the image and Thai post instead show and describe a cream puff.",
+    "formula_status": "Shop formula and manufacturing method are unverified. This is an independently written home adaptation, not an exact-clone claim.",
+    "reference_media": "Downloaded reference photos were viewed in output/mooken-references only. They are not published as recipe illustrations."
+  },
+  "product_sources": [
+    {"url":"https://www.reddit.com/r/ThaiGoJapan/comments/1xt9ddp/","finding":"User's reference: butter aroma, caramelized crisp outside, soft full filling and small size; actual image viewed."},
+    {"url":"https://gourmetyossy-blog.com/2025/01/26/53010/","finding":"Independent tasting and cross-section confirm custard and a partly caramelized crunchy shell; does not provide the shop recipe."},
+    {"url":"https://osaka.goguynet.jp/2023/06/03/mooken--osakalc1--/","finding":"Describes small puffs with crisp shell and custard filling."},
+    {"url":"https://nonno.hpplus.jp/travel/321133/","finding":"Confirms the small cream-puff product; used for identity comparison, not ingredient quantities."}
+  ],
+  "method_sources": [
+    {"url":"https://www.pholfoodmafia.com/recipe/chocolate-osaka-cream-puffs-%E0%B8%8A%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B9%82%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B8%95%E0%B9%82%E0%B8%AD%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B8%A3%E0%B8%B5/","role":"Named chef's published Osaka-style chocolate adaptation demonstrates cooled crushed caramel in cookie topping, small piped choux and staged baking. Our vanilla formula, ingredient amounts and cues are adapted rather than presented as this source's recipe."},
+    {"url":"https://www.kingarthurbaking.com/recipes/easy-mini-puffs-recipe","role":"Mini choux baseline, weighed flour, cooled panade before egg, small piped rounds and complete baking/drying."},
+    {"url":"https://www.kingarthurbaking.com/recipes/pastry-cream-creme-patissiere-recipe","role":"Cornstarch-thickened pastry cream, bubbling cooking stage and surface-contact wrap while chilling."},
+    {"url":"https://www.justonecookbook.com/custard-cream-pastry-cream/","role":"Japanese custard handling: tempering, continuous stirring, boiling after thickening, rapid shallow cooling and whisking cold cream smooth."},
+    {"url":"https://www.seriouseats.com/choux-pastry","role":"Choux fundamentals and ingredient/consistency control; used to cross-check panade and egg technique."},
+    {"url":"https://www.seriouseats.com/choux-au-craquelin","role":"Thin frozen cookie discs, water-based choux and bottom-hole filling technique; general comparison, not the MooKEN shop method."}
+  ],
+  "additional_comparison": {
+    "url":"https://resep.app/en/videos/5680",
+    "creator_video":"https://www.youtube.com/watch?v=dkMyNpRbnK8",
+    "finding":"Secondary auto-transcript describes Luvita Ho's different Osaka adaptation with craquelin plus a separate syrup/butter/flour tuile and diplomat cream.",
+    "limitation":"Primary video fetch was throttled; this secondary transcript was not treated as verified shop technique or used as the final formula."
+  },
+  "selected_home_method": {
+    "yield":"About 24 small puffs, six portions; raw mounds 2.5–3 cm, finished about 4 cm.",
+    "components":"Vanilla pastry cream; thin craquelin with cooled finely crushed caramel; water-based choux with egg added by consistency.",
+    "bake":"180 °C conventional for 20 minutes, then 160 °C for 15–20 minutes; vent only once firm, dry briefly and cool fully.",
+    "serve":"Fill the cooled shells through their bases with cold smooth custard shortly before serving.",
+    "alternatives_rejected":"No deep frying; no caramel sauce; no thick hard-candy dip; no claim that a standard plain puff is the photographed caramel-crusted product.",
+    "unverified":"Not kitchen tested. Oven/fan timing and exact yield depend on oven behaviour, dough drying, egg uptake and piped size. Doneness cues are included rather than relying on time alone."
+  }
+}

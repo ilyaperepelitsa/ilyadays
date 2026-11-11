@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-11",
+  "kitchen_tested": false,
+  "formula_status": "MooKEN-inspired independent home adaptation; original shop formula unverified.",
+  "content_review": {
+    "languages": [
+      "en",
+      "ru"
+    ],
+    "yield": "24 mini puffs, six portions",
+    "components": [
+      "vanilla pastry cream",
+      "caramel-craquelin",
+      "water-based choux"
+    ],
+    "steps": 12,
+    "ingredient_previews": 3,
+    "checks": [
+      "Cold custard and fully cooled shells before filling",
+      "Caramel cooled and finely ground before mixing into topping",
+      "Thin frozen topping discs",
+      "Panade heating and egg-consistency cues",
+      "Small equal domes; no piped rosettes",
+      "Conventional oven stages and separate fan conversion",
+      "Dry hollow shell check; vent only after shell structure sets",
+      "Underside filling and crispness-focused serving window",
+      "Troubleshooting, storage and spare topping guidance"
+    ]
+  },
+  "art_review": {
+    "tool": "built-in image_gen",
+    "policy_version": "2026-10-13.4",
+    "accepted_distinct_scenes": 15,
+    "full_size_inspection": true,
+    "corrections": [
+      "Caramel crumbs blended into uniform dough rather than large shards",
+      "Short hanging V with clear gap above bowl, not a continuous stream",
+      "Smooth raw choux domes instead of soft-serve spirals",
+      "Raw topping stage matches the smooth piped mounds",
+      "Powder mounds simplified; excess egg foam removed"
+    ],
+    "hand_review": "One cupping left hand and a right piping hand in the filling illustration; plausible five-digit anatomy, correct underside nozzle contact and no split-sandwich filling.",
+    "reference_use": "Only the approved illustration style reference is passed to generation. Shop/reference photos were inspected for product identity and kept out of shipped art."
+  },
+  "verification": {
+    "typecheck": "npm run typecheck — passed",
+    "build": "npm run build — passed; 462 static pages generated",
+    "food_tests": "node --test tests/food/*.test.mjs — 63 passed",
+    "export": "84 recipes per language; zero untranslated Russian strings and zero missing referenced images",
+    "integrity": "15 accepted cream-puff image hashes plus 14 accepted potato image hashes checked; all six recipe routes returned HTTP 200",
+    "desktop": "1440×1000 English page and egg-consistency stage visually inspected; 12 steps and all 16 image slots present, decoded, with no horizontal overflow",
+    "mobile": "390×844 Russian page visually inspected; all 16 image slots decoded, no broken images or horizontal overflow",
+    "scaling": "Six to twelve people: milk 250→500 ml, egg 100–115→200–230 g, caramel sugar 40→80 g; restored to six",
+    "units": "US setting converts oven stages to 355 °F and 320 °F; restored to metric",
+    "console": "Only expected local Vercel analytics-script 404/MIME errors; no recipe runtime errors observed",
+    "screenshots": [
+      "output/playwright/mooken-desktop.png",
+      "output/playwright/mooken-technique-desktop.png",
+      "output/playwright/mooken-mobile-ru.png"
+    ],
+    "preview": "http://localhost:3013/food/mooken-mini-cream-puffs",
+    "diff_check": "git diff --check — passed",
+    "catalog": "Server discovers recipe records, derives recency from publication metadata, and ignores the exported recent list; covered in tests/food/catalog.test.mjs.",
+    "recent_pages": "Fresh production build: /, /food, /ru, /ru/food all render the three new recipes inside the Recently Added section; six recipe routes HTTP 200."
+  },
+  "publication": "Production release authorized; deployed by pushing main through the Vercel Git integration. Live verification is performed after deployment."
+}

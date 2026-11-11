@@ -115,6 +115,12 @@ before cleaning deployment history. See [Vercel's optimization guide](https://ve
 
 In the exported HTML, links still point at `<slug>.html`. `src/lib/content.ts` rewrites them to `/food/<slug>` or `/ru/food/<slug>` at build time.
 
+The server discovers recipe JSON files directly and builds the Food catalog, groups, and “Recently added”
+from those records. New recipes own an `added` publication timestamp (ISO 8601 with a timezone) in their
+canonical source; the exporter carries it into each language's recipe JSON. Historical recipes fall back
+to their exported summary dates. The server ignores the export's separate `recent` list, excludes redirected
+recipes before taking the twelve newest, and caches the catalog for the build. No client-side recipe list is maintained.
+
 ## Travel: who can edit
 
 - The page reads the owner's progress from the Supabase table `public.trip_state` (one JSON value per trip and key).
