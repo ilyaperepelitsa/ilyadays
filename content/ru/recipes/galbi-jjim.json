@@ -1,0 +1,532 @@
+{
+ "added": "2026-11-16T19:27:00Z",
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Говяжьи рёбрышки, долго тушённые на слабом огне в соевом соусе с тёртой грушей и чесноком, с редькой, морковью и каштанами, до мягкости. Не острое.",
+ "chips": [
+  {
+   "html": "<span>3 порции, с рисом</span>",
+   "kind": "",
+   "text": "3 порции, с рисом"
+  },
+  {
+   "html": "~2½ ч, почти без участия",
+   "kind": "time",
+   "text": "~2½ ч, почти без участия"
+  }
+ ],
+ "description": "Говяжьи рёбрышки, долго тушённые на слабом огне в соевом соусе с тёртой грушей и чесноком, с редькой, морковью и каштанами, до мягкости. Не острое.",
+ "equipment_html": [
+  "Широкий стальной сотейник с плотной крышкой, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 см</span>",
+  "Тёрка",
+  "Большая миска и дуршлаг",
+  "Щипцы, половник и маленькая ложка для снятия жира"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Корейская кухня"
+ },
+ "hero": {
+  "alt": "Кальби-ччим (тушёные говяжьи рёбрышки)",
+  "image": "illustrations/galbi-jjim/hero.webp?v=483ce0dbd4",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
+     "name_html": "Говяжьи рёбрышки (kaburga), нарезанные по 5 см"
+    }
+   ],
+   "name": "Рёбрышки"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\">6 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"90\" data-alt=\"1\">90 мл</span>)</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Коричневый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Мёд"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> груши или <span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> небольшое яблоко (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>)",
+     "name_html": "Азиатская груша или яблоко, тёртые"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"луковица|луковицы|луковиц\" data-n=\"1\">½ луковицы</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>)",
+     "name_html": "Лук репчатый, тёртый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">6 зубчиков</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>, натёртый",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Чёрный перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Обжаренное кунжутное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\">600 мл</span>, плюс ещё для долива",
+     "name_html": "Вода"
+    }
+   ],
+   "name": "Соус для тушения"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span>",
+     "name_html": "Корейская редька (му) или дайкон"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Сушёные шиитаке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-n=\"1\">8</span> шт., по желанию",
+     "name_html": "Очищенные варёные каштаны"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт., по желанию",
+     "name_html": "Сушёный унаби (китайский финик)"
+    }
+   ],
+   "name": "Овощи"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренные семена кунжута"
+    }
+   ],
+   "name": "Для подачи"
+  }
+ ],
+ "intro_html": "Праздничное блюдо: говяжьи рёбрышки, тушённые до тех пор, пока мясо не начнёт отделяться от кости, в <b>сладко-солёном соевом соусе, смягчённом тёртой грушей</b>, с кусками редьки и моркови, шиитаке и каштанами. Совсем не острое. В Турции просите <b>kaburga</b>, нарезанную кусками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>. Готовится в <b>стальном сотейнике с плотной крышкой</b> (<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 см</span>) на слабом огне. Несколько раз переверните рёбрышки и держите рядом горячую воду: широкий сотейник теряет больше жидкости, чем кастрюля. Это домашняя адаптация по нескольким корейским источникам, на кухне она не проверялась.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/galbi-jjim/mise1.webp?v=7458e3cc82",
+   "items": [
+    "соевый соус",
+    "сахар",
+    "мёд",
+    "тёртая груша",
+    "тёртый лук",
+    "чеснок",
+    "имбирь",
+    "перец",
+    "кунжутное масло"
+   ],
+   "items_html": "соевый соус · сахар · мёд · тёртая груша · тёртый лук · чеснок · имбирь · перец · кунжутное масло",
+   "name": "Соус для тушения",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/galbi-jjim/mise2.webp?v=06254416a2",
+   "items": [
+    "куски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span> со сглаженными острыми краями"
+   ],
+   "items_html": "куски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span> со сглаженными острыми краями",
+   "name": "Редька и морковь",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/galbi-jjim/mise3.webp?v=2b4356b11f",
+   "items": [
+    "шляпки замоченных шиитаке пополам",
+    "каштаны",
+    "унаби"
+   ],
+   "items_html": "шляпки замоченных шиитаке пополам · каштаны · унаби",
+   "name": "Шиитаке, каштаны, унаби",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Корейская кухня:",
+ "next": {
+  "slug": "budae-jjigae",
+  "title": "Пудэ-ччигэ (армейское рагу)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Кальби-ччим на следующий день ещё вкуснее.</li><li>Остудите и уберите в холодильник прямо в сотейнике или в контейнере.</li><li>На следующий день снимите застывший жир и осторожно разогрейте под крышкой с небольшим количеством воды, а затем уварите до глазури.</li></ul>",
+   "title_html": "Приготовьте за день до подачи"
+  },
+  {
+   "html": "<ul class=\"do\"><li>В азиатской груше (наси) есть фермент, который размягчает мясо и придаёт соусу фруктовый вкус.</li><li>Проще всего заменить её хрустящим яблоком; киви тоже подойдёт, но берите только ¼ плода, иначе мясо станет кашеобразным.</li></ul>",
+   "title_html": "Груша делает мясо мягким"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Если крышка выпускает много пара, подложите под неё лист бумаги для выпечки и проверяйте жидкость каждые 15 минут.</li><li>Если крышка неплотная, долгую часть можно приготовить в духовке при <span class=\"q\" data-k=\"temp\" data-u=\"C\" data-a=\"160\" data-s=\"0\">160 °C</span> в жаропрочной посуде.</li></ul>",
+   "title_html": "Важна плотность крышки"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "beoseot-jeongol",
+  "title": "Посот-чонголь (грибной хот-пот)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/galbi-jjim.jpg?v=0283267154",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Кимчи из пекинской капусты"
+  },
+  {
+   "slug": "kkakdugi",
+   "title": "Ккактуги (кимчи из кубиков редьки)"
+  },
+  {
+   "slug": "dakgangjeong",
+   "title": "Дакганджон (сладкие хрустящие голени)"
+  },
+  {
+   "slug": "doenjang-jjigae",
+   "title": "Твенджан-ччигэ (рагу с соевой пастой)"
+  },
+  {
+   "slug": "andong-jjimdak",
+   "title": "Андон-ччимдак (курица, тушённая в соевом соусе)"
+  },
+  {
+   "slug": "beoseot-jeongol",
+   "title": "Посот-чонголь (грибной хот-пот)"
+  },
+  {
+   "slug": "budae-jjigae",
+   "title": "Пудэ-ччигэ (армейское рагу)"
+  }
+ ],
+ "slug": "galbi-jjim",
+ "sources": [
+  {
+   "label": "Maangchi — galbi-jjim",
+   "url": "https://www.maangchi.com/recipe/galbijjim"
+  },
+  {
+   "label": "Korean Bapsang — galbijjim",
+   "url": "https://www.koreanbapsang.com/galbijjim-korean-braised-beef-short/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Положите рёбрышки в большую миску с холодной водой на <b>30–60 минут</b>, чтобы вышла кровь, один раз сменив воду. Одновременно замочите сушёные шиитаке в тёплой воде.</li><li>Срежьте толстые куски наружного жира. Сделайте на мякоти каждого ребра 2–3 неглубоких надреза, чтобы соус проник внутрь.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Замочите и обработайте рёбрышки",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/galbi-jjim/1.webp?v=15a1e8de3b",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~45 мин, в основном замачивание",
+   "time_html": "<span>~45 мин, в основном замачивание</span>",
+   "title": "Замочите и обработайте рёбрышки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
+     "name_html": "Говяжьи рёбрышки (kaburga), нарезанные по 5 см"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Сушёные шиитаке"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Наполните сотейник водой наполовину и доведите до кипения. Положите откинутые рёбрышки и варите <b>5 минут</b>; поднимется серая пена.</li><li>Откиньте рёбрышки на дуршлаг и ополосните каждое тёплой водой. Вымойте сотейник. Так соус получится чистым и глянцевым, а не мутным.</li></ul>",
+   "heat": {
+    "label": "сильный",
+    "label_html": "<span>сильный</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Бланшируйте рёбрышки в сотейнике",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Ополосните каждое бланшированное ребро",
+      "src": "illustrations/galbi-jjim/2-how1.webp?v=a6f2bcf1e7"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/galbi-jjim/2.webp?v=294872eed6",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Бланшируйте рёбрышки в сотейнике",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
+     "name_html": "Говяжьи рёбрышки (kaburga), нарезанные по 5 см"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Натрите грушу и лук на мелкой тёрке, чеснок мелко порубите. Смешайте их с соевым соусом, сахаром, мёдом, имбирём, перцем и кунжутным маслом.</li><li>Верните рёбрышки в чистый сотейник в один слой, залейте соусом и <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\" data-s=\"0\">600 мл</span> воды и доведите до кипения. Накройте крышкой, убавьте до <b>слабого</b> огня и тушите при еле заметном кипении <b>1 час</b>.</li><li>Переворачивайте рёбрышки каждые 20 минут. Жидкость должна доходить как минимум до половины рёбрышек; если уровень ниже, долейте горячей воды.</li></ul>",
+   "heat": {
+    "label": "довести до кипения, затем слабый",
+    "label_html": "<span>довести до кипения, затем слабый</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Тушите в соусе под крышкой",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/galbi-jjim/3.webp?v=025c932be7",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "1 ч",
+   "time_html": "<span>1 ч</span>",
+   "title": "Тушите в соусе под крышкой",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
+     "name_html": "Говяжьи рёбрышки (kaburga), нарезанные по 5 см"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\">6 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"90\" data-alt=\"1\">90 мл</span>)</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Коричневый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Мёд"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> груши или <span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> небольшое яблоко (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>)",
+     "name_html": "Азиатская груша или яблоко, тёртые"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-f=\"луковица|луковицы|луковиц\" data-n=\"1\">½ луковицы</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 г</span>)",
+     "name_html": "Лук репчатый, тёртый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">6 зубчиков</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Чёрный перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Обжаренное кунжутное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"600\">600 мл</span>",
+     "name_html": "Вода"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Тем временем очистите редьку и морковь и нарежьте <b>кусками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span></b>. Малым ножом сгладьте острые края, чтобы куски не разваливались при долгом тушении. Отожмите шиитаке и разрежьте шляпки пополам.</li><li>Разложите редьку, морковь, шиитаке, каштаны и унаби между рёбрышками. Накройте крышкой и тушите на слабом огне <b>30–40 минут</b>, пока палочка не будет легко входить в мясо, а редька не станет прозрачной.</li></ul>",
+   "heat": {
+    "label": "слабый",
+    "label_html": "<span>слабый</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Добавьте редьку, морковь, шиитаке и каштаны",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Сгладьте края редьки",
+      "src": "illustrations/galbi-jjim/4-how1.webp?v=eb57309dda"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/galbi-jjim/4.webp?v=f5fcad8d0f",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "30–40 мин",
+   "time_html": "<span>30–40 мин</span>",
+   "title": "Добавьте редьку, морковь, шиитаке и каштаны",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"250\">250 г</span>",
+     "name_html": "Корейская редька (му) или дайкон"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Сушёные шиитаке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"8\" data-n=\"1\">8</span> шт.",
+     "name_html": "Очищенные варёные каштаны"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт.",
+     "name_html": "Сушёный унаби (китайский финик)"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите крышку и слегка наклоните сотейник. Снимите ложкой прозрачный жир, собравшийся у нижнего края.</li><li>Прибавьте огонь до <b>среднего</b> и варите без крышки <b>8–10 минут</b>, поливая рёбрышки соусом, пока он не станет густым и блестящим, а рёбрышки не будут выглядеть лакированными. Овощи двигайте осторожно, чтобы они не развалились.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Снимите жир и уварите до глазури",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Снимите жир",
+      "src": "illustrations/galbi-jjim/5-how1.webp?v=9438ba364d"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/galbi-jjim/5.webp?v=68ed8deea2",
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "8–10 мин",
+   "time_html": "<span>8–10 мин</span>",
+   "title": "Снимите жир и уварите до глазури",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"kg\" data-a=\"1\">1 кг</span>",
+     "name_html": "Говяжьи рёбрышки (kaburga), нарезанные по 5 см"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Выложите рёбрышки и овощи на блюдо или подавайте прямо в сотейнике. Полейте оставшейся глазурью, посыпьте тонко нарезанным зелёным луком и семенами кунжута. Ешьте с рисом.</li></ul>",
+   "heat": null,
+   "id": "step-6",
+   "images": {
+    "alt": "Украсьте и подавайте",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/galbi-jjim/6.webp?v=979563a9ea",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Украсьте и подавайте",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренные семена кунжута"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Кальби-ччим (тушёные говяжьи рёбрышки)",
+ "total": "~2½ ч, почти без участия",
+ "vinegar_options": null,
+ "yields": "3 порции, с рисом"
+}

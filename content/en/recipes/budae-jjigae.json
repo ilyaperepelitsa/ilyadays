@@ -1,0 +1,505 @@
+{
+ "added": "2026-11-16T19:31:00Z",
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Luncheon meat, sausages, kimchi, beans and ramen noodles simmered in a wide pan and topped with cheese. Mild version.",
+ "chips": [
+  {
+   "html": "<span>3 portions</span>",
+   "kind": "",
+   "text": "3 portions"
+  },
+  {
+   "html": "~30 min",
+   "kind": "time",
+   "text": "~30 min"
+  }
+ ],
+ "description": "Luncheon meat, sausages, kimchi, beans and ramen noodles simmered in a wide pan and topped with cheese. Mild version.",
+ "equipment_html": [
+  "Wide steel sauté pan with lid, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 cm</span>",
+  "Small bowl for the sauce",
+  "Knife and board"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Korean"
+ },
+ "hero": {
+  "alt": "Budae jjigae (army stew)",
+  "image": "illustrations/budae-jjigae/hero.webp?v=9eec49bf25",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Luncheon meat (Spam or beef)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>)",
+     "name_html": "Frankfurters"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Kimchi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>)",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Firm tofu"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Mushrooms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Baked beans"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>, optional",
+     "name_html": "Minced beef"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Spring onions"
+    }
+   ],
+   "name": "Main ingredients"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Gochujang"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"clove|cloves\" data-n=\"1\">3 cloves</span>",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Black pepper"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>, optional, for heat",
+     "name_html": "Gochugaru"
+    }
+   ],
+   "name": "Mild sauce"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"700\">700 ml</span>",
+     "name_html": "Chicken stock or niboshi dashi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> block",
+     "name_html": "Instant ramen noodles (block only)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Cheese slice (processed)"
+    }
+   ],
+   "name": "Broth and topping"
+  }
+ ],
+ "intro_html": "Korea's post-war comfort stew: tinned luncheon meat, sausages and baked beans meet kimchi and instant noodles, with a slice of cheese melting on top. It is traditionally cooked in a <b>wide, shallow pan</b> in the middle of the table, so a steel sauté pan is ideal. The ingredients are arranged in sections, broth is poured around them and the noodles go in last. This version is <b>mild</b>: gochujang only, no chilli flakes. The heat comes from your <a href=\"kimchi.html\">kimchi</a>, and you can control it. Beef luncheon meat and beef frankfurters (common in Turkey) work well. This is a home adaptation built from several Korean sources and has not been kitchen tested.",
+ "mise": [
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/budae-jjigae/mise1.webp?v=d6fa6ff219",
+   "items": [
+    "luncheon meat in <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> slices",
+    "frankfurters on the diagonal",
+    "minced beef"
+   ],
+   "items_html": "luncheon meat in <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> slices · frankfurters on the diagonal · minced beef",
+   "name": "Meats",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/budae-jjigae/mise2.webp?v=067e8eebce",
+   "items": [
+    "kimchi chopped",
+    "onion sliced lengthwise",
+    "tofu slices",
+    "mushrooms"
+   ],
+   "items_html": "kimchi chopped · onion sliced lengthwise · tofu slices · mushrooms",
+   "name": "Kimchi and vegetables",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 2",
+   "image": "illustrations/budae-jjigae/mise3.webp?v=d3832f1b0f",
+   "items": [
+    "gochujang",
+    "soy",
+    "garlic",
+    "mirin",
+    "sugar",
+    "pepper"
+   ],
+   "items_html": "gochujang · soy · garlic · mirin · sugar · pepper",
+   "name": "Mild sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 4",
+   "image": "illustrations/budae-jjigae/mise4.webp?v=22d248d9d2",
+   "items": [
+    "ramen block",
+    "cheese slice",
+    "spring onion"
+   ],
+   "items_html": "ramen block · cheese slice · spring onion",
+   "name": "To finish",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "More korean:",
+ "next": {
+  "slug": "garlic-ginger-chicken-noodles",
+  "title": "Garlic–ginger chicken noodles"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>The sauce here has no chilli flakes, so the only heat comes from the kimchi.</li><li>For a very mild pot, use less kimchi or squeeze out its juice.</li><li>Classic budae jjigae uses <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-b=\"2\" data-s=\"0\">1–2 tbsp</span> gochugaru.</li></ul>",
+   "title_html": "How spicy it gets"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Pork Spam can be hard to find; tinned beef luncheon meat (dana jambon or dana luncheon) and beef frankfurters (dana sosis) taste close.</li><li>Sucuk is too strongly spiced and greasy for this stew.</li><li>Any baked beans in tomato sauce work.</li></ul>",
+   "title_html": "What to use in Turkey"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Use only the noodle block; keep the seasoning packet aside or add a quarter of it if the broth tastes flat.</li><li>Korean ramyeon noodles hold up best, but any instant noodle works.</li><li>Add more stock and a second block to stretch it for 4 people.</li></ul>",
+   "title_html": "Ramen"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "galbi-jjim",
+  "title": "Galbi-jjim (braised beef short ribs)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/budae-jjigae.jpg?v=fa65c8ebce",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Napa cabbage kimchi"
+  },
+  {
+   "slug": "kkakdugi",
+   "title": "Kkakdugi (radish cube kimchi)"
+  },
+  {
+   "slug": "dakgangjeong",
+   "title": "Dakgangjeong (sweet crispy drumsticks)"
+  },
+  {
+   "slug": "doenjang-jjigae",
+   "title": "Doenjang jjigae (soybean paste stew)"
+  },
+  {
+   "slug": "andong-jjimdak",
+   "title": "Andong jjimdak (soy-braised chicken)"
+  },
+  {
+   "slug": "beoseot-jeongol",
+   "title": "Beoseot jeongol (mushroom hot pot)"
+  },
+  {
+   "slug": "galbi-jjim",
+   "title": "Galbi-jjim (braised beef short ribs)"
+  }
+ ],
+ "slug": "budae-jjigae",
+ "sources": [
+  {
+   "label": "Maangchi — budae jjigae",
+   "url": "https://www.maangchi.com/recipe/budae-jjigae"
+  },
+  {
+   "label": "Korean Bapsang — budae jjigae",
+   "url": "https://www.koreanbapsang.com/budae-jjigae-army-stew/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the luncheon meat into <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> thick slices</b> and the frankfurters on the diagonal into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> pieces. Chop the kimchi into bite-sized pieces.</li><li>Cut the ends off the onion, halve it and slice it lengthwise. Cut the tofu into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"1\" data-s=\"0\">1 cm</span> slices, the mushrooms into halves and the spring onions into <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 cm</span> lengths.</li><li>Stir the gochujang, soy sauce, minced garlic, mirin, sugar and pepper into a thick paste. For a spicier pot, add the gochugaru.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Slice and mix the sauce",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/budae-jjigae/1.webp?v=c331697e92",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Slice and mix the sauce",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Luncheon meat (Spam or beef)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>)",
+     "name_html": "Frankfurters"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Kimchi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>)",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Firm tofu"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Mushrooms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Spring onions"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Gochujang"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-f=\"clove|cloves\" data-n=\"1\">3 cloves</span>",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Mirin"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ tsp</span>",
+     "name_html": "Black pepper"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-b=\"2\">1–2 tsp</span>",
+     "name_html": "Gochugaru"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Spread the onion over the bottom of the cold pan. On top, arrange the luncheon meat, frankfurters, kimchi, tofu and mushrooms in <b>separate sections</b> around the pan.</li><li>Spoon the baked beans and the minced beef into gaps. Put the sauce paste as one dollop in the centre.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Arrange everything in the pan",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [
+     {
+      "caption": "Arrange in sections",
+      "src": "illustrations/budae-jjigae/2-how1.webp?v=a36b905183"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/budae-jjigae/2.webp?v=43bffca0f2",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~5 min",
+   "time_html": "<span>~5 min</span>",
+   "title": "Arrange everything in the pan",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>)",
+     "name_html": "Onion"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Luncheon meat (Spam or beef)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"3\" data-n=\"1\">3</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>)",
+     "name_html": "Frankfurters"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Kimchi"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Firm tofu"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"80\">80 g</span>",
+     "name_html": "Mushrooms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\">3 tbsp</span>",
+     "name_html": "Baked beans"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Minced beef"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Gochujang"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Pour the stock gently down the side of the pan until the ingredients are about two-thirds covered.</li><li>Cover and bring to a boil on <b>medium-high</b>, then cook for <b>5 minutes</b>. Uncover, stir the sauce paste into the broth and break up the minced beef. Simmer for another <b>3 minutes</b> and taste; add a splash of soy sauce if it needs more salt.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Pour in the stock and simmer",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/budae-jjigae/3.webp?v=4c89339c21",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~8 min",
+   "time_html": "<span>~8 min</span>",
+   "title": "Pour in the stock and simmer",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"700\">700 ml</span>",
+     "name_html": "Chicken stock or niboshi dashi"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Put the ramen block in the centre and lay the cheese slice on top of it. Scatter the spring onions around.</li><li>Simmer for <b>2–3 minutes</b>, loosening the noodles with chopsticks once they soften, until they are just cooked and the cheese has melted into the broth. Serve straight from the pan; the noodles keep softening.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Add noodles and cheese; eat right away",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [
+     {
+      "caption": "Loosen the noodles",
+      "src": "illustrations/budae-jjigae/4-how1.webp?v=e2aa3e59d2"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/budae-jjigae/4.webp?v=d27906f9ed",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
+   "title": "Add noodles and cheese; eat right away",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> block",
+     "name_html": "Instant ramen noodles (block only)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Cheese slice (processed)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Spring onions"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Budae jjigae (army stew)",
+ "total": "~30 min",
+ "vinegar_options": null,
+ "yields": "3 portions"
+}

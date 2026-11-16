@@ -128,7 +128,12 @@
    "items": [
     "kimchi",
     "kkakdugi",
-    "dakgangjeong"
+    "dakgangjeong",
+    "doenjang-jjigae",
+    "andong-jjimdak",
+    "beoseot-jeongol",
+    "galbi-jjim",
+    "budae-jjigae"
    ],
    "name": "Korean",
    "notes": []
@@ -197,18 +202,18 @@
  ],
  "lede_html": "Illustrated recipes for everyday cooking and bigger projects: Turkish dishes and coastal seafood, Japanese basics and sushi, Korean, noodles, Indian, cheese and sous vide. Start with ingredients, then follow the preparation pictures.",
  "recent": [
+  "budae-jjigae",
+  "doenjang-jjigae",
+  "andong-jjimdak",
+  "beoseot-jeongol",
+  "galbi-jjim",
   "mooken-mini-cream-puffs",
   "crispy-potato-wedges",
   "potato-wedge-tempura",
   "yacht-sashimi",
   "lemon-caper-dorada",
   "garlic-chilli-shrimp",
-  "palamut-tava",
-  "sumac-lamb-wraps",
-  "ali-nazik",
-  "gavurdagi-salad",
-  "pomegranate-salad",
-  "cilbir"
+  "palamut-tava"
  ],
  "recipes": [
   {
@@ -2248,6 +2253,156 @@
    "title": "Dakgangjeong (sweet crispy drumsticks)",
    "total": "~1¼ h",
    "yields": "4 servings (12 drumsticks)"
+  },
+  {
+   "added": "2026-11-16T19:30:00Z",
+   "blurb_html": "Everyday Korean soybean paste stew: potato, courgette, mushroom and tofu in anchovy dashi. Mild, savoury, 30 minutes.",
+   "chips": [
+    {
+     "html": "<span>2 bowls, with rice</span>",
+     "kind": "",
+     "text": "2 bowls, with rice"
+    },
+    {
+     "html": "~30 min",
+     "kind": "time",
+     "text": "~30 min"
+    }
+   ],
+   "description": "Everyday Korean soybean paste stew: potato, courgette, mushroom and tofu in anchovy dashi. Mild, savoury, 30 minutes.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Doenjang jjigae (soybean paste stew)",
+    "image": "illustrations/doenjang-jjigae/hero.webp?v=7be8b0b9fd",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/doenjang-jjigae.jpg?v=bfb419dd57",
+   "slug": "doenjang-jjigae",
+   "title": "Doenjang jjigae (soybean paste stew)",
+   "total": "~30 min",
+   "yields": "2 bowls, with rice"
+  },
+  {
+   "added": "2026-11-16T19:29:00Z",
+   "blurb_html": "Bone-in chicken braised in sweet soy with potato, carrot and glass noodles that soak up the sauce. Savoury, not spicy.",
+   "chips": [
+    {
+     "html": "<span>3 portions, with rice</span>",
+     "kind": "",
+     "text": "3 portions, with rice"
+    },
+    {
+     "html": "~1 h, plus 30 min noodle soak",
+     "kind": "time",
+     "text": "~1 h, plus 30 min noodle soak"
+    }
+   ],
+   "description": "Bone-in chicken braised in sweet soy with potato, carrot and glass noodles that soak up the sauce. Savoury, not spicy.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Andong jjimdak (soy-braised chicken)",
+    "image": "illustrations/andong-jjimdak/hero.webp?v=dce4499e68",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/andong-jjimdak.jpg?v=0a45c7d17d",
+   "slug": "andong-jjimdak",
+   "title": "Andong jjimdak (soy-braised chicken)",
+   "total": "~1 h, plus 30 min noodle soak",
+   "yields": "3 portions, with rice"
+  },
+  {
+   "added": "2026-11-16T19:28:00Z",
+   "blurb_html": "Mushrooms, napa cabbage and tofu arranged in sections in a wide pan, simmered in a clear soy dashi. Mild and quick.",
+   "chips": [
+    {
+     "html": "<span>2 portions, with rice</span>",
+     "kind": "",
+     "text": "2 portions, with rice"
+    },
+    {
+     "html": "~30 min",
+     "kind": "time",
+     "text": "~30 min"
+    }
+   ],
+   "description": "Mushrooms, napa cabbage and tofu arranged in sections in a wide pan, simmered in a clear soy dashi. Mild and quick.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Beoseot jeongol (mushroom hot pot)",
+    "image": "illustrations/beoseot-jeongol/hero.webp?v=6752c243a7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/beoseot-jeongol.jpg?v=5b063a7c68",
+   "slug": "beoseot-jeongol",
+   "title": "Beoseot jeongol (mushroom hot pot)",
+   "total": "~30 min",
+   "yields": "2 portions, with rice"
+  },
+  {
+   "added": "2026-11-16T19:27:00Z",
+   "blurb_html": "Short ribs braised low and slow in soy, grated pear and garlic with radish, carrot and chestnuts until tender. Not spicy.",
+   "chips": [
+    {
+     "html": "<span>3 portions, with rice</span>",
+     "kind": "",
+     "text": "3 portions, with rice"
+    },
+    {
+     "html": "~2½ h, mostly hands-off",
+     "kind": "time",
+     "text": "~2½ h, mostly hands-off"
+    }
+   ],
+   "description": "Short ribs braised low and slow in soy, grated pear and garlic with radish, carrot and chestnuts until tender. Not spicy.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Galbi-jjim (braised beef short ribs)",
+    "image": "illustrations/galbi-jjim/hero.webp?v=483ce0dbd4",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/galbi-jjim.jpg?v=0283267154",
+   "slug": "galbi-jjim",
+   "title": "Galbi-jjim (braised beef short ribs)",
+   "total": "~2½ h, mostly hands-off",
+   "yields": "3 portions, with rice"
+  },
+  {
+   "added": "2026-11-16T19:31:00Z",
+   "blurb_html": "Luncheon meat, sausages, kimchi, beans and ramen noodles simmered in a wide pan and topped with cheese. Mild version.",
+   "chips": [
+    {
+     "html": "<span>3 portions</span>",
+     "kind": "",
+     "text": "3 portions"
+    },
+    {
+     "html": "~30 min",
+     "kind": "time",
+     "text": "~30 min"
+    }
+   ],
+   "description": "Luncheon meat, sausages, kimchi, beans and ramen noodles simmered in a wide pan and topped with cheese. Mild version.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Budae jjigae (army stew)",
+    "image": "illustrations/budae-jjigae/hero.webp?v=9eec49bf25",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/budae-jjigae.jpg?v=fa65c8ebce",
+   "slug": "budae-jjigae",
+   "title": "Budae jjigae (army stew)",
+   "total": "~30 min",
+   "yields": "3 portions"
   },
   {
    "added": "2026-10-06 01:53",

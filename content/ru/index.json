@@ -128,7 +128,12 @@
    "items": [
     "kimchi",
     "kkakdugi",
-    "dakgangjeong"
+    "dakgangjeong",
+    "doenjang-jjigae",
+    "andong-jjimdak",
+    "beoseot-jeongol",
+    "galbi-jjim",
+    "budae-jjigae"
    ],
    "name": "Корейская кухня",
    "notes": []
@@ -197,18 +202,18 @@
  ],
  "lede_html": "Рецепты с иллюстрациями на каждый день и для больших проектов: турецкая кухня и морепродукты, японские основы и суши, корейская кухня, лапша, индийские блюда, сыр и су-вид. Сначала ингредиенты, затем иллюстрации этапов приготовления.",
  "recent": [
+  "budae-jjigae",
+  "doenjang-jjigae",
+  "andong-jjimdak",
+  "beoseot-jeongol",
+  "galbi-jjim",
   "mooken-mini-cream-puffs",
   "crispy-potato-wedges",
   "potato-wedge-tempura",
   "yacht-sashimi",
   "lemon-caper-dorada",
   "garlic-chilli-shrimp",
-  "palamut-tava",
-  "sumac-lamb-wraps",
-  "ali-nazik",
-  "gavurdagi-salad",
-  "pomegranate-salad",
-  "cilbir"
+  "palamut-tava"
  ],
  "recipes": [
   {
@@ -2248,6 +2253,156 @@
    "title": "Дакганджон (сладкие хрустящие голени)",
    "total": "~1¼ ч",
    "yields": "4 порции (12 голеней)"
+  },
+  {
+   "added": "2026-11-16T19:30:00Z",
+   "blurb_html": "Повседневное корейское рагу с соевой пастой: картофель, кабачок, грибы и тофу в даси из анчоусов. Мягкое, наваристое, 30 минут.",
+   "chips": [
+    {
+     "html": "<span>2 миски, с рисом</span>",
+     "kind": "",
+     "text": "2 миски, с рисом"
+    },
+    {
+     "html": "~30 мин",
+     "kind": "time",
+     "text": "~30 мин"
+    }
+   ],
+   "description": "Повседневное корейское рагу с соевой пастой: картофель, кабачок, грибы и тофу в даси из анчоусов. Мягкое, наваристое, 30 минут.",
+   "group": "Корейская кухня",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Твенджан-ччигэ (рагу с соевой пастой)",
+    "image": "illustrations/doenjang-jjigae/hero.webp?v=7be8b0b9fd",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/doenjang-jjigae.jpg?v=bfb419dd57",
+   "slug": "doenjang-jjigae",
+   "title": "Твенджан-ччигэ (рагу с соевой пастой)",
+   "total": "~30 мин",
+   "yields": "2 миски, с рисом"
+  },
+  {
+   "added": "2026-11-16T19:29:00Z",
+   "blurb_html": "Курица на кости, тушённая в сладком соевом соусе с картофелем, морковью и стеклянной лапшой, которая впитывает соус. Наваристое, не острое.",
+   "chips": [
+    {
+     "html": "<span>3 порции, с рисом</span>",
+     "kind": "",
+     "text": "3 порции, с рисом"
+    },
+    {
+     "html": "~1 ч, плюс 30 мин замачивание лапши",
+     "kind": "time",
+     "text": "~1 ч, плюс 30 мин замачивание лапши"
+    }
+   ],
+   "description": "Курица на кости, тушённая в сладком соевом соусе с картофелем, морковью и стеклянной лапшой, которая впитывает соус. Наваристое, не острое.",
+   "group": "Корейская кухня",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Андон-ччимдак (курица, тушённая в соевом соусе)",
+    "image": "illustrations/andong-jjimdak/hero.webp?v=dce4499e68",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/andong-jjimdak.jpg?v=0a45c7d17d",
+   "slug": "andong-jjimdak",
+   "title": "Андон-ччимдак (курица, тушённая в соевом соусе)",
+   "total": "~1 ч, плюс 30 мин замачивание лапши",
+   "yields": "3 порции, с рисом"
+  },
+  {
+   "added": "2026-11-16T19:28:00Z",
+   "blurb_html": "Грибы, пекинская капуста и тофу, разложенные секциями в широком сотейнике и сваренные в прозрачном соевом даси. Мягкое и быстрое блюдо.",
+   "chips": [
+    {
+     "html": "<span>2 порции, с рисом</span>",
+     "kind": "",
+     "text": "2 порции, с рисом"
+    },
+    {
+     "html": "~30 мин",
+     "kind": "time",
+     "text": "~30 мин"
+    }
+   ],
+   "description": "Грибы, пекинская капуста и тофу, разложенные секциями в широком сотейнике и сваренные в прозрачном соевом даси. Мягкое и быстрое блюдо.",
+   "group": "Корейская кухня",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Посот-чонголь (грибной хот-пот)",
+    "image": "illustrations/beoseot-jeongol/hero.webp?v=6752c243a7",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/beoseot-jeongol.jpg?v=5b063a7c68",
+   "slug": "beoseot-jeongol",
+   "title": "Посот-чонголь (грибной хот-пот)",
+   "total": "~30 мин",
+   "yields": "2 порции, с рисом"
+  },
+  {
+   "added": "2026-11-16T19:27:00Z",
+   "blurb_html": "Говяжьи рёбрышки, долго тушённые на слабом огне в соевом соусе с тёртой грушей и чесноком, с редькой, морковью и каштанами, до мягкости. Не острое.",
+   "chips": [
+    {
+     "html": "<span>3 порции, с рисом</span>",
+     "kind": "",
+     "text": "3 порции, с рисом"
+    },
+    {
+     "html": "~2½ ч, почти без участия",
+     "kind": "time",
+     "text": "~2½ ч, почти без участия"
+    }
+   ],
+   "description": "Говяжьи рёбрышки, долго тушённые на слабом огне в соевом соусе с тёртой грушей и чесноком, с редькой, морковью и каштанами, до мягкости. Не острое.",
+   "group": "Корейская кухня",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Кальби-ччим (тушёные говяжьи рёбрышки)",
+    "image": "illustrations/galbi-jjim/hero.webp?v=483ce0dbd4",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/galbi-jjim.jpg?v=0283267154",
+   "slug": "galbi-jjim",
+   "title": "Кальби-ччим (тушёные говяжьи рёбрышки)",
+   "total": "~2½ ч, почти без участия",
+   "yields": "3 порции, с рисом"
+  },
+  {
+   "added": "2026-11-16T19:31:00Z",
+   "blurb_html": "Мясные консервы, сосиски, кимчи, фасоль и лапша рамён, сваренные в широком сотейнике и покрытые сыром. Мягкий вариант.",
+   "chips": [
+    {
+     "html": "<span>3 порции</span>",
+     "kind": "",
+     "text": "3 порции"
+    },
+    {
+     "html": "~30 мин",
+     "kind": "time",
+     "text": "~30 мин"
+    }
+   ],
+   "description": "Мясные консервы, сосиски, кимчи, фасоль и лапша рамён, сваренные в широком сотейнике и покрытые сыром. Мягкий вариант.",
+   "group": "Корейская кухня",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Пудэ-ччигэ (армейское рагу)",
+    "image": "illustrations/budae-jjigae/hero.webp?v=9eec49bf25",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/budae-jjigae.jpg?v=fa65c8ebce",
+   "slug": "budae-jjigae",
+   "title": "Пудэ-ччигэ (армейское рагу)",
+   "total": "~30 мин",
+   "yields": "3 порции"
   },
   {
    "added": "2026-10-06 01:53",

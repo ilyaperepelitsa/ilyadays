@@ -17,3 +17,7 @@ Use one built-in call per distinct scene. Inspect the actual full-size outputs a
 The recipe source, translations and scene specifications remain in `../recipes`. Since that sibling is not a Git repository in this workspace, this collection also retains source snapshots in `art/turkey-recipes/source/` so changes remain reviewable and recoverable.
 
 The recipe parity correction is recorded in `art/recipe-quality/`: full submitted prompt strings and style-reference paths in `prompts.json`, targeted corrections in `repair-prompts.json`, and final source/output hashes in the review manifest. The image-quality review checks visible technique and ingredient state as well as illustration style. Food pages should include prepared-ingredient previews and measured per-step ingredient lists; a single generic finished-dish picture cannot stand in for distinct selected foods.
+
+**2026-11-16 (policy 2026-11-16.1):** OpenAI's image API input moderation rejects prompts naming an artist
+(`moderation_blocked`, always with reference images, sometimes without). At the user's request the artist name in
+the style block was replaced with a detailed description of the same look; the rest of the block is unchanged.

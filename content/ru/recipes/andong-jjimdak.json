@@ -1,0 +1,579 @@
+{
+ "added": "2026-11-16T19:29:00Z",
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Курица на кости, тушённая в сладком соевом соусе с картофелем, морковью и стеклянной лапшой, которая впитывает соус. Наваристое, не острое.",
+ "chips": [
+  {
+   "html": "<span>3 порции, с рисом</span>",
+   "kind": "",
+   "text": "3 порции, с рисом"
+  },
+  {
+   "html": "~1 ч, плюс 30 мин замачивание лапши",
+   "kind": "time",
+   "text": "~1 ч, плюс 30 мин замачивание лапши"
+  }
+ ],
+ "description": "Курица на кости, тушённая в сладком соевом соусе с картофелем, морковью и стеклянной лапшой, которая впитывает соус. Наваристое, не острое.",
+ "equipment_html": [
+  "Широкий стальной сотейник с крышкой, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 см</span>",
+  "Миска для замачивания лапши",
+  "Щипцы и деревянная лопатка"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Корейская кухня"
+ },
+ "hero": {
+  "alt": "Андон-ччимдак (курица, тушённая в соевом соусе)",
+  "image": "illustrations/andong-jjimdak/hero.webp?v=dce4499e68",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\">900 г</span>",
+     "name_html": "Куриные бёдрышки и голени на кости"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"средняя картофелина|средние картофелины|средних картофелин|средней картофелины\" data-n=\"1\">2 средние картофелины</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>)",
+     "name_html": "Картофель"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>)",
+     "name_html": "Лук репчатый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт., по желанию",
+     "name_html": "Сушёные шиитаке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> шт., по желанию",
+     "name_html": "Сушёный красный перец чили"
+    }
+   ],
+   "name": "Курица и овощи"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\">5 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\" data-alt=\"1\">75 мл</span>)</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\">2½ ст. л.</span>",
+     "name_html": "Коричневый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>, по желанию",
+     "name_html": "Устричный соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">6 зубчиков</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>, натёртый",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Чёрный перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"500\">500 мл</span>",
+     "name_html": "Вода"
+    }
+   ],
+   "name": "Соус для тушения"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Корейская стеклянная лапша (тангмён)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренное кунжутное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренные семена кунжута"
+    }
+   ],
+   "name": "Лапша и подача"
+  }
+ ],
+ "intro_html": "Тушёное блюдо из города Андон: курица на кости в <b>глянцевом соусе из сои, чеснока и коричневого сахара</b>, с кусками картофеля и моркови и упругой стеклянной лапшой, которую добавляют в конце. Традиционно в него кладут несколько сушёных перцев для остроты. Здесь они по желанию, поэтому блюдо получается солёно-сладким, а не острым. Идеален <b>широкий стальной сотейник с крышкой</b> (<span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 см</span>). Сначала обжарьте курицу кожей вниз, затем тушите под крышкой и уваривайте без крышки, чтобы соус покрыл всё. Берите обычные куски курицы; тонко ничего резать не нужно. Это домашняя адаптация по нескольким корейским источникам, на кухне она не проверялась.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/andong-jjimdak/mise1.webp?v=bc5443211c",
+   "items": [
+    "стеклянная лапша в тёплой воде",
+    "сушёные шиитаке в тёплой воде"
+   ],
+   "items_html": "стеклянная лапша в тёплой воде · сушёные шиитаке в тёплой воде",
+   "name": "Замачивание",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 3",
+   "image": "illustrations/andong-jjimdak/mise2.webp?v=ffbc986c09",
+   "items": [
+    "соевый соус",
+    "коричневый сахар",
+    "устричный соус",
+    "чеснок",
+    "имбирь",
+    "перец"
+   ],
+   "items_html": "соевый соус · коричневый сахар · устричный соус · чеснок · имбирь · перец",
+   "name": "Соус для тушения",
+   "svg_fallback": null,
+   "vessel": "bowl"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 4",
+   "image": "illustrations/andong-jjimdak/mise3.webp?v=62647fa79f",
+   "items": [
+    "крупные куски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span>"
+   ],
+   "items_html": "крупные куски по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span>",
+   "name": "Картофель и морковь",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/andong-jjimdak/mise4.webp?v=6e9e95a922",
+   "items": [
+    "лук толстыми продольными дольками",
+    "зелёный лук отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span>"
+   ],
+   "items_html": "лук толстыми продольными дольками · зелёный лук отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span>",
+   "name": "Лук и зелёный лук",
+   "svg_fallback": null,
+   "vessel": "plate"
+  }
+ ],
+ "more_label": "Ещё — Корейская кухня:",
+ "next": {
+  "slug": "beoseot-jeongol",
+  "title": "Посот-чонголь (грибной хот-пот)"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Корейская тангмён серая, делается из крахмала батата и остаётся упругой.</li><li>Тонкая фунчоза из маша тоже подойдёт: замачивайте её всего 10 минут и варите только 1–2 минуты, потому что она быстро разваривается.</li><li>Лапша продолжает впитывать соус и после выключения огня, поэтому подавайте сразу.</li></ul>",
+   "title_html": "Стеклянная лапша"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Возьмите <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"700\" data-s=\"0\">700 г</span> бёдрышек без кожи и костей, нарезанных кусками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"5\" data-s=\"0\">5 см</span>.</li><li>Обжаривайте 3–4 минуты, тушите всего 8 минут до добавления картофеля и берите <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"400\" data-s=\"0\">400 мл</span> воды.</li></ul>",
+   "title_html": "Бёдрышки без кости"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Два целых сушёных перца дают мягкое тепло, но не делают блюдо острым.</li><li>Для большей остроты надломите их или добавьте нарезанный свежий зелёный перец чили вместе с луком.</li></ul>",
+   "title_html": "Немного остроты"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "doenjang-jjigae",
+  "title": "Твенджан-ччигэ (рагу с соевой пастой)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 3,
+  "size": "3",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/andong-jjimdak.jpg?v=0a45c7d17d",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Кимчи из пекинской капусты"
+  },
+  {
+   "slug": "kkakdugi",
+   "title": "Ккактуги (кимчи из кубиков редьки)"
+  },
+  {
+   "slug": "dakgangjeong",
+   "title": "Дакганджон (сладкие хрустящие голени)"
+  },
+  {
+   "slug": "doenjang-jjigae",
+   "title": "Твенджан-ччигэ (рагу с соевой пастой)"
+  },
+  {
+   "slug": "beoseot-jeongol",
+   "title": "Посот-чонголь (грибной хот-пот)"
+  },
+  {
+   "slug": "galbi-jjim",
+   "title": "Кальби-ччим (тушёные говяжьи рёбрышки)"
+  },
+  {
+   "slug": "budae-jjigae",
+   "title": "Пудэ-ччигэ (армейское рагу)"
+  }
+ ],
+ "slug": "andong-jjimdak",
+ "sources": [
+  {
+   "label": "Maangchi — jjimdak",
+   "url": "https://www.maangchi.com/recipe/andong-jjimdak"
+  },
+  {
+   "label": "Korean Bapsang — jjimdak",
+   "url": "https://www.koreanbapsang.com/jjimdakdakjjim-korean-style-braised/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Залейте стеклянную лапшу тёплой водой и замочите на <b>30 минут</b>. Сушёные шиитаке замочите в отдельной чашке с тёплой водой.</li><li>Обсушите курицу бумажным полотенцем. Если голени или бёдрышки очень крупные, попросите мясника разрубить их пополам вместе с костью или оставьте целыми.</li><li>Очистите картофель и морковь и нарежьте <b>крупными кусками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span></b>: они долго тушатся и не должны развариться. Лук разрежьте через корень на толстые продольные дольки. Зелёный лук нарежьте отрезками по <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"4\" data-s=\"0\">4 см</span>.</li><li>Смешайте соевый соус, коричневый сахар, устричный соус, мелко порубленный чеснок, имбирь и перец в соус для тушения.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Замочите лапшу; нарежьте овощи",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/andong-jjimdak/1.webp?v=23cc4bb4e6",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~15 мин, плюс 30 мин замачивание",
+   "time_html": "<span>~15 мин, плюс 30 мин замачивание</span>",
+   "title": "Замочите лапшу; нарежьте овощи",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Корейская стеклянная лапша (тангмён)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт.",
+     "name_html": "Сушёные шиитаке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\">900 г</span>",
+     "name_html": "Куриные бёдрышки и голени на кости"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"средняя картофелина|средние картофелины|средних картофелин|средней картофелины\" data-n=\"1\">2 средние картофелины</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>)",
+     "name_html": "Картофель"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>)",
+     "name_html": "Лук репчатый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\">5 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\" data-alt=\"1\">75 мл</span>)</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\">2½ ст. л.</span>",
+     "name_html": "Коричневый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Устричный соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">6 зубчиков</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Чёрный перец"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разогрейте масло в стальном сотейнике на <b>средне-сильном</b> огне, пока оно не заблестит. Выложите курицу <b>кожей вниз</b> в один слой и не трогайте <b>6–8 минут</b>, пока кожа не станет золотистой и сама не отойдёт от сотейника.</li><li>Переверните куски и обжаривайте с другой стороны 2 минуты. Слейте весь вытопившийся жир, оставив около <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> Коричневый налёт на дне даёт вкус, не смывайте его.</li></ul>",
+   "heat": {
+    "label": "средне-сильный",
+    "label_html": "<span>средне-сильный</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Обжарьте курицу кожей вниз",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Кожей вниз, не трогайте",
+      "src": "illustrations/andong-jjimdak/2-how1.webp?v=db7df75195"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/andong-jjimdak/2.webp?v=22f579007a",
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "8–10 мин",
+   "time_html": "<span>8–10 мин</span>",
+   "title": "Обжарьте курицу кожей вниз",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"900\">900 г</span>",
+     "name_html": "Куриные бёдрышки и голени на кости"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Влейте соус для тушения и воду. Соскребите деревянной лопаткой налёт со дна, чтобы он растворился в жидкости. Добавьте сушёный перец, если берёте.</li><li>Доведите до кипения, накройте крышкой, убавьте до <b>средне-слабого</b> огня и тушите <b>15 минут</b>. На полпути переверните куски один раз.</li></ul>",
+   "heat": {
+    "label": "довести до кипения, затем средне-слабый",
+    "label_html": "<span>довести до кипения, затем средне-слабый</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Добавьте соус и воду; тушите под крышкой",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Соскребите коричневый налёт",
+      "src": "illustrations/andong-jjimdak/3-how1.webp?v=dfd1223631"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/andong-jjimdak/3.webp?v=ae2848e3b0",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "15 мин",
+   "time_html": "<span>15 мин</span>",
+   "title": "Добавьте соус и воду; тушите под крышкой",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"5\">5 ст. л.</span><span class=\"qalt\"> (<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"75\" data-alt=\"1\">75 мл</span>)</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2.5\">2½ ст. л.</span>",
+     "name_html": "Коричневый сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 ст. л.</span>",
+     "name_html": "Устричный соус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"6\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">6 зубчиков</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Свежий имбирь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.25\">¼ ч. л.</span>",
+     "name_html": "Чёрный перец"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"500\">500 мл</span>",
+     "name_html": "Вода"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span> шт.",
+     "name_html": "Сушёный красный перец чили"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Отожмите шиитаке, удалите ножки и разрежьте шляпки пополам. Разложите картофель, морковь и шиитаке между кусками курицы, чтобы они были в жидкости.</li><li>Накройте крышкой и тушите <b>12–15 минут</b>, пока нож не будет входить в картофель почти без сопротивления.</li></ul>",
+   "heat": {
+    "label": "средне-слабый",
+    "label_html": "<span>средне-слабый</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Добавьте картофель, морковь и грибы",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/andong-jjimdak/4.webp?v=54fb3186f1",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "12–15 мин",
+   "time_html": "<span>12–15 мин</span>",
+   "title": "Добавьте картофель, морковь и грибы",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"средняя картофелина|средние картофелины|средних картофелин|средней картофелины\" data-n=\"1\">2 средние картофелины</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"300\">300 г</span>)",
+     "name_html": "Картофель"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span> шт.",
+     "name_html": "Сушёные шиитаке"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снимите крышку, добавьте лук и белые части зелёного лука. Прибавьте огонь до <b>среднего</b> и варите <b>5 минут</b>. По мере загустения поливайте курицу соусом.</li><li>Остановитесь, когда на дне останется около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> соуса: лапше нужно что впитывать. Если соуса уже мало, добавьте <span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"100\" data-s=\"0\">100 мл</span> воды.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-5",
+   "images": {
+    "alt": "Снимите крышку и уварите до глянцевого соуса",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/andong-jjimdak/5.webp?v=cc539b5613",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": "5 мин",
+   "time_html": "<span>5 мин</span>",
+   "title": "Снимите крышку и уварите до глянцевого соуса",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>)",
+     "name_html": "Лук репчатый"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Зелёный лук"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Откиньте лапшу и выложите в соус вокруг курицы. Осторожно переворачивайте щипцами <b>3–4 минуты</b>, пока лапша не станет прозрачной, мягкой и коричневой от соуса.</li><li>Выключите огонь. Сбрызните кунжутным маслом, посыпьте зелёными частями зелёного лука и семенами кунжута. Подавайте прямо в сотейнике с рисом.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-6",
+   "images": {
+    "alt": "Добавьте лапшу и завершите блюдо",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Перемешайте лапшу с соусом",
+      "src": "illustrations/andong-jjimdak/6-how1.webp?v=6cdcf521a5"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/andong-jjimdak/6.webp?v=8b0c3759f5",
+    "svg_fallback": null
+   },
+   "n": 6,
+   "part": null,
+   "part_id": null,
+   "time": "3–4 мин",
+   "time_html": "<span>3–4 мин</span>",
+   "title": "Добавьте лапшу и завершите блюдо",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"60\">60 г</span>",
+     "name_html": "Корейская стеклянная лапша (тангмён)"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Зелёный лук"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренное кунжутное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренные семена кунжута"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Андон-ччимдак (курица, тушённая в соевом соусе)",
+ "total": "~1 ч, плюс 30 мин замачивание лапши",
+ "vinegar_options": null,
+ "yields": "3 порции, с рисом"
+}

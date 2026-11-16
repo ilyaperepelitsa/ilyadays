@@ -27,12 +27,13 @@ if [[ "${SKIP_IMAGES:-}" != 1 ]]; then
 fi
 
 # Recipes: JSON for both languages + every picture they reference.
-# Travel proposals and the fitness section are authored here, rather than in the recipe source repo.
+# Travel proposals, fitness and Aurelius are authored here, rather than in the recipe source repo.
 # Keep their content and media when replacing the exported recipe trees.
 shopt -s nullglob
 for root in content public/media; do
   for item in "$root"/*; do
-    [[ "$item" == "$root/travel" || "$item" == "$root/fitness" ]] || rm -rf -- "$item"
+    # Sections authored in this repo (travel, fitness, aurelius) are never part of the recipe export.
+    [[ "$item" == "$root/travel" || "$item" == "$root/fitness" || "$item" == "$root/aurelius" ]] || rm -rf -- "$item"
   done
 done
 shopt -u nullglob
