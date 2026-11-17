@@ -133,7 +133,13 @@
     "andong-jjimdak",
     "beoseot-jeongol",
     "galbi-jjim",
-    "budae-jjigae"
+    "budae-jjigae",
+    "bulgogi",
+    "dak-bulgogi",
+    "tteokgalbi",
+    "japchae",
+    "haemul-pajeon",
+    "bibimbap"
    ],
    "name": "Korean",
    "notes": []
@@ -202,18 +208,18 @@
  ],
  "lede_html": "Illustrated recipes for everyday cooking and bigger projects: Turkish dishes and coastal seafood, Japanese basics and sushi, Korean, noodles, Indian, cheese and sous vide. Start with ingredients, then follow the preparation pictures.",
  "recent": [
+  "bulgogi",
+  "dak-bulgogi",
+  "tteokgalbi",
+  "japchae",
+  "haemul-pajeon",
+  "bibimbap",
   "budae-jjigae",
   "doenjang-jjigae",
   "andong-jjimdak",
   "beoseot-jeongol",
   "galbi-jjim",
-  "mooken-mini-cream-puffs",
-  "crispy-potato-wedges",
-  "potato-wedge-tempura",
-  "yacht-sashimi",
-  "lemon-caper-dorada",
-  "garlic-chilli-shrimp",
-  "palamut-tava"
+  "mooken-mini-cream-puffs"
  ],
  "recipes": [
   {
@@ -2403,6 +2409,186 @@
    "title": "Budae jjigae (army stew)",
    "total": "~30 min",
    "yields": "3 portions"
+  },
+  {
+   "added": "2026-11-17T12:36:00Z",
+   "blurb_html": "Thin slices of beef in a sweet soy, pear and garlic marinade, seared fast in a very hot steel pan. Mild.",
+   "chips": [
+    {
+     "html": "<span>3 portions, with rice</span>",
+     "kind": "",
+     "text": "3 portions, with rice"
+    },
+    {
+     "html": "~1 h, plus 1–2 h freezing and 30 min marinating",
+     "kind": "time",
+     "text": "~1 h, plus 1–2 h freezing and 30 min marinating"
+    }
+   ],
+   "description": "Thin slices of beef in a sweet soy, pear and garlic marinade, seared fast in a very hot steel pan. Mild.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Bulgogi (marinated beef)",
+    "image": "illustrations/bulgogi/hero.webp?v=3f47d9a3ad",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/bulgogi.jpg?v=7665d5e454",
+   "slug": "bulgogi",
+   "title": "Bulgogi (marinated beef)",
+   "total": "~1 h, plus 1–2 h freezing and 30 min marinating",
+   "yields": "3 portions, with rice"
+  },
+  {
+   "added": "2026-11-17T12:35:00Z",
+   "blurb_html": "Boneless chicken thighs in the same sweet soy and garlic marinade as bulgogi, browned in a steel pan and glazed. No slicing needed.",
+   "chips": [
+    {
+     "html": "<span>3 portions, with rice</span>",
+     "kind": "",
+     "text": "3 portions, with rice"
+    },
+    {
+     "html": "~30 min, plus 30 min marinating",
+     "kind": "time",
+     "text": "~30 min, plus 30 min marinating"
+    }
+   ],
+   "description": "Boneless chicken thighs in the same sweet soy and garlic marinade as bulgogi, browned in a steel pan and glazed. No slicing needed.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Dak bulgogi (soy-glazed chicken thighs)",
+    "image": "illustrations/dak-bulgogi/hero.webp?v=3d4392a59a",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/dak-bulgogi.jpg?v=e704fd3990",
+   "slug": "dak-bulgogi",
+   "title": "Dak bulgogi (soy-glazed chicken thighs)",
+   "total": "~30 min, plus 30 min marinating",
+   "yields": "3 portions, with rice"
+  },
+  {
+   "added": "2026-11-17T12:34:00Z",
+   "blurb_html": "Patties of minced beef seasoned like galbi, pan-cooked and brushed with a sweet soy glaze. Mild, easy to shop for.",
+   "chips": [
+    {
+     "html": "<span>6 patties, 3 portions</span>",
+     "kind": "",
+     "text": "6 patties, 3 portions"
+    },
+    {
+     "html": "~45 min, including 20 min chilling",
+     "kind": "time",
+     "text": "~45 min, including 20 min chilling"
+    }
+   ],
+   "description": "Patties of minced beef seasoned like galbi, pan-cooked and brushed with a sweet soy glaze. Mild, easy to shop for.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Tteokgalbi (glazed beef patties)",
+    "image": "illustrations/tteokgalbi/hero.webp?v=709fbb6b56",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/tteokgalbi.jpg?v=a0de099650",
+   "slug": "tteokgalbi",
+   "title": "Tteokgalbi (glazed beef patties)",
+   "total": "~45 min, including 20 min chilling",
+   "yields": "6 patties, 3 portions"
+  },
+  {
+   "added": "2026-11-17T12:33:00Z",
+   "blurb_html": "Chewy sweet potato noodles tossed with spinach, mushrooms, carrot, onion and egg in sesame soy. Mild; good warm or at room temperature.",
+   "chips": [
+    {
+     "html": "<span>3 portions</span>",
+     "kind": "",
+     "text": "3 portions"
+    },
+    {
+     "html": "~45 min",
+     "kind": "time",
+     "text": "~45 min"
+    }
+   ],
+   "description": "Chewy sweet potato noodles tossed with spinach, mushrooms, carrot, onion and egg in sesame soy. Mild; good warm or at room temperature.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Japchae (stir-fried glass noodles)",
+    "image": "illustrations/japchae/hero.webp?v=55698f349a",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/japchae.jpg?v=1c5297fa71",
+   "slug": "japchae",
+   "title": "Japchae (stir-fried glass noodles)",
+   "total": "~45 min",
+   "yields": "3 portions"
+  },
+  {
+   "added": "2026-11-17T12:32:00Z",
+   "blurb_html": "Long spring onions and seafood bound with a thin, cold batter and fried until crisp at the edges, with a soy dipping sauce.",
+   "chips": [
+    {
+     "html": "<span>2 large pancakes</span>",
+     "kind": "",
+     "text": "2 large pancakes"
+    },
+    {
+     "html": "~30 min",
+     "kind": "time",
+     "text": "~30 min"
+    }
+   ],
+   "description": "Long spring onions and seafood bound with a thin, cold batter and fried until crisp at the edges, with a soy dipping sauce.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Haemul pajeon (seafood and spring onion pancake)",
+    "image": "illustrations/haemul-pajeon/hero.webp?v=1db5de4beb",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/haemul-pajeon.jpg?v=7672ae1e97",
+   "slug": "haemul-pajeon",
+   "title": "Haemul pajeon (seafood and spring onion pancake)",
+   "total": "~30 min",
+   "yields": "2 large pancakes"
+  },
+  {
+   "added": "2026-11-17T12:31:00Z",
+   "blurb_html": "Warm rice topped with seasoned vegetables, bulgogi and a fried egg, with a crisp rice crust from the steel pan. Mild soy sauce or gochujang.",
+   "chips": [
+    {
+     "html": "<span>2 bowls</span>",
+     "kind": "",
+     "text": "2 bowls"
+    },
+    {
+     "html": "~45 min (with leftover bulgogi)",
+     "kind": "time",
+     "text": "~45 min (with leftover bulgogi)"
+    }
+   ],
+   "description": "Warm rice topped with seasoned vegetables, bulgogi and a fried egg, with a crisp rice crust from the steel pan. Mild soy sauce or gochujang.",
+   "group": "Korean",
+   "group_id": "korean",
+   "hero": {
+    "alt": "Bibimbap (rice with vegetables, beef and egg)",
+    "image": "illustrations/bibimbap/hero.webp?v=b318ce48f8",
+    "svg_fallback": null
+   },
+   "kind": "recipe",
+   "share_image": "share/bibimbap.jpg?v=301a6aa0b7",
+   "slug": "bibimbap",
+   "title": "Bibimbap (rice with vegetables, beef and egg)",
+   "total": "~45 min (with leftover bulgogi)",
+   "yields": "2 bowls"
   },
   {
    "added": "2026-10-06 01:53",

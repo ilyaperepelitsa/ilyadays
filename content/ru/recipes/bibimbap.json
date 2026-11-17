@@ -1,0 +1,521 @@
+{
+ "added": "2026-11-17T12:31:00Z",
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Тёплый рис с приправленными овощами, пулькоги и жареным яйцом, с хрустящей рисовой корочкой из стальной сковороды. Неострый соевый соус или кочхуджан.",
+ "chips": [
+  {
+   "html": "<span>2 миски</span>",
+   "kind": "",
+   "text": "2 миски"
+  },
+  {
+   "html": "~45 мин (с готовой пулькоги)",
+   "kind": "time",
+   "text": "~45 мин (с готовой пулькоги)"
+  }
+ ],
+ "description": "Тёплый рис с приправленными овощами, пулькоги и жареным яйцом, с хрустящей рисовой корочкой из стальной сковороды. Неострый соевый соус или кочхуджан.",
+ "equipment_html": [
+  "Стальная сковорода или сотейник, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 см</span>",
+  "Кастрюля для бланширования",
+  "Две широкие миски"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Корейская кухня"
+ },
+ "hero": {
+  "alt": "Пибимпап (рис с овощами, говядиной и яйцом)",
+  "image": "illustrations/bibimbap/hero.webp?v=b318ce48f8",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"миска|миски|мисок\" data-n=\"1\">2 миски</span> (около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>)",
+     "name_html": "Варёный круглозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Готовая пулькоги"
+    }
+   ],
+   "name": "Рис и говядина"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Шпинат"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Ростки фасоли"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>)",
+     "name_html": "Кабачок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Грибы шиитаке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
+     "name_html": "Чеснок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, по очереди",
+     "name_html": "Обжаренное кунжутное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "несколько щепоток",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>, по очереди",
+     "name_html": "Нейтральное масло"
+    }
+   ],
+   "name": "Овощи (намуль)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Кочхуджан"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Рисовый уксус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренные семена кунжута"
+    }
+   ],
+   "name": "Яйца и соус"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Соевый соус для неострого соуса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренное кунжутное масло для неострого соуса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Зелёный лук, мелко нарезанный"
+    }
+   ],
+   "name": "Неострый соус вместо кочхуджана"
+  }
+ ],
+ "intro_html": "Миска риса, увенчанная небольшими горками <b>приправленных овощей (намуль)</b>, говядины и жареного яйца, которые перемешивают за столом. Хороший способ использовать остатки <a href=\"bulgogi.html\">пулькоги</a> или <a href=\"dak-bulgogi.html\">так-пулькоги</a>. Все овощи готовятся в одной и той же стальной сковороде один за другим. В конце сковорода делает то же, что и горячая каменная миска (тольсот): рис, прижатый к горячему кунжутному маслу, образует <b>хрустящую золотистую корочку</b>. Традиционно подают соус с кочхуджаном; также дан <b>неострый соево-кунжутный соус</b>. Это домашняя адаптация по нескольким корейским источникам, на кухне она не проверялась.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Шаг 1",
+   "image": "illustrations/bibimbap/mise1.webp?v=6e9bd4e12c",
+   "items": [
+    "для бланширования"
+   ],
+   "items_html": "для бланширования",
+   "name": "Шпинат и ростки",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Шаг 2",
+   "image": "illustrations/bibimbap/mise2.webp?v=87ddf0d75c",
+   "items": [
+    "морковь и кабачок соломкой",
+    "шиитаке ломтиками"
+   ],
+   "items_html": "морковь и кабачок соломкой · шиитаке ломтиками",
+   "name": "Морковь, кабачок, шиитаке",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Шаг 5",
+   "image": "illustrations/bibimbap/mise3.webp?v=50f2c3b5e1",
+   "items": [
+    "кочхуджан",
+    "кунжутное масло",
+    "сахар",
+    "уксус",
+    "семена кунжута, или соевый соус, кунжутное масло и зелёный лук"
+   ],
+   "items_html": "кочхуджан · кунжутное масло · сахар · уксус · семена кунжута, или соевый соус, кунжутное масло и зелёный лук",
+   "name": "Соус",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "Ещё — Корейская кухня:",
+ "next": {
+  "slug": "garlic-ginger-chicken-noodles",
+  "title": "Лапша с курицей, чесноком и имбирём"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Берите 4–5 разных овощей разного цвета.</li><li>Подойдут тонкие ломтики огурца (посоленные и отжатые), редька или кимчи, а также папоротник орляк (косари) или корень колокольчика (тораджи), если найдёте их в азиатском магазине.</li></ul>",
+   "title_html": "Овощи можно менять"
+  },
+  {
+   "html": "<p>Возьмите <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 г</span> говяжьего фарша, обжаренного с <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> соевого соуса, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> сахара и чесноком, или нарезанную <a href=\"dak-bulgogi.html\">так-пулькоги</a>, или оставьте блюдо вегетарианским с дополнительным яйцом.</p>",
+   "title_html": "Без пулькоги"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "haemul-pajeon",
+  "title": "Хэмуль-пхаджон (блин с морепродуктами и зелёным луком)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Количество на одного человека — умножьте на число едоков.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Количества в тексте шагов — для исходного рецепта; списки ингредиентов пересчитаны.",
+   "Batches": "Партий",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Готовьте в несколько заходов — кастрюли и сковороды в шагах рассчитаны на {n}.",
+   "Cooking for": "Готовлю на",
+   "Fewer": "Меньше",
+   "Metric (g, ml, °C)": "Метрические (г, мл, °C)",
+   "More": "Больше",
+   "Per person": "На одного",
+   "Servings": "Порции",
+   "US (oz, cups, °F)": "Американские (унц., стаканы, °F)",
+   "Units": "Единицы",
+   "Whole recipe": "Весь рецепт",
+   "one batch": "одну партию",
+   "people": "человек",
+   "person": "человека"
+  }
+ },
+ "share_image": "share/bibimbap.jpg?v=301a6aa0b7",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Кимчи из пекинской капусты"
+  },
+  {
+   "slug": "kkakdugi",
+   "title": "Ккактуги (кимчи из кубиков редьки)"
+  },
+  {
+   "slug": "dakgangjeong",
+   "title": "Дакганджон (сладкие хрустящие голени)"
+  },
+  {
+   "slug": "doenjang-jjigae",
+   "title": "Твенджан-ччигэ (рагу с соевой пастой)"
+  },
+  {
+   "slug": "andong-jjimdak",
+   "title": "Андон-ччимдак (курица, тушённая в соевом соусе)"
+  },
+  {
+   "slug": "beoseot-jeongol",
+   "title": "Посот-чонголь (грибной хот-пот)"
+  },
+  {
+   "slug": "galbi-jjim",
+   "title": "Кальби-ччим (тушёные говяжьи рёбрышки)"
+  },
+  {
+   "slug": "budae-jjigae",
+   "title": "Пудэ-ччигэ (армейское рагу)"
+  },
+  {
+   "slug": "bulgogi",
+   "title": "Пулькоги (маринованная говядина)"
+  },
+  {
+   "slug": "dak-bulgogi",
+   "title": "Так-пулькоги (курица в соевой глазури)"
+  },
+  {
+   "slug": "tteokgalbi",
+   "title": "Ттоккальби (котлеты из говядины в глазури)"
+  },
+  {
+   "slug": "japchae",
+   "title": "Чапчхэ (жареная стеклянная лапша)"
+  },
+  {
+   "slug": "haemul-pajeon",
+   "title": "Хэмуль-пхаджон (блин с морепродуктами и зелёным луком)"
+  }
+ ],
+ "slug": "bibimbap",
+ "sources": [
+  {
+   "label": "Maangchi — bibimbap",
+   "url": "https://www.maangchi.com/recipe/bibimbap"
+  },
+  {
+   "label": "Korean Bapsang — bibimbap",
+   "url": "https://www.koreanbapsang.com/bibimbap/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Вскипятите в кастрюле подсоленную воду. Варите ростки фасоли <b>4 минуты</b>, затем выньте. Опустите шпинат на <b>30 секунд</b>, ополосните холодной водой и отожмите.</li><li>Приправьте каждый отдельно щепоткой соли, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ ч. л.</span> кунжутного масла и небольшим количеством мелко порубленного чеснока.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Бланшируйте и приправьте шпинат и ростки",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/bibimbap/1.webp?v=de1e5b87a7",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10 мин",
+   "time_html": "<span>~10 мин</span>",
+   "title": "Бланшируйте и приправьте шпинат и ростки",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Ростки фасоли"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>",
+     "name_html": "Шпинат"
+    },
+    {
+     "amount_html": "несколько щепоток",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Обжаренное кунжутное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"зубчик|зубчика|зубчиков\" data-n=\"1\">2 зубчика</span>",
+     "name_html": "Чеснок"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Морковь и кабачок нарежьте соломкой, шиитаке нарежьте ломтиками. Разогрейте немного масла в стальной сковороде на <b>средне-сильном</b> огне.</li><li>Готовьте каждый овощ по очереди и откладывайте отдельными горками: морковь со щепоткой соли <b>1 минуту</b>, кабачок со щепоткой соли <b>1 минуту</b>, шиитаке с соевым соусом <b>2 минуты</b>.</li><li>Разогрейте пулькоги в сковороде в течение минуты.</li></ul>",
+   "heat": {
+    "label": "средне-сильный",
+    "label_html": "<span>средне-сильный</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Обжарьте морковь, кабачок и грибы",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/bibimbap/2.webp?v=fbe5e87191",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~7 мин",
+   "time_html": "<span>~7 мин</span>",
+   "title": "Обжарьте морковь, кабачок и грибы",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> шт. (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 г</span>)",
+     "name_html": "Морковь"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 г</span>)",
+     "name_html": "Кабачок"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Грибы шиитаке"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Соевый соус"
+    },
+    {
+     "amount_html": "несколько щепоток",
+     "name_html": "Соль"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 г</span>",
+     "name_html": "Готовая пулькоги"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Протрите сковороду, добавьте немного масла и жарьте яйца на <b>среднем</b> огне <b>2–3 минуты</b>, пока белки не схватятся, а желтки останутся жидкими.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Пожарьте яйца",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/bibimbap/3.webp?v=576ceec2ec",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "2–3 мин",
+   "time_html": "<span>2–3 мин</span>",
+   "title": "Пожарьте яйца",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Яйца"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Нейтральное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Снова протрите сковороду и добавьте <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 ст. л.</span> кунжутного масла</b>. Прижмите рис ровным слоем толщиной около <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 см</span> и готовьте на <b>среднем</b> огне, не помешивая, <b>5–6 минут</b>, пока низ не станет золотистым и не начнёт потрескивать.</li><li>Лопаткой выньте его кусками, корочкой вниз, в две миски. Либо пропустите этот шаг и возьмите мягкий тёплый рис.</li></ul>",
+   "heat": {
+    "label": "средний",
+    "label_html": "<span>средний</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Подрумяньте рис в сковороде",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [
+     {
+      "caption": "Прижмите рис к сковороде",
+      "src": "illustrations/bibimbap/4-how1.webp?v=5059a11f15"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/bibimbap/4.webp?v=6fd2dcc534",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "5–6 мин",
+   "time_html": "<span>5–6 мин</span>",
+   "title": "Подрумяньте рис в сковороде",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"миска|миски|мисок\" data-n=\"1\">2 миски</span> (около <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 г</span>)",
+     "name_html": "Варёный круглозёрный рис"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Обжаренное кунжутное масло"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Разложите овощи и пулькоги отдельными горками вокруг риса, как спицы колеса. В центр положите яйцо.</li><li>Смешайте кочхуджан с <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 ч. л.</span> кунжутного масла, сахаром, уксусом и семенами кунжута или, для неострого соуса, соевый соус, кунжутное масло и зелёный лук. Добавьте по ложке в каждую миску и перемешайте всё за столом.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Разложите, добавьте яйцо и соус, перемешайте",
+    "diagram": null,
+    "diagram_title": "Схема",
+    "how": [],
+    "illustration": "illustrations/bibimbap/5.webp?v=192c536503",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Разложите, добавьте яйцо и соус, перемешайте",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Кочхуджан"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Сахар"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ ч. л.</span>",
+     "name_html": "Рисовый уксус"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренные семена кунжута"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 ст. л.</span>",
+     "name_html": "Соевый соус для неострого соуса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 ч. л.</span>",
+     "name_html": "Обжаренное кунжутное масло для неострого соуса"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Зелёный лук, мелко нарезанный"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Пибимпап (рис с овощами, говядиной и яйцом)",
+ "total": "~45 мин (с готовой пулькоги)",
+ "vinegar_options": null,
+ "yields": "2 миски"
+}

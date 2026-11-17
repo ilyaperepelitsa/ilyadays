@@ -1,0 +1,521 @@
+{
+ "added": "2026-11-17T12:31:00Z",
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Warm rice topped with seasoned vegetables, bulgogi and a fried egg, with a crisp rice crust from the steel pan. Mild soy sauce or gochujang.",
+ "chips": [
+  {
+   "html": "<span>2 bowls</span>",
+   "kind": "",
+   "text": "2 bowls"
+  },
+  {
+   "html": "~45 min (with leftover bulgogi)",
+   "kind": "time",
+   "text": "~45 min (with leftover bulgogi)"
+  }
+ ],
+ "description": "Warm rice topped with seasoned vegetables, bulgogi and a fried egg, with a crisp rice crust from the steel pan. Mild soy sauce or gochujang.",
+ "equipment_html": [
+  "Steel frying or sauté pan, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"28\" data-s=\"0\">28 cm</span>",
+  "Saucepan for blanching",
+  "Two wide bowls"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Korean"
+ },
+ "hero": {
+  "alt": "Bibimbap (rice with vegetables, beef and egg)",
+  "image": "illustrations/bibimbap/hero.webp?v=b318ce48f8",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"bowl|bowls\" data-n=\"1\">2 bowls</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>)",
+     "name_html": "Cooked short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Cooked bulgogi"
+    }
+   ],
+   "name": "Rice and beef"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Spinach"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Bean sprouts"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>)",
+     "name_html": "Carrot"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>)",
+     "name_html": "Courgette"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Shiitake mushrooms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
+     "name_html": "Garlic"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>, in turns",
+     "name_html": "Toasted sesame oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "a few pinches",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>, in turns",
+     "name_html": "Neutral oil"
+    }
+   ],
+   "name": "Vegetables (namul)"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Gochujang"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Rice vinegar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted sesame seeds"
+    }
+   ],
+   "name": "Eggs and sauce"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce for the mild sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted sesame oil for the mild sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Spring onion, finely chopped"
+    }
+   ],
+   "name": "Mild sauce instead of gochujang"
+  }
+ ],
+ "intro_html": "A bowl of rice crowned with small heaps of <b>seasoned vegetables (namul)</b>, beef and a fried egg, mixed together at the table. It's a good way to use leftover <a href=\"bulgogi.html\">bulgogi</a> or <a href=\"dak-bulgogi.html\">dak bulgogi</a>. Every vegetable is cooked in the same steel pan one after another. At the end the pan does what a hot stone bowl (dolsot) does: rice pressed into hot sesame oil forms a <b>crisp golden crust</b>. Gochujang sauce is traditional; a <b>mild soy-sesame sauce</b> is given too. This is a home adaptation built from several Korean sources and has not been kitchen tested.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 1",
+   "image": "illustrations/bibimbap/mise1.webp?v=6e9bd4e12c",
+   "items": [
+    "for blanching"
+   ],
+   "items_html": "for blanching",
+   "name": "Spinach and sprouts",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 2",
+   "image": "illustrations/bibimbap/mise2.webp?v=87ddf0d75c",
+   "items": [
+    "carrot and courgette in matchsticks",
+    "shiitake sliced"
+   ],
+   "items_html": "carrot and courgette in matchsticks · shiitake sliced",
+   "name": "Carrot, courgette, shiitake",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/bibimbap/mise3.webp?v=50f2c3b5e1",
+   "items": [
+    "gochujang",
+    "sesame oil",
+    "sugar",
+    "vinegar",
+    "sesame seeds — or soy, sesame oil and spring onion"
+   ],
+   "items_html": "gochujang · sesame oil · sugar · vinegar · sesame seeds — or soy, sesame oil and spring onion",
+   "name": "Sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More korean:",
+ "next": {
+  "slug": "garlic-ginger-chicken-noodles",
+  "title": "Garlic–ginger chicken noodles"
+ },
+ "notes": [
+  {
+   "html": "<ul class=\"do\"><li>Use 4–5 different vegetables with different colours.</li><li>Cucumber in thin slices (salted and squeezed), radish or kimchi all work, as do fernbrake (gosari) or bellflower root (doraji) if you find them in an Asian shop.</li></ul>",
+   "title_html": "Vegetables are flexible"
+  },
+  {
+   "html": "<p>Use <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> minced beef fried with <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> soy sauce, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> sugar and garlic, or sliced <a href=\"dak-bulgogi.html\">dak bulgogi</a>, or leave it vegetarian with an extra egg.</p>",
+   "title_html": "Without bulgogi"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "haemul-pajeon",
+  "title": "Haemul pajeon (seafood and spring onion pancake)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/bibimbap.jpg?v=301a6aa0b7",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Napa cabbage kimchi"
+  },
+  {
+   "slug": "kkakdugi",
+   "title": "Kkakdugi (radish cube kimchi)"
+  },
+  {
+   "slug": "dakgangjeong",
+   "title": "Dakgangjeong (sweet crispy drumsticks)"
+  },
+  {
+   "slug": "doenjang-jjigae",
+   "title": "Doenjang jjigae (soybean paste stew)"
+  },
+  {
+   "slug": "andong-jjimdak",
+   "title": "Andong jjimdak (soy-braised chicken)"
+  },
+  {
+   "slug": "beoseot-jeongol",
+   "title": "Beoseot jeongol (mushroom hot pot)"
+  },
+  {
+   "slug": "galbi-jjim",
+   "title": "Galbi-jjim (braised beef short ribs)"
+  },
+  {
+   "slug": "budae-jjigae",
+   "title": "Budae jjigae (army stew)"
+  },
+  {
+   "slug": "bulgogi",
+   "title": "Bulgogi (marinated beef)"
+  },
+  {
+   "slug": "dak-bulgogi",
+   "title": "Dak bulgogi (soy-glazed chicken thighs)"
+  },
+  {
+   "slug": "tteokgalbi",
+   "title": "Tteokgalbi (glazed beef patties)"
+  },
+  {
+   "slug": "japchae",
+   "title": "Japchae (stir-fried glass noodles)"
+  },
+  {
+   "slug": "haemul-pajeon",
+   "title": "Haemul pajeon (seafood and spring onion pancake)"
+  }
+ ],
+ "slug": "bibimbap",
+ "sources": [
+  {
+   "label": "Maangchi — bibimbap",
+   "url": "https://www.maangchi.com/recipe/bibimbap"
+  },
+  {
+   "label": "Korean Bapsang — bibimbap",
+   "url": "https://www.koreanbapsang.com/bibimbap/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Boil a saucepan of salted water. Cook the bean sprouts for <b>4 minutes</b>, then lift them out. Dip the spinach in for <b>30 seconds</b>, rinse in cold water and squeeze dry.</li><li>Season each separately with a pinch of salt, <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\" data-s=\"0\">½ tsp</span> sesame oil and a little minced garlic.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Blanch and season spinach and sprouts",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/bibimbap/1.webp?v=de1e5b87a7",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Blanch and season spinach and sprouts",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Bean sprouts"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>",
+     "name_html": "Spinach"
+    },
+    {
+     "amount_html": "a few pinches",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Toasted sesame oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"clove|cloves\" data-n=\"1\">2 cloves</span>",
+     "name_html": "Garlic"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the carrot and courgette into matchsticks and slice the shiitake. Heat a little oil in the steel pan on <b>medium-high</b>.</li><li>Cook each one in turn and set them aside in separate heaps: carrot with a pinch of salt for <b>1 minute</b>, courgette with a pinch of salt for <b>1 minute</b>, shiitake with the soy sauce for <b>2 minutes</b>.</li><li>Warm the bulgogi in the pan for a minute.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-2",
+   "images": {
+    "alt": "Stir-fry carrot, courgette and mushrooms",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/bibimbap/2.webp?v=fbe5e87191",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~7 min",
+   "time_html": "<span>~7 min</span>",
+   "title": "Stir-fry carrot, courgette and mushrooms",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>)",
+     "name_html": "Carrot"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"0.5\" data-n=\"1\">½</span> (<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\">150 g</span>)",
+     "name_html": "Courgette"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"4\" data-n=\"1\">4</span>",
+     "name_html": "Shiitake mushrooms"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "a few pinches",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"200\">200 g</span>",
+     "name_html": "Cooked bulgogi"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wipe the pan, add a little oil and fry the eggs on <b>medium</b> for <b>2–3 minutes</b>, until the whites are set and the yolks still runny.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Fry the eggs",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/bibimbap/3.webp?v=576ceec2ec",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "2–3 min",
+   "time_html": "<span>2–3 min</span>",
+   "title": "Fry the eggs",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-n=\"1\">2</span>",
+     "name_html": "Eggs"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Neutral oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Wipe the pan again and add <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> sesame oil</b>. Press the rice into an even layer about <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"2\" data-s=\"0\">2 cm</span> thick and cook on <b>medium</b> without stirring for <b>5–6 minutes</b>, until the bottom is golden and crackles.</li><li>Lift it out in pieces with a spatula, crust side down, into the two bowls. Or skip this and use soft warm rice.</li></ul>",
+   "heat": {
+    "label": "medium",
+    "label_html": "<span>medium</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Crisp the rice in the pan",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [
+     {
+      "caption": "Press the rice into the pan",
+      "src": "illustrations/bibimbap/4-how1.webp?v=5059a11f15"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/bibimbap/4.webp?v=6fd2dcc534",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "5–6 min",
+   "time_html": "<span>5–6 min</span>",
+   "title": "Crisp the rice in the pan",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"2\" data-f=\"bowl|bowls\" data-n=\"1\">2 bowls</span> (about <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"400\">400 g</span>)",
+     "name_html": "Cooked short-grain rice"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Toasted sesame oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Arrange the vegetables and bulgogi in separate heaps around the rice, like the spokes of a wheel. Put an egg in the centre.</li><li>Mix the gochujang with <span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\" data-s=\"0\">1 tsp</span> sesame oil, the sugar, vinegar and sesame seeds, or the soy, sesame oil and spring onion for the mild sauce. Add a spoonful to each bowl and mix everything together at the table.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Arrange, top with egg and sauce, mix",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/bibimbap/5.webp?v=192c536503",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Arrange, top with egg and sauce, mix",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Gochujang"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Rice vinegar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted sesame seeds"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce for the mild sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"1\">1 tsp</span>",
+     "name_html": "Toasted sesame oil for the mild sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Spring onion, finely chopped"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Bibimbap (rice with vegetables, beef and egg)",
+ "total": "~45 min (with leftover bulgogi)",
+ "vinegar_options": null,
+ "yields": "2 bowls"
+}

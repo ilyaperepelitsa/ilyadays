@@ -47,12 +47,16 @@ test('rejects malformed publication dates instead of silently dropping a recipe'
 });
 
 for (const lang of ['en', 'ru']) {
-  test(`${lang}: real recipe files produce all three new recent entries even with an empty export recent list`, () => {
+  test(`${lang}: real recipe files produce the three newest recent entries even with an empty export recent list`, () => {
     const source = JSON.parse(fs.readFileSync(`content/${lang}/index.json`, 'utf8'));
     const records = fs.readdirSync(`content/${lang}/recipes`).filter(file => file.endsWith('.json'))
       .map(file => JSON.parse(fs.readFileSync(`content/${lang}/recipes/${file}`, 'utf8')));
     const result = recipeCatalog({ ...source, recent: [] }, records);
-    for (const slug of ['crispy-potato-wedges', 'potato-wedge-tempura', 'mooken-mini-cream-puffs']) {
+    // The three newest records by their own publication date (not a fixed list that newer recipes displace).
+    const newest = records.filter(record => record.added).sort((a, b) => b.added.localeCompare(a.added))
+      .slice(0, 3).map(record => record.slug);
+    assert.equal(newest.length, 3);
+    for (const slug of newest) {
       assert.ok(result.recent.includes(slug), `${slug} must be recently added`);
       assert.ok(result.recipes.find(recipe => recipe.slug === slug)?.added);
     }

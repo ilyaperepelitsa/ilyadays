@@ -1,0 +1,514 @@
+{
+ "added": "2026-11-17T12:32:00Z",
+ "batch": null,
+ "before_ingredients_html": null,
+ "blurb_html": "Long spring onions and seafood bound with a thin, cold batter and fried until crisp at the edges, with a soy dipping sauce.",
+ "chips": [
+  {
+   "html": "<span>2 large pancakes</span>",
+   "kind": "",
+   "text": "2 large pancakes"
+  },
+  {
+   "html": "~30 min",
+   "kind": "time",
+   "text": "~30 min"
+  }
+ ],
+ "description": "Long spring onions and seafood bound with a thin, cold batter and fried until crisp at the edges, with a soy dipping sauce.",
+ "equipment_html": [
+  "Steel frying pan, <span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"26\" data-b=\"28\" data-s=\"0\">26–28 cm</span>",
+  "Wide flat spatula",
+  "Large plate for flipping",
+  "Mixing bowl"
+ ],
+ "group": {
+  "id": "korean",
+  "name": "Korean"
+ },
+ "hero": {
+  "alt": "Haemul pajeon (seafood and spring onion pancake)",
+  "image": "illustrations/haemul-pajeon/hero.webp?v=1db5de4beb",
+  "svg_fallback": null
+ },
+ "ingredients": [
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Plain flour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+     "name_html": "Potato starch or cornflour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"160\">160 ml</span>",
+     "name_html": "Ice-cold water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Egg"
+    }
+   ],
+   "name": "Batter"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"bunch|bunches\" data-n=\"1\">1 large bunch</span> (10–12)",
+     "name_html": "Spring onions"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 g</span>",
+     "name_html": "Raw peeled shrimp"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Squid, cleaned"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>, optional",
+     "name_html": "Mild red chilli"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\">6 tbsp</span>, in turns",
+     "name_html": "Neutral oil"
+    }
+   ],
+   "name": "Filling"
+  },
+  {
+   "items": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Rice vinegar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Toasted sesame seeds"
+    }
+   ],
+   "name": "Dipping sauce"
+  }
+ ],
+ "intro_html": "A rainy-day favourite: <b>whole lengths of spring onion</b> laid side by side, scattered with shrimp and squid and held together with just enough <b>ice-cold batter</b>. Plenty of oil in a well-heated steel pan makes the edges lacy and crisp. Cut into squares and dip in vinegared soy. Mild. This is a home adaptation built from several Korean sources and has not been kitchen tested.",
+ "mise": [
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/haemul-pajeon/mise1.webp?v=d4972c2ac4",
+   "items": [
+    "trimmed to the pan's width; thick white parts split lengthwise"
+   ],
+   "items_html": "trimmed to the pan's width; thick white parts split lengthwise",
+   "name": "Spring onions",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": false,
+   "goes_in": "Step 3",
+   "image": "illustrations/haemul-pajeon/mise2.webp?v=6bdbe82b22",
+   "items": [
+    "shrimp halved",
+    "squid in thin rings"
+   ],
+   "items_html": "shrimp halved · squid in thin rings",
+   "name": "Seafood",
+   "svg_fallback": null,
+   "vessel": "plate"
+  },
+  {
+   "as_list": true,
+   "goes_in": "Step 5",
+   "image": "illustrations/haemul-pajeon/mise3.webp?v=941cd9a7f3",
+   "items": [
+    "soy",
+    "rice vinegar",
+    "water",
+    "sugar",
+    "sesame seeds"
+   ],
+   "items_html": "soy · rice vinegar · water · sugar · sesame seeds",
+   "name": "Dipping sauce",
+   "svg_fallback": null,
+   "vessel": "cup"
+  }
+ ],
+ "more_label": "More korean:",
+ "next": {
+  "slug": "bibimbap",
+  "title": "Bibimbap (rice with vegetables, beef and egg)"
+ },
+ "notes": [
+  {
+   "html": "<p>If you can find buchimgaru (Korean pancake mix), use <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"130\" data-s=\"0\">130 g</span> of it instead of the flour, starch and salt, with the same water.</p>",
+   "title_html": "Korean pancake mix"
+  },
+  {
+   "html": "<ul class=\"do\"><li>A steel pan releases the pancake once a crust forms.</li><li>Preheat it well, use the full amount of oil and don't try to move the pancake in the first 2 minutes.</li></ul>",
+   "title_html": "Stopping it sticking"
+  },
+  {
+   "html": "<ul class=\"do\"><li>Kimchi pancake: replace the seafood with <span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"150\" data-s=\"0\">150 g</span> chopped kimchi plus <span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\" data-s=\"0\">2 tbsp</span> of its juice in the batter.</li><li>Vegetable: courgette and onion in thin strips.</li></ul>",
+   "title_html": "Other fillings"
+  }
+ ],
+ "original": null,
+ "parts": [],
+ "prev": {
+  "slug": "japchae",
+  "title": "Japchae (stir-fried glass noodles)"
+ },
+ "scale": {
+  "mode": "people",
+  "scalable": true,
+  "serves": 2,
+  "size": "2",
+  "text": {
+   "Amounts for one person — multiply by the number of people.": "Amounts for one person — multiply by the number of people.",
+   "Amounts written inside the step text are for the original recipe; the lists are scaled.": "Amounts written inside the step text are for the original recipe; the lists are scaled.",
+   "Batches": "Batches",
+   "Cook in batches — the pots and pans in the steps are sized for {n}.": "Cook in batches — the pots and pans in the steps are sized for {n}.",
+   "Cooking for": "Cooking for",
+   "Fewer": "Fewer",
+   "Metric (g, ml, °C)": "Metric (g, ml, °C)",
+   "More": "More",
+   "Per person": "Per person",
+   "Servings": "Servings",
+   "US (oz, cups, °F)": "US (oz, cups, °F)",
+   "Units": "Units",
+   "Whole recipe": "Whole recipe",
+   "one batch": "one batch",
+   "people": "people",
+   "person": "person"
+  }
+ },
+ "share_image": "share/haemul-pajeon.jpg?v=7672ae1e97",
+ "siblings": [
+  {
+   "slug": "kimchi",
+   "title": "Napa cabbage kimchi"
+  },
+  {
+   "slug": "kkakdugi",
+   "title": "Kkakdugi (radish cube kimchi)"
+  },
+  {
+   "slug": "dakgangjeong",
+   "title": "Dakgangjeong (sweet crispy drumsticks)"
+  },
+  {
+   "slug": "doenjang-jjigae",
+   "title": "Doenjang jjigae (soybean paste stew)"
+  },
+  {
+   "slug": "andong-jjimdak",
+   "title": "Andong jjimdak (soy-braised chicken)"
+  },
+  {
+   "slug": "beoseot-jeongol",
+   "title": "Beoseot jeongol (mushroom hot pot)"
+  },
+  {
+   "slug": "galbi-jjim",
+   "title": "Galbi-jjim (braised beef short ribs)"
+  },
+  {
+   "slug": "budae-jjigae",
+   "title": "Budae jjigae (army stew)"
+  },
+  {
+   "slug": "bulgogi",
+   "title": "Bulgogi (marinated beef)"
+  },
+  {
+   "slug": "dak-bulgogi",
+   "title": "Dak bulgogi (soy-glazed chicken thighs)"
+  },
+  {
+   "slug": "tteokgalbi",
+   "title": "Tteokgalbi (glazed beef patties)"
+  },
+  {
+   "slug": "japchae",
+   "title": "Japchae (stir-fried glass noodles)"
+  },
+  {
+   "slug": "bibimbap",
+   "title": "Bibimbap (rice with vegetables, beef and egg)"
+  }
+ ],
+ "slug": "haemul-pajeon",
+ "sources": [
+  {
+   "label": "Maangchi — haemul pajeon",
+   "url": "https://www.maangchi.com/recipe/haemul-pajeon"
+  },
+  {
+   "label": "Korean Bapsang — haemul pajeon",
+   "url": "https://www.koreanbapsang.com/haemul-pajeon/"
+  }
+ ],
+ "steps": [
+  {
+   "body_html": "<ul class=\"do\"><li>Cut the spring onions to the width of your pan, about <b><span class=\"q\" data-k=\"len\" data-u=\"cm\" data-a=\"20\" data-s=\"0\">20 cm</span></b>. Split the thick white ends lengthwise so they cook as fast as the greens.</li><li>Cut the shrimp in half and the squid into thin rings. Pat everything dry. Slice the chilli thinly, if using. Mix the dipping sauce.</li></ul>",
+   "heat": null,
+   "id": "step-1",
+   "images": {
+    "alt": "Prepare spring onions and seafood",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/haemul-pajeon/1.webp?v=175b863544",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 1,
+   "part": null,
+   "part_id": null,
+   "time": "~10 min",
+   "time_html": "<span>~10 min</span>",
+   "title": "Prepare spring onions and seafood",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"bunch|bunches\" data-n=\"1\">1 large bunch</span> (10–12)",
+     "name_html": "Spring onions"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 g</span>",
+     "name_html": "Raw peeled shrimp"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Squid, cleaned"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Mild red chilli"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Rice vinegar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Toasted sesame seeds"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Whisk the flour, starch and salt with the <b>ice-cold water</b> until just smooth; a few lumps are fine. It should be thin, like single cream. Cold batter and little mixing keep the pancake crisp.</li><li>Beat the egg separately in a cup; it goes on top later.</li></ul>",
+   "heat": null,
+   "id": "step-2",
+   "images": {
+    "alt": "Mix a cold, thin batter",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/haemul-pajeon/2.webp?v=5fd774e52d",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 2,
+   "part": null,
+   "part_id": null,
+   "time": "~3 min",
+   "time_html": "<span>~3 min</span>",
+   "title": "Mix a cold, thin batter",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Plain flour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"30\">30 g</span>",
+     "name_html": "Potato starch or cornflour"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Salt"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"ml\" data-a=\"160\">160 ml</span>",
+     "name_html": "Ice-cold water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Egg"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Heat the steel pan on <b>medium-high</b> for 2 minutes, then add <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"3\" data-s=\"0\">3 tbsp</span> oil</b> and swirl. Lay half the spring onions side by side across the pan.</li><li>Scatter half the seafood and chilli over them. Spoon half the batter evenly over everything, just enough to fill the gaps and bind it; you should still see the onions. Drizzle half the beaten egg over the top.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-3",
+   "images": {
+    "alt": "Lay out the onions and seafood; pour the batter",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [
+     {
+      "caption": "Spoon batter over the onions",
+      "src": "illustrations/haemul-pajeon/3-how1.webp?v=81f7441d3c"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/haemul-pajeon/3.webp?v=797ca80cbf",
+    "svg_fallback": null
+   },
+   "n": 3,
+   "part": null,
+   "part_id": null,
+   "time": "~2 min",
+   "time_html": "<span>~2 min</span>",
+   "title": "Lay out the onions and seafood; pour the batter",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\">6 tbsp</span>",
+     "name_html": "Neutral oil"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-f=\"bunch|bunches\" data-n=\"1\">1 large bunch</span> (10–12)",
+     "name_html": "Spring onions"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"120\">120 g</span>",
+     "name_html": "Raw peeled shrimp"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"mass\" data-u=\"g\" data-a=\"100\">100 g</span>",
+     "name_html": "Squid, cleaned"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Mild red chilli"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"count\" data-a=\"1\" data-n=\"1\">1</span>",
+     "name_html": "Egg"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Fry for <b>3–4 minutes</b>, pressing gently with the spatula, until the underside is golden and the edges are crisp. Shake the pan: it should slide freely.</li><li>To flip, slide the pancake onto a large plate, put the pan upside down over it and turn both over together. Add <b><span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\" data-s=\"0\">1 tbsp</span> oil</b> around the edge and fry for <b>3 minutes</b>, pressing down. Turn once more for 30 seconds to re-crisp the first side.</li><li>Make the second pancake the same way.</li></ul>",
+   "heat": {
+    "label": "medium-high",
+    "label_html": "<span>medium-high</span>",
+    "off": false
+   },
+   "id": "step-4",
+   "images": {
+    "alt": "Fry, flip, fry again",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [
+     {
+      "caption": "Flip with a plate",
+      "src": "illustrations/haemul-pajeon/4-how1.webp?v=373b48fcae"
+     }
+    ],
+    "illustration": null,
+    "photo": null,
+    "result": "illustrations/haemul-pajeon/4.webp?v=113ee94e73",
+    "svg_fallback": null
+   },
+   "n": 4,
+   "part": null,
+   "part_id": null,
+   "time": "~7 min per pancake",
+   "time_html": "<span>~7 min per pancake</span>",
+   "title": "Fry, flip, fry again",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"6\">6 tbsp</span>",
+     "name_html": "Neutral oil"
+    }
+   ]
+  },
+  {
+   "body_html": "<ul class=\"do\"><li>Slide onto a board and cut into squares. Serve at once with the dipping sauce.</li></ul>",
+   "heat": null,
+   "id": "step-5",
+   "images": {
+    "alt": "Cut and serve hot",
+    "diagram": null,
+    "diagram_title": "Diagram",
+    "how": [],
+    "illustration": "illustrations/haemul-pajeon/5.webp?v=a8f2472720",
+    "photo": null,
+    "result": null,
+    "svg_fallback": null
+   },
+   "n": 5,
+   "part": null,
+   "part_id": null,
+   "time": null,
+   "time_html": null,
+   "title": "Cut and serve hot",
+   "uses_rows": [
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"2\">2 tbsp</span>",
+     "name_html": "Soy sauce"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Rice vinegar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tbsp\" data-a=\"1\">1 tbsp</span>",
+     "name_html": "Water"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Sugar"
+    },
+    {
+     "amount_html": "<span class=\"q\" data-k=\"vol\" data-u=\"tsp\" data-a=\"0.5\">½ tsp</span>",
+     "name_html": "Toasted sesame seeds"
+    }
+   ]
+  }
+ ],
+ "timeline": null,
+ "title": "Haemul pajeon (seafood and spring onion pancake)",
+ "total": "~30 min",
+ "vinegar_options": null,
+ "yields": "2 large pancakes"
+}
