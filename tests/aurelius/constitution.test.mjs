@@ -249,7 +249,8 @@ test('the vector map covers the whole section, reports its distortion, and carri
     assert.deepEqual(refs, article.members.map((member) => member.ref), where);
     assert.equal(points.length, refs.length, where);
     assert.ok(points.every(([x, y]) => Math.abs(x) <= 1 && Math.abs(y) <= 1), where);
-    assert.ok(stress > 0 && stress < 0.4, `${where}: stress ${stress}`);
+    // Three points always fit a flat map exactly, so a section of three or fewer passages has no distortion to report.
+    assert.ok((refs.length <= 3 ? stress >= 0 : stress > 0) && stress < 0.4, `${where}: stress ${stress}`);
     const off = [];
     sim.forEach((line, i) => line.forEach((value, j) => {
       assert.equal(value, sim[j][i], `${where}: similarity is symmetric`);

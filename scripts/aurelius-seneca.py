@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Seneca's Moral Letters (Gummere, 1917-25) as a second private corpus beside the Meditations.
 
+Rights (checked 23 Nov 2026; full record with sources in content/aurelius/constitution.json, authors[0].rights):
+Gummere died 3 Dec 1969. The three Loeb volumes (1917, 1920, 1925) are public domain in the United States
+(published before 1931). In the EU, the UK and Turkey the general term is life + 70: protected through 2039. The
+site quotes short sections with their source; whether to keep this translation is the owner's decision (plan 32, W5).
+
   fetch    download the 124 letters from English Wikisource into ignored .aurelius/imports/ (polite, resumable)
   parse    split each letter at its Loeb section numbers into passages with immutable revision ids
   preview  count tokens and estimate the embedding cost; makes no request

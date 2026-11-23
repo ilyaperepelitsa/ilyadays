@@ -103,7 +103,9 @@ def check(stored: dict, corpus: dict) -> list[dict]:
         assert re.search(r'[Ͱ-Ͽἀ-῿]', passage['greek']) and not re.search(r'[A-Za-z]{4,}', passage['greek']), f'{where}: the Greek field must hold Greek'
         found = OLD_FORMS.search(passage['english'])
         assert not found, f"{where}: “{found.group(0)}” is not today's English"
-        assert 0.4 <= len(passage['english'].split()) / max(1, len(passage['greek'].split())) <= 2.6, f'{where}: the English is far longer or shorter than the Greek'
+        # A ratio means little on a short passage: ten Greek words that are each one verb (9.39b) take three or four English words apiece.
+        if len(passage['greek'].split()) >= 20:
+            assert 0.4 <= len(passage['english'].split()) / len(passage['greek'].split()) <= 2.6, f'{where}: the English is far longer or shorter than the Greek'
         for note in passage.get('notes', []):
             assert note.get('greek') and note.get('note'), f'{where}: a note needs the Greek words and what is open'
             assert note['greek'] in passage['greek'], f"{where}: the note quotes “{note['greek']}”, which is not in the Greek of this passage"
