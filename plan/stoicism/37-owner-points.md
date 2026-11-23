@@ -20,6 +20,8 @@ gated, reviewed independently, polished after a reading of all 38 articles side 
 7. **Translation, 7.23:** "Not in the least" can read in English as a denial, though the Greek agrees (noticed by a reviewer).
 8. **Gate warnings:** 74 warnings, 0 blocking (mostly a conclusion that repeats its quote, or a said-once item not in the
    first person). `apps/aurelius/.venv/bin/python scripts/aurelius-qa.py articles` lists them.
+9. **Chapter 7 retitled** "Praise, harm and the worth of things" (was "Other minds, fame and harm"); chapters 1-3 got
+   first-person summaries that match their articles. Say if you want the old wording back.
 
 ## Titles changed from the plan (12)
 

@@ -77,3 +77,11 @@ Scratch folder of this session: `scratchpad/wide/` (`crosswalk.py`, `batch.py`, 
 - **Reference pass:** one Opus reviewer checked all 212 mentions of another article against that article as it now is (claim numbers checked by script). It found 7 stale references (Article 17's claims renumbered after it dropped its old claim 3; Article 36's claims 3 and 4 rewritten; Article 19's Ep. 81.22 now a challenge) and 2 inaccurate ones. Each fix was given as the corrected sentence, and I applied them by exact replacement in Articles 10, 11, 12, 13, 18, 28, 33 and 36. Gates and build pass. Five of the six "dropped disclosures" my script reported were false positives (it read passage numbers such as "and 7.9" as article numbers); the sixth (Article 36 no longer naming Article 3) is a real but correct drop.
 - Usage check 15:43–15:58 UTC: result the writers and reviewers had finished, so activity fell by about 95% (calls 628 → 26, output 595k → 41k); the main session is the one large context (475k); action: assembly and checks run in the main session with short outputs, and no new agents until the chapter-summary check; evidence: codeburn window.
 - **Assembled (23 Nov, ~19:55):** all 38 articles in `content/aurelius/constitution.json`, every chapter `read: full`, section titles from the article titles. On the first apply, `assemble.py` put back the anchor copies of Articles 1 to 5, which predate later fixes (rule-7 reasons in 1 and 3, a Seneca context in 4). I restored Articles 1 to 6 from the commit and removed the override. Build ok (550 Seneca pieces, 38 voices); 88 record tests pass; the gates over the whole record report 0 blocking and 74 warnings; the browser check passes in full.
+
+## 23 November 2026 · Chapter titles and summaries
+
+Every chapter's title and summary predated its articles. One reader checked each against its articles (report only), and the
+corrections went into the record: c1, c2 and c3 summaries rewritten in the first person to match the articles; c7 retitled from
+"Other minds, fame and harm" to "Praise, harm and the worth of things" (the old pair missed the article on the worth of things).
+c4, c5 and c6 stand. Build ok, 88 record tests pass, gates 0 blocking / 74 warnings, browser check all pass. The page-case
+fixture keeps the old c7 title on purpose (it is a frozen test record).
