@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>The first five articles · Stoic Constitution</title>
+<style>
+:root{--paper:#f7f5ee;--card:#fffdf8;--ink:#232926;--muted:#57615a;--line:#d2d3c7;--accent:#1d6450;
+--s1:#1d6450;--t1:#e1efe7;--s2:#8a4d18;--t2:#f7e8d4;--s3:#1f5c8a;--t3:#e0ecf5;--s4:#8b2f5c;--t4:#f6e3ec;--e:#55468f;--et:#ece9f6;
+--warn:#8f3a10;--wt:#fbe9dc;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',sans-serif}
+@media(prefers-color-scheme:dark){:root{--paper:#161917;--card:#1e2320;--ink:#e9e7dd;--muted:#a4ada5;--line:#3b423c;--accent:#86d3b8;
+--s1:#86d3b8;--t1:#1b382f;--s2:#e9ad70;--t2:#3f2e1a;--s3:#8cc3ee;--t3:#1c3447;--s4:#eda0c4;--t4:#42233a;--e:#b9adf0;--et:#2e2948;--warn:#f2a676;--wt:#3d271a}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
+h1,h2,h3,h4,p,ol,ul,figure,blockquote{margin:0}
+ol,ul{padding:0;list-style:none}
+a{color:var(--accent);text-underline-offset:3px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid #3b7fc4;outline-offset:2px}
+.wrap{max-width:820px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.top{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;justify-content:space-between;padding-block:14px 0;font-size:14px}
+.top strong{font:600 17px var(--serif)}
+.intro{padding-block:22px 20px}
+.eyebrow{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+h1{font:400 clamp(32px,8vw,52px)/1.06 var(--serif);letter-spacing:-.025em;margin:8px 0 14px;text-wrap:balance}
+h2{font:400 clamp(24px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-wrap:balance}
+.lede{font-size:17px}
+.status{margin-top:10px;font-size:14px;color:var(--muted)}
+.sub{color:var(--muted);font-size:15px;margin-top:6px}
+section{padding-block:28px;border-top:1px solid var(--line)}
+.step{font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+/* jump bar */
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-block:1px solid var(--line)}
+.bar .wrap{display:flex;gap:6px;align-items:center;padding-block:7px;overflow-x:auto}
+.bar span{flex:none;font-size:13px;color:var(--muted);margin-right:2px}
+.bar a{flex:none;min-width:44px;min-height:40px;display:grid;place-items:center;padding:0 12px;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:var(--ink);font-weight:650;font-size:14px}
+.bar a.to-topics{font-weight:500}
+
+/* funnel + tree */
+.funnel{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:16px;font-size:14px}
+.funnel b{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);font-weight:650}
+.funnel i{font-style:normal;color:var(--muted)}
+.tree{margin-top:18px;display:grid;gap:8px}
+.chapter{background:var(--card);border:1px solid var(--line);border-radius:6px}
+.chapter>summary{list-style:none;cursor:pointer;padding:11px 12px;display:grid;grid-template-columns:26px 1fr auto;gap:2px 8px;align-items:baseline}
+.chapter>summary::-webkit-details-marker{display:none}
+.chapter .num{font:650 13px var(--sans);color:var(--muted)}
+.chapter .name{font:600 18px/1.25 var(--serif)}
+.chapter .count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.chapter .meter{grid-column:2/-1;height:6px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px}
+.chapter .meter i{display:block;height:100%;background:var(--muted)}
+.chapter.first .meter i{background:var(--accent)}
+.chapter .body{padding:0 12px 12px 46px}
+.chapter .body>p{font-size:14.5px;color:var(--muted)}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;font:650 12px/1.5 var(--sans);background:var(--wt);color:var(--warn)}
+.tag.ok{background:var(--t1);color:var(--s1)}
+.sections{margin-top:10px;display:grid;gap:0}
+.sections li{display:grid;grid-template-columns:1fr auto;gap:0 10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.sections small{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
+.sections .n{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.sections a{font-weight:650}
+details.more{margin-top:14px}
+details.more>summary,.process>summary{cursor:pointer;color:var(--accent);font-size:14.5px;padding-block:8px}
+.compare{margin-top:6px;display:grid;gap:10px;font-size:14px}
+.compare .row b{display:block;font-weight:650}
+.stack{display:flex;height:12px;border-radius:3px;overflow:hidden;margin:3px 0;gap:1px}
+.stack i{display:block;background:var(--muted);min-width:1px}
+.compare p{color:var(--muted);font-size:13.5px}
+
+/* article */
+.article{padding-block:34px;border-top:1px solid var(--line);scroll-margin-top:58px}
+.article:first-child{border-top:0;padding-top:20px}
+.leaf{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ink);padding:20px 16px 18px}
+.leaf h3{font:400 clamp(26px,6.4vw,34px)/1.12 var(--serif);letter-spacing:-.02em;margin:4px 0 4px;text-wrap:balance}
+.from{font-size:13.5px;color:var(--muted)}
+.clause{margin-top:18px}
+.label{font:650 12px/1.4 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
+.sent{font:clamp(19px,4.9vw,21px)/1.72 var(--serif)}
+.sg{cursor:pointer;border-radius:3px;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--c);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sg.S{text-decoration-thickness:1.5px}
+.sg.many{text-decoration-style:double}
+.sg.join{text-decoration:none;cursor:help}
+#tip{position:absolute;z-index:20;width:min(380px,calc(100vw - 16px));padding:10px 12px;background:var(--card);border:1px solid var(--ink);border-radius:6px;box-shadow:0 6px 22px rgba(0,0,0,.22);pointer-events:none;font-size:14px}
+.tip-head{font:650 12.5px/1.4 var(--sans);color:var(--s1);margin-bottom:4px}
+.tip-q{font:15px/1.45 var(--serif);margin-top:5px}
+.tip-q b{font:650 13px var(--sans);margin-right:6px;font-variant-numeric:tabular-nums}
+.tip-note{margin-top:6px;font-size:13px;color:var(--muted)}
+.link.hit{box-shadow:inset 0 0 0 2px var(--c)}
+.sg:hover,.sg[aria-pressed=true]{background:var(--ct)}
+.sg[aria-pressed=true]{box-shadow:0 0 0 2px var(--ct)}
+.sg.gone{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:var(--warn);opacity:.5}
+.M{--c:var(--s1);--ct:var(--t1)}.S{--c:var(--s2);--ct:var(--t2)}.E{--c:var(--e);--ct:var(--et)}
+.statement{margin-top:14px;padding:14px 14px 14px 16px;border-left:4px solid var(--s1);background:var(--t1);border-radius:0 6px 6px 0}
+.statement .sent.big{font-size:clamp(21px,5.6vw,25px);line-height:1.55}
+.statement .form{margin-top:10px;font-size:14px;color:var(--muted)}
+.statement .trace{background:var(--card)}
+.statement .link{background:var(--paper)}
+sup.src{font:650 12px/0 var(--sans);color:var(--c);margin-left:3px;white-space:nowrap;font-variant-numeric:tabular-nums;text-decoration:none;--c:var(--s1)}
+sup.src.S{--c:var(--s2)}
+.tip-head.rest{margin-top:9px;padding-top:7px;border-top:1px solid var(--line);color:var(--muted)}
+.tip-row{display:flex;gap:10px;justify-content:space-between;font-size:13px;margin-top:3px}
+.tip-row b{font-weight:650;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--s1)}
+.grp{margin-top:28px}
+.grp-head{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.grp-head b{font:650 13px var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.grp-head span{font-size:14px;color:var(--muted)}
+.grp-empty{margin-top:10px;font-size:14.5px;color:var(--muted)}
+.pair{display:grid;gap:8px}
+.then{padding-top:8px;border-top:1px dashed var(--line)}
+.then .follows{font:16px/1.5 var(--serif)}
+.cols{display:none}
+.part{display:grid;gap:6px}
+.part-words{font:italic 17px/1.4 var(--serif);margin-top:4px}
+.part.hit .part-words{font-weight:650;color:var(--c)}
+.tagsw{min-height:40px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--muted);font-size:13.5px;font-weight:650;cursor:pointer}
+.tagsw[aria-pressed=true]{border-color:var(--s1);color:var(--s1);background:var(--t1)}
+.label.lead{margin-top:24px;color:var(--ink)}
+.claims{display:grid;gap:18px;margin-top:10px}
+.claim .sent{line-height:1.6}
+.sent.small{font-size:clamp(17px,4.4vw,19px)}
+.fused{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;margin-top:6px;font-size:13.5px;color:var(--muted)}
+.fused b{font-weight:650;color:var(--s1);margin-right:2px}
+.fused.warn b{color:var(--warn)}
+.fused span{padding:1px 7px;border:1px solid var(--line);border-radius:99px;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--paper)}
+.fused span.out{text-decoration:line-through;opacity:.5}
+.show{margin-left:auto;min-height:40px;padding:4px 10px;border:1px solid var(--s1);border-radius:6px;background:transparent;color:var(--s1);font-size:13.5px;font-weight:650;cursor:pointer}
+.panel-head{font:650 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
+.trace{display:grid;gap:8px;container-type:inline-size}
+.link.removed{opacity:.45}
+.link.induce{border-left:3px dashed var(--e)}
+.gives{margin-top:4px;font-size:14px;color:var(--muted)}
+.gives i{font-style:normal;font-weight:650;color:var(--ink)}
+.near{font-size:13px;color:var(--muted)}
+
+.sources{margin-top:24px;padding-top:14px;border-top:1px solid var(--line)}
+.sources>p{font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{--c:var(--s1);--ct:var(--t1);min-height:44px;padding:5px 11px;border:1.5px solid var(--c);border-radius:6px;background:var(--ct);cursor:pointer;text-align:left;line-height:1.25}
+.chip b{display:block;font-size:15px;font-weight:650;color:var(--c)}
+.chip small{display:block;font-size:12.5px;color:var(--ink)}
+.chip[aria-pressed=true]{background:transparent;border-style:dashed}
+.chip[aria-pressed=true] b{text-decoration:line-through}
+.chip.fixed{cursor:default;border-style:dashed}
+.bars{display:flex;height:8px;border-radius:4px;overflow:hidden;margin-top:10px;background:var(--line)}
+.bars i{display:block;background:var(--c)}
+.bars i.dim{opacity:.22}
+.dropline{margin-top:6px;font-size:14px;color:var(--muted)}
+.dropline.on{color:var(--warn);font-weight:600}
+
+.trace{margin-top:10px;border:1px solid var(--c);border-radius:6px;background:var(--ct);padding:12px}
+.trace-head{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.trace-head p{font:italic 17px/1.4 var(--serif)}
+.by{display:block;font:650 12.5px/1.4 var(--sans);font-style:normal;color:var(--c);margin-bottom:2px}
+.x{flex:none;min-width:48px;min-height:42px;border:1px solid var(--line);border-radius:5px;background:var(--card);cursor:pointer;font-size:14px}
+.chain{margin-top:10px;display:grid;gap:8px}
+.link{background:var(--card);border-radius:5px;padding:8px 10px;font-size:15px}
+.link b{display:block;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.ctx{font:16px/1.55 var(--serif)}
+mark{background:var(--ct);color:inherit;border-bottom:2px solid var(--c);padding:0 1px}
+mark sup{font:650 12px/0 var(--sans);margin-left:2px}
+
+.hand{margin-top:14px;padding:12px 14px;border:1px dashed var(--e);border-radius:6px;font-size:14.5px}
+.hand h4,.pieces h4,.members h4{font:650 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.hand ol{display:grid;gap:6px;counter-reset:d}
+.hand li{counter-increment:d;display:grid;grid-template-columns:20px 1fr;gap:4px}
+.hand li::before{content:counter(d) '.';color:var(--e);font-weight:650}
+.hand .limit{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted)}
+.hand .limit b{color:var(--ink)}
+
+.process{margin-top:10px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+.process>summary{padding:12px 14px;font-weight:650}
+.process .in{padding:0 14px 14px}
+.members,.pieces{margin-top:6px}
+.pieces{margin-top:20px}
+.members>p,.pieces>p{font-size:14px;color:var(--muted);margin-bottom:8px}
+.member{border-top:1px solid var(--line)}
+.member>summary{list-style:none;cursor:pointer;padding:10px 0;display:grid;grid-template-columns:auto 1fr auto;gap:3px 10px;align-items:center}
+.member>summary::-webkit-details-marker{display:none}
+.member .ref{font-weight:650;font-variant-numeric:tabular-nums}
+.member .why{grid-column:1/-1;font-size:14.5px}
+.member .sim{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:0}
+.member .sim i{flex:none;display:block;height:5px;border-radius:3px;background:var(--muted);opacity:.55}
+.member .state{font:650 12px/1.5 var(--sans);padding:1px 8px;border-radius:99px;background:var(--line);color:var(--ink);white-space:nowrap}
+.member.used .state{background:var(--ct);color:var(--c)}
+.member blockquote{font:16px/1.6 var(--serif);padding:2px 0 14px}
+.pgroup{margin-top:12px}
+.pgroup>b{display:block;font:650 14px var(--sans);color:var(--c);margin-bottom:4px}
+.pc{border-left:3px solid var(--c);background:var(--ct);padding:7px 10px;border-radius:0 5px 5px 0;margin-top:3px}
+.pc.child{margin-left:16px}
+.pc.unused{background:transparent;border-left-style:dashed}
+.pc-meta{display:flex;flex-wrap:wrap;gap:1px 8px;font:650 12.5px/1.4 var(--sans);color:var(--c)}
+.pc-meta i{font-style:normal;font-weight:500;color:var(--ink)}
+.pc-q{display:block;font:16px/1.45 var(--serif);margin-top:2px}
+.pc-note{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+
+.verdict{display:flex;gap:6px;margin-top:14px;align-items:center}
+.verdict span{font-size:13px;color:var(--muted);margin-right:auto}
+.vb{min-height:44px;padding:6px 14px;border:1px solid var(--line);border-radius:6px;background:transparent;cursor:pointer;font-size:14px;font-weight:600}
+.vb[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mine{margin-top:14px;display:grid;gap:4px;font-size:15px}
+.mine li{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line);padding-block:6px}
+.mine li span:last-child{font-weight:650;white-space:nowrap}
+.act{margin-top:12px;min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);font-weight:650;cursor:pointer}
+footer{padding-block:18px 44px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+.err{margin:16px 0;padding:12px;border:2px solid var(--warn);color:var(--warn);font-weight:600}
+.sr{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+@container (min-width:520px){.pair{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px}.then{padding:0 0 0 16px;border-top:0;border-left:1px dashed var(--line)}.cols{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;padding:0 10px;font:650 12px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.cols span+span{padding-left:16px}}
+/* Wide screens: the five sides of the statement stand side by side as columns. */
+@media(min-width:1000px){
+.article{position:relative;left:50%;width:min(1400px,calc(100vw - 48px));margin-left:calc(min(1400px,100vw - 48px)/-2)}
+.statement,.sources,.article>.hand,.article>.process,.article>.verdict{max-width:800px}
+.grps{display:flex;gap:20px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding-bottom:8px}
+.grps .grp{flex:1 1 0;min-width:224px;margin-top:0}
+.grps .grp.none{flex:0 0 168px;min-width:0}
+.grps .grp.open{flex:0 0 640px}
+.grps .grp-head{display:block;min-height:58px}
+.grps .grp-head span{display:block}
+.grps .sent,.grps .sent.small{font-size:17.5px;line-height:1.62}
+.grps .show{margin-left:0}
+}
+@media(min-width:700px){.leaf{padding:30px 34px 26px}.sent{font-size:21px}.chapter .body{padding-left:46px}}
+@media print{.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="wrap top"><strong>Stoic Constitution</strong><a href="/stoicism">← Back to the constitution</a></div>
+<header class="wrap intro">
+<p class="eyebrow">Draft · Marcus Aurelius, Casaubon translation</p>
+<h1>The first five articles</h1>
+<p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here the first five sections are each fused into an article. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. The small numbers after words name the passages those words come from, and a double underline means more than one passage backs them. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
+<p class="status" id="status"></p>
+</header>
+<nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div></nav>
+<p id="announce" class="sr" role="status"></p>
+<div id="tip" role="tooltip" hidden></div>
+<noscript><p class="wrap err">This page needs JavaScript to draw the topics and articles.</p></noscript>
+<main class="wrap" id="main">
+<section id="topics" aria-labelledby="t-head">
+<p class="step">1 · From the whole book to topics</p>
+<h2 id="t-head">How the topics were found</h2>
+<p class="sub">Each passage was turned into a vector of numbers that stands for its meaning. Passages close to one another were merged step by step into a tree. Cutting the tree high gives chapters; cutting each chapter again gives sections. The names are the editor’s, written after reading.</p>
+<p class="funnel" id="funnel"></p>
+<div class="tree" id="tree"></div>
+<details class="more"><summary>Why this way of grouping, and how far to trust it</summary><div class="compare" id="compare"></div></details>
+</section>
+
+<section id="articles" aria-labelledby="a-head">
+<p class="step">2 · From many passages to one statement</p>
+<h2 id="a-head"></h2>
+<p class="sub" id="a-sub"></p>
+<div id="list"></div>
+</section>
+
+<section id="yours" aria-labelledby="y-head">
+<p class="step">3 · Your call</p>
+<h2 id="y-head">Your verdicts</h2>
+<p class="sub">Mark each article Keep, Revise or Drop under its card. Choices are saved in this browser only.</p>
+<ul class="mine" id="mine"></ul>
+<button class="act" id="copy" type="button">Copy my verdicts</button>
+<p class="sub" style="margin-top:16px">For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
+</section>
+</main>
+<footer class="wrap">Passages are quoted from Meric Casaubon’s translation (Project Gutenberg 2680). Topic names, selections and article wordings are editorial drafts. Every article turns “thou” into “I” and modernises the English; other changes are noted phrase by phrase.</footer>
+
+<script>
+'use strict';
+const STORE = 'stoic-constitution:v1:verdicts';
+const VERDICTS = ['Keep', 'Revise', 'Drop'];
+let D = null;
+const TAGS = 'stoic-constitution:v1:tags';
+const state = {sel: null, removed: {}, tags: true};   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: passage numbers shown in the text
+try { state.tags = localStorage.getItem(TAGS) !== 'off'; } catch { /* private mode */ }
+
+function el(tag, cls, text) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text != null) node.textContent = text;
+  return node;
+}
+function press(node, label, onPress) {
+  node.setAttribute('role', 'button');
+  node.tabIndex = 0;
+  node.setAttribute('aria-label', label);
+  node.addEventListener('click', onPress);
+  node.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onPress(); }
+  });
+  return node;
+}
+const flat = text => text.replace(/\s+/g, ' ');
+const words = text => text.split(/\s+/).filter(word => /[\p{L}\p{N}]/u.test(word)).length;
+const short = (text, max = 40) => {
+  text = flat(text);
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return cut.slice(0, Math.max(cut.lastIndexOf(' '), 12)).replace(/[,;:]$/, '') + ' …';
+};
+const articleOf = number => D.articles.find(article => article.number === number);
+const removedOf = article => state.removed[article.number] || new Set();
+const plural = (count, noun) => count + ' ' + noun + (count === 1 ? '' : 's');
+
+function readVerdicts() { try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; } }
+function writeVerdict(key, value) {
+  const all = readVerdicts();
+  if (all[key] === value) delete all[key]; else all[key] = value;
+  try { localStorage.setItem(STORE, JSON.stringify(all)); } catch { /* private mode */ }
+}
+function announce(text) { document.getElementById('announce').textContent = text; }
+
+/* ---------- topics ---------- */
+function renderTopics() {
+  const method = D.method, sections = D.chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0);
+  document.getElementById('status').textContent = D.status + ' Nothing here has been reviewed by you yet.';
+  const funnel = document.getElementById('funnel');
+  [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.articles.length + ' articles so far']]
+    .forEach(([text]) => funnel.append(el(text === '→' ? 'i' : 'b', '', text)));
+  const largest = Math.max(...D.chapters.map(chapter => chapter.size));
+  document.getElementById('tree').replaceChildren(...D.chapters.map(chapter => {
+    const box = el('details', 'chapter' + (chapter.order === 1 ? ' first' : ''));
+    box.open = chapter.order === 1;
+    const head = el('summary');
+    const meter = el('span', 'meter');
+    const fill = el('i');
+    fill.style.width = (100 * chapter.size / largest) + '%';
+    meter.append(fill);
+    head.append(el('span', 'num', String(chapter.order)), el('span', 'name', chapter.title), el('span', 'count', chapter.size + ' passages'), meter);
+    const body = el('div', 'body');
+    const about = el('p', '', chapter.summary + ' ');
+    about.append(chapter.read === 'full'
+      ? el('span', 'tag ok', 'Sections named after reading every passage')
+      : el('span', 'tag', 'Provisional names, from the three most central passages'));
+    const list = el('ul', 'sections');
+    for (const section of chapter.sections) {
+      const row = el('li');
+      if (section.article) {
+        const link = el('a', '', section.title);
+        link.href = '#article-' + section.article;
+        row.append(link, el('span', 'n', 'Article ' + section.article));
+      } else {
+        row.append(el('span', '', section.title), el('span', 'n', chapter.order === 1 ? 'next' : ''));
+      }
+      row.append(el('small', '', plural(section.size, 'passage') + ' · most central: ' + section.central.join(', ')));
+      list.append(row);
+    }
+    body.append(about, list);
+    box.append(head, body);
+    return box;
+  }));
+  const names = {ward: 'Ward linkage (used here)', complete: 'Complete linkage (stored earlier)', average: 'Average linkage (stored earlier)'};
+  const compare = document.getElementById('compare');
+  compare.append(el('p', '', 'Three ways of merging the same vectors, each cut into ' + D.chapters.length + ' groups. Each bar is the whole book and each block is one group.'));
+  for (const [key, label] of Object.entries(names)) {
+    const item = method.comparison[key], row = el('div', 'row');
+    const stack = el('div', 'stack');
+    stack.setAttribute('role', 'img');
+    stack.setAttribute('aria-label', 'Group sizes ' + item.sizes.join(', '));
+    for (const size of item.sizes) { const block = el('i'); block.style.flex = size + ' 0 0'; stack.append(block); }
+    row.append(el('b', '', label), stack, el('p', '', 'Sizes ' + item.sizes.join(', ') + '. Largest group holds ' + Math.round(item.largest_fraction * 100) + '% of the book.'));
+    compare.append(row);
+  }
+  compare.append(el('p', '', 'The two stored hierarchies put most of the book in one group, which gives no chapters to work with. Ward linkage keeps groups balanced. None of the three separates the groups sharply: the passages are one man’s notes on a few recurring concerns, and they overlap. So a section is a place to look for passages on a subject. It is not proof that the subject is a distinct theme, and a passage that fits two subjects still sits in one section only. The vectors are ' + method.vectors + '. They were computed once, earlier, and were not changed.'));
+}
+
+/* ---------- article ---------- */
+const memberOf = (article, ref) => article.members.find(member => member.ref === ref);
+function context(article, piece) {
+  const text = memberOf(article, piece.ref).text, pad = 110;
+  let from = Math.max(0, piece.at - pad), to = Math.min(text.length, piece.at + piece.quote.length + pad);
+  while (from > 0 && /\S/.test(text[from - 1])) from--;
+  while (to < text.length && /\S/.test(text[to])) to++;
+  const box = el('p', 'ctx M');
+  box.append((from > 0 ? '… ' : '') + flat(text.slice(from, piece.at)));
+  box.append(el('mark', '', flat(piece.quote)));
+  box.append(flat(text.slice(piece.at + piece.quote.length, to)) + (to < text.length ? ' …' : ''));
+  return box;
+}
+const openKey = article => state.sel && state.sel.a === article.number ? state.sel.k : null;
+function toggle(article, key, focusKey, phrase) {
+  const previous = state.sel;
+  const same = openKey(article) === key && (phrase == null || previous.p === phrase);
+  state.sel = same ? null : {a: article.number, k: key, p: phrase};
+  hideTip();
+  if (previous && previous.a !== article.number) renderArticle(previous.a);
+  renderArticle(article.number, focusKey);
+}
+const left = (article, claim) => claim.passages.filter(ref => !removedOf(article).has(ref));
+const piecesOf = article => [...article.claims.flatMap(claim => claim.support), ...article.single];
+const pieceOf = (article, id) => piecesOf(article).find(piece => piece.id === id);
+const claimOf = (article, id) => article.claims.find(claim => claim.id === id);
+const refsOf = (article, ids) => [...new Set(ids.map(id => pieceOf(article, id).ref))];
+const claimParts = claim => claim.support.flatMap(piece => (piece.gives || []).map(words => ({words, ids: [piece.id]})));
+
+// Split a sentence into components by which quotes back which words. One quote may back several components.
+function phrases(text, parts) {
+  const lower = text.toLowerCase(), cover = Array.from({length: text.length}, () => []);
+  for (const part of parts) {
+    const at = lower.indexOf(part.words.toLowerCase());
+    for (let i = Math.max(at, 0); at >= 0 && i < at + part.words.length; i++) {
+      for (const id of part.ids) if (!cover[i].includes(id)) cover[i].push(id);
+    }
+  }
+  const out = [], key = i => cover[i].join('|');
+  for (let start = 0, i = 1; i <= text.length; i++) {
+    if (i === text.length || key(i) !== key(start)) { out.push({text: text.slice(start, i), ids: cover[start]}); start = i; }
+  }
+  return out;
+}
+
+/* A small card that follows the pointer or keyboard focus and says where the words come from. */
+const tipBox = document.getElementById('tip');
+function hideTip() { tipBox.hidden = true; }
+function tip(node, build) {
+  const show = () => {
+    if (node.getAttribute('aria-pressed') === 'true') return;   // its quotes are already open just below
+    tipBox.replaceChildren(build());
+    tipBox.hidden = false;
+    const rects = node.getClientRects(), rect = rects[rects.length - 1], width = tipBox.offsetWidth, height = tipBox.offsetHeight;
+    const leftEdge = Math.min(Math.max(8, rect.left), document.documentElement.clientWidth - width - 8);
+    const below = rect.bottom + 8 + height < window.innerHeight || rect.top < height + 16;
+    tipBox.style.left = (leftEdge + window.scrollX) + 'px';
+    tipBox.style.top = ((below ? rect.bottom + 8 : node.getClientRects()[0].top - height - 8) + window.scrollY) + 'px';
+  };
+  node.addEventListener('mouseenter', show);
+  node.addEventListener('mouseleave', hideTip);
+  node.addEventListener('focus', show);
+  node.addEventListener('blur', hideTip);
+}
+function tipQuote(article, piece) {
+  const row = el('p', 'tip-q');
+  row.append(el('b', '', piece.ref + (removedOf(article).has(piece.ref) ? ' (removed)' : '')), document.createTextNode('“' + flat(piece.quote) + '”'));
+  return row;
+}
+// The hover card: the exact quotes behind the words under the pointer, then every other component of the sentence with its passages.
+function breakdown(article, segs, index) {
+  const box = el('div'), seg = segs[index];
+  if (seg.ids.length) {
+    const refs = refsOf(article, seg.ids);
+    box.append(el('p', 'tip-head', '“' + seg.text.trim() + '” · from ' + plural(refs.length, 'passage')));
+    for (const id of seg.ids) box.append(tipQuote(article, pieceOf(article, id)));
+  } else {
+    box.append(el('p', 'tip-head', 'Joining words'), el('p', 'tip-note', 'These words are the editor’s. No passage is quoted for them.'));
+  }
+  const others = segs.filter((other, i) => i !== index && other.ids.length);
+  if (others.length) {
+    box.append(el('p', 'tip-head rest', 'The rest of the sentence'));
+    for (const other of others) {
+      const row = el('p', 'tip-row');
+      row.append(el('span', '', short(other.text.trim(), 36)), el('b', '', refsOf(article, other.ids).join(' · ')));
+      box.append(row);
+    }
+  }
+  box.append(el('p', 'tip-note', 'Click for the full passages and what follows from each.'));
+  return box;
+}
+
+// One sentence, drawn component by component. Every backed component carries its passages, so several sources show at once.
+function sentenceNode(article, o) {
+  const sentence = el('p', 'sent' + (o.cls ? ' ' + o.cls : ''));
+  const segs = phrases(o.text, o.parts), open = openKey(article) === o.key, gone = removedOf(article);
+  segs.forEach((seg, index) => {
+    const lead = seg.text.match(/^\s*/)[0], tail = seg.text.match(/\s*$/)[0], body = seg.text.trim();
+    if (!/[\p{L}\p{N}]/u.test(body)) { sentence.append(seg.text); return; }
+    const refs = refsOf(article, seg.ids), dead = o.lost || (refs.length > 0 && refs.every(ref => gone.has(ref)));
+    const span = el('span', 'sg M' + (refs.length > 1 ? ' many' : refs.length ? '' : ' join') + (dead ? ' gone' : ''), body);
+    span.dataset.k = o.base + '-' + index;
+    span.setAttribute('aria-pressed', String(open && state.sel.p === index));
+    press(span, body + ': ' + (refs.length ? 'from ' + refs.join(', ') : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index));
+    tip(span, () => breakdown(article, segs, index));
+    sentence.append(lead, span);
+    if (state.tags && refs.length) {
+      const tag = el('sup', 'src', refs.join(' · '));
+      tag.setAttribute('aria-hidden', 'true');
+      sentence.append(tag);
+    }
+    sentence.append(tail);
+  });
+  return {sentence, segs};
+}
+
+// One quoted passage with its conclusion beside it: Marcus's words on the left, what follows from them on the right.
+function passageRow(article, piece, hit, mode) {
+  const gone = removedOf(article).has(piece.ref);
+  const row = el('div', 'link pair' + (gone ? ' removed' : '') + (hit ? ' hit' : ''));
+  const said = el('div', 'said'), then = el('div', 'then');
+  said.append(el('b', '', 'Meditations ' + piece.ref + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
+  then.append(el('b', '', 'What follows'), el('p', 'follows', piece.follows));
+  if (mode === 'claim' && piece.gives && piece.gives.length) {
+    const gives = el('p', 'gives');
+    gives.append(el('i', '', 'Gives the claim: '), document.createTextNode(piece.gives.map(words => '“' + words + '”').join(' and ')));
+    then.append(gives);
+  }
+  if (mode === 'statement') {
+    const claim = piece.in === 'single' ? null : claimOf(article, piece.in);
+    then.append(el('p', 'gives', claim ? 'Also behind claim ' + claim.number + ' · ' + claim.role : 'Said once'));
+  }
+  if (mode === 'claim' && piece.note) then.append(el('p', 'gives', piece.note));
+  row.append(said, then);
+  return row;
+}
+function columns() {
+  const head = el('div', 'cols');
+  head.append(el('span', '', 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
+  return head;
+}
+function showButton(article, key, open, more, less) {
+  const button = el('button', 'show', open ? less : more);
+  button.type = 'button';
+  button.dataset.k = ['show', article.number, key].join('-');
+  button.setAttribute('aria-expanded', String(open));
+  button.addEventListener('click', () => toggle(article, key, button.dataset.k));
+  return button;
+}
+
+function statementBlock(article) {
+  const st = article.statement, key = 'statement', open = openKey(article) === key, gone = removedOf(article);
+  const box = el('div', 'statement');
+  box.append(el('p', 'label', 'The statement · ' + st.kind));
+  const {sentence, segs} = sentenceNode(article, {text: st.t, parts: st.parts, key, base: 'st-' + article.number, cls: 'big'});
+  box.append(sentence);
+  const refs = [...new Set(st.parts.flatMap(part => part.refs))];
+  const from = el('p', 'fused');
+  from.append(el('b', '', 'Gathered from ' + plural(refs.length, 'passage')));
+  for (const ref of refs) from.append(el('span', gone.has(ref) ? 'out' : '', ref));
+  from.append(showButton(article, key, open, 'Show part by part', 'Hide the parts'));
+  box.append(from);
+  if (open) {
+    const chosen = state.sel.p != null ? segs[state.sel.p] : null;
+    const panel = el('div', 'trace M');
+    panel.append(el('p', 'panel-head', 'The statement, part by part'), columns());
+    for (const part of st.parts) {
+      const hit = Boolean(chosen && chosen.ids.length && part.ids.every(id => chosen.ids.includes(id)));
+      const group = el('div', 'part' + (hit ? ' hit' : ''));
+      group.append(el('p', 'part-words', '“' + part.words + '”' + (hit ? ' · the words you picked' : '')));
+      for (const id of part.ids) group.append(passageRow(article, pieceOf(article, id), false, 'statement'));
+      panel.append(group);
+    }
+    box.append(panel);
+  }
+  box.append(el('p', 'form', st.form));
+  return box;
+}
+
+function claimBlock(article, claim) {
+  const remaining = left(article, claim), gone = removedOf(article);
+  const lost = remaining.length === 0, thin = !lost && remaining.length === 1;
+  const key = claim.id, open = openKey(article) === key;
+  const block = el('li', 'claim' + (lost ? ' lost' : ''));
+  block.append(el('p', 'label', claim.number + ' · ' + claim.role));
+  const {sentence, segs} = sentenceNode(article, {text: claim.t, parts: claimParts(claim), key, base: 'claim-' + article.number + '-' + key, lost});
+  const chosen = open && state.sel.p != null ? segs[state.sel.p] : null;
+  block.append(sentence);
+  const from = el('p', 'fused' + (thin || lost ? ' warn' : ''));
+  from.append(el('b', '', lost ? 'No passage left' : thin ? 'Now rests on one passage' : 'Fused from ' + plural(claim.passages.length, 'passage')));
+  for (const ref of claim.passages) from.append(el('span', gone.has(ref) ? 'out' : '', ref));
+  from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
+  block.append(from);
+  if (open) {
+    const panel = el('div', 'trace M');
+    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns());
+    for (const piece of claim.support) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
+    const shared = el('div', 'link induce');
+    shared.append(el('b', '', 'Taken together'), document.createTextNode(claim.shared));
+    panel.append(shared);
+    if (claim.changed) {
+      const changed = el('div', 'link induce');
+      changed.append(el('b', '', 'What the fusion changed'), document.createTextNode(claim.changed));
+      panel.append(changed);
+    }
+    panel.append(el('p', 'near', 'Closeness of these ' + claim.passages.length + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'));
+    block.append(panel);
+  }
+  return block;
+}
+
+function singleBlock(article, item) {
+  const key = 's:' + item.id, open = openKey(article) === key, lost = removedOf(article).has(item.ref);
+  const block = el('li', 'claim once' + (lost ? ' lost' : ''));
+  block.append(el('p', 'label', item.label + ' · said once'));
+  const sentence = el('p', 'sent small');
+  const span = el('span', 'sg S' + (lost ? ' gone' : ''), item.t);
+  span.dataset.k = ['single', article.number, item.id].join('-');
+  span.setAttribute('aria-pressed', String(open));
+  press(span, 'Said once, in ' + item.ref + ': ' + item.t, () => toggle(article, key, span.dataset.k));
+  tip(span, () => {
+    const box = el('div');
+    box.append(el('p', 'tip-head', 'Said once, in Meditations ' + item.ref), tipQuote(article, item), el('p', 'tip-note', 'Click for the passage and what follows from it.'));
+    return box;
+  });
+  sentence.append(span);
+  if (state.tags) {
+    const tag = el('sup', 'src S', item.ref);
+    tag.setAttribute('aria-hidden', 'true');
+    sentence.append(tag);
+  }
+  block.append(sentence);
+  if (open) {
+    const panel = el('div', 'trace S');
+    panel.append(columns(), passageRow(article, item, false, 'single'));
+    const why = el('div', 'link induce');
+    why.append(el('b', '', 'Why it is not fused'), document.createTextNode(item.why));
+    panel.append(why);
+    block.append(panel);
+  }
+  return block;
+}
+
+function sourcesBlock(article) {
+  const gone = removedOf(article);
+  const box = el('div', 'sources');
+  box.append(el('p', '', 'Built from ' + article.sources.length + ' of the ' + article.section_size + ' passages in its section. Tap one to take it away and see which claims weaken.'));
+  const chips = el('div', 'chips');
+  for (const ref of article.sources) {
+    const feeds = article.claims.filter(claim => claim.passages.includes(ref)).map(claim => claim.number);
+    const chip = el('button', 'chip');
+    chip.type = 'button';
+    chip.dataset.k = 'chip-' + article.number + '-' + ref;
+    chip.setAttribute('aria-pressed', String(gone.has(ref)));
+    chip.setAttribute('aria-label', (gone.has(ref) ? 'Restore passage ' : 'Remove passage ') + ref);
+    chip.append(el('b', '', ref), el('small', '', feeds.length ? 'claim' + (feeds.length > 1 ? 's ' : ' ') + feeds.join(', ') : 'said once'));
+    chip.addEventListener('click', () => {
+      const next = new Set(gone);
+      if (next.has(ref)) next.delete(ref); else next.add(ref);
+      state.removed[article.number] = next;
+      renderArticle(article.number, chip.dataset.k);
+      const weak = article.claims.filter(claim => left(article, claim).length < 2).map(claim => claim.number);
+      announce(next.has(ref) ? ref + ' removed. ' + (weak.length ? 'Claims resting on fewer than two passages: ' + weak.join(', ') + '.' : 'Every claim still rests on two or more passages.') : ref + ' restored.');
+    });
+    chips.append(chip);
+  }
+  box.append(chips);
+  if (gone.size) {
+    const weak = article.claims.filter(claim => left(article, claim).length === 1).map(claim => claim.number);
+    const dead = article.claims.filter(claim => left(article, claim).length === 0).map(claim => claim.number);
+    box.append(el('p', 'dropline on', 'Without ' + [...gone].join(', ') + ': ' +
+      (dead.length ? 'claim ' + dead.join(', ') + ' has no passage left. ' : '') +
+      (weak.length ? 'Claim ' + weak.join(', ') + ' now rests on a single passage. ' : '') +
+      (!dead.length && !weak.length ? 'every claim still rests on two or more passages.' : '')));
+  }
+  return box;
+}
+
+function membersBlock(article) {
+  const box = el('div', 'members');
+  const used = article.sources.length;
+  box.append(el('h4', '', 'The section, passage by passage'),
+    el('p', '', 'All ' + article.section_size + ' passages, closest to the centre of the section first (the bar and number show closeness). ' + used + ' feed the article and ' + (article.section_size - used) + (article.section_size - used === 1 ? ' is' : ' are') + ' set aside, with the reason. Tap a row to read the passage with its quoted pieces marked.'));
+  for (const member of article.members) {
+    const row = el('details', 'member' + (member.used ? ' used M' : ''));
+    const head = el('summary');
+    const sim = el('span', 'sim'), bar = el('i');
+    bar.style.width = Math.round((member.similarity - 0.6) / 0.3 * 70) + 'px';
+    sim.append(bar, document.createTextNode(member.similarity.toFixed(2) + ' · ' + member.words + ' words'));
+    const claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
+    const role = member.used
+      ? (claims.length ? 'Feeds claim' + (claims.length > 1 ? 's ' : ' ') + claims.join(', ') + (member.feeds.includes('single') ? ', and is quoted alone' : '') + '.' : 'Quoted alone, under “said once”.')
+      : member.why;
+    head.append(el('span', 'ref', member.ref), sim, el('span', 'state', member.used ? 'Used' : 'Set aside'), el('span', 'why', role));
+    const quote = el('blockquote', 'M');
+    const pieces = [...article.claims.flatMap(claim => claim.support), ...article.single].filter(piece => piece.ref === member.ref).sort((x, y) => x.at - y.at);
+    let cursor = 0;
+    for (const piece of pieces) {
+      if (piece.at < cursor) continue;
+      quote.append(flat(member.text.slice(cursor, piece.at)));
+      const mark = el('mark', '', flat(piece.quote));
+      mark.append(el('sup', '', piece.in === 'single' ? 'once' : String(claimOf(article, piece.in).number)));
+      quote.append(mark);
+      cursor = piece.at + piece.quote.length;
+    }
+    quote.append(flat(member.text.slice(cursor)));
+    row.append(head, quote);
+    box.append(row);
+  }
+  return box;
+}
+
+function articleCard(article) {
+  const wrap = el('article', 'article');
+  wrap.id = 'article-' + article.number;
+  const leaf = el('div', 'leaf');
+  leaf.append(el('p', 'eyebrow', 'Article ' + article.number), el('h3', '', article.title));
+  leaf.append(statementBlock(article));
+  const sides = el('div', 'grps');
+  const openNow = openKey(article);
+  for (const group of article.groups) {
+    const part = el('section', 'grp' + (group.empty ? ' none' : '') + (group.items.some(id => id === openNow || 's:' + id === openNow) ? ' open' : ''));
+    const head = el('h4', 'grp-head');
+    head.append(el('b', '', group.name), el('span', '', group.asks));
+    part.append(head);
+    if (group.empty) part.append(el('p', 'grp-empty', group.empty));
+    else {
+      const list = el('ol', 'claims');
+      for (const id of group.items) list.append(claimOf(article, id) ? claimBlock(article, claimOf(article, id)) : singleBlock(article, article.single.find(item => item.id === id)));
+      part.append(list);
+    }
+    sides.append(part);
+  }
+  leaf.append(sides);
+  leaf.append(sourcesBlock(article));
+  wrap.append(leaf);
+
+  const hand = el('div', 'hand');
+  hand.append(el('h4', '', 'What the editor decided'));
+  const decisions = el('ol');
+  for (const decision of article.decisions) decisions.append(el('li', '', decision));
+  const limit = el('p', 'limit');
+  limit.append(el('b', '', 'Limit. '), document.createTextNode(article.limit));
+  hand.append(decisions, limit);
+  wrap.append(hand);
+
+  const process = el('details', 'process');
+  process.dataset.keep = 'process-' + article.number;
+  const inner = el('div', 'in');
+  inner.append(membersBlock(article));
+  process.append(el('summary', '', 'The whole section, and what was done with each passage'), inner);
+  wrap.append(process);
+
+  const mine = readVerdicts()['article-' + article.number];
+  const verdict = el('div', 'verdict');
+  verdict.setAttribute('role', 'group');
+  verdict.setAttribute('aria-label', 'Your verdict on Article ' + article.number);
+  verdict.append(el('span', '', 'Your verdict'));
+  for (const value of VERDICTS) {
+    const button = el('button', 'vb', value);
+    button.type = 'button';
+    button.dataset.k = 'v-' + article.number + '-' + value;
+    button.setAttribute('aria-pressed', String(mine === value));
+    button.addEventListener('click', () => { writeVerdict('article-' + article.number, value); renderArticle(article.number, button.dataset.k); renderVerdicts(); });
+    verdict.append(button);
+  }
+  wrap.append(verdict);
+  return wrap;
+}
+
+// Redraw one article and keep what the reader had open.
+function renderArticle(number, focusKey) {
+  hideTip();
+  const old = document.getElementById('article-' + number);
+  const open = new Set([...old.querySelectorAll('details[open]')].map(node => node.dataset.keep || node.querySelector('.ref')?.textContent));
+  const fresh = articleCard(articleOf(number));
+  for (const node of fresh.querySelectorAll('details')) {
+    if (open.has(node.dataset.keep || node.querySelector('.ref')?.textContent)) node.open = true;
+  }
+  const slid = old.querySelector('.grps').scrollLeft;
+  old.replaceWith(fresh);
+  // Side by side, the open column widens; keep the reader's place and bring that column into view.
+  const sides = fresh.querySelector('.grps'), wide = fresh.querySelector('.grp.open');
+  sides.scrollLeft = slid;
+  if (wide && sides.scrollWidth > sides.clientWidth) {
+    const from = wide.offsetLeft - sides.offsetLeft;
+    if (from < sides.scrollLeft || from + wide.offsetWidth > sides.scrollLeft + sides.clientWidth) sides.scrollLeft = from;
+  }
+  if (focusKey) fresh.querySelector('[data-k="' + focusKey + '"]')?.focus({preventScroll: true});
+  syncUrl();
+}
+
+function verdictLines() {
+  const all = readVerdicts();
+  return D.articles.map(article => ({label: 'Article ' + article.number + ' · ' + article.title, value: all['article-' + article.number] || 'Open'}));
+}
+function renderVerdicts() {
+  document.getElementById('mine').replaceChildren(...verdictLines().map(line => {
+    const row = el('li');
+    row.append(el('span', '', line.label), el('span', '', line.value));
+    return row;
+  }));
+}
+
+function syncUrl() {
+  const query = new URLSearchParams();
+  if (state.sel) query.set('at', state.sel.a + '.' + state.sel.k);
+  const gone = Object.entries(state.removed).filter(([, refs]) => refs.size).map(([number, refs]) => number + ':' + [...refs].join(','));
+  if (gone.length) query.set('without', gone.join(';'));
+  const search = query.toString();
+  try { history.replaceState(null, '', location.pathname + (search ? '?' + search : '') + location.hash); } catch { /* file:// */ }
+}
+function readUrl() {
+  const query = new URLSearchParams(location.search);
+  const at = query.get('at') || '', a = Number(at.split('.')[0]), k = at.slice(at.indexOf('.') + 1), target = articleOf(a);
+  if (target && (k === 'statement' || target.claims.some(claim => claim.id === k) || target.single.some(item => 's:' + item.id === k))) state.sel = {a, k};
+  for (const part of (query.get('without') || '').split(';')) {
+    const [number, refs] = part.split(':');
+    const article = articleOf(Number(number));
+    if (article && refs) state.removed[article.number] = new Set(refs.split(',').filter(ref => article.sources.includes(ref)));
+  }
+}
+
+function render() {
+  renderTopics();
+  const first = D.chapters[0];
+  document.getElementById('a-head').textContent = 'Chapter 1 · ' + first.title;
+  document.getElementById('a-sub').textContent = D.chapter_order_note;
+  const jump = document.getElementById('jump');
+  jump.append(el('span', '', 'Article'));
+  for (const article of D.articles) {
+    const link = el('a', '', String(article.number));
+    link.href = '#article-' + article.number;
+    link.setAttribute('aria-label', 'Article ' + article.number + ', ' + article.title);
+    jump.append(link);
+  }
+  const topics = el('a', 'to-topics', 'Topics');
+  topics.href = '#topics';
+  const tags = el('button', 'tagsw', 'Sources');
+  tags.type = 'button';
+  tags.setAttribute('aria-pressed', String(state.tags));
+  tags.setAttribute('aria-label', 'Show passage numbers in the text');
+  tags.addEventListener('click', () => {
+    state.tags = !state.tags;
+    try { localStorage.setItem(TAGS, state.tags ? 'on' : 'off'); } catch { /* private mode */ }
+    tags.setAttribute('aria-pressed', String(state.tags));
+    for (const article of D.articles) renderArticle(article.number);
+    announce('Passage numbers in the text are ' + (state.tags ? 'shown.' : 'hidden.'));
+  });
+  jump.append(topics, tags);
+  document.getElementById('list').replaceChildren(...D.articles.map(articleCard));
+  renderVerdicts();
+  if (state.sel && !location.hash) document.getElementById('article-' + state.sel.a).scrollIntoView();
+}
+
+document.getElementById('copy').addEventListener('click', async event => {
+  const text = 'Stoic constitution · first five articles · my verdicts\n' + verdictLines().map(line => '- ' + line.label + ': ' + line.value).join('\n');
+  const button = event.currentTarget;
+  try { await navigator.clipboard.writeText(text); button.textContent = 'Copied'; }
+  catch { button.textContent = 'Copy failed. Select the list above.'; }
+  setTimeout(() => { button.textContent = 'Copy my verdicts'; }, 2400);
+});
+
+fetch('stoic-constitution.json').then(response => {
+  if (!response.ok) throw new Error('the record could not be loaded (' + response.status + ')');
+  return response.json();
+}).then(data => { D = data; readUrl(); render(); }).catch(error => {
+  document.getElementById('main').prepend(el('p', 'err', 'This page could not be drawn: ' + error.message));
+});
+</script>
+</body>
+</html>

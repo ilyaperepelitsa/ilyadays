@@ -16,7 +16,7 @@ def corpus():
 
 def test_book_pilot_exact_evidence_shared_sources_and_unapproved():
     w = validate_workspace(manual_study(corpus(), 'local-hash', public_slice=True))
-    assert w['study_revision'] == 3
+    assert w['study_revision'] == 4
     assert w['study_catalog']['default_id'].endswith('-ordinary-impressions')
     lessons = [c for c in w['conclusions'] if c['id'].endswith(('-ordinary-impressions', '-distress-and-threat'))]
     assert len(lessons) == 2

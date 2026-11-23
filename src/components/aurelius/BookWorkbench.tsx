@@ -1,11 +1,13 @@
 'use client';
 import { useState } from 'react';
+import { draftKey, useDraft } from '@/lib/aurelius/drafts';
 import type { BookDraft, BookLesson, Workspace } from '@/lib/aurelius/types';
 import { bookLessonState, draftBook, lessonSnapshot, lessonSources } from '@/lib/aurelius/book.mjs';
 import { sourceGradient } from '@/lib/aurelius/provenance.mjs';
 
 export function BookWorkbench({workspace,busy,onSave,onOpen,onDirty}:{workspace:Workspace;busy:boolean;onSave:(draft:BookDraft)=>Promise<boolean>;onOpen:(id:string)=>void;onDirty:(dirty:boolean)=>void}){
  const [draft,setDraft]=useState<BookDraft>(()=>draftBook(workspace)),[changed,setChanged]=useState(false),[selected,setSelected]=useState(''),[chapterTitle,setChapterTitle]=useState(''),[selectedSpan,setSelectedSpan]=useState<string|null>(null);
+ const base=workspace.manuscript_current??'proposed',saved=useDraft<BookDraft>({key:draftKey(workspace.editions[0]?.id??'','book','outline'),base,value:draft,dirty:changed,onRestore:d=>{setDraft(d);setChanged(true);onDirty(true);}});
  const items=draft.chapters.flatMap(chapter=>chapter.lessons.map(lesson=>({chapter,lesson}))),active=items.find(i=>`${i.chapter.id}/${i.lesson.conclusion_id}`===selected)??items[0];
  const lesson=active?.lesson,meaning=workspace.revisions.find(r=>r.id===lesson?.conclusion_revision),expression=workspace.revisions.find(r=>r.id===lesson?.expression_revision),entity=workspace.conclusions.find(c=>c.id===lesson?.conclusion_id);
  const sources=lesson?lessonSources(workspace,lesson.conclusion_revision):[],links=workspace.links.filter(l=>l.active&&l.target_revision===lesson?.conclusion_revision),argumentsForLesson=(workspace.source_arguments??[]).filter(a=>a.target_revision===lesson?.conclusion_revision);
@@ -17,7 +19,9 @@ export function BookWorkbench({workspace,busy,onSave,onOpen,onDirty}:{workspace:
  function openEvidence(id:string){if(changed)return;onOpen(id);}
  return <section className="au-book" aria-label="Personal constitution editor">
   <header className="au-book-header"><div><span className="au-eyebrow">MANUSCRIPT · SMALL EDITORIAL PILOT</span><h2>Your principles, given structure</h2><p>Opening principles → chapters → distinct lessons. A lesson can appear in several chapters; a passage can serve several lessons.</p></div><span className="au-status status-awaiting_review">Draft · human review required</span></header>
-  <div className="au-book-controls"><label>Book title<input disabled={busy} value={draft.title} maxLength={200} onChange={e=>update({...draft,title:e.target.value})}/></label><div><button type="button" disabled={busy||!changed} onClick={async()=>{if(await onSave(draft)){setChanged(false);onDirty(false);}}}>Save book structure</button><button type="button" disabled={!changed||busy} onClick={()=>{setDraft(draftBook(workspace));setChanged(false);onDirty(false);}}>Discard outline changes</button></div><small>{changed?'Unsaved structure':workspace.manuscript_current?`${workspace.manuscript_revisions?.length} saved structural revision(s)`:'Proposed structure · save to keep your arrangement'}</small></div>
+  <div className="au-book-controls"><label>Book title<input disabled={busy} value={draft.title} maxLength={200} onChange={e=>update({...draft,title:e.target.value})}/></label><div><button type="button" disabled={busy||!changed} onClick={async()=>{if(await onSave(draft)){setChanged(false);onDirty(false);saved.clear();}}}>Save book structure</button><button type="button" disabled={!changed||busy} onClick={()=>{setDraft(draftBook(workspace));setChanged(false);onDirty(false);saved.clear();}}>Discard outline changes</button></div><small>{changed?(saved.restored?'Unsaved structure · draft restored from this browser':'Unsaved structure'):workspace.manuscript_current?`${workspace.manuscript_revisions?.length} saved structural revision(s)`:'Proposed structure · save to keep your arrangement'}</small></div>
+  {saved.restored&&changed&&<p role="status" className="au-help">Unsaved draft restored from this browser</p>}
+  {saved.stale&&<p role="status" className="au-warning">A draft from an earlier revision was found <button type="button" aria-label="Discard earlier-revision draft" onClick={saved.clear}>Discard</button></p>}
   <div className="au-book-layout"><aside className="au-book-outline" aria-label="Chapters and lessons">
    <div className="au-book-counts"><strong>{draft.chapters.length} chapters</strong><span>{new Set(items.map(i=>i.lesson.conclusion_id)).size} distinct lessons</span></div>
    {draft.chapters.map((chapter,ci)=><section key={chapter.id} className="au-book-chapter">

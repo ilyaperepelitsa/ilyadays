@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>How two passages become one article · Stoic Constitution</title>
+<style>
+:root{--paper:#f7f5ee;--card:#fffdf8;--ink:#232926;--muted:#57615a;--line:#d2d3c7;--a:#1d6450;--at:#e1efe7;--b:#8a4d18;--bt:#f7e8d4;--e:#55468f;--et:#ece9f6;--warn:#8f3a10;--wt:#fbe9dc;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',sans-serif}
+@media(prefers-color-scheme:dark){:root{--paper:#161917;--card:#1e2320;--ink:#e9e7dd;--muted:#a4ada5;--line:#3b423c;--a:#86d3b8;--at:#1b382f;--b:#e9ad70;--bt:#3f2e1a;--e:#b9adf0;--et:#2e2948;--warn:#f2a676;--wt:#3d271a}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
+h1,h2,h3,h4,p,ol,ul,figure,blockquote{margin:0}
+ol,ul{padding:0;list-style:none}
+a{color:var(--a);text-underline-offset:3px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid #3b7fc4;outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,48px)}
+.top{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;justify-content:space-between;padding-block:14px 0;font-size:14px}
+.top strong{font:600 17px var(--serif)}
+.intro{padding-block:22px 18px}
+.eyebrow{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+h1{font:400 clamp(30px,7.4vw,50px)/1.08 var(--serif);letter-spacing:-.025em;margin:8px 0 14px;text-wrap:balance}
+h2{font:400 clamp(24px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-wrap:balance}
+h3{font:600 20px/1.25 var(--serif)}
+.lede{max-width:66ch;font-size:17px}
+.status{max-width:66ch;margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* sticky controls */
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-block:1px solid var(--line)}
+.bar .wrap{display:flex;gap:8px;align-items:stretch;padding-block:8px}
+.pairs{display:flex;flex:1;gap:6px;min-width:0}
+.tab{flex:1;min-width:0;min-height:46px;padding:5px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;text-align:left;cursor:pointer;line-height:1.25}
+.tab b{display:block;font-size:14px;font-weight:650}
+.tab small{display:block;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tab[aria-checked=true]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.tab[aria-checked=true] small{color:inherit;opacity:.8}
+.tab.remove{flex:0 0 auto;border-color:var(--b)}
+.tab.remove b{color:var(--b)}
+.tab.remove[aria-pressed=true]{background:var(--b);color:var(--paper)}
+.tab.remove[aria-pressed=true] b,.tab.remove[aria-pressed=true] small{color:inherit}
+
+section{padding-block:28px;border-bottom:1px solid var(--line)}
+.step{display:flex;gap:10px;align-items:baseline;margin-bottom:6px}
+.step span{flex:none;font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sub{max-width:66ch;color:var(--muted);font-size:15px;margin-top:6px}
+.question{font:400 clamp(22px,5.4vw,30px)/1.25 var(--serif);margin-top:4px}
+.why{max-width:66ch;margin-top:10px}
+.theme{max-width:66ch;margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* provenance colours: A, B, editor. Shape repeats the cue: solid, double, dashed. */
+.A{--c:var(--a);--ct:var(--at)}.B{--c:var(--b);--ct:var(--bt)}.E{--c:var(--e);--ct:var(--et)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px;font-size:14px}
+.legend span{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--c)}
+.legend .B{text-decoration-style:double}.legend .E{text-decoration-style:dashed}
+
+/* passages */
+.passages{display:grid;gap:16px;margin-top:18px}
+.passage{min-width:0;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);padding:14px 14px 16px}
+.passage.off{border-style:dashed;border-top-style:solid}
+.passage.off .tree,.passage.off .thought{opacity:.42}
+.p-head{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.p-head b{font:650 15px var(--sans);color:var(--c)}
+.p-head small{font-size:12px;color:var(--muted)}
+.gone-tag{font:650 12px var(--sans);color:var(--warn)}
+.tree{display:grid;gap:3px}
+.pc{display:block;width:100%;text-align:left;border:1px solid transparent;border-left:3px solid var(--c);background:var(--ct);padding:8px 10px;border-radius:0 5px 5px 0;cursor:pointer}
+.tree .child{padding-left:18px;position:relative}
+.tree .child::before{content:'';position:absolute;left:7px;top:-3px;bottom:50%;width:8px;border-left:1.5px solid var(--c);border-bottom:1.5px solid var(--c);border-bottom-left-radius:5px}
+.pc[aria-pressed=true]{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c)}
+.pc-meta{display:flex;flex-wrap:wrap;gap:1px 8px;align-items:baseline;font:650 12.5px/1.4 var(--sans);color:var(--c)}
+.pc-meta i{font-style:normal;font-weight:500;color:var(--ink)}
+.pc-q{display:block;font:17px/1.45 var(--serif);margin-top:2px}
+.pc-ref{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.thought{margin-top:12px;font-size:15px}
+.thought b{display:block;font:650 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.open{margin-top:14px;padding:10px 12px;border:1px dashed var(--c);border-radius:6px}
+.open p{font-size:14px}
+.open .pairs{margin:8px 0}
+.open .tab{min-height:40px}
+.pnote{margin-top:12px;padding:10px 12px;background:var(--ct);border-radius:6px;font-size:15px}
+.pnote ul{margin-top:8px;display:grid;gap:6px}
+.jump{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:5px;padding:7px 9px;font-size:14px;cursor:pointer}
+.jump b{font-weight:650}
+details{margin-top:12px}
+summary{cursor:pointer;color:var(--a);font-size:14px;padding-block:6px}
+.whole{margin-top:6px;font:16px/1.6 var(--serif)}
+mark{background:var(--ct);color:inherit;border-bottom:2px solid var(--c);padding:0 1px}
+mark.lit{background:var(--c);color:var(--paper)}
+mark sup{font:650 12px/0 var(--sans);margin-left:2px}
+
+/* joins */
+.joins{display:grid;gap:18px;margin-top:20px;align-items:start}
+.join{min-width:0;background:var(--card);border:1px solid var(--line);padding:16px 14px 16px;scroll-margin-top:76px}
+.join header{margin-bottom:12px}
+.rule{font-size:14px;color:var(--muted);margin-top:2px}
+.badge{display:inline-block;margin-top:8px;padding:2px 9px;border-radius:99px;background:var(--wt);color:var(--warn);font:650 12.5px var(--sans)}
+.draft{border-left:4px solid var(--ink);padding-left:14px}
+.cap{font:650 12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 2px}
+.cap:first-child{margin-top:0}
+.sent{font:clamp(19px,4.9vw,21px)/1.75 var(--serif)}
+.sent+.sent{margin-top:8px}
+.sg{cursor:pointer;border-radius:3px;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--c);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sg.B{text-decoration-style:double}.sg.E{text-decoration-style:dashed}
+.sg:hover,.sg[aria-pressed=true]{background:var(--ct)}
+.sg[aria-pressed=true]{box-shadow:0 0 0 2px var(--ct)}
+.lost{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-style:solid;text-decoration-color:var(--warn);opacity:.5}
+.sg.lost{text-decoration-color:var(--warn)}
+
+.trace{margin-top:12px;border:1px solid var(--c);border-radius:6px;background:var(--ct);padding:12px}
+.trace-head{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.trace-head p{font:italic 17px/1.4 var(--serif)}
+.x{flex:none;min-width:40px;min-height:36px;border:1px solid var(--line);border-radius:5px;background:var(--card);cursor:pointer;font-size:14px}
+.by{display:block;font:650 12.5px/1.4 var(--sans);font-style:normal;color:var(--c);margin-bottom:2px}
+.chain{margin-top:10px;display:grid;gap:8px}
+.link{background:var(--card);border-radius:5px;padding:8px 10px;font-size:15px}
+.link b{display:block;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.ctx{font:16px/1.55 var(--serif)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.chip{border:1px solid var(--c);border-radius:99px;background:transparent;padding:4px 10px;font-size:13px;cursor:pointer;color:var(--c)}
+
+.tally{margin-top:14px}
+.bars{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--line)}
+.bars i{display:block;background:var(--c)}
+.bars i.dim{opacity:.25}
+.counts{display:flex;flex-wrap:wrap;gap:2px 14px;margin-top:6px;font-size:13.5px}
+.counts span{color:var(--c);font-weight:600}
+.dropline{margin-top:4px;font-size:14px}
+.dropline.on{color:var(--warn);font-weight:600}
+.checks{margin-top:10px;display:grid;gap:4px;font-size:14px}
+.checks li{display:grid;grid-template-columns:20px 1fr;gap:4px}
+.checks .bad{color:var(--warn)}
+.checks .info{color:var(--muted)}
+.mech{margin-top:16px}
+.mech h4,.replies h4{font:650 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.node{border-left:3px solid var(--c);background:var(--ct);padding:7px 10px;font-size:14.5px;line-height:1.4}
+.node.E{border-left-style:dashed}
+.node b{display:block;font:650 12.5px/1.4 var(--sans);color:var(--c)}
+.node em{display:block;font:italic 15px/1.4 var(--serif);margin-bottom:2px}
+.node .fail{display:block;margin-top:4px;font:650 12.5px var(--sans);color:var(--warn)}
+.down{height:14px;text-align:center;line-height:14px;color:var(--muted);font-size:12px}
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.prongs{height:10px;width:50%;margin:6px auto 0;border:1.5px solid var(--muted);border-bottom:0}
+.declined{margin-top:8px;padding:8px 10px;border:1px dashed var(--warn);border-radius:5px;font-size:14.5px;color:var(--warn)}
+.replies{margin-top:16px}
+.reply{padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+.reply>b{display:block;font-weight:650;margin-bottom:3px}
+.reply p{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+.reply p span{font:650 12.5px var(--sans);color:var(--c);white-space:nowrap;min-width:84px}
+.limit{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.limit b{color:var(--ink)}
+.verdict{display:flex;gap:6px;margin-top:14px}
+.verdict span{align-self:center;font-size:13px;color:var(--muted);margin-right:auto}
+.vb{min-height:42px;padding:6px 13px;border:1px solid var(--line);border-radius:6px;background:transparent;cursor:pointer;font-size:14px;font-weight:600}
+.vb[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+.table{overflow-x:auto;margin-top:14px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+thead th{font:650 12.5px/1.3 var(--sans);color:var(--muted)}
+tbody th{font-weight:650}
+.mine{margin-top:14px;display:grid;gap:4px;font-size:15px}
+.mine li{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line);padding-block:6px}
+.mine li span:last-child{font-weight:650;white-space:nowrap}
+.act{margin-top:12px;min-height:44px;padding:8px 16px;border:1px solid var(--a);border-radius:6px;background:transparent;color:var(--a);font-weight:650;cursor:pointer}
+pre{max-height:22rem;overflow:auto;font-size:12.5px;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--card);border:1px solid var(--line);padding:12px}
+.how{display:grid;gap:10px;margin-top:8px;counter-reset:how}
+.how li{counter-increment:how;padding-left:30px;position:relative;font-size:15px}
+.how li::before{content:counter(how);position:absolute;left:0;top:1px;width:21px;height:21px;border-radius:50%;background:var(--ink);color:var(--paper);font:650 12px/21px var(--sans);text-align:center}
+.how b{display:block}
+footer{padding-block:18px 40px;font-size:13.5px;color:var(--muted)}
+.err{margin:16px 0;padding:12px;border:2px solid var(--warn);color:var(--warn);font-weight:600}
+.sr{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+@media(min-width:700px){.passages{grid-template-columns:1fr 1fr;align-items:start}.bar .pairs{max-width:440px}.bar .wrap{justify-content:space-between}.table,.mine{max-width:720px}.passage{padding:16px 18px 18px}.join{padding:18px}}
+@media(min-width:1000px){.joins{grid-template-columns:repeat(3,minmax(0,1fr))}.sent{font-size:19px}}
+@media print{.bar,.verdict,.x,.act{display:none}.join,.passage{break-inside:avoid}*{print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="wrap top"><strong>Stoic Constitution</strong><span><a href="stoic-constitution.html">The first five articles</a> · <a href="/stoicism">← Back to the constitution</a></span></div>
+<header class="wrap intro">
+<p class="eyebrow">Composition study · Marcus Aurelius, Casaubon translation</p>
+<h1>How two passages become one article</h1>
+<p class="lede">Each draft article below is built from two passages of the <i>Meditations</i>. Every phrase is marked by where it came from: Marcus’s words in the first passage, his words in the second, or a step the editor added. Tap a phrase to follow it back to the exact words. Remove the second passage to see what it was contributing.</p>
+<p class="status">Worked by hand on two passage pairs. These are drafts for your judgment, and nothing here was generated automatically.</p>
+</header>
+<div class="bar"><div class="wrap">
+<div class="pairs" role="radiogroup" aria-label="Passage pair" id="pairs"></div>
+<button class="tab remove" id="remove" type="button" aria-pressed="false"></button>
+</div></div>
+<p id="announce" class="sr" role="status"></p>
+<noscript><p class="wrap err">This study needs JavaScript to draw the passages and articles.</p></noscript>
+<main class="wrap" id="main">
+<section id="concept" aria-labelledby="q-head">
+<div class="step"><span>1 · The question</span></div>
+<h2 class="question" id="q-head"></h2>
+<p class="why" id="why"></p>
+<p class="theme" id="theme"></p>
+</section>
+
+<section id="extract" aria-labelledby="x-head">
+<div class="step"><span>2 · What Marcus says</span></div>
+<h2 id="x-head">Each passage, piece by piece</h2>
+<p class="sub">The words are exact. Each piece is labelled with what it does in the sentence, and an indented piece hangs on the piece above it. Tap a piece to see where the articles use it.</p>
+<div class="passages" id="passages"></div>
+</section>
+
+<section id="compose" aria-labelledby="c-head">
+<div class="step"><span>3 · Three ways to join them</span></div>
+<h2 id="c-head">Which article would you keep?</h2>
+<p class="sub">Read the three drafts first, then check how each was joined. A passage pair can also be left unjoined.</p>
+<p class="legend" id="legend"></p>
+<div class="joins" id="joins"></div>
+</section>
+
+<section id="numbers" aria-labelledby="n-head">
+<div class="step"><span>4 · In numbers</span></div>
+<h2 id="n-head">Where each article’s words come from</h2>
+<p class="sub">Word counts by source. They show how much of each draft is Marcus and how much is the editor. They do not say which draft is better.</p>
+<div class="table"><table><thead id="n-cols"></thead><tbody id="n-rows"></tbody></table></div>
+</section>
+
+<section id="yours" aria-labelledby="y-head">
+<div class="step"><span>5 · Your call</span></div>
+<h2 id="y-head">Your verdicts</h2>
+<p class="sub">Mark each draft Keep, Revise or Drop under its card. Choices are saved in this browser only.</p>
+<ul class="mine" id="mine"></ul>
+<button class="act" id="copy" type="button">Copy my verdicts</button>
+<details><summary>See the record behind this pair</summary>
+<p class="sub">Pieces carry the immutable passage revision, exact quote and Unicode scalar offsets. Relation names follow the project’s annotation language. The thought functions are a proposed addition to it.</p>
+<pre id="record"></pre></details>
+<details><summary>How to ask a model for the same work</summary>
+<ol class="how">
+<li><b>Read each passage alone.</b>Give the model the full passage and its revision ID. Withhold the worked articles.</li>
+<li><b>Mark the pieces.</b>Quote each piece exactly. Record what it does, what it hangs on, and what any pronoun points to. Report a second reading where the grammar allows one.</li>
+<li><b>Try one join.</b>Choose a practice, an argument or two tests. Name the step the editor has to supply. If the rule fails, return “keep separate” and say what is missing.</li>
+<li><b>Mark the article phrase by phrase.</b>Give each phrase its piece IDs or label it editorial. Remove the second passage and report which words drop out.</li>
+</ol></details>
+</section>
+</main>
+<footer class="wrap">Passages are quoted from Meric Casaubon’s translation (Project Gutenberg 2680). Article wordings, joins and example replies are editorial drafts. Every article turns “thou” into “I”.</footer>
+
+<script id="study" type="application/json">
+{
+  "passages": {
+    "8.12": {
+      "revision": "casaubon-gutenberg-2680-8-12:45a8ae641522cdfd",
+      "text": "As every fancy and imagination presents itself unto thee, consider\r\n(if it be possible) the true nature, and the proper qualities of it, and\r\nreason with thyself about it."
+    },
+    "9.13": {
+      "revision": "casaubon-gutenberg-2680-9-13:2181b632bcf8e166",
+      "text": "The things themselves that affect us, they stand without doors,\r\nneither knowing anything themselves nor able to utter anything unto\r\nothers concerning themselves. What then is it, that passeth verdict on\r\nthem? The understanding."
+    },
+    "1.15": {
+      "revision": "casaubon-gutenberg-2680-1-15:2fe512aeb1cc2f40",
+      "text": "In the country of the Quadi at Granua, these. Betimes in the morning\r\nsay to thyself, This day I shalt have to do with an idle curious man,\r\nwith an unthankful man, a railer, a crafty, false, or an envious man; an\r\nunsociable uncharitable man. All these ill qualities have happened unto\r\nthem, through ignorance of that which is truly good and truly bad. But I\r\nthat understand the nature of that which is good, that it only is to\r\nbe desired, and of that which is bad, that it only is truly odious and\r\nshameful: who know moreover, that this transgressor, whosoever he be, is\r\nmy kinsman, not by the same blood and seed, but by participation of the\r\nsame reason, and of the same divine particle; How can I either be\r\nhurt by any of those, since it is not in their power to make me incur\r\nanything that is truly reproachful? or angry, and ill affected towards\r\nhim, who by nature is so near unto me? for we are all born to be\r\nfellow-workers, as the feet, the hands, and the eyelids; as the rows of\r\nthe upper and under teeth: for such therefore to be in opposition, is\r\nagainst nature; and what is it to chafe at, and to be averse from, but\r\nto be in opposition?"
+    },
+    "6.5": {
+      "revision": "casaubon-gutenberg-2680-6-5:972add590bf31d9d",
+      "text": "The best kind of revenge is, not to become like unto them."
+    }
+  },
+  "models": {
+    "practice": {"name": "A practice", "rule": "An occasion, an act, and something to do while acting."},
+    "argument": {"name": "An argument", "rule": "A claim, the reason for it, and the premise that connects them."},
+    "tests": {"name": "Two tests", "rule": "One decision, checked against two independent standards."}
+  },
+  "pairs": {
+    "judgment": {
+      "label": "Impression",
+      "refs": ["8.12", "9.13"],
+      "theme": "Judgment",
+      "question": "How shall I examine an impression?",
+      "why": "8.12 gives an exercise for the moment an impression arrives. 9.13 says where the verdict on things comes from. The question is whether the second can help me do the first.",
+      "thoughts": [
+        "Each time an impression presents itself, consider, if it is possible, its true nature and proper qualities, and reason with yourself about it.",
+        "The things that affect us stand outside and say nothing about themselves. The verdict on them is passed by the understanding."
+      ],
+      "open": {
+        "piece": "A5",
+        "prompt": "The grammar leaves one thing open. “And reason with thyself about it” can be a second instruction, or the way the considering is done.",
+        "options": {"act": "A second act", "method": "The method"},
+        "effect": {
+          "act": "Read as a second act, it stands beside “consider”. Whether “(if it be possible)” reaches it is not settled by the sentence.",
+          "method": "Read as the method, it hangs on “consider”, and the condition covers it too."
+        }
+      },
+      "pieces": [
+        {"id": "A1", "fn": "Occasion", "quote": "As every fancy and imagination presents itself unto thee",
+         "note": "When the exercise applies: each time an impression arrives. “Every” makes it broad, and the condition in A3 then limits it."},
+        {"id": "A2", "fn": "Act", "quote": "consider",
+         "note": "The instruction. Alone it is incomplete: it needs its object (A4) and it carries a condition (A3)."},
+        {"id": "A3", "fn": "Condition", "quote": "(if it be possible)", "rel": {"type": "qualifies", "to": "A2"},
+         "note": "Marcus’s own limit on the instruction. It sits directly after “consider” and has to travel with it."},
+        {"id": "A4", "fn": "Object", "quote": "the true nature, and the proper qualities of it", "rel": {"type": "depends_on", "to": "A2", "label": "object of"},
+         "refers": {"word": "it", "to": "A1"},
+         "note": "What to consider. “It” is the impression of A1."},
+        {"id": "A5", "fn": {"act": "Second act", "method": "Method"}, "quote": "reason with thyself about it",
+         "rel": {"act": null, "method": {"type": "depends_on", "to": "A2", "label": "method of"}},
+         "refers": {"word": "it", "to": "A1"},
+         "note": "Either a second instruction beside “consider”, or the way to carry it out. Both readings give a usable article."},
+        {"id": "B1", "fn": "Observation", "quote": "The things themselves that affect us, they stand without doors",
+         "note": "External things stay outside. They are what the question in B3 asks about."},
+        {"id": "B2", "fn": "Elaboration", "quote": "neither knowing anything themselves nor able to utter anything unto others concerning themselves", "rel": {"type": "depends_on", "to": "B1", "label": "elaborates"},
+         "note": "Things carry no account of themselves. They neither know nor say what they are."},
+        {"id": "B3", "fn": "Question", "quote": "What then is it, that passeth verdict on them?",
+         "refers": {"word": "them", "to": "B1"},
+         "note": "Asks who judges the things, given that they say nothing themselves."},
+        {"id": "B4", "fn": "Answer", "quote": "The understanding.", "rel": {"type": "answers", "to": "B3"},
+         "note": "Names the judge. It does not say whether any particular verdict is sound."}
+      ],
+      "joins": {
+        "practice": {
+          "outcome": "join",
+          "entries": [
+            {"segs": [
+              {"t": "When an impression presents itself,", "by": "A", "ids": ["A1"], "note": "“Fancy and imagination” is rendered as “impression”. “Every” is carried by “when”."},
+              {"t": "I shall consider,", "by": "A", "ids": ["A2"]},
+              {"t": "if it is possible,", "by": "A", "ids": ["A3"]},
+              {"t": {"act": "its true nature and proper qualities,", "method": "its true nature and proper qualities"}, "by": "A", "ids": ["A4"]},
+              {"t": {"act": "and reason with myself about it.", "method": "by reasoning with myself about it."}, "by": "A", "ids": ["A5"], "note": "The wording follows the reading chosen for this piece in step 2."}
+            ]},
+            {"segs": [
+              {"t": "As I reason,", "by": "E", "needsB": true, "leans": ["A5"], "note": "Timing. It places the question inside the exercise of 8.12. Neither passage sets this moment."},
+              {"t": "I shall ask what verdict", "by": "E", "needsB": true, "leans": ["B3"], "note": "The question is the editor’s. 9.13 asks who passes verdict and answers “the understanding”. It does not tell me to ask anything, and it does not ask what the verdict was."},
+              {"t": "my understanding has passed", "by": "B", "ids": ["B3", "B4"], "note": "9.13 says “the understanding”. “My” is the first-person turn."},
+              {"t": "on it.", "by": "E", "needsB": true, "leans": ["B1", "A1"], "note": "In 9.13 the verdict is on “the things themselves that affect us”. Pointing it at the impression of 8.12 is the editor’s identification."}
+            ]}
+          ],
+          "mech": {"shape": "chain", "steps": [
+            {"by": "A", "label": "The exercise · 8.12", "text": "Consider, if it is possible, the impression’s true nature and qualities, and reason about it."},
+            {"by": "E", "label": "Editor’s step", "text": "Ask the question of 9.13 while doing the exercise, and point it at this impression.", "needsB": true},
+            {"by": "B", "label": "The prompt · 9.13", "text": "What passes verdict? The understanding."}
+          ]},
+          "limit": "9.13 names the judge. It does not tell me to ask this question, or when. Whether my verdict is right stays open."
+        },
+        "argument": {
+          "outcome": "join",
+          "entries": [
+            {"segs": [
+              {"t": "The things that affect me stand outside;", "by": "B", "ids": ["B1"]},
+              {"t": "they know nothing and say nothing about themselves.", "by": "B", "ids": ["B2"]}
+            ]},
+            {"segs": [
+              {"t": "My understanding passes the verdict on them.", "by": "B", "ids": ["B3", "B4"], "note": "Question and answer are folded into one statement."}
+            ]},
+            {"segs": [
+              {"t": "So", "by": "E", "needsB": true, "note": "Makes 9.13 the reason for 8.12. Marcus does not connect the two passages."},
+              {"t": "when an impression presents itself,", "by": "A", "ids": ["A1"]},
+              {"t": "I shall consider,", "by": "A", "ids": ["A2"]},
+              {"t": "if it is possible,", "by": "A", "ids": ["A3"]},
+              {"t": "its true nature and proper qualities", "by": "A", "ids": ["A4"]},
+              {"t": "— and set apart what the thing is from the verdict I have added.", "by": "E", "needsB": true, "leans": ["A4", "B4"], "note": "The bridge. It assumes that what an impression presents can already include my verdict, so examining its “true nature” means separating the two. Neither passage says this. It gives a reason to distinguish, not a reason to change the verdict."}
+            ]}
+          ],
+          "mech": {"shape": "chain", "steps": [
+            {"by": "B", "label": "The reason · 9.13", "text": "Things say nothing about themselves. The understanding passes the verdict."},
+            {"by": "E", "label": "Editor’s bridge", "text": "What an impression presents may already include my verdict.", "needsB": true},
+            {"by": "A", "label": "What it supports · 8.12", "text": "Consider, if it is possible, the impression’s true nature and proper qualities."}
+          ]},
+          "limit": "Marcus does not connect these passages. The bridge is a premise you can reject, and if you do, the two stay separate. Seeing my verdict gives me no ground, by itself, to change it."
+        },
+        "tests": {
+          "outcome": "separate",
+          "entries": [
+            {"cap": "Kept as an exercise · 8.12", "segs": [
+              {"t": "When an impression presents itself,", "by": "A", "ids": ["A1"]},
+              {"t": "I shall consider,", "by": "A", "ids": ["A2"]},
+              {"t": "if it is possible,", "by": "A", "ids": ["A3"]},
+              {"t": {"act": "its true nature and proper qualities,", "method": "its true nature and proper qualities"}, "by": "A", "ids": ["A4"]},
+              {"t": {"act": "and reason with myself about it.", "method": "by reasoning with myself about it."}, "by": "A", "ids": ["A5"]}
+            ]},
+            {"cap": "Kept as an observation · 9.13", "segs": [
+              {"t": "The things that affect me stand outside;", "by": "B", "ids": ["B1"]},
+              {"t": "they know nothing and say nothing about themselves.", "by": "B", "ids": ["B2"]},
+              {"t": "My understanding passes the verdict on them.", "by": "B", "ids": ["B3", "B4"]}
+            ]}
+          ],
+          "mech": {"shape": "fork",
+            "decision": "Is this verdict sound?",
+            "branches": [
+              {"by": "A", "label": "8.12 says", "quote": "consider … the true nature, and the proper qualities of it", "text": "It tells me what to look at.", "fail": "No standard of soundness"},
+              {"by": "B", "label": "9.13 says", "quote": "The understanding.", "text": "It tells me who judges.", "fail": "No standard of soundness"}
+            ],
+            "declined": "Neither passage says what makes a verdict sound, so there are no two tests to apply. The join is declined and each passage keeps its own entry."},
+          "limit": "Declining is a valid result. A pair that fails one way of joining can still work in another."
+        }
+      }
+    },
+    "encounter": {
+      "label": "Insult",
+      "refs": ["1.15", "6.5"],
+      "theme": "Conduct toward others",
+      "question": "How shall I answer someone who insults me?",
+      "why": "1.15 is a morning rehearsal for meeting difficult people, with Marcus’s reason for not turning against them. 6.5 is a one-line maxim about revenge. The question is whether the maxim can guide the moment the rehearsal prepares for.",
+      "thoughts": [
+        "In the morning, tell yourself that today you will deal with difficult people, a railer among them, and that each is your kin by sharing in the same reason. You cannot be angry with one so near to you: we are born to be fellow-workers, and to chafe at one another is to be in opposition, which is against nature.",
+        "The best kind of revenge is not to become like them. Who “them” is, this passage does not say."
+      ],
+      "pieces": [
+        {"id": "A1", "fn": "Occasion", "quote": "Betimes in the morning",
+         "note": "When the rehearsal happens. It gives no timing for any later reply."},
+        {"id": "A2", "fn": "Act", "quote": "say to thyself",
+         "note": "The rehearsal is inward speech. Everything after it in the passage is what Marcus says to himself."},
+        {"id": "A3", "fn": "What is said", "quote": "This day I shalt have to do with", "rel": {"type": "depends_on", "to": "A2", "label": "content of"},
+         "note": "The rehearsal expects the meeting as certain: “I shalt”, not “I may”."},
+        {"id": "A4", "fn": "Person expected", "quote": "a railer", "rel": {"type": "depends_on", "to": "A3", "label": "object of"},
+         "note": "One in a list of difficult people. A person to expect, not yet an insult."},
+        {"id": "A5", "fn": "Claim", "quote": "this transgressor, whosoever he be, is my kinsman",
+         "note": "The kinship claim. It covers whoever wrongs me, not only the railer."},
+        {"id": "A6", "fn": "Qualification", "quote": "not by the same blood and seed, but by participation of the same reason, and of the same divine particle", "rel": {"type": "qualifies", "to": "A5"},
+         "note": "The kind of kinship meant: shared reason and a shared divine portion, not family."},
+        {"id": "A7", "fn": "Conclusion", "quote": "or angry, and ill affected towards him, who by nature is so near unto me?", "rel": {"type": "depends_on", "to": "A5", "label": "follows from"},
+         "note": "Completes “How can I either be…”. A rhetorical question: Marcus concludes that he cannot be angry with one so near to him."},
+        {"id": "A8", "fn": "Reason", "quote": "we are all born to be fellow-workers", "rel": {"type": "supports", "to": "A7"},
+         "note": "Marcus’s reason for the conclusion in A7. The comparison with feet, hands and teeth illustrates it."},
+        {"id": "A9", "fn": "Inference", "quote": "for such therefore to be in opposition, is against nature", "rel": {"type": "depends_on", "to": "A8", "label": "follows from"},
+         "note": "From shared work to the wrongness of opposition."},
+        {"id": "A10", "fn": "Identification", "quote": "what is it to chafe at, and to be averse from, but to be in opposition?", "rel": {"type": "depends_on", "to": "A9", "label": "applies"},
+         "note": "Counts chafing and aversion as opposition. This ties the reasoning back to anger."},
+        {"id": "B1", "fn": "What is judged", "quote": "The best kind of revenge is",
+         "note": "The maxim is about revenge. That frame is part of the claim."},
+        {"id": "B2", "fn": "Standard", "quote": "not to become like unto them", "rel": {"type": "depends_on", "to": "B1", "label": "completes"},
+         "refers": {"word": "them", "to": null},
+         "note": "“Them” has no antecedent in this passage. Reading it as those who wronged me is conventional. Applying it to the railer of 1.15 is editorial."}
+      ],
+      "joins": {
+        "practice": {
+          "outcome": "join",
+          "entries": [
+            {"segs": [
+              {"t": "In the morning,", "by": "A", "ids": ["A1"]},
+              {"t": "I shall tell myself", "by": "A", "ids": ["A2"]},
+              {"t": "that today I shall have to do with", "by": "A", "ids": ["A3"]},
+              {"t": "someone who rails,", "by": "A", "ids": ["A4"], "note": "Marcus lists several kinds of difficult person. The article picks the railer."},
+              {"t": "and that this person, whoever it is, is my kin:", "by": "A", "ids": ["A5"]},
+              {"t": "not by blood, but by sharing in the same reason and the same divine particle.", "by": "A", "ids": ["A6"]}
+            ]},
+            {"segs": [
+              {"t": "If the insult comes", "by": "E", "needsB": true, "leans": ["A4"], "note": "Carries the morning rehearsal forward to the moment itself. Marcus rehearses. He does not describe the encounter."},
+              {"t": "and I want to get even,", "by": "E", "needsB": true, "leans": ["B1"], "note": "Turns the maxim’s subject, revenge, into the condition for using it. This keeps 6.5 from becoming a rule about every reply."},
+              {"t": "I shall remember that", "by": "E", "needsB": true, "note": "Recalling the maxim at that moment is the editor’s exercise."},
+              {"t": "the best revenge is", "by": "B", "ids": ["B1"]},
+              {"t": "not to become like", "by": "B", "ids": ["B2"]},
+              {"t": "the one who gave it.", "by": "E", "needsB": true, "leans": ["A4", "B2"], "note": "6.5 says “them” and names no one. Reading “them” as the railer of 1.15 is the editor’s identification."}
+            ]}
+          ],
+          "mech": {"shape": "chain", "steps": [
+            {"by": "A", "label": "The rehearsal · 1.15", "text": "In the morning, tell yourself that you will meet a railer today and that this person is your kin."},
+            {"by": "E", "label": "Editor’s step", "text": "Carry the rehearsal forward to the moment of the insult, and recall the maxim there.", "needsB": true},
+            {"by": "B", "label": "The maxim · 6.5", "text": "The best kind of revenge is, not to become like unto them."}
+          ]},
+          "limit": "Marcus rehearses in the morning and says nothing about the moment itself. Neither passage says what to reply."
+        },
+        "argument": {
+          "outcome": "join",
+          "entries": [
+            {"segs": [
+              {"t": "We are all born to be fellow-workers,", "by": "A", "ids": ["A8"]},
+              {"t": "and for fellow-workers to be in opposition is against nature.", "by": "A", "ids": ["A9"]}
+            ]},
+            {"segs": [
+              {"t": "To chafe at someone is already to be in opposition.", "by": "A", "ids": ["A10"], "note": "“To be averse from” is folded into “chafe at”."}
+            ]},
+            {"segs": [
+              {"t": "To return the insult would be to join the railer in that opposition.", "by": "E", "leans": ["A4", "A10"], "note": "The editor’s premise. It applies Marcus’s point about chafing to answering in kind. It does not depend on 6.5, so it stays when 6.5 is removed."}
+            ]},
+            {"segs": [
+              {"t": "So", "by": "E", "needsB": true, "leans": ["A7"], "note": "Uses the reasoning of 1.15 as the reason for the maxim of 6.5. The maxim gives no reason of its own, and Marcus’s own conclusion in 1.15 is about anger (A7), not revenge."},
+              {"t": "the best revenge is", "by": "B", "ids": ["B1"]},
+              {"t": "not to become like", "by": "B", "ids": ["B2"]},
+              {"t": "the one who insults me.", "by": "E", "needsB": true, "leans": ["A4", "B2"], "note": "6.5 says “them” and names no one. Reading “them” as the railer of 1.15 is the editor’s identification."}
+            ]}
+          ],
+          "mech": {"shape": "chain", "steps": [
+            {"by": "A", "label": "Marcus’s reasoning · 1.15", "text": "We are fellow-workers. Opposition is against nature. To chafe is to be in opposition."},
+            {"by": "E", "label": "Editor’s premise", "text": "Returning the insult would put me in the railer’s opposition."},
+            {"by": "B", "label": "The claim it is made to ground · 6.5", "text": "The best kind of revenge is, not to become like unto them."}
+          ]},
+          "limit": "6.5 gives no reason of its own, and the conclusion Marcus draws in 1.15 is about anger. If you reject the bridge, keep the two passages as separate entries."
+        },
+        "tests": {
+          "outcome": "join",
+          "entries": [
+            {"segs": [
+              {"t": "Before I answer an insult, I shall ask:", "by": "E", "leans": ["A4"], "note": "The decision and the act of asking are the editor’s. Neither passage poses a choice between replies."},
+              {"t": "would this reply", "by": "E", "needsB": true, "note": "Turns the maxim into a question about one reply."},
+              {"t": "make me like", "by": "B", "ids": ["B2"]},
+              {"t": "the one who gave it?", "by": "E", "needsB": true, "leans": ["A4", "B2"], "note": "6.5 says “them” and names no one. Reading “them” as the railer of 1.15 is the editor’s identification."}
+            ]},
+            {"segs": [
+              {"t": "And", "by": "E", "needsB": true, "note": "A connective. It is needed only while there are two questions."},
+              {"t": "would it", "by": "E", "note": "Turns Marcus’s claim about opposition into a question about one reply."},
+              {"t": "set fellow-workers", "by": "A", "ids": ["A8"]},
+              {"t": "in opposition?", "by": "A", "ids": ["A9"]}
+            ]}
+          ],
+          "mech": {"shape": "fork",
+            "decision": "How shall I answer this insult?",
+            "branches": [
+              {"by": "B", "label": "6.5 says", "quote": "The best kind of revenge is, not to become like unto them.", "text": "Editor’s question: would this reply make me like the one who gave it?"},
+              {"by": "A", "label": "1.15 says", "quote": "for such therefore to be in opposition, is against nature", "text": "Editor’s question: would it set fellow-workers in opposition?"}
+            ]},
+          "replies": {
+            "title": "Three replies put through both tests",
+            "note": "The replies are the editor’s examples. The middle one is why two questions earn their place: a reply can avoid the manner of the insult and still set fellow-workers in opposition.",
+            "rows": [
+              {"reply": "Return the insult", "b": "Yes. It repeats the abuse.", "a": "Yes."},
+              {"reply": "Quietly leave them out of the shared task", "b": "Unsettled. The manner differs, and the hostility may be the same.", "a": "Yes. It works against the shared task."},
+              {"reply": "Name the insult and ask to resume the task", "b": "No.", "a": "No. It leaves a way to work together."}
+            ]},
+          "limit": "Used as a test for any reply, the maxim loses its revenge frame. A quiet reply can still carry hostility, so the first test can stay unsettled."
+        }
+      }
+    }
+  }
+}
+</script>
+<script>
+'use strict';
+const D = JSON.parse(document.getElementById('study').textContent);
+const STORE = 'stoic-composition:v2:verdicts';
+const JOINS = ['practice', 'argument', 'tests'];
+const VERDICTS = ['Keep', 'Revise', 'Drop'];
+const state = {pair: 'judgment', b: true, read: 'act', sel: null, piece: null};
+
+function el(tag, cls, text) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text != null) node.textContent = text;
+  return node;
+}
+// A span that behaves as a button. Inline buttons do not wrap across lines in every browser.
+function press(node, label, onPress) {
+  node.setAttribute('role', 'button');
+  node.tabIndex = 0;
+  if (label) node.setAttribute('aria-label', label);
+  node.addEventListener('click', onPress);
+  node.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onPress(); }
+  });
+  return node;
+}
+const flat = text => text.replace(/\s+/g, ' ');
+const words = text => text.split(/\s+/).filter(word => /[\p{L}\p{N}]/u.test(word)).length;
+const pick = value => (value && typeof value === 'object' && ('act' in value || 'method' in value)) ? value[state.read] : value;
+const pair = () => D.pairs[state.pair];
+const side = id => id[0];
+const refOf = id => pair().refs[side(id) === 'A' ? 0 : 1];
+const sourceName = by => by === 'E' ? 'Editor' : 'Marcus · ' + pair().refs[by === 'A' ? 0 : 1];
+const lost = seg => !state.b && (seg.by === 'B' || seg.needsB === true);
+const short = (text, max = 44) => {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return cut.slice(0, Math.max(cut.lastIndexOf(' '), 12)).replace(/[,;:]$/, '') + ' …';
+};
+
+// Resolve every authored quote to one exact span of the immutable passage text.
+function resolve(study) {
+  if (study.resolved) return;
+  for (const piece of study.pieces) {
+    const ref = study.refs[side(piece.id) === 'A' ? 0 : 1];
+    const text = D.passages[ref].text;
+    const pattern = piece.quote.split(/\s+/).map(word => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('\\s+');
+    const matches = [...text.matchAll(new RegExp(pattern, 'gu'))];
+    if (matches.length !== 1) throw new Error('Quote for ' + ref + ' ' + piece.id + ' matches ' + matches.length + ' times');
+    piece.ref = ref;
+    piece.at = matches[0].index;
+    piece.exact = matches[0][0];
+  }
+  study.resolved = true;
+}
+const pieceOf = id => pair().pieces.find(piece => piece.id === id);
+const segsOf = join => join.entries.flatMap(entry => entry.segs);
+const usedIds = join => new Set(segsOf(join).flatMap(seg => seg.ids || []));
+
+function tally(join) {
+  const count = {A: 0, B: 0, E: 0, total: 0, lostB: 0};
+  for (const seg of segsOf(join)) {
+    const n = words(pick(seg.t));
+    count.total += n;
+    if (seg.by) count[seg.by] += n;
+    if (seg.by === 'B' || seg.needsB) count.lostB += n;
+  }
+  return count;
+}
+
+// Mechanical checks a pipeline could run on any article: nothing that depends on
+// another piece may travel without it.
+function checks(join) {
+  const used = usedIds(join), out = [];
+  for (const piece of pair().pieces) {
+    const rel = pick(piece.rel);
+    if (!rel) continue;
+    const target = pieceOf(rel.to);
+    if (rel.type === 'qualifies' && used.has(rel.to)) {
+      out.push(used.has(piece.id)
+        ? {kind: 'ok', text: 'Marcus’s ' + pick(piece.fn).toLowerCase() + ' “' + short(piece.quote) + '” travels with “' + short(target.quote, 22) + '”.'}
+        : {kind: 'bad', text: 'Uses “' + short(target.quote, 22) + '” without its ' + pick(piece.fn).toLowerCase() + ' “' + short(piece.quote) + '”.'});
+    }
+    if ((rel.type === 'answers' || rel.label === 'completes') && used.has(piece.id) && !used.has(rel.to)) {
+      out.push({kind: 'bad', text: 'Uses ' + piece.id + ' “' + short(piece.quote, 26) + '” without ' + rel.to + ' “' + short(target.quote, 26) + '”, which it ' + (rel.label || rel.type) + '.'});
+    }
+  }
+  const unused = pair().pieces.filter(piece => !used.has(piece.id)).map(piece => piece.id);
+  if (unused.length) out.push({kind: 'info', text: 'Left out of this draft: ' + unused.join(', ') + '.'});
+  return out;
+}
+
+function readVerdicts() {
+  try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; }
+}
+function writeVerdict(key, value) {
+  const all = readVerdicts();
+  if (all[key] === value) delete all[key]; else all[key] = value;
+  try { localStorage.setItem(STORE, JSON.stringify(all)); } catch { /* private mode: keep going */ }
+}
+
+function update(change, message) {
+  const focused = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.k : null;
+  Object.assign(state, change);
+  render();
+  if (focused) {
+    const again = document.querySelector('[data-k="' + focused + '"]');
+    if (again) again.focus({preventScroll: true});
+  }
+  if (message) document.getElementById('announce').textContent = message;
+}
+
+function renderBar() {
+  const tabs = Object.entries(D.pairs).map(([id, study]) => {
+    const tab = el('button', 'tab');
+    tab.type = 'button';
+    tab.dataset.k = 'pair-' + id;
+    tab.setAttribute('role', 'radio');
+    tab.setAttribute('aria-checked', String(id === state.pair));
+    tab.append(el('b', '', study.label), el('small', '', study.refs.join(' + ')));
+    tab.addEventListener('click', () => update({pair: id, sel: null, piece: null}, 'Showing ' + study.refs.join(' and ') + '.'));
+    return tab;
+  });
+  document.getElementById('pairs').replaceChildren(...tabs);
+  const remove = document.getElementById('remove');
+  const ref = pair().refs[1];
+  remove.dataset.k = 'remove';
+  remove.setAttribute('aria-pressed', String(!state.b));
+  remove.replaceChildren(el('b', '', state.b ? 'Remove' : 'Removed'), el('small', '', ref));
+  remove.setAttribute('aria-label', (state.b ? 'Remove passage ' : 'Restore passage ') + ref);
+}
+
+function relationText(piece) {
+  const rel = pick(piece.rel);
+  if (!rel) return '';
+  return (rel.label || rel.type.replace('_', ' ')) + ' ' + rel.to + ' “' + short(pieceOf(rel.to).quote, 20) + '”';
+}
+
+function usesOf(id) {
+  const uses = [];
+  for (const key of JOINS) {
+    pair().joins[key].entries.forEach((entry, e) => entry.segs.forEach((seg, s) => {
+      if ((seg.ids || []).includes(id) || (seg.leans || []).includes(id)) uses.push({key, e, s, seg});
+    }));
+  }
+  return uses;
+}
+
+function passageCard(ref, index) {
+  const letter = index ? 'B' : 'A';
+  const off = index === 1 && !state.b;
+  const study = pair();
+  const card = el('article', 'passage ' + letter + (off ? ' off' : ''));
+  const head = el('div', 'p-head');
+  head.append(el('b', '', letter + ' · Meditations ' + ref));
+  head.append(off ? el('span', 'gone-tag', 'Removed. Its pieces are unavailable.') : el('small', '', 'the whole passage is ' + words(D.passages[ref].text) + ' words'));
+  const tree = el('ol', 'tree');
+  for (const piece of study.pieces.filter(item => side(item.id) === letter)) {
+    const item = el('li', pick(piece.rel) ? 'child' : '');
+    const button = el('button', 'pc');
+    button.type = 'button';
+    button.dataset.k = 'piece-' + piece.id;
+    button.setAttribute('aria-pressed', String(state.piece === piece.id));
+    const meta = el('span', 'pc-meta');
+    meta.append(el('span', '', piece.id + ' · ' + pick(piece.fn)));
+    const relation = relationText(piece);
+    if (relation) meta.append(el('i', '', '↳ ' + relation));
+    button.append(meta, el('span', 'pc-q', '“' + flat(piece.exact) + '”'));
+    if (piece.refers) button.append(el('span', 'pc-ref', '“' + piece.refers.word + '” points to ' + (piece.refers.to ? piece.refers.to + ' “' + short(pieceOf(piece.refers.to).quote, 26) + '”' : 'no one named in this passage')));
+    button.addEventListener('click', () => update({piece: state.piece === piece.id ? null : piece.id}));
+    item.append(button);
+    tree.append(item);
+  }
+  card.append(head, tree);
+  const thought = el('p', 'thought');
+  thought.append(el('b', '', 'As one complete thought'), document.createTextNode(study.thoughts[index]));
+  card.append(thought);
+
+  if (study.open && side(study.open.piece) === letter) {
+    const box = el('div', 'open');
+    box.append(el('p', '', study.open.piece + ' · ' + study.open.prompt));
+    const group = el('div', 'pairs');
+    group.setAttribute('role', 'radiogroup');
+    group.setAttribute('aria-label', 'Reading of ' + study.open.piece);
+    for (const [value, label] of Object.entries(study.open.options)) {
+      const tab = el('button', 'tab');
+      tab.type = 'button';
+      tab.dataset.k = 'read-' + value;
+      tab.setAttribute('role', 'radio');
+      tab.setAttribute('aria-checked', String(state.read === value));
+      tab.append(el('b', '', label));
+      tab.addEventListener('click', () => update({read: value}, 'Reading changed. The article wording follows.'));
+      group.append(tab);
+    }
+    box.append(group, el('p', '', study.open.effect[state.read]));
+    card.append(box);
+  }
+
+  const chosen = state.piece && side(state.piece) === letter ? pieceOf(state.piece) : null;
+  if (chosen) {
+    const note = el('div', 'pnote');
+    note.append(el('p', '', chosen.id + ' · ' + chosen.note));
+    const uses = usesOf(chosen.id);
+    if (uses.length) {
+      const list = el('ul');
+      for (const use of uses) {
+        const row = el('li');
+        const jump = el('button', 'jump');
+        jump.type = 'button';
+        jump.append(el('b', '', D.models[use.key].name + ': '), document.createTextNode('“' + pick(use.seg.t) + '”' + ((use.seg.ids || []).includes(chosen.id) ? '' : ' (editor leans on it)')));
+        jump.addEventListener('click', () => {
+          update({sel: {key: use.key, e: use.e, s: use.s}});
+          document.getElementById('join-' + use.key).scrollIntoView({block: 'start'});
+        });
+        row.append(jump);
+        list.append(row);
+      }
+      note.append(el('p', 'pc-ref', 'Where the drafts use it'), list);
+    } else {
+      note.append(el('p', 'pc-ref', 'No draft uses this piece.'));
+    }
+    card.append(note);
+  }
+
+  const covered = study.pieces.filter(item => side(item.id) === letter).reduce((sum, item) => sum + words(item.exact), 0);
+  const details = el('details');
+  details.open = Boolean(chosen);
+  const whole = el('blockquote', 'whole');
+  const text = D.passages[ref].text;
+  let cursor = 0;
+  for (const piece of study.pieces.filter(item => side(item.id) === letter).sort((x, y) => x.at - y.at)) {
+    whole.append(flat(text.slice(cursor, piece.at)));
+    const mark = el('mark', state.piece === piece.id ? 'lit' : '', flat(piece.exact));
+    mark.append(el('sup', '', piece.id));
+    whole.append(mark);
+    cursor = piece.at + piece.exact.length;
+  }
+  whole.append(flat(text.slice(cursor)));
+  details.append(el('summary', '', 'Read the whole passage with the pieces marked (' + covered + ' of ' + words(text) + ' words are in a piece)'), whole);
+  card.append(details);
+  return card;
+}
+
+function context(piece) {
+  const text = D.passages[piece.ref].text, pad = 90;
+  let from = Math.max(0, piece.at - pad), to = Math.min(text.length, piece.at + piece.exact.length + pad);
+  while (from > 0 && /\S/.test(text[from - 1])) from--;
+  while (to < text.length && /\S/.test(text[to])) to++;
+  const box = el('p', 'ctx ' + side(piece.id));
+  box.append((from > 0 ? '… ' : '') + flat(text.slice(from, piece.at)));
+  box.append(el('mark', '', flat(piece.exact)));
+  box.append(flat(text.slice(piece.at + piece.exact.length, to)) + (to < text.length ? ' …' : ''));
+  return box;
+}
+
+function tracePanel(key, seg) {
+  const panel = el('div', 'trace ' + seg.by);
+  panel.setAttribute('aria-live', 'polite');
+  const head = el('div', 'trace-head');
+  const title = el('p');
+  title.append(el('span', 'by', sourceName(seg.by) + (lost(seg) ? ' · removed with ' + pair().refs[1] : '')), document.createTextNode('“' + pick(seg.t) + '”'));
+  const close = el('button', 'x', 'Close');
+  close.type = 'button';
+  close.addEventListener('click', () => update({sel: null}));
+  head.append(title, close);
+  const chain = el('div', 'chain');
+  const link = (label, ...content) => {
+    const row = el('div', 'link');
+    row.append(el('b', '', label), ...content);
+    chain.append(row);
+  };
+  if (seg.by === 'E') {
+    link('Marcus’s words', document.createTextNode('None. Neither passage contains this phrase or its instruction.'));
+    link('The editor’s step', document.createTextNode(seg.note));
+    if (seg.leans) {
+      const chips = el('div', 'chips');
+      for (const id of seg.leans) {
+        const chip = el('button', 'chip ' + side(id), id + ' “' + short(pieceOf(id).quote, 24) + '”');
+        chip.type = 'button';
+        chip.addEventListener('click', () => {
+          update({piece: id});
+          document.getElementById('extract').scrollIntoView({block: 'start'});
+        });
+        chips.append(chip);
+      }
+      link('It leans on', chips);
+    }
+    link('Without ' + pair().refs[1], document.createTextNode(seg.needsB ? 'This phrase drops out. It exists only to bring that passage in.' : 'This phrase stays. It does not depend on that passage.'));
+  } else {
+    for (const id of seg.ids) {
+      const piece = pieceOf(id);
+      const relation = relationText(piece);
+      link('Marcus’s exact words · ' + piece.ref + ' · ' + id, context(piece));
+      link('What the piece does', document.createTextNode(pick(piece.fn) + (relation ? ', ' + relation : '') + '. ' + piece.note));
+    }
+    link('What the article changed', document.createTextNode(seg.note || 'Only the person: “thou” becomes “I”.'));
+  }
+  panel.append(head, chain);
+  return panel;
+}
+
+function mechanism(join) {
+  const box = el('div', 'mech');
+  box.append(el('h4', '', 'How it is joined'));
+  const mech = join.mech;
+  if (mech.shape === 'chain') {
+    mech.steps.forEach((step, index) => {
+      if (index) box.append(el('div', 'down', '↓'));
+      const node = el('div', 'node ' + step.by + (!state.b && (step.by === 'B' || step.needsB) ? ' lost' : ''));
+      node.append(el('b', '', step.label), document.createTextNode(step.text));
+      box.append(node);
+    });
+    return box;
+  }
+  const decision = el('div', 'node E');
+  decision.append(el('b', '', 'The decision, proposed by the editor'), document.createTextNode(mech.decision));
+  box.append(decision, el('div', 'prongs'));
+  const fork = el('div', 'fork');
+  for (const branch of mech.branches) {
+    const node = el('div', 'node ' + branch.by + (!state.b && branch.by === 'B' ? ' lost' : ''));
+    node.append(el('b', '', branch.label), el('em', '', '“' + branch.quote + '”'), document.createTextNode(branch.text));
+    if (branch.fail) node.append(el('span', 'fail', '✕ ' + branch.fail));
+    fork.append(node);
+  }
+  box.append(fork);
+  if (mech.declined) box.append(el('p', 'declined', mech.declined));
+  return box;
+}
+
+function joinCard(key) {
+  const study = pair(), join = study.joins[key], model = D.models[key];
+  const card = el('article', 'join');
+  card.id = 'join-' + key;
+  const head = el('header');
+  head.append(el('h3', '', model.name), el('p', 'rule', model.rule));
+  if (join.outcome === 'separate') head.append(el('span', 'badge', 'Join declined · kept separate'));
+  card.append(head);
+
+  const draft = el('div', 'draft');
+  let chosen = null;
+  join.entries.forEach((entry, e) => {
+    if (entry.cap) draft.append(el('p', 'cap', entry.cap));
+    const sentence = el('p', 'sent');
+    entry.segs.forEach((seg, s) => {
+      if (s) sentence.append(' ');
+      const text = pick(seg.t);
+      if (!seg.by) { sentence.append(el('span', lost(seg) ? 'lost' : '', text)); return; }
+      const active = state.sel && state.sel.key === key && state.sel.e === e && state.sel.s === s;
+      const span = el('span', 'sg ' + seg.by + (lost(seg) ? ' lost' : ''), text);
+      span.dataset.k = 'seg-' + key + '-' + e + '-' + s;
+      span.setAttribute('aria-pressed', String(Boolean(active)));
+      press(span, sourceName(seg.by) + ': ' + text + (lost(seg) ? ' (removed)' : ''), () => update({sel: active ? null : {key, e, s}}));
+      if (active) chosen = seg;
+      sentence.append(span);
+    });
+    draft.append(sentence);
+  });
+  card.append(draft);
+  if (chosen) card.append(tracePanel(key, chosen));
+
+  const count = tally(join);
+  const box = el('div', 'tally');
+  const bars = el('div', 'bars');
+  bars.setAttribute('role', 'img');
+  bars.setAttribute('aria-label', count.A + ' words from ' + study.refs[0] + ', ' + count.B + ' from ' + study.refs[1] + ', ' + count.E + ' from the editor');
+  const counts = el('p', 'counts');
+  for (const by of ['A', 'B', 'E']) {
+    if (!count[by]) continue;
+    const bar = el('i', by + (!state.b && by === 'B' ? ' dim' : ''));
+    bar.style.width = (100 * count[by] / count.total) + '%';
+    bars.append(bar);
+    counts.append(el('span', by, (by === 'E' ? 'Editor' : study.refs[by === 'A' ? 0 : 1]) + ' · ' + count[by] + ' words'));
+  }
+  const drop = el('p', 'dropline' + (state.b ? '' : ' on'), state.b
+    ? 'Without ' + study.refs[1] + ', ' + count.lostB + ' of ' + count.total + ' words would drop out.'
+    : 'Without ' + study.refs[1] + ': ' + count.lostB + ' of ' + count.total + ' words dropped. The words from ' + study.refs[0] + ' are unchanged.');
+  box.append(bars, counts, drop);
+  card.append(box);
+
+  const list = el('ul', 'checks');
+  for (const check of checks(join)) {
+    const row = el('li', check.kind);
+    row.append(el('span', '', check.kind === 'ok' ? '✓' : check.kind === 'bad' ? '!' : '·'), el('span', '', check.text));
+    list.append(row);
+  }
+  if (list.children.length) card.append(list);
+  card.append(mechanism(join));
+
+  if (join.replies) {
+    const replies = el('div', 'replies');
+    replies.append(el('h4', '', join.replies.title));
+    for (const row of join.replies.rows) {
+      const item = el('div', 'reply');
+      item.append(el('b', '', row.reply));
+      for (const by of ['B', 'A']) {
+        const line = el('p', by + (!state.b && by === 'B' ? ' lost' : ''));
+        line.append(el('span', '', by === 'B' ? 'Like them?' : 'Opposition?'), document.createTextNode(row[by.toLowerCase()]));
+        item.append(line);
+      }
+      replies.append(item);
+    }
+    replies.append(el('p', 'limit', join.replies.note));
+    card.append(replies);
+  }
+
+  const limit = el('p', 'limit');
+  limit.append(el('b', '', 'Limit. '), document.createTextNode(join.limit));
+  card.append(limit);
+
+  const mine = readVerdicts()[state.pair + '.' + key];
+  const verdict = el('div', 'verdict');
+  verdict.setAttribute('role', 'group');
+  verdict.setAttribute('aria-label', 'Your verdict on ' + model.name);
+  verdict.append(el('span', '', 'Your verdict'));
+  for (const value of VERDICTS) {
+    const button = el('button', 'vb', value);
+    button.type = 'button';
+    button.dataset.k = 'v-' + key + '-' + value;
+    button.setAttribute('aria-pressed', String(mine === value));
+    button.addEventListener('click', () => { writeVerdict(state.pair + '.' + key, value); update({}); });
+    verdict.append(button);
+  }
+  card.append(verdict);
+  return card;
+}
+
+function renderNumbers() {
+  const study = pair();
+  const head = el('tr');
+  for (const label of ['Draft', study.refs[0], study.refs[1], 'Editor', 'Lost without ' + study.refs[1], 'Flags']) {
+    const cell = el('th', '', label);
+    cell.scope = 'col';
+    head.append(cell);
+  }
+  document.getElementById('n-cols').replaceChildren(head);
+  document.getElementById('n-rows').replaceChildren(...JOINS.map(key => {
+    const join = study.joins[key], count = tally(join), row = el('tr');
+    const name = el('th', '', D.models[key].name + (join.outcome === 'separate' ? ' (declined)' : ''));
+    name.scope = 'row';
+    const flags = checks(join).filter(check => check.kind === 'bad').length;
+    row.append(name, el('td', '', count.A), el('td', '', count.B), el('td', '', count.E),
+      el('td', '', count.lostB + ' of ' + count.total), el('td', '', flags ? String(flags) : '—'));
+    return row;
+  }));
+}
+
+function verdictLines() {
+  const all = readVerdicts(), lines = [];
+  for (const [id, study] of Object.entries(D.pairs)) {
+    for (const key of JOINS) lines.push({pair: id, label: study.label + ' (' + study.refs.join(' + ') + ') · ' + D.models[key].name, value: all[id + '.' + key] || 'Open'});
+  }
+  return lines;
+}
+
+function renderVerdicts() {
+  document.getElementById('mine').replaceChildren(...verdictLines().map(line => {
+    const row = el('li');
+    row.append(el('span', '', line.label), el('span', '', line.value));
+    return row;
+  }));
+}
+
+function record() {
+  const study = pair();
+  const scalar = (text, index) => Array.from(text.slice(0, index)).length;
+  return {
+    format: 'stoic-composition-study-v2',
+    question: study.question,
+    theme: study.theme,
+    reading: study.open ? {piece: study.open.piece, chosen: state.read} : undefined,
+    pieces: study.pieces.map(piece => {
+      const text = D.passages[piece.ref].text, start = scalar(text, piece.at);
+      return {id: piece.id, passage: piece.ref, passage_revision: D.passages[piece.ref].revision, voice: 'author',
+        function: pick(piece.fn), quote: piece.exact, start, end: start + Array.from(piece.exact).length, note: piece.note};
+    }),
+    relations: study.pieces.filter(piece => pick(piece.rel)).map(piece => {
+      const rel = pick(piece.rel);
+      return {from: piece.id, to: rel.to, relation: rel.type, ...(rel.label ? {reading: rel.label} : {})};
+    }),
+    references: study.pieces.filter(piece => piece.refers).map(piece => ({from: piece.id, word: piece.refers.word, to: piece.refers.to})),
+    compositions: JOINS.map(key => {
+      const join = study.joins[key];
+      return {model: key, outcome: join.outcome, limit: join.limit,
+        entries: join.entries.map(entry => ({...(entry.cap ? {caption: entry.cap} : {}), phrases: entry.segs.map(seg => ({
+          text: pick(seg.t), voice: seg.by === 'E' ? 'editor' : seg.by ? 'author' : 'connective',
+          ...(seg.ids ? {piece_ids: seg.ids} : {}), ...(seg.leans ? {leans_on: seg.leans} : {}),
+          ...(seg.by === 'B' || seg.needsB ? {needs_second_passage: true} : {}), ...(seg.note ? {note: seg.note} : {})}))}))};
+    })
+  };
+}
+
+function syncUrl() {
+  const query = new URLSearchParams();
+  if (state.pair !== 'judgment') query.set('pair', state.pair);
+  if (!state.b) query.set('without', 'b');
+  if (state.read !== 'act') query.set('read', state.read);
+  if (state.sel) query.set('at', [state.sel.key, state.sel.e, state.sel.s].join('.'));
+  const search = query.toString();
+  const next = location.pathname + (search ? '?' + search : '') + location.hash;
+  try { history.replaceState(null, '', next); } catch { /* file:// in some browsers */ }
+}
+
+function readUrl() {
+  const query = new URLSearchParams(location.search);
+  if (D.pairs[query.get('pair')]) state.pair = query.get('pair');
+  if (query.get('without') === 'b') state.b = false;
+  if (query.get('read') === 'method') state.read = 'method';
+  const [key, e, s] = (query.get('at') || '').split('.');
+  const seg = D.pairs[state.pair].joins[key]?.entries[Number(e)]?.segs[Number(s)];
+  if (seg && seg.by) state.sel = {key, e: Number(e), s: Number(s)};
+}
+
+function render() {
+  const study = pair();
+  resolve(study);
+  renderBar();
+  document.getElementById('q-head').textContent = study.question;
+  document.getElementById('why').textContent = study.why;
+  document.getElementById('theme').textContent = 'Found under the theme “' + study.theme + '”. A theme finds passages. It does not say how they fit together.';
+  document.getElementById('passages').replaceChildren(...study.refs.map(passageCard));
+  document.getElementById('legend').replaceChildren(
+    el('span', 'A', 'Marcus · ' + study.refs[0]), el('span', 'B', 'Marcus · ' + study.refs[1]), el('span', 'E', 'Added by the editor'));
+  document.getElementById('joins').replaceChildren(...JOINS.map(joinCard));
+  renderNumbers();
+  renderVerdicts();
+  document.getElementById('record').textContent = JSON.stringify(record(), null, 2);
+  syncUrl();
+}
+
+document.getElementById('remove').addEventListener('click', () => {
+  const ref = pair().refs[1];
+  const drop = JOINS.map(key => D.models[key].name + ' loses ' + tally(pair().joins[key]).lostB + ' words').join(', ');
+  update({b: !state.b}, state.b ? ref + ' removed. ' + drop + '.' : ref + ' restored.');
+});
+document.getElementById('copy').addEventListener('click', async event => {
+  const text = 'Stoic composition study · my verdicts\n' + verdictLines().map(line => '- ' + line.label + ': ' + line.value).join('\n');
+  const button = event.currentTarget;
+  try { await navigator.clipboard.writeText(text); button.textContent = 'Copied'; }
+  catch { button.textContent = 'Copy failed. Select the list above.'; }
+  setTimeout(() => { button.textContent = 'Copy my verdicts'; }, 2400);
+});
+
+try {
+  readUrl();
+  render();
+} catch (error) {
+  document.getElementById('main').prepend(el('p', 'err', 'This study could not be drawn: ' + error.message));
+}
+</script>
+</body>
+</html>

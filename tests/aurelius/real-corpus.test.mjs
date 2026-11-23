@@ -49,7 +49,7 @@ test('the shipped previous study upgrades additively and retains user revisions,
  assert.deepEqual(upgraded.conclusions.find(c=>c.id===id),before.conclusions[0]);
  for(const key of ['revisions','links','target_mappings','source_arguments'])for(const item of before[key])assert.deepEqual(upgraded[key].find(v=>v.id===item.id),item);
  assert.deepEqual(upgraded.assessments[before.conclusions[0].current],before.assessments[before.conclusions[0].current]);
- assert.equal(upgraded.passages.length,8);assert.equal(upgraded.study_revision,3);assert.ok(upgraded.study_catalog.previous_ids.includes(id));
+ assert.equal(upgraded.passages.length,8);assert.equal(upgraded.study_revision,4);assert.ok(upgraded.study_catalog.previous_ids.includes(id));
  assert.equal(upgradeStudy(upgraded,study()),upgraded);
  const wrong=study();wrong.passages[0].text_hash='changed';assert.throws(()=>upgradeStudy(before,wrong),/identity/);
 });

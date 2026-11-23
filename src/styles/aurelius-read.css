@@ -1,0 +1,66 @@
+/* Aurelius reading view: the book first, tools behind it. Phone-first; one measure for all running text. */
+.au-read { --au-highlight-strength:75%; max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+.au-read h1, .au-read h2, .au-read h3, .au-read h4, .au-read p, .au-read ol, .au-read figure, .au-read blockquote { margin:0; }
+.au-read-head { display:flex; flex-direction:column; gap:14px; padding-top:8px; }
+.au-read-eyebrow { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.au-read-head h1 { font-family:Georgia,'Times New Roman',serif; font-weight:600; font-size:clamp(2.1rem,8vw,3.2rem); line-height:1.08; letter-spacing:-.02em; text-wrap:balance; }
+.au-read-lede { font-size:1.06rem; line-height:1.65; }
+.au-read-meta { font-size:.84rem; line-height:1.6; color:var(--muted); }
+
+.au-read-toc { border-block:1px solid var(--line); padding-block:20px; }
+.au-read-toc h2 { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:10px; }
+.au-read-toc ol { list-style:none; padding:0; display:grid; gap:4px; }
+.au-read-toc a { display:grid; grid-template-columns:2rem 1fr; align-items:baseline; padding:10px 0 2px; color:var(--ink); text-decoration:none; font-weight:650; font-size:1rem; line-height:1.35; }
+.au-read-toc a span { color:var(--muted); font-variant-numeric:tabular-nums; font-size:.84rem; font-weight:500; }
+.au-read-toc li p { padding:0 0 8px 2rem; font-size:.84rem; line-height:1.5; color:var(--muted); }
+.au-read-toc a:hover { color:var(--accent); }
+
+.au-read-chapter { display:flex; flex-direction:column; gap:28px; scroll-margin-top:16px; }
+.au-read-chapter > h2 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(1.5rem,5.5vw,2rem); line-height:1.2; letter-spacing:-.01em; padding-bottom:12px; border-bottom:2px solid var(--ink); text-wrap:balance; }
+.au-read-chapter > h2 span { display:block; font-family:var(--sans); font-size:.75rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+.au-read-repeat { display:grid; grid-template-columns:2.4rem 1fr auto; align-items:baseline; gap:0 8px; font-size:.94rem; }
+.au-read-repeat span, .au-read-repeat small { color:var(--muted); font-size:.84rem; }
+.au-read-repeat a { color:var(--ink); padding-block:12px; }
+
+.au-read-principles { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:22px; }
+.au-read-principles li { display:grid; grid-template-columns:2.4rem 1fr; gap:6px 0; align-items:baseline; }
+.au-read-principles li > span { color:var(--muted); font-size:.84rem; font-variant-numeric:tabular-nums; }
+.au-read-principles p { font-family:Georgia,'Times New Roman',serif; font-size:clamp(1.14rem,4.6vw,1.3rem); line-height:1.55; }
+.au-read-principles a { grid-column:2; display:flex; flex-wrap:wrap; gap:4px 8px; align-items:baseline; padding-block:8px; font-size:.84rem; color:var(--accent); text-decoration:none; }
+.au-read-principles a small { color:var(--muted); font-size:.84rem; }
+.au-read-lesson { display:flex; flex-direction:column; gap:20px; scroll-margin-top:16px; }
+.au-read-lesson + .au-read-lesson, .au-read-repeat + .au-read-lesson { padding-top:28px; border-top:1px solid var(--line); }
+.au-read-lesson > h3 { font-size:1.12rem; line-height:1.3; font-weight:650; display:grid; grid-template-columns:2.4rem 1fr; align-items:baseline; }
+.au-read-lesson > h3 span { color:var(--muted); font-weight:500; font-size:.84rem; font-variant-numeric:tabular-nums; }
+.au-read-rule { font-family:Georgia,'Times New Roman',serif; font-size:clamp(1.28rem,5vw,1.5rem); line-height:1.6; display:flex; flex-direction:column; gap:12px; }
+.au-main .au-read-clause { display:inline; min-height:0; padding:0 0 3px; border:0; border-radius:0; background:var(--au-provenance) left bottom/100% 3px no-repeat; color:inherit; font:inherit; font-weight:inherit; text-align:inherit; cursor:pointer; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+.au-main .au-read-clause:hover:not(:disabled), .au-main .au-read-clause[aria-pressed=true] { background:var(--au-provenance) left bottom/100% 3px no-repeat, var(--accent-soft); }
+.au-read-precise { font-size:.94rem; line-height:1.65; color:var(--muted); }
+.au-read-precise strong { color:var(--ink); font-weight:650; }
+
+.au-read-block { display:flex; flex-direction:column; gap:8px; }
+.au-read-block h4 { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+.au-read-block p { font-size:1rem; line-height:1.7; }
+.au-read-reason { display:flex; flex-direction:column; gap:4px; padding-left:14px; border-left:2px solid var(--line); }
+.au-read-reason + .au-read-reason { margin-top:8px; }
+.au-read-reason span { font-size:.8rem; font-weight:650; }
+.au-read-reason small { font-size:.84rem; line-height:1.6; color:var(--muted); }
+
+.au-read-sources { gap:16px; padding:18px; border-radius:12px; background:var(--surface-2); }
+.au-read-sources figure { display:flex; flex-direction:column; gap:10px; }
+.au-read-sources blockquote { position:relative; padding:2px 0 2px 16px; font-family:Georgia,'Times New Roman',serif; font-size:1.02rem; line-height:1.7; scroll-margin-block:120px; }
+.au-read-sources blockquote::before { content:""; position:absolute; inset:0 auto 0 0; width:4px; border-radius:2px; background:var(--au-provenance); }
+.au-read-sources blockquote.is-selected { background:var(--accent-soft); box-shadow:0 0 0 6px var(--accent-soft); border-radius:2px; }
+.au-read-sources figcaption { font-size:.84rem; color:var(--muted); padding-left:16px; display:flex; flex-direction:column; gap:4px; }
+.au-read-sources summary { cursor:pointer; padding-block:10px; color:var(--ink); }
+.au-read-sources details p { font-family:Georgia,'Times New Roman',serif; font-size:.94rem; line-height:1.7; color:var(--ink); }
+.au-main .au-read-inspect { align-self:flex-start; min-height:44px; font-size:.84rem; }
+
+.au-read-about { display:flex; flex-direction:column; gap:12px; padding-top:28px; border-top:1px solid var(--line); }
+.au-read-about h2 { font-size:1rem; font-weight:650; }
+.au-read-about p { font-size:.94rem; line-height:1.7; color:var(--muted); }
+.au-read-links { display:flex; flex-wrap:wrap; gap:8px; }
+.au-main .au-read-links button { min-height:44px; padding-inline:14px; font-size:.84rem; }
+
+.au-main .au-back { min-height:44px; font-size:.84rem; margin-bottom:14px; }
+@media (prefers-reduced-motion:reduce) { .au-read * { scroll-behavior:auto; } }

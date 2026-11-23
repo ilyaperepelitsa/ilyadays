@@ -90,11 +90,18 @@ def extend_book_study(workspace, corpus):
         ('verdict','explicit_reason','Marcus distinguishes things outside from the understanding that passes judgment on them.','His division between things and judgment is a philosophical account, not a claim that external events have no effects.')])
 
     # Directive voice is a separately reviewed variant, never a Marcus quotation.
+    spans.update(revenge=f'{prefix}-evidence-1', hive=f'{prefix}-evidence-2')
+    assert all(any(s['id']==spans[n] for s in w['spans']) for n in ('revenge','hive'))
     for cid, parts in [
         (ordinary,[('When you can, examine what appears before you. ',['examine']),
                    ('Do not let the first appearance settle your judgment: the thing before you and the verdict you give it are not the same.', ['examine','verdict'])]),
         (distress,[('When an impression frightens you, examine the judgment within it where you can. ',['examine','opinion']),
                    ('Pain may still be felt. Do not mistake that feeling for a settled verdict on what is good or bad.', ['feeling'])]),
+        # Revision 4: the two single-passage lessons gain the same firm voice. Each clause restates its one cited line.
+        (f'{prefix}-non-imitation',[('When someone wrongs you, do not take their conduct as your model. ',['revenge']),
+                   ('The best revenge is to stay unlike them.', ['revenge'])]),
+        (f'{prefix}-shared-good',[('Do not call a thing good for you when it harms the community you belong to: ',['hive']),
+                   ('what is not good for the hive is not good for the bee.', ['hive'])]),
     ]:
         rid=f'{cid}:r1';eid=f'{cid}-constitution-voice'
         expression=deepcopy(next(r for r in w['revisions'] if r['id']==rid))
@@ -114,7 +121,7 @@ def extend_book_study(workspace, corpus):
         for concept in concepts:
             p=passages[ref]
             w['memberships'].append({'id':f'{prefix}-judgment-membership-{ref[0]}-{ref[1]}-{concept.rsplit("-",2)[-2]}','passage_id':p['id'],'concept_id':concept,'rationale':'Proposed topical association; evidence is linked separately.','review_state':'proposed'})
-    w['study_revision']=3
+    w['study_revision']=4
     w['study_catalog']['current_ids']=[ordinary,distress]+w['study_catalog']['current_ids']
     w['study_catalog']['default_id']=ordinary
     return w

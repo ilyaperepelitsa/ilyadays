@@ -12,7 +12,7 @@ export function draftBook(w) {
  const previous=new Set(w.study_catalog?.previous_ids??[]),current=w.conclusions.filter(c=>!previous.has(c.id));
  const ids=suffixes=>current.filter(c=>suffixes.some(s=>c.id.endsWith(s))).map(c=>lessonSnapshot(w,c.id));
  const chapters=[
-  {id:'foundations',title:'Opening principles',lessons:ids(['ordinary-impressions','social-purpose'])},
+  {id:'foundations',title:'Opening principles',lessons:ids(['ordinary-impressions','distress-and-threat','social-purpose','non-imitation','shared-good'])},
   {id:'attention',title:'Judgment and attention',lessons:ids(['ordinary-impressions','distress-and-threat'])},
   {id:'response',title:'Action in difficult encounters',lessons:ids(['distress-and-threat','non-imitation'])},
   {id:'shared-life',title:'Our shared life',lessons:ids(['social-purpose','shared-good'])}
@@ -55,4 +55,14 @@ export function bookLessonState(w, lesson) {
  const meaning=w.assessments[lesson.conclusion_revision]?.state??'awaiting_review';
  if(meaning!=='approved')return meaning;
  return lesson.expression_revision?w.assessments[lesson.expression_revision]?.state??'awaiting_review':'awaiting_review';
+}
+
+/** How a reader meets each placement. The first chapter works as a preface: a lesson that returns in a later
+ * chapter is stated there as a one-line principle. Otherwise a lesson is printed in full once, at its first
+ * placement after the preface, and any further placement points back to it. */
+export function readingPlan(book) {
+ const later=new Set(book.chapters.slice(1).flatMap(c=>c.lessons.map(l=>l.conclusion_id))),full=new Map();
+ const number=(ci,li)=>`${ci+1}.${li+1}`;
+ book.chapters.forEach((c,ci)=>c.lessons.forEach((l,li)=>{if(!(ci===0&&later.has(l.conclusion_id))&&!full.has(l.conclusion_id))full.set(l.conclusion_id,number(ci,li));}));
+ return book.chapters.map((c,ci)=>({id:c.id,title:c.title,lessons:c.lessons.map((lesson,li)=>{const n=number(ci,li),at=full.get(lesson.conclusion_id);return {lesson,number:n,fullAt:at,mode:at===n?'full':ci===0&&later.has(lesson.conclusion_id)?'principle':'reference'};})}));
 }

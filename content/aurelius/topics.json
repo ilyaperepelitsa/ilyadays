@@ -1,0 +1,2939 @@
+{
+ "schema_version": 1,
+ "pipeline_version": "aurelius-topic-hierarchy-v1",
+ "edition_id": "casaubon-gutenberg-2680",
+ "corpus_hash": "9fc9c67e0c213ba8cc30016ed9a2fb67ea2facf2f7688d971b9a96c0a61edf17",
+ "source_vector_hash": "e4f33fda9e55e1e60711e28b03720d0ed4c73a39764d5d27107463433bdecbae",
+ "local_vector_file_hash": "e4f33fda9e55e1e60711e28b03720d0ed4c73a39764d5d27107463433bdecbae",
+ "vector_description": "OpenAI text-embedding-3-large, full 3072-dimensional cached source vectors",
+ "method": {
+  "linkage": "ward",
+  "input": "unit-normalised full 3072-dimensional vectors",
+  "distance": "euclidean on unit vectors",
+  "chapters": 7,
+  "sections_rule": "max(2, round(size / 11)) by Ward linkage inside each chapter",
+  "order": "dendrogram order; members by cosine similarity to the group centroid",
+  "software": {
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "scikit_learn": "1.9.1"
+  }
+ },
+ "passage_count": 418,
+ "comparison_at_chapter_cut": {
+  "ward": {
+   "sizes": [
+    133,
+    85,
+    65,
+    55,
+    33,
+    24,
+    23
+   ],
+   "largest_fraction": 0.318,
+   "cosine_silhouette": 0.009
+  },
+  "complete": {
+   "sizes": [
+    267,
+    109,
+    21,
+    8,
+    7,
+    4,
+    2
+   ],
+   "largest_fraction": 0.639,
+   "cosine_silhouette": 0.013
+  },
+  "average": {
+   "sizes": [
+    412,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "largest_fraction": 0.986,
+   "cosine_silhouette": 0.214
+  }
+ },
+ "share_mode": "references_and_numbers_only",
+ "chapters": [
+  {
+   "id": "c1",
+   "size": 24,
+   "cohesion": 0.7069,
+   "central": [
+    "1.5",
+    "1.6",
+    "1.11",
+    "1.13",
+    "7.37"
+   ],
+   "sections": [
+    {
+     "id": "c1.s1",
+     "size": 10,
+     "cohesion": 0.8305,
+     "members": [
+      {
+       "reference": "1.5",
+       "revision_id": "casaubon-gutenberg-2680-1-5:eeb545c75d84e04f",
+       "similarity": 0.8804,
+       "words": 186
+      },
+      {
+       "reference": "1.11",
+       "revision_id": "casaubon-gutenberg-2680-1-11:d53ec7296645c2b3",
+       "similarity": 0.8699,
+       "words": 161
+      },
+      {
+       "reference": "1.4",
+       "revision_id": "casaubon-gutenberg-2680-1-4:211c986956cfa50b",
+       "similarity": 0.841,
+       "words": 224
+      },
+      {
+       "reference": "1.6",
+       "revision_id": "casaubon-gutenberg-2680-1-6:88907d40a8d0076b",
+       "similarity": 0.8377,
+       "words": 183
+      },
+      {
+       "reference": "1.13",
+       "revision_id": "casaubon-gutenberg-2680-1-13:113f65f980c8835e",
+       "similarity": 0.8301,
+       "words": 913
+      },
+      {
+       "reference": "1.12",
+       "revision_id": "casaubon-gutenberg-2680-1-12:347b221fea352a0d",
+       "similarity": 0.827,
+       "words": 189
+      },
+      {
+       "reference": "1.2",
+       "revision_id": "casaubon-gutenberg-2680-1-2:215bd3fd5cfd2420",
+       "similarity": 0.8254,
+       "words": 85
+      },
+      {
+       "reference": "1.1",
+       "revision_id": "casaubon-gutenberg-2680-1-1:6511197263cffb9e",
+       "similarity": 0.8199,
+       "words": 117
+      },
+      {
+       "reference": "1.10",
+       "revision_id": "casaubon-gutenberg-2680-1-10:2426b2dd3b16fc2c",
+       "similarity": 0.7907,
+       "words": 49
+      },
+      {
+       "reference": "1.3",
+       "revision_id": "casaubon-gutenberg-2680-1-3:c4963f68ddc5e31d",
+       "similarity": 0.7832,
+       "words": 135
+      }
+     ]
+    },
+    {
+     "id": "c1.s2",
+     "size": 14,
+     "cohesion": 0.6917,
+     "members": [
+      {
+       "reference": "7.26",
+       "revision_id": "casaubon-gutenberg-2680-7-26:ce507170afb337e7",
+       "similarity": 0.807,
+       "words": 416
+      },
+      {
+       "reference": "7.37",
+       "revision_id": "casaubon-gutenberg-2680-7-37:b5bdce0baf995676",
+       "similarity": 0.8051,
+       "words": 278
+      },
+      {
+       "reference": "7.23",
+       "revision_id": "casaubon-gutenberg-2680-7-23:b55e8e8f718c940b",
+       "similarity": 0.7423,
+       "words": 61
+      },
+      {
+       "reference": "11.23",
+       "revision_id": "casaubon-gutenberg-2680-11-23:67b16bb21e511f52",
+       "similarity": 0.7423,
+       "words": 40
+      },
+      {
+       "reference": "11.32",
+       "revision_id": "casaubon-gutenberg-2680-11-32:9571fba13e8549c7",
+       "similarity": 0.7027,
+       "words": 64
+      },
+      {
+       "reference": "8.3",
+       "revision_id": "casaubon-gutenberg-2680-8-3:b879bffb4b345215",
+       "similarity": 0.7,
+       "words": 52
+      },
+      {
+       "reference": "1.9",
+       "revision_id": "casaubon-gutenberg-2680-1-9:ab3330e55d065a50",
+       "similarity": 0.6733,
+       "words": 55
+      },
+      {
+       "reference": "11.26",
+       "revision_id": "casaubon-gutenberg-2680-11-26:9ce51a902347400b",
+       "similarity": 0.6719,
+       "words": 54
+      },
+      {
+       "reference": "11.21",
+       "revision_id": "casaubon-gutenberg-2680-11-21:febfbbf0a2a2a832",
+       "similarity": 0.6707,
+       "words": 24
+      },
+      {
+       "reference": "1.8",
+       "revision_id": "casaubon-gutenberg-2680-1-8:c0bc6daf1180fb81",
+       "similarity": 0.6484,
+       "words": 40
+      },
+      {
+       "reference": "6.22",
+       "revision_id": "casaubon-gutenberg-2680-6-22:372d01ef3e9fd0e1",
+       "similarity": 0.6478,
+       "words": 45
+      },
+      {
+       "reference": "1.7",
+       "revision_id": "casaubon-gutenberg-2680-1-7:6121cff9a7361323",
+       "similarity": 0.6462,
+       "words": 71
+      },
+      {
+       "reference": "6.12",
+       "revision_id": "casaubon-gutenberg-2680-6-12:d674b5e9c0c4be6b",
+       "similarity": 0.6226,
+       "words": 7
+      },
+      {
+       "reference": "11.22",
+       "revision_id": "casaubon-gutenberg-2680-11-22:3000d97d9a9fc6fb",
+       "similarity": 0.6039,
+       "words": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "size": 85,
+   "cohesion": 0.7046,
+   "central": [
+    "7.34",
+    "9.43",
+    "10.15",
+    "7.21",
+    "11.16"
+   ],
+   "sections": [
+    {
+     "id": "c2.s1",
+     "size": 20,
+     "cohesion": 0.7946,
+     "members": [
+      {
+       "reference": "9.43",
+       "revision_id": "casaubon-gutenberg-2680-9-43:297fd51ba31aefbb",
+       "similarity": 0.8819,
+       "words": 582
+      },
+      {
+       "reference": "7.34",
+       "revision_id": "casaubon-gutenberg-2680-7-34:7e2c8009d8fba1f9",
+       "similarity": 0.8807,
+       "words": 130
+      },
+      {
+       "reference": "11.16",
+       "revision_id": "casaubon-gutenberg-2680-11-16:6f211b81f558d876",
+       "similarity": 0.8543,
+       "words": 1063
+      },
+      {
+       "reference": "7.19",
+       "revision_id": "casaubon-gutenberg-2680-7-19:4a9788f653c7b441",
+       "similarity": 0.8535,
+       "words": 141
+      },
+      {
+       "reference": "10.30",
+       "revision_id": "casaubon-gutenberg-2680-10-30:e1361bb3fadee9ec",
+       "similarity": 0.8514,
+       "words": 127
+      },
+      {
+       "reference": "1.15",
+       "revision_id": "casaubon-gutenberg-2680-1-15:2fe512aeb1cc2f40",
+       "similarity": 0.8418,
+       "words": 221
+      },
+      {
+       "reference": "12.12",
+       "revision_id": "casaubon-gutenberg-2680-12-12:266d62b8dc14a8ad",
+       "similarity": 0.8212,
+       "words": 140
+      },
+      {
+       "reference": "9.25",
+       "revision_id": "casaubon-gutenberg-2680-9-25:c6e14168e35d46c2",
+       "similarity": 0.8172,
+       "words": 112
+      },
+      {
+       "reference": "11.12",
+       "revision_id": "casaubon-gutenberg-2680-11-12:197579fd1074a8ba",
+       "similarity": 0.8157,
+       "words": 193
+      },
+      {
+       "reference": "6.19",
+       "revision_id": "casaubon-gutenberg-2680-6-19:45df9c885a27bac3",
+       "similarity": 0.8137,
+       "words": 144
+      },
+      {
+       "reference": "6.25",
+       "revision_id": "casaubon-gutenberg-2680-6-25:88b12183ba4b91a9",
+       "similarity": 0.792,
+       "words": 99
+      },
+      {
+       "reference": "7.18",
+       "revision_id": "casaubon-gutenberg-2680-7-18:3732506d4da05e1c",
+       "similarity": 0.7864,
+       "words": 183
+      },
+      {
+       "reference": "9.9",
+       "revision_id": "casaubon-gutenberg-2680-9-9:a6c1f50b124ddb80",
+       "similarity": 0.7809,
+       "words": 80
+      },
+      {
+       "reference": "11.8",
+       "revision_id": "casaubon-gutenberg-2680-11-8:79d8f787f69a8ea9",
+       "similarity": 0.7699,
+       "words": 151
+      },
+      {
+       "reference": "5.22",
+       "revision_id": "casaubon-gutenberg-2680-5-22:ca567be3544c3955",
+       "similarity": 0.7694,
+       "words": 110
+      },
+      {
+       "reference": "10.4",
+       "revision_id": "casaubon-gutenberg-2680-10-4:1fac4462bfb787ca",
+       "similarity": 0.7589,
+       "words": 39
+      },
+      {
+       "reference": "7.36",
+       "revision_id": "casaubon-gutenberg-2680-7-36:84859a95bcb2111e",
+       "similarity": 0.7271,
+       "words": 23
+      },
+      {
+       "reference": "6.52",
+       "revision_id": "casaubon-gutenberg-2680-6-52:a59c662ffbbfbaea",
+       "similarity": 0.7233,
+       "words": 73
+      },
+      {
+       "reference": "11.14",
+       "revision_id": "casaubon-gutenberg-2680-11-14:59754b556a72e3f8",
+       "similarity": 0.6988,
+       "words": 179
+      },
+      {
+       "reference": "8.56",
+       "revision_id": "casaubon-gutenberg-2680-8-56:a4280e56f3603ade",
+       "similarity": 0.6546,
+       "words": 16
+      }
+     ]
+    },
+    {
+     "id": "c2.s2",
+     "size": 6,
+     "cohesion": 0.8296,
+     "members": [
+      {
+       "reference": "12.14",
+       "revision_id": "casaubon-gutenberg-2680-12-14:0c0163ec337e46a9",
+       "similarity": 0.9016,
+       "words": 52
+      },
+      {
+       "reference": "12.7",
+       "revision_id": "casaubon-gutenberg-2680-12-7:c95195b7d1736244",
+       "similarity": 0.8504,
+       "words": 19
+      },
+      {
+       "reference": "8.10",
+       "revision_id": "casaubon-gutenberg-2680-8-10:eddeb70bc5066aff",
+       "similarity": 0.8495,
+       "words": 58
+      },
+      {
+       "reference": "8.12",
+       "revision_id": "casaubon-gutenberg-2680-8-12:45a8ae641522cdfd",
+       "similarity": 0.8282,
+       "words": 29
+      },
+      {
+       "reference": "6.3",
+       "revision_id": "casaubon-gutenberg-2680-6-3:314dce85bb9e13be",
+       "similarity": 0.7752,
+       "words": 22
+      },
+      {
+       "reference": "8.20",
+       "revision_id": "casaubon-gutenberg-2680-8-20:5cf18f1d336c5e9a",
+       "similarity": 0.7727,
+       "words": 26
+      }
+     ]
+    },
+    {
+     "id": "c2.s3",
+     "size": 12,
+     "cohesion": 0.781,
+     "members": [
+      {
+       "reference": "7.21",
+       "revision_id": "casaubon-gutenberg-2680-7-21:e7a9551226096b42",
+       "similarity": 0.8451,
+       "words": 107
+      },
+      {
+       "reference": "11.17",
+       "revision_id": "casaubon-gutenberg-2680-11-17:e981474227b1a249",
+       "similarity": 0.8204,
+       "words": 107
+      },
+      {
+       "reference": "8.27",
+       "revision_id": "casaubon-gutenberg-2680-8-27:643ab9a6b5307024",
+       "similarity": 0.8189,
+       "words": 72
+      },
+      {
+       "reference": "6.45",
+       "revision_id": "casaubon-gutenberg-2680-6-45:8ddb6165c067e058",
+       "similarity": 0.8039,
+       "words": 174
+      },
+      {
+       "reference": "8.46",
+       "revision_id": "casaubon-gutenberg-2680-8-46:b159e69a00ce522b",
+       "similarity": 0.796,
+       "words": 125
+      },
+      {
+       "reference": "8.49",
+       "revision_id": "casaubon-gutenberg-2680-8-49:53605f31b04e9650",
+       "similarity": 0.7944,
+       "words": 56
+      },
+      {
+       "reference": "11.31",
+       "revision_id": "casaubon-gutenberg-2680-11-31:05875438042185a9",
+       "similarity": 0.7911,
+       "words": 129
+      },
+      {
+       "reference": "4.18",
+       "revision_id": "casaubon-gutenberg-2680-4-18:ffdc706563e75eca",
+       "similarity": 0.7876,
+       "words": 37
+      },
+      {
+       "reference": "8.50",
+       "revision_id": "casaubon-gutenberg-2680-8-50:89557dc8eee596ee",
+       "similarity": 0.7862,
+       "words": 119
+      },
+      {
+       "reference": "8.7",
+       "revision_id": "casaubon-gutenberg-2680-8-7:106b6bbc510564cf",
+       "similarity": 0.7487,
+       "words": 75
+      },
+      {
+       "reference": "9.6",
+       "revision_id": "casaubon-gutenberg-2680-9-6:f6205aa670ce717b",
+       "similarity": 0.7355,
+       "words": 17
+      },
+      {
+       "reference": "4.2",
+       "revision_id": "casaubon-gutenberg-2680-4-2:7975468bfb423473",
+       "similarity": 0.644,
+       "words": 21
+      }
+     ]
+    },
+    {
+     "id": "c2.s4",
+     "size": 17,
+     "cohesion": 0.7357,
+     "members": [
+      {
+       "reference": "7.12",
+       "revision_id": "casaubon-gutenberg-2680-7-12:7ae577e2ce841fbf",
+       "similarity": 0.8046,
+       "words": 56
+      },
+      {
+       "reference": "5.3",
+       "revision_id": "casaubon-gutenberg-2680-5-3:163f069d558c4ef1",
+       "similarity": 0.791,
+       "words": 107
+      },
+      {
+       "reference": "4.10",
+       "revision_id": "casaubon-gutenberg-2680-4-10:9584d1b2c9371cf6",
+       "similarity": 0.7787,
+       "words": 107
+      },
+      {
+       "reference": "8.28",
+       "revision_id": "casaubon-gutenberg-2680-8-28:18c467297a4082f0",
+       "similarity": 0.7756,
+       "words": 61
+      },
+      {
+       "reference": "5.5",
+       "revision_id": "casaubon-gutenberg-2680-5-5:cfe8454d5b86a3d8",
+       "similarity": 0.7754,
+       "words": 220
+      },
+      {
+       "reference": "6.48",
+       "revision_id": "casaubon-gutenberg-2680-6-48:3f25b107ef47e8eb",
+       "similarity": 0.7742,
+       "words": 50
+      },
+      {
+       "reference": "12.13",
+       "revision_id": "casaubon-gutenberg-2680-12-13:8c1906032a9c5144",
+       "similarity": 0.769,
+       "words": 29
+      },
+      {
+       "reference": "7.32",
+       "revision_id": "casaubon-gutenberg-2680-7-32:463952b4eae11b3e",
+       "similarity": 0.7651,
+       "words": 74
+      },
+      {
+       "reference": "3.6",
+       "revision_id": "casaubon-gutenberg-2680-3-6:816af31b5faf1181",
+       "similarity": 0.7583,
+       "words": 49
+      },
+      {
+       "reference": "8.14",
+       "revision_id": "casaubon-gutenberg-2680-8-14:141621dbec13d4d6",
+       "similarity": 0.7569,
+       "words": 58
+      },
+      {
+       "reference": "7.24",
+       "revision_id": "casaubon-gutenberg-2680-7-24:43a74867f7430664",
+       "similarity": 0.7314,
+       "words": 71
+      },
+      {
+       "reference": "8.36",
+       "revision_id": "casaubon-gutenberg-2680-8-36:a9a169fb2bdf1437",
+       "similarity": 0.7304,
+       "words": 15
+      },
+      {
+       "reference": "4.40",
+       "revision_id": "casaubon-gutenberg-2680-4-40:5ffe3c36d8467c7a",
+       "similarity": 0.703,
+       "words": 31
+      },
+      {
+       "reference": "10.35",
+       "revision_id": "casaubon-gutenberg-2680-10-35:ad3dbb49d368df3b",
+       "similarity": 0.6789,
+       "words": 118
+      },
+      {
+       "reference": "10.18",
+       "revision_id": "casaubon-gutenberg-2680-10-18:b7faa474de424305",
+       "similarity": 0.6498,
+       "words": 28
+      },
+      {
+       "reference": "8.58",
+       "revision_id": "casaubon-gutenberg-2680-8-58:7b4a88aef2249cdf",
+       "similarity": 0.6366,
+       "words": 32
+      },
+      {
+       "reference": "6.20",
+       "revision_id": "casaubon-gutenberg-2680-6-20:8731f051b977fa3b",
+       "similarity": 0.6285,
+       "words": 64
+      }
+     ]
+    },
+    {
+     "id": "c2.s5",
+     "size": 3,
+     "cohesion": 0.8073,
+     "members": [
+      {
+       "reference": "6.32",
+       "revision_id": "casaubon-gutenberg-2680-6-32:f5a1042a8f04b4c1",
+       "similarity": 0.8443,
+       "words": 88
+      },
+      {
+       "reference": "9.42",
+       "revision_id": "casaubon-gutenberg-2680-9-42:9fe3b27cdcd1a512",
+       "similarity": 0.8102,
+       "words": 25
+      },
+      {
+       "reference": "6.50",
+       "revision_id": "casaubon-gutenberg-2680-6-50:e3139b814b1aff54",
+       "similarity": 0.7673,
+       "words": 53
+      }
+     ]
+    },
+    {
+     "id": "c2.s6",
+     "size": 7,
+     "cohesion": 0.7142,
+     "members": [
+      {
+       "reference": "12.5",
+       "revision_id": "casaubon-gutenberg-2680-12-5:843e2ef67a43f626",
+       "similarity": 0.7337,
+       "words": 48
+      },
+      {
+       "reference": "11.27",
+       "revision_id": "casaubon-gutenberg-2680-11-27:eabfddd4cf50d5bf",
+       "similarity": 0.7309,
+       "words": 45
+      },
+      {
+       "reference": "4.11",
+       "revision_id": "casaubon-gutenberg-2680-4-11:60aeffc805fa1078",
+       "similarity": 0.7303,
+       "words": 25
+      },
+      {
+       "reference": "4.25",
+       "revision_id": "casaubon-gutenberg-2680-4-25:88d9cc674d5b4c60",
+       "similarity": 0.7133,
+       "words": 62
+      },
+      {
+       "reference": "8.21",
+       "revision_id": "casaubon-gutenberg-2680-8-21:320637a32faeb327",
+       "similarity": 0.7075,
+       "words": 26
+      },
+      {
+       "reference": "7.28",
+       "revision_id": "casaubon-gutenberg-2680-7-28:f51215d9cd3700d0",
+       "similarity": 0.6981,
+       "words": 43
+      },
+      {
+       "reference": "7.33",
+       "revision_id": "casaubon-gutenberg-2680-7-33:5836dfb5db43541d",
+       "similarity": 0.6854,
+       "words": 45
+      }
+     ]
+    },
+    {
+     "id": "c2.s7",
+     "size": 8,
+     "cohesion": 0.7594,
+     "members": [
+      {
+       "reference": "6.43",
+       "revision_id": "casaubon-gutenberg-2680-6-43:6be7aa065a02c9fc",
+       "similarity": 0.7947,
+       "words": 97
+      },
+      {
+       "reference": "6.9",
+       "revision_id": "casaubon-gutenberg-2680-6-9:18e6b61c8376b445",
+       "similarity": 0.7882,
+       "words": 75
+      },
+      {
+       "reference": "9.20",
+       "revision_id": "casaubon-gutenberg-2680-9-20:f7fef50775b0593e",
+       "similarity": 0.7758,
+       "words": 84
+      },
+      {
+       "reference": "9.10",
+       "revision_id": "casaubon-gutenberg-2680-9-10:c3d72f72f7d5fdae",
+       "similarity": 0.7634,
+       "words": 52
+      },
+      {
+       "reference": "6.6",
+       "revision_id": "casaubon-gutenberg-2680-6-6:4370ff843af081dd",
+       "similarity": 0.7534,
+       "words": 27
+      },
+      {
+       "reference": "6.10",
+       "revision_id": "casaubon-gutenberg-2680-6-10:5550fc76896b3974",
+       "similarity": 0.745,
+       "words": 80
+      },
+      {
+       "reference": "8.8",
+       "revision_id": "casaubon-gutenberg-2680-8-8:bd65bd8f4557fa68",
+       "similarity": 0.7409,
+       "words": 21
+      },
+      {
+       "reference": "11.2",
+       "revision_id": "casaubon-gutenberg-2680-11-2:5108ab3ba50387a9",
+       "similarity": 0.7135,
+       "words": 147
+      }
+     ]
+    },
+    {
+     "id": "c2.s8",
+     "size": 12,
+     "cohesion": 0.7856,
+     "members": [
+      {
+       "reference": "10.15",
+       "revision_id": "casaubon-gutenberg-2680-10-15:bdab756bfab1befc",
+       "similarity": 0.8675,
+       "words": 165
+      },
+      {
+       "reference": "8.2",
+       "revision_id": "casaubon-gutenberg-2680-8-2:6ae2bc516763e0c1",
+       "similarity": 0.8348,
+       "words": 101
+      },
+      {
+       "reference": "8.11",
+       "revision_id": "casaubon-gutenberg-2680-8-11:fc96418e4d9f20ce",
+       "similarity": 0.8274,
+       "words": 73
+      },
+      {
+       "reference": "5.1",
+       "revision_id": "casaubon-gutenberg-2680-5-1:95a659ca169dae5c",
+       "similarity": 0.823,
+       "words": 367
+      },
+      {
+       "reference": "10.37",
+       "revision_id": "casaubon-gutenberg-2680-10-37:c149012e2aac1480",
+       "similarity": 0.7997,
+       "words": 46
+      },
+      {
+       "reference": "7.5",
+       "revision_id": "casaubon-gutenberg-2680-7-5:875161cbae5c1e92",
+       "similarity": 0.7889,
+       "words": 277
+      },
+      {
+       "reference": "8.13",
+       "revision_id": "casaubon-gutenberg-2680-8-13:52c4ea29c708c414",
+       "similarity": 0.7889,
+       "words": 171
+      },
+      {
+       "reference": "7.43",
+       "revision_id": "casaubon-gutenberg-2680-7-43:a7de69330ad04dac",
+       "similarity": 0.7747,
+       "words": 88
+      },
+      {
+       "reference": "5.6",
+       "revision_id": "casaubon-gutenberg-2680-5-6:ffd6e212cc5a2558",
+       "similarity": 0.7676,
+       "words": 351
+      },
+      {
+       "reference": "10.29",
+       "revision_id": "casaubon-gutenberg-2680-10-29:5551067313558c4c",
+       "similarity": 0.7588,
+       "words": 34
+      },
+      {
+       "reference": "6.37",
+       "revision_id": "casaubon-gutenberg-2680-6-37:fe7ef07c1e63ce4d",
+       "similarity": 0.7226,
+       "words": 193
+      },
+      {
+       "reference": "6.29",
+       "revision_id": "casaubon-gutenberg-2680-6-29:3d49d0a958f88e4a",
+       "similarity": 0.6731,
+       "words": 62
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3",
+   "size": 133,
+   "cohesion": 0.7473,
+   "central": [
+    "12.1",
+    "8.45",
+    "9.29",
+    "7.39",
+    "10.33"
+   ],
+   "sections": [
+    {
+     "id": "c3.s1",
+     "size": 10,
+     "cohesion": 0.7908,
+     "members": [
+      {
+       "reference": "8.38",
+       "revision_id": "casaubon-gutenberg-2680-8-38:9f52143c8c8f9171",
+       "similarity": 0.8368,
+       "words": 75
+      },
+      {
+       "reference": "7.2",
+       "revision_id": "casaubon-gutenberg-2680-7-2:43d63a94064cc47d",
+       "similarity": 0.8357,
+       "words": 127
+      },
+      {
+       "reference": "6.47",
+       "revision_id": "casaubon-gutenberg-2680-6-47:fc0fee1a83b3603b",
+       "similarity": 0.8349,
+       "words": 58
+      },
+      {
+       "reference": "7.13",
+       "revision_id": "casaubon-gutenberg-2680-7-13:f3dff9423886af65",
+       "similarity": 0.8096,
+       "words": 231
+      },
+      {
+       "reference": "9.30",
+       "revision_id": "casaubon-gutenberg-2680-9-30:2ce3d1c446957e78",
+       "similarity": 0.8047,
+       "words": 32
+      },
+      {
+       "reference": "8.47",
+       "revision_id": "casaubon-gutenberg-2680-8-47:222e71f9a7167a80",
+       "similarity": 0.8,
+       "words": 146
+      },
+      {
+       "reference": "12.16",
+       "revision_id": "casaubon-gutenberg-2680-12-16:4f9c2424150e8dbc",
+       "similarity": 0.7769,
+       "words": 56
+      },
+      {
+       "reference": "4.9",
+       "revision_id": "casaubon-gutenberg-2680-4-9:31a081eba46087ca",
+       "similarity": 0.7593,
+       "words": 30
+      },
+      {
+       "reference": "2.13",
+       "revision_id": "casaubon-gutenberg-2680-2-13:038e8b3574538ce4",
+       "similarity": 0.7438,
+       "words": 57
+      },
+      {
+       "reference": "9.11",
+       "revision_id": "casaubon-gutenberg-2680-9-11:d9fece2d6f919d0c",
+       "similarity": 0.706,
+       "words": 63
+      }
+     ]
+    },
+    {
+     "id": "c3.s2",
+     "size": 19,
+     "cohesion": 0.8189,
+     "members": [
+      {
+       "reference": "8.45",
+       "revision_id": "casaubon-gutenberg-2680-8-45:9a7ab60a9d1eaef7",
+       "similarity": 0.8981,
+       "words": 275
+      },
+      {
+       "reference": "10.33",
+       "revision_id": "casaubon-gutenberg-2680-10-33:10d5da344ee4dba4",
+       "similarity": 0.8807,
+       "words": 560
+      },
+      {
+       "reference": "7.39",
+       "revision_id": "casaubon-gutenberg-2680-7-39:f389efe9aec2aa78",
+       "similarity": 0.8806,
+       "words": 248
+      },
+      {
+       "reference": "7.29",
+       "revision_id": "casaubon-gutenberg-2680-7-29:6fbb0b19875a1c84",
+       "similarity": 0.8595,
+       "words": 132
+      },
+      {
+       "reference": "4.32",
+       "revision_id": "casaubon-gutenberg-2680-4-32:0cc78f5b308a57e6",
+       "similarity": 0.8564,
+       "words": 166
+      },
+      {
+       "reference": "4.41",
+       "revision_id": "casaubon-gutenberg-2680-4-41:e9340b7806af6697",
+       "similarity": 0.8484,
+       "words": 235
+      },
+      {
+       "reference": "5.19",
+       "revision_id": "casaubon-gutenberg-2680-5-19:33aca3cf4f3d2d01",
+       "similarity": 0.8484,
+       "words": 339
+      },
+      {
+       "reference": "7.35",
+       "revision_id": "casaubon-gutenberg-2680-7-35:61aa2a11bdb2c27b",
+       "similarity": 0.836,
+       "words": 192
+      },
+      {
+       "reference": "8.34",
+       "revision_id": "casaubon-gutenberg-2680-8-34:877fc6433413fda9",
+       "similarity": 0.8306,
+       "words": 140
+      },
+      {
+       "reference": "5.16",
+       "revision_id": "casaubon-gutenberg-2680-5-16:7fb5126952ca3099",
+       "similarity": 0.8251,
+       "words": 182
+      },
+      {
+       "reference": "5.20",
+       "revision_id": "casaubon-gutenberg-2680-5-20:e13b32b4e91ac03e",
+       "similarity": 0.8078,
+       "words": 122
+      },
+      {
+       "reference": "10.3",
+       "revision_id": "casaubon-gutenberg-2680-10-3:8dc2bba343da73e2",
+       "similarity": 0.8071,
+       "words": 104
+      },
+      {
+       "reference": "7.11",
+       "revision_id": "casaubon-gutenberg-2680-7-11:061933d14e8661d6",
+       "similarity": 0.8043,
+       "words": 61
+      },
+      {
+       "reference": "8.39",
+       "revision_id": "casaubon-gutenberg-2680-8-39:0cd6803321812776",
+       "similarity": 0.78,
+       "words": 198
+      },
+      {
+       "reference": "9.41",
+       "revision_id": "casaubon-gutenberg-2680-9-41:75e4f221f58165fd",
+       "similarity": 0.7796,
+       "words": 217
+      },
+      {
+       "reference": "5.29",
+       "revision_id": "casaubon-gutenberg-2680-5-29:a3ca18117ce74ff8",
+       "similarity": 0.7756,
+       "words": 187
+      },
+      {
+       "reference": "8.41",
+       "revision_id": "casaubon-gutenberg-2680-8-41:25c3f166dad06473",
+       "similarity": 0.7671,
+       "words": 84
+      },
+      {
+       "reference": "8.26",
+       "revision_id": "casaubon-gutenberg-2680-8-26:5c4091f79b7f27eb",
+       "similarity": 0.7668,
+       "words": 81
+      },
+      {
+       "reference": "4.7",
+       "revision_id": "casaubon-gutenberg-2680-4-7:8c08b4786f6ccdd6",
+       "similarity": 0.7073,
+       "words": 65
+      }
+     ]
+    },
+    {
+     "id": "c3.s3",
+     "size": 8,
+     "cohesion": 0.8424,
+     "members": [
+      {
+       "reference": "2.2",
+       "revision_id": "casaubon-gutenberg-2680-2-2:b4e5a31c15d78e4d",
+       "similarity": 0.8981,
+       "words": 145
+      },
+      {
+       "reference": "6.27",
+       "revision_id": "casaubon-gutenberg-2680-6-27:653630e9d2620a98",
+       "similarity": 0.8787,
+       "words": 135
+      },
+      {
+       "reference": "10.8",
+       "revision_id": "casaubon-gutenberg-2680-10-8:31465349ee7d9039",
+       "similarity": 0.8591,
+       "words": 604
+      },
+      {
+       "reference": "3.5",
+       "revision_id": "casaubon-gutenberg-2680-3-5:d178c545a16d83f7",
+       "similarity": 0.8413,
+       "words": 120
+      },
+      {
+       "reference": "5.25",
+       "revision_id": "casaubon-gutenberg-2680-5-25:e3903de9067b3491",
+       "similarity": 0.8345,
+       "words": 129
+      },
+      {
+       "reference": "6.28",
+       "revision_id": "casaubon-gutenberg-2680-6-28:bab006273f554cc5",
+       "similarity": 0.8249,
+       "words": 275
+      },
+      {
+       "reference": "4.26",
+       "revision_id": "casaubon-gutenberg-2680-4-26:27ba78b140c90d5f",
+       "similarity": 0.8212,
+       "words": 54
+      },
+      {
+       "reference": "1.14",
+       "revision_id": "casaubon-gutenberg-2680-1-14:18306b3100bfaca0",
+       "similarity": 0.781,
+       "words": 779
+      }
+     ]
+    },
+    {
+     "id": "c3.s4",
+     "size": 18,
+     "cohesion": 0.8584,
+     "members": [
+      {
+       "reference": "12.1",
+       "revision_id": "casaubon-gutenberg-2680-12-1:ce913012aa143a8c",
+       "similarity": 0.9011,
+       "words": 260
+      },
+      {
+       "reference": "9.29",
+       "revision_id": "casaubon-gutenberg-2680-9-29:d3b902bc75b2c527",
+       "similarity": 0.8993,
+       "words": 239
+      },
+      {
+       "reference": "7.31",
+       "revision_id": "casaubon-gutenberg-2680-7-31:e1f27c728d3f1267",
+       "similarity": 0.8907,
+       "words": 267
+      },
+      {
+       "reference": "5.27",
+       "revision_id": "casaubon-gutenberg-2680-5-27:1c98e61c7e02b9c9",
+       "similarity": 0.8891,
+       "words": 237
+      },
+      {
+       "reference": "2.8",
+       "revision_id": "casaubon-gutenberg-2680-2-8:6e55d15dd2085e0f",
+       "similarity": 0.881,
+       "words": 323
+      },
+      {
+       "reference": "7.16",
+       "revision_id": "casaubon-gutenberg-2680-7-16:f5bcf982a6876c1d",
+       "similarity": 0.8791,
+       "words": 297
+      },
+      {
+       "reference": "12.15",
+       "revision_id": "casaubon-gutenberg-2680-12-15:f15da171e87f3212",
+       "similarity": 0.8657,
+       "words": 128
+      },
+      {
+       "reference": "12.18",
+       "revision_id": "casaubon-gutenberg-2680-12-18:c89c02d2793a8f1b",
+       "similarity": 0.8643,
+       "words": 193
+      },
+      {
+       "reference": "4.21",
+       "revision_id": "casaubon-gutenberg-2680-4-21:c2b1352ea60bad3b",
+       "similarity": 0.8608,
+       "words": 182
+      },
+      {
+       "reference": "3.10",
+       "revision_id": "casaubon-gutenberg-2680-3-10:9c4fda389c2e8f4f",
+       "similarity": 0.8572,
+       "words": 208
+      },
+      {
+       "reference": "8.4",
+       "revision_id": "casaubon-gutenberg-2680-8-4:08eaa0d494e27b95",
+       "similarity": 0.8463,
+       "words": 136
+      },
+      {
+       "reference": "2.15",
+       "revision_id": "casaubon-gutenberg-2680-2-15:fbbc2548aeea49fe",
+       "similarity": 0.8454,
+       "words": 250
+      },
+      {
+       "reference": "7.3",
+       "revision_id": "casaubon-gutenberg-2680-7-3:c21f8803e3cfc597",
+       "similarity": 0.8396,
+       "words": 169
+      },
+      {
+       "reference": "6.21",
+       "revision_id": "casaubon-gutenberg-2680-6-21:4e034e9349749cb7",
+       "similarity": 0.8345,
+       "words": 138
+      },
+      {
+       "reference": "1.16",
+       "revision_id": "casaubon-gutenberg-2680-1-16:d82df86626a8f061",
+       "similarity": 0.8345,
+       "words": 188
+      },
+      {
+       "reference": "5.10",
+       "revision_id": "casaubon-gutenberg-2680-5-10:c5856429eb8ecd57",
+       "similarity": 0.831,
+       "words": 77
+      },
+      {
+       "reference": "12.19",
+       "revision_id": "casaubon-gutenberg-2680-12-19:d1186681ac53db1a",
+       "similarity": 0.8202,
+       "words": 195
+      },
+      {
+       "reference": "12.24",
+       "revision_id": "casaubon-gutenberg-2680-12-24:6f09f735a87d2f34",
+       "similarity": 0.8112,
+       "words": 110
+      }
+     ]
+    },
+    {
+     "id": "c3.s5",
+     "size": 16,
+     "cohesion": 0.7933,
+     "members": [
+      {
+       "reference": "5.9",
+       "revision_id": "casaubon-gutenberg-2680-5-9:d441511832c3fa1c",
+       "similarity": 0.8745,
+       "words": 527
+      },
+      {
+       "reference": "8.1",
+       "revision_id": "casaubon-gutenberg-2680-8-1:10a02c005848cfd6",
+       "similarity": 0.8664,
+       "words": 334
+      },
+      {
+       "reference": "10.9",
+       "revision_id": "casaubon-gutenberg-2680-10-9:2f8973116571b3c4",
+       "similarity": 0.8438,
+       "words": 248
+      },
+      {
+       "reference": "12.6",
+       "revision_id": "casaubon-gutenberg-2680-12-6:5e6894f697f42bb1",
+       "similarity": 0.8415,
+       "words": 212
+      },
+      {
+       "reference": "3.11",
+       "revision_id": "casaubon-gutenberg-2680-3-11:0f09196477e74538",
+       "similarity": 0.8314,
+       "words": 198
+      },
+      {
+       "reference": "10.11",
+       "revision_id": "casaubon-gutenberg-2680-10-11:7283fd1338d7e359",
+       "similarity": 0.8024,
+       "words": 62
+      },
+      {
+       "reference": "6.11",
+       "revision_id": "casaubon-gutenberg-2680-6-11:acbfd0b1021bc79b",
+       "similarity": 0.8001,
+       "words": 234
+      },
+      {
+       "reference": "9.28",
+       "revision_id": "casaubon-gutenberg-2680-9-28:fcbe2d638cea5e56",
+       "similarity": 0.7865,
+       "words": 220
+      },
+      {
+       "reference": "10.32",
+       "revision_id": "casaubon-gutenberg-2680-10-32:207e9821edce42fd",
+       "similarity": 0.7803,
+       "words": 94
+      },
+      {
+       "reference": "7.38",
+       "revision_id": "casaubon-gutenberg-2680-7-38:cab36bed11e4f042",
+       "similarity": 0.7764,
+       "words": 81
+      },
+      {
+       "reference": "11.4",
+       "revision_id": "casaubon-gutenberg-2680-11-4:21b8bb9bcc9fa76a",
+       "similarity": 0.7662,
+       "words": 69
+      },
+      {
+       "reference": "5.12",
+       "revision_id": "casaubon-gutenberg-2680-5-12:3198a0ab0265cc16",
+       "similarity": 0.7591,
+       "words": 246
+      },
+      {
+       "reference": "11.6",
+       "revision_id": "casaubon-gutenberg-2680-11-6:9778759f70ed993e",
+       "similarity": 0.7536,
+       "words": 31
+      },
+      {
+       "reference": "3.14",
+       "revision_id": "casaubon-gutenberg-2680-3-14:97adcbb8a3be8205",
+       "similarity": 0.7535,
+       "words": 92
+      },
+      {
+       "reference": "10.38",
+       "revision_id": "casaubon-gutenberg-2680-10-38:5b41aa41f5d09c09",
+       "similarity": 0.7533,
+       "words": 158
+      },
+      {
+       "reference": "6.18",
+       "revision_id": "casaubon-gutenberg-2680-6-18:2d9a4f7f3a9a523a",
+       "similarity": 0.7042,
+       "words": 39
+      }
+     ]
+    },
+    {
+     "id": "c3.s6",
+     "size": 12,
+     "cohesion": 0.8304,
+     "members": [
+      {
+       "reference": "4.3",
+       "revision_id": "casaubon-gutenberg-2680-4-3:f4abac8b9d3090e9",
+       "similarity": 0.8951,
+       "words": 710
+      },
+      {
+       "reference": "3.4",
+       "revision_id": "casaubon-gutenberg-2680-3-4:24f8752d3b88f651",
+       "similarity": 0.8891,
+       "words": 601
+      },
+      {
+       "reference": "12.2",
+       "revision_id": "casaubon-gutenberg-2680-12-2:21d181a6d48c6210",
+       "similarity": 0.8773,
+       "words": 348
+      },
+      {
+       "reference": "2.11",
+       "revision_id": "casaubon-gutenberg-2680-2-11:eed7700b41cba0b7",
+       "similarity": 0.866,
+       "words": 226
+      },
+      {
+       "reference": "7.20",
+       "revision_id": "casaubon-gutenberg-2680-7-20:26e70ff3a64534b8",
+       "similarity": 0.8449,
+       "words": 125
+      },
+      {
+       "reference": "10.24",
+       "revision_id": "casaubon-gutenberg-2680-10-24:721a383f9b90a1ba",
+       "similarity": 0.8393,
+       "words": 216
+      },
+      {
+       "reference": "6.15",
+       "revision_id": "casaubon-gutenberg-2680-6-15:6a59d2aedbd5573a",
+       "similarity": 0.8319,
+       "words": 435
+      },
+      {
+       "reference": "10.1",
+       "revision_id": "casaubon-gutenberg-2680-10-1:70fc949859c35dce",
+       "similarity": 0.815,
+       "words": 268
+      },
+      {
+       "reference": "2.4",
+       "revision_id": "casaubon-gutenberg-2680-2-4:bca777baf892cfc3",
+       "similarity": 0.7917,
+       "words": 67
+      },
+      {
+       "reference": "10.13",
+       "revision_id": "casaubon-gutenberg-2680-10-13:fa85222c3fed35c4",
+       "similarity": 0.7854,
+       "words": 154
+      },
+      {
+       "reference": "11.10",
+       "revision_id": "casaubon-gutenberg-2680-11-10:778b7518fd6bb400",
+       "similarity": 0.7783,
+       "words": 69
+      },
+      {
+       "reference": "4.15",
+       "revision_id": "casaubon-gutenberg-2680-4-15:b966c95d74440e89",
+       "similarity": 0.751,
+       "words": 69
+      }
+     ]
+    },
+    {
+     "id": "c3.s7",
+     "size": 14,
+     "cohesion": 0.8117,
+     "members": [
+      {
+       "reference": "3.7",
+       "revision_id": "casaubon-gutenberg-2680-3-7:323bf6cf412a7243",
+       "similarity": 0.8699,
+       "words": 392
+      },
+      {
+       "reference": "3.13",
+       "revision_id": "casaubon-gutenberg-2680-3-13:49d0d3eeb5cad6b7",
+       "similarity": 0.8518,
+       "words": 79
+      },
+      {
+       "reference": "11.15",
+       "revision_id": "casaubon-gutenberg-2680-11-15:8d675647bda6296c",
+       "similarity": 0.8468,
+       "words": 213
+      },
+      {
+       "reference": "3.8",
+       "revision_id": "casaubon-gutenberg-2680-3-8:5eff356a33fd66a9",
+       "similarity": 0.8454,
+       "words": 178
+      },
+      {
+       "reference": "12.22",
+       "revision_id": "casaubon-gutenberg-2680-12-22:6fd6326d0927bf15",
+       "similarity": 0.8377,
+       "words": 77
+      },
+      {
+       "reference": "10.2",
+       "revision_id": "casaubon-gutenberg-2680-10-2:335dbcb10779bb93",
+       "similarity": 0.8349,
+       "words": 115
+      },
+      {
+       "reference": "2.6",
+       "revision_id": "casaubon-gutenberg-2680-2-6:895a41dd40ed6074",
+       "similarity": 0.8275,
+       "words": 69
+      },
+      {
+       "reference": "8.30",
+       "revision_id": "casaubon-gutenberg-2680-8-30:c1b125cc29f9961d",
+       "similarity": 0.8094,
+       "words": 160
+      },
+      {
+       "reference": "4.20",
+       "revision_id": "casaubon-gutenberg-2680-4-20:35998324b35e3aed",
+       "similarity": 0.8073,
+       "words": 176
+      },
+      {
+       "reference": "10.6",
+       "revision_id": "casaubon-gutenberg-2680-10-6:5574865d0a6bd831",
+       "similarity": 0.802,
+       "words": 349
+      },
+      {
+       "reference": "5.28",
+       "revision_id": "casaubon-gutenberg-2680-5-28:808e7e0b11c8d9f1",
+       "similarity": 0.7966,
+       "words": 87
+      },
+      {
+       "reference": "4.43",
+       "revision_id": "casaubon-gutenberg-2680-4-43:1202db0c57fcc338",
+       "similarity": 0.7748,
+       "words": 52
+      },
+      {
+       "reference": "6.53",
+       "revision_id": "casaubon-gutenberg-2680-6-53:5bf2155f6eb28069",
+       "similarity": 0.7633,
+       "words": 26
+      },
+      {
+       "reference": "6.24",
+       "revision_id": "casaubon-gutenberg-2680-6-24:116be9a30874570f",
+       "similarity": 0.6968,
+       "words": 121
+      }
+     ]
+    },
+    {
+     "id": "c3.s8",
+     "size": 5,
+     "cohesion": 0.7445,
+     "members": [
+      {
+       "reference": "12.21",
+       "revision_id": "casaubon-gutenberg-2680-12-21:e1d53bead6d901fe",
+       "similarity": 0.7899,
+       "words": 94
+      },
+      {
+       "reference": "5.21",
+       "revision_id": "casaubon-gutenberg-2680-5-21:6b321b99417c46a6",
+       "similarity": 0.7677,
+       "words": 59
+      },
+      {
+       "reference": "4.13",
+       "revision_id": "casaubon-gutenberg-2680-4-13:75f910449eb77cb8",
+       "similarity": 0.7311,
+       "words": 44
+      },
+      {
+       "reference": "11.25",
+       "revision_id": "casaubon-gutenberg-2680-11-25:01960457d94d4ee2",
+       "similarity": 0.723,
+       "words": 63
+      },
+      {
+       "reference": "11.24",
+       "revision_id": "casaubon-gutenberg-2680-11-24:c15ad6a5f6707df2",
+       "similarity": 0.7112,
+       "words": 29
+      }
+     ]
+    },
+    {
+     "id": "c3.s9",
+     "size": 8,
+     "cohesion": 0.8242,
+     "members": [
+      {
+       "reference": "6.36",
+       "revision_id": "casaubon-gutenberg-2680-6-36:022f6f0bb61e0b16",
+       "similarity": 0.8702,
+       "words": 170
+      },
+      {
+       "reference": "12.4",
+       "revision_id": "casaubon-gutenberg-2680-12-4:e0ff86fafb675f71",
+       "similarity": 0.842,
+       "words": 226
+      },
+      {
+       "reference": "8.15",
+       "revision_id": "casaubon-gutenberg-2680-8-15:f167c86aea0943c9",
+       "similarity": 0.8391,
+       "words": 74
+      },
+      {
+       "reference": "7.25",
+       "revision_id": "casaubon-gutenberg-2680-7-25:6885d24c52c3b916",
+       "similarity": 0.8194,
+       "words": 114
+      },
+      {
+       "reference": "7.41",
+       "revision_id": "casaubon-gutenberg-2680-7-41:b78c35aaea20cce4",
+       "similarity": 0.8133,
+       "words": 112
+      },
+      {
+       "reference": "9.40",
+       "revision_id": "casaubon-gutenberg-2680-9-40:aaffbd20258733fc",
+       "similarity": 0.8108,
+       "words": 330
+      },
+      {
+       "reference": "9.35",
+       "revision_id": "casaubon-gutenberg-2680-9-35:0a42df258f7a7c8e",
+       "similarity": 0.8021,
+       "words": 80
+      },
+      {
+       "reference": "12.9",
+       "revision_id": "casaubon-gutenberg-2680-12-9:a79f0cbd37e36d25",
+       "similarity": 0.7965,
+       "words": 55
+      }
+     ]
+    },
+    {
+     "id": "c3.s10",
+     "size": 5,
+     "cohesion": 0.7805,
+     "members": [
+      {
+       "reference": "4.24",
+       "revision_id": "casaubon-gutenberg-2680-4-24:f2a801122f24d6e4",
+       "similarity": 0.8381,
+       "words": 122
+      },
+      {
+       "reference": "2.5",
+       "revision_id": "casaubon-gutenberg-2680-2-5:498c60e72a3beae3",
+       "similarity": 0.7934,
+       "words": 44
+      },
+      {
+       "reference": "7.14",
+       "revision_id": "casaubon-gutenberg-2680-7-14:0d2414de5517e613",
+       "similarity": 0.7643,
+       "words": 84
+      },
+      {
+       "reference": "9.24",
+       "revision_id": "casaubon-gutenberg-2680-9-24:04697394d399e5c9",
+       "similarity": 0.7615,
+       "words": 47
+      },
+      {
+       "reference": "10.25",
+       "revision_id": "casaubon-gutenberg-2680-10-25:d12e3be67ab15fae",
+       "similarity": 0.7452,
+       "words": 101
+      }
+     ]
+    },
+    {
+     "id": "c3.s11",
+     "size": 10,
+     "cohesion": 0.7849,
+     "members": [
+      {
+       "reference": "9.2",
+       "revision_id": "casaubon-gutenberg-2680-9-2:4dbdb4336ead2c7b",
+       "similarity": 0.8287,
+       "words": 123
+      },
+      {
+       "reference": "10.12",
+       "revision_id": "casaubon-gutenberg-2680-10-12:df8c7209392fff99",
+       "similarity": 0.8133,
+       "words": 135
+      },
+      {
+       "reference": "4.30",
+       "revision_id": "casaubon-gutenberg-2680-4-30:ad97acbba8d005ed",
+       "similarity": 0.8099,
+       "words": 67
+      },
+      {
+       "reference": "3.9",
+       "revision_id": "casaubon-gutenberg-2680-3-9:f3a7d50e374ca04e",
+       "similarity": 0.8036,
+       "words": 76
+      },
+      {
+       "reference": "10.23",
+       "revision_id": "casaubon-gutenberg-2680-10-23:42e79c09c742f954",
+       "similarity": 0.7972,
+       "words": 72
+      },
+      {
+       "reference": "10.17",
+       "revision_id": "casaubon-gutenberg-2680-10-17:4b64966d1643b452",
+       "similarity": 0.797,
+       "words": 88
+      },
+      {
+       "reference": "7.40",
+       "revision_id": "casaubon-gutenberg-2680-7-40:96cc58da2dd12eb4",
+       "similarity": 0.7853,
+       "words": 54
+      },
+      {
+       "reference": "5.23",
+       "revision_id": "casaubon-gutenberg-2680-5-23:161bbac826d81b7e",
+       "similarity": 0.7626,
+       "words": 126
+      },
+      {
+       "reference": "6.2",
+       "revision_id": "casaubon-gutenberg-2680-6-2:66ef7f730de5943d",
+       "similarity": 0.7267,
+       "words": 56
+      },
+      {
+       "reference": "10.28",
+       "revision_id": "casaubon-gutenberg-2680-10-28:8ef1ca8c4ae9e163",
+       "similarity": 0.7247,
+       "words": 80
+      }
+     ]
+    },
+    {
+     "id": "c3.s12",
+     "size": 8,
+     "cohesion": 0.7518,
+     "members": [
+      {
+       "reference": "12.8",
+       "revision_id": "casaubon-gutenberg-2680-12-8:8ec5bea168595572",
+       "similarity": 0.8094,
+       "words": 37
+      },
+      {
+       "reference": "8.43",
+       "revision_id": "casaubon-gutenberg-2680-8-43:3dcaa5ec5065e926",
+       "similarity": 0.7838,
+       "words": 51
+      },
+      {
+       "reference": "9.5",
+       "revision_id": "casaubon-gutenberg-2680-9-5:f7c0ffc3de17e8a3",
+       "similarity": 0.7755,
+       "words": 34
+      },
+      {
+       "reference": "10.16",
+       "revision_id": "casaubon-gutenberg-2680-10-16:40740b4a14e578c0",
+       "similarity": 0.7625,
+       "words": 48
+      },
+      {
+       "reference": "8.22",
+       "revision_id": "casaubon-gutenberg-2680-8-22:46d7a57bf4a61a2d",
+       "similarity": 0.7548,
+       "words": 55
+      },
+      {
+       "reference": "5.30",
+       "revision_id": "casaubon-gutenberg-2680-5-30:84f0e0ef7d6fb486",
+       "similarity": 0.7501,
+       "words": 53
+      },
+      {
+       "reference": "5.2",
+       "revision_id": "casaubon-gutenberg-2680-5-2:e997d904d7c90fac",
+       "similarity": 0.7005,
+       "words": 27
+      },
+      {
+       "reference": "8.31",
+       "revision_id": "casaubon-gutenberg-2680-8-31:62e308d476c40427",
+       "similarity": 0.6781,
+       "words": 30
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c4",
+   "size": 23,
+   "cohesion": 0.7921,
+   "central": [
+    "10.7",
+    "7.27",
+    "6.14",
+    "4.29",
+    "10.19"
+   ],
+   "sections": [
+    {
+     "id": "c4.s1",
+     "size": 15,
+     "cohesion": 0.8294,
+     "members": [
+      {
+       "reference": "10.7",
+       "revision_id": "casaubon-gutenberg-2680-10-7:e97e6a52514895fe",
+       "similarity": 0.8805,
+       "words": 521
+      },
+      {
+       "reference": "7.27",
+       "revision_id": "casaubon-gutenberg-2680-7-27:20f849154d6ad722",
+       "similarity": 0.8781,
+       "words": 204
+      },
+      {
+       "reference": "6.14",
+       "revision_id": "casaubon-gutenberg-2680-6-14:cb2303a16a625555",
+       "similarity": 0.8703,
+       "words": 198
+      },
+      {
+       "reference": "4.29",
+       "revision_id": "casaubon-gutenberg-2680-4-29:5af935fadeade1ef",
+       "similarity": 0.8628,
+       "words": 108
+      },
+      {
+       "reference": "10.19",
+       "revision_id": "casaubon-gutenberg-2680-10-19:4edff44471bb06e0",
+       "similarity": 0.8567,
+       "words": 119
+      },
+      {
+       "reference": "9.31",
+       "revision_id": "casaubon-gutenberg-2680-9-31:1d90eeb33fd29475",
+       "similarity": 0.8557,
+       "words": 110
+      },
+      {
+       "reference": "9.27",
+       "revision_id": "casaubon-gutenberg-2680-9-27:50a94823dd7e611e",
+       "similarity": 0.8333,
+       "words": 94
+      },
+      {
+       "reference": "9.17",
+       "revision_id": "casaubon-gutenberg-2680-9-17:65c19321ac24c511",
+       "similarity": 0.8282,
+       "words": 35
+      },
+      {
+       "reference": "2.9",
+       "revision_id": "casaubon-gutenberg-2680-2-9:3885cca473c97ca9",
+       "similarity": 0.824,
+       "words": 87
+      },
+      {
+       "reference": "12.25",
+       "revision_id": "casaubon-gutenberg-2680-12-25:f8cd1b588960f233",
+       "similarity": 0.8129,
+       "words": 118
+      },
+      {
+       "reference": "6.34",
+       "revision_id": "casaubon-gutenberg-2680-6-34:d3329b3f17fb1d51",
+       "similarity": 0.8056,
+       "words": 101
+      },
+      {
+       "reference": "4.35",
+       "revision_id": "casaubon-gutenberg-2680-4-35:a2cbcd372c3e35c1",
+       "similarity": 0.8044,
+       "words": 67
+      },
+      {
+       "reference": "8.5",
+       "revision_id": "casaubon-gutenberg-2680-8-5:a5ecb9d953d67fe7",
+       "similarity": 0.7827,
+       "words": 60
+      },
+      {
+       "reference": "9.33",
+       "revision_id": "casaubon-gutenberg-2680-9-33:08ce1852f72b7a96",
+       "similarity": 0.7761,
+       "words": 117
+      },
+      {
+       "reference": "8.16",
+       "revision_id": "casaubon-gutenberg-2680-8-16:71839926292f0838",
+       "similarity": 0.7694,
+       "words": 62
+      }
+     ]
+    },
+    {
+     "id": "c4.s2",
+     "size": 8,
+     "cohesion": 0.787,
+     "members": [
+      {
+       "reference": "7.17",
+       "revision_id": "casaubon-gutenberg-2680-7-17:f409671dd5b62120",
+       "similarity": 0.8453,
+       "words": 106
+      },
+      {
+       "reference": "6.4",
+       "revision_id": "casaubon-gutenberg-2680-6-4:faf25b5706532a54",
+       "similarity": 0.835,
+       "words": 95
+      },
+      {
+       "reference": "5.13",
+       "revision_id": "casaubon-gutenberg-2680-5-13:fd439998a3e31bdc",
+       "similarity": 0.8227,
+       "words": 111
+      },
+      {
+       "reference": "7.7",
+       "revision_id": "casaubon-gutenberg-2680-7-7:c0f34cd3fb5019cb",
+       "similarity": 0.8182,
+       "words": 56
+      },
+      {
+       "reference": "4.12",
+       "revision_id": "casaubon-gutenberg-2680-4-12:041e3511d466e2e1",
+       "similarity": 0.7796,
+       "words": 73
+      },
+      {
+       "reference": "4.5",
+       "revision_id": "casaubon-gutenberg-2680-4-5:684db4a3eb5089b9",
+       "similarity": 0.7734,
+       "words": 63
+      },
+      {
+       "reference": "5.4",
+       "revision_id": "casaubon-gutenberg-2680-5-4:a715fa78cc138dfa",
+       "similarity": 0.7406,
+       "words": 105
+      },
+      {
+       "reference": "8.18",
+       "revision_id": "casaubon-gutenberg-2680-8-18:2571c1634cf1d512",
+       "similarity": 0.6812,
+       "words": 24
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5",
+   "size": 33,
+   "cohesion": 0.7868,
+   "central": [
+    "4.39",
+    "6.42",
+    "12.27",
+    "4.42",
+    "9.3"
+   ],
+   "sections": [
+    {
+     "id": "c5.s1",
+     "size": 17,
+     "cohesion": 0.8129,
+     "members": [
+      {
+       "reference": "4.39",
+       "revision_id": "casaubon-gutenberg-2680-4-39:7b678057ce858476",
+       "similarity": 0.8897,
+       "words": 283
+      },
+      {
+       "reference": "6.42",
+       "revision_id": "casaubon-gutenberg-2680-6-42:e7a3c2d35e5c4680",
+       "similarity": 0.8887,
+       "words": 219
+      },
+      {
+       "reference": "4.28",
+       "revision_id": "casaubon-gutenberg-2680-4-28:968446e9819e571d",
+       "similarity": 0.8679,
+       "words": 224
+      },
+      {
+       "reference": "10.31",
+       "revision_id": "casaubon-gutenberg-2680-10-31:624c5b046e9ffaba",
+       "similarity": 0.8642,
+       "words": 174
+      },
+      {
+       "reference": "10.34",
+       "revision_id": "casaubon-gutenberg-2680-10-34:eef94b8499ee1373",
+       "similarity": 0.8573,
+       "words": 306
+      },
+      {
+       "reference": "4.27",
+       "revision_id": "casaubon-gutenberg-2680-4-27:8ede0bf062922914",
+       "similarity": 0.8368,
+       "words": 244
+      },
+      {
+       "reference": "12.20",
+       "revision_id": "casaubon-gutenberg-2680-12-20:35a675d387c4748c",
+       "similarity": 0.8303,
+       "words": 195
+      },
+      {
+       "reference": "8.24",
+       "revision_id": "casaubon-gutenberg-2680-8-24:b9a16819c5084dce",
+       "similarity": 0.8236,
+       "words": 164
+      },
+      {
+       "reference": "8.19",
+       "revision_id": "casaubon-gutenberg-2680-8-19:30059d54b50ea375",
+       "similarity": 0.8181,
+       "words": 230
+      },
+      {
+       "reference": "10.27",
+       "revision_id": "casaubon-gutenberg-2680-10-27:3b22474ac73e08cd",
+       "similarity": 0.8098,
+       "words": 130
+      },
+      {
+       "reference": "3.3",
+       "revision_id": "casaubon-gutenberg-2680-3-3:d079e096e268c3ab",
+       "similarity": 0.8035,
+       "words": 198
+      },
+      {
+       "reference": "4.6",
+       "revision_id": "casaubon-gutenberg-2680-4-6:8f9b6151e3feddcb",
+       "similarity": 0.7935,
+       "words": 71
+      },
+      {
+       "reference": "8.35",
+       "revision_id": "casaubon-gutenberg-2680-8-35:98d7c6ef9ff6542b",
+       "similarity": 0.7856,
+       "words": 101
+      },
+      {
+       "reference": "4.37",
+       "revision_id": "casaubon-gutenberg-2680-4-37:8555a0f9379d7b19",
+       "similarity": 0.7797,
+       "words": 163
+      },
+      {
+       "reference": "7.15",
+       "revision_id": "casaubon-gutenberg-2680-7-15:6f50a39ab7c8f6da",
+       "similarity": 0.7626,
+       "words": 123
+      },
+      {
+       "reference": "11.30",
+       "revision_id": "casaubon-gutenberg-2680-11-30:030c54bd216dbf45",
+       "similarity": 0.7264,
+       "words": 104
+      },
+      {
+       "reference": "8.29",
+       "revision_id": "casaubon-gutenberg-2680-8-29:e9d35487b84307a4",
+       "similarity": 0.681,
+       "words": 150
+      }
+     ]
+    },
+    {
+     "id": "c5.s2",
+     "size": 8,
+     "cohesion": 0.8355,
+     "members": [
+      {
+       "reference": "3.1",
+       "revision_id": "casaubon-gutenberg-2680-3-1:33c3a57b609c3016",
+       "similarity": 0.873,
+       "words": 225
+      },
+      {
+       "reference": "2.12",
+       "revision_id": "casaubon-gutenberg-2680-2-12:ba12f45ae39bafeb",
+       "similarity": 0.8708,
+       "words": 294
+      },
+      {
+       "reference": "4.42",
+       "revision_id": "casaubon-gutenberg-2680-4-42:be0bc4fa5fb6fea6",
+       "similarity": 0.8618,
+       "words": 188
+      },
+      {
+       "reference": "2.1",
+       "revision_id": "casaubon-gutenberg-2680-2-1:b5a14ffe5662a06b",
+       "similarity": 0.8478,
+       "words": 117
+      },
+      {
+       "reference": "4.14",
+       "revision_id": "casaubon-gutenberg-2680-4-14:4065f69cf51c4329",
+       "similarity": 0.8174,
+       "words": 23
+      },
+      {
+       "reference": "3.15",
+       "revision_id": "casaubon-gutenberg-2680-3-15:4c96365274806bf0",
+       "similarity": 0.8164,
+       "words": 67
+      },
+      {
+       "reference": "4.38",
+       "revision_id": "casaubon-gutenberg-2680-4-38:ab0ac72d3ac431ff",
+       "similarity": 0.8089,
+       "words": 70
+      },
+      {
+       "reference": "6.44",
+       "revision_id": "casaubon-gutenberg-2680-6-44:c3fd53b52b36a7c8",
+       "similarity": 0.7881,
+       "words": 60
+      }
+     ]
+    },
+    {
+     "id": "c5.s3",
+     "size": 8,
+     "cohesion": 0.8394,
+     "members": [
+      {
+       "reference": "9.3",
+       "revision_id": "casaubon-gutenberg-2680-9-3:45243c1b449355db",
+       "similarity": 0.9075,
+       "words": 381
+      },
+      {
+       "reference": "12.27",
+       "revision_id": "casaubon-gutenberg-2680-12-27:07defa54343a2258",
+       "similarity": 0.9019,
+       "words": 305
+      },
+      {
+       "reference": "10.36",
+       "revision_id": "casaubon-gutenberg-2680-10-36:e4752724c4605028",
+       "similarity": 0.8644,
+       "words": 332
+      },
+      {
+       "reference": "2.10",
+       "revision_id": "casaubon-gutenberg-2680-2-10:d5e63c9ca950ce8a",
+       "similarity": 0.8629,
+       "words": 112
+      },
+      {
+       "reference": "12.17",
+       "revision_id": "casaubon-gutenberg-2680-12-17:2d0dcadf36b213f2",
+       "similarity": 0.8455,
+       "words": 300
+      },
+      {
+       "reference": "9.19",
+       "revision_id": "casaubon-gutenberg-2680-9-19:385253ec2b44047b",
+       "similarity": 0.8246,
+       "words": 194
+      },
+      {
+       "reference": "8.55",
+       "revision_id": "casaubon-gutenberg-2680-8-55:9e68fa6c11d4acee",
+       "similarity": 0.7907,
+       "words": 53
+      },
+      {
+       "reference": "6.26",
+       "revision_id": "casaubon-gutenberg-2680-6-26:5d4ba1c7bd42471b",
+       "similarity": 0.7175,
+       "words": 26
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6",
+   "size": 65,
+   "cohesion": 0.7272,
+   "central": [
+    "7.6",
+    "3.12",
+    "8.6",
+    "7.30",
+    "9.26"
+   ],
+   "sections": [
+    {
+     "id": "c6.s1",
+     "size": 10,
+     "cohesion": 0.8018,
+     "members": [
+      {
+       "reference": "9.7",
+       "revision_id": "casaubon-gutenberg-2680-9-7:712b4253ce7f747f",
+       "similarity": 0.8619,
+       "words": 479
+      },
+      {
+       "reference": "5.15",
+       "revision_id": "casaubon-gutenberg-2680-5-15:e1528374c14d228f",
+       "similarity": 0.8418,
+       "words": 206
+      },
+      {
+       "reference": "8.32",
+       "revision_id": "casaubon-gutenberg-2680-8-32:075990ae718e5ea1",
+       "similarity": 0.8291,
+       "words": 239
+      },
+      {
+       "reference": "7.10",
+       "revision_id": "casaubon-gutenberg-2680-7-10:147f5c24f71051d4",
+       "similarity": 0.8122,
+       "words": 130
+      },
+      {
+       "reference": "4.4",
+       "revision_id": "casaubon-gutenberg-2680-4-4:623714b2cb4ecc3d",
+       "similarity": 0.8121,
+       "words": 192
+      },
+      {
+       "reference": "9.21",
+       "revision_id": "casaubon-gutenberg-2680-9-21:8a1ad7dff9ca2991",
+       "similarity": 0.811,
+       "words": 91
+      },
+      {
+       "reference": "12.23",
+       "revision_id": "casaubon-gutenberg-2680-12-23:84e4d798ce555213",
+       "similarity": 0.8036,
+       "words": 172
+      },
+      {
+       "reference": "11.19",
+       "revision_id": "casaubon-gutenberg-2680-11-19:f80366095047f5f8",
+       "similarity": 0.7625,
+       "words": 147
+      },
+      {
+       "reference": "8.52",
+       "revision_id": "casaubon-gutenberg-2680-8-52:401971829b84aef0",
+       "similarity": 0.7457,
+       "words": 86
+      },
+      {
+       "reference": "11.7",
+       "revision_id": "casaubon-gutenberg-2680-11-7:842c701192f4d70a",
+       "similarity": 0.7379,
+       "words": 167
+      }
+     ]
+    },
+    {
+     "id": "c6.s2",
+     "size": 15,
+     "cohesion": 0.7797,
+     "members": [
+      {
+       "reference": "5.14",
+       "revision_id": "casaubon-gutenberg-2680-5-14:84c7a9003516cd1f",
+       "similarity": 0.8567,
+       "words": 283
+      },
+      {
+       "reference": "8.6",
+       "revision_id": "casaubon-gutenberg-2680-8-6:aa1c91f224cad4d6",
+       "similarity": 0.8531,
+       "words": 246
+      },
+      {
+       "reference": "7.30",
+       "revision_id": "casaubon-gutenberg-2680-7-30:7e5fa4824fa00890",
+       "similarity": 0.8427,
+       "words": 273
+      },
+      {
+       "reference": "11.18",
+       "revision_id": "casaubon-gutenberg-2680-11-18:b520e2a1e5177d86",
+       "similarity": 0.8217,
+       "words": 283
+      },
+      {
+       "reference": "5.17",
+       "revision_id": "casaubon-gutenberg-2680-5-17:d1eefcb27de496f1",
+       "similarity": 0.8032,
+       "words": 172
+      },
+      {
+       "reference": "8.25",
+       "revision_id": "casaubon-gutenberg-2680-8-25:1cc862277895a084",
+       "similarity": 0.7943,
+       "words": 136
+      },
+      {
+       "reference": "8.33",
+       "revision_id": "casaubon-gutenberg-2680-8-33:e37efc80ed80b7ab",
+       "similarity": 0.7857,
+       "words": 140
+      },
+      {
+       "reference": "6.31",
+       "revision_id": "casaubon-gutenberg-2680-6-31:f9160207481c06b5",
+       "similarity": 0.7846,
+       "words": 96
+      },
+      {
+       "reference": "4.1",
+       "revision_id": "casaubon-gutenberg-2680-4-1:2c9e0e90fd634c4f",
+       "similarity": 0.7831,
+       "words": 166
+      },
+      {
+       "reference": "11.9",
+       "revision_id": "casaubon-gutenberg-2680-11-9:f26db2914969fe63",
+       "similarity": 0.768,
+       "words": 114
+      },
+      {
+       "reference": "9.1",
+       "revision_id": "casaubon-gutenberg-2680-9-1:aab62b5aed3dfc58",
+       "similarity": 0.7391,
+       "words": 575
+      },
+      {
+       "reference": "7.8",
+       "revision_id": "casaubon-gutenberg-2680-7-8:1c8614acbf66b634",
+       "similarity": 0.7208,
+       "words": 16
+      },
+      {
+       "reference": "7.42",
+       "revision_id": "casaubon-gutenberg-2680-7-42:b516eca1c6265ed8",
+       "similarity": 0.7192,
+       "words": 33
+      },
+      {
+       "reference": "8.37",
+       "revision_id": "casaubon-gutenberg-2680-8-37:97079096462afecd",
+       "similarity": 0.7143,
+       "words": 35
+      },
+      {
+       "reference": "9.14",
+       "revision_id": "casaubon-gutenberg-2680-9-14:aee53e4c6105f7b0",
+       "similarity": 0.7095,
+       "words": 32
+      }
+     ]
+    },
+    {
+     "id": "c6.s3",
+     "size": 15,
+     "cohesion": 0.8315,
+     "members": [
+      {
+       "reference": "9.26",
+       "revision_id": "casaubon-gutenberg-2680-9-26:a93c52981f6dbc40",
+       "similarity": 0.8813,
+       "words": 131
+      },
+      {
+       "reference": "7.6",
+       "revision_id": "casaubon-gutenberg-2680-7-6:d7bb32a4d25aa8be",
+       "similarity": 0.878,
+       "words": 204
+      },
+      {
+       "reference": "5.8",
+       "revision_id": "casaubon-gutenberg-2680-5-8:26c7f98298c9a3e0",
+       "similarity": 0.8671,
+       "words": 584
+      },
+      {
+       "reference": "1.17",
+       "revision_id": "casaubon-gutenberg-2680-1-17:5187aeafa320adac",
+       "similarity": 0.8533,
+       "words": 199
+      },
+      {
+       "reference": "6.35",
+       "revision_id": "casaubon-gutenberg-2680-6-35:8d4dad0b4e1ccdfb",
+       "similarity": 0.8436,
+       "words": 160
+      },
+      {
+       "reference": "7.22",
+       "revision_id": "casaubon-gutenberg-2680-7-22:c11510e3b6ec26cf",
+       "similarity": 0.8431,
+       "words": 207
+      },
+      {
+       "reference": "3.12",
+       "revision_id": "casaubon-gutenberg-2680-3-12:00a39def7fa5b6aa",
+       "similarity": 0.8383,
+       "words": 158
+      },
+      {
+       "reference": "4.36",
+       "revision_id": "casaubon-gutenberg-2680-4-36:2802eb827292effe",
+       "similarity": 0.8249,
+       "words": 130
+      },
+      {
+       "reference": "12.11",
+       "revision_id": "casaubon-gutenberg-2680-12-11:58005b70fe0c1e2c",
+       "similarity": 0.8226,
+       "words": 172
+      },
+      {
+       "reference": "6.39",
+       "revision_id": "casaubon-gutenberg-2680-6-39:b580d3b8b1c6e8b8",
+       "similarity": 0.8212,
+       "words": 333
+      },
+      {
+       "reference": "4.8",
+       "revision_id": "casaubon-gutenberg-2680-4-8:e2f2737f67db091d",
+       "similarity": 0.8209,
+       "words": 103
+      },
+      {
+       "reference": "3.17",
+       "revision_id": "casaubon-gutenberg-2680-3-17:cde204ac70c2a9f6",
+       "similarity": 0.8173,
+       "words": 255
+      },
+      {
+       "reference": "9.38",
+       "revision_id": "casaubon-gutenberg-2680-9-38:a91b34548c342800",
+       "similarity": 0.8066,
+       "words": 84
+      },
+      {
+       "reference": "10.5",
+       "revision_id": "casaubon-gutenberg-2680-10-5:fab69c5ad48db72c",
+       "similarity": 0.7783,
+       "words": 46
+      },
+      {
+       "reference": "6.40",
+       "revision_id": "casaubon-gutenberg-2680-6-40:16efdf637bbcb8aa",
+       "similarity": 0.7758,
+       "words": 87
+      }
+     ]
+    },
+    {
+     "id": "c6.s4",
+     "size": 12,
+     "cohesion": 0.7647,
+     "members": [
+      {
+       "reference": "6.8",
+       "revision_id": "casaubon-gutenberg-2680-6-8:e7267b7609e45b67",
+       "similarity": 0.8261,
+       "words": 167
+      },
+      {
+       "reference": "7.44",
+       "revision_id": "casaubon-gutenberg-2680-7-44:5bcef44024ddeef1",
+       "similarity": 0.8195,
+       "words": 101
+      },
+      {
+       "reference": "5.24",
+       "revision_id": "casaubon-gutenberg-2680-5-24:20bfa024d5f9035a",
+       "similarity": 0.8039,
+       "words": 84
+      },
+      {
+       "reference": "6.1",
+       "revision_id": "casaubon-gutenberg-2680-6-1:b887387008ca28b8",
+       "similarity": 0.7893,
+       "words": 65
+      },
+      {
+       "reference": "4.33",
+       "revision_id": "casaubon-gutenberg-2680-4-33:94226f3c216caad4",
+       "similarity": 0.7697,
+       "words": 72
+      },
+      {
+       "reference": "6.23",
+       "revision_id": "casaubon-gutenberg-2680-6-23:b00dc93457525e6d",
+       "similarity": 0.7641,
+       "words": 61
+      },
+      {
+       "reference": "4.22",
+       "revision_id": "casaubon-gutenberg-2680-4-22:7d16b2b383f3d6b8",
+       "similarity": 0.7613,
+       "words": 92
+      },
+      {
+       "reference": "6.33",
+       "revision_id": "casaubon-gutenberg-2680-6-33:d091c4190fce4567",
+       "similarity": 0.7586,
+       "words": 140
+      },
+      {
+       "reference": "5.18",
+       "revision_id": "casaubon-gutenberg-2680-5-18:3cb04871f925a810",
+       "similarity": 0.745,
+       "words": 77
+      },
+      {
+       "reference": "10.26",
+       "revision_id": "casaubon-gutenberg-2680-10-26:a8fff079b86a78d8",
+       "similarity": 0.7356,
+       "words": 164
+      },
+      {
+       "reference": "9.23",
+       "revision_id": "casaubon-gutenberg-2680-9-23:bdecb5fb09001bfb",
+       "similarity": 0.7018,
+       "words": 44
+      },
+      {
+       "reference": "6.7",
+       "revision_id": "casaubon-gutenberg-2680-6-7:e9e9c9a032b6267c",
+       "similarity": 0.7013,
+       "words": 32
+      }
+     ]
+    },
+    {
+     "id": "c6.s5",
+     "size": 7,
+     "cohesion": 0.7594,
+     "members": [
+      {
+       "reference": "3.2",
+       "revision_id": "casaubon-gutenberg-2680-3-2:bfc536973e4c9917",
+       "similarity": 0.8195,
+       "words": 335
+      },
+      {
+       "reference": "6.13",
+       "revision_id": "casaubon-gutenberg-2680-6-13:74f7f2f4cb879b23",
+       "similarity": 0.7786,
+       "words": 170
+      },
+      {
+       "reference": "8.17",
+       "revision_id": "casaubon-gutenberg-2680-8-17:eff9b7ae5462e607",
+       "similarity": 0.7752,
+       "words": 55
+      },
+      {
+       "reference": "8.48",
+       "revision_id": "casaubon-gutenberg-2680-8-48:a90539b06e8d5189",
+       "similarity": 0.7626,
+       "words": 212
+      },
+      {
+       "reference": "9.8",
+       "revision_id": "casaubon-gutenberg-2680-9-8:6a7a9dbb29589dbc",
+       "similarity": 0.7497,
+       "words": 85
+      },
+      {
+       "reference": "7.4",
+       "revision_id": "casaubon-gutenberg-2680-7-4:efef01e86ba10ca7",
+       "similarity": 0.7159,
+       "words": 88
+      },
+      {
+       "reference": "11.5",
+       "revision_id": "casaubon-gutenberg-2680-11-5:7231b34bcdfd210e",
+       "similarity": 0.7147,
+       "words": 310
+      }
+     ]
+    },
+    {
+     "id": "c6.s6",
+     "size": 6,
+     "cohesion": 0.7416,
+     "members": [
+      {
+       "reference": "10.22",
+       "revision_id": "casaubon-gutenberg-2680-10-22:146c2d50054fcc26",
+       "similarity": 0.7962,
+       "words": 119
+      },
+      {
+       "reference": "4.19",
+       "revision_id": "casaubon-gutenberg-2680-4-19:4f74e8ff011fc86a",
+       "similarity": 0.7799,
+       "words": 82
+      },
+      {
+       "reference": "6.38",
+       "revision_id": "casaubon-gutenberg-2680-6-38:911800e4fd961782",
+       "similarity": 0.7615,
+       "words": 65
+      },
+      {
+       "reference": "10.21",
+       "revision_id": "casaubon-gutenberg-2680-10-21:8eea8f06167e1447",
+       "similarity": 0.7278,
+       "words": 27
+      },
+      {
+       "reference": "8.54",
+       "revision_id": "casaubon-gutenberg-2680-8-54:b37544b396585ce8",
+       "similarity": 0.6981,
+       "words": 196
+      },
+      {
+       "reference": "5.7",
+       "revision_id": "casaubon-gutenberg-2680-5-7:03a24bf7cf24a6d2",
+       "similarity": 0.6862,
+       "words": 46
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c7",
+   "size": 55,
+   "cohesion": 0.6148,
+   "central": [
+    "2.14",
+    "8.42",
+    "9.32",
+    "10.20",
+    "4.16"
+   ],
+   "sections": [
+    {
+     "id": "c7.s1",
+     "size": 13,
+     "cohesion": 0.7556,
+     "members": [
+      {
+       "reference": "9.32",
+       "revision_id": "casaubon-gutenberg-2680-9-32:42947bc41376d729",
+       "similarity": 0.815,
+       "words": 75
+      },
+      {
+       "reference": "8.42",
+       "revision_id": "casaubon-gutenberg-2680-8-42:d4f8123be53bdf1e",
+       "similarity": 0.8069,
+       "words": 86
+      },
+      {
+       "reference": "6.54",
+       "revision_id": "casaubon-gutenberg-2680-6-54:46f71e7421beff04",
+       "similarity": 0.7907,
+       "words": 35
+      },
+      {
+       "reference": "4.16",
+       "revision_id": "casaubon-gutenberg-2680-4-16:e78ca6f1b1620256",
+       "similarity": 0.7796,
+       "words": 312
+      },
+      {
+       "reference": "6.17",
+       "revision_id": "casaubon-gutenberg-2680-6-17:19ee38ae061ee154",
+       "similarity": 0.7762,
+       "words": 69
+      },
+      {
+       "reference": "8.51",
+       "revision_id": "casaubon-gutenberg-2680-8-51:9c082372c817f48f",
+       "similarity": 0.7711,
+       "words": 146
+      },
+      {
+       "reference": "10.20",
+       "revision_id": "casaubon-gutenberg-2680-10-20:d25b4d782f603ade",
+       "similarity": 0.7667,
+       "words": 110
+      },
+      {
+       "reference": "12.3",
+       "revision_id": "casaubon-gutenberg-2680-12-3:fc0a49336ce1f741",
+       "similarity": 0.7427,
+       "words": 81
+      },
+      {
+       "reference": "4.31",
+       "revision_id": "casaubon-gutenberg-2680-4-31:47d13ea1a5e7cca0",
+       "similarity": 0.7362,
+       "words": 34
+      },
+      {
+       "reference": "9.16",
+       "revision_id": "casaubon-gutenberg-2680-9-16:0a9fc771836ef5df",
+       "similarity": 0.728,
+       "words": 30
+      },
+      {
+       "reference": "11.13",
+       "revision_id": "casaubon-gutenberg-2680-11-13:8bf6ce45add4f337",
+       "similarity": 0.7134,
+       "words": 38
+      },
+      {
+       "reference": "6.46",
+       "revision_id": "casaubon-gutenberg-2680-6-46:3790857f5994128d",
+       "similarity": 0.7033,
+       "words": 29
+      },
+      {
+       "reference": "10.10",
+       "revision_id": "casaubon-gutenberg-2680-10-10:04133a4ff5076d0a",
+       "similarity": 0.6927,
+       "words": 100
+      }
+     ]
+    },
+    {
+     "id": "c7.s2",
+     "size": 7,
+     "cohesion": 0.7533,
+     "members": [
+      {
+       "reference": "8.53",
+       "revision_id": "casaubon-gutenberg-2680-8-53:495f20007fce2977",
+       "similarity": 0.8105,
+       "words": 130
+      },
+      {
+       "reference": "9.4",
+       "revision_id": "casaubon-gutenberg-2680-9-4:7b594f286cad053c",
+       "similarity": 0.8028,
+       "words": 36
+      },
+      {
+       "reference": "2.7",
+       "revision_id": "casaubon-gutenberg-2680-2-7:fc93d2ef734718fe",
+       "similarity": 0.7739,
+       "words": 157
+      },
+      {
+       "reference": "9.18",
+       "revision_id": "casaubon-gutenberg-2680-9-18:4128ca869bdb6ae8",
+       "similarity": 0.7533,
+       "words": 22
+      },
+      {
+       "reference": "9.37",
+       "revision_id": "casaubon-gutenberg-2680-9-37:1ae55ffdcefe787e",
+       "similarity": 0.7431,
+       "words": 15
+      },
+      {
+       "reference": "8.9",
+       "revision_id": "casaubon-gutenberg-2680-8-9:e227869fda7ba141",
+       "similarity": 0.6999,
+       "words": 70
+      },
+      {
+       "reference": "7.1",
+       "revision_id": "casaubon-gutenberg-2680-7-1:334ef2c3186c560b",
+       "similarity": 0.6896,
+       "words": 102
+      }
+     ]
+    },
+    {
+     "id": "c7.s3",
+     "size": 5,
+     "cohesion": 0.6441,
+     "members": [
+      {
+       "reference": "9.15",
+       "revision_id": "casaubon-gutenberg-2680-9-15:353e450856898466",
+       "similarity": 0.7201,
+       "words": 24
+      },
+      {
+       "reference": "7.9",
+       "revision_id": "casaubon-gutenberg-2680-7-9:8004dc8d64f620d1",
+       "similarity": 0.6359,
+       "words": 6
+      },
+      {
+       "reference": "6.49",
+       "revision_id": "casaubon-gutenberg-2680-6-49:edd4eba33287b9ad",
+       "similarity": 0.6303,
+       "words": 14
+      },
+      {
+       "reference": "6.5",
+       "revision_id": "casaubon-gutenberg-2680-6-5:972add590bf31d9d",
+       "similarity": 0.6243,
+       "words": 12
+      },
+      {
+       "reference": "8.40",
+       "revision_id": "casaubon-gutenberg-2680-8-40:35bbf523515d5ceb",
+       "similarity": 0.6097,
+       "words": 14
+      }
+     ]
+    },
+    {
+     "id": "c7.s4",
+     "size": 12,
+     "cohesion": 0.6267,
+     "members": [
+      {
+       "reference": "9.12",
+       "revision_id": "casaubon-gutenberg-2680-9-12:7b2a0258a4b73fc0",
+       "similarity": 0.7755,
+       "words": 46
+      },
+      {
+       "reference": "9.34",
+       "revision_id": "casaubon-gutenberg-2680-9-34:557070a90949a0f7",
+       "similarity": 0.7467,
+       "words": 136
+      },
+      {
+       "reference": "6.41",
+       "revision_id": "casaubon-gutenberg-2680-6-41:7e0a62b72b4503e9",
+       "similarity": 0.7302,
+       "words": 73
+      },
+      {
+       "reference": "8.23",
+       "revision_id": "casaubon-gutenberg-2680-8-23:057b8ba23aab72fd",
+       "similarity": 0.6584,
+       "words": 69
+      },
+      {
+       "reference": "4.23",
+       "revision_id": "casaubon-gutenberg-2680-4-23:b3b9d313ba8c948f",
+       "similarity": 0.643,
+       "words": 68
+      },
+      {
+       "reference": "9.22",
+       "revision_id": "casaubon-gutenberg-2680-9-22:dfd5aa8e0dd509d7",
+       "similarity": 0.6425,
+       "words": 28
+      },
+      {
+       "reference": "12.10",
+       "revision_id": "casaubon-gutenberg-2680-12-10:2b41bfd0005c5ecc",
+       "similarity": 0.6333,
+       "words": 21
+      },
+      {
+       "reference": "9.36",
+       "revision_id": "casaubon-gutenberg-2680-9-36:e38e3ec6ce28d0f3",
+       "similarity": 0.5888,
+       "words": 19
+      },
+      {
+       "reference": "11.29",
+       "revision_id": "casaubon-gutenberg-2680-11-29:dcfcf7291ab2a855",
+       "similarity": 0.5818,
+       "words": 25
+      },
+      {
+       "reference": "11.28",
+       "revision_id": "casaubon-gutenberg-2680-11-28:51c05144604faf80",
+       "similarity": 0.5621,
+       "words": 16
+      },
+      {
+       "reference": "11.20",
+       "revision_id": "casaubon-gutenberg-2680-11-20:ecbcbff0e749e286",
+       "similarity": 0.5062,
+       "words": 22
+      },
+      {
+       "reference": "6.51",
+       "revision_id": "casaubon-gutenberg-2680-6-51:eaefc0548290be3b",
+       "similarity": 0.4523,
+       "words": 22
+      }
+     ]
+    },
+    {
+     "id": "c7.s5",
+     "size": 18,
+     "cohesion": 0.7006,
+     "members": [
+      {
+       "reference": "11.1",
+       "revision_id": "casaubon-gutenberg-2680-11-1:993d21d77e4e6f2a",
+       "similarity": 0.7738,
+       "words": 356
+      },
+      {
+       "reference": "2.14",
+       "revision_id": "casaubon-gutenberg-2680-2-14:7dace010625a70bc",
+       "similarity": 0.7663,
+       "words": 195
+      },
+      {
+       "reference": "5.11",
+       "revision_id": "casaubon-gutenberg-2680-5-11:4cfc034208b9d470",
+       "similarity": 0.7559,
+       "words": 70
+      },
+      {
+       "reference": "11.3",
+       "revision_id": "casaubon-gutenberg-2680-11-3:77b97a0ce0734300",
+       "similarity": 0.7338,
+       "words": 95
+      },
+      {
+       "reference": "11.11",
+       "revision_id": "casaubon-gutenberg-2680-11-11:7d0026444824b4ef",
+       "similarity": 0.7332,
+       "words": 66
+      },
+      {
+       "reference": "4.17",
+       "revision_id": "casaubon-gutenberg-2680-4-17:e466e30588bcbe1a",
+       "similarity": 0.7315,
+       "words": 250
+      },
+      {
+       "reference": "4.34",
+       "revision_id": "casaubon-gutenberg-2680-4-34:f0056861c8c7b5ef",
+       "similarity": 0.7249,
+       "words": 25
+      },
+      {
+       "reference": "5.26",
+       "revision_id": "casaubon-gutenberg-2680-5-26:baa71de22cd59d61",
+       "similarity": 0.7123,
+       "words": 64
+      },
+      {
+       "reference": "9.39",
+       "revision_id": "casaubon-gutenberg-2680-9-39:64f03761e8b09a56",
+       "similarity": 0.6988,
+       "words": 42
+      },
+      {
+       "reference": "3.16",
+       "revision_id": "casaubon-gutenberg-2680-3-16:1fe38da4a0d88842",
+       "similarity": 0.697,
+       "words": 74
+      },
+      {
+       "reference": "6.30",
+       "revision_id": "casaubon-gutenberg-2680-6-30:4c9a802a0cd404dc",
+       "similarity": 0.6958,
+       "words": 88
+      },
+      {
+       "reference": "2.3",
+       "revision_id": "casaubon-gutenberg-2680-2-3:3573b94765215cf4",
+       "similarity": 0.6904,
+       "words": 58
+      },
+      {
+       "reference": "8.44",
+       "revision_id": "casaubon-gutenberg-2680-8-44:75e11ee086e412d3",
+       "similarity": 0.6849,
+       "words": 44
+      },
+      {
+       "reference": "12.26",
+       "revision_id": "casaubon-gutenberg-2680-12-26:2ae6e6a0e363b68d",
+       "similarity": 0.6773,
+       "words": 49
+      },
+      {
+       "reference": "6.16",
+       "revision_id": "casaubon-gutenberg-2680-6-16:02b27890230ae8c9",
+       "similarity": 0.6587,
+       "words": 45
+      },
+      {
+       "reference": "8.57",
+       "revision_id": "casaubon-gutenberg-2680-8-57:693a8b34bbfe70d7",
+       "similarity": 0.65,
+       "words": 52
+      },
+      {
+       "reference": "10.14",
+       "revision_id": "casaubon-gutenberg-2680-10-14:57c8dad30bf4d0d3",
+       "similarity": 0.6404,
+       "words": 24
+      },
+      {
+       "reference": "9.13",
+       "revision_id": "casaubon-gutenberg-2680-9-13:2181b632bcf8e166",
+       "similarity": 0.5852,
+       "words": 34
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

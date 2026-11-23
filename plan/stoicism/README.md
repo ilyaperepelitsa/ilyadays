@@ -1,5 +1,9 @@
 # Aurelius — implementation planning dossier
 
+Read [the first five articles](../../public/apps/stoic-constitution.html), drawn from a topic hierarchy over all 418 Casaubon passages, with every phrase traced to its source.
+
+Compare three ways of composing a constitution lesson in the [passage composition study](27-passage-composition-models.md). It works through the same encounter as a practice, an argument and a decision.
+
 **Current direction, 2026-11-11:** prioritize [the personal-constitution pilot](26-personal-constitution-and-theme-to-lesson-pilot.md), [Luna/Terra delegation and user-run batches](24-delivery-delegation-and-user-run-batches.md), and [constitutional/dataset research](25-constitutional-structure-and-comparison-corpora.md). This supersedes older fixture-only status descriptions below. Real embeddings already cover 488 Hays and 418 Casaubon numbered sections; Hays text stays private. The public pilot now contains eight Casaubon passages and five proposed lessons. Hierarchical discovery uses a merge-distance slider; editorial chapters and overlapping lessons remain separate. Deliver small reviewed slices; the user launches long jobs.
 
 

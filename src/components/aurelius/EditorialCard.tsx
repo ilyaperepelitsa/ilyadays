@@ -1,15 +1,22 @@
 'use client';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Editor, JSONContent } from '@tiptap/react';
 import type { EditorialEntity, Revision, Workspace, EvidenceLink } from '@/lib/aurelius/types';
 import { currentLinks, INTERPRETATIONS, utf16ToScalar } from '@/lib/aurelius/domain.mjs';
+import { draftKey, useDraft } from '@/lib/aurelius/drafts';
 import { ProvenanceEditor } from './ProvenanceEditor';
 import { ActionIcon } from '../site/ActionIcon';
 import { SynthesisExplanation } from './SynthesisExplanation';
+import { AlignmentFigure } from './AlignmentFigure';
 
 type Commit=(type:string,payload:Record<string,unknown>)=>Promise<boolean>;
 export function EditorialCard({workspace,item,revision,meaning,busy,commit,onDirty,onInspect,reviewBlocked=false}:{workspace:Workspace;item:EditorialEntity;revision:Revision;meaning:Revision;busy:boolean;commit:Commit;onDirty:(id:string,dirty:boolean)=>void;onInspect:(revisionId?:string,sourceIds?:string[])=>void;reviewBlocked?:boolean}){
   const [doc,setDoc]=useState<JSONContent>(revision.doc),[scope,setScope]=useState(revision.scope),[practical,setPractical]=useState(revision.practical_implication??''),[qualifications,setQualifications]=useState(revision.qualifications),[assumptions,setAssumptions]=useState(revision.assumptions),[interpretation,setInterpretation]=useState(revision.interpretation),[note,setNote]=useState(''),[dirty,setDirty]=useState(false),[editor,setEditor]=useState<Editor|null>(null),[mapError,setMapError]=useState(''),[editorEpoch,setEditorEpoch]=useState(0);
+  type EditorialDraft={doc:JSONContent;scope:string;practical:string;qualifications:string;assumptions:string;interpretation:string};
+  const draftValue=useMemo<EditorialDraft>(()=>({doc,scope,practical,qualifications,assumptions,interpretation}),[doc,scope,practical,qualifications,assumptions,interpretation]);
+  const pendingDoc=useRef<JSONContent|null>(null);
+  const draft=useDraft<EditorialDraft>({key:draftKey(workspace.editions[0]?.id??'',revision.kind==='expression'?'expression':'meaning',item.id),base:revision.id,value:draftValue,dirty,onRestore:d=>{setDoc(d.doc);setScope(d.scope);setPractical(d.practical);setQualifications(d.qualifications);setAssumptions(d.assumptions);setInterpretation(d.interpretation);pendingDoc.current=d.doc;setDirty(true);onDirty(item.id,true);}});
+  useEffect(()=>{if(editor&&pendingDoc.current){editor.commands.setContent(pendingDoc.current);pendingDoc.current=null;}},[editor]);
   const state=workspace.assessments[revision.id],expression=revision.kind==='expression';
   const sourceLinks=useMemo(()=>currentLinks(workspace,revision.id) as EvidenceLink[],[workspace,revision.id]);
   const targetMappings=useMemo(()=>(workspace.target_mappings??[]).filter(m=>m.target_revision===revision.id),[workspace.target_mappings,revision.id]);
@@ -17,8 +24,8 @@ export function EditorialCard({workspace,item,revision,meaning,busy,commit,onDir
   const markDirty=()=>{setDirty(true);onDirty(item.id,true);};
   const change=useCallback((next:JSONContent)=>{setDoc(next);setDirty(true);onDirty(item.id,true);},[item.id,onDirty]);
   const onReady=useCallback((value:Editor)=>setEditor(value),[]);
-  const discard=()=>{setDoc(revision.doc);setScope(revision.scope);setPractical(revision.practical_implication??'');setQualifications(revision.qualifications);setAssumptions(revision.assumptions);setInterpretation(revision.interpretation);setDirty(false);onDirty(item.id,false);setMapError('');setEditorEpoch(v=>v+1);};
-  const save=async()=>{if(await commit('edit',{entity_id:item.id,doc,scope,practical_implication:practical,qualifications,assumptions,interpretation})){onDirty(item.id,false);}};
+  const discard=()=>{setDoc(revision.doc);setScope(revision.scope);setPractical(revision.practical_implication??'');setQualifications(revision.qualifications);setAssumptions(revision.assumptions);setInterpretation(revision.interpretation);setDirty(false);onDirty(item.id,false);setMapError('');setEditorEpoch(v=>v+1);pendingDoc.current=null;draft.clear();};
+  const save=async()=>{if(await commit('edit',{entity_id:item.id,doc,scope,practical_implication:practical,qualifications,assumptions,interpretation})){onDirty(item.id,false);draft.clear();}};
   const map=()=>{
     if(!editor||editor.state.selection.empty){setMapError('Select the exact clause to map first.');return;}
     const spans=currentLinks(workspace,meaning.id).map((l:EvidenceLink)=>l.source_span);
@@ -36,8 +43,10 @@ export function EditorialCard({workspace,item,revision,meaning,busy,commit,onDir
     <h3>{item.title}</h3>
     {expression&&<p className="au-help">Editorial wording, never a quotation attributed to Marcus.</p>}
     <div data-target-anchor={item.id} className="au-editor-frame"><ProvenanceEditor key={editorEpoch} document={revision.doc} identity={revision.id} label={expression?'Expression text':'Conclusion text'} readOnly={item.locked||busy} onChange={change} onReady={onReady} onInspect={onInspect} targetMappings={expression?undefined:targetMappings} sourceLinks={sourceLinks} sourceLabels={sourceLabels} /></div>
-    {!expression&&<SynthesisExplanation revision={revision} workspace={workspace} onInspect={onInspect}/>}
+    {!expression&&<><SynthesisExplanation revision={revision} workspace={workspace} onInspect={onInspect}/><AlignmentFigure workspace={workspace} revisionId={revision.id} lang="en"/></>}
     <div className="au-editor-tools"><button type="button" disabled={busy||item.locked||!editor?.can().undo()} onClick={()=>editor?.chain().focus().undo().run()}>Undo</button><button type="button" disabled={busy||item.locked||!editor?.can().redo()} onClick={()=>editor?.chain().focus().redo().run()}>Redo</button>{!expression&&<button type="button" onClick={()=>void mapMeaning()} disabled={busy||dirty||item.locked||!sourceLinks.length}>Map selected meaning clause</button>}{expression&&<button type="button" onClick={map} disabled={busy||item.locked}>Map selected clause</button>}<button type="button" disabled={!dirty||busy} onClick={discard}>Discard draft</button><button type="button" className="au-primary" disabled={!dirty||busy||item.locked||reviewBlocked} onClick={()=>void save()}><ActionIcon name="check" />Save revision</button></div>
+    {draft.restored&&dirty&&<p role="status" className="au-help">Unsaved draft restored from this browser</p>}
+    {draft.stale&&<p role="status" className="au-warning">A draft from an earlier revision was found <button type="button" aria-label="Discard earlier-revision draft" onClick={draft.clear}>Discard</button></p>}
     {mapError&&<p role="status" className="au-warning">{mapError}</p>}
     {!expression&&<p className="au-help au-target-help">Source colors inside the meaning text show stored clause or joint-statement mappings. Select a colored clause to inspect its exact contributors. Dashed text needs mapping or review.</p>}{expression?<p className="au-help">Colored text: an explicit clause mapping. Dashed underline: unmapped prose. Mapping is a review proposal, not proof.</p>:<>
       <label className="au-field">Interpretation<select aria-label="Interpretation type" value={interpretation} disabled={item.locked||busy} onChange={e=>{setInterpretation(e.target.value);markDirty();}}>{INTERPRETATIONS.map(v=><option key={v} value={v}>{v.replaceAll('_',' ')}</option>)}</select></label>

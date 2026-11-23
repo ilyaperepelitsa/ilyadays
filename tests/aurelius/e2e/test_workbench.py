@@ -13,17 +13,20 @@ import pytest
 from playwright.sync_api import expect, sync_playwright
 
 ROOT = Path(__file__).resolve().parents[3]
-BASE = 'http://127.0.0.1:3152'
+# Ports can be moved when another local service already holds the defaults.
+UI_PORT = os.environ.get('AURELIUS_TEST_UI_PORT', '3152')
+API_PORT = os.environ.get('AURELIUS_TEST_API_PORT', '8767')
+BASE = f'http://127.0.0.1:{UI_PORT}'
 
 
 @pytest.fixture(scope='session')
 def service(tmp_path_factory):
-    for port in [3152, 8767]:
+    for port in [int(UI_PORT), int(API_PORT)]:
         with socket.socket() as sock:
             assert sock.connect_ex(('127.0.0.1', port)) != 0, f'Test port {port} is in use; tests will not stop another process.'
     data = tmp_path_factory.mktemp('aurelius-private-test')
     log = (data / 'service.log').open('w')
-    process = subprocess.Popen(['node', 'scripts/aurelius-dev.mjs'], cwd=ROOT, env={**os.environ, 'AURELIUS_DATA_DIR': str(data), 'AURELIUS_UI_PORT': '3152', 'AURELIUS_API_PORT': '8767', 'AURELIUS_TEST': '1'}, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+    process = subprocess.Popen(['node', 'scripts/aurelius-dev.mjs'], cwd=ROOT, env={**os.environ, 'AURELIUS_DATA_DIR': str(data), 'AURELIUS_UI_PORT': UI_PORT, 'AURELIUS_API_PORT': API_PORT, 'AURELIUS_TEST': '1'}, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
     try:
         deadline = time.monotonic() + 90
         while time.monotonic() < deadline:

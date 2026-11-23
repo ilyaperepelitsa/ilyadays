@@ -83,7 +83,7 @@ def test_adding_reasons_keeps_old_editorial_revisions_locks_and_reviews(tmp_path
     Store(tmp_path/'data',source)
     source.write_text(json.dumps(seed))
     store=Store(tmp_path/'data',source);upgraded=store.state()
-    assert upgraded['version']==11 and upgraded['study_revision']==3
+    assert upgraded['version']==11 and upgraded['study_revision']==4
     assert all(c in upgraded['conclusions'] for c in legacy['conclusions'])
     assert upgraded['study_catalog']['default_id'] in {c['id'] for c in upgraded['conclusions']}
     assert upgraded['revisions'][:3]==legacy['revisions']

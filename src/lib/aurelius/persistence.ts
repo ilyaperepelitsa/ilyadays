@@ -1,8 +1,8 @@
 import analysis from '../../../content/aurelius/analysis.json';
 import fixture from '../../../content/aurelius/fixture.json';
 import backupStudy from '../../../content/aurelius/backup-study.json';
-import realMap from '../../../content/aurelius/real-map.json';
-import backupMap from '../../../content/aurelius/backup-map.json';
+// The two passage maps are about 1 MB each: fetch one only when the map is opened.
+const loadMap=async(backup:boolean)=>(backup?await import('../../../content/aurelius/backup-map.json'):await import('../../../content/aurelius/real-map.json')).default;
 import { upgradeFixture } from './upgrade.mjs';
 import { upgradeStudy } from './study-upgrade.mjs';
 import { applyCommand } from './domain.mjs';
@@ -40,11 +40,23 @@ async function localCommand(command:WorkCommand,corpus:BrowserCorpus):Promise<Wo
     tx.onerror=()=>{db.close();reject(tx.error);};
   });
 }
+async function localRestore(incoming:Workspace,corpus:BrowserCorpus):Promise<Workspace>{
+  // Same upgrade path as localState; nothing is written unless the upgrade succeeds and keeps the edition identity.
+  if(corpus.seed.corpus_kind==='hays')throw Error('The modern translation stays in private local storage');
+  const upgraded=(corpus.seed.corpus_kind==='synthetic'?upgradeFixture(structuredClone(incoming),corpus.seed):upgradeStudy(structuredClone(incoming),corpus.seed)) as Workspace;
+  if(upgraded.corpus_kind!==corpus.seed.corpus_kind)throw Error('Stored edition identity conflict; source data retained');
+  const db=await browserDb(corpus.name);
+  return new Promise((resolve,reject)=>{
+    const tx=db.transaction('workspace','readwrite');tx.objectStore('workspace').put(upgraded,'current');
+    tx.oncomplete=()=>{db.close();resolve(upgraded);};tx.onabort=tx.onerror=()=>{db.close();reject(tx.error??Error('Could not restore the study; existing data retained.'));};
+  });
+}
 export type HierarchyRun={linkage:string;distance:string;input_dimensions:number;input_space:string;children:number[][];distances:number[];representatives:number[];labels_by_k:Record<string,number[]>;diagnostics_by_k:Record<string,{sizes:number[];largest_fraction:number;singletons:number;cosine_silhouette:number}>};
 export type HierarchyComparison={version:string;run_id:string;vector_hash:string;evaluation_space:string;methods:Record<string,HierarchyRun>;neighbors:{index:number;cosine_similarity:number}[][]};
 export type DiscoveryArtifact={hierarchy?:HierarchyComparison;schema_version:number;pipeline_version:string;run_id:string;corpus_kind:string;corpus_hash:string;vector_origin:string;vector_description:string;dimensions:number;chunk_count:number;excluded_chunks:string[];sampled:boolean;share_mode?:string;edition?:{id:string;translator:string;work:string;source_location:string};embedding_configuration?:{model:string;dimensions:number};pca:{explained_variance:number[];explained_variance_ratio:number[];singular_values:number[]};clustering:{linkage:string;distance:string;input_dimensions:number;input_space:string;labels_by_k:Record<string,number[]>;children:number[][];distances:number[]};software:{numpy:string;scikit_learn:string};points:{passage_id:string;revision_id:string;text_hash:string;reference:string;x:number;y:number}[]};
-export type WorkStorage = {analysis:()=>Promise<DiscoveryArtifact>;mode:'browser'|'sqlite';load:()=>Promise<Workspace>;command:(c:WorkCommand)=>Promise<Workspace>};
-export function publicMapPending(){return !(new URLSearchParams(window.location.search).get('map')==='backup'?backupMap:realMap);}
+export type WorkStorage = {analysis:()=>Promise<DiscoveryArtifact>;mode:'browser'|'sqlite';load:()=>Promise<Workspace>;command:(c:WorkCommand)=>Promise<Workspace>;/** Browser mode only: replace the stored workspace with a validated, upgraded backup. */restore?:(w:Workspace)=>Promise<Workspace>};
+/** Both public maps are published; kept for callers that showed a blocked state before they existed. */
+export function publicMapPending(){return false;}
 export async function connectStorage():Promise<WorkStorage>{
   // Public builds never probe a private service. This flag is set by the loopback dev launcher only.
   if(process.env.NODE_ENV==='development'&&process.env.NEXT_PUBLIC_AURELIUS_LOCAL==='1'){
@@ -57,7 +69,7 @@ export async function connectStorage():Promise<WorkStorage>{
   }
   const demo=new URLSearchParams(window.location.search).get('corpus')==='demo';
   const corpus:BrowserCorpus=demo?{name:DB,seed:fixture as Workspace}:{name:'aurelius-casaubon-study-v1',seed:backupStudy as Workspace};
-  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;const selected=new URLSearchParams(window.location.search).get('map')==='backup'?backupMap:realMap;if(!selected)throw Error('Real-source embeddings are blocked by production model access. Import and bounded processing authorization are recorded; no real vectors or PCA have been generated.');return selected as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus)};
+  return {mode:'browser',analysis:async()=>{if(demo)return analysis as DiscoveryArtifact;const selected=await loadMap(new URLSearchParams(window.location.search).get('map')==='backup');if(!selected)throw Error('Real-source embeddings are blocked by production model access. Import and bounded processing authorization are recorded; no real vectors or PCA have been generated.');return selected as unknown as DiscoveryArtifact;},load:()=>localState(corpus),command:c=>localCommand(c,corpus),restore:w=>localRestore(w,corpus)};
 }
 export function downloadSyntheticProject(workspace:Workspace){
   if(workspace.corpus_kind==='hays')throw Error('Modern translation export is private-only and not implemented');
