@@ -581,3 +581,25 @@ Translation doubts in quoted passages (unchanged, listed only):
    - 7.26 “ahead of disgrace” (7.26b), Greek πρὸ τοῦ αἰσχροῦ, “before the shameful”. In English “disgrace” can be heard as ill repute; the Greek means the shameful thing itself. Claim 1’s text now says “doing what is shameful” (the note’s other reading) while the quote keeps “disgrace”; `changed` says so. Seneca’s “just and at the same time disgraced” (Ep. 113.32) uses the word in the other sense; that item’s `why` says so.
    - 7.37 “a more glorious death”: ἐνδοξότερον has both glory and fame in it (the note’s other reading is “a more famous death”). The article’s “fame” leans on that.
 8. **Editor’s glosses in the article’s own text, each recorded:** “Gaius Caesar” (the Greek has only “Gaius”; claim 2 `changed`), “though hardly anyone has heard of him” for Telauges (from the translators’ note; claim 2 `inferences`), “King” Perdiccas (from the note; 11.23a `why`), the names Alexander, Caesar and Pompey in claim 6 (from 8.3’s first sentence; `changed`), and the plain sense of “seed-reasons” in 6.22a (from the note; item `why`).
+
+## 24 Nov 2026 — methodology page, polish, shared navigation, cover (owner's words, verbatim)
+
+> Can we also have a separate page in the stoic constitution thing that explains the methodology? Embeddings, then
+> clusters, then how we're combining different snippets, different pieces of text together. What's the logic of it?
+> What's kind of the prompts that are used? Kind of the structure as well, like why in action practice, when it breaks,
+> if doubted. That's an important part as well. And also like the parts that are why in action and practice, they're
+> aligned poorly. So I want you to go over just like basic front-end design. Polish it up. […] align those whys and in
+> actions. The vectors should be top aligned as well because they start at the statement. Maybe bring them up. But I
+> like that they kind of scroll with the page still. That's good. Make them just start a bit higher. And there should
+> be, the page that I sent with like documentation and stuff should have all the methodology step-by-step, including
+> combinations with Seneca, including I don't know everything. And also homepage should like, should be a part of the,
+> like all the, all the pages share navigation. This one should as well. And homepage should have some cool generated
+> image like food, travel, and fitness have. There should be one for stoicism. Maybe like portrait of Marcus Aurelius,
+> some like digitized cool thing. Let's pick up like let's do a few like versions of it and pick a better one. But
+> yeah, make sure it fits with the style of the whole thing. Don't have to change the cards and everything. Just the
+> color theme, the top navigation stuff, things like that. I think other parts of the site have the same kind of
+> language selector. It could be shared with this thing. […] there should be a top button somewhere that says hide the
+> what editor decided. Because I'll review it later. I haven't read it, but like when I'm reading through the whole
+> thing, I kind of just don't want to. I want a smoother experience basically
+
+Also: “phone is important part but not all of it” — test 390 and 1440 as equals.

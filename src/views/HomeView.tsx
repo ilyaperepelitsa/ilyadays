@@ -21,7 +21,7 @@ export function HomeView({ lang }: { lang: Lang }) {
           </div>
         </section>
         <section className="home-sections" aria-labelledby="home-sections-title">
-          <div className="home-section-head"><h2 id="home-sections-title">{lang === "ru" ? "Готовить. Исследовать. Тренироваться." : "Cook. Explore. Train."}</h2><p>{lang === "ru" ? "Три части повседневной жизни" : "Three parts of everyday life"}</p></div>
+          <div className="home-section-head"><h2 id="home-sections-title">{lang === "ru" ? "Готовить. Исследовать. Тренироваться. Размышлять." : "Cook. Explore. Train. Reflect."}</h2><p>{lang === "ru" ? "Четыре части повседневной жизни" : "Four parts of everyday life"}</p></div>
         <div className="tiles home-tiles">
           <Link prefetch={false} className="tile" href={localPath(lang, "/food")}>
             {/* eslint-disable-next-line @next/next/no-img-element -- pre-sized static cover */}
@@ -53,6 +53,16 @@ export function HomeView({ lang }: { lang: Lang }) {
               <span className="tile-go">{t.fitnessCardGo}</span>
             </div>
           </Link>
+          <a className="tile tile-stoicism" href={`/apps/stoic-constitution.html?lang=${lang}`}>
+            {/* eslint-disable-next-line @next/next/no-img-element -- pre-sized static cover */}
+            <img src="/covers/stoicism.webp" alt={lang === "ru" ? "Мраморный бюст Марка Аврелия в профиль на фоне заката; затылок и плечо переходят в золотую сеть точек и линий" : "A marble bust of Marcus Aurelius in profile against a sunset, the back of the head and shoulder turning into a gold network of points and lines"} width={800} height={534} />
+            <div className="tile-body">
+              <span className="home-card-label">{lang === "ru" ? "С Марком Аврелием" : "With Marcus Aurelius"}</span>
+              <h3>{lang === "ru" ? "Стоицизм" : "Stoicism"}</h3>
+              <p>{lang === "ru" ? "«Размышления», сведённые в 38 статей, каждую можно сверить с фрагментами; Сенека — второй голос." : "The Meditations fused into 38 articles you can check against every passage, with Seneca as a second voice."}</p>
+              <span className="tile-go">{lang === "ru" ? "Читать конституцию →" : "Read the constitution →"}</span>
+            </div>
+          </a>
         </div>
         </section>
         <RecentlyAdded lang={lang} linked />

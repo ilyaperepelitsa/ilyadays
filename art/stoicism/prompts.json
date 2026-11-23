@@ -1,0 +1,114 @@
+[
+ {
+  "key": "A",
+  "model": "gpt-image-2",
+  "size": "1536x1024",
+  "quality": "medium",
+  "refs": [
+   "art/covers/travel.webp",
+   "art/covers/food.webp",
+   "art/covers/fitness.webp"
+  ],
+  "prompt": "Use the reference image(s) ONLY to keep the same art style: line weight, flat matte shading, palette, warm golden light and background tone. Draw a NEW picture exactly as described below; do not copy the subject, composition or any detail from the references.\n\nClean cel-shaded anime game illustration with a touch of realism, like polished official background art in a Japanese action game: semi-realistic forms, proportions, lighting and materials; crisp, well-defined ink outlines of confident even weight around every object, with clean hard edges and clear separation between pieces; large areas of smooth colour with two- or three-tone cel shading and a few soft gradients; bright, slightly richer colours. All surfaces clean: no texture, no grain, no noise, no hatching or cross-hatching, no pencil, no stippling, no mosaic or crackle pattern, no paper texture. Minimal scenery: only the items the scene mentions. No text, no letters, no lettering, no numbers, no inscriptions, no watermark.\n\nScene: a white marble bust of Marcus Aurelius as his Roman portraits show him in middle age: thick curly hair, a full curly beard, a calm, inward, slightly heavy-lidded gaze, a straight nose. on a plain stone plinth beside a low wooden writing desk with one open papyrus scroll (no legible writing, only soft grey strokes) and a small bronze oil lamp, in a quiet Roman room at golden hour; warm light from a tall window on the left. Behind the bust, a few dozen small glowing points float in the air connected by thin gold lines, grouped into a handful of loose clusters, as if the ideas of the scroll were mapped in space. The 'digital' part is subtle and clean: thin luminous gold lines and small glowing points, like a star chart or a network graph, drawn with the same crisp outlines; no screens, no circuitry, no code, no glitch effects, no text. Calm, uncluttered, inviting; seen at eye level from a gentle three-quarter angle.",
+  "cost": 0.0801,
+  "usage": {
+   "input_tokens": 5028,
+   "input_tokens_details": {
+    "image_tokens": 4608,
+    "text_tokens": 420
+   },
+   "output_tokens": 1372,
+   "output_tokens_details": {
+    "image_tokens": 1372,
+    "text_tokens": 0
+   },
+   "total_tokens": 6400
+  },
+  "seconds": 31,
+  "out": "art/stoicism/drafts/A.webp"
+ },
+ {
+  "key": "B",
+  "model": "gpt-image-2",
+  "size": "1536x1024",
+  "quality": "medium",
+  "refs": [
+   "art/covers/travel.webp",
+   "art/covers/food.webp",
+   "art/covers/fitness.webp"
+  ],
+  "prompt": "Use the reference image(s) ONLY to keep the same art style: line weight, flat matte shading, palette, warm golden light and background tone. Draw a NEW picture exactly as described below; do not copy the subject, composition or any detail from the references.\n\nClean cel-shaded anime game illustration with a touch of realism, like polished official background art in a Japanese action game: semi-realistic forms, proportions, lighting and materials; crisp, well-defined ink outlines of confident even weight around every object, with clean hard edges and clear separation between pieces; large areas of smooth colour with two- or three-tone cel shading and a few soft gradients; bright, slightly richer colours. All surfaces clean: no texture, no grain, no noise, no hatching or cross-hatching, no pencil, no stippling, no mosaic or crackle pattern, no paper texture. Minimal scenery: only the items the scene mentions. No text, no letters, no lettering, no numbers, no inscriptions, no watermark.\n\nScene: a close portrait of a white marble bust of Marcus Aurelius as his Roman portraits show him in middle age: thick curly hair, a full curly beard, a calm, inward, slightly heavy-lidded gaze, a straight nose. in three-quarter profile against a warm sunset sky over soft distant hills; the back of the head and shoulder gradually turn into a clean lattice of small glowing gold points joined by thin lines, the marble form still readable through it. The 'digital' part is subtle and clean: thin luminous gold lines and small glowing points, like a star chart or a network graph, drawn with the same crisp outlines; no screens, no circuitry, no code, no glitch effects, no text. Calm and dignified; plenty of open sky.",
+  "cost": 0.0798,
+  "usage": {
+   "input_tokens": 4973,
+   "input_tokens_details": {
+    "image_tokens": 4608,
+    "text_tokens": 365
+   },
+   "output_tokens": 1372,
+   "output_tokens_details": {
+    "image_tokens": 1372,
+    "text_tokens": 0
+   },
+   "total_tokens": 6345
+  },
+  "seconds": 32,
+  "out": "art/stoicism/drafts/B.webp"
+ },
+ {
+  "key": "C",
+  "model": "gpt-image-2",
+  "size": "1536x1024",
+  "quality": "medium",
+  "refs": [
+   "art/covers/travel.webp",
+   "art/covers/food.webp",
+   "art/covers/fitness.webp"
+  ],
+  "prompt": "Use the reference image(s) ONLY to keep the same art style: line weight, flat matte shading, palette, warm golden light and background tone. Draw a NEW picture exactly as described below; do not copy the subject, composition or any detail from the references.\n\nClean cel-shaded anime game illustration with a touch of realism, like polished official background art in a Japanese action game: semi-realistic forms, proportions, lighting and materials; crisp, well-defined ink outlines of confident even weight around every object, with clean hard edges and clear separation between pieces; large areas of smooth colour with two- or three-tone cel shading and a few soft gradients; bright, slightly richer colours. All surfaces clean: no texture, no grain, no noise, no hatching or cross-hatching, no pencil, no stippling, no mosaic or crackle pattern, no paper texture. Minimal scenery: only the items the scene mentions. No text, no letters, no lettering, no numbers, no inscriptions, no watermark.\n\nScene: Marcus Aurelius as his Roman portraits show him in middle age: thick curly hair, a full curly beard, a calm, inward, slightly heavy-lidded gaze, a straight nose. He sits at a simple camp table inside an open Roman army tent at dusk, wearing a plain wool cloak over a tunic, writing on a wax tablet with a stylus; an oil lamp glows on the table beside a few loose papyrus sheets; through the open tent flap a wide river (the Danube) catches the last golden light. Above the table, faint thin gold threads link the loose sheets like a small constellation. The 'digital' part is subtle and clean: thin luminous gold lines and small glowing points, like a star chart or a network graph, drawn with the same crisp outlines; no screens, no circuitry, no code, no glitch effects, no text. Quiet, focused, warm.",
+  "cost": 0.08,
+  "usage": {
+   "input_tokens": 5003,
+   "input_tokens_details": {
+    "image_tokens": 4608,
+    "text_tokens": 395
+   },
+   "output_tokens": 1372,
+   "output_tokens_details": {
+    "image_tokens": 1372,
+    "text_tokens": 0
+   },
+   "total_tokens": 6375
+  },
+  "seconds": 37,
+  "out": "art/stoicism/drafts/C.webp"
+ },
+ {
+  "key": "D",
+  "model": "gpt-image-2",
+  "size": "1536x1024",
+  "quality": "medium",
+  "refs": [
+   "art/covers/travel.webp",
+   "art/covers/food.webp",
+   "art/covers/fitness.webp"
+  ],
+  "prompt": "Use the reference image(s) ONLY to keep the same art style: line weight, flat matte shading, palette, warm golden light and background tone. Draw a NEW picture exactly as described below; do not copy the subject, composition or any detail from the references.\n\nClean cel-shaded anime game illustration with a touch of realism, like polished official background art in a Japanese action game: semi-realistic forms, proportions, lighting and materials; crisp, well-defined ink outlines of confident even weight around every object, with clean hard edges and clear separation between pieces; large areas of smooth colour with two- or three-tone cel shading and a few soft gradients; bright, slightly richer colours. All surfaces clean: no texture, no grain, no noise, no hatching or cross-hatching, no pencil, no stippling, no mosaic or crackle pattern, no paper texture. Minimal scenery: only the items the scene mentions. No text, no letters, no lettering, no numbers, no inscriptions, no watermark.\n\nScene: the bronze equestrian statue of Marcus Aurelius (the emperor on horseback, right arm raised in a calm gesture, Marcus Aurelius as his Roman portraits show him in middle age: thick curly hair, a full curly beard, a calm, inward, slightly heavy-lidded gaze, a straight nose.) on a tall stone pedestal in an open Roman square at golden hour, warm low sun, long soft shadows on pale paving; in the clear sky above, a soft network of small glowing points and thin gold lines like a star chart. The 'digital' part is subtle and clean: thin luminous gold lines and small glowing points, like a star chart or a network graph, drawn with the same crisp outlines; no screens, no circuitry, no code, no glitch effects, no text. No people besides the statue, no signs.",
+  "cost": 0.0799,
+  "usage": {
+   "input_tokens": 4988,
+   "input_tokens_details": {
+    "image_tokens": 4608,
+    "text_tokens": 380
+   },
+   "output_tokens": 1372,
+   "output_tokens_details": {
+    "image_tokens": 1372,
+    "text_tokens": 0
+   },
+   "total_tokens": 6360
+  },
+  "seconds": 32,
+  "out": "art/stoicism/drafts/D.webp"
+ }
+]
