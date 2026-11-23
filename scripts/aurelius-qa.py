@@ -214,6 +214,9 @@ def gate_seneca(article: dict) -> list[dict]:
             ctx = p.get('context', '')
             if not 20 <= len(ctx) <= 200:
                 out.append(finding('BLOCKING', f'a{n} {p.get("id")}', 'seneca context', f'context must be 20 to 200 characters ({len(ctx)})'))
+            if re.search(r'\b(the )?same letter\b|\b(this|that) letter\b|\bas above\b', ctx, re.I):
+                out.append(finding('BLOCKING', f'a{n} {p.get("id")}', 'seneca context',
+                                   'a context is read alone under its quote (rule 22): name the letter, never “same letter”, “this letter” or “as above”'))
         if it['effect'] == 'stronger' and not it.get('gives'):
             out.append(finding('BLOCKING', f'a{n} {it.get("id")}', 'seneca', 'a backing item names the words of the claim it backs'))
         if it.get('key'):

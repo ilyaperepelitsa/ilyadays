@@ -90,6 +90,14 @@ def test_seneca_context_and_strip_sentences():
     assert {'seneca', 'seneca context'} <= rules(qa.gate_seneca(a))
 
 
+def test_a_seneca_context_names_its_letter_instead_of_pointing_back():
+    a = article()
+    piece = next(it for it in a['voices']['seneca']['items'] if 'quote' in it)
+    assert 'seneca context' not in rules(qa.gate_seneca(a))
+    piece['context'] = 'The same letter, on the death of a friend: grief has its measure.'
+    assert 'seneca context' in rules(qa.gate_seneca(a))
+
+
 def test_an_empty_label_needs_its_reason_and_every_article_quotes_the_new_english():
     a = article()
     a['empty']['doubt'] = ''
