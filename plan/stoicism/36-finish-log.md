@@ -198,3 +198,10 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   Seneca). Known: RU c3 is 1.5 MB (gzip ~378 KB); the header wraps to two rows on a phone. Fixed on the way: the English
   toast said “In this chapter” but counted all articles. Rule 25 added to `apps/aurelius/prompts/constitution-article.md`.
 - Usage check (20:58–21:13 UTC): result quiet, workers done; writes −60% · action: none · evidence: 31 calls.
+- **Site integration (24 Nov):** the owner asked for a methodology page, polish, shared navigation and a cover. Live:
+  `public/apps/stoic-method.html` (EN/RU, 13 steps, numbers tested against the JSON); the static Stoic pages share the
+  site header and colours (`public/apps/site-chrome.{css,js}`, tested against SiteHeader.tsx and theme.css); the five
+  sides share a top line; the vectors start beside the article heading; a remembered “Hide the editor's decisions”
+  switch; `/stoicism` redirects to the Constitution; a home-page card. Cover: first round (bust in the cover style)
+  rejected (“looks like shit”); second round on the owner's “his profile in a mix of constellation / neural net
+  visualization style”, draft F chosen. Images $0.49 in all.
