@@ -6,12 +6,15 @@
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:,">
 <title>The first five articles · Stoic Constitution</title>
+<link rel="preload" href="/fonts/manrope/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/apps/site-chrome.css">
 <style>
-:root{--paper:#f7f5ee;--card:#fffdf8;--ink:#232926;--muted:#57615a;--line:#d2d3c7;--accent:#1d6450;
+/* The site's colours and fonts (site-chrome.css: --bg, --surface, --ink, --muted, --line, --accent, light and dark) under this page's names. */
+:root{--paper:var(--bg);--card:var(--surface);
 --s1:#1d6450;--t1:#e1efe7;--s2:#8a4d18;--t2:#f7e8d4;--s3:#1f5c8a;--t3:#e0ecf5;--s4:#8b2f5c;--t4:#f6e3ec;--e:#55468f;--et:#ece9f6;
---p1:#4379f9;--p2:#cc689e;--p3:#853f13;--p4:#989401;--p5:#861192;--hl:rgba(35,41,38,.08);--warn:#8f3a10;--wt:#fbe9dc;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',sans-serif}
-@media(prefers-color-scheme:dark){:root{--paper:#161917;--card:#1e2320;--ink:#e9e7dd;--muted:#a4ada5;--line:#3b423c;--accent:#86d3b8;
---s1:#86d3b8;--t1:#1b382f;--s2:#e9ad70;--t2:#3f2e1a;--s3:#8cc3ee;--t3:#1c3447;--s4:#eda0c4;--t4:#42233a;--e:#b9adf0;--et:#2e2948;--p1:#2f63e1;--p2:#a95e86;--p3:#d63a00;--p4:#437f43;--p5:#2a97bf;--hl:rgba(233,231,221,.1);--warn:#f2a676;--wt:#3d271a}}
+--p1:#4379f9;--p2:#cc689e;--p3:#853f13;--p4:#989401;--p5:#861192;--hl:rgba(23,27,34,.07);--warn:#8f3a10;--wt:#fbe9dc;--serif:Georgia,'Times New Roman',serif;--sans:var(--site-sans)}
+@media(prefers-color-scheme:dark){:root{
+--s1:#86d3b8;--t1:#1b382f;--s2:#e9ad70;--t2:#3f2e1a;--s3:#8cc3ee;--t3:#1c3447;--s4:#eda0c4;--t4:#42233a;--e:#b9adf0;--et:#2e2948;--p1:#2f63e1;--p2:#a95e86;--p3:#d63a00;--p4:#437f43;--p5:#2a97bf;--hl:rgba(237,241,247,.1);--warn:#f2a676;--wt:#3d271a}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
@@ -19,17 +22,10 @@ h1,h2,h3,h4,p,ol,ul,figure,blockquote{margin:0}
 ol,ul{padding:0;list-style:none}
 a{color:var(--accent);text-underline-offset:3px}
 button{font:inherit;color:inherit}
-:focus-visible{outline:3px solid #3b7fc4;outline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{max-width:820px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
-.top{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;justify-content:space-between;padding-block:14px 0;font-size:14px}
-.top strong{font:600 17px var(--serif)}
-.top-end{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
-/* EN / RU: two small links, the one on screen filled. */
-.lang{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.lang a{min-width:44px;min-height:40px;display:grid;place-items:center;padding:0 8px;color:var(--ink);text-decoration:none;font:650 13px var(--sans);letter-spacing:.06em}
-.lang a+a{border-left:1px solid var(--line)}
-.lang a[aria-current=true]{background:var(--ink);color:var(--paper)}
 .intro{padding-block:22px 20px}
+.intro .title{font:600 17px/1.3 var(--serif);margin-bottom:12px}
 .eyebrow{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 h1{font:400 clamp(32px,8vw,52px)/1.06 var(--serif);letter-spacing:-.025em;margin:8px 0 14px;text-wrap:balance}
 h2{font:400 clamp(24px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-wrap:balance}
@@ -37,6 +33,7 @@ h2{font:400 clamp(24px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-
 .status{margin-top:10px;font-size:14px;color:var(--muted)}
 .sub{color:var(--muted);font-size:15px;margin-top:6px}
 section{padding-block:28px;border-top:1px solid var(--line)}
+#main>section:first-child{border-top:0}   /* the sticky bar's own rule is right above it */
 .step{font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
 /* jump bar */
@@ -316,7 +313,8 @@ footer{padding-block:18px 44px;font-size:13.5px;color:var(--muted);border-top:1p
 .sr{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
 @container (min-width:520px){.pair{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px}.then{padding:0 0 0 16px;border-top:0;border-left:1px dashed var(--line)}.cols{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;padding:0 10px;font:650 12px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.cols span+span{padding-left:16px}}
 /* The vectors: where the section's passages sit relative to one another. */
-.body{display:grid;grid-template-columns:minmax(0,1fr);margin-top:14px}
+.body{display:grid;grid-template-columns:minmax(0,1fr);margin-top:6px}
+.art-head{margin-bottom:14px}
 .body>*{min-width:0}
 .sci{margin-top:16px;border:1px solid var(--line);border-radius:8px;padding:12px 14px 6px;min-width:0}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 4px}
@@ -374,19 +372,22 @@ svg.map .cos{font-size:12.5px;font-weight:650}
 .body>.grps{grid-column:1;grid-row:3}
 .body>.sci{grid-column:2;grid-row:1/span 3;margin-top:0;position:sticky;top:66px;max-height:calc(100vh - 78px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
 .article>.hand,.article>.process,.article>.verdict{max-width:800px}
-.grps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px;align-items:start;margin-top:28px}
-.grps .grp{min-width:0;margin-top:0}
+/* The sides share two rows each, heading and body (subgrid): headings, their rules and the first cards line up across a row. */
+.grps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;row-gap:0;margin-top:28px}
+.grps .grp{min-width:0;margin-top:0;display:grid;grid-template-rows:subgrid;grid-row:span 2}
+.tabs+.grps>.grp:first-child{margin-top:0}
 .grps .grp.open{grid-column:span 2}
-.grps .grp-head{display:block;min-height:58px}
+.grps .grp-head{display:block;align-self:stretch}
 .grps .grp-head span{display:block}
+.grps .grp-body{grid-row:2/-1;min-width:0}
 .grps .sent,.grps .sent.small{font-size:17.5px;line-height:1.75}
 .grps .show{margin-left:0}
 }
 /* How many sides fit beside the vectors. With three or four across, Why runs down the left so the later sides tuck under the shorter ones. */
-@media(min-width:1240px){.grps{grid-template-columns:repeat(3,minmax(0,1fr))}.grps .grp[data-g=why]{grid-row:span 2}}
+@media(min-width:1240px){.grps{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto 1fr}.grps .grp[data-g=why]{grid-row:span 4}}
 @media(min-width:1280px){.body{grid-template-columns:minmax(0,1fr) 372px;column-gap:28px}}
 @media(min-width:1504px){.grps{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(min-width:1768px){.grps{grid-template-columns:repeat(5,minmax(0,1fr))}.grps .grp[data-g=why]{grid-row:auto}}
+@media(min-width:1768px){.grps{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:none}.grps .grp[data-g=why]{grid-row:span 2}}
 @media(min-width:700px){.leaf{padding:30px 34px 26px}.sent{font-size:21px}.chapter .body{padding-left:46px}}
 /* An added author's marks say what the passage does: filled backs, hollow adds, struck through limits. */
 .sci>.key{color:var(--ink)}
@@ -432,18 +433,41 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 .mine li.sub{padding-left:14px;font-size:14px}
 .mine li.sub>span:first-child{color:var(--muted)}
 .mine li i{display:block;font-style:normal;font-size:14px;color:var(--ink)}
+/* "Hide the editor's decisions": a switch at the top of the page. */
+.ed-switch{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:16px;padding:6px 16px 6px 8px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:600 14px/1.3 var(--sans);text-align:left;cursor:pointer}
+.ed-switch:hover{border-color:var(--muted)}
+.ed-switch .track{position:relative;flex:none;width:34px;height:20px;border-radius:99px;background:color-mix(in srgb,var(--muted) 40%,transparent);transition:background .15s}
+.ed-switch .track::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+.ed-switch[aria-checked=true]{border-color:var(--ink)}
+.ed-switch[aria-checked=true] .track{background:var(--ink)}
+.ed-switch[aria-checked=true] .track::after{transform:translateX(14px)}
+@media(prefers-reduced-motion:reduce){.ed-switch .track,.ed-switch .track::after{transition:none}}
+.ed-note{display:none}
+html.no-editor .ed-note{display:block}
+/* While it is on, the reader gets the statement, the claims, the quotes and the passages; the editor's apparatus and the review
+   buttons step aside: the decision list and limit under each article, the section's record of what was done with each passage,
+   the statement's note on its form, the notes on each claim (taken together, what the fusion changed, why it is added, why it is
+   not fused, the editor's note on a quote), the explanation of the editor's own words, and every Verdict button. The editor's
+   joining words stay in the sentence, without a pointer or a highlight. */
+html.no-editor :is(.hand,.process,.statement>.form,.link.ed,.gives.ed,.picked.ed>.picked-head,.picked.ed>.picked-note,.picked>.card-head,.vt,.vpick,.vnote,.save-note.row,.article>.verdict){display:none}
+html.no-editor .picked.ed{padding-top:0;border-top:0}
+html.no-editor .sg.join{cursor:inherit}
+html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transparent;box-shadow:none}
+@media print{.ed-switch{display:none}}
 @media print{.vt,.vpick,.vnote,.review-tools,.filter-note{display:none}}
 @media print{.dock,.tabs,.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
 </style>
 </head>
 <body>
-<div class="wrap top"><strong>Stoic Constitution</strong><span class="top-end"><a href="/">← ilyadays</a><span class="lang" role="group" aria-label="Language · Язык"><a href="?lang=en" hreflang="en" lang="en" data-lang="en">EN</a><a href="?lang=ru" hreflang="ru" lang="ru" data-lang="ru">RU</a></span></span></div>
+<script src="/apps/site-chrome.js"></script>
 <header class="wrap intro">
+<p class="title">Stoic Constitution</p>
 <p class="eyebrow">Draft · Marcus Aurelius, in a new translation from the Greek</p>
 <h1>The articles so far</h1>
 <p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
 <p class="status"><a href="stoic-translation.html">Marcus’s passages translated from the Greek, beside the 1634 English →</a></p>
+<button class="ed-switch" id="hide-editor" type="button" role="switch" aria-checked="false"><span class="track" aria-hidden="true"></span><span class="ed-label">Hide the editor’s decisions</span></button>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
@@ -477,9 +501,10 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 <button class="act" id="download" type="button">Download as a file</button>
 <button class="act" id="only-open" type="button" aria-pressed="false">Only what I have not judged</button>
 </div>
+<p class="sub ed-note" id="ed-note">The editor’s decisions and the Verdict buttons are hidden while you read; switch them back on at the top of the page.</p>
 <p class="sub" id="review-count" role="status"></p>
 <ul class="mine" id="mine"></ul>
-<p class="sub" style="margin-top:16px">For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
+<p class="sub" style="margin-top:16px">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
 </section>
 </main>
 <footer class="wrap">Marcus is quoted in this project’s own translation from the Greek; Meric Casaubon’s 1634 translation (Project Gutenberg 2680) is shown beside it for comparison. Seneca is quoted in the project’s own translation from the Latin. Topic names, selections and article wordings are editorial drafts.<br>Download the translations, free to use for anything (CC0): Marcus, <i>Meditations</i>: <a href="/downloads/marcus-meditations-project-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-project-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-project-v1.txt" download>text</a>. Seneca, a selection of the <i>Letters</i>: <a href="/downloads/seneca-letters-selection-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-v1.txt" download>text</a>.<br><span lang="ru">По-русски (переведено с английского этого проекта моделью Claude Opus 5.5 и сверено другой моделью; человеком пока не проверено): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>text</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>text</a>.</span></footer>
@@ -491,7 +516,8 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
    reads the Russian record (stoic-constitution.ru.json and stoic-constitution/ru/<chapter>.json, built by
    scripts/aurelius-constitution.py --lang ru) and writes the page's own words from RU_WORDS and the Russian branches below. */
 const LANG_KEY = 'stoic-constitution:lang';
-const LANG = (() => {
+// The site header (site-chrome.js, loaded first) decides the language and draws the EN · RU pill; this is its rule, for a page without it.
+const LANG = window.siteChrome ? window.siteChrome.lang : (() => {
   const asked = new URLSearchParams(location.search).get('lang');
   if (asked === 'ru' || asked === 'en') { try { localStorage.setItem(LANG_KEY, asked); } catch { /* the link still decides */ } return asked; }
   try { return localStorage.getItem(LANG_KEY) === 'ru' ? 'ru' : 'en'; } catch { return 'en'; }
@@ -573,8 +599,9 @@ const RU_WORDS = {
 };
 // The page's fixed words in Russian: [selector, text] sets the text, [selector, html, true] the markup (trusted, written here).
 const RU_STATIC = [
-  ['.top strong', 'Стоическая конституция'],
-  ['.top-end > a', '← ilyadays'],
+  ['.intro .title', 'Стоическая конституция'],
+  ['#hide-editor .ed-label', 'Скрыть решения редактора'],
+  ['#ed-note', 'Решения редактора и кнопки «Оценка» скрыты на время чтения; включить их снова можно вверху страницы.'],
   ['.intro .eyebrow', 'Черновик · Марк Аврелий в новом переводе'],
   ['.intro h1', 'Статьи на сегодня'],
   ['.intro .lede', 'Все 418 фрагментов <i>«Размышлений»</i> сгруппированы по смыслу в главы и разделы. Здесь каждый раздел по порядку слит в статью, глава за главой. Статья высказывает одно положение, а затем рассматривает его с пяти постоянных сторон: почему, на деле, упражнение, когда не выходит и если я сомневаюсь. На широком экране пять сторон стоят рядом, столбцами. Под словами идёт по одной цветной линии на каждый фрагмент, который их говорит: две линии — два фрагмента. Один цвет — один и тот же фрагмент во фразе, в кнопках под ней и на карте векторов рядом с положением. Фиолетовым отмечена работа самого редактора. Других авторов можно добавить с панели «Голоса» внизу экрана и посмотреть, что получает каждая статья; первый из них — Сенека. Наведите курсор, чтобы увидеть точные цитаты. Нажмите или коснитесь, чтобы прочитать фрагменты рядом с тем, что следует из каждого. Русский текст переведён с английского текста этого проекта.', true],
@@ -592,22 +619,12 @@ const RU_STATIC = [
   ['#copy', 'Скопировать мой отзыв'],
   ['#download', 'Скачать файлом'],
   ['#only-open', 'Только неоценённое'],
-  ['#yours > .sub[style]', 'Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).', true],
+  ['#yours > .sub[style]', 'Как всё это сделано, шаг за шагом (векторы, кластеры, слияние, пять сторон, промпты, проверки, Сенека и переводы): <a href="stoic-method.html?lang=ru">метод</a>. Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).', true],
   ['footer', 'Марк цитируется в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого); Сенека — в русском переводе с английского перевода проекта (а тот — с латыни). Русский текст сделан моделью Claude Opus 5.5, сверен другой моделью и человеком пока не проверен. Названия тем, отбор фрагментов и формулировки статей — редакторские черновики.<br>Скачать переводы, свободные для любого использования (CC0): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>текст</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>текст</a>. Английские переводы — на английской версии этой страницы.', true],
   ['.dock-label', 'Голоса'],
 ];
-// The switch: the language on screen is marked; choosing the other one keeps the chapter, the voices and what was open.
-for (const link of document.querySelectorAll('.lang a')) {
-  link.setAttribute('aria-current', String(link.dataset.lang === LANG));
-  link.addEventListener('click', event => {
-    event.preventDefault();
-    const query = new URLSearchParams(location.search);
-    if (link.dataset.lang === 'ru') query.set('lang', 'ru'); else query.delete('lang');
-    try { localStorage.setItem(LANG_KEY, link.dataset.lang); } catch { /* the link carries the choice for this visit */ }
-    const search = query.toString();
-    location.assign(location.pathname + (search ? '?' + search : '') + location.hash);
-  });
-}
+// The EN · RU switch is the site header's (site-chrome.js): choosing the other language reopens this page with the same query
+// and hash, so the chapter, the voices and what was open stay.
 if (RU) {
   document.documentElement.lang = 'ru';
   document.title = 'Статьи · Стоическая конституция';
@@ -616,10 +633,25 @@ if (RU) {
     if (!node) { MISSING_RU.add('static ' + selector); continue; }
     if (html) node.innerHTML = text; else node.textContent = text;
   }
-  document.querySelector('.top-end > a').href = '/ru';   // home, in Russian
   document.querySelector('nav.bar').setAttribute('aria-label', 'Переход');
   document.querySelector('nav.dock').setAttribute('aria-label', 'Голоса');
 }
+// "Hide the editor's decisions": a reading mode. The claims, the statement, the quotes and the passages stay; the editor's
+// apparatus (decision lists, notes on each claim, the section's record) and the review buttons go (CSS under html.no-editor).
+// Off by default; the choice is kept in this browser.
+const EDITOR_KEY = 'stoic-constitution:hide-editor';
+const editorSwitch = document.getElementById('hide-editor');
+function setEditorHidden(on, save) {
+  document.documentElement.classList.toggle('no-editor', on);
+  editorSwitch.setAttribute('aria-checked', String(on));
+  if (save) try { localStorage.setItem(EDITOR_KEY, on ? '1' : '0'); } catch { /* storage blocked: kept for this visit */ }
+}
+setEditorHidden((() => { try { return localStorage.getItem(EDITOR_KEY) === '1'; } catch { return false; } })(), false);
+editorSwitch.addEventListener('click', () => {
+  const on = editorSwitch.getAttribute('aria-checked') !== 'true';
+  setEditorHidden(on, true);
+  announce(RU ? (on ? 'Решения редактора скрыты.' : 'Решения редактора показаны.') : on ? 'The editor’s decisions are hidden.' : 'The editor’s decisions are shown.');
+});
 const STORE = 'stoic-constitution:v1:verdicts';
 const VERDICTS = ['Keep', 'Revise', 'Drop'];
 let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
@@ -1570,6 +1602,7 @@ function pickedBlock(article, key, segs) {
       box.append(...headWith(article, 'a' + article.number + ':' + seg.amend.author + ':amend:' + seg.amend.target, el('p', 'picked-head', RU ? 'Ваша оценка приписки ' + inCase(name, 'gen') : 'Your verdict on ' + name + '’s clause')));
     }
   } else {
+    box.classList.add('ed');   // the editor's own words: what they join, and why the step is the editor's
     const before = segs.slice(0, state.sel.p).reverse().find(other => other.ids.length), after = segs.slice(state.sel.p + 1).find(other => other.ids.length);
     // A recorded inference ("so", "because"): the editor draws a conclusion here, and says why the step is the editor's.
     const where = key === 'statement' ? article.statement : claimOf(article, key);
@@ -1624,7 +1657,7 @@ function passageRow(article, piece, hit, mode) {
     const claim = piece.in === 'single' ? null : claimOf(article, piece.in);
     then.append(el('p', 'gives', claim ? (RU ? 'Также стоит за ' + claimCase(claim.number, 'ins') : 'Also behind claim ' + claim.number) + ' · ' + claim.role : T('Said once')));
   }
-  if (mode === 'claim' && piece.note) then.append(el('p', 'gives', piece.note));
+  if (mode === 'claim' && piece.note) then.append(el('p', 'gives ed', piece.note));   // the editor's note on this quote
   if (source) {
     const voice = voiceOfRef(article, piece.ref);
     if (RU) then.append(el('p', 'gives', 'Векторы: ' + fx(source.nearest.similarity) + ' до ближайшего фрагмента здесь (' + source.nearest.ref + '). Место ' + nf(source.rank) + ' из ' + nf(voice.total)
@@ -1768,11 +1801,11 @@ function claimBlock(article, claim) {
     const panel = el('div', 'trace M');
     panel.append(el('p', 'panel-head', T('The passages, and what follows from each')), columns(article));
     for (const piece of supportOf(article, claim)) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
-    const shared = el('div', 'link induce');
+    const shared = el('div', 'link induce ed');
     shared.append(el('b', '', T('Taken together')), document.createTextNode(claim.shared));
     panel.append(shared);
     if (claim.changed) {
-      const changed = el('div', 'link induce');
+      const changed = el('div', 'link induce ed');
       changed.append(el('b', '', T('What the fusion changed')), document.createTextNode(claim.changed));
       panel.append(changed);
     }
@@ -1813,7 +1846,7 @@ function widerBlock(article, item) {
     const panel = el('div', 'trace M');
     panel.append(el('p', 'panel-head', T('The passages, and what follows from each')), columns(article));
     for (const piece of item.support) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
-    const why = el('div', 'link induce');
+    const why = el('div', 'link induce ed');
     why.append(el('b', '', T('Why it is added')), document.createTextNode(item.why));
     panel.append(why);
     block.append(panel);
@@ -1948,7 +1981,7 @@ function singleBlock(article, item) {
   if (open) {
     const panel = el('div', 'trace S');
     panel.append(columns(), passageRow(article, item, false, 'single'));
-    const why = el('div', 'link induce');
+    const why = el('div', 'link induce ed');
     why.append(el('b', '', T('Why it is not fused')), document.createTextNode(item.why));
     panel.append(why);
     block.append(panel);
@@ -2052,22 +2085,24 @@ function articleCard(article) {
   wrap.dataset.anchor = 'a' + article.number;
   wrap.id = 'article-' + article.number;
   const leaf = el('div', 'leaf');
-  leaf.append(el('p', 'eyebrow', T('Article') + ' ' + article.number), el('h3', '', article.title));
+  // The article's heading opens the text column, so on a wide screen the vectors beside it start level with the heading.
+  const head = el('div', 'art-head');
+  head.append(el('p', 'eyebrow', T('Article') + ' ' + article.number), el('h3', '', article.title));
   if (RU) {
     const note = el('p', 'from-greek', 'Цитаты — в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого). Номера фрагментов — по переводу 1634 года, по которому сгруппированы разделы; заголовок каждого фрагмента и список источников выбранных слов дают его номер в современных изданиях. ');
     const link = el('a', '', 'Фрагменты по-гречески, в новом английском переводе и в переводе 1634 года (на английском)');
     link.href = 'stoic-translation.html';
     note.append(link);
-    leaf.append(note);
+    head.append(note);
   } else if (article.edition) {
     const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English. Passage numbers are those of the 1634 translation, which grouped the sections; each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
     const link = el('a', '', 'Read the passages in Greek, today’s English and 1634');
     link.href = 'stoic-translation.html';
     note.append(link);
-    leaf.append(note);
+    head.append(note);
   }
   const top = el('div', 'body'), lead = el('div', 'lead-col');
-  lead.append(statementBlock(article));
+  lead.append(head, statementBlock(article));
   for (const voice of voicesOf(article)) lead.append(voiceStrip(article, voice));
   lead.append(sourcesBlock(article));
   top.append(lead, mapBlock(article));
@@ -2094,17 +2129,18 @@ function articleCard(article) {
     const part = el('section', 'grp' + (bare ? ' none' : '') + (group.items.some(id => id === openNow || 's:' + id === openNow) || extra.some(item => widerKey(item) === openNow) ? ' open' : ''));
     part.dataset.g = group.key;
     part.dataset.anchor = 'g' + article.number + group.key;
-    const head = el('h4', 'grp-head');
+    const head = el('h4', 'grp-head'), body = el('div', 'grp-body');
     head.append(el('b', '', group.name), el('span', '', group.asks));
-    part.append(head);
-    if (bare) part.append(el('p', 'grp-empty', group.empty));
+    // Heading and body are the side's two rows; on a wide screen the sides share them, so headings and first cards line up.
+    part.append(head, body);
+    if (bare) body.append(el('p', 'grp-empty', group.empty));
     else {
-      if (group.empty && RU) part.append(el('p', 'grp-empty', 'У Марка здесь нет фрагмента. Дальше — слова ' + [...new Set(extra.map(item => inCase(authorByKey(item.author).name, 'gen')))].join(' и ') + '.'));
-      else if (group.empty) part.append(el('p', 'grp-empty', 'Marcus has no passage here. What follows comes from ' + [...new Set(extra.map(item => authorByKey(item.author).name))].join(' and ') + '.'));
+      if (group.empty && RU) body.append(el('p', 'grp-empty', 'У Марка здесь нет фрагмента. Дальше — слова ' + [...new Set(extra.map(item => inCase(authorByKey(item.author).name, 'gen')))].join(' и ') + '.'));
+      else if (group.empty) body.append(el('p', 'grp-empty', 'Marcus has no passage here. What follows comes from ' + [...new Set(extra.map(item => authorByKey(item.author).name))].join(' and ') + '.'));
       const list = el('ol', 'claims');
       for (const id of group.items) list.append(claimOf(article, id) ? claimBlock(article, claimOf(article, id)) : singleBlock(article, article.single.find(item => item.id === id)));
       for (const item of extra) list.append(widerBlock(article, item));
-      part.append(list);
+      body.append(list);
     }
     sides.append(part);
   }

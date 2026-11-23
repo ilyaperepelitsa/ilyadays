@@ -40,6 +40,7 @@ export function BookReader({ workspace, lang, onInspect, onWorkbench }: {
         `Первый черновик, ещё на проверке. Фрагменты цитируются по переводу: ${translator}. Тексты уроков пока на английском.`)}</p>
       <a href={`/apps/stoic-constitution.html?lang=${lang}`}>{pick(lang, 'The Stoic Constitution: all 38 articles from the whole book →', 'Стоическая конституция: все 38 статей из всей книги →')}</a>
       <a href="/apps/stoic-composition.html">{pick(lang, 'See how passages become a constitution article →', 'Как из фрагментов составить статью конституции · на английском →')}</a>
+      <a href={`/apps/stoic-method.html?lang=${lang}`}>{pick(lang, 'How the Constitution was made: the method, step by step →', 'Как сделана конституция: метод шаг за шагом →')}</a>
     </header>
 
     <nav className="au-read-toc" aria-label={pick(lang, 'Contents', 'Содержание')}>

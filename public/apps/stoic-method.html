@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>How the Constitution was made · Stoic Constitution</title>
+<link rel="preload" href="/fonts/manrope/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/apps/site-chrome.css">
+<meta name="description" content="The method of the Stoic Constitution, step by step: sources, embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations.">
+<script>
+/* The language follows the reader, in the order site-chrome.js uses: ?lang=en|ru, else the choice kept by the Stoic pages
+   (the Constitution page's key), else the site's own choice, else English. Set before paint so only one language shows. */
+(function () {
+  var asked = new URLSearchParams(location.search).get('lang'), lang = 'en', page = null, site = null;
+  try { page = localStorage.getItem('stoic-constitution:lang'); site = localStorage.getItem('site-lang'); } catch (e) { /* English */ }
+  if (asked === 'ru' || asked === 'en') lang = asked;
+  else if (page === 'ru' || page === 'en') lang = page;
+  else if (site === 'ru') lang = 'ru';
+  document.documentElement.lang = lang;
+  document.documentElement.setAttribute('data-lang', lang);
+})();
+</script>
+<style>
+/* The site's colours and fonts (site-chrome.css: --bg, --surface, --ink, --muted, --line, --accent, light and dark) under this
+   page's names. The five passage colours and the editor's purple are the Constitution page's. */
+:root{--paper:var(--bg);--card:var(--surface);--p1:#4379f9;--p2:#cc689e;--p3:#853f13;--p4:#989401;--p5:#861192;--e:#55468f;--et:#ece9f6;
+--hl:rgba(23,27,34,.06);--serif:Georgia,'Times New Roman',serif;--sans:var(--site-sans);--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+@media(prefers-color-scheme:dark){:root{--p1:#2f63e1;--p2:#a95e86;--p3:#d63a00;--p4:#437f43;--p5:#2a97bf;--e:#b9adf0;--et:#2e2948;--hl:rgba(237,241,247,.08)}}
+[data-lang=ru] .en,:root:not([data-lang=ru]) .ru{display:none!important}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans)}
+h1,h2,h3,p,ol,ul,figure,blockquote,dl,dd{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+code{font:.86em var(--mono);background:var(--hl);padding:1px 4px;border-radius:4px;overflow-wrap:anywhere}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.intro{padding-block:24px 8px;max-width:760px}
+.eyebrow{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+h1{font:400 clamp(32px,8vw,52px)/1.06 var(--serif);letter-spacing:-.025em;margin:8px 0 14px;text-wrap:balance}
+h2{font:400 clamp(25px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-wrap:balance;margin-bottom:12px}
+h3{font:600 19px/1.3 var(--serif);margin:22px 0 8px}
+.lede{font-size:18px}
+.status{margin-top:12px;font-size:15px;color:var(--muted)}
+/* layout: contents beside the text on a wide screen */
+.layout{display:block}
+.toc{margin:18px 0 8px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--card);font-size:15px}
+.toc p{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.toc ol{padding-left:1.6em;columns:2 15em;column-gap:24px}
+.toc li{break-inside:avoid;padding-block:3px}
+.toc a{color:var(--ink);text-decoration:none}
+.toc a:hover{text-decoration:underline}
+@media(min-width:1100px){
+  .layout{display:grid;grid-template-columns:230px minmax(0,760px);gap:56px;align-items:start}
+  .toc{position:sticky;top:16px;margin-top:28px;max-height:calc(100vh - 32px);overflow:auto}
+  .toc ol{columns:auto}
+  .intro{margin-left:286px}
+}
+article.doc{max-width:760px}
+section.step{padding-block:30px;border-top:1px solid var(--line);scroll-margin-top:12px}
+section.step>p,section.step>ul,section.step>ol,section.step>dl{margin-top:12px}
+.num{font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.files{font-size:14px;color:var(--muted);margin-top:14px!important}
+.files a{color:var(--muted)}
+ul.plain,ol.steps{padding-left:1.3em}
+ul.plain li,ol.steps li{margin-top:8px}
+dl.defs dt{font-weight:650;margin-top:14px}
+dl.defs dd{margin-top:2px}
+blockquote{margin:14px 0;padding:8px 0 8px 16px;border-left:3px solid var(--line);color:var(--muted);font:italic 17px/1.55 var(--serif)}
+blockquote cite{display:block;font:normal 13px var(--sans);margin-top:4px}
+figure{margin:18px 0 6px;padding:16px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.tbl{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;width:100%}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:650;color:var(--muted)}
+td.n,th.n{text-align:right}
+details{margin-top:14px}
+summary{cursor:pointer;font-weight:600;min-height:40px;display:flex;align-items:center}
+/* the pipeline */
+ol.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;counter-reset:f}
+ol.flow li{position:relative;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);counter-increment:f}
+ol.flow li::before{content:counter(f);font:650 12px var(--sans);color:var(--muted);display:block}
+ol.flow b{display:block;font:400 22px/1.15 var(--serif)}
+ol.flow li>span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+/* svg diagrams */
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--ink);font-family:var(--sans)}
+.bars .t{font:600 16px var(--serif)}
+figure svg.bars{max-width:560px}
+figure svg.vec,figure svg.scale,figure svg.marks{max-width:480px}
+.bars .m{font-size:16px;fill:var(--muted)}
+.bars rect{fill:var(--accent)}
+.vec line.ax{stroke:var(--line);stroke-width:1.5}
+.vec .arrow{stroke:var(--ink);stroke-width:2.5;fill:none}
+.vec .arc{stroke:var(--accent);stroke-width:2;fill:none}
+.vec .lab{font-size:17px;font-weight:650}
+.vec .note{font-size:16px;fill:var(--muted)}
+.scale line{stroke:var(--line);stroke-width:6;stroke-linecap:round}
+.scale .fill{stroke:var(--accent)}
+.scale text{font-size:16px}
+.scale .mu{fill:var(--muted)}
+.marks circle,.marks rect{stroke:var(--ink);stroke-width:2}
+.marks .m{fill:var(--p3);stroke:var(--card)}
+.marks .full{fill:var(--ink)}
+.marks .hollow{fill:var(--card)}
+.marks line{stroke:var(--ink);stroke-width:2}
+.marks text{font-size:16px}
+/* the worked example: one coloured line per passage under the words it says */
+.ex{font:400 21px/2.3 var(--serif)}
+.ex.small{font-size:19px}
+.u{--c1:transparent;--c2:transparent;--c3:transparent;padding-bottom:9px;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+  background:linear-gradient(var(--c1),var(--c1)) 0 calc(100% - 1px)/100% 2.5px no-repeat,linear-gradient(var(--c2),var(--c2)) 0 calc(100% - 6px)/100% 2.5px no-repeat,linear-gradient(var(--c3),var(--c3)) 0 calc(100% - 11px)/100% 2.5px no-repeat}
+.chip{display:inline-block;font:650 13px/1.2 var(--sans);padding:3px 7px;border-radius:999px;border:2px solid var(--c,var(--line));margin:2px 2px 0 0;white-space:nowrap}
+.chips{margin-top:6px}
+.inf{color:var(--e);background:var(--et);border-radius:3px;padding:0 3px}
+.sen{border-bottom:2.5px dotted var(--ink);padding-bottom:2px}
+.tag{font:650 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);border-radius:3px;padding:2px 4px;vertical-align:3px;margin-left:4px;white-space:nowrap}
+.q{font-family:var(--serif)}
+.qtbl td:first-child{white-space:nowrap}
+.qtbl td{font-size:14px}
+.qtbl .q{font-size:15px}
+/* the five sides */
+.statement{font:400 20px/1.4 var(--serif);padding:12px 14px;border:1px solid var(--ink);border-radius:8px;background:var(--card)}
+.sides{display:grid;gap:8px;margin-top:8px}
+.side{padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--card);font-size:15px}
+.side h4{margin:0;font:650 15px var(--sans)}
+.side .asks{color:var(--muted);font-size:14px;margin-top:2px}
+.side .for{margin-top:8px}
+.side .a1{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-family:var(--serif)}
+.side .a1 i{color:var(--muted);font-style:normal;font-family:var(--sans);font-size:13px;display:block}
+.side .count{margin-top:8px;font-size:13px;color:var(--muted)}
+/* On a wide screen the five sides are columns whose rows line up: name, question, purpose, Article 1, count. */
+@media(min-width:900px){.sides{grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,auto);column-gap:8px;row-gap:0}
+  .side{font-size:14px;display:grid;grid-row:span 5;grid-template-rows:subgrid;align-content:start}
+  .side>*{margin-top:0}.side .asks,.side .for,.side .a1,.side .count{padding-top:8px}.side .a1{margin-top:8px}}
+/* three readers */
+ol.readers{list-style:none;padding:0;display:grid;gap:10px}
+ol.readers li{padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+ol.readers b{display:block;font:600 17px var(--serif)}
+ol.readers .sees{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+@media(min-width:700px){ol.readers{grid-template-columns:repeat(3,minmax(0,1fr))}}
+footer{padding-block:28px 40px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);margin-top:12px}
+footer p+p{margin-top:8px}
+@media print{.toc{display:none}}
+</style>
+</head>
+<body>
+<script src="/apps/site-chrome.js"></script>
+<main id="main">
+<!-- ===================================================================== ENGLISH -->
+<div class="en" lang="en">
+<header class="wrap"><div class="intro">
+<p class="eyebrow">Stoic Constitution · Method</p>
+<h1>How the Constitution was made</h1>
+<p class="lede">The <a href="stoic-constitution.html">Stoic Constitution</a> turns the <span data-n="passages">418</span> passages of Marcus Aurelius’s <i>Meditations</i> into <span data-n="articles">38</span> articles. Each article makes one statement and looks at it from five fixed sides. Seneca can be added as a second voice, and everything is in English and Russian. This page explains each step: what was done, how, and where the file that does it lives.</p>
+<p class="status">The articles are an editorial draft: the owner has not reviewed them yet, and no person who reads Greek, Latin or Russian has checked the translations. Every number on this page is taken from the published record. For a worked example of joining two passages, with three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc" aria-label="Contents"><p>Contents</p><ol start="0">
+<li><a href="#pipeline">The whole path at a glance</a></li>
+<li><a href="#sources">The sources and their rights</a></li>
+<li><a href="#vectors">Passages become vectors</a></li>
+<li><a href="#clusters">Vectors become chapters and sections</a></li>
+<li><a href="#names">Naming what the vectors grouped</a></li>
+<li><a href="#fusion">Fusing a section into an article</a></li>
+<li><a href="#sides">The five sides</a></li>
+<li><a href="#prompt">The prompt, and feedback that became rules</a></li>
+<li><a href="#checks">The checks</a></li>
+<li><a href="#seneca">Seneca as a second voice</a></li>
+<li><a href="#translation">The translations</a></li>
+<li><a href="#review">Tools for the owner’s review</a></li>
+<li><a href="#open">What is still open</a></li>
+</ol></nav>
+
+<article class="doc">
+
+<section class="step" id="pipeline" data-step="pipeline" aria-labelledby="h-pipeline">
+<p class="num">Overview</p>
+<h2 id="h-pipeline">The whole path at a glance</h2>
+<figure>
+<ol class="flow" aria-label="From passages to translated articles">
+<li><b><span data-n="passages">418</span> passages</b><span>Marcus, in the 1634 English</span></li>
+<li><b><span data-n="passages">418</span> vectors</b><span><span data-n="dims">3072</span> numbers each</span></li>
+<li><b>1 tree</b><span>Ward linkage over the vectors</span></li>
+<li><b><span data-n="chapters">7</span> chapters</b><span><span data-n="sections">38</span> sections</span></li>
+<li><b><span data-n="articles">38</span> articles</b><span><span data-n="claims">178</span> fused claims, <span data-n="single">165</span> said once</span></li>
+<li><b>+ Seneca</b><span><span data-n="seneca-pieces">421</span> quotes from <span data-n="letters">94</span> letters</span></li>
+<li><b>EN · RU</b><span>Greek and Latin into English, English into Russian</span></li>
+</ol>
+<figcaption>Passages are grouped by meaning, each group is fused into an article, a second author is added, and the text the reader sees is translated. In practice the translation from the Greek came after the grouping and before most articles were written (step 3 says what that changed).</figcaption>
+</figure>
+</section>
+
+<section class="step" id="sources" data-step="sources" aria-labelledby="h-sources">
+<p class="num">Step 1</p>
+<h2 id="h-sources">The sources and their rights</h2>
+<p>Five texts are involved, and each has one job.</p>
+<dl class="defs">
+<dt>Marcus in Meric Casaubon’s English of 1634 — the corpus that was measured</dt>
+<dd>Project Gutenberg 2680. Casaubon died in 1671, so the text is free everywhere. Its <span data-n="passages">418</span> numbered passages are what was embedded and clustered: the chapters and sections were found on this text, and every passage keeps its 1634 number and revision id as its identity. The articles no longer quote it; it is shown beside the new English for comparison.</dd>
+<dt>Marcus in Greek</dt>
+<dd>J. H. Leopold’s edition of 1908 (Leopold died in 1925, so the edition is out of copyright), from the Perseus Digital Library’s file, which Perseus licenses CC BY-SA. The Greek stands beside each passage on the <a href="stoic-translation.html">translation page</a>.</dd>
+<dt>The project’s own English from the Greek — what the articles quote</dt>
+<dd>All <span data-n="passages">418</span> passages, each made by three readings (step 10). Every article quotes this English.</dd>
+<dt>Seneca’s <i>Moral Letters to Lucilius</i> in Latin, and the project’s English of it</dt>
+<dd>The Latin is from The Latin Library, checked against Latin Wikisource. Seneca is quoted only in the project’s own translation from the Latin: 304 sections from <span data-n="letters">94</span> letters are translated, and the Constitution quotes <span data-n="seneca-sections">303</span> of them (the 304th, Letter 66.5, serves a frozen test record).</dd>
+<dt>Gummere’s English of Seneca — kept private</dt>
+<dd>Richard Mott Gummere’s Loeb translation (1917, 1920, 1925) was used only to find Seneca’s passages by vector similarity. Gummere died on 3 December 1969, so his English is free in the United States but protected in the EU, the UK and Turkey through 2039. None of his words are published: the build refuses any clause of 30 or more characters that is in Gummere and not in the project’s English.</dd>
+</dl>
+<p><b>Downloads.</b> The project’s English of the <i>Meditations</i> and of the Seneca selection, and their Russian, are dedicated to the public domain (CC0): anyone may use them for anything. They hold English or Russian only, so the CC BY-SA of the Greek file does not attach to them. Marcus: <a href="/downloads/marcus-meditations-project-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-project-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-project-v1.txt" download>text</a>. Seneca: <a href="/downloads/seneca-letters-selection-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-v1.txt" download>text</a>. In Russian: <a href="/downloads/marcus-meditations-ru-v1.epub" download>Marcus EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>Seneca EPUB</a>.</p>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/project-v1.json">project-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/seneca-v1.json">seneca-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (the rights record for Seneca is under <code>authors[0].rights</code>) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-downloads.py">aurelius-downloads.py</a></p>
+</section>
+
+<section class="step" id="vectors" data-step="vectors" aria-labelledby="h-vectors">
+<p class="num">Step 2</p>
+<h2 id="h-vectors">Passages become vectors</h2>
+<p>Each of the <span data-n="passages">418</span> passages, in Casaubon’s exact text, was sent to OpenAI’s <b>text-embedding-3-large</b> model, which returns a vector: a list of <span data-n="dims">3072</span> numbers. The full length was kept; the model can return shorter vectors, and that was not used. Passages that mean similar things get vectors that point in similar directions.</p>
+<p><b>Closeness</b> is cosine similarity: the cosine of the angle between two vectors. It would be 1 for the same direction. Across the whole book the median similarity of two of Marcus’s passages is 0.468; inside the section behind Article 1 the ten passages’ pairs run from 0.439 to 0.756. A section’s <b>centre</b> is the average of its passages’ vectors (each scaled to length 1 first), and a passage’s closeness to its section is its similarity to that centre.</p>
+<figure>
+<svg class="vec" viewBox="0 0 420 250" role="img" aria-label="Two passages as arrows from one point, 49 degrees apart; cosine similarity 0.655">
+<line class="ax" x1="40" y1="220" x2="400" y2="220"/><line class="ax" x1="40" y1="220" x2="40" y2="20"/>
+<path class="arrow" d="M40 220 L300 220 M288 213 L300 220 L288 227"/>
+<path class="arrow" d="M40 220 L210.6 23.8 M197.4 28.3 L210.6 23.8 L208 37.5"/>
+<path class="arc" d="M130 220 A90 90 0 0 0 99 152"/>
+<text class="lab" x="308" y="226">9.7</text>
+<text class="lab" x="220" y="30">7.10</text>
+<text class="note" x="138" y="182">49°</text>
+<text class="note" x="250" y="160">cos 49° = 0.655</text>
+</svg>
+<svg class="scale" viewBox="0 0 420 70" role="img" aria-label="Similarity scale from 0 to 1; the section's pairs run from 0.439 to 0.756" style="margin-top:12px">
+<line x1="20" y1="30" x2="400" y2="30"/><line class="fill" x1="187" y1="30" x2="307" y2="30"/>
+<text class="mu" x="20" y="62">0</text><text class="mu" x="392" y="62">1</text>
+<text x="166" y="62">0.439</text><text x="287" y="62">0.756</text>
+</svg>
+<figcaption>Two of the ten passages behind Article 1, 9.7 and 7.10, drawn as arrows. Their real vectors have 3,072 numbers; only the angle between them is kept in the drawing. Below: where all pairs of that section fall between 0 and 1.</figcaption>
+</figure>
+<p>The vectors are computed once, stored under a hash of the exact text and the model settings, and kept privately with the corpus. The published files hold only references and the numbers derived from them. When the project’s own English existed, the same model embedded it too (rule 21 in step 7: the vectors follow the text the reader is shown), and each article reports its closeness on both texts.</p>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/aurelius/embeddings.py">embeddings.py</a> (model, dimensions, cache) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-translation.py">aurelius-translation.py</a> (<code>--embed</code> for the new English)</p>
+</section>
+
+<section class="step" id="clusters" data-step="clusters" aria-labelledby="h-clusters">
+<p class="num">Step 3</p>
+<h2 id="h-clusters">Vectors become chapters and sections</h2>
+<p>The script builds one tree over all the vectors by <b>Ward linkage</b>: it starts with every passage on its own and repeatedly merges the two groups whose merging adds the least spread. The vectors are scaled to length 1 first, so the straight-line distance between two of them orders pairs exactly as cosine similarity does.</p>
+<ol class="steps">
+<li><b>Chapters.</b> The tree is cut into <span data-n="chapters">7</span> groups: the largest number before a group of fewer than 20 passages appears.</li>
+<li><b>Sections.</b> Each chapter is clustered again by the same method and cut into max(2, round(size ÷ 11)) sections. That gives <span data-n="sections">38</span> sections, and each became one article.</li>
+<li><b>Order.</b> The tree gives groups, not an order. Inside a chapter the sections follow the tree; the order of the chapters is the editor’s choice (the chapter about the whole and my place in it comes first, because the others lean on it).</li>
+</ol>
+<figure>
+<svg class="bars" viewBox="0 0 420 384" role="img" aria-label="Seven chapters and 38 sections: bar length is the number of passages, the divisions are sections">
+<text x="0" y="17" class="t">1. The whole and my place in it</text>
+<text x="420" y="41" class="m" text-anchor="end">65 · 6 sections</text>
+<rect x="0.0" y="27" width="19.8" height="16" rx="2"><title>c6.s1 · A member of one body · 10</title></rect>
+<rect x="21.8" y="27" width="30.7" height="16" rx="2"><title>c6.s2 · The work that belongs to me · 15</title></rect>
+<rect x="54.5" y="27" width="30.7" height="16" rx="2"><title>c6.s3 · What happens to me · 15</title></rect>
+<rect x="87.2" y="27" width="24.2" height="16" rx="2"><title>c6.s4 · The reason that governs the whole · 12</title></rect>
+<rect x="113.4" y="27" width="13.3" height="16" rx="2"><title>c6.s5 · What I was made for · 7</title></rect>
+<rect x="128.6" y="27" width="11.1" height="16" rx="2"><title>c6.s6 · What the whole sends in its season · 6</title></rect>
+<text x="0" y="71" class="t">2. The life within</text>
+<text x="420" y="95" class="m" text-anchor="end">133 · 12 sections</text>
+<rect x="0.0" y="81" width="19.8" height="16" rx="2"><title>c3.s1 · My judgment is up to me · 10</title></rect>
+<rect x="21.8" y="81" width="39.4" height="16" rx="2"><title>c3.s2 · What happens can be borne and does not harm me · 19</title></rect>
+<rect x="63.2" y="81" width="15.4" height="16" rx="2"><title>c3.s3 · Keeping the few names I have given myself · 8</title></rect>
+<rect x="80.7" y="81" width="37.2" height="16" rx="2"><title>c3.s4 · Living now as one about to die · 18</title></rect>
+<rect x="119.9" y="81" width="32.9" height="16" rx="2"><title>c3.s5 · Coming back to my principles and keeping them ready · 16</title></rect>
+<rect x="154.8" y="81" width="24.2" height="16" rx="2"><title>c3.s6 · The retreat within · 12</title></rect>
+<rect x="181.0" y="81" width="28.5" height="16" rx="2"><title>c3.s7 · Whether anything is better than virtue · 14</title></rect>
+<rect x="211.5" y="81" width="8.9" height="16" rx="2"><title>c3.s8 · Living with the gods · 5</title></rect>
+<rect x="222.4" y="81" width="15.4" height="16" rx="2"><title>c3.s9 · Blaming no one for what is not up to me · 8</title></rect>
+<rect x="239.8" y="81" width="8.9" height="16" rx="2"><title>c3.s10 · Happiness and unhappiness are my own doing · 5</title></rect>
+<rect x="250.8" y="81" width="19.8" height="16" rx="2"><title>c3.s11 · Ready to leave · 10</title></rect>
+<rect x="272.6" y="81" width="15.4" height="16" rx="2"><title>c3.s12 · Content wherever I am put · 8</title></rect>
+<text x="0" y="125" class="t">3. Daily conduct</text>
+<text x="420" y="149" class="m" text-anchor="end">85 · 8 sections</text>
+<rect x="0.0" y="135" width="41.6" height="16" rx="2"><title>c2.s1 · When someone offends me · 20</title></rect>
+<rect x="43.6" y="135" width="11.1" height="16" rx="2"><title>c2.s2 · Taking a thing apart: material, cause, purpose and time · 6</title></rect>
+<rect x="56.7" y="135" width="24.2" height="16" rx="2"><title>c2.s3 · Wiping out impressions, checking impulses · 12</title></rect>
+<rect x="82.9" y="135" width="35.1" height="16" rx="2"><title>c2.s4 · Good whatever others say, and open to being set right · 17</title></rect>
+<rect x="119.9" y="135" width="4.5" height="16" rx="2"><title>c2.s5 · Keeping to one’s craft · 3</title></rect>
+<rect x="126.5" y="135" width="13.3" height="16" rx="2"><title>c2.s6 · Training, and the use of reason · 7</title></rect>
+<rect x="141.7" y="135" width="15.4" height="16" rx="2"><title>c2.s7 · What I turn to · 8</title></rect>
+<rect x="159.2" y="135" width="24.2" height="16" rx="2"><title>c2.s8 · The morning, and the question before each action · 12</title></rect>
+<text x="0" y="179" class="t">4. Praise, harm and the worth of things</text>
+<text x="420" y="203" class="m" text-anchor="end">55 · 5 sections</text>
+<rect x="0.0" y="189" width="26.3" height="16" rx="2"><title>c7.s1 · Whose praise do I want? · 13</title></rect>
+<rect x="28.3" y="189" width="13.3" height="16" rx="2"><title>c7.s2 · Wrongdoing harms the wrongdoer · 7</title></rect>
+<rect x="43.6" y="189" width="8.9" height="16" rx="2"><title>c7.s3 · Short sayings · 5</title></rect>
+<rect x="54.5" y="189" width="24.2" height="16" rx="2"><title>c7.s4 · The sameness and meanness of things · 12</title></rect>
+<rect x="80.7" y="189" width="37.2" height="16" rx="2"><title>c7.s5 · How my soul uses itself · 18</title></rect>
+<text x="0" y="233" class="t">5. Change</text>
+<text x="420" y="257" class="m" text-anchor="end">23 · 2 sections</text>
+<rect x="0.0" y="243" width="30.7" height="16" rx="2"><title>c4.s1 · All things pass · 15</title></rect>
+<rect x="32.7" y="243" width="15.4" height="16" rx="2"><title>c4.s2 · The same matter, reshaped · 8</title></rect>
+<text x="0" y="287" class="t">6. Death and time</text>
+<text x="420" y="311" class="m" text-anchor="end">33 · 3 sections</text>
+<rect x="0.0" y="297" width="35.1" height="16" rx="2"><title>c5.s1 · The dead and the forgotten · 17</title></rect>
+<rect x="37.1" y="297" width="15.4" height="16" rx="2"><title>c5.s2 · The length of a life and the use of its time · 8</title></rect>
+<rect x="54.5" y="297" width="15.4" height="16" rx="2"><title>c5.s3 · Meeting death well · 8</title></rect>
+<text x="0" y="341" class="t">7. Teachers and examples</text>
+<text x="420" y="365" class="m" text-anchor="end">24 · 2 sections</text>
+<rect x="0.0" y="351" width="19.8" height="16" rx="2"><title>c1.s1 · What I learned, and from whom · 10</title></rect>
+<rect x="21.8" y="351" width="28.5" height="16" rx="2"><title>c1.s2 · Socrates, Plato and other models · 14</title></rect>
+</svg>
+<figcaption>The seven chapters in page order. The length of a bar is the chapter’s number of passages; each division is one section, and so one article. Hover a division for its section.</figcaption>
+</figure>
+<p><b>Why Ward.</b> The project first planned average linkage on cosine distance. At seven groups, average linkage puts 412 of the 418 passages into one group and complete linkage 267; Ward’s largest group holds 133.</p>
+<div class="tbl"><table>
+<thead><tr><th>Method, cut at 7 groups</th><th>Group sizes</th><th class="n">Largest share</th><th class="n">Silhouette</th></tr></thead>
+<tbody>
+<tr><td>Ward (used)</td><td>133, 85, 65, 55, 33, 24, 23</td><td class="n">0.318</td><td class="n">0.009</td></tr>
+<tr><td>Complete</td><td>267, 109, 21, 8, 7, 4, 2</td><td class="n">0.639</td><td class="n">0.013</td></tr>
+<tr><td>Average</td><td>412, 1, 1, 1, 1, 1, 1</td><td class="n">0.986</td><td class="n">0.214</td></tr>
+</tbody></table></div>
+<p><b>How far to trust it.</b> The silhouette measures how much closer passages are to their own group than to the next one; for Ward it is near zero. A section is therefore a neighbourhood of passages worth reading together, not a proven theme. That is why an article must find what its passages really share, and may set passages aside.</p>
+<p><b>Grouped before the translation.</b> The sections were found on the 1634 English, before the project’s own translation existed. The cleaner order, later written down as a rule, is: translate, embed, group, then write. When all <span data-n="passages">418</span> passages had been translated and embedded, <span data-n="stayed">352</span> of them were still nearest the centre of their own section, and every section was less tightly grouped on the new English. The decision was to keep the 38 sections and move nothing; the translation page lists the passages that now sit nearer another section.</p>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-topics.py">aurelius-topics.py</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/topics.json">topics.json</a> (references and numbers only)</p>
+</section>
+
+<section class="step" id="names" data-step="names" aria-labelledby="h-names">
+<p class="num">Step 4</p>
+<h2 id="h-names">Naming what the vectors grouped</h2>
+<p>Clustering gives numbers, not names. At first each section had a provisional name taken from its three most central passages. Then each chapter was read in full, every passage of every section, before any of its articles was written; after that reading the chapter’s title, its one-line summary and each section’s title were confirmed or rewritten. Twelve section titles changed in that reading (for example “Opinion is in my power” became “My judgment is up to me”), each with its reason recorded. A section’s title is its article’s title.</p>
+<p>After all articles were written, each chapter’s title and summary were checked against its articles: the summaries of three chapters were rewritten in the first person, and chapter 7 was retitled “Praise, harm and the worth of things”, because the old title missed its article on the worth of things.</p>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (<code>chapters</code>: titles, summaries, <code>read: full</code>) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/37-owner-points.md">37-owner-points.md</a> (the twelve changed titles)</p>
+</section>
+
+<section class="step" id="fusion" data-step="fusion" aria-labelledby="h-fusion">
+<p class="num">Step 5</p>
+<h2 id="h-fusion">Fusing a section into an article</h2>
+<p>The main idea of the project is <b>fusion</b>. Passages that the vectors put close together are read side by side; where two or more of them say the same thing in different words or images, that shared thing is stated once, as a claim, and the claims are joined into one statement. The owner rejected the first drafts, which paraphrased one passage per point, as “concatenations”. Everything below follows from that.</p>
+<h3>The procedure, for one section</h3>
+<ol class="steps">
+<li><b>Read every passage</b> and note the separate things each one says.</li>
+<li><b>Find parallels:</b> the same thing said in two or more passages. Quote each instance exactly.</li>
+<li><b>Fuse each group into one claim,</b> stated once in plain first person. Record what the passages share, and what the fusion generalised or dropped.</li>
+<li><b>Trace every quote:</b> name the words of the claim it backs (“gives”; one quote may back several), and write one sentence that follows from that quote alone (“what follows”).</li>
+<li><b>Induce the statement:</b> one sentence under 140 characters that joins the claims, split into parts, each part mapped to the quotes behind it. Name how it was reached: a chain of consequences, lists aligned into one, an argument by cases, a likeness, a rule with its hardest case.</li>
+<li><b>Keep single witnesses apart:</b> what only one passage says goes under “said once”, with the reason. It is never counted as fused.</li>
+<li><b>Account for every passage:</b> each one feeds a claim, is quoted alone, or is set aside with a one-sentence reason.</li>
+<li><b>Place</b> every claim and said-once item under one of the five sides (step 6), and write the editor’s decisions a reader might dispute and the article’s limit: where it is weak.</li>
+</ol>
+<h3>The parts of an article</h3>
+<dl class="defs">
+<dt>Statement</dt><dd>One short first-person sentence (30 to 140 characters). Each of its parts names the quotes behind it and should rest on two or more passages.</dd>
+<dt>Fused claim</dt><dd>Rests on at least two passages, and at least one of its words or phrases must be said by two of them. A passage about one thing may not be stretched to back another. Across the 38 articles there are <span data-n="claims">178</span> claims.</dd>
+<dt>Said once</dt><dd>A point only one passage makes, kept apart with the reason (<span data-n="single">165</span> in all). One article, Article 29 (“Short sayings”), has no fused claim at all: its writer tested every pair of its five passages and found none that say the same thing, so it is marked as separate sayings kept side by side, with the reason. There is <span data-n="unfused">1</span> such article.</dd>
+<dt>Every quote exact</dt><dd>A quote must match exactly one span of its passage in the project’s English, or the build stops. <span data-n="sources">391</span> of the <span data-n="passages">418</span> passages are quoted; the rest are set aside, each with its reason.</dd>
+<dt>What follows</dt><dd>For each quote, one plain sentence of what follows from that passage alone, before any fusion. It stands in a column beside the passage, so a reader can check each step: Marcus’s words, what follows from them, then what the passages give taken together.</dd>
+<dt>The editor’s inferences, in purple</dt><dd>A “so”, “therefore” or “because” that no passage says is recorded as the editor’s, with one sentence of why, and may not sit inside words a passage backs. On the page it is purple and named “The editor’s inference”. There are <span data-n="inferences">12</span> in the 38 articles.</dd>
+<dt>One colour per passage</dt><dd>A passage keeps one colour throughout its article: the line under the words it backs, its chip, its quoted row and its dot on the map. Two lines under a phrase mean two passages say it. Passages that meet in a claim never share a colour; five colours is the most that stays distinguishable, also for colour-blind readers, so the chip always names the passage too. Purple is kept for the editor, the warning colour for a weakened claim, and everything else is neutral.</dd>
+<dt>The vectors column</dt><dd>Beside each statement: a map of the section’s passages, a flat layout of their cosine distances (metric multidimensional scaling) with its stress stated, which says how much the flat picture distorts the true distances (0.211 for Article 1); the exact similarity of every pair in a table; the nearest sections; and how close each claim’s passages are on the 1634 and the new English. Pointing at words picks out their passages on the map, and pointing at a passage picks out the words it backs.</dd>
+</dl>
+
+<h3>An example: Article 1, “A member of one body”</h3>
+<figure>
+<p class="eyebrow">The statement, part by part</p>
+<p class="ex" data-src="1:statement">I am <span class="u" style="--c1:var(--p3);--c2:var(--p1)">a member</span> <span class="u" style="--c1:var(--p3);--c2:var(--p4)">of one body</span> <span class="u" style="--c1:var(--p3);--c2:var(--p2)">of reasoning beings</span>, <span class="u" style="--c1:var(--p3);--c2:var(--p5)">made for a shared life with them</span>.</p>
+<p class="chips"><span class="chip" style="--c:var(--p3)">7.10</span><span class="chip" style="--c:var(--p1)">9.21</span><span class="chip" style="--c:var(--p4)">11.7</span><span class="chip" style="--c:var(--p2)">9.7</span><span class="chip" style="--c:var(--p5)">5.15</span></p>
+<p class="eyebrow" style="margin-top:18px">Claim 1 · Why · fused from five passages</p>
+<p class="ex small" data-src="1:c1"><span class="u" style="--c1:var(--p3);--c2:var(--p2)">Everything that reasons</span> <span class="u" style="--c1:var(--p5);--c2:var(--p2)">shares one reason</span>, <span class="u" style="--c1:var(--p3)">as limbs share one body</span>, <span class="u" style="--c1:var(--p4);--c2:var(--p1)">citizens one city</span>, and <span class="u" style="--c1:var(--p5)">every lit place one sun</span>.</p>
+<div class="tbl"><table class="qtbl">
+<thead><tr><th>Passage</th><th>Marcus’s words (the project’s English)</th><th>Gives</th><th>What follows from it alone</th></tr></thead>
+<tbody>
+<tr><td><span class="chip" style="--c:var(--p3)">7.10</span></td><td class="q" data-quote="1:7.10a">The relation that the limbs of the body have in things that are united is the relation that rational beings have in things that stand apart</td><td>as limbs share one body; Everything that reasons</td><td>Rational beings, who stand apart, have the same relation to one another that the limbs of one body have.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p4)">4.4</span></td><td class="q" data-quote="1:4.4a">we are citizens. If that is so, we share in some civic body. If that is so, the universe is, as it were, a city.</td><td>citizens one city</td><td>We are citizens, we share in a civic body, and the universe is like a city.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p1)">9.21</span></td><td class="q" data-quote="1:9.21a">you yourself help to complete a civic whole</td><td>citizens one city</td><td>I am one of those who make a civic whole complete.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p5)">12.23</span></td><td class="q" data-quote="1:12.23a">One light of the sun, even if it is divided by walls, by mountains</td><td>every lit place one sun</td><td>The light of the sun is one, even where walls and mountains divide it.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p5)">12.23</span></td><td class="q" data-quote="1:12.23b">One soul that has mind, even if it seems to be separated.</td><td>shares one reason</td><td>There is one soul that has mind, even though it seems to be separated.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p2)">9.7</span></td><td class="q" data-quote="1:9.7a">one soul that has mind has been portioned out among the rational ones</td><td>shares one reason; Everything that reasons</td><td>The beings that reason share one soul, the soul that has mind.</td></tr>
+</tbody></table></div>
+<p style="margin-top:12px"><b>Shared:</b> four pictures (body, city, sunlight, soul) with one structure: a single thing present in many, and not split by being shared. <b>Changed by the fusion:</b> Marcus says “one soul that has mind” in 12.23 and 9.7, and “mind” and “reason” in 4.4; the claim says “reason” throughout.</p>
+<p class="eyebrow" style="margin-top:18px">Claim 5 · When it breaks · with the editor’s inference</p>
+<p class="ex small" data-src="1:c5">Having cut myself off, I can grow back into the whole, <span class="inf">because</span> nature is stronger than my leaving.</p>
+<figcaption>The editor’s inference: “No passage gives this reason: 11.7 credits the return to Zeus and 8.32 to god, and 9.7 speaks of people who run away and are overtaken, not of a return.” The statement was reached as “Many pictures, one claim; then its consequences”. Read it on the page: <a href="stoic-constitution.html#article-1">Article 1</a>.</figcaption>
+</figure>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (the authored articles) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution.py">aurelius-constitution.py</a> (the build) · <a href="stoic-composition.html">composition study</a> (two passages joined three ways, by hand)</p>
+</section>
+
+<section class="step" id="sides" data-step="sides" aria-labelledby="h-sides">
+<p class="num">Step 6</p>
+<h2 id="h-sides">The five sides</h2>
+<p>Every article opens with one short statement. Everything else approaches that statement from five fixed sides, the same in every article and in the same order, so that articles can be read and compared the same way. On a wide screen the sides are five columns under the statement; on a phone they are a row of tabs that stays in reach.</p>
+<p>The owner asked for one statement with “subarticles [that] approach this theme from other perspectives … labeled somehow”, then named the first three (“why, in action, practice. maybe show them as columns?”). Each side asks one question:</p>
+<figure>
+<p class="statement" data-src="1:statement">I am a member of one body of reasoning beings, made for a shared life with them.</p>
+<div class="sides">
+<div class="side"><h4>Why</h4><p class="asks">The ground for the statement.</p><p class="for">The reasons to hold it, in the passages’ own words.</p><p class="a1"><i>Article 1</i>Claims 1 and 2: we share one reason; we are made for one another.</p><p class="count">Filled in <span data-n="fill-why">37</span> of 38</p></div>
+<div class="side"><h4>In action</h4><p class="asks">What follows for what I do.</p><p class="for">A rule of life has to change conduct, or it is only a view.</p><p class="a1"><i>Article 1</i>Claim 3: each thing I do aims at the common good.</p><p class="count">Filled in <span data-n="fill-action">37</span> of 38</p></div>
+<div class="side"><h4>Practice</h4><p class="asks">An exercise I can repeat.</p><p class="for">Marcus often tells himself what to say or do again; this side keeps those exercises.</p><p class="a1"><i>Article 1</i>Said once (7.10): “I shall often say to myself: I am a member, and not merely a part.”</p><p class="count">Filled in <span data-n="fill-practice">35</span> of 38</p></div>
+<div class="side"><h4>When it breaks</h4><p class="asks">What failing looks like, and the way back.</p><p class="for">A rule that says nothing about failing leaves the reader alone the first time they fail it.</p><p class="a1"><i>Article 1</i>Claims 4 and 5: hating cuts me off from the whole; I can grow back. A warning, said once (11.7).</p><p class="count">Filled in <span data-n="fill-breaks">32</span> of 38</p></div>
+<div class="side"><h4>If I doubt it</h4><p class="asks">What still holds if the statement is not true.</p><p class="for">Marcus often argues by cases (whether the world is providence or atoms, something still holds); this side keeps what survives doubt.</p><p class="a1"><i>Article 1</i>Empty: “No passage in this section considers that reasoning beings might not be one; the doubt is taken up under Article 3.”</p><p class="count">Filled in <span data-n="fill-doubt">19</span> of 38</p></div>
+</div>
+<figcaption>The five sides of Article 1. The questions are the ones the record and the Constitution page use; the line under each question, on what the side is for, is this page’s explanation and not part of the record.</figcaption>
+</figure>
+<p>Every claim and every said-once item sits under exactly one side. A side with no passage for it stays empty and says why in one sentence; it is never filled with the editor’s words. That is why “If I doubt it” is empty in about half of the articles: Marcus does not consider doubt in every section.</p>
+</section>
+
+<section class="step" id="prompt" data-step="prompt" aria-labelledby="h-prompt">
+<p class="num">Step 7</p>
+<h2 id="h-prompt">The prompt, and feedback that became rules</h2>
+<p>One prompt is used for every article, whether a model or the editor writes it: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/constitution-article.md">apps/aurelius/prompts/constitution-article.md</a>. It has two parts: the task (the procedure of step 5) and the rules learned from the owner’s review. Its opening instruction is how the method keeps learning:</p>
+<blockquote>“When the owner gives feedback on any article, generalise it into a rule, add it to the second part with the date and their words, and apply it to every existing article, not only the one they pointed at.”</blockquote>
+<p>So each of the 25 rules is followed by the words it came from. In short:</p>
+<ul class="plain">
+<li><b>What an article is</b> — 1 fuse, do not concatenate · 2 keep exact quote tracking under every fused statement · 3 write it as an article, in the first person · 4 say it plainly · 7 one statement, then the five labelled sides · 8 several sources at once, component by component · 9 every quoted passage gets its own conclusion · 19 mark the editor’s inferences · 22 every line a reader meets alone must stand alone.</li>
+<li><b>How it is shown</b> — 5 keep the page structure · 10 colour means one thing: the source passage · 11 show the measurements behind the grouping · 15 the vectors are a column of their own.</li>
+<li><b>Added authors</b> — 12 a second author is added, and every word of his is marked as his · 13 adding or removing an author is one tap · 14 whose words these are is one quiet mark, and an added author changes the body · 16 read his quote where it stands · 17 search by words as well as by vectors, and log it · 18 a clause never says more than its quote.</li>
+<li><b>Translation</b> — 20 evidence in today’s English · 21 vectors follow the text the reader is shown · 23 translate with three readers and keep the briefs · 24 other languages from the settled text (since replaced by the owner’s choice) · 25 an article in another language is re-cut, not re-translated.</li>
+<li><b>The loop itself</b> — 6 carry feedback forward.</li>
+</ul>
+<p>Four of the owner’s remarks, as the prompt records them:</p>
+<blockquote>“These look like concatenations of exact quotes… I don't see any level of merging into common concepts… from parts to the whole, from parts to a higher thought.”<cite>Rule 1, 23 Nov 2026</cite></blockquote>
+<blockquote>“Bits like this aren't clear enough: ‘That work is finished in the doing’.”<cite>Rule 4: the fix is “this work is complete the moment I do it; it does not depend on how things turn out”</cite></blockquote>
+<blockquote>“I think I also want a parallel conclusions column to show what follows from the passage.”<cite>Rule 9</cite></blockquote>
+<blockquote>“maybe we should've translated source ones first? into modern english … just make sure to do embeddings on new translation”<cite>Rule 21</cite></blockquote>
+<p>Where a rule can be checked by script it became a gate: since 23 November, an empty side must say why in one sentence (rule 7), and a Seneca context may not point back to another quote, as in “the same letter” (rule 22).</p>
+<p class="files">The other briefs: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/article-review.md">article-review.md</a> (the independent reviewer) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-translator.md">translation-translator.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-checker.md">translation-checker.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-settler.md">translation-settler.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-glossary.md">translation-glossary.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-matcher.md">translation-matcher.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-lead.md">translation-lead.md</a>. The briefs for the Russian were working files of that session and are not in the repository; the Russian method is recorded in the Russian store (step 10).</p>
+</section>
+
+<section class="step" id="checks" data-step="checks" aria-labelledby="h-checks">
+<p class="num">Step 8</p>
+<h2 id="h-checks">The checks</h2>
+<p>An article enters the record only after passing each layer below. The first two are scripts; the next two are readers who did not write the article.</p>
+<ol class="steps">
+<li><b>The build</b> (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution.py">aurelius-constitution.py</a>) refuses to publish: a quote that is not exactly one span of its passage; a claim on fewer than two passages; a “gives” phrase that is not in its claim; a statement part that is not in the statement or has no quote; a quote without “what follows”; a claim or said-once item that is not under exactly one side; a passage neither used nor set aside with a reason; a sixth colour, or two meeting passages in one colour; an inference that appears more than once or inside words a passage backs; an article quoting a translation whose passages are not all translated and embedded; for Seneca, a quote that is not in the project’s translation, a missing context or search log, a clause that does not continue its sentence or cites a quote of another item, a limiting clause that does not come from a limiting item, and any clause of Gummere’s. Each passage of the project’s English, of Marcus and of Seneca, is checked against a hash of its text, so an edit without a new revision fails; each Russian passage must have been made from the English now published.</li>
+<li><b>The acceptance gates</b> (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-qa.py">aurelius-qa.py</a>) check the writing rules a script can check: plain typography and no archaic forms; a first-person statement of 30 to 140 characters; that at least two passages back words of each claim; “what follows” as one sentence of 21 to 169 characters that does not merely repeat its quote; two to four decisions and a stated limit; an empty side explained in one sentence; Seneca’s strip, contexts of 20 to 200 characters that do not point back, at least three logged searches, clauses that come from the right items; and repetition of another article. A finding is BLOCKING when a reader would be misled, WARNING when a person should look. The gates are themselves tested by injecting 14 known faults into real articles (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/tests/test_qa.py">test_qa.py</a>). Over all 38 articles they now report 0 blocking findings and 74 warnings.</li>
+<li><b>An independent reviewer</b> in a fresh context, with a fixed rubric (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/article-review.md">article-review.md</a>), reads every quote in its passage and asks: does it say what its “gives” words say; does “what follows” follow from that passage alone; does a claim say more than its quotes (an added “only”, “always” or “because” is blocking); does a Seneca quote mean, in its letter, what it is used for? Blocking findings go back to the writer, at most two rounds; one narrow extra round was allowed only for a single exact fix (Articles 8, 14, 15, 31 and 35); after that the article goes to the owner. Of the first 19 reviews, 18 sent the article back.</li>
+<li><b>Reading across articles.</b> One reader read all 38 articles side by side and found 79 points: 68 overlaps, 7 contradictions between articles and 4 Seneca passages labelled differently in two articles. Each article was then polished to say what its own section adds and to name the overlapping article in its limit, and a last pass checked all 212 places where an article mentions another against that article as it now is.</li>
+<li><b>Tests.</b> <code>npm test</code> runs the record tests (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/tests/aurelius/constitution.test.mjs">constitution.test.mjs</a>: every quote resolves, revisions match, counts agree, both languages are complete) and this page’s own test. <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution-fixtures.py">aurelius-constitution-fixtures.py</a> plants known faults in copies of the record and requires the build and the tests to reject each one.</li>
+<li><b>The browser check</b> (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution-check.py">aurelius-constitution-check.py</a>) opens every chapter at 360 px (dark), 390 px and 1440 px, with and without Seneca, in English and Russian, and fails on sideways scrolling, text under 12 px, buttons under 40 px, any script error, or a vectors column that pushes the five sides down. It also replays named cases, each a scenario that once failed on the page.</li>
+</ol>
+</section>
+
+<section class="step" id="seneca" data-step="seneca" aria-labelledby="h-seneca">
+<p class="num">Step 9</p>
+<h2 id="h-seneca">Seneca as a second voice</h2>
+<p>Seneca is added to Marcus, not mixed into him. Marcus’s sections, claims and words stay as they are, and every word of Seneca’s is marked as his. The reader switches him on or off for the whole page in the Voices bar at the bottom of the Constitution page; each article then says what it becomes.</p>
+<h3>How his passages were found</h3>
+<ol class="steps">
+<li><b>A corpus to search.</b> Gummere’s English of all <span data-n="seneca-letters-all">124</span> letters, split at the standard section numbers into <span data-n="seneca-corpus">2140</span> passages and embedded with the same model as Marcus. It is used only for finding.</li>
+<li><b>Vectors.</b> For each article, every letter passage is ranked by its similarity to the section’s centre and to the article’s own sentences. Similarities across the two authors run lower than within one: the median is 0.468 between two of Marcus’s passages, 0.330 between two of Seneca’s and 0.351 across. The vectors are a net, not a judge: about half of what they return is off the point, and some of the best passages rank low.</li>
+<li><b>Words.</b> At least three searches of the letters by the section’s own key words, logged with every passage considered and rejected and why. The log stays in the authored record; it is not published, because it records searches of Gummere’s text.</li>
+<li><b>Reading.</b> Before a quote backs anything, the letter around it is read and one sentence of context says what that part of the letter is about and what the quote’s key noun or pronoun refers to. If the context is about something else, the quote is not evidence, however well its words match: an early draft used a line of Seneca about everything perishing to back a clause about working together, and that is why this rule exists. On the page, a passage found by reading rather than by the vectors says so.</li>
+</ol>
+<h3>How a piece is placed</h3>
+<p>Each piece of Seneca enters an article as exactly one of three effects, so the reader can be told “if you add Seneca, this article becomes …”:</p>
+<dl class="defs">
+<dt>Backs — <span data-n="seneca-backs">149</span></dt><dd>A further witness to words of an existing claim: his words say what those words say. Shown as a dotted black line under the words, with his chip.</dd>
+<dt>Adds — <span data-n="seneca-adds">136</span></dt><dd>Something Marcus does not say in this section, placed under one of the five sides, preferably an empty one, with a sentence saying what Marcus lacks there.</dd>
+<dt>Limits — <span data-n="seneca-limits">47</span></dt><dd>He narrows a claim or disagrees with it. The difference is stated, not blended in, and where he is inconsistent with himself the article says so. It is called a challenge only where the two would really disagree.</dd>
+</dl>
+<p>That is <span data-n="seneca-items">332</span> items in 38 articles. They use <span data-n="seneca-pieces">421</span> different exact quotes from <span data-n="seneca-sections">303</span> sections of <span data-n="letters">94</span> letters, <span data-n="seneca-uses">550</span> times in all, because one quote may serve in more than one article. Each quote has its own “what follows” and its context.</p>
+<p><b>Clauses in the body.</b> When Seneca adds to or limits a sentence, one clause is appended to Marcus’s sentence while Seneca is on, with a small tag (“Seneca adds”, “Seneca limits”, “Seneca challenges”) and his dotted line; Marcus’s words before it are never rewritten. A clause continues the sentence (it starts with a comma or semicolon and has no full stop), is under 140 characters, names the items it comes from and cites only their quotes; a limiting or challenging clause must come from a Limits item on that same sentence. An author who only backs Marcus leaves the body as it is. There are <span data-n="clauses">83</span> clauses: <span data-n="clauses-adds">36</span> add, <span data-n="clauses-limits">36</span> limit and <span data-n="clauses-challenges">11</span> challenge. Each article also has one sentence beginning “With Seneca, …”, shown while he is off, and one saying whether the statement still stands, shown while he is on.</p>
+<figure>
+<p class="eyebrow">Adds · Article 1, under Why</p>
+<p class="ex small" data-src="1:amend">I am a member of one body of reasoning beings, made for a shared life with them<span class="sen">, each of us holding the others up as the stones of an arch do</span><span class="tag">Seneca adds</span></p>
+<div class="tbl"><table class="qtbl"><tbody>
+<tr><td>Ep. 95.53</td><td class="q" data-quote="1:S95.53a">Our fellowship is very like an arch of stones, which would fall if the stones did not block one another, and is held up by that very thing</td></tr>
+<tr><td>Follows</td><td>Human fellowship stands the way an arch of stones does: only because its parts hold one another up.</td></tr>
+<tr><td>Context</td><td>Seneca’s short rule for how to treat other people, given after the rule for worshipping the gods. “Our fellowship” is human fellowship as a whole, not one friendship.</td></tr>
+<tr><td>Why added</td><td>Marcus has body, city, sunlight and soul. The arch adds something none of them states: that the whole stands only because its parts hold one another up.</td></tr>
+</tbody></table></div>
+<p class="eyebrow" style="margin-top:18px">Challenges · Article 8, the statement</p>
+<p class="ex small" data-src="8:amend">Nothing happens to me that I cannot bear; what happens harms me only if I judge it bad, and it does not stop me from being good and just<span class="sen">; but a pain I cannot bear may still come, and then it is short</span><span class="tag">Seneca challenges</span></p>
+<figcaption>With Seneca on, Article 8 says its first part “does not stand as it is worded: Seneca, like Marcus in 10.3, allows a pain I cannot bear, and says only that it will not last, though elsewhere he says nothing is unbearable.” Read them on the page: <a href="stoic-constitution.html?with=seneca#article-1">Article 1</a> · <a href="stoic-constitution.html?with=seneca#article-8">Article 8</a>.</figcaption>
+</figure>
+<figure>
+<svg class="marks" viewBox="0 0 420 110" role="img" aria-label="Marks on the map: a coloured circle is a passage of Marcus; a filled square is Seneca backing; a hollow square is Seneca adding; a hollow square with a stroke is Seneca limiting">
+<circle class="m" cx="20" cy="18" r="9"/><text x="40" y="24">Marcus, feeds the article</text>
+<circle class="hollow" cx="260" cy="18" r="9" style="stroke:var(--muted)"/><text x="280" y="24">set aside</text>
+<rect class="full" x="11" y="47" width="18" height="18"/><text x="40" y="62">Seneca backs</text>
+<rect class="hollow" x="251" y="47" width="18" height="18"/><text x="280" y="62">adds</text>
+<rect class="hollow" x="11" y="85" width="18" height="18"/><line x1="11" y1="103" x2="29" y2="85"/><text x="40" y="100">limits</text>
+</svg>
+<figcaption>How Seneca’s passages are drawn on each article’s map of vectors. Dotted lines tie each of them to the nearest passage of Marcus.</figcaption>
+</figure>
+<details><summary>Seneca in each article: Backs, Adds, Limits</summary>
+<div class="tbl"><table>
+<thead><tr><th>No.</th><th>Article</th><th class="n">Backs</th><th class="n">Adds</th><th class="n">Limits</th></tr></thead>
+<tbody>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-1">1</a></td><td>A member of one body</td><td>3</td><td>4</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-2">2</a></td><td>The work that belongs to me</td><td>6</td><td>2</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-3">3</a></td><td>What happens to me</td><td>6</td><td>5</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-4">4</a></td><td>The reason that governs the whole</td><td>7</td><td>3</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-5">5</a></td><td>What I was made for</td><td>4</td><td>3</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-6">6</a></td><td>What the whole sends in its season</td><td>2</td><td>6</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-7">7</a></td><td>My judgment is up to me</td><td>4</td><td>3</td><td>3</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-8">8</a></td><td>What happens can be borne and does not harm me</td><td>8</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-9">9</a></td><td>Keeping the few names I have given myself</td><td>8</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-10">10</a></td><td>Living now as one about to die</td><td>8</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-11">11</a></td><td>Coming back to my principles and keeping them ready</td><td>7</td><td>5</td><td>3</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-12">12</a></td><td>The retreat within</td><td>4</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-13">13</a></td><td>Whether anything is better than virtue</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-14">14</a></td><td>Living with the gods</td><td>2</td><td>5</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-15">15</a></td><td>Blaming no one for what is not up to me</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-16">16</a></td><td>Happiness and unhappiness are my own doing</td><td>3</td><td>5</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-17">17</a></td><td>Ready to leave</td><td>7</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-18">18</a></td><td>Content wherever I am put</td><td>5</td><td>5</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-19">19</a></td><td>When someone offends me</td><td>4</td><td>4</td><td>3</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-20">20</a></td><td>Taking a thing apart: material, cause, purpose and time</td><td>3</td><td>4</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-21">21</a></td><td>Wiping out impressions, checking impulses</td><td>3</td><td>4</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-22">22</a></td><td>Good whatever others say, and open to being set right</td><td>2</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-23">23</a></td><td>Keeping to one’s craft</td><td>0</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-24">24</a></td><td>Training, and the use of reason</td><td>2</td><td>6</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-25">25</a></td><td>What I turn to</td><td>2</td><td>4</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-26">26</a></td><td>The morning, and the question before each action</td><td>2</td><td>4</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-27">27</a></td><td>Whose praise do I want?</td><td>3</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-28">28</a></td><td>Wrongdoing harms the wrongdoer</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-29">29</a></td><td>Short sayings</td><td>0</td><td>5</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-30">30</a></td><td>The sameness and meanness of things</td><td>1</td><td>4</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-31">31</a></td><td>How my soul uses itself</td><td>5</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-32">32</a></td><td>All things pass</td><td>7</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-33">33</a></td><td>The same matter, reshaped</td><td>3</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-34">34</a></td><td>The dead and the forgotten</td><td>4</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-35">35</a></td><td>The length of a life and the use of its time</td><td>5</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-36">36</a></td><td>Meeting death well</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-37">37</a></td><td>What I learned, and from whom</td><td>4</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?with=seneca#article-38">38</a></td><td>Socrates, Plato and other models</td><td>7</td><td>6</td><td>1</td></tr>
+</tbody></table></div>
+</details>
+<p><b>Then in his own words.</b> Seneca was first quoted from Gummere. When the rights facts were gathered, the owner chose to translate him within the project (“let’s translate seneca ourselves?”). After the translation from the Latin (step 10), all <span data-n="seneca-pieces">421</span> quotes were cut again from the new English; each article was checked by script (every quote in the new English, nothing outside Seneca’s part changed, no old wording quoted, the gates passed) and by a reader who saw only the Latin and the new English. That reader accepted 25 articles at once and sent 13 back with exact fixes.</p>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-seneca.py">aurelius-seneca.py</a> (the search corpus: fetch, split, embed, attach) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (<code>voices.seneca</code> in each article) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/32-delegation-plan.md">32-delegation-plan.md</a> (W4, the procedure)</p>
+</section>
+
+<section class="step" id="translation" data-step="translation" aria-labelledby="h-translation">
+<p class="num">Step 10</p>
+<h2 id="h-translation">The translations</h2>
+<h3>Greek into English: Marcus</h3>
+<p><b>Matching.</b> The 1634 translation numbers and cuts its passages differently from modern editions. Each of its passages was matched to the Greek by reading the openings and endings side by side, after a whole-book alignment had proposed the matches. Together the <span data-n="passages">418</span> passages cover every chapter of the Greek exactly once. 58 passages join two or more modern chapters; 63 cut inside one and carry a letter (11.8a is the first part, 3.11b a later one) and say which Greek they leave out.</p>
+<p><b>Three readers.</b> Every section was translated by three readings, all by the same model, Claude Fable 5.2, each in a fresh context that saw only what its brief allowed:</p>
+<ol class="readers">
+<li><b>1 · Translator</b><span class="sees">Sees: the Greek only</span><p>Plain English of today that keeps the speaker, the person addressed, every “all” and “not”, and each image; one reading translated and the other noted wherever the Greek is open.</p></li>
+<li><b>2 · Checker</b><span class="sees">Sees: the Greek and the English</span><p>Without the translator’s notes, lists every place where the English says more, less or other than the Greek.</p></li>
+<li><b>3 · Settler</b><span class="sees">Sees: Greek, draft and points</span><p>Settles each point in writing (accepted, partly accepted or declined, with the reason) and gives the final English.</p></li>
+</ol>
+<p>Across the book the checker raised 1,458 points and called 5 passages wrong in a way that changed what Marcus says. The settler accepted 969 points, partly accepted 465 and declined 189, and found 137 further faults that neither earlier reader had caught. The notes on what the Greek leaves open number 3,201; 124 of them rely on memory of the manuscripts and are marked “from memory, unchecked”. A glossary keeps one English word for one Greek term (“the ruling part”, “the nature of the whole”). Before a section was stored, a script checked that every quoted Greek word is exact, every point has its decision, and the typography is plain. A stored passage is never edited: a correction is a new revision with a new id.</p>
+<p>The owner read the first six passages and said “looks good”; the other 412 have not been read by the owner, and none has been checked by a person who reads Greek. The new English was then embedded (step 2), and every article quotes it. Where the Greek settles a question the 1634 English cannot, the article follows the Greek and says so: Article 5’s statement lost “by nature”, because Casaubon’s “naturally sociable” has no Greek behind it.</p>
+<h3>Latin into English: Seneca</h3>
+<p>The same three readings, ported to Latin, with a Latin glossary that keeps shared Stoic terms in the same English as the Marcus. No reader saw Gummere or any other published translation. 304 sections from <span data-n="letters">94</span> letters; the checker raised 1,024 points, of which 708 were accepted, 343 partly and 86 declined. In three places the settler kept its reading against the checker, with a note, for a Latin reader to judge (51.9, 74.18, 95.53). The letter titles are new, written from each letter’s Latin. A comparison of the two Latin sources at every section boundary found two sections where one source starts the next section a sentence early (56.12 and 65.10); both were taken from the other source and translated again.</p>
+<h3>English into Russian</h3>
+<p>The owner chose to make the Russian from the settled English (“we're translating from english so it should be easier than latin and greek”, “opus it is for english to russian”). Claude Opus 5.5 translated; a second reader on another model, Claude Sonnet 5.5, compared the Russian with the English passage by passage; the translator settled each point in writing. 722 passages (Marcus 418, Seneca 304); 212 points settled: 148 accepted, 57 partly, 7 declined. A pass across all units harmonised one phrase that had been rendered four ways (“do wrong”, now «поступать дурно» in 13 passages). Scripts checked order, paragraphs, length, script and typography. The translators’ notes on the Greek and Latin stay in English.</p>
+<p><b>The articles are re-cut, not re-translated.</b> An article’s own words (statement, claims, notes) were translated from its English, but every quote was cut again from the Russian of its passage, every “gives” phrase and statement part had to stand inside its Russian sentence, and every inference word had to stand there once. So the Russian build runs every rule of the English build again, and refuses an article whose English has changed since it was translated, or a passage whose Russian was made from an older English. The page’s own terms were fixed in one glossary before the translators started, because eleven translators had chosen four different sets of names for the sides: статья, положение, утверждение, сказано однажды, Подкрепляет / Добавляет / Ограничивает, Почему · На деле · Упражнение · Когда не выходит · Если я сомневаюсь. 39 units (38 articles and the page’s own words); 121 points settled (103 accepted, 17 partly, 1 declined). Where an article translator found a passage’s Russian wrong (8.3), the passage was corrected with a recorded decision and every quote of it cut again. The Russian has not been checked by a person against the English.</p>
+<p class="files">Files: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/project-v1.json">project-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/seneca-v1.json">seneca-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/ru-v1.json">ru-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/articles-ru-v1.json">articles-ru-v1.json</a> (the Russian of the articles’ own words) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-translation.py">aurelius-translation.py</a> · <a href="stoic-translation.html">the translation page</a></p>
+</section>
+
+<section class="step" id="review" data-step="review" aria-labelledby="h-review">
+<p class="num">Step 11</p>
+<h2 id="h-review">Tools for the owner’s review</h2>
+<ul class="plain">
+<li><b>A verdict on every part.</b> On the Constitution page each part of an article has a small Verdict button: the statement, each claim, each quote’s conclusion, each thing Seneca brings, each clause he appends, and the whole article. Keep, Revise or Drop; Revise and Drop take a note. Everything is saved in the browser only.</li>
+<li><b>Copy my review</b> gives plain text to paste into a chat, grouped by article, each line with the sentence it is about and the note; <b>Download as a file</b> saves the same; <b>Only what I have not judged</b> hides what already has a verdict.</li>
+<li><b>Take out a passage</b> to see what each claim loses without it.</li>
+<li><b>Hover or tap any words</b> to see the exact quotes behind them; open the quotes to read each passage beside what follows from it.</li>
+<li><b>The Voices bar</b> switches Seneca on and off for the whole page, keeps the reader in place, and says how much changed.</li>
+<li><b>The <a href="stoic-translation.html">translation page</a></b> shows the Greek, the new English, the 1634 English and the Russian side by side, with the notes and the checker’s points under each passage.</li>
+<li><b>The <a href="stoic-composition.html">composition study</a></b> works two pairs of passages by hand, three ways each, with every phrase traced and a switch that removes the second passage.</li>
+</ul>
+<p>A review comes back the way the prompt says: each Revise or Drop is fixed, turned into a dated rule in the prompt, and applied to every article, not only the one it was about.</p>
+</section>
+
+<section class="step" id="open" data-step="open" aria-labelledby="h-open">
+<p class="num">Step 12</p>
+<h2 id="h-open">What is still open</h2>
+<p>From the list of decisions waiting on the owner (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/37-owner-points.md">37-owner-points.md</a>):</p>
+<ul class="plain">
+<li>The owner has not reviewed the articles; topic names, selections and wordings are drafts.</li>
+<li>Some sections overlap heavily (Article 17 restated Article 10 almost whole; Article 23’s one claim is Article 22’s first). Each now names the other in its limit; merging sections is the owner’s call.</li>
+<li>Article 29 has no fused claim; its writer recommends dropping it.</li>
+<li>Article 8’s statement is challenged by Seneca as worded.</li>
+<li>Article 23 rests on one reading of the Greek of 6.50, which the Greek allows but does not require.</li>
+<li>Article 6’s Seneca clause is tagged “adds”; a reviewer argued it limits.</li>
+<li>The gates report 74 warnings, none blocking.</li>
+<li>Three places in Seneca’s English need a Latin reader (51.9, 74.18, 95.53); the Greek and the Russian have not been checked by a person either.</li>
+<li>The sections were grouped on the 1634 English: <span data-n="moved">66</span> passages now sit nearer another section’s centre on the new English, and nothing was moved.</li>
+<li>Asked for on 24 November and in progress: polish of the Constitution page (aligned sides, the vectors column starting higher), shared site navigation and colours, a cover image for the home page, and a switch to hide the editor’s decisions while reading. This page answers the first request of that list.</li>
+</ul>
+<p class="files">The running log of the whole build: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/36-finish-log.md">36-finish-log.md</a>.</p>
+</section>
+</article>
+</div>
+</div>
+
+<!-- ===================================================================== RUSSIAN -->
+<div class="ru" lang="ru">
+<header class="wrap"><div class="intro">
+<p class="eyebrow">Стоическая конституция · Метод</p>
+<h1>Как сделана конституция</h1>
+<p class="lede"><a href="stoic-constitution.html?lang=ru">Стоическая конституция</a> превращает <span data-n="passages">418</span> фрагментов «Размышлений» Марка Аврелия в <span data-n="articles">38</span> статей. Каждая статья высказывает одно положение и рассматривает его с пяти постоянных сторон. Вторым голосом можно добавить Сенеку, и всё есть по-английски и по-русски. Эта страница объясняет каждый шаг: что сделано, как и в каком файле это лежит.</p>
+<p class="status">Статьи — редакторский черновик: владелец их ещё не проверил, и переводы не проверял человек, читающий по-гречески, по-латыни или по-русски. Все числа на этой странице взяты из опубликованных данных. Разобранный пример того, как соединяются два фрагмента, и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).</p>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc" aria-label="Содержание"><p>Содержание</p><ol start="0">
+<li><a href="#ru-pipeline">Весь путь одним взглядом</a></li>
+<li><a href="#ru-sources">Источники и права на них</a></li>
+<li><a href="#ru-vectors">Фрагменты становятся векторами</a></li>
+<li><a href="#ru-clusters">Векторы становятся главами и разделами</a></li>
+<li><a href="#ru-names">Названия для того, что сгруппировали векторы</a></li>
+<li><a href="#ru-fusion">Как раздел сливается в статью</a></li>
+<li><a href="#ru-sides">Пять сторон</a></li>
+<li><a href="#ru-prompt">Промпт и замечания, ставшие правилами</a></li>
+<li><a href="#ru-checks">Проверки</a></li>
+<li><a href="#ru-seneca">Сенека как второй голос</a></li>
+<li><a href="#ru-translation">Переводы</a></li>
+<li><a href="#ru-review">Инструменты для отзыва владельца</a></li>
+<li><a href="#ru-open">Что ещё не решено</a></li>
+</ol></nav>
+
+<article class="doc">
+
+<section class="step" id="ru-pipeline" data-step="pipeline" aria-labelledby="rh-pipeline">
+<p class="num">Обзор</p>
+<h2 id="rh-pipeline">Весь путь одним взглядом</h2>
+<figure>
+<ol class="flow" aria-label="От фрагментов к переведённым статьям">
+<li><b><span data-n="passages">418</span> фрагментов</b><span>Марк, английский перевод 1634 года</span></li>
+<li><b><span data-n="passages">418</span> векторов</b><span>по <span data-n="dims">3072</span> числа в каждом</span></li>
+<li><b>1 дерево</b><span>метод Уорда по векторам</span></li>
+<li><b><span data-n="chapters">7</span> глав</b><span><span data-n="sections">38</span> разделов</span></li>
+<li><b><span data-n="articles">38</span> статей</b><span><span data-n="claims">178</span> слитых утверждений, <span data-n="single">165</span> сказано однажды</span></li>
+<li><b>+ Сенека</b><span><span data-n="seneca-pieces">421</span> цитата из <span data-n="letters">94</span> писем</span></li>
+<li><b>EN · RU</b><span>с греческого и латыни на английский, с английского на русский</span></li>
+</ol>
+<figcaption>Фрагменты группируются по смыслу, каждая группа сливается в статью, добавляется второй автор, а текст, который видит читатель, переводится. На деле перевод с греческого был сделан после группировки и до того, как была написана бо́льшая часть статей (что это изменило — в шаге 3).</figcaption>
+</figure>
+</section>
+
+<section class="step" id="ru-sources" data-step="sources" aria-labelledby="rh-sources">
+<p class="num">Шаг 1</p>
+<h2 id="rh-sources">Источники и права на них</h2>
+<p>В работе пять текстов, и у каждого одна задача.</p>
+<dl class="defs">
+<dt>Марк в английском переводе Мерика Казобона 1634 года — корпус, который измеряли</dt>
+<dd>Project Gutenberg 2680. Казобон умер в 1671 году, так что текст свободен везде. Именно его <span data-n="passages">418</span> пронумерованных фрагментов были превращены в векторы и сгруппированы: главы и разделы найдены на этом тексте, и каждый фрагмент сохраняет номер 1634 года и идентификатор редакции как своё имя. Статьи его больше не цитируют; он показан рядом с новым английским для сравнения.</dd>
+<dt>Марк по-гречески</dt>
+<dd>Издание Я. Х. Леопольда 1908 года (Леопольд умер в 1925 году, издание вне авторского права) по файлу Perseus Digital Library, который Perseus распространяет по лицензии CC BY-SA. Греческий текст стоит рядом с каждым фрагментом на <a href="stoic-translation.html">странице перевода</a>.</dd>
+<dt>Собственный английский перевод проекта с греческого — то, что цитируют статьи</dt>
+<dd>Все <span data-n="passages">418</span> фрагментов, каждый сделан в три чтения (шаг 10). Все статьи цитируют этот английский.</dd>
+<dt>«Нравственные письма к Луцилию» Сенеки по-латыни и английский перевод проекта</dt>
+<dd>Латынь взята из The Latin Library и сверена с латинской Викитекой. Сенека цитируется только в собственном переводе проекта с латыни: переведено 304 раздела из <span data-n="letters">94</span> писем, конституция цитирует <span data-n="seneca-sections">303</span> из них (304-й, письмо 66.5, нужен замороженной тестовой записи).</dd>
+<dt>Английский Гаммера — только для внутреннего пользования</dt>
+<dd>Перевод Ричарда Мотта Гаммера в серии Loeb (1917, 1920, 1925) использовался только для поиска фрагментов Сенеки по сходству векторов. Гаммер умер 3 декабря 1969 года, поэтому его перевод свободен в США, но охраняется в ЕС, Великобритании и Турции до конца 2039 года. Ни одно его слово не публикуется: сборка отказывается публиковать любой отрезок из 30 и более знаков, который есть у Гаммера и которого нет в английском проекта.</dd>
+</dl>
+<p><b>Скачать.</b> Английский перевод проекта «Размышлений» и избранных писем Сенеки, а также их русский перевод, переданы в общественное достояние (CC0): их можно использовать для чего угодно. В них только английский или русский текст, поэтому лицензия CC BY-SA греческого файла на них не распространяется. По-русски: Марк — <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>текст</a>; Сенека — <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>текст</a>. По-английски: <a href="/downloads/marcus-meditations-project-v1.epub" download>Марк, EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.epub" download>Сенека, EPUB</a>.</p>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/project-v1.json">project-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/seneca-v1.json">seneca-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (сведения о правах на перевод Сенеки — в <code>authors[0].rights</code>) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-downloads.py">aurelius-downloads.py</a></p>
+</section>
+
+<section class="step" id="ru-vectors" data-step="vectors" aria-labelledby="rh-vectors">
+<p class="num">Шаг 2</p>
+<h2 id="rh-vectors">Фрагменты становятся векторами</h2>
+<p>Каждый из <span data-n="passages">418</span> фрагментов в точном тексте Казобона был отправлен модели OpenAI <b>text-embedding-3-large</b>, которая возвращает вектор — список из <span data-n="dims">3072</span> чисел. Использована полная длина; модель умеет возвращать и укороченные векторы, но этого не делали. У фрагментов с близким смыслом векторы смотрят в близких направлениях.</p>
+<p><b>Близость</b> — это косинусное сходство: косинус угла между двумя векторами. Для одного и того же направления он был бы равен 1. По всей книге медиана сходства двух фрагментов Марка — 0,468; внутри раздела, из которого сделана статья 1, пары из десяти фрагментов лежат между 0,439 и 0,756. <b>Центр</b> раздела — среднее векторов его фрагментов (каждый сначала приведён к длине 1), а близость фрагмента к разделу — его сходство с этим центром.</p>
+<figure>
+<svg class="vec" viewBox="0 0 420 250" role="img" aria-label="Два фрагмента как стрелки из одной точки, угол 49 градусов; косинусное сходство 0,655">
+<line class="ax" x1="40" y1="220" x2="400" y2="220"/><line class="ax" x1="40" y1="220" x2="40" y2="20"/>
+<path class="arrow" d="M40 220 L300 220 M288 213 L300 220 L288 227"/>
+<path class="arrow" d="M40 220 L210.6 23.8 M197.4 28.3 L210.6 23.8 L208 37.5"/>
+<path class="arc" d="M130 220 A90 90 0 0 0 99 152"/>
+<text class="lab" x="308" y="226">9.7</text>
+<text class="lab" x="220" y="30">7.10</text>
+<text class="note" x="138" y="182">49°</text>
+<text class="note" x="250" y="160">cos 49° = 0,655</text>
+</svg>
+<svg class="scale" viewBox="0 0 420 70" role="img" aria-label="Шкала сходства от 0 до 1; пары раздела лежат между 0,439 и 0,756" style="margin-top:12px">
+<line x1="20" y1="30" x2="400" y2="30"/><line class="fill" x1="187" y1="30" x2="307" y2="30"/>
+<text class="mu" x="20" y="62">0</text><text class="mu" x="392" y="62">1</text>
+<text x="166" y="62">0,439</text><text x="287" y="62">0,756</text>
+</svg>
+<figcaption>Два из десяти фрагментов статьи 1, 9.7 и 7.10, нарисованы стрелками. В настоящих векторах по 3072 числа; на рисунке сохранён только угол между ними. Ниже — где на отрезке от 0 до 1 лежат все пары этого раздела.</figcaption>
+</figure>
+<p>Векторы вычисляются один раз, хранятся под хешем точного текста и настроек модели и остаются в закрытой части проекта вместе с корпусом. В опубликованных файлах — только ссылки и выведенные из векторов числа. Когда появился собственный английский перевод проекта, та же модель превратила в векторы и его (правило 21 в шаге 7: векторы следуют за текстом, который видит читатель), и каждая статья показывает свою близость на обоих текстах.</p>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/aurelius/embeddings.py">embeddings.py</a> (модель, размерность, кэш) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-translation.py">aurelius-translation.py</a> (<code>--embed</code> для нового английского)</p>
+</section>
+
+<section class="step" id="ru-clusters" data-step="clusters" aria-labelledby="rh-clusters">
+<p class="num">Шаг 3</p>
+<h2 id="rh-clusters">Векторы становятся главами и разделами</h2>
+<p>Скрипт строит одно дерево по всем векторам <b>методом Уорда</b>: сначала каждый фрагмент стоит отдельно, затем раз за разом сливаются те две группы, слияние которых меньше всего увеличивает разброс. Векторы сначала приводятся к длине 1, поэтому прямое расстояние между двумя из них упорядочивает пары ровно так же, как косинусное сходство.</p>
+<ol class="steps">
+<li><b>Главы.</b> Дерево срезается на <span data-n="chapters">7</span> групп — наибольшее число, при котором ещё не появляется группа меньше чем из 20 фрагментов.</li>
+<li><b>Разделы.</b> Каждая глава заново группируется тем же методом и срезается на max(2, round(размер ÷ 11)) разделов. Получается <span data-n="sections">38</span> разделов, и каждый стал одной статьёй.</li>
+<li><b>Порядок.</b> Дерево даёт группы, а не порядок. Внутри главы разделы идут в порядке дерева; порядок глав выбрал редактор (глава о целом и моём месте в нём идёт первой, потому что остальные на неё опираются).</li>
+</ol>
+<figure>
+<svg class="bars" viewBox="0 0 420 384" role="img" aria-label="Семь глав и 38 разделов: длина полосы — число фрагментов, деления — разделы">
+<text x="0" y="17" class="t">1. Целое и моё место в нём</text>
+<text x="420" y="41" class="m" text-anchor="end">65 · 6 разделов</text>
+<rect x="0.0" y="27" width="19.8" height="16" rx="2"><title>c6.s1 · Член единого тела · 10</title></rect>
+<rect x="21.8" y="27" width="30.7" height="16" rx="2"><title>c6.s2 · Работа, которая принадлежит мне · 15</title></rect>
+<rect x="54.5" y="27" width="30.7" height="16" rx="2"><title>c6.s3 · Что со мной случается · 15</title></rect>
+<rect x="87.2" y="27" width="24.2" height="16" rx="2"><title>c6.s4 · Разум, который управляет целым · 12</title></rect>
+<rect x="113.4" y="27" width="13.3" height="16" rx="2"><title>c6.s5 · Для чего я создан · 7</title></rect>
+<rect x="128.6" y="27" width="11.1" height="16" rx="2"><title>c6.s6 · Что целое посылает в свой срок · 6</title></rect>
+<text x="0" y="71" class="t">2. Внутренняя жизнь</text>
+<text x="420" y="95" class="m" text-anchor="end">133 · 12 разделов</text>
+<rect x="0.0" y="81" width="19.8" height="16" rx="2"><title>c3.s1 · Моё суждение зависит от меня · 10</title></rect>
+<rect x="21.8" y="81" width="39.4" height="16" rx="2"><title>c3.s2 · То, что случается, можно вынести, и оно мне не вредит · 19</title></rect>
+<rect x="63.2" y="81" width="15.4" height="16" rx="2"><title>c3.s3 · Хранить немногие имена, которые я дал себе · 8</title></rect>
+<rect x="80.7" y="81" width="37.2" height="16" rx="2"><title>c3.s4 · Жить сейчас как тот, кто вот-вот умрёт · 18</title></rect>
+<rect x="119.9" y="81" width="32.9" height="16" rx="2"><title>c3.s5 · Возвращаться к своим принципам и держать их наготове · 16</title></rect>
+<rect x="154.8" y="81" width="24.2" height="16" rx="2"><title>c3.s6 · Уединение внутри себя · 12</title></rect>
+<rect x="181.0" y="81" width="28.5" height="16" rx="2"><title>c3.s7 · Есть ли что-нибудь лучше добродетели · 14</title></rect>
+<rect x="211.5" y="81" width="8.9" height="16" rx="2"><title>c3.s8 · Жить вместе с богами · 5</title></rect>
+<rect x="222.4" y="81" width="15.4" height="16" rx="2"><title>c3.s9 · Никого не винить за то, что не в моей власти · 8</title></rect>
+<rect x="239.8" y="81" width="8.9" height="16" rx="2"><title>c3.s10 · Счастье и несчастье — моих рук дело · 5</title></rect>
+<rect x="250.8" y="81" width="19.8" height="16" rx="2"><title>c3.s11 · Готов уйти · 10</title></rect>
+<rect x="272.6" y="81" width="15.4" height="16" rx="2"><title>c3.s12 · Доволен, куда бы меня ни поместили · 8</title></rect>
+<text x="0" y="125" class="t">3. Поведение изо дня в день</text>
+<text x="420" y="149" class="m" text-anchor="end">85 · 8 разделов</text>
+<rect x="0.0" y="135" width="41.6" height="16" rx="2"><title>c2.s1 · Когда кто-то меня задевает · 20</title></rect>
+<rect x="43.6" y="135" width="11.1" height="16" rx="2"><title>c2.s2 · Разобрать вещь: материя, причина, цель и время · 6</title></rect>
+<rect x="56.7" y="135" width="24.2" height="16" rx="2"><title>c2.s3 · Стирать представления, сдерживать побуждения · 12</title></rect>
+<rect x="82.9" y="135" width="35.1" height="16" rx="2"><title>c2.s4 · Хороший, что бы ни говорили другие, и готовый принять поправку · 17</title></rect>
+<rect x="119.9" y="135" width="4.5" height="16" rx="2"><title>c2.s5 · Держаться своего ремесла · 3</title></rect>
+<rect x="126.5" y="135" width="13.3" height="16" rx="2"><title>c2.s6 · Упражнение и пользование разумом · 7</title></rect>
+<rect x="141.7" y="135" width="15.4" height="16" rx="2"><title>c2.s7 · К чему я обращаюсь · 8</title></rect>
+<rect x="159.2" y="135" width="24.2" height="16" rx="2"><title>c2.s8 · Утро и вопрос перед каждым действием · 12</title></rect>
+<text x="0" y="179" class="t">4. Похвала, вред и ценность вещей</text>
+<text x="420" y="203" class="m" text-anchor="end">55 · 5 разделов</text>
+<rect x="0.0" y="189" width="26.3" height="16" rx="2"><title>c7.s1 · Чьей похвалы я хочу? · 13</title></rect>
+<rect x="28.3" y="189" width="13.3" height="16" rx="2"><title>c7.s2 · Дурной поступок вредит тому, кто его совершает · 7</title></rect>
+<rect x="43.6" y="189" width="8.9" height="16" rx="2"><title>c7.s3 · Короткие изречения · 5</title></rect>
+<rect x="54.5" y="189" width="24.2" height="16" rx="2"><title>c7.s4 · Однообразие и низменность вещей · 12</title></rect>
+<rect x="80.7" y="189" width="37.2" height="16" rx="2"><title>c7.s5 · Как моя душа пользуется собой · 18</title></rect>
+<text x="0" y="233" class="t">5. Перемена</text>
+<text x="420" y="257" class="m" text-anchor="end">23 · 2 раздела</text>
+<rect x="0.0" y="243" width="30.7" height="16" rx="2"><title>c4.s1 · Всё проходит · 15</title></rect>
+<rect x="32.7" y="243" width="15.4" height="16" rx="2"><title>c4.s2 · То же вещество в новой форме · 8</title></rect>
+<text x="0" y="287" class="t">6. Смерть и время</text>
+<text x="420" y="311" class="m" text-anchor="end">33 · 3 раздела</text>
+<rect x="0.0" y="297" width="35.1" height="16" rx="2"><title>c5.s1 · Мёртвые и забытые · 17</title></rect>
+<rect x="37.1" y="297" width="15.4" height="16" rx="2"><title>c5.s2 · Долгота жизни и употребление её времени · 8</title></rect>
+<rect x="54.5" y="297" width="15.4" height="16" rx="2"><title>c5.s3 · Встретить смерть достойно · 8</title></rect>
+<text x="0" y="341" class="t">7. Учителя и примеры</text>
+<text x="420" y="365" class="m" text-anchor="end">24 · 2 раздела</text>
+<rect x="0.0" y="351" width="19.8" height="16" rx="2"><title>c1.s1 · Чему я научился и у кого · 10</title></rect>
+<rect x="21.8" y="351" width="28.5" height="16" rx="2"><title>c1.s2 · Сократ, Платон и другие образцы · 14</title></rect>
+</svg>
+<figcaption>Семь глав в порядке страницы. Длина полосы — число фрагментов главы; каждое деление — один раздел, то есть одна статья. Наведите на деление, чтобы увидеть раздел.</figcaption>
+</figure>
+<p><b>Почему Уорд.</b> Сначала проект собирался использовать среднюю связь (average linkage) с косинусным расстоянием. Но при семи группах средняя связь кладёт 412 из 418 фрагментов в одну группу, а полная связь — 267; самая большая группа Уорда — 133.</p>
+<div class="tbl"><table>
+<thead><tr><th>Метод, срез на 7 групп</th><th>Размеры групп</th><th class="n">Доля самой большой</th><th class="n">Силуэт</th></tr></thead>
+<tbody>
+<tr><td>Уорд (выбран)</td><td>133, 85, 65, 55, 33, 24, 23</td><td class="n">0,318</td><td class="n">0,009</td></tr>
+<tr><td>Полная связь</td><td>267, 109, 21, 8, 7, 4, 2</td><td class="n">0,639</td><td class="n">0,013</td></tr>
+<tr><td>Средняя связь</td><td>412, 1, 1, 1, 1, 1, 1</td><td class="n">0,986</td><td class="n">0,214</td></tr>
+</tbody></table></div>
+<p><b>Насколько этому верить.</b> Силуэт показывает, насколько фрагменты ближе к своей группе, чем к соседней; у Уорда он почти нулевой. Поэтому раздел — это соседство фрагментов, которые стоит читать вместе, а не доказанная тема. Именно поэтому статья должна найти то, что её фрагменты действительно говорят вместе, и может откладывать фрагменты.</p>
+<p><b>Сгруппировано до перевода.</b> Разделы найдены на английском 1634 года, до того как появился перевод проекта. Более чистый порядок, позже записанный как правило, — перевести, превратить в векторы, сгруппировать, потом писать. Когда все <span data-n="passages">418</span> фрагментов были переведены и превращены в векторы, <span data-n="stayed">352</span> из них по-прежнему были ближе всего к центру своего раздела, а каждый раздел на новом английском оказался менее сплочённым. Решили оставить 38 разделов и ничего не переносить; страница перевода перечисляет фрагменты, которые теперь ближе к другому разделу.</p>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-topics.py">aurelius-topics.py</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/topics.json">topics.json</a> (только ссылки и числа)</p>
+</section>
+
+<section class="step" id="ru-names" data-step="names" aria-labelledby="rh-names">
+<p class="num">Шаг 4</p>
+<h2 id="rh-names">Названия для того, что сгруппировали векторы</h2>
+<p>Группировка даёт числа, а не названия. Сначала у каждого раздела было предварительное название по трём самым центральным фрагментам. Затем каждую главу прочитали целиком — каждый фрагмент каждого раздела — прежде чем писать её статьи; после этого чтения название главы, её краткое описание и название каждого раздела были подтверждены или переписаны. При этом чтении изменились двенадцать названий разделов (например, «Мнение в моей власти» стало «Моё суждение зависит от меня»), и причина каждого изменения записана. Название раздела — это название его статьи.</p>
+<p>Когда все статьи были написаны, название и описание каждой главы сверили с её статьями: описания трёх глав переписаны от первого лица, а глава 7 получила название «Похвала, вред и ценность вещей», потому что старое не охватывало статью о ценности вещей.</p>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (<code>chapters</code>: названия, описания, <code>read: full</code>) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/37-owner-points.md">37-owner-points.md</a> (двенадцать изменённых названий)</p>
+</section>
+
+<section class="step" id="ru-fusion" data-step="fusion" aria-labelledby="rh-fusion">
+<p class="num">Шаг 5</p>
+<h2 id="rh-fusion">Как раздел сливается в статью</h2>
+<p>Главная идея проекта — <b>слияние</b>. Фрагменты, которые векторы поставили рядом, читаются бок о бок; где два или больше из них говорят одно и то же разными словами или образами, это общее высказывается один раз — как утверждение, а утверждения соединяются в одно положение. Первые черновики, где каждый пункт пересказывал один фрагмент, владелец отверг как «конкатенацию». Всё, что ниже, следует из этого.</p>
+<h3>Порядок работы над одним разделом</h3>
+<ol class="steps">
+<li><b>Прочитать каждый фрагмент</b> и отметить, какие отдельные вещи он говорит.</li>
+<li><b>Найти параллели:</b> одно и то же, сказанное в двух или более фрагментах. Каждый случай процитировать точно.</li>
+<li><b>Слить каждую группу в одно утверждение,</b> сказанное один раз, просто и от первого лица. Записать, что у фрагментов общего и что слияние обобщило или отбросило.</li>
+<li><b>Проследить каждую цитату:</b> назвать слова утверждения, которые она подкрепляет («даёт»; одна цитата может подкреплять несколько), и написать одну фразу о том, что следует из этой цитаты самой по себе («что следует»).</li>
+<li><b>Вывести положение:</b> одна фраза короче 140 знаков, соединяющая утверждения, разбитая на части; каждая часть связана с цитатами, на которых стоит. Назвать, как оно получено: цепь следствий, списки, сведённые в один, рассуждение по случаям, подобие, правило и его самый трудный случай.</li>
+<li><b>Держать единственных свидетелей отдельно:</b> то, что говорит лишь один фрагмент, идёт под пометкой «сказано однажды» с причиной. Слитым это никогда не считается.</li>
+<li><b>Отчитаться за каждый фрагмент:</b> каждый либо питает утверждение, либо цитируется отдельно, либо отложен с причиной в одну фразу.</li>
+<li><b>Разместить</b> каждое утверждение и каждое «сказано однажды» под одной из пяти сторон (шаг 6) и записать решения редактора, с которыми читатель может поспорить, и ограничение статьи — где она слаба.</li>
+</ol>
+<h3>Из чего состоит статья</h3>
+<dl class="defs">
+<dt>Положение</dt><dd>Одна короткая фраза от первого лица (от 30 до 140 знаков). Каждая её часть называет цитаты, на которых стоит, и должна опираться на два или более фрагмента.</dd>
+<dt>Слитое утверждение</dt><dd>Опирается не меньше чем на два фрагмента, и хотя бы одно его слово или выражение должны говорить два из них. Фрагмент об одном нельзя натягивать на другое. Во всех 38 статьях <span data-n="claims">178</span> утверждений.</dd>
+<dt>Сказано однажды</dt><dd>Мысль, которую высказывает только один фрагмент; она стоит отдельно, с причиной (всего <span data-n="single">165</span>). В одной статье, статье 29 («Короткие изречения»), нет ни одного слитого утверждения: её автор проверил каждую пару из пяти фрагментов и не нашёл двух, которые говорят одно и то же, поэтому она помечена как отдельные изречения, стоящие рядом, с причиной. Такая статья <span data-n="unfused">1</span>.</dd>
+<dt>Каждая цитата точна</dt><dd>Цитата должна совпадать ровно с одним отрезком своего фрагмента в английском проекта, иначе сборка останавливается. Цитируются <span data-n="sources">391</span> из <span data-n="passages">418</span> фрагментов; остальные отложены, у каждого своя причина.</dd>
+<dt>Что следует</dt><dd>Для каждой цитаты — одна простая фраза о том, что следует из этого фрагмента самого по себе, до всякого слияния. Она стоит в столбце рядом с фрагментом, чтобы читатель мог проверить каждый шаг: слова Марка, что из них следует, потом что фрагменты дают вместе.</dd>
+<dt>Выводы редактора — фиолетовым</dt><dd>«Поэтому», «следовательно» или «потому что», которых не говорит ни один фрагмент, записываются как слова редактора, с одной фразой о том, почему это его шаг, и не могут стоять внутри слов, которые подкрепляет фрагмент. На странице они фиолетовые и называются «Вывод редактора». В 38 статьях их <span data-n="inferences">12</span>.</dd>
+<dt>Один цвет — один фрагмент</dt><dd>Фрагмент сохраняет один цвет во всей статье: линия под словами, которые он подкрепляет, его кнопка, его строка с цитатой и его точка на карте. Две линии под выражением значат, что его говорят два фрагмента. Фрагменты, встречающиеся в одном утверждении, никогда не делят цвет; пять цветов — предел, который ещё различим, в том числе для людей с нарушением цветового зрения, поэтому кнопка всегда называет и номер фрагмента. Фиолетовый оставлен для редактора, предупреждающий цвет — для ослабленного утверждения, всё остальное нейтрально.</dd>
+<dt>Столбец векторов</dt><dd>Рядом с каждым положением: карта фрагментов раздела — плоская раскладка их косинусных расстояний (метрическое многомерное шкалирование) с указанным стрессом, то есть тем, насколько плоская картинка искажает настоящие расстояния (для статьи 1 — 0,211); точное сходство каждой пары в таблице; ближайшие разделы; и насколько близки фрагменты каждого утверждения на английском 1634 года и на новом. Наведение на слова выделяет их фрагменты на карте, а наведение на фрагмент — слова, которые он подкрепляет.</dd>
+</dl>
+
+<h3>Пример: статья 1, «Член единого тела»</h3>
+<figure>
+<p class="eyebrow">Положение по частям</p>
+<p class="ex" data-src="1:statement">Я <span class="u" style="--c1:var(--p3);--c2:var(--p1)">член</span> <span class="u" style="--c1:var(--p3);--c2:var(--p4)">единого тела</span> <span class="u" style="--c1:var(--p3);--c2:var(--p2)">разумных существ</span>, <span class="u" style="--c1:var(--p3);--c2:var(--p5)">созданный для общей жизни с ними</span>.</p>
+<p class="chips"><span class="chip" style="--c:var(--p3)">7.10</span><span class="chip" style="--c:var(--p1)">9.21</span><span class="chip" style="--c:var(--p4)">11.7</span><span class="chip" style="--c:var(--p2)">9.7</span><span class="chip" style="--c:var(--p5)">5.15</span></p>
+<p class="eyebrow" style="margin-top:18px">Утверждение 1 · Почему · слито из пяти фрагментов</p>
+<p class="ex small" data-src="1:c1"><span class="u" style="--c1:var(--p3);--c2:var(--p2)">Всё, что рассуждает</span>, <span class="u" style="--c1:var(--p5);--c2:var(--p2)">причастно одному разуму</span>, <span class="u" style="--c1:var(--p3)">как члены — одному телу</span>, <span class="u" style="--c1:var(--p4);--c2:var(--p1)">граждане — одному городу</span>, а <span class="u" style="--c1:var(--p5)">всякое освещённое место — одному солнцу</span>.</p>
+<div class="tbl"><table class="qtbl">
+<thead><tr><th>Фрагмент</th><th>Слова Марка (перевод проекта)</th><th>Даёт</th><th>Что следует из него самого</th></tr></thead>
+<tbody>
+<tr><td><span class="chip" style="--c:var(--p3)">7.10</span></td><td class="q" data-quote="1:7.10a">Какое отношение имеют члены тела в том, что едино, такое же отношение имеют разумные существа в том, что существует раздельно</td><td>как члены — одному телу; Всё, что рассуждает</td><td>Разумные существа, существующие раздельно, относятся друг к другу так же, как члены одного тела.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p4)">4.4</span></td><td class="q" data-quote="1:4.4a">мы граждане. Если так, мы участвуем в некоем гражданском сообществе. Если так, мироздание — как бы город.</td><td>граждане — одному городу</td><td>Мы граждане, мы участвуем в гражданском сообществе, и мироздание подобно городу.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p1)">9.21</span></td><td class="q" data-quote="1:9.21a">ты сам помогаешь восполнить гражданское целое</td><td>граждане — одному городу</td><td>Я — один из тех, кто делает гражданское целое полным.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p5)">12.23</span></td><td class="q" data-quote="1:12.23a">Один свет солнца, хотя он и разделён стенами, горами</td><td>всякое освещённое место — одному солнцу</td><td>Свет солнца один, даже там, где его разделяют стены и горы.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p5)">12.23</span></td><td class="q" data-quote="1:12.23b">Одна душа, обладающая умом, хотя и кажется, что она разъединена.</td><td>причастно одному разуму</td><td>Душа, обладающая умом, одна, хотя и кажется разъединённой.</td></tr>
+<tr><td><span class="chip" style="--c:var(--p2)">9.7</span></td><td class="q" data-quote="1:9.7a">одна душа, наделённая умом, распределена между разумными</td><td>причастно одному разуму; Всё, что рассуждает</td><td>Существа, которые рассуждают, причастны одной душе — душе, наделённой умом.</td></tr>
+</tbody></table></div>
+<p style="margin-top:12px"><b>Общее:</b> четыре образа (тело, город, солнечный свет, душа) с одним строением: одно и то же присутствует во многих и не делится оттого, что его делят. <b>Что изменило слияние:</b> в 12.23 и 9.7 Марк говорит «одна душа, обладающая умом», а в 4.4 — «ум» и «разум»; утверждение везде говорит «разум».</p>
+<p class="eyebrow" style="margin-top:18px">Утверждение 5 · Когда не выходит · с выводом редактора</p>
+<p class="ex small" data-src="1:c5">Отсёкши себя, я могу снова врасти в целое, <span class="inf">потому что</span> природа сильнее моего ухода.</p>
+<figcaption>Вывод редактора: «Ни один фрагмент не даёт этой причины: 11.7 приписывает возвращение Зевсу, 8.32 — богу, а 9.7 говорит о людях, которые убегают и которых настигают, а не о возвращении». Положение получено как «Много образов, одно утверждение; затем его следствия». Прочитать на странице: <a href="stoic-constitution.html?lang=ru#article-1">статья 1</a>.</figcaption>
+</figure>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (статьи, как их написали) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution.py">aurelius-constitution.py</a> (сборка) · <a href="stoic-composition.html">исследование композиции</a> (два фрагмента, соединённые тремя способами вручную; на английском)</p>
+</section>
+
+<section class="step" id="ru-sides" data-step="sides" aria-labelledby="rh-sides">
+<p class="num">Шаг 6</p>
+<h2 id="rh-sides">Пять сторон</h2>
+<p>Каждая статья открывается одним коротким положением. Всё остальное подходит к нему с пяти постоянных сторон — одних и тех же в каждой статье и в одном порядке, чтобы статьи можно было читать и сравнивать одинаково. На широком экране стороны стоят пятью столбцами под положением; на телефоне это ряд вкладок, который всегда под рукой.</p>
+<p>Владелец попросил одно положение и «подстатьи, которые подходят к этой теме с других точек зрения … как-то подписанные», а потом назвал первые три («why, in action, practice. maybe show them as columns?»). Каждая сторона задаёт один вопрос:</p>
+<figure>
+<p class="statement" data-src="1:statement">Я член единого тела разумных существ, созданный для общей жизни с ними.</p>
+<div class="sides">
+<div class="side"><h4>Почему</h4><p class="asks">Основание положения.</p><p class="for">Причины его держаться — словами самих фрагментов.</p><p class="a1"><i>Статья 1</i>Утверждения 1 и 2: мы причастны одному разуму; мы созданы друг для друга.</p><p class="count">Заполнена в <span data-n="fill-why">37</span> из 38</p></div>
+<div class="side"><h4>На деле</h4><p class="asks">Что из этого следует для моих поступков.</p><p class="for">Правило жизни должно менять поступки, иначе это только взгляд.</p><p class="a1"><i>Статья 1</i>Утверждение 3: всё, что я делаю, нацелено на общее благо.</p><p class="count">Заполнена в <span data-n="fill-action">37</span> из 38</p></div>
+<div class="side"><h4>Упражнение</h4><p class="asks">Упражнение, которое я могу повторять.</p><p class="for">Марк часто велит себе снова сказать или сделать что-то; эта сторона хранит такие упражнения.</p><p class="a1"><i>Статья 1</i>Сказано однажды (7.10): «Я буду часто говорить себе: я член, а не просто часть».</p><p class="count">Заполнена в <span data-n="fill-practice">35</span> из 38</p></div>
+<div class="side"><h4>Когда не выходит</h4><p class="asks">Как выглядит неудача и каков путь назад.</p><p class="for">Правило, которое молчит о неудаче, оставляет читателя одного при первом же срыве.</p><p class="a1"><i>Статья 1</i>Утверждения 4 и 5: ненависть отсекает меня от целого; я могу врасти обратно. Предупреждение, сказанное однажды (11.7).</p><p class="count">Заполнена в <span data-n="fill-breaks">32</span> из 38</p></div>
+<div class="side"><h4>Если я сомневаюсь</h4><p class="asks">Что остаётся в силе, если положение неверно.</p><p class="for">Марк часто рассуждает по случаям (провидение ли правит миром или атомы — что-то остаётся в силе); эта сторона хранит то, что переживает сомнение.</p><p class="a1"><i>Статья 1</i>Пусто: «Ни один фрагмент этого раздела не допускает, что разумные существа могут не быть едины; это сомнение рассматривается в статье 3».</p><p class="count">Заполнена в <span data-n="fill-doubt">19</span> из 38</p></div>
+</div>
+<figcaption>Пять сторон статьи 1. Вопросы — те, что используют данные и страница конституции; строка под каждым вопросом, о том, зачем нужна сторона, — объяснение этой страницы, а не часть данных.</figcaption>
+</figure>
+<p>Каждое утверждение и каждое «сказано однажды» стоит ровно под одной стороной. Сторона, для которой нет фрагмента, остаётся пустой и одной фразой объясняет почему; словами редактора её никогда не заполняют. Поэтому «Если я сомневаюсь» пусто примерно в половине статей: Марк не в каждом разделе допускает сомнение.</p>
+</section>
+
+<section class="step" id="ru-prompt" data-step="prompt" aria-labelledby="rh-prompt">
+<p class="num">Шаг 7</p>
+<h2 id="rh-prompt">Промпт и замечания, ставшие правилами</h2>
+<p>Для каждой статьи используется один промпт, пишет ли её модель или редактор: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/constitution-article.md">apps/aurelius/prompts/constitution-article.md</a> (на английском). В нём две части: задача (порядок работы из шага 5) и правила, выученные на отзывах владельца. Его первое указание — то, благодаря чему метод продолжает учиться:</p>
+<blockquote>«Когда владелец даёт отзыв на любую статью, обобщи его в правило, добавь во вторую часть с датой и его словами и примени ко всем существующим статьям, а не только к той, на которую он указал».</blockquote>
+<p>Поэтому за каждым из 25 правил стоят слова, из которых оно выросло. Коротко:</p>
+<ul class="plain">
+<li><b>Что такое статья</b> — 1 сливать, а не склеивать · 2 сохранять точное прослеживание цитат под каждым слитым утверждением · 3 писать как статью, от первого лица · 4 говорить просто · 7 одно положение, затем пять подписанных сторон · 8 несколько источников сразу, часть за частью · 9 у каждого цитируемого фрагмента свой вывод · 19 отмечать выводы редактора · 22 каждая строка, которую читатель встречает отдельно, должна быть понятна сама по себе.</li>
+<li><b>Как это показано</b> — 5 сохранять устройство страницы · 10 цвет значит одно: фрагмент-источник · 11 показывать измерения, на которых стоит группировка · 15 векторы — отдельный столбец.</li>
+<li><b>Добавленные авторы</b> — 12 второй автор добавляется, и каждое его слово помечено как его · 13 добавить или убрать автора — одно касание · 14 чьи это слова — одна тихая метка, и добавленный автор меняет текст статьи · 16 читать его цитату там, где она стоит · 17 искать по словам, а не только по векторам, и записывать поиск · 18 приписка никогда не говорит больше своей цитаты.</li>
+<li><b>Перевод</b> — 20 свидетельства на современном английском · 21 векторы следуют за текстом, который видит читатель · 23 переводить тремя читателями и хранить инструкции · 24 другие языки — с окончательного текста (позже заменено решением владельца) · 25 статья на другом языке перерезается, а не переводится заново.</li>
+<li><b>Сам цикл</b> — 6 переносить отзывы дальше.</li>
+</ul>
+<p>Четыре замечания владельца в том виде, как их записал промпт (в оригинале по-английски):</p>
+<blockquote>«These look like concatenations of exact quotes… I don't see any level of merging into common concepts… from parts to the whole, from parts to a higher thought.» — «Это похоже на склейку точных цитат… я не вижу никакого слияния в общие понятия… от частей к целому, от частей к более высокой мысли».<cite>Правило 1, 23 ноября 2026</cite></blockquote>
+<blockquote>«Bits like this aren't clear enough: ‘That work is finished in the doing’.» — «Вот такие куски недостаточно ясны».<cite>Правило 4: исправление — «эта работа завершена в тот момент, когда я её делаю; она не зависит от того, чем всё кончится»</cite></blockquote>
+<blockquote>«I think I also want a parallel conclusions column to show what follows from the passage.» — «Хочу ещё параллельный столбец выводов, чтобы было видно, что следует из фрагмента».<cite>Правило 9</cite></blockquote>
+<blockquote>«maybe we should've translated source ones first? into modern english … just make sure to do embeddings on new translation» — «может, надо было сначала перевести исходные на современный английский? … только обязательно сделай векторы по новому переводу».<cite>Правило 21</cite></blockquote>
+<p>Где правило можно проверить скриптом, оно стало приёмочной проверкой: с 23 ноября пустая сторона обязана объяснить себя одной фразой (правило 7), а контекст цитаты Сенеки не может отсылать к другой цитате, как в «то же письмо» (правило 22).</p>
+<p class="files">Другие инструкции (на английском): <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/article-review.md">article-review.md</a> (независимый рецензент) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-translator.md">translation-translator.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-checker.md">translation-checker.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-settler.md">translation-settler.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-glossary.md">translation-glossary.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-matcher.md">translation-matcher.md</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/translation-lead.md">translation-lead.md</a>. Инструкции для русского перевода были рабочими файлами той сессии и в репозиторий не попали; метод русского перевода записан в самом русском хранилище (шаг 10).</p>
+</section>
+
+<section class="step" id="ru-checks" data-step="checks" aria-labelledby="rh-checks">
+<p class="num">Шаг 8</p>
+<h2 id="rh-checks">Проверки</h2>
+<p>Статья попадает в данные, только пройдя каждый слой ниже. Первые два — скрипты; следующие два — читатели, которые не писали эту статью.</p>
+<ol class="steps">
+<li><b>Сборка</b> (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution.py">aurelius-constitution.py</a>) отказывается публиковать: цитату, которая не совпадает ровно с одним отрезком своего фрагмента; утверждение меньше чем на двух фрагментах; выражение «даёт», которого нет в его утверждении; часть положения, которой нет в положении или у которой нет цитаты; цитату без «что следует»; утверждение или «сказано однажды», которое стоит не ровно под одной стороной; фрагмент, который и не использован, и не отложен с причиной; шестой цвет или два встречающихся фрагмента одного цвета; вывод редактора, который стоит больше одного раза или внутри слов, подкреплённых фрагментом; статью, цитирующую перевод, в котором не все фрагменты переведены и превращены в векторы; у Сенеки — цитату не из перевода проекта, отсутствующий контекст или журнал поиска, приписку, которая не продолжает свою фразу или ссылается на цитату другого элемента, ограничивающую приписку не из ограничивающего элемента и любой отрезок Гаммера. Каждый фрагмент английского перевода проекта, Марка и Сенеки, сверяется с хешем своего текста, поэтому правка без новой редакции не проходит; каждый русский фрагмент должен быть сделан с того английского, который опубликован сейчас.</li>
+<li><b>Приёмочные проверки</b> (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-qa.py">aurelius-qa.py</a>) проверяют те правила письма, которые может проверить скрипт: простую типографику и отсутствие архаизмов; положение от первого лица длиной от 30 до 140 знаков; что слова каждого утверждения подкрепляют хотя бы два фрагмента; «что следует» — одна фраза от 21 до 169 знаков, не просто повторяющая цитату; от двух до четырёх решений и названное ограничение; пустую сторону, объяснённую одной фразой; полосу Сенеки, контексты от 20 до 200 знаков, не отсылающие назад, не меньше трёх записанных поисков, приписки из нужных элементов; повторение другой статьи. Находка БЛОКИРУЕТ, если читатель был бы введён в заблуждение, и ПРЕДУПРЕЖДАЕТ, если человеку стоит посмотреть. Сами проверки протестированы: в настоящие статьи внесены 14 известных ошибок (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/tests/test_qa.py">test_qa.py</a>). По всем 38 статьям сейчас 0 блокирующих находок и 74 предупреждения.</li>
+<li><b>Независимый рецензент</b> в новом контексте, с постоянной методикой (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/apps/aurelius/prompts/article-review.md">article-review.md</a>), читает каждую цитату в её фрагменте и спрашивает: говорит ли она то, что говорят её слова «даёт»; следует ли «что следует» из этого фрагмента самого по себе; не говорит ли утверждение больше своих цитат (добавленное «только», «всегда» или «потому что» блокирует); значит ли цитата Сенеки в своём письме то, для чего её используют? Блокирующие находки возвращаются автору, не больше двух кругов; один узкий дополнительный круг допускался только ради одной точной правки (статьи 8, 14, 15, 31 и 35); после этого статья идёт к владельцу. Из первых 19 рецензий 18 вернули статью автору.</li>
+<li><b>Чтение поперёк статей.</b> Один читатель прочитал все 38 статей рядом и нашёл 79 мест: 68 пересечений, 7 противоречий между статьями и 4 фрагмента Сенеки, помеченных в двух статьях по-разному. Затем каждую статью доработали, чтобы она говорила, что добавляет именно её раздел, и называла пересекающуюся статью в своём ограничении, а последний проход сверил все 212 мест, где одна статья упоминает другую, с той статьёй в её нынешнем виде.</li>
+<li><b>Тесты.</b> <code>npm test</code> запускает тесты данных (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/tests/aurelius/constitution.test.mjs">constitution.test.mjs</a>: каждая цитата находится, редакции совпадают, числа сходятся, оба языка полны) и собственный тест этой страницы. <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution-fixtures.py">aurelius-constitution-fixtures.py</a> вносит известные ошибки в копии данных и требует, чтобы сборка и тесты отвергли каждую.</li>
+<li><b>Проверка в браузере</b> (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-constitution-check.py">aurelius-constitution-check.py</a>) открывает каждую главу на 360 px (тёмная тема), 390 px и 1440 px, с Сенекой и без, по-английски и по-русски, и не проходит при горизонтальной прокрутке, тексте мельче 12 px, кнопках ниже 40 px, любой ошибке скрипта или столбце векторов, который сдвигает пять сторон вниз. Ещё она воспроизводит именованные случаи — сценарии, которые когда-то ломались на странице.</li>
+</ol>
+</section>
+
+<section class="step" id="ru-seneca" data-step="seneca" aria-labelledby="rh-seneca">
+<p class="num">Шаг 9</p>
+<h2 id="rh-seneca">Сенека как второй голос</h2>
+<p>Сенека добавляется к Марку, а не смешивается с ним. Разделы, утверждения и слова Марка остаются как есть, и каждое слово Сенеки помечено как его. Читатель включает или выключает его для всей страницы на панели «Голоса» внизу страницы конституции; каждая статья тогда говорит, чем она становится.</p>
+<h3>Как нашлись его фрагменты</h3>
+<ol class="steps">
+<li><b>Корпус для поиска.</b> Английский Гаммера, все <span data-n="seneca-letters-all">124</span> письма, разбитые по стандартным номерам разделов на <span data-n="seneca-corpus">2140</span> фрагментов и превращённые в векторы той же моделью, что и Марк. Он нужен только для поиска.</li>
+<li><b>Векторы.</b> Для каждой статьи все фрагменты писем ранжируются по сходству с центром раздела и с собственными фразами статьи. Сходство между двумя авторами ниже, чем внутри одного: медиана — 0,468 между двумя фрагментами Марка, 0,330 между двумя фрагментами Сенеки и 0,351 между ними. Векторы — сеть, а не судья: примерно половина найденного ими не по делу, а некоторые лучшие фрагменты стоят низко.</li>
+<li><b>Слова.</b> Не меньше трёх поисков по письмам по ключевым словам самого раздела, с записью каждого рассмотренного и отвергнутого фрагмента и причины. Журнал остаётся в данных, как их написали; он не публикуется, потому что записывает поиски по тексту Гаммера.</li>
+<li><b>Чтение.</b> Прежде чем цитата что-то подкрепит, письмо вокруг неё читается, и одна фраза контекста говорит, о чём эта часть письма и к чему относится ключевое существительное или местоимение цитаты. Если контекст о другом, цитата не свидетельство, как бы ни совпадали слова: в одном раннем черновике строку Сенеки о том, что всё гибнет, использовали для приписки о совместной работе, — из-за этого правило и появилось. На странице фрагмент, найденный чтением, а не векторами, помечен так.</li>
+</ol>
+<h3>Как ставится цитата</h3>
+<p>Каждая цитата Сенеки входит в статью ровно с одним из трёх действий, чтобы читателю можно было сказать: «если добавить Сенеку, статья становится …»:</p>
+<dl class="defs">
+<dt>Подкрепляет — <span data-n="seneca-backs">149</span></dt><dd>Ещё один свидетель для слов уже имеющегося утверждения: его слова говорят то же, что эти слова. Показано пунктирной чёрной линией под словами и его кнопкой.</dd>
+<dt>Добавляет — <span data-n="seneca-adds">136</span></dt><dd>То, чего Марк в этом разделе не говорит, поставленное под одну из пяти сторон, лучше под пустую, с фразой о том, чего там не хватает у Марка.</dd>
+<dt>Ограничивает — <span data-n="seneca-limits">47</span></dt><dd>Он сужает утверждение или не согласен с ним. Различие названо, а не растворено, и где он противоречит сам себе, статья это говорит. Возражением это называется только там, где двое действительно расходятся.</dd>
+</dl>
+<p>Всего <span data-n="seneca-items">332</span> элемента в 38 статьях. В них <span data-n="seneca-pieces">421</span> разная точная цитата из <span data-n="seneca-sections">303</span> разделов <span data-n="letters">94</span> писем, использованная всего <span data-n="seneca-uses">550</span> раз, потому что одна цитата может служить в нескольких статьях. У каждой цитаты своё «что следует» и свой контекст.</p>
+<p><b>Приписки в тексте.</b> Когда Сенека добавляет к фразе или ограничивает её, к фразе Марка, пока Сенека включён, приписывается одна приписка — с маленькой меткой («Сенека добавляет», «Сенека ограничивает», «Сенека возражает») и его пунктирной линией; слова Марка перед ней никогда не переписываются. Приписка продолжает фразу (начинается с запятой или точки с запятой и не кончается точкой), короче 140 знаков, называет элементы, из которых взята, и ссылается только на их цитаты; ограничивающая или возражающая приписка должна идти от элемента «Ограничивает» на ту же фразу. Автор, который только подкрепляет Марка, текст статьи не меняет. Приписок <span data-n="clauses">83</span>: <span data-n="clauses-adds">36</span> добавляют, <span data-n="clauses-limits">36</span> ограничивают и <span data-n="clauses-challenges">11</span> возражают. Ещё в каждой статье есть фраза, начинающаяся с «С Сенекой …» (видна, пока он выключен), и фраза о том, устояло ли положение (видна, пока он включён).</p>
+<figure>
+<p class="eyebrow">Добавляет · статья 1, сторона «Почему»</p>
+<p class="ex small" data-src="1:amend">Я член единого тела разумных существ, созданный для общей жизни с ними<span class="sen">, и каждый из нас держит других, как камни свода</span><span class="tag">Сенека добавляет</span></p>
+<div class="tbl"><table class="qtbl"><tbody>
+<tr><td>Ep. 95.53</td><td class="q" data-quote="1:S95.53a">Наше содружество очень похоже на свод из камней, который упал бы, если бы камни не удерживали друг друга, и который этим самым и держится</td></tr>
+<tr><td>Что следует</td><td>Человеческое содружество стоит так же, как свод из камней: лишь потому, что его части держат друг друга.</td></tr>
+<tr><td>Контекст</td><td>Краткое правило Сенеки о том, как обращаться с людьми, данное после правила о почитании богов. «Наше содружество» — человеческое содружество в целом, а не одна дружба.</td></tr>
+<tr><td>Почему добавлено</td><td>У Марка есть тело, город, солнечный свет и душа. Свод добавляет то, чего не говорит ни один из них: целое стоит лишь потому, что его части держат друг друга.</td></tr>
+</tbody></table></div>
+<p class="eyebrow" style="margin-top:18px">Возражает · статья 8, положение</p>
+<p class="ex small" data-src="8:amend">Со мной не случается ничего, что я не мог бы вынести; случающееся вредит мне, только если я сужу, что оно дурно, и оно не мешает мне быть добрым и справедливым<span class="sen">; но может прийти и боль, которую я не в силах вынести, и тогда она коротка</span><span class="tag">Сенека возражает</span></p>
+<figcaption>С включённым Сенекой статья 8 говорит, что её первая часть «в нынешней формулировке не устоит: Сенека, как и Марк в 10.3, допускает боль, которую я не в силах вынести, и говорит лишь, что она не продлится, хотя в другом месте говорит, что нет ничего невыносимого». Прочитать на странице: <a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-1">статья 1</a> · <a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-8">статья 8</a>.</figcaption>
+</figure>
+<figure>
+<svg class="marks" viewBox="0 0 420 110" role="img" aria-label="Метки на карте: цветной круг — фрагмент Марка; закрашенный квадрат — Сенека подкрепляет; пустой квадрат — Сенека добавляет; пустой квадрат с чертой — Сенека ограничивает">
+<circle class="m" cx="20" cy="18" r="9"/><text x="40" y="24">Марк, питает статью</text>
+<circle class="hollow" cx="260" cy="18" r="9" style="stroke:var(--muted)"/><text x="280" y="24">отложен</text>
+<rect class="full" x="11" y="47" width="18" height="18"/><text x="40" y="62">Сенека подкрепляет</text>
+<rect class="hollow" x="251" y="47" width="18" height="18"/><text x="280" y="62">добавляет</text>
+<rect class="hollow" x="11" y="85" width="18" height="18"/><line x1="11" y1="103" x2="29" y2="85"/><text x="40" y="100">ограничивает</text>
+</svg>
+<figcaption>Как фрагменты Сенеки нарисованы на карте векторов каждой статьи. Пунктир связывает каждый из них с ближайшим фрагментом Марка.</figcaption>
+</figure>
+<details><summary>Сенека в каждой статье: Подкрепляет, Добавляет, Ограничивает</summary>
+<div class="tbl"><table>
+<thead><tr><th>№</th><th>Статья</th><th class="n">Подкрепляет</th><th class="n">Добавляет</th><th class="n">Ограничивает</th></tr></thead>
+<tbody>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-1">1</a></td><td>Член единого тела</td><td>3</td><td>4</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-2">2</a></td><td>Работа, которая принадлежит мне</td><td>6</td><td>2</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-3">3</a></td><td>Что со мной случается</td><td>6</td><td>5</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-4">4</a></td><td>Разум, который управляет целым</td><td>7</td><td>3</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-5">5</a></td><td>Для чего я создан</td><td>4</td><td>3</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-6">6</a></td><td>Что целое посылает в свой срок</td><td>2</td><td>6</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-7">7</a></td><td>Моё суждение зависит от меня</td><td>4</td><td>3</td><td>3</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-8">8</a></td><td>То, что случается, можно вынести, и оно мне не вредит</td><td>8</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-9">9</a></td><td>Хранить немногие имена, которые я дал себе</td><td>8</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-10">10</a></td><td>Жить сейчас как тот, кто вот-вот умрёт</td><td>8</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-11">11</a></td><td>Возвращаться к своим принципам и держать их наготове</td><td>7</td><td>5</td><td>3</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-12">12</a></td><td>Уединение внутри себя</td><td>4</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-13">13</a></td><td>Есть ли что-нибудь лучше добродетели</td><td>3</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-14">14</a></td><td>Жить вместе с богами</td><td>2</td><td>5</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-15">15</a></td><td>Никого не винить за то, что не в моей власти</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-16">16</a></td><td>Счастье и несчастье — моих рук дело</td><td>3</td><td>5</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-17">17</a></td><td>Готов уйти</td><td>7</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-18">18</a></td><td>Доволен, куда бы меня ни поместили</td><td>5</td><td>5</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-19">19</a></td><td>Когда кто-то меня задевает</td><td>4</td><td>4</td><td>3</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-20">20</a></td><td>Разобрать вещь: материя, причина, цель и время</td><td>3</td><td>4</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-21">21</a></td><td>Стирать представления, сдерживать побуждения</td><td>3</td><td>4</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-22">22</a></td><td>Хороший, что бы ни говорили другие, и готовый принять поправку</td><td>2</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-23">23</a></td><td>Держаться своего ремесла</td><td>0</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-24">24</a></td><td>Упражнение и пользование разумом</td><td>2</td><td>6</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-25">25</a></td><td>К чему я обращаюсь</td><td>2</td><td>4</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-26">26</a></td><td>Утро и вопрос перед каждым действием</td><td>2</td><td>4</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-27">27</a></td><td>Чьей похвалы я хочу?</td><td>3</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-28">28</a></td><td>Дурной поступок вредит тому, кто его совершает</td><td>1</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-29">29</a></td><td>Короткие изречения</td><td>0</td><td>5</td><td>0</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-30">30</a></td><td>Однообразие и низменность вещей</td><td>1</td><td>4</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-31">31</a></td><td>Как моя душа пользуется собой</td><td>5</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-32">32</a></td><td>Всё проходит</td><td>7</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-33">33</a></td><td>То же вещество в новой форме</td><td>3</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-34">34</a></td><td>Мёртвые и забытые</td><td>4</td><td>2</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-35">35</a></td><td>Долгота жизни и употребление её времени</td><td>5</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-36">36</a></td><td>Встретить смерть достойно</td><td>2</td><td>3</td><td>2</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-37">37</a></td><td>Чему я научился и у кого</td><td>4</td><td>3</td><td>1</td></tr>
+<tr><td><a href="stoic-constitution.html?lang=ru&amp;with=seneca#article-38">38</a></td><td>Сократ, Платон и другие образцы</td><td>7</td><td>6</td><td>1</td></tr>
+</tbody></table></div>
+</details>
+<p><b>Потом — в его собственных словах.</b> Сначала Сенеку цитировали по Гаммеру. Когда были собраны сведения о правах, владелец решил перевести его в рамках проекта («let’s translate seneca ourselves?» — «давай переведём Сенеку сами?»). После перевода с латыни (шаг 10) все <span data-n="seneca-pieces">421</span> цитата были заново вырезаны из нового английского; каждую статью проверил скрипт (каждая цитата есть в новом английском, вне части Сенеки ничего не изменилось, старые формулировки не цитируются, приёмочные проверки пройдены) и читатель, который видел только латынь и новый английский. Он сразу принял 25 статей и вернул 13 с точными правками.</p>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-seneca.py">aurelius-seneca.py</a> (корпус для поиска: загрузка, разбиение, векторы, подбор) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/constitution.json">constitution.json</a> (<code>voices.seneca</code> в каждой статье) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/32-delegation-plan.md">32-delegation-plan.md</a> (W4, порядок работы)</p>
+</section>
+
+<section class="step" id="ru-translation" data-step="translation" aria-labelledby="rh-translation">
+<p class="num">Шаг 10</p>
+<h2 id="rh-translation">Переводы</h2>
+<h3>С греческого на английский: Марк</h3>
+<p><b>Сопоставление.</b> Перевод 1634 года нумерует и режет фрагменты иначе, чем современные издания. Каждый его фрагмент сопоставлен с греческим чтением начал и концов рядом, после того как выравнивание всей книги предложило соответствия. Вместе <span data-n="passages">418</span> фрагментов покрывают каждую главу греческого текста ровно один раз. 58 фрагментов объединяют две или больше современных глав; 63 режут главу внутри, несут букву (11.8a — первая часть, 3.11b — более поздняя) и говорят, какой греческий текст они оставляют.</p>
+<p><b>Три читателя.</b> Каждый раздел переведён в три чтения, все одной моделью, Claude Fable 5.2, каждое в новом контексте, который видел только то, что позволяла инструкция:</p>
+<ol class="readers">
+<li><b>1 · Переводчик</b><span class="sees">Видит: только греческий</span><p>Простой современный английский, который сохраняет говорящего, того, к кому обращаются, каждое «все» и «не» и каждый образ; где греческий допускает два чтения, одно переведено, другое отмечено.</p></li>
+<li><b>2 · Проверяющий</b><span class="sees">Видит: греческий и английский</span><p>Без заметок переводчика перечисляет каждое место, где английский говорит больше, меньше или другое, чем греческий.</p></li>
+<li><b>3 · Решающий</b><span class="sees">Видит: греческий, черновик и пункты</span><p>Письменно решает каждый пункт (принят, принят частично или отклонён, с причиной) и даёт окончательный английский.</p></li>
+</ol>
+<p>По всей книге проверяющий поднял 1 458 пунктов и назвал 5 фрагментов неверными в том, что меняет сказанное Марком. Решающий принял 969 пунктов, частично принял 465 и отклонил 189, а также нашёл ещё 137 ошибок, которых не заметили первые два читателя. Заметок о том, что греческий оставляет открытым, — 3 201; 124 из них опираются на память о рукописях и помечены «по памяти, не проверено». Глоссарий держит одно английское слово для одного греческого термина («the ruling part» — «руководящее начало», «the nature of the whole» — «природа целого»). Прежде чем раздел попадал в хранилище, скрипт проверял, что каждое цитируемое греческое слово точно, у каждого пункта есть решение, а типографика проста. Сохранённый фрагмент никогда не правится: исправление — это новая редакция с новым идентификатором.</p>
+<p>Владелец прочитал первые шесть фрагментов и сказал «looks good» («хорошо выглядит»); остальные 412 владелец не читал, и ни один не проверял человек, читающий по-гречески. Затем новый английский был превращён в векторы (шаг 2), и все статьи цитируют его. Где греческий решает вопрос, который английский 1634 года решить не может, статья следует греческому и говорит об этом: положение статьи 5 потеряло «by nature» («по природе»), потому что за «naturally sociable» Казобона нет греческого текста.</p>
+<h3>С латыни на английский: Сенека</h3>
+<p>Те же три чтения, перенесённые на латынь, с латинским глоссарием, который держит общие стоические термины в том же английском, что и у Марка. Ни один читатель не видел Гаммера или другой опубликованный перевод. 304 раздела из <span data-n="letters">94</span> писем; проверяющий поднял 1 024 пункта, из них 708 приняты, 343 частично и 86 отклонены. В трёх местах решающий оставил своё чтение вопреки проверяющему, с заметкой, — пусть рассудит читатель латыни (51.9, 74.18, 95.53). Названия писем новые, написаны по латыни каждого письма. Сравнение двух латинских источников на каждой границе разделов нашло два раздела, где один источник начинает следующий раздел на фразу раньше (56.12 и 65.10); оба взяты из другого источника и переведены заново.</p>
+<h3>С английского на русский</h3>
+<p>Владелец решил делать русский перевод с окончательного английского («we're translating from english so it should be easier than latin and greek» — «мы переводим с английского, это должно быть проще, чем с латыни и греческого»; «opus it is for english to russian» — «значит, Opus для перевода с английского на русский»). Переводила модель Claude Opus 5.5; второй читатель на другой модели, Claude Sonnet 5.5, сравнивал русский текст с английским фрагмент за фрагментом; переводчик письменно решал каждый пункт. 722 фрагмента (Марк — 418, Сенека — 304); решено 212 пунктов: 148 приняты, 57 частично, 7 отклонены. Проход по всем частям выровнял одно выражение, переведённое четырьмя способами («do wrong», теперь «поступать дурно» в 13 фрагментах). Скрипты проверили порядок, абзацы, длину, алфавит и типографику. Заметки переводчиков о греческом и латыни остались на английском.</p>
+<p><b>Статьи перерезаны, а не переведены заново.</b> Собственные слова статьи (положение, утверждения, заметки) переведены с её английского, но каждая цитата заново вырезана из русского текста своего фрагмента, каждое выражение «даёт» и каждая часть положения должны стоять внутри русской фразы, а каждое слово вывода редактора — стоять в ней один раз. Поэтому русская сборка заново выполняет все правила английской и отвергает статью, чей английский изменился после перевода, или фрагмент, чей русский сделан с более старого английского. Собственные термины страницы закрепили в одном глоссарии до начала работы, потому что одиннадцать переводчиков выбрали четыре разных набора названий сторон: статья, положение, утверждение, сказано однажды, Подкрепляет / Добавляет / Ограничивает, Почему · На деле · Упражнение · Когда не выходит · Если я сомневаюсь. 39 частей (38 статей и собственные слова страницы); решён 121 пункт (103 приняты, 17 частично, 1 отклонён). Когда переводчик статьи находил ошибку в русском тексте фрагмента (8.3), фрагмент исправляли с записанным решением и заново вырезали каждую его цитату. Человек русский перевод с английским пока не сверял.</p>
+<p><b>Эта страница</b> переведена на русский с её английской версии той же моделью, которая её написала, с закреплёнными терминами проекта.</p>
+<p class="files">Файлы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/project-v1.json">project-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/seneca-v1.json">seneca-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/ru-v1.json">ru-v1.json</a> · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/content/aurelius/translation/articles-ru-v1.json">articles-ru-v1.json</a> (русский текст собственных слов статей) · <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/scripts/aurelius-translation.py">aurelius-translation.py</a> · <a href="stoic-translation.html">страница перевода</a></p>
+</section>
+
+<section class="step" id="ru-review" data-step="review" aria-labelledby="rh-review">
+<p class="num">Шаг 11</p>
+<h2 id="rh-review">Инструменты для отзыва владельца</h2>
+<ul class="plain">
+<li><b>Оценка каждой части.</b> На странице конституции у каждой части статьи есть маленькая кнопка «Оценка»: у положения, у каждого утверждения, у вывода из каждой цитаты, у всего, что приносит Сенека, у каждой его приписки и у статьи целиком. Оставить, Исправить или Отбросить; «Исправить» и «Отбросить» принимают заметку. Всё сохраняется только в браузере.</li>
+<li><b>«Скопировать мой отзыв»</b> даёт простой текст, который можно вставить в чат, сгруппированный по статьям, — каждая строка с фразой, к которой она относится, и с заметкой; <b>«Скачать файлом»</b> сохраняет то же самое; <b>«Только неоценённое»</b> скрывает то, у чего уже есть оценка.</li>
+<li><b>Убрать фрагмент</b> — чтобы увидеть, что теряет без него каждое утверждение.</li>
+<li><b>Наведите на любые слова или коснитесь их,</b> чтобы увидеть точные цитаты за ними; раскройте цитаты, чтобы прочитать каждый фрагмент рядом с тем, что из него следует.</li>
+<li><b>Панель «Голоса»</b> включает и выключает Сенеку для всей страницы, оставляет читателя на месте и говорит, сколько изменилось.</li>
+<li><b><a href="stoic-translation.html">Страница перевода</a></b> показывает рядом греческий, новый английский, английский 1634 года и русский, а под каждым фрагментом — заметки и пункты проверяющего.</li>
+<li><b><a href="stoic-composition.html">Исследование композиции</a></b> разбирает вручную две пары фрагментов, каждую тремя способами, с прослеженной каждой фразой и переключателем, который убирает второй фрагмент (на английском).</li>
+</ul>
+<p>Отзыв возвращается так, как велит промпт: каждое «Исправить» или «Отбросить» исправляется, становится датированным правилом в промпте и применяется ко всем статьям, а не только к той, о которой шла речь.</p>
+</section>
+
+<section class="step" id="ru-open" data-step="open" aria-labelledby="rh-open">
+<p class="num">Шаг 12</p>
+<h2 id="rh-open">Что ещё не решено</h2>
+<p>Из списка решений, которые ждут владельца (<a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/37-owner-points.md">37-owner-points.md</a>, на английском):</p>
+<ul class="plain">
+<li>Владелец ещё не проверил статьи; названия тем, отбор и формулировки — черновики.</li>
+<li>Некоторые разделы сильно пересекаются (статья 17 почти целиком повторяла статью 10; единственное утверждение статьи 23 — это первое утверждение статьи 22). Теперь каждая называет другую в своём ограничении; объединять ли разделы, решает владелец.</li>
+<li>В статье 29 нет слитого утверждения; её автор советует её убрать.</li>
+<li>Положение статьи 8 в нынешней формулировке оспаривает Сенека.</li>
+<li>Статья 23 опирается на одно чтение греческого текста 6.50, которое греческий допускает, но не требует.</li>
+<li>Приписка Сенеки в статье 6 помечена «добавляет»; рецензент считал, что она ограничивает.</li>
+<li>Приёмочные проверки дают 74 предупреждения и ни одной блокирующей находки.</li>
+<li>Три места в английском Сенеки ждут читателя латыни (51.9, 74.18, 95.53); греческий и русский человек тоже не проверял.</li>
+<li>Разделы сгруппированы на английском 1634 года: <span data-n="moved">66</span> фрагментов на новом английском теперь ближе к центру другого раздела, и ничего не перенесено.</li>
+<li>Запрошено 24 ноября и в работе: доводка страницы конституции (выровненные стороны, столбец векторов начинается выше), общая навигация и цвета сайта, обложка для главной страницы и переключатель, скрывающий решения редактора при чтении. Эта страница отвечает на первую просьбу из этого списка.</li>
+</ul>
+<p class="files">Журнал всей работы: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/plan/stoicism/36-finish-log.md">36-finish-log.md</a> (на английском).</p>
+</section>
+</article>
+</div>
+</div>
+</main>
+
+<footer class="wrap">
+<p class="en">This page: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/public/apps/stoic-method.html">public/apps/stoic-method.html</a>. Back to <a href="stoic-constitution.html">the Stoic Constitution</a> · <a href="stoic-translation.html">the translation</a> · <a href="stoic-composition.html">the composition study</a>.</p>
+<p class="ru">Эта страница: <a href="https://github.com/ilyaperepelitsa/ilyadays/blob/main/public/apps/stoic-method.html">public/apps/stoic-method.html</a>. Назад к <a href="stoic-constitution.html?lang=ru">Стоической конституции</a> · <a href="stoic-translation.html">переводу</a> · <a href="stoic-composition.html">исследованию композиции</a>.</p>
+</footer>
+
+<script>
+'use strict';
+/* The shared header (site-chrome.js) owns the EN · RU switch: it remembers the choice under the Constitution page's key and
+   reopens this page with ?lang. Here: show the language it settled on, and keep a section link in that language
+   (#fusion in English is #ru-fusion in Russian). */
+(() => {
+  const root = document.documentElement;
+  const TITLE = {en: 'How the Constitution was made · Stoic Constitution', ru: 'Как сделана конституция · Стоическая конституция'};
+  const lang = (window.siteChrome && window.siteChrome.lang) || (root.getAttribute('data-lang') === 'ru' ? 'ru' : 'en');
+  root.lang = lang;
+  root.setAttribute('data-lang', lang);
+  document.title = TITLE[lang];
+  const asked = decodeURIComponent(location.hash.slice(1));
+  if (!asked) return;
+  const id = (lang === 'ru' ? 'ru-' : '') + asked.replace(/^ru-/, '');
+  const target = document.getElementById(id);
+  if (!target) return;
+  if (id !== asked) history.replaceState(null, '', location.pathname + location.search + '#' + id);
+  requestAnimationFrame(() => target.scrollIntoView());
+})();
+</script>
+</body>
+</html>

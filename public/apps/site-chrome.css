@@ -1,0 +1,88 @@
+/* The site's colours, fonts and header on the static Stoic pages (public/apps/stoic-*.html), with site-chrome.js.
+   Tokens: src/styles/theme.css (light and dark follow the system, as on the rest of the site). Header: the computed result of
+   src/styles/site.css, modern.css, theme.css and aurelius.css for SiteHeader.tsx at the same widths (1440, 761–1000, 641–760,
+   ≤ 640). Link this before the page's own <style>, which maps its names (--paper, --card) onto these. */
+@font-face {
+  font-family: "Manrope";
+  src: url('/fonts/manrope/manrope-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+:root {
+  --bg: #f5f7fa; --surface: #ffffff; --surface-2: #edf0f4;
+  --ink: #171b22; --muted: #626c7a; --line: #dfe4eb;
+  --accent: #c64227; --accent-soft: #fff0e9;
+  --action: #171b22; --on-action: #ffffff;
+  --site-sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101318; --surface: #191e26; --surface-2: #242b35;
+    --ink: #edf1f7; --muted: #a5afbf; --line: #303947;
+    --accent: #ffa080; --accent-soft: #3b2824;
+    --action: #edf1f7; --on-action: #151a22;
+  }
+}
+
+/* The header scrolls away with the page: these pages keep their own sticky bar (chapters, articles) at the top, and two
+   sticky bars would take a seventh of a phone's screen. */
+.site-header {
+  position: relative; z-index: 6;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px 24px;
+  padding: 12px max(16px, calc((100vw - 1180px) / 2));
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink); font: 400 16px/1.6 var(--site-sans); letter-spacing: -.012em;
+  -webkit-font-smoothing: antialiased;
+}
+.site-header a { text-decoration: none; }
+.site-header > .brand {
+  grid-column: 1; grid-row: 1; justify-self: start; min-width: 0; min-height: 40px;
+  display: flex; align-items: center; gap: 9px;
+  color: var(--ink); font: 800 1.32rem var(--site-sans); letter-spacing: -.055em;
+}
+.site-header .brand-mark { position: relative; flex: none; width: 25px; height: 25px; border-radius: 7px; background: var(--ink); }
+.site-header .brand-mark::before { content: ""; position: absolute; left: 11px; bottom: 5px; width: 3px; height: 9px; border-radius: 1px; background: var(--surface); }
+.site-header .brand-mark::after { content: ""; position: absolute; left: 11px; top: 5px; width: 3px; height: 3px; border-radius: 50%; background: var(--accent); }
+.site-header .site-primary-nav {
+  grid-column: 2; grid-row: 1; justify-self: center; min-width: 0;
+  display: flex; align-items: center; flex-wrap: nowrap; gap: 6px;
+}
+.site-header .site-primary-nav a {
+  position: relative; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px;
+  padding: 8px 13px; border-radius: 7px; color: var(--muted); font-size: .8rem; font-weight: 600; white-space: nowrap;
+}
+.site-header .site-primary-nav a:hover { color: var(--ink); background: var(--surface-2); }
+.site-header .site-primary-nav a[aria-current=page] { color: var(--ink); background: var(--surface-2); font-weight: 750; }
+.site-header .site-primary-nav a[aria-current=page]::after { content: ""; position: absolute; left: 13px; right: 13px; bottom: 2px; height: 2px; border-radius: 1px; background: var(--accent); }
+.site-header .site-primary-nav a[aria-current=page] .action-icon { color: var(--accent); }
+.site-header .site-primary-nav a > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.site-header .action-icon { flex-shrink: 0; width: 17px; height: 17px; }
+.site-header .header-end { grid-column: 3; grid-row: 1; justify-self: end; min-width: 0; min-height: 40px; display: flex; align-items: center; gap: 12px; }
+/* EN · RU: the language on screen filled, the other a link. */
+.site-header .lang { display: flex; flex-wrap: nowrap; align-items: baseline; gap: 2px; padding: 2px; border-radius: 8px; background: var(--surface-2); font-size: .75rem; letter-spacing: .04em; }
+.site-header .lang .sep { display: none; }
+.site-header .lang :is(a, .on) {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 36px; padding: 5px;
+  border-radius: 6px; color: var(--muted); font: 600 .68rem var(--site-sans);
+}
+.site-header .lang .on { background: var(--action); color: var(--on-action); }
+.site-header .lang a:hover { background: var(--surface); color: var(--accent); }
+.site-header :is(a, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+@media (max-width: 900px) { .site-header { gap: 10px 14px; } }
+@media (max-width: 760px) {
+  .site-header { grid-template-columns: minmax(0, 1fr) auto; gap: 7px 12px; padding-top: 10px; padding-bottom: 8px; }
+  .site-header .header-end { grid-column: 2; gap: 6px; }
+  .site-header .site-primary-nav { grid-column: 1 / -1; grid-row: 2; justify-self: stretch; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); width: 100%; gap: 3px; }
+  .site-header .site-primary-nav a { min-width: 0; padding: 7px 3px; font-size: .75rem; gap: 5px; }
+  .site-header .site-primary-nav .action-icon { width: 15px; height: 15px; }
+  .site-header .lang :is(a, .on) { min-width: 30px; }
+}
+@media (max-width: 640px) {
+  .site-header > .brand { font-size: 1.2rem; }
+  .site-header .site-primary-nav a[aria-current=page]::after { left: 8px; right: 8px; }
+}
+@media print { .site-header { display: none; } }

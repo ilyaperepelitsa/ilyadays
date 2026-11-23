@@ -19,7 +19,10 @@ passages, a verdict that cannot be saved, chapter navigation in a simulated seco
 as chapter c3), a chapter file that does not match the index, the phone bar, and the source list for picked words.
 Cases R1 to R4 cover the owner's review tools (W7 of plan/stoicism/32-delegation-plan.md: per-item verdicts and notes kept
 across a reload, Copy my review and the file, the filter, the v1 carry-over); M1 and M2 the map (W6.1 marks by effect, W6.3
-labels that do not overlap).
+labels that do not overlap). H1 to H3 cover the shared site header (the React header's links, labels, boxes and colours on all
+three Stoic pages, EN and RU, without a layout shift), the "Hide the editor's decisions" switch (off, on, kept across a reload,
+storage blocked) and the wide-screen columns (sides in a row share heading, rule and first card within 2 px at 1440 and 1920, EN
+and RU, with and without Seneca; the vectors start level with the article's heading).
   --cases P1,P4   run only these cases (and no sweep)      --no-cases   run only the sweep
 
 Last, the Russian edition (skipped, with a message, while public/apps/stoic-constitution.ru.json does not exist): the EN / RU
@@ -537,8 +540,9 @@ def case_t6(page, base, port):
     page.wait_for_selector('article.passage')
     visible = lambda: page.evaluate("[...document.querySelector('article.passage').querySelectorAll('.col')].filter(n => n.offsetParent).map(n => n.className.replace('col ', ''))")
     data = json.loads((ROOT / 'public/apps/stoic-translation.json').read_text())
+    # The site header (site-chrome.js) is the site's own, EN · RU pill at 0.68 rem included, so it is not this page's small text.
     measure = lambda: page.evaluate("""() => ({n: document.querySelectorAll('article.passage').length, sections: document.querySelectorAll('header.sec').length, overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
-        small: [...document.querySelectorAll('body *')].filter(n => n.children.length === 0 && n.textContent.trim() && n.offsetParent && parseFloat(getComputedStyle(n).fontSize) < 12).length,
+        small: [...document.querySelectorAll('body *')].filter(n => n.children.length === 0 && n.textContent.trim() && n.offsetParent && !n.closest('.site-header') && parseFloat(getComputedStyle(n).fontSize) < 12).length,
         short: [...document.querySelectorAll('button')].filter(n => n.offsetParent && n.getBoundingClientRect().height < 40).length})""")
     seen = measure()
     if seen != {'n': len(data['passages']), 'sections': len(data['sections']), 'overflow': 0, 'small': 0, 'short': 0}:
@@ -977,6 +981,160 @@ def case_m2(page, base, port):
     return problems
 
 
+# ---------- the site header, the reading switch and the columns (plan: shared chrome and polish, 2026-11-24) ----------
+# The static Stoic pages draw the site header with public/apps/site-chrome.js and site-chrome.css; tests/site/static-chrome.test.mjs
+# checks its links and labels against SiteHeader.tsx. Here: it is drawn first, looks like the React header box for box, and does not move.
+HEADER = """() => {
+  const h = document.querySelector('.site-header');
+  if (!h) return null;
+  const box = n => { const r = n.getBoundingClientRect(); return [Math.round(r.x), Math.round(r.y), Math.round(r.width), Math.round(r.height)]; };
+  return {first: document.body.firstElementChild === h, height: box(h)[3], brand: [h.querySelector('.brand').getAttribute('href'), box(h.querySelector('.brand')).slice(0, 2)],
+    links: [...h.querySelectorAll('.site-primary-nav a')].map(a => ({href: a.getAttribute('href'), text: a.textContent.trim(), current: a.getAttribute('aria-current'), box: box(a)})),
+    on: (h.querySelector('.lang [aria-current=true]') || {}).textContent || null, font: getComputedStyle(h.querySelector('.site-primary-nav a')).fontFamily.split(',')[0].replace(/"/g, ''),
+    bg: getComputedStyle(document.body).backgroundColor, ink: getComputedStyle(document.body).color, old: Boolean(document.querySelector('.wrap.top')),
+    shifted: (window.__shifts || []).filter(node => node && node.closest && node.closest('.site-header')).length};
+}"""
+# Layout shifts, collected from the first paint: a header that moves (late styles, a late language) shows up here.
+SHIFTS = """window.__shifts = [];
+try { new PerformanceObserver(list => { for (const e of list.getEntries()) for (const s of e.sources || []) window.__shifts.push(s.node); }).observe({type: 'layout-shift', buffered: true}); } catch (e) {}"""
+
+
+def case_h1(page, base, port):
+    """The header on the three Stoic pages, EN and RU, at 390 dark and 1440 light: the React header's boxes, labels and colours."""
+    problems = []
+    browser = page.context.browser
+    site = f'http://localhost:{port}'
+    for width, height, scheme in [(390, 844, 'dark'), (1440, 900, 'light')]:
+        for lang in ['en', 'ru']:
+            ctx = browser.new_context(viewport={'width': width, 'height': height}, color_scheme=scheme)
+            ctx.add_init_script(SHIFTS)
+            ref_page = ctx.new_page()
+            ref_page.goto(site + ('/ru' if lang == 'ru' else '') + '/fitness', wait_until='networkidle')
+            ref_page.evaluate('document.fonts.ready')
+            # No public React page has Stoicism current (it is this static page), so mark it there as SiteHeader would.
+            ref_page.evaluate("() => { for (const a of document.querySelectorAll('.site-primary-nav a')) a.toggleAttribute('aria-current', a.classList.contains('nav-stoicism')); "
+                              "document.querySelector('.nav-stoicism').setAttribute('aria-current', 'page'); }")
+            ref = ref_page.evaluate(HEADER)
+            ref_page.close()
+            for name in ['stoic-constitution.html', 'stoic-translation.html', 'stoic-composition.html']:
+                where = f'{width}px {lang} {name}'
+                p = ctx.new_page()
+                p.goto(f'{site}/apps/{name}?lang={lang}', wait_until='networkidle')
+                p.evaluate('document.fonts.ready')
+                got = p.evaluate(HEADER)
+                p.close()
+                if not got:
+                    problems.append(f'{where}: no site header')
+                    continue
+                if not got['first'] or got['old']:
+                    problems.append(f"{where}: the header is not first in <body> or the old top bar is still there")
+                if got['font'] != 'Manrope' or got['bg'] != ref['bg'] or got['ink'] != ref['ink']:
+                    problems.append(f"{where}: font {got['font']}, colours {got['bg']} / {got['ink']}, the site has {ref['bg']} / {ref['ink']}")
+                if abs(got['height'] - ref['height']) > 1 or got['brand'][0] != ref['brand'][0] or got['brand'][1] != ref['brand'][1]:
+                    problems.append(f"{where}: header {got['height']}px, brand {got['brand']}; the site's {ref['height']}px, {ref['brand']}")
+                stoic = f'/apps/stoic-constitution.html?lang={lang}'
+                want = [(link['text'], link['href'], 'page' if link['href'] == stoic else None) for link in ref['links']]
+                if [(link['text'], link['href'], link['current']) for link in got['links']] != want:
+                    problems.append(f"{where}: links {[(l['text'], l['href'], l['current']) for l in got['links']]}, expected {want}")
+                for mine, theirs in zip(got['links'], ref['links']):
+                    if any(abs(a - b) > 1 for a, b in zip(mine['box'], theirs['box'])):
+                        problems.append(f"{where}: {mine['text']} at {mine['box']}, the site's at {theirs['box']}")
+                        break
+                if got['on'] != lang.upper():
+                    problems.append(f"{where}: the pill marks {got['on']}")
+                if got['shifted']:
+                    problems.append(f"{where}: the header moved after the first paint")
+            ctx.close()
+    return problems
+
+
+VISIBLE = "sel => [...document.querySelectorAll(sel)].filter(n => n.getClientRects().length > 0).length"
+EDITORIAL = ['.hand', '.process', '.statement > .form', '.link.ed', '.vt', '.article > .verdict']
+READING = ['.statement .sent', 'li.claim .sent', '.trace .link.pair', 'li.claim .fused']
+
+
+def case_h2(page, base, port):
+    """Hide the editor's decisions: off by default; on hides the apparatus and keeps the reading; kept across a reload; off again."""
+    problems = []
+    seen = lambda: {sel: page.evaluate(VISIBLE, sel) for sel in EDITORIAL + READING}
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('#article-1 .statement')
+    switch = page.locator('#hide-editor')
+    show = page.locator('#article-1 li.claim .show').first
+    show.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+    show.click()
+    page.wait_for_selector('#article-1 li.claim .trace')
+    before = seen()
+    if switch.get_attribute('aria-checked') != 'false' or not all(before.values()):
+        problems.append(f"off by default, everything shown: aria-checked {switch.get_attribute('aria-checked')}, visible {before}")
+    switch.click()
+    on = seen()
+    stored = page.evaluate("localStorage.getItem('stoic-constitution:hide-editor')")
+    if any(on[sel] for sel in EDITORIAL) or not all(on[sel] for sel in READING) or stored != '1':
+        problems.append(f'on: {on}, stored {stored!r}')
+    page.reload(wait_until='networkidle')
+    page.wait_for_selector('#article-1 .statement')
+    again = seen()
+    if switch.get_attribute('aria-checked') != 'true' or any(again[sel] for sel in EDITORIAL) or not again['.statement .sent']:
+        problems.append(f"after a reload: aria-checked {switch.get_attribute('aria-checked')}, {again}")
+    switch.click()
+    off = seen()
+    if page.evaluate("localStorage.getItem('stoic-constitution:hide-editor')") != '0' or not all(off[sel] for sel in ['.hand', '.process', '.vt', '.article > .verdict']):
+        problems.append(f'off again: {off}')
+    page.reload(wait_until='networkidle')
+    page.wait_for_selector('#article-1 .statement')
+    if switch.get_attribute('aria-checked') != 'false' or not page.evaluate(VISIBLE, '.hand'):
+        problems.append('after a reload it did not stay off')
+    # In Russian, and with storage blocked: the switch still works for the visit, without an error.
+    ctx = page.context.browser.new_context(viewport={'width': 390, 'height': 844})
+    ctx.add_init_script("Object.defineProperty(window, 'localStorage', {get() { throw new DOMException('blocked', 'SecurityError'); }});")
+    blocked = ctx.new_page()
+    errors: list[str] = []
+    blocked.on('pageerror', lambda e: errors.append(str(e)))
+    blocked.goto(base + '?lang=ru', wait_until='networkidle')
+    blocked.wait_for_selector('#article-1 .statement')
+    label = blocked.locator('#hide-editor').inner_text().strip()
+    blocked.locator('#hide-editor').click()
+    if label != 'Скрыть решения редактора' or blocked.evaluate(VISIBLE, '.hand') or errors:
+        problems.append(f'Russian with storage blocked: label {label!r}, decisions visible {blocked.evaluate(VISIBLE, ".hand")}, errors {errors[:2]}')
+    ctx.close()
+    return problems
+
+
+ALIGN = """() => [...document.querySelectorAll('article.article')].map(a => {
+  const top = n => n ? Math.round(n.getBoundingClientRect().top) : null, bottom = n => n ? Math.round(n.getBoundingClientRect().bottom) : null;
+  const sides = {};
+  for (const g of a.querySelectorAll('.grps > .grp')) sides[g.dataset.g] = {head: top(g.querySelector('.grp-head')), rule: bottom(g.querySelector('.grp-head')), first: top(g.querySelector('.grp-body > *'))};
+  return {id: a.id, sides, sci: top(a.querySelector('.sci')), lead: top(a.querySelector('.lead-col')), statement: top(a.querySelector('.statement'))};
+})"""
+
+
+def case_h3(page, base, port):
+    """Wide screens: the sides that share a row share a top line (heading, rule, first card) within 2 px, EN and RU, with and without
+    Seneca; the vectors start level with the article's heading, above the statement."""
+    problems = []
+    rows = {1440: [['why', 'action', 'practice'], ['breaks', 'doubt']], 1920: [['why', 'action', 'practice', 'breaks', 'doubt']]}
+    for width, want in rows.items():
+        page.set_viewport_size({'width': width, 'height': 1000})
+        for lang in ['en', 'ru']:
+            for query in ['', '&with=seneca']:
+                where = f"{width}px {lang}{' Seneca' if query else ''}"
+                page.goto(f'{base}?lang={lang}{query}', wait_until='networkidle')
+                page.wait_for_selector('article.article .statement')
+                for n in page.evaluate("[...document.querySelectorAll('article.article')].map(a => a.id)"):
+                    # The article's top in view, below the sticky bar, so the vectors are not yet held by it.
+                    page.evaluate(f"scrollTo({{top: document.getElementById('{n}').getBoundingClientRect().top + scrollY - 120, behavior: 'instant'}})")
+                    art = next(a for a in page.evaluate(ALIGN) if a['id'] == n)
+                    for row in want:
+                        for part in ['head', 'rule', 'first']:
+                            values = [art['sides'][g][part] for g in row if g in art['sides'] and art['sides'][g][part] is not None]
+                            if len(values) > 1 and max(values) - min(values) > 2:
+                                problems.append(f"{where} {n}: {part} of {'/'.join(row)} differ by {max(values) - min(values)}px")
+                    if abs(art['sci'] - art['lead']) > 2 or art['sci'] > art['statement'] - 20:
+                        problems.append(f"{where} {n}: the vectors start at {art['sci']}, the heading at {art['lead']}, the statement at {art['statement']}")
+    return problems[:8]
+
+
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
@@ -1005,6 +1163,9 @@ CASES = {
     'R4': ('review: v1 article verdicts carried over once', case_r4, (390, 844)),
     'M1': ('map: an added author\'s marks by effect, one key entry per mark, tie opacity by similarity', case_m1, (1440, 1000)),
     'M2': ('map: no visible label overlaps another at 390 and 1440 px', case_m2, (390, 900)),
+    'H1': ('site header on the Stoic pages: the React header\'s links, labels, boxes and colours, EN and RU, no shift', case_h1, (1440, 900), 'real'),
+    'H2': ('Hide the editor\'s decisions: off by default, hides the apparatus, kept across a reload, works with storage blocked', case_h2, (1440, 1000), 'real'),
+    'H3': ('wide screens: sides in a row share heading, rule and first card within 2 px; the vectors start at the heading', case_h3, (1440, 1000), 'real'),
 }
 
 
@@ -1111,13 +1272,13 @@ def ru_checks(browser, base: str, ru_dir: Path | None, shots: Path | None, quick
             page.wait_for_selector('article.article .statement', timeout=15000)
             if page.evaluate('document.documentElement.lang') != 'en':
                 problems.append('the page does not start in English')
-            if page.locator('.lang a[aria-current=true]').inner_text() != 'EN':
+            if page.locator('.site-header .lang [aria-current=true]').inner_text() != 'EN':
                 problems.append('EN is not marked as current')
-            page.click('.lang a[data-lang=ru]')
+            page.click('.site-header .lang a[data-lang=ru]')
             page.wait_for_url(re.compile(r'lang=ru'))
             page.wait_for_selector('article.article .statement', timeout=15000)
             state = page.evaluate("""() => ({lang: document.documentElement.lang, head: document.getElementById('a-head').textContent, h1: document.querySelector('h1').textContent,
-                current: document.querySelector('.lang a[aria-current=true]').textContent, missing: [...MISSING_RU], stored: localStorage.getItem('stoic-constitution:lang'),
+                current: document.querySelector('.site-header .lang [aria-current=true]').textContent, missing: [...MISSING_RU], stored: localStorage.getItem('stoic-constitution:lang'),
                 articles: document.querySelectorAll('article.article').length})""")
             if state['lang'] != 'ru' or state['current'] != 'RU' or state['stored'] != 'ru':
                 problems.append(f"after the switch: lang {state['lang']}, current {state['current']}, stored {state['stored']}")
@@ -1159,11 +1320,11 @@ def ru_checks(browser, base: str, ru_dir: Path | None, shots: Path | None, quick
                 page.locator('li.claim .trace').first.evaluate("n => n.scrollIntoView({block: 'start', behavior: 'instant'})")
                 page.screenshot(path=str(shots / f'ru-{width}-quotes.png'))
             # Back to English.
-            page.click('.lang a[data-lang=en]')
+            page.click('.site-header .lang a[data-lang=en]')
             page.wait_for_load_state('networkidle')
             page.wait_for_selector('article.article .statement', timeout=15000)
             back = page.evaluate("[document.documentElement.lang, document.getElementById('a-head').textContent, localStorage.getItem('stoic-constitution:lang')]")
-            if back[0] != 'en' or not back[1].startswith('Chapter') or back[2] != 'en' or 'lang=' in page.url:
+            if back[0] != 'en' or not back[1].startswith('Chapter') or back[2] != 'en' or 'lang=ru' in page.url:
                 problems.append(f'back to English failed: {back}, {page.url}')
         except Exception as error:
             problems.append(f'could not run: {str(error).splitlines()[0][:200]}')
