@@ -66,6 +66,12 @@ const nextConfig: NextConfig = {
       ...[...ONIGIRI_RECIPES,...ONIGIRI_METHODS,'sous-vide-salmon'].flatMap(slug=>['','/ru'].flatMap(lang=>['','.html'].map(ext=>({
         source:`${lang}/food/${slug}${ext}`,destination:`${lang}/food${integratedDestination(slug)}`,statusCode:301 as const,
       })))),
+      // Stoicism is the Stoic Constitution (a static page). The old five-lesson workbench draft stays at /stoicism only
+      // in the private loopback workbench (scripts/aurelius-dev.mjs), whose tests use it. Temporary, so it can change.
+      ...(process.env.AURELIUS_LOCAL_SERVICE === "1" ? [] : [
+        { source: "/stoicism", destination: "/apps/stoic-constitution.html?lang=en", statusCode: 307 as const },
+        { source: "/ru/stoicism", destination: "/apps/stoic-constitution.html?lang=ru", statusCode: 307 as const },
+      ]),
       ...legacy.map((r) => ({ ...r, statusCode: 301 as const })),
       ...supersededFillings.map((r) => ({ ...r, statusCode: 301 as const })),
       ...Object.entries(mediaAliases).map(([from, to]) => ({
