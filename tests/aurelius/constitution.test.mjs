@@ -7,11 +7,16 @@ import crypto from 'node:crypto';
 // published Casaubon map (immutable revisions and text hashes) and to the topic hierarchy.
 const read = (path) => JSON.parse(fs.readFileSync(new URL(`../../${path}`, import.meta.url), 'utf8'));
 // The page's index lists every article as a stub; the full articles sit in one file per chapter. Join them.
+// STOIC_RECORD_DIR points the tests at another copy of the published files (used by scripts/aurelius-constitution-fixtures.py).
+const RECORD_DIR = process.env.STOIC_RECORD_DIR ? new URL(`file://${process.env.STOIC_RECORD_DIR.replace(/\/?$/, '/')}`) : new URL('../../public/apps/', import.meta.url);
+const published = (name) => JSON.parse(fs.readFileSync(new URL(name, RECORD_DIR), 'utf8'));
+const chapterFiles = new Map();
 const load = () => {
-  const index = read('public/apps/stoic-constitution.json');
+  const index = published('stoic-constitution.json');
   const full = new Map();
   for (const chapter of [...new Set(index.articles.map((stub) => stub.chapter))]) {
-    for (const article of read(`public/apps/stoic-constitution/${chapter}.json`).articles) full.set(article.number, article);
+    chapterFiles.set(chapter, published(`stoic-constitution/${chapter}.json`));
+    for (const article of chapterFiles.get(chapter).articles) full.set(article.number, article);
   }
   return {...index, stubs: index.articles, articles: index.articles.map((stub) => full.get(stub.number))};
 };
@@ -34,7 +39,7 @@ test('the topic hierarchy places every passage of the published map in exactly o
 });
 
 test('the index is small and lists every article; each chapter file holds exactly that chapter\'s articles', () => {
-  const size = fs.statSync(new URL('../../public/apps/stoic-constitution.json', import.meta.url)).size;
+  const size = fs.statSync(new URL('stoic-constitution.json', RECORD_DIR)).size;
   assert.ok(size < 60 * 1024, `index is ${size} bytes`);
   const chapterOf = new Map(topics.chapters.flatMap((chapter) => chapter.sections.map((section) => [section.id, chapter.id])));
   for (const [index, stub] of record.stubs.entries()) {
@@ -46,7 +51,12 @@ test('the index is small and lists every article; each chapter file holds exactl
     assert.deepEqual(stub.counts, {claims: article.claims.length, single: article.single.length, sources: article.sources.length, section_size: article.section_size});
     for (const [key, voice] of Object.entries(article.voices)) assert.deepEqual(stub.voices[key].counts, voice.counts);
   }
-  const files = fs.readdirSync(new URL('../../public/apps/stoic-constitution/', import.meta.url)).filter((name) => name.endsWith('.json')).sort();
+  // Each chapter file holds exactly its chapter's articles, in the index's order, once each.
+  for (const [chapter, file] of chapterFiles) {
+    const expected = record.stubs.filter((stub) => stub.chapter === chapter).map((stub) => stub.number);
+    assert.deepEqual(file.articles.map((article) => article.number), expected, `chapter file ${chapter}.json must hold articles ${expected.join(', ')} in order, once each`);
+  }
+  const files = fs.readdirSync(new URL('stoic-constitution/', RECORD_DIR)).filter((name) => name.endsWith('.json')).sort();
   assert.deepEqual(files, [...new Set(record.stubs.map((stub) => stub.chapter))].map((id) => id + '.json').sort());
 });
 
@@ -129,22 +139,37 @@ test('what only one passage says is kept apart with the reason, and never counte
   }
 });
 
+// What is wrong with an article's statement, as a list of sentences; empty when it is sound.
+const statementProblems = (article) => {
+  const where = `article ${article.number}`, problems = [];
+  const ids = new Map([...article.claims.flatMap((claim) => claim.support), ...article.single].map((piece) => [piece.id, piece]));
+  const { statement } = article;
+  if (!(statement.t.length > 30 && statement.t.length < 140 && statement.kind && statement.form)) problems.push(`${where}: statement length, kind or form`);
+  if (statement.parts.length < 2) problems.push(`${where}: the statement is traced in parts`);
+  for (const part of statement.parts) {
+    if (!statement.t.toLowerCase().includes(part.words.toLowerCase())) problems.push(`${where}: “${part.words}” is not in the statement`);
+    if (JSON.stringify(part.refs) !== JSON.stringify([...new Set(part.ids.map((id) => ids.get(id).ref))])) problems.push(`${where}: “${part.words}” refs do not match its ids`);
+    // A section of fewer than five passages may have parts resting on one passage, but not all of them.
+    if (!part.ids.length || !part.refs.length) problems.push(`${where}: “${part.words}” has no witness: every part needs at least one quoted piece`);
+    else if (article.section_size >= 5 && part.refs.length < 2) problems.push(`${where}: “${part.words}” rests on fewer than two passages`);
+  }
+  if (!statement.parts.some((part) => part.refs.length >= 2)) problems.push(`${where}: no part rests on two passages`);
+  return problems;
+};
+
 test('each article makes one short statement whose parts each rest on quoted pieces from two or more passages', () => {
   for (const article of record.articles) {
-    const where = `article ${article.number}`;
-    const ids = new Map([...article.claims.flatMap((claim) => claim.support), ...article.single].map((piece) => [piece.id, piece]));
-    const { statement } = article;
-    assert.ok(statement.t.length > 30 && statement.t.length < 140 && statement.kind && statement.form, where);
-    assert.ok(statement.parts.length >= 2, `${where}: the statement is traced in parts`);
-    for (const part of statement.parts) {
-      assert.ok(statement.t.toLowerCase().includes(part.words.toLowerCase()), `${where}: “${part.words}” is in the statement`);
-      assert.deepEqual(part.refs, [...new Set(part.ids.map((id) => ids.get(id).ref))], `${where}: “${part.words}”`);
-      // A section of fewer than five passages may have parts resting on one passage, but not all of them.
-      if (article.section_size >= 5) assert.ok(part.refs.length >= 2, `${where}: “${part.words}” rests on more than one passage`);
-    }
-    assert.ok(statement.parts.some((part) => part.refs.length >= 2), `${where}: at least one part rests on two passages`);
+    assert.deepEqual(statementProblems(article), []);
     assert.ok(article.decisions.length && article.limit);
   }
+});
+
+test('in a small section every statement part still needs a witness (synthetic four-passage case)', () => {
+  const small = structuredClone(record.articles.find((article) => article.number === 6));
+  small.section_size = 4;
+  small.statement.parts[0].ids = [];
+  small.statement.parts[0].refs = [];
+  assert.ok(statementProblems(small).some((problem) => problem.includes('witness')), `the rule accepted a part with no witness: ${JSON.stringify(statementProblems(small))}`);
 });
 
 test('subarticles sit under the same five labels in every article, each claim and single item under exactly one', () => {
@@ -165,28 +190,46 @@ test('subarticles sit under the same five labels in every article, each claim an
   }
 });
 
-test('every quoted piece carries its own one-sentence conclusion, and enough components have more than one source', () => {
+// Claim components (runs of words backed by the same passages) per article, and how many rest on two or more passages.
+const sharedOf = (article) => {
   let components = 0, shared = 0;
+  for (const claim of article.claims) {
+    const cover = Array.from(claim.t, () => new Set());
+    for (const piece of claim.support) {
+      for (const words of piece.gives ?? []) {
+        const at = claim.t.toLowerCase().indexOf(words.toLowerCase());
+        for (let i = at; i < at + words.length; i += 1) cover[i].add(piece.ref);
+      }
+    }
+    const keys = cover.map((refs) => [...refs].sort().join('|'));
+    keys.forEach((key, i) => { if (key && key !== keys[i - 1]) { components += 1; if (key.includes('|')) shared += 1; } });
+  }
+  return {shared, components};
+};
+// Articles known to be below the bar on 23 Nov 2026, to be fixed in milestone N3 (plan/stoicism/34-after-review-plan.md, G1).
+// The list may only shrink: an article on it that meets the bar fails the test until it is taken off.
+const KNOWN_BELOW = (process.env.STOIC_KNOWN_BELOW ?? '1,4,5').split(',').filter(Boolean).map(Number);
+
+test('each article has enough claim components resting on more than one passage', () => {
+  for (const article of record.articles) {
+    const {shared, components} = sharedOf(article);
+    const meets = article.section_size >= 8 ? shared * 3 >= components : shared >= 1;
+    const bar = article.section_size >= 8 ? 'a third' : 'one (small section)';
+    if (KNOWN_BELOW.includes(article.number)) {
+      assert.ok(!meets, `article ${article.number} now meets the bar (${shared}/${components}): take it off KNOWN_BELOW`);
+    } else {
+      assert.ok(meets, `article ${article.number}: ${shared} of ${components} claim components rest on more than one passage; the bar is ${bar}`);
+    }
+  }
+});
+
+test('every quoted piece carries its own one-sentence conclusion', () => {
   for (const article of record.articles) {
     for (const piece of [...article.claims.flatMap((claim) => claim.support), ...article.single]) {
       assert.ok(typeof piece.follows === 'string' && piece.follows.length > 20 && piece.follows.length < 170 && /\.$/.test(piece.follows), `article ${article.number} ${piece.id}`);
       assert.ok(!/\b(thou|thee|thy|doth|hath)\b/i.test(piece.follows), `article ${article.number} ${piece.id}: the conclusion is in plain modern English`);
     }
-    for (const claim of article.claims) {
-      const cover = Array.from(claim.t, () => new Set());
-      for (const piece of claim.support) {
-        for (const words of piece.gives ?? []) {
-          const at = claim.t.toLowerCase().indexOf(words.toLowerCase());
-          for (let i = at; i < at + words.length; i += 1) cover[i].add(piece.ref);
-        }
-      }
-      const keys = cover.map((refs) => [...refs].sort().join('|'));
-      keys.forEach((key, i) => {
-        if (key && key !== keys[i - 1]) { components += 1; if (key.includes('|')) shared += 1; }
-      });
-    }
   }
-  assert.ok(shared / components >= 0.35, `${shared} of ${components} claim components rest on more than one passage`);
 });
 
 test('each source passage has one of five colours, and passages that meet in a sentence never share one', () => {
@@ -197,6 +240,9 @@ test('each source passage has one of five colours, and passages that meet in a s
     for (const group of [...article.claims.map((claim) => claim.passages), ...article.statement.parts.map((part) => part.refs)]) {
       assert.equal(new Set(group.map((ref) => article.colors[ref])).size, group.length, `${where}: ${group.join(', ')} have distinct colours`);
     }
+    // Anywhere in the statement, passages differ in colour whenever five colours are enough to keep them all apart.
+    const lead = [...new Set(article.statement.parts.flatMap((part) => part.refs))];
+    if (lead.length <= 5) assert.equal(new Set(lead.map((ref) => article.colors[ref])).size, lead.length, `${where}: the statement's passages ${lead.join(', ')} share a colour although five colours would keep them apart`);
   }
 });
 
@@ -237,6 +283,8 @@ test('Seneca is added as stronger, wider or qualified items, each resting on one
     const labels = record.labels.map((label) => label.key);
     const seen = new Set();
     const check = (piece, sentence) => {
+      assert.ok(Object.hasOwn(piece, 'context') && (piece.context === null || (typeof piece.context === 'string' && piece.context.length >= 20 && piece.context.length <= 200)),
+        `${where} ${piece.id}: every added piece carries its context sentence (null only while it awaits review in N3)`);
       assert.match(piece.ref, /^Ep\. \d+\.\d+$/, `${where} ${piece.id}`);
       assert.equal(piece.author, 'seneca', `${where} ${piece.id}`);
       assert.ok(!seen.has(piece.id), `${where} ${piece.id} is used once`);

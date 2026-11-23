@@ -1,5 +1,7 @@
 # Aurelius — implementation planning dossier
 
+**Milestone N1 done (23 Nov 2026):** [report](34-N1-report.md): every check row and page row with a case that failed before its fix.
+
 **Plan after the two reviews (23 Nov 2026):** [what to fix before more articles are written](34-after-review-plan.md): trustworthy checks and markings, a translation pilot from the Greek on six passages, then Article 6 revised and Articles 1 to 5 audited.
 
 **Report of milestone M1 (23 Nov 2026):** [what was built, the checks, and the proof that Articles 1 to 5 are unchanged](32-m1-report.md).

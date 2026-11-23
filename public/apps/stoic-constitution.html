@@ -93,6 +93,7 @@ details.more>summary,.process>summary{cursor:pointer;color:var(--accent);font-si
 .sg[aria-pressed=true]{box-shadow:0 0 0 2px var(--hl)}
 .sg.gone{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:var(--warn);opacity:.5}
 @media(forced-colors:active),print{.sg:not(.join){text-decoration:underline}}
+@media(forced-colors:active){.sg[aria-pressed=true]{outline:2px solid Highlight;outline-offset:1px}.picked .dot{forced-color-adjust:none}}
 .M,.S{--c:var(--ink);--ct:var(--hl)}.E{--c:var(--e);--ct:var(--et)}
 .statement{padding:14px 14px 14px 16px;border-left:4px solid var(--ink);background:var(--paper);border-radius:0 6px 6px 0}
 .statement .sent.big{font-size:clamp(21px,5.6vw,25px);line-height:1.55}
@@ -257,11 +258,32 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .vb{min-height:44px;padding:6px 14px;border:1px solid var(--line);border-radius:6px;background:transparent;cursor:pointer;font-size:14px;font-weight:600}
 .vb[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .mine{margin-top:14px;display:grid;gap:4px;font-size:15px}
+.in-context{margin-top:6px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.in-context.todo{font-style:italic}
+.picked{margin-top:8px;padding:8px 10px 6px;border-top:1px solid var(--line)}
+.picked-head{font:650 12.5px/1.4 var(--sans);letter-spacing:.04em;color:var(--muted)}
+.picked ul{display:grid;gap:2px;margin:4px 0 2px}
+.picked li{display:flex;align-items:center;gap:10px;min-height:28px;font-size:14.5px}
+.picked .sample{flex:none;display:inline-block;width:26px;height:9px}
+.picked li .dot{flex:none}
+.picked em{font-style:normal;color:var(--warn)}
+.picked-note{font-size:14.5px;line-height:1.45;margin:2px 0 4px}
+.picked .show{margin:4px 0 0}
+.fused span .sr{position:absolute}
+.save-note{font-size:13px;color:var(--warn);margin-right:auto}
+#articles{scroll-margin-top:64px}
+.art-btn{display:none}
+.bar.compact #jump a.num,.bar.compact #jump .lab{display:none}
+.bar.compact .art-btn{flex:none;min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:0 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font:650 14px var(--sans);cursor:pointer;white-space:nowrap}
+.bar.compact .art-btn::after,.bar.compact .chap-btn::after{content:'';width:6px;height:6px;margin-top:-3px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.bar.compact .chap-btn{padding:0 10px}
 .mine li.ch{display:block;border:0;padding:12px 0 0;font:650 12px/1.4 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 /* Chapters: one is shown at a time; the picker sits at the start of the sticky bar. */
 .chap-btn{flex:none;min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:0 12px;border:1px solid var(--ink);border-radius:6px;background:transparent;color:var(--ink);font:650 14px var(--sans);cursor:pointer;white-space:nowrap}
 .chap-btn::after{content:'';width:7px;height:7px;margin-top:-4px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
 .chap-btn[aria-expanded=true]::after{margin-top:3px;transform:rotate(225deg)}
+.chap-btn .brief,.bar.compact .chap-btn .long{display:none}
+.bar.compact .chap-btn .brief{display:inline}
 .chapters{position:absolute;left:0;right:0;top:100%;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 10px 24px rgba(0,0,0,.14);max-height:calc(100vh - 120px);overflow-y:auto}
 .chapters[hidden]{display:none}
 .chapters ol{display:grid;gap:4px;padding-block:8px 10px}
@@ -363,7 +385,7 @@ svg.map .cos{font-size:12.5px;font-weight:650}
 <p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
 </header>
-<nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div></nav>
+<nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
 <nav class="dock" aria-label="Voices"><span class="dock-label">Voices</span><div id="voices"></div><p id="dock-note" aria-hidden="true"></p></nav>
 <div id="tip" role="tooltip" hidden></div>
@@ -403,7 +425,7 @@ const VERDICTS = ['Keep', 'Revise', 'Drop'];
 let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
 const CHAPTERS = new Map();   // chapter id -> its full articles, once loaded
 const TAGS = 'stoic-constitution:v1:tags';
-const state = {chapter: null, sel: null, removed: {}, tags: true, voices: new Set(), fresh: null};   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: numbers on statements; voices: added authors switched on; fresh: the voice just added, so its parts can arrive visibly
+const state = {chapter: null, pending: {}, sel: null, removed: {}, tags: true, voices: new Set(), fresh: null};   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: numbers on statements; voices: added authors switched on; fresh: the voice just added, so its parts can arrive visibly
 try { state.tags = localStorage.getItem(TAGS) !== 'off'; } catch { /* private mode */ }
 
 function el(tag, cls, text) {
@@ -434,11 +456,21 @@ const articleOf = number => D.articles.find(article => article.number === number
 const removedOf = article => state.removed[article.number] || new Set();
 const plural = (count, noun) => count + ' ' + noun + (count === 1 ? '' : 's');
 
-function readVerdicts() { try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch { return {}; } }
+// Verdicts the browser refused to store are kept for this visit (null = cleared), shown as unsaved, and still copied.
+const unsaved = {};
+function readVerdicts() {
+  let stored = {};
+  try { stored = JSON.parse(localStorage.getItem(STORE)) || {}; } catch { /* private mode */ }
+  const all = {...stored};
+  for (const [key, value] of Object.entries(unsaved)) { if (value == null) delete all[key]; else all[key] = value; }
+  return all;
+}
 function writeVerdict(key, value) {
   const all = readVerdicts();
-  if (all[key] === value) delete all[key]; else all[key] = value;
-  try { localStorage.setItem(STORE, JSON.stringify(all)); } catch { /* private mode */ }
+  const next = all[key] === value ? null : value;
+  if (next == null) delete all[key]; else all[key] = next;
+  try { localStorage.setItem(STORE, JSON.stringify(all)); delete unsaved[key]; return true; }
+  catch { unsaved[key] = next; return false; }
 }
 function announce(text) { document.getElementById('announce').textContent = text; }
 
@@ -453,6 +485,7 @@ function renderTopics() {
   const next = D.chapters.flatMap(chapter => chapter.sections).find(section => !section.article);
   document.getElementById('tree').replaceChildren(...D.chapters.map(chapter => {
     const box = el('details', 'chapter' + (chapter.order === 1 ? ' first' : ''));
+    box.dataset.chapter = chapter.id;
     box.open = chapter.order === 1;
     const head = el('summary');
     const meter = el('span', 'meter');
@@ -510,11 +543,19 @@ function context(article, piece) {
   box.append(flat(text.slice(piece.at + piece.quote.length, to)) + (to < text.length ? ' …' : ''));
   return box;
 }
+// state.sel: {a, k, p, w, quotes}. k is the open sentence; p the picked phrase (an index, re-found from its words w
+// after every redraw); quotes whether the full passages are open. A sentence opened without a phrase shows its quotes.
 const openKey = article => state.sel && state.sel.a === article.number ? state.sel.k : null;
-function toggle(article, key, focusKey, phrase) {
-  const previous = state.sel;
-  const same = openKey(article) === key && (phrase == null || previous.p === phrase);
-  state.sel = same ? null : {a: article.number, k: key, p: phrase};
+const quotesOpen = (article, key) => openKey(article) === key && (state.sel.p == null || state.sel.quotes === true);
+function toggle(article, key, focusKey, phrase, words) {
+  const previous = state.sel, here = openKey(article) === key;
+  if (phrase != null) {
+    state.sel = here && previous.p === phrase ? (previous.quotes ? {...previous, p: null, w: null} : null)
+      : {a: article.number, k: key, p: phrase, w: words || null, quotes: here ? Boolean(previous.quotes || previous.p == null) : false};
+  } else {
+    state.sel = quotesOpen(article, key) ? (previous.p != null ? {...previous, quotes: false} : null)
+      : here ? {...previous, quotes: true} : {a: article.number, k: key, p: null, w: null, quotes: true};
+  }
   hideTip();
   if (previous && previous.a !== article.number) renderArticle(previous.a);
   renderArticle(article.number, focusKey);
@@ -552,6 +593,7 @@ function dot(article, ref) {
 function refChip(article, ref, out) {
   const chip = el('span', out ? 'out' : '');
   chip.append(dot(article, ref), document.createTextNode(ref));
+  if (out) { chip.append(el('span', 'sr', ' removed')); chip.title = ref + ' is removed for now'; }
   chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
   chip.addEventListener('mouseleave', () => spotlight(article, null));
   return chip;
@@ -564,10 +606,10 @@ function lines(span, specs) {
     : spec.kind === 'dot' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 2px,transparent 2px 5px)'
     : spec.kind === 'dashdot' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 8px,transparent 8px 11px,' + spec.c + ' 11px 13px,transparent 13px 16px)' : 'linear-gradient(' + spec.c + ',' + spec.c + ')';
   span.style.backgroundImage = colours.map(layer).join(',');
-  span.style.backgroundSize = '100% 2px';
+  span.style.backgroundSize = '100% 1px';
   span.style.backgroundRepeat = 'no-repeat';
   span.style.backgroundPosition = colours.map((_, index) => '0 calc(100% - ' + index * 3 + 'px)').join(',');
-  span.style.paddingBottom = Math.max(0, colours.length * 3 - 4) + 'px';
+  span.style.paddingBottom = (2 + (colours.length - 1) * 3) + 'px';   // the top line still clears the descenders by 2 px
 }
 // Which passages the map should pick out when nothing is under the pointer: those of the open sentence or picked words.
 function selectionRefs(article) {
@@ -890,15 +932,30 @@ function sentenceSegs(article, text, parts, target) {
 const VERB = {adds: 'adds', changes: 'changes', challenges: 'challenges'};
 function sentenceNode(article, o) {
   const sentence = el('p', 'sent' + (o.cls ? ' ' + o.cls : ''));
-  const segs = sentenceSegs(article, o.text, o.parts, o.target), open = openKey(article) === o.key, gone = removedOf(article);
+  const segs = sentenceSegs(article, o.text, o.parts, o.target), gone = removedOf(article);
+  const shape = seg => {
+    const lead = seg.text.match(seg.amend ? /^[\s,;:—–-]*/ : /^\s*/)[0];
+    return {lead, tail: seg.text.match(/\s*$/)[0], body: seg.text.slice(lead.length).trim()};
+  };
+  let open = openKey(article) === o.key;
+  // A redraw (a voice switched, a passage removed) can split or shift the components: find the picked words again.
+  if (open && state.sel.w) {
+    const at = segs.flatMap((seg, i) => shape(seg).body === state.sel.w.text ? [i] : []);
+    if (at.length === 1) state.sel.p = at[0];
+    else if (state.sel.quotes) { state.sel.p = null; state.sel.w = null; }
+    else { state.sel = null; open = false; }
+  }
+  const sourced = segs.map(seg => refsOf(article, seg.ids));
+  const alive = sourced.some(refs => refs.length && !refs.every(ref => gone.has(ref)));
   segs.forEach((seg, index) => {
-    const lead = seg.text.match(seg.amend ? /^[\s,;:—–-]*/ : /^\s*/)[0], tail = seg.text.match(/\s*$/)[0], body = seg.text.slice(lead.length).trim();
+    const {lead, tail, body} = shape(seg);
     if (!/[\p{L}\p{N}]/u.test(body)) { sentence.append(seg.text); return; }
-    const refs = refsOf(article, seg.ids), dead = o.lost || (refs.length > 0 && refs.every(ref => gone.has(ref)));
+    // Words are struck only when every passage behind them is removed; the editor's words only when nothing in the sentence survives.
+    const refs = sourced[index], dead = refs.length ? refs.every(ref => gone.has(ref)) : !alive && sourced.some(r => r.length);
     const span = el('span', 'sg' + (refs.length ? '' : ' join') + (dead ? ' gone' : '') + (seg.amend ? ' add' + (state.fresh === seg.amend.author ? ' fresh' : '') : ''), body);
     span.dataset.k = o.base + '-' + index;
     span.setAttribute('aria-pressed', String(open && state.sel.p === index));
-    press(span, (seg.amend ? authorByKey(seg.amend.author).name + ' ' + VERB[seg.amend.kind] + ': ' : '') + body + ': ' + (refs.length ? 'from ' + refs.join(', ') : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index));
+    press(span, (seg.amend ? authorByKey(seg.amend.author).name + ' ' + VERB[seg.amend.kind] + ': ' : '') + body + ': ' + (refs.length ? 'from ' + refs.join(', ') : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index, {text: body}));
     tip(span, () => breakdown(article, segs, index));
     if (refs.length) {
       span.dataset.refs = refs.join('|');
@@ -922,6 +979,39 @@ function sentenceNode(article, o) {
   });
   return {sentence, segs};
 }
+// Under a sentence whose words are picked: the sources of exactly those words, or, for the editor's own words, what they join.
+function pickedBlock(article, key, segs) {
+  if (openKey(article) !== key || state.sel.p == null || !segs[state.sel.p]) return null;
+  const seg = segs[state.sel.p], gone = removedOf(article), refs = refsOf(article, seg.ids), box = el('div', 'picked');
+  if (refs.length) {
+    box.append(el('p', 'picked-head', 'Sources for the selected words'));
+    const list = el('ul');
+    for (const ref of [...refs.filter(r => !authorOfRef(r)), ...refs.filter(r => authorOfRef(r))]) {
+      const row = el('li'), sample = el('span', 'sample');
+      row.dataset.ref = ref;
+      // The dot carries the colour (a 1 px line is too thin to tell two colours apart); the sample beside it shows the line's pattern, drawn at 2 px.
+      if (!gone.has(ref)) {
+        lines(sample, [{c: hue(article, ref), kind: authorOfRef(ref) ? authorOfRef(ref).line : 'solid'}]);
+        sample.style.backgroundSize = '100% 2px';
+        sample.style.backgroundPosition = '0 50%';
+      }
+      sample.style.paddingBottom = '0';
+      sample.setAttribute('aria-hidden', 'true');
+      const mark = dot(article, ref);
+      mark.setAttribute('aria-hidden', 'true');
+      if (gone.has(ref)) mark.style.opacity = '.35';
+      row.append(mark, sample, el('span', '', authorOfRef(ref) ? cite(ref) : 'Marcus ' + ref));
+      if (gone.has(ref)) row.append(el('em', '', 'removed'));
+      list.append(row);
+    }
+    box.append(list);
+  } else {
+    const before = segs.slice(0, state.sel.p).reverse().find(other => other.ids.length), after = segs.slice(state.sel.p + 1).find(other => other.ids.length);
+    box.append(el('p', 'picked-head', 'The editor’s connection'));
+    box.append(el('p', 'picked-note', '“' + seg.text.trim() + '” is the editor’s' + (before && after ? ': it joins “' + short(before.text.trim(), 44) + '” to “' + short(after.text.trim(), 44) + '”' : '') + '. No passage says these words.'));
+  }
+  return box;
+}
 // The top line of a card: what the bit is, and whose it is. Names appear only while an added author is switched on.
 function cardHead(article, label, marcus, keys) {
   const head = el('div', 'card-head');
@@ -943,10 +1033,13 @@ function cardHead(article, label, marcus, keys) {
 function passageRow(article, piece, hit, mode) {
   const gone = removedOf(article).has(piece.ref);
   const row = el('div', 'link pair' + (gone ? ' removed' : '') + (hit ? ' hit' : ''));
+  row.dataset.ref = piece.ref;
   row.style.setProperty('--c', hue(article, piece.ref));
   const said = el('div', 'said'), then = el('div', 'then');
   const source = piece.author ? addedPassage(article, piece.ref) : null;
   said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
+  // An added author's quote carries a sentence on what the passage around it is about and what its key words refer to.
+  if (piece.author) said.append(el('p', 'in-context' + (piece.context ? '' : ' todo'), piece.context ? 'In context: ' + piece.context : 'In context: not yet read and written down (to be done in review).'));
   then.append(el('b', '', 'What follows'), el('p', 'follows', piece.follows));
   if (mode === 'claim' && piece.gives && piece.gives.length) {
     const gives = el('p', 'gives');
@@ -966,9 +1059,10 @@ function passageRow(article, piece, hit, mode) {
   row.append(said, then);
   return row;
 }
-function columns() {
+// While an added author is switched on, the left column also holds that author's quotes, so it names no one.
+function columns(article) {
   const head = el('div', 'cols');
-  head.append(el('span', '', 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
+  head.append(el('span', '', article && voicesOn(article).length ? 'The passage, in its author’s words' : 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
   return head;
 }
 function showButton(article, key, open, more, less) {
@@ -981,23 +1075,24 @@ function showButton(article, key, open, more, less) {
 }
 
 function statementBlock(article) {
-  const st = article.statement, key = 'statement', open = openKey(article) === key, gone = removedOf(article);
+  const st = article.statement, key = 'statement', gone = removedOf(article);
   const box = el('div', 'statement');
   box.dataset.anchor = 'st' + article.number;
   box.append(el('p', 'label', 'The statement · ' + st.kind));
   const {sentence, segs} = sentenceNode(article, {text: st.t, parts: st.parts, key, base: 'st-' + article.number, cls: 'big', numbers: true, target: 'statement'});
   box.dataset.amended = amendsFor(article, 'statement').map(clause => clause.author + ':' + clause.kind).join(' ');
+  const open = quotesOpen(article, key), pick = pickedBlock(article, key, segs);
   box.append(sentence);
   const refs = [...new Set(st.parts.flatMap(part => part.refs))];
   const from = el('p', 'fused');
   from.append(el('b', '', 'Gathered from ' + plural(refs.length, 'passage')));
   for (const ref of refs) from.append(refChip(article, ref, gone.has(ref)));
   from.append(showButton(article, key, open, 'Show part by part', 'Hide the parts'));
-  box.append(from);
+  if (pick) { pick.append(showButton(article, key, open, 'Show part by part', 'Hide the parts')); box.append(pick); } else box.append(from);
   if (open) {
     const chosen = state.sel.p != null ? segs[state.sel.p] : null;
     const panel = el('div', 'trace M');
-    panel.append(el('p', 'panel-head', 'The statement, part by part'), columns());
+    panel.append(el('p', 'panel-head', 'The statement, part by part'), columns(article));
     for (const part of [...st.parts, ...amendsFor(article, 'statement').map(clause => ({words: clause.t.replace(/^[\s,;:—–-]+/, ''), ids: clause.ids}))]) {
       const hit = Boolean(chosen && chosen.ids.length && part.ids.every(id => chosen.ids.includes(id)));
       const group = el('div', 'part' + (hit ? ' hit' : ''));
@@ -1013,38 +1108,45 @@ function statementBlock(article) {
 
 function claimBlock(article, claim) {
   const remaining = left(article, claim), gone = removedOf(article);
-  const lost = remaining.length === 0, thin = !lost && remaining.length === 1;
-  const key = claim.id, open = openKey(article) === key;
-  const block = el('li', 'claim' + (lost ? ' lost' : ''));
+  const key = claim.id;
+  const block = el('li', 'claim');
   block.dataset.anchor = article.number + ':' + claim.id;
   const helpers = voicesOn(article).filter(voice => voice.items.some(item => item.claim === claim.id) || (voice.amend || []).some(clause => clause.target === claim.id)).map(voice => voice.key);
   block.append(cardHead(article, claim.number + ' · ' + claim.role, true, helpers));
-  const {sentence, segs} = sentenceNode(article, {text: claim.t, target: claim.id, parts: claimParts(article, claim), key, base: 'claim-' + article.number + '-' + key, lost});
-  const chosen = open && state.sel.p != null ? segs[state.sel.p] : null;
+  const {sentence, segs} = sentenceNode(article, {text: claim.t, target: claim.id, parts: claimParts(article, claim), key, base: 'claim-' + article.number + '-' + key});
+  const open = quotesOpen(article, key), pick = pickedBlock(article, key, segs);
+  const chosen = openKey(article) === key && state.sel.p != null ? segs[state.sel.p] : null;
   block.append(sentence);
-  const from = el('p', 'fused' + (thin || lost ? ' warn' : ''));
-  from.append(el('b', '', lost ? 'No passage left' : thin ? 'Now rests on one passage' : 'Fused from ' + plural(claim.passages.length, 'passage')));
-  for (const ref of claim.passages) from.append(refChip(article, ref, gone.has(ref)));
-  for (const voice of voicesOn(article)) {
+  // What else backs it while an added author is on.
+  const extra = voicesOn(article).map(voice => {
     const backs = voice.items.filter(item => item.effect === 'stronger' && item.claim === claim.id).map(item => item.piece.ref);
     const clauses = (voice.amend || []).filter(clause => clause.target === claim.id);
     if (backs.length) block.dataset.stronger = ((block.dataset.stronger || '') + ' ' + voice.key).trim();
     if (clauses.length) block.dataset.challenged = ((block.dataset.challenged || '') + ' ' + voice.key).trim();
-    const second = [...new Set([...backs, ...clauses.flatMap(clause => clause.ids.map(id => pieceOf(article, id).ref))])];
-    if (!second.length) continue;
+    return {voice, refs: [...new Set([...backs, ...clauses.flatMap(clause => clause.ids.map(id => pieceOf(article, id).ref))])]};
+  }).filter(entry => entry.refs.length);
+  const all = claim.passages.length, now = remaining.length, lost = now === 0, thin = now === 1 && all > 1;
+  if (lost) block.classList.add('lost');
+  const headline = now === all ? 'Fused from ' + plural(all, 'passage')
+    : lost ? (extra.length ? 'Marcus’s passages for this claim are removed; what remains is ' + extra.map(entry => entry.voice.author.name + '’s').join(' and ') : 'No passage left')
+    : now + ' of ' + all + ' passages remain for this claim';
+  const from = el('p', 'fused' + (thin || lost ? ' warn' : ''));
+  from.append(el('b', '', headline));
+  for (const ref of claim.passages) from.append(refChip(article, ref, gone.has(ref)));
+  for (const {voice, refs} of extra) {
     const plus = el('b', 'plus' + (state.fresh === voice.key ? ' fresh' : ''), '+ ' + voice.author.name);
     from.append(plus);
-    for (const ref of second) {
+    for (const ref of refs) {
       const chip = refChip(article, ref, false);
       if (state.fresh === voice.key) chip.classList.add('fresh');
       from.append(chip);
     }
   }
   from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
-  block.append(from);
+  if (pick) { pick.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes')); block.append(pick); } else block.append(from);
   if (open) {
     const panel = el('div', 'trace M');
-    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns());
+    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns(article));
     for (const piece of supportOf(article, claim)) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
     const shared = el('div', 'link induce');
     shared.append(el('b', '', 'Taken together'), document.createTextNode(claim.shared));
@@ -1060,7 +1162,7 @@ function claimBlock(article, claim) {
       for (const piece of item.support) if (!supportOf(article, claim).some(row => row.id === piece.id)) panel.append(passageRow(article, piece, false, 'claim'));
       panel.append(differs);
     }
-    panel.append(el('p', 'near', 'Closeness of these ' + claim.passages.length + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'));
+    panel.append(el('p', 'near', 'Closeness of these ' + all + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'));
     block.append(panel);
   }
   return block;
@@ -1068,21 +1170,23 @@ function claimBlock(article, claim) {
 
 // Something Marcus does not say in this section, added from another author under one of the five labels.
 function widerBlock(article, item) {
-  const key = widerKey(item), open = openKey(article) === key, name = authorByKey(item.author).name;
+  const key = widerKey(item), name = authorByKey(item.author).name;
   const block = el('li', 'claim sen' + (state.fresh === item.author ? ' fresh' : ''));
   block.dataset.voice = item.author;
   block.dataset.anchor = article.number + ':' + key;
   block.append(cardHead(article, item.role, false, [item.author]));
   const {sentence, segs} = sentenceNode(article, {text: item.t, parts: widerParts(item), key, base: 'wider-' + article.number + '-' + item.author + '-' + item.key, cls: 'small'});
-  const chosen = open && state.sel.p != null ? segs[state.sel.p] : null;
+  const open = quotesOpen(article, key), pick = pickedBlock(article, key, segs);
+  const chosen = openKey(article) === key && state.sel.p != null ? segs[state.sel.p] : null;
   const from = el('p', 'fused'), refs = [...new Set(item.support.map(piece => piece.ref))];
   from.append(el('b', '', refs.length > 1 ? 'Fused from ' + refs.length + ' passages of ' + name : 'One passage of ' + name));
   for (const ref of refs) from.append(refChip(article, ref, false));
   from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
-  block.append(sentence, from);
+  if (pick) pick.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
+  block.append(sentence, pick || from);
   if (open) {
     const panel = el('div', 'trace M');
-    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns());
+    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns(article));
     for (const piece of item.support) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
     const why = el('div', 'link induce');
     why.append(el('b', '', 'Why it is added'), document.createTextNode(item.why));
@@ -1375,25 +1479,45 @@ function articleCard(article) {
     button.type = 'button';
     button.dataset.k = 'v-' + article.number + '-' + value;
     button.setAttribute('aria-pressed', String(mine === value));
-    button.addEventListener('click', () => { writeVerdict('article-' + article.number, value); renderArticle(article.number, button.dataset.k); renderVerdicts(); });
+    button.addEventListener('click', () => {
+      const saved = writeVerdict('article-' + article.number, value);
+      renderArticle(article.number, button.dataset.k);
+      renderVerdicts();
+      if (!saved) announce('Your verdict could not be saved on this device. It is kept until you close this page and is included when you copy your verdicts.');
+    });
     verdict.append(button);
+  }
+  if (Object.hasOwn(unsaved, 'article-' + article.number)) {
+    verdict.querySelector('span').remove();
+    verdict.prepend(el('span', 'save-note', 'Could not be saved on this device; kept until you close this page'));
   }
   wrap.append(verdict);
   return wrap;
 }
 
 // Redraw one article and keep what the reader had open.
+// Draw one article; if its data cannot be drawn, say so in its place and let the others stand.
+function drawCard(article) {
+  try { return articleCard(article); }
+  catch (error) {
+    console.error(error);
+    const box = el('article', 'article');
+    box.id = 'article-' + article.number;
+    box.append(el('p', 'err', 'Article ' + article.number + ' could not be drawn (' + error.message + '). The rest of the chapter is shown.'));
+    return box;
+  }
+}
 function renderArticle(number, focusKey) {
   hideTip();
   const old = document.getElementById('article-' + number);
   const open = new Set([...old.querySelectorAll('details[open]')].map(node => node.dataset.keep || node.querySelector('.ref')?.textContent));
-  const fresh = articleCard(articleOf(number));
+  const fresh = drawCard(articleOf(number));
   for (const node of fresh.querySelectorAll('details')) {
     if (open.has(node.dataset.keep || node.querySelector('.ref')?.textContent)) node.open = true;
   }
-  const slid = old.querySelector('.sci').scrollTop;
+  const slid = old.querySelector('.sci')?.scrollTop || 0;
   old.replaceWith(fresh);
-  fresh.querySelector('.sci').scrollTop = slid;
+  if (fresh.querySelector('.sci')) fresh.querySelector('.sci').scrollTop = slid;
   onMap(articleOf(number), null);
   markTabs();
   if (focusKey) fresh.querySelector('[data-k="' + focusKey + '"]')?.focus({preventScroll: true});
@@ -1436,17 +1560,17 @@ function renderVerdicts() {
   document.getElementById('mine').replaceChildren(...rows);
 }
 
-function syncUrl() {
+function syncUrl(mode = 'replace', hash = location.hash) {
   const query = new URLSearchParams();
   if (state.chapter && state.chapter !== D.chapters[0].id) query.set('c', state.chapter);
   if (state.sel) query.set('at', state.sel.a + '.' + state.sel.k);
-  const gone = Object.entries(state.removed).filter(([, refs]) => refs.size).map(([number, refs]) => number + ':' + [...refs].join(','));
+  const gone = Object.entries(state.removed).filter(([, refs]) => refs.size).map(([number, refs]) => number + ':' + [...refs].join(','))
+    .concat(Object.entries(state.pending).map(([number, refs]) => number + ':' + refs));
   if (gone.length) query.set('without', gone.join(';'));
   if (state.voices.size) query.set('with', [...state.voices].sort().join(','));
-  const search = query.toString();
-  try { history.replaceState(null, '', location.pathname + (search ? '?' + search : '') + location.hash); } catch { /* file:// */ }
+  const search = query.toString(), url = location.pathname + (search ? '?' + search : '') + hash;
+  try { history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', url); } catch { /* file:// */ }
 }
-// Which authors are on: read before anything is drawn.
 function readVoices() {
   const query = new URLSearchParams(location.search);
   for (const key of (query.get('with') || '').split(',')) if (D.authors.some(author => author.key === key)) state.voices.add(key);
@@ -1467,6 +1591,17 @@ function readSelection() {
     const [number, refs] = part.split(':');
     const article = articleOf(Number(number));
     if (article && refs) state.removed[article.number] = new Set(refs.split(',').filter(ref => article.sources.includes(ref)));
+    else if (refs && D.all.some(stub => stub.number === Number(number))) state.pending[Number(number)] = refs;   // checked when its chapter loads
+  }
+}
+// Removals named in the link for articles of another chapter are checked once that chapter's articles are in.
+function applyPending() {
+  for (const article of D.articles) {
+    const refs = state.pending[article.number];
+    if (refs == null) continue;
+    delete state.pending[article.number];
+    const kept = refs.split(',').filter(ref => article.sources.includes(ref));
+    if (kept.length) state.removed[article.number] = new Set(kept);
   }
 }
 
@@ -1485,10 +1620,16 @@ function decorate(articles) {
 }
 function loadChapter(id) {
   if (CHAPTERS.has(id)) return Promise.resolve(CHAPTERS.get(id));
-  return fetch('stoic-constitution/' + id + '.json').then(response => {
+  return fetch('stoic-constitution/' + id + '.json', {cache: 'no-cache'}).then(response => {
     if (!response.ok) throw new Error('the server answered ' + response.status);
     return response.json();
   }).then(data => {
+    // The file must hold exactly the articles the index lists for this chapter, each complete; a file that does not is never kept.
+    const expected = D.all.filter(stub => stub.chapter === id).map(stub => stub.number);
+    const got = Array.isArray(data && data.articles) ? data.articles.map(article => article && article.number) : [];
+    if (JSON.stringify(got) !== JSON.stringify(expected)) throw new Error('the file holds articles ' + (got.join(', ') || 'none') + ' but the index lists ' + expected.join(', '));
+    const broken = data.articles.find(article => !Array.isArray(article.claims) || !article.statement || !Array.isArray(article.members));
+    if (broken) throw new Error('Article ' + broken.number + ' is incomplete in the file');
     CHAPTERS.set(id, decorate(data.articles));
     return CHAPTERS.get(id);
   });
@@ -1496,15 +1637,21 @@ function loadChapter(id) {
 // The sticky bar: the chapter picker, the chapter's article numbers, Topics and the Sources switch.
 function renderBar() {
   const jump = document.getElementById('jump'), chapter = chapterById(state.chapter), stubs = D.all.filter(article => article.chapter === state.chapter);
-  const pick = el('button', 'chap-btn', 'Chapter ' + chapter.order);
+  const pick = el('button', 'chap-btn');
   pick.type = 'button';
+  pick.append(el('span', 'long', 'Chapter ' + chapter.order), el('span', 'brief', 'Ch. ' + chapter.order));
   pick.setAttribute('aria-expanded', 'false');
   pick.setAttribute('aria-controls', 'chapters');
   pick.setAttribute('aria-label', 'Chapter ' + chapter.order + ', ' + chapter.title + '. Choose another chapter');
   pick.addEventListener('click', () => toggleChapters());
-  jump.replaceChildren(pick, el('span', '', 'Article'));
+  const which = el('button', 'art-btn');
+  which.type = 'button';
+  which.setAttribute('aria-expanded', 'false');
+  which.setAttribute('aria-controls', 'article-list');
+  which.addEventListener('click', () => toggleArticles());
+  jump.replaceChildren(pick, el('span', 'lab', 'Article'), which);
   for (const article of stubs) {
-    const link = el('a', '', String(article.number));
+    const link = el('a', 'num', String(article.number));
     link.href = '#article-' + article.number;
     link.setAttribute('aria-label', 'Article ' + article.number + ', ' + article.title);
     jump.append(link);
@@ -1523,6 +1670,22 @@ function renderBar() {
     announce('Passage numbers in the text are ' + (state.tags ? 'shown.' : 'hidden.'));
   });
   jump.append(topics, tags);
+  // The chapter's articles with their titles, for the phone bar.
+  const articles = el('ol');
+  for (const article of stubs) {
+    const row = el('li'), button = el('button');
+    button.type = 'button';
+    button.dataset.n = article.number;
+    button.append(el('b', '', String(article.number)), el('span', '', article.title), el('small', '', ''));
+    button.addEventListener('click', () => { toggleArticles(false); goToArticle(article.number); });
+    row.append(button);
+    articles.append(row);
+  }
+  const listInner = el('div', 'wrap');
+  listInner.append(articles);
+  document.getElementById('article-list').replaceChildren(listInner);
+  fitBar();
+  markArticle();
   const list = el('ol');
   for (const item of D.chapters) {
     const count = D.all.filter(article => article.chapter === item.id).length, button = el('button');
@@ -1530,7 +1693,7 @@ function renderBar() {
     button.disabled = !count;
     button.setAttribute('aria-current', String(item.id === state.chapter));
     button.append(el('b', '', String(item.order)), el('span', '', item.title), el('small', '', count ? plural(count, 'article') : 'no articles yet'));
-    button.addEventListener('click', () => { toggleChapters(false); if (item.id !== state.chapter) openChapter(item.id, {to: 'top'}); });
+    button.addEventListener('click', () => { toggleChapters(false); if (item.id !== state.chapter) openChapter(item.id, {to: 'top', push: true}); });
     const row = el('li');
     row.append(button);
     list.append(row);
@@ -1539,15 +1702,44 @@ function renderBar() {
   inner.append(list);
   document.getElementById('chapters').replaceChildren(inner);
 }
+// On a narrow screen the article numbers give way to one button that opens the chapter's list.
+function fitBar() {
+  const bar = document.querySelector('.bar'), jump = document.getElementById('jump');
+  bar.classList.remove('compact');
+  if (jump.scrollWidth > jump.clientWidth + 1) bar.classList.add('compact');
+}
+// Which article the reader is in, for the phone bar's button.
+function markArticle() {
+  const button = document.querySelector('.art-btn');
+  if (!button || !D.articles.length) return;
+  const cards = [...document.querySelectorAll('#list > article.article')];
+  const current = cards.filter(card => card.getBoundingClientRect().top < innerHeight * 0.4).pop() || cards[0];
+  const number = current ? Number(current.id.replace('article-', '')) : D.articles[0].number;
+  const stubs = D.all.filter(article => article.chapter === state.chapter), position = stubs.findIndex(article => article.number === number) + 1;
+  const label = 'Art. ' + number;
+  if (button.textContent !== label) button.textContent = label;
+  button.setAttribute('aria-label', 'Article ' + number + ', ' + position + ' of ' + stubs.length + ' in this chapter. Choose another article');
+  for (const row of document.querySelectorAll('#article-list button')) row.setAttribute('aria-current', String(Number(row.dataset.n) === number));
+}
+function toggleArticles(open) {
+  const panel = document.getElementById('article-list'), button = document.querySelector('.art-btn');
+  const now = open ?? panel.hidden;
+  panel.hidden = !now;
+  button.setAttribute('aria-expanded', String(now));
+  if (now) { toggleChapters(false); (panel.querySelector('[aria-current=true]') || panel.querySelector('button'))?.focus({preventScroll: true}); }
+}
+addEventListener('resize', () => { if (D && state.chapter) fitBar(); });
+addEventListener('scroll', () => { if (D) markArticle(); }, {passive: true});
 function toggleChapters(open) {
   const panel = document.getElementById('chapters'), button = document.querySelector('.chap-btn');
   const now = open ?? panel.hidden;
   panel.hidden = !now;
   button.setAttribute('aria-expanded', String(now));
+  if (now) { const list = document.getElementById('article-list'); list.hidden = true; document.querySelector('.art-btn')?.setAttribute('aria-expanded', 'false'); }
   if (now) (panel.querySelector('[aria-current=true]') || panel.querySelector('button:not(:disabled)'))?.focus({preventScroll: true});
 }
 // Open a chapter: draw its heading and bar at once, its articles when they have arrived.
-function openChapter(id, {initial = false, to = null} = {}) {
+function openChapter(id, {initial = false, to = null, push = false} = {}) {
   hideTip();
   if (!initial) state.sel = null;
   state.chapter = id;
@@ -1555,15 +1747,19 @@ function openChapter(id, {initial = false, to = null} = {}) {
   document.getElementById('a-head').textContent = 'Chapter ' + chapter.order + ' · ' + chapter.title;
   document.getElementById('a-sub').textContent = D.chapter_order_note;
   renderBar();
+  for (const box of document.querySelectorAll('#tree details[data-chapter]')) box.open = box.dataset.chapter === id;
   if (!CHAPTERS.has(id)) list.replaceChildren(el('p', 'loading', 'Loading chapter…'));
   return loadChapter(id).then(articles => {
     if (state.chapter !== id) return;
     D.articles = articles;
     if (initial) readSelection();
-    list.replaceChildren(...D.articles.map(articleCard));
+    applyPending();
+    list.replaceChildren(...D.articles.map(drawCard));
     for (const article of D.articles) onMap(article, null);
     markTabs();
-    syncUrl();
+    markArticle();
+    fitBar();
+    syncUrl(push ? 'push' : 'replace', typeof to === 'number' ? '#article-' + to : to === 'top' ? '' : location.hash);
     const target = to === 'top' ? document.getElementById('articles')
       : to ? document.getElementById('article-' + to)
       : location.hash ? document.getElementById(location.hash.slice(1))
@@ -1574,33 +1770,49 @@ function openChapter(id, {initial = false, to = null} = {}) {
     if (state.chapter !== id) return;
     const line = el('p', 'loading', 'This chapter could not be loaded (' + error.message + ').'), retry = el('button', 'act', 'Try again');
     retry.type = 'button';
-    retry.addEventListener('click', () => openChapter(id, {initial, to}));
+    retry.addEventListener('click', () => openChapter(id, {initial, to, push}));
     line.append(retry);
     list.replaceChildren(line);
   });
 }
 // A link to an article anywhere on the page (the topic tree, the neighbours list) opens its chapter first.
-function goToArticle(number) {
+function goToArticle(number, {push = true} = {}) {
   const stub = D.all.find(article => article.number === number);
   if (!stub) return false;
-  if (stub.chapter !== state.chapter) { openChapter(stub.chapter, {to: number}); return true; }
+  if (stub.chapter !== state.chapter) { openChapter(stub.chapter, {to: number, push}); return true; }
   document.getElementById('article-' + number)?.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  try { history.replaceState(null, '', location.pathname + location.search + '#article-' + number); } catch { /* file:// */ }
   return true;
 }
 document.addEventListener('click', event => {
   const link = event.target.closest && event.target.closest('a[href*="#article-"]');
   if (link && D && !event.metaKey && !event.ctrlKey && !event.shiftKey) {
     const number = Number((link.getAttribute('href').match(/#article-(\d+)$/) || [])[1]);
-    if (number && goToArticle(number)) {
-      event.preventDefault();
-      try { history.replaceState(null, '', location.pathname + location.search + '#article-' + number); } catch { /* file:// */ }
-    }
+    if (number && goToArticle(number)) event.preventDefault();
   }
-  const panel = document.getElementById('chapters');
+  const panel = document.getElementById('chapters'), articles = document.getElementById('article-list');
   if (!panel.hidden && !event.target.closest('#chapters, .chap-btn')) toggleChapters(false);
+  if (!articles.hidden && !event.target.closest('#article-list, .art-btn')) toggleArticles(false);
+});
+// A typed or restored #article-N that is not on screen opens its chapter.
+addEventListener('hashchange', () => {
+  const number = Number((location.hash.match(/^#article-(\d+)$/) || [])[1]);
+  if (D && number && !document.getElementById('article-' + number)) goToArticle(number, {push: false});
+});
+// Back and Forward: restore the chapter, the voices and what was open from the link of that entry.
+addEventListener('popstate', () => {
+  if (!D) return;
+  const query = new URLSearchParams(location.search);
+  state.voices = new Set((query.get('with') || '').split(',').filter(key => D.authors.some(author => author.key === key)));
+  state.sel = null;
+  state.removed = {};
+  state.pending = {};
+  renderDock();
+  openChapter(readChapter(), {initial: true});
 });
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !document.getElementById('chapters').hidden) { toggleChapters(false); document.querySelector('.chap-btn')?.focus(); }
+  if (event.key === 'Escape' && !document.getElementById('article-list').hidden) { toggleArticles(false); document.querySelector('.art-btn')?.focus(); }
 });
 
 document.getElementById('copy').addEventListener('click', async event => {

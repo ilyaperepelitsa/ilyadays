@@ -7,10 +7,12 @@ Joins the topic hierarchy (content/aurelius/topics.json), the authored fusions
 induced from fused claims; a fused claim rests on exact quotes from at least two passages. Every
 quote must resolve to exactly one span of its immutable passage. Writes public/apps/stoic-constitution.json.
 
-Run: apps/aurelius/.venv/bin/python scripts/aurelius-constitution.py
+Run: apps/aurelius/.venv/bin/python scripts/aurelius-constitution.py [--authored FILE] [--out-dir DIR]
+(--authored and --out-dir let scripts/aurelius-constitution-fixtures.py build altered copies without touching public/.)
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -26,6 +28,8 @@ AUTHORED = ROOT / 'content/aurelius/constitution.json'
 OUT = ROOT / 'public/apps/stoic-constitution.json'          # the index: everything but full articles
 CHAPTER_DIR = ROOT / 'public/apps/stoic-constitution'        # one file per chapter that has articles
 SENECA = ROOT / '.aurelius/corpora/seneca-gummere-wikisource'
+PLACEHOLDER = 'TO REVIEW IN N3'     # accepted for `context` and `searched` until milestone N3 writes them; counted in the output
+CHAPTER_WARN_BYTES = 600 * 1024
 RELATIONS = {'supports', 'qualifies', 'challenges', 'illustrates', 'depends_on', 'paraphrases', 'answers'}
 
 
@@ -41,13 +45,37 @@ def span(text: str, quote: str, where: str) -> tuple[int, int]:
     return found[0].start(), found[0].end()
 
 
+def shared_components(claims: list[dict]) -> tuple[int, int]:
+    """Claim components (runs of words backed by the same set of passages) and how many rest on two or more."""
+    components = shared = 0
+    for claim in claims:
+        cover = [set() for _ in claim['t']]
+        for piece in claim['support']:
+            for words_ in piece.get('gives', []):
+                at = claim['t'].lower().find(words_.lower())
+                for i in range(at, at + len(words_)):
+                    cover[i].add(piece['ref'])
+        keys = ['|'.join(sorted(refs)) for refs in cover]
+        for i, key in enumerate(keys):
+            if key and key != (keys[i - 1] if i else None):
+                components += 1
+                shared += '|' in key
+    return shared, components
+
+
 def scalar(text: str, index: int) -> int:
     return len(text[:index].encode('utf-32-le')) // 4
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--authored', type=Path, default=AUTHORED)
+    parser.add_argument('--out-dir', type=Path, default=None, help='write the index and chapter files here instead of public/apps')
+    args = parser.parse_args()
+    out = args.out_dir / OUT.name if args.out_dir else OUT
+    chapter_dir = args.out_dir / CHAPTER_DIR.name if args.out_dir else CHAPTER_DIR
     topics = json.loads(TOPICS.read_text())
-    authored = json.loads(AUTHORED.read_text())
+    authored = json.loads(args.authored.read_text())
     passages = {p['revision_id']: p for p in json.loads(CORPUS.read_text())['passages']}
     for passage in passages.values():
         assert hashlib.sha256(passage['text'].encode()).hexdigest() == passage['text_hash'], passage['id']
@@ -168,6 +196,7 @@ def main() -> None:
         return round(float(sims[np.triu_indices(len(rows), 1)].mean()), 3)
 
     articles = []
+    placeholders = {'context': 0, 'pieces': 0, 'searched': 0, 'voices': 0}
     for article in authored['articles']:
         chapter, section = sections[article['section']]
         where = f"article {article['number']}"
@@ -211,6 +240,7 @@ def main() -> None:
         statement = article['statement']
         for part in statement['parts']:
             assert part['words'].lower() in statement['t'].lower() and set(part['ids']) <= set(ids), f"{where}: statement part {part['words']!r}"
+            assert part['ids'], f"{where}: statement part {part['words']!r} has no witness: every part needs at least one quoted piece"
             part['refs'] = list(dict.fromkeys(ids[i]['ref'] for i in part['ids']))
         keys = [label['key'] for label in authored['labels']]
         assert list(article['groups']) == keys, f'{where}: groups follow the fixed labels'
@@ -229,20 +259,42 @@ def main() -> None:
         for claim in claims:
             claim['number'] = shown.index(claim['id']) + 1
         # One colour slot per passage, fixed for the article. Passages that meet in a claim or in a part of the
-        # statement never share a slot; passages that never meet may. Five slots are all the palette can keep apart.
+        # statement never share a slot (hard). Passages anywhere in the same sentence (the statement, or one claim)
+        # also differ when five slots allow it (soft); if they cannot, the two that share are the ones whose words sit
+        # farthest apart in that sentence, and the build says so. Five slots are all the palette can keep apart.
         meets = {ref: set() for ref in used}
         for group in [c['passages'] for c in claims] + [part['refs'] for part in statement['parts']]:
             for ref in group:
                 meets[ref] |= set(group) - {ref}
+        sentence_order = list(dict.fromkeys(ref for part in statement['parts'] for ref in part['refs']))
+        position = {ref: statement['t'].lower().find(next(p['words'] for p in statement['parts'] if ref in p['refs']).lower()) for ref in sentence_order}
+        near = {ref: set(sentence_order) - {ref} if ref in sentence_order else set() for ref in used}
         colors = {}
-        for ref in sorted(used, key=lambda r: (-len(meets[r]), used.index(r))):
-            colors[ref] = next(slot for slot in range(1, 99) if slot not in {colors.get(other) for other in meets[ref]})
-        assert max(colors.values()) <= 5, f'{where}: needs {max(colors.values())} passage colours; the palette has five'
+        for ref in sorted(used, key=lambda r: (-len(meets[r] | near[r]), used.index(r))):
+            hard = {colors.get(other) for other in meets[ref]}
+            free = [slot for slot in range(1, 6) if slot not in hard]
+            assert free, f'{where}: needs more than five passage colours; the palette has five'
+            clear = [slot for slot in free if slot not in {colors.get(other) for other in near[ref]}]
+            if clear:
+                colors[ref] = clear[0]
+            else:
+                # Share with the statement passage whose words are farthest from this one's.
+                holder = {colors[o]: o for o in near[ref] if o in colors}
+                colors[ref] = max(free, key=lambda slot: abs(position[holder[slot]] - position[ref]) if slot in holder else 10**6)
+                print(f"  note: {where}: {ref} shares a colour with {holder.get(colors[ref])} in the statement; five colours cannot keep all apart")
         second = None
         extra = None
         assert set(article.get('voices', {})) <= {'seneca'}, f'{where}: unknown voice'
         if 'seneca' in article.get('voices', {}):
             voice = article['voices']['seneca']
+            searched = voice.get('searched')
+            if searched == PLACEHOLDER:
+                placeholders['searched'] += 1
+            else:
+                assert isinstance(searched, dict) and len(searched.get('searches', [])) >= 3 and all(isinstance(x, str) and x.strip() for x in searched['searches']) \
+                    and all(r.get('ref') and r.get('why') for r in searched.get('rejected', [])), \
+                    f"{where}: voices.seneca.searched must log at least three word searches of the corpus and a reason for each passage rejected (or be {PLACEHOLDER!r} until N3)"
+            placeholders['voices'] += 1
             added = {}
             claim_text = {c['id']: c['t'] for c in claims}
 
@@ -253,12 +305,21 @@ def main() -> None:
                 start, end = span(letters[ref]['text'], item['quote'], f"{where} {item['id']}")
                 for words_ in item.get('gives', []):
                     assert text and words_.lower() in text.lower(), f"{where} {item['id']}: “{words_}” is not in the sentence it backs"
+                said = item.get('context')
+                assert isinstance(said, str) and (said == PLACEHOLDER or 20 <= len(said) <= 200), \
+                    f"{where} {item['id']}: context must say, in 20 to 200 characters, what the passage around the quote is about and what its key words refer to (or be {PLACEHOLDER!r} until N3)"
+                placeholders['context'] += said == PLACEHOLDER
+                placeholders['pieces'] += 1
                 added[item['id']] = {'id': item['id'], 'ref': ref, 'author': 'seneca', 'quote': letters[ref]['text'][start:end], 'at': start, 'in': context,
-                                     'follows': item['follows'], **({'gives': item['gives']} if 'gives' in item else {})}
+                                     'follows': item['follows'], 'context': None if said == PLACEHOLDER else said, **({'gives': item['gives']} if 'gives' in item else {})}
                 return added[item['id']]
 
             items = []
+            keys_seen = {}
             for item in voice['items']:
+                if item['effect'] != 'stronger':
+                    assert item['key'] not in keys_seen, f"{where}: two Seneca items share the key {item['key']!r}: “{keys_seen.get(item['key'])}” and “{item.get('role') or item['t'][:50]}”"
+                    keys_seen[item['key']] = item.get('role') or item['t'][:50]
                 if item['effect'] == 'stronger':
                     assert item['claim'] in claim_text and item.get('gives'), f"{where}: {item['id']}"
                     items.append({'effect': 'stronger', 'claim': item['claim'], 'piece': letter_piece(item, item['claim'], claim_text[item['claim']])})
@@ -272,12 +333,39 @@ def main() -> None:
                                   'support': [letter_piece(piece_, 'q:' + item['key'], None) for piece_ in item['support']]})
             # Clauses the added author contributes to the article's own sentences. Marcus's words are never altered:
             # a clause is appended to the statement or to a claim, and stays marked as the other author's.
+            # Each clause names the items it comes from (`from`), cites only their pieces, and those items must be about
+            # what the clause is appended to: a claim's own items for a claim, and for the statement an addition or an
+            # item on a claim that feeds the statement.
+            owner = {}
+            about = {}
+            for item in items:
+                key = item['piece']['id'] if item['effect'] == 'stronger' else item['key']
+                about[key] = (item['effect'], item.get('claim'))
+                for piece_ in ([item['piece']] if item['effect'] == 'stronger' else item['support']):
+                    owner[piece_['id']] = key
+            statement_ids = {i for part in statement['parts'] for i in part['ids']}
+            feeds = {c['id'] for c in claims if statement_ids & {p['id'] for p in c['support']}}
+            describe = lambda key: f"{key} ({about[key][0]}" + (f", claim {about[key][1]})" if about[key][1] else ")")
             amend = []
             for clause in voice.get('amend', []):
+                name = f"clause on {clause['target']} ({clause['kind']}) “{clause['t'].strip()[:50]}…”"
                 assert clause['target'] == 'statement' or clause['target'] in claim_text, f"{where}: amend target {clause['target']}"
                 assert clause['kind'] in {'adds', 'changes', 'challenges'} and clause['t'].strip() and clause['ids'], f"{where}: amend {clause}"
                 assert clause['t'][0] in ' ,;' and not clause['t'].rstrip().endswith('.'), f"{where}: an added clause continues the sentence and carries no full stop"
                 assert all(piece_id in added for piece_id in clause['ids']), f"{where}: amend ids {clause['ids']} are not among this author's pieces"
+                frm = clause.get('from')
+                assert frm and all(key in about for key in frm), f"{where}: {name} must name in `from` the Seneca items it comes from; got {frm!r}"
+                for piece_id in clause['ids']:
+                    assert owner[piece_id] in frm, (f"{where}: {name} cites {piece_id}, which belongs to item {describe(owner[piece_id])}, "
+                                                    f"not to the items it comes from: {', '.join(describe(k) for k in frm)}")
+                for key in frm:
+                    effect, on = about[key]
+                    if clause['target'] == 'statement':
+                        assert effect == 'wider' or on in feeds, f"{where}: {name} comes from {describe(key)}, whose claim does not feed the statement"
+                    else:
+                        assert on == clause['target'], f"{where}: {name} comes from {describe(key)}, which is not about claim {clause['target']}"
+                if clause['target'] != 'statement' and clause['kind'] == 'challenges':
+                    assert any(about[key] == ('qualified', clause['target']) for key in frm), f"{where}: {name} is a challenge but comes from no qualified item on claim {clause['target']}"
                 amend.append(clause)
             cited = list(dict.fromkeys(piece_['ref'] for piece_ in added.values()))
             extra = letter_vectors[[letter_row[ref] for ref in cited]]
@@ -335,24 +423,29 @@ def main() -> None:
         'counts': {'claims': len(a['claims']), 'single': len(a['single']), 'sources': len(a['sources']), 'section_size': a['section_size']},
         'voices': {key: {'becomes': voice['becomes'], 'counts': voice['counts']} for key, voice in a['voices'].items()},
     } for a in articles]
-    OUT.write_text(json.dumps(record, ensure_ascii=False, indent=1) + '\n')
-    print('wrote', OUT.relative_to(ROOT), f'{OUT.stat().st_size // 1024} KB')
-    CHAPTER_DIR.mkdir(exist_ok=True)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(record, ensure_ascii=False, indent=1) + '\n')
+    print('wrote', out, f'{out.stat().st_size // 1024} KB')
+    chapter_dir.mkdir(parents=True, exist_ok=True)
     written = set()
     for chapter_id in dict.fromkeys(chapter_of[a['section']] for a in articles):
-        path = CHAPTER_DIR / f'{chapter_id}.json'
+        path = chapter_dir / f'{chapter_id}.json'
         path.write_text(json.dumps({'chapter': chapter_id, 'articles': [a for a in articles if chapter_of[a['section']] == chapter_id]},
-                                   ensure_ascii=False, indent=1) + '\n')
+                                   ensure_ascii=False, separators=(',', ':')) + '\n')
         written.add(path.name)
-        print('wrote', path.relative_to(ROOT), f'{path.stat().st_size // 1024} KB')
-    for stale in CHAPTER_DIR.glob('*.json'):
+        size = path.stat().st_size
+        print('wrote', path, f'{size // 1024} KB' + (f'  WARNING: above {CHAPTER_WARN_BYTES // 1024} KB; a phone will feel it' if size > CHAPTER_WARN_BYTES else ''))
+    for stale in chapter_dir.glob('*.json'):
         if stale.name not in written:
             stale.unlink()
-            print('removed', stale.relative_to(ROOT), '(chapter has no articles)')
+            print('removed', stale, '(chapter has no articles)')
     for a in articles:
         print(f"  Article {a['number']} {a['title']!r}: {len(a['sources'])} of {a['section_size']} passages, "
               + ', '.join(f"claim {c['number']} from {len(c['passages'])} ({c['closeness']})" for c in a['claims'])
-              + f", {len(a['single'])} said once; section closeness {a['section_closeness']}")
+              + f", {len(a['single'])} said once; section closeness {a['section_closeness']}"
+              + "; shared components {}/{}".format(*shared_components(a['claims'])))
+    print(f"placeholders awaiting N3: context on {placeholders['context']} of {placeholders['pieces']} added-author pieces, "
+          f"search log on {placeholders['searched']} of {placeholders['voices']} voices")
 
 if __name__ == '__main__':
     main()
