@@ -38,7 +38,8 @@ export function SiteHeader({ lang, path, section, groups, auth }: Props) {
           aria-current={section === "travel" ? "page" : undefined}><ActionIcon name="travel" /><span>{lang === "ru" ? "Поездки" : t.travel}</span></Link>
         <Link href={fitness} className="nav-section nav-fitness" prefetch={false}
           aria-current={section === "fitness" ? "page" : undefined}><ActionIcon name="fitness" /><span>{t.fitness}</span></Link>
-        <Link href={localPath(lang, "/stoicism")} className="nav-section nav-stoicism" prefetch={false} aria-current={section === "stoicism" ? "page" : undefined}><ActionIcon name="science"/><span>{lang === "ru" ? "Стоицизм" : "Stoicism"}</span></Link>
+        {/* Stoicism opens the Stoic Constitution (a static page), in the site's language */}
+        <a href={`/apps/stoic-constitution.html?lang=${lang}`} className="nav-section nav-stoicism" aria-current={section === "stoicism" ? "page" : undefined}><ActionIcon name="science"/><span>{lang === "ru" ? "Стоицизм" : "Stoicism"}</span></a>
       </nav>
       <div className="header-end">
         <LangSwitch lang={lang} path={path} label={t.language} />

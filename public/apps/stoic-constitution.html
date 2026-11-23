@@ -437,7 +437,7 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 </style>
 </head>
 <body>
-<div class="wrap top"><strong>Stoic Constitution</strong><span class="top-end"><a href="/stoicism">← Back to the constitution</a><span class="lang" role="group" aria-label="Language · Язык"><a href="?lang=en" hreflang="en" lang="en" data-lang="en">EN</a><a href="?lang=ru" hreflang="ru" lang="ru" data-lang="ru">RU</a></span></span></div>
+<div class="wrap top"><strong>Stoic Constitution</strong><span class="top-end"><a href="/">← ilyadays</a><span class="lang" role="group" aria-label="Language · Язык"><a href="?lang=en" hreflang="en" lang="en" data-lang="en">EN</a><a href="?lang=ru" hreflang="ru" lang="ru" data-lang="ru">RU</a></span></span></div>
 <header class="wrap intro">
 <p class="eyebrow">Draft · Marcus Aurelius, in a new translation from the Greek</p>
 <h1>The articles so far</h1>
@@ -574,7 +574,7 @@ const RU_WORDS = {
 // The page's fixed words in Russian: [selector, text] sets the text, [selector, html, true] the markup (trusted, written here).
 const RU_STATIC = [
   ['.top strong', 'Стоическая конституция'],
-  ['.top-end > a', '← К конституции'],
+  ['.top-end > a', '← ilyadays'],
   ['.intro .eyebrow', 'Черновик · Марк Аврелий в новом переводе'],
   ['.intro h1', 'Статьи на сегодня'],
   ['.intro .lede', 'Все 418 фрагментов <i>«Размышлений»</i> сгруппированы по смыслу в главы и разделы. Здесь каждый раздел по порядку слит в статью, глава за главой. Статья высказывает одно положение, а затем рассматривает его с пяти постоянных сторон: почему, на деле, упражнение, когда не выходит и если я сомневаюсь. На широком экране пять сторон стоят рядом, столбцами. Под словами идёт по одной цветной линии на каждый фрагмент, который их говорит: две линии — два фрагмента. Один цвет — один и тот же фрагмент во фразе, в кнопках под ней и на карте векторов рядом с положением. Фиолетовым отмечена работа самого редактора. Других авторов можно добавить с панели «Голоса» внизу экрана и посмотреть, что получает каждая статья; первый из них — Сенека. Наведите курсор, чтобы увидеть точные цитаты. Нажмите или коснитесь, чтобы прочитать фрагменты рядом с тем, что следует из каждого. Русский текст переведён с английского текста этого проекта.', true],
@@ -616,6 +616,7 @@ if (RU) {
     if (!node) { MISSING_RU.add('static ' + selector); continue; }
     if (html) node.innerHTML = text; else node.textContent = text;
   }
+  document.querySelector('.top-end > a').href = '/ru';   // home, in Russian
   document.querySelector('nav.bar').setAttribute('aria-label', 'Переход');
   document.querySelector('nav.dock').setAttribute('aria-label', 'Голоса');
 }

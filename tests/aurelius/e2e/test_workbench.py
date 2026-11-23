@@ -241,7 +241,7 @@ def test_responsive_navigation_and_three_panes(page,width,lang,scheme):
     expect(page.get_by_role('textbox',name='Conclusion text',exact=True)).to_be_visible()
     active = page.locator('.site-primary-nav [aria-current=page]')
     expect(active).to_have_count(1)
-    expect(active).to_have_attribute('href',('/ru' if lang=='ru' else '')+'/stoicism')
+    expect(active).to_have_attribute('href','/apps/stoic-constitution.html?lang='+lang)
     assert page.locator('.site-primary-nav a').count() == 4
     page.get_by_role('button',name='Add expression pane').click()
     expect(page.get_by_role('textbox',name='Expression text',exact=True)).to_be_visible()

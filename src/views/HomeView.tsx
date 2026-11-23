@@ -61,7 +61,7 @@ export function HomeView({ lang }: { lang: Lang }) {
           <p>{t.aboutText}</p>
           <h3>{t.madeTitle}</h3>
           <ul className="projects">
-            <li><Link prefetch={false} href={localPath(lang,"/stoicism")}>Aurelius</Link> — {lang === "ru" ? "редакторская работа с «Размышлениями»: источники, смысл и формулировка." : "a source-linked workbench for Meditations: evidence, meaning and expression."}</li>
+            <li><a href={`/apps/stoic-constitution.html?lang=${lang}`}>{lang === "ru" ? "Стоическая конституция" : "Stoic Constitution"}</a> — {lang === "ru" ? "«Размышления» Марка Аврелия, сведённые в 38 статей, в новом переводе; Сенека — второй голос." : "Marcus Aurelius's Meditations fused into 38 articles, in a new translation from the Greek, with Seneca as a second voice."}</li>
             <li>
               <a href="https://typekana.com">TypeKana</a> — {t.typekana}
             </li>
