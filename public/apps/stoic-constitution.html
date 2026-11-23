@@ -9,9 +9,9 @@
 <style>
 :root{--paper:#f7f5ee;--card:#fffdf8;--ink:#232926;--muted:#57615a;--line:#d2d3c7;--accent:#1d6450;
 --s1:#1d6450;--t1:#e1efe7;--s2:#8a4d18;--t2:#f7e8d4;--s3:#1f5c8a;--t3:#e0ecf5;--s4:#8b2f5c;--t4:#f6e3ec;--e:#55468f;--et:#ece9f6;
---warn:#8f3a10;--wt:#fbe9dc;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',sans-serif}
+--p1:#4379f9;--p2:#cc689e;--p3:#853f13;--p4:#989401;--p5:#861192;--hl:rgba(35,41,38,.08);--warn:#8f3a10;--wt:#fbe9dc;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',sans-serif}
 @media(prefers-color-scheme:dark){:root{--paper:#161917;--card:#1e2320;--ink:#e9e7dd;--muted:#a4ada5;--line:#3b423c;--accent:#86d3b8;
---s1:#86d3b8;--t1:#1b382f;--s2:#e9ad70;--t2:#3f2e1a;--s3:#8cc3ee;--t3:#1c3447;--s4:#eda0c4;--t4:#42233a;--e:#b9adf0;--et:#2e2948;--warn:#f2a676;--wt:#3d271a}}
+--s1:#86d3b8;--t1:#1b382f;--s2:#e9ad70;--t2:#3f2e1a;--s3:#8cc3ee;--t3:#1c3447;--s4:#eda0c4;--t4:#42233a;--e:#b9adf0;--et:#2e2948;--p1:#2f63e1;--p2:#a95e86;--p3:#d63a00;--p4:#437f43;--p5:#2a97bf;--hl:rgba(233,231,221,.1);--warn:#f2a676;--wt:#3d271a}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans)}
@@ -80,36 +80,33 @@ details.more>summary,.process>summary{cursor:pointer;color:var(--accent);font-si
 .clause{margin-top:18px}
 .label{font:650 12px/1.4 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:1px}
 .sent{font:clamp(19px,4.9vw,21px)/1.72 var(--serif)}
-.sg{cursor:pointer;border-radius:3px;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px;text-decoration-color:var(--c);-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.sg.S{text-decoration-thickness:1.5px}
-.sg.many{text-decoration-style:double}
-.sg.join{text-decoration:none;cursor:help}
+.sg{cursor:pointer;border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:opacity .12s}
+.sg.dim{opacity:.28}
+.sg.join{cursor:help}
 #tip{position:absolute;z-index:20;width:min(380px,calc(100vw - 16px));padding:10px 12px;background:var(--card);border:1px solid var(--ink);border-radius:6px;box-shadow:0 6px 22px rgba(0,0,0,.22);pointer-events:none;font-size:14px}
-.tip-head{font:650 12.5px/1.4 var(--sans);color:var(--s1);margin-bottom:4px}
+.tip-head{font:650 12.5px/1.4 var(--sans);color:var(--ink);margin-bottom:4px}
 .tip-q{font:15px/1.45 var(--serif);margin-top:5px}
 .tip-q b{font:650 13px var(--sans);margin-right:6px;font-variant-numeric:tabular-nums}
 .tip-note{margin-top:6px;font-size:13px;color:var(--muted)}
-.link.hit{box-shadow:inset 0 0 0 2px var(--c)}
-.sg:hover,.sg[aria-pressed=true]{background:var(--ct)}
-.sg[aria-pressed=true]{box-shadow:0 0 0 2px var(--ct)}
+.link.hit{box-shadow:inset 0 0 0 2px var(--ink)}
+.sg:hover,.sg[aria-pressed=true]{background-color:var(--hl)}
+.sg[aria-pressed=true]{box-shadow:0 0 0 2px var(--hl)}
 .sg.gone{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:var(--warn);opacity:.5}
-.M{--c:var(--s1);--ct:var(--t1)}.S{--c:var(--s2);--ct:var(--t2)}.E{--c:var(--e);--ct:var(--et)}
-.statement{margin-top:14px;padding:14px 14px 14px 16px;border-left:4px solid var(--s1);background:var(--t1);border-radius:0 6px 6px 0}
+@media(forced-colors:active),print{.sg:not(.join){text-decoration:underline}}
+.M,.S{--c:var(--ink);--ct:var(--hl)}.E{--c:var(--e);--ct:var(--et)}
+.statement{padding:14px 14px 14px 16px;border-left:4px solid var(--ink);background:var(--paper);border-radius:0 6px 6px 0}
 .statement .sent.big{font-size:clamp(21px,5.6vw,25px);line-height:1.55}
 .statement .form{margin-top:10px;font-size:14px;color:var(--muted)}
-.statement .trace{background:var(--card)}
-.statement .link{background:var(--paper)}
-sup.src{font:650 12px/0 var(--sans);color:var(--c);margin-left:3px;white-space:nowrap;font-variant-numeric:tabular-nums;text-decoration:none;--c:var(--s1)}
-sup.src.S{--c:var(--s2)}
+sup.src{font:600 12px/0 var(--sans);color:var(--muted);margin-left:3px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .tip-head.rest{margin-top:9px;padding-top:7px;border-top:1px solid var(--line);color:var(--muted)}
 .tip-row{display:flex;gap:10px;justify-content:space-between;font-size:13px;margin-top:3px}
-.tip-row b{font-weight:650;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--s1)}
+.tip-row b{font-weight:650;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--ink)}
 .grp{margin-top:28px}
 .grp-head{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;padding-bottom:6px;border-bottom:1px solid var(--line)}
 .grp-head b{font:650 13px var(--sans);letter-spacing:.08em;text-transform:uppercase}
 .grp-head span{font-size:14px;color:var(--muted)}
 .grp-empty{margin-top:10px;font-size:14.5px;color:var(--muted)}
-.pair{display:grid;gap:8px}
+.pair{display:grid;gap:8px;border-left:4px solid var(--c)}
 .then{padding-top:8px;border-top:1px dashed var(--line)}
 .then .follows{font:16px/1.5 var(--serif)}
 .cols{display:none}
@@ -117,17 +114,75 @@ sup.src.S{--c:var(--s2)}
 .part-words{font:italic 17px/1.4 var(--serif);margin-top:4px}
 .part.hit .part-words{font-weight:650;color:var(--c)}
 .tagsw{min-height:40px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--muted);font-size:13.5px;font-weight:650;cursor:pointer}
-.tagsw[aria-pressed=true]{border-color:var(--s1);color:var(--s1);background:var(--t1)}
+.tagsw[aria-pressed=true]{border-color:var(--ink);color:var(--ink);background:var(--hl)}
 .label.lead{margin-top:24px;color:var(--ink)}
-.claims{display:grid;gap:18px;margin-top:10px}
-.claim .sent{line-height:1.6}
+.claims{display:grid;gap:10px;margin-top:10px}
+/* Every bit is one card with one border: grey for Marcus, black for an added author. The corner names whose it is. */
+.claim{border:1px solid var(--line);border-radius:8px;padding:9px 12px 11px;background:var(--card);min-width:0}
+.claim.sen{border:1.5px solid var(--ink)}
+.card-head{display:flex;gap:8px;justify-content:space-between;align-items:flex-start}
+.whos{flex:none;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px 8px}
+.who{display:inline-flex;align-items:center;gap:4px;font:650 12px/1.5 var(--sans);letter-spacing:.03em;color:var(--muted);white-space:nowrap}
+.who.added{color:var(--ink)}
+.who .dot{width:8px;height:8px}
+.who.inl{padding:0 7px 0 5px;margin:0 6px 0 1px;border:1px solid var(--ink);border-radius:99px;color:var(--ink);vertical-align:.18em;line-height:1.45}
+.claim .sent{line-height:1.75}
 .sent.small{font-size:clamp(17px,4.4vw,19px)}
 .fused{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;margin-top:6px;font-size:13.5px;color:var(--muted)}
-.fused b{font-weight:650;color:var(--s1);margin-right:2px}
+.fused b{font-weight:650;color:var(--ink);margin-right:2px}
 .fused.warn b{color:var(--warn)}
-.fused span{padding:1px 7px;border:1px solid var(--line);border-radius:99px;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--paper)}
+.fused span{display:inline-flex;align-items:center;gap:5px;padding:1px 8px 1px 6px;border:1px solid var(--line);border-radius:99px;font-variant-numeric:tabular-nums;color:var(--ink);background:var(--card);cursor:default}
+.dot{flex:none;display:inline-block;width:10px;height:10px;border-radius:50%}
+.dot.square,.key i.square{border-radius:2px;background:var(--ink)}
+.dot.diamond,.key i.diamond{border-radius:2px;background:var(--ink);transform:rotate(45deg) scale(.85)}
+.dot.triangle,.key i.triangle{border-radius:0;background:var(--ink);clip-path:polygon(50% 0,100% 100%,0 100%)}
+/* The dock: who is in the room. A bar within thumb reach on a phone, a floating pill on a wide screen. */
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+.dock{position:fixed;z-index:9;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:10px;padding:6px 8px 6px 16px;background:color-mix(in srgb,var(--card) 90%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 28px rgba(0,0,0,.2)}
+.dock-label{font:650 12px var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+#voices{display:flex;gap:6px;margin-left:auto;overflow-x:auto}
+.voice{flex:none;min-height:44px;display:inline-flex;align-items:center;gap:7px;padding:4px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 15px var(--sans);white-space:nowrap}
+button.voice{cursor:pointer;transition:background .15s,color .15s,transform .1s}
+button.voice:active{transform:scale(.96)}
+.voice.base{border-color:transparent;color:var(--muted)}
+.voice[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.voice[aria-pressed=true] .dot{background:var(--paper)}
+#dock-note{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translate(-50%,6px);max-width:calc(100vw - 32px);width:max-content;padding:8px 14px;border-radius:10px;background:var(--ink);color:var(--paper);font-size:14px;line-height:1.35;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+#dock-note.on{opacity:1;transform:translate(-50%,0)}
+@media(min-width:700px){.dock{left:50%;right:auto;transform:translateX(-50%);bottom:18px}#voices{margin-left:4px}}
+/* What an added author brings arrives visibly, and can be pulsed again from the strip. */
+@keyframes arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 transparent}30%{box-shadow:0 0 0 4px var(--hl),0 0 0 6px var(--ink)}}
+.fresh{animation:arrive .5s ease-out both}
+.flash{animation:pulse 1.4s ease-out;border-radius:6px}
+svg.map .fresh{animation:arrive .5s ease-out both;transform-box:fill-box}
+@media(prefers-reduced-motion:reduce){.fresh,.flash,svg.map .fresh{animation:none}#dock-note,button.voice{transition:none}}
+.jump{min-height:40px;padding:1px 12px;border:1px solid var(--ink);border-radius:99px;background:transparent;color:var(--ink);font:600 13.5px var(--sans);cursor:pointer;font-variant-numeric:tabular-nums}
+
+/* Tabs for the five sides: shown while they are a list, hidden once they are columns. */
+.tabs{position:sticky;top:55px;z-index:4;display:flex;gap:6px;margin:22px -16px 0;padding:8px 16px;overflow-x:auto;background:var(--card);border-block:1px solid var(--line);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:2px 12px;border:1px solid var(--line);border-radius:99px;background:transparent;color:var(--ink);font:600 13.5px var(--sans);cursor:pointer;white-space:nowrap}
+.tabs button small{font-size:12.5px;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.tabs button.none{color:var(--muted);border-style:dashed}
+.tabs button[aria-current=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tabs button[aria-current=true] small{color:var(--paper)}
+.tabs button[aria-current=true] .dot{background:var(--paper)}
+.tabs+.grps>.grp{scroll-margin-top:118px}
+.tabs+.grps>.grp:first-child{margin-top:18px}
+.fused b.plus{margin-left:4px;color:var(--muted)}
+.sen-strip{margin-top:12px;padding:8px 12px 10px;border:1px solid var(--line);border-radius:8px}
+.sen-strip.on{border:1.5px solid var(--ink)}
+.becomes{font:15px/1.45 var(--sans);margin-top:1px}
+.qual{margin-top:10px;padding:9px 12px;border-left:3px dotted var(--ink);background:var(--paper);border-radius:0 5px 5px 0}
+.qual-t{font-size:15px;line-height:1.5}
+.qual-q{margin-top:6px;font:16px/1.5 var(--serif)}
+.qual-q span{display:inline-flex;align-items:center;gap:5px;padding:1px 8px 1px 6px;border:1px solid var(--line);border-radius:99px;font:13.5px var(--sans);font-variant-numeric:tabular-nums;background:var(--card);vertical-align:1px}
+svg.map .pt.second text{opacity:0}
+svg.map .pt.second:hover text,svg.map .pt.second:focus text,svg.map.focused .pt.second:not(.dim) text{opacity:1}
+svg.map .base.second{stroke:var(--ink);stroke-dasharray:2 3;opacity:.55}
 .fused span.out{text-decoration:line-through;opacity:.5}
-.show{margin-left:auto;min-height:40px;padding:4px 10px;border:1px solid var(--s1);border-radius:6px;background:transparent;color:var(--s1);font-size:13.5px;font-weight:650;cursor:pointer}
+.show{margin-left:auto;min-height:40px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font-size:13.5px;font-weight:650;cursor:pointer}
 .panel-head{font:650 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--c)}
 .trace{display:grid;gap:8px;container-type:inline-size}
 .link.removed{opacity:.45}
@@ -136,11 +191,11 @@ sup.src.S{--c:var(--s2)}
 .gives i{font-style:normal;font-weight:650;color:var(--ink)}
 .near{font-size:13px;color:var(--muted)}
 
-.sources{margin-top:24px;padding-top:14px;border-top:1px solid var(--line)}
+.sources{margin-top:18px}
 .sources>p{font-size:13.5px;color:var(--muted);margin-bottom:8px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{--c:var(--s1);--ct:var(--t1);min-height:44px;padding:5px 11px;border:1.5px solid var(--c);border-radius:6px;background:var(--ct);cursor:pointer;text-align:left;line-height:1.25}
-.chip b{display:block;font-size:15px;font-weight:650;color:var(--c)}
+.chip{min-height:44px;padding:5px 11px;border:1px solid var(--line);border-radius:6px;background:var(--card);cursor:pointer;text-align:left;line-height:1.25}
+.chip b{display:flex;align-items:center;gap:6px;font-size:15px;font-weight:650;color:var(--ink)}
 .chip small{display:block;font-size:12.5px;color:var(--ink)}
 .chip[aria-pressed=true]{background:transparent;border-style:dashed}
 .chip[aria-pressed=true] b{text-decoration:line-through}
@@ -160,7 +215,7 @@ sup.src.S{--c:var(--s2)}
 .link{background:var(--card);border-radius:5px;padding:8px 10px;font-size:15px}
 .link b{display:block;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .ctx{font:16px/1.55 var(--serif)}
-mark{background:var(--ct);color:inherit;border-bottom:2px solid var(--c);padding:0 1px}
+mark{background:color-mix(in srgb,var(--c) 16%,transparent);color:inherit;border-bottom:2px solid var(--c);padding:0 1px}
 mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 
 .hand{margin-top:14px;padding:12px 14px;border:1px dashed var(--e);border-radius:6px;font-size:14.5px}
@@ -202,6 +257,21 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .vb{min-height:44px;padding:6px 14px;border:1px solid var(--line);border-radius:6px;background:transparent;cursor:pointer;font-size:14px;font-weight:600}
 .vb[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .mine{margin-top:14px;display:grid;gap:4px;font-size:15px}
+.mine li.ch{display:block;border:0;padding:12px 0 0;font:650 12px/1.4 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+/* Chapters: one is shown at a time; the picker sits at the start of the sticky bar. */
+.chap-btn{flex:none;min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:0 12px;border:1px solid var(--ink);border-radius:6px;background:transparent;color:var(--ink);font:650 14px var(--sans);cursor:pointer;white-space:nowrap}
+.chap-btn::after{content:'';width:7px;height:7px;margin-top:-4px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.chap-btn[aria-expanded=true]::after{margin-top:3px;transform:rotate(225deg)}
+.chapters{position:absolute;left:0;right:0;top:100%;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 10px 24px rgba(0,0,0,.14);max-height:calc(100vh - 120px);overflow-y:auto}
+.chapters[hidden]{display:none}
+.chapters ol{display:grid;gap:4px;padding-block:8px 10px}
+.chapters button{width:100%;min-height:44px;display:grid;grid-template-columns:22px 1fr auto;gap:2px 10px;align-items:center;padding:6px 10px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--ink);font:500 15px/1.3 var(--sans);text-align:left;cursor:pointer}
+.chapters button b{font-weight:650;font-variant-numeric:tabular-nums}
+.chapters button small{font-size:13px;color:var(--muted);white-space:nowrap}
+.chapters button[aria-current=true]{border-color:var(--ink);background:var(--hl)}
+.chapters button:disabled{color:var(--muted);cursor:default}
+.loading{margin-top:22px;padding:14px 0;font-size:15px;color:var(--muted)}
+.loading .act{margin:0 0 0 12px}
 .mine li{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line);padding-block:6px}
 .mine li span:last-child{font-weight:650;white-space:nowrap}
 .act{margin-top:12px;min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);font-weight:650;cursor:pointer}
@@ -209,33 +279,93 @@ footer{padding-block:18px 44px;font-size:13.5px;color:var(--muted);border-top:1p
 .err{margin:16px 0;padding:12px;border:2px solid var(--warn);color:var(--warn);font-weight:600}
 .sr{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
 @container (min-width:520px){.pair{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px}.then{padding:0 0 0 16px;border-top:0;border-left:1px dashed var(--line)}.cols{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;padding:0 10px;font:650 12px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.cols span+span{padding-left:16px}}
+/* The vectors: where the section's passages sit relative to one another. */
+.body{display:grid;grid-template-columns:minmax(0,1fr);margin-top:14px}
+.body>*{min-width:0}
+.sci{margin-top:16px;border:1px solid var(--line);border-radius:8px;padding:12px 14px 6px;min-width:0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 4px}
+.stats b{display:block;font:600 22px/1.15 var(--serif);font-variant-numeric:tabular-nums}
+.stats span{display:block;font-size:12.5px;line-height:1.3;color:var(--muted)}
+.readout{min-height:44px;margin-top:8px;padding:7px 10px;border-radius:6px;background:var(--paper);font-size:13.5px;line-height:1.4;color:var(--muted)}
+.readout b{color:var(--ink);font-weight:650;font-variant-numeric:tabular-nums}
+svg.map .land{fill:var(--ink);stroke:var(--ink);stroke-width:30;stroke-linejoin:round;opacity:.055}
+svg.map .base.second{stroke-dasharray:2 4}
+.sci svg{display:block;font-family:var(--sans)}
+svg.map{width:100%;max-width:430px;height:auto;margin:4px auto 0;overflow:visible}
+svg.map text{font-size:13.5px;font-variant-numeric:tabular-nums;fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:3.5px;stroke-linejoin:round}
+svg.map .aside text{fill:var(--muted)}
+svg.map .pt{cursor:default;transition:opacity .12s;outline:none}
+svg.map .pt.dim{opacity:.22}
+svg.map .pt:focus-visible circle{stroke:var(--ink)}
+svg.map .base{stroke:var(--line);stroke-width:1}
+svg.map.focused .base{opacity:.3}
+svg.map .tie{stroke:var(--ink);stroke-width:1.5}
+svg.map .cos{font-size:12.5px;font-weight:650}
+.key{display:flex;flex-wrap:wrap;gap:3px 14px;margin-top:6px;font-size:13px;color:var(--muted)}
+.key i.land{width:16px;height:10px;border-radius:5px;background:color-mix(in srgb,var(--ink) 12%,transparent)}
+.key i.square,.key i.diamond,.key i.triangle{border-radius:2px;background:var(--ink)}
+.key span{display:inline-flex;align-items:center;gap:6px}
+.key i{flex:none;display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--muted)}
+.key i.hollow{background:transparent;border:1.5px solid var(--muted)}
+.key i.rule{width:18px;height:0;border-radius:0;border-top:1.5px solid var(--muted);background:none}
+.key i.ring{border-radius:3px;background:transparent;border:2px solid var(--e)}
+.cap{margin-top:6px;font-size:13px;line-height:1.45;color:var(--muted)}
+.around{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.near{display:grid;gap:9px;margin-top:6px}
+.near li{display:grid;grid-template-columns:auto minmax(60px,1fr) auto;gap:0 10px;align-items:center;font-size:14.5px;line-height:1.35}
+.near li>a,.near li>span.name{grid-column:1/3}
+.near b{font-weight:650;font-variant-numeric:tabular-nums}
+.near small{grid-column:1;font-size:12.5px;color:var(--muted)}
+.near .track{grid-column:2/-1;position:relative;height:8px;margin:0 4px}
+.near .track::before{content:'';position:absolute;left:0;right:0;top:3.5px;height:1px;background:var(--line)}
+.near .track i{position:absolute;top:0;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--ink)}
+.sci details{margin-top:8px;border-top:1px solid var(--line)}
+.sci details .cap:last-child{margin-bottom:10px}
+.sci summary{min-height:40px;display:flex;align-items:center;font-size:13.5px;font-weight:650;cursor:pointer}
+.matrix{overflow-x:auto;padding-bottom:4px}
+.matrix svg text{font-size:12.5px;fill:var(--muted);font-variant-numeric:tabular-nums}
+.matrix rect{fill:var(--ink)}
+.matrix rect.fusedpair{stroke:var(--e);stroke-width:2}
+.matrix rect:hover,.matrix rect:focus{stroke:var(--ink);stroke-width:2;outline:none}
 /* Wide screens: the five sides of the statement stand side by side as columns. */
 @media(min-width:1000px){
-.article{position:relative;left:50%;width:min(1400px,calc(100vw - 48px));margin-left:calc(min(1400px,100vw - 48px)/-2)}
-.statement,.sources,.article>.hand,.article>.process,.article>.verdict{max-width:800px}
-.grps{display:flex;gap:20px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding-bottom:8px}
-.grps .grp{flex:1 1 0;min-width:224px;margin-top:0}
-.grps .grp.none{flex:0 0 168px;min-width:0}
-.grps .grp.open{flex:0 0 640px}
+.tabs{display:none}
+.article{position:relative;left:50%;width:min(1720px,calc(100vw - 48px));margin-left:calc(min(1720px,100vw - 48px)/-2)}
+/* The text is one column and the vectors another. The vectors stay beside the text as it scrolls, and whatever their height they never push the sides down. */
+.body{grid-template-columns:minmax(0,1fr) 320px;grid-template-rows:auto auto 1fr;column-gap:24px;align-items:start}
+.body>.lead-col{grid-column:1;grid-row:1;max-width:900px}
+.body>.tabs{grid-column:1;grid-row:2}
+.body>.grps{grid-column:1;grid-row:3}
+.body>.sci{grid-column:2;grid-row:1/span 3;margin-top:0;position:sticky;top:66px;max-height:calc(100vh - 78px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.article>.hand,.article>.process,.article>.verdict{max-width:800px}
+.grps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px;align-items:start;margin-top:28px}
+.grps .grp{min-width:0;margin-top:0}
+.grps .grp.open{grid-column:span 2}
 .grps .grp-head{display:block;min-height:58px}
 .grps .grp-head span{display:block}
-.grps .sent,.grps .sent.small{font-size:17.5px;line-height:1.62}
+.grps .sent,.grps .sent.small{font-size:17.5px;line-height:1.75}
 .grps .show{margin-left:0}
 }
+/* How many sides fit beside the vectors. With three or four across, Why runs down the left so the later sides tuck under the shorter ones. */
+@media(min-width:1240px){.grps{grid-template-columns:repeat(3,minmax(0,1fr))}.grps .grp[data-g=why]{grid-row:span 2}}
+@media(min-width:1280px){.body{grid-template-columns:minmax(0,1fr) 372px;column-gap:28px}}
+@media(min-width:1504px){.grps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:1768px){.grps{grid-template-columns:repeat(5,minmax(0,1fr))}.grps .grp[data-g=why]{grid-row:auto}}
 @media(min-width:700px){.leaf{padding:30px 34px 26px}.sent{font-size:21px}.chapter .body{padding-left:46px}}
-@media print{.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
+@media print{.dock,.tabs,.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
 </style>
 </head>
 <body>
 <div class="wrap top"><strong>Stoic Constitution</strong><a href="/stoicism">← Back to the constitution</a></div>
 <header class="wrap intro">
 <p class="eyebrow">Draft · Marcus Aurelius, Casaubon translation</p>
-<h1>The first five articles</h1>
-<p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here the first five sections are each fused into an article. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. The small numbers after words name the passages those words come from, and a double underline means more than one passage backs them. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
+<h1>The articles so far</h1>
+<p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
 </header>
-<nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div></nav>
+<nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
+<nav class="dock" aria-label="Voices"><span class="dock-label">Voices</span><div id="voices"></div><p id="dock-note" aria-hidden="true"></p></nav>
 <div id="tip" role="tooltip" hidden></div>
 <noscript><p class="wrap err">This page needs JavaScript to draw the topics and articles.</p></noscript>
 <main class="wrap" id="main">
@@ -270,9 +400,10 @@ footer{padding-block:18px 44px;font-size:13.5px;color:var(--muted);border-top:1p
 'use strict';
 const STORE = 'stoic-constitution:v1:verdicts';
 const VERDICTS = ['Keep', 'Revise', 'Drop'];
-let D = null;
+let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
+const CHAPTERS = new Map();   // chapter id -> its full articles, once loaded
 const TAGS = 'stoic-constitution:v1:tags';
-const state = {sel: null, removed: {}, tags: true};   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: passage numbers shown in the text
+const state = {chapter: null, sel: null, removed: {}, tags: true, voices: new Set(), fresh: null};   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: numbers on statements; voices: added authors switched on; fresh: the voice just added, so its parts can arrive visibly
 try { state.tags = localStorage.getItem(TAGS) !== 'off'; } catch { /* private mode */ }
 
 function el(tag, cls, text) {
@@ -316,9 +447,10 @@ function renderTopics() {
   const method = D.method, sections = D.chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0);
   document.getElementById('status').textContent = D.status + ' Nothing here has been reviewed by you yet.';
   const funnel = document.getElementById('funnel');
-  [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.articles.length + ' articles so far']]
+  [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.all.length + ' articles so far']]
     .forEach(([text]) => funnel.append(el(text === '→' ? 'i' : 'b', '', text)));
   const largest = Math.max(...D.chapters.map(chapter => chapter.size));
+  const next = D.chapters.flatMap(chapter => chapter.sections).find(section => !section.article);
   document.getElementById('tree').replaceChildren(...D.chapters.map(chapter => {
     const box = el('details', 'chapter' + (chapter.order === 1 ? ' first' : ''));
     box.open = chapter.order === 1;
@@ -338,10 +470,10 @@ function renderTopics() {
       const row = el('li');
       if (section.article) {
         const link = el('a', '', section.title);
-        link.href = '#article-' + section.article;
+        link.href = '?c=' + chapter.id + '#article-' + section.article;
         row.append(link, el('span', 'n', 'Article ' + section.article));
       } else {
-        row.append(el('span', '', section.title), el('span', 'n', chapter.order === 1 ? 'next' : ''));
+        row.append(el('span', '', section.title), el('span', 'n', section === next ? 'next' : ''));
       }
       row.append(el('small', '', plural(section.size, 'passage') + ' · most central: ' + section.central.join(', ')));
       list.append(row);
@@ -368,7 +500,7 @@ function renderTopics() {
 /* ---------- article ---------- */
 const memberOf = (article, ref) => article.members.find(member => member.ref === ref);
 function context(article, piece) {
-  const text = memberOf(article, piece.ref).text, pad = 110;
+  const text = (piece.author ? addedPassage(article, piece.ref) : memberOf(article, piece.ref)).text, pad = 110;
   let from = Math.max(0, piece.at - pad), to = Math.min(text.length, piece.at + piece.quote.length + pad);
   while (from > 0 && /\S/.test(text[from - 1])) from--;
   while (to < text.length && /\S/.test(text[to])) to++;
@@ -388,11 +520,299 @@ function toggle(article, key, focusKey, phrase) {
   renderArticle(article.number, focusKey);
 }
 const left = (article, claim) => claim.passages.filter(ref => !removedOf(article).has(ref));
-const piecesOf = article => [...article.claims.flatMap(claim => claim.support), ...article.single];
+// Added authors ("voices"). Their pieces are always known by id; they join the articles only while that author is switched on.
+const authorByKey = key => D.authors.find(author => author.key === key);
+const authorOfRef = ref => D.authors.find(author => ref.startsWith(author.reference_prefix)) || null;
+const voicesOf = article => D.authors.map(author => article.voices[author.key]).filter(Boolean);
+const voicesOn = article => voicesOf(article).filter(voice => state.voices.has(voice.key));
+const addedItems = (article, effect) => voicesOn(article).flatMap(voice => voice.items.filter(item => item.effect === effect));
+const addedPieces = article => voicesOf(article).flatMap(voice => voice.items.flatMap(item => item.piece ? [item.piece] : item.support));
+const addedPassage = (article, ref) => voicesOf(article).flatMap(voice => voice.passages).find(passage => passage.ref === ref);
+const voiceOfRef = (article, ref) => voicesOf(article).find(voice => voice.passages.some(passage => passage.ref === ref));
+const widerKey = item => 'w:' + item.author + ':' + item.key;
+// "Seneca, Letters 95.52"
+const cite = ref => { const author = authorOfRef(ref); if (!author) return ref; return author.name + ', ' + author.short + ' ' + ref.slice(author.reference_prefix.length).trim(); };
+const supportOf = (article, claim) => {
+  const list = [...claim.support, ...addedItems(article, 'stronger').filter(item => item.claim === claim.id).map(item => item.piece)];
+  for (const clause of amendsFor(article, claim.id)) for (const id of clause.ids) if (!list.some(piece => piece.id === id)) list.push(pieceOf(article, id));
+  return list;
+};
+const widerParts = item => item.support.flatMap(piece => (piece.gives || [item.t]).map(words => ({words, ids: [piece.id]})));
+const piecesOf = article => [...article.claims.flatMap(claim => claim.support), ...article.single, ...addedPieces(article)];
 const pieceOf = (article, id) => piecesOf(article).find(piece => piece.id === id);
 const claimOf = (article, id) => article.claims.find(claim => claim.id === id);
 const refsOf = (article, ids) => [...new Set(ids.map(id => pieceOf(article, id).ref))];
-const claimParts = claim => claim.support.flatMap(piece => (piece.gives || []).map(words => ({words, ids: [piece.id]})));
+const hue = (article, ref) => authorOfRef(ref) ? 'var(--ink)' : 'var(--p' + article.colors[ref] + ')';
+function dot(article, ref) {
+  const mark = el('i', 'dot' + (authorOfRef(ref) ? ' ' + authorOfRef(ref).mark : ''));
+  mark.style.background = hue(article, ref);
+  return mark;
+}
+// A passage number with its colour. Pointing at it picks that passage out in the text and on the map.
+function refChip(article, ref, out) {
+  const chip = el('span', out ? 'out' : '');
+  chip.append(dot(article, ref), document.createTextNode(ref));
+  chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
+  chip.addEventListener('mouseleave', () => spotlight(article, null));
+  return chip;
+}
+// Coloured lines under words: one line for each passage that says them.
+// Marcus's passages draw solid lines in their colours; what only one passage says is dashed; an added author's lines are black, in that author's own pattern.
+function lines(span, specs) {
+  if (!specs.length) return;
+  const colours = specs, layer = spec => spec.kind === 'dash' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 7px,transparent 7px 11px)'
+    : spec.kind === 'dot' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 2px,transparent 2px 5px)'
+    : spec.kind === 'dashdot' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 8px,transparent 8px 11px,' + spec.c + ' 11px 13px,transparent 13px 16px)' : 'linear-gradient(' + spec.c + ',' + spec.c + ')';
+  span.style.backgroundImage = colours.map(layer).join(',');
+  span.style.backgroundSize = '100% 2px';
+  span.style.backgroundRepeat = 'no-repeat';
+  span.style.backgroundPosition = colours.map((_, index) => '0 calc(100% - ' + index * 3 + 'px)').join(',');
+  span.style.paddingBottom = Math.max(0, colours.length * 3 - 4) + 'px';
+}
+// Which passages the map should pick out when nothing is under the pointer: those of the open sentence or picked words.
+function selectionRefs(article) {
+  if (!state.sel || state.sel.a !== article.number) return null;
+  const key = state.sel.k, pick = (text, parts, all, target) => {
+    const seg = state.sel.p != null ? sentenceSegs(article, text, parts, target)[state.sel.p] : null;
+    return seg && seg.ids.length ? refsOf(article, seg.ids) : all;
+  };
+  if (key === 'statement') return pick(article.statement.t, article.statement.parts, [...new Set(article.statement.parts.flatMap(part => part.refs))], 'statement');
+  if (key.startsWith('s:')) return [article.single.find(item => 's:' + item.id === key).ref];
+  if (key.startsWith('w:')) {
+    const item = addedItems(article, 'wider').find(entry => widerKey(entry) === key);
+    return pick(item.t, widerParts(item), [...new Set(item.support.map(piece => piece.ref))]);
+  }
+  const claim = claimOf(article, key);
+  return pick(claim.t, claimParts(article, claim), claim.passages, claim.id);
+}
+const SVG = 'http://www.w3.org/2000/svg';
+function svg(tag, attrs, text) {
+  const node = document.createElementNS(SVG, tag);
+  for (const [name, value] of Object.entries(attrs || {})) node.setAttribute(name, value);
+  if (text != null) node.textContent = text;
+  return node;
+}
+const MAP = {w: 360, h: 290};
+function place(article) {
+  const second = voicesOn(article).flatMap(voice => voice.passages), points = [...article.map.points, ...second.map(passage => passage.at)];
+  const xs = points.map(point => point[0]), ys = points.map(point => point[1]);
+  const left = Math.min(...xs), right = Math.max(...xs), low = Math.min(...ys), high = Math.max(...ys);
+  const scale = Math.min((MAP.w - 104) / (right - left || 1), (MAP.h - 52) / (high - low || 1));
+  return new Map([...article.map.refs, ...second.map(passage => passage.ref)].map((ref, index) => [ref, {x: MAP.w / 2 + (points[index][0] - (left + right) / 2) * scale, y: MAP.h / 2 - (points[index][1] - (low + high) / 2) * scale}]));
+}
+// The outline of a set of points (Andrew's monotone chain), for the shaded ground the section covers.
+function outline(points) {
+  const sorted = [...points].sort((a, b) => a.x - b.x || a.y - b.y), turn = (o, a, b) => (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);
+  const half = list => { const out = []; for (const point of list) { while (out.length > 1 && turn(out[out.length - 2], out[out.length - 1], point) <= 0) out.pop(); out.push(point); } out.pop(); return out; };
+  return [...half(sorted), ...half(sorted.reverse())];
+}
+const cosine = (article, a, b) => authorOfRef(a) && authorOfRef(b) ? undefined : authorOfRef(a) ? addedPassage(article, a).sims[b] : authorOfRef(b) ? addedPassage(article, b).sims[a] : article.map.sim[article.map.refs.indexOf(a)][article.map.refs.indexOf(b)];
+const fusedPairs = article => {
+  const pairs = new Map();
+  for (const claim of article.claims) {
+    claim.passages.forEach((a, i) => claim.passages.slice(i + 1).forEach(b => {
+      const key = [a, b].sort().join('|');
+      pairs.set(key, [...(pairs.get(key) || []), claim.number]);
+    }));
+  }
+  return pairs;
+};
+// Pick passages out on the map: dim the rest, and tie the picked ones together with their similarity.
+function onMap(article, refs) {
+  const map = document.querySelector('#article-' + article.number + ' svg.map');
+  if (!map) return;
+  const focus = refs || selectionRefs(article), spots = place(article), ties = map.querySelector('.ties');
+  map.classList.toggle('focused', Boolean(focus));
+  for (const point of map.querySelectorAll('.pt')) point.classList.toggle('dim', Boolean(focus) && !focus.includes(point.dataset.ref));
+  ties.replaceChildren();
+  readout(article, focus);
+  if (!focus || focus.length < 2) return;
+  const pairs = focus.flatMap((a, i) => focus.slice(i + 1).map(b => [a, b])).filter(([a, b]) => spots.has(a) && spots.has(b));
+  for (const [a, b] of pairs) ties.append(svg('line', {class: 'tie', x1: spots.get(a).x, y1: spots.get(a).y, x2: spots.get(b).x, y2: spots.get(b).y}));
+  if (pairs.length <= 3) {
+    for (const [a, b] of pairs) {
+      const value = cosine(article, a, b);
+      if (value != null) ties.append(svg('text', {class: 'cos', x: (spots.get(a).x + spots.get(b).x) / 2, y: (spots.get(a).y + spots.get(b).y) / 2 + 4, 'text-anchor': 'middle'}, value.toFixed(2)));
+    }
+  }
+}
+// One line under the map that says, in numbers, what the picked passages have to do with one another.
+function readout(article, focus) {
+  const box = document.querySelector('#article-' + article.number + ' .readout');
+  if (!box) return;
+  const line = (...parts) => box.replaceChildren(...parts.map(part => typeof part === 'string' ? document.createTextNode(part) : part)), strong = text => el('b', '', text);
+  if (!focus || !focus.length) return line('Point at words in the article, or at a mark on the map, to see how close their passages are.');
+  if (focus.length === 1) {
+    const ref = focus[0];
+    if (authorOfRef(ref)) { const passage = addedPassage(article, ref); return line(strong(cite(ref)), ' sits nearest ', strong(passage.nearest.ref), ' at ', strong(passage.nearest.similarity.toFixed(2)), '.'); }
+    const others = article.map.refs.filter(other => other !== ref).map(other => [other, cosine(article, ref, other)]).sort((a, b) => b[1] - a[1]);
+    return line(strong(ref), ' is closest to ', strong(others[0][0]), ' (' + others[0][1].toFixed(2) + ') and farthest from ', strong(others[others.length - 1][0]), ' (' + others[others.length - 1][1].toFixed(2) + ').');
+  }
+  const values = focus.flatMap((a, i) => focus.slice(i + 1).map(b => cosine(article, a, b))).filter(value => value != null);
+  if (!values.length) return line(strong(focus.map(cite).join(' and ')), ': no similarity is kept between two passages of an added author.');
+  if (focus.length === 2) return line(strong(focus.map(cite).join(' and ')), ': similarity ', strong(values[0].toFixed(2)), ' (the section’s pairs average ' + article.section_closeness.toFixed(2) + ').');
+  const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
+  return line(strong(focus.length + ' passages'), ': pairs from ', strong(Math.min(...values).toFixed(2)), ' to ', strong(Math.max(...values).toFixed(2)), ', average ', strong(mean.toFixed(2)), ' (section ' + article.section_closeness.toFixed(2) + ').');
+}
+// Pick passages out in the text as well: the words they do not back fade.
+function spotlight(article, refs) {
+  const root = document.getElementById('article-' + article.number);
+  for (const span of root.querySelectorAll('.sg')) {
+    span.classList.toggle('dim', Boolean(refs) && !(span.dataset.refs || '').split('|').some(ref => refs.includes(ref)));
+  }
+  onMap(article, refs);
+}
+
+// Where the section sits in the whole book: its nearest sections, members on a border, close passages left outside.
+function aroundBlock(article) {
+  const around = article.map.around, box = el('div', 'around'), total = D.chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0);
+  box.append(el('p', 'label', 'Next to it in the book'));
+  const list = el('ol', 'near');
+  for (const item of around.near) {
+    const row = el('li'), name = item.article ? el('a', '', item.title) : el('span', 'name', item.title), track = el('span', 'track'), mark = el('i');
+    if (item.article) name.href = '#article-' + item.article;
+    else name.title = 'In the chapter “' + item.chapter + '”' + (item.provisional ? ' (provisional name)' : '');
+    mark.style.left = (100 * (item.similarity - around.lowest) / (around.highest - around.lowest)).toFixed(1) + '%';
+    track.append(mark);
+    row.append(name, el('b', '', item.similarity.toFixed(2)), el('small', '', (item.article ? 'Article ' + item.article : 'No article yet') + ' · ' + plural(item.size, 'passage')), track);
+    list.append(row);
+  }
+  box.append(list, el('p', 'cap', 'The nearest four of the other ' + (total - 1) + ' sections. ' + plural(around.outside_closer, 'passage') + ' filed elsewhere ' + (around.outside_closer === 1 ? 'sits' : 'sit') + ' closer to this section than its own farthest member.'));
+  return box;
+}
+// The fine print of the vectors column, kept folded.
+function mapNotes(article) {
+  const around = article.map.around, notes = el('details');
+  notes.dataset.keep = 'notes-' + article.number;
+  notes.append(el('summary', '', 'How to read these numbers'));
+  notes.append(el('p', 'cap', 'Each passage is a vector of 3,072 numbers. The map flattens them to two dimensions, keeping close passages close. Flattening distorts: stress ' + article.map.stress.toFixed(2) + ', where 0 is exact and above 0.2 is rough. The exact numbers are in the table below.'));
+  for (const voice of voicesOn(article)) {
+    notes.append(el('p', 'cap', voice.author.name + ' is placed afterwards, where his distances to the dots fit best, after lifting his similarities by ' + voice.author.author_gap.toFixed(2) + ' (the average gap between the two authors). Each of his marks is dotted to its nearest passage here.'));
+  }
+  notes.append(el('p', 'cap', 'Neighbours: similarity between section centres. Each line runs from the farthest section (“' + around.farthest + '”, ' + around.lowest.toFixed(2) + ') to the nearest (' + around.highest.toFixed(2) + ').'));
+  if (around.border.length) {
+    notes.append(el('p', 'cap', 'On the border: ' + around.border.map(item => item.ref + ' is as close to “' + item.section + '” (' + item.other.toFixed(2) + ') as to its own section (' + item.own.toFixed(2) + ')').join('; ') + '.'));
+  }
+  notes.append(el('p', 'cap', 'Filed elsewhere but close: ' + around.outside.map(item => item.ref + ' (' + item.similarity.toFixed(2) + ', in “' + item.section + '”)').join(', ') + '. This section’s own farthest member is at ' + around.weakest_member.toFixed(2) + '.'));
+  return notes;
+}
+
+function mapBlock(article) {
+  const box = el('figure', 'sci'), gone = removedOf(article), spots = place(article);
+  box.dataset.anchor = 'sci' + article.number;
+  box.append(el('p', 'label', 'The vectors · closeness of meaning'));
+  const stats = el('div', 'stats');
+  for (const [value, name] of [[article.map.refs.length, 'passages in the section'], [article.sources.length, 'feed the article'], [article.section_closeness.toFixed(2), 'average similarity of a pair']]) {
+    const tile = el('p');
+    tile.append(el('b', '', String(value)), el('span', '', name));
+    stats.append(tile);
+  }
+  box.append(stats);
+  const map = svg('svg', {class: 'map', viewBox: '0 0 ' + MAP.w + ' ' + MAP.h, role: 'group', 'aria-label': 'Map of the ' + article.map.refs.length + ' passages in this section. Passages with closer meaning vectors sit closer together.'});
+  const base = svg('g'), ties = svg('g', {class: 'ties'}), dots = svg('g');
+  const ground = outline(article.map.refs.map(ref => spots.get(ref)));
+  if (ground.length > 2) base.append(svg('path', {class: 'land', d: 'M' + ground.map(point => point.x.toFixed(1) + ' ' + point.y.toFixed(1)).join('L') + 'Z'}));
+  for (const key of fusedPairs(article).keys()) {
+    const [a, b] = key.split('|');
+    base.append(svg('line', {class: 'base', x1: spots.get(a).x, y1: spots.get(a).y, x2: spots.get(b).x, y2: spots.get(b).y}));
+  }
+  for (const member of article.members) {
+    const at = spots.get(member.ref), live = member.used && !gone.has(member.ref), right = at.x >= MAP.w / 2;
+    const point = svg('g', {class: 'pt ' + (member.used ? 'used' : 'aside'), 'data-ref': member.ref, tabindex: '0', role: 'img',
+      'aria-label': 'Meditations ' + member.ref + ', ' + (member.used ? 'feeds the article' : 'set aside') + ', similarity to the centre of the section ' + member.similarity.toFixed(2)});
+    point.append(svg('circle', live
+      ? {cx: at.x, cy: at.y, r: 6.5, fill: hue(article, member.ref), stroke: 'var(--card)', 'stroke-width': 2}
+      : {cx: at.x, cy: at.y, r: 5, fill: 'var(--card)', stroke: member.used ? hue(article, member.ref) : 'var(--muted)', 'stroke-width': 1.5}));
+    point.append(svg('text', {x: at.x + (right ? 10 : -10), y: at.y + 4.5, 'text-anchor': right ? 'start' : 'end'}, member.ref));
+    tip(point, () => {
+      const card = el('div'), claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
+      card.append(el('p', 'tip-head', 'Meditations ' + member.ref + ' · ' + member.words + ' words'));
+      card.append(el('p', 'tip-row', 'Similarity to the centre of the section: ' + member.similarity.toFixed(2)));
+      card.append(el('p', 'tip-note', member.used ? (claims.length ? 'Feeds claim' + (claims.length > 1 ? 's ' : ' ') + claims.join(', ') + (member.feeds.includes('single') ? ', and is quoted alone' : '') + '.' : 'Quoted alone, under “said once”.') + (gone.has(member.ref) ? ' Removed for now.' : '') : 'Set aside. ' + member.why));
+      return card;
+    });
+    for (const [on, off] of [['mouseenter', 'mouseleave'], ['focus', 'blur']]) {
+      point.addEventListener(on, () => spotlight(article, [member.ref]));
+      point.addEventListener(off, () => spotlight(article, null));
+    }
+    dots.append(point);
+  }
+  for (const voice of voicesOn(article)) {
+    for (const passage of voice.passages) {
+      const at = spots.get(passage.ref), home = spots.get(passage.nearest.ref), right = at.x >= MAP.w / 2;
+      base.append(svg('line', {class: 'base second', x1: at.x, y1: at.y, x2: home.x, y2: home.y}));
+      const point = svg('g', {class: 'pt second' + (state.fresh === voice.key ? ' fresh' : ''), 'data-ref': passage.ref, tabindex: '0', role: 'img',
+        'aria-label': cite(passage.ref) + ', nearest passage here ' + passage.nearest.ref + ' at ' + passage.nearest.similarity.toFixed(2)});
+      const shape = voice.author.mark === 'diamond' ? svg('rect', {x: at.x - 5, y: at.y - 5, width: 10, height: 10, rx: 1.5, transform: 'rotate(45 ' + at.x + ' ' + at.y + ')'})
+        : voice.author.mark === 'triangle' ? svg('path', {d: 'M' + at.x + ' ' + (at.y - 7) + 'l6.5 12h-13z'})
+        : svg('rect', {x: at.x - 5.5, y: at.y - 5.5, width: 11, height: 11, rx: 2});
+      for (const [name, value] of [['fill', 'var(--ink)'], ['stroke', 'var(--card)'], ['stroke-width', 2]]) shape.setAttribute(name, value);
+      point.append(shape, svg('text', {x: at.x + (right ? 10 : -10), y: at.y + 4.5, 'text-anchor': right ? 'start' : 'end'}, passage.ref));
+      tip(point, () => {
+        const card = el('div');
+        card.append(el('p', 'tip-head', cite(passage.ref) + ' · ' + passage.title),
+          el('p', 'tip-row', 'Nearest passage here: ' + passage.nearest.ref + ' (' + passage.nearest.similarity.toFixed(2) + ')'),
+          el('p', 'tip-row', 'Closeness to this section: number ' + passage.rank.toLocaleString('en') + ' of ' + voice.total.toLocaleString('en') + ' passages of ' + voice.author.name),
+          el('p', 'tip-note', passage.rank > 200 ? 'Found by reading, not by the vectors.' : 'The vectors point to it.'));
+        return card;
+      });
+      for (const [on, off] of [['mouseenter', 'mouseleave'], ['focus', 'blur']]) {
+        point.addEventListener(on, () => spotlight(article, [passage.ref, passage.nearest.ref]));
+        point.addEventListener(off, () => spotlight(article, null));
+      }
+      dots.append(point);
+    }
+  }
+  map.append(base, ties, dots);
+  const key = el('p', 'key');
+  const used = el('span'), aside = el('span'), rule = el('span'), land = el('span');
+  used.append(el('i'), document.createTextNode('feeds the article'));
+  aside.append(el('i', 'hollow'), document.createTextNode('set aside'));
+  rule.append(el('i', 'rule'), document.createTextNode('fused together'));
+  land.append(el('i', 'land'), document.createTextNode('the section'));
+  key.append(used, aside, rule, land);
+  for (const voice of voicesOn(article)) {
+    const second = el('span');
+    second.append(el('i', voice.author.mark), document.createTextNode(voice.author.name));
+    key.append(second);
+  }
+  const live = el('p', 'readout', 'Point at words in the article, or at a mark on the map, to see how close their passages are.');
+  box.append(map, key, live, aroundBlock(article), mapNotes(article));
+
+  // The exact numbers the map approximates.
+  const order = [...article.sources].sort((a, b) => Math.min(...memberOf(article, a).feeds.map(key => key === 'single' ? 99 : claimOf(article, key).number)) - Math.min(...memberOf(article, b).feeds.map(key => key === 'single' ? 99 : claimOf(article, key).number)))
+    .concat(article.members.filter(member => !member.used).map(member => member.ref));
+  const cell = 24, pad = 46, size = pad + order.length * cell + 2, pairs = fusedPairs(article), span = article.map.highest - article.map.lowest;
+  const grid = svg('svg', {width: size, height: size, viewBox: '0 0 ' + size + ' ' + size, role: 'group', 'aria-label': 'Cosine similarity between every two passages of the section'});
+  order.forEach((ref, i) => {
+    grid.append(svg('text', {x: pad - 6, y: pad + i * cell + 15, 'text-anchor': 'end'}, ref));
+    grid.append(svg('text', {x: 0, y: 0, transform: 'translate(' + (pad + i * cell + 15) + ' ' + (pad - 6) + ') rotate(-55)'}, ref));
+    order.forEach((other, j) => {
+      if (i === j) return;
+      const value = cosine(article, ref, other), together = pairs.get([ref, other].sort().join('|'));
+      const square = svg('rect', {x: pad + j * cell + 1, y: pad + i * cell + 1, width: cell - 2, height: cell - 2, rx: 3, tabindex: '0', role: 'img',
+        'fill-opacity': (0.06 + 0.84 * (value - article.map.lowest) / span).toFixed(3), class: together ? 'fusedpair' : '',
+        'aria-label': ref + ' and ' + other + ': cosine similarity ' + value.toFixed(2) + (together ? ', fused in claim ' + together.join(', ') : '')});
+      tip(square, () => {
+        const card = el('div');
+        card.append(el('p', 'tip-head', ref + ' and ' + other), el('p', 'tip-row', 'Cosine similarity: ' + value.toFixed(2)),
+          el('p', 'tip-note', together ? 'Fused together in claim ' + together.join(', ') + '.' : 'Not fused together.'));
+        return card;
+      });
+      grid.append(square);
+    });
+  });
+  const more = el('details'), table = el('div', 'matrix'), scale = el('p', 'key'), ring = el('span');
+  more.dataset.keep = 'matrix-' + article.number;
+  table.append(grid);
+  ring.append(el('i', 'ring'), document.createTextNode('fused in the same claim'));
+  scale.append(el('span', '', 'Darker is closer: ' + article.map.lowest.toFixed(2) + ' to ' + article.map.highest.toFixed(2) + ' (1 would be identical)'), ring);
+  more.append(el('summary', '', 'Exact similarity of every pair'), table, scale);
+  box.append(more);
+  return box;
+}
+
+const claimParts = (article, claim) => supportOf(article, claim).flatMap(piece => (piece.gives || []).map(words => ({words, ids: [piece.id]})));
 
 // Split a sentence into components by which quotes back which words. One quote may back several components.
 function phrases(text, parts) {
@@ -418,11 +838,11 @@ function tip(node, build) {
     if (node.getAttribute('aria-pressed') === 'true') return;   // its quotes are already open just below
     tipBox.replaceChildren(build());
     tipBox.hidden = false;
-    const rects = node.getClientRects(), rect = rects[rects.length - 1], width = tipBox.offsetWidth, height = tipBox.offsetHeight;
+    const rects = node.getClientRects().length ? node.getClientRects() : [node.getBoundingClientRect()], rect = rects[rects.length - 1], width = tipBox.offsetWidth, height = tipBox.offsetHeight;
     const leftEdge = Math.min(Math.max(8, rect.left), document.documentElement.clientWidth - width - 8);
     const below = rect.bottom + 8 + height < window.innerHeight || rect.top < height + 16;
     tipBox.style.left = (leftEdge + window.scrollX) + 'px';
-    tipBox.style.top = ((below ? rect.bottom + 8 : node.getClientRects()[0].top - height - 8) + window.scrollY) + 'px';
+    tipBox.style.top = ((below ? rect.bottom + 8 : rects[0].top - height - 8) + window.scrollY) + 'px';
   };
   node.addEventListener('mouseenter', show);
   node.addEventListener('mouseleave', hideTip);
@@ -458,20 +878,42 @@ function breakdown(article, segs, index) {
 }
 
 // One sentence, drawn component by component. Every backed component carries its passages, so several sources show at once.
+// Clauses an added author contributes to one of the article's own sentences ('statement' or a claim id).
+const amendsFor = (article, target) => voicesOn(article).flatMap(voice => (voice.amend || []).filter(clause => clause.target === target).map(clause => ({...clause, author: voice.key})));
+function sentenceSegs(article, text, parts, target) {
+  const amends = target ? amendsFor(article, target) : [];
+  const segs = phrases(amends.length ? text.replace(/\.\s*$/, '') : text, parts);
+  for (const amend of amends) segs.push({text: amend.t, ids: amend.ids, amend});
+  if (amends.length) segs.push({text: '.', ids: []});
+  return segs;
+}
+const VERB = {adds: 'adds', changes: 'changes', challenges: 'challenges'};
 function sentenceNode(article, o) {
   const sentence = el('p', 'sent' + (o.cls ? ' ' + o.cls : ''));
-  const segs = phrases(o.text, o.parts), open = openKey(article) === o.key, gone = removedOf(article);
+  const segs = sentenceSegs(article, o.text, o.parts, o.target), open = openKey(article) === o.key, gone = removedOf(article);
   segs.forEach((seg, index) => {
-    const lead = seg.text.match(/^\s*/)[0], tail = seg.text.match(/\s*$/)[0], body = seg.text.trim();
+    const lead = seg.text.match(seg.amend ? /^[\s,;:—–-]*/ : /^\s*/)[0], tail = seg.text.match(/\s*$/)[0], body = seg.text.slice(lead.length).trim();
     if (!/[\p{L}\p{N}]/u.test(body)) { sentence.append(seg.text); return; }
     const refs = refsOf(article, seg.ids), dead = o.lost || (refs.length > 0 && refs.every(ref => gone.has(ref)));
-    const span = el('span', 'sg M' + (refs.length > 1 ? ' many' : refs.length ? '' : ' join') + (dead ? ' gone' : ''), body);
+    const span = el('span', 'sg' + (refs.length ? '' : ' join') + (dead ? ' gone' : '') + (seg.amend ? ' add' + (state.fresh === seg.amend.author ? ' fresh' : '') : ''), body);
     span.dataset.k = o.base + '-' + index;
     span.setAttribute('aria-pressed', String(open && state.sel.p === index));
-    press(span, body + ': ' + (refs.length ? 'from ' + refs.join(', ') : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index));
+    press(span, (seg.amend ? authorByKey(seg.amend.author).name + ' ' + VERB[seg.amend.kind] + ': ' : '') + body + ': ' + (refs.length ? 'from ' + refs.join(', ') : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index));
     tip(span, () => breakdown(article, segs, index));
-    sentence.append(lead, span);
-    if (state.tags && refs.length) {
+    if (refs.length) {
+      span.dataset.refs = refs.join('|');
+      lines(span, refs.filter(ref => !gone.has(ref)).map(ref => ({c: hue(article, ref), kind: authorOfRef(ref) ? authorOfRef(ref).line : 'solid'})));
+      span.addEventListener('mouseenter', () => onMap(article, refs));
+      span.addEventListener('mouseleave', () => onMap(article, null));
+    }
+    sentence.append(lead);
+    if (seg.amend) {
+      const author = authorByKey(seg.amend.author), tag = el('span', 'who inl');
+      tag.append(el('i', 'dot ' + author.mark), document.createTextNode(author.name + ' ' + VERB[seg.amend.kind]));
+      sentence.append(tag);
+    }
+    sentence.append(span);
+    if (o.numbers && state.tags && refs.length) {
       const tag = el('sup', 'src', refs.join(' · '));
       tag.setAttribute('aria-hidden', 'true');
       sentence.append(tag);
@@ -480,24 +922,47 @@ function sentenceNode(article, o) {
   });
   return {sentence, segs};
 }
+// The top line of a card: what the bit is, and whose it is. Names appear only while an added author is switched on.
+function cardHead(article, label, marcus, keys) {
+  const head = el('div', 'card-head');
+  head.append(el('p', 'label', label));
+  if (voicesOn(article).length) {
+    const tags = el('span', 'whos');
+    if (marcus) tags.append(el('span', 'who', 'Aurelius'));
+    for (const key of keys) {
+      const author = authorByKey(key), tag = el('span', 'who added');
+      tag.append(el('i', 'dot ' + author.mark), document.createTextNode(author.name));
+      tags.append(tag);
+    }
+    head.append(tags);
+  }
+  return head;
+}
 
 // One quoted passage with its conclusion beside it: Marcus's words on the left, what follows from them on the right.
 function passageRow(article, piece, hit, mode) {
   const gone = removedOf(article).has(piece.ref);
   const row = el('div', 'link pair' + (gone ? ' removed' : '') + (hit ? ' hit' : ''));
+  row.style.setProperty('--c', hue(article, piece.ref));
   const said = el('div', 'said'), then = el('div', 'then');
-  said.append(el('b', '', 'Meditations ' + piece.ref + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
+  const source = piece.author ? addedPassage(article, piece.ref) : null;
+  said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
   then.append(el('b', '', 'What follows'), el('p', 'follows', piece.follows));
   if (mode === 'claim' && piece.gives && piece.gives.length) {
     const gives = el('p', 'gives');
     gives.append(el('i', '', 'Gives the claim: '), document.createTextNode(piece.gives.map(words => '“' + words + '”').join(' and ')));
     then.append(gives);
   }
-  if (mode === 'statement') {
+  if (mode === 'statement' && !piece.author) {
     const claim = piece.in === 'single' ? null : claimOf(article, piece.in);
     then.append(el('p', 'gives', claim ? 'Also behind claim ' + claim.number + ' · ' + claim.role : 'Said once'));
   }
   if (mode === 'claim' && piece.note) then.append(el('p', 'gives', piece.note));
+  if (source) {
+    const voice = voiceOfRef(article, piece.ref);
+    then.append(el('p', 'gives', 'Vectors: ' + source.nearest.similarity.toFixed(2) + ' to its nearest passage here (' + source.nearest.ref + '). Number ' + source.rank.toLocaleString('en') + ' of ' + voice.total.toLocaleString('en')
+      + ' passages of ' + voice.author.name + ' for closeness to this section.' + (source.rank > 200 ? ' Found by reading, not by the vectors.' : '')));
+  }
   row.append(said, then);
   return row;
 }
@@ -518,20 +983,22 @@ function showButton(article, key, open, more, less) {
 function statementBlock(article) {
   const st = article.statement, key = 'statement', open = openKey(article) === key, gone = removedOf(article);
   const box = el('div', 'statement');
+  box.dataset.anchor = 'st' + article.number;
   box.append(el('p', 'label', 'The statement · ' + st.kind));
-  const {sentence, segs} = sentenceNode(article, {text: st.t, parts: st.parts, key, base: 'st-' + article.number, cls: 'big'});
+  const {sentence, segs} = sentenceNode(article, {text: st.t, parts: st.parts, key, base: 'st-' + article.number, cls: 'big', numbers: true, target: 'statement'});
+  box.dataset.amended = amendsFor(article, 'statement').map(clause => clause.author + ':' + clause.kind).join(' ');
   box.append(sentence);
   const refs = [...new Set(st.parts.flatMap(part => part.refs))];
   const from = el('p', 'fused');
   from.append(el('b', '', 'Gathered from ' + plural(refs.length, 'passage')));
-  for (const ref of refs) from.append(el('span', gone.has(ref) ? 'out' : '', ref));
+  for (const ref of refs) from.append(refChip(article, ref, gone.has(ref)));
   from.append(showButton(article, key, open, 'Show part by part', 'Hide the parts'));
   box.append(from);
   if (open) {
     const chosen = state.sel.p != null ? segs[state.sel.p] : null;
     const panel = el('div', 'trace M');
     panel.append(el('p', 'panel-head', 'The statement, part by part'), columns());
-    for (const part of st.parts) {
+    for (const part of [...st.parts, ...amendsFor(article, 'statement').map(clause => ({words: clause.t.replace(/^[\s,;:—–-]+/, ''), ids: clause.ids}))]) {
       const hit = Boolean(chosen && chosen.ids.length && part.ids.every(id => chosen.ids.includes(id)));
       const group = el('div', 'part' + (hit ? ' hit' : ''));
       group.append(el('p', 'part-words', '“' + part.words + '”' + (hit ? ' · the words you picked' : '')));
@@ -549,19 +1016,36 @@ function claimBlock(article, claim) {
   const lost = remaining.length === 0, thin = !lost && remaining.length === 1;
   const key = claim.id, open = openKey(article) === key;
   const block = el('li', 'claim' + (lost ? ' lost' : ''));
-  block.append(el('p', 'label', claim.number + ' · ' + claim.role));
-  const {sentence, segs} = sentenceNode(article, {text: claim.t, parts: claimParts(claim), key, base: 'claim-' + article.number + '-' + key, lost});
+  block.dataset.anchor = article.number + ':' + claim.id;
+  const helpers = voicesOn(article).filter(voice => voice.items.some(item => item.claim === claim.id) || (voice.amend || []).some(clause => clause.target === claim.id)).map(voice => voice.key);
+  block.append(cardHead(article, claim.number + ' · ' + claim.role, true, helpers));
+  const {sentence, segs} = sentenceNode(article, {text: claim.t, target: claim.id, parts: claimParts(article, claim), key, base: 'claim-' + article.number + '-' + key, lost});
   const chosen = open && state.sel.p != null ? segs[state.sel.p] : null;
   block.append(sentence);
   const from = el('p', 'fused' + (thin || lost ? ' warn' : ''));
   from.append(el('b', '', lost ? 'No passage left' : thin ? 'Now rests on one passage' : 'Fused from ' + plural(claim.passages.length, 'passage')));
-  for (const ref of claim.passages) from.append(el('span', gone.has(ref) ? 'out' : '', ref));
+  for (const ref of claim.passages) from.append(refChip(article, ref, gone.has(ref)));
+  for (const voice of voicesOn(article)) {
+    const backs = voice.items.filter(item => item.effect === 'stronger' && item.claim === claim.id).map(item => item.piece.ref);
+    const clauses = (voice.amend || []).filter(clause => clause.target === claim.id);
+    if (backs.length) block.dataset.stronger = ((block.dataset.stronger || '') + ' ' + voice.key).trim();
+    if (clauses.length) block.dataset.challenged = ((block.dataset.challenged || '') + ' ' + voice.key).trim();
+    const second = [...new Set([...backs, ...clauses.flatMap(clause => clause.ids.map(id => pieceOf(article, id).ref))])];
+    if (!second.length) continue;
+    const plus = el('b', 'plus' + (state.fresh === voice.key ? ' fresh' : ''), '+ ' + voice.author.name);
+    from.append(plus);
+    for (const ref of second) {
+      const chip = refChip(article, ref, false);
+      if (state.fresh === voice.key) chip.classList.add('fresh');
+      from.append(chip);
+    }
+  }
   from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
   block.append(from);
   if (open) {
     const panel = el('div', 'trace M');
     panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns());
-    for (const piece of claim.support) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
+    for (const piece of supportOf(article, claim)) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
     const shared = el('div', 'link induce');
     shared.append(el('b', '', 'Taken together'), document.createTextNode(claim.shared));
     panel.append(shared);
@@ -570,18 +1054,154 @@ function claimBlock(article, claim) {
       changed.append(el('b', '', 'What the fusion changed'), document.createTextNode(claim.changed));
       panel.append(changed);
     }
+    for (const item of addedItems(article, 'qualified').filter(entry => entry.claim === claim.id)) {
+      const differs = el('div', 'link induce');
+      differs.append(el('b', '', authorByKey(item.author).name + ' challenges this'), document.createTextNode(item.t));
+      for (const piece of item.support) if (!supportOf(article, claim).some(row => row.id === piece.id)) panel.append(passageRow(article, piece, false, 'claim'));
+      panel.append(differs);
+    }
     panel.append(el('p', 'near', 'Closeness of these ' + claim.passages.length + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'));
     block.append(panel);
   }
   return block;
 }
 
+// Something Marcus does not say in this section, added from another author under one of the five labels.
+function widerBlock(article, item) {
+  const key = widerKey(item), open = openKey(article) === key, name = authorByKey(item.author).name;
+  const block = el('li', 'claim sen' + (state.fresh === item.author ? ' fresh' : ''));
+  block.dataset.voice = item.author;
+  block.dataset.anchor = article.number + ':' + key;
+  block.append(cardHead(article, item.role, false, [item.author]));
+  const {sentence, segs} = sentenceNode(article, {text: item.t, parts: widerParts(item), key, base: 'wider-' + article.number + '-' + item.author + '-' + item.key, cls: 'small'});
+  const chosen = open && state.sel.p != null ? segs[state.sel.p] : null;
+  const from = el('p', 'fused'), refs = [...new Set(item.support.map(piece => piece.ref))];
+  from.append(el('b', '', refs.length > 1 ? 'Fused from ' + refs.length + ' passages of ' + name : 'One passage of ' + name));
+  for (const ref of refs) from.append(refChip(article, ref, false));
+  from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
+  block.append(sentence, from);
+  if (open) {
+    const panel = el('div', 'trace M');
+    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns());
+    for (const piece of item.support) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
+    const why = el('div', 'link induce');
+    why.append(el('b', '', 'Why it is added'), document.createTextNode(item.why));
+    panel.append(why);
+    block.append(panel);
+  }
+  return block;
+}
+
+// "If you add Seneca, this article becomes ...": what one added author does to one article, and a way to walk through the changes.
+function voiceStrip(article, voice) {
+  const on = state.voices.has(voice.key), author = voice.author, box = el('div', 'sen-strip' + (on ? ' on' : ''));
+  box.dataset.anchor = 'strip' + article.number + voice.key;
+  const tag = el('span', 'who added');
+  tag.append(el('i', 'dot ' + author.mark), document.createTextNode(on ? 'With ' + author.name : 'If you add ' + author.name));
+  box.append(tag, el('p', 'becomes', on ? voice.statement : voice.becomes));
+  const row = el('p', 'fused');
+  for (const effect of D.effects) {
+    const count = voice.counts[effect.key];
+    if (!count) continue;
+    if (!on) { const plain = el('span', '', effect.name + ' ' + count); plain.title = effect.asks; row.append(plain); continue; }
+    const chip = el('button', 'jump', effect.name + ' ' + count);
+    chip.type = 'button';
+    chip.title = effect.asks;
+    chip.setAttribute('aria-label', 'Show where ' + author.name + ' ' + effect.name.toLowerCase() + ' in this article, ' + count + ' places');
+    chip.addEventListener('click', () => reveal(article, voice.key, effect.key));
+    row.append(chip);
+  }
+  const button = el('button', 'show', on ? 'Take out' : 'Add');
+  button.type = 'button';
+  button.dataset.k = 'voice-' + article.number + '-' + voice.key;
+  button.setAttribute('aria-pressed', String(on));
+  button.setAttribute('aria-label', (on ? 'Take ' + author.name + ' out of' : 'Add ' + author.name + ' to') + ' every article');
+  button.addEventListener('click', () => setVoice(voice.key, !on, button.dataset.k));
+  row.append(button);
+  box.append(row);
+  return box;
+}
+
+// Walk the reader to what an added author changed: scroll to the first place and let all of them pulse once.
+function reveal(article, key, effect) {
+  const root = document.getElementById('article-' + article.number), kinds = effect === 'wider' ? ['adds'] : effect === 'qualified' ? ['changes', 'challenges'] : [];
+  const found = effect === 'stronger' ? [...root.querySelectorAll('li.claim[data-stronger~="' + key + '"]')]
+    : effect === 'wider' ? [...root.querySelectorAll('li.claim.sen[data-voice="' + key + '"]')] : [...root.querySelectorAll('li.claim[data-challenged~="' + key + '"]')];
+  const top = root.querySelector('.statement');
+  if (kinds.some(kind => top.dataset.amended.split(' ').includes(key + ':' + kind))) found.unshift(top);
+  for (const node of found) { node.classList.remove('flash'); void node.offsetWidth; node.classList.add('flash'); }
+  if (found.length) found[0].scrollIntoView({block: 'center', inline: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  announce(found.length + ' places in Article ' + article.number + '.');
+}
+
+// Switch an added author on or off everywhere, keeping the reader's place on the page.
+function anchorNow() {
+  // Look at a few points across the upper part of the screen and hold on to the most specific thing found there.
+  let best = [];
+  for (const x of [0.5, 0.25, 0.75, 0.12, 0.88]) {
+    for (const y of [0.3, 0.42, 0.2]) {
+      const probe = document.elementFromPoint(innerWidth * x, Math.max(120, innerHeight * y)), marks = [];
+      for (let node = probe && probe.closest('[data-anchor]'); node; node = node.parentElement && node.parentElement.closest('[data-anchor]')) {
+        marks.push({key: node.dataset.anchor, top: node.getBoundingClientRect().top});
+      }
+      if (marks.length > best.length) best = marks;
+    }
+  }
+  return best;
+}
+function setVoice(key, on, focusKey) {
+  const anchor = anchorNow(), author = authorByKey(key);
+  if (on) state.voices.add(key); else state.voices.delete(key);
+  if (!on && state.sel && state.sel.k.startsWith('w:' + key + ':')) state.sel = null;
+  state.fresh = on ? key : null;
+  for (const article of D.articles) renderArticle(article.number);
+  state.fresh = null;
+  const now = new Map([...document.querySelectorAll('[data-anchor]')].map(node => [node.dataset.anchor, node]));
+  const held = anchor.find(mark => now.has(mark.key));
+  if (held) window.scrollBy({top: now.get(held.key).getBoundingClientRect().top - held.top, behavior: 'instant'});
+  renderDock();
+  if (focusKey) document.querySelector('[data-k="' + focusKey + '"]')?.focus({preventScroll: true});
+  const total = effect => D.all.reduce((sum, article) => sum + (article.voices[key] ? article.voices[key].counts[effect] : 0), 0);
+  const text = on ? author.name + ' added: backs ' + total('stronger') + ' places, adds ' + total('wider') + ', challenges ' + total('qualified') : author.name + ' taken out';
+  announce(text + '.');
+  toast(text);
+}
+let toastTimer = 0;
+function toast(text) {
+  const note = document.getElementById('dock-note');
+  note.textContent = text;
+  note.classList.add('on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => note.classList.remove('on'), 3600);
+}
+// The dock: who is in the room. Marcus always; each added author is one tap.
+function renderDock() {
+  const box = document.getElementById('voices');
+  const base = el('span', 'voice base', 'Marcus');
+  base.title = 'The Meditations are the base text and cannot be switched off';
+  box.replaceChildren(base);
+  for (const author of D.authors) {
+    const on = state.voices.has(author.key), button = el('button', 'voice');
+    button.type = 'button';
+    button.dataset.k = 'dock-' + author.key;
+    button.setAttribute('aria-pressed', String(on));
+    button.setAttribute('aria-label', (on ? 'Take out ' : 'Add ') + author.name + ', ' + author.work);
+    button.append(el('i', 'dot ' + author.mark), document.createTextNode((on ? '' : '+ ') + author.name));
+    button.addEventListener('click', () => setVoice(author.key, !on, button.dataset.k));
+    box.append(button);
+  }
+}
+
 function singleBlock(article, item) {
   const key = 's:' + item.id, open = openKey(article) === key, lost = removedOf(article).has(item.ref);
   const block = el('li', 'claim once' + (lost ? ' lost' : ''));
-  block.append(el('p', 'label', item.label + ' · said once'));
+  block.append(cardHead(article, item.label + ' · said once', true, []));
   const sentence = el('p', 'sent small');
-  const span = el('span', 'sg S' + (lost ? ' gone' : ''), item.t);
+  const span = el('span', 'sg' + (lost ? ' gone' : ''), item.t);
+  span.dataset.refs = item.ref;
+  if (!lost) lines(span, [{c: hue(article, item.ref), kind: 'dash'}]);
+  span.addEventListener('mouseenter', () => onMap(article, [item.ref]));
+  span.addEventListener('mouseleave', () => onMap(article, null));
   span.dataset.k = ['single', article.number, item.id].join('-');
   span.setAttribute('aria-pressed', String(open));
   press(span, 'Said once, in ' + item.ref + ': ' + item.t, () => toggle(article, key, span.dataset.k));
@@ -591,12 +1211,9 @@ function singleBlock(article, item) {
     return box;
   });
   sentence.append(span);
-  if (state.tags) {
-    const tag = el('sup', 'src S', item.ref);
-    tag.setAttribute('aria-hidden', 'true');
-    sentence.append(tag);
-  }
-  block.append(sentence);
+  const from = el('p', 'fused');
+  from.append(el('b', '', 'One passage'), refChip(article, item.ref, lost));
+  block.append(sentence, from);
   if (open) {
     const panel = el('div', 'trace S');
     panel.append(columns(), passageRow(article, item, false, 'single'));
@@ -614,13 +1231,17 @@ function sourcesBlock(article) {
   box.append(el('p', '', 'Built from ' + article.sources.length + ' of the ' + article.section_size + ' passages in its section. Tap one to take it away and see which claims weaken.'));
   const chips = el('div', 'chips');
   for (const ref of article.sources) {
-    const feeds = article.claims.filter(claim => claim.passages.includes(ref)).map(claim => claim.number);
+    const feeds = article.claims.filter(claim => claim.passages.includes(ref)).map(claim => claim.number).sort((x, y) => x - y);
     const chip = el('button', 'chip');
     chip.type = 'button';
     chip.dataset.k = 'chip-' + article.number + '-' + ref;
     chip.setAttribute('aria-pressed', String(gone.has(ref)));
     chip.setAttribute('aria-label', (gone.has(ref) ? 'Restore passage ' : 'Remove passage ') + ref);
-    chip.append(el('b', '', ref), el('small', '', feeds.length ? 'claim' + (feeds.length > 1 ? 's ' : ' ') + feeds.join(', ') : 'said once'));
+    const name = el('b');
+    name.append(dot(article, ref), document.createTextNode(ref));
+    chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
+    chip.addEventListener('mouseleave', () => spotlight(article, null));
+    chip.append(name, el('small', '', feeds.length ? 'claim' + (feeds.length > 1 ? 's ' : ' ') + feeds.join(', ') : 'said once'));
     chip.addEventListener('click', () => {
       const next = new Set(gone);
       if (next.has(ref)) next.delete(ref); else next.add(ref);
@@ -666,6 +1287,7 @@ function membersBlock(article) {
       if (piece.at < cursor) continue;
       quote.append(flat(member.text.slice(cursor, piece.at)));
       const mark = el('mark', '', flat(piece.quote));
+      mark.style.setProperty('--c', hue(article, member.ref));
       mark.append(el('sup', '', piece.in === 'single' ? 'once' : String(claimOf(article, piece.in).number)));
       quote.append(mark);
       cursor = piece.at + piece.quote.length;
@@ -679,27 +1301,52 @@ function membersBlock(article) {
 
 function articleCard(article) {
   const wrap = el('article', 'article');
+  wrap.dataset.anchor = 'a' + article.number;
   wrap.id = 'article-' + article.number;
   const leaf = el('div', 'leaf');
   leaf.append(el('p', 'eyebrow', 'Article ' + article.number), el('h3', '', article.title));
-  leaf.append(statementBlock(article));
+  const top = el('div', 'body'), lead = el('div', 'lead-col');
+  lead.append(statementBlock(article));
+  for (const voice of voicesOf(article)) lead.append(voiceStrip(article, voice));
+  lead.append(sourcesBlock(article));
+  top.append(lead, mapBlock(article));
+  leaf.append(top);
+  // On a phone the five sides are a long list, so a row of tabs stays in reach and shows where an added author contributes.
+  const tabs = el('nav', 'tabs');
+  tabs.setAttribute('aria-label', 'Sides of Article ' + article.number);
+  for (const group of article.groups) {
+    const extra = addedItems(article, 'wider').filter(item => item.label === group.key), count = group.items.length + extra.length;
+    const tab = el('button', count ? '' : 'none');
+    tab.type = 'button';
+    tab.dataset.g = group.key;
+    tab.append(document.createTextNode(group.name), el('small', '', String(count)));
+    for (const key of new Set(extra.map(item => item.author))) tab.append(el('i', 'dot ' + authorByKey(key).mark));
+    tab.setAttribute('aria-label', group.name + ', ' + count + (count === 1 ? ' item' : ' items') + (extra.length ? ', ' + extra.length + ' added' : ''));
+    tab.addEventListener('click', () => document.querySelector('#article-' + article.number + ' .grp[data-g="' + group.key + '"]').scrollIntoView({block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}));
+    tabs.append(tab);
+  }
+  top.append(tabs);
   const sides = el('div', 'grps');
   const openNow = openKey(article);
   for (const group of article.groups) {
-    const part = el('section', 'grp' + (group.empty ? ' none' : '') + (group.items.some(id => id === openNow || 's:' + id === openNow) ? ' open' : ''));
+    const extra = addedItems(article, 'wider').filter(item => item.label === group.key), bare = Boolean(group.empty) && !extra.length;
+    const part = el('section', 'grp' + (bare ? ' none' : '') + (group.items.some(id => id === openNow || 's:' + id === openNow) || extra.some(item => widerKey(item) === openNow) ? ' open' : ''));
+    part.dataset.g = group.key;
+    part.dataset.anchor = 'g' + article.number + group.key;
     const head = el('h4', 'grp-head');
     head.append(el('b', '', group.name), el('span', '', group.asks));
     part.append(head);
-    if (group.empty) part.append(el('p', 'grp-empty', group.empty));
+    if (bare) part.append(el('p', 'grp-empty', group.empty));
     else {
+      if (group.empty) part.append(el('p', 'grp-empty', 'Marcus has no passage here. What follows comes from ' + [...new Set(extra.map(item => authorByKey(item.author).name))].join(' and ') + '.'));
       const list = el('ol', 'claims');
       for (const id of group.items) list.append(claimOf(article, id) ? claimBlock(article, claimOf(article, id)) : singleBlock(article, article.single.find(item => item.id === id)));
+      for (const item of extra) list.append(widerBlock(article, item));
       part.append(list);
     }
     sides.append(part);
   }
-  leaf.append(sides);
-  leaf.append(sourcesBlock(article));
+  top.append(sides);
   wrap.append(leaf);
 
   const hand = el('div', 'hand');
@@ -744,43 +1391,78 @@ function renderArticle(number, focusKey) {
   for (const node of fresh.querySelectorAll('details')) {
     if (open.has(node.dataset.keep || node.querySelector('.ref')?.textContent)) node.open = true;
   }
-  const slid = old.querySelector('.grps').scrollLeft;
+  const slid = old.querySelector('.sci').scrollTop;
   old.replaceWith(fresh);
-  // Side by side, the open column widens; keep the reader's place and bring that column into view.
-  const sides = fresh.querySelector('.grps'), wide = fresh.querySelector('.grp.open');
-  sides.scrollLeft = slid;
-  if (wide && sides.scrollWidth > sides.clientWidth) {
-    const from = wide.offsetLeft - sides.offsetLeft;
-    if (from < sides.scrollLeft || from + wide.offsetWidth > sides.scrollLeft + sides.clientWidth) sides.scrollLeft = from;
-  }
+  fresh.querySelector('.sci').scrollTop = slid;
+  onMap(articleOf(number), null);
+  markTabs();
   if (focusKey) fresh.querySelector('[data-k="' + focusKey + '"]')?.focus({preventScroll: true});
   syncUrl();
 }
 
+// Mark the tab of the side the reader is in.
+let tabTick = false;
+function markTabs() {
+  tabTick = false;
+  for (const tabs of document.querySelectorAll('.tabs')) {
+    const rect = tabs.parentElement.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > innerHeight || !tabs.offsetParent) continue;
+    let active = null;
+    for (const side of tabs.parentElement.querySelectorAll('.grp')) if (side.getBoundingClientRect().top < 170) active = side.dataset.g;
+    for (const tab of tabs.children) {
+      const now = tab.dataset.g === active;
+      if ((tab.getAttribute('aria-current') === 'true') !== now) {
+        tab.setAttribute('aria-current', String(now));
+        if (now) tabs.scrollTo({left: tab.offsetLeft - 16, behavior: 'smooth'});
+      }
+    }
+  }
+}
+addEventListener('scroll', () => { if (!tabTick) { tabTick = true; requestAnimationFrame(markTabs); } }, {passive: true});
+
 function verdictLines() {
   const all = readVerdicts();
-  return D.articles.map(article => ({label: 'Article ' + article.number + ' · ' + article.title, value: all['article-' + article.number] || 'Open'}));
+  return D.all.map(article => ({chapter: chapterById(article.chapter), label: 'Article ' + article.number + ' · ' + article.title, value: all['article-' + article.number] || 'Open'}));
 }
 function renderVerdicts() {
-  document.getElementById('mine').replaceChildren(...verdictLines().map(line => {
+  const rows = [];
+  let last = null;
+  for (const line of verdictLines()) {
+    if (line.chapter !== last) { rows.push(el('li', 'ch', 'Chapter ' + line.chapter.order + ' · ' + line.chapter.title)); last = line.chapter; }
     const row = el('li');
     row.append(el('span', '', line.label), el('span', '', line.value));
-    return row;
-  }));
+    rows.push(row);
+  }
+  document.getElementById('mine').replaceChildren(...rows);
 }
 
 function syncUrl() {
   const query = new URLSearchParams();
+  if (state.chapter && state.chapter !== D.chapters[0].id) query.set('c', state.chapter);
   if (state.sel) query.set('at', state.sel.a + '.' + state.sel.k);
   const gone = Object.entries(state.removed).filter(([, refs]) => refs.size).map(([number, refs]) => number + ':' + [...refs].join(','));
   if (gone.length) query.set('without', gone.join(';'));
+  if (state.voices.size) query.set('with', [...state.voices].sort().join(','));
   const search = query.toString();
   try { history.replaceState(null, '', location.pathname + (search ? '?' + search : '') + location.hash); } catch { /* file:// */ }
 }
-function readUrl() {
+// Which authors are on: read before anything is drawn.
+function readVoices() {
+  const query = new URLSearchParams(location.search);
+  for (const key of (query.get('with') || '').split(',')) if (D.authors.some(author => author.key === key)) state.voices.add(key);
+}
+// Which chapter to open: ?c, else the chapter of the article in ?at or in the #hash, else the first.
+function readChapter() {
+  const query = new URLSearchParams(location.search), stub = number => D.all.find(article => article.number === number);
+  if (chapterById(query.get('c'))?.sections.some(section => section.article)) return query.get('c');
+  const named = stub(Number((query.get('at') || '').split('.')[0])) || stub(Number((location.hash.match(/^#article-(\d+)$/) || [])[1]));
+  return named ? named.chapter : (D.all[0] ? D.all[0].chapter : D.chapters[0].id);
+}
+// What was open and what was removed: read once the chapter's articles are in.
+function readSelection() {
   const query = new URLSearchParams(location.search);
   const at = query.get('at') || '', a = Number(at.split('.')[0]), k = at.slice(at.indexOf('.') + 1), target = articleOf(a);
-  if (target && (k === 'statement' || target.claims.some(claim => claim.id === k) || target.single.some(item => 's:' + item.id === k))) state.sel = {a, k};
+  if (target && (k === 'statement' || addedItems(target, 'wider').some(item => widerKey(item) === k) || target.claims.some(claim => claim.id === k) || target.single.some(item => 's:' + item.id === k))) state.sel = {a, k};
   for (const part of (query.get('without') || '').split(';')) {
     const [number, refs] = part.split(':');
     const article = articleOf(Number(number));
@@ -788,14 +1470,40 @@ function readUrl() {
   }
 }
 
-function render() {
-  renderTopics();
-  const first = D.chapters[0];
-  document.getElementById('a-head').textContent = 'Chapter 1 · ' + first.title;
-  document.getElementById('a-sub').textContent = D.chapter_order_note;
-  const jump = document.getElementById('jump');
-  jump.append(el('span', '', 'Article'));
-  for (const article of D.articles) {
+const chapterById = id => D.chapters.find(chapter => chapter.id === id);
+function decorate(articles) {
+  for (const article of articles) {
+    for (const author of D.authors) {
+      const voice = article.voices[author.key];
+      if (!voice) continue;
+      voice.key = author.key;
+      voice.author = author;
+      for (const item of voice.items) item.author = author.key;
+    }
+  }
+  return articles;
+}
+function loadChapter(id) {
+  if (CHAPTERS.has(id)) return Promise.resolve(CHAPTERS.get(id));
+  return fetch('stoic-constitution/' + id + '.json').then(response => {
+    if (!response.ok) throw new Error('the server answered ' + response.status);
+    return response.json();
+  }).then(data => {
+    CHAPTERS.set(id, decorate(data.articles));
+    return CHAPTERS.get(id);
+  });
+}
+// The sticky bar: the chapter picker, the chapter's article numbers, Topics and the Sources switch.
+function renderBar() {
+  const jump = document.getElementById('jump'), chapter = chapterById(state.chapter), stubs = D.all.filter(article => article.chapter === state.chapter);
+  const pick = el('button', 'chap-btn', 'Chapter ' + chapter.order);
+  pick.type = 'button';
+  pick.setAttribute('aria-expanded', 'false');
+  pick.setAttribute('aria-controls', 'chapters');
+  pick.setAttribute('aria-label', 'Chapter ' + chapter.order + ', ' + chapter.title + '. Choose another chapter');
+  pick.addEventListener('click', () => toggleChapters());
+  jump.replaceChildren(pick, el('span', '', 'Article'));
+  for (const article of stubs) {
     const link = el('a', '', String(article.number));
     link.href = '#article-' + article.number;
     link.setAttribute('aria-label', 'Article ' + article.number + ', ' + article.title);
@@ -806,7 +1514,7 @@ function render() {
   const tags = el('button', 'tagsw', 'Sources');
   tags.type = 'button';
   tags.setAttribute('aria-pressed', String(state.tags));
-  tags.setAttribute('aria-label', 'Show passage numbers in the text');
+  tags.setAttribute('aria-label', 'Show passage numbers on each statement');
   tags.addEventListener('click', () => {
     state.tags = !state.tags;
     try { localStorage.setItem(TAGS, state.tags ? 'on' : 'off'); } catch { /* private mode */ }
@@ -815,13 +1523,88 @@ function render() {
     announce('Passage numbers in the text are ' + (state.tags ? 'shown.' : 'hidden.'));
   });
   jump.append(topics, tags);
-  document.getElementById('list').replaceChildren(...D.articles.map(articleCard));
-  renderVerdicts();
-  if (state.sel && !location.hash) document.getElementById('article-' + state.sel.a).scrollIntoView();
+  const list = el('ol');
+  for (const item of D.chapters) {
+    const count = D.all.filter(article => article.chapter === item.id).length, button = el('button');
+    button.type = 'button';
+    button.disabled = !count;
+    button.setAttribute('aria-current', String(item.id === state.chapter));
+    button.append(el('b', '', String(item.order)), el('span', '', item.title), el('small', '', count ? plural(count, 'article') : 'no articles yet'));
+    button.addEventListener('click', () => { toggleChapters(false); if (item.id !== state.chapter) openChapter(item.id, {to: 'top'}); });
+    const row = el('li');
+    row.append(button);
+    list.append(row);
+  }
+  const inner = el('div', 'wrap');
+  inner.append(list);
+  document.getElementById('chapters').replaceChildren(inner);
 }
+function toggleChapters(open) {
+  const panel = document.getElementById('chapters'), button = document.querySelector('.chap-btn');
+  const now = open ?? panel.hidden;
+  panel.hidden = !now;
+  button.setAttribute('aria-expanded', String(now));
+  if (now) (panel.querySelector('[aria-current=true]') || panel.querySelector('button:not(:disabled)'))?.focus({preventScroll: true});
+}
+// Open a chapter: draw its heading and bar at once, its articles when they have arrived.
+function openChapter(id, {initial = false, to = null} = {}) {
+  hideTip();
+  if (!initial) state.sel = null;
+  state.chapter = id;
+  const chapter = chapterById(id), list = document.getElementById('list');
+  document.getElementById('a-head').textContent = 'Chapter ' + chapter.order + ' · ' + chapter.title;
+  document.getElementById('a-sub').textContent = D.chapter_order_note;
+  renderBar();
+  if (!CHAPTERS.has(id)) list.replaceChildren(el('p', 'loading', 'Loading chapter…'));
+  return loadChapter(id).then(articles => {
+    if (state.chapter !== id) return;
+    D.articles = articles;
+    if (initial) readSelection();
+    list.replaceChildren(...D.articles.map(articleCard));
+    for (const article of D.articles) onMap(article, null);
+    markTabs();
+    syncUrl();
+    const target = to === 'top' ? document.getElementById('articles')
+      : to ? document.getElementById('article-' + to)
+      : location.hash ? document.getElementById(location.hash.slice(1))
+      : state.sel ? document.getElementById('article-' + state.sel.a) : null;
+    if (target) target.scrollIntoView({behavior: initial ? 'instant' : matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+    if (!initial) announce('Chapter ' + chapter.order + ', ' + plural(articles.length, 'article') + '.');
+  }).catch(error => {
+    if (state.chapter !== id) return;
+    const line = el('p', 'loading', 'This chapter could not be loaded (' + error.message + ').'), retry = el('button', 'act', 'Try again');
+    retry.type = 'button';
+    retry.addEventListener('click', () => openChapter(id, {initial, to}));
+    line.append(retry);
+    list.replaceChildren(line);
+  });
+}
+// A link to an article anywhere on the page (the topic tree, the neighbours list) opens its chapter first.
+function goToArticle(number) {
+  const stub = D.all.find(article => article.number === number);
+  if (!stub) return false;
+  if (stub.chapter !== state.chapter) { openChapter(stub.chapter, {to: number}); return true; }
+  document.getElementById('article-' + number)?.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  return true;
+}
+document.addEventListener('click', event => {
+  const link = event.target.closest && event.target.closest('a[href*="#article-"]');
+  if (link && D && !event.metaKey && !event.ctrlKey && !event.shiftKey) {
+    const number = Number((link.getAttribute('href').match(/#article-(\d+)$/) || [])[1]);
+    if (number && goToArticle(number)) {
+      event.preventDefault();
+      try { history.replaceState(null, '', location.pathname + location.search + '#article-' + number); } catch { /* file:// */ }
+    }
+  }
+  const panel = document.getElementById('chapters');
+  if (!panel.hidden && !event.target.closest('#chapters, .chap-btn')) toggleChapters(false);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !document.getElementById('chapters').hidden) { toggleChapters(false); document.querySelector('.chap-btn')?.focus(); }
+});
 
 document.getElementById('copy').addEventListener('click', async event => {
-  const text = 'Stoic constitution · first five articles · my verdicts\n' + verdictLines().map(line => '- ' + line.label + ': ' + line.value).join('\n');
+  const text = 'Stoic constitution · my verdicts\n' + verdictLines().map(line => '- Chapter ' + line.chapter.order + ' · ' + line.label + ': ' + line.value).join('\n');
   const button = event.currentTarget;
   try { await navigator.clipboard.writeText(text); button.textContent = 'Copied'; }
   catch { button.textContent = 'Copy failed. Select the list above.'; }
@@ -831,7 +1614,16 @@ document.getElementById('copy').addEventListener('click', async event => {
 fetch('stoic-constitution.json').then(response => {
   if (!response.ok) throw new Error('the record could not be loaded (' + response.status + ')');
   return response.json();
-}).then(data => { D = data; readUrl(); render(); }).catch(error => {
+}).then(data => {
+  D = data;
+  D.all = data.articles;
+  D.articles = [];
+  readVoices();
+  renderTopics();
+  renderVerdicts();
+  renderDock();
+  return openChapter(readChapter(), {initial: true});
+}).catch(error => {
   document.getElementById('main').prepend(el('p', 'err', 'This page could not be drawn: ' + error.message));
 });
 </script>

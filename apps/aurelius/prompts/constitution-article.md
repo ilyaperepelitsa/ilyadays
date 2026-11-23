@@ -81,8 +81,10 @@ Each rule is followed by the feedback it came from.
    `gives` on each quote; one quote may back several components). Prefer wordings in which a
    component is said by two or more passages, and map a quote to every component its exact words
    really say, never to one they do not. Each statement part must rest on at least two passages. On
-   the page the passage numbers sit in the text after each component, and the hover card lists the
-   exact quotes for the words under the pointer and every other component with its passages.
+   the page one coloured line runs under a component for each passage that says it (two lines, two
+   passages), and the hover card lists the exact quotes for the words under the pointer and every
+   other component with its passages. Passage numbers are printed in the text only on the
+   statement; in subarticles they sit in the chips under the sentence, not above the words.
    *23 Nov 2026: “There should be more statements that show more than one source at the same time
    and what component came from where.” Also: “do the hover thing.”*
 9. **Give every quoted passage its own conclusion.** For each quote write one plain modern sentence
@@ -92,3 +94,78 @@ Each rule is followed by the feedback it came from.
    passages or from the fused claim's wording when the quote does not say it.
    *23 Nov 2026: “I think I also want a parallel conclusions column to show what follows from the
    passage.”*
+10. **Colour means one thing: the source passage.** Each source passage has one colour for the whole
+    article, used for the lines under the words it backs, its chip, its quoted row and its dot on the
+    map. Passages that meet in a claim or a statement part never share a colour (the build checks);
+    five colours is the limit that stays distinguishable, including for colour-blind readers, so
+    passages that never meet may share one and the chip always names the passage. Purple is kept for
+    the editor's own work, the warning colour for a weakened claim, and everything else is neutral.
+    Do not add markers above the words of subarticles.
+    *23 Nov 2026: “Maybe don't do superscript above sub-statements? Or maybe do in different style?
+    It's a bit too interfering but does a job of showing that it comes from different parts. Also
+    you should figure out how to use color better here.”*
+11. **Show the measurements behind the grouping.** Beside each statement, show the section's
+    passages as a map of their vectors (two-dimensional layout of cosine distances, with the stress
+    of the flattening stated), tied to the text: pointing at words picks out their passages and the
+    similarity between them, and pointing at a passage picks out the words it backs. Give the exact
+    pairwise similarities in a table under the map. A figure must state what it distorts. Also say
+    where the section sits in the whole book: its nearest sections with their similarity, any
+    member that is as close to another section as to its own, and how many outside passages are
+    closer to its centre than its own farthest member.
+    *23 Nov 2026: “I also wanna show some scientific part of this, maybe vectors and their distance
+    or something? Show them on the right or left of the card?” Then: “Should we show additional
+    info on the vector bit? Like what clusters it sits next to in Aurelius' writings?”*
+12. **A second author is added to Marcus, and every word of his is marked as his.** Marcus's
+    topics, claims and own wording stay as they are (rule 14 says how the body still changes). Another author's passages (first: Seneca's Letters, Gummere, split at
+    the Loeb section numbers) are found by embedding similarity to the article's own sentences and
+    to its section, then read. Each one enters as exactly one of three effects, so the reader can be
+    told “if you add Seneca, this article becomes …”: **Backs** (key `stronger`: a further witness
+    to words of an existing claim), **Adds** (key `wider`: something Marcus does not say in this
+    section, placed under one of the five labels, especially an empty one), or **Challenges** (key
+    `qualified`: he limits or disagrees with a claim; state the difference and where he is
+    inconsistent with himself). Every piece is an exact
+    quote with its own conclusion. Write one sentence per article saying what it becomes, and say
+    whether the statement stands. On the page the second author is switched on per article, his
+    lines are black and dotted and his passages are squares, and where a passage was found by
+    reading against the vectors, say so.
+    *23 Nov 2026: “When I expand this with letters to stoic of Seneca, would it work well? In the
+    format ‘if you add Seneca's thoughts, this article becomes x, y or z’.” Then, to the proposal of
+    Gummere's translation and a paid embedding call: “both are fine.”*
+13. **Adding or removing an author is one tap, and nothing gets lost.** Authors are "voices" in one
+    dock at the bottom of the screen (within thumb reach on a phone): Marcus is always there, each
+    added author is a single switch that applies to every article and is kept in the link. When a
+    voice is switched, the reader stays at the same place on the page, what the voice brings
+    arrives visibly, and a short note says how much changed. Each article's strip says what it
+    becomes, and its counts walk the reader to those places. Every added author has its own mark
+    and line pattern, declared once in `authors`; the page has no author's name hard-coded. Build
+    for a phone first: the five sides get a row of tabs that stays in reach and shows where a voice
+    contributes.
+    *23 Nov 2026: “Need to have good interface for adding-removing Seneca (and other authors we're
+    gonna add later), need to be super natural. And don't forget to make it cool on mobile.”*
+14. **Whose words these are is one quiet mark, and an added author changes the body.** Every bit of
+    an article (claim, said-once item, an added author's item) is the same card with one plain
+    border; the author's name sits in its corner (“Aurelius”, “Seneca”), shown only while an added
+    author is switched on. No boxes inside boxes, no side stripes, no second panel for what an
+    author thinks: the per-article strip is one sentence, three counts and one button. When an
+    added author **adds** meaning to the statement or a claim, **changes** it, or **challenges** it,
+    that goes into the sentence itself as one clause appended to Marcus's words (`voices.<author>.
+    amend`: `target` is `statement` or a claim id, `kind` is `adds`, `changes` or `challenges`, `t`
+    continues the sentence and has no full stop, `ids` are that author's quoted pieces). The clause
+    carries a small tag (“Seneca adds”, “Seneca challenges”) and that author's line pattern, and it
+    disappears when the author is switched off. Marcus's words before it are never rewritten. One
+    clause per sentence at most, under 140 characters, plain first person. Write a clause only when
+    the author's exact quote says it. Whenever an author has an Adds or a Challenges item in an
+    article, at least one clause appears in its body; an author who only backs what Marcus says
+    leaves the body as it is.
+    *23 Nov 2026: “Seneca bits and Aurelius bits should just have one color border and have ‘M’ or
+    ‘S’ in the corner or ‘Aurelius’ and ‘Seneca’, current thing is too bulky. Also doesn't show any
+    additions to article body. And it should if Seneca adds meaning or changes it or challenges.”*
+15. **The vectors are a column of their own.** On a wide screen the measurements (rule 11) stand in
+    a separate column to the right of the text and stay beside it while the reader scrolls; their
+    height must never push the five sides down or sideways. The column leads with three numbers,
+    then the map (the section's ground shaded, added authors as their own marks), a one-line
+    readout of the similarity between whatever the reader is pointing at, and the nearest sections;
+    explanations and the full table are folded. On a phone the same block sits between the
+    statement and the sides.
+    *23 Nov 2026: “Let's design the vectors bit a bit better. It should be separate column and not
+    move the ‘why’, ‘in action’ etc.”*

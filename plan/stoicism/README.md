@@ -1,5 +1,13 @@
 # Aurelius — implementation planning dossier
 
+**Plan after the two reviews (23 Nov 2026):** [what to fix before more articles are written](34-after-review-plan.md): trustworthy checks and markings, a translation pilot from the Greek on six passages, then Article 6 revised and Articles 1 to 5 audited.
+
+**Report of milestone M1 (23 Nov 2026):** [what was built, the checks, and the proof that Articles 1 to 5 are unchanged](32-m1-report.md).
+
+**Review of milestone M1 (23 Nov 2026):** [handover for a second reviewer](33-astra-review-handover.md), with the first review's findings on Article 6, chapter navigation and the test gates.
+
+**Next work, written for delegation (23 Nov 2026):** [the delegation plan](32-delegation-plan.md) lists every outstanding task for the Stoic Constitution page, including Articles 6 to 38, with exact commands, checks and stop conditions.
+
 Read [the first five articles](../../public/apps/stoic-constitution.html), drawn from a topic hierarchy over all 418 Casaubon passages, with every phrase traced to its source.
 
 Compare three ways of composing a constitution lesson in the [passage composition study](27-passage-composition-models.md). It works through the same encounter as a practice, an argument and a decision.
