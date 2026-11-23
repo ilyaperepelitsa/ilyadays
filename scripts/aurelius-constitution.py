@@ -431,7 +431,7 @@ def main() -> None:
     for chapter_id in dict.fromkeys(chapter_of[a['section']] for a in articles):
         path = chapter_dir / f'{chapter_id}.json'
         path.write_text(json.dumps({'chapter': chapter_id, 'articles': [a for a in articles if chapter_of[a['section']] == chapter_id]},
-                                   ensure_ascii=False, separators=(',', ':')) + '\n')
+                                   ensure_ascii=False, indent=1) + '\n')   # readable diffs; compact saved 6 KB after gzip
         written.add(path.name)
         size = path.stat().st_size
         print('wrote', path, f'{size // 1024} KB' + (f'  WARNING: above {CHAPTER_WARN_BYTES // 1024} KB; a phone will feel it' if size > CHAPTER_WARN_BYTES else ''))

@@ -608,7 +608,7 @@ function lines(span, specs) {
   span.style.backgroundImage = colours.map(layer).join(',');
   span.style.backgroundSize = '100% 1px';
   span.style.backgroundRepeat = 'no-repeat';
-  span.style.backgroundPosition = colours.map((_, index) => '0 calc(100% - ' + index * 3 + 'px)').join(',');
+  span.style.backgroundPosition = colours.map((_, index) => '0 calc(100% - ' + (colours.length - 1 - index) * 3 + 'px)').join(',');   // first source on top
   span.style.paddingBottom = (2 + (colours.length - 1) * 3) + 'px';   // the top line still clears the descenders by 2 px
 }
 // Which passages the map should pick out when nothing is under the pointer: those of the open sentence or picked words.
@@ -1084,8 +1084,11 @@ function statementBlock(article) {
   const open = quotesOpen(article, key), pick = pickedBlock(article, key, segs);
   box.append(sentence);
   const refs = [...new Set(st.parts.flatMap(part => part.refs))];
-  const from = el('p', 'fused');
-  from.append(el('b', '', 'Gathered from ' + plural(refs.length, 'passage')));
+  const now = refs.filter(ref => !gone.has(ref)).length, others = [...new Set(amendsFor(article, 'statement').map(clause => authorByKey(clause.author).name + '’s'))];
+  const from = el('p', 'fused' + (now === 0 || (now === 1 && refs.length > 1) ? ' warn' : ''));
+  from.append(el('b', '', now === refs.length ? 'Gathered from ' + plural(refs.length, 'passage')
+    : now ? now + ' of ' + refs.length + ' passages remain for this statement'
+    : others.length ? 'Marcus’s passages for this statement are removed; what remains is ' + others.join(' and ') : 'No passage left'));
   for (const ref of refs) from.append(refChip(article, ref, gone.has(ref)));
   from.append(showButton(article, key, open, 'Show part by part', 'Hide the parts'));
   if (pick) { pick.append(showButton(article, key, open, 'Show part by part', 'Hide the parts')); box.append(pick); } else box.append(from);
@@ -1570,7 +1573,9 @@ function syncUrl(mode = 'replace', hash = location.hash) {
   if (state.voices.size) query.set('with', [...state.voices].sort().join(','));
   const search = query.toString(), url = location.pathname + (search ? '?' + search : '') + hash;
   try { history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', url); } catch { /* file:// */ }
+  drawnFor = location.search;
 }
+let drawnFor = location.search;   // the query the page on screen was drawn from
 function readVoices() {
   const query = new URLSearchParams(location.search);
   for (const key of (query.get('with') || '').split(',')) if (D.authors.some(author => author.key === key)) state.voices.add(key);
@@ -1627,7 +1632,12 @@ function loadChapter(id) {
     // The file must hold exactly the articles the index lists for this chapter, each complete; a file that does not is never kept.
     const expected = D.all.filter(stub => stub.chapter === id).map(stub => stub.number);
     const got = Array.isArray(data && data.articles) ? data.articles.map(article => article && article.number) : [];
-    if (JSON.stringify(got) !== JSON.stringify(expected)) throw new Error('the file holds articles ' + (got.join(', ') || 'none') + ' but the index lists ' + expected.join(', '));
+    if (JSON.stringify(got) !== JSON.stringify(expected)) {
+      // Usually a new article was published while this page was open: only a fresh index can match the file.
+      const error = new Error('the file holds articles ' + (got.join(', ') || 'none') + ' but this page lists ' + expected.join(', '));
+      error.stale = true;
+      throw error;
+    }
     const broken = data.articles.find(article => !Array.isArray(article.claims) || !article.statement || !Array.isArray(article.members));
     if (broken) throw new Error('Article ' + broken.number + ' is incomplete in the file');
     CHAPTERS.set(id, decorate(data.articles));
@@ -1721,9 +1731,15 @@ function markArticle() {
   button.setAttribute('aria-label', 'Article ' + number + ', ' + position + ' of ' + stubs.length + ' in this chapter. Choose another article');
   for (const row of document.querySelectorAll('#article-list button')) row.setAttribute('aria-current', String(Number(row.dataset.n) === number));
 }
+// The lists hang below the bar. Before one opens, bring the bar to the top of the screen so the list has the screen to itself.
+function raiseBar() {
+  const top = document.querySelector('.bar').getBoundingClientRect().top;
+  if (top > 1) scrollBy({top, behavior: 'auto'});
+}
 function toggleArticles(open) {
   const panel = document.getElementById('article-list'), button = document.querySelector('.art-btn');
   const now = open ?? panel.hidden;
+  if (now) raiseBar();
   panel.hidden = !now;
   button.setAttribute('aria-expanded', String(now));
   if (now) { toggleChapters(false); (panel.querySelector('[aria-current=true]') || panel.querySelector('button'))?.focus({preventScroll: true}); }
@@ -1733,6 +1749,7 @@ addEventListener('scroll', () => { if (D) markArticle(); }, {passive: true});
 function toggleChapters(open) {
   const panel = document.getElementById('chapters'), button = document.querySelector('.chap-btn');
   const now = open ?? panel.hidden;
+  if (now) raiseBar();
   panel.hidden = !now;
   button.setAttribute('aria-expanded', String(now));
   if (now) { const list = document.getElementById('article-list'); list.hidden = true; document.querySelector('.art-btn')?.setAttribute('aria-expanded', 'false'); }
@@ -1768,9 +1785,10 @@ function openChapter(id, {initial = false, to = null, push = false} = {}) {
     if (!initial) announce('Chapter ' + chapter.order + ', ' + plural(articles.length, 'article') + '.');
   }).catch(error => {
     if (state.chapter !== id) return;
-    const line = el('p', 'loading', 'This chapter could not be loaded (' + error.message + ').'), retry = el('button', 'act', 'Try again');
+    const line = el('p', 'loading', error.stale ? 'This page is out of date: the constitution has changed since it was opened (' + error.message + '). Reload to see it. '
+      : 'This chapter could not be loaded (' + error.message + ').'), retry = el('button', 'act', error.stale ? 'Reload the page' : 'Try again');
     retry.type = 'button';
-    retry.addEventListener('click', () => openChapter(id, {initial, to, push}));
+    retry.addEventListener('click', () => error.stale ? location.reload() : openChapter(id, {initial, to, push}));
     line.append(retry);
     list.replaceChildren(line);
   });
@@ -1802,6 +1820,10 @@ addEventListener('hashchange', () => {
 // Back and Forward: restore the chapter, the voices and what was open from the link of that entry.
 addEventListener('popstate', () => {
   if (!D) return;
+  // An in-page link (Topics, a typed #article-N) also arrives here. If only the #part changed, what is on screen
+  // already matches the link: redraw nothing, so picked words and open panels stay.
+  if (location.search === drawnFor) return;
+  drawnFor = location.search;
   const query = new URLSearchParams(location.search);
   state.voices = new Set((query.get('with') || '').split(',').filter(key => D.authors.some(author => author.key === key)));
   state.sel = null;

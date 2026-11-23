@@ -11,8 +11,10 @@ errors (none). At 1440 px it also hovers every traced phrase and every map mark 
 checks the layout rule: the vectors column never pushes the five sides down, and stays on screen beside
 them. Exits 1 if any check fails.
 
-Then it runs named cases (rows P1 to P12 of plan/stoicism/34-after-review-plan.md), each a scenario that once
-failed on the page: a selection that must stay on its words across a voice switch, honest counts after removing
+Then it runs named cases (rows P1 to P12 of plan/stoicism/34-after-review-plan.md, and P13 to P16 from the second look
+at that milestone), each a scenario that once failed on the page. The cases run on a frozen record
+(tests/aurelius/fixtures/constitution-page-cases.json, built by the real build and served in place of the published
+files), so rewriting an article cannot break them: a selection that must stay on its words across a voice switch, honest counts after removing
 passages, a verdict that cannot be saved, chapter navigation in a simulated second chapter (Articles 4 to 6 served
 as chapter c3), a chapter file that does not match the index, the phone bar, and the source list for picked words.
   --cases P1,P4   run only these cases (and no sweep)      --no-cases   run only the sweep
@@ -21,7 +23,9 @@ import argparse
 import copy
 import json
 import re
+import subprocess
 import sys
+import tempfile
 from pathlib import Path
 from urllib.request import urlopen
 
@@ -29,6 +33,24 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 SIZES = [(360, 740, 'dark'), (390, 844, 'light'), (1440, 1000, 'light')]
+# The named cases run on a frozen record, built by the real build, so that rewriting an article cannot break a page case.
+FIXTURE = ROOT / 'tests/aurelius/fixtures/constitution-page-cases.json'
+FIX: dict = {}
+
+
+def build_fixture() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        done = subprocess.run([sys.executable, str(ROOT / 'scripts/aurelius-constitution.py'), '--authored', str(FIXTURE), '--out-dir', tmp], capture_output=True, text=True, cwd=ROOT)
+        if done.returncode:
+            raise SystemExit('the fixture record does not build: ' + (done.stderr.strip().splitlines() or ['?'])[-1])
+        FIX['index'] = json.loads((Path(tmp) / 'stoic-constitution.json').read_text())
+        FIX['chapters'] = {path.stem: json.loads(path.read_text()) for path in (Path(tmp) / 'stoic-constitution').glob('*.json')}
+
+
+def serve_fixture(ctx) -> None:
+    ctx.route('**/apps/stoic-constitution.json', lambda route: route.fulfill(json=FIX['index']))
+    ctx.route('**/apps/stoic-constitution/*.json', lambda route: route.fulfill(json=FIX['chapters'][route.request.url.rsplit('/', 1)[1].split('.')[0]])
+              if route.request.url.rsplit('/', 1)[1].split('.')[0] in FIX['chapters'] else route.fulfill(status=404, body='no such chapter'))
 
 MEASURE = """() => {
   const visible = n => n.offsetParent !== null && n.getBoundingClientRect().width > 0;
@@ -63,8 +85,8 @@ VERDICT_KEY = 'stoic-constitution:v1:verdicts'
 
 def two_chapters(port: int) -> tuple[dict, dict]:
     """An index and chapter files in which Articles 4 to 6 belong to chapter c3 (order 2): same data, two chapters."""
-    index = json.loads(urlopen(f'http://localhost:{port}/apps/stoic-constitution.json').read())
-    full = json.loads(urlopen(f'http://localhost:{port}/apps/stoic-constitution/c6.json').read())['articles']
+    index = copy.deepcopy(FIX['index'])
+    full = copy.deepcopy(FIX['chapters']['c6'])['articles']
     for stub in index['articles']:
         if stub['number'] >= 4:
             stub['chapter'] = 'c3'
@@ -236,14 +258,14 @@ def case_p7(page, base, port):
 
 def case_p8(page, base, port):
     problems = []
-    full = json.loads(urlopen(f'http://localhost:{port}/apps/stoic-constitution/c6.json').read())
+    full = copy.deepcopy(FIX['chapters']['c6'])
     # a) a chapter file that lacks an article the index lists
     serve(page, None, {'c6': {'chapter': 'c6', 'articles': full['articles'][:5]}})
     page.goto(base, wait_until='networkidle')
     page.wait_for_timeout(500)
     text = page.locator('#list').text_content()
-    if 'could not be loaded' not in text:
-        problems.append(f'a chapter file without Article 6 draws {shown(page)} and says nothing')
+    if 'out of date' not in text or 'Reload' not in text or shown(page):   # a file out of step with the index: say so and offer a reload (R2)
+        problems.append(f'a chapter file without Article 6 draws {shown(page)} and says “{text[:80]}”')
     page.unroute('**/stoic-constitution/c6.json')
     # b) a bad file first, a good one on retry
     calls = {'n': 0}
@@ -378,6 +400,107 @@ def case_p12(page, base, port):
     return problems
 
 
+# ---- cases from the second look at milestone N1 (plan/stoicism/35-completion-log.md, rows R1 to R4)
+def case_p13(page, base, port):
+    """An in-page link (Topics) must not redraw the chapter or drop the picked words."""
+    problems = []
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    words = page.locator('#article-6 li.claim .sg:not(.join)').first
+    words.scroll_into_view_if_needed()
+    words.click(timeout=5000)
+    text = picked(page, 6)
+    page.evaluate("() => { window.__card = document.getElementById('article-6'); }")
+    page.locator('#jump a[href="#topics"]').click()
+    page.wait_for_timeout(700)
+    if not page.evaluate("() => window.__card === document.getElementById('article-6')"):
+        problems.append('a tap on Topics redrew the chapter')
+    if picked(page, 6) != text or not page.locator('#article-6 .picked').count():
+        problems.append(f'a tap on Topics dropped the picked words {text}')
+    page.go_back()
+    page.wait_for_timeout(700)
+    if picked(page, 6) != text:
+        problems.append(f'Back from Topics dropped the picked words {text}')
+    return problems
+
+
+def case_p14(page, base, port):
+    """A chapter file that holds an article the index does not list: the reader must be able to get out by reloading."""
+    problems = []
+    state = {'stale': True, 'index': 0}
+    def chapter(route):
+        data = copy.deepcopy(FIX['chapters'][route.request.url.rsplit('/', 1)[1].split('.')[0]])
+        if state['stale']:
+            data['articles'] = data['articles'] + [dict(data['articles'][-1], number=data['articles'][-1]['number'] + 1)]
+        route.fulfill(json=data)
+    def index(route):
+        state['index'] += 1
+        route.fallback()
+    page.route('**/stoic-constitution/*.json', chapter)
+    page.route('**/apps/stoic-constitution.json', index)
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('#list .loading')
+    said = page.locator('#list').inner_text()
+    if 'reload' not in said.lower():
+        problems.append(f'a newer chapter file than the index does not tell the reader to reload: “{said[:120]}”')
+    button = page.locator('#list button')
+    if button.count() and 'reload' in button.first.inner_text().lower():
+        state['stale'] = False
+        before = state['index']
+        button.first.click()
+        try:
+            page.wait_for_selector('article.article .statement', timeout=8000)
+        except Exception:
+            problems.append('after Reload the chapter is still not drawn')
+        if state['index'] <= before:
+            problems.append('Reload did not fetch the index again')
+    else:
+        problems.append(f'the button offered is “{button.first.inner_text() if button.count() else "none"}”, which fetches the same file again')
+    return problems
+
+
+def case_p15(page, base, port):
+    """The statement counts its surviving passages as the claims do."""
+    problems = []
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    refs = page.evaluate("() => [...document.querySelectorAll('#article-6 .statement .fused span')].map(n => n.textContent.trim()).filter(Boolean)")
+    head = lambda: page.locator('#article-6 .statement .fused b').first.text_content()
+    page.goto(base + f'?without=6:{refs[0]}#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    want = f'{len(refs) - 1} of {len(refs)} passages remain for this statement'
+    if want not in head():
+        problems.append(f'{refs[0]} removed: the statement says “{head()}”, not “{want}”')
+    page.goto(base + f'?without=6:{",".join(refs)}#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    if 'No passage left' not in head():
+        problems.append(f'all of {refs} removed: the statement says “{head()}”')
+    page.goto(base + f'?with=seneca&without=6:{",".join(refs)}#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    if page.locator('#article-6 .statement .sg.add').count() and 'what remains is Seneca' not in head():
+        problems.append(f'all removed with Seneca on: the statement says “{head()}” although Seneca\'s clause remains')
+    return problems
+
+
+def case_p16(page, base, port):
+    """At the top of the page on a phone, the article list and the chapter list open where they can be seen and tapped."""
+    problems = []
+    for button, panel in [('.art-btn', '#article-list'), ('.chap-btn', '#chapters')]:
+        page.goto(base, wait_until='networkidle')
+        page.wait_for_selector('#article-6 .statement')
+        page.evaluate('scrollTo(0, 0)')
+        page.locator(button).click()
+        page.wait_for_timeout(500)
+        seen = page.evaluate("""sel => { const rows = [...document.querySelectorAll(sel + ' button')]; return rows.map(row => { const r = row.getBoundingClientRect();
+            const at = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2); return r.top >= 0 && r.bottom <= innerHeight && Boolean(at && at.closest(sel)); }); }""", panel)
+        if not seen or not seen[0]:
+            problems.append(f'{panel}: its first row cannot be seen or tapped when opened at the top of the page')
+        elif not all(seen[:6]):
+            problems.append(f'{panel}: rows hidden or covered: {[i + 1 for i, ok in enumerate(seen[:6]) if not ok]}')
+        page.keyboard.press('Escape')
+    return problems
+
+
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
@@ -391,14 +514,20 @@ CASES = {
     'P10': ('the phone bar fits at 360 px', case_p10, (360, 740)),
     'P11': ('source list for picked words; editor\'s words; thin lines', case_p11, (390, 844)),
     'P12': ('two-chapter simulation: picker, neighbour link, Back, deep links', case_p12, (1440, 1000)),
+    'P13': ('an in-page link keeps the chapter and the picked words', case_p13, (390, 844)),
+    'P14': ('a chapter file newer than the index: reload gets out', case_p14, (390, 844)),
+    'P15': ('the statement counts its surviving passages', case_p15, (1440, 1000)),
+    'P16': ('lists opened at the top of the page on a phone can be seen', case_p16, (390, 844)),
 }
 
 
 def run_cases(browser, base: str, port: int, names: list[str]) -> int:
     failures = 0
+    build_fixture()
     for name in names:
         title, fn, (width, height) = CASES[name]
         ctx = browser.new_context(viewport={'width': width, 'height': height})
+        serve_fixture(ctx)
         page = ctx.new_page()
         errors: list[str] = []
         page.on('pageerror', lambda e: errors.append(str(e)))
