@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:,">
-<title>Six passages from the Greek · Stoic Constitution</title>
+<title>Marcus from the Greek · Stoic Constitution</title>
 <style>
 :root{--paper:#f7f5ee;--card:#fffdf8;--ink:#232926;--muted:#57615a;--line:#d2d3c7;--accent:#1d6450;--hl:rgba(35,41,38,.08);--warn:#8f3a10;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,'Segoe UI',sans-serif}
 @media(prefers-color-scheme:dark){:root{--paper:#161917;--card:#1e2320;--ink:#e9e7dd;--muted:#a4ada5;--line:#3b423c;--accent:#86d3b8;--hl:rgba(233,231,221,.1);--warn:#f2a676}}
@@ -36,10 +36,26 @@ main{padding-block:8px 40px}
 .passage h2{font:400 clamp(22px,5.2vw,28px)/1.2 var(--serif);letter-spacing:-.015em}
 .passage h2 small{font:500 14px var(--sans);color:var(--muted);letter-spacing:0;margin-left:8px;white-space:nowrap}
 .used{margin-top:4px;font-size:14px;color:var(--muted)}
+.part{margin-top:6px;font-size:14px;max-width:68ch}
+.part span{color:var(--muted)}
+.sec{padding:30px 0 14px;border-top:2px solid var(--ink);scroll-margin-top:64px}
+.sec h2{font:400 clamp(24px,6vw,32px)/1.15 var(--serif);letter-spacing:-.02em;text-wrap:balance}
+.sec p{margin-top:4px;font-size:14px;color:var(--muted)}
+.sec a{color:var(--link, inherit)}
+.passage{scroll-margin-top:64px}
+.passage h3.ref{font:400 clamp(22px,5.2vw,28px)/1.2 var(--serif);letter-spacing:-.015em}
+.passage h3.ref small{font:500 14px var(--sans);color:var(--muted);letter-spacing:0;margin-left:8px;white-space:nowrap}
+.toc{margin-top:14px;display:grid;gap:2px;max-width:68ch;list-style:none;padding:0}
+.toc a{display:flex;justify-content:space-between;gap:12px;min-height:44px;align-items:center;padding:4px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;font-size:15px}
+.toc a span{color:var(--muted);font-size:13.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.vt{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px;font-variant-numeric:tabular-nums}
+.vt th,.vt td{text-align:right;padding:6px 0 6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.vt th:first-child,.vt td:first-child{text-align:left;padding-left:0}
+.vt th{font-weight:650;font-size:12.5px;color:var(--muted)}
 .cols{display:grid;gap:14px;margin-top:14px}
 .col{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 16px}
 .col h3{font:650 12px/1.4 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.col p{font:18px/1.6 var(--serif)}
+.col p{font:18px/1.6 var(--serif);white-space:pre-line}
 .col.en{border-color:var(--ink)}
 .col.en p{font-size:19px}
 .col.grc p{font-size:18.5px;line-height:1.7}
@@ -79,10 +95,11 @@ footer{padding-block:20px 90px;border-top:1px solid var(--line);font-size:13.5px
 <body data-show="en">
 <div class="wrap top"><strong>Stoic Constitution</strong><a href="stoic-constitution.html#article-6">← Back to the articles</a></div>
 <header class="wrap intro">
-<p class="eyebrow">Translation pilot · six passages</p>
-<h1>Six passages, from the Greek</h1>
-<p class="lede">The articles are written in today’s English, but their evidence was quoted in an English of 1634. Here the six passages behind Article 6 are translated again, directly from Marcus’s Greek, so you can judge the evidence without translating it first. Each passage is shown three ways: the Greek, the new English, and the 1634 English the articles used until now.</p>
+<p class="eyebrow" id="eyebrow">Translation from the Greek</p>
+<h1>Marcus, from the Greek</h1>
+<p class="lede">The articles are written in today’s English, but their evidence was quoted in an English of 1634. Here the passages behind the articles are translated again, directly from Marcus’s Greek, so you can judge the evidence without translating it first. Each passage is shown three ways: the Greek, the new English, and the 1634 English the articles were built on.</p>
 <p class="status" id="status"></p>
+<ul class="toc" id="toc" aria-label="Sections translated so far"></ul>
 </header>
 <nav class="bar" aria-label="Which version to show"><div class="wrap"><span class="switch">Show</span>
 <button type="button" class="switch" data-show="en" aria-pressed="true">Today’s English</button>
@@ -91,7 +108,7 @@ footer{padding-block:20px 90px;border-top:1px solid var(--line);font-size:13.5px
 <button type="button" class="switch" data-show="all" aria-pressed="false">All three</button>
 </div></nav>
 <p id="announce" class="sr" role="status"></p>
-<main class="wrap" id="main"><p class="status">Loading the six passages…</p></main>
+<main class="wrap" id="main"><p class="status">Loading the passages…</p></main>
 <section class="wrap about" id="about" hidden></section>
 <footer class="wrap" id="foot"></footer>
 <script>
@@ -147,16 +164,35 @@ function verdictRow(passage) {
   if (Object.hasOwn(unsaved, key)) row.append(el('span', 'save-note', 'Could not be saved on this device; kept until you close this page'));
   return row;
 }
+// 10.21 -> p-10-21 · 6.9–10 -> p-6-9-10 · 7.31b–34 -> p-7-31b-34
+const anchor = ref => 'p-' + ref.replace(/[^0-9a-z]+/g, '-');
+function sectionHead(section, number) {
+  const box = el('header', 'sec');
+  box.id = 's-' + section.id.replace('.', '-');
+  box.append(el('h2', '', section.title));
+  const line = el('p', '', section.passages + (section.passages === 1 ? ' passage' : ' passages') + (section.article ? ' · the evidence of ' : ''));
+  if (section.article) { const link = el('a', '', 'Article ' + section.article); link.href = 'stoic-constitution.html#article-' + section.article; line.append(link); }
+  box.append(line);
+  return box;
+}
 function card(passage) {
   const box = el('article', 'passage');
-  box.id = 'p-' + passage.standard_ref.replace('.', '-');
-  const head = el('h2', '', 'Meditations ' + passage.standard_ref);
+  box.id = anchor(passage.standard_ref);
+  const head = el('h3', 'ref', 'Meditations ' + passage.standard_ref);
   head.append(el('small', '', passage.casaubon_ref === passage.standard_ref ? 'same number in the 1634 translation' : 'numbered ' + passage.casaubon_ref + ' in the 1634 translation'));
   box.append(head);
+  if (passage.part) {
+    const note = el('p', 'part');
+    note.append(document.createTextNode('Part of a chapter. ' + passage.part.why + ' Not in this passage: '));
+    const rest = el('span', '', passage.part.left_out);
+    rest.lang = 'grc';
+    note.append(rest);
+    box.append(note);
+  }
   if (passage.vector) {
-    const v = passage.vector, own = v.home_rank === 1;
+    const v = passage.vector, own = v.home_rank === 1, mine = D.sections.find(section => section.id === passage.section);
     box.append(el('p', 'used', 'Vectors: the new English is ' + v.to_1634.toFixed(2) + ' similar to the 1634 English of the same passage. Nearest section of ' + D.vectors.sections + ': '
-      + (own ? 'still its own, “' + D.vectors.home.title + '” (' + v.home.toFixed(2) + ').' : '“' + v.nearest.title + '” (' + v.nearest.similarity.toFixed(2) + '); its own section is number ' + v.home_rank + ' (' + v.home.toFixed(2) + ').')));
+      + (own ? 'still its own, “' + mine.title + '” (' + v.home.toFixed(2) + ').' : '“' + v.nearest.title + '” (' + v.nearest.similarity.toFixed(2) + '); its own section is number ' + v.home_rank + ' (' + v.home.toFixed(2) + ').')));
   }
   const cols = el('div', 'cols');
   cols.append(column('grc', 'grc', 'Greek · ' + D.edition.short, passage.greek), column('en', 'en', 'Today’s English · this project', passage.english), column('old', 'en', '1634 · Casaubon', passage.casaubon));
@@ -187,8 +223,17 @@ function about() {
     const v = D.vectors;
     box.append(el('h2', '', 'What the vectors say about the new English'));
     box.append(el('p', '', 'The new English of each passage was embedded with the same model as the rest of the book (' + v.model + '). ' + v.stayed_home + ' of ' + D.passages.length
-      + ' passages are still nearest to their own section, “' + v.home.title + '”, among all ' + v.sections + ' sections. The six are ' + v.closeness.toFixed(2)
-      + ' close to one another in the new English and ' + v.closeness_1634.toFixed(2) + ' in the 1634 English. That suggests part of what made them look alike was the shared old style.'));
+      + ' passages are still nearest to their own section among all ' + v.sections + ' sections. The table gives, for each section, how close its passages are to one another in the new English and in the 1634 English (1 would be identical).'));
+    const table = el('table', 'vt'), head = el('tr');
+    for (const title of ['Section', 'Passages', 'Still nearest to it', 'Close, new', 'Close, 1634']) head.append(el('th', '', title));
+    table.append(head);
+    for (const row of v.by_section) {
+      const line = el('tr');
+      for (const cell of [row.title, row.passages, row.stayed_home + ' of ' + row.passages, row.closeness == null ? '–' : row.closeness.toFixed(2), row.closeness_1634 == null ? '–' : row.closeness_1634.toFixed(2)]) line.append(el('td', '', String(cell)));
+      table.append(line);
+    }
+    box.append(table);
+    box.append(el('p', '', 'Where a section is less close in the new English, part of what made its passages look alike was the shared old style.'));
     box.append(el('p', '', v.note));
     box.append(el('h2', '', 'Sources'));
   }
@@ -199,7 +244,7 @@ function about() {
   copy.type = 'button';
   copy.addEventListener('click', async () => {
     const mine = readVerdicts(), lines = D.passages.map(p => 'Meditations ' + p.standard_ref + ' (' + p.revision + '): ' + (mine[p.revision] || 'no verdict'));
-    try { await navigator.clipboard.writeText('Translation pilot ' + D.id + '\n' + lines.join('\n')); announce('Copied.'); copy.textContent = 'Copied'; }
+    try { await navigator.clipboard.writeText('Translation ' + D.id + '\n' + lines.join('\n')); announce('Copied.'); copy.textContent = 'Copied'; }
     catch { announce('Could not copy. Select the text instead.'); window.prompt('Copy your verdicts', lines.join('; ')); }
   });
   box.append(copy);
@@ -210,7 +255,19 @@ fetch('stoic-translation.json', {cache: 'no-cache'}).then(response => {
 }).then(data => {
   D = data;
   document.getElementById('status').textContent = D.status;
-  document.getElementById('main').replaceChildren(...D.passages.map(card));
+  document.title = D.passages.length + ' passages of Marcus from the Greek · Stoic Constitution';
+  document.getElementById('eyebrow').textContent = 'Translation from the Greek · ' + D.passages.length + ' passages in ' + D.sections.length + (D.sections.length === 1 ? ' section' : ' sections');
+  const nodes = [], toc = document.getElementById('toc');
+  D.sections.forEach((section, index) => {
+    nodes.push(sectionHead(section, index + 1), ...D.passages.filter(passage => passage.section === section.id).map(card));
+    const item = el('li'), link = el('a', '', section.title);
+    link.href = '#s-' + section.id.replace('.', '-');
+    link.append(el('span', '', section.passages + (section.article ? ' · Article ' + section.article : '')));
+    item.append(link);
+    toc.append(item);
+  });
+  toc.hidden = D.sections.length < 2;
+  document.getElementById('main').replaceChildren(...nodes);
   about();
   document.getElementById('foot').textContent = D.footer;
   if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();

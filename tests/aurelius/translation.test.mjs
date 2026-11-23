@@ -1,4 +1,4 @@
-// The project's own translation of the Meditations (pilot: six passages). Stored record, published file, and the rules
+// The project's own translation of the Meditations, section by section. Stored record, published file, and the rules
 // scripts/aurelius-translation.py enforces: a revision never changes, notes quote the Greek exactly, today's English.
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
@@ -12,15 +12,39 @@ const chapter = read('public/apps/stoic-constitution/c6.json');
 const revisionOf = (passage) => `${stored.id}:${passage.standard_ref}:${crypto.createHash('sha256')
   .update([stored.edition.id, passage.standard_ref, passage.greek, passage.english].join('\n'), 'utf8').digest('hex').slice(0, 16)}`;
 
-test('the pilot translates exactly the passages of section c6.s6, each once', () => {
-  const section = chapter.articles.find((article) => article.section === stored.scope);
-  assert.ok(section, `an article is written on ${stored.scope}`);
-  assert.deepEqual(stored.passages.map((passage) => passage.casaubon_revision).sort(), section.members.map((member) => member.revision).sort());
+const topics = read('content/aurelius/topics.json');
+const sectionOf = new Map(topics.chapters.flatMap((c) => c.sections.flatMap((s) => s.members.map((m) => [m.revision_id, s.id]))));
+const STANDARD = /^\d{1,2}\.\d{1,2}b?(?:–\d{1,2})?a?$/;
+
+test('translation goes section by section: every passage of a listed section is translated once, and none from outside', () => {
+  assert.ok(stored.sections.length >= 1 && new Set(stored.sections).size === stored.sections.length);
+  assert.ok(stored.sections.includes('c6.s6'), 'the pilot section');
+  const expected = topics.chapters.flatMap((c) => c.sections).filter((s) => stored.sections.includes(s.id)).flatMap((s) => s.members.map((m) => m.revision_id));
+  assert.deepEqual(stored.passages.map((passage) => passage.casaubon_revision).sort(), expected.sort());
   assert.equal(new Set(stored.passages.map((passage) => passage.standard_ref)).size, stored.passages.length);
   for (const passage of stored.passages) {
-    const member = section.members.find((item) => item.revision === passage.casaubon_revision);
-    assert.equal(passage.casaubon_ref, member.ref, `Meditations ${passage.standard_ref}: the 1634 number`);
+    assert.match(passage.standard_ref, STANDARD, `Meditations ${passage.standard_ref}`);
+    assert.ok(passage.casaubon_revision.startsWith(`casaubon-gutenberg-2680-${passage.casaubon_ref.replace('.', '-')}:`), `Meditations ${passage.standard_ref}: the 1634 number`);
   }
+  // Article 6 quotes the pilot section, and its passages carry the same numbers.
+  const article = chapter.articles.find((item) => item.section === 'c6.s6');
+  for (const member of article.members) assert.equal(stored.passages.find((p) => p.casaubon_revision === member.revision).casaubon_ref, member.ref);
+});
+
+test('a passage that covers part of a modern chapter says which Greek it leaves out, and no other passage carries a part', () => {
+  for (const passage of stored.passages) {
+    const where = `Meditations ${passage.standard_ref}`;
+    if (/[ab]/.test(passage.standard_ref)) {
+      assert.ok(passage.part && passage.part.why.length > 20, `${where}: why the 1634 translation cuts here`);
+      assert.match(passage.part.left_out, /[Ͱ-Ͽἀ-῿]/, where);
+      assert.ok(!passage.greek.includes(passage.part.left_out), `${where}: the Greek left out is not in the passage`);
+    } else assert.equal(passage.part, undefined, where);
+  }
+});
+
+test('what the owner has said about the translation is recorded in their words, with the reading of it marked as the editor’s', () => {
+  assert.ok(stored.owner.length >= 1);
+  for (const entry of stored.owner) assert.ok(/^\d{4}-\d{2}-\d{2}$/.test(entry.date) && entry.said && entry.about && entry.read_as, 'date, their words, what about, and how it was read');
 });
 
 test('a revision is the hash of its edition, reference, Greek and English, so no passage is edited in place', () => {
@@ -59,13 +83,28 @@ test('the published file is the stored record with the 1634 text beside each pas
   }
 });
 
-test('the new English is embedded with the corpus model, and the comparison with the 1634 English is published', () => {
+test('the published file reads section by section', () => {
+  assert.deepEqual(published.sections.map((section) => section.id), stored.sections);
+  for (const section of published.sections) {
+    assert.ok(section.title && section.passages >= 1, section.id);
+    assert.equal(section.passages, published.passages.filter((passage) => passage.section === section.id).length, section.id);
+  }
+  const order = published.passages.map((passage) => stored.sections.indexOf(passage.section));
+  assert.deepEqual(order, [...order].sort((x, y) => x - y), 'passages are grouped by section, in the order the sections were translated');
+  for (const passage of published.passages) assert.equal(passage.section, sectionOf.get(passage.casaubon_revision));
+});
+
+test('the new English is embedded with the corpus model, and the comparison with the 1634 English is published per section', () => {
   const { vectors } = published;
   assert.ok(vectors, 'run scripts/aurelius-translation.py --embed, then publish');
   assert.equal(vectors.dimensions, 3072);
-  assert.equal(vectors.home.section, stored.scope);
-  assert.ok(vectors.closeness > 0 && vectors.closeness < 1 && vectors.closeness_1634 > 0 && vectors.closeness_1634 < 1);
-  assert.ok(vectors.stayed_home >= 0 && vectors.stayed_home <= published.passages.length);
+  assert.deepEqual(vectors.by_section.map((row) => row.section), stored.sections);
+  for (const row of vectors.by_section) {
+    const mine = published.passages.filter((passage) => passage.section === row.section);
+    assert.equal(row.passages, mine.length, row.section);
+    assert.ok(row.closeness > 0 && row.closeness < 1 && row.closeness_1634 > 0 && row.closeness_1634 < 1, row.section);
+    assert.equal(row.stayed_home, mine.filter((passage) => passage.vector.home_rank === 1).length, row.section);
+  }
   for (const passage of published.passages) {
     assert.ok(passage.vector.to_1634 > 0 && passage.vector.to_1634 < 1, `Meditations ${passage.standard_ref}: similarity to its 1634 text`);
     assert.ok(passage.vector.home_rank >= 1 && passage.vector.home_rank <= vectors.sections);

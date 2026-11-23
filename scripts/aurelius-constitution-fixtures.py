@@ -164,13 +164,17 @@ TESTS = [
 
 
 # ---- translation cases: (name, row, fault, mutate(stored translation record), text the rejection must contain)
+def translated(r, standard):
+    return next(p for p in r['passages'] if p['standard_ref'] == standard)
+
+
 def t5_edited_in_place(r):
-    r['passages'][0]['english'] = r['passages'][0]['english'].replace('loves', 'longs for', 1)
+    translated(r, '10.21')['english'] = translated(r, '10.21')['english'].replace('loves', 'longs for', 1)
 
 
 def t5_old_english(r):
     import hashlib
-    passage = r['passages'][1]
+    passage = translated(r, '4.23')
     passage['english'] = passage['english'].replace('fits well with you', 'is expedient unto thee')
     body = '\n'.join([r['edition']['id'], passage['standard_ref'], passage['greek'], passage['english']])   # a proper new revision, so only the wording is at fault
     passage['superseded'].append(passage['revision'])
@@ -178,13 +182,33 @@ def t5_old_english(r):
 
 
 def t5_note_misquotes_greek(r):
-    r['passages'][2]['notes'][0]['greek'] = 'Μήτις'
+    translated(r, '6.43')['notes'][0]['greek'] = 'Μήτις'
+
+
+def t7_section_incomplete(r):
+    r['passages'].remove(translated(r, '5.7'))
+
+
+def t7_outside_listed_sections(r):
+    r['sections'].remove('c6.s6')
+
+
+def t7_part_without_what_is_left_out(r):
+    next(p for p in r['passages'] if p.get('part')).pop('part')
+
+
+def t7_whole_chapter_with_a_part(r):
+    translated(r, '5.7')['part'] = {'of': '5.7', 'left_out': 'Εὐχὴ Ἀθηναίων', 'why': 'A whole chapter does not carry a part.'}
 
 
 TRANSLATIONS = [
     ('t5-english-edited-in-place', 'T5', 'a translated passage reworded without a new revision', t5_edited_in_place, 'revision'),
     ('t5-old-english', 'T5', 'a translation that falls back into 1634 English', t5_old_english, "not today's English"),
     ('t5-note-misquotes-the-greek', 'T5', 'a note whose Greek is not in the passage', t5_note_misquotes_greek, 'not in the Greek'),
+    ('t7-listed-section-incomplete', 'T7', 'a section listed as translated that lacks one of its passages', t7_section_incomplete, 'lacks'),
+    ('t7-passage-outside-the-listed-sections', 'T7', 'translated passages whose section is not listed', t7_outside_listed_sections, 'not among the sections'),
+    ('t7-part-of-a-chapter-without-what-is-left-out', 'T7', 'a passage numbered as part of a chapter that does not say what it leaves out', t7_part_without_what_is_left_out, 'part of a chapter'),
+    ('t7-whole-chapter-with-a-part', 'T7', 'a whole chapter that claims to leave something out', t7_whole_chapter_with_a_part, 'only for a passage that covers part'),
 ]
 
 

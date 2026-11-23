@@ -170,10 +170,42 @@ These four lines are the reader's words, not rechecked after the fixes above.
 
 ### What waits for the owner
 
-1. **Read the six passages** at `/apps/stoic-translation.html` and say keep, revise or stop (the page has Keep and Revise on each passage and "Copy my verdicts"). Nothing beyond the six is translated until then.
+1. **Read the six passages** at `/apps/stoic-translation.html` and say keep, revise or stop (the page has Keep and Revise on each passage and "Copy my verdicts"). Nothing beyond the six is translated until then. *(Later on 23 Nov the owner said “looks good”; see the last section of this log.)*
 2. **Article 6**, with Seneca on and off: accept, or say what to change.
 3. **The audit of Articles 1 to 5** ([35-audit-articles-1-5.md](35-audit-articles-1-5.md)): the changed statements of Articles 4 and 5, the reworded claims of Article 3, and three proposed changes to Marcus's wording in Article 1, which are proposed and not made.
 4. **The order of the whole book:** translate all 418 passages, embed, regroup, then write; or keep the grouping made on the 1634 English. The pilot's vectors argue for the first.
 5. **Pushing.** Four commits are local on main and none is pushed: `22cffd2`, `796b763`, `a70e988`, `205bcff`, plus the N3 commit that contains this log. A push publishes all of them together.
 
 Articles 7 to 38 wait for points 1 to 4.
+
+### After the plan: the owner's word on the six, and the rest of chapter 1 translated (23 Nov)
+
+**What the owner said.** After the translation page was shown working, the owner wrote “looks good”. I read that as Keep on the six pilot passages and recorded it in the store in those words, marked as my reading. The owner did not mark the passages one by one. If the two words meant only that the page loads, the note is wrong and the work below stands or falls on the owner's reading of it.
+
+**What followed.** With the six kept, the limit “nothing wider” was lifted, and the 59 passages behind Articles 1 to 5 were translated from the Greek, one section at a time. This is needed under either order the owner may choose for the rest of the book, short of stopping the translation.
+
+- **Matching the numbers.** A script aligned the 1634 sections with modern chapters by their cached vectors (it recovered all six pilot matches); I then read each of the 59 openings and endings beside the Greek. Ten passages join two or more chapters. Six are only part of a chapter (11.8a, 9.28a, 9.39a, 3.11b, 3.16b, 7.31b–34), because the 1634 translation cuts its sections elsewhere; each says which Greek it leaves out. One (1634's 1.17) is modern 2.3: the 1634 translation puts the start of Book 2 at the end of Book 1. The alignment script still works book by book and misses that case; it is in the session's scratch folder, not in the repository.
+- **Three readers per section.** A first translator saw only the Greek. A second reader saw only the Greek and the English and raised 242 points on the 59 passages, calling none wrong. A third reader settled every point in writing and fixed further faults it found. I read the settled English of every section, sent back small corrections, and merged. The briefs are now in `apps/aurelius/prompts/translation-*.md`.
+- **One vocabulary.** The third readers were given the renderings fixed in the six pilot passages (“the universe”, “the nature of the whole”, “the ruling part” and so on) and brought their sections into line; departures carry a note.
+- **Damaged or doubted Greek is shown, not smoothed:** 8.35 (no verb; brackets in the English), 9.28a and 7.31b (bare fragments), 5.8 (ἐκεῖ σε or ἐκεῖσε; the printed edition was not consulted).
+- **In the store now:** 65 passages in six sections, 560 notes on what the Greek leaves open, 355 settled points.
+- **Embedded as asked:** the 59 new passages, 8,930 tokens, about $0.0012 (caps: 10,000 tokens, $0.01). 56 of 65 passages are still nearest to their own section among all 38.
+
+| Section | Passages | Still nearest to it | Close, new English | Close, 1634 |
+|---|---|---|---|---|
+| A member of one body | 10 | 9 of 10 | 0.50 | 0.60 |
+| The work that belongs to me | 15 | 13 of 15 | 0.50 | 0.58 |
+| What happens to me | 15 | 12 of 15 | 0.54 | 0.67 |
+| The reason that governs the whole | 12 | 10 of 12 | 0.44 | 0.55 |
+| What I was made for | 7 | 6 of 7 | 0.39 | 0.51 |
+| What the whole sends in its season | 6 | 6 of 6 | 0.37 | 0.46 |
+
+Every section is about a tenth less close in the new English. The grouping holds, but part of what bound each section was the shared style of 1634.
+
+- **On the pages.** The translation page now reads section by section with a contents list, marks passages that are part of a chapter, and gives the vectors per section. In Articles 1 to 5, each passage of Marcus offers “In today's English, from the Greek” one tap away and says that the article itself still quotes the 1634 text. Articles 1 to 5 were not rewritten: that waits for the owner's verdict on the audit.
+- **Checks:** store rules extended (sections complete, parts say what they leave out) with four new fault fixtures; browser cases T6 rewritten and E2 added (E2 was written after the feature and not seen to fail first). Build exit 0; browser check 27 ok; 31 tests pass; 25 faults rejected; `npm run build` exit 0.
+- **The owner's question about Russian** (“do we also translate to russian right away? or just translate final stuff”): my recommendation, now rule 24 of the article prompt, is the second: from the settled text only, and from the Greek. Not confirmed by the owner.
+- **Usage review at 12:17 UTC:** result, the main session's context had grown to 365k while helpers ran; action, section work was delegated and my own reads were kept to samples and validators; evidence, calls per quarter hour fell from 41 to 3 once the helpers had reported.
+
+**Still the owner's:** read the 59 new passages (or a sample) on the translation page; the verdicts on Article 6 and on the audit of Articles 1 to 5; whether Articles 1 to 5 should now be re-anchored on the new English; the order for the remaining 353 passages; Russian; pushing.
+

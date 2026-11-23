@@ -518,35 +518,50 @@ def case_p17(page, base, port):
 
 
 def case_t6(page, base, port):
-    """The translation pilot's page: six passages, one version at a time on a phone, three side by side on a wide screen."""
+    """The translation page: every translated passage under its section, one version at a time on a phone, three side by side on a wide screen."""
     problems = []
     url = base.replace('stoic-constitution.html', 'stoic-translation.html')
     page.goto(url, wait_until='networkidle')
     page.wait_for_selector('article.passage')
-    visible = lambda: page.evaluate("[...document.querySelectorAll('article.passage:first-child .col')].filter(n => n.offsetParent).map(n => n.className.replace('col ', ''))")
-    measure = lambda: page.evaluate("""() => ({n: document.querySelectorAll('article.passage').length, overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    visible = lambda: page.evaluate("[...document.querySelector('article.passage').querySelectorAll('.col')].filter(n => n.offsetParent).map(n => n.className.replace('col ', ''))")
+    data = json.loads((ROOT / 'public/apps/stoic-translation.json').read_text())
+    measure = lambda: page.evaluate("""() => ({n: document.querySelectorAll('article.passage').length, sections: document.querySelectorAll('header.sec').length, overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
         small: [...document.querySelectorAll('body *')].filter(n => n.children.length === 0 && n.textContent.trim() && n.offsetParent && parseFloat(getComputedStyle(n).fontSize) < 12).length,
         short: [...document.querySelectorAll('button')].filter(n => n.offsetParent && n.getBoundingClientRect().height < 40).length})""")
     seen = measure()
-    if seen != {'n': 6, 'overflow': 0, 'small': 0, 'short': 0}:
+    if seen != {'n': len(data['passages']), 'sections': len(data['sections']), 'overflow': 0, 'small': 0, 'short': 0}:
         problems.append(f'phone: {seen}')
+    for passage in data['passages']:
+        if page.locator('#p-' + re.sub(r'[^0-9a-z]+', '-', passage['standard_ref'])).count() != 1:
+            problems.append(f"no card to link to for Meditations {passage['standard_ref']}")
+    parts = [p for p in data['passages'] if p.get('part')]
+    if page.locator('article.passage p.part').count() != len(parts):
+        problems.append('a passage that is part of a chapter does not say so')
+    if len(data['sections']) > 1:
+        last = data['sections'][-1]
+        page.locator('#toc a').nth(len(data['sections']) - 1).click()
+        page.wait_for_timeout(250)
+        top = page.locator('#s-' + last['id'].replace('.', '-')).evaluate('n => n.getBoundingClientRect().top')
+        if not 0 <= top < 200:
+            problems.append(f'the contents link to the last section leaves its heading at y={top:.0f}')
+        page.evaluate('scrollTo(0, 0)')
     if visible() != ['en']:
         problems.append(f'phone: opens showing {visible()}, not the new English alone')
     for which, want in [('grc', ['grc']), ('old', ['old']), ('all', ['grc', 'en', 'old'])]:
         page.locator(f'.bar button[data-show={which}]').click()
         if visible() != want:
             problems.append(f'phone: “{which}” shows {visible()}')
-    keep = page.locator('article.passage:first-child .vb', has_text='Keep')
+    keep = page.locator('article.passage').first.locator('.vb', has_text='Keep')
     keep.click()
     page.reload(wait_until='networkidle')
     page.wait_for_selector('article.passage')
-    if page.locator('article.passage:first-child .vb[aria-pressed=true]').count() != 1:
+    if page.locator('article.passage').first.locator('.vb[aria-pressed=true]').count() != 1:
         problems.append('a verdict is not kept after a reload')
     page.set_viewport_size({'width': 1440, 'height': 900})
     page.wait_for_timeout(200)
     if visible() != ['grc', 'en', 'old'] or measure()['overflow']:
         problems.append(f'wide: {visible()} {measure()}')
-    opened = page.locator('article.passage:first-child details.notes')
+    opened = page.locator('article.passage').first.locator('details.notes')
     if opened.count() != 2:
         problems.append('the notes and the second reading are not both offered')
     return problems
@@ -596,6 +611,49 @@ def case_p18(page, base, port):
     if page.locator('#article-6 .statement .sg.add').count() and 'Seneca' not in page.locator('#article-6 .statement .fused').first.text_content():
         problems.append('the statement carries Seneca’s clause but lists only Marcus’s passages under it')
     return problems
+
+def case_e2(page, base, port):
+    """An article that still quotes the 1634 English (run on the real record): each of Marcus's passages offers the
+    project's English and the Greek one tap away, says the article is not rewritten on it, and links to a card that exists."""
+    problems = []
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('article.article .statement')
+    art = page.locator('article.article:not(:has(.from-greek))').first
+    art.scroll_into_view_if_needed()
+    art.locator('li.claim .show').first.click()
+    page.wait_for_timeout(300)
+    rows = art.locator('li.claim .pair:not(:has(.in-context))')
+    if not rows.count():
+        return ['no passage of Marcus is shown under the first claim']
+    cards = {'p-' + re.sub(r'[^0-9a-z]+', '-', p['standard_ref']): p for p in json.loads((ROOT / 'public/apps/stoic-translation.json').read_text())['passages']}
+    for i in range(rows.count()):
+        row = rows.nth(i)
+        name = row.locator('.said b').first.text_content()
+        more = row.locator('details.versions')
+        if more.count() != 1:
+            problems.append(f'{name}: the new English is not offered')
+            continue
+        summary = more.locator('summary')
+        if 'today’s English' not in summary.text_content():
+            problems.append(f'{name}: the disclosure is called “{summary.text_content()}”')
+        summary.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+        summary.click()
+        target = (more.locator('a').get_attribute('href') or '').split('#')[-1]
+        passage = cards.get(target)
+        if not passage:
+            problems.append(f'{name}: links to #{target}, which is not a card on the translation page')
+            continue
+        shown = more.locator('.ctx.new').text_content()
+        if ' '.join(shown.split()) != ' '.join(passage['english'].split()):
+            problems.append(f'{name}: the English shown is not the stored translation of {passage["standard_ref"]}')
+        if not more.locator('.ctx.grc').is_visible() or 'still quotes the 1634' not in more.text_content():
+            problems.append(f'{name}: the Greek, or the line saying the article still quotes 1634, is missing')
+        if passage['casaubon_ref'] not in name:
+            problems.append(f'{name}: the card it links to is the 1634 passage {passage["casaubon_ref"]}')
+    if page.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth') != 0:
+        problems.append('the opened disclosure makes the page scroll sideways')
+    return problems
+
 
 def case_e1(page, base, port):
     """An article quoted from the project's translation (run on the real record): today's English is what is quoted,
@@ -676,8 +734,9 @@ CASES = {
     'P16': ('lists opened at the top of the page on a phone can be seen', case_p16, (390, 844)),
     'P17': ('an editor\'s inference is named, with its reason', case_p17, (390, 844)),
     'P18': ('second cold reader: steady panels, no jump on touch, removal line, statement sources', case_p18, (390, 844)),
-    'T6': ('the translation pilot page: six passages, three versions', case_t6, (390, 844)),
+    'T6': ('the translation page: every passage under its section, three versions', case_t6, (390, 844)),
     'E1': ('an article quoted from the new English: modern number, Greek and 1634 on request', case_e1, (390, 844), 'real'),
+    'E2': ('an article still on the 1634 English: the new English and the Greek on request', case_e2, (390, 844), 'real'),
 }
 
 

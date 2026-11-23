@@ -264,6 +264,8 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .versions b{display:block;margin-top:8px;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .versions .ctx{margin-top:4px}
 .versions .ctx.old{color:var(--muted)}
+.versions .ctx.new{white-space:pre-line}
+.versions .ctx.note{font:14px/1.5 var(--sans);color:var(--muted)}
 .versions a{display:inline-block;margin-top:8px;font-size:14px}
 .in-context{margin-top:6px;font-size:13.5px;line-height:1.45;color:var(--muted)}
 .picked{margin-top:8px;padding:8px 10px 6px;border-top:1px solid var(--line)}
@@ -390,7 +392,7 @@ svg.map .cos{font-size:12.5px;font-weight:650}
 <h1>The articles so far</h1>
 <p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
-<p class="status"><a href="stoic-translation.html">New: the six passages behind Article 6, translated from the Greek →</a></p>
+<p class="status"><a href="stoic-translation.html">Marcus’s passages translated from the Greek, beside the 1634 English →</a></p>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
@@ -1062,7 +1064,7 @@ function passageRow(article, piece, hit, mode) {
   const said = el('div', 'said'), then = el('div', 'then');
   const source = piece.author ? addedPassage(article, piece.ref) : null;
   said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref + (modern(article, piece.ref) ? ' (' + modern(article, piece.ref) + ' in modern editions)' : '')) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
-  if (!piece.author && article.edition) said.append(versions(article, memberOf(article, piece.ref)));
+  if (!piece.author && memberOf(article, piece.ref).english) said.append(versions(article, memberOf(article, piece.ref)));
   // An added author's quote carries a sentence on what the passage around it is about and what its key words refer to.
   if (piece.author && piece.context) said.append(el('p', 'in-context', 'In context: ' + piece.context));
   then.append(el('b', '', 'What follows'), el('p', 'follows', piece.follows));
@@ -1084,15 +1086,23 @@ function passageRow(article, piece, hit, mode) {
   row.append(said, then);
   return row;
 }
-// For an article quoted in the project's English: the Greek and the 1634 English of the same passage, one tap away.
+// The other versions of a passage, one tap away. An article quoted in the project's English offers the Greek and the
+// 1634 English; an article that still quotes the 1634 English offers the project's English and the Greek.
 function versions(article, member) {
   const box = el('details', 'more versions');
   box.dataset.keep = 'versions-' + article.number + '-' + member.ref;
-  box.append(el('summary', '', 'The Greek and the 1634 English'));
-  const greek = el('p', 'ctx grc', member.greek), old = el('p', 'ctx old', flat(member.text)), link = el('a', '', 'All six passages side by side (there this one is ' + member.standard + ')');
+  const greek = el('p', 'ctx grc', member.greek), link = el('a', '', 'This passage on the translation page (there it is ' + member.standard + ')');
   greek.lang = 'grc';
-  link.href = 'stoic-translation.html#p-' + member.standard.replace('.', '-');
-  box.append(el('b', '', 'Greek'), greek, el('b', '', 'Casaubon, 1634 (' + member.ref + ')'), old, link);
+  link.href = 'stoic-translation.html#p-' + member.standard.replace(/[^0-9a-z]+/g, '-');
+  if (article.edition) {
+    box.append(el('summary', '', 'The Greek and the 1634 English'));
+    box.append(el('b', '', 'Greek'), greek, el('b', '', 'Casaubon, 1634 (' + member.ref + ')'), el('p', 'ctx old', flat(member.text)), link);
+  } else {
+    box.append(el('summary', '', 'In today’s English, from the Greek'));
+    const fresh = el('p', 'ctx new', member.english);
+    box.append(el('b', '', 'This project’s translation (' + member.standard + ')'), fresh, el('b', '', 'Greek'), greek,
+      el('p', 'ctx note', 'This article still quotes the 1634 English above; it has not been rewritten on the new translation.'), link);
+  }
   return box;
 }
 // While an added author is switched on, the left column also holds that author's quotes, so it names no one.
@@ -1465,7 +1475,7 @@ function articleCard(article) {
   leaf.append(el('p', 'eyebrow', 'Article ' + article.number), el('h3', '', article.title));
   if (article.edition) {
     const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English (a pilot). Passage numbers are Casaubon’s, as in the other articles. Each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
-    const link = el('a', '', 'Read the six passages in Greek, today’s English and 1634');
+    const link = el('a', '', 'Read the passages in Greek, today’s English and 1634');
     link.href = 'stoic-translation.html';
     note.append(link);
     leaf.append(note);

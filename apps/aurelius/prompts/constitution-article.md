@@ -229,3 +229,23 @@ Each rule is followed by the feedback it came from.
     *(23 Nov 2026, second cold reader: a context that pointed at another quote; a list of modern
     numbers with no pairs; a decision that said “both passages say” over words marked as the
     editor's.)*
+23. **Translate a section with three readers, and keep the briefs.** A section's passages are translated
+    from the Greek by the procedure in `translation-translator.md`, `translation-checker.md` and
+    `translation-settler.md` (this folder): a first translator who sees only the Greek; a second
+    reader who sees only the Greek and the English; a third who settles every point in writing. The
+    renderings already settled are in `translation-glossary.md`; add to it when a new term is
+    fixed. Match each 1634 passage to the Greek by reading its opening and ending beside the Greek,
+    not by its number: the 1634 translation joins chapters, cuts inside them, and puts the start of
+    Book 2 at the end of Book 1. A passage that is part of a chapter says what it leaves out. Where
+    the Greek is damaged or a reading is from memory, the English and the notes say so; nothing is
+    smoothed over. Embed the new English before any article quotes it (rule 21). Record what the
+    owner says about a translation in their own words, with the reading of it marked as the
+    editor's. *(23 Nov 2026: the owner read the first six passages and said “looks good”; the 59
+    passages behind Articles 1 to 5 were then translated this way.)*
+24. **Other languages are made from the settled text, and from the Greek.** A translation into
+    another language (the owner asked about Russian on 23 Nov 2026: “do we also translate to russian
+    right away? or just translate final stuff”) is made only once a section's English is settled
+    and the articles that quote it have the owner's verdict, and it is made from the Greek with the
+    settled decisions on open readings, not from the English. This is the editor's recommendation;
+    the owner has not yet confirmed it.
+
