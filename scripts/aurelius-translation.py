@@ -2,6 +2,14 @@
 """Check the project's own translation of the Meditations and publish it for the page.
 
 Run: apps/aurelius/.venv/bin/python scripts/aurelius-translation.py [--stored FILE] [--out FILE]
+     apps/aurelius/.venv/bin/python scripts/aurelius-translation.py --embed --allow-openai --token-budget 2000 --cost-budget-usd 0.01
+
+--embed sends the English of each translated passage to the same embedding model the Meditations and Seneca were
+embedded with (through the shared cache, under explicit token and cost caps; the key is read from OPENAI_API_KEY),
+and keeps the vectors in .aurelius/corpora/project-v1/vectors.npz. With those vectors present, publishing also
+reports how each passage sits in the new English: how close its vector is to the vector of the same passage in the
+1634 English, which section's centre it is nearest to, and how close the translated passages are to one another
+compared with the same passages in 1634 English. The sections themselves were grouped on the 1634 English.
 
 The stored record (content/aurelius/translation/project-v1.json) holds, per passage: the reference in the 1634
 translation the articles were built on (Casaubon) and that passage's revision id; the standard reference of modern
@@ -23,13 +31,17 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CORPUS = ROOT / '.aurelius/corpora/casaubon-gutenberg-2680-6977474f82a39dd8-numbered-text-v2-d436fea5/corpus.json'
 STORED = ROOT / 'content/aurelius/translation/project-v1.json'
 OUT = ROOT / 'public/apps/stoic-translation.json'
+TOPICS = ROOT / 'content/aurelius/topics.json'
+VECTORS = ROOT / '.aurelius/corpora/project-v1/vectors.npz'
 OLD_FORMS = re.compile(r"\b(thee|thou|thy|thine|doth|hath|saith|unto|whatsoever|shalt)\b", re.I)
 
 
@@ -75,15 +87,95 @@ def check(stored: dict, corpus: dict) -> list[dict]:
     return out
 
 
+def items(stored: dict) -> list[dict]:
+    """The translated passages in the shape the embedding cache takes: an immutable id, the text, and its hash."""
+    return [{'revision_id': p['revision'], 'text': p['english'], 'text_hash': hashlib.sha256(p['english'].encode()).hexdigest()} for p in stored['passages']]
+
+
+def cache():
+    sys.path.insert(0, str(ROOT / 'apps/aurelius'))
+    from aurelius.embeddings import CONFIG, EmbeddingCache
+    return EmbeddingCache(ROOT / '.aurelius/vectors', CONFIG), CONFIG
+
+
+def embed(stored: dict, args) -> None:
+    import numpy as np
+    store, _ = cache()
+    plan = store.plan(items(stored))
+    print(json.dumps({k: plan[k] for k in ('chunks', 'cached_chunks', 'uncached_unique_inputs', 'input_tokens', 'estimated_usd')}))
+    if plan['uncached_unique_inputs']:
+        if not args.allow_openai or not args.token_budget or not args.cost_budget_usd:
+            raise SystemExit('Nothing was sent. Pass --allow-openai with --token-budget and --cost-budget-usd to embed.')
+        key = os.environ.get('OPENAI_API_KEY')
+        if not key:
+            raise SystemExit('Set OPENAI_API_KEY in the environment; never paste it into chat or source code')
+        from aurelius.analysis import corpus_identity
+        from openai import OpenAI
+        client = OpenAI(api_key=key, base_url='https://api.openai.com/v1', max_retries=0, timeout=60)
+        approval = {'corpus_hash': corpus_identity(items(stored)), 'segmentation_reviewed': True, 'external_processing_approved': True,
+                    'token_budget': args.token_budget, 'cost_budget_usd': args.cost_budget_usd, 'reviewer': 'explicit CLI operator approval',
+                    'source': 'content/aurelius/translation/project-v1.json'}
+        print('state:', store.embed(items(stored), client, approval)['state'])
+    matrix = store.matrix(items(stored))
+    VECTORS.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(VECTORS, vectors=matrix.astype(np.float32), revision_ids=np.array([p['revision'] for p in stored['passages']]))
+    print('kept', list(matrix.shape), 'in', VECTORS.relative_to(ROOT))
+
+
+def compare(stored: dict, corpus: dict) -> dict | None:
+    """How the translated passages sit in the new English, against the 1634 English they replace. None without vectors."""
+    if not VECTORS.exists():
+        return None
+    import numpy as np
+    kept = np.load(VECTORS)
+    assert list(kept['revision_ids']) == [p['revision'] for p in stored['passages']], 'the vectors are of other revisions: run --embed again'
+    unit = lambda m: m / np.linalg.norm(m, axis=-1, keepdims=True)
+    new = unit(kept['vectors'].astype(np.float64))
+    old_all = unit(np.load(CORPUS.parent / 'projection-arrays.npz')['vectors'].astype(np.float64))
+    row = {p['revision_id']: i for i, p in enumerate(corpus['passages'])}
+    old = old_all[[row[p['casaubon_revision']] for p in stored['passages']]]
+    topics = json.loads(TOPICS.read_text())
+    index = ROOT / 'public/apps/stoic-constitution.json'   # section names live in the published index
+    names = {s['id']: s.get('title') or s.get('name') for c in json.loads(index.read_text())['chapters'] for s in c['sections']} if index.exists() else {}
+    sections = [(s['id'], names.get(s['id']) or s['id'], unit(old_all[[row[m['revision_id']] for m in s['members']]].mean(axis=0)))
+                for c in topics['chapters'] for s in c['sections']]
+    home = next(i for i, (sid, _, _) in enumerate(sections) if sid == stored['scope'])
+    centres = np.stack([c for _, _, c in sections])
+    pairs = np.triu_indices(len(new), 1)
+    per = []
+    for i, p in enumerate(stored['passages']):
+        to_new, to_old = centres @ new[i], centres @ old[i]
+        order = list(np.argsort(-to_new))
+        per.append({'revision': p['revision'], 'to_1634': round(float(new[i] @ old[i]), 3),
+                    'home': round(float(to_new[home]), 3), 'home_1634': round(float(to_old[home]), 3), 'home_rank': order.index(home) + 1,
+                    'nearest': {'section': sections[order[0]][0], 'title': sections[order[0]][1], 'similarity': round(float(to_new[order[0]]), 3)}})
+    _, config = cache()
+    return {'model': config['model'], 'dimensions': config['dimensions'], 'sections': len(sections),
+            'note': 'The sections were grouped on the 1634 English, and each centre is the mean of its own passages in that English, so a passage in 1634 English has a head start toward its own centre. Read the new numbers as: does the passage still belong here when said in today’s words?', 'home': {'section': sections[home][0], 'title': sections[home][1]},
+            'closeness': round(float((new @ new.T)[pairs].mean()), 3), 'closeness_1634': round(float((old @ old.T)[pairs].mean()), 3),
+            'stayed_home': sum(1 for x in per if x['home_rank'] == 1), 'passages': per}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument('--stored', type=Path, default=STORED)
     parser.add_argument('--out', type=Path, default=OUT)
+    parser.add_argument('--embed', action='store_true', help='embed the English of each passage with the corpus model, then stop')
+    parser.add_argument('--allow-openai', action='store_true')
+    parser.add_argument('--token-budget', type=int, default=0)
+    parser.add_argument('--cost-budget-usd', type=float, default=0.0)
     args = parser.parse_args()
     stored = json.loads(args.stored.read_text())
     corpus = json.loads(CORPUS.read_text())
     passages = check(stored, corpus)
+    if args.embed:
+        return embed(stored, args)
     record = {key: stored[key] for key in ('id', 'made', 'status', 'scope', 'edition', 'method', 'limits', 'footer')}
+    vectors = compare(stored, corpus) if args.stored == STORED else None
+    if vectors:
+        by = {x['revision']: x for x in vectors.pop('passages')}
+        passages = [{**p, 'vector': {k: v for k, v in by[p['revision']].items() if k != 'revision'}} for p in passages]
+        record['vectors'] = vectors
     record['passages'] = passages
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(record, ensure_ascii=False, indent=1) + '\n')

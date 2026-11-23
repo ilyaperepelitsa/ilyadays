@@ -97,7 +97,9 @@ const piecesOf = (article) => [...article.claims.flatMap((claim) => claim.suppor
 
 test('quoted passages are the immutable published text, and every quote is one exact span', () => {
   for (const article of record.articles) {
-    const texts = new Map(article.members.map((member) => [member.ref, member.text]));
+    // An article anchored in the project's translation quotes that English; member.text stays the immutable 1634 text.
+    const texts = new Map(article.members.map((member) => [member.ref, article.edition ? member.english : member.text]));
+    if (article.edition) for (const member of article.members) assert.ok(member.english && member.greek && member.standard && member.translation, `article ${article.number}: ${member.ref} is translated`);
     for (const member of article.members) {
       assert.equal(crypto.createHash('sha256').update(member.text).digest('hex'), points.get(member.revision).text_hash, `${member.ref} text matches its hash`);
       assert.equal(points.get(member.revision).reference, member.ref);
@@ -206,20 +208,14 @@ const sharedOf = (article) => {
   }
   return {shared, components};
 };
-// Articles known to be below the bar on 23 Nov 2026, to be fixed in milestone N3 (plan/stoicism/34-after-review-plan.md, G1).
-// The list may only shrink: an article on it that meets the bar fails the test until it is taken off.
-const KNOWN_BELOW = (process.env.STOIC_KNOWN_BELOW ?? '1,4,5').split(',').filter(Boolean).map(Number);
-
+// Until milestone N3 a named list exempted the articles then below the bar (1, 4 and 5). The audit of 23 Nov 2026 brought
+// every article above it, so there is no list any more: an article below the bar fails.
 test('each article has enough claim components resting on more than one passage', () => {
   for (const article of record.articles) {
     const {shared, components} = sharedOf(article);
     const meets = article.section_size >= 8 ? shared * 3 >= components : shared >= 1;
     const bar = article.section_size >= 8 ? 'a third' : 'one (small section)';
-    if (KNOWN_BELOW.includes(article.number)) {
-      assert.ok(!meets, `article ${article.number} now meets the bar (${shared}/${components}): take it off KNOWN_BELOW`);
-    } else {
-      assert.ok(meets, `article ${article.number}: ${shared} of ${components} claim components rest on more than one passage; the bar is ${bar}`);
-    }
+    assert.ok(meets, `article ${article.number}: ${shared} of ${components} claim components rest on more than one passage; the bar is ${bar}`);
   }
 });
 
@@ -283,8 +279,8 @@ test('Seneca is added as stronger, wider or qualified items, each resting on one
     const labels = record.labels.map((label) => label.key);
     const seen = new Set();
     const check = (piece, sentence) => {
-      assert.ok(Object.hasOwn(piece, 'context') && (piece.context === null || (typeof piece.context === 'string' && piece.context.length >= 20 && piece.context.length <= 200)),
-        `${where} ${piece.id}: every added piece carries its context sentence (null only while it awaits review in N3)`);
+      assert.ok(typeof piece.context === 'string' && piece.context.length >= 20 && piece.context.length <= 200,
+        `${where} ${piece.id}: every added piece carries its context sentence`);
       assert.match(piece.ref, /^Ep\. \d+\.\d+$/, `${where} ${piece.id}`);
       assert.equal(piece.author, 'seneca', `${where} ${piece.id}`);
       assert.ok(!seen.has(piece.id), `${where} ${piece.id} is used once`);
@@ -316,7 +312,11 @@ test('Seneca is added as stronger, wider or qualified items, each resting on one
       assert.ok(clause.target === 'statement' || claims.has(clause.target), `${where} clause target ${clause.target}`);
       assert.ok(!targets.has(clause.target), `${where}: one clause per sentence (${clause.target})`);
       targets.add(clause.target);
-      assert.ok(['adds', 'changes', 'challenges'].includes(clause.kind), `${where} clause kind ${clause.kind}`);
+      assert.ok(['adds', 'changes', 'challenges', 'limits'].includes(clause.kind), `${where} clause kind ${clause.kind}`);
+      // A clause that limits or challenges a claim comes from an item that limits that same claim.
+      if (clause.target !== 'statement' && ['challenges', 'limits'].includes(clause.kind)) {
+        assert.ok(seneca.items.some((item) => item.effect === 'qualified' && item.claim === clause.target && (clause.from || []).includes(item.key)), `${where}: the clause on ${clause.target} ${clause.kind} it, but no item of that kind stands on that claim`);
+      }
       assert.match(clause.t, /^[ ,;]/, `${where}: a clause continues the sentence`);
       assert.ok(!/[.!?]\s*$/.test(clause.t) && clause.t.trim().length >= 20 && clause.t.length <= 140, `${where}: “${clause.t}”`);
       assert.ok(clause.ids.length && clause.ids.every((id) => seen.has(id)), `${where}: a clause rests on Seneca's quoted pieces (${clause.ids})`);

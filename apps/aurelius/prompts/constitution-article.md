@@ -149,7 +149,7 @@ Each rule is followed by the feedback it came from.
     author thinks: the per-article strip is one sentence, three counts and one button. When an
     added author **adds** meaning to the statement or a claim, **changes** it, or **challenges** it,
     that goes into the sentence itself as one clause appended to Marcus's words (`voices.<author>.
-    amend`: `target` is `statement` or a claim id, `kind` is `adds`, `changes` or `challenges`, `t`
+    amend`: `target` is `statement` or a claim id, `kind` is `adds`, `changes`, `limits` or `challenges`, `t`
     continues the sentence and has no full stop, `ids` are that author's quoted pieces). The clause
     carries a small tag (“Seneca adds”, “Seneca challenges”) and that author's line pattern, and it
     disappears when the author is switched off. Marcus's words before it are never rewritten. One
@@ -187,7 +187,11 @@ Each rule is followed by the feedback it came from.
     clause appended to a statement or claim names the items it comes from (`from`) and cites only
     their quotes. Test each clause twice: does it say more than its quote says in context; and, if
     it is marked as a challenge, would the two authors really disagree? If the added author only
-    narrows or adds, mark it as an addition; if nothing real remains, drop the clause.
+    adds, mark it `adds`; if he narrows a claim without contradicting it, mark it `limits`, and it
+    must come from a `qualified` item on that same claim; if nothing real remains, drop the clause.
+    A clause's tag and the count it falls under must agree: a reader who sees “Limits 1” and then a
+    clause tagged “adds” cannot find the limit. *(23 Nov 2026, second cold reader: Article 6's
+    limiting clause was tagged “Seneca adds”.)*
     *23 Nov 2026, second review: Ep. 96.2 supports receiving hardship willingly, not wanting it;
     asking for joy outright does not contradict praying for everyone.*
 19. **Mark the editor's inferences.** A "so", "therefore" or "because" that no passage says is
@@ -208,3 +212,20 @@ Each rule is followed by the feedback it came from.
     *23 Nov 2026, the owner's request recorded in the second review: a project translation of the
     Meditations from the Greek into contemporary English; "drive it to completion please.
     including the translations".*
+21. **Vectors follow the text the reader is shown.** When a passage has a project translation, embed
+    that translation with the same model before an article quotes it, and report the article's
+    closeness on the new vectors, with the older figure beside it. The build refuses an article
+    anchored in a translation whose passages are not embedded. Say plainly on the page which text
+    the sections were grouped on. The clean order for the whole book is: translate, embed, group,
+    then write; grouping done on an older translation is provisional once a newer one exists.
+    *23 Nov 2026: “maybe we should've translated source ones first? into modern english, so that we
+    have modern english meditations. and then constitution? if that's the way we doing it - fine,
+    just make sure to do embeddings on new translation”.*
+22. **Every line a reader meets alone must stand alone.** A context sentence is read under one
+    quote with nothing else in view: name the letter and what is going on, never “same letter as
+    …”. When two numberings are in play, give them in pairs (“10.22 is 10.21 in modern editions”),
+    never as two separate lists. A decision never claims more for a sentence than the article's
+    own markings do: if the shared words are marked as the editor's summary, the decision says so.
+    *(23 Nov 2026, second cold reader: a context that pointed at another quote; a list of modern
+    numbers with no pairs; a decision that said “both passages say” over words marked as the
+    editor's.)*

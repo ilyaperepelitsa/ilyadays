@@ -106,8 +106,8 @@
   },
   {
    "key": "qualified",
-   "name": "Challenges",
-   "asks": "He limits or disagrees with a claim. The difference is shown, not blended in."
+   "name": "Limits",
+   "asks": "He limits a claim, or disagrees with it. The difference is shown, not blended in. It is called a challenge only where the two would really disagree."
   }
  ],
  "authors": [
@@ -684,11 +684,11 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the two central claims gain a second author, the body picture gains an arch beside it, and the article gains a concrete act and a second exercise. One claim is qualified: Seneca allows me to withdraw from the crowd.",
+     "becomes": "With Seneca, the two central claims gain a second author, the body picture gains an arch beside it, and the article gains a concrete act, a second exercise and a caution about crowds: I may step back from them, but I must not hate them. He disputes none of Marcus’s claims here.",
      "counts": {
       "stronger": 3,
-      "wider": 3,
-      "qualified": 1
+      "wider": 4,
+      "qualified": 0
      }
     }
    }
@@ -709,11 +709,11 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four of the five claims gain a second author and Practice gains a way to keep to the work on a crowded day. One claim is qualified: Seneca is milder about the body.",
+     "becomes": "With Seneca, four of the five claims gain a second author and Practice gains a way to stay my own master amid business. To the claim about the body he adds that it may still be indulged somewhat.",
      "counts": {
-      "stronger": 6,
+      "stronger": 7,
       "wider": 1,
-      "qualified": 1
+      "qualified": 0
      }
     }
    }
@@ -734,11 +734,11 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca this article changes most. Every claim gains a second author, the empty Practice label gets two exercises, “Why” gets a new argument, and “be glad of it” is qualified.",
+     "becomes": "With Seneca every claim gains a second author, the empty Practice label gets two exercises, “Why” gets a further argument, and “In action” gains what I may still prefer before a hardship comes. Nothing of Marcus’s is challenged.",
      "counts": {
       "stronger": 6,
-      "wider": 4,
-      "qualified": 1
+      "wider": 5,
+      "qualified": 0
      }
     }
    }
@@ -749,21 +749,21 @@
    "chapter": "c6",
    "title": "The reason that governs the whole",
    "statement": {
-    "t": "The reason that orders the world and the reason that guides me are the same kind of thing."
+    "t": "The reason that orders the world and the reason that guides me are alike."
    },
    "counts": {
-    "claims": 4,
-    "single": 3,
+    "claims": 5,
+    "single": 4,
     "sources": 12,
     "section_size": 12
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, all four claims gain a second author, the empty “When it breaks” gets its first item, and “In action” says how to honour what governs the world. One point is qualified: providence may overlook the individual.",
+     "becomes": "With Seneca, four of the five claims gain a second author, the empty “When it breaks” gets its first item, “In action” says what worship of the governing power is enough, and “Why” gains a limit: its care may miss one person.",
      "counts": {
       "stronger": 7,
-      "wider": 2,
-      "qualified": 1
+      "wider": 3,
+      "qualified": 0
      }
     }
    }
@@ -774,21 +774,21 @@
    "chapter": "c6",
    "title": "What I was made for",
    "statement": {
-    "t": "I exist for a purpose, as everything does, and my purpose is not my own amusement."
+    "t": "Like everything that exists, the gods included, I am made for something, namely to use my reason, which by nature turns toward others."
    },
    "counts": {
     "claims": 3,
-    "single": 2,
+    "single": 3,
     "sources": 6,
     "section_size": 7
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, all three claims gain a second author and the empty “When it breaks” gets its first item. The statement is qualified: the work is not for amusement, but it does bring a joy of its own.",
+     "becomes": "With Seneca, each claim gains a second author on one of its parts, and the article gains three things Marcus leaves out here: the answer to what I was made for, what failing at it looks like, and the joy that is left when pleasure is ruled out.",
      "counts": {
-      "stronger": 6,
-      "wider": 1,
-      "qualified": 1
+      "stronger": 4,
+      "wider": 3,
+      "qualified": 0
      }
     }
    }
@@ -799,20 +799,20 @@
    "chapter": "c6",
    "title": "What the whole sends in its season",
    "statement": {
-    "t": "What the whole sends me is good for me and comes at the right time, so I want what the world wants."
+    "t": "What the whole brings me is good for me and comes at the right time, so I take its side."
    },
    "counts": {
-    "claims": 3,
-    "single": 2,
+    "claims": 2,
+    "single": 5,
     "sources": 6,
     "section_size": 6
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, each of the three claims gains a second witness, and the article gains what Marcus leaves out here: paying for the hard things willingly, an answer if I doubt it, a way of holding my ground, and a test for prayer. He challenges one point: he does not want every good alike.",
+     "becomes": "With Seneca, taking the universe’s side gains two witnesses, and the article gains what Marcus leaves out here: the hard things, paid willingly as a tax; words for a setback; a test for prayer; how to stand under pain; an answer when a death seems too early; and what holds if I doubt it. He backs nothing in the first claim, and he limits the second: he does not crave hardship itself.",
      "counts": {
-      "stronger": 3,
-      "wider": 4,
+      "stronger": 2,
+      "wider": 6,
       "qualified": 1
      }
     }

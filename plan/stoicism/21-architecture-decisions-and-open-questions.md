@@ -21,6 +21,15 @@ These decisions follow the user’s brief and inspected repository. Changing one
 | Human approval of core meaning | Citation validity is not philosophical entailment | Workers propose, validate and critique but do not approve |
 | Separate expression layer | Emotional force can change claims | Wording needs mapping and semantic review |
 
+### Project translation beside the base edition (23 November 2026)
+
+Recorded from the owner's request in the second review of milestone M1 and their word on 23 Nov 2026 ("drive it to completion please. including the translations"; "just make sure to do embeddings on new translation").
+
+- **What exists:** a pilot translation of six passages (section c6.s6) from the Greek of Leopold's 1908 edition into today's English, stored in `content/aurelius/translation/project-v1.json` with the Greek, the translator's notes, the second reader's points and a revision id per passage. A revision never changes; a correction is a new revision.
+- **Identity stays with the base edition.** Passages keep their Casaubon revision ids and numbers as their identity, because sections, vectors and colours were built on them. A translated passage carries the modern number beside Casaubon's. An article may be anchored in the translation (`"edition": "project-v1"`); its quotes are then exact spans of that English.
+- **Vectors.** The translated passages are embedded with the same model. For the six: all remain nearest to their own section; they are less close to one another in modern English (0.37) than in 1634 English (0.46).
+- **Open, the owner's:** whether to translate all 418 passages first and regroup the book on the new English (the cleaner order, and the pilot's vectors argue for it), and whether Seneca's Latin gets the same treatment, which would also settle the rights question for Gummere's English.
+
 ## Decisions needing implementation design, not user permission
 
 Choose concrete internal IDs, migration ordering, component boundaries, file organization, typed error shapes and test utilities using existing conventions. The user need not approve routine reversible implementation details repeatedly.

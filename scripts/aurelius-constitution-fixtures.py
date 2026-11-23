@@ -3,7 +3,7 @@
 
 Usage: apps/aurelius/.venv/bin/python scripts/aurelius-constitution-fixtures.py [--json FILE] [name ...]
 
-Each case takes a copy of the authored record (build cases) or of the published files (test cases),
+Each case takes a copy of a frozen authored record (build cases) or of the published files (test cases),
 introduces one known fault, and runs the real build or the real test file on the copy. A case passes
 when the fault is REJECTED with the expected message. Nothing under public/ or content/ is touched.
 Exits 1 when any fault is accepted. Faults that need an impossible record (a four-passage section) are
@@ -24,7 +24,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PY = sys.executable
-AUTHORED = ROOT / 'content/aurelius/constitution.json'
+# Build cases start from a frozen record, so rewriting a real article cannot break them. Test cases start from the
+# published files and change them by structure only (never by an article's wording).
+AUTHORED = ROOT / 'tests/aurelius/fixtures/constitution-page-cases.json'
 PUBLISHED = ROOT / 'public/apps'
 TEST = ROOT / 'tests/aurelius/constitution.test.mjs'
 TRANSLATION = ROOT / 'content/aurelius/translation/project-v1.json'
@@ -59,6 +61,12 @@ def g2_no_from(r):
     clause(r, 6, 'c2').pop('from', None)
 
 
+def g2_limit_without_item(r):
+    backing = next(i for i in seneca(r, 6)['items'] if i['effect'] == 'stronger' and i.get('claim') == 'c2')
+    limit = clause(r, 6, 'c2')
+    limit['kind'], limit['from'], limit['ids'] = 'limits', [backing.get('key') or backing['id']], [backing['id']]
+
+
 def g3_duplicate_key(r):
     item(r, 6, 'w2')['key'] = 'w1'
 
@@ -73,6 +81,14 @@ def g7_no_context(r):
 
 def g7_short_context(r):
     item(r, 6, 'S96.2b')['context'] = 'about God'
+
+
+def g7_placeholder(r):
+    item(r, 3, next(i['id'] for i in seneca(r, 3)['items'] if i.get('effect') == 'stronger'))['context'] = 'TO REVIEW IN N3'
+
+
+def g8_placeholder(r):
+    seneca(r, 3)['searched'] = 'TO REVIEW IN N3'
 
 
 def g8_no_search(r):
@@ -96,18 +112,27 @@ BUILD = [
     ('a3-inference-inside-backed-words', 'A3', 'an editor\'s inference that claims words a passage backs', a3_inference_inside_backed_words, 'inference'),
     ('g2-clause-cites-another-item', 'G2', 'the prayer clause on c2 cites S71.13c, a piece of the item on c3', g2_wrong_item, 'S71.13c'),
     ('g2-clause-without-from', 'G2', 'a body clause that does not say which items contribute it', g2_no_from, 'from'),
+    ('g2-limit-from-no-limiting-item', 'G2', 'a clause said to limit claim 2 that comes from an item which only backs it', g2_limit_without_item, 'no qualified item'),
     ('g3-duplicate-item-key', 'G3', 'two added items share the key w1', g3_duplicate_key, 'w1'),
     ('g4-statement-part-without-witness', 'G4', 'the first part of the statement has no quote behind it', g4_empty_part, 'statement part'),
     ('g7-piece-without-context', 'G7', 'an added-author piece without a context sentence', g7_no_context, 'context'),
     ('g7-context-too-short', 'G7', 'an added-author piece whose context is two words', g7_short_context, 'context'),
+    ('g7-placeholder-no-longer-accepted', 'R5', 'a context that still holds the N1 placeholder', g7_placeholder, 'placeholder'),
+    ('g8-placeholder-no-longer-accepted', 'R5', 'a search log that still holds the N1 placeholder', g8_placeholder, 'placeholder'),
     ('g8-voice-without-search-log', 'G8', 'an added voice with no record of what was searched', g8_no_search, 'searched'),
     ('g8-two-searches', 'G8', 'an added voice that logs only two searches', g8_two_searches, 'searched'),
 ]
 
 
 # ---- test cases: (name, row, fault, mutate(files), env, text the failure must contain)
-def g1_none(files):
-    pass
+def g1_no_shared_component(files):
+    # Every claim of Article 4 keeps its words on one passage only: nothing is fused any more.
+    a4 = next(a for a in chapter(files)['articles'] if a['number'] == 4)
+    for claim in a4['claims']:
+        for piece in claim['support'][1:]:
+            if piece['ref'] != claim['support'][0]['ref']:
+                piece['gives'] = []
+                piece.setdefault('note', 'fixture')
 
 
 def g5_duplicate(files):
@@ -125,12 +150,12 @@ def g6_shared_colour(files):
 
 
 def g7_published_without_context(files):
-    a6 = next(a for a in chapter(files)['articles'] if a['number'] == 6)
-    a6['voices']['seneca']['items'][0]['piece'].pop('context', None)
+    first = next(i for a in chapter(files)['articles'] for i in a['voices']['seneca']['items'] if i['effect'] == 'stronger')
+    first['piece'].pop('context', None)
 
 
 TESTS = [
-    ('g1-article-5-without-exemption', 'G1', 'Article 5 has 0 of 9 shared components and is not on the exempt list', g1_none, {'STOIC_KNOWN_BELOW': '1,4'}, 'article 5'),
+    ('g1-article-without-a-shared-component', 'G1', 'an article whose claims give every phrase to a single passage', g1_no_shared_component, {}, 'rest on more than one passage'),
     ('g5-chapter-file-repeats-an-article', 'G5', 'the chapter file holds Article 6 twice', g5_duplicate, {}, 'chapter file'),
     ('g5-chapter-file-lacks-an-article', 'G5', 'the chapter file lacks Article 6', g5_missing, {}, 'chapter file'),
     ('g6-statement-passages-share-a-colour', 'G6', '10.21 and 10.22 share a colour in one statement although five colours allow otherwise', g6_shared_colour, {}, "statement's passages"),

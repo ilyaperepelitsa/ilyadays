@@ -258,8 +258,14 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .vb{min-height:44px;padding:6px 14px;border:1px solid var(--line);border-radius:6px;background:transparent;cursor:pointer;font-size:14px;font-weight:600}
 .vb[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .mine{margin-top:14px;display:grid;gap:4px;font-size:15px}
+.tr-note{margin-top:8px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.from-greek{margin-top:6px;font-size:14px;color:var(--muted);max-width:68ch}
+.versions{margin-top:4px}
+.versions b{display:block;margin-top:8px;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.versions .ctx{margin-top:4px}
+.versions .ctx.old{color:var(--muted)}
+.versions a{display:inline-block;margin-top:8px;font-size:14px}
 .in-context{margin-top:6px;font-size:13.5px;line-height:1.45;color:var(--muted)}
-.in-context.todo{font-style:italic}
 .picked{margin-top:8px;padding:8px 10px 6px;border-top:1px solid var(--line)}
 .picked-head{font:650 12.5px/1.4 var(--sans);letter-spacing:.04em;color:var(--muted)}
 .picked ul{display:grid;gap:2px;margin:4px 0 2px}
@@ -308,7 +314,7 @@ footer{padding-block:18px 44px;font-size:13.5px;color:var(--muted);border-top:1p
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:6px 0 4px}
 .stats b{display:block;font:600 22px/1.15 var(--serif);font-variant-numeric:tabular-nums}
 .stats span{display:block;font-size:12.5px;line-height:1.3;color:var(--muted)}
-.readout{min-height:44px;margin-top:8px;padding:7px 10px;border-radius:6px;background:var(--paper);font-size:13.5px;line-height:1.4;color:var(--muted)}
+.readout{min-height:calc(4.2em + 14px);margin-top:8px;padding:7px 10px;border-radius:6px;background:var(--paper);font-size:13.5px;line-height:1.4;color:var(--muted)}
 .readout b{color:var(--ink);font-weight:650;font-variant-numeric:tabular-nums}
 svg.map .land{fill:var(--ink);stroke:var(--ink);stroke-width:30;stroke-linejoin:round;opacity:.055}
 svg.map .base.second{stroke-dasharray:2 4}
@@ -533,8 +539,12 @@ function renderTopics() {
 
 /* ---------- article ---------- */
 const memberOf = (article, ref) => article.members.find(member => member.ref === ref);
+// An article anchored in the project's translation quotes that English; the others quote the 1634 text.
+const anchorText = (article, member) => article.edition && member.english ? member.english : member.text;
+// Casaubon numbers the sections differently from modern editions. Where the modern number is known, it stands beside his.
+const modern = (article, ref) => { const member = memberOf(article, ref); return member && member.standard && member.standard !== ref ? member.standard : null; };
 function context(article, piece) {
-  const text = (piece.author ? addedPassage(article, piece.ref) : memberOf(article, piece.ref)).text, pad = 110;
+  const text = piece.author ? addedPassage(article, piece.ref).text : anchorText(article, memberOf(article, piece.ref)), pad = 110;
   let from = Math.max(0, piece.at - pad), to = Math.min(text.length, piece.at + piece.quote.length + pad);
   while (from > 0 && /\S/.test(text[from - 1])) from--;
   while (to < text.length && /\S/.test(text[to])) to++;
@@ -558,8 +568,12 @@ function toggle(article, key, focusKey, phrase, words) {
       : here ? {...previous, quotes: true} : {a: article.number, k: key, p: null, w: null, quotes: true};
   }
   hideTip();
+  // A panel that closes above the tapped control would carry the reader's place away: hold the control where it was.
+  const find = () => focusKey ? document.querySelector('[data-k="' + focusKey + '"]') : null, held = find(), was = held ? held.getBoundingClientRect().top : null;
   if (previous && previous.a !== article.number) renderArticle(previous.a);
   renderArticle(article.number, focusKey);
+  const now = find();
+  if (was != null && now) scrollBy({top: now.getBoundingClientRect().top - was, behavior: 'instant'});
 }
 const left = (article, claim) => claim.passages.filter(ref => !removedOf(article).has(ref));
 // Added authors ("voices"). Their pieces are always known by id; they join the articles only while that author is switched on.
@@ -751,6 +765,11 @@ function mapBlock(article) {
     stats.append(tile);
   }
   box.append(stats);
+  if (article.in_translation) {
+    const tr = article.in_translation;
+    box.append(el('p', 'tr-note', 'Measured on the 1634 English, on which the sections were grouped. In the new English these ' + tr.of + ' passages are ' + tr.closeness.toFixed(2)
+      + ' close to one another, and ' + tr.stayed + ' of ' + tr.of + ' are still nearest to this section among all ' + tr.sections + '.'));
+  }
   const map = svg('svg', {class: 'map', viewBox: '0 0 ' + MAP.w + ' ' + MAP.h, role: 'group', 'aria-label': 'Map of the ' + article.map.refs.length + ' passages in this section. Passages with closer meaning vectors sit closer together.'});
   const base = svg('g'), ties = svg('g', {class: 'ties'}), dots = svg('g');
   const ground = outline(article.map.refs.map(ref => spots.get(ref)));
@@ -930,7 +949,7 @@ function sentenceSegs(article, text, parts, target) {
   if (amends.length) segs.push({text: '.', ids: []});
   return segs;
 }
-const VERB = {adds: 'adds', changes: 'changes', challenges: 'challenges'};
+const VERB = {adds: 'adds', changes: 'changes', challenges: 'challenges', limits: 'limits'};
 function sentenceNode(article, o) {
   const sentence = el('p', 'sent' + (o.cls ? ' ' + o.cls : ''));
   const segs = sentenceSegs(article, o.text, o.parts, o.target), gone = removedOf(article);
@@ -1001,7 +1020,7 @@ function pickedBlock(article, key, segs) {
       const mark = dot(article, ref);
       mark.setAttribute('aria-hidden', 'true');
       if (gone.has(ref)) mark.style.opacity = '.35';
-      row.append(mark, sample, el('span', '', authorOfRef(ref) ? cite(ref) : 'Marcus ' + ref));
+      row.append(mark, sample, el('span', '', authorOfRef(ref) ? cite(ref) : 'Marcus ' + ref + (modern(article, ref) ? ' (' + modern(article, ref) + ' in modern editions)' : '')));
       if (gone.has(ref)) row.append(el('em', '', 'removed'));
       list.append(row);
     }
@@ -1042,9 +1061,10 @@ function passageRow(article, piece, hit, mode) {
   row.style.setProperty('--c', hue(article, piece.ref));
   const said = el('div', 'said'), then = el('div', 'then');
   const source = piece.author ? addedPassage(article, piece.ref) : null;
-  said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
+  said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref + (modern(article, piece.ref) ? ' (' + modern(article, piece.ref) + ' in modern editions)' : '')) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
+  if (!piece.author && article.edition) said.append(versions(article, memberOf(article, piece.ref)));
   // An added author's quote carries a sentence on what the passage around it is about and what its key words refer to.
-  if (piece.author) said.append(el('p', 'in-context' + (piece.context ? '' : ' todo'), piece.context ? 'In context: ' + piece.context : 'In context: not yet read and written down (to be done in review).'));
+  if (piece.author && piece.context) said.append(el('p', 'in-context', 'In context: ' + piece.context));
   then.append(el('b', '', 'What follows'), el('p', 'follows', piece.follows));
   if (mode === 'claim' && piece.gives && piece.gives.length) {
     const gives = el('p', 'gives');
@@ -1064,10 +1084,21 @@ function passageRow(article, piece, hit, mode) {
   row.append(said, then);
   return row;
 }
+// For an article quoted in the project's English: the Greek and the 1634 English of the same passage, one tap away.
+function versions(article, member) {
+  const box = el('details', 'more versions');
+  box.dataset.keep = 'versions-' + article.number + '-' + member.ref;
+  box.append(el('summary', '', 'The Greek and the 1634 English'));
+  const greek = el('p', 'ctx grc', member.greek), old = el('p', 'ctx old', flat(member.text)), link = el('a', '', 'All six passages side by side (there this one is ' + member.standard + ')');
+  greek.lang = 'grc';
+  link.href = 'stoic-translation.html#p-' + member.standard.replace('.', '-');
+  box.append(el('b', '', 'Greek'), greek, el('b', '', 'Casaubon, 1634 (' + member.ref + ')'), old, link);
+  return box;
+}
 // While an added author is switched on, the left column also holds that author's quotes, so it names no one.
 function columns(article) {
   const head = el('div', 'cols');
-  head.append(el('span', '', article && voicesOn(article).length ? 'The passage, in its author’s words' : 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
+  head.append(el('span', '', article && voicesOn(article).length ? 'The passage, in its author’s words' : article && article.edition ? 'The passage, translated from the Greek' : 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
   return head;
 }
 function showButton(article, key, open, more, less) {
@@ -1095,6 +1126,12 @@ function statementBlock(article) {
     : now ? now + ' of ' + refs.length + ' passages remain for this statement'
     : others.length ? 'Marcus’s passages for this statement are removed; what remains is ' + others.join(' and ') : 'No passage left'));
   for (const ref of refs) from.append(refChip(article, ref, gone.has(ref)));
+  for (const voice of voicesOn(article)) {
+    const extra = [...new Set((voice.amend || []).filter(clause => clause.target === 'statement').flatMap(clause => clause.ids.map(id => pieceOf(article, id).ref)))];
+    if (!extra.length) continue;
+    from.append(el('b', 'plus' + (state.fresh === voice.key ? ' fresh' : ''), '+ ' + voice.author.name));
+    for (const ref of extra) from.append(refChip(article, ref, false));
+  }
   from.append(showButton(article, key, open, 'Show part by part', 'Hide the parts'));
   if (pick) { pick.append(showButton(article, key, open, 'Show part by part', 'Hide the parts')); box.append(pick); } else box.append(from);
   if (open) {
@@ -1166,11 +1203,14 @@ function claimBlock(article, claim) {
     }
     for (const item of addedItems(article, 'qualified').filter(entry => entry.claim === claim.id)) {
       const differs = el('div', 'link induce');
-      differs.append(el('b', '', authorByKey(item.author).name + ' challenges this'), document.createTextNode(item.t));
+      // "Challenges" only where a clause from this item is marked as a real disagreement; otherwise the author limits the claim.
+      const disputes = voicesOn(article).some(voice => voice.key === item.author && (voice.amend || []).some(clause => clause.kind === 'challenges' && (clause.from || []).includes(item.key)));
+      differs.append(el('b', '', authorByKey(item.author).name + (disputes ? ' challenges this' : ' limits this')), document.createTextNode(item.t));
       for (const piece of item.support) if (!supportOf(article, claim).some(row => row.id === piece.id)) panel.append(passageRow(article, piece, false, 'claim'));
       panel.append(differs);
     }
-    panel.append(el('p', 'near', 'Closeness of these ' + all + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'));
+    panel.append(el('p', 'near', 'Closeness of these ' + all + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'
+      + (claim.closeness_new != null ? ' In the new English: ' + claim.closeness_new.toFixed(2) + ' (section ' + article.in_translation.closeness.toFixed(2) + ').' : '')));
     block.append(panel);
   }
   return block;
@@ -1236,7 +1276,7 @@ function voiceStrip(article, voice) {
 
 // Walk the reader to what an added author changed: scroll to the first place and let all of them pulse once.
 function reveal(article, key, effect) {
-  const root = document.getElementById('article-' + article.number), kinds = effect === 'wider' ? ['adds'] : effect === 'qualified' ? ['changes', 'challenges'] : [];
+  const root = document.getElementById('article-' + article.number), kinds = effect === 'wider' ? ['adds'] : effect === 'qualified' ? ['changes', 'challenges', 'limits'] : [];
   const found = effect === 'stronger' ? [...root.querySelectorAll('li.claim[data-stronger~="' + key + '"]')]
     : effect === 'wider' ? [...root.querySelectorAll('li.claim.sen[data-voice="' + key + '"]')] : [...root.querySelectorAll('li.claim[data-challenged~="' + key + '"]')];
   const top = root.querySelector('.statement');
@@ -1274,7 +1314,7 @@ function setVoice(key, on, focusKey) {
   renderDock();
   if (focusKey) document.querySelector('[data-k="' + focusKey + '"]')?.focus({preventScroll: true});
   const total = effect => D.all.reduce((sum, article) => sum + (article.voices[key] ? article.voices[key].counts[effect] : 0), 0);
-  const text = on ? author.name + ' added: backs ' + total('stronger') + ' places, adds ' + total('wider') + ', challenges ' + total('qualified') : author.name + ' taken out';
+  const text = on ? author.name + ' added. In this chapter he backs ' + total('stronger') + ' places, adds ' + total('wider') + ', limits ' + total('qualified') : author.name + ' taken out';
   announce(text + '.');
   toast(text);
 }
@@ -1368,10 +1408,16 @@ function sourcesBlock(article) {
   if (gone.size) {
     const weak = article.claims.filter(claim => left(article, claim).length === 1).map(claim => claim.number);
     const dead = article.claims.filter(claim => left(article, claim).length === 0).map(claim => claim.number);
-    box.append(el('p', 'dropline on', 'Without ' + [...gone].join(', ') + ': ' +
-      (dead.length ? 'claim ' + dead.join(', ') + ' has no passage left. ' : '') +
-      (weak.length ? 'Claim ' + weak.join(', ') + ' now rests on a single passage. ' : '') +
-      (!dead.length && !weak.length ? 'every claim still rests on two or more passages.' : '')));
+    const list = numbers => numbers.length > 1 ? numbers.slice(0, -1).join(', ') + ' and ' + numbers[numbers.length - 1] : String(numbers[0]);
+    const once = article.single.filter(item => gone.has(item.ref)).length;
+    dead.sort((x, y) => x - y);
+    weak.sort((x, y) => x - y);
+    box.append(el('p', 'dropline on', 'Without ' + list([...gone]) + ': ' +
+      (dead.length ? (dead.length > 1 ? 'Claims ' + list(dead) + ' have' : 'Claim ' + dead[0] + ' has') + ' no passage left. ' : '') +
+      (weak.length ? (weak.length > 1 ? 'Claims ' + list(weak) + ' now rest' : 'Claim ' + weak[0] + ' now rests') + ' on a single passage. ' : '') +
+      (!dead.length && !weak.length ? 'Every claim still rests on two or more passages. ' : '') +
+      (once ? (once > 1 ? once + ' sentences said once have lost their passage. ' : 'One sentence said once has lost its passage. ') : '') +
+      'Tap a removed passage to put it back.'));
   }
   return box;
 }
@@ -1386,7 +1432,7 @@ function membersBlock(article) {
     const head = el('summary');
     const sim = el('span', 'sim'), bar = el('i');
     bar.style.width = Math.round((member.similarity - 0.6) / 0.3 * 70) + 'px';
-    sim.append(bar, document.createTextNode(member.similarity.toFixed(2) + ' · ' + member.words + ' words'));
+    sim.append(bar, document.createTextNode(member.similarity.toFixed(2) + ' · ' + (article.edition && member.english ? member.english.trim().split(/\s+/).length : member.words) + ' words'));
     const claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
     const role = member.used
       ? (claims.length ? 'Feeds claim' + (claims.length > 1 ? 's ' : ' ') + claims.join(', ') + (member.feeds.includes('single') ? ', and is quoted alone' : '') + '.' : 'Quoted alone, under “said once”.')
@@ -1397,14 +1443,14 @@ function membersBlock(article) {
     let cursor = 0;
     for (const piece of pieces) {
       if (piece.at < cursor) continue;
-      quote.append(flat(member.text.slice(cursor, piece.at)));
+      quote.append(flat(anchorText(article, member).slice(cursor, piece.at)));
       const mark = el('mark', '', flat(piece.quote));
       mark.style.setProperty('--c', hue(article, member.ref));
       mark.append(el('sup', '', piece.in === 'single' ? 'once' : String(claimOf(article, piece.in).number)));
       quote.append(mark);
       cursor = piece.at + piece.quote.length;
     }
-    quote.append(flat(member.text.slice(cursor)));
+    quote.append(flat(anchorText(article, member).slice(cursor)));
     row.append(head, quote);
     box.append(row);
   }
@@ -1417,6 +1463,13 @@ function articleCard(article) {
   wrap.id = 'article-' + article.number;
   const leaf = el('div', 'leaf');
   leaf.append(el('p', 'eyebrow', 'Article ' + article.number), el('h3', '', article.title));
+  if (article.edition) {
+    const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English (a pilot). Passage numbers are Casaubon’s, as in the other articles. Each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
+    const link = el('a', '', 'Read the six passages in Greek, today’s English and 1634');
+    link.href = 'stoic-translation.html';
+    note.append(link);
+    leaf.append(note);
+  }
   const top = el('div', 'body'), lead = el('div', 'lead-col');
   lead.append(statementBlock(article));
   for (const voice of voicesOf(article)) lead.append(voiceStrip(article, voice));

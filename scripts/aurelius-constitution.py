@@ -28,7 +28,9 @@ AUTHORED = ROOT / 'content/aurelius/constitution.json'
 OUT = ROOT / 'public/apps/stoic-constitution.json'          # the index: everything but full articles
 CHAPTER_DIR = ROOT / 'public/apps/stoic-constitution'        # one file per chapter that has articles
 SENECA = ROOT / '.aurelius/corpora/seneca-gummere-wikisource'
-PLACEHOLDER = 'TO REVIEW IN N3'     # accepted for `context` and `searched` until milestone N3 writes them; counted in the output
+TRANSLATION_VECTORS = ROOT / '.aurelius/corpora/project-v1/vectors.npz'   # the same model, on the new English (scripts/aurelius-translation.py --embed)
+TRANSLATION = ROOT / 'content/aurelius/translation/project-v1.json'   # the project's own English from the Greek (pilot)
+PLACEHOLDER = 'TO REVIEW IN N3'     # stood in for `context` and `searched` during milestone N1; no longer accepted (every one was written on 23 Nov 2026)
 CHAPTER_WARN_BYTES = 600 * 1024
 RELATIONS = {'supports', 'qualifies', 'challenges', 'illustrates', 'depends_on', 'paraphrases', 'answers'}
 
@@ -209,19 +211,51 @@ def main() -> None:
         sims = vectors[rows] @ vectors[rows].T
         return round(float(sims[np.triu_indices(len(rows), 1)].mean()), 3)
 
+    # An article may be anchored in the project's own translation instead of Casaubon: `"edition": "project-v1"`.
+    # Its quotes are then exact spans of that English; the passages keep their Casaubon numbers and revisions as their
+    # identity (sections, vectors and colours were built on them), and carry the modern number, the Greek and both Englishes.
+    translation = json.loads(TRANSLATION.read_text()) if TRANSLATION.exists() else {'id': None, 'edition': {}, 'passages': []}
+    translated = {p['casaubon_revision']: p for p in translation['passages']}
+    for p in translation['passages']:
+        body = '\n'.join([translation['edition']['id'], p['standard_ref'], p['greek'], p['english']])
+        assert p['revision'] == f"{translation['id']}:{p['standard_ref']}:{hashlib.sha256(body.encode('utf-8')).hexdigest()[:16]}", \
+            f"translation {p['standard_ref']}: text and revision disagree; run scripts/aurelius-translation.py"
+
+    # Vectors of the translated passages, by the Casaubon revision each one replaces.
+    new_vectors = {}
+    if TRANSLATION_VECTORS.exists():
+        kept = np.load(TRANSLATION_VECTORS)
+        by_new = {p['revision']: p['casaubon_revision'] for p in translation['passages']}
+        new_vectors = {by_new[str(rid)]: v / np.linalg.norm(v) for rid, v in zip(kept['revision_ids'], kept['vectors'].astype(np.float64)) if str(rid) in by_new}
+
+    def closeness_new(revisions: list[str]) -> float | None:
+        """As `closeness`, measured on the new English of the same passages."""
+        rows_ = [new_vectors[r] for r in dict.fromkeys(revisions)]
+        if len(rows_) < 2:
+            return None
+        sims = np.stack(rows_) @ np.stack(rows_).T
+        return round(float(sims[np.triu_indices(len(rows_), 1)].mean()), 3)
+
     articles = []
-    placeholders = {'context': 0, 'pieces': 0, 'searched': 0, 'voices': 0}
+    counted = {'pieces': 0, 'voices': 0}
     for article in authored['articles']:
         chapter, section = sections[article['section']]
         where = f"article {article['number']}"
         by_ref = {m['reference']: m for m in section['members']}
         ids: dict[str, dict] = {}
+        anchored = 'edition' in article
+        if anchored:
+            assert article['edition'] == translation['id'], f"{where}: unknown edition {article['edition']!r}; the only one besides Casaubon is {translation['id']!r}"
+            missing = [m['reference'] for m in section['members'] if m['revision_id'] not in translated]
+            assert not missing, f"{where}: anchored in {article['edition']} but these passages of its section are not translated: {', '.join(missing)}"
+            unembedded = [m['reference'] for m in section['members'] if m['revision_id'] not in new_vectors]
+            assert not unembedded, f"{where}: the new English of {', '.join(unembedded)} has no vectors; run scripts/aurelius-translation.py --embed"
 
         def piece(item: dict, context: str) -> dict:
             ref = item['id'].rstrip('abcdefghijklmnopqrstuvwxyz')
             assert ref in by_ref and item['id'] not in ids, f"{where}: piece {item['id']}"
-            text = passages[by_ref[ref]['revision_id']]['text']
-            start, end = span(text, item['quote'], f"{where} {item['id']}")
+            text = translated[by_ref[ref]['revision_id']]['english'] if anchored else passages[by_ref[ref]['revision_id']]['text']
+            start, end = span(text, item['quote'], f"{where} {item['id']}" + (f" (in the {article['edition']} English)" if anchored else ''))
             ids[item['id']] = {'id': item['id'], 'ref': ref, 'quote': text[start:end], 'at': start,
                                'start': scalar(text, start), 'end': scalar(text, end), 'in': context}
             return ids[item['id']]
@@ -240,7 +274,8 @@ def main() -> None:
             check_inferences(f"{where} {claim['id']}", claim['t'], [words_ for s in support for words_ in s.get('gives', [])], claim.get('inferences', []))
             claims.append({'id': claim['id'], 'number': number, 'role': claim['role'], 't': claim['t'], 'shared': claim['shared'],
                            **({'changed': claim['changed']} if 'changed' in claim else {}), **({'inferences': claim['inferences']} if claim.get('inferences') else {}), 'passages': refs,
-                           'closeness': closeness([by_ref[r]['revision_id'] for r in refs]), 'support': support})
+                           'closeness': closeness([by_ref[r]['revision_id'] for r in refs]),
+                           **({'closeness_new': closeness_new([by_ref[r]['revision_id'] for r in refs])} if anchored else {}), 'support': support})
         single = [{**piece(item, 'single'), 'label': item['label'], 't': item['t'], 'why': item['why'], 'follows': item['follows']} for item in article['single']]
 
         used = list(dict.fromkeys(p['ref'] for p in ids.values()))
@@ -251,7 +286,10 @@ def main() -> None:
             members.append({'ref': ref, 'revision': member['revision_id'], 'rank': rank, 'similarity': member['similarity'],
                             'words': member['words'], 'used': ref in used,
                             'feeds': sorted({p['in'] for p in ids.values() if p['ref'] == ref}),
-                            'why': article['aside'].get(ref), 'text': passages[member['revision_id']]['text']})
+                            'why': article['aside'].get(ref), 'text': passages[member['revision_id']]['text'],
+                            **({'standard': translated[member['revision_id']]['standard_ref'], 'translation': translated[member['revision_id']]['revision'],
+                                'english': translated[member['revision_id']]['english'], 'greek': translated[member['revision_id']]['greek']}
+                               if member['revision_id'] in translated else {})})
         statement = article['statement']
         for part in statement['parts']:
             assert part['words'].lower() in statement['t'].lower() and set(part['ids']) <= set(ids), f"{where}: statement part {part['words']!r}"
@@ -304,13 +342,11 @@ def main() -> None:
         if 'seneca' in article.get('voices', {}):
             voice = article['voices']['seneca']
             searched = voice.get('searched')
-            if searched == PLACEHOLDER:
-                placeholders['searched'] += 1
-            else:
-                assert isinstance(searched, dict) and len(searched.get('searches', [])) >= 3 and all(isinstance(x, str) and x.strip() for x in searched['searches']) \
-                    and all(r.get('ref') and r.get('why') for r in searched.get('rejected', [])), \
-                    f"{where}: voices.seneca.searched must log at least three word searches of the corpus and a reason for each passage rejected (or be {PLACEHOLDER!r} until N3)"
-            placeholders['voices'] += 1
+            assert searched != PLACEHOLDER, f"{where}: voices.seneca.searched still holds the placeholder {PLACEHOLDER!r}; write the search log"
+            assert isinstance(searched, dict) and len(searched.get('searches', [])) >= 3 and all(isinstance(x, str) and x.strip() for x in searched['searches']) \
+                and all(r.get('ref') and r.get('why') for r in searched.get('rejected', [])), \
+                f"{where}: voices.seneca.searched must log at least three word searches of the corpus and a reason for each passage rejected"
+            counted['voices'] += 1
             added = {}
             claim_text = {c['id']: c['t'] for c in claims}
 
@@ -322,12 +358,12 @@ def main() -> None:
                 for words_ in item.get('gives', []):
                     assert text and words_.lower() in text.lower(), f"{where} {item['id']}: “{words_}” is not in the sentence it backs"
                 said = item.get('context')
-                assert isinstance(said, str) and (said == PLACEHOLDER or 20 <= len(said) <= 200), \
-                    f"{where} {item['id']}: context must say, in 20 to 200 characters, what the passage around the quote is about and what its key words refer to (or be {PLACEHOLDER!r} until N3)"
-                placeholders['context'] += said == PLACEHOLDER
-                placeholders['pieces'] += 1
+                assert said != PLACEHOLDER, f"{where} {item['id']}: context still holds the placeholder {PLACEHOLDER!r}; read the passage and write the sentence"
+                assert isinstance(said, str) and 20 <= len(said) <= 200, \
+                    f"{where} {item['id']}: context must say, in 20 to 200 characters, what the passage around the quote is about and what its key words refer to"
+                counted['pieces'] += 1
                 added[item['id']] = {'id': item['id'], 'ref': ref, 'author': 'seneca', 'quote': letters[ref]['text'][start:end], 'at': start, 'in': context,
-                                     'follows': item['follows'], 'context': None if said == PLACEHOLDER else said, **({'gives': item['gives']} if 'gives' in item else {})}
+                                     'follows': item['follows'], 'context': said, **({'gives': item['gives']} if 'gives' in item else {})}
                 return added[item['id']]
 
             items = []
@@ -366,7 +402,7 @@ def main() -> None:
             for clause in voice.get('amend', []):
                 name = f"clause on {clause['target']} ({clause['kind']}) “{clause['t'].strip()[:50]}…”"
                 assert clause['target'] == 'statement' or clause['target'] in claim_text, f"{where}: amend target {clause['target']}"
-                assert clause['kind'] in {'adds', 'changes', 'challenges'} and clause['t'].strip() and clause['ids'], f"{where}: amend {clause}"
+                assert clause['kind'] in {'adds', 'changes', 'challenges', 'limits'} and clause['t'].strip() and clause['ids'], f"{where}: amend {clause}"
                 assert clause['t'][0] in ' ,;' and not clause['t'].rstrip().endswith('.'), f"{where}: an added clause continues the sentence and carries no full stop"
                 assert all(piece_id in added for piece_id in clause['ids']), f"{where}: amend ids {clause['ids']} are not among this author's pieces"
                 frm = clause.get('from')
@@ -380,8 +416,8 @@ def main() -> None:
                         assert effect == 'wider' or on in feeds, f"{where}: {name} comes from {describe(key)}, whose claim does not feed the statement"
                     else:
                         assert on == clause['target'], f"{where}: {name} comes from {describe(key)}, which is not about claim {clause['target']}"
-                if clause['target'] != 'statement' and clause['kind'] == 'challenges':
-                    assert any(about[key] == ('qualified', clause['target']) for key in frm), f"{where}: {name} is a challenge but comes from no qualified item on claim {clause['target']}"
+                if clause['target'] != 'statement' and clause['kind'] in {'challenges', 'limits'}:
+                    assert any(about[key] == ('qualified', clause['target']) for key in frm), f"{where}: {name} limits or challenges claim {clause['target']} but comes from no qualified item on that claim"
                 amend.append(clause)
             cited = list(dict.fromkeys(piece_['ref'] for piece_ in added.values()))
             extra = letter_vectors[[letter_row[ref] for ref in cited]]
@@ -408,9 +444,14 @@ def main() -> None:
                 passage_['at'] = at
         picture['refs'] = [m['ref'] for m in members]
         picture['around'] = surroundings(article['section'])
-        articles.append({'number': article['number'], 'section': article['section'], 'title': article['title'], 'statement': statement, 'groups': groups, 'colors': colors, 'map': picture, 'voices': {'seneca': second} if second else {},
+        articles.append({'number': article['number'], 'section': article['section'], 'title': article['title'], **({'edition': article['edition']} if anchored else {}), 'statement': statement, 'groups': groups, 'colors': colors, 'map': picture, 'voices': {'seneca': second} if second else {},
                          'section_size': section['size'], 'cohesion': section['cohesion'],
                          'section_closeness': closeness([m['revision_id'] for m in section['members']]),
+                         # For an article quoted in the new English: the same measure on the new English, and how many of its
+                         # passages are still nearest to this section's centre among all sections when said in today's words.
+                         **({'in_translation': {'closeness': closeness_new([m['revision_id'] for m in section['members']]),
+                                                'stayed': sum(1 for m in section['members'] if max(centres, key=lambda sid: float(centres[sid] @ new_vectors[m['revision_id']])) == article['section']),
+                                                'of': len(section['members']), 'sections': len(centres)}} if anchored else {}),
                          'sources': [m['ref'] for m in members if m['used']], 'claims': claims, 'single': single, 'members': members,
                          'decisions': article['decisions'], 'limit': article['limit']})
 
@@ -460,8 +501,7 @@ def main() -> None:
               + ', '.join(f"claim {c['number']} from {len(c['passages'])} ({c['closeness']})" for c in a['claims'])
               + f", {len(a['single'])} said once; section closeness {a['section_closeness']}"
               + "; shared components {}/{}".format(*shared_components(a['claims'])))
-    print(f"placeholders awaiting N3: context on {placeholders['context']} of {placeholders['pieces']} added-author pieces, "
-          f"search log on {placeholders['searched']} of {placeholders['voices']} voices")
+    print(f"added authors: {counted['pieces']} pieces, each with its context sentence; {counted['voices']} voices, each with a search log")
 
 if __name__ == '__main__':
     main()

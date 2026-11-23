@@ -58,3 +58,17 @@ test('the published file is the stored record with the 1634 text beside each pas
     assert.ok(passage.casaubon.length > 40, `Meditations ${passage.standard_ref}: the 1634 text`);
   }
 });
+
+test('the new English is embedded with the corpus model, and the comparison with the 1634 English is published', () => {
+  const { vectors } = published;
+  assert.ok(vectors, 'run scripts/aurelius-translation.py --embed, then publish');
+  assert.equal(vectors.dimensions, 3072);
+  assert.equal(vectors.home.section, stored.scope);
+  assert.ok(vectors.closeness > 0 && vectors.closeness < 1 && vectors.closeness_1634 > 0 && vectors.closeness_1634 < 1);
+  assert.ok(vectors.stayed_home >= 0 && vectors.stayed_home <= published.passages.length);
+  for (const passage of published.passages) {
+    assert.ok(passage.vector.to_1634 > 0 && passage.vector.to_1634 < 1, `Meditations ${passage.standard_ref}: similarity to its 1634 text`);
+    assert.ok(passage.vector.home_rank >= 1 && passage.vector.home_rank <= vectors.sections);
+  }
+  assert.equal(vectors.stayed_home, published.passages.filter((passage) => passage.vector.home_rank === 1).length);
+});

@@ -25,6 +25,8 @@ The product is one static page, `public/apps/stoic-constitution.html`, which sho
 
 **Stop and ask, do not guess, when:** a "When to stop and ask" condition of W3 is met; a rule of section 3 would have to bend; a check fails twice after a real attempt to fix it; or the private corpus under `.aurelius/` is missing.
 
+> **Amended 23 November 2026, after two reviews of milestone M1** ([plan 34](34-after-review-plan.md), [log](35-completion-log.md)). The state below is as of that date; the amendments are marked where they apply. **Articles 7 to 38 (M2 onward) wait for the owner's verdicts on the translation pilot, on Article 6 and on the audit of Articles 1 to 5.**
+
 ## 1. What exists today
 
 | Thing | Where | State |
@@ -32,12 +34,13 @@ The product is one static page, `public/apps/stoic-constitution.html`, which sho
 | Parked version | commit `d576e71` on `main`, pushed | Statement, five labelled subarticles, columns on wide screens |
 | Work since then | uncommitted in the working tree | Colour per passage, the vectors column, neighbours, Seneca (items and body clauses), Voices dock, one-border cards with the author's name, phone tabs |
 | Topic hierarchy | `content/aurelius/topics.json` (built by `scripts/aurelius-topics.py`) | 418 passages, 7 chapters, 38 sections. Final. |
-| Authored record | `content/aurelius/constitution.json` | Schema 3. Articles 1 to 5 written. 33 sections have a name and no article. |
-| Build and validator | `scripts/aurelius-constitution.py` | Writes `public/apps/stoic-constitution.json` (260 KB for five articles) |
+| Authored record | `content/aurelius/constitution.json` | Schema 3. Articles 1 to 6 written and audited (23 Nov 2026); Article 6 quotes the project's translation. 32 sections have a name and no article. |
+| Build and validator | `scripts/aurelius-constitution.py` | Writes a small index and one file per chapter. Fault fixtures: `scripts/aurelius-constitution-fixtures.py`. Browser check with named cases on a frozen fixture record: `scripts/aurelius-constitution-check.py` |
+| Project translation (pilot) | `content/aurelius/translation/project-v1.json`, `scripts/aurelius-translation.py`, `public/apps/stoic-translation.html` | Six passages (section c6.s6) from Leopold's Greek, checked by a second reader, embedded with the corpus model. Awaiting the owner's reading. |
 | Seneca corpus | `scripts/aurelius-seneca.py`, data under `.aurelius/` (git-ignored) | 124 letters, 2,140 passages, embedded |
 | Page | `public/apps/stoic-constitution.html` | One file, vanilla JS and CSS, about 1,500 lines |
 | Tests | `tests/aurelius/constitution.test.mjs` | 14 tests, all pass (19 with `composition-study.test.mjs`) |
-| Writing rules | `apps/aurelius/prompts/constitution-article.md` | Task steps plus rules 1 to 15, each with the owner's dated words |
+| Writing rules | `apps/aurelius/prompts/constitution-article.md` | Task steps plus rules 1 to 21, each with the owner's dated words or the review it came from |
 | History | `docs/aurelius/implementation-log.md`, `plan/stoicism/31-claude-handover.md` | Up to date |
 
 The private corpus lives in `.aurelius/` and is not in git. Without it the build cannot run. It is present on the owner's machine:
@@ -208,6 +211,8 @@ The page sets `scroll-behavior: smooth`. In a test, scroll with `window.scrollTo
 
 Check: the script exits 0 on the current page.
 
+> **Amended 23 Nov 2026 (G4).** The small-section rule below let a statement part have no witness at all. Corrected: every statement part needs at least one quoted piece in any section, at least one part rests on two passages, and in a section of five or more passages every part does. Shared components are now tested per article with no exempt list (G1).
+
 **W1.3 Tests that assume five articles.** In `tests/aurelius/constitution.test.mjs` change exactly these, and nothing else:
 
 | Test | Now | Change to |
@@ -290,6 +295,11 @@ Chapter order is editorial and fixed in `chapters.<id>.order` of the authored re
 ### The procedure, for one chapter
 
 **Step 1. Read the whole chapter once** (only when starting a chapter). Run the section reader for each of its sections. Then, in `content/aurelius/constitution.json` under `chapters.<id>`: confirm or rewrite the chapter `title` and `summary` and every section title, and set `"read": "full"`. A title is a short plain noun phrase or sentence that fits every central passage. Report each title you changed and why, in one line each.
+
+> **Amended 23 Nov 2026.** Three steps are added to the procedure below, from the second review (article prompt, rules 18 to 20):
+> - **After finding parallels:** for each fused claim, name the words that two of its passages both say. If there are none, it is not a fused claim; make the points said-once items. Never map a passage to words it does not say in order to raise the share: correct such mappings even when the share falls.
+> - **After writing the statement:** every "so", "therefore" or "because" that no passage says goes into `inferences` with one sentence of why it is the editor's.
+> - **Where the project's translation of the section exists:** set `"edition": "project-v1"` and quote that English; the build then checks quotes against it and the page shows the Greek and Casaubon on request.
 
 ### The procedure, for one article
 
@@ -386,6 +396,8 @@ The build numbers the claims in reading order (label by label), so write "claim 
 - Two sections would produce the same statement.
 - A title confirmed from the full reading differs in meaning from the provisional one.
 - The owner's review (D5) is due: after Article 6, then after each chapter.
+
+> **Amended 23 Nov 2026 (G2, G7, G8; article prompt rules 16 to 18).** Before the steps of W4 below: search the letters by the section's own key words and log it in `searched` (words searched, each passage rejected and why). For every piece: read the letter around the quote and write `context`; a piece whose context is about something else is not used. Every clause names its items in `from`, cites only their quotes, says no more than they say, and is marked "challenges" only for a real disagreement. The build rejects a voice without a search log and a piece without its context.
 
 ## W4. Seneca for each new article
 

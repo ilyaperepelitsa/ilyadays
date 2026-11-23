@@ -1,5 +1,7 @@
 # Aurelius — implementation planning dossier
 
+**Plan 34 carried through (23 Nov 2026):** [running log and report](35-completion-log.md) · [audit of Articles 1 to 5](35-audit-articles-1-5.md). Waiting for the owner: read the six translated passages, and give verdicts on Article 6 and the audit.
+
 **Milestone N1 done (23 Nov 2026):** [report](34-N1-report.md): every check row and page row with a case that failed before its fix.
 
 **Plan after the two reviews (23 Nov 2026):** [what to fix before more articles are written](34-after-review-plan.md): trustworthy checks and markings, a translation pilot from the Greek on six passages, then Article 6 revised and Articles 1 to 5 audited.

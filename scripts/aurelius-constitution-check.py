@@ -552,6 +552,111 @@ def case_t6(page, base, port):
     return problems
 
 
+def case_p18(page, base, port):
+    """Found by the second cold reader (23 Nov 2026), on a phone: opening another panel must not throw the reader off;
+    touching words must not make the text jump; the removal line reads properly and counts said-once items;
+    with an added author on, the statement names that author among its sources."""
+    problems = []
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    shows = page.locator('#article-6 li.claim .show')
+    shows.nth(0).scroll_into_view_if_needed()
+    shows.nth(0).click()
+    page.wait_for_timeout(300)
+    second = page.locator('#article-6 li.claim:not(:has(.trace)) .show').first
+    second.scroll_into_view_if_needed()
+    key = second.get_attribute('data-k')
+    before = second.bounding_box()['y']
+    second.click()
+    page.wait_for_timeout(400)
+    after = page.locator(f'[data-k="{key}"]').bounding_box()
+    if after is None or abs(after['y'] - before) > 6:
+        problems.append(f'opening a second panel moved the button I tapped from y={before:.0f} to y={after["y"] if after else "nowhere":.0f}')
+    # touching a phrase must not change the height of the vectors readout (it sits above the text on a phone)
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    readout = page.locator('#article-6 .readout').first
+    idle = readout.bounding_box()['height']
+    page.locator('#article-6 li.claim .sg:not(.join)').first.hover()
+    page.wait_for_timeout(200)
+    busy = readout.bounding_box()['height']
+    if abs(idle - busy) > 1:
+        problems.append(f'touching a phrase changes the readout from {idle:.0f}px to {busy:.0f}px, so the text below jumps')
+    # the removal line
+    page.goto(base + '?without=6:4.19,10.22#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    line = page.locator('#article-6 .dropline').first.text_content()
+    if not re.search(r'Claims \d(, \d)* and \d now rest on a single passage', line):
+        problems.append(f'the removal line reads “{line}”')
+    if 'said once' not in line:
+        problems.append('the removal line does not mention the said-once sentences that lost their passage')
+    # the statement names the added author among its sources
+    page.goto(base + '?with=seneca#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    if page.locator('#article-6 .statement .sg.add').count() and 'Seneca' not in page.locator('#article-6 .statement .fused').first.text_content():
+        problems.append('the statement carries Seneca’s clause but lists only Marcus’s passages under it')
+    return problems
+
+def case_e1(page, base, port):
+    """An article quoted from the project's translation (run on the real record): today's English is what is quoted,
+    the modern number stands beside Casaubon's, and the Greek and the 1634 English are one tap away."""
+    problems = []
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('article.article .statement')
+    anchored = page.locator('article.article:has(.from-greek)')
+    if not anchored.count():
+        return ['no article on the page is quoted from the project translation']
+    art = anchored.first
+    art.scroll_into_view_if_needed()
+    art.locator('li.claim .show').first.click()
+    page.wait_for_timeout(300)
+    row = art.locator('li.claim .pair').first
+    head = row.locator('.said b').first.text_content()
+    if 'in modern editions' not in head:
+        problems.append(f'the passage is headed “{head}”, without its modern number')
+    quoted = row.locator('.ctx mark').first.text_content()
+    if re.search(r'\b(thee|thou|doth|unto|hath)\b', row.locator('.ctx').first.text_content()):
+        problems.append(f'the quoted passage is still 1634 English: “{quoted[:60]}”')
+    more = row.locator('details.versions')
+    if not more.count():
+        problems.append('the Greek and the 1634 English are not offered under the passage')
+    else:
+        more.locator('summary').click()
+        text = more.text_content()
+        if not re.search('[\u0370-\u03ff\u1f00-\u1fff]{4,}', text):
+            problems.append('opening it shows no Greek')
+        if not re.search(r'\b(thee|thou|doth|unto|hath|is it best)\b', text):
+            problems.append('opening it shows no 1634 English')
+        link = more.locator('a').first.get_attribute('href')
+        if not link or not link.startswith('stoic-translation.html#p-'):
+            problems.append(f'the link to the side-by-side page is “{link}”')
+    note = art.locator('.tr-note')
+    if not note.count() or 'new English' not in note.first.text_content():
+        problems.append('the vectors column does not say how the passages sit in the new English')
+    if 'In the new English' not in art.locator('li.claim .near').first.text_content():
+        problems.append('the claim’s closeness is not given for the new English')
+    # Found by the second cold reader: promises and counts that did not match what the page shows.
+    if 'beside each passage' in art.locator('.from-greek').first.text_content():
+        problems.append('the note under the title promises the modern number “beside each passage”, but the chips show only Casaubon’s')
+    row = art.locator('details.member').first
+    row.evaluate("n => { for (let p = n; p; p = p.parentElement) if (p.tagName === 'DETAILS') p.open = true; }")
+    said = len(row.locator('blockquote').first.inner_text().split())
+    counted = int(re.search(r'(\d+) words', row.locator('summary').inner_text()).group(1))
+    if abs(said - counted) > 2:
+        problems.append(f'the section list says {counted} words for a passage shown in {said} words of the new English')
+    page.goto(base + '?with=seneca', wait_until='networkidle')
+    page.wait_for_selector('article.article .statement')
+    art = page.locator('article.article:has(.from-greek)').first
+    limited = art.locator('li.claim[data-challenged]')
+    for i in range(limited.count()):
+        tag = limited.nth(i).locator('.who.inl').first.text_content()
+        box = art.locator('.voice, [data-voice]').first
+        if 'adds' in tag and 'Limits' in art.inner_text():
+            problems.append(f'a clause the page counts under “Limits” is tagged “{tag.strip()}”')
+            break
+    return problems
+
+
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
@@ -570,7 +675,9 @@ CASES = {
     'P15': ('the statement counts its surviving passages', case_p15, (1440, 1000)),
     'P16': ('lists opened at the top of the page on a phone can be seen', case_p16, (390, 844)),
     'P17': ('an editor\'s inference is named, with its reason', case_p17, (390, 844)),
+    'P18': ('second cold reader: steady panels, no jump on touch, removal line, statement sources', case_p18, (390, 844)),
     'T6': ('the translation pilot page: six passages, three versions', case_t6, (390, 844)),
+    'E1': ('an article quoted from the new English: modern number, Greek and 1634 on request', case_e1, (390, 844), 'real'),
 }
 
 
@@ -578,9 +685,10 @@ def run_cases(browser, base: str, port: int, names: list[str]) -> int:
     failures = 0
     build_fixture()
     for name in names:
-        title, fn, (width, height) = CASES[name]
+        title, fn, (width, height) = CASES[name][:3]
         ctx = browser.new_context(viewport={'width': width, 'height': height})
-        serve_fixture(ctx)
+        if 'real' not in CASES[name][3:]:   # a few cases look at the real record on purpose
+            serve_fixture(ctx)
         page = ctx.new_page()
         errors: list[str] = []
         page.on('pageerror', lambda e: errors.append(str(e)))
@@ -626,6 +734,8 @@ def main() -> int:
                     page.wait_for_selector(f'#article-{numbers[-1]} .statement', timeout=15000)
                     buttons = page.locator('li.claim .show')
                     for i in range(0, buttons.count(), 3):
+                        # the page now holds a tapped button where it was, so the next one can lie under the Voices dock: bring it to the middle first
+                        buttons.nth(i).evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
                         buttons.nth(i).click()
                     m = page.evaluate(MEASURE)
                     problems = []

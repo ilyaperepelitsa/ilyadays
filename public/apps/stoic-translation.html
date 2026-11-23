@@ -66,6 +66,8 @@ body[data-show=en] .col:not(.en),body[data-show=grc] .col:not(.grc),body[data-sh
 .about{padding-block:26px;border-top:1px solid var(--line);max-width:820px;font-size:15px}
 .about h2{font:400 24px/1.2 var(--serif);margin-bottom:10px}
 .about p+p{margin-top:8px}
+.about h2+p{margin-top:0}
+.about p+h2,.about ul+h2{margin-top:22px}
 .about ul{margin-top:8px;display:grid;gap:6px}
 .about li{padding-left:14px;border-left:2px solid var(--line)}
 .act{min-height:40px;padding:0 14px;border:1px solid var(--line);border-radius:6px;background:transparent;font-weight:650;font-size:14px;cursor:pointer;margin-top:10px}
@@ -151,7 +153,11 @@ function card(passage) {
   const head = el('h2', '', 'Meditations ' + passage.standard_ref);
   head.append(el('small', '', passage.casaubon_ref === passage.standard_ref ? 'same number in the 1634 translation' : 'numbered ' + passage.casaubon_ref + ' in the 1634 translation'));
   box.append(head);
-  if (passage.used) box.append(el('p', 'used', passage.used));
+  if (passage.vector) {
+    const v = passage.vector, own = v.home_rank === 1;
+    box.append(el('p', 'used', 'Vectors: the new English is ' + v.to_1634.toFixed(2) + ' similar to the 1634 English of the same passage. Nearest section of ' + D.vectors.sections + ': '
+      + (own ? 'still its own, “' + D.vectors.home.title + '” (' + v.home.toFixed(2) + ').' : '“' + v.nearest.title + '” (' + v.nearest.similarity.toFixed(2) + '); its own section is number ' + v.home_rank + ' (' + v.home.toFixed(2) + ').')));
+  }
   const cols = el('div', 'cols');
   cols.append(column('grc', 'grc', 'Greek · ' + D.edition.short, passage.greek), column('en', 'en', 'Today’s English · this project', passage.english), column('old', 'en', '1634 · Casaubon', passage.casaubon));
   box.append(cols);
@@ -177,6 +183,15 @@ function about() {
   box.hidden = false;
   box.append(el('h2', '', 'How this was made'));
   for (const line of D.method) box.append(el('p', '', line));
+  if (D.vectors) {
+    const v = D.vectors;
+    box.append(el('h2', '', 'What the vectors say about the new English'));
+    box.append(el('p', '', 'The new English of each passage was embedded with the same model as the rest of the book (' + v.model + '). ' + v.stayed_home + ' of ' + D.passages.length
+      + ' passages are still nearest to their own section, “' + v.home.title + '”, among all ' + v.sections + ' sections. The six are ' + v.closeness.toFixed(2)
+      + ' close to one another in the new English and ' + v.closeness_1634.toFixed(2) + ' in the 1634 English. That suggests part of what made them look alike was the shared old style.'));
+    box.append(el('p', '', v.note));
+    box.append(el('h2', '', 'Sources'));
+  }
   const facts = el('ul');
   for (const line of [e.citation, e.rights, 'Taken from: ' + e.source, 'Licence of the digital text: ' + e.licence, ...D.limits]) facts.append(el('li', '', line));
   box.append(facts);

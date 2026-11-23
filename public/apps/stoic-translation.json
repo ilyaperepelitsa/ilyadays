@@ -32,6 +32,19 @@
   "A translated passage is never edited in place. A correction is a new revision with a new id; the old one is kept in the record."
  ],
  "footer": "Greek: M. Antoninus Imperator ad se ipsum, ed. J. H. Leopold (1908), from the Perseus Digital Library, CC BY-SA. 1634 English: Meric Casaubon (Project Gutenberg 2680). The new English is this project’s own pilot translation.",
+ "vectors": {
+  "model": "text-embedding-3-large",
+  "dimensions": 3072,
+  "sections": 38,
+  "note": "The sections were grouped on the 1634 English, and each centre is the mean of its own passages in that English, so a passage in 1634 English has a head start toward its own centre. Read the new numbers as: does the passage still belong here when said in today’s words?",
+  "home": {
+   "section": "c6.s6",
+   "title": "What the whole sends in its season"
+  },
+  "closeness": 0.367,
+  "closeness_1634": 0.46,
+  "stayed_home": 6
+ },
  "passages": [
   {
    "casaubon_ref": "10.22",
@@ -120,7 +133,18 @@
    ],
    "revision": "project-v1:10.21:f687b6f37d2d8cb3",
    "superseded": [],
-   "casaubon": "The earth, saith the poet, doth often long after the rain. So is the glorious sky often as desirous to fall upon the earth, which argues a mutual kind of love between them. And so (say I) doth the world bear a certain affection of love to whatsoever shall come to pass With thine affections shall mine concur, O world. The same (and no other) shall the object of my longing be which is of thine. Now that the world doth love it is true indeed so is it as commonly said, and acknowledged ledged, when, according to the Greek phrase, imitated by the Latins, of things that used to be, we say commonly, that they love to be."
+   "casaubon": "The earth, saith the poet, doth often long after the rain. So is the glorious sky often as desirous to fall upon the earth, which argues a mutual kind of love between them. And so (say I) doth the world bear a certain affection of love to whatsoever shall come to pass With thine affections shall mine concur, O world. The same (and no other) shall the object of my longing be which is of thine. Now that the world doth love it is true indeed so is it as commonly said, and acknowledged ledged, when, according to the Greek phrase, imitated by the Latins, of things that used to be, we say commonly, that they love to be.",
+   "vector": {
+    "to_1634": 0.613,
+    "home": 0.549,
+    "home_1634": 0.796,
+    "home_rank": 1,
+    "nearest": {
+     "section": "c6.s6",
+     "title": "What the whole sends in its season",
+     "similarity": 0.549
+    }
+   }
   },
   {
    "casaubon_ref": "4.19",
@@ -219,7 +243,18 @@
    ],
    "revision": "project-v1:4.23:bb27fec45d0d2a9e",
    "superseded": [],
-   "casaubon": "Whatsoever is expedient unto thee, O World, is expedient unto me; nothing can either be 'unseasonable unto me, or out of date, which unto thee is seasonable. Whatsoever thy seasons bear, shall ever by me be esteemed as happy fruit, and increase. O Nature! from thee are all things, in thee all things subsist, and to thee all tend. Could he say of Athens, Thou lovely city of Cecrops; and shalt not thou say of the world, Thou lovely city of God?"
+   "casaubon": "Whatsoever is expedient unto thee, O World, is expedient unto me; nothing can either be 'unseasonable unto me, or out of date, which unto thee is seasonable. Whatsoever thy seasons bear, shall ever by me be esteemed as happy fruit, and increase. O Nature! from thee are all things, in thee all things subsist, and to thee all tend. Could he say of Athens, Thou lovely city of Cecrops; and shalt not thou say of the world, Thou lovely city of God?",
+   "vector": {
+    "to_1634": 0.73,
+    "home": 0.609,
+    "home_1634": 0.78,
+    "home_rank": 1,
+    "nearest": {
+     "section": "c6.s6",
+     "title": "What the whole sends in its season",
+     "similarity": 0.609
+    }
+   }
   },
   {
    "casaubon_ref": "6.38",
@@ -293,7 +328,18 @@
    ],
    "revision": "project-v1:6.43:4c376672b9df0ade",
    "superseded": [],
-   "casaubon": "Doth either the sun take upon him to do that which belongs to the rain? or his son Aesculapius that, which unto the earth doth properly belong? How is it with every one of the stars in particular? Though they all differ one from another, and have their several charges and functions by themselves, do they not all nevertheless concur and co-operate to one end?"
+   "casaubon": "Doth either the sun take upon him to do that which belongs to the rain? or his son Aesculapius that, which unto the earth doth properly belong? How is it with every one of the stars in particular? Though they all differ one from another, and have their several charges and functions by themselves, do they not all nevertheless concur and co-operate to one end?",
+   "vector": {
+    "to_1634": 0.768,
+    "home": 0.575,
+    "home_1634": 0.761,
+    "home_rank": 1,
+    "nearest": {
+     "section": "c6.s6",
+     "title": "What the whole sends in its season",
+     "similarity": 0.575
+    }
+   }
   },
   {
    "casaubon_ref": "10.21",
@@ -352,7 +398,18 @@
    ],
    "revision": "project-v1:10.20:712816a03cc0cb70",
    "superseded": [],
-   "casaubon": "That is best for every one, that the common nature of all doth send unto every one, and then is it best, when she doth send it."
+   "casaubon": "That is best for every one, that the common nature of all doth send unto every one, and then is it best, when she doth send it.",
+   "vector": {
+    "to_1634": 0.635,
+    "home": 0.559,
+    "home_1634": 0.728,
+    "home_rank": 1,
+    "nearest": {
+     "section": "c6.s6",
+     "title": "What the whole sends in its season",
+     "similarity": 0.559
+    }
+   }
   },
   {
    "casaubon_ref": "8.54",
@@ -486,7 +543,18 @@
    ],
    "revision": "project-v1:8.57:33c8165a0c29f6b0",
    "superseded": [],
-   "casaubon": "The sun seemeth to be shed abroad. And indeed it is diffused but not effused. For that diffusion of it is a τάσις or an extension. For therefore are the beams of it called ἀκτῖνες from the word ἐκτείνεσθαι to be stretched out and extended. Now what a sunbeam is, thou mayest know if thou observe the light of the sun, when through some narrow hole it pierceth into some room that is dark. For it is always in a direct line. And as by any solid body, that it meets with in the way that is not penetrable by air, it is divided and abrupted, and yet neither slides off, or falls down, but stayeth there nevertheless: such must the diffusion in the mind be; not an effusion, but an extension. What obstacles and impediments soever she meeteth within her way, she must not violently, and by way of an impetuous onset light upon them; neither must she fall down; but she must stand, and give light unto that which doth admit of it. For as for that which doth not, it is its own fault and loss, if it bereave itself of her light."
+   "casaubon": "The sun seemeth to be shed abroad. And indeed it is diffused but not effused. For that diffusion of it is a τάσις or an extension. For therefore are the beams of it called ἀκτῖνες from the word ἐκτείνεσθαι to be stretched out and extended. Now what a sunbeam is, thou mayest know if thou observe the light of the sun, when through some narrow hole it pierceth into some room that is dark. For it is always in a direct line. And as by any solid body, that it meets with in the way that is not penetrable by air, it is divided and abrupted, and yet neither slides off, or falls down, but stayeth there nevertheless: such must the diffusion in the mind be; not an effusion, but an extension. What obstacles and impediments soever she meeteth within her way, she must not violently, and by way of an impetuous onset light upon them; neither must she fall down; but she must stand, and give light unto that which doth admit of it. For as for that which doth not, it is its own fault and loss, if it bereave itself of her light.",
+   "vector": {
+    "to_1634": 0.795,
+    "home": 0.586,
+    "home_1634": 0.698,
+    "home_rank": 1,
+    "nearest": {
+     "section": "c6.s6",
+     "title": "What the whole sends in its season",
+     "similarity": 0.586
+    }
+   }
   },
   {
    "casaubon_ref": "5.7",
@@ -560,7 +628,18 @@
    ],
    "revision": "project-v1:5.7:819f7cc517e5be8e",
    "superseded": [],
-   "casaubon": "The form of the Athenians' prayer did run thus: 'O rain, rain, good Jupiter, upon all the grounds and fields that belong to the Athenians.' Either we should not pray at all, or thus absolutely and freely; and not every one for himself in particular alone."
+   "casaubon": "The form of the Athenians' prayer did run thus: 'O rain, rain, good Jupiter, upon all the grounds and fields that belong to the Athenians.' Either we should not pray at all, or thus absolutely and freely; and not every one for himself in particular alone.",
+   "vector": {
+    "to_1634": 0.792,
+    "home": 0.531,
+    "home_1634": 0.686,
+    "home_rank": 1,
+    "nearest": {
+     "section": "c6.s6",
+     "title": "What the whole sends in its season",
+     "similarity": 0.531
+    }
+   }
   }
  ]
 }
