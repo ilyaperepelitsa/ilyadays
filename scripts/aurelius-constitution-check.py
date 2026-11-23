@@ -551,7 +551,7 @@ def case_t6(page, base, port):
         page.evaluate('scrollTo(0, 0)')
     if visible() != ['en']:
         problems.append(f'phone: opens showing {visible()}, not the new English alone')
-    for which, want in [('grc', ['grc']), ('old', ['old']), ('all', ['grc', 'en', 'old'])]:
+    for which, want in [('grc', ['grc']), ('old', ['old']), ('ru', ['ru']), ('all', ['grc', 'en', 'old', 'ru'])]:
         page.locator(f'.bar button[data-show={which}]').click()
         if visible() != want:
             problems.append(f'phone: “{which}” shows {visible()}')
@@ -563,7 +563,7 @@ def case_t6(page, base, port):
         problems.append('a verdict is not kept after a reload')
     page.set_viewport_size({'width': 1440, 'height': 900})
     page.wait_for_timeout(200)
-    if visible() != ['grc', 'en', 'old'] or measure()['overflow']:
+    if visible() != ['grc', 'en', 'old', 'ru'] or measure()['overflow']:
         problems.append(f'wide: {visible()} {measure()}')
     opened = page.locator('article.passage').first.locator('details.notes')
     if opened.count() != 2:
@@ -988,7 +988,7 @@ CASES = {
     'P16': ('lists opened at the top of the page on a phone can be seen', case_p16, (390, 844)),
     'P17': ('an editor\'s inference is named, with its reason', case_p17, (390, 844)),
     'P18': ('second cold reader: steady panels, no jump on touch, removal line, statement sources', case_p18, (390, 844)),
-    'T6': ('the translation page: every passage under its section, three versions', case_t6, (390, 844)),
+    'T6': ('the translation page: every passage under its section, four versions (Greek, English, 1634, Russian)', case_t6, (390, 844)),
     'E1': ('an article quoted from the new English: modern number, Greek and 1634 on request', case_e1, (390, 844), 'real'),
     'E2': ('an article still on the 1634 English: the new English and the Greek on request', case_e2, (390, 844), 'real'),
     'R1': ('review on a phone: a quote\'s conclusion marked Revise with a note survives a reload; cards no bulkier', case_r1, (390, 844)),

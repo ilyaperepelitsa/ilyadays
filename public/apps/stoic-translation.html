@@ -60,13 +60,16 @@ main{padding-block:8px 40px}
 .col.en p{font-size:19px}
 .col.grc p{font-size:18.5px;line-height:1.7}
 .col.old p{color:var(--muted)}
+.col.ru p{font-size:19px}
 /* One version at a time on a narrow screen; the bar chooses which. "All" stacks the three. */
-body[data-show=en] .col:not(.en),body[data-show=grc] .col:not(.grc),body[data-show=old] .col:not(.old){display:none}
+body[data-show=en] .col:not(.en),body[data-show=grc] .col:not(.grc),body[data-show=old] .col:not(.old),body[data-show=ru] .col:not(.ru){display:none}
 @media(min-width:900px){
   .bar .switch{display:none}
   .cols{grid-template-columns:1fr 1.15fr 1fr;align-items:start}
+  .cols:has(.col.ru){grid-template-columns:1fr 1fr}
   body[data-show] .col{display:block !important}
 }
+@media(min-width:1280px){.cols:has(.col.ru){grid-template-columns:1fr 1.15fr 1fr 1.1fr}}
 .notes{margin-top:14px;max-width:820px}
 .notes summary{cursor:pointer;min-height:40px;display:flex;align-items:center;color:var(--accent);font-size:15px;font-weight:600}
 .notes dl{display:grid;gap:12px;margin:4px 0 6px}
@@ -106,12 +109,13 @@ footer{padding-block:20px 90px;border-top:1px solid var(--line);font-size:13.5px
 <button type="button" class="switch" data-show="en" aria-pressed="true">Today’s English</button>
 <button type="button" class="switch" data-show="grc" aria-pressed="false">Greek</button>
 <button type="button" class="switch" data-show="old" aria-pressed="false">1634</button>
-<button type="button" class="switch" data-show="all" aria-pressed="false">All three</button>
+<button type="button" class="switch" data-show="ru" aria-pressed="false" lang="ru">Русский</button>
+<button type="button" class="switch" data-show="all" aria-pressed="false">All</button>
 </div></nav>
 <p id="announce" class="sr" role="status"></p>
 <main class="wrap" id="main"><p class="status">Loading the passages…</p></main>
 <section class="wrap about" id="about" hidden></section>
-<p class="wrap downloads" id="downloads">Download this translation, free to use for anything (CC0): <a href="/downloads/marcus-meditations-project-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-project-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-project-v1.txt" download>text</a>. The English only, with the notes in EPUB and Markdown. Seneca, the quoted <i>Letters</i>: <a href="/downloads/seneca-letters-selection-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-v1.txt" download>text</a>.</p>
+<p class="wrap downloads" id="downloads">Download this translation, free to use for anything (CC0): <a href="/downloads/marcus-meditations-project-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-project-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-project-v1.txt" download>text</a>. The English only, with the notes in EPUB and Markdown. Seneca, the quoted <i>Letters</i>: <a href="/downloads/seneca-letters-selection-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-v1.txt" download>text</a>.<br><span lang="ru">По-русски (переведено с английского этого проекта моделью Claude Opus 5.5 и сверено другой моделью; человеком пока не проверено): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>text</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>text</a>.</span></p>
 <footer class="wrap" id="foot"></footer>
 <script>
 'use strict';
@@ -139,7 +143,7 @@ function show(which) {
   try { localStorage.setItem('stoic-translation:v1:show', which); } catch { /* private mode */ }
 }
 for (const button of document.querySelectorAll('.bar button')) button.addEventListener('click', () => show(button.dataset.show));
-try { const kept = localStorage.getItem('stoic-translation:v1:show'); if (['en', 'grc', 'old', 'all'].includes(kept)) show(kept); } catch { /* private mode */ }
+try { const kept = localStorage.getItem('stoic-translation:v1:show'); if (['en', 'grc', 'old', 'ru', 'all'].includes(kept)) show(kept); } catch { /* private mode */ }
 
 function column(cls, lang, title, text) {
   const box = el('div', 'col ' + cls);
@@ -198,6 +202,7 @@ function card(passage) {
   }
   const cols = el('div', 'cols');
   cols.append(column('grc', 'grc', 'Greek · ' + D.edition.short, passage.greek), column('en', 'en', 'Today’s English · this project', passage.english), column('old', 'en', '1634 · Casaubon', passage.casaubon));
+  if (passage.russian) cols.append(column('ru', 'ru', 'Русский · с английского этого проекта', passage.russian));
   box.append(cols);
   for (const [title, items] of [['Where the Greek is open: ' + passage.notes.length + (passage.notes.length === 1 ? ' note' : ' notes'), passage.notes], ['What the second reader questioned, and what was decided: ' + passage.check.length, passage.check]]) {
     if (!items.length) continue;

@@ -132,3 +132,28 @@ test('the translations are published as downloads that hold every passage, dedic
     for (const name of ['marcus-meditations-project-v1.epub', 'seneca-letters-selection-v1.epub']) assert.ok(html.includes(`/downloads/${name}`), `${page} links ${name}`);
   }
 });
+
+test('the Russian is made from the current English, complete, and published on the page and as downloads', () => {
+  // content/aurelius/translation/ru-v1.json: Opus 5.5 from the settled English, checked by another model (owner, 23 Nov 2026).
+  const json = (path) => JSON.parse(fs.readFileSync(new URL(`../../${path}`, import.meta.url), 'utf8'));
+  const ru = json('content/aurelius/translation/ru-v1.json');
+  const sources = {marcus: [json('content/aurelius/translation/project-v1.json').passages, 'standard_ref'], seneca: [json('content/aurelius/translation/seneca-v1.json').passages, 'ref']};
+  for (const [work, [passages, key]] of Object.entries(sources)) {
+    const mine = new Map(ru.passages.filter((p) => p.work === work).map((p) => [p.ref, p]));
+    assert.equal(mine.size, passages.length, `${work}: every passage has its Russian`);
+    for (const p of passages) {
+      const r = mine.get(p[key]);
+      assert.ok(r, `${work} ${p[key]}: no Russian`);
+      assert.equal(r.english_revision, p.revision, `${work} ${p[key]}: the Russian was made from an older English`);
+      assert.match(r.russian, /[А-Яа-яЁё]/);
+      assert.doesNotMatch(r.russian, /["']/, `${work} ${p[key]}: straight quote`);
+    }
+  }
+  const page = json('public/apps/stoic-translation.json');
+  assert.ok(page.passages.every((p) => p.russian), 'every passage on the page carries its Russian');
+  for (const slug of ['marcus-meditations-ru-v1', 'seneca-letters-selection-ru-v1']) {
+    const text = fs.readFileSync(new URL(`../../public/downloads/${slug}.txt`, import.meta.url), 'utf8');
+    assert.match(text, /CC0 1\.0 Universal/);
+    for (const p of ru.passages.filter((x) => slug.startsWith(x.work))) assert.ok(text.includes(p.russian), `${slug}: ${p.ref}`);
+  }
+});

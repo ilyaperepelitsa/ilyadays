@@ -220,6 +220,16 @@ def main() -> None:
         by = {x['revision']: x for x in vectors.pop('passages')}
         passages = [{**p, 'vector': {k: v for k, v in by[p['revision']].items() if k != 'revision'}} for p in passages]
         record['vectors'] = vectors
+    # Russian, made from this English (content/aurelius/translation/ru-v1.json, owner's choice of 23 Nov 2026). A passage gets
+    # its Russian only when the Russian was made from the English revision published here; otherwise it is left out as stale.
+    russian = ROOT / 'content/aurelius/translation/ru-v1.json'
+    if russian.exists() and args.stored == STORED:
+        ru = json.loads(russian.read_text())
+        by_ref = {p['ref']: p for p in ru['passages'] if p['work'] == 'marcus'}
+        stale = [p['standard_ref'] for p in passages if p['standard_ref'] in by_ref and by_ref[p['standard_ref']]['english_revision'] != p['revision']]
+        assert not stale, f'the Russian of {stale[:5]} was made from an older English: translate them again'
+        passages = [{**p, 'russian': by_ref[p['standard_ref']]['russian']} if p['standard_ref'] in by_ref else p for p in passages]
+        record['russian'] = {k: ru[k] for k in ('id', 'made', 'status', 'method', 'limits')}
     record['passages'] = passages
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(record, ensure_ascii=False, indent=1) + '\n')

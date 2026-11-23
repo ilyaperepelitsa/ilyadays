@@ -252,6 +252,8 @@ Each rule is followed by the feedback it came from.
     another language (the owner asked about Russian on 23 Nov 2026: “do we also translate to russian
     right away? or just translate final stuff”) is made only once a section's English is settled
     and the articles that quote it have the owner's verdict, and it is made from the Greek with the
-    settled decisions on open readings, not from the English. This is the editor's recommendation;
-    the owner has not yet confirmed it.
+    settled decisions on open readings, not from the English. *(Superseded by the owner on 23 Nov 2026:
+    “we're translating from english so it should be easier than latin and greek”, “opus it is for
+    english to russian”. So: another language is made from the settled English, by Claude Opus 5.5,
+    checked by a different model against the English; the translators' notes stay in English.)*
 

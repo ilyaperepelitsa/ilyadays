@@ -149,3 +149,26 @@ passages are Casaubon's (all 38 articles quote project-v1; Casaubon is shown for
 passage of both records to the .md and .txt and checks the links.
 - Usage check (18:19–18:34 UTC): result main context 333k; cached reads fell 38% · action: keep to one call per step until
   the session ends · evidence: codeburn window 10 calls.
+
+## 23 November 2026 · Russian
+
+The owner, in their words: “how much would it cost to translate”, then “different models. we're translating from english so it
+should be easier than latin and greek”, then “opus it is for english to russian”. This replaces decision 4 and rule 24 (Russian
+from the Greek). Plan: Opus 5.5 translates the settled English (Marcus 418 passages, the Seneca selection, then the articles);
+Fable 5.2 checks the Russian against the English; Opus settles each point; scripts check order, completeness and typography.
+Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units first to measure.
+- Then the owner: “maybe use claude code session for it?”. So no API spend: 12 Opus workers in this session translate one unit
+  each (Marcus u01–u07 in book order, Seneca u08–u12, ~6,000 English words each; `scratchpad/ru/`), a checker on another model
+  compares each unit's Russian with the English, and the same translator, resumed, settles each point in writing; `check.py`
+  checks order, paragraphs, length, Cyrillic and typography at every stage. Briefs: `scratchpad/ru/{TRANSLATOR,CHECKER,FIXER}.md`.
+- **Russian done (23 Nov, ~22:40):** 722 passages (Marcus 418, Seneca 304) in 12 units. Translators: Opus 5.5 workers. Checkers:
+  Sonnet 5.5 workers (Fable's session limit was reached on the first checker; it resets 30 Nov). 212 points settled in writing
+  (148 accepted, 57 partly, 7 declined); the two places marked wrong were 4.47 (declined, rightly: «если только … не» is “unless”)
+  and Ep. 81.25 (accepted: the Russian had reversed the sense). A cross-unit pass found “do wrong” rendered four ways across
+  Marcus and harmonised 13 passages to «поступать дурно» (kept apart from «несправедливо» for “unjust”); the glossary terms
+  (ruling part, impression, impulse, judgment, social, universe) were already consistent. Record
+  `content/aurelius/translation/ru-v1.json`, each passage tied to the English revision it was made from (the build refuses a
+  stale one). Russian column on the translation page (phone switch «Русский»; four columns from 1280 px; T6 updated), Russian
+  downloads (md, txt, epub, CC0, Russian front matter), test that every passage is present and current. No API spend.
+- Usage check (19:25–19:40 UTC): result 24 workers this hour; writes −82% and output −90% from the peak as they finished ·
+  action: no new workers; main context 454k · evidence: codeburn window 117 calls.
