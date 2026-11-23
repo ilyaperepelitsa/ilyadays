@@ -63,6 +63,20 @@ def shared_components(claims: list[dict]) -> tuple[int, int]:
     return shared, components
 
 
+def check_inferences(where: str, sentence: str, backed: list[str], inferences: list[dict]) -> None:
+    """An inference is a word or two of the editor's that draws a conclusion ("so", "therefore", "because").
+    It is recorded with one sentence of why the step is the editor's, so the page can say so. It must stand once in
+    the sentence, as whole words, outside every phrase a passage backs."""
+    for inference in inferences:
+        words_, why = inference.get('words', ''), inference.get('why', '')
+        found = [m.start() for m in re.finditer(r'(?<!\w)' + re.escape(words_) + r'(?!\w)', sentence)] if words_ else []
+        assert len(found) == 1, f"{where}: the inference “{words_}” must stand exactly once in the sentence; found {len(found)} times"
+        assert isinstance(why, str) and 20 <= len(why) <= 200, f"{where}: the inference “{words_}” needs one sentence of why it is the editor's (20 to 200 characters)"
+        for phrase in backed:
+            start = sentence.lower().find(phrase.lower())
+            assert start < 0 or not (start <= found[0] < start + len(phrase)), f"{where}: the inference “{words_}” lies inside “{phrase}”, which a passage backs; an inference is the editor's alone"
+
+
 def scalar(text: str, index: int) -> int:
     return len(text[:index].encode('utf-32-le')) // 4
 
@@ -223,8 +237,9 @@ def main() -> None:
                 support.append(record)
             refs = list(dict.fromkeys(s['ref'] for s in support))
             assert len(refs) >= 2, f"{where} {claim['id']}: a fused claim needs at least two passages"
+            check_inferences(f"{where} {claim['id']}", claim['t'], [words_ for s in support for words_ in s.get('gives', [])], claim.get('inferences', []))
             claims.append({'id': claim['id'], 'number': number, 'role': claim['role'], 't': claim['t'], 'shared': claim['shared'],
-                           **({'changed': claim['changed']} if 'changed' in claim else {}), 'passages': refs,
+                           **({'changed': claim['changed']} if 'changed' in claim else {}), **({'inferences': claim['inferences']} if claim.get('inferences') else {}), 'passages': refs,
                            'closeness': closeness([by_ref[r]['revision_id'] for r in refs]), 'support': support})
         single = [{**piece(item, 'single'), 'label': item['label'], 't': item['t'], 'why': item['why'], 'follows': item['follows']} for item in article['single']]
 
@@ -242,6 +257,7 @@ def main() -> None:
             assert part['words'].lower() in statement['t'].lower() and set(part['ids']) <= set(ids), f"{where}: statement part {part['words']!r}"
             assert part['ids'], f"{where}: statement part {part['words']!r} has no witness: every part needs at least one quoted piece"
             part['refs'] = list(dict.fromkeys(ids[i]['ref'] for i in part['ids']))
+        check_inferences(f'{where} statement', statement['t'], [part['words'] for part in statement['parts']], statement.get('inferences', []))
         keys = [label['key'] for label in authored['labels']]
         assert list(article['groups']) == keys, f'{where}: groups follow the fixed labels'
         placed = [item for key in keys for item in article['groups'][key]]

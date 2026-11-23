@@ -169,3 +169,42 @@ Each rule is followed by the feedback it came from.
     statement and the sides.
     *23 Nov 2026: “Let's design the vectors bit a bit better. It should be separate column and not
     move the ‘why’, ‘in action’ etc.”*
+16. **Read an added author's quote where it stands.** Before a quote of an added author backs
+    anything, read the passage around it and write one sentence (`context`, 20 to 200 characters)
+    saying what that passage is about and what the quote's key noun or pronoun refers to. If the
+    context is about something else than the claim, the quote is not evidence for it, however well
+    its words match. The page shows the sentence under the quote.
+    *23 Nov 2026, second review of Article 6: an exact span of Seneca about everything perishing
+    was used to back a clause about working together (Ep. 71.13). Accepted by the owner with the
+    plan that followed.*
+17. **Search by words as well as by vectors, and log it.** For every added author, search the
+    corpus for the section's own key words before choosing passages, and record in `searched` the
+    words searched and, for each passage considered and rejected, its reference and a reason in a
+    few words. At least three searches. The log stays in the authored record.
+    *23 Nov 2026, second review: passages the vectors ranked low were missed, and nothing recorded
+    what had been looked for.*
+18. **A clause never says more than its quote, and "challenges" is for a real disagreement.** A
+    clause appended to a statement or claim names the items it comes from (`from`) and cites only
+    their quotes. Test each clause twice: does it say more than its quote says in context; and, if
+    it is marked as a challenge, would the two authors really disagree? If the added author only
+    narrows or adds, mark it as an addition; if nothing real remains, drop the clause.
+    *23 Nov 2026, second review: Ep. 96.2 supports receiving hardship willingly, not wanting it;
+    asking for joy outright does not contradict praying for everyone.*
+19. **Mark the editor's inferences.** A "so", "therefore" or "because" that no passage says is
+    recorded in `inferences` on the statement or claim, with one sentence of why the step is the
+    editor's. It is never inside words a passage backs. The page names it "The editor's inference"
+    when the reader picks it. A fused claim also needs at least one component that two of its
+    passages both say; a passage about one thing must not be stretched to back another (cosmic
+    order is not personal benefit; "all things go to you" is not "all work toward one end").
+    *23 Nov 2026, second review: "…so I want what the world wants" presented the editor's step as
+    Marcus's; 4.19 "to thee all tend" was made to back "work toward one end".*
+20. **Evidence in today's English, with the Greek and the older translation on request.** Where
+    the project's own translation of a passage exists (`content/aurelius/translation/`), an
+    article quotes that English, shows the standard reference of modern editions with Casaubon's
+    number beside it, and keeps the Greek and Casaubon one tap away. A reader must be able to
+    judge whether Marcus supports a claim without first translating 1634 English. Where the Greek
+    settles a question Casaubon cannot (he adds "not every one for himself in particular alone" to
+    5.7; the Greek ends at "simply and freely"), the article follows the Greek and says so.
+    *23 Nov 2026, the owner's request recorded in the second review: a project translation of the
+    Meditations from the Greek into contemporary English; "drive it to completion please.
+    including the translations".*

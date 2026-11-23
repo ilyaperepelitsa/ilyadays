@@ -384,6 +384,7 @@ svg.map .cos{font-size:12.5px;font-weight:650}
 <h1>The articles so far</h1>
 <p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
+<p class="status"><a href="stoic-translation.html">New: the six passages behind Article 6, translated from the Greek →</a></p>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
@@ -1007,8 +1008,12 @@ function pickedBlock(article, key, segs) {
     box.append(list);
   } else {
     const before = segs.slice(0, state.sel.p).reverse().find(other => other.ids.length), after = segs.slice(state.sel.p + 1).find(other => other.ids.length);
-    box.append(el('p', 'picked-head', 'The editor’s connection'));
+    // A recorded inference ("so", "because"): the editor draws a conclusion here, and says why the step is the editor's.
+    const where = key === 'statement' ? article.statement : claimOf(article, key);
+    const inference = ((where && where.inferences) || []).find(item => new RegExp('(^|[^\\p{L}])' + item.words.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^\\p{L}])', 'u').test(seg.text));
+    box.append(el('p', 'picked-head', inference ? 'The editor’s inference' : 'The editor’s connection'));
     box.append(el('p', 'picked-note', '“' + seg.text.trim() + '” is the editor’s' + (before && after ? ': it joins “' + short(before.text.trim(), 44) + '” to “' + short(after.text.trim(), 44) + '”' : '') + '. No passage says these words.'));
+    if (inference) box.append(el('p', 'picked-note why', inference.why));
   }
   return box;
 }

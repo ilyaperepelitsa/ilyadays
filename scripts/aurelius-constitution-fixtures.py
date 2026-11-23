@@ -27,6 +27,7 @@ PY = sys.executable
 AUTHORED = ROOT / 'content/aurelius/constitution.json'
 PUBLISHED = ROOT / 'public/apps'
 TEST = ROOT / 'tests/aurelius/constitution.test.mjs'
+TRANSLATION = ROOT / 'content/aurelius/translation/project-v1.json'
 
 
 def article(record: dict, number: int) -> dict:
@@ -82,7 +83,17 @@ def g8_two_searches(r):
     seneca(r, 6)['searched'] = {'searches': ['willing', 'Fate'], 'rejected': []}
 
 
+def a3_inference_not_in_sentence(r):
+    article(r, 6)['statement']['inferences'] = [{'words': 'therefore', 'why': 'The step from what is sent to what I want is the editor’s.'}]
+
+
+def a3_inference_inside_backed_words(r):
+    article(r, 6)['statement']['inferences'] = [{'words': 'good', 'why': 'The step from what is sent to what I want is the editor’s.'}]
+
+
 BUILD = [
+    ('a3-inference-not-in-the-sentence', 'A3', 'an editor\'s inference whose words are not in the statement', a3_inference_not_in_sentence, 'inference'),
+    ('a3-inference-inside-backed-words', 'A3', 'an editor\'s inference that claims words a passage backs', a3_inference_inside_backed_words, 'inference'),
     ('g2-clause-cites-another-item', 'G2', 'the prayer clause on c2 cites S71.13c, a piece of the item on c3', g2_wrong_item, 'S71.13c'),
     ('g2-clause-without-from', 'G2', 'a body clause that does not say which items contribute it', g2_no_from, 'from'),
     ('g3-duplicate-item-key', 'G3', 'two added items share the key w1', g3_duplicate_key, 'w1'),
@@ -127,6 +138,42 @@ TESTS = [
 ]
 
 
+# ---- translation cases: (name, row, fault, mutate(stored translation record), text the rejection must contain)
+def t5_edited_in_place(r):
+    r['passages'][0]['english'] = r['passages'][0]['english'].replace('loves', 'longs for', 1)
+
+
+def t5_old_english(r):
+    import hashlib
+    passage = r['passages'][1]
+    passage['english'] = passage['english'].replace('fits well with you', 'is expedient unto thee')
+    body = '\n'.join([r['edition']['id'], passage['standard_ref'], passage['greek'], passage['english']])   # a proper new revision, so only the wording is at fault
+    passage['superseded'].append(passage['revision'])
+    passage['revision'] = f"{r['id']}:{passage['standard_ref']}:{hashlib.sha256(body.encode('utf-8')).hexdigest()[:16]}"
+
+
+def t5_note_misquotes_greek(r):
+    r['passages'][2]['notes'][0]['greek'] = 'Μήτις'
+
+
+TRANSLATIONS = [
+    ('t5-english-edited-in-place', 'T5', 'a translated passage reworded without a new revision', t5_edited_in_place, 'revision'),
+    ('t5-old-english', 'T5', 'a translation that falls back into 1634 English', t5_old_english, "not today's English"),
+    ('t5-note-misquotes-the-greek', 'T5', 'a note whose Greek is not in the passage', t5_note_misquotes_greek, 'not in the Greek'),
+]
+
+
+def run_translation(mutate) -> tuple[bool, str]:
+    record = json.loads(TRANSLATION.read_text())
+    mutate(record)
+    with tempfile.TemporaryDirectory() as tmp:
+        path = Path(tmp) / 'project.json'
+        path.write_text(json.dumps(record, ensure_ascii=False))
+        done = subprocess.run([PY, str(ROOT / 'scripts/aurelius-translation.py'), '--stored', str(path), '--out', str(Path(tmp) / 'out.json')],
+                              capture_output=True, text=True, cwd=ROOT)
+    return done.returncode != 0, (done.stderr.strip().splitlines() or done.stdout.strip().splitlines() or [''])[-1]
+
+
 def run_build(mutate) -> tuple[bool, str]:
     record = json.loads(AUTHORED.read_text())
     mutate(record)
@@ -164,6 +211,12 @@ def main() -> int:
         rejected, message = run_build(mutate)
         ok = rejected and expect.lower() in message.lower()
         results.append({'case': name, 'row': row, 'fault': fault, 'kind': 'build', 'rejected': rejected, 'ok': ok, 'message': message})
+    for name, row, fault, mutate, expect in TRANSLATIONS:
+        if args.names and name not in args.names:
+            continue
+        rejected, message = run_translation(mutate)
+        ok = rejected and expect.lower() in message.lower()
+        results.append({'case': name, 'row': row, 'fault': fault, 'kind': 'translation', 'rejected': rejected, 'ok': ok, 'message': message})
     for name, row, fault, mutate, env, expect in TESTS:
         if args.names and name not in args.names:
             continue

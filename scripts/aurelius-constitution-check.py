@@ -501,6 +501,57 @@ def case_p16(page, base, port):
     return problems
 
 
+def case_p17(page, base, port):
+    """A recorded inference of the editor's (the fixture's “so” in Article 6's statement) is named as one, with its reason."""
+    problems = []
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    joint = page.locator('#article-6 .statement .sg.join').filter(has_text=re.compile(r'(^|[^a-z])so$')).first
+    joint.scroll_into_view_if_needed()
+    joint.click(timeout=5000)
+    said = page.locator('#article-6 .statement .picked').text_content().replace('’', "'") if page.locator('#article-6 .statement .picked').count() else ''
+    if "The editor's inference" not in said:
+        problems.append(f'picking “so” says “{said[:90]}”, not that it is the editor\'s inference')
+    if 'the step from what is sent' not in said:
+        problems.append('the reason recorded for the inference is not shown')
+    return problems
+
+
+def case_t6(page, base, port):
+    """The translation pilot's page: six passages, one version at a time on a phone, three side by side on a wide screen."""
+    problems = []
+    url = base.replace('stoic-constitution.html', 'stoic-translation.html')
+    page.goto(url, wait_until='networkidle')
+    page.wait_for_selector('article.passage')
+    visible = lambda: page.evaluate("[...document.querySelectorAll('article.passage:first-child .col')].filter(n => n.offsetParent).map(n => n.className.replace('col ', ''))")
+    measure = lambda: page.evaluate("""() => ({n: document.querySelectorAll('article.passage').length, overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        small: [...document.querySelectorAll('body *')].filter(n => n.children.length === 0 && n.textContent.trim() && n.offsetParent && parseFloat(getComputedStyle(n).fontSize) < 12).length,
+        short: [...document.querySelectorAll('button')].filter(n => n.offsetParent && n.getBoundingClientRect().height < 40).length})""")
+    seen = measure()
+    if seen != {'n': 6, 'overflow': 0, 'small': 0, 'short': 0}:
+        problems.append(f'phone: {seen}')
+    if visible() != ['en']:
+        problems.append(f'phone: opens showing {visible()}, not the new English alone')
+    for which, want in [('grc', ['grc']), ('old', ['old']), ('all', ['grc', 'en', 'old'])]:
+        page.locator(f'.bar button[data-show={which}]').click()
+        if visible() != want:
+            problems.append(f'phone: “{which}” shows {visible()}')
+    keep = page.locator('article.passage:first-child .vb', has_text='Keep')
+    keep.click()
+    page.reload(wait_until='networkidle')
+    page.wait_for_selector('article.passage')
+    if page.locator('article.passage:first-child .vb[aria-pressed=true]').count() != 1:
+        problems.append('a verdict is not kept after a reload')
+    page.set_viewport_size({'width': 1440, 'height': 900})
+    page.wait_for_timeout(200)
+    if visible() != ['grc', 'en', 'old'] or measure()['overflow']:
+        problems.append(f'wide: {visible()} {measure()}')
+    opened = page.locator('article.passage:first-child details.notes')
+    if opened.count() != 2:
+        problems.append('the notes and the second reading are not both offered')
+    return problems
+
+
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
@@ -518,6 +569,8 @@ CASES = {
     'P14': ('a chapter file newer than the index: reload gets out', case_p14, (390, 844)),
     'P15': ('the statement counts its surviving passages', case_p15, (1440, 1000)),
     'P16': ('lists opened at the top of the page on a phone can be seen', case_p16, (390, 844)),
+    'P17': ('an editor\'s inference is named, with its reason', case_p17, (390, 844)),
+    'T6': ('the translation pilot page: six passages, three versions', case_t6, (390, 844)),
 }
 
 

@@ -1,0 +1,561 @@
+{
+ "id": "project-v1",
+ "language": "en",
+ "made": "2026-11-23",
+ "scope": "c6.s6",
+ "status": "Pilot: the six passages behind Article 6 and nothing wider. Translated by one model from the Greek alone and checked against the Greek by a second. Not yet read by the owner, and not checked by a person who reads Greek.",
+ "edition": {
+  "id": "leopold-1908-perseus-grc2",
+  "short": "Leopold 1908",
+  "urn": "urn:cts:greekLit:tlg0562.tlg001.perseus-grc2",
+  "citation": "M. Antoninus Imperator ad se ipsum, edited by Jan Hendrik Leopold, 1908.",
+  "editor": "Jan Hendrik Leopold",
+  "editor_born": "1865-05-11",
+  "editor_died": "1925-06-21",
+  "year": 1908,
+  "publisher_note": "Library catalogues and the Classical Review give Oxford, Clarendon Press (Oxford Classical Texts). The header of the Perseus file says “Leipzig: Teubner, 1908”. Both are recorded; the text used is the Perseus file.",
+  "rights": "The editor died on 21 June 1925, more than 100 years ago, so the edition itself is out of copyright.",
+  "source": "Perseus Digital Library, https://www.perseus.tufts.edu/ · file tlg0562.tlg001.perseus-grc2.xml in https://github.com/PerseusDL/canonical-greekLit (data/tlg0562/tlg001)",
+  "file_sha256": "7e5017cbc9e911a6c3e300cfc31ecc2a6c289bc43b1f2c69145ce85037981a2d",
+  "file_bytes": 493638,
+  "retrieved": "2026-11-23",
+  "licence": "Creative Commons Attribution-ShareAlike (CC BY-SA), Perseus Digital Library. The Greek quoted here is theirs to credit and is shared under the same licence."
+ },
+ "method": [
+  "A first translator was given the Greek of the six passages and nothing else: no earlier translation, no article. It was asked for plain English of today that keeps the speaker, the person addressed, every “all” and “not”, and each image, and to translate one reading and note the other wherever the Greek is open.",
+  "A second reader was given only the Greek and that English, without the first translator’s notes, and asked to list every place where the English says more, less or other than the Greek. It found 44 points and called no passage wrong.",
+  "Each point was then settled in writing: accepted, partly accepted or declined with a reason. The result is the English shown here. Under each passage you can open both lists: what the Greek leaves open, and what the second reader questioned."
+ ],
+ "limits": [
+  "Both readers are language models. A model’s Greek can be confidently wrong; the Greek is shown beside the English so that anyone who reads Greek can object.",
+  "One doubt about the Greek text itself (a word in 8.57) is noted but was not checked against a critical edition’s notes.",
+  "The passage numbers are those of modern editions. The 1634 translation numbers the sections differently; the six were matched by their text, not by their numbers.",
+  "A translated passage is never edited in place. A correction is a new revision with a new id; the old one is kept in the record."
+ ],
+ "footer": "Greek: M. Antoninus Imperator ad se ipsum, ed. J. H. Leopold (1908), from the Perseus Digital Library, CC BY-SA. 1634 English: Meric Casaubon (Project Gutenberg 2680). The new English is this project’s own pilot translation.",
+ "passages": [
+  {
+   "casaubon_ref": "10.22",
+   "casaubon_revision": "casaubon-gutenberg-2680-10-22:146c2d50054fcc26",
+   "standard_ref": "10.21",
+   "greek": "ʽἘρᾷ μὲν ὄμβρου γαῖα, ἐρᾷ δὲ ὁ σεμνὸς αἰθήρ,ʼ ἐρᾷ δὲ ὁ κόσμος ποιῆσαι ὃ ἂν μέλλῃ γίνεσθαι. λέγω οὖν τῷ κόσμῳ ὅτι σοὶ συνερῶ. μήτι δὲ οὕτω κἀκεῖνο λέγεται, ὅτι· φιλεῖ τοῦτο γίνεσθαι;",
+   "english": "“The earth loves the rain, and the holy sky loves,” and the universe loves to bring about whatever is to come. So I say to the universe: “I love along with you.” And is that, too, perhaps said in this sense: “this loves to happen”?",
+   "notes": [
+    {
+     "greek": "ἐρᾷ δὲ ὁ σεμνὸς αἰθήρ",
+     "note": "The quoted line of verse stops here without saying what the sky loves. The English leaves it just as bare.",
+     "other_reading": "and the holy sky loves it too"
+    },
+    {
+     "greek": "σεμνὸς αἰθήρ",
+     "note": "αἰθήρ is the bright upper air or heaven; σεμνός is “revered”, “holy”, “majestic”.",
+     "other_reading": "the majestic heaven"
+    },
+    {
+     "greek": "ἐρᾷ δὲ ὁ κόσμος ποιῆσαι",
+     "note": "The poet’s words end before this; from here Marcus speaks, reusing the poet’s verb. It is the verb of being in love and of strong desire. “Loves” is used for it throughout so that the last sentence can be heard.",
+     "other_reading": "and the universe longs to bring about"
+    },
+    {
+     "greek": "κόσμος",
+     "note": "The word means both the universe and its order. 'Universe' is used here and in 4.23.",
+     "other_reading": "the world"
+    },
+    {
+     "greek": "ὃ ἂν μέλλῃ γίνεσθαι",
+     "note": "The verb can mean simply “is about to” or “is destined to”. The plain future sense is translated.",
+     "other_reading": "whatever is destined to happen"
+    },
+    {
+     "greek": "σοὶ συνερῶ",
+     "note": "One compound verb, “I love together with you”; no object is given, so what is loved is left to the context.",
+     "other_reading": "I long along with you"
+    },
+    {
+     "greek": "μήτι δὲ οὕτω κἀκεῖνο λέγεται",
+     "note": "The particle μήτι usually opens a question expecting “no” (as in 6.43), but it can also float a tentative suggestion. It is taken as a suggestion here, since the sentence completes the thought.",
+     "other_reading": "Surely that, too, is not said in this sense: “this loves to happen”?"
+    },
+    {
+     "greek": "φιλεῖ τοῦτο γίνεσθαι",
+     "note": "An everyday Greek idiom: “loves to happen” means “tends to happen, usually happens”. The literal “loves” is kept because Marcus’s point depends on hearing the love in it. It is a different Greek verb from the “loves” of the lines above.",
+     "other_reading": "This tends to happen"
+    }
+   ],
+   "check": [
+    {
+     "greek": "φιλεῖ τοῦτο γίνεσθαι",
+     "note": "φιλεῖ with an infinitive is the everyday Greek idiom for 'this tends to happen, this usually happens'. Marcus's point is that the ordinary idiom literally says 'loves'; the English gives only the literal half, and since 'this loves to happen' is not an English saying, the reader cannot see that a common phrase is being reread.",
+     "decided": "Kept the literal “loves” and explained the idiom in a note; the English cannot carry both senses in the words alone."
+    },
+    {
+     "greek": "Ἐρᾷ",
+     "note": "ἐρᾷ is the verb of being in love and desiring passionately, and the whole passage is a chain of love words ending in φιλεῖ ('loves'). English switches from 'longs' (four times) to 'loves' at the last step, so the link that makes the final question follow is cut exactly at the punchline.",
+     "decided": "Accepted. “Loves” throughout, so the last question follows from the first line."
+    },
+    {
+     "greek": "μήτι δὲ οὕτω κἀκεῖνο λέγεται",
+     "note": "μήτι normally marks a question expecting 'no' (as it does twice in 6.43); here the English reads it as a tentative 'perhaps', leaning toward yes. The sense of the passage supports that, but it is a choice, and the same particle is rendered two different ways in this set without any signal.",
+     "decided": "Kept as a tentative question (“perhaps”); the reading that expects “no” is in the notes. In 6.43 the same particle is translated as expecting “no”."
+    },
+    {
+     "greek": "κἀκεῖνο λέγεται",
+     "note": "'other' and 'saying' have no Greek behind them (κἀκεῖνο is just 'that too'), and λέγεται is 'is said', not 'is meant'. 'That other saying' also implies that what came before was a saying of the same kind.",
+     "decided": "Accepted: “And is that, too, perhaps said in this sense”."
+    },
+    {
+     "greek": "ὁ σεμνὸς αἰθήρ",
+     "note": "σεμνός is 'revered, august, holy'; 'solemn' in current English leans toward 'grave, unsmiling'. αἰθήρ is specifically the bright upper air or heaven; 'sky' is acceptable but flatter. Note also that the quotation is cut off with no object for the second 'loves', which the English rightly keeps.",
+     "decided": "Changed to “holy”; “majestic” is in the notes."
+    },
+    {
+     "greek": "ποιῆσαι ὃ ἂν μέλλῃ γίνεσθαι",
+     "note": "ποιῆσαι is 'do / make / bring about'; 'to make whatever is going to happen' is odd English ('make' wants an object that is a thing, not an event). μέλλῃ can be plain future ('is going to') or 'is destined to'; the English picks the plain future.",
+     "decided": "Accepted: “to bring about whatever is to come”."
+    },
+    {
+     "greek": "σοὶ συνερῶ",
+     "note": "'long along' is an accidental jingle. Formally συνερῶ could also be a future 'I will speak with you / on your side', which would pick up λέγω; the run of ἐρᾷ before it settles the sense as 'love with', so this is only a possible undertone.",
+     "decided": "Accepted: “I love along with you”."
+    }
+   ],
+   "revision": "project-v1:10.21:f687b6f37d2d8cb3",
+   "superseded": []
+  },
+  {
+   "casaubon_ref": "4.19",
+   "casaubon_revision": "casaubon-gutenberg-2680-4-19:4f74e8ff011fc86a",
+   "standard_ref": "4.23",
+   "greek": "Πᾶν μοι συναρμόζει ὃ σοὶ εὐάρμοστόν ἐστιν, ὦ κόσμε· οὐδέν μοι πρόωρον οὐδὲ ὄψιμον ὃ σοὶ εὔκαιρον. πᾶν μοι καρπὸς ὃ φέρουσιν αἱ σαὶ ὧραι, ὦ φύσις· ἐκ σοῦ πάντα, ἐν σοὶ πάντα, εἰς σὲ πάντα. ἐκεῖνος μέν φησιν· ʽὦ πόλι φίλη Κέκροπος·ʼ σὺ δὲ οὐκ ἐρεῖς· ʽὦ πόλι φίλη Διός;ʼ",
+   "english": "Universe, everything that fits well with you fits well with me. Nothing that is timely for you is too early or too late for me. Nature, everything your seasons bear is fruit to me. All things from you, all things in you, all things into you. One man says, “Dear city of Cecrops.” But you, will you not say, “Dear city of Zeus”?",
+   "notes": [
+    {
+     "greek": "Πᾶν μοι συναρμόζει ὃ σοὶ εὐάρμοστόν ἐστιν",
+     "note": "Both words come from the root for fitting together, which covers a carpenter's joint and a musical tuning. I chose 'fits'.",
+     "other_reading": "Everything that is in tune with you is in tune with me"
+    },
+    {
+     "greek": "κόσμε",
+     "note": "Universe, or world, or the ordered whole; the same choice as in 10.21.",
+     "other_reading": "world"
+    },
+    {
+     "greek": "οὐδέν μοι πρόωρον οὐδὲ ὄψιμον ὃ σοὶ εὔκαιρον",
+     "note": "The words for “too early” and “too late” are also used of crops that come before or after their season, which leads into the fruit of the next sentence.",
+     "other_reading": "Nothing that is timely for you is unripe or overdue for me"
+    },
+    {
+     "greek": "αἱ σαὶ ὧραι",
+     "note": "The word means seasons and also hours or times in general. 'Seasons' goes with the fruit.",
+     "other_reading": "your hours"
+    },
+    {
+     "greek": "ἐκ σοῦ πάντα, ἐν σοὶ πάντα, εἰς σὲ πάντα",
+     "note": "The Greek has no verbs, only “out of you”, “in you”, “into you”. None is supplied.",
+     "other_reading": "All things come from you, exist in you and go back into you"
+    },
+    {
+     "greek": "ἐκεῖνος μέν φησιν",
+     "note": "The speaker is not named, only pointed to as 'that one'; the words quoted look like a line of verse. Cecrops was the legendary first king of Athens, so his city is Athens.",
+     "other_reading": "The poet says"
+    },
+    {
+     "greek": "ὦ πόλι φίλη Κέκροπος",
+     "note": "'Dear' can go with 'city' (dear city, belonging to Cecrops) or with the name (city dear to Cecrops). The same holds for the phrase about Zeus that copies it.",
+     "other_reading": "O city dear to Cecrops ... O city dear to Zeus"
+    },
+    {
+     "greek": "σὺ δὲ οὐκ ἐρεῖς",
+     "note": "Up to here 'you' was the universe and then nature. This 'you' is set against 'that man' and is most naturally Marcus speaking to himself; the Greek does not say so, and does not say what the city of Zeus is. The question expects the answer yes.",
+     "other_reading": null
+    }
+   ],
+   "check": [
+    {
+     "greek": "ἐκ σοῦ πάντα, ἐν σοὶ πάντα, εἰς σὲ πάντα",
+     "note": "The Greek has no verb at all: three bare prepositional phrases, 'out of you, in you, into you'. English supplies 'come', 'are' and 'go', and 'to you' is weaker than εἰς, which is 'into'.",
+     "decided": "Accepted: no verbs supplied, and “into you”."
+    },
+    {
+     "greek": "πρόωρον οὐδὲ ὄψιμον ὃ σοὶ εὔκαιρον",
+     "note": "πρόωρον ('before its season', same root as ὧραι, 'seasons', in the next sentence) and ὄψιμον ('late in the season', used of crops and rain) are farming words that prepare the fruit image; 'too early or too late' is clock language and the link is lost. 'In good time' in English can also mean 'eventually' or 'with time to spare'; εὔκαιρον is 'timely, at the right moment'.",
+     "decided": "Partly accepted: “timely” for εὔκαιρον. “Too early or too late” is kept as the plain sense; the crop sense is in the notes."
+    },
+    {
+     "greek": "φέρουσιν",
+     "note": "With καρπός the verb φέρειν is the regular word for 'bear' (fruit). 'Bring' is the other live sense and is not wrong, but it drops the idiom the image rests on.",
+     "decided": "Accepted: “bear”."
+    },
+    {
+     "greek": "συναρμόζει",
+     "note": "The ἁρμ- words mean both 'fitted together' (joinery) and 'in tune, harmonious' (music). English keeps the repeated root, which is good, but picks the joinery sense only.",
+     "decided": "No change. The word also means “in tune”; a reader should know both senses are there."
+    },
+    {
+     "greek": "σὺ δὲ οὐκ ἐρεῖς",
+     "note": "Up to this point 'you' has been the universe and nature; here σύ is the writer turning on himself (or the reader), set against ἐκεῖνος. The Greek makes the same unannounced switch, but δέ is contrastive ('but you'), and 'And you' lets an English reader think nature is still being addressed. οὐκ expecting 'yes' and the future tense are rendered correctly.",
+     "decided": "Accepted: “But you”."
+    },
+    {
+     "greek": "ἐκεῖνος μέν φησιν",
+     "note": "ἐκεῖνος is 'that one', often 'the well-known one'; it introduces a quoted line of verse. 'That man' sounds dismissive in English and gives the reader no hint that a poet's line is being quoted. The Greek does not say 'poet', so that word could only go in a note.",
+     "decided": "Changed to “One man says”. That the words are a line of verse is in the notes; the Greek does not say “poet”."
+    },
+    {
+     "greek": "Κέκροπος",
+     "note": "The contrast is Athens (city of its legendary king Cecrops) against the world as the city of Zeus. A modern reader with no Greek will not know Cecrops, so the point of the last two sentences is invisible without a note.",
+     "decided": "The name is kept without a gloss inside the translation; the note says the city is Athens."
+    },
+    {
+     "greek": "ὦ κόσμε",
+     "note": "Both addresses are marked in Greek with ὦ. A bare lower-case 'universe' and 'nature' tacked on after a comma reads awkwardly and is easy to misread as part of the sentence rather than as the one spoken to.",
+     "decided": "Accepted: “Universe,” and “Nature,” now open their sentences."
+    },
+    {
+     "greek": "ἐκ σοῦ πάντα, ἐν σοὶ πάντα, εἰς σὲ πάντα",
+     "note": "A question for the article: do these words say that all things work or tend toward one end?",
+     "decided": "No. Three phrases without a verb: out of you, in you, into you. That is origin, containment and destination. Working together toward the same thing is said in 6.43, not here. The “you” is nature."
+    }
+   ],
+   "revision": "project-v1:4.23:bb27fec45d0d2a9e",
+   "superseded": []
+  },
+  {
+   "casaubon_ref": "6.38",
+   "casaubon_revision": "casaubon-gutenberg-2680-6-38:911800e4fd961782",
+   "standard_ref": "6.43",
+   "greek": "Μήτι ὁ ἥλιος τὰ τοῦ ὑετοῦ ἀξιοῖ ποιεῖν; μήτι ὁ Ἀσκληπιὸς τὰ τῆς Καρποφόρου; τί δὲ τῶν ἄστρων ἕκαστον; οὐχὶ διάφορα μέν, συνεργὰ δὲ πρὸς ταὐτόν;",
+   "english": "Surely the sun does not think it should do the rain’s part? Or Asclepius the part of the fruit-bearing goddess? And what of each of the stars? Are they not different, yet working together toward the same thing?",
+   "notes": [
+    {
+     "greek": "Μήτι",
+     "note": "This particle marks a question expecting the answer no, here and in the next question; “Surely … not” carries that.",
+     "other_reading": "Does the sun think it should do the rain’s part?"
+    },
+    {
+     "greek": "ἀξιοῖ",
+     "note": "The verb ranges from “thinks it right” and “sees fit” to “claims” and “demands”.",
+     "other_reading": "Surely the sun does not claim the rain’s part?"
+    },
+    {
+     "greek": "τὰ τοῦ ὑετοῦ",
+     "note": "Literally “the things of the rain”: what belongs to the rain to do.",
+     "other_reading": "the rain’s work"
+    },
+    {
+     "greek": "τῆς Καρποφόρου",
+     "note": "“The Fruit-Bearer” (feminine) is a title of a goddess of crops, usually Demeter, sometimes Earth. Asclepius is the god of healing.",
+     "other_reading": "the part of Demeter, bringer of crops"
+    },
+    {
+     "greek": "τί δὲ τῶν ἄστρων ἕκαστον;",
+     "note": "The question has no verb: literally 'and what each of the stars?'",
+     "other_reading": "And what does each of the stars do?"
+    },
+    {
+     "greek": "οὐχὶ διάφορα μέν, συνεργὰ δὲ πρὸς ταὐτόν;",
+     "note": "The adjectives are neuter plural and may describe the stars alone or everything just named (sun, rain, the two gods, the stars). The Greek also does not say what 'the same thing' is.",
+     "other_reading": "Are all these not different, yet working together toward the same end?"
+    }
+   ],
+   "check": [
+    {
+     "greek": "Μήτι ὁ ἥλιος",
+     "note": "μήτι marks a question that expects the answer 'no'. The English questions are neutral, so the expected 'of course not' is left for the reader to guess; the next question (οὐχί, expecting 'yes') is rendered with its expectation, which makes the unevenness visible.",
+     "decided": "Accepted: “Surely … not”."
+    },
+    {
+     "greek": "ἀξιοῖ",
+     "note": "ἀξιοῖ is 'think it right, think oneself entitled, expect, demand'. 'Claim' picks the 'demand as one's due' sense, but in English 'claim to do' also means 'assert that one does', which is not in the Greek.",
+     "decided": "Changed to “think it should do”."
+    },
+    {
+     "greek": "μήτι ὁ Ἀσκληπιὸς τὰ τῆς Καρποφόρου",
+     "note": "The Greek does not repeat the verb; it is carried over whole from the first question ('claim to do'). English repeats 'claim' but drops 'to do', so the second question becomes 'lay claim to the work', a slightly different construction from the first.",
+     "decided": "Accepted: “Or Asclepius the part of …”, with the verb carried over as in the Greek."
+    },
+    {
+     "greek": "τῆς Καρποφόρου",
+     "note": "The article is feminine: this is a goddess's title (the giver of crops, Demeter or the Earth), set beside the god Asclepius. English loses the gender, and a reader with no Greek cannot tell that a goddess is meant or which one.",
+     "decided": "Accepted: “the fruit-bearing goddess”."
+    },
+    {
+     "greek": "τὰ τοῦ ὑετοῦ",
+     "note": "Greek says only 'the things of the rain' (its business, its part). 'Work' is supplied, twice, which builds a work / work / working-together echo that in the Greek exists only in συνεργά.",
+     "decided": "Accepted: “the rain’s part”. “Working together” now translates only συνεργά."
+    },
+    {
+     "greek": "οὐχὶ διάφορα μέν, συνεργὰ δὲ πρὸς ταὐτόν",
+     "note": "'They' and 'thing' are supplied. The neuter plurals can describe the stars just mentioned or everything named in the passage, and the English 'they' is equally open, which is fair; πρὸς ταὐτόν is 'toward the same', where 'the same end' is the other natural filling.",
+     "decided": "No change; the English “they” and “thing” are as open as the Greek."
+    }
+   ],
+   "revision": "project-v1:6.43:4c376672b9df0ade",
+   "superseded": []
+  },
+  {
+   "casaubon_ref": "10.21",
+   "casaubon_revision": "casaubon-gutenberg-2680-10-21:8eea8f06167e1447",
+   "standard_ref": "10.20",
+   "greek": "Συμφέρει ἑκάστῳ ὃ φέρει ἑκάστῳ ἡ τῶν ὅλων φύσις, καὶ τότε συμφέρει ὅτε ἐκείνη φέρει.",
+   "english": "What the nature of the whole brings to each is good for each, and it is good at the time when nature brings it.",
+   "notes": [
+    {
+     "greek": "Συμφέρει ἑκάστῳ ὃ φέρει ἑκάστῳ",
+     "note": "A play on words: “brings” (φέρει) and “is good for”, literally “brings together” (συμφέρει), which means to benefit or be to the advantage of. English cannot keep the echo, so the sense is kept.",
+     "other_reading": "What the nature of the whole brings to each benefits each"
+    },
+    {
+     "greek": "ἑκάστῳ",
+     "note": "The form can be masculine or neuter: each person or each thing. “Each” leaves it open.",
+     "other_reading": "to each thing"
+    },
+    {
+     "greek": "ἡ τῶν ὅλων φύσις",
+     "note": "Literally “the nature of the wholes”, a set phrase for the nature of the universe taken as a whole.",
+     "other_reading": "the nature of all things"
+    },
+    {
+     "greek": "καὶ τότε συμφέρει ὅτε ἐκείνη φέρει",
+     "note": "'Then ... when': the benefit is tied to the moment of the bringing. The Greek does not add 'only' or 'exactly'; a stronger wording would be an interpretation.",
+     "other_reading": "and it is good for them exactly when nature brings it"
+    }
+   ],
+   "check": [
+    {
+     "greek": "Συμφέρει",
+     "note": "The sentence is built on a pun: συμφέρει ('is of benefit', literally 'brings together') against φέρει ('brings'), each twice. 'Brings' and 'is good for' share nothing, so what is close to a proof-by-wordplay in Greek reads in English as a flat assertion.",
+     "decided": "Not carried into English: a forced echo would be less clear than the sense. The play on words is in the notes."
+    },
+    {
+     "greek": "Συμφέρει",
+     "note": "συμφέρει is 'is advantageous, benefits, is in the interest of'. 'Is good for' is close in everyday English, but 'good' is the word normally kept for ἀγαθόν, so it makes the claim sound more like a statement about the good than the Greek does.",
+     "decided": "Kept “is good for” as the plain reading; “benefits, is to the advantage of” is in the notes."
+    },
+    {
+     "greek": "ἐκείνη",
+     "note": "ἐκείνη is just 'that one / she', pointing back to nature. 'That nature' is stilted and suggests there is some other nature it is being distinguished from.",
+     "decided": "Accepted: “when nature brings it”."
+    },
+    {
+     "greek": "ἑκάστῳ ὃ φέρει ἑκάστῳ",
+     "note": "Greek repeats the same word, 'to each ... to each', which may be 'each person' or 'each thing'. 'Each one' keeps that open, but 'that one' breaks the repetition and is awkward.",
+     "decided": "Accepted: “to each … for each”."
+    },
+    {
+     "greek": "τῶν ὅλων",
+     "note": "The Greek is plural, 'of all things / of the totality'. 'The nature of the whole' is defensible but opaque to a modern reader ('the whole' of what?), and it is a different word from κόσμος, which the same translator renders 'universe' elsewhere.",
+     "decided": "Kept “the nature of the whole”; “of all things” is in the notes."
+    }
+   ],
+   "revision": "project-v1:10.20:712816a03cc0cb70",
+   "superseded": []
+  },
+  {
+   "casaubon_ref": "8.54",
+   "casaubon_revision": "casaubon-gutenberg-2680-8-54:b37544b396585ce8",
+   "standard_ref": "8.57",
+   "greek": "Ὁ ἥλιος κατακεχύσθαι δοκεῖ καὶ πάντῃ γε κέχυται, οὐ μὴν ἐκκέχυται. ἡ γὰρ χύσις αὕτη τάσις ἐστίν· ἀκτῖνες γοῦν αἱ αὐγαὶ αὐτοῦ ἀπὸ τοῦ ἐκτείνεσθαι λέγονται. ὁποῖον δέ τι ἐστὶν ἀκτίς, ἴδοις ἄν, εἰ διά τινος στενοῦ εἰς ἐσκιασμένον οἶκον τὸ ἀφ’ ἡλίου φῶς εἰσδυόμενον θεάσαιο· τείνεται γὰρ κατ’ εὐθὺ καὶ ὥσπερ διερείδεται πρὸς τὸ στερέμνιον ὅ τι ἂν ἀπαντήσῃ διεῖργον τὸν ἐπέκεινα ἀέρα, ἐνταῦθα δὲ ἔστη καὶ οὐ κατώλισθεν οὐδὲ ἔπεσε. τοιαύτην οὖν τὴν χύσιν καὶ διάχυσιν τῆς διανοίας εἶναι χρή, μηδαμῶς ἔκχυσιν, ἀλλὰ τάσιν, καὶ πρὸς τὰ ἀπαντῶντα κωλύματα μὴ βίαιον μηδὲ ῥαγδαίαν τὴν ἐπέρεισιν ποιεῖσθαι μηδὲ μὴν καταπίπτειν, ἀλλὰ ἵστασθαι καὶ ἐπιλάμπειν τὸ δεχόμενον· αὐτὸ γὰρ ἑαυτὸ στερήσει τῆς αὐγῆς τὸ μὴ παραπέμπον αὐτήν.",
+   "english": "The sun seems to be poured down, and indeed it is poured in every direction, yet it is not poured out. For this pouring is an extension; its beams, at any rate, are called aktines (“rays”) from ekteinesthai (“to be extended”). You could see what a ray is if you watched the sun’s light coming through something narrow into a shaded room. For it extends in a straight line and leans, so to speak, against whatever solid thing it meets that shuts off the air beyond; there it stands, and it does not slip down or fall. So the pouring and spreading of thought should be like that: in no way a pouring out, but an extension. It should not lean on the obstacles it meets with force or like a torrent, nor fall down, but stand and light up whatever receives it. For whatever does not give the beam passage will deprive itself of the beam.",
+   "notes": [
+    {
+     "greek": "Ὁ ἥλιος κατακεχύσθαι δοκεῖ",
+     "note": "'The sun' stands for its light. The verb form can be passive ('be poured down') or reflexive ('pour itself down'), and δοκεῖ can be 'seems' or 'is thought'.",
+     "other_reading": "The sun is thought to pour itself down"
+    },
+    {
+     "greek": "οὐ μὴν ἐκκέχυται",
+     "note": "'Poured out' in the sense of spilled away and used up. I kept the same verb 'pour' so the three forms (down, everywhere, out) stay visible.",
+     "other_reading": "yet it does not run out"
+    },
+    {
+     "greek": "ἡ γὰρ χύσις αὕτη τάσις ἐστίν",
+     "note": "τάσις is stretching, extension or tension, a term of Stoic physics. “Extension” is used because the next clause derives “ray” from the verb “to be extended”.",
+     "other_reading": "For this pouring is a stretching"
+    },
+    {
+     "greek": "ἀκτῖνες γοῦν αἱ αὐγαὶ αὐτοῦ ἀπὸ τοῦ ἐκτείνεσθαι λέγονται",
+     "note": "Marcus derives the word for rays (aktines) from the verb “to be extended” (ekteinesthai) because they sound alike. The Greek words are given in Latin letters so the claim still makes sense in English.",
+     "other_reading": null
+    },
+    {
+     "greek": "ἐσκιασμένον οἶκον",
+     "note": "Literally a “shaded” house or room.",
+     "other_reading": "a darkened house"
+    },
+    {
+     "greek": "ὥσπερ διερείδεται",
+     "note": "The verb means to lean on or brace oneself against something; ὥσπερ (“so to speak”) marks it as a figure. The text of this word has been doubted, and another reading gives “is divided”; that doubt was not checked against a critical edition’s notes.",
+     "other_reading": "and presses, so to speak, against"
+    },
+    {
+     "greek": "διεῖργον τὸν ἐπέκεινα ἀέρα",
+     "note": "The participle goes with the solid thing: it bars the way to the air on the far side. It could also be taken as the solid thing marking off the air beyond.",
+     "other_reading": "that separates off the air beyond"
+    },
+    {
+     "greek": "ἐνταῦθα δὲ ἔστη καὶ οὐ κατώλισθεν οὐδὲ ἔπεσε",
+     "note": "The Greek verbs are past tense, either a general truth or the moment of watching. I used the English present.",
+     "other_reading": "there it has stopped, and it did not slip down or fall"
+    },
+    {
+     "greek": "τῆς διανοίας",
+     "note": "The word covers thought, thinking and the mind.",
+     "other_reading": "of the mind"
+    },
+    {
+     "greek": "μὴ βίαιον μηδὲ ῥαγδαίαν τὴν ἐπέρεισιν ποιεῖσθαι",
+     "note": "The noun for leaning picks up the verb used of the sunbeam; the second adjective is the one used of a driving storm. No subject is stated: it may be thought or a general “one”.",
+     "other_reading": "one should not make the contact forced or violent"
+    },
+    {
+     "greek": "αὐτὸ γὰρ ἑαυτὸ στερήσει τῆς αὐγῆς τὸ μὴ παραπέμπον αὐτήν",
+     "note": "The last verb means to escort, convey or let pass. The sense is open: the thing that does not let the beam through, or the thing that does not take it in, as against “whatever receives it” just before.",
+     "other_reading": "For whatever does not take the beam in will deprive itself of it"
+    },
+    {
+     "greek": "τὴν χύσιν καὶ διάχυσιν",
+     "note": "Both nouns, and the “pouring out” after them, are built on one root. English cannot keep that without strain.",
+     "other_reading": "the pouring and wide pouring"
+    }
+   ],
+   "check": [
+    {
+     "greek": "ἔστη",
+     "note": "The comparison is carried by repeated verbs: the ray 'stood' (ἔστη) and did not 'fall' (ἔπεσε), so the mind must not 'fall down' (καταπίπτειν) but 'stand' (ἵστασθαι). English gives stops / fall for the ray and collapse / stand for the mind, so the ray and the mind no longer do the same things in the same words.",
+     "decided": "Accepted: the ray “stands” and does not “fall”; thought must not “fall down” but “stand”."
+    },
+    {
+     "greek": "τὸ μὴ παραπέμπον αὐτήν",
+     "note": "παραπέμπειν is 'escort, conduct, convey along, let pass'. English picks 'transmit onward', which gives a puzzling thought (a wall that does not pass light on is still lit); the other live sense is 'does not give it passage / does not take it along', the opposite of τὸ δεχόμενον, 'what receives it'. The English is unclear to a modern reader as it stands.",
+     "decided": "Changed to “does not give the beam passage”; the other reading is in the notes."
+    },
+    {
+     "greek": "τῆς αὐγῆς",
+     "note": "αὐγή was 'beams' earlier (αἱ αὐγαὶ αὐτοῦ) and φῶς was 'light'; at the end αὐγή becomes 'light' too, so two Greek words share one English word and the closing echo of the opening 'beams' is lost. The pronoun αὐτήν ('it') is expanded to 'the light', and 'that' has no Greek behind it.",
+     "decided": "Accepted: “beam” at the end as at the start."
+    },
+    {
+     "greek": "καὶ πάντῃ γε κέχυται",
+     "note": "γε stresses πάντῃ: 'and in every direction, at that'. The contrast is between down (κατα-), everywhere (πάντῃ) and out (ἐκ-); 'really is' moves the stress onto a seeming-versus-reality contrast that the Greek does not draw so sharply.",
+     "decided": "Accepted: “and indeed it is poured in every direction”."
+    },
+    {
+     "greek": "μηδαμῶς ἔκχυσιν",
+     "note": "μηδαμῶς is 'in no way, by no means', not a word of time. 'Never' is idiomatic but makes the statement temporal.",
+     "decided": "Accepted: “in no way”."
+    },
+    {
+     "greek": "τὴν χύσιν καὶ διάχυσιν",
+     "note": "διάχυσις has the same root as χύσις and ἔκχυσις ('pouring abroad'); the passage runs on one root seven times. 'Spreading' steps out of the pouring vocabulary at the point where the image is applied to the mind. The connecting οὖν ('so, then') is also dropped.",
+     "decided": "“Spreading” is kept and “So” is restored. The shared root is in the notes."
+    },
+    {
+     "greek": "διερείδεται",
+     "note": "The ἐρειδ- words mean 'lean on, prop oneself against, rest firmly on' as much as 'press'. English keeps the echo between the two places, which is right, but 'press' sounds more forceful than the Greek, in a passage whose point is that the contact must not be forced.",
+     "decided": "Accepted: “leans”."
+    },
+    {
+     "greek": "ῥαγδαίαν",
+     "note": "ῥαγδαῖος is 'violent, tempestuous', typically used of driving rain and storms, so it continues the water imagery. 'Fury' turns it into an emotion.",
+     "decided": "Accepted: “like a torrent”."
+    },
+    {
+     "greek": "τάσις ἐστίν· ἀκτῖνες γοῦν αἱ αὐγαὶ αὐτοῦ ἀπὸ τοῦ ἐκτείνεσθαι λέγονται",
+     "note": "The Greek derives the word for 'rays' from the verb 'to be extended' by sound; that cannot be done in English, and the bracketed Greek is an editorial addition inside the sentence. As written, 'called rays from being stretched out' still makes no sense until the reader works out from the brackets that aktines is meant to sound like ekteinesthai. τάσις is also 'tension, extension', a term of Stoic physics; 'stretching' picks the plainest sense.",
+     "decided": "Accepted: the Greek words are given in Latin letters with their meanings beside them."
+    },
+    {
+     "greek": "τῆς διανοίας",
+     "note": "διάνοια is 'thought, thinking, understanding' as well as 'mind'. What is poured and extended is more naturally the activity (thought) than the faculty; the English picks the faculty.",
+     "decided": "Accepted: “thought”."
+    },
+    {
+     "greek": "εἰς ἐσκιασμένον οἶκον",
+     "note": "οἶκος is 'house' or 'room', and ἐσκιασμένον is 'shaded, in shadow' rather than 'made dark'. 'Darkened room' is a reasonable choice but slightly more definite than the Greek; 'gap' in 'narrow gap' is also supplied, since the Greek says only 'something narrow'.",
+     "decided": "Accepted: “a shaded room”, “something narrow”."
+    },
+    {
+     "greek": "τείνεται γὰρ κατ’ εὐθὺ",
+     "note": "γάρ ('for') is dropped: in Greek this sentence gives the reason why watching the light shows what a ray is. τείνεται is also middle or passive ('is stretched, extends'), which the active-sounding 'stretches' blurs a little.",
+     "decided": "Accepted: “For it extends”."
+    }
+   ],
+   "revision": "project-v1:8.57:33c8165a0c29f6b0",
+   "superseded": []
+  },
+  {
+   "casaubon_ref": "5.7",
+   "casaubon_revision": "casaubon-gutenberg-2680-5-7:03a24bf7cf24a6d2",
+   "standard_ref": "5.7",
+   "greek": "Εὐχὴ Ἀθηναίων· ὗσον, ὗσον, ὦ φίλε Ζεῦ, κατὰ τῆς ἀρούρας τῆς Ἀθηναίων καὶ τῶν πεδίων. ἤτοι οὐ δεῖ εὔχεσθαι ἢ οὕτως ἁπλῶς καὶ ἐλευθέρως.",
+   "english": "A prayer of the Athenians: “Rain, rain, dear Zeus, down on the ploughland of the Athenians and the plains.” Either one should not pray, or one should pray like this: simply and like a free person.",
+   "notes": [
+    {
+     "greek": "Εὐχὴ Ἀθηναίων",
+     "note": "The Greek has no quotation marks; I take the prayer to run from 'Rain, rain' to 'the plains', with Marcus's comment after it. There is no article, so it could also be 'An Athenian prayer'.",
+     "other_reading": "An Athenian prayer"
+    },
+    {
+     "greek": "ὗσον, ὗσον",
+     "note": "A command to Zeus himself, “rain!”, said twice.",
+     "other_reading": "Send rain, send rain"
+    },
+    {
+     "greek": "κατὰ τῆς ἀρούρας τῆς Ἀθηναίων καὶ τῶν πεδίων",
+     "note": "ἄρουρα is ploughed or sown land. One preposition governs both nouns, so the plains may be the Athenians’ own or simply “the plains”; the English leaves that open.",
+     "other_reading": "on the ploughland and plains of the Athenians"
+    },
+    {
+     "greek": "ἤτοι οὐ δεῖ εὔχεσθαι ἢ οὕτως",
+     "note": "The second half has no verb; “one should pray” is supplied from the first. δεῖ can be “should” or “must”.",
+     "other_reading": "Either one must not pray, or only like this"
+    },
+    {
+     "greek": "ἁπλῶς καὶ ἐλευθέρως",
+     "note": "The first word is “simply, plainly, sincerely”; the second is “in the manner of a free person”: frankly, without servility, perhaps open-handedly. Marcus does not say what this is set against. οὕτως may also measure the two words: “as simply and freely as this”.",
+     "other_reading": "plainly and frankly"
+    }
+   ],
+   "check": [
+    {
+     "greek": "ἐλευθέρως",
+     "note": "ἐλευθέρως is 'in the manner of a free person': frankly, without servility, possibly open-handedly. Bare 'freely' in English suggests 'without restraint, as much as you like', which is not a sense of the Greek, and hides the two senses that are live (unservile / generous).",
+     "decided": "Accepted: “like a free person”."
+    },
+    {
+     "greek": "ἁπλῶς",
+     "note": "ἁπλῶς covers 'plainly, without elaboration', 'straightforwardly, sincerely, single-mindedly' and 'without qualification'. 'Simply' is the natural choice but in English it leans toward 'in few words' and loses 'sincerely / with nothing held back'.",
+     "decided": "Kept “simply”; “plainly, sincerely” is in the notes."
+    },
+    {
+     "greek": "ἢ οὕτως ἁπλῶς καὶ ἐλευθέρως",
+     "note": "The second 'one should pray' is supplied (the Greek has only 'or thus simply and freely'), which is unavoidable. The comma then decides that 'simply and freely' explains 'in this way'; the Greek equally allows 'as simply and freely as this', with οὕτως measuring the adverbs.",
+     "decided": "The second “one should pray” is supplied because English needs it. The other construction, “as simply and freely as this”, is in the notes."
+    },
+    {
+     "greek": "ὗσον, ὗσον, ὦ φίλε Ζεῦ, κατὰ",
+     "note": "ὗσον is an imperative addressed to Zeus as the one who rains, and κατά with the genitive is 'down upon'. In English 'Rain, rain' reads at first as a noun (as in the nursery rhyme), and 'on' drops 'down'.",
+     "decided": "Partly accepted: “Rain, rain, dear Zeus, down on”."
+    },
+    {
+     "greek": "τῆς ἀρούρας τῆς Ἀθηναίων καὶ τῶν πεδίων",
+     "note": "Repeating 'on' makes the plains a second, separate target and leaves open whose plains they are. The Greek has one preposition and can equally be 'the Athenians' ploughland and plains' (their own); how far the prayer reaches depends on this, so the English should not settle it.",
+     "decided": "Accepted: one “on”, so the English does not decide whose plains they are."
+    },
+    {
+     "greek": "οὐ δεῖ εὔχεσθαι",
+     "note": "δεῖ is 'it is necessary, one must'. 'Should' is a little weaker, and the first half means 'one must not pray at all', which the English leaves to be inferred.",
+     "decided": "Kept “should”; “must” is in the notes. “At all” was not added because the Greek does not say it."
+    },
+    {
+     "greek": "ἁπλῶς καὶ ἐλευθέρως",
+     "note": "A question for the article: does the Greek say that the point of the prayer is to pray for the whole community rather than for oneself?",
+     "decided": "No. The Greek has no word for community, for others or for oneself. Marcus says only how to pray: simply and like a free person. That his example is a public prayer for shared land is the reader’s inference. Casaubon’s “and not every one for himself in particular alone” has nothing behind it in this Greek text."
+    }
+   ],
+   "revision": "project-v1:5.7:819f7cc517e5be8e",
+   "superseded": []
+  }
+ ]
+}

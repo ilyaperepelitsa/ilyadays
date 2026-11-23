@@ -20,7 +20,7 @@ Standing rules: never push; one local commit at the end of each milestone (plan 
 ## Status
 
 - [x] R1 · [x] R2 · [x] R3 · [x] R4 · [ ] R5 (settled at the end of N3: the placeholder stops being accepted) · [x] R6 · [x] R7 · [x] commit R
-- [ ] T1 · [ ] T2 · [ ] T3 · [ ] T4 · [ ] T5 · [ ] T6 · [ ] commit N2
+- [x] T1 · [x] T2 · [x] T3 · [x] T4 · [x] T5 · [x] T6 · [x] commit N2 · [ ] the owner reads the six and says keep, revise or stop
 - [ ] A1 · [ ] A2 · [ ] A3 · [ ] A4 · [ ] A5 · [ ] A6 · [ ] A7 · [ ] A8 · [ ] documents · [ ] commit N3
 
 ## Log
@@ -40,4 +40,36 @@ R5  not done as an allow-list: N3 fills every context and search log, after whic
 ```
 
 Checks after R: build exit 0 · tests 22 of 22 · fixtures all rejected · browser check exit 0 (sweep + P1–P16).
+
+### N2 in progress (23 Nov)
+
+- **T1 edition.** Leopold's text: *M. Antoninus Imperator ad se ipsum*, ed. Jan Hendrik Leopold (11 May 1865 – 21 June 1925, so dead more than 100 years), 1908. Library catalogues and the Classical Review give Oxford, Clarendon Press; the Perseus file's own header says "Leipzig: Teubner, 1908". Both are recorded. Taken from the Perseus Digital Library's `canonical-greekLit` repository, file `tlg0562.tlg001.perseus-grc2.xml` (493,638 bytes, sha256 `7e5017cb…981a2d`), CC BY-SA. The plan says fetching the Greek needs the owner's word: "including the translations" was taken as that word. The Perseus reading site answered a script with a bot check, which was not worked around; the same text was taken from the project's public repository instead.
+- **T2 crosswalk, aligned by text:** Casaubon 10.22 → 10.21 · 4.19 → 4.23 · 6.38 → 6.43 · 10.21 → 10.20 · 8.54 → 8.57 · 5.7 → 5.7. All six as the plan believed.
+- **T3 draft** by a first translator given the Greek alone (no Casaubon, no article). 45 notes on open readings.
+- **T4 check** by a second reader given Greek and English only: 44 points, no passage called wrong. Each point settled in writing (accepted, partly accepted, or declined with a reason) and stored with the passage.
+- **Found already:** Casaubon ends 5.7 with "and not every one for himself in particular alone". Leopold's Greek ends at "simply and freely" (ἁπλῶς καὶ ἐλευθέρως). The article's "not for myself alone" rests on Casaubon's addition.
+- Working files: scratchpad `greek/` (edition file, `t3/draft.json`, `t4/check.json`).
+
+### N3 groundwork (23 Nov)
+
+- **A3 mechanism.** `inferences: [{words, why}]` on a statement or claim; the build requires the words to stand once, outside backed phrases, with a reason of 20 to 200 characters (fixtures `a3-inference-not-in-the-sentence`, `a3-inference-inside-backed-words`: both rejected); the page names it "The editor's inference" with the reason (case P17: failed on the old page, passes now).
+- **Article prompt:** rules 16 to 20 added (context, logged word search, clause tests, inferences, evidence in today's English).
+- **A8** started as five separate audits, one per article, each on a private copy, each to hand back its article and a one-page audit (`scratchpad/a8/article<N>/`). Brief: `scratchpad/a8/BRIEF.md`.
+
+### N2 done up to the owner's reading (23 Nov)
+
+- **T4, the two questions that affect Article 6, answered from the Greek:**
+  - 5.7: the Greek has no word for community, others or oneself. Marcus says only how to pray: "simply and like a free person". Casaubon's "and not every one for himself in particular alone" has nothing behind it in Leopold's text. → A2: the prayer cannot back "I pray for everyone, not for myself alone".
+  - 4.23 (Casaubon 4.19): "All things from you, all things in you, all things into you": three phrases without a verb, addressed to nature. Nothing about working or tending toward one end; that is 6.43. → A1: 4.19 must not back "work toward one end".
+- **T5 store:** `content/aurelius/translation/project-v1.json` (edition, method, limits; per passage: Casaubon reference and revision, standard reference, Greek, English, 43 notes on open readings, 46 settled points, its own revision id). `scripts/aurelius-translation.py` checks it and writes `public/apps/stoic-translation.json`. A passage reworded without a new revision is rejected. Tests: `tests/aurelius/translation.test.mjs` (5). Fault fixtures: `t5-english-edited-in-place`, `t5-old-english`, `t5-note-misquotes-the-greek` (all rejected).
+- **T6 page:** `public/apps/stoic-translation.html`: Greek, today's English and 1634 side by side on a wide screen; one at a time on a phone with a switch (or all three stacked); both lists of notes under each passage; Keep / Revise per passage and "Copy my verdicts". Linked from the top of the constitution page. Browser case `T6`. This case was written after the page, so it was not seen to fail first.
+- **Final English of the six** (what the owner is asked to read):
+  - 10.21: "The earth loves the rain, and the holy sky loves," and the universe loves to bring about whatever is to come. So I say to the universe: "I love along with you." And is that, too, perhaps said in this sense: "this loves to happen"?
+  - 4.23: Universe, everything that fits well with you fits well with me. Nothing that is timely for you is too early or too late for me. Nature, everything your seasons bear is fruit to me. All things from you, all things in you, all things into you. One man says, "Dear city of Cecrops." But you, will you not say, "Dear city of Zeus"?
+  - 6.43: Surely the sun does not think it should do the rain's part? Or Asclepius the part of the fruit-bearing goddess? And what of each of the stars? Are they not different, yet working together toward the same thing?
+  - 10.20: What the nature of the whole brings to each is good for each, and it is good at the time when nature brings it.
+  - 8.57: see the page (the sunbeam).
+  - 5.7: A prayer of the Athenians: "Rain, rain, dear Zeus, down on the ploughland of the Athenians and the plains." Either one should not pray, or one should pray like this: simply and like a free person.
+- **Checks:** build exit 0 · constitution, composition and translation tests pass · fixtures all rejected · browser check exit 0 (sweep, P1–P17, T6).
+- **Not mine, noted:** two older tests fail before and after this work and are outside plan 34: `tests/aurelius/book.test.mjs` ("reading plan: the first chapter states recurring lessons…") and "the shipped previous study upgrades additively…".
 
