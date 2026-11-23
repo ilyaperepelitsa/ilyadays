@@ -17,6 +17,9 @@ at that milestone), each a scenario that once failed on the page. The cases run 
 files), so rewriting an article cannot break them: a selection that must stay on its words across a voice switch, honest counts after removing
 passages, a verdict that cannot be saved, chapter navigation in a simulated second chapter (Articles 4 to 6 served
 as chapter c3), a chapter file that does not match the index, the phone bar, and the source list for picked words.
+Cases R1 to R4 cover the owner's review tools (W7 of plan/stoicism/32-delegation-plan.md: per-item verdicts and notes kept
+across a reload, Copy my review and the file, the filter, the v1 carry-over); M1 and M2 the map (W6.1 marks by effect, W6.3
+labels that do not overlap).
   --cases P1,P4   run only these cases (and no sweep)      --no-cases   run only the sweep
 """
 import argparse
@@ -80,7 +83,8 @@ def chapters(port: int) -> list[tuple[str | None, list[int]]]:
 
 
 # ---------------------------------------------------------------- named cases
-VERDICT_KEY = 'stoic-constitution:v1:verdicts'
+VERDICT_KEY = 'stoic-constitution:v2:review'   # the owner's review (W7); v1 held article verdicts only and is read once
+OLD_VERDICT_KEY = 'stoic-constitution:v1:verdicts'
 
 
 def two_chapters(port: int) -> tuple[dict, dict]:
@@ -721,6 +725,250 @@ def case_e1(page, base, port):
     return problems
 
 
+# ---- W7 of plan/stoicism/32-delegation-plan.md: review tools for the owner
+def stored_review(page) -> dict:
+    return page.evaluate(f"(() => {{ try {{ return JSON.parse(localStorage.getItem('{VERDICT_KEY}')) || {{}}; }} catch {{ return {{}}; }} }})()")
+
+
+def judge(page, scope: str, verdict: str):
+    """Open the verdict button of the item whose node carries data-review (inside `scope`) and choose `verdict`."""
+    key = page.locator(scope).first.get_attribute('data-review')
+    item = page.locator(f'[data-review="{key}"]').first
+    item.locator('.vt').first.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+    item.locator('.vt').first.click()
+    page.locator(f'[data-review="{key}"] .vpick .vb', has_text=verdict).first.click()
+    return key
+
+
+HEADS = """() => [...document.querySelectorAll('li.claim > .card-head, .statement > .card-head')].filter(n => n.offsetParent).map(n => Math.round(n.getBoundingClientRect().height))"""
+
+
+def case_r1(page, base, port):
+    """On a phone: mark one quote's conclusion Revise, type why, reload, and find both kept. The button keeps the card as it was."""
+    problems = []
+    note = 'The conclusion says more than the quote'
+    for query in ['', '?with=seneca']:   # the corner button must not make a card's corner row taller, with or without an added author
+        page.goto(base + query + '#article-6', wait_until='networkidle')
+        page.wait_for_selector('#article-6 .statement')
+        with_button = page.evaluate(HEADS)
+        page.add_style_tag(content='.vt{display:none!important}')
+        without = page.evaluate(HEADS)
+        taller = sum(1 for a, b in zip(with_button, without) if a > b + 1)
+        if taller:
+            problems.append(f'{query or "Marcus alone"}: the verdict button makes {taller} of {len(without)} corner rows taller')
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    claim = page.locator('#article-6 li.claim').first
+    claim.locator('.fused .show').first.click()
+    key = judge(page, '#article-6 li.claim .pair[data-review]', 'Revise')
+    if not key or not key.startswith('a6:p:'):
+        problems.append(f'a quote row of Marcus is keyed “{key}”, not a6:p:<quote id>')
+    field = page.locator(f'#article-6 [data-review="{key}"] .vnote').first
+    if not field.count():
+        return problems + ['choosing Revise shows no note field']
+    if not field.evaluate('n => n === document.activeElement'):
+        problems.append('after Revise the note field does not take the focus, so the phone keyboard does not open')
+    size = field.evaluate("n => [parseFloat(getComputedStyle(n).fontSize), n.getBoundingClientRect().height]")
+    if size[0] < 16 or size[1] < 44:
+        problems.append(f'the note field is {size[0]}px text and {size[1]:.0f}px tall (needs 16 and 44)')
+    field.press_sequentially(note)
+    page.wait_for_timeout(700)
+    page.reload(wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    row = page.locator(f'#article-6 [data-review="{key}"]').first
+    if not row.count():   # the link keeps the open panel (?at=); open it only if it is closed
+        page.locator('#article-6 li.claim').first.locator('.fused .show').first.click()
+    if not row.count():
+        return problems + ['after a reload the quote row is gone']
+    if row.locator('.vt').first.text_content().strip() != 'Revise':
+        problems.append(f'after a reload the button says “{row.locator(".vt").first.text_content().strip()}”')
+    kept = row.locator('.vnote').first.input_value() if row.locator('.vnote').count() else None
+    if kept != note:
+        problems.append(f'after a reload the note reads {kept!r}')
+    stored = stored_review(page)
+    if stored.get('verdicts', {}).get(key) != 'Revise' or stored.get('notes', {}).get(key) != note:
+        problems.append(f'stored under {VERDICT_KEY}: {stored}')
+    return problems
+
+
+def case_r2(page, base, port):
+    """“Copy my review” gives plain text with the verdict, the sentence it is about and the note; “Download as a file” gives the same."""
+    page.add_init_script("Object.defineProperty(navigator, 'clipboard', {value: {writeText: text => { window.__copied = text; return Promise.resolve(); }}, configurable: true})")
+    problems = []
+    note = 'Say which body, not just one body'
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    key = judge(page, '#article-6 li.claim[data-review]', 'Drop')
+    page.locator(f'#article-6 [data-review="{key}"] .vnote').first.press_sequentially(note)
+    sentence = page.evaluate("k => D.articles.find(a => a.number === 6).claims.find(c => 'a6:' + c.id === k).t", key)
+    page.locator('#copy').evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+    page.locator('#copy').click()
+    page.wait_for_timeout(200)
+    text = page.evaluate('window.__copied') or ''
+    for need, what in [(note, 'the note'), (' '.join(sentence.split())[:40], 'the sentence it is about'), ('Drop', 'the verdict'), ('Article 6 · ', 'the article heading'), (f'[{key}]', 'the key')]:
+        if need not in text:
+            problems.append(f'the copied review lacks {what} (“{need}”): {text[:160]!r}')
+    if 'Copied' not in page.locator('#copy').text_content():
+        problems.append(f'the button says “{page.locator("#copy").text_content()}” after copying')
+    with page.expect_download() as info:
+        page.locator('#download').click()
+    download = info.value
+    if not re.fullmatch(r'stoic-review-\d{4}-\d{2}-\d{2}\.txt', download.suggested_filename):
+        problems.append(f'the file is called {download.suggested_filename}')
+    if note not in Path(download.path()).read_text(encoding='utf-8'):
+        problems.append('the downloaded file lacks the note')
+    return problems
+
+
+def case_r3(page, base, port):
+    """“Only what I have not judged” hides judged items; one judged while it is on stays until the switch is used again."""
+    problems = []
+    visible = lambda sel: page.locator(sel).first.is_visible()
+    page.goto(base + '#article-6', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .statement')
+    statement = judge(page, '#article-6 .statement[data-review]', 'Keep')
+    claim = judge(page, '#article-6 li.claim[data-review]', 'Revise')
+    switch_ = page.locator('#only-open')
+    switch_.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+    switch_.click()
+    if switch_.get_attribute('aria-pressed') != 'true':
+        problems.append('the switch does not show that it is on')
+    for key, what in [(statement, 'the statement'), (claim, 'the judged claim')]:
+        if visible(f'[data-review="{key}"]'):
+            problems.append(f'{what} is still shown')
+    open_ = page.evaluate("[...document.querySelectorAll('#article-6 li.claim')].filter(n => n.offsetParent).map(n => n.dataset.judged || '')")
+    if not open_ or any(open_):
+        problems.append(f'the claims left in view are {open_} (judged ones must be hidden, the rest shown)')
+    if not visible('#filter-note'):
+        problems.append('nothing at the top of the articles says that judged items are hidden')
+    other = judge(page, '#article-6 li.claim[data-review]:not([data-judged])', 'Keep')
+    if not visible(f'[data-review="{other}"]'):
+        problems.append('a claim judged while the switch is on vanishes at once, before a note can be typed')
+    page.locator('#article-6 .verdict .vb', has_text='Keep').click()
+    if not visible('#article-6 .leaf'):
+        problems.append('the article judged while the switch is on is folded at once')
+    switch_.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+    switch_.click()
+    switch_.click()
+    if visible(f'[data-review="{other}"]'):
+        problems.append('after the switch is used again, the claim judged meanwhile is still shown')
+    if visible('#article-6 .leaf') or not visible('#article-6 .judged-stub') or not visible('#article-6 .verdict'):
+        problems.append('a judged article does not fold to one line with its verdict buttons')
+    page.reload(wait_until='networkidle')
+    page.wait_for_selector('#article-6 .verdict')
+    if page.locator('#only-open').get_attribute('aria-pressed') != 'true':
+        problems.append('the switch is not kept across a reload')
+    page.locator('#show-all').click()
+    if not visible(f'[data-review="{statement}"]') or not visible('#article-6 .leaf'):
+        problems.append('“Show everything” does not bring the judged items back')
+    return problems
+
+
+def case_r4(page, base, port):
+    """The article verdicts of v1 are carried over once into the v2 review."""
+    page.add_init_script(f"if (!localStorage.getItem('{VERDICT_KEY}')) localStorage.setItem('{OLD_VERDICT_KEY}', JSON.stringify({{'article-2': 'Drop', 'article-5': 'Keep'}}))")
+    problems = []
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('#article-6 .verdict')
+    if page.locator('#article-2 .verdict .vb[aria-pressed=true]').all_text_contents() != ['Drop']:
+        problems.append('Article 2’s v1 verdict Drop is not shown')
+    verdicts = stored_review(page).get('verdicts', {})
+    if verdicts.get('a2') != 'Drop' or verdicts.get('a5') != 'Keep':
+        problems.append(f'v2 holds {verdicts} after the carry-over')
+    page.locator('#article-2 .verdict .vb', has_text='Keep').click()
+    page.reload(wait_until='networkidle')
+    page.wait_for_selector('#article-6 .verdict')
+    if page.locator('#article-2 .verdict .vb[aria-pressed=true]').all_text_contents() != ['Keep']:
+        problems.append('v1 is read again after the carry-over and overrides a newer verdict')
+    if not re.search(r'Article 2 · .*Keep', page.locator('#mine').text_content()):
+        problems.append('the review list does not show Article 2 as Keep')
+    return problems
+
+
+# ---- W6.1 and W6.3: the map of vectors
+def expected_effects() -> dict[int, dict[str, str]]:
+    """For each article of the fixture, what each quoted passage of Seneca does: the first of Backs, Limits, Adds."""
+    out = {}
+    for article in FIX['chapters']['c6']['articles']:
+        voice = (article.get('voices') or {}).get('seneca')
+        if not voice:
+            continue
+        refs = {}
+        for effect in ['stronger', 'qualified', 'wider']:
+            for item in voice['items']:
+                if item['effect'] == effect:
+                    for piece in [item['piece']] if item.get('piece') else item.get('support', []):
+                        refs.setdefault(piece['ref'], effect)
+        out[article['number']] = {p['ref']: refs.get(p['ref'], 'stronger') for p in voice['passages']}
+    return out
+
+
+def case_m1(page, base, port):
+    """An added author's marks say what the passage does, with one key entry for each mark present; ties are darker when closer."""
+    problems = []
+    page.goto(base + '?with=seneca', wait_until='networkidle')
+    page.wait_for_selector('#article-6 .pt.second')
+    for number, want in expected_effects().items():
+        seen = page.evaluate("""n => [...document.querySelectorAll('#article-' + n + ' svg.map .pt.second')].map(p => {
+            const shape = p.querySelector('.mk > :first-child');
+            return {ref: p.dataset.ref, effect: p.dataset.effect, fill: shape.getAttribute('fill'), width: shape.getAttribute('stroke-width'), struck: Boolean(p.querySelector('.mk > line'))}; })""", number)
+        got = {s['ref']: s['effect'] for s in seen}
+        if got != want:
+            problems.append(f'Article {number}: marks say {got}, the record says {want}')
+        for s in seen:
+            look = {'stronger': ('var(--ink)', False), 'wider': ('var(--card)', False), 'qualified': ('var(--card)', True)}[s['effect']]
+            if (s['fill'], s['struck']) != look or (s['effect'] != 'stronger' and s['width'] != '2'):
+                problems.append(f'Article {number}: {s["ref"]} ({s["effect"]}) is drawn {s}')
+        keys = page.evaluate("n => [...document.querySelectorAll('#article-' + n + ' .sci > .key [data-effect]')].map(k => k.dataset.effect)", number)
+        if sorted(keys) != sorted(set(want.values())):
+            problems.append(f'Article {number}: the key lists {keys} for marks {sorted(set(want.values()))}')
+        ties = page.evaluate("n => [...document.querySelectorAll('#article-' + n + ' svg.map .base.second')].map(l => [Number(l.dataset.sim), parseFloat(l.style.getPropertyValue('--o'))])", number)
+        if ties:
+            low, high = min(ties), max(ties)
+            if len({t[0] for t in ties}) > 1 and (abs(low[1] - 0.35) > 0.01 or abs(high[1] - 0.9) > 0.01):
+                problems.append(f'Article {number}: tie opacity runs {low[1]} to {high[1]}, not 0.35 to 0.9')
+    colour = page.evaluate("getComputedStyle(document.querySelector('#article-6 .sci > .key')).color === getComputedStyle(document.body).color")
+    if not colour:
+        problems.append('the key under the map is not in ink')
+    return problems
+
+
+LABELS = """n => { const svg = document.querySelector('#article-' + n + ' svg.map'), out = [];
+  const texts = [...svg.querySelectorAll('.pt text')].filter(t => parseFloat(getComputedStyle(t).opacity) > 0 && !t.closest('.pt').classList.contains('dim'));
+  const boxes = texts.map(t => [t.textContent, t.getBoundingClientRect()]);
+  for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
+    const [a, r] = boxes[i], [b, s] = boxes[j], w = Math.min(r.right, s.right) - Math.max(r.left, s.left), h = Math.min(r.bottom, s.bottom) - Math.max(r.top, s.top);
+    if (w > 0.5 && h > 2) out.push(a + ' and ' + b);
+  }
+  return {shown: texts.length, marcus: svg.querySelectorAll('.pt:not(.second)').length, overlaps: out}; }"""
+
+
+def case_m2(page, base, port):
+    """No visible map label overlaps another, at 390 and 1440 px, with and without an added author; a hidden label shows on hover."""
+    problems = []
+    for width in [390, 1440]:
+        page.set_viewport_size({'width': width, 'height': 900})
+        for query in ['', '?with=seneca']:
+            page.goto(base + query, wait_until='networkidle')
+            page.wait_for_selector('#article-6 .statement')
+            page.mouse.move(1, 1)
+            for number in shown(page):
+                seen = page.evaluate(LABELS, number)
+                where = f'{width}px {query or "Marcus alone"}, Article {number}'
+                if seen['overlaps']:
+                    problems.append(f'{where}: labels overlap: {seen["overlaps"][:4]}')
+                if seen['shown'] < seen['marcus'] / 2:
+                    problems.append(f'{where}: only {seen["shown"]} of {seen["marcus"]} labels are shown')
+        crowded = page.locator('svg.map .pt.crowded:not(.second)')
+        if crowded.count():
+            crowded.first.scroll_into_view_if_needed()
+            crowded.first.hover(force=True)
+            if crowded.first.locator('text').evaluate('t => getComputedStyle(t).opacity') != '1':
+                problems.append(f'{width}px: a label without a free place does not show when its mark is pointed at')
+            page.mouse.move(1, 1)
+    return problems
+
+
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
@@ -743,6 +991,12 @@ CASES = {
     'T6': ('the translation page: every passage under its section, three versions', case_t6, (390, 844)),
     'E1': ('an article quoted from the new English: modern number, Greek and 1634 on request', case_e1, (390, 844), 'real'),
     'E2': ('an article still on the 1634 English: the new English and the Greek on request', case_e2, (390, 844), 'real'),
+    'R1': ('review on a phone: a quote\'s conclusion marked Revise with a note survives a reload; cards no bulkier', case_r1, (390, 844)),
+    'R2': ('review: Copy my review and Download as a file carry verdict, sentence and note', case_r2, (390, 844)),
+    'R3': ('review: Only what I have not judged hides judged items', case_r3, (390, 844)),
+    'R4': ('review: v1 article verdicts carried over once', case_r4, (390, 844)),
+    'M1': ('map: an added author\'s marks by effect, one key entry per mark, tie opacity by similarity', case_m1, (1440, 1000)),
+    'M2': ('map: no visible label overlaps another at 390 and 1440 px', case_m2, (390, 900)),
 }
 
 

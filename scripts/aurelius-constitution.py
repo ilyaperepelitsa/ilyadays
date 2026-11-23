@@ -277,6 +277,10 @@ def main() -> None:
                            'closeness': closeness([by_ref[r]['revision_id'] for r in refs]),
                            **({'closeness_new': closeness_new([by_ref[r]['revision_id'] for r in refs])} if anchored else {}), 'support': support})
         single = [{**piece(item, 'single'), 'label': item['label'], 't': item['t'], 'why': item['why'], 'follows': item['follows']} for item in article['single']]
+        # A section whose passages share no claim gets an article of said-once items only, and says so (plan 32, Article 29).
+        unfused = article.get('unfused')
+        assert bool(claims) != bool(unfused), f"{where}: an article fuses at least one claim, or carries `unfused` with the reason it cannot, not both"
+        assert not unfused or len(unfused.get('reason', '')) >= 40, f"{where}: `unfused.reason` must say in a sentence why no two passages share a claim"
 
         used = list(dict.fromkeys(p['ref'] for p in ids.values()))
         assert set(article['aside']) == set(by_ref) - set(used), f"{where}: every unused member needs a reason; mismatch {set(article['aside']) ^ (set(by_ref) - set(used))}"
@@ -452,7 +456,7 @@ def main() -> None:
                          **({'in_translation': {'closeness': closeness_new([m['revision_id'] for m in section['members']]),
                                                 'stayed': sum(1 for m in section['members'] if max(centres, key=lambda sid: float(centres[sid] @ new_vectors[m['revision_id']])) == article['section']),
                                                 'of': len(section['members']), 'sections': len(centres)}} if anchored else {}),
-                         'sources': [m['ref'] for m in members if m['used']], 'claims': claims, 'single': single, 'members': members,
+                         'sources': [m['ref'] for m in members if m['used']], 'claims': claims, 'single': single, **({'unfused': unfused} if unfused else {}), 'members': members,
                          'decisions': article['decisions'], 'limit': article['limit']})
 
     record = {

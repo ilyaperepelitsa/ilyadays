@@ -119,6 +119,8 @@ test('quoted passages are the immutable published text, and every quote is one e
 
 test('a fused claim rests on at least two passages, says what they share, and each quote names the words it backs', () => {
   for (const article of record.articles) {
+    // An article whose section shares no claim says so in `unfused` and has none (Article 29); every other one fuses.
+    if (article.unfused) { assert.ok(article.claims.length === 0 && article.unfused.reason.length >= 40, `article ${article.number}: unfused`); continue; }
     const least = article.section_size >= 8 ? 3 : 1;
     assert.ok(article.claims.length >= least, `article ${article.number} fuses at least ${least} claim(s) from a section of ${article.section_size}`);
     for (const claim of article.claims) {
@@ -153,9 +155,9 @@ const statementProblems = (article) => {
     if (JSON.stringify(part.refs) !== JSON.stringify([...new Set(part.ids.map((id) => ids.get(id).ref))])) problems.push(`${where}: “${part.words}” refs do not match its ids`);
     // A section of fewer than five passages may have parts resting on one passage, but not all of them.
     if (!part.ids.length || !part.refs.length) problems.push(`${where}: “${part.words}” has no witness: every part needs at least one quoted piece`);
-    else if (article.section_size >= 5 && part.refs.length < 2) problems.push(`${where}: “${part.words}” rests on fewer than two passages`);
+    else if (article.section_size >= 5 && part.refs.length < 2 && !article.unfused) problems.push(`${where}: “${part.words}” rests on fewer than two passages`);
   }
-  if (!statement.parts.some((part) => part.refs.length >= 2)) problems.push(`${where}: no part rests on two passages`);
+  if (!article.unfused && !statement.parts.some((part) => part.refs.length >= 2)) problems.push(`${where}: no part rests on two passages`);
   return problems;
 };
 
@@ -211,7 +213,7 @@ const sharedOf = (article) => {
 // Until milestone N3 a named list exempted the articles then below the bar (1, 4 and 5). The audit of 23 Nov 2026 brought
 // every article above it, so there is no list any more: an article below the bar fails.
 test('each article has enough claim components resting on more than one passage', () => {
-  for (const article of record.articles) {
+  for (const article of record.articles.filter((item) => !item.unfused)) {
     const {shared, components} = sharedOf(article);
     const meets = article.section_size >= 8 ? shared * 3 >= components : shared >= 1;
     const bar = article.section_size >= 8 ? 'a third' : 'one (small section)';

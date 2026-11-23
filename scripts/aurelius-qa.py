@@ -121,6 +121,8 @@ def gate_fusion(article: dict) -> list[dict]:
     """A fused claim must have words that two of its passages both back (rule 1; plan 32 risks table: a claim whose
     `gives` phrases all come from one quote is a paraphrase). Counts shared components as the tests do."""
     out, n = [], article['number']
+    if article.get('unfused'):
+        return [finding('WARNING', f'a{n}', 'unfused', 'no fused claim: the article is said-once items only (the owner may drop it)')]
     shared_total = comp_total = 0
     for c in article['claims']:
         t = c['t'].lower()
