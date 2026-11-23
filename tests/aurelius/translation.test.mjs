@@ -112,3 +112,23 @@ test('the new English is embedded with the corpus model, and the comparison with
   }
   assert.equal(vectors.stayed_home, published.passages.filter((passage) => passage.vector.home_rank === 1).length);
 });
+
+test('the translations are published as downloads that hold every passage, dedicated to the public domain', () => {
+  // scripts/aurelius-downloads.py writes them; `--check` says whether they are up to date byte for byte.
+  const file = (name) => fs.readFileSync(new URL(`../../public/downloads/${name}`, import.meta.url));
+  for (const [slug, record, key] of [['marcus-meditations-project-v1', 'project-v1', 'standard_ref'], ['seneca-letters-selection-v1', 'seneca-v1', 'ref']]) {
+    const passages = JSON.parse(fs.readFileSync(new URL(`../../content/aurelius/translation/${record}.json`, import.meta.url), 'utf8')).passages;
+    const md = file(`${slug}.md`).toString(), txt = file(`${slug}.txt`).toString(), epub = file(`${slug}.epub`);
+    for (const text of [md, txt]) {
+      assert.match(text, /CC0 1\.0 Universal/);
+      assert.match(text, /checked by a person who reads (Greek|Latin)/);
+      for (const p of passages) assert.ok(text.includes(p.english), `${slug}: ${p[key]} is missing or not current`);
+    }
+    assert.equal(epub.subarray(0, 4).toString('latin1'), 'PK\u0003\u0004');
+    assert.equal(epub.subarray(30, 38).toString(), 'mimetype');
+  }
+  for (const page of ['stoic-translation.html', 'stoic-constitution.html']) {
+    const html = fs.readFileSync(new URL(`../../public/apps/${page}`, import.meta.url), 'utf8');
+    for (const name of ['marcus-meditations-project-v1.epub', 'seneca-letters-selection-v1.epub']) assert.ok(html.includes(`/downloads/${name}`), `${page} links ${name}`);
+  }
+});

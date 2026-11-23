@@ -136,3 +136,16 @@ them; the Seneca rights question (W5) is settled by not publishing Gummere at al
   passage is the stored revision and text of `seneca-v1`. Build ok, 89 record tests, 16 gate tests, 0 blocking / 74 warnings,
   browser check all pass, fault cases all rejected, `npm run build` ok, `npm test` 1201/1201. API spend for Seneca $109.26 of
   $129.50. Not pushed.
+
+## 23 November 2026 · Downloads
+
+The owner: “we should also publish our translations for people to download, right?”; asked the licence and the formats, they
+chose CC0 (public domain) and plain text / Markdown, then added “actually let's add epub”. `scripts/aurelius-downloads.py` writes
+`public/downloads/{marcus-meditations-project-v1,seneca-letters-selection-v1}.{md,txt,epub}`: English only (so the Greek's
+CC BY-SA does not attach), each opening with what it is, how it was made, what no one has checked, and the CC0 dedication;
+notes in Markdown and EPUB; reproducible output (`--check`). Both pages link them; the constitution page no longer says its
+passages are Casaubon's (all 38 articles quote project-v1; Casaubon is shown for comparison). EPUBs pass a structural check
+(every file parses, manifest and contents complete); epubcheck was not run (it would need a download). A test ties every
+passage of both records to the .md and .txt and checks the links.
+- Usage check (18:19–18:34 UTC): result main context 333k; cached reads fell 38% · action: keep to one call per step until
+  the session ends · evidence: codeburn window 10 calls.
