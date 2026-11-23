@@ -85,3 +85,6 @@ corrections went into the record: c1, c2 and c3 summaries rewritten in the first
 "Other minds, fame and harm" to "Praise, harm and the worth of things" (the old pair missed the article on the worth of things).
 c4, c5 and c6 stand. Build ok, 88 record tests pass, gates 0 blocking / 74 warnings, browser check all pass. The page-case
 fixture keeps the old c7 title on purpose (it is a frozen test record).
+
+Usage check (16:05-16:20 UTC): result: write/cache down 94-98% from the prior window, as expected after the workers ended ·
+action: none needed, main session only · evidence: codeburn window 10 new turns, 423k cached, ctx 86k.
