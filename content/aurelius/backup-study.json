@@ -2,7 +2,7 @@
   "manuscript_current": null,
   "manuscript_revisions": [],
   "fixture_revision": 0,
-  "study_revision": 3,
+  "study_revision": 4,
   "study_catalog": {
     "default_id": "casaubon-gutenberg-2680-ordinary-impressions",
     "current_ids": [
@@ -696,6 +696,18 @@
     }
   ],
   "expressions": [
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-constitution-voice",
+      "title": "Personal constitution formulation",
+      "current": "casaubon-gutenberg-2680-shared-good-constitution-voice:r1",
+      "locked": false
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-constitution-voice",
+      "title": "Personal constitution formulation",
+      "current": "casaubon-gutenberg-2680-non-imitation-constitution-voice:r1",
+      "locked": false
+    },
     {
       "id": "casaubon-gutenberg-2680-distress-and-threat-constitution-voice",
       "title": "Personal constitution formulation",
@@ -1779,6 +1791,128 @@
         "casaubon-gutenberg-2680-distress-and-threat:r1"
       ],
       "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-non-imitation-constitution-voice:r1",
+      "entity_id": "casaubon-gutenberg-2680-non-imitation-constitution-voice",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "When someone wrongs you, do not take their conduct as your model. The best revenge is to stay unlike them.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-non-imitation-constitution-voice-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "When someone wrongs you, do not take their conduct as your model. ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-non-imitation:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-1"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "The best revenge is to stay unlike them.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-non-imitation:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-1"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "A reminder about responding to wrongdoing, not a general instruction about giving or communal duty.",
+      "qualifications": "The aphorism does not define every forbidden response or supply a complete account of punishment, protection or reconciliation.",
+      "assumptions": "This is a close paraphrase of a single prescription. It does not derive an obligation to help the offender.",
+      "practical_implication": "A response can be assessed for imitation of the wrongdoer without making this passage support a theory of gratitude.",
+      "interpretation": "close_paraphrase",
+      "dependencies": [
+        "casaubon-gutenberg-2680-non-imitation:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
+    },
+    {
+      "id": "casaubon-gutenberg-2680-shared-good-constitution-voice:r1",
+      "entity_id": "casaubon-gutenberg-2680-shared-good-constitution-voice",
+      "kind": "expression",
+      "sequence": 1,
+      "text": "Do not call a thing good for you when it harms the community you belong to: what is not good for the hive is not good for the bee.",
+      "doc": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "paragraph",
+            "attrs": {
+              "id": "casaubon-gutenberg-2680-shared-good-constitution-voice-block"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Do not call a thing good for you when it harms the community you belong to: ",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-shared-good:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-2"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "what is not good for the hive is not good for the bee.",
+                "marks": [
+                  {
+                    "type": "grounding",
+                    "attrs": {
+                      "conclusionRevision": "casaubon-gutenberg-2680-shared-good:r1",
+                      "sourceSpanIds": [
+                        "casaubon-gutenberg-2680-evidence-2"
+                      ],
+                      "state": "proposed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scope": "The relationship between individual and shared good, expressed through an analogy.",
+      "qualifications": "The line does not demonstrate that every collective demand is just, or explain how to resolve a disagreement about the community’s good.",
+      "assumptions": "The interpretation reads the bee/hive comparison as an analogy of membership. Its application to every political demand would be a further inference.",
+      "practical_implication": "The question becomes whether an alleged individual benefit undermines the shared whole, rather than whether an individual must repay a favor.",
+      "interpretation": "close_paraphrase",
+      "dependencies": [
+        "casaubon-gutenberg-2680-shared-good:r1"
+      ],
+      "created_at": "2026-11-10T00:00:00Z"
     }
   ],
   "propositions": [
@@ -2179,6 +2313,14 @@
       "notes": "Firm editorial voice; not Marcus’s words. Review scope, qualifications and fidelity independently of resonance."
     },
     "casaubon-gutenberg-2680-distress-and-threat-constitution-voice:r1": {
+      "state": "awaiting_review",
+      "notes": "Firm editorial voice; not Marcus’s words. Review scope, qualifications and fidelity independently of resonance."
+    },
+    "casaubon-gutenberg-2680-non-imitation-constitution-voice:r1": {
+      "state": "awaiting_review",
+      "notes": "Firm editorial voice; not Marcus’s words. Review scope, qualifications and fidelity independently of resonance."
+    },
+    "casaubon-gutenberg-2680-shared-good-constitution-voice:r1": {
       "state": "awaiting_review",
       "notes": "Firm editorial voice; not Marcus’s words. Review scope, qualifications and fidelity independently of resonance."
     }
