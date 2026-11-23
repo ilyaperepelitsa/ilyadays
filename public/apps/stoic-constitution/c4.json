@@ -1,0 +1,3771 @@
+{
+ "chapter": "c4",
+ "articles": [
+  {
+   "number": 32,
+   "section": "c4.s1",
+   "title": "All things pass",
+   "edition": "project-v1",
+   "statement": {
+    "t": "All things change, and I with them; the change is the work of nature and nothing bad, and nothing that passes is great.",
+    "parts": [
+     {
+      "words": "All things change, and I with them",
+      "ids": [
+       "9.17a",
+       "9.17b",
+       "6.14d"
+      ],
+      "refs": [
+       "9.17",
+       "6.14"
+      ]
+     },
+     {
+      "words": "the change is the work of nature",
+      "ids": [
+       "8.5a",
+       "4.29c"
+      ],
+      "refs": [
+       "8.5",
+       "4.29"
+      ]
+     },
+     {
+      "words": "nothing bad",
+      "ids": [
+       "4.35a",
+       "10.7b"
+      ],
+      "refs": [
+       "4.35",
+       "10.7"
+      ]
+     },
+     {
+      "words": "nothing that passes is great",
+      "ids": [
+       "12.25b",
+       "9.27b",
+       "6.14a",
+       "2.9b"
+      ],
+      "refs": [
+       "12.25",
+       "9.27",
+       "6.14",
+       "2.9"
+      ]
+     }
+    ],
+    "inferences": [],
+    "kind": "A fact, its source and two judgments",
+    "form": "Claim 1 states the fact: all things change, quickly, and I with them. Claim 2 gives its source, the nature of the whole, which loves change and keeps to one kind. The statement then sets two judgments side by side: change is nothing bad (claim 5) and nothing that passes is great (claim 3). Claim 4 is the exercise that keeps the fact in view, and claim 6 says what holds without nature."
+   },
+   "groups": [
+    {
+     "key": "why",
+     "name": "Why",
+     "asks": "The ground for the statement.",
+     "items": [
+      "c1",
+      "c2",
+      "4.29d",
+      "9.31b"
+     ],
+     "claims": [
+      "c1",
+      "c2"
+     ],
+     "single": [
+      "4.29d",
+      "9.31b"
+     ]
+    },
+    {
+     "key": "action",
+     "name": "In action",
+     "asks": "What follows for what I do.",
+     "items": [
+      "c3",
+      "12.25c"
+     ],
+     "claims": [
+      "c3"
+     ],
+     "single": [
+      "12.25c"
+     ]
+    },
+    {
+     "key": "practice",
+     "name": "Practice",
+     "asks": "An exercise I can repeat.",
+     "items": [
+      "c4"
+     ],
+     "claims": [
+      "c4"
+     ],
+     "single": []
+    },
+    {
+     "key": "breaks",
+     "name": "When it breaks",
+     "asks": "What failing looks like, and the way back.",
+     "items": [
+      "c5",
+      "7.27c"
+     ],
+     "claims": [
+      "c5"
+     ],
+     "single": [
+      "7.27c"
+     ]
+    },
+    {
+     "key": "doubt",
+     "name": "If I doubt it",
+     "asks": "What still holds if the statement is not true.",
+     "items": [
+      "c6"
+     ],
+     "claims": [
+      "c6"
+     ],
+     "single": []
+    }
+   ],
+   "colors": {
+    "4.29": 1,
+    "8.5": 2,
+    "10.7": 3,
+    "4.35": 4,
+    "9.17": 5,
+    "9.27": 1,
+    "6.14": 3,
+    "2.9": 2,
+    "12.25": 5,
+    "9.33": 5,
+    "7.27": 4,
+    "6.34": 3,
+    "8.16": 1,
+    "10.19": 2,
+    "9.31": 3
+   },
+   "map": {
+    "points": [
+     [
+      -0.0069,
+      0.2394
+     ],
+     [
+      -0.08,
+      -0.268
+     ],
+     [
+      -0.1652,
+      -0.0455
+     ],
+     [
+      0.2817,
+      -0.0366
+     ],
+     [
+      -0.4061,
+      0.1192
+     ],
+     [
+      -0.4698,
+      -0.2023
+     ],
+     [
+      -0.2499,
+      -0.5174
+     ],
+     [
+      0.2793,
+      0.4099
+     ],
+     [
+      -0.6545,
+      -0.0166
+     ],
+     [
+      -0.5272,
+      0.3928
+     ],
+     [
+      0.1051,
+      -0.642
+     ],
+     [
+      0.4801,
+      -0.415
+     ],
+     [
+      0.6446,
+      0.3164
+     ],
+     [
+      0.7373,
+      -0.0984
+     ],
+     [
+      0.0317,
+      0.764
+     ]
+    ],
+    "stress": 0.258,
+    "sim": [
+     [
+      1.0,
+      0.779,
+      0.779,
+      0.722,
+      0.731,
+      0.716,
+      0.691,
+      0.747,
+      0.708,
+      0.698,
+      0.651,
+      0.671,
+      0.634,
+      0.719,
+      0.708
+     ],
+     [
+      0.779,
+      1.0,
+      0.801,
+      0.706,
+      0.74,
+      0.769,
+      0.758,
+      0.656,
+      0.708,
+      0.674,
+      0.731,
+      0.685,
+      0.63,
+      0.644,
+      0.645
+     ],
+     [
+      0.779,
+      0.801,
+      1.0,
+      0.723,
+      0.726,
+      0.772,
+      0.717,
+      0.68,
+      0.72,
+      0.729,
+      0.656,
+      0.697,
+      0.605,
+      0.597,
+      0.627
+     ],
+     [
+      0.722,
+      0.706,
+      0.723,
+      1.0,
+      0.73,
+      0.691,
+      0.668,
+      0.736,
+      0.671,
+      0.634,
+      0.741,
+      0.685,
+      0.733,
+      0.672,
+      0.621
+     ],
+     [
+      0.731,
+      0.74,
+      0.726,
+      0.73,
+      1.0,
+      0.819,
+      0.658,
+      0.66,
+      0.769,
+      0.717,
+      0.672,
+      0.622,
+      0.607,
+      0.588,
+      0.622
+     ],
+     [
+      0.716,
+      0.769,
+      0.772,
+      0.691,
+      0.819,
+      1.0,
+      0.696,
+      0.653,
+      0.761,
+      0.74,
+      0.694,
+      0.631,
+      0.557,
+      0.56,
+      0.588
+     ],
+     [
+      0.691,
+      0.758,
+      0.717,
+      0.668,
+      0.658,
+      0.696,
+      1.0,
+      0.65,
+      0.677,
+      0.685,
+      0.634,
+      0.682,
+      0.629,
+      0.617,
+      0.605
+     ],
+     [
+      0.747,
+      0.656,
+      0.68,
+      0.736,
+      0.66,
+      0.653,
+      0.65,
+      1.0,
+      0.637,
+      0.602,
+      0.62,
+      0.667,
+      0.644,
+      0.682,
+      0.67
+     ],
+     [
+      0.708,
+      0.708,
+      0.72,
+      0.671,
+      0.769,
+      0.761,
+      0.677,
+      0.637,
+      1.0,
+      0.708,
+      0.611,
+      0.596,
+      0.555,
+      0.547,
+      0.583
+     ],
+     [
+      0.698,
+      0.674,
+      0.729,
+      0.634,
+      0.717,
+      0.74,
+      0.685,
+      0.602,
+      0.708,
+      1.0,
+      0.622,
+      0.561,
+      0.608,
+      0.545,
+      0.59
+     ],
+     [
+      0.651,
+      0.731,
+      0.656,
+      0.741,
+      0.672,
+      0.694,
+      0.634,
+      0.62,
+      0.611,
+      0.622,
+      1.0,
+      0.606,
+      0.651,
+      0.584,
+      0.55
+     ],
+     [
+      0.671,
+      0.685,
+      0.697,
+      0.685,
+      0.622,
+      0.631,
+      0.682,
+      0.667,
+      0.596,
+      0.561,
+      0.606,
+      1.0,
+      0.622,
+      0.692,
+      0.591
+     ],
+     [
+      0.634,
+      0.63,
+      0.605,
+      0.733,
+      0.607,
+      0.557,
+      0.629,
+      0.644,
+      0.555,
+      0.608,
+      0.651,
+      0.622,
+      1.0,
+      0.649,
+      0.614
+     ],
+     [
+      0.719,
+      0.644,
+      0.597,
+      0.672,
+      0.588,
+      0.56,
+      0.617,
+      0.682,
+      0.547,
+      0.545,
+      0.584,
+      0.692,
+      0.649,
+      1.0,
+      0.561
+     ],
+     [
+      0.708,
+      0.645,
+      0.627,
+      0.621,
+      0.622,
+      0.588,
+      0.605,
+      0.67,
+      0.583,
+      0.59,
+      0.55,
+      0.591,
+      0.614,
+      0.561,
+      1.0
+     ]
+    ],
+    "lowest": 0.545,
+    "highest": 0.819,
+    "refs": [
+     "10.7",
+     "7.27",
+     "6.14",
+     "4.29",
+     "10.19",
+     "9.31",
+     "9.27",
+     "9.17",
+     "2.9",
+     "12.25",
+     "6.34",
+     "4.35",
+     "8.5",
+     "9.33",
+     "8.16"
+    ],
+    "around": {
+     "near": [
+      {
+       "id": "c4.s2",
+       "title": "The same matter, reshaped",
+       "chapter": "Change",
+       "size": 8,
+       "provisional": false,
+       "article": 33,
+       "similarity": 0.878
+      },
+      {
+       "id": "c5.s1",
+       "title": "The dead and the forgotten",
+       "chapter": "Death and time",
+       "size": 17,
+       "provisional": false,
+       "article": 34,
+       "similarity": 0.875
+      },
+      {
+       "id": "c3.s4",
+       "title": "Living now as one about to die",
+       "chapter": "The life within",
+       "size": 18,
+       "provisional": false,
+       "article": 10,
+       "similarity": 0.859
+      },
+      {
+       "id": "c6.s4",
+       "title": "The reason that governs the whole",
+       "chapter": "The whole and my place in it",
+       "size": 12,
+       "provisional": false,
+       "article": 4,
+       "similarity": 0.856
+      }
+     ],
+     "lowest": 0.531,
+     "highest": 0.878,
+     "farthest": "Short sayings",
+     "border": [],
+     "weakest_member": 0.769,
+     "outside": [
+      {
+       "ref": "9.26",
+       "similarity": 0.816,
+       "section": "What happens to me"
+      },
+      {
+       "ref": "7.22",
+       "similarity": 0.812,
+       "section": "What happens to me"
+      },
+      {
+       "ref": "4.39",
+       "similarity": 0.803,
+       "section": "The dead and the forgotten"
+      }
+     ],
+     "outside_closer": 9
+    }
+   },
+   "voices": {
+    "seneca": {
+     "becomes": "With Seneca, five claims gain a second author: that all things change and I with them, that I look down on what passes, the practice of seeing all of time, that a loss is only a change, and that a thing is resolved into its elements. The ground gains one good that does not perish; what breaks gains the fear of a death already under way and the weariness that sameness can breed. He backs the third claim’s contempt for what passes in Letter 58 and limits it in Letter 98: what I lose I keep in memory, with thanks.",
+     "statement": "With Seneca the statement stands, and he adds what Marcus’s section does not name: a good that does not pass, the real good of wisdom and virtue.",
+     "items": [
+      {
+       "effect": "stronger",
+       "claim": "c1",
+       "piece": {
+        "id": "S58.22a",
+        "ref": "Ep. 58.22",
+        "author": "seneca",
+        "quote": "Even I myself, as I comment on this change, am changed myself.",
+        "at": 872,
+        "in": "c1",
+        "follows": "Seneca himself changes even while he speaks about change.",
+        "context": "Letter 58, on Plato’s classes of being: what we see and touch is in flux, our bodies above all. “This change” is that flux.",
+        "gives": [
+         "I am changing with them"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c1",
+       "piece": {
+        "id": "S58.24a",
+        "ref": "Ep. 58.24",
+        "author": "seneca",
+        "quote": "the universe, too, immortal and enduring as it is, changes and never remains the same",
+        "at": 88,
+        "in": "c1",
+        "follows": "Even the universe, which lasts for ever, changes and never stays the same.",
+        "context": "Letter 58, after saying that a man flows away like a river: the universe too keeps everything it had, but always in a new arrangement.",
+        "gives": [
+         "All things are changing"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c3",
+       "piece": {
+        "id": "S58.28a",
+        "ref": "Ep. 58.28",
+        "author": "seneca",
+        "quote": "Let us despise everything that is so little an object of value that it makes us doubt whether it exists at all.",
+        "at": 280,
+        "in": "c3",
+        "follows": "We should look down on things of so little worth that we can doubt they exist at all.",
+        "context": "Letter 58 draws a use from Plato: what the senses show is in flux and not truly real. “Everything so little an object of value” is those passing things.",
+        "gives": [
+         "I look down on everything mortal"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c4",
+       "piece": {
+        "id": "S99.10a",
+        "ref": "Ep. 99.10",
+        "author": "seneca",
+        "quote": "Place before your mind’s eye the vast spread of time’s abyss, and consider the universe; and then contrast our so-called human life with infinity",
+        "at": 246,
+        "in": "c4",
+        "follows": "I should picture all of time and the whole universe, and set a human life against that infinity.",
+        "context": "Letter 99 consoles a father whose young son has died. Set against all of time and the universe, Seneca says, a long life is little more than a child’s.",
+        "gives": [
+         "the whole of eternity and the whole of what exists"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c5",
+       "piece": {
+        "id": "S36.11a",
+        "ref": "Ep. 36.11",
+        "author": "seneca",
+        "quote": "everything which seems to perish merely changes",
+        "at": 51,
+        "in": "c5",
+        "follows": "What seems to perish only changes.",
+        "context": "Letter 36 answers a craving for longer life: nothing that vanishes from sight is annihilated. “Everything which seems to perish” includes our own death.",
+        "gives": [
+         "a loss is nothing but a change"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c6",
+       "piece": {
+        "id": "S71.13a",
+        "ref": "Ep. 71.13",
+        "author": "seneca",
+        "quote": "Whatever is will cease to be, and yet it will not perish, but will be resolved into its elements.",
+        "at": 425,
+        "in": "c6",
+        "follows": "Everything that exists will cease to be, yet it does not perish but is resolved into its elements.",
+        "context": "Letter 71: everything, the stars and the earth included, is born, grows and is destroyed. “Whatever is” means each of those things.",
+        "gives": [
+         "a thing’s death is only its dissolution into what it was made of"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c6",
+       "piece": {
+        "id": "S98.10a",
+        "ref": "Ep. 98.10",
+        "author": "seneca",
+        "quote": "they are surprised at losing anything, although some day they are bound to lose everything",
+        "at": 114,
+        "in": "c6",
+        "follows": "It makes no sense to be surprised at losing one thing when one is bound to lose everything.",
+        "context": "Letter 98, on the fickleness of Fortune: people forget where each day pushes them. “Losing anything” means their goods, and in the end their life.",
+        "gives": [
+         "it is ridiculous to be surprised or annoyed at it"
+        ]
+       }
+      },
+      {
+       "effect": "wider",
+       "key": "w1",
+       "label": "why",
+       "role": "One good that does not pass",
+       "t": "All the good things that mortals chase are mortal too. The real good, which is wisdom and virtue, does not perish: it is the only lasting thing a mortal can have.",
+       "why": "Marcus says here that nothing that passes is great, and 12.25 names one great thing, acting as my nature leads. He does not say that anything does not pass. Seneca names it: the real good, wisdom and virtue, does not perish.",
+       "support": [
+        {
+         "id": "S98.9a",
+         "ref": "Ep. 98.9",
+         "author": "seneca",
+         "quote": "“All the Good of mortals is mortal.”",
+         "at": 158,
+         "in": "w:w1",
+         "follows": "Every good that mortals have is itself mortal.",
+         "context": "Letter 98 quotes Metrodorus, consoling his sister for the death of her son. The “Good of mortals” is the goods people rush after in crowds.",
+         "gives": [
+          "All the good things that mortals chase are mortal too"
+         ]
+        },
+        {
+         "id": "S98.9b",
+         "ref": "Ep. 98.9",
+         "author": "seneca",
+         "quote": "For the real Good does not perish; it is certain and lasting and it consists of wisdom and virtue; it is the only immortal thing that falls to mortal lot.",
+         "at": 260,
+         "in": "w:w1",
+         "follows": "The real good, wisdom and virtue, does not perish; it is the only immortal thing a mortal can have.",
+         "context": "Letter 98, Seneca’s comment on Metrodorus’s saying that all the good of mortals is mortal: the real good is the one exception.",
+         "gives": [
+          "The real good, which is wisdom and virtue, does not perish",
+          "it is the only lasting thing a mortal can have"
+         ]
+        }
+       ]
+      },
+      {
+       "effect": "wider",
+       "key": "w2",
+       "label": "breaks",
+       "role": "A death that happens every day",
+       "t": "When I fear that death will come to me once, I forget that it comes every day: every moment is the death of what I was, and the last hour only completes it.",
+       "why": "Marcus says that I am in continual alteration and in a certain respect perishing (9.17), but he draws nothing from it about the fear of death. Seneca does: what I fear as one future event is already happening.",
+       "support": [
+        {
+         "id": "S58.23a",
+         "ref": "Ep. 58.23",
+         "author": "seneca",
+         "quote": "every instant means the death of our previous condition. Will you not stop fearing lest that may happen once which really happens every day?",
+         "at": 486,
+         "in": "w:w2",
+         "follows": "Each moment ends what we were before, so it is foolish to fear that death will happen once.",
+         "context": "Letter 58: after Heraclitus’s river, Seneca says that we mortals are carried past as fast. “That” which happens every day is death.",
+         "gives": [
+          "When I fear that death will come to me once",
+          "it comes every day",
+          "every moment is the death of what I was"
+         ]
+        },
+        {
+         "id": "S24.20a",
+         "ref": "Ep. 24.20",
+         "author": "seneca",
+         "quote": "the final hour when we cease to exist does not of itself bring death; it merely of itself completes the death-process.",
+         "at": 407,
+         "in": "w:w2",
+         "follows": "The last hour of life does not bring death by itself; it only completes a dying that was already under way.",
+         "context": "Letter 24, on despising death: we die every day, as a water-clock empties drop by drop. “The final hour” is the moment we cease to exist.",
+         "gives": [
+          "the last hour only completes it"
+         ]
+        }
+       ]
+      },
+      {
+       "effect": "wider",
+       "key": "w3",
+       "label": "breaks",
+       "role": "When sameness wearies me",
+       "t": "Seeing that I do nothing new and see nothing new can make me sick of living. The wish to die that grows from that weariness is a weakness, and I avoid it.",
+       "why": "Marcus draws comfort from sameness: nothing new comes that I need fear (8.5), and forty years show as much as ten thousand (7.27). Seneca shows the same thought turning into weariness of life, a failure Marcus does not name here.",
+       "support": [
+        {
+         "id": "S24.26a",
+         "ref": "Ep. 24.26",
+         "author": "seneca",
+         "quote": "Others also are moved by a satiety of doing and seeing the same things, and not so much by a hatred of life as because they are cloyed with it.",
+         "at": 0,
+         "in": "w:w3",
+         "follows": "Some people want to die not because they hate life but because they are sick of doing and seeing the same things.",
+         "context": "Letter 24, on the urge to die: besides those who despise life and those who find it irksome, some are moved by weariness. “It” is life, of which they are cloyed.",
+         "gives": [
+          "can make me sick of living"
+         ]
+        },
+        {
+         "id": "S24.26b",
+         "ref": "Ep. 24.26",
+         "author": "seneca",
+         "quote": "I do nothing new; I see nothing new; sooner or later one sickens of this, also.",
+         "at": 645,
+         "in": "w:w3",
+         "follows": "Whoever thinks that he does and sees nothing new will sooner or later grow sick of it.",
+         "context": "Letter 24: the words Seneca gives to a man cloyed with life, who sees nature go round and return. “This” is that endless round.",
+         "gives": [
+          "Seeing that I do nothing new and see nothing new"
+         ]
+        },
+        {
+         "id": "S24.25a",
+         "ref": "Ep. 24.25",
+         "author": "seneca",
+         "quote": "above all, he should avoid the weakness which has taken possession of so many,—the lust for death.",
+         "at": 102,
+         "in": "w:w3",
+         "follows": "The brave and wise man should above all avoid the lust for death.",
+         "context": "Letter 24: the brave and wise man should not rush out of life. “The weakness” is the lust for death, which takes the noble and the craven alike.",
+         "gives": [
+          "The wish to die that grows from that weariness is a weakness, and I avoid it"
+         ]
+        }
+       ]
+      },
+      {
+       "effect": "qualified",
+       "key": "q1",
+       "claim": "c3",
+       "t": "In Letter 58 Seneca, like Marcus, tells me to despise what passes (Ep. 58.28); in Letter 98 he tells me to keep what I have lost in memory and to be thankful for having had it. Fortune can take the thing from me, but not the fact that I had it. This limits claim 3 and does not contradict it: Marcus’s word in 9.27, “look down on”, can also mean simply to think little of.",
+       "support": [
+        {
+         "id": "S98.11a",
+         "ref": "Ep. 98.11",
+         "author": "seneca",
+         "quote": "to keep in memory the things we have lost, and not to suffer the enjoyment which we have derived from them to pass away along with them",
+         "at": 73,
+         "in": "q:q1",
+         "follows": "We should keep in memory what we have lost, and not let the enjoyment we had of it pass away with it.",
+         "context": "Letter 98 asks what resource we have in the face of losses. “Them” are the things we have lost: goods, and the people we loved."
+        },
+        {
+         "id": "S98.11b",
+         "ref": "Ep. 98.11",
+         "author": "seneca",
+         "quote": "To have may be taken from us, to have had, never.",
+         "at": 210,
+         "in": "q:q1",
+         "follows": "What we have can be taken from us; that we had it cannot.",
+         "context": "Letter 98, on losses brought by Fortune: having a thing can be taken away, having had it cannot."
+        },
+        {
+         "id": "S98.11c",
+         "ref": "Ep. 98.11",
+         "author": "seneca",
+         "quote": "A man is thankless in the highest degree if, after losing something, he feels no obligation for having received it.",
+         "at": 260,
+         "in": "q:q1",
+         "follows": "It is deeply ungrateful to lose something and feel no gratitude for having had it.",
+         "context": "Letter 98, on losses brought by Fortune: whoever loses a thing still owes thanks for having received it."
+        }
+       ]
+      }
+     ],
+     "amend": [
+      {
+       "target": "statement",
+       "kind": "adds",
+       "t": "; but the real good, wisdom and virtue, does not perish",
+       "ids": [
+        "S98.9a",
+        "S98.9b"
+       ],
+       "from": [
+        "w1"
+       ]
+      },
+      {
+       "target": "c3",
+       "kind": "limits",
+       "t": "; but what I have lost I keep in memory, and I am thankful for having had it",
+       "ids": [
+        "S98.11a",
+        "S98.11c"
+       ],
+       "from": [
+        "q1"
+       ]
+      }
+     ],
+     "passages": [
+      {
+       "ref": "Ep. 58.22",
+       "title": "On being",
+       "text": "The fifth class is made up of the things which exist in the usual sense of the term. These things are the first that have to do with us; here we have all such things as men, cattle, and things. In the sixth class goes all that which has a fictitious existence, like void, or time. Whatever is concrete to the sight or touch, Plato does not include among the things which he believes to be existent in the strict sense of the term. These things are the first that have to do with us: here we have all such things as men, cattle, and things. For they are in a state of flux, constantly diminishing or increasing. None of us is the same man in old age that he was in youth; nor the same on the morrow as on the day preceding. Our bodies are hurried along like flowing waters; every visible object accompanies time in its flight; of the things which we see, nothing is fixed. Even I myself, as I comment on this change, am changed myself.",
+       "words": 181,
+       "revision": "gummere-wikisource-58-22:292c13170ba818ad",
+       "to_centre": 0.517,
+       "rank": 218,
+       "nearest": {
+        "ref": "10.7",
+        "similarity": 0.493
+       },
+       "sims": {
+        "10.7": 0.493,
+        "7.27": 0.452,
+        "6.14": 0.449,
+        "4.29": 0.487,
+        "10.19": 0.421,
+        "9.31": 0.388,
+        "9.27": 0.39,
+        "9.17": 0.449,
+        "2.9": 0.456,
+        "12.25": 0.397,
+        "6.34": 0.47,
+        "4.35": 0.407,
+        "8.5": 0.442,
+        "9.33": 0.352,
+        "8.16": 0.376,
+        "Ep. 58.24": 0.441,
+        "Ep. 58.28": 0.438,
+        "Ep. 99.10": 0.279,
+        "Ep. 36.11": 0.352,
+        "Ep. 71.13": 0.411,
+        "Ep. 98.10": 0.357,
+        "Ep. 98.9": 0.35,
+        "Ep. 58.23": 0.41,
+        "Ep. 24.20": 0.319,
+        "Ep. 24.26": 0.365,
+        "Ep. 24.25": 0.259,
+        "Ep. 98.11": 0.307
+       },
+       "at": [
+        0.2432,
+        -1.0
+       ]
+      },
+      {
+       "ref": "Ep. 58.24",
+       "title": "On being",
+       "text": "So much for man,—a substance that flows away and falls, exposed to every influence; but the universe, too, immortal and enduring as it is, changes and never remains the same. For though it has within itself all that it has had, it has it in a different way from that in which it has had it; it keeps changing its arrangement.",
+       "words": 61,
+       "revision": "gummere-wikisource-58-24:3b44961ed2741fa6",
+       "to_centre": 0.675,
+       "rank": 4,
+       "nearest": {
+        "ref": "9.27",
+        "similarity": 0.628
+       },
+       "sims": {
+        "10.7": 0.608,
+        "7.27": 0.573,
+        "6.14": 0.595,
+        "4.29": 0.621,
+        "10.19": 0.514,
+        "9.31": 0.494,
+        "9.27": 0.628,
+        "9.17": 0.6,
+        "2.9": 0.5,
+        "12.25": 0.492,
+        "6.34": 0.496,
+        "4.35": 0.6,
+        "8.5": 0.581,
+        "9.33": 0.529,
+        "8.16": 0.569,
+        "Ep. 58.22": 0.441,
+        "Ep. 58.28": 0.545,
+        "Ep. 99.10": 0.402,
+        "Ep. 36.11": 0.543,
+        "Ep. 71.13": 0.575,
+        "Ep. 98.10": 0.475,
+        "Ep. 98.9": 0.436,
+        "Ep. 58.23": 0.57,
+        "Ep. 24.20": 0.425,
+        "Ep. 24.26": 0.43,
+        "Ep. 24.25": 0.317,
+        "Ep. 98.11": 0.374
+       },
+       "at": [
+        0.3905,
+        0.1635
+       ]
+      },
+      {
+       "ref": "Ep. 58.28",
+       "title": "On being",
+       "text": "For all things abide, not because they are everlasting, but because they are protected by the care of him who governs all things; but that which was imperishable would need no guardian. The Master Builder keeps them safe, overcoming the weakness of their fabric by his own power. Let us despise everything that is so little an object of value that it makes us doubt whether it exists at all.",
+       "words": 70,
+       "revision": "gummere-wikisource-58-28:3f923dd6fedb5cd7",
+       "to_centre": 0.649,
+       "rank": 9,
+       "nearest": {
+        "ref": "4.29",
+        "similarity": 0.578
+       },
+       "sims": {
+        "10.7": 0.554,
+        "7.27": 0.559,
+        "6.14": 0.573,
+        "4.29": 0.578,
+        "10.19": 0.525,
+        "9.31": 0.537,
+        "9.27": 0.574,
+        "9.17": 0.539,
+        "2.9": 0.553,
+        "12.25": 0.494,
+        "6.34": 0.533,
+        "4.35": 0.521,
+        "8.5": 0.521,
+        "9.33": 0.525,
+        "8.16": 0.495,
+        "Ep. 58.22": 0.438,
+        "Ep. 58.24": 0.545,
+        "Ep. 99.10": 0.438,
+        "Ep. 36.11": 0.483,
+        "Ep. 71.13": 0.558,
+        "Ep. 98.10": 0.531,
+        "Ep. 98.9": 0.511,
+        "Ep. 58.23": 0.424,
+        "Ep. 24.20": 0.381,
+        "Ep. 24.26": 0.415,
+        "Ep. 24.25": 0.388,
+        "Ep. 98.11": 0.453
+       },
+       "at": [
+        0.2506,
+        -0.4707
+       ]
+      },
+      {
+       "ref": "Ep. 99.10",
+       "title": "On consolation to the bereaved",
+       "text": "‘But he died in boyhood.’ I am not yet prepared to say that he who quickly comes to the end of his life has the better of the bargain; let us turn to consider the case of him who has grown to old age. How very little is he superior to the child! Place before your mind’s eye the vast spread of time’s abyss, and consider the universe; and then contrast our so-called human life with infinity: you will then see how scant is that for which we pray, and which we seek to lengthen.",
+       "words": 95,
+       "revision": "gummere-wikisource-99-10:ae12562a267b8b96",
+       "to_centre": 0.562,
+       "rank": 82,
+       "nearest": {
+        "ref": "9.31",
+        "similarity": 0.612
+       },
+       "sims": {
+        "10.7": 0.488,
+        "7.27": 0.529,
+        "6.14": 0.548,
+        "4.29": 0.399,
+        "10.19": 0.49,
+        "9.31": 0.612,
+        "9.27": 0.484,
+        "9.17": 0.383,
+        "2.9": 0.485,
+        "12.25": 0.59,
+        "6.34": 0.409,
+        "4.35": 0.456,
+        "8.5": 0.33,
+        "9.33": 0.39,
+        "8.16": 0.397,
+        "Ep. 58.22": 0.279,
+        "Ep. 58.24": 0.402,
+        "Ep. 58.28": 0.438,
+        "Ep. 36.11": 0.42,
+        "Ep. 71.13": 0.412,
+        "Ep. 98.10": 0.481,
+        "Ep. 98.9": 0.525,
+        "Ep. 58.23": 0.458,
+        "Ep. 24.20": 0.6,
+        "Ep. 24.26": 0.464,
+        "Ep. 24.25": 0.508,
+        "Ep. 98.11": 0.425
+       },
+       "at": [
+        -0.8242,
+        -0.4535
+       ]
+      },
+      {
+       "ref": "Ep. 36.11",
+       "title": "On the value of retirement",
+       "text": "But I mean to show you later, with more care, that everything which seems to perish merely changes. Since you are destined to return, you ought to depart with a tranquil mind. Mark how the round of the universe repeats its course; you will see that no star in our firmament is extinguished, but that they all set and rise in alternation. Summer has gone, but another year will bring it again; winter lies low, but will be restored by its own proper months; night has overwhelmed the sun, but day will soon rout the night again. The wandering stars retrace their former courses; a part of the sky is rising unceasingly, and a part is sinking.",
+       "words": 117,
+       "revision": "gummere-wikisource-36-11:809e77765f8fc9ef",
+       "to_centre": 0.668,
+       "rank": 5,
+       "nearest": {
+        "ref": "7.27",
+        "similarity": 0.614
+       },
+       "sims": {
+        "10.7": 0.58,
+        "7.27": 0.614,
+        "6.14": 0.596,
+        "4.29": 0.593,
+        "10.19": 0.559,
+        "9.31": 0.546,
+        "9.27": 0.583,
+        "9.17": 0.545,
+        "2.9": 0.488,
+        "12.25": 0.519,
+        "6.34": 0.511,
+        "4.35": 0.526,
+        "8.5": 0.591,
+        "9.33": 0.51,
+        "8.16": 0.548,
+        "Ep. 58.22": 0.352,
+        "Ep. 58.24": 0.543,
+        "Ep. 58.28": 0.483,
+        "Ep. 99.10": 0.42,
+        "Ep. 71.13": 0.675,
+        "Ep. 98.10": 0.49,
+        "Ep. 98.9": 0.435,
+        "Ep. 58.23": 0.553,
+        "Ep. 24.20": 0.441,
+        "Ep. 24.26": 0.544,
+        "Ep. 24.25": 0.429,
+        "Ep. 98.11": 0.398
+       },
+       "at": [
+        0.3442,
+        0.1894
+       ]
+      },
+      {
+       "ref": "Ep. 71.13",
+       "title": "On the supreme good",
+       "text": "All things move in accord with their appointed times; they are destined to be born, to grow, and to be destroyed. The stars which you see moving above us, and this seemingly immovable earth to which we cling and on which we are set, will be consumed and will cease to exist. There is nothing that does not have its old age; the intervals are merely unequal at which Nature sends forth all these things towards the same goal. Whatever is will cease to be, and yet it will not perish, but will be resolved into its elements.",
+       "words": 98,
+       "revision": "gummere-wikisource-71-13:de0cb3df2946fd08",
+       "to_centre": 0.725,
+       "rank": 1,
+       "nearest": {
+        "ref": "9.27",
+        "similarity": 0.66
+       },
+       "sims": {
+        "10.7": 0.605,
+        "7.27": 0.658,
+        "6.14": 0.641,
+        "4.29": 0.632,
+        "10.19": 0.588,
+        "9.31": 0.598,
+        "9.27": 0.66,
+        "9.17": 0.598,
+        "2.9": 0.556,
+        "12.25": 0.556,
+        "6.34": 0.581,
+        "4.35": 0.578,
+        "8.5": 0.622,
+        "9.33": 0.531,
+        "8.16": 0.621,
+        "Ep. 58.22": 0.411,
+        "Ep. 58.24": 0.575,
+        "Ep. 58.28": 0.558,
+        "Ep. 99.10": 0.412,
+        "Ep. 36.11": 0.675,
+        "Ep. 98.10": 0.492,
+        "Ep. 98.9": 0.419,
+        "Ep. 58.23": 0.508,
+        "Ep. 24.20": 0.524,
+        "Ep. 24.26": 0.518,
+        "Ep. 24.25": 0.326,
+        "Ep. 98.11": 0.355
+       },
+       "at": [
+        0.1151,
+        0.0004
+       ]
+      },
+      {
+       "ref": "Ep. 98.10",
+       "title": "On the fickleness of fortune",
+       "text": "But men are so wayward, and so forgetful of their goal and of the point toward which every day jostles them, that they are surprised at losing anything, although some day they are bound to lose everything. Anything of which you are entitled the owner is in your possession but is not your own; for there is no strength in that which is weak, nor anything lasting and invincible in that which is frail. We must lose our lives as surely as we lose our property, and this, if we understand the truth, is itself a consolation. Lose it with equanimity; for you must lose your life also.",
+       "words": 108,
+       "revision": "gummere-wikisource-98-10:2d1e8f75be2318f5",
+       "to_centre": 0.623,
+       "rank": 20,
+       "nearest": {
+        "ref": "6.14",
+        "similarity": 0.597
+       },
+       "sims": {
+        "10.7": 0.538,
+        "7.27": 0.528,
+        "6.14": 0.597,
+        "4.29": 0.515,
+        "10.19": 0.5,
+        "9.31": 0.546,
+        "9.27": 0.506,
+        "9.17": 0.557,
+        "2.9": 0.548,
+        "12.25": 0.551,
+        "6.34": 0.434,
+        "4.35": 0.48,
+        "8.5": 0.452,
+        "9.33": 0.504,
+        "8.16": 0.5,
+        "Ep. 58.22": 0.357,
+        "Ep. 58.24": 0.475,
+        "Ep. 58.28": 0.531,
+        "Ep. 99.10": 0.481,
+        "Ep. 36.11": 0.49,
+        "Ep. 71.13": 0.492,
+        "Ep. 98.9": 0.526,
+        "Ep. 58.23": 0.544,
+        "Ep. 24.20": 0.562,
+        "Ep. 24.26": 0.449,
+        "Ep. 24.25": 0.49,
+        "Ep. 98.11": 0.623
+       },
+       "at": [
+        -0.301,
+        0.6447
+       ]
+      },
+      {
+       "ref": "Ep. 98.9",
+       "title": "On the fickleness of fortune",
+       "text": "For this very reason I regard as excellent the saying of Metrodorus, in a letter of consolation to his sister on the loss of her son, a lad of great promise: “All the Good of mortals is mortal.” He is referring to those Goods towards which men rush in shoals. For the real Good does not perish; it is certain and lasting and it consists of wisdom and virtue; it is the only immortal thing that falls to mortal lot.",
+       "words": 80,
+       "revision": "gummere-wikisource-98-9:073c3c8a0fffe9b3",
+       "to_centre": 0.549,
+       "rank": 98,
+       "nearest": {
+        "ref": "10.7",
+        "similarity": 0.504
+       },
+       "sims": {
+        "10.7": 0.504,
+        "7.27": 0.489,
+        "6.14": 0.497,
+        "4.29": 0.45,
+        "10.19": 0.425,
+        "9.31": 0.476,
+        "9.27": 0.435,
+        "9.17": 0.451,
+        "2.9": 0.45,
+        "12.25": 0.473,
+        "6.34": 0.418,
+        "4.35": 0.462,
+        "8.5": 0.386,
+        "9.33": 0.494,
+        "8.16": 0.42,
+        "Ep. 58.22": 0.35,
+        "Ep. 58.24": 0.436,
+        "Ep. 58.28": 0.511,
+        "Ep. 99.10": 0.525,
+        "Ep. 36.11": 0.435,
+        "Ep. 71.13": 0.419,
+        "Ep. 98.10": 0.526,
+        "Ep. 58.23": 0.472,
+        "Ep. 24.20": 0.401,
+        "Ep. 24.26": 0.41,
+        "Ep. 24.25": 0.473,
+        "Ep. 98.11": 0.483
+       },
+       "at": [
+        -0.3928,
+        0.8401
+       ]
+      },
+      {
+       "ref": "Ep. 58.23",
+       "title": "On being",
+       "text": "This is just what Heraclitus says: “We go down twice into the same river, and yet into a different river.” For the stream still keeps the same name, but the water has already flowed past. Of course this is much more evident in rivers than in human beings. Still, we mortals are also carried past in no less speedy a course; and this prompts me to marvel at our madness in cleaving with great affection to such a fleeting thing as the body, and in fearing lest some day we may die, when every instant means the death of our previous condition. Will you not stop fearing lest that may happen once which really happens every day?",
+       "words": 117,
+       "revision": "gummere-wikisource-58-23:9ffbc2c954b2190f",
+       "to_centre": 0.63,
+       "rank": 16,
+       "nearest": {
+        "ref": "6.14",
+        "similarity": 0.631
+       },
+       "sims": {
+        "10.7": 0.584,
+        "7.27": 0.568,
+        "6.14": 0.631,
+        "4.29": 0.538,
+        "10.19": 0.476,
+        "9.31": 0.522,
+        "9.27": 0.551,
+        "9.17": 0.507,
+        "2.9": 0.483,
+        "12.25": 0.516,
+        "6.34": 0.478,
+        "4.35": 0.561,
+        "8.5": 0.487,
+        "9.33": 0.445,
+        "8.16": 0.494,
+        "Ep. 58.22": 0.41,
+        "Ep. 58.24": 0.57,
+        "Ep. 58.28": 0.424,
+        "Ep. 99.10": 0.458,
+        "Ep. 36.11": 0.553,
+        "Ep. 71.13": 0.508,
+        "Ep. 98.10": 0.544,
+        "Ep. 98.9": 0.472,
+        "Ep. 24.20": 0.58,
+        "Ep. 24.26": 0.543,
+        "Ep. 24.25": 0.436,
+        "Ep. 98.11": 0.432
+       },
+       "at": [
+        -0.2158,
+        0.5959
+       ]
+      },
+      {
+       "ref": "Ep. 24.20",
+       "title": "On despising death [ 1 ]",
+       "text": "For every day a little of our life is taken from us; even when we are growing, our life is on the wane. We lose our childhood, then our boyhood, and then our youth. Counting even yesterday, all past time is lost time; the very day which we are now spending is shared between ourselves and death. It is not the last drop that empties the water-clock, but all that which previously has flowed out; similarly, the final hour when we cease to exist does not of itself bring death; it merely of itself completes the death-process. We reach death at that moment, but we have been a long time on the way.",
+       "words": 113,
+       "revision": "gummere-wikisource-24-20:97f1901b7a06e6cf",
+       "to_centre": 0.564,
+       "rank": 77,
+       "nearest": {
+        "ref": "6.14",
+        "similarity": 0.623
+       },
+       "sims": {
+        "10.7": 0.516,
+        "7.27": 0.524,
+        "6.14": 0.623,
+        "4.29": 0.454,
+        "10.19": 0.49,
+        "9.31": 0.547,
+        "9.27": 0.469,
+        "9.17": 0.437,
+        "2.9": 0.464,
+        "12.25": 0.516,
+        "6.34": 0.395,
+        "4.35": 0.452,
+        "8.5": 0.342,
+        "9.33": 0.359,
+        "8.16": 0.424,
+        "Ep. 58.22": 0.319,
+        "Ep. 58.24": 0.425,
+        "Ep. 58.28": 0.381,
+        "Ep. 99.10": 0.6,
+        "Ep. 36.11": 0.441,
+        "Ep. 71.13": 0.524,
+        "Ep. 98.10": 0.562,
+        "Ep. 98.9": 0.401,
+        "Ep. 58.23": 0.58,
+        "Ep. 24.26": 0.504,
+        "Ep. 24.25": 0.416,
+        "Ep. 98.11": 0.441
+       },
+       "at": [
+        -0.786,
+        -0.4936
+       ]
+      },
+      {
+       "ref": "Ep. 24.26",
+       "title": "On despising death [ 1 ]",
+       "text": "Others also are moved by a satiety of doing and seeing the same things, and not so much by a hatred of life as because they are cloyed with it. We slip into this condition, while philosophy itself pushes us on, and we say: “How long must I endure the same things? Shall I continue to wake and sleep, be hungry and be cloyed, shiver and perspire? There is an end to nothing; all things are connected in a sort of circle; they flee and they are pursued. Night is close at the heels of day, day at the heels of night; summer ends in autumn, winter rushes after autumn, and winter softens into spring; all nature in this way passes, only to return. I do nothing new; I see nothing new; sooner or later one sickens of this, also.” There are many who think that living is not painful, but superfluous. Farewell.",
+       "words": 153,
+       "revision": "gummere-wikisource-24-26:48d941f5b1115e58",
+       "to_centre": 0.609,
+       "rank": 30,
+       "nearest": {
+        "ref": "7.27",
+        "similarity": 0.596
+       },
+       "sims": {
+        "10.7": 0.538,
+        "7.27": 0.596,
+        "6.14": 0.587,
+        "4.29": 0.496,
+        "10.19": 0.459,
+        "9.31": 0.498,
+        "9.27": 0.522,
+        "9.17": 0.455,
+        "2.9": 0.504,
+        "12.25": 0.503,
+        "6.34": 0.506,
+        "4.35": 0.538,
+        "8.5": 0.492,
+        "9.33": 0.451,
+        "8.16": 0.431,
+        "Ep. 58.22": 0.365,
+        "Ep. 58.24": 0.43,
+        "Ep. 58.28": 0.415,
+        "Ep. 99.10": 0.464,
+        "Ep. 36.11": 0.544,
+        "Ep. 71.13": 0.518,
+        "Ep. 98.10": 0.449,
+        "Ep. 98.9": 0.41,
+        "Ep. 58.23": 0.543,
+        "Ep. 24.20": 0.504,
+        "Ep. 24.25": 0.518,
+        "Ep. 98.11": 0.394
+       },
+       "at": [
+        -0.1486,
+        -0.7963
+       ]
+      },
+      {
+       "ref": "Ep. 24.25",
+       "title": "On despising death [ 1 ]",
+       "text": "The brave and wise man should not beat a hasty retreat from life; he should make a becoming exit. And above all, he should avoid the weakness which has taken possession of so many,—the lust for death. For just as there is an unreflecting tendency of the mind towards other things, so, my dear Lucilius, there is an unreflecting tendency towards death; this often seizes upon the noblest and most spirited men, as well as upon the craven and the abject. The former despise life; the latter find it irksome.",
+       "words": 90,
+       "revision": "gummere-wikisource-24-25:c37904805a40529a",
+       "to_centre": 0.476,
+       "rank": 469,
+       "nearest": {
+        "ref": "6.14",
+        "similarity": 0.471
+       },
+       "sims": {
+        "10.7": 0.43,
+        "7.27": 0.453,
+        "6.14": 0.471,
+        "4.29": 0.347,
+        "10.19": 0.427,
+        "9.31": 0.45,
+        "9.27": 0.379,
+        "9.17": 0.33,
+        "2.9": 0.457,
+        "12.25": 0.434,
+        "6.34": 0.315,
+        "4.35": 0.374,
+        "8.5": 0.325,
+        "9.33": 0.348,
+        "8.16": 0.383,
+        "Ep. 58.22": 0.259,
+        "Ep. 58.24": 0.317,
+        "Ep. 58.28": 0.388,
+        "Ep. 99.10": 0.508,
+        "Ep. 36.11": 0.429,
+        "Ep. 71.13": 0.326,
+        "Ep. 98.10": 0.49,
+        "Ep. 98.9": 0.473,
+        "Ep. 58.23": 0.436,
+        "Ep. 24.20": 0.416,
+        "Ep. 24.26": 0.518,
+        "Ep. 98.11": 0.374
+       },
+       "at": [
+        -0.8486,
+        0.7422
+       ]
+      },
+      {
+       "ref": "Ep. 98.11",
+       "title": "On the fickleness of fortune",
+       "text": "What resource do we find, then, in the face of these losses? Simply this—to keep in memory the things we have lost, and not to suffer the enjoyment which we have derived from them to pass away along with them. To have may be taken from us, to have had, never. A man is thankless in the highest degree if, after losing something, he feels no obligation for having received it. Chance robs us of the thing, but leaves us its use and its enjoyment—and we have lost this if we are so unfair as to regret.",
+       "words": 97,
+       "revision": "gummere-wikisource-98-11:579bf147c922e3d9",
+       "to_centre": 0.521,
+       "rank": 200,
+       "nearest": {
+        "ref": "9.33",
+        "similarity": 0.496
+       },
+       "sims": {
+        "10.7": 0.443,
+        "7.27": 0.463,
+        "6.14": 0.484,
+        "4.29": 0.478,
+        "10.19": 0.411,
+        "9.31": 0.446,
+        "9.27": 0.396,
+        "9.17": 0.383,
+        "2.9": 0.44,
+        "12.25": 0.438,
+        "6.34": 0.404,
+        "4.35": 0.456,
+        "8.5": 0.376,
+        "9.33": 0.496,
+        "8.16": 0.367,
+        "Ep. 58.22": 0.307,
+        "Ep. 58.24": 0.374,
+        "Ep. 58.28": 0.453,
+        "Ep. 99.10": 0.425,
+        "Ep. 36.11": 0.398,
+        "Ep. 71.13": 0.355,
+        "Ep. 98.10": 0.623,
+        "Ep. 98.9": 0.483,
+        "Ep. 58.23": 0.432,
+        "Ep. 24.20": 0.441,
+        "Ep. 24.26": 0.394,
+        "Ep. 24.25": 0.374
+       },
+       "at": [
+        0.4966,
+        -0.888
+       ]
+      }
+     ],
+     "counts": {
+      "stronger": 7,
+      "wider": 3,
+      "qualified": 1
+     },
+     "nearest_here": 21,
+     "total": 2140
+    }
+   },
+   "section_size": 15,
+   "cohesion": 0.8294,
+   "section_closeness": 0.666,
+   "in_translation": {
+    "closeness": 0.573,
+    "stayed": 14,
+    "of": 15,
+    "sections": 38
+   },
+   "sources": [
+    "10.7",
+    "7.27",
+    "6.14",
+    "4.29",
+    "10.19",
+    "9.31",
+    "9.27",
+    "9.17",
+    "2.9",
+    "12.25",
+    "6.34",
+    "4.35",
+    "8.5",
+    "9.33",
+    "8.16"
+   ],
+   "claims": [
+    {
+     "id": "c1",
+     "number": 1,
+     "role": "Everything changes, quickly",
+     "t": "All things are changing, and I am changing with them, all the time and quickly. The whole is like a river in flood: each thing is carried past as soon as it has been seen.",
+     "shared": "9.17 and 9.27 both say that all things change (“All things are in change”; earth “will change, and those things too will change without end”), and 9.17 and 6.14 both put the person among them. 4.35 and 9.27 both picture the whole as a rushing stream (“a violent current”; “a torrent”), and 4.35 and 6.14 both say that a thing is gone as soon as it is seen.",
+     "changed": "9.17 speaks of the universe, 4.35 of eternity as a river, 9.27 of the substance of the whole as a torrent; the claim calls all three “the whole”. 2.9 speaks of things vanishing, not changing; the claim takes from it only the speed.",
+     "passages": [
+      "9.17",
+      "9.27",
+      "6.14",
+      "2.9",
+      "4.35"
+     ],
+     "closeness": 0.672,
+     "closeness_new": 0.612,
+     "support": [
+      {
+       "id": "9.17a",
+       "ref": "9.17",
+       "quote": "All things are in change.",
+       "at": 0,
+       "start": 0,
+       "end": 25,
+       "in": "c1",
+       "follows": "Everything is changing.",
+       "gives": [
+        "All things are changing"
+       ]
+      },
+      {
+       "id": "9.17b",
+       "ref": "9.17",
+       "quote": "You yourself too are in continual alteration and, in a certain respect, in perishing, and so is the whole universe.",
+       "at": 26,
+       "start": 26,
+       "end": 141,
+       "in": "c1",
+       "follows": "I too am always being altered, and in a way perishing, and so is the whole universe.",
+       "gives": [
+        "I am changing with them",
+        "all the time"
+       ]
+      },
+      {
+       "id": "9.27a",
+       "ref": "9.27",
+       "quote": "Then earth itself will change, and those things too will change without end, and those again without end.",
+       "at": 40,
+       "start": 40,
+       "end": 145,
+       "in": "c1",
+       "follows": "Even the earth will change, and what it changes into will change again, without end.",
+       "gives": [
+        "All things are changing"
+       ]
+      },
+      {
+       "id": "6.14b",
+       "ref": "6.14",
+       "quote": "Flows and alterations renew the universe continually",
+       "at": 145,
+       "start": 145,
+       "end": 197,
+       "in": "c1",
+       "follows": "The universe is renewed all the time by flows and alterations.",
+       "gives": [
+        "All things are changing",
+        "all the time"
+       ]
+      },
+      {
+       "id": "6.14d",
+       "ref": "6.14",
+       "quote": "Each person’s life itself, too, is something of the kind: like the vapour that rises from blood and the breath drawn in from the air.",
+       "at": 502,
+       "start": 502,
+       "end": 635,
+       "in": "c1",
+       "follows": "A person’s life is a passing thing too, like vapour rising from blood or a breath drawn in.",
+       "gives": [
+        "I am changing with them"
+       ]
+      },
+      {
+       "id": "2.9a",
+       "ref": "2.9",
+       "quote": "How quickly all things vanish, the bodies themselves into the universe, the memories of them into eternity.",
+       "at": 0,
+       "start": 0,
+       "end": 107,
+       "in": "c1",
+       "follows": "All things vanish quickly: bodies into the universe, and the memory of them into eternity.",
+       "gives": [
+        "and quickly"
+       ]
+      },
+      {
+       "id": "4.35b",
+       "ref": "4.35",
+       "quote": "Eternity is a kind of river of things that come to be, and a violent current. For as soon as each thing has been seen it has been carried past, and another is being carried past, and yet another will be carried along.",
+       "at": 142,
+       "start": 142,
+       "end": 359,
+       "in": "c1",
+       "follows": "Time is like a fast river: each thing is swept past as soon as it is seen, and others follow it.",
+       "gives": [
+        "and quickly",
+        "The whole is like a river in flood",
+        "each thing is carried past as soon as it has been seen"
+       ]
+      },
+      {
+       "id": "9.27c",
+       "ref": "9.27",
+       "quote": "The substance of the whole is a torrent: it carries everything along.",
+       "at": 277,
+       "start": 277,
+       "end": 346,
+       "in": "c1",
+       "follows": "The stuff of which everything is made is like a torrent that sweeps all things along.",
+       "gives": [
+        "The whole is like a river in flood"
+       ]
+      },
+      {
+       "id": "6.14c",
+       "ref": "6.14",
+       "quote": "It is as if someone began to love one of the little sparrows flying past, and it has already gone out of sight.",
+       "at": 390,
+       "start": 390,
+       "end": 501,
+       "in": "c1",
+       "follows": "Loving one of these passing things is like loving a sparrow that is out of sight the moment one notices it.",
+       "gives": [
+        "each thing is carried past as soon as it has been seen"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "number": 2,
+     "role": "Nature’s work, always of one kind",
+     "t": "Changing things is the work of the nature of the whole, and it loves this work: it changes what exists and makes new things like the old. Nothing comes that is new in kind; what will be is of the same kind as what has been.",
+     "shared": "4.29 and 9.33 both say that the nature of the whole loves change (“loves nothing so much as to change”; “in this the nature of the whole delights”) and that it makes new things like the old (“new things like them”; “others like them”). 6.34, 7.27 and 9.33 all say that what comes is “of the same kind” as what was.",
+     "changed": "8.5 says that change is nature’s work and 4.29 that nature loves it; the claim puts the two in one sentence. “New in kind” is the editor’s wording for 8.5’s “nothing new” read beside 6.34’s “of the same kind”.",
+     "passages": [
+      "8.5",
+      "4.29",
+      "9.33",
+      "6.34",
+      "7.27"
+     ],
+     "closeness": 0.674,
+     "closeness_new": 0.557,
+     "support": [
+      {
+       "id": "8.5a",
+       "ref": "8.5",
+       "quote": "The nature of the whole has this as its work: to move what is here over to there, to change it, to lift it from here and carry it there.",
+       "at": 0,
+       "start": 0,
+       "end": 136,
+       "in": "c2",
+       "follows": "The work of the nature of the whole is to move things from one place to another and to change them.",
+       "gives": [
+        "Changing things is the work of the nature of the whole"
+       ]
+      },
+      {
+       "id": "4.29c",
+       "ref": "4.29",
+       "quote": "the nature of the whole loves nothing so much as to change the things that exist and make new things like them",
+       "at": 169,
+       "start": 169,
+       "end": 279,
+       "in": "c2",
+       "follows": "Nothing pleases the nature of the whole more than changing what exists and making new things like it.",
+       "gives": [
+        "Changing things is the work of the nature of the whole",
+        "it loves this work",
+        "it changes what exists",
+        "makes new things like the old"
+       ]
+      },
+      {
+       "id": "9.33b",
+       "ref": "9.33",
+       "quote": "And in this the nature of the whole delights, the nature in accordance with which all things come about well, and from eternity have come about in the same kind of way, and without end there will be others like them.",
+       "at": 35,
+       "start": 35,
+       "end": 251,
+       "in": "c2",
+       "follows": "The nature of the whole delights in change, and things of the same kind as before will keep coming about without end.",
+       "gives": [
+        "it loves this work",
+        "makes new things like the old",
+        "what will be is of the same kind as what has been"
+       ]
+      },
+      {
+       "id": "8.5b",
+       "ref": "8.5",
+       "quote": "All things are transformations, not so that one need fear something new. All things are familiar",
+       "at": 137,
+       "start": 137,
+       "end": 233,
+       "in": "c2",
+       "follows": "All things are changes of what was, so nothing new and strange comes that one need fear.",
+       "gives": [
+        "Nothing comes that is new in kind"
+       ]
+      },
+      {
+       "id": "6.34a",
+       "ref": "6.34",
+       "quote": "Whoever has seen what is now has seen everything: all that has come to be from the everlasting past and all that will be without end. For all things are of the same stock and of the same kind.",
+       "at": 0,
+       "start": 0,
+       "end": 192,
+       "in": "c2",
+       "follows": "Whoever has seen the present has seen all past and future, since all things are of the same kind.",
+       "gives": [
+        "Nothing comes that is new in kind",
+        "what will be is of the same kind as what has been"
+       ]
+      },
+      {
+       "id": "7.27a",
+       "ref": "7.27",
+       "quote": "It is possible to foresee what will be as well. For it will certainly be of the same kind, and it cannot step out of the rhythm of what is happening now.",
+       "at": 71,
+       "start": 71,
+       "end": 224,
+       "in": "c2",
+       "follows": "The future can be foreseen, because it will be of the same kind as what happens now.",
+       "gives": [
+        "what will be is of the same kind as what has been"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "number": 3,
+     "role": "Nothing passing is great",
+     "t": "When I reflect on how fast things change and on how small a part of eternity and of substance is mine, I picture nothing that passes as great. I do not prize what runs past me, and I look down on everything mortal.",
+     "shared": "9.27 and 12.25 both say that reflecting leads to holding things cheap (“a person who reflects on … will look down on everything mortal”; “Reflecting on all this, picture nothing as great”). 6.14 and 2.9 say the same of what passes: no one would prize it, and it is “cheap and contemptible”.",
+     "changed": "12.25 says “nothing” and names one exception, kept as a said-once item; the claim says “nothing that passes”. 9.27 says what a person who reflects will do; the claim says it of me.",
+     "passages": [
+      "9.27",
+      "12.25",
+      "6.14",
+      "2.9"
+     ],
+     "closeness": 0.706,
+     "closeness_new": 0.606,
+     "support": [
+      {
+       "id": "9.27b",
+       "ref": "9.27",
+       "quote": "For a person who reflects on wave after wave of changes and alterations, and on their speed, will look down on everything mortal.",
+       "at": 146,
+       "start": 146,
+       "end": 275,
+       "in": "c3",
+       "follows": "Whoever thinks about how fast changes follow one another will look down on everything mortal.",
+       "gives": [
+        "When I reflect",
+        "how fast things change",
+        "I look down on everything mortal"
+       ]
+      },
+      {
+       "id": "12.25a",
+       "ref": "12.25",
+       "quote": "How small a part of boundless, gaping eternity has been portioned out to each one: for it vanishes very quickly into the everlasting. And how small a part of the whole of substance, and how small a part of the whole of soul.",
+       "at": 0,
+       "start": 0,
+       "end": 224,
+       "in": "c3",
+       "follows": "Each of us has been given a tiny share of endless time, of all substance and of all soul.",
+       "gives": [
+        "how small a part of eternity and of substance is mine"
+       ]
+      },
+      {
+       "id": "12.25b",
+       "ref": "12.25",
+       "quote": "Reflecting on all this, picture nothing as great",
+       "at": 279,
+       "start": 279,
+       "end": 327,
+       "in": "c3",
+       "follows": "Whoever reflects on how small their share is should picture nothing as great.",
+       "gives": [
+        "When I reflect",
+        "I picture nothing that passes as great"
+       ]
+      },
+      {
+       "id": "6.14a",
+       "ref": "6.14",
+       "quote": "In this river, then, which of these things running past would anyone prize, a thing it is not possible to stand on?",
+       "at": 274,
+       "start": 274,
+       "end": 389,
+       "in": "c3",
+       "follows": "Nothing running past in this river is worth prizing, since no one can stand on it.",
+       "gives": [
+        "I do not prize what runs past me"
+       ]
+      },
+      {
+       "id": "2.9b",
+       "ref": "2.9",
+       "quote": "What all the things perceived by the senses are like, and above all those that lure with pleasure or frighten with pain or are loudly celebrated through vanity: how cheap and contemptible and filthy and quick to perish and dead.",
+       "at": 108,
+       "start": 108,
+       "end": 336,
+       "in": "c3",
+       "follows": "The things of the senses, above all what tempts, frightens or is famous, are cheap, quick to perish and dead.",
+       "gives": [
+        "I picture nothing that passes as great"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "number": 4,
+     "role": "Seeing each thing as passing",
+     "t": "I constantly keep in mind the whole of eternity and the whole of what exists, and against all that exists each thing is a fig seed, and against all of time a turn of a drill. I fix my attention on each thing and think of it as changing, and already dissolving.",
+     "shared": "10.19 and 9.31 both tell me to hold the whole of time and of what exists in mind (“the whole of eternity and the whole of substance”; “encompassed the whole universe in thought … surveying everlasting eternity”) and to think of each thing as it changes (“think of it as already dissolving and in change”; “thinking of the swift change of each particular thing”). 4.29 says to observe change “continually”, as 10.19 says “constantly”.",
+     "changed": "10.19 and 4.29 are instructions to “you”, and 9.31 is a fragment without a main verb; the claim states them as what I do.",
+     "passages": [
+      "10.19",
+      "9.31",
+      "4.29"
+     ],
+     "closeness": 0.746,
+     "closeness_new": 0.662,
+     "support": [
+      {
+       "id": "10.19a",
+       "ref": "10.19",
+       "quote": "An impression, constantly, of the whole of eternity and the whole of substance, and that all particular things are, set against substance, a fig seed, and set against time, a turn of a drill.",
+       "at": 0,
+       "start": 0,
+       "end": 191,
+       "in": "c4",
+       "follows": "I should keep all of time and all substance always in view, and see each thing against them as a fig seed or a moment.",
+       "gives": [
+        "I constantly keep in mind",
+        "the whole of eternity and the whole of what exists",
+        "against all that exists each thing is a fig seed, and against all of time a turn of a drill"
+       ]
+      },
+      {
+       "id": "10.19b",
+       "ref": "10.19",
+       "quote": "Fixing attention on each object, think of it as already dissolving and in change",
+       "at": 193,
+       "start": 193,
+       "end": 273,
+       "in": "c4",
+       "follows": "Whatever I look at, I should think of as already changing and coming apart.",
+       "gives": [
+        "I fix my attention on each thing",
+        "think of it as changing",
+        "already dissolving"
+       ]
+      },
+      {
+       "id": "9.31a",
+       "ref": "9.31",
+       "quote": "By having encompassed the whole universe in thought, and by surveying everlasting eternity, and by thinking of the swift change of each particular thing",
+       "at": 0,
+       "start": 0,
+       "end": 152,
+       "in": "c4",
+       "follows": "One holds the whole universe and all of time in thought, and thinks of how fast each thing changes.",
+       "gives": [
+        "the whole of eternity and the whole of what exists",
+        "think of it as changing"
+       ]
+      },
+      {
+       "id": "4.29b",
+       "ref": "4.29",
+       "quote": "Observe continually that all things come about by change",
+       "at": 69,
+       "start": 69,
+       "end": 125,
+       "in": "c4",
+       "follows": "I should keep observing that everything comes about through change.",
+       "gives": [
+        "I constantly keep in mind",
+        "think of it as changing"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c5",
+     "number": 5,
+     "role": "Complaining, and the way back",
+     "t": "When I say that everything goes badly, I forget that a loss is nothing but a change, and that change is nothing bad for what is changed. The elements I am made of change too, and do not grumble.",
+     "shared": "9.33 and 10.7 both say that losing or perishing is only change (“Loss is nothing other than change”; “let “perish” be said in the sense of “be altered””). 4.35 and 10.7 both deny that change is bad for what is changed.",
+     "changed": "9.33 asks “you” why you say that all goes badly; the claim makes it my failure. 8.16 adds that my own elements change without complaint.",
+     "passages": [
+      "9.33",
+      "10.7",
+      "4.35",
+      "8.16"
+     ],
+     "closeness": 0.657,
+     "closeness_new": 0.576,
+     "support": [
+      {
+       "id": "9.33c",
+       "ref": "9.33",
+       "quote": "Why then do you say that all things have come about badly and all things will always go badly",
+       "at": 252,
+       "start": 252,
+       "end": 345,
+       "in": "c5",
+       "follows": "It is wrong to say that everything has gone badly and always will.",
+       "gives": [
+        "When I say that everything goes badly"
+       ]
+      },
+      {
+       "id": "9.33a",
+       "ref": "9.33",
+       "quote": "Loss is nothing other than change.",
+       "at": 0,
+       "start": 0,
+       "end": 34,
+       "in": "c5",
+       "follows": "Losing something is only its changing.",
+       "gives": [
+        "a loss is nothing but a change"
+       ]
+      },
+      {
+       "id": "10.7a",
+       "ref": "10.7",
+       "quote": "The parts of the whole, all that are by nature contained by the universe, must perish; but let “perish” be said in the sense of “be altered”.",
+       "at": 0,
+       "start": 0,
+       "end": 141,
+       "in": "c5",
+       "follows": "The parts of the universe must perish, and here perishing means being altered.",
+       "gives": [
+        "a loss is nothing but a change"
+       ]
+      },
+      {
+       "id": "10.7b",
+       "ref": "10.7",
+       "quote": "Now if this is by nature both bad and necessary for them, the whole would not be well managed",
+       "at": 142,
+       "start": 142,
+       "end": 235,
+       "in": "c5",
+       "follows": "If being altered were bad for the parts, the whole would be badly managed, which is not believable.",
+       "gives": [
+        "change is nothing bad for what is changed"
+       ]
+      },
+      {
+       "id": "4.35a",
+       "ref": "4.35",
+       "quote": "There is nothing bad for things that are in the course of change, just as there is nothing good for things that come to exist out of change.",
+       "at": 0,
+       "start": 0,
+       "end": 140,
+       "in": "c5",
+       "follows": "Being changed is not bad for a thing, just as coming out of a change is not good for it.",
+       "gives": [
+        "change is nothing bad for what is changed"
+       ]
+      },
+      {
+       "id": "8.16c",
+       "ref": "8.16",
+       "quote": "which are the elements of the universe and of you. And these too change, and do not grumble.",
+       "at": 129,
+       "start": 129,
+       "end": 221,
+       "in": "c5",
+       "follows": "My elements, which are also the universe’s, change and do not complain of it.",
+       "gives": [
+        "The elements I am made of change too, and do not grumble"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c6",
+     "number": 6,
+     "role": "If nature is left out",
+     "t": "Even if no nature orders things, a thing’s death is only its dissolution into what it was made of: it goes back where it came from, or its elements are scattered. Either way it is ridiculous to be surprised or annoyed at it.",
+     "shared": "10.7 and 7.27 both give two accounts of dissolution, and both name “a scattering of the elements” among them (7.27: “some such scattering of elements”). 10.7 and 8.16 both say that a thing is dissolved into what it was made of (“into the things out of which each is put together”; “dissolved into what is its own”).",
+     "changed": "In 7.27 the second account is the atomists’; in 10.7 the person imagined leaves out nature as the one who orders things. The claim takes both as what still holds without nature. 10.7 speaks of parts of the whole; “a thing’s death” follows 8.16’s “what has died”.",
+     "passages": [
+      "10.7",
+      "7.27",
+      "8.16"
+     ],
+     "closeness": 0.71,
+     "closeness_new": 0.6,
+     "support": [
+      {
+       "id": "10.7c",
+       "ref": "10.7",
+       "quote": "And if someone were to leave nature out of it and explain these things by the way they naturally are, even so it would be ridiculous to say that the parts of the whole are naturally such as to change, and at the same time to be surprised or annoyed as though at something happening against nature, especially when the dissolution is into the things out of which each is put together.",
+       "at": 560,
+       "start": 560,
+       "end": 943,
+       "in": "c6",
+       "follows": "Even without nature as the one who orders things, it is absurd to expect change and then be annoyed when a thing comes apart into its parts.",
+       "gives": [
+        "Even if no nature orders things",
+        "a thing’s death is only its dissolution into what it was made of",
+        "it is ridiculous to be surprised or annoyed at it"
+       ]
+      },
+      {
+       "id": "10.7d",
+       "ref": "10.7",
+       "quote": "For it is either a scattering of the elements out of which it was compounded, or a turning of the solid into the earthy and of the breath-like into the airy, so that these too are taken back up into the reason of the whole",
+       "at": 944,
+       "start": 944,
+       "end": 1166,
+       "in": "c6",
+       "follows": "Dissolving either scatters a thing’s elements or turns them into earth and air, which the whole takes back.",
+       "gives": [
+        "it goes back where it came from",
+        "its elements are scattered"
+       ]
+      },
+      {
+       "id": "7.27b",
+       "ref": "7.27",
+       "quote": "What grew from earth goes back to earth, and what sprouted from a seed of the upper air, back to the vault of heaven.",
+       "at": 344,
+       "start": 344,
+       "end": 461,
+       "in": "c6",
+       "follows": "What came from the earth returns to the earth, and what came from the sky returns to the sky.",
+       "gives": [
+        "it goes back where it came from"
+       ]
+      },
+      {
+       "id": "7.27d",
+       "ref": "7.27",
+       "quote": "Or else this is a dissolution of the interlockings among the atoms, and some such scattering of elements that cannot be affected.",
+       "at": 463,
+       "start": 463,
+       "end": 592,
+       "in": "c6",
+       "follows": "Or else death is a coming apart of the atoms’ links and a scattering of elements that nothing can act upon.",
+       "gives": [
+        "a thing’s death is only its dissolution into what it was made of",
+        "its elements are scattered"
+       ]
+      },
+      {
+       "id": "8.16a",
+       "ref": "8.16",
+       "quote": "What has died does not fall outside the universe. If it stays here, it also changes here, and is dissolved into what is its own",
+       "at": 0,
+       "start": 0,
+       "end": 127,
+       "in": "c6",
+       "follows": "What dies stays in the universe, changes there, and is dissolved into its own parts.",
+       "gives": [
+        "a thing’s death is only its dissolution into what it was made of"
+       ]
+      }
+     ]
+    }
+   ],
+   "single": [
+    {
+     "id": "7.27c",
+     "ref": "7.27",
+     "quote": "But the sailing wind that blows from the gods must be borne, in toils without lament.",
+     "at": 680,
+     "start": 680,
+     "end": 765,
+     "in": "single",
+     "label": "Without lament",
+     "t": "What the gods send me I bear, in toil and without lament.",
+     "why": "A line of verse Marcus copied, and the only place in the section that speaks of bearing what the gods send. 8.16 says the elements change without grumbling, but it speaks of the elements, not of what I bear.",
+     "follows": "What the gods send must be borne, with toil and without lament."
+    },
+    {
+     "id": "4.29d",
+     "ref": "4.29",
+     "quote": "For everything that exists is, in a way, the seed of what will come from it. But you picture as seeds only those that are cast into earth or womb, and that is very much a layman’s view.",
+     "at": 281,
+     "start": 281,
+     "end": 466,
+     "in": "single",
+     "label": "Everything a seed",
+     "t": "Everything that exists is in a way the seed of what will come from it, and not only what is sown in the earth or in a womb.",
+     "why": "Only this passage calls everything a seed. It goes with the claim that nature makes new things like the old, but no second passage says it.",
+     "follows": "Whatever exists is a seed of what will follow it, not only seeds sown in earth or womb."
+    },
+    {
+     "id": "9.31b",
+     "ref": "9.31",
+     "quote": "Everything you see will very quickly perish, and those who have looked on as it perished will very quickly perish themselves, and whoever dies in extreme old age will be brought level with the one who died before their time.",
+     "at": 325,
+     "start": 325,
+     "end": 549,
+     "in": "single",
+     "label": "Old and young alike",
+     "t": "Everything I see will soon perish, and so will those who watched it perish; whoever dies very old will be brought level with whoever died before their time.",
+     "why": "Only this passage draws from the speed of change that a long life and a short one end level. The speed itself is in claim 1.",
+     "follows": "Since everything and everyone perishes quickly, dying very old comes to the same as dying young."
+    },
+    {
+     "id": "12.25c",
+     "ref": "12.25",
+     "quote": "except this: to act as your own nature leads, and to undergo things as the common nature brings them.",
+     "at": 328,
+     "start": 328,
+     "end": 429,
+     "in": "single",
+     "label": "What is great",
+     "t": "The one thing I count as great is to act as my own nature leads and to undergo things as the common nature brings them.",
+     "why": "Only this passage names what is still great when nothing that passes is. It is kept beside the claim it limits.",
+     "follows": "The only thing to picture as great is acting as one’s own nature leads and undergoing what the common nature brings."
+    }
+   ],
+   "members": [
+    {
+     "ref": "10.7",
+     "revision": "casaubon-gutenberg-2680-10-7:e97e6a52514895fe",
+     "rank": 1,
+     "similarity": 0.8805,
+     "words": 521,
+     "used": true,
+     "feeds": [
+      "c5",
+      "c6"
+     ],
+     "why": null,
+     "text": "All parts of the world, (all things I mean that are contained\r\nwithin the whole world), must of necessity at some time or other come to\r\ncorruption. Alteration I should say, to speak truly and properly; but\r\nthat I may be the better understood, I am content at this time to use\r\nthat more common word. Now say I, if so be that this be both hurtful\r\nunto them, and yet unavoidable, would not, thinkest thou, the whole\r\nitself be in a sweet case, all the parts of it being subject to\r\nalteration, yea and by their making itself fitted for corruption, as\r\nconsisting of things different and contrary? And did nature then either\r\nof herself thus project and purpose the affliction and misery of her\r\nparts, and therefore of purpose so made them, not only that haply they\r\nmight, but of necessity that they should fall into evil; or did not she\r\nknow what she did, when she made them? For either of these two to say,\r\nis equally absurd. But to let pass nature in general, and to reason of\r\nthings particular according to their own particular natures; how absurd\r\nand ridiculous is it, first to say that all parts of the whole are, by\r\ntheir proper natural constitution, subject to alteration; and then when\r\nany such thing doth happen, as when one doth fall sick and dieth, to\r\ntake on and wonder as though some strange thing had happened? Though\r\nthis besides might move not so grievously to take on when any such thing\r\ndoth happen, that whatsoever is dissolved, it is dissolved into those\r\nthings, whereof it was compounded. For every dissolution is either\r\na mere dispersion, of the elements into those elements again whereof\r\neverything did consist, or a change, of that which is more solid into\r\nearth; and of that which is pure and subtile or spiritual, into air.\r\nSo that by this means nothing is lost, but all resumed again into those\r\nrational generative seeds of the universe; and this universe, either\r\nafter a certain period of time to lie consumed by fire, or by continual\r\nchanges to be renewed, and so for ever to endure. Now that solid and\r\nspiritual that we speak of, thou must not conceive it to be that very\r\nsame, which at first was, when thou wert born. For alas! all this that\r\nnow thou art in either kind, either for matter of substance, or of life,\r\nhath but two or three days ago partly from meats eaten, and partly from\r\nair breathed in, received all its influx, being the same then in no\r\nother respect, than a running river, maintained by the perpetual influx\r\nand new supply of waters, is the same. That therefore which thou hast\r\nsince received, not that which came from thy mother, is that which\r\ncomes to change and corruption. But suppose that that for the general\r\nsubstance, and more solid part of it, should still cleave unto thee\r\nnever so close, yet what is that to the proper qualities and affections\r\nof it, by which persons are distinguished, which certainly are quite\r\ndifferent?",
+     "standard": "10.7",
+     "translation": "project-v1:10.7:021966cef8295341",
+     "english": "The parts of the whole, all that are by nature contained by the universe, must perish; but let “perish” be said in the sense of “be altered”. Now if this is by nature both bad and necessary for them, the whole would not be well managed, with its parts going into alteration and built in various ways for perishing. For did nature itself set out to treat its own parts badly, and to make them both liable to fall into what is bad and bound by necessity to fall into what is bad, or did such things come about without nature noticing? For both are unbelievable. And if someone were to leave nature out of it and explain these things by the way they naturally are, even so it would be ridiculous to say that the parts of the whole are naturally such as to change, and at the same time to be surprised or annoyed as though at something happening against nature, especially when the dissolution is into the things out of which each is put together. For it is either a scattering of the elements out of which it was compounded, or a turning of the solid into the earthy and of the breath-like into the airy, so that these too are taken back up into the reason of the whole, whether the whole is burned up in fire at each cycle or renewed by everlasting exchanges. And do not picture the solid and the breath-like as the ones that date from the first birth. For all of this took its inflow yesterday and the day before, from food and from the air drawn in. So what changes is this that it took in, not what your mother bore. But suppose that this binds you very closely to that individually qualified thing, which, I think, has no bearing on what is being said now.",
+     "greek": "Τοῖς μέρεσι τοῦ ὅλου, ὅσα φύσει περιέχεται ὑπὸ τοῦ κόσμου, ἀνάγκη φθείρεσθαι· λεγέσθω δὲ τοῦτο σημαντικῶς τοῦ ἀλλοιοῦσθαι. εἰ δὲ φύσει κακόν τε καὶ ἀναγκαῖόν ἐστι τοῦτο αὐτοῖς, οὐκ ἂν τὸ ὅλον καλῶς διεξάγοιτο τῶν μερῶν εἰς ἀλλοίωσιν ἰόντων καὶ πρὸς τὸ φθείρεσθαι διαφόρως κατεσκευασμένων. πότερον γὰρ ἐπεχείρησεν ἡ φύσις αὐτὴ τὰ ἑαυτῆς μέρη κακοῦν καὶ περιπτωτικὰ τῷ κακῷ καὶ ἐξ ἀνάγκης ἔμπτωτα εἰς τὸ κακὸν ποιεῖν, ἢ ἔλαθεν αὐτὴν τοιάδε τινὰ γινόμενα; ἀμφότερα γὰρ ἀπίθανα. εἰ δέ τις καὶ ἀφέμενος τῆς φύσεως κατὰ τὸ πεφυκέναι ταῦτα ἐξηγοῖτο, καὶ ὣς γελοῖον ἅμα μὲν φάναι πεφυκέναι τὰ μέρη τοῦ ὅλου μεταβάλλειν, ἅμα δὲ ὡς ἐπί τινι τῶν παρὰ φύσιν συμβαίνοντι θαυμάζειν ἣ δυσχεραίνειν, ἄλλως τε καὶ τῆς διαλύσεως εἰς ταῦτα γινομένης, ἐξ ὧν ἕκαστον συνίσταται. ἤτοι γὰρ σκεδασμὸς στοιχείων, ἐξ ὧν συνεκρίθη, ἢ τροπὴ τοῦ μὲν στερεμνίου εἰς τὸ γεῶδες, τοῦ δὲ πνευματικοῦ εἰς τὸ ἀερῶδες, ὥστε καὶ ταῦτα ἀναληφθῆναι εἰς τὸν τοῦ ὅλου λόγον, εἴτε κατὰ περίοδον ἐκπυρουμένου εἴτε ἀιδίοις ἀμοιβαῖς ἀνανεουμένου. καὶ τὸ στερέμνιον δὲ καὶ τὸ πνευματικὸν μὴ φαντάζου τὸ ἀπὸ τῆς πρώτης γενέσεως· πᾶν γὰρ τοῦτο ἐχθὲς καὶ τρίτην ἡμέραν ἐκ τῶν σιτίων καὶ τοῦ ἑλκομένου ἀέρος τὴν ἐπιρροὴν ἔλαβεν· τοῦτο οὖν ὃ ἔλαβε μεταβάλλει, οὐχ ὃ ἡ μήτηρ ἔτεκεν. ὑπόθου δ’ ὅτι ἐκείνῳ σε λίαν προσπλέκει τῷ ἰδίως ποιῷ, οὐδὲν ὄντι οἶμαι πρὸς τὸ νῦν λεγόμενον."
+    },
+    {
+     "ref": "7.27",
+     "revision": "casaubon-gutenberg-2680-7-27:20f849154d6ad722",
+     "rank": 2,
+     "similarity": 0.8781,
+     "words": 204,
+     "used": true,
+     "feeds": [
+      "c2",
+      "c6",
+      "single"
+     ],
+     "why": null,
+     "text": "To look back upon things of former ages, as upon the manifold\r\nchanges and conversions of several monarchies and commonwealths. We\r\nmay also foresee things future, for they shall all be of the same kind;\r\nneither is it possible that they should leave the tune, or break the\r\nconcert that is now begun, as it were, by these things that are now done\r\nand brought to pass in the world. It comes all to one therefore, whether\r\na man be a spectator of the things of this life but forty years, or\r\nwhether he see them ten thousand years together: for what shall he\r\nsee more? 'And as for those parts that came from the earth, they shall\r\nreturn unto the earth again; and those that came from heaven, they\r\nalso shall return unto those heavenly places.' Whether it be a mere\r\ndissolution and unbinding of the manifold intricacies and entanglements\r\nof the confused atoms; or some such dispersion of the simple and\r\nincorruptible elements... 'With meats and drinks and divers charms, they\r\nseek to divert the channel, that they might not die. Yet must we needs\r\nendure that blast of wind that cometh from above, though we toil and\r\nlabour never so much.'",
+     "standard": "7.49–51",
+     "translation": "project-v1:7.49–51:c662efc62a34bb79",
+     "english": "Look back over what has gone before: so many changes of ruling powers. It is possible to foresee what will be as well. For it will certainly be of the same kind, and it cannot step out of the rhythm of what is happening now. So to observe human life for forty years is equal to observing it for ten thousand. For what more will you see?\n\nAnd: “What grew from earth goes back to earth, and what sprouted from a seed of the upper air, back to the vault of heaven.” Or else this is a dissolution of the interlockings among the atoms, and some such scattering of elements that cannot be affected.\n\nAnd: “Turning the channel aside with food and drink and spells, so as not to die.” … “But the sailing wind that blows from the gods must be borne, in toils without lament.”",
+     "greek": "Τὰ προγεγονότα ἀναθεωρεῖν, τὰς τοσαύτας τῶν ἡγεμονιῶν μεταβολάς. ἔξεστι καὶ τὰ ἐσόμενα προεφορᾶν· ὁμοειδῆ γὰρ πάντως ἔσται καὶ οὐχ οἷόν τε ἐκβῆναι τοῦ ῥυθμοῦ τῶν νῦν γινομένων· ὅθεν καὶ ἴσον τὸ τεσσαράκοντα ἔτεσιν ἱστορῆσαι τὸν ἀνθρώπινον βίον τῷ ἐπὶ ἔτη μύρια· τί γὰρ πλέον ὄψει;\n\nΚαὶ τὰ μὲν ἐκ γαίας φύντ’ εἰς γαῖαν, τὰ δ’ ἀπ’ αἰθερίου βλάστοντα γονῆς εἰς οὐράνιον πάλιν ἦλθε πόλον. Ἢ τοῦτο διάλυσις τῶν ἐν ταῖς ἀτόμοις ἀντεμπλοκῶν καὶ τοιοῦτός τις σκορπισμὸς τῶν ἀπαθῶν στοιχείων.\n\nΚαὶ σίτοισι καὶ ποτοῖσι καὶ μαγεύμασι παρεκτρέποντες ὀχετὸν ὥστε μὴ θανεῖν. . . . . . . . . . . . . .θεόθεν δὲ πνέοντ’ οὖρον ἀνάγκη τλῆναι καμάτοις ἀνοδύρτοις."
+    },
+    {
+     "ref": "6.14",
+     "revision": "casaubon-gutenberg-2680-6-14:cb2303a16a625555",
+     "rank": 3,
+     "similarity": 0.8703,
+     "words": 198,
+     "used": true,
+     "feeds": [
+      "c1",
+      "c3"
+     ],
+     "why": null,
+     "text": "Some things hasten to be, and others to be no more. And even\r\nwhatsoever now is, some part thereof hath already perished. Perpetual\r\nfluxes and alterations renew the world, as the perpetual course of time\r\ndoth make the age of the world (of itself infinite) to appear always\r\nfresh and new. In such a flux and course of all things, what of these\r\nthings that hasten so fast away should any man regard, since among all\r\nthere is not any that a man may fasten and fix upon? as if a man would\r\nsettle his affection upon some ordinary sparrow living by him, who is no\r\nsooner seen, than out of sight. For we must not think otherwise of our\r\nlives, than as a mere exhalation of blood, or of an ordinary respiration\r\nof air. For what in our common apprehension is, to breathe in the air\r\nand to breathe it out again, which we do daily: so much is it and no\r\nmore, at once to breathe out all thy respirative faculty into that\r\ncommon air from whence but lately (as being but from yesterday, and\r\nto-day), thou didst first breathe it in, and with it, life.",
+     "standard": "6.15",
+     "translation": "project-v1:6.15:b34ec42dbc427be3",
+     "english": "Some things are hurrying to come to be, others are hurrying to have come to be, and of what is coming to be some part has already been quenched. Flows and alterations renew the universe continually, just as the unbroken movement of time keeps boundless eternity always new. In this river, then, which of these things running past would anyone prize, a thing it is not possible to stand on? It is as if someone began to love one of the little sparrows flying past, and it has already gone out of sight. Each person’s life itself, too, is something of the kind: like the vapour that rises from blood and the breath drawn in from the air. For drawing in the air once and giving it back, which we do every moment, is the same kind of thing as giving back the whole power of breathing, which you acquired yesterday and the day before when you were born, to the place from which you first drew it.",
+     "greek": "Τὰ μὲν σπεύδει γίνεσθαι, τὰ δὲ σπεύδει γεγονέναι, καὶ τοῦ γινομένου δὲ ἤδη τι ἀπέσβη· ῥύσεις καὶ ἀλλοιώσεις ἀνανεοῦσι τὸν κόσμον διηνεκῶς, ὥσπερ τὸν ἄπειρον αἰῶνα ἡ τοῦ χρόνου ἀδιάλειπτος φορὰ νέον ἀεὶ παρέχεται. ἐν δὴ τούτῳ τῷ ποταμῷ τί ἄν τις τούτων τῶν παραθεόντων ἐκτιμήσειεν, ἐφ’ οὗ στῆναι οὐκ ἔξεστιν; ὥσπερ εἴ τίς τι τῶν παραπετομένων στρουθαρίων φιλεῖν ἄρχοιτο, τὸ δ’ ἤδη ἐξ ὀφθαλμῶν ἀπελήλυθεν. τοιοῦτον δή τι καὶ αὐτὴ ἡ ζωὴ ἑκάστου, οἷον ἡ ἀφ’ αἵματος ἀναθυμίασις καὶ ἡ ἐκ τοῦ ἀέρος ἀνάπνευσις· ὁποῖον γάρ ἐστι τὸ ἅπαξ ἑλκύσαι τὸν ἀέρα καὶ ἀποδοῦναι, ὅπερ παρέκαστον ποιοῦμεν, τοιοῦτόν ἐστι καὶ τὸ τὴν πᾶσαν ἀναπνευστικὴν δύναμιν, ἣν χθὲς καὶ πρῴην ἀποτεχθεὶς ἐκτήσω, ἀποδοῦναι ἐκεῖ ὅθεν τὸ πρῶτον ἔσπασας."
+    },
+    {
+     "ref": "4.29",
+     "revision": "casaubon-gutenberg-2680-4-29:5af935fadeade1ef",
+     "rank": 4,
+     "similarity": 0.8628,
+     "words": 108,
+     "used": true,
+     "feeds": [
+      "c2",
+      "c4",
+      "single"
+     ],
+     "why": null,
+     "text": "Whatsoever is now present, and from day to day hath its existence;\r\nall objects of memories, and the minds and memories themselves,\r\nincessantly consider, all things that are, have their being by change\r\nand alteration. Use thyself therefore often to meditate upon this, that\r\nthe nature of the universe delights in nothing more, than in altering\r\nthose things that are, and in making others like unto them. So that we\r\nmay say, that whatsoever is, is but as it were the seed of that which\r\nshall be. For if thou think that that only is seed, which either the\r\nearth or the womb receiveth, thou art very simple.",
+     "standard": "4.35–36",
+     "translation": "project-v1:4.35–36:c42d4148db5071a5",
+     "english": "Everything lasts a day, both what remembers and what is remembered.\n\nObserve continually that all things come about by change, and accustom yourself to the thought that the nature of the whole loves nothing so much as to change the things that exist and make new things like them. For everything that exists is, in a way, the seed of what will come from it. But you picture as seeds only those that are cast into earth or womb, and that is very much a layman’s view.",
+     "greek": "Πᾶν ἐφήμερον, καὶ τὸ μνημονεῦον καὶ τὸ μνημονευόμενον.\n\nΘεώρει διηνεκῶς πάντα κατὰ μεταβολὴν γινόμενα καὶ ἐθίζου ἐννοεῖν, ὅτι οὐδὲν οὕτως φιλεῖ ἡ τῶν ὅλων φύσις ὡς τὸ τὰ ὄντα μεταβάλλειν καὶ ποιεῖν νέα ὅμοια. σπέρμα γὰρ τρόπον τινὰ πᾶν τὸ ὃν τοῦ ἐξ αὐτοῦ ἐσομένου, σὺ δὲ μόνα σπέρματα φαντάζῃ τὰ εἰς γῆν ἣ μήτραν καταβαλλόμενα, τοῦτο δὲ λίαν ἰδιωτικόν."
+    },
+    {
+     "ref": "10.19",
+     "revision": "casaubon-gutenberg-2680-10-19:4edff44471bb06e0",
+     "rank": 5,
+     "similarity": 0.8567,
+     "words": 119,
+     "used": true,
+     "feeds": [
+      "c4"
+     ],
+     "why": null,
+     "text": "Ever to represent unto thyself; and to set before thee, both the\r\ngeneral age and time of the world, and the whole substance of it. And\r\nhow all things particular in respect of these are for their substance,\r\nas one of the least seeds that is: and for their duration, as the\r\nturning of the pestle in the mortar once about. Then to fix thy mind\r\nupon every particular object of the world, and to conceive it, (as it\r\nis indeed,) as already being in the state of dissolution, and of change;\r\ntending to some kind of either putrefaction or dispersion; or whatsoever\r\nelse it is, that is the death as it were of everything in his own kind.",
+     "standard": "10.17–18",
+     "translation": "project-v1:10.17–18:57b411591200bd9e",
+     "english": "An impression, constantly, of the whole of eternity and the whole of substance, and that all particular things are, set against substance, a fig seed, and set against time, a turn of a drill.\n\nFixing attention on each object, think of it as already dissolving and in change, and as it were in the course of rotting or scattering, or in whatever way it is the nature of each thing, so to speak, to die.",
+     "greek": "Τοῦ ὅλου αἰῶνος καὶ τῆς ὅλης οὐσίας συνεχῶς φαντασία καὶ ὅτι πάντα τὰ κατὰ μέρος, ὡς μὲν πρὸς οὐσίαν, κεγχραμίς, ὡς δὲ πρὸς χρόνον, τρυπάνου περιστροφή.\n\nΕἰς ἕκαστον τῶν ὑποκειμένων ἐφιστάντα ἐπινοεῖν αὐτὸ ἤδη διαλυόμενον καὶ ἐν μεταβολῇ καὶ οἷον σήψει ἢ σκεδάσει γινόμενον ἢ καθότι ἕκαστον πέφυκεν ὥσπερ θνῄσκειν."
+    },
+    {
+     "ref": "9.31",
+     "revision": "casaubon-gutenberg-2680-9-31:1d90eeb33fd29475",
+     "rank": 6,
+     "similarity": 0.8557,
+     "words": 110,
+     "used": true,
+     "feeds": [
+      "c4",
+      "single"
+     ],
+     "why": null,
+     "text": "To comprehend the whole world together in thy mind, and the whole\r\ncourse of this present age to represent it unto thyself, and to fix thy\r\nthoughts upon the sudden change of every particular object. How short\r\nthe time is from the generation of anything, unto the dissolution of\r\nthe same; but how immense and infinite both that which was before the\r\ngeneration, and that which after the generation of it shall be. All\r\nthings that thou seest, will soon be perished, and they that see their\r\ncorruptions, will soon vanish away themselves. He that dieth a hundred\r\nyears old, and he that dieth young, shall come all to one.",
+     "standard": "9.32b–33",
+     "translation": "project-v1:9.32b–33:3141adcee12d78f6",
+     "english": "By having encompassed the whole universe in thought, and by surveying everlasting eternity, and by thinking of the swift change of each particular thing: how short is the stretch from coming to be to dissolution, and how gaping the time before the coming to be, just as the time after the dissolution is likewise boundless.\n\nEverything you see will very quickly perish, and those who have looked on as it perished will very quickly perish themselves, and whoever dies in extreme old age will be brought level with the one who died before their time.",
+     "greek": "τῷ τὸν ὅλον κόσμον περιειληφέναι τῇ γνώμῃ καὶ τὸν ἀίδιον αἰῶνα περινοεῖν καὶ τὴν τῶν κατὰ μέρος ἑκάστου πράγματος ταχεῖαν μεταβολὴν ἐπινοεῖν, ὡς βραχὺ μὲν τὸ ἀπὸ γενέσεως μέχρι διαλύσεως, ἀχανὲς δὲ τὸ πρὸ τῆς γενέσεως, ὡς καὶ τὸ μετὰ τὴν διάλυσιν ὁμοίως ἄπειρον.\n\nΠάντα ὅσα ὁρᾷς τάχιστα φθαρήσεται καὶ οἱ φθειρόμενα αὐτὰ ἐπιδόντες τάχιστα καὶ αὐτοὶ φθαρήσονται καὶ ὁ ἐσχατόγηρως ἀποθανὼν εἰς ἴσον καταστήσεται τῷ προώρῳ."
+    },
+    {
+     "ref": "9.27",
+     "revision": "casaubon-gutenberg-2680-9-27:50a94823dd7e611e",
+     "rank": 7,
+     "similarity": 0.8333,
+     "words": 94,
+     "used": true,
+     "feeds": [
+      "c1",
+      "c3"
+     ],
+     "why": null,
+     "text": "Within a while the earth shall cover us all, and then she herself\r\nshall have her change. And then the course will be, from one period of\r\neternity unto another, and so a perpetual eternity. Now can any man\r\nthat shall consider with himself in his mind the several rollings or\r\nsuccessions of so many changes and alterations, and the swiftness of all\r\nthese rulings; can he otherwise but contemn in his heart and despise\r\nall worldly things? The cause of the universe is as it were a strong\r\ntorrent, it carrieth all away.",
+     "standard": "9.28b–29a",
+     "translation": "project-v1:9.28b–29a:f22a5d1909c2a4c8",
+     "english": "Any moment now earth will cover us all. Then earth itself will change, and those things too will change without end, and those again without end. For a person who reflects on wave after wave of changes and alterations, and on their speed, will look down on everything mortal.\n\nThe substance of the whole is a torrent: it carries everything along.",
+     "greek": "Ἤδη πάντας ἡμᾶς γῆ καλύψει, ἔπειτα καὶ αὐτὴ μεταβαλεῖ κἀκεῖνα εἰς ἄπειρον μεταβαλεῖ καὶ πάλιν ἐκεῖνα εἰς ἄπειρον. τὰς γὰρ ἐπικυματώσεις τῶν μεταβολῶν καὶ ἀλλοιώσεων ἐνθυμούμενός τις καὶ τὸ τάχος παντὸς θνητοῦ καταφρονήσει.\n\nΧειμάρρους ἡ τῶν ὅλων οὐσία· πάντα φέρει."
+    },
+    {
+     "ref": "9.17",
+     "revision": "casaubon-gutenberg-2680-9-17:65c19321ac24c511",
+     "rank": 8,
+     "similarity": 0.8282,
+     "words": 35,
+     "used": true,
+     "feeds": [
+      "c1"
+     ],
+     "why": null,
+     "text": "All things that are in the world, are always in the estate\r\nof alteration. Thou also art in a perpetual change, yea and under\r\ncorruption too, in some part: and so is the whole world.",
+     "standard": "9.19",
+     "translation": "project-v1:9.19:bd8e50656ac60c29",
+     "english": "All things are in change. You yourself too are in continual alteration and, in a certain respect, in perishing, and so is the whole universe.",
+     "greek": "Πάντα ἐν μεταβολῇ· καὶ αὐτὸς σὺ ἐν διηνεκεῖ ἀλλοιώσει καὶ κατά τι φθορᾷ, καὶ ὁ κόσμος δὲ ὅλος."
+    },
+    {
+     "ref": "2.9",
+     "revision": "casaubon-gutenberg-2680-2-9:3885cca473c97ca9",
+     "rank": 9,
+     "similarity": 0.824,
+     "words": 87,
+     "used": true,
+     "feeds": [
+      "c1",
+      "c3"
+     ],
+     "why": null,
+     "text": "Consider how quickly all things are dissolved and resolved: the\r\nbodies and substances themselves, into the matter and substance of the\r\nworld: and their memories into the general age and time of the world.\r\nConsider the nature of all worldly sensible things; of those especially,\r\nwhich either ensnare by pleasure, or for their irksomeness are dreadful,\r\nor for their outward lustre and show are in great esteem and request,\r\nhow vile and contemptible, how base and corruptible, how destitute of\r\nall true life and being they are.",
+     "standard": "2.12a",
+     "translation": "project-v1:2.12a:ae94d67e6cf79882",
+     "english": "How quickly all things vanish, the bodies themselves into the universe, the memories of them into eternity. What all the things perceived by the senses are like, and above all those that lure with pleasure or frighten with pain or are loudly celebrated through vanity: how cheap and contemptible and filthy and quick to perish and dead.",
+     "greek": "Πῶς πάντα ταχέως ἐναφανίζεται, τῷ μὲν κόσμῳ αὐτὰ τὰ σώματα, τῷ δὲ αἰῶνι αἱ μνῆμαι αὐτῶν. οἶά ἐστι τὰ αἰσθητὰ πάντα καὶ μάλιστα τὰ ἡδονῇ δελεάζοντα ἢ τῷ πόνῳ φοβοῦντα ἢ τῷ τύφῳ διαβεβοημένα· πῶς εὐτελῆ καὶ εὐκαταφρόνητα καὶ ῥυπαρὰ καὶ εὔφθαρτα καὶ νεκρά,"
+    },
+    {
+     "ref": "12.25",
+     "revision": "casaubon-gutenberg-2680-12-25:f8cd1b588960f233",
+     "rank": 10,
+     "similarity": 0.8129,
+     "words": 118,
+     "used": true,
+     "feeds": [
+      "c3",
+      "single"
+     ],
+     "why": null,
+     "text": "What a small portion of vast and infinite eternity it is, that is\r\nallowed unto every one of us, and how soon it vanisheth into the general\r\nage of the world: of the common substance, and of the common soul also\r\nwhat a small portion is allotted unto us: and in what a little clod of\r\nthe whole earth (as it were) it is that thou doest crawl. After thou\r\nshalt rightly have considered these things with thyself; fancy not\r\nanything else in the world any more to be of any weight and moment\r\nbut this, to do that only which thine own nature doth require; and to\r\nconform thyself to that which the common nature doth afford.",
+     "standard": "12.32",
+     "translation": "project-v1:12.32:307d039e1838cba3",
+     "english": "How small a part of boundless, gaping eternity has been portioned out to each one: for it vanishes very quickly into the everlasting. And how small a part of the whole of substance, and how small a part of the whole of soul. And on how small a clod of the whole earth you crawl. Reflecting on all this, picture nothing as great except this: to act as your own nature leads, and to undergo things as the common nature brings them.",
+     "greek": "Πόστον μέρος τοῦ ἀπείρου καὶ ἀχανοῦς αἰῶνος ἀπομεμέρισται ἑκάστῳ· τάχιστα γὰρ ἐναφανίζεται τῷ ἀιδίῳ· πόστον δὲ τῆς ὅλης οὐσίας· πόστον δὲ τῆς ὅλης ψυχῆς· ἐν πόστῳ δὲ βωλαρίῳ τῆς ὅλης γῆς ἕρπεις. πάντα ταῦτα ἐνθυμούμενος μηδὲν μέγα φαντάζου ἢ τό, ὡς μὲν ἡ σὴ φύσις ἄγει ποιεῖν, πάσχειν δὲ ὡς ἡ κοινὴ φύσις φέρει."
+    },
+    {
+     "ref": "6.34",
+     "revision": "casaubon-gutenberg-2680-6-34:d3329b3f17fb1d51",
+     "rank": 11,
+     "similarity": 0.8056,
+     "words": 101,
+     "used": true,
+     "feeds": [
+      "c2"
+     ],
+     "why": null,
+     "text": "He that seeth the things that are now, hath Seen all that either\r\nwas ever, or ever shall be, for all things are of one kind; and all like\r\none unto another. Meditate often upon the connection of all things in\r\nthe world; and upon the mutual relation that they have one unto another.\r\nFor all things are after a sort folded and involved one within another,\r\nand by these means all agree well together. For one thing is consequent\r\nunto another, by local motion, by natural conspiration and agreement,\r\nand by substantial union, or, reduction of all substances into one.",
+     "standard": "6.37–38",
+     "translation": "project-v1:6.37–38:94172f8e28fa5c25",
+     "english": "Whoever has seen what is now has seen everything: all that has come to be from the everlasting past and all that will be without end. For all things are of the same stock and of the same kind.\n\nReflect often on the linking together of all things in the universe and their relation to one another. For in a way all things are interwoven with one another, and all are on that account dear to one another. For this thing is next in order to another, through the movement of tension, the breathing together and the unity of substance.",
+     "greek": "Ὁ τὰ νῦν ἰδὼν πάντα ἑώρακεν, ὅσα τε ἐξ ἀιδίου ἐγένετο καὶ ὅσα εἰς τὸ ἄπειρον ἔσται· πάντα γὰρ ὁμογενῆ καὶ ὁμοειδῆ.\n\nΠολλάκις ἐνθυμοῦ τὴν ἐπισύνδεσιν πάντων τῶν ἐν τῷ κόσμῳ καὶ σχέσιν πρὸς ἄλληλα. τρόπον γάρ τινα πάντα ἀλλήλοις ἐπιπέπλεκται καὶ πάντα κατὰ τοῦτο φίλα ἀλλήλοις ἐστί· καὶ γὰρ ἄλλῳ ἑξῆς ἐστι τοῦτο διὰ τὴν τονικὴν κίνησιν καὶ σύμπνοιαν καὶ τὴν ἕνωσιν τῆς οὐσίας."
+    },
+    {
+     "ref": "4.35",
+     "revision": "casaubon-gutenberg-2680-4-35:a2cbcd372c3e35c1",
+     "rank": 12,
+     "similarity": 0.8044,
+     "words": 67,
+     "used": true,
+     "feeds": [
+      "c1",
+      "c5"
+     ],
+     "why": null,
+     "text": "To suffer change can be no hurt; as no benefit it is, by change to\r\nattain to being. The age and time of the world is as it were a flood and\r\nswift current, consisting of the things that are brought to pass in\r\nthe world. For as soon as anything hath appeared, and is passed away,\r\nanother succeeds, and that also will presently out of sight.",
+     "standard": "4.42–43",
+     "translation": "project-v1:4.42–43:6c60d009bccb1066",
+     "english": "There is nothing bad for things that are in the course of change, just as there is nothing good for things that come to exist out of change.\n\nEternity is a kind of river of things that come to be, and a violent current. For as soon as each thing has been seen it has been carried past, and another is being carried past, and yet another will be carried along.",
+     "greek": "Οὐδέν ἐστι κακὸν τοῖς ἐν μεταβολῇ γινομένοις, ὡς οὐδὲ ἀγαθὸν τοῖς ἐκ μεταβολῆς ὑφισταμένοις.\n\nΠοταμός τίς ἐστι τῶν γινομένων καὶ ῥεῦμα βίαιον ὁ αἰών· ἅμα τε γὰρ ὤφθη ἕκαστον, καὶ παρενήνεκται καὶ ἄλλο παραφέρεται, τὸ δὲ ἐνεχθήσεται."
+    },
+    {
+     "ref": "8.5",
+     "revision": "casaubon-gutenberg-2680-8-5:a5ecb9d953d67fe7",
+     "rank": 13,
+     "similarity": 0.7827,
+     "words": 60,
+     "used": true,
+     "feeds": [
+      "c2"
+     ],
+     "why": null,
+     "text": "That which the nature of the universe doth busy herself about, is;\r\nthat which is here, to transfer it thither, to change it, and thence\r\nagain to take it away, and to carry it to another place. So that thou\r\nneedest not fear any new thing. For all things are usual and ordinary;\r\nand all things are disposed by equality.",
+     "standard": "8.6",
+     "translation": "project-v1:8.6:ceabda464369291a",
+     "english": "The nature of the whole has this as its work: to move what is here over to there, to change it, to lift it from here and carry it there. All things are transformations, not so that one need fear something new. All things are familiar, and what is more, the allotments are equal.",
+     "greek": "Ἡ τῶν ὅλων φύσις τοῦτο ἔργον ἔχει, τὰ ὧδε ὄντα ἐκεῖ μετατιθέναι, μεταβάλλειν, αἴρειν ἔνθεν καὶ ἐκεῖ φέρειν. πάντα τροπαί, οὐχ ὥστε φοβηθῆναι, μή τι καινόν· πάντα συνήθη· ἀλλὰ καὶ ἴσαι αἱ ἀπονεμήσεις."
+    },
+    {
+     "ref": "9.33",
+     "revision": "casaubon-gutenberg-2680-9-33:08ce1852f72b7a96",
+     "rank": 14,
+     "similarity": 0.7761,
+     "words": 117,
+     "used": true,
+     "feeds": [
+      "c2",
+      "c5"
+     ],
+     "why": null,
+     "text": "Loss and corruption, is in very deed nothing else but change and\r\nalteration; and that is it, which the nature of the universe doth most\r\ndelight in, by which, and according to which, whatsoever is done, is\r\nwell done. For that was the estate of worldly things from the beginning,\r\nand so shall it ever be. Or wouldest thou rather say, that all things\r\nin the world have gone ill from the beginning for so many ages, and\r\nshall ever go ill? And then among so many deities, could no divine power\r\nbe found all this while, that could rectify the things of the world? Or\r\nis the world, to incessant woes and miseries, for ever condemned?",
+     "standard": "9.35",
+     "translation": "project-v1:9.35:6037c141bb51c03f",
+     "english": "Loss is nothing other than change. And in this the nature of the whole delights, the nature in accordance with which all things come about well, and from eternity have come about in the same kind of way, and without end there will be others like them. Why then do you say that all things have come about badly and all things will always go badly, and that among so many gods no power, it seems, has ever been found to set these things right, but the universe has been condemned to be held fast in bad things without a break?",
+     "greek": "Ἡ ἀποβολὴ οὐδὲν ἄλλο ἐστὶν ἢ μεταβολή. τούτῳ δὲ χαίρει ἡ τῶν ὅλων φύσις, καθ’ ἢν πάντα καλῶς γίνεται καὶ ἐξ αἰῶνος ὁμοειδῶς ἐγίνετο καὶ εἰς ἄπειρον τοιαῦθ̓ ἕτερα ἔσται. τί οὖν λέγεις ὅτι ἐγίνετό τε πάντα κακῶς καὶ πάντα ἀεὶ κακῶς ἔσται καὶ οὐδεμία ἄρα δύναμις ἐν τοσούτοις θεοῖς ἐξευρέθη ποτὲ ἡ διορθώσουσα ταῦτα, ἀλλὰ κατακέκριται ὁ κόσμος ἐν ἀδιαλείπτοις κακοῖς συνέχεσθαι;"
+    },
+    {
+     "ref": "8.16",
+     "revision": "casaubon-gutenberg-2680-8-16:71839926292f0838",
+     "rank": 15,
+     "similarity": 0.7694,
+     "words": 62,
+     "used": true,
+     "feeds": [
+      "c5",
+      "c6"
+     ],
+     "why": null,
+     "text": "Whatsoever dieth and falleth, however and wheresoever it die\r\nand fall, it cannot fall out of the world, here it have its abode\r\nand change, here also shall it have its dissolution into its proper\r\nelements. The same are the world's elements, and the elements of which\r\nthou dost consist. And they when they are changed, they murmur not; why\r\nshouldest thou?",
+     "standard": "8.18",
+     "translation": "project-v1:8.18:b4e2bf6f9da0a193",
+     "english": "What has died does not fall outside the universe. If it stays here, it also changes here, and is dissolved into what is its own, which are the elements of the universe and of you. And these too change, and do not grumble.",
+     "greek": "Ἔξω τοῦ κόσμου τὸ ἀποθανὸν οὐ πίπτει. εἰ ὧδε μένει καὶ μεταβάλλει ὧδε καὶ διαλύεται εἰς τὰ ἴδια, ἃ στοιχεῖά ἐστι τοῦ κόσμου καὶ σά. καὶ αὐτὰ δὲ μεταβάλλει καὶ οὐ γογγύζει."
+    }
+   ],
+   "decisions": [
+    "Quotes the project’s own translation from the Greek. Passage numbers stay Casaubon’s. In modern editions 7.27 is 7.49–51, 6.14 is 6.15, 4.29 is 4.35–36, 10.19 is 10.17–18, 9.31 is 9.32b–33, 9.27 is 9.28b–29a, 9.17 is 9.19, 2.9 is 2.12a, 12.25 is 12.32, 6.34 is 6.37–38, 4.35 is 4.42–43, 8.5 is 8.6, 9.33 is 9.35 and 8.16 is 8.18; 10.7 is the same.",
+    "Reads “perish” in 10.7, “perishing” in 9.17 and “loss” in 9.33 as one thing, because 10.7 and 9.33 each say that it is change.",
+    "Sets “nothing that passes is great” beside “nothing bad” in the statement. 4.35 pairs a denial of bad with a denial of good in one sentence, but the statement’s “great” comes from 12.25, 9.27, 6.14 and 2.9, not from 4.35.",
+    "Leaves out what belongs to other articles: that what I give back at death I took in only “yesterday and the day before” (10.7, 6.14), the subject of Article 33; that all things are linked and dear to one another (6.34), Article 4’s subject; and the changes of ruling powers that open 7.27."
+   ],
+   "limit": "Article 3 already says that I accept what happens without complaint, which claim 5 comes near, and that none of it is unusual, which claim 2’s “nothing comes that is new in kind” comes near, though claim 2 speaks of one kind across all time, not of the ordinariness of what happens to me; Article 5 says that nature makes new things of what it takes back. Claims 5 and 6 come near Article 36 (no change of my life, its ending included, is bad) and Article 10 (death is a dissolving of my elements), the said-once 9.31 is Article 35’s point that a long life and a short one come to the same, and claims 2 and 6 come near Articles 30 and 33 on sameness and on matter reshaped. What this article adds is change itself, in all things and not only in my death: it is everywhere, fast and of one kind, it is nothing bad, and nothing that passes is great."
+  },
+  {
+   "number": 33,
+   "section": "c4.s2",
+   "title": "The same matter, reshaped",
+   "edition": "project-v1",
+   "statement": {
+    "t": "What I am made of came out of the whole, goes back into it and is shaped again, and my ending belongs to the way I am made.",
+    "parts": [
+     {
+      "words": "What I am made of came out of the whole",
+      "ids": [
+       "4.5a",
+       "5.13c",
+       "4.12a"
+      ],
+      "refs": [
+       "4.5",
+       "5.13",
+       "4.12"
+      ]
+     },
+     {
+      "words": "goes back into it",
+      "ids": [
+       "7.7a",
+       "4.12b",
+       "5.4b"
+      ],
+      "refs": [
+       "7.7",
+       "4.12",
+       "5.4"
+      ]
+     },
+     {
+      "words": "is shaped again",
+      "ids": [
+       "7.17a",
+       "5.13b"
+      ],
+      "refs": [
+       "7.17",
+       "5.13"
+      ]
+     },
+     {
+      "words": "my ending belongs to the way I am made",
+      "ids": [
+       "8.18a",
+       "4.5b"
+      ],
+      "refs": [
+       "8.18",
+       "4.5"
+      ]
+     }
+    ],
+    "inferences": [],
+    "kind": "One cycle traced, and what it means for the end",
+    "form": "Claims 1 to 3 follow the same material through one cycle: it is made into one thing after another, none of it goes into nothing, and I go back into what I came from. Claim 4 says what this means for my ending: it was intended as my beginning was."
+   },
+   "groups": [
+    {
+     "key": "why",
+     "name": "Why",
+     "asks": "The ground for the statement.",
+     "items": [
+      "c1",
+      "c2",
+      "c3",
+      "c4"
+     ],
+     "claims": [
+      "c1",
+      "c2",
+      "c3",
+      "c4"
+     ],
+     "single": []
+    },
+    {
+     "key": "action",
+     "name": "In action",
+     "asks": "What follows for what I do.",
+     "items": [
+      "5.4a"
+     ],
+     "claims": [],
+     "single": [
+      "5.4a"
+     ]
+    },
+    {
+     "key": "practice",
+     "name": "Practice",
+     "asks": "An exercise I can repeat.",
+     "items": [],
+     "claims": [],
+     "single": [],
+     "empty": "No passage in this section gives an exercise to repeat; they describe what happens to what I am made of."
+    },
+    {
+     "key": "breaks",
+     "name": "When it breaks",
+     "asks": "What failing looks like, and the way back.",
+     "items": [],
+     "claims": [],
+     "single": [],
+     "empty": "No passage in this section describes what failing looks like here or how to come back from it."
+    },
+    {
+     "key": "doubt",
+     "name": "If I doubt it",
+     "asks": "What still holds if the statement is not true.",
+     "items": [
+      "6.4b",
+      "5.13d"
+     ],
+     "claims": [],
+     "single": [
+      "6.4b",
+      "5.13d"
+     ]
+    }
+   ],
+   "colors": {
+    "7.17": 1,
+    "5.13": 2,
+    "7.7": 3,
+    "4.12": 4,
+    "4.5": 5,
+    "5.4": 1,
+    "8.18": 2,
+    "6.4": 3
+   },
+   "map": {
+    "points": [
+     [
+      -0.0006,
+      -0.1037
+     ],
+     [
+      -0.4004,
+      -0.3617
+     ],
+     [
+      -0.3406,
+      0.4134
+     ],
+     [
+      -0.1134,
+      -0.6743
+     ],
+     [
+      -0.8462,
+      -0.0475
+     ],
+     [
+      0.6078,
+      0.3251
+     ],
+     [
+      0.1335,
+      0.9065
+     ],
+     [
+      0.9598,
+      -0.4578
+     ]
+    ],
+    "stress": 0.218,
+    "sim": [
+     [
+      1.0,
+      0.716,
+      0.676,
+      0.675,
+      0.62,
+      0.609,
+      0.54,
+      0.487
+     ],
+     [
+      0.716,
+      1.0,
+      0.657,
+      0.693,
+      0.651,
+      0.576,
+      0.493,
+      0.471
+     ],
+     [
+      0.676,
+      0.657,
+      1.0,
+      0.636,
+      0.583,
+      0.58,
+      0.594,
+      0.454
+     ],
+     [
+      0.675,
+      0.693,
+      0.636,
+      1.0,
+      0.637,
+      0.548,
+      0.477,
+      0.485
+     ],
+     [
+      0.62,
+      0.651,
+      0.583,
+      0.637,
+      1.0,
+      0.504,
+      0.515,
+      0.398
+     ],
+     [
+      0.609,
+      0.576,
+      0.58,
+      0.548,
+      0.504,
+      1.0,
+      0.552,
+      0.501
+     ],
+     [
+      0.54,
+      0.493,
+      0.594,
+      0.477,
+      0.515,
+      0.552,
+      1.0,
+      0.492
+     ],
+     [
+      0.487,
+      0.471,
+      0.454,
+      0.485,
+      0.398,
+      0.501,
+      0.492,
+      1.0
+     ]
+    ],
+    "lowest": 0.398,
+    "highest": 0.716,
+    "refs": [
+     "7.17",
+     "6.4",
+     "5.13",
+     "7.7",
+     "4.12",
+     "4.5",
+     "5.4",
+     "8.18"
+    ],
+    "around": {
+     "near": [
+      {
+       "id": "c4.s1",
+       "title": "All things pass",
+       "chapter": "Change",
+       "size": 15,
+       "provisional": false,
+       "article": 32,
+       "similarity": 0.878
+      },
+      {
+       "id": "c6.s4",
+       "title": "The reason that governs the whole",
+       "chapter": "The whole and my place in it",
+       "size": 12,
+       "provisional": false,
+       "article": 4,
+       "similarity": 0.826
+      },
+      {
+       "id": "c7.s5",
+       "title": "How my soul uses itself",
+       "chapter": "Other minds, fame and harm",
+       "size": 18,
+       "provisional": false,
+       "article": 31,
+       "similarity": 0.783
+      },
+      {
+       "id": "c6.s3",
+       "title": "What happens to me",
+       "chapter": "The whole and my place in it",
+       "size": 15,
+       "provisional": false,
+       "article": 3,
+       "similarity": 0.781
+      }
+     ],
+     "lowest": 0.521,
+     "highest": 0.878,
+     "farthest": "Short sayings",
+     "border": [],
+     "weakest_member": 0.681,
+     "outside": [
+      {
+       "ref": "10.7",
+       "similarity": 0.84,
+       "section": "All things pass"
+      },
+      {
+       "ref": "7.27",
+       "similarity": 0.792,
+       "section": "All things pass"
+      },
+      {
+       "ref": "6.14",
+       "similarity": 0.778,
+       "section": "All things pass"
+      }
+     ],
+     "outside_closer": 34
+    }
+   },
+   "voices": {
+    "seneca": {
+     "becomes": "With Seneca, claims 1, 2 and 3 each gain a second author, and the article gains what Marcus leaves out here: an exercise for facing death, what failing looks like and the way back, and what holds if death is simply the end. He limits claim 4: death is no evil, but it keeps a look of evil.",
+     "statement": "With Seneca the statement stands and takes in the other case: if death is the end and not a change, ceasing to exist is the same as never having begun.",
+     "items": [
+      {
+       "effect": "stronger",
+       "claim": "c1",
+       "piece": {
+        "id": "S30.11a",
+        "ref": "Ep. 30.11",
+        "author": "seneca",
+        "quote": "she but resolves that which she has compounded, and compounds again that which she has resolved.",
+        "at": 292,
+        "in": "c1",
+        "follows": "Nature takes apart what she has put together, and puts together again what she has taken apart.",
+        "context": "Letter 30, on facing death calmly: death’s rule is the same for everyone. “She” is Nature, and what she takes apart and puts together again are living things.",
+        "gives": [
+         "Out of the same material, the nature of the whole makes one thing after another"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c2",
+       "piece": {
+        "id": "S71.13a",
+        "ref": "Ep. 71.13",
+        "author": "seneca",
+        "quote": "Whatever is will cease to be, and yet it will not perish, but will be resolved into its elements.",
+        "at": 425,
+        "in": "c2",
+        "follows": "Everything that exists will come to an end, yet it will not perish: it will be resolved into its elements.",
+        "context": "Letter 71, on the supreme good: everything, earth and stars included, is born, grows and is destroyed. “Whatever is” is every thing in the world.",
+        "gives": [
+         "will perish into nothing"
+        ]
+       }
+      },
+      {
+       "effect": "stronger",
+       "claim": "c3",
+       "piece": {
+        "id": "S36.10a",
+        "ref": "Ep. 36.10",
+        "author": "seneca",
+        "quote": "re-absorbed into the world of things, from which they have come forth",
+        "at": 139,
+        "in": "c3",
+        "follows": "Things that vanish from sight are taken back into the world they came from.",
+        "context": "Letter 36, to someone who craves a longer life: things that vanish from sight go back into the world. Seneca adds that they come forth again, a return Marcus does not speak of here.",
+        "gives": [
+         "I go back into what I came from"
+        ]
+       }
+      },
+      {
+       "effect": "wider",
+       "key": "w1",
+       "label": "doubt",
+       "role": "If death is simply the end",
+       "t": "Death is either an end or a change. If it is an end, I do not fear ceasing to exist: it is the same as never having begun, and a lamp is no worse off when it is put out than before it was lit.",
+       "why": "Marcus’s passages here hold that nothing of me goes into nothing; none asks what is left if death is simply the end. Seneca takes that case and answers it: ceasing to exist is the same as not having begun.",
+       "support": [
+        {
+         "id": "S65.24a",
+         "ref": "Ep. 65.24",
+         "author": "seneca",
+         "quote": "And what is death? It is either the end, or a process of change.",
+         "at": 255,
+         "in": "w:w1",
+         "follows": "Death is one of two things: an end, or a change.",
+         "context": "The close of Letter 65, on the first cause: God is to the universe as the soul is to the body. Seneca then asks what death is.",
+         "gives": [
+          "Death is either an end or a change"
+         ]
+        },
+        {
+         "id": "S65.24b",
+         "ref": "Ep. 65.24",
+         "author": "seneca",
+         "quote": "I have no fear of ceasing to exist; it is the same as not having begun.",
+         "at": 320,
+         "in": "w:w1",
+         "follows": "Seneca does not fear ceasing to exist, because that is the same as never having begun.",
+         "context": "The close of Letter 65: having said that death is either an end or a change, Seneca takes the first case. “It” is ceasing to exist.",
+         "gives": [
+          "I do not fear ceasing to exist",
+          "it is the same as never having begun"
+         ]
+        },
+        {
+         "id": "S54.5a",
+         "ref": "Ep. 54.5",
+         "author": "seneca",
+         "quote": "would you not say that one was the greatest of fools who believed that a lamp was worse off when it was extinguished than before it was lighted?",
+         "at": 15,
+         "in": "w:w1",
+         "follows": "A lamp is no worse off once it is put out than it was before it was lit.",
+         "context": "Letter 54, written after an asthma attack: death is non-existence, as before birth. The lamp stands for us, lit at birth and put out at death.",
+         "gives": [
+          "a lamp is no worse off when it is put out than before it was lit"
+         ]
+        }
+       ]
+      },
+      {
+       "effect": "wider",
+       "key": "w2",
+       "label": "practice",
+       "role": "Hardening by practice",
+       "t": "Death is not a thing I can easily ignore. I harden my mind by long practice, so that it learns to bear the sight and the approach of death.",
+       "why": "No passage of Marcus in this section gives an exercise. Seneca gives one, long practice in facing death, and gives it because death is hard to ignore.",
+       "support": [
+        {
+         "id": "S82.16a",
+         "ref": "Ep. 82.16",
+         "author": "seneca",
+         "quote": "although death is something indifferent, it is nevertheless not a thing which we can easily ignore. The soul must be hardened by long practice, so that it may learn to endure the sight and the approach of death.",
+         "at": 11,
+         "in": "w:w2",
+         "follows": "Death is hard to ignore, so the mind must be hardened by long practice until it can bear death’s sight and approach.",
+         "context": "Letter 82, on the natural fear of death: Seneca has just said that we naturally shrink from dying. This hardening is his answer to that fear.",
+         "gives": [
+          "Death is not a thing I can easily ignore",
+          "I harden my mind by long practice",
+          "so that it learns to bear the sight and the approach of death"
+         ]
+        }
+       ]
+      },
+      {
+       "effect": "wider",
+       "key": "w3",
+       "label": "breaks",
+       "role": "Going out as I came in",
+       "t": "Failing is to be worse when I die than when I was born, and the fault is mine, not nature’s. Nature brought me into the world without desires or fears; the way back is to go out as I came in.",
+       "why": "Marcus says that I go back into what I came from, and describes no failing. Seneca names one: dying worse than I was born, with desires and fears that nature did not give me.",
+       "support": [
+        {
+         "id": "S22.15a",
+         "ref": "Ep. 22.15",
+         "author": "seneca",
+         "quote": "we are worse when we die than when we were born; but it is our fault, and not that of Nature.",
+         "at": 116,
+         "in": "w:w3",
+         "follows": "People are worse when they die than when they were born, and the fault is theirs, not nature’s.",
+         "context": "Letter 22: Seneca corrects Epicurus, who said that everyone leaves life as one just born. “We” are people in general, who die more afraid than they were born.",
+         "gives": [
+          "to be worse when I die than when I was born",
+          "the fault is mine, not nature’s"
+         ]
+        },
+        {
+         "id": "S22.15b",
+         "ref": "Ep. 22.15",
+         "author": "seneca",
+         "quote": "I brought you into the world without desires or fears, free from superstition, treachery and the other curses. Go forth as you were when you entered!",
+         "at": 264,
+         "in": "w:w3",
+         "follows": "Nature brought each of us in without desires or fears and tells us to leave as we came.",
+         "context": "Letter 22: Nature’s imagined rebuke to people who die full of fears. “I” is Nature, “you” is all of us, and “as you were when you entered” means as at birth.",
+         "gives": [
+          "Nature brought me into the world without desires or fears",
+          "to go out as I came in"
+         ]
+        }
+       ]
+      },
+      {
+       "effect": "qualified",
+       "key": "q1",
+       "claim": "c4",
+       "t": "Seneca agrees that death is no evil, but he says it is not as indifferent as how one’s hair is cut. There is implanted in us a love of ourselves and an abhorrence of dissolution, so death keeps a look of evil (Ep. 82.15). This limits the claim that there is nothing terrible in coming apart; it does not contradict it.",
+       "support": [
+        {
+         "id": "S82.15a",
+         "ref": "Ep. 82.15",
+         "author": "seneca",
+         "quote": "death is not so indifferent as the question whether your hair should be worn evenly or unevenly.",
+         "at": 100,
+         "in": "q:q1",
+         "follows": "Death matters more to us than how our hair is cut, though both are called indifferent.",
+         "context": "Letter 82, on the natural fear of death: Seneca says the things called indifferent differ among themselves, and gives death as his example."
+        },
+        {
+         "id": "S82.15b",
+         "ref": "Ep. 82.15",
+         "author": "seneca",
+         "quote": "Death belongs among those things which are not indeed evils, but still have in them a semblance of evil; for there are implanted in us love of self, a desire for existence and self-preservation, and also an abhorrence of dissolution",
+         "at": 197,
+         "in": "q:q1",
+         "follows": "Death is no evil, but it looks like one, because love of self and a shrinking from dissolution are planted in us.",
+         "context": "Letter 82, on the natural fear of death: why death, though no evil, still looks like one. The “abhorrence of dissolution” is our own coming apart."
+        }
+       ]
+      }
+     ],
+     "amend": [
+      {
+       "target": "statement",
+       "kind": "adds",
+       "t": "; and if death is simply an end, ceasing to exist is the same as never having begun",
+       "ids": [
+        "S65.24a",
+        "S65.24b"
+       ],
+       "from": [
+        "w1"
+       ]
+      },
+      {
+       "target": "c4",
+       "kind": "limits",
+       "t": "; yet death keeps a look of evil for me, since an abhorrence of dissolution is implanted in me",
+       "ids": [
+        "S82.15b"
+       ],
+       "from": [
+        "q1"
+       ]
+      }
+     ],
+     "passages": [
+      {
+       "ref": "Ep. 30.11",
+       "title": "On conquering the conqueror",
+       "text": "Death has its fixed rule,—equitable and unavoidable. Who can complain when he is governed by terms which include everyone? The chief part of equity, however, is equality. But it is superfluous at the present time to plead Nature’s cause; for she wishes our laws to be identical with her own; she but resolves that which she has compounded, and compounds again that which she has resolved.",
+       "words": 66,
+       "revision": "gummere-wikisource-30-11:dccebc04ded315f8",
+       "to_centre": 0.557,
+       "rank": 32,
+       "nearest": {
+        "ref": "4.5",
+        "similarity": 0.582
+       },
+       "sims": {
+        "7.17": 0.463,
+        "6.4": 0.434,
+        "5.13": 0.403,
+        "7.7": 0.418,
+        "4.12": 0.336,
+        "4.5": 0.582,
+        "5.4": 0.427,
+        "8.18": 0.441,
+        "Ep. 71.13": 0.491,
+        "Ep. 36.10": 0.428,
+        "Ep. 65.24": 0.42,
+        "Ep. 54.5": 0.405,
+        "Ep. 82.16": 0.466,
+        "Ep. 22.15": 0.458,
+        "Ep. 82.15": 0.497
+       },
+       "at": [
+        0.845,
+        0.1586
+       ]
+      },
+      {
+       "ref": "Ep. 71.13",
+       "title": "On the supreme good",
+       "text": "All things move in accord with their appointed times; they are destined to be born, to grow, and to be destroyed. The stars which you see moving above us, and this seemingly immovable earth to which we cling and on which we are set, will be consumed and will cease to exist. There is nothing that does not have its old age; the intervals are merely unequal at which Nature sends forth all these things towards the same goal. Whatever is will cease to be, and yet it will not perish, but will be resolved into its elements.",
+       "words": 98,
+       "revision": "gummere-wikisource-71-13:de0cb3df2946fd08",
+       "to_centre": 0.684,
+       "rank": 1,
+       "nearest": {
+        "ref": "7.17",
+        "similarity": 0.591
+       },
+       "sims": {
+        "7.17": 0.591,
+        "6.4": 0.578,
+        "5.13": 0.559,
+        "7.7": 0.554,
+        "4.12": 0.462,
+        "4.5": 0.528,
+        "5.4": 0.49,
+        "8.18": 0.543,
+        "Ep. 30.11": 0.491,
+        "Ep. 36.10": 0.572,
+        "Ep. 65.24": 0.477,
+        "Ep. 54.5": 0.428,
+        "Ep. 82.16": 0.353,
+        "Ep. 22.15": 0.435,
+        "Ep. 82.15": 0.398
+       },
+       "at": [
+        0.3359,
+        -0.1853
+       ]
+      },
+      {
+       "ref": "Ep. 36.10",
+       "title": "On the value of retirement",
+       "text": "And yet, if you are possessed by so great a craving for a longer life, reflect that none of the objects which vanish from our gaze and are re-absorbed into the world of things, from which they have come forth and are soon to come forth again, is annihilated; they merely end their course and do not perish. And death, which we fear and shrink from, merely interrupts life, but does not steal it away; the time will return when we shall be restored to the light of day; and many men would object to this, were they not brought back in forgetfulness of the past.",
+       "words": 106,
+       "revision": "gummere-wikisource-36-10:b1785bb4fa234250",
+       "to_centre": 0.616,
+       "rank": 5,
+       "nearest": {
+        "ref": "7.17",
+        "similarity": 0.549
+       },
+       "sims": {
+        "7.17": 0.549,
+        "6.4": 0.48,
+        "5.13": 0.496,
+        "7.7": 0.533,
+        "4.12": 0.474,
+        "4.5": 0.536,
+        "5.4": 0.44,
+        "8.18": 0.37,
+        "Ep. 30.11": 0.428,
+        "Ep. 71.13": 0.572,
+        "Ep. 65.24": 0.526,
+        "Ep. 54.5": 0.655,
+        "Ep. 82.16": 0.577,
+        "Ep. 22.15": 0.513,
+        "Ep. 82.15": 0.553
+       },
+       "at": [
+        0.3644,
+        -0.0834
+       ]
+      },
+      {
+       "ref": "Ep. 65.24",
+       "title": "On the first cause",
+       "text": "God’s place in the universe corresponds to the soul’s relation to man. World-matter corresponds to our mortal body; therefore let the lower serve the higher. Let us be brave in the face of hazards. Let us not fear wrongs, or wounds, or bonds, or poverty. And what is death? It is either the end, or a process of change. I have no fear of ceasing to exist; it is the same as not having begun. Nor do I shrink from changing into another state, because I shall, under no conditions, be as cramped as I am now. Farewell.",
+       "words": 98,
+       "revision": "gummere-wikisource-65-24:1d053d202019ca05",
+       "to_centre": 0.592,
+       "rank": 10,
+       "nearest": {
+        "ref": "7.17",
+        "similarity": 0.537
+       },
+       "sims": {
+        "7.17": 0.537,
+        "6.4": 0.487,
+        "5.13": 0.494,
+        "7.7": 0.44,
+        "4.12": 0.443,
+        "4.5": 0.484,
+        "5.4": 0.469,
+        "8.18": 0.372,
+        "Ep. 30.11": 0.42,
+        "Ep. 71.13": 0.477,
+        "Ep. 36.10": 0.526,
+        "Ep. 54.5": 0.477,
+        "Ep. 82.16": 0.563,
+        "Ep. 22.15": 0.447,
+        "Ep. 82.15": 0.497
+       },
+       "at": [
+        0.1782,
+        0.4142
+       ]
+      },
+      {
+       "ref": "Ep. 54.5",
+       "title": "On asthma and death",
+       "text": "And I ask you, would you not say that one was the greatest of fools who believed that a lamp was worse off when it was extinguished than before it was lighted? We mortals also are lighted and extinguished; the period of suffering comes in between, but on either side there is a deep peace. For, unless I am very much mistaken, my dear Lucilius, we go astray in thinking that death only follows, when in reality it has both preceded us and will in turn follow us. Whatever condition existed before our birth, is death. For what does it matter whether you do not begin at all, or whether you leave off, inasmuch as the result of both these states is non-existence?",
+       "words": 123,
+       "revision": "gummere-wikisource-54-5:94b98a2a310e01f6",
+       "to_centre": 0.526,
+       "rank": 71,
+       "nearest": {
+        "ref": "4.5",
+        "similarity": 0.465
+       },
+       "sims": {
+        "7.17": 0.458,
+        "6.4": 0.391,
+        "5.13": 0.446,
+        "7.7": 0.394,
+        "4.12": 0.428,
+        "4.5": 0.465,
+        "5.4": 0.414,
+        "8.18": 0.315,
+        "Ep. 30.11": 0.405,
+        "Ep. 71.13": 0.428,
+        "Ep. 36.10": 0.655,
+        "Ep. 65.24": 0.477,
+        "Ep. 82.16": 0.514,
+        "Ep. 22.15": 0.531,
+        "Ep. 82.15": 0.528
+       },
+       "at": [
+        -0.5639,
+        0.8346
+       ]
+      },
+      {
+       "ref": "Ep. 82.16",
+       "title": "On the natural fear of death",
+       "text": "Therefore, although death is something indifferent, it is nevertheless not a thing which we can easily ignore. The soul must be hardened by long practice, so that it may learn to endure the sight and the approach of death. Death ought to be despised more than it is wont to be despised. For we believe too many of the stories about death. Many thinkers have striven hard to increase its ill repute; they have portrayed the prison in the world below and the land overwhelmed by everlasting night, where Within his blood-stained cave Hell’s warder huge Doth sprawl his ugly length on half-crunched bones, And terrifies the disembodied ghosts With never-ceasing bark. Even if you can win your point and prove that these are mere stories and that nothing is left for the dead to fear, another fear steals upon you. For the fear of going to the underworld is equalled by the fear of going nowhere.",
+       "words": 157,
+       "revision": "gummere-wikisource-82-16:a86fe3732202511e",
+       "to_centre": 0.439,
+       "rank": 472,
+       "nearest": {
+        "ref": "4.5",
+        "similarity": 0.485
+       },
+       "sims": {
+        "7.17": 0.41,
+        "6.4": 0.317,
+        "5.13": 0.329,
+        "7.7": 0.375,
+        "4.12": 0.271,
+        "4.5": 0.485,
+        "5.4": 0.326,
+        "8.18": 0.252,
+        "Ep. 30.11": 0.466,
+        "Ep. 71.13": 0.353,
+        "Ep. 36.10": 0.577,
+        "Ep. 65.24": 0.563,
+        "Ep. 54.5": 0.514,
+        "Ep. 22.15": 0.46,
+        "Ep. 82.15": 0.639
+       },
+       "at": [
+        1.0,
+        0.6478
+       ]
+      },
+      {
+       "ref": "Ep. 22.15",
+       "title": "On the futility of half-way measures",
+       "text": "“No one,” he says, “leaves this world in a different manner from one who has just been born.” That is not true; for we are worse when we die than when we were born; but it is our fault, and not that of Nature. Nature should scold us, saying: “What does this mean? I brought you into the world without desires or fears, free from superstition, treachery and the other curses. Go forth as you were when you entered!”",
+       "words": 79,
+       "revision": "gummere-wikisource-22-15:a0508c3166c02a51",
+       "to_centre": 0.531,
+       "rank": 61,
+       "nearest": {
+        "ref": "4.5",
+        "similarity": 0.5
+       },
+       "sims": {
+        "7.17": 0.445,
+        "6.4": 0.358,
+        "5.13": 0.456,
+        "7.7": 0.342,
+        "4.12": 0.366,
+        "4.5": 0.5,
+        "5.4": 0.49,
+        "8.18": 0.388,
+        "Ep. 30.11": 0.458,
+        "Ep. 71.13": 0.435,
+        "Ep. 36.10": 0.513,
+        "Ep. 65.24": 0.447,
+        "Ep. 54.5": 0.531,
+        "Ep. 82.16": 0.46,
+        "Ep. 82.15": 0.439
+       },
+       "at": [
+        0.6477,
+        0.7337
+       ]
+      },
+      {
+       "ref": "Ep. 82.15",
+       "title": "On the natural fear of death",
+       "text": "Furthermore, there are vast distinctions among these qualities which we call “middle.” For example, death is not so indifferent as the question whether your hair should be worn evenly or unevenly. Death belongs among those things which are not indeed evils, but still have in them a semblance of evil; for there are implanted in us love of self, a desire for existence and self-preservation, and also an abhorrence of dissolution, because death seems to rob us of many goods and to withdraw us from the abundance to which we have become accustomed. And there is another element which estranges us from death: we are already familiar with the present, but are ignorant of the future into which we shall transfer ourselves, and we shrink from the unknown. Moreover, it is natural to fear the world of shades, whither death is supposed to lead.",
+       "words": 144,
+       "revision": "gummere-wikisource-82-15:5cb77648fca6b776",
+       "to_centre": 0.484,
+       "rank": 171,
+       "nearest": {
+        "ref": "4.5",
+        "similarity": 0.503
+       },
+       "sims": {
+        "7.17": 0.448,
+        "6.4": 0.395,
+        "5.13": 0.383,
+        "7.7": 0.384,
+        "4.12": 0.304,
+        "4.5": 0.503,
+        "5.4": 0.331,
+        "8.18": 0.301,
+        "Ep. 30.11": 0.497,
+        "Ep. 71.13": 0.398,
+        "Ep. 36.10": 0.553,
+        "Ep. 65.24": 0.497,
+        "Ep. 54.5": 0.528,
+        "Ep. 82.16": 0.639,
+        "Ep. 22.15": 0.439
+       },
+       "at": [
+        0.9486,
+        0.5082
+       ]
+      }
+     ],
+     "counts": {
+      "stronger": 3,
+      "wider": 3,
+      "qualified": 1
+     },
+     "nearest_here": 10,
+     "total": 2140
+    }
+   },
+   "section_size": 8,
+   "cohesion": 0.787,
+   "section_closeness": 0.565,
+   "in_translation": {
+    "closeness": 0.44,
+    "stayed": 7,
+    "of": 8,
+    "sections": 38
+   },
+   "sources": [
+    "7.17",
+    "6.4",
+    "5.13",
+    "7.7",
+    "4.12",
+    "4.5",
+    "5.4",
+    "8.18"
+   ],
+   "claims": [
+    {
+     "id": "c1",
+     "number": 1,
+     "role": "One material, many shapes",
+     "t": "Out of the same material, the nature of the whole makes one thing after another, and each very quickly changes into something else: what was part of one becomes part of another, and so on without end.",
+     "shared": "Both 7.17 and 5.13 follow the same material from one thing into the next: in 7.17 the material of a little horse is used “for a little tree, then for a little human, then for something else”; in 5.13 a part of me “will change into another part of the universe, and so on”. 7.17 and 6.4 both say that this is quick: “for the briefest time”, “very quickly change”.",
+     "changed": "7.17 gives the image of wax and names the shapes; the claim keeps the names and drops the wax. 5.13 says it of the parts of me; the claim says it of everything, as 7.17 and 6.4 do.",
+     "passages": [
+      "7.17",
+      "6.4",
+      "5.13"
+     ],
+     "closeness": 0.683,
+     "closeness_new": 0.487,
+     "support": [
+      {
+       "id": "7.17a",
+       "ref": "7.17",
+       "quote": "The nature of the whole, out of the whole of substance as if out of wax, at one moment shaped a little horse; then it melted that down and used its material for a little tree, then for a little human, then for something else.",
+       "at": 0,
+       "start": 0,
+       "end": 225,
+       "in": "c1",
+       "follows": "Nature makes one thing after another out of the same substance, melting each down and using its material for the next.",
+       "gives": [
+        "Out of the same material, the nature of the whole makes one thing after another",
+        "into something else",
+        "what was part of one becomes part of another"
+       ]
+      },
+      {
+       "id": "7.17b",
+       "ref": "7.17",
+       "quote": "Each of these existed for the briefest time.",
+       "at": 226,
+       "start": 226,
+       "end": 270,
+       "in": "c1",
+       "follows": "Each thing made in this way exists only for a very short time.",
+       "gives": [
+        "each very quickly changes"
+       ]
+      },
+      {
+       "id": "6.4a",
+       "ref": "6.4",
+       "quote": "All existing things will very quickly change",
+       "at": 0,
+       "start": 0,
+       "end": 44,
+       "in": "c1",
+       "follows": "Everything that exists will very soon change.",
+       "gives": [
+        "each very quickly changes"
+       ]
+      },
+      {
+       "id": "5.13b",
+       "ref": "5.13",
+       "quote": "So every part of me will be assigned, through change, to some part of the universe, and that in turn will change into another part of the universe, and so on to infinity.",
+       "at": 151,
+       "start": 151,
+       "end": 321,
+       "in": "c1",
+       "follows": "Each part of me will pass by change into some part of the universe, and that part into another, without end.",
+       "gives": [
+        "into something else",
+        "what was part of one becomes part of another",
+        "and so on without end"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "number": 2,
+     "role": "Nothing goes into nothing",
+     "t": "I am made of matter and of a cause, which is what in me acts and shapes the matter. Neither will perish into nothing, just as neither came out of nothing: the matter vanishes into the substance of the whole, and the cause is taken back up into the reason of the whole, the reason that orders all things.",
+     "shared": "5.13 names two things I am made of, “what is causal and what is material”; 7.7 names the same pair for all things, “everything material” and “every cause”. 7.7 and 4.12 both say that what goes is “taken back up into” a reason: “the reason of the whole” and “its seminal reason”.",
+     "changed": "“What in me acts and shapes the matter” is the editor’s explanation of the cause; 5.13 says only “what is causal”. 4.12 says “you” will be taken back up into “its seminal reason”, the reason of what gave birth to me; the claim says it of the cause and of the whole, as 7.7 does. “The reason that orders all things” is the editor’s gloss of 7.7’s “the reason of the whole”. No passage here says in so many words that this reason orders anything; 6.4’s left-out second saying speaks of “the reason that governs”, without saying what it governs.",
+     "passages": [
+      "5.13",
+      "7.7",
+      "4.12"
+     ],
+     "closeness": 0.619,
+     "closeness_new": 0.514,
+     "support": [
+      {
+       "id": "5.13a",
+       "ref": "5.13",
+       "quote": "I am made up of what is causal and what is material, and neither of these will perish into what is not, just as neither came to be out of what is not.",
+       "at": 0,
+       "start": 0,
+       "end": 150,
+       "in": "c2",
+       "follows": "Neither the causal nor the material in me will perish into nothing, just as neither came from nothing.",
+       "gives": [
+        "I am made of matter and of a cause",
+        "Neither will perish into nothing",
+        "just as neither came out of nothing"
+       ]
+      },
+      {
+       "id": "7.7a",
+       "ref": "7.7",
+       "quote": "Everything material very quickly vanishes into the substance of the whole",
+       "at": 0,
+       "start": 0,
+       "end": 73,
+       "in": "c2",
+       "follows": "Everything material soon disappears into the substance of the whole.",
+       "gives": [
+        "the matter vanishes into the substance of the whole"
+       ]
+      },
+      {
+       "id": "7.7b",
+       "ref": "7.7",
+       "quote": "every cause is very quickly taken back up into the reason of the whole",
+       "at": 79,
+       "start": 79,
+       "end": 149,
+       "in": "c2",
+       "follows": "Every cause is soon taken back up into the reason of the whole.",
+       "gives": [
+        "the cause is taken back up into the reason of the whole"
+       ]
+      },
+      {
+       "id": "4.12c",
+       "ref": "4.12",
+       "quote": "or rather, you will be taken back up into its seminal reason, through change.",
+       "at": 91,
+       "start": 91,
+       "end": 168,
+       "in": "c2",
+       "follows": "More exactly, I will be taken back up, through change, into the seminal reason of what gave birth to me.",
+       "gives": [
+        "is taken back up into the reason"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "number": 3,
+     "role": "Death is the change birth was",
+     "t": "My death is the same kind of change as my birth. I came to be through change, as my parents did, and I go back into what I came from: the same things from which my father and mother drew what made me, and from which I have been fed every day.",
+     "shared": "4.5 and 5.13 both set birth and death side by side as one kind of thing: “Death is the same kind of thing as birth”; “It was through a change of this kind that I too came to be”. 4.5, 4.12 and 5.4 all say that I go “into” what I came from: “a dissolving into the same”, “vanish into what gave birth to you”, “breathing my last into that from which I draw breath”. 5.13 and 4.12 both say that I “came to be” or “came to exist”, and 4.12 that I did so “as a part within something”.",
+     "changed": "4.5 speaks of death in general; the claim says “my death”. 5.4 does not name what it falls on; the claim calls it “the same things”, without naming the earth.",
+     "passages": [
+      "4.5",
+      "5.13",
+      "4.12",
+      "5.4"
+     ],
+     "closeness": 0.555,
+     "closeness_new": 0.472,
+     "support": [
+      {
+       "id": "4.5a",
+       "ref": "4.5",
+       "quote": "Death is the same kind of thing as birth, a mystery of nature: a combining out of the same elements, a dissolving into the same.",
+       "at": 0,
+       "start": 0,
+       "end": 128,
+       "in": "c3",
+       "follows": "Death is the same kind of thing as birth: a combining out of the same elements and a dissolving into them.",
+       "gives": [
+        "My death is the same kind of change as my birth",
+        "I go back into what I came from"
+       ]
+      },
+      {
+       "id": "5.13c",
+       "ref": "5.13",
+       "quote": "It was through a change of this kind that I too came to be, and my parents",
+       "at": 322,
+       "start": 322,
+       "end": 396,
+       "in": "c3",
+       "follows": "I came to be, as my parents did, through the same kind of change that will pass my parts on.",
+       "gives": [
+        "My death is the same kind of change as my birth",
+        "I came to be through change, as my parents did"
+       ]
+      },
+      {
+       "id": "4.12a",
+       "ref": "4.12",
+       "quote": "You came to exist as a part within something.",
+       "at": 0,
+       "start": 0,
+       "end": 45,
+       "in": "c3",
+       "follows": "I came to exist as a part of something larger than me.",
+       "gives": [
+        "I came to be"
+       ]
+      },
+      {
+       "id": "4.12b",
+       "ref": "4.12",
+       "quote": "You will vanish into what gave birth to you",
+       "at": 46,
+       "start": 46,
+       "end": 89,
+       "in": "c3",
+       "follows": "I will vanish into what gave birth to me.",
+       "gives": [
+        "I go back into what I came from"
+       ]
+      },
+      {
+       "id": "5.4b",
+       "ref": "5.4",
+       "quote": "breathing my last into that from which I draw breath every day, and falling on that from which my father gathered the bit of seed, my mother the bit of blood and my nurse the bit of milk; from which every day, for so many years, I have been fed and watered",
+       "at": 80,
+       "start": 80,
+       "end": 336,
+       "in": "c3",
+       "follows": "When I die I breathe out into what I breathe every day and fall onto what my parents drew me from and what has fed me.",
+       "gives": [
+        "I go back into what I came from",
+        "the same things from which my father and mother drew what made me",
+        "from which I have been fed every day"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "number": 4,
+     "role": "The ending is intended",
+     "t": "There is nothing terrible in my coming apart, just as there is nothing good in my being put together. My ending belongs to the way I am made: nature aimed at it no less than at my beginning, and it does not go against the reason on which I am built.",
+     "shared": "8.18 and 4.5 both say that the end belongs to the way a thing is made: nature “has aimed at the ending of each thing”, and death is not “contrary to the reason on which it is built”. 7.17 and 8.18 both set the end beside the beginning and weigh them alike: “taken apart” and “put together”, “ending” and “beginning”.",
+     "changed": "7.17 says it of “a little box”, after a horse, a tree and a human made of wax; the claim says it of me. “Belongs to the way I am made” is the editor’s phrase for what 8.18 and 4.5 both say: 8.18 that nature aimed at the ending, 4.5 that death does not go against the reason on which a living being is built.",
+     "passages": [
+      "7.17",
+      "8.18",
+      "4.5"
+     ],
+     "closeness": 0.532,
+     "closeness_new": 0.425,
+     "support": [
+      {
+       "id": "7.17c",
+       "ref": "7.17",
+       "quote": "But there is nothing terrible for a little box in being taken apart, just as there is nothing good in its being put together.",
+       "at": 271,
+       "start": 271,
+       "end": 396,
+       "in": "c4",
+       "follows": "Being taken apart is nothing terrible for a thing, just as being put together is nothing good for it.",
+       "gives": [
+        "There is nothing terrible in my coming apart, just as there is nothing good in my being put together"
+       ]
+      },
+      {
+       "id": "8.18a",
+       "ref": "8.18",
+       "quote": "Nature has aimed at the ending of each thing not a bit less than at its beginning and its course.",
+       "at": 0,
+       "start": 0,
+       "end": 97,
+       "in": "c4",
+       "follows": "Nature aims at the end of each thing just as much as at its beginning and its course.",
+       "gives": [
+        "My ending belongs to the way I am made",
+        "nature aimed at it no less than at my beginning"
+       ]
+      },
+      {
+       "id": "4.5b",
+       "ref": "4.5",
+       "quote": "it is not contrary to what follows in sequence for a living being with mind, nor contrary to the reason on which it is built.",
+       "at": 193,
+       "start": 193,
+       "end": 318,
+       "in": "c4",
+       "follows": "Death goes neither against what comes next for a being with a mind nor against the reason on which that being is built.",
+       "gives": [
+        "My ending belongs to the way I am made",
+        "it does not go against the reason on which I am built"
+       ]
+      }
+     ]
+    }
+   ],
+   "single": [
+    {
+     "id": "5.4a",
+     "ref": "5.4",
+     "quote": "I make my way through the things that accord with nature until I fall and rest",
+     "at": 0,
+     "start": 0,
+     "end": 78,
+     "in": "single",
+     "label": "Until I rest",
+     "t": "I make my way through the things that accord with nature until I fall and rest.",
+     "why": "Only this passage says what I do in the meantime: I go on through what accords with nature. No second passage says it, so it is not fused.",
+     "follows": "I go on through what accords with nature until I fall and rest."
+    },
+    {
+     "id": "6.4b",
+     "ref": "6.4",
+     "quote": "either they will go up in vapour, if substance is indeed a unity, or they will be scattered",
+     "at": 50,
+     "start": 50,
+     "end": 141,
+     "in": "single",
+     "label": "One whole or not",
+     "t": "Whether the stuff of the world is one continuous whole or not, what exists changes either way: if it is one, things go up in vapour; if it is not, they are scattered.",
+     "why": "Only this passage gives two pictures of what the world is made of and says what happens to things under each. 5.13 also allows for another picture, but a different one, so the two are not fused.",
+     "follows": "If the stuff of the world is one continuous whole, things will go up in vapour; if not, they will be scattered."
+    },
+    {
+     "id": "5.13d",
+     "ref": "5.13",
+     "quote": "and, for one who goes back, into another infinity. For nothing prevents one from saying so, even if the universe is governed in finite cycles.",
+     "at": 398,
+     "start": 398,
+     "end": 540,
+     "in": "single",
+     "label": "Even in finite cycles",
+     "t": "Even if the universe is governed in cycles that come to an end, nothing stops me from saying that the change which made me and will pass me on is endless both ways: back through my parents and forward through my parts.",
+     "why": "Only this passage asks whether the endless change still holds if the universe runs in cycles with an end. “So” covers both infinities 5.13 has just named, forward through my parts and back through my parents. 6.4 allows for a different picture, so the two are not fused.",
+     "follows": "Going back through one’s ancestors leads into another infinity, and one may say so even if the universe runs in finite cycles."
+    }
+   ],
+   "members": [
+    {
+     "ref": "7.17",
+     "revision": "casaubon-gutenberg-2680-7-17:f409671dd5b62120",
+     "rank": 1,
+     "similarity": 0.8453,
+     "words": 106,
+     "used": true,
+     "feeds": [
+      "c1",
+      "c4"
+     ],
+     "why": null,
+     "text": "The nature of the universe, of the common substance of all things\r\nas it were of so much wax hath now perchance formed a horse; and then,\r\ndestroying that figure, hath new tempered and fashioned the matter of it\r\ninto the form and substance of a tree: then that again into the form and\r\nsubstance of a man: and then that again into some other. Now every one\r\nof these doth subsist but for a very little while. As for dissolution,\r\nif it be no grievous thing to the chest or trunk, to be joined together;\r\nwhy should it be more grievous to be put asunder?",
+     "standard": "7.23",
+     "translation": "project-v1:7.23:f18dfcbc73bbe257",
+     "english": "The nature of the whole, out of the whole of substance as if out of wax, at one moment shaped a little horse; then it melted that down and used its material for a little tree, then for a little human, then for something else. Each of these existed for the briefest time. But there is nothing terrible for a little box in being taken apart, just as there is nothing good in its being put together.",
+     "greek": "Ἡ τῶν ὅλων φύσις ἐκ τῆς ὅλης οὐσίας ὡς κηροῦ νῦν μὲν ἱππάριον ἔπλασε, συγχέασα δὲ τοῦτο εἰς δενδρύφιον συνεχρήσατο τῇ ὕλῃ αὐτοῦ· εἶτα εἰς ἀνθρωπάριον· εἶτα εἰς ἄλλο τι· ἕκαστον δὲ τούτων πρὸς ὀλίγιστον ὑπέστη. δεινὸν δὲ οὐδὲν τὸ διαλυθῆναι τῷ κιβωτίῳ, ὥσπερ οὐδὲ τὸ συμπαγῆναι ἀγαθόν."
+    },
+    {
+     "ref": "6.4",
+     "revision": "casaubon-gutenberg-2680-6-4:faf25b5706532a54",
+     "rank": 2,
+     "similarity": 0.835,
+     "words": 95,
+     "used": true,
+     "feeds": [
+      "c1",
+      "single"
+     ],
+     "why": null,
+     "text": "All substances come soon to their change, and either they shall\r\nbe resolved by way of exhalation (if so be that all things shall be\r\nreunited into one substance), or as others maintain, they shall be\r\nscattered and dispersed. As for that Rational Essence by which all\r\nthings are governed, as it best understandeth itself, both its own\r\ndisposition, and what it doth, and what matter it hath to do with and\r\naccordingly doth all things; so we that do not, no wonder, if we wonder\r\nat many things, the reasons whereof we cannot comprehend.",
+     "standard": "6.4–5",
+     "translation": "project-v1:6.4–5:4460482eee528803",
+     "english": "All existing things will very quickly change, and either they will go up in vapour, if substance is indeed a unity, or they will be scattered.\n\nThe reason that governs knows in what condition it acts, what it does, and on what material.",
+     "greek": "Πάντα τὰ ὑποκείμενα τάχιστα μεταβαλεῖ καὶ ἤτοι ἐκθυμιαθήσεται, εἴπερ ἥνωται ἡ οὐσία, ἢ σκεδασθήσεται.\n\nὉ διοικῶν λόγος οἶδε πῶς διακείμενος καὶ τί ποιεῖ καὶ ἐπὶ τίνος ὕλης."
+    },
+    {
+     "ref": "5.13",
+     "revision": "casaubon-gutenberg-2680-5-13:fd439998a3e31bdc",
+     "rank": 3,
+     "similarity": 0.8227,
+     "words": 111,
+     "used": true,
+     "feeds": [
+      "c1",
+      "c2",
+      "c3",
+      "single"
+     ],
+     "why": null,
+     "text": "All that I consist of, is either form or matter. No corruption\r\ncan reduce either of these unto nothing: for neither did I of nothing\r\nbecome a subsistent creature. Every part of mine then will by mutation\r\nbe disposed into a certain part of the whole world, and that in time\r\ninto another part; and so _in infinitum;_ by which kind of mutation, I\r\nalso became what I am, and so did they that begot me, and they before\r\nthem, and so upwards _in infinitum_. For so we may be allowed to speak,\r\nthough the age and government of the world, be to some certain periods\r\nof time limited, and confined.",
+     "standard": "5.13",
+     "translation": "project-v1:5.13:42079d5de0d37cc1",
+     "english": "I am made up of what is causal and what is material, and neither of these will perish into what is not, just as neither came to be out of what is not. So every part of me will be assigned, through change, to some part of the universe, and that in turn will change into another part of the universe, and so on to infinity. It was through a change of this kind that I too came to be, and my parents, and, for one who goes back, into another infinity. For nothing prevents one from saying so, even if the universe is governed in finite cycles.",
+     "greek": "Ἐξ αἰτιώδους καὶ ὑλικοῦ συνέστηκα, οὐδέτερον δὲ τούτων εἰς τὸ μὴ ὂν φθαρήσεται, ὥσπερ οὐδὲ ἐκ τοῦ μὴ ὄντος ὑπέστη. οὐκοῦν καταταχθήσεται πᾶν μέρος ἐμὸν κατὰ μεταβολὴν εἰς μέρος τι τοῦ κόσμου καὶ πάλιν ἐκεῖνο εἰς ἕτερον μέρος τι τοῦ κόσμου μεταβαλεῖ καὶ ἤδη εἰς ἄπειρον. κατὰ τοιαύτην δὲ μεταβολὴν κἀγὼ ὑπέστην καὶ οἱ ἐμὲ γεννήσαντες καὶ ἐπανιόντι εἰς ἄλλο ἄπειρον. οὐδὲν γὰρ κωλύει οὕτως φάναι, κἂν κατὰ περιόδους πεπερασμένας ὁ κόσμος διοικῆται."
+    },
+    {
+     "ref": "7.7",
+     "revision": "casaubon-gutenberg-2680-7-7:c0f34cd3fb5019cb",
+     "rank": 4,
+     "similarity": 0.8182,
+     "words": 56,
+     "used": true,
+     "feeds": [
+      "c2"
+     ],
+     "why": null,
+     "text": "Whatsoever is material, doth soon vanish away into the common\r\nsubstance of the whole; and whatsoever is formal, or, whatsoever doth\r\nanimate that which is material, is soon resumed into the common reason\r\nof the whole; and the fame and memory of anything, is soon swallowed up\r\nby the general age and duration of the whole.",
+     "standard": "7.10",
+     "translation": "project-v1:7.10:1d0766e7a3ab3afa",
+     "english": "Everything material very quickly vanishes into the substance of the whole, and every cause is very quickly taken back up into the reason of the whole, and the memory of everything is very quickly buried in eternity.",
+     "greek": "Πᾶν τὸ ἔνυλον ἐναφανίζεται τάχιστα τῇ τῶν ὅλων οὐσίᾳ καὶ πᾶν αἴτιον εἰς τὸν τῶν ὅλων λόγον τάχιστα ἀναλαμβάνεται καὶ παντὸς μνήμη τάχιστα ἐγκαταχώννυται τῷ αἰῶνι."
+    },
+    {
+     "ref": "4.12",
+     "revision": "casaubon-gutenberg-2680-4-12:041e3511d466e2e1",
+     "rank": 5,
+     "similarity": 0.7796,
+     "words": 73,
+     "used": true,
+     "feeds": [
+      "c2",
+      "c3"
+     ],
+     "why": null,
+     "text": "As a part hitherto thou hast had a particular subsistence: and now\r\nshalt thou vanish away into the common substance of Him, who first begot\r\nthee, or rather thou shalt be resumed again into that original rational\r\nsubstance, out of which all others have issued, and are propagated.\r\nMany small pieces of frankincense are set upon the same altar, one drops\r\nfirst and is consumed, another after; and it comes all to one.",
+     "standard": "4.14–15",
+     "translation": "project-v1:4.14–15:76c94958fd981c8d",
+     "english": "You came to exist as a part within something. You will vanish into what gave birth to you; or rather, you will be taken back up into its seminal reason, through change.\n\nMany little lumps of incense on the same altar: one fell earlier, another later, but it makes no difference.",
+     "greek": "Ἐνυπέστης ὡς μέρος. ἐναφανισθήσῃ τῷ γεννήσαντι· μᾶλλον δὲ ἀναληφθήσῃ εἰς τὸν λόγον αὐτοῦ τὸν σπερματικὸν κατὰ μεταβολήν.\n\nΠολλὰ λιβανωτοῦ βωλάρια ἐπὶ τοῦ αὐτοῦ βωμοῦ· τὸ μὲν προκατέπεσεν, τὸ δʼ ὕστερον, διαφέρει δʼ οὐδέν."
+    },
+    {
+     "ref": "4.5",
+     "revision": "casaubon-gutenberg-2680-4-5:684db4a3eb5089b9",
+     "rank": 6,
+     "similarity": 0.7734,
+     "words": 63,
+     "used": true,
+     "feeds": [
+      "c3",
+      "c4"
+     ],
+     "why": null,
+     "text": "As generation is, so also death, a secret of nature's wisdom: a\r\nmixture of elements, resolved into the same elements again, a thing\r\nsurely which no man ought to be ashamed of: in a series of other fatal\r\nevents and consequences, which a rational creature is subject unto,\r\nnot improper or incongruous, nor contrary to the natural and proper\r\nconstitution of man himself.",
+     "standard": "4.5",
+     "translation": "project-v1:4.5:df99990a06d2e159",
+     "english": "Death is the same kind of thing as birth, a mystery of nature: a combining out of the same elements, a dissolving into the same. And in short, it is not a thing anyone would be ashamed of: for it is not contrary to what follows in sequence for a living being with mind, nor contrary to the reason on which it is built.",
+     "greek": "Ὁ θάνατος τοιοῦτον, οἷον γένεσις, φύσεως μυστήριον· σύγκρισις ἐκ τῶν αὐτῶν στοιχείων, εἰς ταὐτὰ λύσις. ὅλως δὲ οὐκ ἐφʼ ᾧ ἄν τις αἰσχυνθείη· οὐ γὰρ παρὰ τὸ ἑξῆς τῷ νοερῷ ζῴῳ οὐδὲ παρὰ τὸν λόγον τῆς κατασκευῆς."
+    },
+    {
+     "ref": "5.4",
+     "revision": "casaubon-gutenberg-2680-5-4:a715fa78cc138dfa",
+     "rank": 7,
+     "similarity": 0.7406,
+     "words": 105,
+     "used": true,
+     "feeds": [
+      "c3",
+      "single"
+     ],
+     "why": null,
+     "text": "I continue my course by actions according to nature, until I\r\nfall and cease, breathing out my last breath into that air, by which\r\ncontinually breathed in I did live; and falling upon that earth, out of\r\nwhose gifts and fruits my father gathered his seed, my mother her\r\nblood, and my nurse her milk, out of which for so many years I have\r\nbeen provided, both of meat and drink. And lastly, which beareth me that\r\ntread upon it, and beareth with me that so many ways do abuse it, or\r\nso freely make use of it, so many ways to so many ends.",
+     "standard": "5.4",
+     "translation": "project-v1:5.4:4729877091eb74ce",
+     "english": "I make my way through the things that accord with nature until I fall and rest, breathing my last into that from which I draw breath every day, and falling on that from which my father gathered the bit of seed, my mother the bit of blood and my nurse the bit of milk; from which every day, for so many years, I have been fed and watered; which bears me as I tread on it and make free use of it for so many purposes.",
+     "greek": "Πορεύομαι διὰ τῶν κατὰ φύσιν, μέχρι πεσὼν ἀναπαύσομαι ἐναποπνεύσας μὲν τούτῳ, ἐξ οὖ καθ’ ἡμέραν ἀναπνέω, πεσὼν δὲ ἐπὶ τούτῳ, ἐξ οὗ καὶ τὸ σπερμάτιον ὁ πατήρ μου συνέλεξε καὶ τὸ αἱμάτιον ἡ μήτηρ καὶ τὸ γαλάκτιον ἡ τροφός· ἐξ οὗ καθ’ ἡμέραν τοσούτοις ἔτεσι βόσκομαι καὶ ἀρδεύομαι· ὃ φέρει με πατοῦντα καὶ εἰς τοσαῦτα ἀποχρώμενον αὐτῷ."
+    },
+    {
+     "ref": "8.18",
+     "revision": "casaubon-gutenberg-2680-8-18:2571c1634cf1d512",
+     "rank": 8,
+     "similarity": 0.6812,
+     "words": 24,
+     "used": true,
+     "feeds": [
+      "c4"
+     ],
+     "why": null,
+     "text": "Nature hath its end as well in the end and final consummation of\r\nanything that is, as in the begin-nine and continuation of it.",
+     "standard": "8.20a",
+     "translation": "project-v1:8.20a:79cb8300df01bc80",
+     "english": "Nature has aimed at the ending of each thing not a bit less than at its beginning and its course.",
+     "greek": "Ἡ φύσις ἐστόχασται ἑκάστου οὐδέν τι ἔλασσον τῆς ἀπολήξεως ἢ τῆς ἀρχῆς τε καὶ διεξαγωγῆς,"
+    }
+   ],
+   "decisions": [
+    "Quotes the project’s own translation from the Greek instead of Casaubon. Passage numbers stay Casaubon’s. In modern editions 7.17 is 7.23, 6.4 is 6.4–5, 7.7 is 7.10, 4.12 is 4.14–15 and 8.18 is 8.20; 5.13, 4.5 and 5.4 are the same.",
+    "Reads the pair “what is causal and what is material” in 5.13 and the pair “every cause” and “everything material” in 7.7 as the same two things in me, and explains the cause as what in me acts and shapes the matter. In the statement, “the whole” that I came out of is the editor’s word for 4.5’s “the same elements”, 5.13’s parts of the universe and 4.12’s “something” of which I am a part.",
+    "Reads “a change of this kind” in 5.13 as the change just described, by which my parts pass into other parts of the universe. So 5.13 is taken to say that I came to be by the same kind of change as the one that ends me, and it backs “My death is the same kind of change as my birth” beside 4.5.",
+    "Applies 7.17’s last sentence, said of “a little box”, to me, since the human made of wax is one of the shapes in the same passage. Leaves out, as being about other things: the second saying of 6.4 (modern 6.5: the reason that governs knows on what material it acts) and of 4.12 (modern 4.15: lumps of incense falling earlier or later); 7.7’s “the memory of everything is very quickly buried in eternity”, which is about memory, not matter; 4.5’s “not a thing anyone would be ashamed of”, whose shame the passage does not explain (claim 4 quotes the reason that follows it); and 5.4’s “which bears me as I tread on it”, about how the earth serves me while I live."
+   ],
+   "limit": "Other articles say parts of this. Article 32 (“All things pass”) says that change is nothing bad for what is changed (its claim 5) and that a thing’s death is its dissolution into what it was made of (its claim 6). Article 10’s claim 4 says that death is a dissolving of my elements, according to nature, and so not bad. Article 36 says that my death is one more of the changes I live through (its claim 2) and that nature, not I, fixes the time and limit of my death, which is not bad (its claim 3). Claims 3 and 4 here come near all of these, and Ep. 30.11, 82.15 and 82.16 are used in Article 10 or 36 as well. Article 6 says once that everything is from nature and goes into nature (4.19), and Article 5 (its claim 3) that nature throws nothing away but takes it back into herself and makes new things out of it, which comes near claims 1 and 2 here; Ep. 36.10 is used there as well. What this article adds is that nothing of me perishes into nothing, that what I am made of is shaped into something else, that my death is the same change as my birth, and that my ending was intended as my beginning was. No passage gives an exercise or describes failing."
+  }
+ ]
+}
