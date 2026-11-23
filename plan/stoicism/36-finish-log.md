@@ -172,3 +172,29 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   downloads (md, txt, epub, CC0, Russian front matter), test that every passage is present and current. No API spend.
 - Usage check (19:25–19:40 UTC): result 24 workers this hour; writes −82% and output −90% from the peak as they finished ·
   action: no new workers; main context 454k · evidence: codeburn window 117 calls.
+- **Russian articles (24 Nov, started):** owner's “do it”. 38 articles + page-wide words in 39 units (8,248 strings) under
+  `scratchpad/ru-art` (`tool.py` prep / check / merge; quotes re-cut as exact cuts of the ru-v1 passages, gives and statement
+  parts checked inside their Russian sentences). 11 Opus translators, Sonnet checkers, an Opus engineer on `--lang ru` and the
+  page's EN/RU switch. Translators found two ru-v1 faults, both corrected with recorded decisions: 8.3 «в рабстве у скольких
+  вещей» decided what the Greek leaves open (now «у скольких быть в рабстве»); 3.11a and 10.11a share a sentence in the
+  English but differed in Russian (now both «порождает»). Glossary fixed: Почему · На деле · Упражнение · Когда не выходит ·
+  Если я сомневаюсь.
+- Usage check (20:13–20:28 UTC): result 11 translators started from an idle window; worker contexts ~230k · action: none,
+  batches of 3, ≤12 agents · evidence: codeburn window 210 calls.
+- **Russian articles settled (24 Nov):** 39 units checked by Sonnet, 121 points settled in writing (103 accepted, 17 partly,
+  1 declined: «мне нечего удивляться» is right for “I need not wonder”). Real sense errors caught: 32 “sameness” rendered
+  «неизменность», 19 “need not” made a prohibition, 6 «маленький человек» (social, not stature), 28 “not to harm” read as
+  oneself, 16 a counterfactual made real. `lint.py` (side names, glossary) 0 across all units; `tool.py check` now also runs
+  the build's inference rule. Overlay `content/aurelius/translation/articles-ru-v1.json` merged with per-article digests of
+  the English. Translation page JSON and Russian Marcus downloads rebuilt for the 8.3 and 3.11a corrections.
+- Usage check (20:42–20:57 UTC): result writes −98%, calls −92% as the 22 workers finished; only the engineer runs (ctx
+  365k) · action: none · evidence: codeburn window 28 calls.
+- **Russian Constitution page (24 Nov):** `scripts/aurelius-constitution.py --lang ru` applies the overlay, puts the ru-v1
+  Russian in every passage and runs every build rule on the Russian (quotes, gives, parts, inferences once, contexts
+  20–260); it refuses a missing or extra path, an English digest mismatch and a stale ru-v1. Writes
+  `public/apps/stoic-constitution.ru.json` and `stoic-constitution/ru/c1–c7.json`; the English build is byte-identical.
+  The page has an EN/RU switch (remembered; `?lang=ru`), a Russian dictionary with plurals, and Russian downloads in the
+  footer. Tests 1209/1209; browser check 113 ok (EN sweep, 27 cases, 44 RU runs at 360/390/1440, with and without
+  Seneca). Known: RU c3 is 1.5 MB (gzip ~378 KB); the header wraps to two rows on a phone. Fixed on the way: the English
+  toast said “In this chapter” but counted all articles. Rule 25 added to `apps/aurelius/prompts/constitution-article.md`.
+- Usage check (20:58–21:13 UTC): result quiet, workers done; writes −60% · action: none · evidence: 31 calls.

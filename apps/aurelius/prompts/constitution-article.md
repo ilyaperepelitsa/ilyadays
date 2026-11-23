@@ -256,4 +256,15 @@ Each rule is followed by the feedback it came from.
     “we're translating from english so it should be easier than latin and greek”, “opus it is for
     english to russian”. So: another language is made from the settled English, by Claude Opus 5.5,
     checked by a different model against the English; the translators' notes stay in English.)*
+25. **An article in another language is re-cut, not re-translated.** *(24 Nov 2026, after the owner's
+    “do it” for the Russian articles.)* The article's own words (claims, statement, notes) are
+    translated from the English; every quote is cut from that language's settled passage, every
+    “gives” phrase and statement part must stand inside its translated sentence, and every inference
+    word must stand there once, so the same build rules hold in each language. A note that is true only
+    of the English wording (“both passages say ‘see’”) is rewritten to be true of the translated
+    passages, or dropped. The page's own terms (the five sides, Backs / Adds / Limits, “said once”)
+    are fixed in one glossary before translators start, because eleven translators chose four sets of
+    side names when they were not. When an article translator finds the settled passage wrong (8.3
+    «вещей» decided what the Greek leaves open), the passage is corrected with a recorded decision
+    and every quote of it re-cut.
 

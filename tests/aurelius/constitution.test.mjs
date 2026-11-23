@@ -144,11 +144,12 @@ test('what only one passage says is kept apart with the reason, and never counte
 });
 
 // What is wrong with an article's statement, as a list of sentences; empty when it is sound.
-const statementProblems = (article) => {
+// Russian runs about a third longer than English, so the Russian edition passes a longer limit.
+const statementProblems = (article, longest = 140) => {
   const where = `article ${article.number}`, problems = [];
   const ids = new Map([...article.claims.flatMap((claim) => claim.support), ...article.single].map((piece) => [piece.id, piece]));
   const { statement } = article;
-  if (!(statement.t.length > 30 && statement.t.length < 140 && statement.kind && statement.form)) problems.push(`${where}: statement length, kind or form`);
+  if (!(statement.t.length > 30 && statement.t.length < longest && statement.kind && statement.form)) problems.push(`${where}: statement length (${statement.t.length}, under ${longest}), kind or form`);
   if (statement.parts.length < 2) problems.push(`${where}: the statement is traced in parts`);
   for (const part of statement.parts) {
     if (!statement.t.toLowerCase().includes(part.words.toLowerCase())) problems.push(`${where}: “${part.words}” is not in the statement`);
@@ -360,5 +361,192 @@ test('Seneca is published only in the project’s own translation from the Latin
       assert.equal(passage.revision, mine.revision, `article ${article.number}: ${passage.ref} is not the stored revision`);
       assert.equal(passage.text, mine.english, `article ${article.number}: ${passage.ref} text differs from the stored English`);
     }
+  }
+});
+
+// ---------- the Russian edition ----------
+// scripts/aurelius-constitution.py --lang ru writes stoic-constitution.ru.json and stoic-constitution/ru/<chapter>.json from the
+// overlay content/aurelius/translation/articles-ru-v1.json and the passages' Russian in ru-v1.json. Until the overlay is merged and
+// built, these tests skip and say so. STOIC_RU_DIR points them at another build (a development build is --partial and fails the
+// completeness test on purpose).
+const RU_DIR = process.env.STOIC_RU_DIR ? new URL(`file://${process.env.STOIC_RU_DIR.replace(/\/?$/, '/')}`) : RECORD_DIR;
+const OVERLAY_URL = new URL('../../content/aurelius/translation/articles-ru-v1.json', import.meta.url);
+const ruIndexUrl = new URL('stoic-constitution.ru.json', RU_DIR);
+const ruSkip = !fs.existsSync(ruIndexUrl) ? `the Russian record ${ruIndexUrl.pathname} is not built yet (merge the overlay, then run scripts/aurelius-constitution.py --lang ru)`
+  : !process.env.STOIC_RU_DIR && !fs.existsSync(OVERLAY_URL) ? 'the Russian record exists but the overlay articles-ru-v1.json does not' : false;
+const ruRecord = ruSkip ? null : (() => {
+  const index = JSON.parse(fs.readFileSync(ruIndexUrl, 'utf8')), full = new Map();
+  for (const chapter of [...new Set(index.articles.map((stub) => stub.chapter))]) {
+    for (const article of JSON.parse(fs.readFileSync(new URL(`stoic-constitution/ru/${chapter}.json`, RU_DIR), 'utf8')).articles) full.set(article.number, article);
+  }
+  return {...index, stubs: index.articles, articles: index.articles.map((stub) => full.get(stub.number))};
+})();
+const russianOf = new Map(ruSkip ? [] : read('content/aurelius/translation/ru-v1.json').passages.map((p) => [p.work + ':' + p.ref, p]));
+const inRussian = (article) => ruRecord.overlay.articles.includes(article.number);
+// The paths of an authored article that carry words the page shows (the same rule as the build's overlay_paths).
+const RU_TEXT_KEYS = new Set(['title', 't', 'kind', 'form', 'why', 'role', 'shared', 'changed', 'follows', 'note', 'label', 'limit', 'context',
+  'becomes', 'statement', 'words', 'doubt', 'action', 'practice', 'breaks']);
+const RU_ID = /^(?:[a-z]?\d+(?:\.\d+)*[a-z]?|c\d+|w\d+|S[\d.]+[a-z])$/;
+const overlayPaths = (article) => {
+  const out = new Set();
+  const walk = (x, path) => {
+    if (Array.isArray(x)) x.forEach((v, i) => walk(v, [...path, i]));
+    else if (x && typeof x === 'object') { for (const [k, v] of Object.entries(x)) if (k !== 'searched') walk(v, [...path, k]); }
+    else if (typeof x === 'string') {
+      const key = [...path].reverse().find((p) => typeof p === 'string') || '';
+      if ((['quote', 'gives', 'decisions'].includes(key) || RU_TEXT_KEYS.has(key) || ['limit', 'decisions', 'aside', 'empty'].includes(path[0])) && !RU_ID.test(x)) out.add(path.join('/'));
+    }
+  };
+  walk(article, []);
+  return out;
+};
+// English in a Russian string: three or more words in Latin letters that make up 40% or more of its letters. Names, references and
+// a Greek term in transliteration stay allowed.
+const LATIN_OK = /^(Ep|EPUB|OpenAI|text|embedding|large|Claude|Opus|[ivxlcdm]+)$/i;
+const english = (text) => {
+  const latin = (text.match(/[A-Za-z][A-Za-z’'-]+/g) || []).filter((word) => !LATIN_OK.test(word));
+  return latin.length >= 3 && latin.join('').length >= 0.4 * (text.match(/\p{L}/gu) || []).length;
+};
+
+test('Russian: the overlay is complete and current, and every passage’s Russian was made from the published English', {skip: ruSkip}, () => {
+  const authored = read('content/aurelius/constitution.json');
+  const overlay = process.env.STOIC_RU_DIR && !fs.existsSync(OVERLAY_URL) ? null : JSON.parse(fs.readFileSync(OVERLAY_URL, 'utf8'));
+  assert.equal(ruRecord.language, 'ru');
+  assert.equal(ruRecord.overlay.partial, false, 'the published Russian record is not a development (partial) build');
+  assert.deepEqual(ruRecord.overlay.articles, authored.articles.map((article) => article.number), 'every article is in Russian');
+  if (overlay) {
+    assert.equal(ruRecord.overlay.id, overlay.id);
+    for (const article of authored.articles) {
+      const want = overlayPaths(article), have = new Set(Object.keys(overlay.articles[String(article.number)] || {}));
+      assert.deepEqual([...want].filter((p) => !have.has(p)), [], `article ${article.number}: paths of the English without a Russian`);
+      assert.deepEqual([...have].filter((p) => !want.has(p)), [], `article ${article.number}: paths not in the present English (the English changed under the overlay)`);
+    }
+    const letters = read('content/aurelius/translation/seneca-v1.json').letters;
+    const global = [...authored.labels.flatMap((l, i) => ['name', 'asks'].map((k) => `labels/${i}/${k}`)), ...authored.effects.flatMap((l, i) => ['name', 'asks'].map((k) => `effects/${i}/${k}`)),
+      ...Object.keys(authored.chapters).flatMap((c) => [`chapters/${c}/title`, `chapters/${c}/summary`]), 'chapter_order_note', ...Object.keys(letters).map((n) => `letters/${n}`)];
+    assert.deepEqual(Object.keys(overlay.global).sort(), global.sort(), 'the page-wide strings');
+  }
+  // Every Russian passage was made from the English published now.
+  const current = new Map([...read('content/aurelius/translation/project-v1.json').passages.map((p) => ['marcus:' + p.standard_ref, p.revision]),
+    ...read('content/aurelius/translation/seneca-v1.json').passages.map((p) => ['seneca:' + p.ref, p.revision])]);
+  const stale = [...russianOf.values()].filter((p) => current.get(p.work + ':' + p.ref) !== p.english_revision).map((p) => p.ref);
+  assert.deepEqual(stale, [], 'Russian made from an English that is no longer published');
+});
+
+test('Russian: every quote is one exact span of its passage’s Russian, and the passages are the stored Russian', {skip: ruSkip}, () => {
+  for (const article of ruRecord.articles.filter(inRussian)) {
+    const where = `article ${article.number}`;
+    const texts = new Map(article.members.map((member) => [member.ref, member.text]));
+    for (const member of article.members) {
+      const stored = russianOf.get('marcus:' + member.standard);
+      assert.ok(stored && member.text === stored.russian && member.russian === stored.revision, `${where}: ${member.ref} is the stored Russian of ${member.standard}`);
+    }
+    for (const piece of piecesOf(article)) {
+      const text = texts.get(piece.ref);
+      assert.equal(occurrences(text, piece.quote), 1, `${where} ${piece.id} is one exact span of the Russian`);
+      assert.equal(text.slice(piece.at, piece.at + piece.quote.length), piece.quote, `${where} ${piece.id}`);
+      assert.equal(Array.from(text).slice(piece.start, piece.end).join(''), piece.quote, `${where} ${piece.id}`);
+    }
+    const seneca = article.voices?.seneca;
+    if (!seneca) continue;
+    const letters = new Map(seneca.passages.map((passage) => [passage.ref, passage.text]));
+    for (const passage of seneca.passages) {
+      const stored = russianOf.get('seneca:' + passage.ref);
+      assert.ok(stored && passage.text === stored.russian && passage.russian === stored.revision, `${where}: ${passage.ref} is the stored Russian`);
+    }
+    for (const item of seneca.items) {
+      for (const piece of item.piece ? [item.piece] : item.support) {
+        assert.equal(occurrences(letters.get(piece.ref), piece.quote), 1, `${where} ${piece.id} is one exact span of the Russian`);
+        assert.equal(letters.get(piece.ref).slice(piece.at, piece.at + piece.quote.length), piece.quote, `${where} ${piece.id}`);
+        assert.ok(piece.context.length >= 20 && piece.context.length <= 260, `${where} ${piece.id}: context of 20 to 260 characters`);
+      }
+    }
+  }
+});
+
+test('Russian: gives phrases, statement parts and inferences stand in their Russian sentences', {skip: ruSkip}, () => {
+  const once = (sentence, words) => [...sentence.matchAll(new RegExp('(?<![\\p{L}\\p{N}_])' + escape(words) + '(?![\\p{L}\\p{N}_])', 'gu'))].length;
+  for (const article of ruRecord.articles.filter(inRussian)) {
+    const where = `article ${article.number}`;
+    assert.deepEqual(statementProblems(article, 190), [], where);
+    for (const claim of article.claims) {
+      for (const piece of claim.support) for (const words of piece.gives ?? []) assert.ok(claim.t.toLowerCase().includes(words.toLowerCase()), `${where} ${piece.id}: «${words}» is in claim ${claim.number}`);
+      for (const item of claim.inferences ?? []) assert.equal(once(claim.t, item.words), 1, `${where} claim ${claim.number}: the inference «${item.words}» stands once`);
+    }
+    for (const item of article.statement.inferences ?? []) assert.equal(once(article.statement.t, item.words), 1, `${where} statement: the inference «${item.words}» stands once`);
+    const seneca = article.voices?.seneca;
+    for (const item of seneca?.items ?? []) {
+      const sentence = item.effect === 'stronger' ? article.claims.find((claim) => claim.id === item.claim).t : item.t;
+      for (const piece of item.piece ? [item.piece] : item.support) for (const words of piece.gives ?? []) assert.ok(sentence.toLowerCase().includes(words.toLowerCase()), `${where} ${piece.id}: «${words}»`);
+    }
+    for (const clause of seneca?.amend ?? []) assert.ok(/^[ ,;]/.test(clause.t) && !/[.!?]\s*$/.test(clause.t), `${where}: Seneca's clause continues the sentence: «${clause.t}»`);
+  }
+});
+
+test('Russian: the shown strings carry no English beyond names and references', {skip: ruSkip}, () => {
+  const found = [];
+  const look = (where, value) => { if (typeof value === 'string' && english(value)) found.push(`${where}: ${value.slice(0, 60)}`); };
+  look('status', ruRecord.status);
+  look('vectors', ruRecord.method.vectors);
+  for (const key of ['name', 'work', 'short']) look('author ' + key, ruRecord.authors[0][key]);
+  for (const part of [...ruRecord.labels, ...ruRecord.effects]) { look('label', part.name); look('label', part.asks); }
+  look('chapter_order_note', ruRecord.chapter_order_note);
+  for (const chapter of ruRecord.chapters) { look(chapter.id, chapter.title); look(chapter.id, chapter.summary); for (const section of chapter.sections) look(section.id, section.title); }
+  for (const article of ruRecord.articles.filter(inRussian)) {
+    const at = `article ${article.number}`;
+    for (const value of [article.title, article.statement.t, article.statement.kind, article.statement.form, article.limit, ...article.decisions]) look(at, value);
+    for (const part of article.statement.parts) look(at, part.words);
+    for (const group of article.groups) { look(at, group.name); look(at, group.asks); look(at, group.empty); }
+    for (const claim of article.claims) {
+      for (const value of [claim.role, claim.t, claim.shared, claim.changed, ...(claim.inferences ?? []).map((item) => item.why)]) look(`${at} ${claim.id}`, value);
+      for (const piece of claim.support) for (const value of [piece.follows, piece.note, ...(piece.gives ?? [])]) look(`${at} ${piece.id}`, value);
+    }
+    for (const item of article.single) for (const value of [item.label, item.t, item.why, item.follows]) look(`${at} ${item.id}`, value);
+    for (const member of article.members) look(`${at} ${member.ref}`, member.why);
+    for (const item of article.map.around.near) look(`${at} neighbour`, item.title);
+    const seneca = article.voices?.seneca;
+    if (!seneca) continue;
+    for (const value of [seneca.becomes, seneca.statement, ...seneca.amend.map((clause) => clause.t), ...seneca.passages.map((passage) => passage.title)]) look(`${at} seneca`, value);
+    for (const item of seneca.items) {
+      for (const value of [item.role, item.t, item.why]) look(`${at} seneca`, value);
+      for (const piece of item.piece ? [item.piece] : item.support) for (const value of [piece.follows, piece.context, ...(piece.gives ?? [])]) look(`${at} ${piece.id}`, value);
+    }
+  }
+  assert.deepEqual(found.slice(0, 10), [], `${found.length} shown strings look English`);
+});
+
+test('Russian: each article keeps the English one’s structure: numbers, ids, colours, map and counts', {skip: ruSkip}, () => {
+  assert.deepEqual(ruRecord.stubs.map((stub) => [stub.number, stub.section, stub.chapter, stub.counts]), record.stubs.map((stub) => [stub.number, stub.section, stub.chapter, stub.counts]));
+  for (const [index, article] of ruRecord.articles.entries()) {
+    const en = record.articles[index], where = `article ${article.number}`;
+    assert.deepEqual(article.colors, en.colors, `${where}: colours`);
+    assert.deepEqual(article.map.points, en.map.points, `${where}: map`);
+    assert.deepEqual(article.claims.map((claim) => [claim.id, claim.number, claim.passages, claim.support.map((piece) => piece.id)]),
+      en.claims.map((claim) => [claim.id, claim.number, claim.passages, claim.support.map((piece) => piece.id)]), `${where}: claims`);
+    assert.deepEqual(article.members.map((member) => [member.ref, member.used, member.feeds]), en.members.map((member) => [member.ref, member.used, member.feeds]), `${where}: members`);
+    assert.deepEqual(article.statement.parts.map((part) => part.refs), en.statement.parts.map((part) => part.refs), `${where}: statement parts`);
+    assert.deepEqual(Object.keys(article.voices), Object.keys(en.voices), where);
+    for (const [key, voice] of Object.entries(article.voices)) assert.deepEqual(voice.counts, en.voices[key].counts, `${where}: ${key}`);
+  }
+  // The English record says nothing of a language; only the Russian one does.
+  assert.equal(record.language, undefined);
+});
+
+// The English build is untouched by the Russian one: a fresh English build matches the published files byte for byte.
+// Needs the private corpus under .aurelius/ (and about 25 s); skipped without it.
+const CORPUS_DIR = new URL('../../.aurelius/corpora/', import.meta.url);
+test('the published English record is exactly what the build writes now', {skip: !fs.existsSync(CORPUS_DIR) || process.env.STOIC_RECORD_DIR ? 'needs the private corpus under .aurelius/ and the published files' : false, timeout: 180000}, async () => {
+  const {spawnSync} = await import('node:child_process');
+  const os = await import('node:os');
+  const path = await import('node:path');
+  const root = new URL('../../', import.meta.url).pathname;
+  const out = fs.mkdtempSync(path.join(os.tmpdir(), 'stoic-en-'));
+  try {
+    const done = spawnSync(path.join(root, 'apps/aurelius/.venv/bin/python'), [path.join(root, 'scripts/aurelius-constitution.py'), '--out-dir', out], {cwd: root, encoding: 'utf8'});
+    assert.equal(done.status, 0, done.stderr.split('\n').slice(-3).join('\n'));
+    const names = ['stoic-constitution.json', ...fs.readdirSync(path.join(out, 'stoic-constitution')).filter((name) => name.endsWith('.json')).map((name) => 'stoic-constitution/' + name)];
+    for (const name of names) assert.ok(fs.readFileSync(path.join(out, name)).equals(fs.readFileSync(new URL(name, RECORD_DIR))), `${name} differs from a fresh English build: rebuild, or the build changed the English`);
+  } finally {
+    fs.rmSync(out, {recursive: true, force: true});
   }
 });

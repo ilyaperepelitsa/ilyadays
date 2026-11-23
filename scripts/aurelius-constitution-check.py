@@ -21,6 +21,14 @@ Cases R1 to R4 cover the owner's review tools (W7 of plan/stoicism/32-delegation
 across a reload, Copy my review and the file, the filter, the v1 carry-over); M1 and M2 the map (W6.1 marks by effect, W6.3
 labels that do not overlap).
   --cases P1,P4   run only these cases (and no sweep)      --no-cases   run only the sweep
+
+Last, the Russian edition (skipped, with a message, while public/apps/stoic-constitution.ru.json does not exist): the EN / RU
+switch at 390 and 1440 px (the Russian files are read, the choice survives a reload without ?lang, a second chapter opens from
+the picker, a claim's quotes open, EN comes back), then every chapter with ?lang=ru at 360, 390 and 1440 px with and without
+Seneca: overflow, small text, short buttons, articles drawn, console errors, page words without a Russian, and English left
+in the Russian articles.
+  --ru-only   only the Russian checks      --no-ru   skip them      --ru-dir DIR   serve a development build (--lang ru --partial --out-dir DIR)
+  --shots DIR   save screenshots of the Russian page
 """
 import argparse
 import copy
@@ -1023,12 +1031,208 @@ def run_cases(browser, base: str, port: int, names: list[str]) -> int:
     return failures
 
 
+# ---------- the Russian edition ----------
+# The page in Russian reads stoic-constitution.ru.json and stoic-constitution/ru/<chapter>.json (scripts/aurelius-constitution.py
+# --lang ru). Until the overlay is merged those files do not exist and these checks are skipped, saying so. --ru-dir serves a
+# development build (--lang ru --partial --out-dir DIR) in their place; articles the overlay did not cover are English there.
+RU_INDEX = ROOT / 'public/apps/stoic-constitution.ru.json'
+RU_SIZES = [(360, 740, 'dark'), (390, 844, 'light'), (1440, 1000, 'light')]
+# Words in Latin letters a Russian article may show: names, references, and the few terms kept in the original.
+RU_LATIN_OK = re.compile(r'^(Ep|EN|RU|EPUB|Markdown|CC|OpenAI|text|embedding|large|Claude|Opus|melos|Perseus|Leopold|logos|[ivxlcdm]+)$', re.I)
+# A text node counts as English when it has three or more Latin words that make up 40% or more of its letters: a Greek term in
+# transliteration or a few words of the 1634 English quoted in a decision stay allowed. `skip` holds the titles of articles a
+# development build left in English (they appear in other articles' neighbour lists).
+RU_ENGLISH = """([numbers, skip]) => {
+  const ok = new RegExp(%s, 'i'), out = [];
+  for (const n of numbers) {
+    const root = document.getElementById('article-' + n);
+    if (!root) continue;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      if (node.parentElement.closest('[lang="en"], [lang="grc"], svg, .ctx.old')) continue;   // the English source and the Greek are meant to show
+      let text = node.textContent;
+      for (const title of skip) text = text.split(title).join('');
+      const latin = (text.match(/[A-Za-z][A-Za-z’'-]+/g) || []).filter(word => !ok.test(word));
+      const share = latin.join('').length / Math.max(1, (text.match(/\\p{L}/gu) || []).length);
+      if (latin.length >= 3 && share >= 0.4) out.push(n + ': ' + node.textContent.trim().slice(0, 70));
+    }
+  }
+  return out.slice(0, 5);
+}""" % json.dumps(RU_LATIN_OK.pattern)
+
+
+def serve_ru(ctx, ru_dir: Path | None) -> None:
+    if ru_dir is None:
+        return
+    ctx.route(re.compile(r'/apps/stoic-constitution\.ru\.json'), lambda route: route.fulfill(body=(ru_dir / 'stoic-constitution.ru.json').read_text(), content_type='application/json'))
+    ctx.route(re.compile(r'/apps/stoic-constitution/ru/c\d+\.json'),
+              lambda route: route.fulfill(body=(ru_dir / 'stoic-constitution/ru' / route.request.url.split('?')[0].rsplit('/', 1)[1]).read_text(), content_type='application/json'))
+
+
+def ru_checks(browser, base: str, ru_dir: Path | None, shots: Path | None, quick: bool) -> int:
+    """The EN / RU switch, its persistence, a chapter change and the sweep of every chapter, in Russian."""
+    index_path = ru_dir / 'stoic-constitution.ru.json' if ru_dir else RU_INDEX
+    if not index_path.exists():
+        print(f'skip RU: {index_path.relative_to(ROOT) if index_path.is_relative_to(ROOT) else index_path} does not exist yet '
+              '(merge the overlay, then run scripts/aurelius-constitution.py --lang ru; or pass --ru-dir with a development build)')
+        return 0
+    index = json.loads(index_path.read_text())
+    assert index.get('language') == 'ru', f'{index_path} is not the Russian index'
+    russian = set(index['overlay']['articles'])
+    by_chapter: dict[str, list[int]] = {}
+    for article in index['articles']:
+        by_chapter.setdefault(article['chapter'], []).append(article['number'])
+    first, second = list(by_chapter)[0], list(by_chapter)[1]
+    if shots:
+        shots.mkdir(parents=True, exist_ok=True)
+    print(f"RU: {len(russian)} of {len(index['articles'])} articles in Russian" + (f' (development build from {ru_dir})' if ru_dir else ''))
+    failures = 0
+
+    def watch(page) -> list[str]:
+        errors: list[str] = []
+        page.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
+        page.on('pageerror', lambda e: errors.append(str(e)))
+        return errors
+
+    def report(name: str, problems: list[str]) -> None:
+        nonlocal failures
+        failures += bool(problems)
+        print(f"{'ok  ' if not problems else 'FAIL'} RU {name}" + ('' if not problems else ' · ' + '; '.join(problems)))
+
+    # 1. The switch: English first, RU from the header, kept across a reload without ?lang, another chapter, back to EN.
+    for width, height in [(390, 844), (1440, 1000)]:
+        ctx = browser.new_context(viewport={'width': width, 'height': height})
+        serve_ru(ctx, ru_dir)
+        page = ctx.new_page()
+        errors, problems, fetched = watch(page), [], []
+        page.on('request', lambda r: fetched.append(r.url) if '/stoic-constitution' in r.url and r.url.endswith('.json') else None)
+        try:
+            page.goto(base, wait_until='networkidle')
+            page.wait_for_selector('article.article .statement', timeout=15000)
+            if page.evaluate('document.documentElement.lang') != 'en':
+                problems.append('the page does not start in English')
+            if page.locator('.lang a[aria-current=true]').inner_text() != 'EN':
+                problems.append('EN is not marked as current')
+            page.click('.lang a[data-lang=ru]')
+            page.wait_for_url(re.compile(r'lang=ru'))
+            page.wait_for_selector('article.article .statement', timeout=15000)
+            state = page.evaluate("""() => ({lang: document.documentElement.lang, head: document.getElementById('a-head').textContent, h1: document.querySelector('h1').textContent,
+                current: document.querySelector('.lang a[aria-current=true]').textContent, missing: [...MISSING_RU], stored: localStorage.getItem('stoic-constitution:lang'),
+                articles: document.querySelectorAll('article.article').length})""")
+            if state['lang'] != 'ru' or state['current'] != 'RU' or state['stored'] != 'ru':
+                problems.append(f"after the switch: lang {state['lang']}, current {state['current']}, stored {state['stored']}")
+            if not state['head'].startswith('Глава') or 'Статьи' not in state['h1']:
+                problems.append(f"headings not in Russian: {state['head'][:40]!r}, {state['h1']!r}")
+            if state['articles'] != len(by_chapter[first]):
+                problems.append(f"{state['articles']} articles drawn, expected {len(by_chapter[first])}")
+            if not any('/stoic-constitution/ru/' in url for url in fetched) or not any(url.endswith('stoic-constitution.ru.json') for url in fetched):
+                problems.append('the Russian files were not requested')
+            if state['missing']:
+                problems.append(f"words without a Russian: {state['missing'][:5]}")
+            if shots:
+                page.screenshot(path=str(shots / f'ru-{width}-top.png'))
+            # Persistence: the plain address, without ?lang, opens in Russian again.
+            page.goto(base, wait_until='networkidle')
+            page.wait_for_selector('article.article .statement', timeout=15000)
+            if page.evaluate('document.documentElement.lang') != 'ru' or 'lang=ru' not in page.url:
+                problems.append(f'a reload without ?lang lost the language ({page.url})')
+            # Another chapter through the picker.
+            page.click('.chap-btn')
+            page.locator('#chapters button:not(:disabled)').nth(list(by_chapter).index(second)).click()
+            page.wait_for_function(f"document.querySelectorAll('article.article').length === {len(by_chapter[second])} && !!document.querySelector('#article-{by_chapter[second][0]} .statement')", timeout=15000)
+            if not page.evaluate("document.getElementById('a-head').textContent").startswith('Глава'):
+                problems.append('the second chapter heading is not in Russian')
+            if f'c={second}' not in page.url or 'lang=ru' not in page.url:
+                problems.append(f'the link lost the chapter or the language: {page.url}')
+            # A claim's quotes open, in Russian.
+            show = page.locator('li.claim .show').first
+            show.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+            show.click()
+            page.wait_for_selector('li.claim .trace', timeout=5000)
+            head = page.locator('li.claim .trace .panel-head').first.inner_text()
+            if 'Фрагменты' not in head and 'ФРАГМЕНТЫ' not in head:
+                problems.append(f'the quotes panel is not in Russian: {head!r}')
+            overflow = page.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth')
+            if overflow:
+                problems.append(f'overflow {overflow}px')
+            if shots:
+                page.locator('li.claim .trace').first.evaluate("n => n.scrollIntoView({block: 'start', behavior: 'instant'})")
+                page.screenshot(path=str(shots / f'ru-{width}-quotes.png'))
+            # Back to English.
+            page.click('.lang a[data-lang=en]')
+            page.wait_for_load_state('networkidle')
+            page.wait_for_selector('article.article .statement', timeout=15000)
+            back = page.evaluate("[document.documentElement.lang, document.getElementById('a-head').textContent, localStorage.getItem('stoic-constitution:lang')]")
+            if back[0] != 'en' or not back[1].startswith('Chapter') or back[2] != 'en' or 'lang=' in page.url:
+                problems.append(f'back to English failed: {back}, {page.url}')
+        except Exception as error:
+            problems.append(f'could not run: {str(error).splitlines()[0][:200]}')
+        if errors:
+            problems.append(f'errors {errors[:3]}')
+        report(f'switch, reload, chapter, quotes, back to EN at {width}px', problems)
+        ctx.close()
+
+    # 2. Every chapter in Russian (?lang=ru on a fresh browser), with and without Seneca.
+    for chapter, numbers in by_chapter.items():
+        for query in ['', 'with=seneca']:
+            for width, height, scheme in RU_SIZES:
+                params = '&'.join(x for x in [f'c={chapter}', query, 'lang=ru'] if x)
+                ctx = browser.new_context(viewport={'width': width, 'height': height}, color_scheme=scheme)
+                serve_ru(ctx, ru_dir)
+                page = ctx.new_page()
+                errors, problems = watch(page), []
+                try:
+                    page.goto(base + '?' + params, wait_until='networkidle')
+                    page.wait_for_selector(f'#article-{numbers[-1]} .statement', timeout=15000)
+                    buttons = page.locator('li.claim .show')
+                    for i in range(0, buttons.count(), 3):
+                        buttons.nth(i).evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
+                        buttons.nth(i).click()
+                    m = page.evaluate(MEASURE)
+                    if m['overflow'] != 0:
+                        problems.append(f"overflow {m['overflow']}px")
+                    if m['small']:
+                        problems.append(f"small text {m['small']}")
+                    if m['short']:
+                        problems.append(f"short buttons {m['short']}")
+                    if sorted(m['articles']) != sorted(f'article-{n}' for n in numbers):
+                        problems.append(f"articles drawn {m['articles']}, expected {numbers}")
+                    if page.evaluate('document.documentElement.lang') != 'ru':
+                        problems.append('?lang=ru did not open the page in Russian')
+                    missing = page.evaluate('[...MISSING_RU]')
+                    if missing:
+                        problems.append(f'words without a Russian: {missing[:5]}')
+                    english = page.evaluate(RU_ENGLISH, [[n for n in numbers if n in russian], [a['title'] for a in index['articles'] if a['number'] not in russian]])
+                    if english:
+                        problems.append(f'English left in Russian articles: {english}')
+                    if width >= 1000 and not quick:
+                        page.mouse.move(1, 1)
+                        for selector in ['.sg[data-refs]', 'svg.map .pt']:
+                            items = page.locator(selector)
+                            for i in range(0, items.count(), 4):
+                                items.nth(i).dispatch_event('mouseenter')
+                                items.nth(i).dispatch_event('mouseleave')
+                    if shots and chapter == first and not query:
+                        page.screenshot(path=str(shots / f'ru-{width}-{scheme}-{chapter}.png'))
+                except Exception as error:
+                    problems.append(f'could not run: {str(error).splitlines()[0][:200]}')
+                if errors:
+                    problems.append(f'errors {errors[:3]}')
+                report(f"{width}×{height} {scheme:5} {params:28}", problems)
+                ctx.close()
+    return failures
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', type=int, default=3170)
     parser.add_argument('--quick', action='store_true', help='skip the hover sweep')
     parser.add_argument('--cases', default='', help='comma-separated case names; runs only these, without the sweep')
     parser.add_argument('--no-cases', action='store_true', help='run only the sweep')
+    parser.add_argument('--ru-only', action='store_true', help='run only the Russian checks')
+    parser.add_argument('--no-ru', action='store_true', help='skip the Russian checks')
+    parser.add_argument('--ru-dir', type=Path, default=None, help='serve the Russian files from this development build instead of public/apps')
+    parser.add_argument('--shots', type=Path, default=None, help='save screenshots of the Russian page here')
     args = parser.parse_args()
     base = f'http://localhost:{args.port}/apps/stoic-constitution.html'
     failures = 0
@@ -1038,6 +1242,11 @@ def main() -> int:
             failures = run_cases(browser, base, args.port, [c.strip().upper() for c in args.cases.split(',')])
             browser.close()
             print('all cases pass' if not failures else f'{failures} case(s) failed')
+            return 1 if failures else 0
+        if args.ru_only:
+            failures = ru_checks(browser, base, args.ru_dir.resolve() if args.ru_dir else None, args.shots, args.quick)
+            browser.close()
+            print('all Russian checks pass' if not failures else f'{failures} Russian check(s) failed')
             return 1 if failures else 0
         for chapter, numbers in chapters(args.port):
             for query in ['', 'with=seneca']:
@@ -1093,6 +1302,8 @@ def main() -> int:
                     ctx.close()
         if not args.no_cases:
             failures += run_cases(browser, base, args.port, list(CASES))
+        if not args.no_ru:
+            failures += ru_checks(browser, base, args.ru_dir.resolve() if args.ru_dir else None, args.shots, args.quick)
         browser.close()
     print('all checks pass' if not failures else f'{failures} run(s) or case(s) failed')
     return 1 if failures else 0

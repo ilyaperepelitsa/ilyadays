@@ -23,6 +23,12 @@ button{font:inherit;color:inherit}
 .wrap{max-width:820px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
 .top{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;justify-content:space-between;padding-block:14px 0;font-size:14px}
 .top strong{font:600 17px var(--serif)}
+.top-end{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+/* EN / RU: two small links, the one on screen filled. */
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.lang a{min-width:44px;min-height:40px;display:grid;place-items:center;padding:0 8px;color:var(--ink);text-decoration:none;font:650 13px var(--sans);letter-spacing:.06em}
+.lang a+a{border-left:1px solid var(--line)}
+.lang a[aria-current=true]{background:var(--ink);color:var(--paper)}
 .intro{padding-block:22px 20px}
 .eyebrow{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 h1{font:400 clamp(32px,8vw,52px)/1.06 var(--serif);letter-spacing:-.025em;margin:8px 0 14px;text-wrap:balance}
@@ -431,7 +437,7 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 </style>
 </head>
 <body>
-<div class="wrap top"><strong>Stoic Constitution</strong><a href="/stoicism">← Back to the constitution</a></div>
+<div class="wrap top"><strong>Stoic Constitution</strong><span class="top-end"><a href="/stoicism">← Back to the constitution</a><span class="lang" role="group" aria-label="Language · Язык"><a href="?lang=en" hreflang="en" lang="en" data-lang="en">EN</a><a href="?lang=ru" hreflang="ru" lang="ru" data-lang="ru">RU</a></span></span></div>
 <header class="wrap intro">
 <p class="eyebrow">Draft · Marcus Aurelius, in a new translation from the Greek</p>
 <h1>The articles so far</h1>
@@ -480,6 +486,139 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 
 <script>
 'use strict';
+/* ---------- language ----------
+   English is the page as written. Russian (?lang=ru, or the EN / RU switch in the header; the choice is kept in this browser)
+   reads the Russian record (stoic-constitution.ru.json and stoic-constitution/ru/<chapter>.json, built by
+   scripts/aurelius-constitution.py --lang ru) and writes the page's own words from RU_WORDS and the Russian branches below. */
+const LANG_KEY = 'stoic-constitution:lang';
+const LANG = (() => {
+  const asked = new URLSearchParams(location.search).get('lang');
+  if (asked === 'ru' || asked === 'en') { try { localStorage.setItem(LANG_KEY, asked); } catch { /* the link still decides */ } return asked; }
+  try { return localStorage.getItem(LANG_KEY) === 'ru' ? 'ru' : 'en'; } catch { return 'en'; }
+})();
+const RU = LANG === 'ru';
+const MISSING_RU = new Set();   // words written in Russian mode that have no Russian; the browser check expects none
+// A fixed string of the page in the reader's language.
+const T = text => !RU ? text : RU_WORDS[text] != null ? RU_WORDS[text] : (MISSING_RU.add(text), text);
+// Numbers: 0.85 is 0,85 in Russian, and 1,234 is 1 234.
+const fx = (value, digits = 2) => RU ? value.toLocaleString('ru-RU', {minimumFractionDigits: digits, maximumFractionDigits: digits}) : value.toFixed(digits);
+const nf = value => RU ? value.toLocaleString('ru-RU') : value.toLocaleString('en');
+// Russian plural forms: ruForm(5, 'фрагмент', 'фрагмента', 'фрагментов') is 'фрагментов'; pl() puts the number before it.
+const ruForm = (n, one, few, many) => { const t = n % 10, h = n % 100; return t === 1 && h !== 11 ? one : t >= 2 && t <= 4 && (h < 12 || h > 14) ? few : many; };
+const pl = (n, one, few, many) => n + ' ' + ruForm(n, one, few, many);
+const PASSAGES = n => pl(n, 'фрагмент', 'фрагмента', 'фрагментов');
+const OF_PASSAGES = n => n + ' ' + ruForm(n, 'фрагмента', 'фрагментов', 'фрагментов');   // after «из»
+// Quotation marks: “…” in English, «…» in Russian.
+const quoted = text => RU ? '«' + text + '»' : '“' + text + '”';
+// An added author's name in another case (only Seneca so far); an unknown name stays as it is.
+const RU_CASES = {'Сенека': {gen: 'Сенеки', acc: 'Сенеку', ins: 'Сенекой'}};
+const inCase = (name, c) => (RU_CASES[name] || {})[c] || name;
+// A claim's number in Russian, in the case the sentence needs.
+const claimCase = (number, c) => ({nom: 'утверждение ', gen: 'утверждения ', prep: 'утверждении ', ins: 'утверждением '})[c] + number;
+const listRu = items => items.length > 1 ? items.slice(0, -1).join(', ') + ' и ' + items[items.length - 1] : String(items[0]);
+const RU_WORDS = {
+  'Verdict': 'Оценка', 'Keep': 'Оставить', 'Revise': 'Исправить', 'Drop': 'Отбросить', 'Open': 'Не оценено',
+  'Could not be saved on this device; kept until you close this page': 'Не удалось сохранить на этом устройстве; хранится, пока страница открыта',
+  'The whole article': 'Статья целиком', 'The statement': 'Положение', 'said once': 'сказано однажды',
+  'Nothing judged yet.': 'Пока ничего не оценено.',
+  'Only what you have not judged is shown.': 'Показано только то, что вы ещё не оценили.',
+  'Everything is shown again.': 'Снова показано всё.',
+  'Sections named after reading every passage': 'Разделы названы после чтения каждого фрагмента',
+  'Provisional names, from the three most central passages': 'Предварительные названия — по трём самым центральным фрагментам',
+  'next': 'следующий',
+  'Next to it in the book': 'Рядом в книге',
+  'How to read these numbers': 'Как читать эти числа',
+  'Point at words in the article, or at a mark on the map, to see how close their passages are.': 'Наведите на слова статьи или на метку на карте, чтобы увидеть, насколько близки их фрагменты.',
+  'The vectors · closeness of meaning': 'Векторы · близость смысла',
+  'average similarity of a pair': 'среднее сходство пары',
+  'Found by reading, not by the vectors.': 'Найден чтением, а не векторами.',
+  'The vectors point to it.': 'На него указывают векторы.',
+  'feeds the article': 'питает статью', 'set aside': 'отложен', 'fused together': 'слиты вместе', 'the section': 'раздел',
+  'Cosine similarity between every two passages of the section': 'Косинусное сходство между каждыми двумя фрагментами раздела',
+  'Not fused together.': 'Не слиты вместе.',
+  'fused in the same claim': 'слиты в одном утверждении',
+  'Exact similarity of every pair': 'Точное сходство каждой пары',
+  'Joining words': 'Связующие слова',
+  'These words are the editor’s. No passage is quoted for them.': 'Эти слова — редактора. Ни один фрагмент для них не цитируется.',
+  'The rest of the sentence': 'Остальная часть фразы',
+  'Click for the full passages and what follows from each.': 'Нажмите, чтобы прочитать фрагменты целиком и что следует из каждого.',
+  'Sources for the selected words': 'Источники выбранных слов',
+  'removed': 'убран',
+  'The editor’s inference': 'Вывод редактора', 'The editor’s connection': 'Связка редактора',
+  'Aurelius': 'Аврелий', 'Marcus': 'Марк',
+  'What follows': 'Что следует',
+  'Said once': 'Сказано однажды',
+  'Show part by part': 'Показать по частям', 'Hide the parts': 'Скрыть части',
+  'Show the quotes': 'Показать цитаты', 'Hide the quotes': 'Скрыть цитаты',
+  'The statement, part by part': 'Положение по частям',
+  'No passage left': 'Не осталось ни одного фрагмента',
+  'The passages, and what follows from each': 'Фрагменты и что следует из каждого',
+  'Taken together': 'Вместе', 'What the fusion changed': 'Что изменило слияние',
+  'Why it is added': 'Почему это добавлено',
+  'Take out': 'Убрать', 'Add': 'Добавить',
+  'The Meditations are the base text and cannot be switched off': '«Размышления» — основной текст, их нельзя выключить',
+  'Click for the passage and what follows from it.': 'Нажмите, чтобы прочитать фрагмент и что из него следует.',
+  'One passage': 'Один фрагмент', 'Why it is not fused': 'Почему это не слито',
+  'The section, passage by passage': 'Раздел, фрагмент за фрагментом',
+  'Used': 'Использован', 'Set aside': 'Отложен', 'once': 'однажды',
+  'What the editor decided': 'Что решил редактор', 'Limit. ': 'Ограничение. ',
+  'The whole section, and what was done with each passage': 'Весь раздел и что сделано с каждым фрагментом',
+  'Your verdict on the whole article': 'Ваша оценка статьи целиком',
+  'Article': 'Статья', 'Topics': 'Темы', 'Sources': 'Источники',
+  'Show passage numbers on each statement': 'Показывать номера фрагментов в каждом положении',
+  'Loading chapter…': 'Глава загружается…',
+  'Reload the page': 'Перезагрузить страницу', 'Try again': 'Попробовать снова',
+  'Copy my review': 'Скопировать мой отзыв', 'Download as a file': 'Скачать файлом',
+  'Copy failed. Use Download as a file': 'Не удалось скопировать. Скачайте файлом',
+};
+// The page's fixed words in Russian: [selector, text] sets the text, [selector, html, true] the markup (trusted, written here).
+const RU_STATIC = [
+  ['.top strong', 'Стоическая конституция'],
+  ['.top-end > a', '← К конституции'],
+  ['.intro .eyebrow', 'Черновик · Марк Аврелий в новом переводе'],
+  ['.intro h1', 'Статьи на сегодня'],
+  ['.intro .lede', 'Все 418 фрагментов <i>«Размышлений»</i> сгруппированы по смыслу в главы и разделы. Здесь каждый раздел по порядку слит в статью, глава за главой. Статья высказывает одно положение, а затем рассматривает его с пяти постоянных сторон: почему, на деле, упражнение, когда не выходит и если я сомневаюсь. На широком экране пять сторон стоят рядом, столбцами. Под словами идёт по одной цветной линии на каждый фрагмент, который их говорит: две линии — два фрагмента. Один цвет — один и тот же фрагмент во фразе, в кнопках под ней и на карте векторов рядом с положением. Фиолетовым отмечена работа самого редактора. Других авторов можно добавить с панели «Голоса» внизу экрана и посмотреть, что получает каждая статья; первый из них — Сенека. Наведите курсор, чтобы увидеть точные цитаты. Нажмите или коснитесь, чтобы прочитать фрагменты рядом с тем, что следует из каждого. Русский текст переведён с английского текста этого проекта.', true],
+  ['.intro .status a', 'Фрагменты Марка в переводе с греческого, рядом с английским переводом 1634 года (страница на английском) →'],
+  ['#topics .step', '1 · От всей книги к темам'],
+  ['#t-head', 'Как были найдены темы'],
+  ['#topics > .sub', 'Каждый фрагмент превращён в вектор чисел, который передаёт его смысл. Близкие друг к другу фрагменты шаг за шагом объединялись в дерево. Если срезать дерево высоко, получаются главы; если срезать каждую главу ещё раз — разделы. Названия дал редактор, после чтения.'],
+  ['#topics details.more > summary', 'Почему такая группировка и насколько ей можно доверять'],
+  ['#articles .step', '2 · От многих фрагментов к одному положению'],
+  ['#filter-note > span', 'Показано только то, что вы ещё не оценили.'],
+  ['#show-all', 'Показать всё'],
+  ['#yours .step', '3 · Ваше решение'],
+  ['#y-head', 'Ваш отзыв'],
+  ['#yours > .sub', 'У каждой части статьи в углу есть маленькая кнопка «Оценка»: у положения, у каждого утверждения, у вывода из каждой цитаты, у всего, что приносит добавленный автор, и у каждой приписки, которую добавленный автор делает к фразе (коснитесь приписки, чтобы увидеть её кнопку). Статья целиком оценивается под своей карточкой. «Исправить» и «Отбросить» принимают заметку. Всё сохраняется только в этом браузере, поэтому, закончив, скопируйте отзыв в чат или скачайте его файлом.'],
+  ['#copy', 'Скопировать мой отзыв'],
+  ['#download', 'Скачать файлом'],
+  ['#only-open', 'Только неоценённое'],
+  ['#yours > .sub[style]', 'Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).', true],
+  ['footer', 'Марк цитируется в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого); Сенека — в русском переводе с английского перевода проекта (а тот — с латыни). Русский текст сделан моделью Claude Opus 5.5, сверен другой моделью и человеком пока не проверен. Названия тем, отбор фрагментов и формулировки статей — редакторские черновики.<br>Скачать переводы, свободные для любого использования (CC0): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>текст</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>текст</a>. Английские переводы — на английской версии этой страницы.', true],
+  ['.dock-label', 'Голоса'],
+];
+// The switch: the language on screen is marked; choosing the other one keeps the chapter, the voices and what was open.
+for (const link of document.querySelectorAll('.lang a')) {
+  link.setAttribute('aria-current', String(link.dataset.lang === LANG));
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const query = new URLSearchParams(location.search);
+    if (link.dataset.lang === 'ru') query.set('lang', 'ru'); else query.delete('lang');
+    try { localStorage.setItem(LANG_KEY, link.dataset.lang); } catch { /* the link carries the choice for this visit */ }
+    const search = query.toString();
+    location.assign(location.pathname + (search ? '?' + search : '') + location.hash);
+  });
+}
+if (RU) {
+  document.documentElement.lang = 'ru';
+  document.title = 'Статьи · Стоическая конституция';
+  for (const [selector, text, html] of RU_STATIC) {
+    const node = document.querySelector(selector);
+    if (!node) { MISSING_RU.add('static ' + selector); continue; }
+    if (html) node.innerHTML = text; else node.textContent = text;
+  }
+  document.querySelector('nav.bar').setAttribute('aria-label', 'Переход');
+  document.querySelector('nav.dock').setAttribute('aria-label', 'Голоса');
+}
 const STORE = 'stoic-constitution:v1:verdicts';
 const VERDICTS = ['Keep', 'Revise', 'Drop'];
 let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
@@ -515,6 +654,7 @@ const short = (text, max = 40) => {
 const articleOf = number => D.articles.find(article => article.number === number);
 const removedOf = article => state.removed[article.number] || new Set();
 const plural = (count, noun) => count + ' ' + noun + (count === 1 ? '' : 's');
+const feedsRu = (claims, alone) => claims.length ? (claims.length > 1 ? 'Питает утверждения ' : 'Питает утверждение ') + claims.join(', ') + (alone ? ', а также цитируется отдельно' : '') + '.' : 'Цитируется отдельно, как «сказано однажды».';
 
 /* ---------- the owner's review ----------
    One verdict (Keep, Revise, Drop; none = Open) and one note per item. Keys: a<number> (the article), a<number>:statement,
@@ -568,23 +708,44 @@ function reviewItems(article) {
     const full = key ? prefix + ':' + key : prefix;
     if (!seen.has(full)) { seen.add(full); list.push({key: full, label, text: flat(text || '').trim(), name}); }
   };
-  const claimName = id => 'claim ' + ((claimOf(article, id) || {}).number || id);
-  add('', 'The whole article', article.statement.t, 'the whole of Article ' + article.number);
-  add('statement', 'The statement', article.statement.t, 'the statement');
+  const claimName = id => RU ? claimCase((claimOf(article, id) || {}).number || id, 'nom') : 'claim ' + ((claimOf(article, id) || {}).number || id);
+  const claimIn = id => claimCase((claimOf(article, id) || {}).number || id, 'prep'), claimWith = id => claimCase((claimOf(article, id) || {}).number || id, 'ins');
+  add('', T('The whole article'), article.statement.t, RU ? 'статья ' + article.number + ' целиком' : 'the whole of Article ' + article.number);
+  add('statement', T('The statement'), article.statement.t, RU ? 'положение' : 'the statement');
   const ids = article.groups.flatMap(group => group.items);
   for (const claim of article.claims) if (!ids.includes(claim.id)) ids.push(claim.id);
   for (const id of ids) {
     const claim = claimOf(article, id);
     if (claim) {
+      if (RU) {
+        add(claim.id, 'Утверждение ' + claim.number + ' · ' + claim.role, claim.t, claimCase(claim.number, 'nom'));
+        for (const piece of claim.support) add('p:' + piece.id, 'Что следует из ' + piece.ref + ' (' + claimCase(claim.number, 'nom') + ')', piece.follows, 'что следует из ' + piece.ref + ' в ' + claimCase(claim.number, 'prep'));
+        continue;
+      }
       add(claim.id, 'Claim ' + claim.number + ' · ' + claim.role, claim.t, 'claim ' + claim.number);
       for (const piece of claim.support) add('p:' + piece.id, 'What follows from ' + piece.ref + ' (claim ' + claim.number + ')', piece.follows, 'what follows from ' + piece.ref + ' in claim ' + claim.number);
       continue;
     }
     const item = article.single.find(entry => entry.id === id);
-    if (item) add('s:' + item.id, item.label + ' · said once, ' + item.ref, item.t, item.label.toLowerCase() + ', said once in ' + item.ref);
+    if (item && RU) add('s:' + item.id, item.label + ' · сказано однажды, ' + item.ref, item.t, item.label.toLowerCase() + ', сказано однажды в ' + item.ref);
+    else if (item) add('s:' + item.id, item.label + ' · said once, ' + item.ref, item.t, item.label.toLowerCase() + ', said once in ' + item.ref);
   }
   for (const voice of voicesOf(article)) {
     const name = voice.author.name, own = voice.key + ':';
+    if (RU) {
+      const whereIn = target => target === 'statement' ? 'положении' : claimIn(target), of = inCase(name, 'gen');
+      for (const clause of voice.amend || []) add(own + 'amend:' + clause.target, 'Приписка ' + of + ' в ' + whereIn(clause.target), clause.t.replace(/^[\s,;:—–-]+/, ''), 'приписка ' + of + ' в ' + whereIn(clause.target));
+      for (const item of voice.items) {
+        if (item.effect === 'stronger') {
+          add(own + item.piece.id, 'Что следует из ' + cite(item.piece.ref) + ' (подкрепляет ' + claimName(item.claim) + ')', item.piece.follows, 'что следует из ' + cite(item.piece.ref));
+          continue;
+        }
+        const what = item.effect === 'wider' ? name + ' добавляет · ' + item.role : name + ' об ' + claimIn(item.claim) + ' · расхождение';
+        add(own + item.key, what, item.t, item.effect === 'wider' ? 'добавление ' + of + ' «' + item.role + '»' : 'расхождение ' + of + ' с ' + claimWith(item.claim));
+        for (const piece of item.support) add(own + piece.id, 'Что следует из ' + cite(piece.ref), piece.follows, 'что следует из ' + cite(piece.ref));
+      }
+      continue;
+    }
     const where = target => target === 'statement' ? 'the statement' : claimName(target);
     for (const clause of voice.amend || []) add(own + 'amend:' + clause.target, name + '’s clause in ' + where(clause.target), clause.t.replace(/^[\s,;:—–-]+/, ''), name + '’s clause in ' + where(clause.target));
     for (const item of voice.items) {
@@ -610,21 +771,22 @@ function judged(node, key) {
 }
 // The small button for a card's corner row, and what goes under that row: the three choices while open, the note for Revise or Drop.
 function reviewControl(article, key) {
-  const item = reviewItem(article, key), name = item ? item.name : 'this', value = verdictOf(key), open = state.reviewOpen === key;
+  const item = reviewItem(article, key), name = item ? item.name : RU ? 'это' : 'this', value = verdictOf(key), open = state.reviewOpen === key;
   const button = el('button', 'vt' + (value ? ' on' : ''));
   button.type = 'button';
   button.dataset.k = 'vt-' + key;
-  button.append(el('span', '', value || 'Verdict'));
+  button.append(el('span', '', T(value || 'Verdict')));
   button.setAttribute('aria-expanded', String(open));
-  button.setAttribute('aria-label', 'Your verdict on ' + name + ': ' + (value || 'not judged yet') + '. ' + (open ? 'Close the choices' : 'Choose Keep, Revise or Drop'));
+  button.setAttribute('aria-label', RU ? 'Ваша оценка — ' + name + ': ' + (value ? T(value) : 'ещё не оценено') + '. ' + (open ? 'Закрыть варианты' : 'Выбрать: Оставить, Исправить или Отбросить')
+    : 'Your verdict on ' + name + ': ' + (value || 'not judged yet') + '. ' + (open ? 'Close the choices' : 'Choose Keep, Revise or Drop'));
   button.addEventListener('click', () => { state.reviewOpen = open ? null : key; renderArticle(article.number, button.dataset.k); });
   const extra = [];
   if (open) {
     const row = el('div', 'vpick');
     row.setAttribute('role', 'group');
-    row.setAttribute('aria-label', 'Your verdict on ' + name);
+    row.setAttribute('aria-label', RU ? 'Ваша оценка — ' + name : 'Your verdict on ' + name);
     for (const choice of VERDICTS) {
-      const pick = el('button', 'vb', choice);
+      const pick = el('button', 'vb', T(choice));
       pick.type = 'button';
       pick.dataset.k = 'vc-' + key + '-' + choice;
       pick.setAttribute('aria-pressed', String(value === choice));
@@ -634,7 +796,7 @@ function reviewControl(article, key) {
     extra.push(row);
   }
   if (takesNote(value)) extra.push(noteField(key, name));
-  if (unsavedKeys.has(key)) extra.push(el('p', 'save-note row', 'Could not be saved on this device; kept until you close this page'));
+  if (unsavedKeys.has(key)) extra.push(el('p', 'save-note row', T('Could not be saved on this device; kept until you close this page')));
   return {button, extra};
 }
 // A corner row: the label on the left, the verdict button on the right.
@@ -649,10 +811,10 @@ function noteField(key, name) {
   input.type = 'text';
   input.value = review.notes[key] || '';
   input.dataset.k = 'vn-' + key;
-  input.placeholder = 'Why ' + verdictOf(key) + '? Saved as you type';
+  input.placeholder = RU ? 'Почему «' + T(verdictOf(key)) + '»? Сохраняется по мере ввода' : 'Why ' + verdictOf(key) + '? Saved as you type';
   input.autocomplete = 'off';
   input.setAttribute('enterkeyhint', 'done');
-  input.setAttribute('aria-label', 'Your note on ' + name + ' (' + verdictOf(key) + ')');
+  input.setAttribute('aria-label', RU ? 'Ваша заметка — ' + name + ' (' + T(verdictOf(key)) + ')' : 'Your note on ' + name + ' (' + verdictOf(key) + ')');
   input.addEventListener('input', () => {
     if (input.value.trim()) review.notes[key] = input.value; else delete review.notes[key];
     for (const twin of document.querySelectorAll('.vnote')) if (twin !== input && twin.dataset.k === input.dataset.k) twin.value = input.value;
@@ -679,7 +841,9 @@ function choose(article, key, value, focusKey) {
   state.reviewOpen = null;
   renderArticle(article.number, takesNote(next) ? 'vn-' + key : focusKey || 'vt-' + key);
   renderVerdicts();
-  announce((next ? next + ': ' : 'Verdict cleared: ') + (item ? item.name : key) + '.' + (takesNote(next) ? ' Type a note if you like.' : '')
+  if (RU) announce((next ? T(next) + ': ' : 'Оценка снята: ') + (item ? item.name : key) + '.' + (takesNote(next) ? ' Если хотите, напишите заметку.' : '')
+    + (saved ? '' : ' На этом устройстве её не удалось сохранить. Она хранится, пока страница открыта, и войдёт в скопированный отзыв.'));
+  else announce((next ? next + ': ' : 'Verdict cleared: ') + (item ? item.name : key) + '.' + (takesNote(next) ? ' Type a note if you like.' : '')
     + (saved ? '' : ' It could not be saved on this device. It is kept until you close this page and is included when you copy your review.'));
 }
 // Judged keys, by article number.
@@ -699,24 +863,24 @@ function judgedRows(number) {
   const article = loadedArticle(number), items = article ? reviewItems(article) : [], at = key => { const i = items.findIndex(item => item.key === key); return i < 0 ? 1e6 : i; };
   return (keysByArticle().get(number) || []).filter(key => key !== 'a' + number).sort((x, y) => at(x) - at(y) || x.localeCompare(y)).map(key => {
     const item = items.find(entry => entry.key === key);
-    return {key, label: item ? item.label : key + (article ? ' (no longer in this article)' : ''), text: item ? item.text : '', value: verdictOf(key), note: noteOf(key)};
+    return {key, label: item ? item.label : key + (article ? (RU ? ' (больше нет в этой статье)' : ' (no longer in this article)') : ''), text: item ? item.text : '', value: verdictOf(key), note: noteOf(key)};
   });
 }
 const today = () => { const now = new Date(); return now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0'); };
 // Plain text for a chat: one line per verdict, grouped by article, with the sentence it is about and the note.
 function reviewText() {
   flushNotes();
-  const by = keysByArticle(), out = ['Stoic constitution · my review · ' + today()];
+  const by = keysByArticle(), out = [RU ? 'Стоическая конституция · мой отзыв · ' + new Date().toLocaleDateString('ru-RU') : 'Stoic constitution · my review · ' + today()];
   const cut = text => text.length > 80 ? text.slice(0, 80).trimEnd() + '…' : text;
-  const line = (label, value, text, note, key) => '- ' + label + ': ' + value + (text ? ' · “' + cut(text) + '”' : '') + (note ? ' · Note: ' + flat(note).trim() : '') + ' [' + key + ']';
+  const line = (label, value, text, note, key) => '- ' + label + ': ' + T(value) + (text ? ' · ' + quoted(cut(text)) : '') + (note ? (RU ? ' · Заметка: ' : ' · Note: ') + flat(note).trim() : '') + ' [' + key + ']';
   let count = 0;
   for (const number of [...by.keys()].sort((x, y) => x - y)) {
     const stub = D.all.find(article => article.number === number), key = 'a' + number;
-    out.push('', stub ? 'Article ' + number + ' · ' + stub.title : 'Article ' + number + ' (no longer in the record)');
-    if (verdictOf(key)) { out.push(line('The whole article', verdictOf(key), stub && stub.statement ? flat(stub.statement.t) : '', noteOf(key), key)); count++; }
+    out.push('', RU ? (stub ? 'Статья ' + number + ' · ' + stub.title : 'Статья ' + number + ' (больше нет в записи)') : stub ? 'Article ' + number + ' · ' + stub.title : 'Article ' + number + ' (no longer in the record)');
+    if (verdictOf(key)) { out.push(line(T('The whole article'), verdictOf(key), stub && stub.statement ? flat(stub.statement.t) : '', noteOf(key), key)); count++; }
     for (const row of judgedRows(number)) { out.push(line(row.label, row.value, row.text, row.note, row.key)); count++; }
   }
-  if (!count) out.push('', 'Nothing judged yet.');
+  if (!count) out.push('', T('Nothing judged yet.'));
   return {text: out.join('\n') + '\n', count};
 }
 async function copyText(text) {
@@ -753,15 +917,16 @@ function setFilter(on, fallback, quiet) {
   document.getElementById('filter-note').hidden = !on;
   try { localStorage.setItem(FILTER, on ? 'on' : 'off'); } catch { /* the switch then lasts for this visit */ }
   if (restore) restore();
-  if (!quiet) announce(on ? 'Only what you have not judged is shown.' : 'Everything is shown again.');
+  if (!quiet) announce(T(on ? 'Only what you have not judged is shown.' : 'Everything is shown again.'));
 }
 
 /* ---------- topics ---------- */
 function renderTopics() {
   const method = D.method, sections = D.chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0);
-  document.getElementById('status').textContent = D.status + ' Nothing here has been reviewed by you yet.';
+  document.getElementById('status').textContent = D.status + (RU ? ' Вы здесь пока ничего не проверяли.' : ' Nothing here has been reviewed by you yet.');
   const funnel = document.getElementById('funnel');
-  [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.all.length + ' articles so far']]
+  (RU ? [[PASSAGES(method.passage_count)], ['→'], [pl(D.chapters.length, 'глава', 'главы', 'глав')], ['→'], [pl(sections, 'раздел', 'раздела', 'разделов')], ['→'], [pl(D.all.length, 'статья', 'статьи', 'статей') + ' на сегодня']]
+    : [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.all.length + ' articles so far']])
     .forEach(([text]) => funnel.append(el(text === '→' ? 'i' : 'b', '', text)));
   const largest = Math.max(...D.chapters.map(chapter => chapter.size));
   const next = D.chapters.flatMap(chapter => chapter.sections).find(section => !section.article);
@@ -774,48 +939,52 @@ function renderTopics() {
     const fill = el('i');
     fill.style.width = (100 * chapter.size / largest) + '%';
     meter.append(fill);
-    head.append(el('span', 'num', String(chapter.order)), el('span', 'name', chapter.title), el('span', 'count', chapter.size + ' passages'), meter);
+    head.append(el('span', 'num', String(chapter.order)), el('span', 'name', chapter.title), el('span', 'count', RU ? PASSAGES(chapter.size) : chapter.size + ' passages'), meter);
     const body = el('div', 'body');
     const about = el('p', '', chapter.summary + ' ');
     about.append(chapter.read === 'full'
-      ? el('span', 'tag ok', 'Sections named after reading every passage')
-      : el('span', 'tag', 'Provisional names, from the three most central passages'));
+      ? el('span', 'tag ok', T('Sections named after reading every passage'))
+      : el('span', 'tag', T('Provisional names, from the three most central passages')));
     const list = el('ul', 'sections');
     for (const section of chapter.sections) {
       const row = el('li');
       if (section.article) {
         const link = el('a', '', section.title);
         link.href = '?c=' + chapter.id + '#article-' + section.article;
-        row.append(link, el('span', 'n', 'Article ' + section.article));
+        row.append(link, el('span', 'n', T('Article') + ' ' + section.article));
       } else {
-        row.append(el('span', '', section.title), el('span', 'n', section === next ? 'next' : ''));
+        row.append(el('span', '', section.title), el('span', 'n', section === next ? T('next') : ''));
       }
-      row.append(el('small', '', plural(section.size, 'passage') + ' · most central: ' + section.central.join(', ')));
+      row.append(el('small', '', RU ? PASSAGES(section.size) + ' · самые центральные: ' + section.central.join(', ') : plural(section.size, 'passage') + ' · most central: ' + section.central.join(', ')));
       list.append(row);
     }
     body.append(about, list);
     box.append(head, body);
     return box;
   }));
-  const names = {ward: 'Ward linkage (used here)', complete: 'Complete linkage (stored earlier)', average: 'Average linkage (stored earlier)'};
+  const names = RU ? {ward: 'Метод Уорда (используется здесь)', complete: 'Полная связь (сохранено раньше)', average: 'Средняя связь (сохранено раньше)'}
+    : {ward: 'Ward linkage (used here)', complete: 'Complete linkage (stored earlier)', average: 'Average linkage (stored earlier)'};
   const compare = document.getElementById('compare');
-  compare.append(el('p', '', 'Three ways of merging the same vectors, each cut into ' + D.chapters.length + ' groups. Each bar is the whole book and each block is one group.'));
+  compare.append(el('p', '', RU ? 'Три способа объединить одни и те же векторы, каждый разрезан на ' + D.chapters.length + ' ' + ruForm(D.chapters.length, 'группу', 'группы', 'групп') + '. Каждая полоса — вся книга, каждый блок — одна группа.'
+    : 'Three ways of merging the same vectors, each cut into ' + D.chapters.length + ' groups. Each bar is the whole book and each block is one group.'));
   for (const [key, label] of Object.entries(names)) {
     const item = method.comparison[key], row = el('div', 'row');
     const stack = el('div', 'stack');
     stack.setAttribute('role', 'img');
-    stack.setAttribute('aria-label', 'Group sizes ' + item.sizes.join(', '));
+    stack.setAttribute('aria-label', (RU ? 'Размеры групп: ' : 'Group sizes ') + item.sizes.join(', '));
     for (const size of item.sizes) { const block = el('i'); block.style.flex = size + ' 0 0'; stack.append(block); }
-    row.append(el('b', '', label), stack, el('p', '', 'Sizes ' + item.sizes.join(', ') + '. Largest group holds ' + Math.round(item.largest_fraction * 100) + '% of the book.'));
+    row.append(el('b', '', label), stack, el('p', '', RU ? 'Размеры: ' + item.sizes.join(', ') + '. В самой большой группе ' + item.largest_fraction.toLocaleString('ru-RU', {style: 'percent', maximumFractionDigits: 0}) + ' книги.'
+      : 'Sizes ' + item.sizes.join(', ') + '. Largest group holds ' + Math.round(item.largest_fraction * 100) + '% of the book.'));
     compare.append(row);
   }
-  compare.append(el('p', '', 'The two stored hierarchies put most of the book in one group, which gives no chapters to work with. Ward linkage keeps groups balanced. None of the three separates the groups sharply: the passages are one man’s notes on a few recurring concerns, and they overlap. So a section is a place to look for passages on a subject. It is not proof that the subject is a distinct theme, and a passage that fits two subjects still sits in one section only. The vectors are ' + method.vectors + '. They were computed once, earlier, and were not changed.'));
+  if (RU) compare.append(el('p', '', 'Две сохранённые иерархии помещают бо́льшую часть книги в одну группу, и глав из этого не получается. Метод Уорда держит группы соразмерными. Ни один из трёх способов не разделяет группы резко: фрагменты — это заметки одного человека о немногих повторяющихся заботах, и они перекрываются. Поэтому раздел — место, где искать фрагменты на определённую тему. Он не доказывает, что эта тема отдельна, и фрагмент, подходящий к двум темам, всё равно стоит только в одном разделе. Векторы: ' + method.vectors + '. Они были посчитаны один раз, раньше, и не менялись.'));
+  else compare.append(el('p', '', 'The two stored hierarchies put most of the book in one group, which gives no chapters to work with. Ward linkage keeps groups balanced. None of the three separates the groups sharply: the passages are one man’s notes on a few recurring concerns, and they overlap. So a section is a place to look for passages on a subject. It is not proof that the subject is a distinct theme, and a passage that fits two subjects still sits in one section only. The vectors are ' + method.vectors + '. They were computed once, earlier, and were not changed.'));
 }
 
 /* ---------- article ---------- */
 const memberOf = (article, ref) => article.members.find(member => member.ref === ref);
 // An article anchored in the project's translation quotes that English; the others quote the 1634 text.
-const anchorText = (article, member) => article.edition && member.english ? member.english : member.text;
+const anchorText = (article, member) => member.russian ? member.text : article.edition && member.english ? member.english : member.text;   // a Russian article carries the Russian as text
 // Casaubon numbers the sections differently from modern editions. Where the modern number is known, it stands beside his.
 const modern = (article, ref) => { const member = memberOf(article, ref); return member && member.standard && member.standard !== ref ? member.standard : null; };
 function context(article, piece) {
@@ -883,7 +1052,7 @@ function dot(article, ref) {
 function refChip(article, ref, out) {
   const chip = el('span', out ? 'out' : '');
   chip.append(dot(article, ref), document.createTextNode(ref));
-  if (out) { chip.append(el('span', 'sr', ' removed')); chip.title = ref + ' is removed for now'; }
+  if (out) { chip.append(el('span', 'sr', RU ? ' убран' : ' removed')); chip.title = RU ? ref + ' пока убран' : ref + ' is removed for now'; }
   chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
   chip.addEventListener('mouseleave', () => spotlight(article, null));
   return chip;
@@ -964,7 +1133,7 @@ function onMap(article, refs) {
   if (pairs.length <= 3) {
     for (const [a, b] of pairs) {
       const value = cosine(article, a, b);
-      if (value != null) ties.append(svg('text', {class: 'cos', x: (spots.get(a).x + spots.get(b).x) / 2, y: (spots.get(a).y + spots.get(b).y) / 2 + 4, 'text-anchor': 'middle'}, value.toFixed(2)));
+      if (value != null) ties.append(svg('text', {class: 'cos', x: (spots.get(a).x + spots.get(b).x) / 2, y: (spots.get(a).y + spots.get(b).y) / 2 + 4, 'text-anchor': 'middle'}, fx(value)));
     }
   }
 }
@@ -973,18 +1142,19 @@ function readout(article, focus) {
   const box = document.querySelector('#article-' + article.number + ' .readout');
   if (!box) return;
   const line = (...parts) => box.replaceChildren(...parts.map(part => typeof part === 'string' ? document.createTextNode(part) : part)), strong = text => el('b', '', text);
-  if (!focus || !focus.length) return line('Point at words in the article, or at a mark on the map, to see how close their passages are.');
+  if (!focus || !focus.length) return line(T('Point at words in the article, or at a mark on the map, to see how close their passages are.'));
   if (focus.length === 1) {
     const ref = focus[0];
-    if (authorOfRef(ref)) { const passage = addedPassage(article, ref); return line(strong(cite(ref)), ' sits nearest ', strong(passage.nearest.ref), ' at ', strong(passage.nearest.similarity.toFixed(2)), '.'); }
+    if (authorOfRef(ref)) { const passage = addedPassage(article, ref); return line(strong(cite(ref)), RU ? ' ближе всего к ' : ' sits nearest ', strong(passage.nearest.ref), RU ? ': ' : ' at ', strong(fx(passage.nearest.similarity)), '.'); }
     const others = article.map.refs.filter(other => other !== ref).map(other => [other, cosine(article, ref, other)]).sort((a, b) => b[1] - a[1]);
-    return line(strong(ref), ' is closest to ', strong(others[0][0]), ' (' + others[0][1].toFixed(2) + ') and farthest from ', strong(others[others.length - 1][0]), ' (' + others[others.length - 1][1].toFixed(2) + ').');
+    return line(strong(ref), RU ? ' ближе всего к ' : ' is closest to ', strong(others[0][0]), ' (' + fx(others[0][1]) + (RU ? ') и дальше всего от ' : ') and farthest from '), strong(others[others.length - 1][0]), ' (' + fx(others[others.length - 1][1]) + ').');
   }
   const values = focus.flatMap((a, i) => focus.slice(i + 1).map(b => cosine(article, a, b))).filter(value => value != null);
-  if (!values.length) return line(strong(focus.map(cite).join(' and ')), ': no similarity is kept between two passages of an added author.');
-  if (focus.length === 2) return line(strong(focus.map(cite).join(' and ')), ': similarity ', strong(values[0].toFixed(2)), ' (the section’s pairs average ' + article.section_closeness.toFixed(2) + ').');
+  const both = focus.map(cite).join(RU ? ' и ' : ' and ');
+  if (!values.length) return line(strong(both), RU ? ': сходство между двумя фрагментами добавленного автора не хранится.' : ': no similarity is kept between two passages of an added author.');
+  if (focus.length === 2) return line(strong(both), RU ? ': сходство ' : ': similarity ', strong(fx(values[0])), RU ? ' (в среднем по парам раздела ' + fx(article.section_closeness) + ').' : ' (the section’s pairs average ' + article.section_closeness.toFixed(2) + ').');
   const mean = values.reduce((sum, value) => sum + value, 0) / values.length;
-  return line(strong(focus.length + ' passages'), ': pairs from ', strong(Math.min(...values).toFixed(2)), ' to ', strong(Math.max(...values).toFixed(2)), ', average ', strong(mean.toFixed(2)), ' (section ' + article.section_closeness.toFixed(2) + ').');
+  return line(strong(RU ? PASSAGES(focus.length) : focus.length + ' passages'), RU ? ': пары от ' : ': pairs from ', strong(fx(Math.min(...values))), RU ? ' до ' : ' to ', strong(fx(Math.max(...values))), RU ? ', в среднем ' : ', average ', strong(fx(mean)), (RU ? ' (раздел ' : ' (section ') + fx(article.section_closeness) + ').');
 }
 // Pick passages out in the text as well: the words they do not back fade.
 function spotlight(article, refs) {
@@ -998,25 +1168,36 @@ function spotlight(article, refs) {
 // Where the section sits in the whole book: its nearest sections, members on a border, close passages left outside.
 function aroundBlock(article) {
   const around = article.map.around, box = el('div', 'around'), total = D.chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0);
-  box.append(el('p', 'label', 'Next to it in the book'));
+  box.append(el('p', 'label', T('Next to it in the book')));
   const list = el('ol', 'near');
   for (const item of around.near) {
     const row = el('li'), name = item.article ? el('a', '', item.title) : el('span', 'name', item.title), track = el('span', 'track'), mark = el('i');
     if (item.article) name.href = '#article-' + item.article;
-    else name.title = 'In the chapter “' + item.chapter + '”' + (item.provisional ? ' (provisional name)' : '');
+    else name.title = RU ? 'В главе «' + item.chapter + '»' + (item.provisional ? ' (предварительное название)' : '') : 'In the chapter “' + item.chapter + '”' + (item.provisional ? ' (provisional name)' : '');
     mark.style.left = (100 * (item.similarity - around.lowest) / (around.highest - around.lowest)).toFixed(1) + '%';
     track.append(mark);
-    row.append(name, el('b', '', item.similarity.toFixed(2)), el('small', '', (item.article ? 'Article ' + item.article : 'No article yet') + ' · ' + plural(item.size, 'passage')), track);
+    row.append(name, el('b', '', fx(item.similarity)), el('small', '', RU ? (item.article ? 'Статья ' + item.article : 'Статьи пока нет') + ' · ' + PASSAGES(item.size) : (item.article ? 'Article ' + item.article : 'No article yet') + ' · ' + plural(item.size, 'passage')), track);
     list.append(row);
   }
-  box.append(list, el('p', 'cap', 'The nearest four of the other ' + (total - 1) + ' sections. ' + plural(around.outside_closer, 'passage') + ' filed elsewhere ' + (around.outside_closer === 1 ? 'sits' : 'sit') + ' closer to this section than its own farthest member.'));
+  box.append(list, el('p', 'cap', RU ? 'Четыре ближайших из остальных ' + (total - 1) + ' ' + ruForm(total - 1, 'раздела', 'разделов', 'разделов') + '. ' + PASSAGES(around.outside_closer) + ' из других разделов ' + ruForm(around.outside_closer, 'стоит', 'стоят', 'стоят') + ' к этому разделу ближе, чем его самый дальний собственный фрагмент.'
+    : 'The nearest four of the other ' + (total - 1) + ' sections. ' + plural(around.outside_closer, 'passage') + ' filed elsewhere ' + (around.outside_closer === 1 ? 'sits' : 'sit') + ' closer to this section than its own farthest member.'));
   return box;
 }
 // The fine print of the vectors column, kept folded.
 function mapNotes(article) {
   const around = article.map.around, notes = el('details');
   notes.dataset.keep = 'notes-' + article.number;
-  notes.append(el('summary', '', 'How to read these numbers'));
+  notes.append(el('summary', '', T('How to read these numbers')));
+  if (RU) {
+    notes.append(el('p', 'cap', 'Каждый фрагмент — вектор из 3072 чисел. Карта сводит их к двум измерениям, оставляя близкие фрагменты рядом. Такое сведение искажает: стресс ' + fx(article.map.stress) + ' (0 — точно, выше 0,2 — грубо). Точные числа — в таблице ниже.'));
+    for (const voice of voicesOn(article)) {
+      notes.append(el('p', 'cap', voice.author.name + ' размещён потом — там, где его расстояния до точек подходят лучше всего, после того как его сходства подняты на ' + fx(voice.author.author_gap) + ' (средний разрыв между двумя авторами). Каждая его метка связана пунктиром с ближайшим фрагментом здесь: чем они ближе, тем линия темнее. Закрашенная метка подкрепляет утверждение, полая что-то добавляет, перечёркнутая ограничивает утверждение.'));
+    }
+    notes.append(el('p', 'cap', 'Соседи: сходство между центрами разделов. Каждая шкала идёт от самого дальнего раздела («' + around.farthest + '», ' + fx(around.lowest) + ') до ближайшего (' + fx(around.highest) + ').'));
+    if (around.border.length) notes.append(el('p', 'cap', 'На границе: ' + around.border.map(item => item.ref + ' так же близок к разделу «' + item.section + '» (' + fx(item.other) + '), как к своему (' + fx(item.own) + ')').join('; ') + '.'));
+    notes.append(el('p', 'cap', 'В других разделах, но близко: ' + around.outside.map(item => item.ref + ' (' + fx(item.similarity) + ', в разделе «' + item.section + '»)').join(', ') + '. Самый дальний собственный фрагмент этого раздела — ' + fx(around.weakest_member) + '.'));
+    return notes;
+  }
   notes.append(el('p', 'cap', 'Each passage is a vector of 3,072 numbers. The map flattens them to two dimensions, keeping close passages close. Flattening distorts: stress ' + article.map.stress.toFixed(2) + ', where 0 is exact and above 0.2 is rough. The exact numbers are in the table below.'));
   for (const voice of voicesOn(article)) {
     notes.append(el('p', 'cap', voice.author.name + ' is placed afterwards, where his distances to the dots fit best, after lifting his similarities by ' + voice.author.author_gap.toFixed(2) + ' (the average gap between the two authors). Each of his marks is dotted to its nearest passage here, darker the closer the two are. A filled mark backs a claim, a hollow one adds something, a struck-through one limits a claim.'));
@@ -1031,7 +1212,8 @@ function mapNotes(article) {
 
 // What an added author's passage does in this article. A passage used in two effects takes the first of Backs, Limits, Adds.
 const MARK_ORDER = ['stronger', 'qualified', 'wider'];
-const DOES = {stronger: 'backs a claim', qualified: 'limits a claim', wider: 'adds something Marcus does not say here'};
+const DOES = RU ? {stronger: 'подкрепляет утверждение', qualified: 'ограничивает утверждение', wider: 'добавляет то, чего Марк здесь не говорит'}
+  : {stronger: 'backs a claim', qualified: 'limits a claim', wider: 'adds something Marcus does not say here'};
 const effectOf = (voice, ref) => MARK_ORDER.find(effect => voice.items.some(item => item.effect === effect && (item.piece ? [item.piece] : item.support || []).some(piece => piece.ref === ref))) || 'stronger';
 // The author's own shape: filled black when it backs, hollow when it adds, hollow and struck through when it limits.
 function addedMark(mark, effect, x, y, size = 1) {
@@ -1078,9 +1260,10 @@ function placeLabels(labels, spots) {
 function mapBlock(article) {
   const box = el('figure', 'sci'), gone = removedOf(article), spots = place(article), labels = [];
   box.dataset.anchor = 'sci' + article.number;
-  box.append(el('p', 'label', 'The vectors · closeness of meaning'));
+  box.append(el('p', 'label', T('The vectors · closeness of meaning')));
   const stats = el('div', 'stats');
-  for (const [value, name] of [[article.map.refs.length, 'passages in the section'], [article.sources.length, 'feed the article'], [article.section_closeness.toFixed(2), 'average similarity of a pair']]) {
+  for (const [value, name] of RU ? [[article.map.refs.length, ruForm(article.map.refs.length, 'фрагмент', 'фрагмента', 'фрагментов') + ' в разделе'], [article.sources.length, ruForm(article.sources.length, 'питает', 'питают', 'питают') + ' статью'], [fx(article.section_closeness), T('average similarity of a pair')]]
+    : [[article.map.refs.length, 'passages in the section'], [article.sources.length, 'feed the article'], [article.section_closeness.toFixed(2), 'average similarity of a pair']]) {
     const tile = el('p');
     tile.append(el('b', '', String(value)), el('span', '', name));
     stats.append(tile);
@@ -1088,10 +1271,13 @@ function mapBlock(article) {
   box.append(stats);
   if (article.in_translation) {
     const tr = article.in_translation;
-    box.append(el('p', 'tr-note', 'Measured on the 1634 English, on which the sections were grouped. In the new English these ' + tr.of + ' passages are ' + tr.closeness.toFixed(2)
+    box.append(el('p', 'tr-note', RU ? 'Измерено на английском тексте 1634 года, по которому сгруппированы разделы. В новом английском переводе близость этих ' + OF_PASSAGES(tr.of) + ' друг к другу — ' + fx(tr.closeness)
+      + ', и ' + tr.stayed + ' из ' + tr.of + ' по-прежнему ближе всего к этому разделу среди всех ' + tr.sections + '.'
+      : 'Measured on the 1634 English, on which the sections were grouped. In the new English these ' + tr.of + ' passages are ' + tr.closeness.toFixed(2)
       + ' close to one another, and ' + tr.stayed + ' of ' + tr.of + ' are still nearest to this section among all ' + tr.sections + '.'));
   }
-  const map = svg('svg', {class: 'map', viewBox: '0 0 ' + MAP.w + ' ' + MAP.h, role: 'group', 'aria-label': 'Map of the ' + article.map.refs.length + ' passages in this section. Passages with closer meaning vectors sit closer together. Flattening to two dimensions distorts: stress ' + article.map.stress.toFixed(2) + ', where 0 is exact.'});
+  const map = svg('svg', {class: 'map', viewBox: '0 0 ' + MAP.w + ' ' + MAP.h, role: 'group', 'aria-label': RU ? 'Карта ' + OF_PASSAGES(article.map.refs.length) + ' этого раздела. Фрагменты с более близкими векторами смысла стоят ближе. Сведение к двум измерениям искажает: стресс ' + fx(article.map.stress) + ', 0 — точно.'
+    : 'Map of the ' + article.map.refs.length + ' passages in this section. Passages with closer meaning vectors sit closer together. Flattening to two dimensions distorts: stress ' + article.map.stress.toFixed(2) + ', where 0 is exact.'});
   const base = svg('g'), ties = svg('g', {class: 'ties'}), dots = svg('g');
   const ground = outline(article.map.refs.map(ref => spots.get(ref)));
   if (ground.length > 2) base.append(svg('path', {class: 'land', d: 'M' + ground.map(point => point.x.toFixed(1) + ' ' + point.y.toFixed(1)).join('L') + 'Z'}));
@@ -1102,7 +1288,8 @@ function mapBlock(article) {
   for (const member of article.members) {
     const at = spots.get(member.ref), live = member.used && !gone.has(member.ref), name = svg('text', {}, member.ref);
     const point = svg('g', {class: 'pt ' + (member.used ? 'used' : 'aside'), 'data-ref': member.ref, tabindex: '0', role: 'img',
-      'aria-label': 'Meditations ' + member.ref + ', ' + (member.used ? 'feeds the article' : 'set aside') + ', similarity to the centre of the section ' + member.similarity.toFixed(2)});
+      'aria-label': RU ? '«Размышления» ' + member.ref + ', ' + T(member.used ? 'feeds the article' : 'set aside') + ', сходство с центром раздела ' + fx(member.similarity)
+        : 'Meditations ' + member.ref + ', ' + (member.used ? 'feeds the article' : 'set aside') + ', similarity to the centre of the section ' + member.similarity.toFixed(2)});
     point.append(svg('circle', live
       ? {cx: at.x, cy: at.y, r: 6.5, fill: hue(article, member.ref), stroke: 'var(--card)', 'stroke-width': 2}
       : {cx: at.x, cy: at.y, r: 5, fill: 'var(--card)', stroke: member.used ? hue(article, member.ref) : 'var(--muted)', 'stroke-width': 1.5}));
@@ -1110,6 +1297,12 @@ function mapBlock(article) {
     labels.push({point, text: name, at, ref: member.ref, rank: member.similarity, added: false});
     tip(point, () => {
       const card = el('div'), claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
+      if (RU) {
+        card.append(el('p', 'tip-head', '«Размышления» ' + member.ref + ' · ' + pl(member.words, 'слово', 'слова', 'слов')));
+        card.append(el('p', 'tip-row', 'Сходство с центром раздела: ' + fx(member.similarity)));
+        card.append(el('p', 'tip-note', member.used ? feedsRu(claims, member.feeds.includes('single')) + (gone.has(member.ref) ? ' Пока убран.' : '') : 'Отложен. ' + member.why));
+        return card;
+      }
       card.append(el('p', 'tip-head', 'Meditations ' + member.ref + ' · ' + member.words + ' words'));
       card.append(el('p', 'tip-row', 'Similarity to the centre of the section: ' + member.similarity.toFixed(2)));
       card.append(el('p', 'tip-note', member.used ? (claims.length ? 'Feeds claim' + (claims.length > 1 ? 's ' : ' ') + claims.join(', ') + (member.feeds.includes('single') ? ', and is quoted alone' : '') + '.' : 'Quoted alone, under “said once”.') + (gone.has(member.ref) ? ' Removed for now.' : '') : 'Set aside. ' + member.why));
@@ -1129,13 +1322,18 @@ function mapBlock(article) {
       const at = spots.get(passage.ref), home = spots.get(passage.nearest.ref), effect = effectOf(voice, passage.ref);
       base.append(svg('line', {class: 'base second', x1: at.x, y1: at.y, x2: home.x, y2: home.y, style: '--o:' + strength(passage.nearest.similarity).toFixed(2), 'data-sim': passage.nearest.similarity}));
       const point = svg('g', {class: 'pt second' + (state.fresh === voice.key ? ' fresh' : ''), 'data-ref': passage.ref, 'data-effect': effect, tabindex: '0', role: 'img',
-        'aria-label': cite(passage.ref) + ', ' + DOES[effect] + ', nearest passage here ' + passage.nearest.ref + ' at ' + passage.nearest.similarity.toFixed(2)});
+        'aria-label': cite(passage.ref) + ', ' + DOES[effect] + (RU ? ', ближайший фрагмент здесь ' + passage.nearest.ref + ': ' + fx(passage.nearest.similarity) : ', nearest passage here ' + passage.nearest.ref + ' at ' + passage.nearest.similarity.toFixed(2))});
       const name = svg('text', {}, passage.ref);
       point.append(addedMark(voice.author.mark, effect, at.x, at.y), name);
       labels.push({point, text: name, at, ref: passage.ref, rank: passage.to_centre, added: true});
       tip(point, () => {
         const card = el('div');
-        card.append(el('p', 'tip-head', cite(passage.ref) + ' · ' + passage.title),
+        if (RU) card.append(el('p', 'tip-head', cite(passage.ref) + ' · ' + passage.title),
+          el('p', 'tip-row', 'В этой статье он ' + DOES[effect] + '.'),
+          el('p', 'tip-row', 'Ближайший фрагмент здесь: ' + passage.nearest.ref + ' (' + fx(passage.nearest.similarity) + ')'),
+          el('p', 'tip-row', 'Близость к этому разделу: место ' + nf(passage.rank) + ' из ' + nf(voice.total) + ' фрагментов ' + inCase(voice.author.name, 'gen')),
+          el('p', 'tip-note', T(passage.rank > 200 ? 'Found by reading, not by the vectors.' : 'The vectors point to it.')));
+        else card.append(el('p', 'tip-head', cite(passage.ref) + ' · ' + passage.title),
           el('p', 'tip-row', 'In this article it ' + DOES[effect] + '.'),
           el('p', 'tip-row', 'Nearest passage here: ' + passage.nearest.ref + ' (' + passage.nearest.similarity.toFixed(2) + ')'),
           el('p', 'tip-row', 'Closeness to this section: number ' + passage.rank.toLocaleString('en') + ' of ' + voice.total.toLocaleString('en') + ' passages of ' + voice.author.name),
@@ -1153,10 +1351,10 @@ function mapBlock(article) {
   map.append(base, ties, dots);
   const key = el('p', 'key');
   const used = el('span'), aside = el('span'), rule = el('span'), land = el('span');
-  used.append(el('i'), document.createTextNode('feeds the article'));
-  aside.append(el('i', 'hollow'), document.createTextNode('set aside'));
-  rule.append(el('i', 'rule'), document.createTextNode('fused together'));
-  land.append(el('i', 'land'), document.createTextNode('the section'));
+  used.append(el('i'), document.createTextNode(T('feeds the article')));
+  aside.append(el('i', 'hollow'), document.createTextNode(T('set aside')));
+  rule.append(el('i', 'rule'), document.createTextNode(T('fused together')));
+  land.append(el('i', 'land'), document.createTextNode(T('the section')));
   key.append(used, aside, rule, land);
   // One entry for each mark an added author has on this map, after the author's name (the dotted ties are explained in the folded notes,
   // so that the column still fits a 900 px screen).
@@ -1173,14 +1371,14 @@ function mapBlock(article) {
     }
     key.append(group);
   }
-  const live = el('p', 'readout', 'Point at words in the article, or at a mark on the map, to see how close their passages are.');
+  const live = el('p', 'readout', T('Point at words in the article, or at a mark on the map, to see how close their passages are.'));
   box.append(map, key, live, aroundBlock(article), mapNotes(article));
 
   // The exact numbers the map approximates.
   const order = [...article.sources].sort((a, b) => Math.min(...memberOf(article, a).feeds.map(key => key === 'single' ? 99 : claimOf(article, key).number)) - Math.min(...memberOf(article, b).feeds.map(key => key === 'single' ? 99 : claimOf(article, key).number)))
     .concat(article.members.filter(member => !member.used).map(member => member.ref));
   const cell = 24, pad = 46, size = pad + order.length * cell + 2, pairs = fusedPairs(article), span = article.map.highest - article.map.lowest;
-  const grid = svg('svg', {width: size, height: size, viewBox: '0 0 ' + size + ' ' + size, role: 'group', 'aria-label': 'Cosine similarity between every two passages of the section'});
+  const grid = svg('svg', {width: size, height: size, viewBox: '0 0 ' + size + ' ' + size, role: 'group', 'aria-label': T('Cosine similarity between every two passages of the section')});
   order.forEach((ref, i) => {
     grid.append(svg('text', {x: pad - 6, y: pad + i * cell + 15, 'text-anchor': 'end'}, ref));
     grid.append(svg('text', {x: 0, y: 0, transform: 'translate(' + (pad + i * cell + 15) + ' ' + (pad - 6) + ') rotate(-55)'}, ref));
@@ -1189,10 +1387,13 @@ function mapBlock(article) {
       const value = cosine(article, ref, other), together = pairs.get([ref, other].sort().join('|'));
       const square = svg('rect', {x: pad + j * cell + 1, y: pad + i * cell + 1, width: cell - 2, height: cell - 2, rx: 3, tabindex: '0', role: 'img',
         'fill-opacity': (0.06 + 0.84 * (value - article.map.lowest) / span).toFixed(3), class: together ? 'fusedpair' : '',
-        'aria-label': ref + ' and ' + other + ': cosine similarity ' + value.toFixed(2) + (together ? ', fused in claim ' + together.join(', ') : '')});
+        'aria-label': RU ? ref + ' и ' + other + ': косинусное сходство ' + fx(value) + (together ? (together.length > 1 ? ', слиты в утверждениях ' : ', слиты в утверждении ') + together.join(', ') : '')
+          : ref + ' and ' + other + ': cosine similarity ' + value.toFixed(2) + (together ? ', fused in claim ' + together.join(', ') : '')});
       tip(square, () => {
         const card = el('div');
-        card.append(el('p', 'tip-head', ref + ' and ' + other), el('p', 'tip-row', 'Cosine similarity: ' + value.toFixed(2)),
+        if (RU) card.append(el('p', 'tip-head', ref + ' и ' + other), el('p', 'tip-row', 'Косинусное сходство: ' + fx(value)),
+          el('p', 'tip-note', together ? (together.length > 1 ? 'Слиты вместе в утверждениях ' : 'Слиты вместе в утверждении ') + together.join(', ') + '.' : T('Not fused together.')));
+        else card.append(el('p', 'tip-head', ref + ' and ' + other), el('p', 'tip-row', 'Cosine similarity: ' + value.toFixed(2)),
           el('p', 'tip-note', together ? 'Fused together in claim ' + together.join(', ') + '.' : 'Not fused together.'));
         return card;
       });
@@ -1202,9 +1403,9 @@ function mapBlock(article) {
   const more = el('details'), table = el('div', 'matrix'), scale = el('p', 'key'), ring = el('span');
   more.dataset.keep = 'matrix-' + article.number;
   table.append(grid);
-  ring.append(el('i', 'ring'), document.createTextNode('fused in the same claim'));
-  scale.append(el('span', '', 'Darker is closer: ' + article.map.lowest.toFixed(2) + ' to ' + article.map.highest.toFixed(2) + ' (1 would be identical)'), ring);
-  more.append(el('summary', '', 'Exact similarity of every pair'), table, scale);
+  ring.append(el('i', 'ring'), document.createTextNode(T('fused in the same claim')));
+  scale.append(el('span', '', RU ? 'Темнее — ближе: от ' + fx(article.map.lowest) + ' до ' + fx(article.map.highest) + ' (1 — полное совпадение)' : 'Darker is closer: ' + article.map.lowest.toFixed(2) + ' to ' + article.map.highest.toFixed(2) + ' (1 would be identical)'), ring);
+  more.append(el('summary', '', T('Exact similarity of every pair')), table, scale);
   box.append(more);
   return box;
 }
@@ -1248,7 +1449,7 @@ function tip(node, build) {
 }
 function tipQuote(article, piece) {
   const row = el('p', 'tip-q');
-  row.append(el('b', '', piece.ref + (removedOf(article).has(piece.ref) ? ' (removed)' : '')), document.createTextNode('“' + flat(piece.quote) + '”'));
+  row.append(el('b', '', piece.ref + (removedOf(article).has(piece.ref) ? (RU ? ' (убран)' : ' (removed)') : '')), document.createTextNode(quoted(flat(piece.quote))));
   return row;
 }
 // The hover card: the exact quotes behind the words under the pointer, then every other component of the sentence with its passages.
@@ -1256,21 +1457,21 @@ function breakdown(article, segs, index) {
   const box = el('div'), seg = segs[index];
   if (seg.ids.length) {
     const refs = refsOf(article, seg.ids);
-    box.append(el('p', 'tip-head', '“' + seg.text.trim() + '” · from ' + plural(refs.length, 'passage')));
+    box.append(el('p', 'tip-head', RU ? quoted(seg.text.trim()) + ' · из ' + OF_PASSAGES(refs.length) : '“' + seg.text.trim() + '” · from ' + plural(refs.length, 'passage')));
     for (const id of seg.ids) box.append(tipQuote(article, pieceOf(article, id)));
   } else {
-    box.append(el('p', 'tip-head', 'Joining words'), el('p', 'tip-note', 'These words are the editor’s. No passage is quoted for them.'));
+    box.append(el('p', 'tip-head', T('Joining words')), el('p', 'tip-note', T('These words are the editor’s. No passage is quoted for them.')));
   }
   const others = segs.filter((other, i) => i !== index && other.ids.length);
   if (others.length) {
-    box.append(el('p', 'tip-head rest', 'The rest of the sentence'));
+    box.append(el('p', 'tip-head rest', T('The rest of the sentence')));
     for (const other of others) {
       const row = el('p', 'tip-row');
       row.append(el('span', '', short(other.text.trim(), 36)), el('b', '', refsOf(article, other.ids).join(' · ')));
       box.append(row);
     }
   }
-  box.append(el('p', 'tip-note', 'Click for the full passages and what follows from each.'));
+  box.append(el('p', 'tip-note', T('Click for the full passages and what follows from each.')));
   return box;
 }
 
@@ -1284,7 +1485,7 @@ function sentenceSegs(article, text, parts, target) {
   if (amends.length) segs.push({text: '.', ids: []});
   return segs;
 }
-const VERB = {adds: 'adds', changes: 'changes', challenges: 'challenges', limits: 'limits'};
+const VERB = RU ? {adds: 'добавляет', changes: 'меняет', challenges: 'возражает', limits: 'ограничивает'} : {adds: 'adds', changes: 'changes', challenges: 'challenges', limits: 'limits'};
 function sentenceNode(article, o) {
   const sentence = el('p', 'sent' + (o.cls ? ' ' + o.cls : ''));
   const segs = sentenceSegs(article, o.text, o.parts, o.target), gone = removedOf(article);
@@ -1310,7 +1511,7 @@ function sentenceNode(article, o) {
     const span = el('span', 'sg' + (refs.length ? '' : ' join') + (dead ? ' gone' : '') + (seg.amend ? ' add' + (state.fresh === seg.amend.author ? ' fresh' : '') : ''), body);
     span.dataset.k = o.base + '-' + index;
     span.setAttribute('aria-pressed', String(open && state.sel.p === index));
-    press(span, (seg.amend ? authorByKey(seg.amend.author).name + ' ' + VERB[seg.amend.kind] + ': ' : '') + body + ': ' + (refs.length ? 'from ' + refs.join(', ') : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index, {text: body}));
+    press(span, (seg.amend ? authorByKey(seg.amend.author).name + ' ' + VERB[seg.amend.kind] + ': ' : '') + body + ': ' + (refs.length ? (RU ? 'из ' : 'from ') + refs.join(', ') : RU ? 'связующие слова редактора' : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index, {text: body}));
     tip(span, () => breakdown(article, segs, index));
     if (refs.length) {
       span.dataset.refs = refs.join('|');
@@ -1322,7 +1523,7 @@ function sentenceNode(article, o) {
     if (seg.amend) {
       // The clause's verdict is given where its sources are listed (tap the clause); the tag says it once given.
       const author = authorByKey(seg.amend.author), tag = el('span', 'who inl'), key = 'a' + article.number + ':' + seg.amend.author + ':amend:' + seg.amend.target;
-      tag.append(el('i', 'dot ' + author.mark), document.createTextNode(author.name + ' ' + VERB[seg.amend.kind] + (verdictOf(key) ? ' · ' + verdictOf(key) : '')));
+      tag.append(el('i', 'dot ' + author.mark), document.createTextNode(author.name + ' ' + VERB[seg.amend.kind] + (verdictOf(key) ? ' · ' + T(verdictOf(key)) : '')));
       judged(tag, key);
       judged(span, key);
       sentence.append(tag);
@@ -1342,7 +1543,7 @@ function pickedBlock(article, key, segs) {
   if (openKey(article) !== key || state.sel.p == null || !segs[state.sel.p]) return null;
   const seg = segs[state.sel.p], gone = removedOf(article), refs = refsOf(article, seg.ids), box = el('div', 'picked');
   if (refs.length) {
-    box.append(el('p', 'picked-head', 'Sources for the selected words'));
+    box.append(el('p', 'picked-head', T('Sources for the selected words')));
     const list = el('ul');
     for (const ref of [...refs.filter(r => !authorOfRef(r)), ...refs.filter(r => authorOfRef(r))]) {
       const row = el('li'), sample = el('span', 'sample');
@@ -1358,22 +1559,23 @@ function pickedBlock(article, key, segs) {
       const mark = dot(article, ref);
       mark.setAttribute('aria-hidden', 'true');
       if (gone.has(ref)) mark.style.opacity = '.35';
-      row.append(mark, sample, el('span', '', authorOfRef(ref) ? cite(ref) : 'Marcus ' + ref + (modern(article, ref) ? ' (' + modern(article, ref) + ' in modern editions)' : '')));
-      if (gone.has(ref)) row.append(el('em', '', 'removed'));
+      row.append(mark, sample, el('span', '', authorOfRef(ref) ? cite(ref) : RU ? 'Марк ' + ref + (modern(article, ref) ? ' (в современных изданиях ' + modern(article, ref) + ')' : '') : 'Marcus ' + ref + (modern(article, ref) ? ' (' + modern(article, ref) + ' in modern editions)' : '')));
+      if (gone.has(ref)) row.append(el('em', '', T('removed')));
       list.append(row);
     }
     box.append(list);
     if (seg.amend) {
       const name = authorByKey(seg.amend.author).name;
-      box.append(...headWith(article, 'a' + article.number + ':' + seg.amend.author + ':amend:' + seg.amend.target, el('p', 'picked-head', 'Your verdict on ' + name + '’s clause')));
+      box.append(...headWith(article, 'a' + article.number + ':' + seg.amend.author + ':amend:' + seg.amend.target, el('p', 'picked-head', RU ? 'Ваша оценка приписки ' + inCase(name, 'gen') : 'Your verdict on ' + name + '’s clause')));
     }
   } else {
     const before = segs.slice(0, state.sel.p).reverse().find(other => other.ids.length), after = segs.slice(state.sel.p + 1).find(other => other.ids.length);
     // A recorded inference ("so", "because"): the editor draws a conclusion here, and says why the step is the editor's.
     const where = key === 'statement' ? article.statement : claimOf(article, key);
     const inference = ((where && where.inferences) || []).find(item => new RegExp('(^|[^\\p{L}])' + item.words.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^\\p{L}])', 'u').test(seg.text));
-    box.append(el('p', 'picked-head', inference ? 'The editor’s inference' : 'The editor’s connection'));
-    box.append(el('p', 'picked-note', '“' + seg.text.trim() + '” is the editor’s' + (before && after ? ': it joins “' + short(before.text.trim(), 44) + '” to “' + short(after.text.trim(), 44) + '”' : '') + '. No passage says these words.'));
+    box.append(el('p', 'picked-head', T(inference ? 'The editor’s inference' : 'The editor’s connection')));
+    box.append(el('p', 'picked-note', RU ? quoted(seg.text.trim()) + ' — слова редактора' + (before && after ? ': они соединяют ' + quoted(short(before.text.trim(), 44)) + ' и ' + quoted(short(after.text.trim(), 44)) : '') + '. Ни один фрагмент этих слов не говорит.'
+      : '“' + seg.text.trim() + '” is the editor’s' + (before && after ? ': it joins “' + short(before.text.trim(), 44) + '” to “' + short(after.text.trim(), 44) + '”' : '') + '. No passage says these words.'));
     if (inference) box.append(el('p', 'picked-note why', inference.why));
   }
   return box;
@@ -1384,7 +1586,7 @@ function cardHead(article, label, marcus, keys, reviewKey) {
   const parts = [el('p', 'label', label)];
   if (voicesOn(article).length) {
     const tags = el('span', 'whos');
-    if (marcus) tags.append(el('span', 'who', 'Aurelius'));
+    if (marcus) tags.append(el('span', 'who', T('Aurelius')));
     for (const key of keys) {
       const author = authorByKey(key), tag = el('span', 'who added');
       tag.append(el('i', 'dot ' + author.mark), document.createTextNode(author.name));
@@ -1403,27 +1605,30 @@ function passageRow(article, piece, hit, mode) {
   row.style.setProperty('--c', hue(article, piece.ref));
   const said = el('div', 'said'), then = el('div', 'then');
   const source = piece.author ? addedPassage(article, piece.ref) : null;
-  said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref + (modern(article, piece.ref) ? ' (' + modern(article, piece.ref) + ' in modern editions)' : '')) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
+  if (RU) said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : '«Размышления» ' + piece.ref + (modern(article, piece.ref) ? ' (в современных изданиях ' + modern(article, piece.ref) + ')' : '')) + (gone ? ' · убран' : '') + (hit ? ' · подкрепляет выбранные вами слова' : '')), context(article, piece));
+  else said.append(el('b', '', (source ? cite(piece.ref) + ' · ' + source.title : 'Meditations ' + piece.ref + (modern(article, piece.ref) ? ' (' + modern(article, piece.ref) + ' in modern editions)' : '')) + (gone ? ' · removed' : '') + (hit ? ' · backs the words you picked' : '')), context(article, piece));
   if (!piece.author && memberOf(article, piece.ref).english) said.append(versions(article, memberOf(article, piece.ref)));
   // An added author's quote carries a sentence on what the passage around it is about and what its key words refer to.
-  if (piece.author && piece.context) said.append(el('p', 'in-context', 'In context: ' + piece.context));
+  if (piece.author && piece.context) said.append(el('p', 'in-context', (RU ? 'В контексте: ' : 'In context: ') + piece.context));
   // The owner judges each quote's conclusion here; a said-once item is judged on its card.
-  if (mode === 'single') then.append(el('b', '', 'What follows'));
-  else then.append(...headWith(article, judged(row, 'a' + article.number + ':' + (piece.author ? piece.author + ':' : 'p:') + piece.id).dataset.review, el('b', '', 'What follows')));
+  if (mode === 'single') then.append(el('b', '', T('What follows')));
+  else then.append(...headWith(article, judged(row, 'a' + article.number + ':' + (piece.author ? piece.author + ':' : 'p:') + piece.id).dataset.review, el('b', '', T('What follows'))));
   then.append(el('p', 'follows', piece.follows));
   if (mode === 'claim' && piece.gives && piece.gives.length) {
     const gives = el('p', 'gives');
-    gives.append(el('i', '', 'Gives the claim: '), document.createTextNode(piece.gives.map(words => '“' + words + '”').join(' and ')));
+    gives.append(el('i', '', RU ? 'Даёт утверждению: ' : 'Gives the claim: '), document.createTextNode(piece.gives.map(quoted).join(RU ? ' и ' : ' and ')));
     then.append(gives);
   }
   if (mode === 'statement' && !piece.author) {
     const claim = piece.in === 'single' ? null : claimOf(article, piece.in);
-    then.append(el('p', 'gives', claim ? 'Also behind claim ' + claim.number + ' · ' + claim.role : 'Said once'));
+    then.append(el('p', 'gives', claim ? (RU ? 'Также стоит за ' + claimCase(claim.number, 'ins') : 'Also behind claim ' + claim.number) + ' · ' + claim.role : T('Said once')));
   }
   if (mode === 'claim' && piece.note) then.append(el('p', 'gives', piece.note));
   if (source) {
     const voice = voiceOfRef(article, piece.ref);
-    then.append(el('p', 'gives', 'Vectors: ' + source.nearest.similarity.toFixed(2) + ' to its nearest passage here (' + source.nearest.ref + '). Number ' + source.rank.toLocaleString('en') + ' of ' + voice.total.toLocaleString('en')
+    if (RU) then.append(el('p', 'gives', 'Векторы: ' + fx(source.nearest.similarity) + ' до ближайшего фрагмента здесь (' + source.nearest.ref + '). Место ' + nf(source.rank) + ' из ' + nf(voice.total)
+      + ' фрагментов ' + inCase(voice.author.name, 'gen') + ' по близости к этому разделу.' + (source.rank > 200 ? ' ' + T('Found by reading, not by the vectors.') : '')));
+    else then.append(el('p', 'gives', 'Vectors: ' + source.nearest.similarity.toFixed(2) + ' to its nearest passage here (' + source.nearest.ref + '). Number ' + source.rank.toLocaleString('en') + ' of ' + voice.total.toLocaleString('en')
       + ' passages of ' + voice.author.name + ' for closeness to this section.' + (source.rank > 200 ? ' Found by reading, not by the vectors.' : '')));
   }
   row.append(said, then);
@@ -1437,6 +1642,15 @@ function versions(article, member) {
   const greek = el('p', 'ctx grc', member.greek), link = el('a', '', 'This passage on the translation page (there it is ' + member.standard + ')');
   greek.lang = 'grc';
   link.href = 'stoic-translation.html#p-' + member.standard.replace(/[^0-9a-z]+/g, '-');
+  if (RU && member.russian) {
+    // The Russian was made from the project's English, which was made from the Greek: both are one tap away.
+    link.textContent = 'Этот фрагмент на странице перевода (там он ' + member.standard + ', страница на английском)';
+    const english = el('p', 'ctx new', member.english);
+    english.lang = 'en';
+    box.append(el('summary', '', 'Греческий оригинал и английский перевод, с которого сделан русский'));
+    box.append(el('b', '', 'По-гречески'), greek, el('b', '', 'Английский перевод проекта (' + member.standard + ')'), english, link);
+    return box;
+  }
   if (article.edition) {
     box.append(el('summary', '', 'The Greek and the 1634 English'));
     box.append(el('b', '', 'Greek'), greek, el('b', '', 'Casaubon, 1634 (' + member.ref + ')'), el('p', 'ctx old', flat(member.text)), link);
@@ -1451,11 +1665,12 @@ function versions(article, member) {
 // While an added author is switched on, the left column also holds that author's quotes, so it names no one.
 function columns(article) {
   const head = el('div', 'cols');
-  head.append(el('span', '', article && voicesOn(article).length ? 'The passage, in its author’s words' : article && article.edition ? 'The passage, translated from the Greek' : 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
+  if (RU) head.append(el('span', '', article && voicesOn(article).length ? 'Фрагмент — словами автора' : article && article.edition ? 'Фрагмент, в переводе' : 'Фрагмент — словами Марка'), el('span', '', 'Что из него следует'));
+  else head.append(el('span', '', article && voicesOn(article).length ? 'The passage, in its author’s words' : article && article.edition ? 'The passage, translated from the Greek' : 'The passage, in Marcus’s words'), el('span', '', 'What follows from it'));
   return head;
 }
 function showButton(article, key, open, more, less) {
-  const button = el('button', 'show', open ? less : more);
+  const button = el('button', 'show', T(open ? less : more));
   button.type = 'button';
   button.dataset.k = ['show', article.number, key].join('-');
   button.setAttribute('aria-expanded', String(open));
@@ -1467,15 +1682,18 @@ function statementBlock(article) {
   const st = article.statement, key = 'statement', gone = removedOf(article);
   const box = judged(el('div', 'statement'), 'a' + article.number + ':statement');
   box.dataset.anchor = 'st' + article.number;
-  box.append(...headWith(article, box.dataset.review, el('p', 'label', 'The statement · ' + st.kind)));
+  box.append(...headWith(article, box.dataset.review, el('p', 'label', T('The statement') + ' · ' + st.kind)));
   const {sentence, segs} = sentenceNode(article, {text: st.t, parts: st.parts, key, base: 'st-' + article.number, cls: 'big', numbers: true, target: 'statement'});
   box.dataset.amended = amendsFor(article, 'statement').map(clause => clause.author + ':' + clause.kind).join(' ');
   const open = quotesOpen(article, key), pick = pickedBlock(article, key, segs);
   box.append(sentence);
   const refs = [...new Set(st.parts.flatMap(part => part.refs))];
-  const now = refs.filter(ref => !gone.has(ref)).length, others = [...new Set(amendsFor(article, 'statement').map(clause => authorByKey(clause.author).name + '’s'))];
+  const now = refs.filter(ref => !gone.has(ref)).length, others = [...new Set(amendsFor(article, 'statement').map(clause => RU ? inCase(authorByKey(clause.author).name, 'gen') : authorByKey(clause.author).name + '’s'))];
   const from = el('p', 'fused' + (now === 0 || (now === 1 && refs.length > 1) ? ' warn' : ''));
-  from.append(el('b', '', now === refs.length ? 'Gathered from ' + plural(refs.length, 'passage')
+  if (RU) from.append(el('b', '', now === refs.length ? 'Собрано из ' + OF_PASSAGES(refs.length)
+    : now ? 'Для этого положения осталось ' + now + ' из ' + OF_PASSAGES(refs.length)
+    : others.length ? 'Фрагменты Марка для этого положения убраны; остались слова ' + others.join(' и ') : T('No passage left')));
+  else from.append(el('b', '', now === refs.length ? 'Gathered from ' + plural(refs.length, 'passage')
     : now ? now + ' of ' + refs.length + ' passages remain for this statement'
     : others.length ? 'Marcus’s passages for this statement are removed; what remains is ' + others.join(' and ') : 'No passage left'));
   for (const ref of refs) from.append(refChip(article, ref, gone.has(ref)));
@@ -1490,11 +1708,11 @@ function statementBlock(article) {
   if (open) {
     const chosen = state.sel.p != null ? segs[state.sel.p] : null;
     const panel = el('div', 'trace M');
-    panel.append(el('p', 'panel-head', 'The statement, part by part'), columns(article));
+    panel.append(el('p', 'panel-head', T('The statement, part by part')), columns(article));
     for (const part of [...st.parts, ...amendsFor(article, 'statement').map(clause => ({words: clause.t.replace(/^[\s,;:—–-]+/, ''), ids: clause.ids}))]) {
       const hit = Boolean(chosen && chosen.ids.length && part.ids.every(id => chosen.ids.includes(id)));
       const group = el('div', 'part' + (hit ? ' hit' : ''));
-      group.append(el('p', 'part-words', '“' + part.words + '”' + (hit ? ' · the words you picked' : '')));
+      group.append(el('p', 'part-words', quoted(part.words) + (hit ? (RU ? ' · выбранные вами слова' : ' · the words you picked') : '')));
       for (const id of part.ids) group.append(passageRow(article, pieceOf(article, id), false, 'statement'));
       panel.append(group);
     }
@@ -1525,7 +1743,10 @@ function claimBlock(article, claim) {
   }).filter(entry => entry.refs.length);
   const all = claim.passages.length, now = remaining.length, lost = now === 0, thin = now === 1 && all > 1;
   if (lost) block.classList.add('lost');
-  const headline = now === all ? 'Fused from ' + plural(all, 'passage')
+  const headline = RU ? (now === all ? 'Слито из ' + OF_PASSAGES(all)
+    : lost ? (extra.length ? 'Фрагменты Марка для этого утверждения убраны; остались слова ' + extra.map(entry => inCase(entry.voice.author.name, 'gen')).join(' и ') : T('No passage left'))
+    : 'Для этого утверждения осталось ' + now + ' из ' + OF_PASSAGES(all))
+    : now === all ? 'Fused from ' + plural(all, 'passage')
     : lost ? (extra.length ? 'Marcus’s passages for this claim are removed; what remains is ' + extra.map(entry => entry.voice.author.name + '’s').join(' and ') : 'No passage left')
     : now + ' of ' + all + ' passages remain for this claim';
   const from = el('p', 'fused' + (thin || lost ? ' warn' : ''));
@@ -1544,25 +1765,27 @@ function claimBlock(article, claim) {
   if (pick) { pick.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes')); block.append(pick); } else block.append(from);
   if (open) {
     const panel = el('div', 'trace M');
-    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns(article));
+    panel.append(el('p', 'panel-head', T('The passages, and what follows from each')), columns(article));
     for (const piece of supportOf(article, claim)) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
     const shared = el('div', 'link induce');
-    shared.append(el('b', '', 'Taken together'), document.createTextNode(claim.shared));
+    shared.append(el('b', '', T('Taken together')), document.createTextNode(claim.shared));
     panel.append(shared);
     if (claim.changed) {
       const changed = el('div', 'link induce');
-      changed.append(el('b', '', 'What the fusion changed'), document.createTextNode(claim.changed));
+      changed.append(el('b', '', T('What the fusion changed')), document.createTextNode(claim.changed));
       panel.append(changed);
     }
     for (const item of addedItems(article, 'qualified').filter(entry => entry.claim === claim.id)) {
       const differs = judged(el('div', 'link induce'), 'a' + article.number + ':' + item.author + ':' + item.key);
       // "Challenges" only where a clause from this item is marked as a real disagreement; otherwise the author limits the claim.
       const disputes = voicesOn(article).some(voice => voice.key === item.author && (voice.amend || []).some(clause => clause.kind === 'challenges' && (clause.from || []).includes(item.key)));
-      differs.append(...headWith(article, differs.dataset.review, el('b', '', authorByKey(item.author).name + (disputes ? ' challenges this' : ' limits this'))), document.createTextNode(item.t));
+      differs.append(...headWith(article, differs.dataset.review, el('b', '', authorByKey(item.author).name + (RU ? (disputes ? ' возражает' : ' ограничивает это') : disputes ? ' challenges this' : ' limits this'))), document.createTextNode(item.t));
       for (const piece of item.support) if (!supportOf(article, claim).some(row => row.id === piece.id)) panel.append(passageRow(article, piece, false, 'claim'));
       panel.append(differs);
     }
-    panel.append(el('p', 'near', 'Closeness of these ' + all + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'
+    if (RU) panel.append(el('p', 'near', 'Близость этих ' + OF_PASSAGES(all) + ' друг к другу, если брать их целиком: ' + fx(claim.closeness) + '. В среднем по всему разделу: ' + fx(article.section_closeness) + '.'
+      + (claim.closeness_new != null ? ' В новом английском переводе: ' + fx(claim.closeness_new) + ' (раздел ' + fx(article.in_translation.closeness) + ').' : '')));
+    else panel.append(el('p', 'near', 'Closeness of these ' + all + ' passages to one another, as wholes: ' + claim.closeness.toFixed(2) + '. Average for the whole section: ' + article.section_closeness.toFixed(2) + '.'
       + (claim.closeness_new != null ? ' In the new English: ' + claim.closeness_new.toFixed(2) + ' (section ' + article.in_translation.closeness.toFixed(2) + ').' : '')));
     block.append(panel);
   }
@@ -1580,17 +1803,17 @@ function widerBlock(article, item) {
   const open = quotesOpen(article, key), pick = pickedBlock(article, key, segs);
   const chosen = openKey(article) === key && state.sel.p != null ? segs[state.sel.p] : null;
   const from = el('p', 'fused'), refs = [...new Set(item.support.map(piece => piece.ref))];
-  from.append(el('b', '', refs.length > 1 ? 'Fused from ' + refs.length + ' passages of ' + name : 'One passage of ' + name));
+  from.append(el('b', '', RU ? (refs.length > 1 ? 'Слито из ' + OF_PASSAGES(refs.length) + ' ' + inCase(name, 'gen') : 'Один фрагмент ' + inCase(name, 'gen')) : refs.length > 1 ? 'Fused from ' + refs.length + ' passages of ' + name : 'One passage of ' + name));
   for (const ref of refs) from.append(refChip(article, ref, false));
   from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
   if (pick) pick.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
   block.append(sentence, pick || from);
   if (open) {
     const panel = el('div', 'trace M');
-    panel.append(el('p', 'panel-head', 'The passages, and what follows from each'), columns(article));
+    panel.append(el('p', 'panel-head', T('The passages, and what follows from each')), columns(article));
     for (const piece of item.support) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
     const why = el('div', 'link induce');
-    why.append(el('b', '', 'Why it is added'), document.createTextNode(item.why));
+    why.append(el('b', '', T('Why it is added')), document.createTextNode(item.why));
     panel.append(why);
     block.append(panel);
   }
@@ -1602,7 +1825,7 @@ function voiceStrip(article, voice) {
   const on = state.voices.has(voice.key), author = voice.author, box = el('div', 'sen-strip' + (on ? ' on' : ''));
   box.dataset.anchor = 'strip' + article.number + voice.key;
   const tag = el('span', 'who added');
-  tag.append(el('i', 'dot ' + author.mark), document.createTextNode(on ? 'With ' + author.name : 'If you add ' + author.name));
+  tag.append(el('i', 'dot ' + author.mark), document.createTextNode(RU ? (on ? 'С ' + inCase(author.name, 'ins') : 'Если добавить ' + inCase(author.name, 'acc')) : on ? 'With ' + author.name : 'If you add ' + author.name));
   box.append(tag, el('p', 'becomes', on ? voice.statement : voice.becomes));
   const row = el('p', 'fused');
   for (const effect of D.effects) {
@@ -1612,15 +1835,15 @@ function voiceStrip(article, voice) {
     const chip = el('button', 'jump', effect.name + ' ' + count);
     chip.type = 'button';
     chip.title = effect.asks;
-    chip.setAttribute('aria-label', 'Show where ' + author.name + ' ' + effect.name.toLowerCase() + ' in this article, ' + count + ' places');
+    chip.setAttribute('aria-label', RU ? 'Показать, где ' + author.name + ' ' + effect.name.toLowerCase() + ' в этой статье: ' + pl(count, 'место', 'места', 'мест') : 'Show where ' + author.name + ' ' + effect.name.toLowerCase() + ' in this article, ' + count + ' places');
     chip.addEventListener('click', () => reveal(article, voice.key, effect.key));
     row.append(chip);
   }
-  const button = el('button', 'show', on ? 'Take out' : 'Add');
+  const button = el('button', 'show', T(on ? 'Take out' : 'Add'));
   button.type = 'button';
   button.dataset.k = 'voice-' + article.number + '-' + voice.key;
   button.setAttribute('aria-pressed', String(on));
-  button.setAttribute('aria-label', (on ? 'Take ' + author.name + ' out of' : 'Add ' + author.name + ' to') + ' every article');
+  button.setAttribute('aria-label', RU ? (on ? 'Убрать ' + inCase(author.name, 'acc') + ' из всех статей' : 'Добавить ' + inCase(author.name, 'acc') + ' во все статьи') : (on ? 'Take ' + author.name + ' out of' : 'Add ' + author.name + ' to') + ' every article');
   button.addEventListener('click', () => setVoice(voice.key, !on, button.dataset.k));
   row.append(button);
   box.append(row);
@@ -1636,7 +1859,7 @@ function reveal(article, key, effect) {
   if (kinds.some(kind => top.dataset.amended.split(' ').includes(key + ':' + kind))) found.unshift(top);
   for (const node of found) { node.classList.remove('flash'); void node.offsetWidth; node.classList.add('flash'); }
   if (found.length) found[0].scrollIntoView({block: 'center', inline: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
-  announce(found.length + ' places in Article ' + article.number + '.');
+  announce(RU ? pl(found.length, 'место', 'места', 'мест') + ' в статье ' + article.number + '.' : found.length + ' places in Article ' + article.number + '.');
 }
 
 // Switch an added author on or off everywhere, keeping the reader's place on the page.
@@ -1667,7 +1890,9 @@ function setVoice(key, on, focusKey) {
   renderDock();
   if (focusKey) document.querySelector('[data-k="' + focusKey + '"]')?.focus({preventScroll: true});
   const total = effect => D.all.reduce((sum, article) => sum + (article.voices[key] ? article.voices[key].counts[effect] : 0), 0);
-  const text = on ? author.name + ' added. In this chapter he backs ' + total('stronger') + ' places, adds ' + total('wider') + ', limits ' + total('qualified') : author.name + ' taken out';
+  // total() counts every article, in every chapter, so both languages say so
+  const text = RU ? (on ? author.name + ' добавлен. Во всех статьях он подкрепляет ' + pl(total('stronger'), 'место', 'места', 'мест') + ', добавляет ' + total('wider') + ', ограничивает ' + total('qualified') : author.name + ' убран')
+    : on ? author.name + ' added. Across all articles he backs ' + total('stronger') + ' places, adds ' + total('wider') + ', limits ' + total('qualified') : author.name + ' taken out';
   announce(text + '.');
   toast(text);
 }
@@ -1682,15 +1907,15 @@ function toast(text) {
 // The dock: who is in the room. Marcus always; each added author is one tap.
 function renderDock() {
   const box = document.getElementById('voices');
-  const base = el('span', 'voice base', 'Marcus');
-  base.title = 'The Meditations are the base text and cannot be switched off';
+  const base = el('span', 'voice base', T('Marcus'));
+  base.title = T('The Meditations are the base text and cannot be switched off');
   box.replaceChildren(base);
   for (const author of D.authors) {
     const on = state.voices.has(author.key), button = el('button', 'voice');
     button.type = 'button';
     button.dataset.k = 'dock-' + author.key;
     button.setAttribute('aria-pressed', String(on));
-    button.setAttribute('aria-label', (on ? 'Take out ' : 'Add ') + author.name + ', ' + author.work);
+    button.setAttribute('aria-label', RU ? (on ? 'Убрать ' : 'Добавить ') + inCase(author.name, 'acc') + ', ' + author.work : (on ? 'Take out ' : 'Add ') + author.name + ', ' + author.work);
     button.append(el('i', 'dot ' + author.mark), document.createTextNode((on ? '' : '+ ') + author.name));
     button.addEventListener('click', () => setVoice(author.key, !on, button.dataset.k));
     box.append(button);
@@ -1700,7 +1925,7 @@ function renderDock() {
 function singleBlock(article, item) {
   const key = 's:' + item.id, open = openKey(article) === key, lost = removedOf(article).has(item.ref);
   const block = judged(el('li', 'claim once' + (lost ? ' lost' : '')), 'a' + article.number + ':s:' + item.id);
-  block.append(...cardHead(article, item.label + ' · said once', true, [], block.dataset.review));
+  block.append(...cardHead(article, item.label + ' · ' + T('said once'), true, [], block.dataset.review));
   const sentence = el('p', 'sent small');
   const span = el('span', 'sg' + (lost ? ' gone' : ''), item.t);
   span.dataset.refs = item.ref;
@@ -1709,21 +1934,21 @@ function singleBlock(article, item) {
   span.addEventListener('mouseleave', () => onMap(article, null));
   span.dataset.k = ['single', article.number, item.id].join('-');
   span.setAttribute('aria-pressed', String(open));
-  press(span, 'Said once, in ' + item.ref + ': ' + item.t, () => toggle(article, key, span.dataset.k));
+  press(span, (RU ? 'Сказано однажды, в ' : 'Said once, in ') + item.ref + ': ' + item.t, () => toggle(article, key, span.dataset.k));
   tip(span, () => {
     const box = el('div');
-    box.append(el('p', 'tip-head', 'Said once, in Meditations ' + item.ref), tipQuote(article, item), el('p', 'tip-note', 'Click for the passage and what follows from it.'));
+    box.append(el('p', 'tip-head', (RU ? 'Сказано однажды, в «Размышлениях» ' : 'Said once, in Meditations ') + item.ref), tipQuote(article, item), el('p', 'tip-note', T('Click for the passage and what follows from it.')));
     return box;
   });
   sentence.append(span);
   const from = el('p', 'fused');
-  from.append(el('b', '', 'One passage'), refChip(article, item.ref, lost));
+  from.append(el('b', '', T('One passage')), refChip(article, item.ref, lost));
   block.append(sentence, from);
   if (open) {
     const panel = el('div', 'trace S');
     panel.append(columns(), passageRow(article, item, false, 'single'));
     const why = el('div', 'link induce');
-    why.append(el('b', '', 'Why it is not fused'), document.createTextNode(item.why));
+    why.append(el('b', '', T('Why it is not fused')), document.createTextNode(item.why));
     panel.append(why);
     block.append(panel);
   }
@@ -1733,7 +1958,8 @@ function singleBlock(article, item) {
 function sourcesBlock(article) {
   const gone = removedOf(article);
   const box = el('div', 'sources');
-  box.append(el('p', '', 'Built from ' + article.sources.length + ' of the ' + article.section_size + ' passages in its section. Tap one to take it away and see which claims weaken.'));
+  box.append(el('p', '', RU ? 'Опирается на ' + PASSAGES(article.sources.length) + ' из ' + article.section_size + ' в своём разделе. Коснитесь фрагмента, чтобы убрать его и увидеть, какие утверждения ослабнут.'
+    : 'Built from ' + article.sources.length + ' of the ' + article.section_size + ' passages in its section. Tap one to take it away and see which claims weaken.'));
   const chips = el('div', 'chips');
   for (const ref of article.sources) {
     const feeds = article.claims.filter(claim => claim.passages.includes(ref)).map(claim => claim.number).sort((x, y) => x - y);
@@ -1741,19 +1967,20 @@ function sourcesBlock(article) {
     chip.type = 'button';
     chip.dataset.k = 'chip-' + article.number + '-' + ref;
     chip.setAttribute('aria-pressed', String(gone.has(ref)));
-    chip.setAttribute('aria-label', (gone.has(ref) ? 'Restore passage ' : 'Remove passage ') + ref);
+    chip.setAttribute('aria-label', (RU ? (gone.has(ref) ? 'Вернуть фрагмент ' : 'Убрать фрагмент ') : gone.has(ref) ? 'Restore passage ' : 'Remove passage ') + ref);
     const name = el('b');
     name.append(dot(article, ref), document.createTextNode(ref));
     chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
     chip.addEventListener('mouseleave', () => spotlight(article, null));
-    chip.append(name, el('small', '', feeds.length ? 'claim' + (feeds.length > 1 ? 's ' : ' ') + feeds.join(', ') : 'said once'));
+    chip.append(name, el('small', '', RU ? (feeds.length ? (feeds.length > 1 ? 'утверждения ' : 'утверждение ') + feeds.join(', ') : T('said once')) : feeds.length ? 'claim' + (feeds.length > 1 ? 's ' : ' ') + feeds.join(', ') : 'said once'));
     chip.addEventListener('click', () => {
       const next = new Set(gone);
       if (next.has(ref)) next.delete(ref); else next.add(ref);
       state.removed[article.number] = next;
       renderArticle(article.number, chip.dataset.k);
       const weak = article.claims.filter(claim => left(article, claim).length < 2).map(claim => claim.number);
-      announce(next.has(ref) ? ref + ' removed. ' + (weak.length ? 'Claims resting on fewer than two passages: ' + weak.join(', ') + '.' : 'Every claim still rests on two or more passages.') : ref + ' restored.');
+      if (RU) announce(next.has(ref) ? ref + ' убран. ' + (weak.length ? 'Утверждения, у которых меньше двух фрагментов: ' + weak.join(', ') + '.' : 'Каждое утверждение по-прежнему опирается на два фрагмента или больше.') : ref + ' возвращён.');
+      else announce(next.has(ref) ? ref + ' removed. ' + (weak.length ? 'Claims resting on fewer than two passages: ' + weak.join(', ') + '.' : 'Every claim still rests on two or more passages.') : ref + ' restored.');
     });
     chips.append(chip);
   }
@@ -1765,7 +1992,13 @@ function sourcesBlock(article) {
     const once = article.single.filter(item => gone.has(item.ref)).length;
     dead.sort((x, y) => x - y);
     weak.sort((x, y) => x - y);
-    box.append(el('p', 'dropline on', 'Without ' + list([...gone]) + ': ' +
+    if (RU) box.append(el('p', 'dropline on', 'Без ' + listRu([...gone]) + ': ' +
+      (dead.length ? (dead.length > 1 ? 'у утверждений ' + listRu(dead) : 'у утверждения ' + dead[0]) + ' не осталось ни одного фрагмента. ' : '') +
+      (weak.length ? (weak.length > 1 ? 'утверждения ' + listRu(weak) + ' теперь опираются' : 'утверждение ' + weak[0] + ' теперь опирается') + ' на один фрагмент. ' : '') +
+      (!dead.length && !weak.length ? 'каждое утверждение по-прежнему опирается на два фрагмента или больше. ' : '') +
+      (once ? pl(once, 'фраза', 'фразы', 'фраз') + ' «сказано однажды» ' + ruForm(once, 'потеряла', 'потеряли', 'потеряли') + ' свой фрагмент. ' : '') +
+      'Коснитесь убранного фрагмента, чтобы вернуть его.'));
+    else box.append(el('p', 'dropline on', 'Without ' + list([...gone]) + ': ' +
       (dead.length ? (dead.length > 1 ? 'Claims ' + list(dead) + ' have' : 'Claim ' + dead[0] + ' has') + ' no passage left. ' : '') +
       (weak.length ? (weak.length > 1 ? 'Claims ' + list(weak) + ' now rest' : 'Claim ' + weak[0] + ' now rests') + ' on a single passage. ' : '') +
       (!dead.length && !weak.length ? 'Every claim still rests on two or more passages. ' : '') +
@@ -1778,19 +2011,22 @@ function sourcesBlock(article) {
 function membersBlock(article) {
   const box = el('div', 'members');
   const used = article.sources.length;
-  box.append(el('h4', '', 'The section, passage by passage'),
+  if (RU) box.append(el('h4', '', T('The section, passage by passage')),
+    el('p', '', 'Все ' + PASSAGES(article.section_size) + ' раздела, сначала ближайшие к его центру (полоса и число показывают близость). ' + used + ' ' + ruForm(used, 'питает', 'питают', 'питают') + ' статью, '
+      + (article.section_size - used) + ' ' + ruForm(article.section_size - used, 'отложен', 'отложены', 'отложены') + ' с указанием причины. Коснитесь строки, чтобы прочитать фрагмент с отмеченными цитатами.'));
+  else box.append(el('h4', '', 'The section, passage by passage'),
     el('p', '', 'All ' + article.section_size + ' passages, closest to the centre of the section first (the bar and number show closeness). ' + used + ' feed the article and ' + (article.section_size - used) + (article.section_size - used === 1 ? ' is' : ' are') + ' set aside, with the reason. Tap a row to read the passage with its quoted pieces marked.'));
   for (const member of article.members) {
     const row = el('details', 'member' + (member.used ? ' used M' : ''));
     const head = el('summary');
     const sim = el('span', 'sim'), bar = el('i');
     bar.style.width = Math.round((member.similarity - 0.6) / 0.3 * 70) + 'px';
-    sim.append(bar, document.createTextNode(member.similarity.toFixed(2) + ' · ' + (article.edition && member.english ? member.english.trim().split(/\s+/).length : member.words) + ' words'));
+    sim.append(bar, document.createTextNode(RU ? fx(member.similarity) + ' · ' + pl(member.russian || !(article.edition && member.english) ? member.words : member.english.trim().split(/\s+/).length, 'слово', 'слова', 'слов') : member.similarity.toFixed(2) + ' · ' + (article.edition && member.english ? member.english.trim().split(/\s+/).length : member.words) + ' words'));
     const claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
-    const role = member.used
+    const role = RU ? (member.used ? feedsRu(claims, member.feeds.includes('single')) : member.why) : member.used
       ? (claims.length ? 'Feeds claim' + (claims.length > 1 ? 's ' : ' ') + claims.join(', ') + (member.feeds.includes('single') ? ', and is quoted alone' : '') + '.' : 'Quoted alone, under “said once”.')
       : member.why;
-    head.append(el('span', 'ref', member.ref), sim, el('span', 'state', member.used ? 'Used' : 'Set aside'), el('span', 'why', role));
+    head.append(el('span', 'ref', member.ref), sim, el('span', 'state', T(member.used ? 'Used' : 'Set aside')), el('span', 'why', role));
     const quote = el('blockquote', 'M');
     const pieces = [...article.claims.flatMap(claim => claim.support), ...article.single].filter(piece => piece.ref === member.ref).sort((x, y) => x.at - y.at);
     let cursor = 0;
@@ -1799,7 +2035,7 @@ function membersBlock(article) {
       quote.append(flat(anchorText(article, member).slice(cursor, piece.at)));
       const mark = el('mark', '', flat(piece.quote));
       mark.style.setProperty('--c', hue(article, member.ref));
-      mark.append(el('sup', '', piece.in === 'single' ? 'once' : String(claimOf(article, piece.in).number)));
+      mark.append(el('sup', '', piece.in === 'single' ? T('once') : String(claimOf(article, piece.in).number)));
       quote.append(mark);
       cursor = piece.at + piece.quote.length;
     }
@@ -1815,8 +2051,14 @@ function articleCard(article) {
   wrap.dataset.anchor = 'a' + article.number;
   wrap.id = 'article-' + article.number;
   const leaf = el('div', 'leaf');
-  leaf.append(el('p', 'eyebrow', 'Article ' + article.number), el('h3', '', article.title));
-  if (article.edition) {
+  leaf.append(el('p', 'eyebrow', T('Article') + ' ' + article.number), el('h3', '', article.title));
+  if (RU) {
+    const note = el('p', 'from-greek', 'Цитаты — в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого). Номера фрагментов — по переводу 1634 года, по которому сгруппированы разделы; заголовок каждого фрагмента и список источников выбранных слов дают его номер в современных изданиях. ');
+    const link = el('a', '', 'Фрагменты по-гречески, в новом английском переводе и в переводе 1634 года (на английском)');
+    link.href = 'stoic-translation.html';
+    note.append(link);
+    leaf.append(note);
+  } else if (article.edition) {
     const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English. Passage numbers are those of the 1634 translation, which grouped the sections; each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
     const link = el('a', '', 'Read the passages in Greek, today’s English and 1634');
     link.href = 'stoic-translation.html';
@@ -1831,7 +2073,7 @@ function articleCard(article) {
   leaf.append(top);
   // On a phone the five sides are a long list, so a row of tabs stays in reach and shows where an added author contributes.
   const tabs = el('nav', 'tabs');
-  tabs.setAttribute('aria-label', 'Sides of Article ' + article.number);
+  tabs.setAttribute('aria-label', (RU ? 'Стороны статьи ' : 'Sides of Article ') + article.number);
   for (const group of article.groups) {
     const extra = addedItems(article, 'wider').filter(item => item.label === group.key), count = group.items.length + extra.length;
     const tab = el('button', count ? '' : 'none');
@@ -1839,7 +2081,7 @@ function articleCard(article) {
     tab.dataset.g = group.key;
     tab.append(document.createTextNode(group.name), el('small', '', String(count)));
     for (const key of new Set(extra.map(item => item.author))) tab.append(el('i', 'dot ' + authorByKey(key).mark));
-    tab.setAttribute('aria-label', group.name + ', ' + count + (count === 1 ? ' item' : ' items') + (extra.length ? ', ' + extra.length + ' added' : ''));
+    tab.setAttribute('aria-label', RU ? group.name + ', ' + pl(count, 'пункт', 'пункта', 'пунктов') + (extra.length ? ', добавлено: ' + extra.length : '') : group.name + ', ' + count + (count === 1 ? ' item' : ' items') + (extra.length ? ', ' + extra.length + ' added' : ''));
     tab.addEventListener('click', () => document.querySelector('#article-' + article.number + ' .grp[data-g="' + group.key + '"]').scrollIntoView({block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}));
     tabs.append(tab);
   }
@@ -1856,7 +2098,8 @@ function articleCard(article) {
     part.append(head);
     if (bare) part.append(el('p', 'grp-empty', group.empty));
     else {
-      if (group.empty) part.append(el('p', 'grp-empty', 'Marcus has no passage here. What follows comes from ' + [...new Set(extra.map(item => authorByKey(item.author).name))].join(' and ') + '.'));
+      if (group.empty && RU) part.append(el('p', 'grp-empty', 'У Марка здесь нет фрагмента. Дальше — слова ' + [...new Set(extra.map(item => inCase(authorByKey(item.author).name, 'gen')))].join(' и ') + '.'));
+      else if (group.empty) part.append(el('p', 'grp-empty', 'Marcus has no passage here. What follows comes from ' + [...new Set(extra.map(item => authorByKey(item.author).name))].join(' and ') + '.'));
       const list = el('ol', 'claims');
       for (const id of group.items) list.append(claimOf(article, id) ? claimBlock(article, claimOf(article, id)) : singleBlock(article, article.single.find(item => item.id === id)));
       for (const item of extra) list.append(widerBlock(article, item));
@@ -1868,11 +2111,11 @@ function articleCard(article) {
   wrap.append(leaf);
 
   const hand = el('div', 'hand');
-  hand.append(el('h4', '', 'What the editor decided'));
+  hand.append(el('h4', '', T('What the editor decided')));
   const decisions = el('ol');
   for (const decision of article.decisions) decisions.append(el('li', '', decision));
   const limit = el('p', 'limit');
-  limit.append(el('b', '', 'Limit. '), document.createTextNode(article.limit));
+  limit.append(el('b', '', T('Limit. ')), document.createTextNode(article.limit));
   hand.append(decisions, limit);
   wrap.append(hand);
 
@@ -1880,7 +2123,7 @@ function articleCard(article) {
   process.dataset.keep = 'process-' + article.number;
   const inner = el('div', 'in');
   inner.append(membersBlock(article));
-  process.append(el('summary', '', 'The whole section, and what was done with each passage'), inner);
+  process.append(el('summary', '', T('The whole section, and what was done with each passage')), inner);
   wrap.append(process);
 
   // The whole article is judged under its card. With "Only what I have not judged" on, a judged article folds to one line.
@@ -1888,21 +2131,21 @@ function articleCard(article) {
   if (mine) wrap.dataset.artJudged = mine;
   if (justJudged.has(own)) wrap.dataset.just = '';
   const stub = el('p', 'judged-stub');
-  stub.append(el('b', '', 'Article ' + article.number + ' · ' + article.title), document.createTextNode(' is marked ' + mine + ' and folded while only what you have not judged is shown.'));
+  stub.append(el('b', '', T('Article') + ' ' + article.number + ' · ' + article.title), document.createTextNode(RU ? ' — оценка «' + (mine ? T(mine) : '') + '»; статья свёрнута, пока показано только неоценённое.' : ' is marked ' + mine + ' and folded while only what you have not judged is shown.'));
   wrap.prepend(stub);
   const verdict = el('div', 'verdict');
   verdict.setAttribute('role', 'group');
-  verdict.setAttribute('aria-label', 'Your verdict on the whole of Article ' + article.number);
-  verdict.append(unsavedKeys.has(own) ? el('span', 'save-note', 'Could not be saved on this device; kept until you close this page') : el('span', '', 'Your verdict on the whole article'));
+  verdict.setAttribute('aria-label', RU ? 'Ваша оценка статьи ' + article.number + ' целиком' : 'Your verdict on the whole of Article ' + article.number);
+  verdict.append(unsavedKeys.has(own) ? el('span', 'save-note', T('Could not be saved on this device; kept until you close this page')) : el('span', '', T('Your verdict on the whole article')));
   for (const value of VERDICTS) {
-    const button = el('button', 'vb', value);
+    const button = el('button', 'vb', T(value));
     button.type = 'button';
     button.dataset.k = 'v-' + article.number + '-' + value;
     button.setAttribute('aria-pressed', String(mine === value));
     button.addEventListener('click', () => choose(article, own, value, button.dataset.k));
     verdict.append(button);
   }
-  if (takesNote(mine)) verdict.append(noteField(own, 'the whole of Article ' + article.number));
+  if (takesNote(mine)) verdict.append(noteField(own, RU ? 'статья ' + article.number + ' целиком' : 'the whole of Article ' + article.number));
   wrap.append(verdict);
   return wrap;
 }
@@ -1915,7 +2158,7 @@ function drawCard(article) {
     console.error(error);
     const box = el('article', 'article');
     box.id = 'article-' + article.number;
-    box.append(el('p', 'err', 'Article ' + article.number + ' could not be drawn (' + error.message + '). The rest of the chapter is shown.'));
+    box.append(el('p', 'err', RU ? 'Статью ' + article.number + ' не удалось построить (' + error.message + '). Остальная глава показана.' : 'Article ' + article.number + ' could not be drawn (' + error.message + '). The rest of the chapter is shown.'));
     return box;
   }
 }
@@ -1962,21 +2205,23 @@ function renderVerdicts() {
   let last = null, notes = 0;
   for (const stub of D.all) {
     const chapter = chapterById(stub.chapter), own = 'a' + stub.number;
-    if (chapter && chapter !== last) { rows.push(el('li', 'ch', 'Chapter ' + chapter.order + ' · ' + chapter.title)); last = chapter; }
-    const row = el('li'), what = el('span', '', 'Article ' + stub.number + ' · ' + stub.title);
-    if (noteOf(own)) { what.append(el('i', '', 'Note: ' + noteOf(own))); notes++; }
-    row.append(what, el('span', '', verdictOf(own) || 'Open'));
+    if (chapter && chapter !== last) { rows.push(el('li', 'ch', (RU ? 'Глава ' : 'Chapter ') + chapter.order + ' · ' + chapter.title)); last = chapter; }
+    const row = el('li'), what = el('span', '', T('Article') + ' ' + stub.number + ' · ' + stub.title);
+    if (noteOf(own)) { what.append(el('i', '', (RU ? 'Заметка: ' : 'Note: ') + noteOf(own))); notes++; }
+    row.append(what, el('span', '', T(verdictOf(own) || 'Open')));
     rows.push(row);
     for (const item of judgedRows(stub.number)) {
       const sub = el('li', 'sub'), label = el('span', '', item.label);
-      if (item.note) { label.append(el('i', '', 'Note: ' + item.note)); notes++; }
-      sub.append(label, el('span', '', item.value));
+      if (item.note) { label.append(el('i', '', (RU ? 'Заметка: ' : 'Note: ') + item.note)); notes++; }
+      sub.append(label, el('span', '', T(item.value)));
       rows.push(sub);
     }
   }
   document.getElementById('mine').replaceChildren(...rows);
   const total = Object.keys(review.verdicts).length;
-  document.getElementById('review-count').textContent = total
+  document.getElementById('review-count').textContent = RU ? (total ? pl(total, 'оценка', 'оценки', 'оценок') + ', ' + pl(notes, 'заметка', 'заметки', 'заметок')
+      + (unsavedKeys.size ? '. ' + unsavedKeys.size + ' не удалось сохранить на этом устройстве; они хранятся, пока страница открыта.' : '.') : T('Nothing judged yet.'))
+    : total
     ? plural(total, 'verdict') + ', ' + plural(notes, 'note') + (unsavedKeys.size ? '. ' + unsavedKeys.size + ' could not be saved on this device and are kept until you close this page.' : '.')
     : 'Nothing judged yet.';
 }
@@ -1989,6 +2234,7 @@ function syncUrl(mode = 'replace', hash = location.hash) {
     .concat(Object.entries(state.pending).map(([number, refs]) => number + ':' + refs));
   if (gone.length) query.set('without', gone.join(';'));
   if (state.voices.size) query.set('with', [...state.voices].sort().join(','));
+  if (RU) query.set('lang', 'ru');
   const search = query.toString(), url = location.pathname + (search ? '?' + search : '') + hash;
   try { history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', url); } catch { /* file:// */ }
   drawnFor = location.search;
@@ -2043,8 +2289,8 @@ function decorate(articles) {
 }
 function loadChapter(id) {
   if (CHAPTERS.has(id)) return Promise.resolve(CHAPTERS.get(id));
-  return fetch('stoic-constitution/' + id + '.json', {cache: 'no-cache'}).then(response => {
-    if (!response.ok) throw new Error('the server answered ' + response.status);
+  return fetch('stoic-constitution/' + (RU ? 'ru/' : '') + id + '.json', {cache: 'no-cache'}).then(response => {
+    if (!response.ok) throw new Error((RU ? 'сервер ответил ' : 'the server answered ') + response.status);
     return response.json();
   }).then(data => {
     // The file must hold exactly the articles the index lists for this chapter, each complete; a file that does not is never kept.
@@ -2052,12 +2298,12 @@ function loadChapter(id) {
     const got = Array.isArray(data && data.articles) ? data.articles.map(article => article && article.number) : [];
     if (JSON.stringify(got) !== JSON.stringify(expected)) {
       // Usually a new article was published while this page was open: only a fresh index can match the file.
-      const error = new Error('the file holds articles ' + (got.join(', ') || 'none') + ' but this page lists ' + expected.join(', '));
+      const error = new Error(RU ? 'в файле статьи ' + (got.join(', ') || 'отсутствуют') + ', а на странице — ' + expected.join(', ') : 'the file holds articles ' + (got.join(', ') || 'none') + ' but this page lists ' + expected.join(', '));
       error.stale = true;
       throw error;
     }
     const broken = data.articles.find(article => !Array.isArray(article.claims) || !article.statement || !Array.isArray(article.members));
-    if (broken) throw new Error('Article ' + broken.number + ' is incomplete in the file');
+    if (broken) throw new Error(RU ? 'статья ' + broken.number + ' в файле неполна' : 'Article ' + broken.number + ' is incomplete in the file');
     CHAPTERS.set(id, decorate(data.articles));
     return CHAPTERS.get(id);
   });
@@ -2067,35 +2313,35 @@ function renderBar() {
   const jump = document.getElementById('jump'), chapter = chapterById(state.chapter), stubs = D.all.filter(article => article.chapter === state.chapter);
   const pick = el('button', 'chap-btn');
   pick.type = 'button';
-  pick.append(el('span', 'long', 'Chapter ' + chapter.order), el('span', 'brief', 'Ch. ' + chapter.order));
+  pick.append(el('span', 'long', (RU ? 'Глава ' : 'Chapter ') + chapter.order), el('span', 'brief', (RU ? 'Гл. ' : 'Ch. ') + chapter.order));
   pick.setAttribute('aria-expanded', 'false');
   pick.setAttribute('aria-controls', 'chapters');
-  pick.setAttribute('aria-label', 'Chapter ' + chapter.order + ', ' + chapter.title + '. Choose another chapter');
+  pick.setAttribute('aria-label', RU ? 'Глава ' + chapter.order + ', ' + chapter.title + '. Выбрать другую главу' : 'Chapter ' + chapter.order + ', ' + chapter.title + '. Choose another chapter');
   pick.addEventListener('click', () => toggleChapters());
   const which = el('button', 'art-btn');
   which.type = 'button';
   which.setAttribute('aria-expanded', 'false');
   which.setAttribute('aria-controls', 'article-list');
   which.addEventListener('click', () => toggleArticles());
-  jump.replaceChildren(pick, el('span', 'lab', 'Article'), which);
+  jump.replaceChildren(pick, el('span', 'lab', T('Article')), which);
   for (const article of stubs) {
     const link = el('a', 'num', String(article.number));
     link.href = '#article-' + article.number;
-    link.setAttribute('aria-label', 'Article ' + article.number + ', ' + article.title);
+    link.setAttribute('aria-label', T('Article') + ' ' + article.number + ', ' + article.title);
     jump.append(link);
   }
-  const topics = el('a', 'to-topics', 'Topics');
+  const topics = el('a', 'to-topics', T('Topics'));
   topics.href = '#topics';
-  const tags = el('button', 'tagsw', 'Sources');
+  const tags = el('button', 'tagsw', T('Sources'));
   tags.type = 'button';
   tags.setAttribute('aria-pressed', String(state.tags));
-  tags.setAttribute('aria-label', 'Show passage numbers on each statement');
+  tags.setAttribute('aria-label', T('Show passage numbers on each statement'));
   tags.addEventListener('click', () => {
     state.tags = !state.tags;
     try { localStorage.setItem(TAGS, state.tags ? 'on' : 'off'); } catch { /* private mode */ }
     tags.setAttribute('aria-pressed', String(state.tags));
     for (const article of D.articles) renderArticle(article.number);
-    announce('Passage numbers in the text are ' + (state.tags ? 'shown.' : 'hidden.'));
+    announce(RU ? 'Номера фрагментов в тексте ' + (state.tags ? 'показаны.' : 'скрыты.') : 'Passage numbers in the text are ' + (state.tags ? 'shown.' : 'hidden.'));
   });
   jump.append(topics, tags);
   // The chapter's articles with their titles, for the phone bar.
@@ -2120,7 +2366,7 @@ function renderBar() {
     button.type = 'button';
     button.disabled = !count;
     button.setAttribute('aria-current', String(item.id === state.chapter));
-    button.append(el('b', '', String(item.order)), el('span', '', item.title), el('small', '', count ? plural(count, 'article') : 'no articles yet'));
+    button.append(el('b', '', String(item.order)), el('span', '', item.title), el('small', '', RU ? (count ? pl(count, 'статья', 'статьи', 'статей') : 'статей пока нет') : count ? plural(count, 'article') : 'no articles yet'));
     button.addEventListener('click', () => { toggleChapters(false); if (item.id !== state.chapter) openChapter(item.id, {to: 'top', push: true}); });
     const row = el('li');
     row.append(button);
@@ -2144,9 +2390,9 @@ function markArticle() {
   const current = cards.filter(card => card.getBoundingClientRect().top < innerHeight * 0.4).pop() || cards[0];
   const number = current ? Number(current.id.replace('article-', '')) : D.articles[0].number;
   const stubs = D.all.filter(article => article.chapter === state.chapter), position = stubs.findIndex(article => article.number === number) + 1;
-  const label = 'Art. ' + number;
+  const label = (RU ? 'Ст. ' : 'Art. ') + number;
   if (button.textContent !== label) button.textContent = label;
-  button.setAttribute('aria-label', 'Article ' + number + ', ' + position + ' of ' + stubs.length + ' in this chapter. Choose another article');
+  button.setAttribute('aria-label', RU ? 'Статья ' + number + ', ' + position + ' из ' + stubs.length + ' в этой главе. Выбрать другую статью' : 'Article ' + number + ', ' + position + ' of ' + stubs.length + ' in this chapter. Choose another article');
   for (const row of document.querySelectorAll('#article-list button')) row.setAttribute('aria-current', String(Number(row.dataset.n) === number));
 }
 // The lists hang below the bar. Before one opens, bring the bar to the top of the screen so the list has the screen to itself.
@@ -2179,11 +2425,11 @@ function openChapter(id, {initial = false, to = null, push = false} = {}) {
   if (!initial) state.sel = null;
   state.chapter = id;
   const chapter = chapterById(id), list = document.getElementById('list');
-  document.getElementById('a-head').textContent = 'Chapter ' + chapter.order + ' · ' + chapter.title;
+  document.getElementById('a-head').textContent = (RU ? 'Глава ' : 'Chapter ') + chapter.order + ' · ' + chapter.title;
   document.getElementById('a-sub').textContent = D.chapter_order_note;
   renderBar();
   for (const box of document.querySelectorAll('#tree details[data-chapter]')) box.open = box.dataset.chapter === id;
-  if (!CHAPTERS.has(id)) list.replaceChildren(el('p', 'loading', 'Loading chapter…'));
+  if (!CHAPTERS.has(id)) list.replaceChildren(el('p', 'loading', T('Loading chapter…')));
   return loadChapter(id).then(articles => {
     if (state.chapter !== id) return;
     D.articles = articles;
@@ -2200,11 +2446,12 @@ function openChapter(id, {initial = false, to = null, push = false} = {}) {
       : location.hash ? document.getElementById(location.hash.slice(1))
       : state.sel ? document.getElementById('article-' + state.sel.a) : null;
     if (target) target.scrollIntoView({behavior: initial ? 'instant' : matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
-    if (!initial) announce('Chapter ' + chapter.order + ', ' + plural(articles.length, 'article') + '.');
+    if (!initial) announce(RU ? 'Глава ' + chapter.order + ', ' + pl(articles.length, 'статья', 'статьи', 'статей') + '.' : 'Chapter ' + chapter.order + ', ' + plural(articles.length, 'article') + '.');
   }).catch(error => {
     if (state.chapter !== id) return;
-    const line = el('p', 'loading', error.stale ? 'This page is out of date: the constitution has changed since it was opened (' + error.message + '). Reload to see it. '
-      : 'This chapter could not be loaded (' + error.message + ').'), retry = el('button', 'act', error.stale ? 'Reload the page' : 'Try again');
+    const line = el('p', 'loading', RU ? (error.stale ? 'Страница устарела: конституция изменилась, пока страница была открыта (' + error.message + '). Перезагрузите её. '
+      : 'Главу не удалось загрузить (' + error.message + ').') : error.stale ? 'This page is out of date: the constitution has changed since it was opened (' + error.message + '). Reload to see it. '
+      : 'This chapter could not be loaded (' + error.message + ').'), retry = el('button', 'act', T(error.stale ? 'Reload the page' : 'Try again'));
     retry.type = 'button';
     retry.addEventListener('click', () => error.stale ? location.reload() : openChapter(id, {initial, to, push}));
     line.append(retry);
@@ -2270,7 +2517,7 @@ function feedback(button, text, rest) {
 document.getElementById('copy').addEventListener('click', async event => {
   if (!D) return;
   const button = event.currentTarget, {text, count} = reviewText();
-  feedback(button, await copyText(text) ? 'Copied ' + plural(count, 'verdict') : 'Copy failed. Use Download as a file', 'Copy my review');
+  feedback(button, await copyText(text) ? (RU ? 'Скопировано: ' + pl(count, 'оценка', 'оценки', 'оценок') : 'Copied ' + plural(count, 'verdict')) : T('Copy failed. Use Download as a file'), T('Copy my review'));
 });
 document.getElementById('download').addEventListener('click', event => {
   if (!D) return;
@@ -2281,15 +2528,15 @@ document.getElementById('download').addEventListener('click', event => {
   link.click();
   link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 4000);
-  feedback(event.currentTarget, 'Saved ' + plural(count, 'verdict') + ' to a file', 'Download as a file');
+  feedback(event.currentTarget, RU ? 'Сохранено в файл: ' + pl(count, 'оценка', 'оценки', 'оценок') : 'Saved ' + plural(count, 'verdict') + ' to a file', T('Download as a file'));
 });
 document.getElementById('only-open').addEventListener('click', event => setFilter(!state.filter, event.currentTarget));
 document.getElementById('show-all').addEventListener('click', () => setFilter(false, document.getElementById('list')));
 loadReview();
 try { if (localStorage.getItem(FILTER) === 'on') setFilter(true, null, true); } catch { /* starts with everything shown */ }
 
-fetch('stoic-constitution.json').then(response => {
-  if (!response.ok) throw new Error('the record could not be loaded (' + response.status + ')');
+fetch(RU ? 'stoic-constitution.ru.json' : 'stoic-constitution.json').then(response => {
+  if (!response.ok) throw new Error(RU ? 'русская версия не загрузилась (' + response.status + ')' : 'the record could not be loaded (' + response.status + ')');
   return response.json();
 }).then(data => {
   D = data;
@@ -2306,7 +2553,13 @@ fetch('stoic-constitution.json').then(response => {
     renderVerdicts();
   });
 }).catch(error => {
-  document.getElementById('main').prepend(el('p', 'err', 'This page could not be drawn: ' + error.message));
+  const box = el('p', 'err', RU ? 'Страницу не удалось построить: ' + error.message + '. ' : 'This page could not be drawn: ' + error.message);
+  if (RU) {
+    const back = el('a', '', 'Открыть английскую версию');
+    back.href = '?lang=en';
+    box.append(back);
+  }
+  document.getElementById('main').prepend(box);
 });
 </script>
 </body>
