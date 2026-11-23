@@ -116,8 +116,8 @@ Each rule is followed by the feedback it came from.
     or something? Show them on the right or left of the card?” Then: “Should we show additional
     info on the vector bit? Like what clusters it sits next to in Aurelius' writings?”*
 12. **A second author is added to Marcus, and every word of his is marked as his.** Marcus's
-    topics, claims and own wording stay as they are (rule 14 says how the body still changes). Another author's passages (first: Seneca's Letters, Gummere, split at
-    the Loeb section numbers) are found by embedding similarity to the article's own sentences and
+    topics, claims and own wording stay as they are (rule 14 says how the body still changes). Another author's passages (first: Seneca's Letters, split at
+    the standard section numbers) are found by embedding similarity to the article's own sentences and
     to its section, then read. Each one enters as exactly one of three effects, so the reader can be
     told “if you add Seneca, this article becomes …”: **Backs** (key `stronger`: a further witness
     to words of an existing claim), **Adds** (key `wider`: something Marcus does not say in this
@@ -131,6 +131,12 @@ Each rule is followed by the feedback it came from.
     *23 Nov 2026: “When I expand this with letters to stoic of Seneca, would it work well? In the
     format ‘if you add Seneca's thoughts, this article becomes x, y or z’.” Then, to the proposal of
     Gummere's translation and a paid embedding call: “both are fine.”*
+    **An added author is quoted only in the project's own translation from the original language**
+    (Seneca: `content/aurelius/translation/seneca-v1.json`, from the Latin, three readings like the Marcus
+    translation). An older translation may be used privately to find passages by similarity, never quoted
+    or published; the build refuses a quote that is not in the project's translation.
+    *23 Nov 2026, after the rights facts on Gummere: “you have my approval for everything. let's translate
+    seneca ourselves?”*
 13. **Adding or removing an author is one tap, and nothing gets lost.** Authors are "voices" in one
     dock at the bottom of the screen (within thumb reach on a phone): Marcus is always there, each
     added author is a single switch that applies to every article and is kept in the link. When a

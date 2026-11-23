@@ -345,3 +345,20 @@ test('every passage of a section either feeds the article or is set aside with a
     assert.ok(article.sources.length * 2 > article.section_size, `article ${article.number} draws on most of its section`);
   }
 });
+
+test('Seneca is published only in the project’s own translation from the Latin', () => {
+  // content/aurelius/translation/seneca-v1.json holds the Latin and the English of every quoted section; the page carries
+  // its text and revision, and every quote is a span of that English. Gummere's 1917–25 English is never published.
+  const own = new Map(read('content/aurelius/translation/seneca-v1.json').passages.map((p) => [p.ref, p]));
+  assert.match(record.authors[0].translator, /This project, from the Latin/);
+  for (const article of record.articles) {
+    const voice = article.voices?.seneca;
+    if (!voice) continue;
+    for (const passage of voice.passages) {
+      const mine = own.get(passage.ref);
+      assert.ok(mine, `article ${article.number}: ${passage.ref} is not in the project's translation`);
+      assert.equal(passage.revision, mine.revision, `article ${article.number}: ${passage.ref} is not the stored revision`);
+      assert.equal(passage.text, mine.english, `article ${article.number}: ${passage.ref} text differs from the stored English`);
+    }
+  }
+});

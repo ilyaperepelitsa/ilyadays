@@ -27,13 +27,34 @@ TOPICS = ROOT / 'content/aurelius/topics.json'
 AUTHORED = ROOT / 'content/aurelius/constitution.json'
 OUT = ROOT / 'public/apps/stoic-constitution.json'          # the index: everything but full articles
 CHAPTER_DIR = ROOT / 'public/apps/stoic-constitution'        # one file per chapter that has articles
-SENECA = ROOT / '.aurelius/corpora/seneca-gummere-wikisource'
+SENECA = ROOT / '.aurelius/corpora/seneca-gummere-wikisource'   # private: Gummere's English, used only for the vectors
+SENECA_TRANSLATION = ROOT / 'content/aurelius/translation/seneca-v1.json'   # the project's own English of every quoted section
 TRANSLATION_VECTORS = ROOT / '.aurelius/corpora/project-v1/vectors.npz'   # the same model, on the new English (scripts/aurelius-translation.py --embed)
 TRANSLATION = ROOT / 'content/aurelius/translation/project-v1.json'   # the project's own English from the Greek (pilot)
 PLACEHOLDER = 'TO REVIEW IN N3'     # stood in for `context` and `searched` during milestone N1; no longer accepted (every one was written on 23 Nov 2026)
 CHAPTER_WARN_BYTES = 600 * 1024
 RELATIONS = {'supports', 'qualifies', 'challenges', 'illustrates', 'depends_on', 'paraphrases', 'answers'}
 
+
+
+def load_seneca_translation(path: Path) -> dict:
+    """The project's English of Seneca's letters, from the Latin. Each passage's revision is a hash of its reference, its Latin
+    and its English, so an edit without a new revision fails; notes quote the Latin exactly; the English is today's."""
+    data = json.loads(path.read_text())
+    by_ref = {}
+    for p in data['passages']:
+        digest = hashlib.sha256(f"{p['ref']}\n{p['latin']}\n{p['english']}".encode()).hexdigest()[:16]
+        assert p['revision'] == f"{data['id']}:{p['ref']}:{digest}", f"Seneca {p['ref']}: revision does not match its Latin and English"
+        assert p['ref'] not in by_ref, f"Seneca {p['ref']} translated twice"
+        for kind in ('notes', 'check'):
+            for x in p[kind]:
+                assert x['latin'] in p['latin'], f"Seneca {p['ref']}: a {kind} item quotes Latin that is not in the section: {x['latin'][:40]!r}"
+        assert not re.search(r'["\']', p['english']), f"Seneca {p['ref']}: straight quote in the English"
+        assert not re.search(r'\b(thee|thou|thy|thine|doth|hath|saith|unto|shalt)\b', p['english'], re.I), f"Seneca {p['ref']}: an old form in the English"
+        by_ref[p['ref']] = p
+    letters_cited = {int(r.split()[1].split('.')[0]) for r in by_ref}
+    assert letters_cited <= {int(n) for n in data['letters']}, f"Seneca: letters without a title: {sorted(letters_cited - {int(n) for n in data['letters']})}"
+    return {**data, 'by_ref': by_ref}
 
 def words(text: str) -> int:
     return sum(1 for word in text.split() if re.search(r'\w', word))
@@ -126,7 +147,12 @@ def main() -> None:
     assert [a['key'] for a in authored['authors']] == ['seneca'], 'only Seneca has a corpus so far'
     seneca_corpus = json.loads((SENECA / 'corpus.json').read_text())
     letters = {p['reference']: p for p in seneca_corpus['passages']}
-    letter_titles = {l['letter']: l['title'].split('. ', 1)[-1].capitalize() for l in seneca_corpus['letters']}
+    # What is published of Seneca is the project's own translation from the Latin: the text of each quoted section and the
+    # letters' titles. Gummere's English stays private; it is used only for the vectors (as the 1634 English is for Marcus).
+    seneca_english = load_seneca_translation(SENECA_TRANSLATION)
+    letter_titles = {int(n): title for n, title in seneca_english['letters'].items()}
+    letters = {ref: {**letters[ref], 'text': p['english'], 'words': len(p['english'].split()), 'revision_id': p['revision']}
+               for ref, p in seneca_english['by_ref'].items()} | {ref: {**v, 'text': None} for ref, v in letters.items() if ref not in seneca_english['by_ref']}
     stored = np.load(SENECA / 'vectors.npz')
     assert list(stored['revision_ids']) == [p['revision_id'] for p in seneca_corpus['passages']], 'Seneca vectors do not match the corpus'
     letter_vectors = stored['vectors'].astype(np.float64)
@@ -358,6 +384,7 @@ def main() -> None:
                 number = re.fullmatch(r'S(\d+)\.(\d+)[a-z]', item['id'])
                 assert number and item['id'] not in added, f"{where}: Seneca piece {item['id']}"
                 ref = f'Ep. {number[1]}.{number[2]}'
+                assert letters[ref]['text'] is not None, f"{where} {item['id']}: {ref} is not in the project's translation of Seneca ({SENECA_TRANSLATION.name})"
                 start, end = span(letters[ref]['text'], item['quote'], f"{where} {item['id']}")
                 for words_ in item.get('gives', []):
                     assert text and words_.lower() in text.lower(), f"{where} {item['id']}: “{words_}” is not in the sentence it backs"
@@ -477,6 +504,14 @@ def main() -> None:
         'chapters': chapters,
     }
     # The page loads the index first and a chapter's articles only when that chapter is opened.
+    # Nothing of Gummere's English may be published: any clause of 30 or more characters that stands in his text and not in the
+    # project's own translation fails the build (a literal rendering of the same Latin may of course coincide with his).
+    published = json.dumps([record, articles], ensure_ascii=False)   # the index and every chapter file
+    ours = ' '.join(p['english'] for p in seneca_english['passages'])
+    leaked = sorted({s for p in seneca_corpus['passages'] for s in re.split(r'(?<=[.;?!:,])\s+', p['text'])
+                     if len(s) >= 30 and s in published
+                     and re.sub(r'^(and|for|but|or|so|that)\s+', '', s.strip(' ,.;:?!“”‘’'), flags=re.I) not in ours})
+    assert not leaked, f'words of the old Seneca translation would be published: {leaked[:5]}'
     chapter_of = {s['id']: c['id'] for c in topics['chapters'] for s in c['sections']}
     record['articles'] = [{
         'number': a['number'], 'section': a['section'], 'chapter': chapter_of[a['section']], 'title': a['title'],

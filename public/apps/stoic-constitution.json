@@ -116,36 +116,40 @@
    "name": "Seneca",
    "work": "Moral Letters to Lucilius",
    "short": "Letters",
-   "translator": "Richard Mott Gummere",
-   "source": "Loeb Classical Library 1917–1925, as transcribed on English Wikisource",
+   "translator": "This project, from the Latin",
+   "source": "Latin: The Latin Library, checked against Latin Wikisource; English: content/aurelius/translation/seneca-v1.json",
    "reference_prefix": "Ep.",
    "id_prefix": "S",
    "mark": "square",
    "line": "dot",
    "rights": {
-    "basis": "Richard Mott Gummere died on 3 December 1969. His Loeb translation appeared in three volumes, 1917, 1920 and 1925. Works published before 1 January 1931 are in the public domain in the United States. In the European Union, the United Kingdom and Turkey the general term is the translator’s life plus 70 years, counted to the end of the year, so the translation is protected there through 31 December 2039. Each of those laws also compares the term with the work’s country of origin; that comparison was not worked out. Each allows quotation of a published work with its source named, within conditions (EU Directive 2001/29/EC art. 5(3)(d); UK CDPA s.30(1ZA); Turkey Law 5846 art. 35). This is a record of facts for the owner, not legal advice.",
-    "free_in": [
-     "United States (all three volumes, published before 1931)"
-    ],
-    "protected_until": {
-     "European Union": "2039-12-31",
-     "United Kingdom": "2039-12-31",
-     "Turkey": "2039-12-31"
-    },
+    "basis": "The English quoted on the page is this project’s own translation from the Latin, so no translator’s rights apply. The Latin is an older public-domain text. Gummere’s 1917–25 English is kept privately and used only to find passages by similarity; none of its words are published. The facts gathered on Gummere’s rights are kept below for the record.",
+    "decision": "Settled on 23 November 2026: the owner chose to translate Seneca within the project (“let’s translate seneca ourselves?”).",
     "checked_on": "2026-11-23",
-    "sources": [
-     "American Antiquarian Society obituary: https://www.americanantiquarian.org/sites/default/files/proceedings/44497989.pdf (died 3 December 1969)",
-     "Rutgers Database of Classical Scholars: https://dbcs.rutgers.edu/all-scholars/8752-gummere-richard-mott (date of death 3 December 1969)",
-     "Library of Congress name authority n85222674: https://id.loc.gov/authorities/names/n85222674.html (1883-1969)",
-     "Wikisource work page, volumes 1917, 1920, 1925, tag PD/US|1969: https://en.wikisource.org/wiki/Moral_letters_to_Lucilius",
-     "US Copyright Office Circular 15A: https://www.copyright.gov/circs/circ15a.pdf (published before 1 January 1931)",
-     "Directive 2006/116/EC arts. 1, 7, 8: https://www.legislation.gov.uk/eudr/2006/116/article/1",
-     "UK CDPA 1988 s.12: https://www.legislation.gov.uk/ukpga/1988/48/section/12; s.30: https://www.legislation.gov.uk/ukpga/1988/48/section/30",
-     "Turkey Law No. 5846 arts. 6, 26, 27, 35: https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf",
-     "Directive 2001/29/EC art. 5: https://www.legislation.gov.uk/eudr/2001/29/article/5"
-    ],
-    "fallbacks": "Thomas Morell (died 1784; letters published 1786) and Thomas Lodge (died 1625; Seneca 1614) are free everywhere; see plan 32, W5.3.",
-    "decision": "Open: the owner chooses whether to keep Gummere (rung 1) or move down the ladder in plan 32, W5.3."
+    "gummere": {
+     "basis": "Richard Mott Gummere died on 3 December 1969. His Loeb translation appeared in three volumes, 1917, 1920 and 1925. Works published before 1 January 1931 are in the public domain in the United States. In the European Union, the United Kingdom and Turkey the general term is the translator’s life plus 70 years, counted to the end of the year, so the translation is protected there through 31 December 2039. Each of those laws also compares the term with the work’s country of origin; that comparison was not worked out. Each allows quotation of a published work with its source named, within conditions (EU Directive 2001/29/EC art. 5(3)(d); UK CDPA s.30(1ZA); Turkey Law 5846 art. 35). This is a record of facts for the owner, not legal advice.",
+     "free_in": [
+      "United States (all three volumes, published before 1931)"
+     ],
+     "protected_until": {
+      "European Union": "2039-12-31",
+      "United Kingdom": "2039-12-31",
+      "Turkey": "2039-12-31"
+     },
+     "checked_on": "2026-11-23",
+     "sources": [
+      "American Antiquarian Society obituary: https://www.americanantiquarian.org/sites/default/files/proceedings/44497989.pdf (died 3 December 1969)",
+      "Rutgers Database of Classical Scholars: https://dbcs.rutgers.edu/all-scholars/8752-gummere-richard-mott (date of death 3 December 1969)",
+      "Library of Congress name authority n85222674: https://id.loc.gov/authorities/names/n85222674.html (1883-1969)",
+      "Wikisource work page, volumes 1917, 1920, 1925, tag PD/US|1969: https://en.wikisource.org/wiki/Moral_letters_to_Lucilius",
+      "US Copyright Office Circular 15A: https://www.copyright.gov/circs/circ15a.pdf (published before 1 January 1931)",
+      "Directive 2006/116/EC arts. 1, 7, 8: https://www.legislation.gov.uk/eudr/2006/116/article/1",
+      "UK CDPA 1988 s.12: https://www.legislation.gov.uk/ukpga/1988/48/section/12; s.30: https://www.legislation.gov.uk/ukpga/1988/48/section/30",
+      "Turkey Law No. 5846 arts. 6, 26, 27, 35: https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf",
+      "Directive 2001/29/EC art. 5: https://www.legislation.gov.uk/eudr/2001/29/article/5"
+     ],
+     "fallbacks": "Thomas Morell (died 1784; letters published 1786) and Thomas Lodge (died 1625; Seneca 1614) are free everywhere; see plan 32, W5.3."
+    }
    },
    "passages": 2140,
    "units": 124,
@@ -734,7 +738,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four of the five claims gain a second author, Practice gains a way to stay my own master amid business, and “When it breaks” gains what Marcus does not say in this section: to look to the reason for an action and not to its result. To the claim about the body he adds that it may still be indulged somewhat.",
+     "becomes": "With Seneca, four of the five claims gain a second author, Practice gains a way to stay my own master amid business, and “When it breaks” gains what Marcus does not say in this section: to look to the intention behind an action and not to its result. To the claim about the body he adds that it may still be indulged.",
      "counts": {
       "stronger": 6,
       "wider": 2,
@@ -834,7 +838,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, taking the universe’s side gains two witnesses, and the article gains what Marcus leaves out here: the hard things, paid willingly as a tax; words for a setback; a test for prayer; how to stand under pain; an answer when a death seems too early; and what holds if I doubt it. He backs nothing in the first claim, and he limits the second: he does not crave hardship itself.",
+     "becomes": "With Seneca, taking the universe’s side gains two witnesses, and the article gains what Marcus leaves out here: the hard things, paid willingly as a tax; words for a setback; a test for prayer; how to stand under pain; an answer when a death seems too early; and what holds if I doubt it. He backs nothing in the first claim, and he limits the second: he does not desire hardship itself.",
      "counts": {
       "stronger": 2,
       "wider": 6,
@@ -859,7 +863,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the first and the fifth claims gain a second author. Practice gains questions to put to myself and words for facing a feared event, and “when it breaks” gains where false opinions come from and how they are driven out. He limits the first claim (even pain with no opinion added is still slight) and the fourth (the mind is struck by feelings reason cannot rout), and he challenges the fifth: where all is in doubt, he would have me believe what I prefer.",
+     "becomes": "With Seneca, the first and the fifth claims gain a second author. Practice gains questions to put to myself and words for facing a feared event, and “when it breaks” gains where false opinions come from and how they are driven out. He limits the first claim (even pain with no opinion added is still light) and the fourth (the mind is struck by feelings that reason cannot take by storm), and he challenges the fifth: where everything is uncertain, he would have me believe what I prefer.",
      "counts": {
       "stronger": 4,
       "wider": 3,
@@ -884,7 +888,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, five of the six claims gain a second witness: nothing is beyond my power to bear, I suffer according to opinion, pain is a sensation of the body, whatever I am given is material for virtue, and pain is slight when opinion adds nothing to it. The article gains a way of turning the mind from pain, a question that catches the sorrow I add myself, and a reason to go on living when I could leave. He challenges the first claim: a pain I cannot bear may come, though it is short. He limits the third: the mind is steady only once virtue is complete.",
+     "becomes": "With Seneca, five of the six claims gain a second witness: nothing is unbearable, I feel pain according to opinion, pain is a feeling of the body, whatever I am given is material for virtue, and pain is light when opinion adds nothing to it. The article gains a way of turning the mind from pain, a question that catches the pain I add myself, and a reason to go on living when I could leave. He challenges the first claim: a pain I cannot bear may come, though it is short. He limits the third: the mind is steady only once virtue is complete.",
      "counts": {
       "stronger": 8,
       "wider": 3,
@@ -909,7 +913,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, five of the six claims gain a second author; only the review of my conduct does not. Practice gains a daily review with a test of steadiness, action gains a warning against making a show of plainness, and the side on what failing looks like gains what Seneca says of those who are not yet one person. He limits two claims: until I respect myself I keep a witness in mind, and a day is lived as one that might be my last, not snatched at as the last. The side on doubt stays empty.",
+     "becomes": "With Seneca, five of the six claims gain a second author; only the review of my conduct does not. Practice gains a daily review with a test of steadiness, action gains a warning against making a show of plainness, and the side on what failing looks like gains what Seneca says of those who are not yet one man. He limits two claims: until I respect myself I keep a witness in mind, and a day is lived as one that could be my last, not snatched at as the last. The side on doubt stays empty.",
      "counts": {
       "stronger": 8,
       "wider": 3,
@@ -934,7 +938,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, living as one already at the end gains three witnesses, waiting for death gains three, and what is enough and the view from above gain one each. Practice gains a nightly exercise and the reminder that a cheerful death is long prepared; When it breaks gains a name for the failure, a life always postponed. He limits leaving the past behind, and he challenges the claim that being remembered is of no account. His allowance for ending one’s own life, which differs from waiting for the natural end, is left out of this article.",
+     "becomes": "With Seneca, living as one already at the end gains three witnesses, waiting for death gains three, and what is enough and the view from above gain one each. Practice gains a nightly exercise and the reminder that a cheerful death is long prepared; When it breaks gains a name for the failure, a life always put off. He limits leaving the past behind, and he challenges the claim that being remembered is of no account. His allowance for ending one’s own life, which differs from waiting for the natural end, is left out of this article.",
      "counts": {
       "stronger": 8,
       "wider": 3,
@@ -959,7 +963,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four of the five claims gain a second author: that the work needs no audience, that acting well comes from principles kept ready, that each thing is looked at bare, and that I do not give up. The article gains a measure for the learner, an image for what makes the teaching hold, a way to keep principles at hand, the same stripping used on what frightens, and what stands behind “I cannot”. He limits three claims: needing no one to see, since until I respect myself I picture a good man watching; coming back, since no one resumes where he left off; and the situation I am in, since affairs that engross me are to be put out of the way.",
+     "becomes": "With Seneca, four of the five claims gain a second author: that the work needs no audience, that acting well comes from principles kept ready, that each thing is looked at bare, and that I do not give up. The article gains a measure for one who is making progress, an image for what makes the teaching hold, a way to keep principles at hand, the same stripping used on what frightens, and what stands behind “I cannot”. He limits three claims: needing no one to see, since until I respect myself I picture a good man watching; coming back, since no one finds his progress where he had left it; and the situation I am in, since the things that keep me busy are to be pushed out of the way.",
      "counts": {
       "stronger": 7,
       "wider": 5,
@@ -984,7 +988,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the retreat of claim 1 gains a second author for its hour and its place, the praise of claim 2 and the target of claim 6 gain one each; the practice gains a way to keep my mind within amid noise, and what failing looks like gains two signs: travelling to escape my own gloom, and starting at every sound. He sets two limits on the retreat: one goes into the statement (it is right only for someone already good), and one into claim 1 (a mind not yet sound is harmed by some places).",
+     "becomes": "With Seneca, the retreat of claim 1 gains a second author for its hour and its place, the praise of claim 2 and the target of claim 6 gain one each; the practice gains a way to keep my mind within amid noise, and what failing looks like gains two signs: travelling to escape my own sadness, and starting up at every voice. He sets two limits on the retreat: one goes into the statement (it is right only for someone already good), and one into claim 1 (for a mind not yet perfected some places are not wholesome enough).",
      "counts": {
       "stronger": 4,
       "wider": 3,
@@ -1009,7 +1013,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, three claims gain a second author: the good that is my own, keeping to what is necessary, and what pulls me away from it. “Why” gains his argument that reason is a human being’s own good, and “In action” gains where the good in a choice lies. He limits the claim that no one can prevent me from living well: nothing can break the happiness of the wise, but mine can be broken off while I am short of perfection, and old age can shatter the mind.",
+     "becomes": "With Seneca, three claims gain a second author: the good that is my own, keeping to what is necessary, and what pulls me away from it. “Why” gains his argument that reason is a human being’s own good, and “In action” gains where the good in a choice lies. He limits the claim that no one can prevent me from living well: nothing can break the happiness of the wise, but my gladness can be cut apart while I am still imperfect, and old age can shake the mind.",
      "counts": {
       "stronger": 3,
       "wider": 2,
@@ -1034,7 +1038,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, claim 1 gains a second author for calling the spirit, which is reason, a fragment of the divine, and claim 3 a second author for keeping one good person in mind. The article gains what Marcus leaves out here: God as a witness within me, what worship consists in, the chosen person as a watcher, an example of what I turn back from when I return to reason, and what holds if no guardian was given to me. He limits claim 3: I need the person as a guard over me only until I respect myself.",
+     "becomes": "With Seneca, claim 1 gains a second author for calling the spirit, which is reason, a fragment of the divine, and claim 3 a second author for keeping one good person in mind. The article gains what Marcus leaves out here: God as an observer within me, what worship consists in, the chosen person as a watcher, an example of what I turn back from when I return to reason, and what holds if no minder was given to me. He limits claim 3: I need the person as a guard over me only until I respect myself.",
      "counts": {
       "stronger": 2,
       "wider": 5,
@@ -1059,7 +1063,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the slavery of claim c1 and the case against the gods in claim c5 gain a second author; what I do gains philosophy turned on my own faults, the practice gains happiness without vows, and “If I doubt it” gains a second answer to the gods’ neglect. He limits two claims: the gods are sometimes unmindful of the individual, and for the harm we bring on ourselves we can complain of ourselves.",
+     "becomes": "With Seneca, the slavery of claim c1 and the case against the gods in claim c5 gain a second author; what I do gains philosophy turned on my own vices, the practice gains being fortunate without prayers, and “If I doubt it” gains a second answer to the gods’ neglect. He limits two claims: the gods are sometimes without concern for individuals, and for the harm we bring on ourselves we can complain of ourselves.",
      "counts": {
       "stronger": 2,
       "wider": 3,
@@ -1109,7 +1113,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four claims gain a second author: that death is near, that I am ready to go, that I do not pretend, and, in claim 4, both “wherever I am” and preferring death to living another way. He adds what can serve as a reason for the article, though he does not offer it as one: death will show whether my brave words were felt or a pretence. He adds words to say each night, and he limits the readiness to die: not in haste, and not from a longing for death.",
+     "becomes": "With Seneca, four claims gain a second author: that death is near, that I am ready to go, that I do not pretend, and, in claim 4, both “wherever I am” and preferring death to living another way. He adds what can serve as a reason for the article, though he does not offer it as one: death will show whether my brave words were meant or a pretence. He adds words to say each night, and he limits the readiness to die: I go out of life, I do not flee from it, and not from a longing for death.",
      "counts": {
       "stronger": 7,
       "wider": 2,
@@ -1134,7 +1138,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, all three claims gain a second author. For the first: any land I am driven to can be a hospitable home, the soul by its own power makes a life happy or wretched, and the real good comes from a good conscience, honourable purposes and right actions. For the second: a good man bears whatever happens to him as the result of divine law. For the third: a prayer hands to Jupiter the choice of where I am led. The article gains two grounds (the person matters more than the place; a spirit within treats me as I treat it), two things under “In action” (how to hold what is given; making something of whatever fortune I find) and a rehearsal of poverty and exile. Nothing is added under “If I doubt it”. He limits the first claim: some places harm a mind still recovering, and where he may choose he avoids them.",
+     "becomes": "With Seneca, all three claims gain a second author. For the first: any land I am driven to can be a hospitable home, the mind is itself the cause of a happy life or a wretched one, and the real good comes from a good conscience, honourable plans and right actions. For the second: a good man bears whatever happens to him as something that has happened by the divine law. For the third: a prayer hands to Jupiter the choice of where I am led. The article gains two grounds (who I am matters more than where I come to; a spirit within treats me as I treat it), two things under “In action” (how to hold what is given; making something of whatever fortune I receive) and a rehearsal of poverty and exile. Nothing is added under “If I doubt it”. He limits the first claim: some places harm a mind still recovering, and where he may choose he avoids them.",
      "counts": {
       "stronger": 5,
       "wider": 5,
@@ -1159,7 +1163,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, claims 2, 5 and 6 gain a second author. The practice gains a habit of reading words and looks generously, and the side of failing gains three things: going on giving after ingratitude, that how far anger goes depends on the soul a provocation reaches, and not copying bad people because they are many. He challenges claim 1, holding that people know what evil is and do not care, and claim 2, holding that the least part of a wrong does reach the one wronged; he limits claim 4 to those willing to listen.",
+     "becomes": "With Seneca, claims 2, 5 and 6 gain a second author. The practice gains a habit of reading words and looks kindly, and the side of failing gains three things: going on giving after ingratitude, that how far anger goes depends on the mind it reaches, and not becoming like bad people because they are many. He challenges claim 1, holding that people know what is shameful and disregard it, and claim 2, holding that the smallest part of wickedness does spill over onto others; he limits claim 4 to those who are going to hear.",
      "counts": {
       "stronger": 4,
       "wider": 4,
@@ -1184,7 +1188,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the division into material and cause gains a second author, and so does asking what each thing is and what it is worth. The article gains what Marcus leaves out here: why to look, since what I fear, seen as it is at bottom, holds nothing but my fear; what failing looks like; a rule that the parts must not be countless and tiny; and what holds if I cannot be certain which account of what causes things is true.",
+     "becomes": "With Seneca, the division into material and cause gains a second author, and so does asking what each thing is and what it is worth. The article gains what Marcus leaves out here: why to look, since what I fear, once I see what is in it, holds nothing but my fear; what failing looks like; a rule that the parts must not be countless and tiny; and what holds if I cannot be certain which account of what causes things is true.",
      "counts": {
       "stronger": 3,
       "wider": 4,
@@ -1209,7 +1213,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, claim 2 (my mind cannot be harmed) and claim 4 (impulse by worth, desire kept out) gain a second author, and the article gains how an impression leads to an act, worth, impulse and action as three steps in order, what being carried along by impulse looks like, and what to do if I leave open what is in my power. He limits claim 1: once a passion is let in, it is no longer in my power; and claim 4: keeping desire out still leaves me free to wish.",
+     "becomes": "With Seneca, claim 2 (my mind cannot be harmed) and claim 4 (impulse by worth, desire kept out) gain a second author, and the article gains how an impression leads to an act, worth, impulse and action as three steps in order, what being carried along by impulse looks like, and what to do if I leave open what is mine to decide. He limits claim 1: once a passion is let in, it is no longer in my power; and claim 4: keeping desire out still leaves me free to want.",
      "counts": {
       "stronger": 3,
       "wider": 4,
@@ -1234,7 +1238,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, acting well while spoken ill of and wanting approval as the failure gain a second author, the ground gains a reward that lies in the deed itself, the way back gains an answer for one who cannot stand alone, and the claim that my mind stands upright by itself is limited, since he holds that no one rises above his folly unaided.",
+     "becomes": "With Seneca, acting well while spoken ill of and wanting approval as the failure gain a second author, the ground gains a reward that is in the deed itself, the way back gains an answer for one who cannot stand alone, and the claim that my mind stands upright by itself is limited, since he holds that no one comes up out of his folly unaided.",
      "counts": {
       "stronger": 2,
       "wider": 2,
@@ -1259,7 +1263,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the article gains what Marcus leaves out here: a ground, that what a pilot answers for is the work and not its success; how far to go along with other people, which 6.32 says only of craftsmen; and, under “When it breaks”, philosophy that courts applause. He backs nothing in the one claim, and he limits the picture it uses: a pilot’s or a physician’s skill is for the good of other people, and the wise person’s good is their own as well.",
+     "becomes": "With Seneca, the article gains what Marcus leaves out here: a ground, that what a helmsman answers for is the work and not its success; how far to go along with other people, which 6.32 says only of craftsmen; and, under “When it breaks”, philosophy that hunts for shouts of praise. He backs nothing in the one claim, and he limits the picture it uses: a helmsman’s or a doctor’s skill is for the good of other people, and the wise person’s good is their own as well.",
      "counts": {
       "stronger": 0,
       "wider": 3,
@@ -1284,7 +1288,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the first two claims gain a second author, the article gains two reasons under Why, an exercise of thinking ahead and three things for when it breaks, and claims 2 and 3 are limited: I need a helping hand, and I may fall so long as I rise again.",
+     "becomes": "With Seneca, the first two claims gain a second author, the article gains two reasons under Why, an exercise of thinking ahead and three things for when it breaks, and claims 2 and 3 are limited: I need someone to stretch out a hand, and I may fall so long as I get up again.",
      "counts": {
       "stronger": 2,
       "wider": 6,
@@ -1309,7 +1313,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, going back into myself and going to philosophy each gain a witness, and the article gains a reason not to complain, justice without reward or renown, the company of the best people of any age and what to do while I am not yet fit to be alone with myself; he limits the going back into myself, and where Marcus waits on the court he would put the affairs that take up his time out of the way.",
+     "becomes": "With Seneca, going back into myself and going to philosophy each gain a witness, and the article gains a reason not to complain, justice without payment or glory, the company of the best people of any age and what to do while I am not yet fit to be alone with myself; he limits the going back into myself, and where Marcus waits on the court he would push the things that keep him busy out of the way.",
      "counts": {
       "stronger": 2,
       "wider": 4,
@@ -1334,7 +1338,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, looking for nothing after doing good gains a second author. Under Why he adds the purpose of the whole life, against which each act is weighed; under Practice, death kept in mind at lying down and at waking, so that each morning is a gift, and a review of each day; under When it breaks, owning a fault as the sign that I am awake. He limits and challenges nothing.",
+     "becomes": "With Seneca, looking for nothing after doing good gains a second author. Under Why he adds the purpose of the whole life, against which each act is weighed; under Practice, death kept in mind before sleep and at waking, so that each morning is a gain, and a review of the day; under When it breaks, confessing my vices as the sign that I am awake. He limits and challenges nothing.",
      "counts": {
       "stronger": 2,
       "wider": 4,
@@ -1359,7 +1363,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, three claims gain a second author: seeing what sort of people they are (claim 1), not wanting praise from people I cannot praise (claim 2), and taking others’ word for what I am (claim 4). The article gains an audience of a few, one or none; a way to weigh judgments; and a way back: what I think of myself counts for more. He challenges two claims: he holds that those who come after will judge without prejudice, and that deserved praise from good people is a good.",
+     "becomes": "With Seneca, three claims gain a second author: seeing what sort of people they are (claim 1), not wanting praise from people I cannot praise (claim 2), and taking others’ word for what I am (claim 4). The article gains an audience of a few, one or none; a way to assess judgments; and a way back: what I seem to myself counts for more. He challenges two claims: he holds that those who come after will judge without ill will, and that deserved praise from good people is a good.",
      "counts": {
       "stronger": 3,
       "wider": 3,
@@ -1384,7 +1388,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, where the harm of a wrong lies gains a second witness and a challenge: he holds that the least and lightest part of a wrong reaches the one it is done to, and that bad people make one another worse. Practice gains forgetting wrongs on purpose and reading words and looks generously, and In action gains keeping watch against what people may do.",
+     "becomes": "With Seneca, where the harm of a wrong lies gains a second witness and a challenge: he holds that the smallest and lightest part of a wrong reaches the one it is done to, and that bad people make one another worse. Practice gains forgetting wrongs on purpose and reading words and looks kindly, and In action gains keeping watch against what people may do.",
      "counts": {
       "stronger": 1,
       "wider": 2,
@@ -1409,7 +1413,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the article gains what Marcus leaves out here: that a fall from a height has nothing evil in it, that a wise person’s good is shared with the people they live with, that the worst part of a wrong stays with the one who does it, that a person’s good is a free and upright mind subject to nothing, and that a slanderous companion rubs off on me and that I should not copy the bad because they are many. The article has no fused claims, so he backs none, and he limits nothing.",
+     "becomes": "With Seneca, the article gains what Marcus leaves out here: that a fall from a height has no evil in it, that a wise person’s good is shared with the people they live with, that the worst part of wickedness stays with the one who has it, that a person’s good is a free mind, standing tall and under none, and that a spiteful companion rubs off on me and that I should not become like the bad because they are many. The article has no fused claims, so he backs none, and he limits nothing.",
      "counts": {
       "stronger": 0,
       "wider": 5,
@@ -1434,7 +1438,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, being surprised at what happens gains a second author, and the article gains what Marcus leaves out here: what to do, which is to think ahead; what surprise costs; a way back after a loss; and words to say when wealth dazzles me. He limits the distaste for life as a whole, which must not turn into hating life, and he challenges the little breath: for him the soul is heavenly, not of one kind with dust and bones.",
+     "becomes": "With Seneca, being surprised at what happens gains a second author, and the article gains what Marcus leaves out here: what to do, which is to think ahead; what surprise costs; a way back after a loss; and words to say when wealth dazzles me. He limits the distaste for life as a whole, which must not turn into hating life, and he challenges the little breath: for him the soul is divine, not of one kind with dust and bones.",
      "counts": {
       "stronger": 1,
       "wider": 4,
@@ -1459,7 +1463,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the claims on what my soul sees, on going straight toward its end and on being ready when life ends gain a second author. Practice gains a daily review, When it breaks gains the soul that turns from king to tyrant, which also extends the statement, and If I doubt it gains a reason to fear neither end nor change. He limits the claim on what is mine: the body is to be cherished with care, though not lived for.",
+     "becomes": "With Seneca, the claims on what my soul sees, on going straight toward its end and on being ready when life ends gain a second author. Practice gains a review of the day, When it breaks gains the soul that turns from king to tyrant, which also extends the statement, and If I doubt it gains a reason to fear neither end nor crossing. He limits the claim on what is mine: the body is to be cared for with diligence, though not lived for.",
      "counts": {
       "stronger": 5,
       "wider": 3,
@@ -1484,7 +1488,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, five claims gain a second author: that all things change and I with them, that I look down on what passes, the practice of seeing all of time, that a loss is only a change, and that a thing is resolved into its elements. The ground gains one good that does not perish; what breaks gains the fear of a death already under way and the weariness that sameness can breed. He backs the third claim’s contempt for what passes in Letter 58 and limits it in Letter 98: what I lose I keep in memory, with thanks.",
+     "becomes": "With Seneca, five claims gain a second author: that all things change and I with them, that I look down on what passes, the practice of seeing all of time, that a loss is only a change, and that what ceases to be does not perish but is dissolved. The ground gains one good that does not die; what breaks gains the fear of a death already under way and the weariness that sameness can breed. He backs the third claim’s contempt for what passes in Letter 58 and limits it in Letter 98: what I lose I keep in memory, with thanks.",
      "counts": {
       "stronger": 7,
       "wider": 3,
@@ -1534,7 +1538,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four claims gain a second author: that everyone dies, that those who outlive me follow, that death is a harbour, and what death may be. The action side gains an answer to the objection that my own deed will be forgotten or little thanked, the practice side gains thinking of my own death beside the deaths of those I love, and the claim about fame is challenged: he holds that whatever fame virtue earns does not pass away.",
+     "becomes": "With Seneca, four claims gain a second author: that everyone dies, that those who outlive me follow, that death is a harbour, and what death may be. The action side gains an answer to the objection that my own deed will be forgotten and judged with little gratitude, the practice side gains thinking of my own death beside the deaths of those I love, and the claim about fame is challenged: he holds that whatever fame virtue earns does not perish.",
      "counts": {
       "stronger": 4,
       "wider": 2,
@@ -1559,7 +1563,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four of the five claims gain a second author: young and old alike are short-lived beside eternity, a limit is fixed and life is taken a little each day, I hasten, and while I postpone, life speeds by. In action, Practice and If I doubt it each gain something Marcus does not say here, and claim 5 is limited: age need not harm the mind, though Seneca also says that wisdom is hard to learn when old.",
+     "becomes": "With Seneca, four of the five claims gain a second author: young and old alike are short-lived beside the whole of time, a boundary is fixed and some part of life is taken away each day, I hurry, and if I lay hands on today, I depend less on tomorrow. In action, Practice and If I doubt it each gain something Marcus does not say here, and claim 5 is limited: age need not harm the mind, though Seneca also says that wisdom is hard to learn when old.",
      "counts": {
       "stronger": 5,
       "wider": 3,
@@ -1584,7 +1588,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, the ages of a life gain a second author. Practice gains a daily rehearsal, When it breaks gains the longing for death, and If I doubt it gains what remains of me either way. He limits claim 3, since death keeps a look of evil, and claim 5, since those I hold dear can be a reason to stay.",
+     "becomes": "With Seneca, the ages of a life gain a second author. Practice gains a daily exercise, When it breaks gains the longing for death, and If I doubt it gains what remains for me either way. He limits claim 3, since death keeps a look of evil, and claim 5, since my own people can be a reason to stay.",
      "counts": {
       "stronger": 2,
       "wider": 3,
@@ -1609,7 +1613,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, freedom from anger, steadiness in illness, slowness to believe and easy reconciliation each gain a second author. The article gains a reason for learning from people, what happens when a teacher’s habit is broken, and what holds if a teacher was wrong. He limits the training in hardness: a few days at a time, as a test, not a penance or a show.",
+     "becomes": "With Seneca, freedom from anger, steadiness in illness, slowness to believe and easy reconciliation each gain a second author. The article gains a reason for learning from people, what happens when a teacher’s habit is broken, and what holds if a teacher was wrong. He limits the training in hardness: a few days at a time, as a test, not a punishment or a show.",
      "counts": {
       "stronger": 4,
       "wider": 3,
@@ -1634,7 +1638,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four of the six claims gain a second author: that staying alive is not the great thing, that the soul is the measure and fame is not, that being just is enough, and the wide view. The article gains a way to look at a person stripped of everything but the soul, a model to live by, birth set beside fame and power, the names of what the conquerors were slaves to, justice without renown, and the duty to stay alive for those who need me. He limits one claim: for him the glory of a death proves nothing, but how a person meets death does judge a soul.",
+     "becomes": "With Seneca, four of the six claims gain a second author: that staying alive is not the great thing, that the soul is the measure and fame is not, that being just is enough, and the wide view. The article gains a way to look at a person stripped of everything but the soul, a model to live by, birth set beside fame and power, the names of what the conquerors were slaves to, justice without glory, and the duty to stay alive for those who need me. He limits one claim: for him the glory of a death proves nothing, but how a person meets death does judge a soul.",
      "counts": {
       "stronger": 7,
       "wider": 6,

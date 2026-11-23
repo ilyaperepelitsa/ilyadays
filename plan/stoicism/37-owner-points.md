@@ -22,6 +22,13 @@ gated, reviewed independently, polished after a reading of all 38 articles side 
    first person). `apps/aurelius/.venv/bin/python scripts/aurelius-qa.py articles` lists them.
 9. **Chapter 7 retitled** "Praise, harm and the worth of things" (was "Other minds, fame and harm"); chapters 1-3 got
    first-person summaries that match their articles. Say if you want the old wording back.
+10. **Seneca is now the project’s own translation from the Latin** (your “let’s translate seneca ourselves?”): 304 sections, three
+   readings each, every quote re-cut on the new English and reviewed (`content/aurelius/translation/seneca-v1.json`; log in
+   `36-finish-log.md`). Gummere is no longer published; the build refuses any clause of his. Not yet read by you or by a Latin
+   reader. Three places the settler kept against the checker, for a Latin reader: 51.9, 74.18, 95.53.
+11. **Letter titles are new**, written from each letter’s Latin (they read like “On valuing and saving your time”).
+12. **API spend:** $109.26 of the $129.50 you allowed for Seneca (translation $69, letter titles $2.41, re-quoting and reviews
+   about $38); together with the earlier $169.85, about $279.
 
 ## Titles changed from the plan (12)
 

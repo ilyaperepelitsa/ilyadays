@@ -88,3 +88,51 @@ fixture keeps the old c7 title on purpose (it is a frozen test record).
 
 Usage check (16:05-16:20 UTC): result: write/cache down 94-98% from the prior window, as expected after the workers ended ·
 action: none needed, main session only · evidence: codeburn window 10 new turns, 423k cached, ctx 86k.
+
+## 23 November 2026 · Seneca from the Latin
+
+The owner, in their words: “you have my approval for everything. let's translate seneca ourselves?” and then “spend until we
+hit $0 then we decide what to do”. My reading (mine, not theirs): the open decisions in `37-owner-points.md` stand as I left
+them; the Seneca rights question (W5) is settled by not publishing Gummere at all; the rest of the API credit may be spent.
+
+- Scope: the page publishes 303 Gummere sections from 94 letters (the quoted pieces and their whole sections), 421 pieces.
+  All 303 get the project's own English from the Latin; the pieces are re-quoted on it.
+- Latin: The Latin Library (headings and [n] section numbers), checked against Latin Wikisource (the same text with
+  {{pn}} markers). Both merge a few sections (22.13–17, 30.1–4, 41.8–9); those were split by hand at the Latin sentence
+  each section begins with. Private copies under `.aurelius/imports/seneca-latin-*` and `.aurelius/corpora/seneca-latin`.
+- Readers: the Greek pipeline's three briefs ported to Latin, with a Latin glossary that keeps the English of shared
+  Stoic terms in line with the Marcus translation. Measured on the Greek, all three rounds would cost about $59 through
+  the API against about $30 left, so the first translation goes through the API (batch, Fable 5.2, hard cap $29.50) and
+  the check and settling go to Opus workers in Claude Code, which never see Gummere or any other translation.
+- Budget raised by the owner, in their words: “I'll allow a $100 cost as well. this seems important”. Seneca ledger
+  (`scratchpad/sen-tr/api-ledger.json`) hard cap $129.50 (the ~$29.50 promo rest plus $100). With it, check and settling
+  go through the API as for the Greek (Fable 5.2, batch); the re-quoting and the reviews too where the cap allows.
+- Usage check (16:35–16:50 UTC): result main context 220k and cached reads +62% while the Seneca pipeline was built ·
+  action: the long text work (translate, check, settle, re-quote) runs as API batches, the main session only collects
+  and checks · evidence: codeburn window 40 calls, 7.8M cached; API ledger $34.16 after two rounds.
+- **Translated (23 Nov, ~21:15):** 303 sections from 94 letters, three readings through the API (batch, Fable 5.2):
+  translate $17.17, check $14.59, settle $35.48 with repairs; 1,024 points raised by the checker, 1,137 settled in writing
+  (708 accepted, 343 partly, 86 declined); 2,337 notes; 29,190 English words. The checker called four sections wrong; the
+  settler kept its reading with a note in 51.9 (Fortune as subject, as the Latin stands), 74.18 (ut as purpose; the concessive
+  reading noted) and 95.53 (a sentence that does not construe as given), and accepted 98.5. These three are for a Latin reader.
+- **Letter titles:** the page showed Gummere's titles. 94 new ones from each letter's Latin alone (one request, $2.41).
+- **Record and build:** `content/aurelius/translation/seneca-v1.json` holds Latin, English, notes and every settled point per
+  section, with a revision hash. `scripts/aurelius-constitution.py` publishes Seneca's text and titles only from it (a quote not
+  in it fails), keeps Gummere's English private for the vectors (as the 1634 English is for Marcus), and refuses to publish any
+  clause of 30+ characters that is in Gummere and not in the project's English (tested: a planted Gummere clause fails the build;
+  14 clauses that a literal rendering of the same Latin shares with him pass).
+- **Re-quoted:** all 421 pieces in 38 articles through the API, each article checked by script (quote in the new English, nothing
+  outside the Seneca voice changed, no old wording quoted, the article gates). The first check missed the gates (19 context
+  sentences grew past 200 characters); the gates are now part of it. An independent reader per article (Latin and new English
+  only) accepted 25 and sent 13 back, all with exact fixes (sentences still leaning on the old wording, quotes that were not a whole
+  thought); 11 passed the second review. The search logs (`searched`) keep a few of Gummere's words: they record searches of his
+  text, are not published, and are left as they are.
+- **Source alignment:** a reviewer found 65.10's Latin short. Comparing the two Latin sources on all 303 sections against the
+  Loeb section boundaries: in 56.12 and 65.10 Wikisource starts the next section a sentence early; both now come from The Latin
+  Library and were translated again (folder s27). The other disputed sections (20.2, 20.9, 23.6, 29.12, 75.15, 80.10) were right.
+- **Done (23 Nov, ~22:00):** all 38 articles re-quoted and accepted by review (25 at once, 11 after one fix round, 3, 12 and 20
+  after the 65.10 correction); 66.5 translated too, for the frozen page-case fixture (its 60 pieces now quote the project's
+  English; 53 from the record, 7 by nearest sentence; its fault cases all still rejected). New test: every published Seneca
+  passage is the stored revision and text of `seneca-v1`. Build ok, 89 record tests, 16 gate tests, 0 blocking / 74 warnings,
+  browser check all pass, fault cases all rejected, `npm run build` ok, `npm test` 1201/1201. API spend for Seneca $109.26 of
+  $129.50. Not pushed.
