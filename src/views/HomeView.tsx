@@ -55,7 +55,7 @@ export function HomeView({ lang }: { lang: Lang }) {
           </Link>
           <a className="tile tile-stoicism" href={`/apps/stoic-constitution.html?lang=${lang}`}>
             {/* eslint-disable-next-line @next/next/no-img-element -- pre-sized static cover */}
-            <img src="/covers/stoicism.webp" alt={lang === "ru" ? "Мраморный бюст Марка Аврелия в профиль на фоне заката; затылок и плечо переходят в золотую сеть точек и линий" : "A marble bust of Marcus Aurelius in profile against a sunset, the back of the head and shoulder turning into a gold network of points and lines"} width={800} height={534} />
+            <img src="/covers/stoicism.webp" alt={lang === "ru" ? "Профиль Марка Аврелия, построенный из золотых узлов и связей, как граф нейросети, на тёмном фоне" : "Marcus Aurelius in profile, built from gold nodes and links like a neural-network graph, on a dark background"} width={800} height={534} />
             <div className="tile-body">
               <span className="home-card-label">{lang === "ru" ? "С Марком Аврелием" : "With Marcus Aurelius"}</span>
               <h3>{lang === "ru" ? "Стоицизм" : "Stoicism"}</h3>

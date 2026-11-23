@@ -2,6 +2,7 @@
 """Stoicism section cover: a few drafts in the site's cover style, one of which becomes public/covers/stoicism.webp.
 
     python3 scripts/stoicism-cover.py draft [--only A,B] [--budget-usd 2]   # drafts into art/stoicism/drafts/
+    python3 scripts/stoicism-cover.py draft2 [--only E,F]                  # second round: the profile as a network
     python3 scripts/stoicism-cover.py pick X                                # draft X -> art/covers, public/covers, public/share
 
 Uses the same OpenAI Images call, model, size, quality and style references as the Fitness cover
@@ -76,9 +77,50 @@ def pick(k):
     l, tp = (im.width - w) // 2, (im.height - h) // 2; im.crop((l, tp, l + w, tp + h)).save(ROOT / 'public/share/stoicism.jpg', quality=85)
     png.unlink(); print('picked', k)
 
+# Second round (owner, 24 Nov 2026: "his profile in a mix of constellation / neural net visualization style"): the
+# profile itself is the network. No style references (they pull towards cel-shaded scenes); palette stated in words.
+NET = ("A clean, elegant data-visualization illustration, sharp and high-resolution, vector-like: small round glowing "
+       "nodes joined by thin straight lines of even weight, with soft light only around the nodes; no texture, no grain, "
+       "no noise, no glitch, no circuitry, no screens, no code. No text, no letters, no numbers, no labels, no watermark. "
+       "The likeness must read at a glance as the classical portrait of the Roman emperor Marcus Aurelius in left-facing "
+       "profile: thick tight curls of hair, a full curly beard, a straight nose, a calm brow.\n\n")
+SCENES2 = {
+ 'E': NET + "Scene: his head and shoulders in profile drawn entirely as a constellation: a few hundred bright points of "
+      "warm gold and white, linked by fine lines that trace the curls, the beard, the brow and the line of the neck, denser "
+      "where the features are, sparser at the edges; set in a deep night-blue sky that warms to amber at the bottom edge, "
+      "with a faint scattering of tiny stars. Wide 3:2 frame, the profile left of centre, open sky to the right.",
+ 'F': NET + "Scene: his head and shoulders in profile drawn as a neural-network graph: nodes arranged in loose layers that "
+      "follow the shape of the head, each node connected to several in the next layer by thin translucent lines, so the "
+      "lines themselves model the curls, beard and face; a few connection paths glow brighter as if signals are passing "
+      "through. Warm gold and soft amber lines on a deep charcoal-blue background with a gentle radial glow behind the "
+      "head. Wide 3:2 frame, profile slightly left of centre.",
+ 'G': NET + "Scene: his head and shoulders in profile drawn as a network of points and lines in warm ink on a smooth "
+      "light cream background, like a fine scientific plate; the points fall into seven softly coloured clusters (muted "
+      "teal, ochre, rust, olive, slate blue, plum, sand) that together form the face, beard, curls and shoulder, joined "
+      "by thin grey lines. Calm, airy, lots of cream space. Wide 3:2 frame, profile left of centre.",
+ 'H': NET + "Scene: his head and shoulders in profile formed as a constellation of glowing gold points and fine lines "
+      "across a warm sunset sky (deep blue above, rose and amber near a low horizon of soft distant hills), the same "
+      "golden-hour palette as a calm sunset painting; the network is crisp and luminous, the sky smooth. Wide 3:2 "
+      "frame, the profile left of centre, the sun low at the right.",
+}
+
+def draft2(only, budget):
+    spent = sum(e.get('cost', 0) for e in (json.loads(LOG.read_text()) if LOG.exists() else []))
+    pricing = fi.load_json(ROOT / 'art/fitness/pricing.json')
+    for k in only:
+        if spent + 0.12 > budget: sys.exit(f'budget {budget} would be passed (spent {spent:.3f})')
+        t = time.time(); r = fi.generate(SCENES2[k], 'gpt-image-2', 'medium', '1536x1024')
+        cost = fi.cost_from_usage(pricing, 'gpt-image-2', r.get('usage', {})); spent += cost
+        out = OUT / 'drafts' / f'{k}.webp'; out.write_bytes(base64.b64decode(r['data'][0]['b64_json']))
+        log({'key': k, 'model': 'gpt-image-2', 'size': '1536x1024', 'quality': 'medium', 'refs': [], 'prompt': SCENES2[k],
+             'cost': round(cost, 4), 'usage': r.get('usage'), 'seconds': round(time.time() - t), 'out': str(out.relative_to(ROOT))})
+        print(f'{k}: {out.relative_to(ROOT)} ${cost:.4f} (total ${spent:.4f})')
+
 if __name__ == '__main__':
     a = sys.argv[1:]
     if a[0] == 'draft':
         only = a[a.index('--only') + 1].split(',') if '--only' in a else list(SCENES)
         draft(only, float(a[a.index('--budget-usd') + 1]) if '--budget-usd' in a else 2.0)
+    elif a[0] == 'draft2':
+        draft2(a[a.index('--only') + 1].split(',') if '--only' in a else list(SCENES2), float(a[a.index('--budget-usd') + 1]) if '--budget-usd' in a else 2.0)
     elif a[0] == 'pick': pick(a[1])
