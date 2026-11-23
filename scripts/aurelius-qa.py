@@ -182,6 +182,9 @@ def gate_accounting(article: dict) -> list[dict]:
     for k in ('why', 'action', 'practice', 'breaks', 'doubt'):
         if not article['groups'].get(k) and len((article.get('empty') or {}).get(k, '')) < 25:
             out.append(finding('BLOCKING', f'a{n} empty.{k}', 'empty label', 'an empty label needs a sentence saying why'))
+    for k, why in (article.get('empty') or {}).items():
+        if len([s for s in re.split(r'(?<=[.!?])\s+(?=[A-Z“"0-9])', why.strip()) if s]) > 1:
+            out.append(finding('BLOCKING', f'a{n} empty.{k}', 'empty label', 'an empty label says why in one sentence (rule 7)'))
     for ref, why in (article.get('aside') or {}).items():
         if len(why) < 25:
             out.append(finding('BLOCKING', f'a{n} aside.{ref}', 'set aside', 'the reason is too short to be a sentence'))

@@ -90,6 +90,15 @@ def test_seneca_context_and_strip_sentences():
     assert {'seneca', 'seneca context'} <= rules(qa.gate_seneca(a))
 
 
+def test_an_empty_label_says_why_in_one_sentence():
+    a = article()
+    a['groups']['doubt'] = []
+    a.setdefault('empty', {})['doubt'] = 'No passage in this section doubts it; the article states it and does not argue for it.'
+    assert 'empty label' not in rules(qa.gate_accounting(a))
+    a['empty']['doubt'] = 'No passage in this section doubts it. The article states it and does not argue for it.'
+    assert 'empty label' in rules(qa.gate_accounting(a))
+
+
 def test_a_seneca_context_names_its_letter_instead_of_pointing_back():
     a = article()
     piece = next(it for it in a['voices']['seneca']['items'] if 'quote' in it)
