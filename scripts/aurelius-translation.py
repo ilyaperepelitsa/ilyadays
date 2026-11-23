@@ -24,7 +24,7 @@ Rules checked here:
 - Translation goes section by section: `sections` lists the sections done, and every passage of a listed section is
   translated, none from outside them.
 - The 1634 translation sometimes cuts its sections inside a modern chapter. A passage that covers only part of a
-  chapter carries a letter on its modern number (11.8a: the first part; 3.11b: the later part) and says in `part`
+  chapter carries a letter on its modern number (11.8a: the chapter's first part; 3.11b: its next part) and says in `part`
   which Greek words of the chapter it leaves out, and why.
 - Notes quote the Greek exactly: the words of a note must stand in the passage's Greek.
 - The English is today's: none of the old forms the 1634 text is full of.
@@ -47,7 +47,7 @@ STORED = ROOT / 'content/aurelius/translation/project-v1.json'
 OUT = ROOT / 'public/apps/stoic-translation.json'
 TOPICS = ROOT / 'content/aurelius/topics.json'
 VECTORS = ROOT / '.aurelius/corpora/project-v1/vectors.npz'
-STANDARD = r'\d{1,2}\.\d{1,2}b?(?:–\d{1,2})?a?'   # 10.21 · 6.9–10 (two chapters) · 11.8a (first part) · 3.11b (later part) · 7.31b–34
+STANDARD = r'\d{1,2}\.\d{1,2}[a-d]?(?:–\d{1,2}[a-d]?)?'   # 10.21 · 6.9–10 (two chapters) · 11.8a (first part of 11.8) · 3.11b (its next part) · 7.31b–34
 OLD_FORMS = re.compile(r"\b(thee|thou|thy|thine|doth|hath|saith|unto|whatsoever|shalt)\b", re.I)
 
 
@@ -91,7 +91,7 @@ def check(stored: dict, corpus: dict) -> list[dict]:
         assert re.fullmatch(STANDARD, passage['standard_ref']) and re.fullmatch(r'\d{1,2}\.\d{1,2}', passage['casaubon_ref']), f'{where}: references are book.chapter'
         assert home.get(passage['casaubon_revision']) in listed, f"{where}: its section {home.get(passage['casaubon_revision'])} is not among the sections listed as translated"
         part = passage.get('part')
-        if re.search(r'[ab]', passage['standard_ref']):
+        if re.search(r'[a-d]', passage['standard_ref']):
             assert part and part.get('left_out') and part.get('why'), f'{where}: a passage that is part of a chapter says which Greek it leaves out, and why'
             assert re.search(r'[Ͱ-Ͽἀ-῿]', part['left_out']) and part['left_out'] not in passage['greek'], f'{where}: `left_out` holds the Greek of the chapter that is not in this passage'
         else:

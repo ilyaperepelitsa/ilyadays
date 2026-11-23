@@ -618,6 +618,12 @@ def case_e2(page, base, port):
     problems = []
     page.goto(base, wait_until='networkidle')
     page.wait_for_selector('article.article .statement')
+    record = json.loads((ROOT / 'content/aurelius/constitution.json').read_text())
+    if all(a.get('edition') for a in record['articles']):
+        # Every article now quotes the new English, so there is nothing on the 1634 English to look at. That is the
+        # intended end state; the page must then show no such article either.
+        left = page.locator('article.article:not(:has(.from-greek))').count()
+        return [f'{left} article(s) on the page lack the “from the Greek” note, but every article in the record quotes the new English'] if left else []
     art = page.locator('article.article:not(:has(.from-greek))').first
     art.scroll_into_view_if_needed()
     art.locator('li.claim .show').first.click()

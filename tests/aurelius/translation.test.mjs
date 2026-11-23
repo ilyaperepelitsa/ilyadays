@@ -14,7 +14,7 @@ const revisionOf = (passage) => `${stored.id}:${passage.standard_ref}:${crypto.c
 
 const topics = read('content/aurelius/topics.json');
 const sectionOf = new Map(topics.chapters.flatMap((c) => c.sections.flatMap((s) => s.members.map((m) => [m.revision_id, s.id]))));
-const STANDARD = /^\d{1,2}\.\d{1,2}b?(?:–\d{1,2})?a?$/;
+const STANDARD = /^\d{1,2}\.\d{1,2}[a-d]?(?:–\d{1,2}[a-d]?)?$/;
 
 test('translation goes section by section: every passage of a listed section is translated once, and none from outside', () => {
   assert.ok(stored.sections.length >= 1 && new Set(stored.sections).size === stored.sections.length);
@@ -34,7 +34,7 @@ test('translation goes section by section: every passage of a listed section is 
 test('a passage that covers part of a modern chapter says which Greek it leaves out, and no other passage carries a part', () => {
   for (const passage of stored.passages) {
     const where = `Meditations ${passage.standard_ref}`;
-    if (/[ab]/.test(passage.standard_ref)) {
+    if (/[a-d]/.test(passage.standard_ref)) {
       assert.ok(passage.part && passage.part.why.length > 20, `${where}: why the 1634 translation cuts here`);
       assert.match(passage.part.left_out, /[Ͱ-Ͽἀ-῿]/, where);
       assert.ok(!passage.greek.includes(passage.part.left_out), `${where}: the Greek left out is not in the passage`);
@@ -79,7 +79,8 @@ test('the published file is the stored record with the 1634 text beside each pas
     const mine = stored.passages.find((item) => item.revision === passage.revision);
     assert.equal(passage.english, mine.english);
     assert.equal(passage.greek, mine.greek);
-    assert.ok(passage.casaubon.length > 40, `Meditations ${passage.standard_ref}: the 1634 text`);
+    // Present, and not the new English. (Some passages are one line: 7.12 is 38 characters in 1634.)
+    assert.ok(passage.casaubon.trim().length > 0 && passage.casaubon !== passage.english, `Meditations ${passage.standard_ref}: the 1634 text`);
   }
 });
 

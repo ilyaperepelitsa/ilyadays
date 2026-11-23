@@ -1474,7 +1474,7 @@ function articleCard(article) {
   const leaf = el('div', 'leaf');
   leaf.append(el('p', 'eyebrow', 'Article ' + article.number), el('h3', '', article.title));
   if (article.edition) {
-    const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English (a pilot). Passage numbers are Casaubon’s, as in the other articles. Each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
+    const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English. Passage numbers are those of the 1634 translation, which grouped the sections; each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
     const link = el('a', '', 'Read the passages in Greek, today’s English and 1634');
     link.href = 'stoic-translation.html';
     note.append(link);

@@ -5,6 +5,7 @@
    "number": 1,
    "section": "c6.s1",
    "title": "A member of one body",
+   "edition": "project-v1",
    "statement": {
     "t": "I am a member of one body of reasoning beings, made for a shared life with them.",
     "parts": [
@@ -47,19 +48,17 @@
      {
       "words": "made for a shared life with them",
       "ids": [
-       "9.21a",
        "5.15b",
        "7.10b"
       ],
       "refs": [
-       "9.21",
        "5.15",
        "7.10"
       ]
      }
     ],
     "kind": "Many pictures, one claim; then its consequences",
-    "form": "The statement gathers claims 1 and 2. Claim 1 is fused from four passages that use different pictures: body, city, sunlight, soul; claim 2 from four that say what we are made for. Claims 3 and 4 are what Marcus draws from it; the “because” of claim 5 is the editor’s."
+    "form": "The statement gathers claims 1 and 2. Claim 1 is fused from five passages that use four different pictures: body, city, sunlight, soul; claim 2 from three that say what we are made for. Claims 3 and 4 are what Marcus draws from it; the “because” of claim 5 is the editor’s."
    },
    "groups": [
     {
@@ -128,15 +127,15 @@
     }
    ],
    "colors": {
-    "9.7": 1,
-    "7.10": 2,
-    "9.21": 3,
+    "9.21": 1,
+    "9.7": 2,
+    "7.10": 3,
     "11.7": 4,
+    "4.4": 4,
+    "12.23": 5,
     "5.15": 5,
-    "4.4": 3,
-    "12.23": 4,
-    "8.32": 2,
-    "11.19": 1
+    "8.32": 3,
+    "11.19": 2
    },
    "map": {
     "points": [
@@ -675,6 +674,12 @@
    "section_size": 10,
    "cohesion": 0.8018,
    "section_closeness": 0.603,
+   "in_translation": {
+    "closeness": 0.502,
+    "stayed": 9,
+    "of": 10,
+    "sections": 38
+   },
    "sources": [
     "9.7",
     "5.15",
@@ -693,24 +698,26 @@
      "role": "What we are",
      "t": "Everything that reasons shares one reason, as limbs share one body, citizens one city, and every lit place one sun.",
      "shared": "Four pictures (body, city, sunlight, soul) with one structure: a single thing present in many, and not split by being shared.",
-     "changed": "Marcus says soul, reason and intellectual soul by turns. The fused claim says “reason” throughout.",
+     "changed": "Marcus says “one soul that has mind” in 12.23 and 9.7, and “mind” and “reason” in 4.4. The fused claim says “reason” throughout.",
      "passages": [
       "7.10",
       "4.4",
+      "9.21",
       "12.23",
       "9.7"
      ],
-     "closeness": 0.663,
+     "closeness": 0.641,
+     "closeness_new": 0.542,
      "support": [
       {
        "id": "7.10a",
        "ref": "7.10",
-       "quote": "As several members in one body united, so are reasonable creatures\r\nin a body divided and dispersed",
+       "quote": "The relation that the limbs of the body have in things that are united is the relation that rational beings have in things that stand apart",
        "at": 0,
        "start": 0,
-       "end": 99,
+       "end": 139,
        "in": "c1",
-       "follows": "Reasoning beings relate to one another as the parts of one body do.",
+       "follows": "Rational beings, who stand apart, have the same relation to one another that the limbs of one body have.",
        "gives": [
         "as limbs share one body",
         "Everything that reasons"
@@ -719,26 +726,40 @@
       {
        "id": "4.4a",
        "ref": "4.4",
-       "quote": "then are we fellow-citizens. If so, then are we partners in some one\r\ncommonweal. If so, then the world is as it were a city.",
-       "at": 283,
-       "start": 283,
-       "end": 408,
+       "quote": "we are citizens. If that is so, we share in some civic body. If that is so, the universe is, as it were, a city.",
+       "at": 220,
+       "start": 220,
+       "end": 332,
        "in": "c1",
-       "follows": "We are fellow citizens, partners in one commonwealth, and the world is like a city.",
+       "follows": "We are citizens, we share in a civic body, and the universe is like a city.",
        "gives": [
         "citizens one city"
        ],
-       "note": "The last step of a chain that starts from reason being common to all."
+       "note": "The last step of a chain that starts from mind and reason being common to us."
+      },
+      {
+       "id": "9.21a",
+       "ref": "9.21",
+       "quote": "you yourself help to complete a civic whole",
+       "at": 8,
+       "start": 8,
+       "end": 51,
+       "in": "c1",
+       "follows": "I am one of those who make a civic whole complete.",
+       "gives": [
+        "citizens one city"
+       ],
+       "note": "Casaubon wrote that I was “made for” a common society. The Greek has no making here: one word says that I am one of the things that make the civic whole complete."
       },
       {
        "id": "12.23a",
        "ref": "12.23",
-       "quote": "There is but one light of the sun, though it be intercepted by\r\nwalls and mountains",
+       "quote": "One light of the sun, even if it is divided by walls, by mountains",
        "at": 0,
        "start": 0,
-       "end": 83,
+       "end": 66,
        "in": "c1",
-       "follows": "The light of the sun is one, even where walls and mountains block it.",
+       "follows": "The light of the sun is one, even where walls and mountains divide it.",
        "gives": [
         "every lit place one sun"
        ]
@@ -746,12 +767,12 @@
       {
        "id": "12.23b",
        "ref": "12.23",
-       "quote": "So is there but one common intellectual soul, though it seem to be\r\ndivided.",
-       "at": 355,
-       "start": 355,
-       "end": 431,
+       "quote": "One soul that has mind, even if it seems to be separated.",
+       "at": 265,
+       "start": 265,
+       "end": 322,
        "in": "c1",
-       "follows": "There is one common reasoning soul, even though it seems to be divided.",
+       "follows": "There is one soul that has mind, even though it seems to be separated.",
        "gives": [
         "shares one reason"
        ]
@@ -759,12 +780,12 @@
       {
        "id": "9.7a",
        "ref": "9.7",
-       "quote": "of all that are reasonable, but one reasonable soul, divided betwixt\r\nthem all",
-       "at": 72,
-       "start": 72,
-       "end": 150,
+       "quote": "one soul that has mind has been portioned out among the rational ones",
+       "at": 64,
+       "start": 64,
+       "end": 133,
        "in": "c1",
-       "follows": "All reasoning beings share a single soul.",
+       "follows": "The beings that reason share one soul, the soul that has mind.",
        "gives": [
         "shares one reason",
         "Everything that reasons"
@@ -777,51 +798,38 @@
      "number": 2,
      "role": "What we are for",
      "t": "We are made for one another and for one common work, and that shared life is our own good.",
-     "shared": "Each says that a reasonable being is directed toward its own kind, whether by its making (7.10, 9.21, 5.15) or by its nature (9.7). 5.15 and 9.7 both say the direction is toward one another, and 5.15 and 7.10 both call it its own good.",
+     "shared": "Each says that a rational being is directed toward its own kind, whether by what it was built or born for (7.10, 5.15) or by the nature it shares in (9.7). 5.15 and 9.7 both say the direction is toward one another, and 5.15 and 7.10 both call it its own good.",
      "passages": [
       "7.10",
-      "9.21",
       "9.7",
       "5.15"
      ],
-     "closeness": 0.669,
+     "closeness": 0.662,
+     "closeness_new": 0.565,
      "support": [
       {
        "id": "7.10b",
        "ref": "7.10",
-       "quote": "all made and prepared for one common\r\noperation",
-       "at": 101,
-       "start": 101,
-       "end": 148,
+       "quote": "being built to do some one work together",
+       "at": 141,
+       "start": 141,
+       "end": 181,
        "in": "c2",
-       "follows": "All are made and prepared for one shared work.",
+       "follows": "Rational beings are built to do one work together.",
        "gives": [
         "for one common work",
         "We are made"
        ]
       },
       {
-       "id": "9.21a",
-       "ref": "9.21",
-       "quote": "As thou thyself, whoever thou art, were made for the perfection and\r\nconsummation, being a member of it, of a common society",
-       "at": 0,
-       "start": 0,
-       "end": 124,
-       "in": "c2",
-       "follows": "I was made to complete a shared society, as one of its members.",
-       "gives": [
-        "We are made"
-       ]
-      },
-      {
        "id": "9.7b",
        "ref": "9.7",
-       "quote": "Whatsoever therefore is partaker of that reasonable common\r\nnature, naturally doth as much and more long after his own kind.",
-       "at": 939,
-       "start": 939,
-       "end": 1063,
+       "quote": "everything that shares in a common nature of mind hurries toward its kin in the same way, or even more",
+       "at": 762,
+       "start": 762,
+       "end": 864,
        "in": "c2",
-       "follows": "Whatever shares in reason is naturally drawn to others who share in it.",
+       "follows": "Whatever shares in the common nature of mind hurries toward its own kin.",
        "gives": [
         "for one another"
        ]
@@ -829,10 +837,10 @@
       {
        "id": "5.15a",
        "ref": "5.15",
-       "quote": "Society therefore is the proper good of a rational creature.",
-       "at": 710,
-       "start": 710,
-       "end": 770,
+       "quote": "therefore the good of a rational animal is community",
+       "at": 567,
+       "start": 567,
+       "end": 619,
        "in": "c2",
        "follows": "Living with others is what is good for a reasoning being.",
        "gives": [
@@ -842,12 +850,12 @@
       {
        "id": "5.15b",
        "ref": "5.15",
-       "quote": "For that we\r\nare made for society, it hath long since been demonstrated.",
-       "at": 771,
-       "start": 771,
-       "end": 843,
+       "quote": "For that we were born for community has long since been shown.",
+       "at": 621,
+       "start": 621,
+       "end": 683,
        "in": "c2",
-       "follows": "It has already been shown that we are made for society.",
+       "follows": "It has long been shown that we were born for community.",
        "gives": [
         "We are made"
        ]
@@ -855,31 +863,30 @@
       {
        "id": "5.15c",
        "ref": "5.15",
-       "quote": "those things that are best, are made one for another? And those things\r\nthat have souls, are better than those that have none? and of those that\r\nhave, those best that have rational souls?",
-       "at": 999,
-       "start": 999,
-       "end": 1187,
+       "quote": "the worse things are for the sake of the better, and the better for the sake of one another? And things with a soul are better than things without one, and rational things better than things with a soul.",
+       "at": 709,
+       "start": 709,
+       "end": 912,
        "in": "c2",
-       "follows": "The best things are made for one another, and the best of all are those with reasoning souls.",
+       "follows": "The better things are for the sake of one another, and rational things rank above everything else that has a soul.",
        "gives": [
-        "We are made",
         "for one another"
        ],
-       "note": "Asked as questions no one can answer with no: the best things are made for one another, and the best are those with reasoning souls."
+       "note": "Asked as a question that expects the answer yes: the better things are for the sake of one another. Marcus then ranks rational things highest."
       },
       {
        "id": "7.10f",
        "ref": "7.10",
-       "quote": "as doing good to thyself, when thou dost good unto others",
-       "at": 648,
-       "start": 648,
-       "end": 705,
+       "quote": "doing good does not yet delight you fully; you still do it as no more than the proper thing, not yet as doing good to yourself",
+       "at": 430,
+       "start": 430,
+       "end": 556,
        "in": "c2",
-       "follows": "When I do good to others, I do good to myself.",
+       "follows": "Doing good is also doing good to myself, and I have not grasped that while I do it only because it is proper.",
        "gives": [
         "our own good"
        ],
-       "note": "The good of the other and my own are the same act."
+       "note": "Marcus’s word for “doing good” means doing a kindness to someone else. The good of the other and my own are the same act."
       }
      ]
     },
@@ -888,35 +895,36 @@
      "number": 3,
      "role": "What follows for action",
      "t": "So each thing I do should aim at the common good, directly or at a distance, and holding to that one aim is what makes me one person.",
-     "shared": "Two passages draw the same consequence from membership: the aim of action is common. 11.19 adds what the single aim does for the one who holds it.",
+     "shared": "Two passages set the same aim for what I do: 9.21 calls it “the social goal”, 11.19 “the social and civic one”. 11.19 adds what the single aim does for the one who holds it: that person is always the same. 9.21 gives the reverse case: an action without that reference “tears your life apart and does not let it be one”.",
      "passages": [
       "9.21",
       "11.19"
      ],
      "closeness": 0.646,
+     "closeness_new": 0.538,
      "support": [
       {
        "id": "9.21b",
        "ref": "9.21",
-       "quote": "so must every\r\naction of thine tend to the perfection and consummation of a life that\r\nis truly sociable",
-       "at": 126,
-       "start": 126,
-       "end": 230,
+       "quote": "so too let every action of yours help to complete a civic life",
+       "at": 53,
+       "start": 53,
+       "end": 115,
        "in": "c3",
-       "follows": "Every action of mine should help make shared life complete.",
+       "follows": "Every action of mine should help to complete a civic life.",
        "gives": [
-        "each thing I do should aim at the common good"
+        "each thing I do should"
        ]
       },
       {
        "id": "9.21c",
        "ref": "9.21",
-       "quote": "What action soever of thine therefore that either\r\nimmediately or afar off, hath not reference to the common good, that is\r\nan exorbitant and disorderly action",
-       "at": 232,
-       "start": 232,
-       "end": 391,
+       "quote": "any action of yours that does not refer, whether directly or at a distance, to the social goal tears your life apart and does not let it be one",
+       "at": 120,
+       "start": 120,
+       "end": 263,
        "in": "c3",
-       "follows": "An action with no connection to the common good is out of order, even when the connection would only be distant.",
+       "follows": "An action with no reference to the social goal, not even a distant one, tears my life apart and keeps it from being one.",
        "gives": [
         "directly or at a distance",
         "aim at the common good"
@@ -925,25 +933,26 @@
       {
        "id": "11.19a",
        "ref": "11.19",
-       "quote": "so must the end also that we propose unto ourselves, be common\r\nand sociable",
-       "at": 573,
-       "start": 573,
-       "end": 649,
+       "quote": "so too the aim to be set up must be the social and civic one",
+       "at": 375,
+       "start": 375,
+       "end": 435,
        "in": "c3",
-       "follows": "The goal I set for myself should be a common one.",
+       "follows": "The aim I set up should be the social and civic one.",
        "gives": [
         "aim at the common good"
-       ]
+       ],
+       "note": "In the same sentence Marcus compares this aim to “the common goods”, the only goods that people judge alike."
       },
       {
        "id": "11.19b",
        "ref": "11.19",
-       "quote": "he that doth direct all his own private motions and\r\npurposes to that end, all his actions will be agreeable and uniform; and\r\nby that means will be still the same man",
-       "at": 655,
-       "start": 655,
-       "end": 822,
+       "quote": "whoever directs all their private impulses toward this aim will make all their actions alike, and in this way will always be the same",
+       "at": 441,
+       "start": 441,
+       "end": 574,
        "in": "c3",
-       "follows": "A person who directs all his purposes to that one end acts consistently and stays the same person.",
+       "follows": "A person who directs every private impulse toward this aim makes all their actions alike, and so is always the same.",
        "gives": [
         "holding to that one aim is what makes me one person"
        ]
@@ -955,23 +964,24 @@
      "number": 4,
      "role": "What breaking it does",
      "t": "When I hate someone, wrong them, or resent what happens, I cut myself off, and not from that one thing only but from the whole.",
-     "shared": "Three pictures of severing (a branch, a limb, a faction). In each the person does it to himself, and in each the cut is from the whole.",
+     "shared": "Three pictures of severing (a branch, a limb, a seditious citizen). In each the person does it to himself, and in each the cut is from the whole.",
      "passages": [
       "11.7",
       "8.32",
       "9.21"
      ],
      "closeness": 0.652,
+     "closeness_new": 0.592,
      "support": [
       {
        "id": "11.7c",
        "ref": "11.7",
-       "quote": "he that hates and is averse, cuts himself off from his\r\nneighbour",
-       "at": 229,
-       "start": 229,
-       "end": 294,
+       "quote": "it is the human being who separates themselves from their neighbour, by coming to hate and turning away",
+       "at": 239,
+       "start": 239,
+       "end": 342,
        "in": "c4",
-       "follows": "Hatred and aversion are how a person cuts himself off from a neighbour.",
+       "follows": "A person separates themselves from a neighbour by coming to hate and turning away.",
        "gives": [
         "When I hate someone",
         "I cut myself off"
@@ -980,10 +990,10 @@
       {
        "id": "11.7g",
        "ref": "11.7",
-       "quote": "and knows not that at the same time he divides himself from\r\nthe whole body, or corporation",
-       "at": 296,
-       "start": 296,
-       "end": 387,
+       "quote": "they do not know that they have at the same time cut themselves away from the whole civic body as well",
+       "at": 348,
+       "start": 348,
+       "end": 450,
        "in": "c4",
        "follows": "In the same act, and without knowing it, he separates himself from the whole body of people.",
        "gives": [
@@ -993,26 +1003,26 @@
       {
        "id": "8.32a",
        "ref": "8.32",
-       "quote": "If ever thou sawest either a hand, or a foot, or a head lying by\r\nitself, in some place or other, as cut off from the rest of the body,\r\nsuch must thou conceive him to make himself, as much as in him lieth,\r\nthat either is offended with anything that is happened",
+       "quote": "If you have ever seen a hand cut off, or a foot, or a severed head, lying somewhere or other apart from the rest of the body: that is what a person makes of themselves, as far as it is in their power, when they do not want what happens",
        "at": 0,
        "start": 0,
-       "end": 262,
+       "end": 235,
        "in": "c4",
-       "follows": "A person who resents anything that has happened makes himself, as far as he can, like a hand or foot cut off from the body.",
+       "follows": "A person who does not want what happens makes of themselves, as far as they can, something like a hand or foot cut off from the body.",
        "gives": [
         "resent what happens"
        ],
-       "note": "8.32 counts resentment of events as a cut too."
+       "note": "8.32 counts not wanting what happens as a cut too."
       },
       {
        "id": "8.32b",
        "ref": "8.32",
-       "quote": "or that commits anything\r\nagainst the natural law of mutual correspondence, and society among men",
-       "at": 324,
-       "start": 324,
-       "end": 421,
+       "quote": "or when they do something unsocial",
+       "at": 262,
+       "start": 262,
+       "end": 296,
        "in": "c4",
-       "follows": "Acting against the natural law of fellowship among people is counted as the same kind of act.",
+       "follows": "Doing something unsocial is counted as the same kind of act.",
        "gives": [
         "wrong them"
        ]
@@ -1020,12 +1030,12 @@
       {
        "id": "8.32d",
        "ref": "8.32",
-       "quote": "he needed not, except he would himself, have divided\r\nhimself from the whole",
-       "at": 1006,
-       "start": 1006,
-       "end": 1082,
+       "quote": "he put it in the human being’s power not to be broken off from the whole in the first place",
+       "at": 694,
+       "start": 694,
+       "end": 785,
        "in": "c4",
-       "follows": "A person is divided from the whole only by his own will.",
+       "follows": "It is in a person’s own power not to be broken off from the whole.",
        "gives": [
         "I cut myself off",
         "from the whole"
@@ -1034,12 +1044,12 @@
       {
        "id": "9.21d",
        "ref": "9.21",
-       "quote": "as one among\r\nthe people who from such and such a consent and unity, should factiously\r\ndivide and separate himself",
-       "at": 414,
-       "start": 414,
-       "end": 529,
+       "quote": "like the person in a citizen body who, for their own part, stands apart from such harmony",
+       "at": 286,
+       "start": 286,
+       "end": 375,
        "in": "c4",
-       "follows": "It is like a man who breaks away from a united people to form a faction.",
+       "follows": "It is like a person in a body of citizens who, for their own part, stands apart from its harmony.",
        "gives": [
         "I cut myself off"
        ]
@@ -1051,12 +1061,12 @@
      "number": 5,
      "role": "The way back",
      "t": "Having cut myself off, I can grow back into the whole, because nature is stronger than my leaving.",
-     "shared": "Two passages say the return is possible in almost the same words. 9.7 says something else: those who flee their nature are caught by it. Joining the two with “because” is the editor’s step.",
-     "changed": "Both 11.7 and 8.32 credit the return to God. The fused claim credits nature, following 9.7.",
+     "shared": "Two passages say the return is possible in almost the same words. 9.7 says something else: those who run away are overtaken all the same, because nature prevails. Joining the two with “because” is the editor’s step.",
+     "changed": "11.7 credits the return to Zeus and 8.32 to god. The fused claim credits nature, following 9.7.",
      "inferences": [
       {
        "words": "because",
-       "why": "No passage gives this reason: 11.7 and 8.32 credit the return to God, and 9.7 speaks of flight from nature, not of return."
+       "why": "No passage gives this reason: 11.7 credits the return to Zeus and 8.32 to god, and 9.7 speaks of people who run away and are overtaken, not of a return."
       }
      ],
      "passages": [
@@ -1065,16 +1075,17 @@
       "9.7"
      ],
      "closeness": 0.686,
+     "closeness_new": 0.658,
      "support": [
       {
        "id": "11.7d",
        "ref": "11.7",
-       "quote": "once cut off we may grow together\r\nand become part of the whole again",
-       "at": 468,
-       "start": 468,
-       "end": 537,
+       "quote": "we are allowed to grow together again with the one next to us and again to help to complete the whole",
+       "at": 518,
+       "start": 518,
+       "end": 619,
        "in": "c5",
-       "follows": "Once cut off, we can grow together again and be part of the whole again.",
+       "follows": "We are allowed to grow together again with the person next to us, and again to help make the whole complete.",
        "gives": [
         "I can grow back into the whole"
        ]
@@ -1082,12 +1093,12 @@
       {
        "id": "8.32c",
        "ref": "8.32",
-       "quote": "if he would himself, he might return, and grow\r\ntogether again",
-       "at": 1155,
-       "start": 1155,
-       "end": 1217,
+       "quote": "for one who has been broken off, he made it possible to come back again and grow together",
+       "at": 792,
+       "start": 792,
+       "end": 881,
        "in": "c5",
-       "follows": "Return is possible if the person wants it.",
+       "follows": "A person who has been broken off has been given the power to come back and grow together again.",
        "gives": [
         "I can grow back"
        ]
@@ -1095,12 +1106,12 @@
       {
        "id": "9.7c",
        "ref": "9.7",
-       "quote": "But though they fly from nature, yet are they stopt in\r\ntheir course, and apprehended.",
-       "at": 2445,
-       "start": 2445,
-       "end": 2531,
+       "quote": "though they run away, they are overtaken and hemmed in all the same; for nature prevails",
+       "at": 1914,
+       "start": 1914,
+       "end": 2002,
        "in": "c5",
-       "follows": "Reasoning beings cannot finally escape their nature; it catches up with them.",
+       "follows": "Those who run away are overtaken all the same, because nature prevails.",
        "gives": [
         "nature is stronger than my leaving"
        ]
@@ -1112,28 +1123,28 @@
     {
      "id": "7.10c",
      "ref": "7.10",
-     "quote": "use\r\nthyself often to say to thyself, I am μέλος, or a member of the mass and\r\nbody of reasonable substances",
-     "at": 206,
-     "start": 206,
-     "end": 314,
+     "quote": "you often say to yourself: “I am a limb [melos] of the whole made up of rational beings.”",
+     "at": 227,
+     "start": 227,
+     "end": 316,
      "in": "single",
      "label": "A practice",
      "t": "I shall often say to myself: I am a member, and not merely a part.",
      "why": "Only 7.10 gives an exercise. It is kept as the article’s practice.",
-     "follows": "I should often tell myself that I am a member of this body."
+     "follows": "I should often tell myself that I am a limb of the whole that rational beings make up."
     },
     {
      "id": "11.7f",
      "ref": "11.7",
-     "quote": "But if this happen often the misery\r\nis that the further a man is run in this division, the harder he is to\r\nbe reunited and restored again",
-     "at": 539,
-     "start": 539,
-     "end": 678,
+     "quote": "when this kind of division happens many times, it makes what withdraws hard to unite and hard to restore",
+     "at": 625,
+     "start": 625,
+     "end": 729,
      "in": "single",
      "label": "A warning",
      "t": "The more often I cut myself off, the harder the return.",
      "why": "Only 11.7 says the return gets harder. One witness, so it is not fused into claim 5.",
-     "follows": "Each repeated separation makes reunion harder."
+     "follows": "When this division happens many times, what withdraws becomes hard to unite and hard to restore."
     }
    ],
    "members": [
@@ -1235,7 +1246,7 @@
      "words": 91,
      "used": true,
      "feeds": [
-      "c2",
+      "c1",
       "c3",
       "c4"
      ],
@@ -1288,7 +1299,7 @@
      "words": 86,
      "used": false,
      "feeds": [],
-     "why": "A wish to share one mind as we share one air. Close to claim 1, but a wish and not a statement.",
+     "why": "A wish to think together with the mind that surrounds all things, as we breathe together with the air around us. Close to claim 1, but a wish and not a statement.",
      "text": "Not only now henceforth to have a common breath, or to hold\r\ncorrespondency of breath, with that air, that compasseth us about; but\r\nto have a common mind, or to hold correspondency of mind also with that\r\nrational substance, which compasseth all things. For, that also is of\r\nitself, and of its own nature (if a man can but draw it in as he should)\r\neverywhere diffused; and passeth through all things, no less than the\r\nair doth, if a man can but suck it in.",
      "standard": "8.54",
      "translation": "project-v1:8.54:6be8d8015e41ff22",
@@ -1316,16 +1327,19 @@
     }
    ],
    "decisions": [
+    "Quotes the project’s own translation from the Greek instead of Casaubon. Passage numbers stay Casaubon’s. In modern editions 9.7 is 9.8 and 9.9, 5.15 is 5.16, 8.32 is 8.34, 7.10 is 7.13, 9.21 is 9.23, 12.23 is 12.30, 11.19 is 11.21, 8.52 is 8.54 and 11.7 is the first part of 11.8; 4.4 is the same.",
+    "Follows the Greek where Casaubon added to it. 9.21 does not say that I was “made for” a common society; it says that I help to complete a civic whole, so it no longer backs “We are made” in claim 2 and stands with the city picture of claim 1. 5.15 does not say that the best things “are made” for one another; it says that the better are for the sake of one another. 9.7 does not say that people “fly from nature”; it says that they run away and that nature prevails.",
     "Reads body, city, sunlight and soul as four pictures of one claim. Marcus sets sunlight beside soul himself (12.23, 9.7); body and city he never lines up with them.",
-    "Joins the return (11.7, 8.32) to 9.7 with “because”. Marcus states the return and credits it to God; he does not derive it.",
-    "Says “nature” where two of the three passages behind claim 5 say God."
+    "Joins the return (11.7, 8.32) to 9.7 with “because”. Marcus states the return and credits it to a god (Zeus in 11.7, “god” in 8.32); he does not derive it.",
+    "Says “nature” where two of the three passages behind claim 5 name a god: Zeus in 11.7, “god” in 8.32."
    ],
-   "limit": "Nine of the ten passages feed the article. That is also a risk: fusing smooths over differences. 4.4 argues for the unity step by step, and 9.7 argues from the elements; the article states the unity and keeps neither argument. Nine of the 22 components of its claims rest on two or more passages; the other thirteen are one passage’s words."
+   "limit": "Nine of the ten passages feed the article. That is also a risk: fusing smooths over differences. 4.4 argues for the unity step by step, and 9.7 argues from the elements; the article states the unity and keeps neither argument. Ten of the 22 components of its claims rest on two or more passages; the other twelve are one passage’s words."
   },
   {
    "number": 2,
    "section": "c6.s2",
    "title": "The work that belongs to me",
+   "edition": "project-v1",
    "statement": {
     "t": "My work is to let reason lead in how I treat other people, in how I handle my body, and in how I judge.",
     "parts": [
@@ -1379,7 +1393,7 @@
      }
     ],
     "kind": "Three lists aligned into one",
-    "form": "Three passages (7.30, 8.25 and 8.6) each list what is proper to a human being, in different words and at different lengths. The statement and the three claims under “In action” come from aligning those lists item by item."
+    "form": "Three passages each give a list, in different words and at different lengths: 7.30 lists what comes first, second and third in the human make-up, 8.25 what is proper to a human being, and 8.6 the ways in which a rational nature’s road goes well. The statement and the three claims under “In action” come from aligning those lists item by item."
    },
    "groups": [
     {
@@ -1387,12 +1401,15 @@
      "name": "Why",
      "asks": "The ground for the statement.",
      "items": [
-      "c4"
+      "c4",
+      "7.30f"
      ],
      "claims": [
       "c4"
      ],
-     "single": []
+     "single": [
+      "7.30f"
+     ]
     },
     {
      "key": "action",
@@ -1450,18 +1467,18 @@
     }
    ],
    "colors": {
-    "7.30": 1,
-    "8.25": 2,
-    "5.17": 3,
+    "8.25": 1,
+    "5.17": 2,
+    "7.30": 3,
     "8.6": 4,
-    "6.31": 3,
-    "7.8": 5,
+    "7.8": 2,
     "5.14": 1,
-    "9.14": 2,
+    "9.14": 3,
     "4.1": 4,
     "8.33": 5,
-    "11.9": 3,
-    "8.37": 3
+    "11.9": 2,
+    "6.31": 3,
+    "8.37": 2
    },
    "map": {
     "points": [
@@ -1876,7 +1893,7 @@
    },
    "voices": {
     "seneca": {
-     "becomes": "With Seneca, four of the five claims gain a second author and Practice gains a way to stay my own master amid business. To the claim about the body he adds that it may still be indulged somewhat.",
+     "becomes": "With Seneca, four of the five claims gain a second author, Practice gains a way to stay my own master amid business, and “When it breaks” gains what Marcus does not say in this section: to look to the reason for an action and not to its result. To the claim about the body he adds that it may still be indulged somewhat.",
      "statement": "The statement stands. Seneca names its ground outright: reason is what is peculiar to a human being.",
      "items": [
       {
@@ -1909,7 +1926,7 @@
         "follows": "The body may be indulged somewhat, but we must not be its slaves.",
         "context": "On our love of the body, which we must guard; “it” is the body, and the slavery he describes is living for it and fearing on its behalf.",
         "gives": [
-         "I do not let its urges rule me"
+         "I do not let what it feels rule me"
         ]
        }
       },
@@ -1926,7 +1943,7 @@
         "follows": "While soul and body are joined they are not equals: the soul judges every dispute between them.",
         "context": "Seneca refuses to live as his body’s chattel; “our alliance” is the soul’s with the body while they are bound together. A resolve, not a law of nature.",
         "gives": [
-         "Reason was made to be in charge of the body"
+         "Reason should hold first place"
         ]
        }
       },
@@ -1968,23 +1985,6 @@
        "effect": "stronger",
        "claim": "c5",
        "piece": {
-        "id": "S14.16a",
-        "ref": "Ep. 14.16",
-        "author": "seneca",
-        "quote": "the wise man regards the reason for all his actions, but not the results. The beginning is in our own power; fortune decides the issue",
-        "at": 13,
-        "in": "c5",
-        "follows": "The wise man looks to the reasons for what he does, not to how it turns out: the start is ours, the outcome is fortune’s.",
-        "context": "Seneca has admitted that a careful life cannot guarantee safety; “the results” are how the wise man’s actions turn out, which fortune decides.",
-        "gives": [
-         "not its result"
-        ]
-       }
-      },
-      {
-       "effect": "stronger",
-       "claim": "c5",
-       "piece": {
         "id": "S85.38a",
         "ref": "Ep. 85.38",
         "author": "seneca",
@@ -2004,7 +2004,7 @@
        "label": "practice",
        "role": "On a crowded day",
        "t": "I lend myself to my affairs; I do not hand myself over to them.",
-       "why": "Marcus says to keep to the three things and not be distracted. Seneca, writing about keeping time for study, says how he stays his own master amid business.",
+       "why": "Marcus says to hold to the three things and go straight on. Seneca, writing about keeping time for study, says how he stays his own master amid business.",
        "support": [
         {
          "id": "S62.1a",
@@ -2017,13 +2017,37 @@
          "context": "Seneca denies that business keeps anyone from study; “my affairs” are his engagements, and what he keeps back is his time and his own thoughts."
         }
        ]
+      },
+      {
+       "effect": "wider",
+       "key": "w2",
+       "label": "breaks",
+       "role": "Not the result",
+       "t": "I look to the reason for what I do, not to how it turns out. The beginning is in my power; fortune decides the outcome.",
+       "why": "Marcus’s claim places the work in the act itself. Seneca adds that the wise man looks to the reason for an action and not to its result. The article once said this of Marcus too, on Casaubon’s wording of 5.14; the Greek there does not speak of results.",
+       "support": [
+        {
+         "id": "S14.16a",
+         "ref": "Ep. 14.16",
+         "author": "seneca",
+         "quote": "the wise man regards the reason for all his actions, but not the results. The beginning is in our own power; fortune decides the issue",
+         "at": 13,
+         "in": "w:w2",
+         "follows": "The wise man looks to the reasons for what he does, not to how it turns out: the start is ours, the outcome is fortune’s.",
+         "context": "Seneca has admitted that a careful life cannot guarantee safety; “the results” are how the wise man’s actions turn out, which fortune decides.",
+         "gives": [
+          "I look to the reason for what I do, not to how it turns out",
+          "The beginning is in my power; fortune decides the outcome"
+         ]
+        }
+       ]
       }
      ],
      "amend": [
       {
        "target": "c2",
        "kind": "adds",
-       "t": "; I may still indulge it somewhat",
+       "t": "; I may still indulge the body somewhat",
        "ids": [
         "S14.1a"
        ],
@@ -2065,9 +2089,9 @@
         "Ep. 65.22": 0.327,
         "Ep. 41.9": 0.412,
         "Ep. 76.10": 0.513,
-        "Ep. 14.16": 0.4,
         "Ep. 85.38": 0.341,
-        "Ep. 62.1": 0.385
+        "Ep. 62.1": 0.385,
+        "Ep. 14.16": 0.4
        },
        "at": [
         -0.219,
@@ -2106,9 +2130,9 @@
         "Ep. 65.22": 0.6,
         "Ep. 41.9": 0.339,
         "Ep. 76.10": 0.28,
-        "Ep. 14.16": 0.32,
         "Ep. 85.38": 0.232,
-        "Ep. 62.1": 0.398
+        "Ep. 62.1": 0.398,
+        "Ep. 14.16": 0.32
        },
        "at": [
         -1.0,
@@ -2147,9 +2171,9 @@
         "Ep. 14.1": 0.6,
         "Ep. 41.9": 0.365,
         "Ep. 76.10": 0.345,
-        "Ep. 14.16": 0.409,
         "Ep. 85.38": 0.321,
-        "Ep. 62.1": 0.432
+        "Ep. 62.1": 0.432,
+        "Ep. 14.16": 0.409
        },
        "at": [
         -0.3769,
@@ -2188,9 +2212,9 @@
         "Ep. 14.1": 0.339,
         "Ep. 65.22": 0.365,
         "Ep. 76.10": 0.521,
-        "Ep. 14.16": 0.434,
         "Ep. 85.38": 0.438,
-        "Ep. 62.1": 0.425
+        "Ep. 62.1": 0.425,
+        "Ep. 14.16": 0.434
        },
        "at": [
         0.2203,
@@ -2229,13 +2253,95 @@
         "Ep. 14.1": 0.28,
         "Ep. 65.22": 0.345,
         "Ep. 41.9": 0.521,
-        "Ep. 14.16": 0.422,
         "Ep. 85.38": 0.355,
-        "Ep. 62.1": 0.309
+        "Ep. 62.1": 0.309,
+        "Ep. 14.16": 0.422
        },
        "at": [
         0.1581,
         0.1741
+       ]
+      },
+      {
+       "ref": "Ep. 85.38",
+       "title": "On some vain syllogisms",
+       "text": "Besides, he is not prevented from helping others, even at the time when constraining circumstances press him down. Because of his poverty he is prevented from showing how the State should be handled; but he teaches, none the less, how poverty should be handled. His work goes on throughout his whole life. Thus no fortune, no external circumstance, can shut off the wise man from action. For the very thing which engages his attention prevents him from attending to other things. He is ready for either outcome: if it brings goods, he controls them; if evils, he conquers them.",
+       "words": 99,
+       "revision": "gummere-wikisource-85-38:b8982de0a97dc271",
+       "to_centre": 0.528,
+       "rank": 433,
+       "nearest": {
+        "ref": "7.30",
+        "similarity": 0.489
+       },
+       "sims": {
+        "5.14": 0.456,
+        "8.6": 0.412,
+        "7.30": 0.489,
+        "11.18": 0.427,
+        "5.17": 0.457,
+        "8.25": 0.425,
+        "8.33": 0.417,
+        "6.31": 0.433,
+        "4.1": 0.479,
+        "11.9": 0.381,
+        "9.1": 0.351,
+        "7.8": 0.302,
+        "7.42": 0.334,
+        "8.37": 0.403,
+        "9.14": 0.415,
+        "Ep. 102.18": 0.341,
+        "Ep. 14.1": 0.232,
+        "Ep. 65.22": 0.321,
+        "Ep. 41.9": 0.438,
+        "Ep. 76.10": 0.355,
+        "Ep. 62.1": 0.481,
+        "Ep. 14.16": 0.566
+       },
+       "at": [
+        -0.8414,
+        0.0546
+       ]
+      },
+      {
+       "ref": "Ep. 62.1",
+       "title": "On good company",
+       "text": "We are deceived by those who would have us believe that a multitude of affairs blocks their pursuit of liberal studies; they make a pretence of their engagements, and multiply them, when their engagements are merely with themselves. As for me, Lucilius, my time is free; it is indeed free, and wherever I am, I am master of myself. For I do not surrender myself to my affairs, but loan myself to them, and I do not hunt out excuses for wasting my time. And wherever I am situated, I carry on my own meditations and ponder in my mind some wholesome thought.",
+       "words": 103,
+       "revision": "gummere-wikisource-62-1:edfcc6d9c2bce9bb",
+       "to_centre": 0.5,
+       "rank": 697,
+       "nearest": {
+        "ref": "7.30",
+        "similarity": 0.481
+       },
+       "sims": {
+        "5.14": 0.443,
+        "8.6": 0.425,
+        "7.30": 0.481,
+        "11.18": 0.441,
+        "5.17": 0.463,
+        "8.25": 0.422,
+        "8.33": 0.37,
+        "6.31": 0.387,
+        "4.1": 0.465,
+        "11.9": 0.332,
+        "9.1": 0.33,
+        "7.8": 0.256,
+        "7.42": 0.367,
+        "8.37": 0.362,
+        "9.14": 0.299,
+        "Ep. 102.18": 0.385,
+        "Ep. 14.1": 0.398,
+        "Ep. 65.22": 0.432,
+        "Ep. 41.9": 0.425,
+        "Ep. 76.10": 0.309,
+        "Ep. 85.38": 0.481,
+        "Ep. 14.16": 0.432
+       },
+       "at": [
+        -0.9098,
+        0.0163
        ]
       },
       {
@@ -2278,93 +2384,11 @@
         -0.7425,
         0.091
        ]
-      },
-      {
-       "ref": "Ep. 85.38",
-       "title": "On some vain syllogisms",
-       "text": "Besides, he is not prevented from helping others, even at the time when constraining circumstances press him down. Because of his poverty he is prevented from showing how the State should be handled; but he teaches, none the less, how poverty should be handled. His work goes on throughout his whole life. Thus no fortune, no external circumstance, can shut off the wise man from action. For the very thing which engages his attention prevents him from attending to other things. He is ready for either outcome: if it brings goods, he controls them; if evils, he conquers them.",
-       "words": 99,
-       "revision": "gummere-wikisource-85-38:b8982de0a97dc271",
-       "to_centre": 0.528,
-       "rank": 433,
-       "nearest": {
-        "ref": "7.30",
-        "similarity": 0.489
-       },
-       "sims": {
-        "5.14": 0.456,
-        "8.6": 0.412,
-        "7.30": 0.489,
-        "11.18": 0.427,
-        "5.17": 0.457,
-        "8.25": 0.425,
-        "8.33": 0.417,
-        "6.31": 0.433,
-        "4.1": 0.479,
-        "11.9": 0.381,
-        "9.1": 0.351,
-        "7.8": 0.302,
-        "7.42": 0.334,
-        "8.37": 0.403,
-        "9.14": 0.415,
-        "Ep. 102.18": 0.341,
-        "Ep. 14.1": 0.232,
-        "Ep. 65.22": 0.321,
-        "Ep. 41.9": 0.438,
-        "Ep. 76.10": 0.355,
-        "Ep. 14.16": 0.566,
-        "Ep. 62.1": 0.481
-       },
-       "at": [
-        -0.8414,
-        0.0546
-       ]
-      },
-      {
-       "ref": "Ep. 62.1",
-       "title": "On good company",
-       "text": "We are deceived by those who would have us believe that a multitude of affairs blocks their pursuit of liberal studies; they make a pretence of their engagements, and multiply them, when their engagements are merely with themselves. As for me, Lucilius, my time is free; it is indeed free, and wherever I am, I am master of myself. For I do not surrender myself to my affairs, but loan myself to them, and I do not hunt out excuses for wasting my time. And wherever I am situated, I carry on my own meditations and ponder in my mind some wholesome thought.",
-       "words": 103,
-       "revision": "gummere-wikisource-62-1:edfcc6d9c2bce9bb",
-       "to_centre": 0.5,
-       "rank": 697,
-       "nearest": {
-        "ref": "7.30",
-        "similarity": 0.481
-       },
-       "sims": {
-        "5.14": 0.443,
-        "8.6": 0.425,
-        "7.30": 0.481,
-        "11.18": 0.441,
-        "5.17": 0.463,
-        "8.25": 0.422,
-        "8.33": 0.37,
-        "6.31": 0.387,
-        "4.1": 0.465,
-        "11.9": 0.332,
-        "9.1": 0.33,
-        "7.8": 0.256,
-        "7.42": 0.367,
-        "8.37": 0.362,
-        "9.14": 0.299,
-        "Ep. 102.18": 0.385,
-        "Ep. 14.1": 0.398,
-        "Ep. 65.22": 0.432,
-        "Ep. 41.9": 0.425,
-        "Ep. 76.10": 0.309,
-        "Ep. 14.16": 0.432,
-        "Ep. 85.38": 0.481
-       },
-       "at": [
-        -0.9098,
-        0.0163
-       ]
       }
      ],
      "counts": {
-      "stronger": 7,
-      "wider": 1,
+      "stronger": 6,
+      "wider": 2,
       "qualified": 0
      },
      "nearest_here": 118,
@@ -2374,6 +2398,12 @@
    "section_size": 15,
    "cohesion": 0.7797,
    "section_closeness": 0.58,
+   "in_translation": {
+    "closeness": 0.501,
+    "stayed": 13,
+    "of": 15,
+    "sections": 38
+   },
    "sources": [
     "5.14",
     "8.6",
@@ -2393,8 +2423,8 @@
      "id": "c1",
      "number": 2,
      "role": "Among others",
-     "t": "Among other people, I mean well by my own kind and aim at the common good. This comes first.",
-     "shared": "All three lists have this item. 7.30 calls it chief and 8.25 names it first; 8.6 names it second, after judgment. Only 7.30 ranks it.",
+     "t": "Among other people, I mean well by my own kind and aim at social acts. This comes first.",
+     "shared": "All three lists have this item. 7.30 says it “comes first”. 8.25 puts it first in its list and 8.6 second, after judgment, and neither of them ranks it. Only 7.30 ranks it. Where the claim says “social acts”, 7.30 says only “being social”; the acts are 8.6’s word.",
      "passages": [
       "7.30",
       "8.25",
@@ -2402,31 +2432,32 @@
       "5.17"
      ],
      "closeness": 0.678,
+     "closeness_new": 0.583,
      "support": [
       {
        "id": "7.30b",
        "ref": "7.30",
-       "quote": "That therefore which is chief in every man's constitution, is,\r\nthat he intend the common good.",
-       "at": 644,
-       "start": 644,
-       "end": 739,
+       "quote": "So what comes first in the human make-up is being social.",
+       "at": 513,
+       "start": 513,
+       "end": 570,
        "in": "c1",
-       "follows": "The most important thing in a human being is to aim at the common good.",
+       "follows": "What comes first in the way a human being is made is being social.",
        "gives": [
-        "aim at the common good",
+        "aim at social acts",
         "This comes first"
        ],
-       "note": "7.30 ranks it: “chief”."
+       "note": "7.30 ranks it: “what comes first”. It says “being social” and does not speak of acts; the sentence before it says that what each being has to do follows from its make-up."
       },
       {
        "id": "8.25b",
        "ref": "8.25",
-       "quote": "That which is most proper unto a man, is, first, to be kindly\r\naffected towards them that are of the same kind and nature as he is\r\nhimself",
-       "at": 73,
-       "start": 73,
-       "end": 212,
+       "quote": "what is proper to a human being is goodwill towards their own kind",
+       "at": 66,
+       "start": 66,
+       "end": 132,
        "in": "c1",
-       "follows": "What is most proper to a human being is, first, goodwill toward those of his own kind.",
+       "follows": "It is proper to a human being to have goodwill towards their own kind.",
        "gives": [
         "mean well by my own kind"
        ]
@@ -2434,26 +2465,26 @@
       {
        "id": "8.6a",
        "ref": "8.6",
-       "quote": "when in all its motions and resolutions it\r\ntakes its level at the common good only",
-       "at": 240,
-       "start": 240,
-       "end": 323,
+       "quote": "when it directs its impulses only to social acts",
+       "at": 178,
+       "start": 178,
+       "end": 226,
        "in": "c1",
-       "follows": "A reasoning nature does well when all its impulses aim only at the common good.",
+       "follows": "A reasoning nature does well when it directs its impulses only to social acts.",
        "gives": [
-        "aim at the common good"
+        "aim at social acts"
        ],
        "note": "Second in the list of 8.6."
       },
       {
        "id": "5.17a",
        "ref": "5.17",
-       "quote": "as we are bound\r\nto do them good, and to bear with them",
-       "at": 49,
-       "start": 49,
-       "end": 104,
+       "quote": "in so far as we must do good to them and bear with them",
+       "at": 59,
+       "start": 59,
+       "end": 114,
        "in": "c1",
-       "follows": "We are bound to do good to other people and to be patient with them.",
+       "follows": "We must do good to other people and bear with them.",
        "gives": [
         "mean well by my own kind"
        ]
@@ -2464,65 +2495,68 @@
      "id": "c2",
      "number": 3,
      "role": "Over the body",
-     "t": "With my body, I do not let its urges rule me. Reason was made to be in charge of the body.",
-     "shared": "Two of the three lists have the item about not yielding. 8.6 has none about the body; it speaks of desire in general. That reason was made to command the body is said by 7.30 alone.",
+     "t": "With my body, I do not let what it feels rule me. Reason should hold first place and not be overpowered by the senses and impulses: it is by nature fitted to make use of them.",
+     "shared": "Two of the three lists have the item about not yielding: 7.30 names “what the body undergoes” and 8.25 “the movements of the senses”. 8.6 has none about the body; it speaks of desires and aversions in general. That reason should hold first place over the senses and impulses, and is by nature fitted to make use of them, is said by 7.30 alone.",
      "passages": [
       "7.30",
       "8.25",
       "8.37"
      ],
      "closeness": 0.606,
+     "closeness_new": 0.541,
      "support": [
       {
        "id": "7.30c",
        "ref": "7.30",
-       "quote": "The second is, that he yield not to any\r\nlusts and motions of the flesh.",
-       "at": 740,
-       "start": 740,
-       "end": 812,
+       "quote": "Second is not giving way to what the body undergoes",
+       "at": 571,
+       "start": 571,
+       "end": 622,
        "in": "c2",
-       "follows": "A human being should not give in to bodily urges.",
+       "follows": "A human being should not give way to what the body undergoes.",
        "gives": [
-        "I do not let its urges rule me"
+        "I do not let what it feels rule me"
        ]
       },
       {
        "id": "8.25c",
        "ref": "8.25",
-       "quote": "to contemn all sensual motions and appetites",
-       "at": 213,
-       "start": 213,
-       "end": 257,
+       "quote": "looking down on the movements of the senses",
+       "at": 134,
+       "start": 134,
+       "end": 177,
        "in": "c2",
-       "follows": "It is proper to a human being to look down on bodily urges and appetites.",
+       "follows": "It is proper to a human being to look down on the stirrings of the senses.",
        "gives": [
-        "I do not let its urges rule me"
+        "I do not let what it feels rule me"
        ]
       },
       {
        "id": "7.30g",
        "ref": "7.30",
-       "quote": "For\r\nby nature she was ordained to command all in the body.",
-       "at": 1205,
-       "start": 1205,
-       "end": 1264,
+       "quote": "the movement of mind wants to hold first place and not to be overpowered by them. And rightly so, for it is by nature fitted to make use of all of those.",
+       "at": 844,
+       "start": 844,
+       "end": 997,
        "in": "c2",
-       "follows": "Reason is by nature the part that commands the body.",
+       "follows": "The mind rightly wants to come first and not be overpowered by the senses and impulses, because by nature it is fitted to make use of them.",
        "gives": [
-        "Reason was made to be in charge of the body"
-       ]
+        "Reason should hold first place",
+        "not be overpowered by the senses and impulses: it is by nature fitted to make use of them"
+       ],
+       "note": "“Them” and “those” are the movement of the senses and the movement of impulse, named in the sentence before."
       },
       {
        "id": "8.37a",
        "ref": "8.37",
-       "quote": "But one whereby\r\npleasure and voluptuousness may be resisted and opposed, I see:\r\ncontinence.",
-       "at": 117,
-       "start": 117,
-       "end": 210,
+       "quote": "but I do see one that rises up against pleasure: self-control",
+       "at": 85,
+       "start": 85,
+       "end": 146,
        "in": "c2",
        "follows": "Self-restraint is the virtue that resists pleasure.",
        "gives": [
-        "I do not let its urges rule me"
+        "I do not let what it feels rule me"
        ],
        "note": "Names the virtue that does this work."
       }
@@ -2541,14 +2575,15 @@
       "11.9"
      ],
      "closeness": 0.656,
+     "closeness_new": 0.598,
      "support": [
       {
        "id": "7.30d",
        "ref": "7.30",
-       "quote": "The third\r\nthing proper to man by his constitution, is, to avoid all rashness and\r\nprecipitancy; and not to be subject to error.",
-       "at": 1265,
-       "start": 1265,
-       "end": 1393,
+       "quote": "Third in the rational make-up is not being hasty and not being deceived.",
+       "at": 998,
+       "start": 998,
+       "end": 1070,
        "in": "c3",
        "follows": "A human being should avoid haste in judging and should not be deceived.",
        "gives": [
@@ -2559,12 +2594,12 @@
       {
        "id": "8.6b",
        "ref": "8.6",
-       "quote": "A reasonable nature doth then speed, when first in matter of\r\nfancies and imaginations, it gives no consent to that which is either\r\nfalse uncertain",
-       "at": 80,
-       "start": 80,
-       "end": 228,
+       "quote": "a rational nature’s road goes well when, among its impressions, it assents to nothing false and nothing unclear",
+       "at": 65,
+       "start": 65,
+       "end": 176,
        "in": "c3",
-       "follows": "A reasoning nature does well when it does not agree to anything false or uncertain.",
+       "follows": "A reasoning nature does well when it does not agree to anything false or unclear.",
        "gives": [
         "I do not accept what is false or uncertain"
        ]
@@ -2572,12 +2607,12 @@
       {
        "id": "8.25d",
        "ref": "8.25",
-       "quote": "to discern rightly\r\nall plausible fancies and imaginations",
-       "at": 259,
-       "start": 259,
-       "end": 317,
+       "quote": "telling the persuasive impressions apart",
+       "at": 179,
+       "start": 179,
+       "end": 219,
        "in": "c3",
-       "follows": "It is proper to a human being to judge persuasive impressions correctly.",
+       "follows": "It is proper to a human being to tell persuasive impressions apart.",
        "gives": [
         "I take care"
        ]
@@ -2585,12 +2620,12 @@
       {
        "id": "11.9a",
        "ref": "11.9",
-       "quote": "For justice cannot be\r\npreserved, if either we settle our minds and affections upon worldly\r\nthings; or be apt to be deceived, or rash, and inconstant.",
-       "at": 477,
-       "start": 477,
-       "end": 628,
+       "quote": "what is just will not be kept if we either care about the things in between, or are easily deceived, hasty and changeable",
+       "at": 418,
+       "start": 418,
+       "end": 539,
        "in": "c3",
-       "follows": "Justice cannot be kept by someone who is attached to worldly things, or is easily deceived, hasty or changeable.",
+       "follows": "What is just cannot be kept by people who care about the things in between, or who are easily deceived, hasty and changeable.",
        "gives": [
         "I do not judge in a hurry",
         "I do not accept what is false or uncertain"
@@ -2603,26 +2638,26 @@
      "id": "c4",
      "number": 1,
      "role": "Why it is enough",
-     "t": "Doing this work is living according to my own nature. That is why it cannot harm me, and why doing it makes me content.",
-     "shared": "Joy, content and happiness are three words in three passages for one thing: doing my proper work is its own reward. Two passages say the work is according to nature. Only 6.31 says it cannot harm.",
+     "t": "Doing this work is living according to my own nature. So long as I am doing it, pain is not against nature for me, and so it is not bad for me. And doing it makes me content.",
+     "shared": "Joy and being content are two words in two passages for one thing: doing my proper work is its own reward. Only 7.8 says that an action in accordance with reason is in accordance with nature. Only 6.31 speaks of pain: so long as I am doing a human being’s work it is not against nature for me, and so it is not bad for me.",
      "passages": [
       "8.25",
       "8.6",
       "6.31",
-      "7.30",
       "7.8"
      ],
-     "closeness": 0.628,
+     "closeness": 0.607,
+     "closeness_new": 0.516,
      "support": [
       {
        "id": "8.25a",
        "ref": "8.25",
-       "quote": "The true joy of a man, is to do that which properly belongs unto a\r\nman.",
+       "quote": "A human being’s joy is to do what is proper to a human being.",
        "at": 0,
        "start": 0,
-       "end": 72,
+       "end": 61,
        "in": "c4",
-       "follows": "A human being’s real joy is in doing what belongs to a human being.",
+       "follows": "A human being’s joy is in doing what is proper to a human being.",
        "gives": [
         "doing it makes me content"
        ]
@@ -2630,12 +2665,12 @@
       {
        "id": "8.6c",
        "ref": "8.6",
-       "quote": "Every particular nature hath content, when in its own proper course\r\nit speeds.",
+       "quote": "Every nature is content with itself when its road goes well.",
        "at": 0,
        "start": 0,
-       "end": 79,
+       "end": 60,
        "in": "c4",
-       "follows": "Every nature is content when it proceeds along its own course.",
+       "follows": "Every nature is content with itself when its course goes well.",
        "gives": [
         "doing it makes me content"
        ]
@@ -2643,49 +2678,36 @@
       {
        "id": "6.31b",
        "ref": "6.31",
-       "quote": "So a man as long as he doth that which is proper unto\r\na man, his labour cannot be against nature",
-       "at": 154,
-       "start": 154,
-       "end": 251,
+       "quote": "So too for a human being, as a human being, pain is not against nature, so long as they are doing a human being’s work.",
+       "at": 127,
+       "start": 127,
+       "end": 246,
        "in": "c4",
-       "follows": "Work that is proper to a human being cannot be against nature.",
+       "follows": "For a human being who is doing a human being’s work, pain is not against nature.",
        "gives": [
-        "living according to my own nature"
+        "So long as I am doing it, pain is not against nature for me"
        ]
       },
       {
        "id": "6.31c",
        "ref": "6.31",
-       "quote": "and if it be not against\r\nnature, then neither is it hurtful unto him",
-       "at": 253,
-       "start": 253,
-       "end": 322,
+       "quote": "And if it is not against nature for them, it is not bad for them either.",
+       "at": 247,
+       "start": 247,
+       "end": 319,
        "in": "c4",
-       "follows": "What is not against nature does not harm the one who does it.",
+       "follows": "If pain is not against nature for a person, it is not bad for that person either.",
        "gives": [
-        "it cannot harm me"
-       ]
-      },
-      {
-       "id": "7.30f",
-       "ref": "7.30",
-       "quote": "and she hath her end, and by consequent her happiness",
-       "at": 1509,
-       "start": 1509,
-       "end": 1562,
-       "in": "c4",
-       "follows": "The mind then has its end, and with that its happiness.",
-       "gives": [
-        "doing it makes me content"
+        "and so it is not bad for me"
        ]
       },
       {
        "id": "7.8a",
        "ref": "7.8",
-       "quote": "To a reasonable creature, the same action is both according\r\nto nature, and according to reason.",
+       "quote": "For the rational animal, the same action is in accordance with nature and in accordance with reason.",
        "at": 0,
        "start": 0,
-       "end": 96,
+       "end": 100,
        "in": "c4",
        "follows": "For a reasoning being, acting by reason and acting by nature are the same.",
        "gives": [
@@ -2699,8 +2721,8 @@
      "id": "c5",
      "number": 5,
      "role": "When I am blocked",
-     "t": "The work is the act itself, not its result and not what I feel. And when something blocks one action, dealing with that obstacle becomes my next action.",
-     "shared": "Two passages place the work in the acting itself; only 5.14 rules out the result, and only 9.14 rules out what I feel. Three more, in three images, say an obstacle is turned into the next object of action.",
+     "t": "The work is the act itself, not what happens to me. And when something blocks one action, dealing with that obstacle becomes my next action.",
+     "shared": "Two passages place the work in the acting itself; only 9.14 rules out what happens to me. Three more, in three images, say an obstacle is turned into what I work on next: 5.17 says the mind shifts it “into what comes first”; 4.1 and 8.33 say it is made “into material for itself”.",
      "passages": [
       "5.14",
       "9.14",
@@ -2709,14 +2731,15 @@
       "8.33"
      ],
      "closeness": 0.602,
+     "closeness_new": 0.518,
      "support": [
       {
        "id": "5.14b",
        "ref": "5.14",
-       "quote": "Reason, and rational power, are faculties which content themselves\r\nwith themselves, and their own proper operations.",
+       "quote": "Reason and the art of reasoning are powers that are content with themselves and with the works that are their own.",
        "at": 0,
        "start": 0,
-       "end": 117,
+       "end": 114,
        "in": "c5",
        "follows": "Reason needs nothing beyond itself and its own activity.",
        "gives": [
@@ -2724,41 +2747,28 @@
        ]
       },
       {
-       "id": "5.14a",
-       "ref": "5.14",
-       "quote": "The final ends and consummations of actions are nothing at all\r\nto a man's nature.",
-       "at": 769,
-       "start": 769,
-       "end": 851,
-       "in": "c5",
-       "follows": "How an action finally turns out is not part of what a human being is.",
-       "gives": [
-        "not its result"
-       ]
-      },
-      {
        "id": "9.14a",
        "ref": "9.14",
-       "quote": "so\r\nneither doth the true good or evil of a reasonable charitable man\r\nconsist in passion, but in operation and action",
-       "at": 64,
-       "start": 64,
-       "end": 182,
+       "quote": "The bad and the good of the rational and civic animal lie not in what it undergoes but in what it does",
+       "at": 0,
+       "start": 0,
+       "end": 102,
        "in": "c5",
-       "follows": "A person’s good and bad lie in what he does, not in what he feels.",
+       "follows": "The good and the bad of a rational, civic animal lie in what it does, not in what happens to it.",
        "gives": [
         "The work is the act itself",
-        "not what I feel"
+        "not what happens to me"
        ]
       },
       {
        "id": "5.17b",
        "ref": "5.17",
-       "quote": "For by these the mind doth turn and\r\nconvert any impediment whatsoever, to be her aim and purpose.",
-       "at": 681,
-       "start": 681,
-       "end": 779,
+       "quote": "For the mind turns round every obstacle to its activity and shifts it into what comes first",
+       "at": 435,
+       "start": 435,
+       "end": 526,
        "in": "c5",
-       "follows": "The mind can turn any obstacle into its new aim.",
+       "follows": "The mind turns every obstacle to its activity around and makes it the thing that comes first.",
        "gives": [
         "when something blocks one action, dealing with that obstacle becomes my next action"
        ]
@@ -2766,12 +2776,12 @@
       {
        "id": "4.1a",
        "ref": "4.1",
-       "quote": "so that\r\nwhatsoever it is that falls out contrary to its first intentions, even\r\nthat afterwards it makes its proper object",
-       "at": 490,
-       "start": 490,
-       "end": 613,
+       "quote": "what is brought in instead it makes into material for itself",
+       "at": 298,
+       "start": 298,
+       "end": 358,
        "in": "c5",
-       "follows": "When something goes against its first plan, the mind takes that very thing as its next object.",
+       "follows": "Whatever comes in place of what it was aiming at, the ruling part makes into material for itself.",
        "gives": [
         "when something blocks one action, dealing with that obstacle becomes my next action"
        ]
@@ -2779,10 +2789,10 @@
       {
        "id": "8.33a",
        "ref": "8.33",
-       "quote": "what crosses and impediments soever it meets with in the\r\ncourse of this mortal life, it may use them as fit and proper objects,\r\nto the furtherance of whatsoever it intended",
-       "at": 575,
-       "start": 575,
-       "end": 749,
+       "quote": "the rational animal can make every obstacle into material for itself and use it for whatever its impulse was set on",
+       "at": 314,
+       "start": 314,
+       "end": 429,
        "in": "c5",
        "follows": "A reasoning being can use whatever obstacles it meets as material for what it set out to do.",
        "gives": [
@@ -2796,41 +2806,54 @@
     {
      "id": "8.25e",
      "ref": "8.25",
-     "quote": "to contemplate the nature of the\r\nuniverse",
-     "at": 319,
-     "start": 319,
-     "end": 361,
+     "quote": "contemplating the nature of the whole",
+     "at": 225,
+     "start": 225,
+     "end": 262,
      "in": "single",
      "label": "Only in one list",
      "t": "I may add a fourth work: to contemplate the nature of the universe.",
      "why": "Neither of the other two lists has it, so it is not fused. Article 4 takes it up.",
-     "follows": "Contemplating the nature of the universe is also proper to a human being."
+     "follows": "Contemplating the nature of the whole is also proper to a human being."
     },
     {
      "id": "8.6d",
      "ref": "8.6",
-     "quote": "when it willingly and gladly embraceth, whatsoever is\r\ndealt and appointed unto it by the common nature",
-     "at": 444,
-     "start": 444,
-     "end": 547,
+     "quote": "when it welcomes everything allotted by the common nature",
+     "at": 318,
+     "start": 318,
+     "end": 375,
      "in": "single",
      "label": "Only in one list",
      "t": "And I may welcome gladly whatever the common nature deals out.",
      "why": "Only 8.6 puts this in the list. It is the whole subject of Article 3.",
-     "follows": "A reasoning nature does well when it gladly accepts what nature assigns it."
+     "follows": "A reasoning nature does well when it welcomes everything the common nature allots."
     },
     {
      "id": "7.30e",
      "ref": "7.30",
-     "quote": "To these things then, let\r\nthe mind apply herself and go straight on, without any distraction about\r\nother things",
-     "at": 1394,
-     "start": 1394,
-     "end": 1507,
+     "quote": "So let the ruling part hold to these and carry its straight road through",
+     "at": 1071,
+     "start": 1071,
+     "end": 1143,
      "in": "single",
      "label": "A direction",
-     "t": "To these I shall apply my mind and go straight on, without distraction about other things.",
+     "t": "To these I shall apply my mind and go straight on.",
      "why": "Only 7.30 turns the list into an instruction.",
-     "follows": "The mind should keep to these three things and not be distracted by others."
+     "follows": "The ruling part should hold to these three things and go straight on to the end."
+    },
+    {
+     "id": "7.30f",
+     "ref": "7.30",
+     "quote": "and it has what is its own",
+     "at": 1145,
+     "start": 1145,
+     "end": 1171,
+     "in": "single",
+     "label": "What I then have",
+     "t": "When I hold to these, my mind has all that belongs to it.",
+     "why": "Only 7.30 says this, and it names no feeling. Casaubon wrote “her end, and by consequent her happiness”, so the article used to count it with joy and content in the claim about being content. The Greek says only that the ruling part “has what is its own”.",
+     "follows": "A ruling part that holds to these three things has what is its own."
     }
    ],
    "members": [
@@ -2882,7 +2905,6 @@
       "c1",
       "c2",
       "c3",
-      "c4",
       "single"
      ],
      "why": null,
@@ -3054,7 +3076,7 @@
      "words": 33,
      "used": false,
      "feeds": [],
-     "why": "What offers nothing to reason or to charity is beneath the reasonable faculty. A test for objects, not a description of the work.",
+     "why": "What the rational and civic power finds to be neither of mind nor social, it judges inferior to itself. A test for objects, not a description of the work.",
      "text": "What object soever, our reasonable and sociable faculty doth meet\r\nwith, that affords nothing either for the satisfaction of reason, or for\r\nthe practice of charity, she worthily doth think unworthy of herself.",
      "standard": "7.72",
      "translation": "project-v1:7.72:a78ae33f83fd3796",
@@ -3097,16 +3119,20 @@
     }
    ],
    "decisions": [
+    "Quotes the project’s own translation from the Greek instead of Casaubon. Passage numbers stay Casaubon’s. In modern editions 7.30 is 7.55, 8.25 is 8.26 and 8.27, 8.6 is 8.7, 5.17 is 5.20, 8.37 is 8.39, 11.9 is 11.10, 6.31 is 6.33 and 6.34, 7.8 is 7.11, 9.14 is 9.16 and 8.33 is 8.35; 5.14 is 5.14 and 5.15, and 4.1 is the same. Of the passages set aside, 11.18 is 11.20 and 7.42 is 7.72; 9.1 is the same.",
     "Treats the three lists as versions of one list. Marcus never says they are the same list.",
-    "Names the three places “other people, my body, my judgments”, and sums them up as “letting reason lead”. The names and the summary are the editor’s: 7.30 says reason commands the body and 7.8 that acting by reason is acting by nature; neither says it of other people or of judging.",
-    "Joins the passages about outcomes with those about obstacles in claim 5, as two sides of one point."
+    "Names the three places “other people, my body, my judgments”, and sums them up as “letting reason lead”. The names and the summary are the editor’s: 7.30 says the movement of mind “wants to hold first place” over the movements of the senses and of impulse, and 7.8 that the same action is in accordance with nature and with reason; neither says it of other people or of judging.",
+    "Joins the passages that place the work in the act itself with those about obstacles in claim 5, as two sides of one point.",
+    "Follows the Greek where Casaubon said more, or something else. He wrote “the common good” where 7.30 says “being social” and 8.6 “social acts”; “lusts” and “appetites” where 7.30 speaks of “what the body undergoes” and 8.25 of “the movements of the senses”; “ordained to command all in the body” where 7.30 says “fitted to make use of all of those”; and “passion” where 9.14 says “what it undergoes”. The claims now say what the Greek says.",
+    "Withdraws three things the article said on Casaubon’s wording alone. That the work is not its result rested on his “final ends and consummations of actions” in 5.14; the Greek there speaks of things that do not fall to a human being as a human being, and says nothing of results. That proper work cannot harm me rested on his “labour” in 6.31; the translation from the Greek has “pain”, and claim 4 now says what Marcus says of pain. That the mind then has “her happiness” in 7.30 is his addition; the Greek says it “has what is its own”, and that line now stands alone under “said once”."
    ],
-   "limit": "The alignment is clean for two of the three items. The item about the body is missing from 8.6, and each list has something the others lack. Those leftovers are shown under “said once”. Inside the claims, three things rest on one passage each: that the common good comes first (7.30), that reason was made to command the body (7.30), and that proper work cannot harm (6.31)."
+   "limit": "The alignment is clean for two of the three items. The item about the body is missing from 8.6, and each list has something the others lack. Those leftovers are shown under “said once”. Inside the claims, six things rest on one passage each: that being social comes first (7.30), that reason should hold first place over the senses and impulses (7.30), that I take care in judging (8.25), that this work is living according to my own nature (7.8), that pain met in it is not bad for me (6.31), and that the work is not what happens to me (9.14)."
   },
   {
    "number": 3,
    "section": "c6.s3",
    "title": "What happens to me",
+   "edition": "project-v1",
    "statement": {
     "t": "Whatever happens to me, I accept it and do not complain.",
     "parts": [
@@ -3150,7 +3176,7 @@
      }
     ],
     "kind": "An argument by cases, found four times",
-    "form": "This is an argument by cases, and Marcus makes it four times in this section. “Why” holds the first case, that the world is governed. “If I doubt it” holds the second. “Do not complain” gathers three wordings: complain (9.38), be displeased (5.8), and, on the second case, trouble yourself (9.38)."
+    "form": "This is an argument by cases, and Marcus makes it four times in this section. “Why” holds the first case, that the world is governed. “If I doubt it” holds the second. “Do not complain” gathers three wordings: find fault (9.38), be discontented (5.8), and be troubled (9.38), in a question that closes both cases."
    },
    "groups": [
     {
@@ -3191,7 +3217,7 @@
      "items": [],
      "claims": [],
      "single": [],
-     "empty": "No passage used in this article gives an exercise. The physician of 5.8 is a comparison, not something to do. 3.12, set aside, has one (to say of each thing where it comes from), but its subject is judging impressions."
+     "empty": "No passage used in this article gives an exercise. Asclepius and his orders in 5.8 are a comparison, not something to do. 3.12, set aside, has one (to say of each thing where it comes from), but its subject is judging impressions."
     },
     {
      "key": "breaks",
@@ -3757,7 +3783,7 @@
        "label": "why",
        "role": "Refusing does not spare me",
        "t": "And refusing does not spare me: fate leads the willing and drags the unwilling.",
-       "why": "Marcus argues from the good of the whole. This argues that I go either way. Marcus only touches it, in 12.11 (“why doest thou resist?”), which this article uses for something else. Seneca gives the line as Cleanthes’s, in his own Latin.",
+       "why": "Marcus argues from the good of the whole. This argues that I go either way. Marcus only touches it, in 12.11 (“why do you strain against it?”), which this article uses for something else. Seneca gives the line as Cleanthes’s, in his own Latin.",
        "support": [
         {
          "id": "S107.11a",
@@ -4411,6 +4437,12 @@
    "section_size": 15,
    "cohesion": 0.8315,
    "section_closeness": 0.669,
+   "in_translation": {
+    "closeness": 0.541,
+    "stayed": 12,
+    "of": 15,
+    "sections": 38
+   },
    "sources": [
     "9.26",
     "7.6",
@@ -4430,9 +4462,9 @@
      "id": "c1",
      "number": 1,
      "role": "It comes from one chain of causes",
-     "t": "What happens to me is not chance. All things are linked together, and it comes from a chain of causes, the same that produced me.",
-     "shared": "Five passages use one family of words: connection, concatenation, coherence, linked, correspondence. Two (7.6, 4.36) say that things hold together. Three (10.5, 5.8, 1.17) say that what happens comes through that holding. Only 10.5 says the same causes produced me, and only 1.17 speaks of chance.",
-     "changed": "“Not a random blow from outside” is gone: no passage says “from outside”, and 4.36 sets its order against a bare sequence, not against chance. 7.6 now backs “linked together”, which it says, and no longer “chain of causes”, which it does not.",
+     "t": "What happens to me is not chance alone. All things are linked together, and it comes from a chain of causes, the same that produced me.",
+     "shared": "Five passages use one family of words: interwoven, interweaving, spun together, fit together, kinship. Two (7.6, 4.36) say that things hold together. Three (10.5, 5.8, 1.17) say that what happens comes through that holding. Only 10.5 says the same causes produced me, and only 1.17 speaks of chance. No passage has the word “chain”: it is the editor’s plain word for the interweaving of causes (10.5) and for what is spun together out of the oldest causes (5.8).",
+     "changed": "“Not a random blow from outside” is gone: no passage says “from outside”, and 4.36 sets its order against a bare succession, not against chance. 7.6 now backs “linked together”, which is what its “interwoven with one another” says, and no longer “chain of causes”, of which it says nothing. “Not chance” became “not chance alone” when the quotes moved to the project’s English: 1.17 does not deny chance, it says that what comes from chance is not without nature.",
      "passages": [
       "10.5",
       "5.8",
@@ -4441,14 +4473,15 @@
       "4.36"
      ],
      "closeness": 0.697,
+     "closeness_new": 0.593,
      "support": [
       {
        "id": "10.5a",
        "ref": "10.5",
-       "quote": "For by the same coherence of causes, by\r\nwhich thy substance from all eternity was appointed to be, was also\r\nwhatsoever should happen unto it, destinated and appointed.",
-       "at": 98,
-       "start": 98,
-       "end": 267,
+       "quote": "Whatever happens to you was being made ready for you beforehand, from all time, and the interweaving of causes was spinning together, from eternity, both your existence and the happening of this.",
+       "at": 0,
+       "start": 0,
+       "end": 195,
        "in": "c1",
        "follows": "The causes that produced me also produced everything that happens to me.",
        "gives": [
@@ -4459,12 +4492,12 @@
       {
        "id": "5.8h",
        "ref": "5.8",
-       "quote": "from the very beginning by the series\r\nand connection of the first causes, it hath ever had a reference unto\r\nthee",
-       "at": 2663,
-       "start": 2663,
-       "end": 2777,
+       "quote": "it came about for you, and was ordered for you, and stood in some relation to you, spun together from far back out of the oldest causes",
+       "at": 1752,
+       "start": 1752,
+       "end": 1887,
        "in": "c1",
-       "follows": "What happens to me was connected to me from the beginning through the chain of causes.",
+       "follows": "What happens to me was spun together from far back, out of the oldest causes, and it came about for me.",
        "gives": [
         "it comes from a chain of causes"
        ]
@@ -4472,10 +4505,10 @@
       {
        "id": "7.6a",
        "ref": "7.6",
-       "quote": "All things are linked and knitted\r\ntogether, and the knot is sacred",
-       "at": 251,
-       "start": 251,
-       "end": 318,
+       "quote": "All things are interwoven with one another, and the bond is sacred",
+       "at": 144,
+       "start": 144,
+       "end": 210,
        "in": "c1",
        "follows": "Everything is connected to everything else.",
        "gives": [
@@ -4485,26 +4518,26 @@
       {
        "id": "1.17a",
        "ref": "1.17",
-       "quote": "those\r\nthings that are commonly said to happen by fortune, even those must be\r\nconceived to have dependence from nature, or from that first and general\r\nconnection, and concatenation of all those things",
-       "at": 125,
-       "start": 125,
-       "end": 327,
+       "quote": "What comes from chance is not without nature, or without the spinning together and interweaving of the things that providence governs.",
+       "at": 48,
+       "start": 48,
+       "end": 182,
        "in": "c1",
-       "follows": "Even what is said to happen by chance depends on nature, or on one connected chain of things.",
+       "follows": "Even what comes from chance is not apart from nature, or from the spinning together and interweaving of the things that providence governs.",
        "gives": [
-        "is not chance",
+        "is not chance alone",
         "chain of causes"
        ]
       },
       {
        "id": "4.36c",
        "ref": "4.36",
-       "quote": "There\r\nis then to be seen in the things of the world, not a bare succession,\r\nbut an admirable correspondence and affinity.",
-       "at": 631,
-       "start": 631,
-       "end": 754,
+       "quote": "just as the things that exist have been arranged to fit together, so the things that come to be show not bare succession but a wonderful kinship",
+       "at": 403,
+       "start": 403,
+       "end": 547,
        "in": "c1",
-       "follows": "The things of the world do not merely follow one another; they correspond and belong together.",
+       "follows": "The things that exist are arranged to fit together, and in the same way the things that happen do not merely follow one another: they are akin.",
        "gives": [
         "All things are linked together"
        ]
@@ -4515,9 +4548,9 @@
      "id": "c2",
      "number": 2,
      "role": "It serves the whole",
-     "t": "It serves the whole of which I am a part. What serves the whole is good for every part, and a part has no reason to complain of it.",
-     "shared": "Three passages say that what happens is useful to the whole, and two that I am a part of it. Two go on to the part, and each says a different thing: 1.17 that what the whole needs is good for every part, 9.38 that a part has no reason to complain of it. They share the subject, not the conclusion.",
-     "changed": "Was “what serves the whole is not bad for the part”, a middle wording that neither passage says: 1.17 says “good”, and 9.38 speaks of complaining, not of harm. Each now backs its own words.",
+     "t": "It serves the whole of which I am a part. What serves the whole is good for every part, and a part must not complain of it.",
+     "shared": "Three passages say that what happens is good for the whole (6.40, 5.8) or comes about for its sake (9.38), and two that I am a part of it (1.17, 9.38). Two go on to the part, and each says a different thing: 1.17 that what the nature of the whole brings, and what preserves it, is good for every part; 9.38 that the part must not find fault. They share the subject, not the conclusion.",
+     "changed": "Was “what serves the whole is not bad for the part”, a middle wording that neither passage says: 1.17 says “good”, and 9.38 speaks of finding fault, not of harm. Each now backs its own words. “Has no reason to complain” became “must not complain” when the quotes moved to the project’s English: 9.38 says the part “must not find fault”, and the Greek has nothing for the 1634 translation’s “against reason”.",
      "passages": [
       "6.40",
       "5.8",
@@ -4525,14 +4558,15 @@
       "9.38"
      ],
      "closeness": 0.661,
+     "closeness_new": 0.564,
      "support": [
       {
        "id": "6.40a",
        "ref": "6.40",
-       "quote": "Whatsoever in any kind doth happen to any one, is expedient to the\r\nwhole.",
+       "quote": "Whatever happens to each is good for the whole.",
        "at": 0,
        "start": 0,
-       "end": 74,
+       "end": 47,
        "in": "c2",
        "follows": "What happens to any individual is useful to the whole.",
        "gives": [
@@ -4542,12 +4576,12 @@
       {
        "id": "5.8i",
        "ref": "5.8",
-       "quote": "For this whatsoever it be, should not have been produced,\r\nhad it not conduced to the good of the universe.",
-       "at": 2149,
-       "start": 2149,
-       "end": 2256,
+       "quote": "it would not bring this to anyone if it did not bring good to the whole",
+       "at": 1519,
+       "start": 1519,
+       "end": 1590,
        "in": "c2",
-       "follows": "Nothing would have happened unless it helped the good of the universe.",
+       "follows": "Nothing would be brought to anyone if it did not bring good to the whole.",
        "gives": [
         "It serves the whole"
        ]
@@ -4555,26 +4589,25 @@
       {
        "id": "1.17b",
        "ref": "1.17",
-       "quote": "whatsoever it is that is, is both\r\nnecessary, and conducing to the whole (part of which thou art)",
-       "at": 449,
-       "start": 449,
-       "end": 546,
+       "quote": "there is besides what is necessary, and what benefits the whole universe, of which you are a part",
+       "at": 216,
+       "start": 216,
+       "end": 313,
        "in": "c2",
-       "follows": "Whatever exists is necessary and helps the whole, and I am part of that whole.",
+       "follows": "There is also what is necessary and what benefits the whole universe, and I am a part of that universe.",
        "gives": [
-        "It serves the whole",
         "of which I am a part"
        ]
       },
       {
        "id": "1.17c",
        "ref": "1.17",
-       "quote": "whatsoever it is that is requisite and necessary for the preservation of\r\nthe general, must of necessity for every particular nature, be good and\r\nbehoveful",
-       "at": 553,
-       "start": 553,
-       "end": 709,
+       "quote": "what the nature of the whole brings is good for every part of nature, and so is what preserves that nature",
+       "at": 319,
+       "start": 319,
+       "end": 425,
        "in": "c2",
-       "follows": "Whatever is needed to preserve the whole is good and useful for every part of it.",
+       "follows": "Whatever the nature of the whole brings, and whatever preserves that nature, is good for every part.",
        "gives": [
         "What serves the whole is good for every part"
        ]
@@ -4582,16 +4615,16 @@
       {
        "id": "9.38a",
        "ref": "9.38",
-       "quote": "all things by the providence of reason happen unto every\r\nparticular, as a part of one general body; and then it is against reason\r\nthat a part should complain of anything that happens for the good of the\r\nwhole",
+       "quote": "everything happens, one thing upon another, as to one body, from one source that has mind, and the part must not find fault with what comes about for the sake of the whole",
        "at": 7,
        "start": 7,
-       "end": 218,
+       "end": 178,
        "in": "c2",
-       "follows": "If things happen to each of us as a part of one body, a part has no reason to complain of what happens for the good of the whole.",
+       "follows": "If everything happens as to one body, from one source that has mind, the part must not find fault with what comes about for the sake of the whole.",
        "gives": [
         "of which I am a part",
         "What serves the whole",
-        "a part has no reason to complain of it"
+        "a part must not complain of it"
        ]
       }
      ]
@@ -4601,7 +4634,7 @@
      "number": 4,
      "role": "I accept it",
      "t": "So I shall accept it, and more than accept it: fit myself to it and be glad of it, as I take a harsh prescription for the sake of health.",
-     "shared": "Four passages give the same instruction with rising warmth: accept, fit yourself, embrace, be pleased. Only 5.8 has the physician. “So” is Marcus’s own step in 5.8 (“therefore”, “then”). “And more than accept it” is the editor’s link and rests on no quote.",
+     "shared": "Four passages give the same instruction with rising warmth: accept, fit yourself, welcome, hold dear, love. Only 5.8 says “accept”; 5.8, 6.39 and 3.17 say “welcome”, which is more. Only 5.8 has Asclepius, the god of healing, and his orders. “So” is Marcus’s own step in 5.8 (“Let us accept these things, then”; “So you should hold dear what falls to you”). “And more than accept it” is the editor’s link and rests on no quote.",
      "passages": [
       "5.8",
       "6.35",
@@ -4609,16 +4642,17 @@
       "6.39"
      ],
      "closeness": 0.713,
+     "closeness_new": 0.586,
      "support": [
       {
        "id": "5.8b",
        "ref": "5.8",
-       "quote": "These therefore let us\r\naccept of in like manner, as we do those that are prescribed unto us\r\nour physicians. For them also in themselves shall We find to contain\r\nmany harsh things, but we nevertheless, in hope of health, and\r\nrecovery, accept of them.",
-       "at": 1563,
-       "start": 1563,
-       "end": 1816,
+       "quote": "Let us accept these things, then, as we accept the things Asclepius orders. After all, many of those too are rough, but we welcome them in the hope of health.",
+       "at": 1045,
+       "start": 1045,
+       "end": 1203,
        "in": "c3",
-       "follows": "I should accept what happens as I accept a doctor’s prescription: harsh in itself, and taken in hope of health.",
+       "follows": "I should accept what happens as I accept what Asclepius, the god of healing, orders: much of it is rough, and I welcome it in the hope of health.",
        "gives": [
         "as I take a harsh prescription for the sake of health",
         "So I shall accept it"
@@ -4627,24 +4661,23 @@
       {
        "id": "5.8j",
        "ref": "5.8",
-       "quote": "Accept then, and be pleased with whatsoever doth happen,\r\nthough otherwise harsh and un-pleasing",
-       "at": 1942,
-       "start": 1942,
-       "end": 2038,
+       "quote": "welcome everything that comes about, even if it seems rather harsh",
+       "at": 1342,
+       "start": 1342,
+       "end": 1408,
        "in": "c3",
-       "follows": "I should accept what happens and be glad of it, even when it is harsh.",
+       "follows": "I should welcome everything that comes about, even when it seems harsh.",
        "gives": [
-        "be glad of it",
-        "So I shall accept it"
+        "be glad of it"
        ]
       },
       {
        "id": "6.35a",
        "ref": "6.35",
-       "quote": "Fit and accommodate thyself to that estate and to those\r\noccurrences, which by the destinies have been annexed unto thee",
+       "quote": "Fit yourself to the things your lot has joined you to",
        "at": 0,
        "start": 0,
-       "end": 120,
+       "end": 53,
        "in": "c3",
        "follows": "I should adapt myself to the circumstances I have been given.",
        "gives": [
@@ -4654,41 +4687,42 @@
       {
        "id": "3.17a",
        "ref": "3.17",
-       "quote": "to like and\r\nembrace all things that happen and are destinated unto him",
-       "at": 560,
-       "start": 560,
-       "end": 631,
+       "quote": "to love and welcome the things that happen to them and are spun together for them",
+       "at": 501,
+       "start": 501,
+       "end": 582,
        "in": "c3",
-       "follows": "The stance named here is to like and welcome everything that happens and is destined for me.",
+       "follows": "The stance named here is to love and welcome the things that happen to me and are spun together for me.",
        "gives": [
         "be glad of it"
        ],
-       "note": "In 3.17 this is part of what belongs to a good man alone; that part of the sentence lies outside the quote."
+       "note": "In 3.17 this is what is left as the good person’s own; that part of the sentence lies outside the quote."
       },
       {
        "id": "3.17b",
        "ref": "3.17",
-       "quote": "willing of himself without any compulsion to fit and accommodate himself\r\nto his proper lot and portion",
-       "at": 1287,
-       "start": 1287,
-       "end": 1390,
+       "quote": "one must arrive pure, quiet, ready to be released, fitted to one’s own portion without being forced",
+       "at": 1046,
+       "start": 1046,
+       "end": 1145,
        "in": "c3",
-       "follows": "I should fit myself to my own lot willingly, without being forced.",
+       "follows": "I must arrive pure, quiet and ready to be released, fitted to my own portion without being forced.",
        "gives": [
         "fit myself to it"
-       ]
+       ],
+       "note": "In 3.17 the place of arrival is the end of life; those words lie outside the quote."
       },
       {
        "id": "6.39a",
        "ref": "6.39",
-       "quote": "those things which in consequence and coherence of this\r\ngeneral deliberation happen unto me in particular, I am bound to embrace\r\nand accept of",
-       "at": 504,
-       "start": 504,
-       "end": 648,
+       "quote": "they certainly did deliberate about the affairs of the community, at least, and these things too, which happen as a consequence of those, I ought to welcome and hold dear",
+       "at": 391,
+       "start": 391,
+       "end": 561,
        "in": "c3",
-       "follows": "I am bound to welcome and accept what happens to me as a consequence of the general plan.",
+       "follows": "What happens as a consequence of what the gods deliberated for the community, I ought to welcome and hold dear.",
        "gives": [
-        "So I shall accept it"
+        "be glad of it"
        ]
       }
      ]
@@ -4698,20 +4732,21 @@
      "number": 3,
      "role": "It is nothing unusual",
      "t": "None of it is unusual. Sickness, death and slander are as ordinary as roses in spring.",
-     "shared": "Two passages make what happens familiar and recurring.",
+     "shared": "Two passages make what happens familiar and recurring: 4.36 calls it ordinary and familiar, and 9.26 says the cycles of the universe are the same from age to age.",
      "passages": [
       "4.36",
       "9.26"
      ],
      "closeness": 0.74,
+     "closeness_new": 0.528,
      "support": [
       {
        "id": "4.36a",
        "ref": "4.36",
-       "quote": "Whatsoever doth happen in the world, is, in the course of nature,\r\nas usual and ordinary as a rose in the spring, and fruit in summer.",
+       "quote": "Everything that happens is as ordinary and familiar as the rose in spring and fruit in summer.",
        "at": 0,
        "start": 0,
-       "end": 134,
+       "end": 94,
        "in": "c4",
        "follows": "Everything that happens is as ordinary as the seasons.",
        "gives": [
@@ -4722,12 +4757,12 @@
       {
        "id": "4.36b",
        "ref": "4.36",
-       "quote": "Of\r\nthe same nature is sickness and death; slander, and lying in wait",
-       "at": 135,
-       "start": 135,
-       "end": 204,
+       "quote": "illness is like that too, and death, and slander, and plotting",
+       "at": 99,
+       "start": 99,
+       "end": 161,
        "in": "c4",
-       "follows": "Sickness, death, slander and treachery are ordinary in the same way.",
+       "follows": "Illness, death, slander and plotting are ordinary in the same way.",
        "gives": [
         "Sickness, death and slander"
        ]
@@ -4735,12 +4770,12 @@
       {
        "id": "9.26c",
        "ref": "9.26",
-       "quote": "Up and down, from one age to another, go the ordinary things of\r\nthe world; being still the same.",
+       "quote": "The cycles of the universe are the same, up and down, from age to age.",
        "at": 0,
        "start": 0,
-       "end": 97,
+       "end": 70,
        "in": "c4",
-       "follows": "The same ordinary things recur in every age.",
+       "follows": "The cycles of the universe are the same in every age.",
        "gives": [
         "None of it is unusual"
        ]
@@ -4752,7 +4787,7 @@
      "number": 5,
      "role": "If nothing governs the world",
      "t": "And if nothing governs the world, I still have a reason of my own, and can govern what is mine with it.",
-     "shared": "Four passages grant the other case, that nothing governs. Three end the same way, with my own reason left to govern what is mine (9.26, 12.11, 6.39). 9.38 ends only with “why trouble yourself?”. This is the most repeated move in the section.",
+     "shared": "Four passages grant the other case, that nothing governs. Three end with something left to me: an order not to act at random myself (9.26), a mind that rules, in myself (12.11), and freedom to deliberate about myself (6.39). Only 12.11 names that mind; the claim calls it reason. 9.38 ends only with “Why, then, are you troubled?”. This is the most repeated move in the section.",
      "passages": [
       "9.26",
       "12.11",
@@ -4760,30 +4795,32 @@
       "9.38"
      ],
      "closeness": 0.686,
+     "closeness_new": 0.559,
      "support": [
       {
        "id": "9.26b",
        "ref": "9.26",
-       "quote": "or if all things go by chance and fortune,\r\nyet mayest thou use thine own providence in those things that concern\r\nthee properly; and then art thou well",
-       "at": 586,
-       "start": 586,
-       "end": 738,
+       "quote": "if it is randomness, do not act at random yourself as well",
+       "at": 364,
+       "start": 364,
+       "end": 422,
        "in": "c5",
-       "follows": "Even if everything is chance, I can still use my own foresight in what concerns me.",
+       "follows": "Even if everything is randomness, I must not act at random myself.",
        "gives": [
         "And if nothing governs the world",
-        "can govern what is mine with it"
-       ]
+        "can govern what is mine"
+       ],
+       "note": "Here Marcus gives only the order not to act at random myself. He does not name reason."
       },
       {
        "id": "12.11a",
        "ref": "12.11",
-       "quote": "If\r\nall be a mere confusion without any moderator, or governor, then hast\r\nthou reason to congratulate thyself; that in such a general flood of\r\nconfusion thou thyself hast obtained a reasonable faculty, whereby thou\r\nmayest govern thine own life and actions",
-       "at": 348,
-       "start": 348,
-       "end": 606,
+       "quote": "if it is a jumble with nothing ruling it, be glad that in such a rough sea you yourself have in yourself a mind that rules",
+       "at": 363,
+       "start": 363,
+       "end": 485,
        "in": "c5",
-       "follows": "Even in a world without order, I have reason and can govern my life with it.",
+       "follows": "Even if the world is a jumble with nothing ruling it, I have in myself a mind that rules, and I can be glad of that.",
        "gives": [
         "And if nothing governs the world",
         "I still have a reason of my own",
@@ -4793,10 +4830,10 @@
       {
        "id": "6.39b",
        "ref": "6.39",
-       "quote": "if so be that they have not indeed either in general, or\r\nparticular deliberated of any of those things, that happen unto us\r\nin this world; yet God be thanked, that of those things that\r\nconcern myself, it is lawful for me to deliberate myself",
-       "at": 999,
-       "start": 999,
-       "end": 1243,
+       "quote": "if in fact they deliberate about nothing that concerns us, then I am free to deliberate about myself",
+       "at": 791,
+       "start": 791,
+       "end": 891,
        "in": "c5",
        "follows": "Even if the gods plan nothing, I may still deliberate about my own affairs.",
        "gives": [
@@ -4807,16 +4844,16 @@
       {
        "id": "9.38b",
        "ref": "9.38",
-       "quote": "if, according to Epicurus, atoms be the cause of all things\r\nand that life be nothing else but an accidentary confusion of things,\r\nand death nothing else, but a mere dispersion and so of all other\r\nthings: what doest thou trouble thyself for?",
-       "at": 223,
-       "start": 223,
-       "end": 466,
+       "quote": "there are atoms, and nothing else but a stirred brew and a scattering. Why, then, are you troubled?",
+       "at": 183,
+       "start": 183,
+       "end": 282,
        "in": "c5",
-       "follows": "If everything is only atoms, there is nothing for me to be troubled about.",
+       "follows": "If there are only atoms, and nothing but a stirred brew and a scattering, there is nothing for me to be troubled about.",
        "gives": [
         "And if nothing governs the world"
        ],
-       "note": "On the atomist case Marcus does not say here that reason remains, only that there is nothing to be troubled about."
+       "note": "The question closes both cases, the one body and the atoms. On the atomist case Marcus does not say here that reason remains; he only asks why I am troubled."
       }
      ]
     }
@@ -4825,28 +4862,28 @@
     {
      "id": "5.8g",
      "ref": "5.8",
-     "quote": "For the whole (because whole,\r\ntherefore entire and perfect) is maimed, and mutilated, if thou shalt\r\ncut off anything at all, whereby the coherence, and contiguity as of\r\nparts, so of causes, is maintained and preserved. Of which certain it\r\nis, that thou doest (as much as lieth in thee) cut off, and in some\r\nsort violently take somewhat away, as often as thou art displeased with\r\nanything that happeneth",
-     "at": 2952,
-     "start": 2952,
-     "end": 3360,
+     "quote": "the complete whole is maimed if you cut through the connection and continuity at any point at all, of its causes just as of its parts. And you do cut through it, as far as it lies with you, whenever you are discontented, and in a way you destroy it.",
+     "at": 2075,
+     "start": 2075,
+     "end": 2324,
      "in": "single",
      "label": "A warning",
-     "t": "Each time I am displeased with what happens, I cut something away from the whole, as far as lies in me.",
-     "why": "One witness in this section. 8.32, in the section behind Article 1, says the same with a severed limb.",
-     "follows": "Each time I am displeased with what happens I cut something off from the whole, as far as I am able."
+     "t": "Each time I am displeased with what happens, I cut through the connection of the whole, as far as lies in me.",
+     "why": "One witness in this section. 8.32, in the section behind Article 1, makes a like point with a severed limb. The quote says only “whenever you are discontented”; that the discontent is with what happens comes from the sentence that opens this argument in 5.8, “you should hold dear what falls to you”, outside the quote.",
+     "follows": "Each time I am discontented I cut through the connection of the whole, as far as it lies with me, and in a way I destroy it."
     },
     {
      "id": "6.35b",
      "ref": "6.35",
-     "quote": "and\r\nlove those men whom thy fate it is to live with; but love them truly",
-     "at": 122,
-     "start": 122,
-     "end": 195,
+     "quote": "love the people your lot has put you among, but truly",
+     "at": 59,
+     "start": 59,
+     "end": 112,
      "in": "single",
      "label": "An addition",
      "t": "And I shall love the people fate has given me to live with, and love them truly.",
      "why": "Only 6.35 turns acceptance toward people. It is kept apart for a later article.",
-     "follows": "I should truly love the people it is my fate to live with."
+     "follows": "I should truly love the people my lot has put me among."
     }
    ],
    "members": [
@@ -4949,7 +4986,7 @@
      "words": 207,
      "used": false,
      "feeds": [],
-     "why": "A list of reminders about order, death, pain and praise. Too many subjects to fuse with anything here.",
+     "why": "A list of reminders about convention, death, pain and fame. Too many subjects to fuse with anything here.",
      "text": "All things (saith he) are by certain order and appointment. And\r\nwhat if the elements only.\r\n\r\nIt will suffice to remember, that all things in general are by certain\r\norder and appointment: or if it be but few. And as concerning death,\r\nthat either dispersion, or the atoms, or annihilation, or extinction,\r\nor translation will ensue. And as concerning pain, that that which is\r\nintolerable is soon ended by death; and that which holds long must needs\r\nbe tolerable; and that the mind in the meantime (which is all in all)\r\nmay by way of interclusion, or interception, by stopping all manner of\r\ncommerce and sympathy with the body, still retain its own tranquillity.\r\nThy understanding is not made worse by it. As for those parts that\r\nsuffer, let them, if they can, declare their grief themselves. As for\r\npraise and commendation, view their mind and understanding, what estate\r\nthey are in; what kind of things they fly, and what things they seek\r\nafter: and that as in the seaside, whatsoever was before to be seen,\r\nis by the continual succession of new heaps of sand cast up one upon\r\nanother, soon hid and covered; so in this life, all former things by\r\nthose which immediately succeed.",
      "standard": "7.31b–34",
      "translation": "project-v1:7.31b–34:0c3fb6e7c955a45f",
@@ -4964,7 +5001,7 @@
      "words": 158,
      "used": false,
      "feeds": [],
-     "why": "Questions to ask of any impression, tracing each thing to God, fate or a neighbour. An exercise in examining impressions, nearer to judgment than to accepting what happens.",
+     "why": "Questions to ask of any impression, tracing each thing to god, to the shared lot and chance, or to a kinsman. An exercise in examining impressions, nearer to judgment than to accepting what happens.",
      "text": "What is this, that now my fancy is set upon? of what things doth\r\nit consist? how long can it last? which of all the virtues is the proper\r\nvirtue for this present use? as whether meekness, fortitude, truth,\r\nfaith, sincerity, contentation, or any of the rest? Of everything\r\ntherefore thou must use thyself to say, This immediately comes from God,\r\nthis by that fatal connection, and concatenation of things, or (which\r\nalmost comes to one) by some coincidental casualty. And as for this, it\r\nproceeds from my neighbour, my kinsman, my fellow: through his ignorance\r\nindeed, because he knows not what is truly natural unto him: but I know\r\nit, and therefore carry myself towards him according to the natural law\r\nof fellowship; that is kindly, and justly. As for those things that of\r\nthemselves are altogether indifferent, as in my best judgment I conceive\r\neverything to deserve more or less, so I carry myself towards it.",
      "standard": "3.11b",
      "translation": "project-v1:3.11b:298c48c31bf57890",
@@ -5111,8 +5148,8 @@
    ],
    "decisions": [
     "Presents the section as one argument by cases. Marcus gives the cases in four passages and never the whole chain in one place.",
-    "Keeps apart the two things said about the part: 1.17 says what the whole needs is good for every part, 9.38 that a part has no reason to complain. An earlier draft merged them into “not bad for the part”, which neither says.",
-    "Records no editor’s inference. The one “so”, in the claim under In action, is Marcus’s own: 5.8 gives the chain of causes and the good of the whole as its two reasons for being pleased with what happens.",
+    "Keeps apart the two things said about the part: 1.17 says that what the nature of the whole brings, and what preserves it, is good for every part; 9.38 says that the part must not find fault. An earlier draft merged them into “not bad for the part”, which neither says.",
+    "Records no editor’s inference. The one “so”, in the claim under In action, is Marcus’s own: 5.8 says “So you should hold dear what falls to you, for two reasons”. The reasons are that it was spun together for me out of the oldest causes, and that it is a cause of good progress for the one that governs the whole.",
     "Says nothing about acting to change what can be changed. That is Article 2. Accepting what has happened is not an instruction to do nothing."
    ],
    "limit": "Claims 1 to 4 hold only in the first case. If you do not think the world is governed, the article reduces to claim 5, and Marcus would not object: he says so himself. That what serves the whole is good for me has one witness here (1.17); Article 6 returns to it from its own passages."
@@ -5121,6 +5158,7 @@
    "number": 4,
    "section": "c6.s4",
    "title": "The reason that governs the whole",
+   "edition": "project-v1",
    "statement": {
     "t": "The reason that orders the world and the reason that guides me are alike.",
     "parts": [
@@ -5159,7 +5197,7 @@
      }
     ],
     "kind": "A likeness between the whole and myself",
-    "form": "Claims 1 and 2 describe the world and claim 3 turns to me. 5.18 says the two are of one kind; 4.22 argues from the order in me to order in the whole. What both give is a likeness, so the statement says “alike”, and claim 3 keeps “of one kind” on 5.18 alone."
+    "form": "Claims 1 and 2 describe the world and claim 3 turns to me. 5.18 says that what is supreme in me is “akin” to what is supreme in the universe; the Greek word means “of the same kind”. 4.22 argues from the order in me to order in the whole. What both give is a likeness, so the statement says “alike”, and claim 3 keeps “of one kind” on 5.18 alone. “Reason” is the word of 6.1. 5.24 says “the mind of the whole”, 6.7 “the ruling part”, and 5.18 “what is supreme” in me; the statement says “reason” for all of them, and that naming is the editor’s."
    },
    "groups": [
     {
@@ -5647,7 +5685,7 @@
         "follows": "The rational part answers to nothing else in a person, and everything else is referred to it.",
         "context": "Same opening: body serves soul and the soul's lower parts serve its primary part; “the latter” is the rational element of that part.",
         "gives": [
-         "it turns everything else to its use"
+         "it turns everything else in me to its use"
         ]
        }
       },
@@ -5691,7 +5729,7 @@
        "label": "action",
        "role": "What worship is enough",
        "t": "To worship what governs the world, it is enough to imitate it: to be a good man.",
-       "why": "Marcus says to honour what is most powerful in the world. Seneca says what counts as worship enough.",
+       "why": "Marcus says to honour what is supreme in the world. Seneca says what counts as worship enough.",
        "support": [
         {
          "id": "S95.50a",
@@ -5731,7 +5769,7 @@
        "label": "why",
        "role": "Where its care may stop",
        "t": "What governs the world guards the human race, though it is sometimes unmindful of one person.",
-       "why": "Marcus's 7.44 says that if it cares for anything in particular, it is for those who reason. Seneca says the care is for humankind and may miss one person. The two do not disagree: Marcus speaks only of a possibility.",
+       "why": "Marcus’s 7.44 speaks of a particular impulse of the world’s ruling part, and only as one of two cases; it does not say whom that impulse is for. Seneca says the gods guard humankind and may miss one person. The two do not disagree.",
        "support": [
         {
          "id": "S95.50b",
@@ -6032,6 +6070,12 @@
    "section_size": 12,
    "cohesion": 0.7647,
    "section_closeness": 0.547,
+   "in_translation": {
+    "closeness": 0.444,
+    "stayed": 10,
+    "of": 12,
+    "sections": 38
+   },
    "sources": [
     "6.8",
     "7.44",
@@ -6052,8 +6096,8 @@
      "number": 1,
      "role": "One ordered whole",
      "t": "The world is one thing, ordered throughout, and all things in it are bound to one another.",
-     "shared": "Three passages call the world one (one living substance, a union, “one and general”), two call it ordered, and two say that all things in it are tied together. 4.22 and 6.8 each put order as one of two cases.",
-     "changed": "4.33 says more: that each thing helps to cause the others. The claim keeps what 4.22 also says, that all things are bound together; the causing is kept in the practice claim.",
+     "shared": "Three passages call the world one (“one living thing”, “unity”, “the one and entire thing”), two call it ordered, and two say that all things in it are tied together. 6.8 puts order as one of two cases; 4.22 names two cases and then decides: “But in fact an order.”",
+     "changed": "4.33 says more: that all things are joint causes of all the things that come about. That is kept in the practice claim. 4.22 says that all things “feel with one another”, and 4.33 speaks of a “spinning together and winding together”; the claim says “bound to one another” for both. “Throughout” is the claim’s word for what 4.22 calls “an arranged order” and sets against a jumble.",
      "passages": [
       "4.33",
       "6.23",
@@ -6061,14 +6105,15 @@
       "4.22"
      ],
      "closeness": 0.607,
+     "closeness_new": 0.524,
      "support": [
       {
        "id": "4.33a",
        "ref": "4.33",
-       "quote": "the world as being but one living\r\nsubstance, and having but one soul",
-       "at": 29,
-       "start": 29,
-       "end": 98,
+       "quote": "the universe as one living thing, having one substance and one soul",
+       "at": 23,
+       "start": 23,
+       "end": 90,
        "in": "c1",
        "follows": "The world is one living thing with one soul.",
        "gives": [
@@ -6078,12 +6123,12 @@
       {
        "id": "6.23a",
        "ref": "6.23",
-       "quote": "can at one time subsist, and coexist in that both one and\r\ngeneral, which we call the world",
-       "at": 223,
-       "start": 223,
-       "end": 314,
+       "quote": "all the things that come about, exist at once within the one and entire thing, the very thing we call the universe",
+       "at": 205,
+       "start": 205,
+       "end": 319,
        "in": "c1",
-       "follows": "Everything that happens can exist together in one world.",
+       "follows": "All the things that happen exist at once inside one whole thing, the thing we call the universe.",
        "gives": [
         "The world is one thing"
        ]
@@ -6091,12 +6136,12 @@
       {
        "id": "6.8a",
        "ref": "6.8",
-       "quote": "or it is an union consisting of order, and administered\r\nby Providence",
-       "at": 353,
-       "start": 353,
-       "end": 423,
+       "quote": "or unity and order and providence",
+       "at": 302,
+       "start": 302,
+       "end": 335,
        "in": "c1",
-       "follows": "The second possibility is that the world is a unity made of order and run by providence.",
+       "follows": "The second possibility is unity, order and providence.",
        "gives": [
         "The world is one thing",
         "ordered throughout"
@@ -6106,26 +6151,26 @@
       {
        "id": "4.22b",
        "ref": "4.22",
-       "quote": "Either this world is a κόσμος or comely piece, because all\r\ndisposed and governed by certain order",
+       "quote": "Either an arranged order, or a stirred brew jumbled together. But in fact an order.",
        "at": 0,
        "start": 0,
-       "end": 98,
+       "end": 83,
        "in": "c1",
-       "follows": "One possibility is that the world is a well-made whole, because all in it is arranged and governed by order.",
+       "follows": "The whole is either an arranged order or a jumble, and in fact it is an order.",
        "gives": [
         "ordered throughout"
        ],
-       "note": "The first of two cases. In the second he still calls the world a comely piece."
+       "note": "He names two cases and decides for the first."
       },
       {
        "id": "4.33c",
        "ref": "4.33",
-       "quote": "and by what manner of\r\nconnection and concatenation all things happen",
-       "at": 332,
-       "start": 332,
-       "end": 401,
+       "quote": "and what the spinning together and winding together is like",
+       "at": 265,
+       "start": 265,
+       "end": 324,
        "in": "c1",
-       "follows": "Everything that happens is linked to the rest, as in a chain.",
+       "follows": "The things of the world are spun together and wound together.",
        "gives": [
         "all things in it are bound to one another"
        ]
@@ -6133,12 +6178,12 @@
       {
        "id": "4.22c",
        "ref": "4.22",
-       "quote": "and yet all through diffused, and by natural sympathy,\r\none to another united",
-       "at": 430,
-       "start": 430,
-       "end": 507,
+       "quote": "all things are, as they are, separated out and spread out, and feel with one another",
+       "at": 160,
+       "start": 160,
+       "end": 244,
        "in": "c1",
-       "follows": "All things, though different, run through one another and are united by a natural sympathy.",
+       "follows": "All things are distinct and spread out, and all of them feel with one another.",
        "gives": [
         "all things in it are bound to one another"
        ]
@@ -6150,8 +6195,8 @@
      "number": 2,
      "role": "What governs it",
      "t": "What governs it is reason, and everything that happens comes from it. It has no cause to do evil, it is for community, and even what is harmful follows from something good.",
-     "shared": "6.1 and 5.24 both name a rational essence that governs the universe. 6.1, 6.33 and 7.44 all say that whatever happens comes from it. The last three points each rest on one passage.",
-     "changed": "6.33 says “all hurtful things”; the claim no longer softens this to “what looks harmful”. 6.33 says “one beginning” and 7.44 “the nature of the universe”; the claim says “it” for both.",
+     "shared": "6.1 names “the reason that governs” the whole, and 5.24 “the mind of the whole”. 6.1, 6.33 and 7.44 all say that whatever happens comes from it. The last three points each rest on one passage.",
+     "changed": "6.33 says “every kind of harm”; the claim no longer softens this to “what looks harmful”. 6.33 says “those revered and beautiful things”; the claim says “something good”. 5.24 says “mind” and does not say “governs”; the claim reads it with 6.1 as the reason that governs. 6.1 says that all things come about “in accordance with” that reason, 6.33 that they come from “that common ruling part”, and 7.44 that they follow from the impulse of “the nature of the whole”; the claim says “comes from it” for all three.",
      "passages": [
       "6.1",
       "5.24",
@@ -6159,14 +6204,15 @@
       "7.44"
      ],
      "closeness": 0.601,
+     "closeness_new": 0.457,
      "support": [
       {
        "id": "6.1a",
        "ref": "6.1",
-       "quote": "That rational essence that doth govern it,\r\nhath in itself no cause to do evil.",
-       "at": 97,
-       "start": 97,
-       "end": 176,
+       "quote": "the reason that governs it has in itself no cause for doing anything bad",
+       "at": 54,
+       "start": 54,
+       "end": 126,
        "in": "c2",
        "follows": "The reason that governs the world has no motive to do evil.",
        "gives": [
@@ -6177,26 +6223,27 @@
       {
        "id": "5.24a",
        "ref": "5.24",
-       "quote": "That rational essence by which the universe is governed, is for\r\ncommunity and society",
+       "quote": "The mind of the whole is social.",
        "at": 0,
        "start": 0,
-       "end": 86,
+       "end": 32,
        "in": "c2",
-       "follows": "The reason that governs the world aims at community.",
+       "follows": "The whole has a mind, and that mind is social.",
        "gives": [
         "it is for community",
         "What governs it is reason"
-       ]
+       ],
+       "note": "The quote names the mind of the whole. That this mind puts things in order is said two sentences later in 5.24: “it has ranked things one below another, one beside another”."
       },
       {
        "id": "6.1c",
        "ref": "6.1",
-       "quote": "And\r\nall things are done and determined according to its will and prescript.",
-       "at": 282,
-       "start": 282,
-       "end": 358,
+       "quote": "And all things come about and are carried through in accordance with it.",
+       "at": 209,
+       "start": 209,
+       "end": 281,
        "in": "c2",
-       "follows": "Everything is done and settled as the governing reason wills.",
+       "follows": "Everything comes about and is carried through in accordance with the reason that governs.",
        "gives": [
         "everything that happens comes from it"
        ]
@@ -6204,12 +6251,12 @@
       {
        "id": "6.33c",
        "ref": "6.33",
-       "quote": "And all\r\nthings come from one beginning; either all severally and particularly\r\ndeliberated and resolved upon, by the general ruler and governor of all;\r\nor all by necessary consequence.",
-       "at": 274,
-       "start": 274,
-       "end": 460,
+       "quote": "All things come from there: they have set out from that common ruling part, or they come as a consequence.",
+       "at": 203,
+       "start": 203,
+       "end": 309,
        "in": "c2",
-       "follows": "All things come from one beginning: each decided by the ruler of all, or following by necessity.",
+       "follows": "Everything comes from the common ruling part: it either sets out from it or follows as a consequence.",
        "gives": [
         "everything that happens comes from it"
        ]
@@ -6217,26 +6264,26 @@
       {
        "id": "7.44c",
        "ref": "7.44",
-       "quote": "whatsoever it is, that\r\nis and happens in the world, is either but a consequent of that one and\r\nfirst deliberation",
-       "at": 181,
-       "start": 181,
-       "end": 296,
+       "quote": "The nature of the whole set out by impulse to make the universe. But now either everything that comes about comes about as a consequence",
+       "at": 0,
+       "start": 0,
+       "end": 136,
        "in": "c2",
-       "follows": "Whatever happens follows from the first deliberation of the universe, unless it is cared for in particular.",
+       "follows": "In the first case, everything that happens now follows as a consequence of the impulse by which the nature of the whole set out to make the world.",
        "gives": [
         "everything that happens comes from it"
        ],
-       "note": "The first of two cases. In the second the ruling part also takes thought for particular things."
+       "note": "The first of two cases. The second, in which even the most important things would be irrational, is under “said once”."
       },
       {
        "id": "6.33a",
        "ref": "6.33",
-       "quote": "and all hurtful things, are but (as the thorn and\r\nthe mire) the necessary consequences of goodly fair things",
-       "at": 524,
-       "start": 524,
-       "end": 633,
+       "quote": "and every kind of harm, like a thorn, like mud, are by-products of those revered and beautiful things",
+       "at": 358,
+       "start": 358,
+       "end": 459,
        "in": "c2",
-       "follows": "Harmful things are necessary by-products of good and fair things.",
+       "follows": "Every kind of harm is a by-product of revered and beautiful things.",
        "gives": [
         "even what is harmful follows from something good"
        ]
@@ -6247,9 +6294,9 @@
      "id": "c3",
      "number": 3,
      "role": "The same thing rules in me",
-     "t": "What rules in me is of one kind with it. It moves itself, and it turns everything else to its use. What I find in myself I can expect in the whole.",
-     "shared": "5.18 and 6.7 both name a part of me that rules. 4.22 and 6.23 both argue from what is in me to what is in the whole. Only 5.18 says the two are of one kind.",
-     "changed": "4.22 speaks of order in me and 6.23 of many things happening in me at once; the claim says “what I find in myself” for both. 5.18 says “all other things”, so “in me” is gone from the claim.",
+     "t": "What rules in me is of one kind with it. It moves itself, and it turns everything else in me to its use. What I find in myself I can expect in the whole.",
+     "shared": "5.18 and 6.7 both name a part of me that rules. 4.22 and 6.23 both argue from what is in me to what is in the whole. Only 5.18 says the two are akin, a word that in the Greek means “of the same kind”.",
+     "changed": "4.22 speaks of order in me and 6.23 of many things happening in me at once; the claim says “what I find in myself” for both. 5.18 says “the others”, which are the other things in me, so the claim says “everything else in me”. 5.18 says “akin”; the claim says “of one kind”, which is what the Greek word means.",
      "passages": [
       "5.18",
       "6.7",
@@ -6257,16 +6304,17 @@
       "6.23"
      ],
      "closeness": 0.504,
+     "closeness_new": 0.382,
      "support": [
       {
        "id": "5.18b",
        "ref": "5.18",
-       "quote": "and\r\nis of one kind and nature with that which we now spake of",
-       "at": 205,
-       "start": 205,
-       "end": 267,
+       "quote": "this is what is akin to that other",
+       "at": 175,
+       "start": 175,
+       "end": 209,
        "in": "c3",
-       "follows": "What is chief in me is of one kind and nature with what was just spoken of: what governs the world.",
+       "follows": "What is supreme in me is akin to what is supreme in the world.",
        "gives": [
         "of one kind with it"
        ]
@@ -6274,26 +6322,26 @@
       {
        "id": "5.18c",
        "ref": "5.18",
-       "quote": "For it is the\r\nvery same, which being in thee, turneth all other things to its own use,\r\nand by whom also thy life is governed.",
-       "at": 269,
-       "start": 269,
-       "end": 396,
+       "quote": "For in your case too, this is what uses the others, and your life is governed by it.",
+       "at": 211,
+       "start": 211,
+       "end": 295,
        "in": "c3",
-       "follows": "What is chief in me is the very same thing: it turns all else to its use and governs my life.",
+       "follows": "In me too, what is supreme is what uses the other things, and my life is governed by it.",
        "gives": [
-        "it turns everything else to its use",
+        "it turns everything else in me to its use",
         "What rules in me"
        ]
       },
       {
        "id": "6.7a",
        "ref": "6.7",
-       "quote": "The rational commanding part, as it alone can stir up and turn\r\nitself",
+       "quote": "The ruling part is what wakes itself and turns itself",
        "at": 0,
        "start": 0,
-       "end": 70,
+       "end": 53,
        "in": "c3",
-       "follows": "The ruling part of me is the only thing that moves and directs itself.",
+       "follows": "The ruling part wakes itself and turns itself.",
        "gives": [
         "It moves itself",
         "What rules in me"
@@ -6302,12 +6350,12 @@
       {
        "id": "4.22a",
        "ref": "4.22",
-       "quote": "For is it possible that in\r\nthee there should be any beauty at all, and that in the whole world\r\nthere should be nothing but disorder and confusion?",
-       "at": 173,
-       "start": 173,
-       "end": 321,
+       "quote": "Or can a kind of order exist in you, and disorder in the all?",
+       "at": 84,
+       "start": 84,
+       "end": 145,
        "in": "c3",
-       "follows": "If there is order in me, there cannot be only disorder in the world.",
+       "follows": "If a kind of order can exist in me, there cannot be disorder in the whole.",
        "gives": [
         "What I find in myself I can expect in the whole"
        ],
@@ -6316,10 +6364,10 @@
       {
        "id": "6.23b",
        "ref": "6.23",
-       "quote": "Consider how many different things, whether they concern our\r\nbodies, or our souls, in a moment of time come to pass in every one of\r\nus, and so thou wilt not wonder",
+       "quote": "Consider how many things come about at once in each of us in the same instant of time, things of the body and things of the soul together. And then you will not be surprised",
        "at": 0,
        "start": 0,
-       "end": 165,
+       "end": 173,
        "in": "c3",
        "follows": "So much happens in me at one moment that I need not wonder at the world holding all things at once.",
        "gives": [
@@ -6333,37 +6381,25 @@
      "number": 5,
      "role": "The practice",
      "t": "I shall make a habit of asking what causes each thing: the power at work in it, considered apart from its matter, and the one source of all things.",
-     "shared": "4.33 and 10.26 both make it a standing habit (“ever consider”, “thou must use to behold”). 10.26, 9.23 and 4.33 all point at the cause and not the thing; 6.33 and 4.33 at the one origin.",
+     "shared": "Only 4.33 makes it constant: “To think constantly of”. 10.26 says “to look” and “to see”, with no word for a habit. 9.23 and 4.33 both name causes (“the quality of the cause”, “joint causes”), and 10.26 names “the power” after speaking of “another cause”. 6.33 and 4.33 point at the one origin: “the source of all things” and “one impulse”.",
      "passages": [
-      "10.26",
       "4.33",
+      "10.26",
       "9.23",
       "6.33"
      ],
      "closeness": 0.531,
+     "closeness_new": 0.443,
      "support": [
-      {
-       "id": "10.26c",
-       "ref": "10.26",
-       "quote": "These things therefore\r\nthat are so secretly and invisibly wrought and brought to pass, thou\r\nmust use to behold and contemplate",
-       "at": 525,
-       "start": 525,
-       "end": 653,
-       "in": "c4",
-       "follows": "I must make it my practice to look at what is brought about out of sight.",
-       "gives": [
-        "I shall make a habit"
-       ]
-      },
       {
        "id": "4.33e",
        "ref": "4.33",
-       "quote": "Ever consider and think upon",
+       "quote": "To think constantly of",
        "at": 0,
        "start": 0,
-       "end": 28,
+       "end": 22,
        "in": "c4",
-       "follows": "This is something to consider and think about always.",
+       "follows": "This is something to think of constantly.",
        "gives": [
         "I shall make a habit"
        ]
@@ -6371,26 +6407,25 @@
       {
        "id": "10.26a",
        "ref": "10.26",
-       "quote": "and not the things themselves only,\r\nbut the power also by which they are effected",
-       "at": 655,
-       "start": 655,
-       "end": 737,
+       "quote": "and to see the power just as we see the power that presses downward and the power that rises upward",
+       "at": 437,
+       "start": 437,
+       "end": 536,
        "in": "c4",
-       "follows": "I should look at the power that produces things, and not only at the things.",
+       "follows": "I should see the power in things just as I see the power that presses downward and the power that rises upward.",
        "gives": [
-        "the power at work",
-        "what causes each thing"
+        "the power at work"
        ]
       },
       {
        "id": "9.23b",
        "ref": "9.23",
-       "quote": "Go to the quality of the cause from which the effect doth\r\nproceed.",
+       "quote": "Go to the quality of the cause",
        "at": 0,
        "start": 0,
-       "end": 67,
+       "end": 30,
        "in": "c4",
-       "follows": "I should go to the cause an effect comes from, and ask what kind of cause it is.",
+       "follows": "I should go to the cause and ask what kind of cause it is.",
        "gives": [
         "what causes each thing"
        ]
@@ -6398,12 +6433,12 @@
       {
        "id": "4.33b",
        "ref": "4.33",
-       "quote": "and how all things that\r\nare, concur in the cause of one another's being",
-       "at": 258,
-       "start": 258,
-       "end": 330,
+       "quote": "and how all things are joint causes of all the things that come about",
+       "at": 194,
+       "start": 194,
+       "end": 263,
        "in": "c4",
-       "follows": "Everything that exists helps cause everything else.",
+       "follows": "All things are joint causes of everything that happens.",
        "gives": [
         "what causes each thing"
        ]
@@ -6411,12 +6446,12 @@
       {
        "id": "9.23a",
        "ref": "9.23",
-       "quote": "Behold it by itself bare and naked, separated from all that is\r\nmaterial.",
-       "at": 68,
-       "start": 68,
-       "end": 141,
+       "quote": "mark the cause off from the material and look at it",
+       "at": 32,
+       "start": 32,
+       "end": 83,
        "in": "c4",
-       "follows": "I should consider a cause by itself, apart from the material it works on.",
+       "follows": "I should mark a cause off from the material and look at the cause.",
        "gives": [
         "considered apart from its matter"
        ]
@@ -6424,12 +6459,12 @@
       {
        "id": "6.33b",
        "ref": "6.33",
-       "quote": "but consider in thy mind the true fountain of all",
-       "at": 737,
-       "start": 737,
-       "end": 786,
+       "quote": "but consider the source of all things",
+       "at": 515,
+       "start": 515,
+       "end": 552,
        "in": "c4",
-       "follows": "I should keep in mind the true source of everything.",
+       "follows": "I should consider the source of everything.",
        "gives": [
         "the one source of all things"
        ]
@@ -6437,12 +6472,12 @@
       {
        "id": "4.33d",
        "ref": "4.33",
-       "quote": "are done by one general motion\r\nas it were, and deliberation of that one soul",
-       "at": 179,
-       "start": 179,
-       "end": 256,
+       "quote": "and how it does all things by one impulse",
+       "at": 151,
+       "start": 151,
+       "end": 192,
        "in": "c4",
-       "follows": "All things are done by one movement and one deliberation of the world's one soul.",
+       "follows": "The world does all things by one impulse.",
        "gives": [
         "the one source of all things"
        ]
@@ -6453,24 +6488,25 @@
      "id": "c5",
      "number": 4,
      "role": "What it gives me",
-     "t": "Thinking of the world as governed makes me calm, and I can be patient and trust what governs it.",
-     "shared": "7.44 and 6.8 end on the same effect: tranquillity in one, quiet and patience in the other. Only 6.8 adds trust.",
-     "changed": "7.44 says “often thought upon”; 6.8 puts it as a condition, “if the latter be”. The claim keeps the thought and the calm, which both have.",
+     "t": "Thinking of the world as governed makes me calm, and I can stand firm and trust what governs it.",
+     "shared": "7.44 and 6.8 end on the same effect: “calmer” in one, “I stand firm, and I take heart” in the other. Only 6.8 adds reliance on what governs.",
+     "changed": "7.44 says “Remembering this”; 6.8 puts it as a condition, “if it is the second”. 7.44 says “calmer” and 6.8 “I stand firm, and I take heart”; the claim says “calm” for both. The claim keeps the thought and the calm, which both have.",
      "passages": [
       "7.44",
       "6.8"
      ],
      "closeness": 0.75,
+     "closeness_new": 0.629,
      "support": [
       {
        "id": "7.44b",
        "ref": "7.44",
-       "quote": "This often thought upon, will much\r\nconduce to thy tranquillity.",
-       "at": 529,
-       "start": 529,
-       "end": 593,
+       "quote": "Remembering this will make you calmer about many things.",
+       "at": 269,
+       "start": 269,
+       "end": 325,
        "in": "c5",
-       "follows": "Thinking about this often brings calm.",
+       "follows": "Remembering this makes me calmer about many things.",
        "gives": [
         "Thinking of the world as governed makes me calm"
        ]
@@ -6478,15 +6514,15 @@
       {
        "id": "6.8c",
        "ref": "6.8",
-       "quote": "But if the latter be, then am not I religious in vain;\r\nthen will I be quiet and patient, and put my trust in Him, who is the\r\nGovernor of all.",
-       "at": 781,
-       "start": 781,
-       "end": 924,
+       "quote": "But if it is the second, I feel reverence, I stand firm, and I take heart, relying on the one that governs.",
+       "at": 619,
+       "start": 619,
+       "end": 726,
        "in": "c5",
-       "follows": "If the world is ordered and governed, my worship is not wasted, and I will be quiet, patient and trusting.",
+       "follows": "If the world is unity, order and providence, I feel reverence, I stand firm and I take heart, relying on what governs it.",
        "gives": [
         "Thinking of the world as governed makes me calm",
-        "I can be patient and trust what governs it"
+        "I can stand firm and trust what governs it"
        ]
       }
      ]
@@ -6496,49 +6532,49 @@
     {
      "id": "5.18a",
      "ref": "5.18",
-     "quote": "Honour that which is chiefest and most powerful in the world, and\r\nthat is it, which makes use of all things, and governs all things. So\r\nalso in thyself; honour that which is chiefest, and most powerful",
+     "quote": "Of the things in the universe, honour what is supreme: this is what uses all things and directs all things. In the same way, of the things in you too, honour what is supreme",
      "at": 0,
      "start": 0,
-     "end": 203,
+     "end": 173,
      "in": "single",
      "label": "An instruction",
-     "t": "I shall honour what is chief and most powerful in the world, and in the same way what is chief in myself.",
+     "t": "I shall honour what is supreme in the world, and in the same way what is supreme in myself.",
      "why": "Only 5.18 says “honour”. It is the one place where the likeness becomes an instruction.",
-     "follows": "I should honour what is most powerful in the world, and likewise what is most powerful in me."
+     "follows": "I should honour what is supreme in the world, and likewise what is supreme in me."
     },
     {
      "id": "6.1b",
      "ref": "6.1",
-     "quote": "neither can anything be hurt by it",
-     "at": 246,
-     "start": 246,
-     "end": 280,
+     "quote": "nothing is harmed by it",
+     "at": 184,
+     "start": 184,
+     "end": 207,
      "in": "single",
      "label": "A strong claim",
-     "t": "Nothing can be hurt by it.",
+     "t": "Nothing is harmed by it.",
      "why": "Only 6.1 goes this far. It is kept apart so that the claim on what governs the world does not rest on it.",
-     "follows": "Nothing can be harmed by the reason that governs the world."
+     "follows": "Nothing is harmed by the reason that governs the world."
     },
     {
      "id": "7.44a",
      "ref": "7.44",
-     "quote": "if so be that this ruling rational part of the\r\nworld, takes any thought and care of things particular, they are surely\r\nhis reasonable and principal creatures, that are the proper object of\r\nhis particular care and providence",
-     "at": 301,
-     "start": 301,
-     "end": 527,
+     "quote": "or even the most important things, the ones at which the ruling part of the universe directs a particular impulse, are irrational",
+     "at": 138,
+     "start": 138,
+     "end": 267,
      "in": "single",
-     "label": "A condition",
-     "t": "If it takes thought for anything in particular, it is for those who reason.",
-     "why": "Only 7.44 speaks of care for particular beings, and only as a possibility. It stood in the claim on what governs the world without backing any of its words.",
-     "follows": "If the governing reason cares for anything in particular, it cares for reasoning beings."
+     "label": "The second of two cases",
+     "t": "If things did not all follow as a consequence, even the most important things, the ones the ruling part of the world aims at in particular, would be without reason.",
+     "why": "Only 7.44 speaks of a particular impulse of the world’s ruling part, and only as the second of two cases. It backs no words of the claim on what governs the world, so it stands apart.",
+     "follows": "If not everything follows as a consequence, then even the most important things, the ones the ruling part of the universe aims at in particular, are irrational."
     },
     {
      "id": "6.8b",
      "ref": "6.8",
-     "quote": "If the first, why should I desire to continue any longer\r\nin this fortuit confusion and commixtion?",
-     "at": 425,
-     "start": 425,
-     "end": 524,
+     "quote": "Now if it is the first, why do I even want to spend my time in a random compound and a jumble of that kind?",
+     "at": 337,
+     "start": 337,
+     "end": 444,
      "in": "single",
      "label": "The other case",
      "t": "If the world were only confusion, why should I wish to stay in it?",
@@ -6763,27 +6799,31 @@
     }
    ],
    "decisions": [
+    "Quotes the project’s own translation from the Greek instead of Casaubon. Passage numbers stay Casaubon’s. In modern editions 4.22 is 4.27, 4.33 is 4.40, 5.18 is 5.21, 5.24 is 5.30, 6.7 is 6.8, 6.8 is 6.9 and 6.10, 6.23 is 6.25, 6.33 is 6.36, 7.44 is 7.75 and 9.23 is 9.25; 6.1 and 10.26 are the same.",
     "Reads four descriptions of the world as one claim, and four of what governs it as another.",
-    "Makes the likeness between the whole and myself the centre of the article. Only 5.18 says the two are of one kind; 4.22 and 6.23 argue from myself to the whole, so the statement says “alike” and no more.",
-    "Keeps “nothing can be hurt by it” out of the fused claim, and keeps the particular care of 7.44 apart as well: Marcus puts it as a condition.",
-    "Joins 7.44 and 6.8 on calm as a claim of its own, under “In action”."
+    "Says “reason” for what Marcus names in several ways. What governs the world is “the reason that governs” in 6.1, “the mind of the whole” in 5.24 and a “ruling part” in 6.33 and 7.44. What governs me is “the ruling part” in 6.7 and “what is supreme” in me in 5.18; no passage of the section calls it reason. The second “reason” of the statement is the editor’s word.",
+    "Makes the likeness between the whole and myself the centre of the article. Only 5.18 says the two are akin; 4.22 and 6.23 argue from myself to the whole, so the statement says “alike” and no more.",
+    "Keeps “nothing is harmed by it” out of the fused claim, and keeps the second case of 7.44 apart as well.",
+    "Joins 7.44 and 6.8 on calm as a claim of its own, under “In action”.",
+    "Follows the Greek in 7.44. Casaubon has the world’s reason caring for “his reasonable and principal creatures”; the Greek says that in the second of two cases even the most important things are “irrational”. The earlier item on care for those who reason is withdrawn.",
+    "Follows the Greek where Casaubon added words. Claim 3 says “everything else in me” again, because 5.18 has “the others”, which are the other things in me. Claim 5 says “stand firm” where it said “be patient”. 10.26 no longer backs the habit in claim 4: its “thou must use to” is Casaubon’s."
    ],
-   "limit": "All twelve passages are used. This is a belief about the universe and the least argued of the five. Only 5.18 says that my reason and the world's are of one kind; the statement claims a likeness and no more. If you do not hold it, Articles 1 and 2 still stand on what human beings share, and Article 3 keeps its last claim."
+   "limit": "All twelve passages are used. This is a belief about the universe and the least argued of the five. Only 5.18 says that what is supreme in me is akin to what is supreme in the world; the statement claims a likeness and no more. If you do not hold it, Articles 1 and 2 still stand on what human beings share, and Article 3 keeps its last claim."
   },
   {
    "number": 5,
    "section": "c6.s5",
    "title": "What I was made for",
+   "edition": "project-v1",
    "statement": {
-    "t": "Like everything that exists, the gods included, I am made for something, namely to use my reason, which by nature turns toward others.",
+    "t": "Like everything that exists, the gods included, I am made for something, namely to use my reason, which turns toward others.",
     "parts": [
      {
       "words": "Like everything that exists, the gods included",
       "ids": [
        "8.17a",
        "8.17b",
-       "9.8a",
-       "9.8b"
+       "9.8a"
       ],
       "refs": [
        "8.17",
@@ -6791,11 +6831,11 @@
       ]
      },
      {
-      "words": "to use my reason, which by nature turns toward others",
+      "words": "to use my reason, which turns toward others",
       "ids": [
        "6.13a",
        "6.13b",
-       "9.8e"
+       "9.8c"
       ],
       "refs": [
        "6.13",
@@ -6806,11 +6846,11 @@
     "inferences": [
      {
       "words": "namely",
-      "why": "8.17 asks what I was made for and rules out only pleasure. That the answer is reason is the editor’s, from 6.13 and 9.8."
+      "why": "8.17 asks what I am for and challenges only pleasure as an answer. That the answer is reason is the editor’s, from 6.13 and 9.8."
      }
     ],
     "kind": "A rule, its application to me, and its hardest case",
-    "form": "A rule, its application to me, and the case that seems to break it. “If I doubt it” answers the objection that some things are plainly useless or flawed. “I am made for something” is said by 8.17 alone, so it carries no source line here; claim 1 shows it. That it is not for my own pleasure is also 8.17 alone and stays in claim 2."
+    "form": "A rule, its application to me, and the case that seems to break it. “If I doubt it” answers the objection that some things are plainly useless or flawed. “I am made for something” rests on 8.17 alone (“Each thing has come to be for something”, then “So what are you for?”), so it carries no source line here; claim 1 shows it. That it is not for my own pleasure is also 8.17 alone and stays in claim 2."
    },
    "groups": [
     {
@@ -7090,7 +7130,7 @@
         "follows": "Wisdom is the good of other people and also the wise man’s own.",
         "context": "Seneca is showing that hardship cannot stop the wise man from acting. “This wisdom” is what he still practises then; “his own” means the wise man’s.",
         "gives": [
-         "its fruit is for them as well as for itself"
+         "its fruit is shared as well as its own"
         ]
        }
       },
@@ -7134,7 +7174,7 @@
        "label": "why",
        "role": "What nature designed me for",
        "t": "What is peculiar to me as a human being is reason. Reason brought to perfection is the good that nature designed me for at birth, and when I fulfil it I have reached my highest good.",
-       "why": "Marcus asks in 8.17 what I was made for and rules out pleasure, but this section never gives the answer. Seneca gives it in so many words.",
+       "why": "Marcus asks in 8.17 what I am for, and whether it is pleasure, but this section never gives the answer. Seneca gives it in so many words.",
        "support": [
         {
          "id": "S76.10a",
@@ -7184,7 +7224,7 @@
        "label": "action",
        "role": "The joy that is left",
        "t": "I am not to go without gladness. Real joy is a stern matter, and I rejoice only in what comes from my own store.",
-       "why": "Marcus rules out pleasure as what I was made for (8.17) and says of joy only that reason enjoys its own fruit (9.8). Seneca says what joy remains and where it comes from.",
+       "why": "Marcus asks whether I am for pleasure and expects a no (8.17). He does not say in this section what joy is left; 9.8 says only that reason has fruit of its own. Seneca says what joy remains and where it comes from.",
        "support": [
         {
          "id": "S23.3a",
@@ -7727,6 +7767,12 @@
    "section_size": 7,
    "cohesion": 0.7594,
    "section_closeness": 0.506,
+   "in_translation": {
+    "closeness": 0.393,
+    "stayed": 6,
+    "of": 7,
+    "sections": 38
+   },
    "sources": [
     "3.2",
     "6.13",
@@ -7740,24 +7786,25 @@
      "id": "c1",
      "number": 1,
      "role": "Everything has its work",
-     "t": "Everything that exists, the gods included, is made for something and bears fruit of its own kind in its own time.",
-     "shared": "Both passages speak of everything, and both name the gods. What they say of it differs: 8.17 says it is made for something, 9.8 says it bears fruit of its kind, in its time.",
-     "changed": "“Made for something” and “bears fruit” are kept as two phrases, each from its own passage. Drops the horse, the vine and the sun as examples.",
+     "t": "Everything that exists, the gods included, is made for something and bears fruit in its own time.",
+     "shared": "Both passages name the gods: 8.17 has the Sun and “the other gods”, 9.8 has “god”. What they say of them differs: 8.17 says each thing has come to be for something, 9.8 says a human being, god and the universe bear fruit, each in its own seasons.",
+     "changed": "“Made for something” and “bears fruit” are kept as two phrases, each from its own passage. “Made for” is the claim’s plain English for 8.17’s “has come to be for”; the Greek names no maker. “Everything that exists” is 8.17’s “each thing”. 9.8 names only a human being, god and the universe; when the claim says that everything bears fruit, it widens 9.8. Drops the horse, the vine and the Sun as examples.",
      "passages": [
       "8.17",
       "9.8"
      ],
      "closeness": 0.532,
+     "closeness_new": 0.459,
      "support": [
       {
        "id": "8.17a",
        "ref": "8.17",
-       "quote": "Whatsoever is, was made for something: as a horse, a vine.",
+       "quote": "Each thing has come to be for something: a horse, a vine.",
        "at": 0,
        "start": 0,
-       "end": 58,
+       "end": 57,
        "in": "c1",
-       "follows": "Everything that exists was made for something, as a horse or a vine is.",
+       "follows": "Each thing has come to be for something, as a horse or a vine has.",
        "gives": [
         "Everything that exists",
         "is made for something"
@@ -7766,12 +7813,12 @@
       {
        "id": "8.17b",
        "ref": "8.17",
-       "quote": "The sun itself will say of itself, I was made for\r\nsomething; and so hath every god its proper function.",
-       "at": 80,
-       "start": 80,
-       "end": 184,
+       "quote": "Even the Sun will say, “I have come to be for some work,” and so will the other gods.",
+       "at": 81,
+       "start": 81,
+       "end": 166,
        "in": "c1",
-       "follows": "The sun would say it was made for something, and every god has a function of its own.",
+       "follows": "Even the Sun would say it has come to be for some work, and the other gods would say the same.",
        "gives": [
         "the gods included",
         "is made for something"
@@ -7780,28 +7827,27 @@
       {
        "id": "9.8a",
        "ref": "9.8",
-       "quote": "Man, God, the world, every one in their kind, bear some fruits.",
+       "quote": "A human being bears fruit, and so does god, and so does the universe",
        "at": 0,
        "start": 0,
-       "end": 63,
+       "end": 68,
        "in": "c1",
-       "follows": "Man, God and the world each bear fruit of their own kind.",
+       "follows": "A human being, god and the universe each bear fruit.",
        "gives": [
         "the gods included",
-        "bears fruit of its own kind"
+        "bears fruit"
        ]
       },
       {
        "id": "9.8b",
        "ref": "9.8",
-       "quote": "All things have their proper time to bear.",
-       "at": 65,
-       "start": 65,
-       "end": 107,
+       "quote": "each bears it in its own seasons",
+       "at": 70,
+       "start": 70,
+       "end": 102,
        "in": "c1",
-       "follows": "Everything has its proper time to bear fruit.",
+       "follows": "Each of them bears its fruit in its own seasons.",
        "gives": [
-        "Everything that exists",
         "in its own time"
        ]
       }
@@ -7811,13 +7857,13 @@
      "id": "c2",
      "number": 2,
      "role": "Mine is reason’s work",
-     "t": "I was not made to please myself, but to keep exercising reason and fellowship. Reason by its nature turns toward other people, and its fruit is for them as well as for itself.",
-     "shared": "Two passages say that reason is by nature not a private thing: 6.13 calls the reasonable soul “naturally sociable”, 9.8 says reason is “of a diffusive nature” and begets itself in others. The rest is one passage each: 8.17 rules out pleasure, 6.13 names the exercise, 9.8 the fruit.",
-     "changed": "8.17 only asks what I was made for and rules out pleasure. The “but” that answers it is the editor’s, and is marked.",
+     "t": "I was not made to please myself, but to keep exercising reason and fellowship. Reason turns toward other people, and its fruit is shared as well as its own.",
+     "shared": "Two passages say that reason is not a private thing, in different words: 6.13 honours rational soul “as civic” and keeps the soul “rational and social”; 9.8 says reason has fruit “both shared and its own”. “Social” and “shared” translate Greek words of one family. “Turns toward other people” is the claim’s phrase for both; neither passage uses it. The rest is one passage each: 8.17 asks whether I am for pleasure, 6.13 names the keeping of the soul, 9.8 the fruit.",
+     "changed": "8.17 asks what I am for, offers pleasure as an answer and says “See whether the idea holds up.” It expects a no and does not say it; the claim says it. The “but” that answers the question is the editor’s, and is marked.",
      "inferences": [
       {
        "words": "but",
-       "why": "8.17 asks what I was made for and rules out only pleasure. The answer is the editor’s, taken from 6.13 and 9.8, which do not say “made for”."
+       "why": "8.17 asks what I am for and challenges only pleasure as an answer. The answer is the editor’s, taken from 6.13 and 9.8, which do not say what I have come to be for."
       }
      ],
      "passages": [
@@ -7826,30 +7872,31 @@
       "9.8"
      ],
      "closeness": 0.535,
+     "closeness_new": 0.394,
      "support": [
       {
        "id": "8.17c",
        "ref": "8.17",
-       "quote": "What then were\r\nthen made for? to disport and delight thyself?",
-       "at": 185,
-       "start": 185,
-       "end": 247,
+       "quote": "So what are you for? For pleasure?",
+       "at": 167,
+       "start": 167,
+       "end": 201,
        "in": "c2",
-       "follows": "I should ask what I was made for, and whether it can be to amuse and please myself.",
+       "follows": "I should ask what I am for, and whether it can be pleasure.",
        "gives": [
         "not made to please myself"
        ],
-       "note": "Casaubon’s text reads “were then”. The question is put to the reader."
+       "note": "The question is put to the reader. Its verb is understood from the Sun’s words just before it: what have you come to be for?"
       },
       {
        "id": "8.17d",
        "ref": "8.17",
-       "quote": "See how even common sense\r\nand reason cannot brook it.",
-       "at": 248,
-       "start": 248,
-       "end": 302,
+       "quote": "See whether the idea holds up.",
+       "at": 202,
+       "start": 202,
+       "end": 232,
        "in": "c2",
-       "follows": "Common sense and reason cannot accept that answer.",
+       "follows": "I should test whether that idea holds up; Marcus expects that it will not, and leaves the verdict to me.",
        "gives": [
         "not made to please myself"
        ]
@@ -7857,12 +7904,12 @@
       {
        "id": "6.13a",
        "ref": "6.13",
-       "quote": "is careful to preserve his own, in the continual habit and\r\nexercise both of reason and sociableness",
-       "at": 848,
-       "start": 848,
-       "end": 948,
+       "quote": "before everything else preserves their own soul rational and social in its condition and its movement",
+       "at": 687,
+       "start": 687,
+       "end": 788,
        "in": "c2",
-       "follows": "Such a person takes care to keep his own soul in the constant exercise of reason and fellowship.",
+       "follows": "Such a person, before everything else, keeps their own soul rational and social, in its state and in what it does.",
        "gives": [
         "to keep exercising reason and fellowship"
        ]
@@ -7870,40 +7917,41 @@
       {
        "id": "6.13b",
        "ref": "6.13",
-       "quote": "he that honours a reasonable soul in general, as it is reasonable and\r\nnaturally sociable",
-       "at": 701,
-       "start": 701,
-       "end": 790,
+       "quote": "whoever honours rational soul as such, and as civic",
+       "at": 577,
+       "start": 577,
+       "end": 628,
        "in": "c2",
-       "follows": "What is to be honoured in a soul is that it is reasonable and, by nature, sociable.",
+       "follows": "This person honours rational soul as such, and as civic: as something that belongs to a community.",
        "gives": [
-        "Reason by its nature turns toward other people"
+        "Reason turns toward other people"
        ]
       },
       {
        "id": "9.8e",
        "ref": "9.8",
-       "quote": "Reason is of a diffusive nature, what itself is in itself, it\r\nbegets in others, and so doth multiply.",
-       "at": 356,
-       "start": 356,
-       "end": 458,
+       "quote": "from it come other things of much the same kind as reason itself",
+       "at": 279,
+       "start": 279,
+       "end": 343,
        "in": "c2",
-       "follows": "Reason spreads by nature: what it is in itself it produces in others, and so it multiplies.",
+       "follows": "What comes from reason is of much the same kind as reason itself.",
        "gives": [
-        "Reason by its nature turns toward other people"
+        "its fruit"
        ]
       },
       {
        "id": "9.8c",
        "ref": "9.8",
-       "quote": "As for reason, that beareth both\r\ncommon fruit for the use of others; and peculiar, which itself doth\r\nenjoy.",
-       "at": 246,
-       "start": 246,
-       "end": 355,
+       "quote": "reason has fruit, both shared and its own",
+       "at": 232,
+       "start": 232,
+       "end": 273,
        "in": "c2",
-       "follows": "Reason produces something for others to use and something of its own that it enjoys.",
+       "follows": "Reason has fruit that is shared and fruit that is its own.",
        "gives": [
-        "its fruit is for them as well as for itself"
+        "Reason turns toward other people",
+        "its fruit is shared as well as its own"
        ]
       }
      ]
@@ -7913,21 +7961,22 @@
      "number": 3,
      "role": "What about waste and flaws?",
      "t": "What looks rotten or old to me looks different to someone who knows nature well. Nature throws nothing away: she takes it back into herself and makes new things out of it, and it has something pleasing of its own.",
-     "shared": "Both passages speak of the rotten and the old, and both appeal to the person acquainted with nature, who sees them differently: in 8.48 he laughs at the complaint, in 3.2 he alone finds the beauty. What he sees differs: 8.48 says nature reuses such things, 3.2 says they are pleasing as they are.",
-     "changed": "Drops “by-products” as the common term: 8.48 has shavings and 3.2 has “accessories”, but only as comparisons. The claim now rests on the two things both passages say outright.",
+     "shared": "Both passages speak of the rotten and the old, and both appeal to a person who knows nature, who sees them differently: in 8.48 “a person who studies nature” laughs at the complaint, in 3.2 only “the one who has become truly at home with nature and its works” is struck by the beauty. What that person sees differs: 8.48 says nature reuses such things, 3.2 says they are pleasing as they are.",
+     "changed": "Does not make “by-products” the common term. They are the subject of 3.2 from its first sentence (“what comes about on top of the things that come about by nature”), but 8.48 has shavings and trimmings only as a comparison. The claim rests on the two things both passages say outright. The claim calls nature “she”; the translation says “it”.",
      "passages": [
       "8.48",
       "3.2"
      ],
      "closeness": 0.575,
+     "closeness_new": 0.575,
      "support": [
       {
        "id": "8.48e",
        "ref": "8.48",
-       "quote": "whatsoever is within her\r\nthat seems either corrupted, or old, or unprofitable, she can change it\r\ninto herself, and of these very things can make new things",
-       "at": 747,
-       "start": 747,
-       "end": 904,
+       "quote": "changes into itself everything inside that seems to be decaying and growing old and to be useless, and that it makes other, fresh things again out of these very things",
+       "at": 599,
+       "start": 599,
+       "end": 766,
        "in": "c3",
        "follows": "What seems spoiled, old or useless, nature changes into herself and makes into new things.",
        "gives": [
@@ -7938,12 +7987,12 @@
       {
        "id": "8.48f",
        "ref": "8.48",
-       "quote": "one that is\r\nacquainted with the mysteries of nature, will laugh at thee for it",
-       "at": 188,
-       "start": 188,
-       "end": 267,
+       "quote": "you will be laughed at by a person who studies nature",
+       "at": 170,
+       "start": 170,
+       "end": 223,
        "in": "c3",
-       "follows": "Someone who knows how nature works would laugh at the question of what such things are for.",
+       "follows": "A person who studies nature would laugh at me for asking why such things came to be.",
        "gives": [
         "looks different to someone who knows nature well"
        ]
@@ -7951,10 +8000,10 @@
       {
        "id": "8.48d",
        "ref": "8.48",
-       "quote": "but the\r\nnature of the universe hath no such out-place",
-       "at": 550,
-       "start": 550,
-       "end": 604,
+       "quote": "they, at least, have somewhere to throw these, whereas the nature of the whole has nothing outside it",
+       "at": 400,
+       "start": 400,
+       "end": 501,
        "in": "c3",
        "follows": "Nature has nowhere outside itself to discard anything.",
        "gives": [
@@ -7964,12 +8013,12 @@
       {
        "id": "3.2d",
        "ref": "3.2",
-       "quote": "So ripe olives, when\r\nthey are next to putrefaction, then are they in their proper beauty.",
-       "at": 690,
-       "start": 690,
-       "end": 780,
+       "quote": "in olives ripened on the tree, the very nearness to rotting adds a certain beauty of its own to the fruit",
+       "at": 501,
+       "start": 501,
+       "end": 606,
        "in": "c3",
-       "follows": "Ripe olives are at their most beautiful when they are close to rotting.",
+       "follows": "In olives ripened on the tree, being close to rotting adds a beauty of its own to the fruit.",
        "gives": [
         "What looks rotten or old",
         "it has something pleasing of its own"
@@ -7978,12 +8027,12 @@
       {
        "id": "3.2e",
        "ref": "3.2",
-       "quote": "So will he be able to perceive the proper\r\nripeness and beauty of old age, whether in man or woman",
-       "at": 1472,
-       "start": 1472,
-       "end": 1570,
+       "quote": "will be able to see a kind of prime and ripeness in an old woman and an old man",
+       "at": 1375,
+       "start": 1375,
+       "end": 1454,
        "in": "c3",
-       "follows": "He will be able to see the ripeness and beauty that belong to old age, in a man or a woman.",
+       "follows": "That person will be able to see a kind of prime and ripeness in an old woman and an old man.",
        "gives": [
         "What looks rotten or old",
         "it has something pleasing of its own"
@@ -7992,12 +8041,12 @@
       {
        "id": "3.2f",
        "ref": "3.2",
-       "quote": "not credible unto every one, but unto them\r\nonly who are truly and familiarly acquainted, both with nature itself,\r\nand all natural things",
-       "at": 1761,
-       "start": 1761,
-       "end": 1899,
+       "quote": "which will not convince everyone, will strike only the one who has become truly at home with nature and its works",
+       "at": 1550,
+       "start": 1550,
+       "end": 1663,
        "in": "c3",
-       "follows": "Only those who know nature and natural things closely will see this; not everyone finds it believable.",
+       "follows": "Such things will not convince everyone; they will strike only someone who has become truly at home with nature and its works.",
        "gives": [
         "looks different to someone who knows nature well"
        ]
@@ -8005,12 +8054,12 @@
       {
        "id": "3.2a",
        "ref": "3.2",
-       "quote": "whatsoever it is that naturally\r\ndoth happen to things natural, hath somewhat in itself that is pleasing\r\nand delightful",
-       "at": 34,
-       "start": 34,
-       "end": 154,
+       "quote": "even what comes about on top of the things that come about by nature has something graceful and attractive about it",
+       "at": 52,
+       "start": 52,
+       "end": 167,
        "in": "c3",
-       "follows": "Whatever happens naturally to natural things has something pleasing in it.",
+       "follows": "Even what comes about as an extra, on top of what nature produces, has something graceful and attractive about it.",
        "gives": [
         "it has something pleasing of its own"
        ]
@@ -8018,12 +8067,12 @@
       {
        "id": "3.2b",
        "ref": "3.2",
-       "quote": "even among all those\r\nthings which are but mere accessories and natural appendices as it were,\r\nthere will scarce appear anything unto him, wherein he will not find\r\nmatter of pleasure and delight",
-       "at": 1128,
-       "start": 1128,
-       "end": 1324,
+       "quote": "there is almost nothing, even among the things that happen as consequences, that will not seem to that person to be put together in a way that somehow gives pleasure",
+       "at": 1046,
+       "start": 1046,
+       "end": 1211,
        "in": "c3",
-       "follows": "Even among nature’s side effects, he will find pleasure in almost every one.",
+       "follows": "Even among nature’s side effects, that person will find pleasure in almost every one.",
        "gives": [
         "it has something pleasing of its own"
        ]
@@ -8035,10 +8084,10 @@
     {
      "id": "8.48a",
      "ref": "8.48",
-     "quote": "Is the cucumber bitter? set it away. Brambles are in the way?\r\navoid them. Let this suffice.",
+     "quote": "A bitter cucumber? Leave it. Brambles in the path? Turn aside. That is enough.",
      "at": 0,
      "start": 0,
-     "end": 92,
+     "end": 78,
      "in": "single",
      "label": "A practice",
      "t": "If the cucumber is bitter, I set it aside; if brambles are in the way, I go round them. That is enough.",
@@ -8048,28 +8097,28 @@
     {
      "id": "8.48c",
      "ref": "8.48",
-     "quote": "Add not presently speaking unto thyself,\r\nWhat serve these things for in the world?",
-     "at": 93,
-     "start": 93,
-     "end": 176,
+     "quote": "Do not go on to say, “And why did these things come to be in the universe at all?”",
+     "at": 79,
+     "start": 79,
+     "end": 161,
      "in": "single",
      "label": "A prohibition",
-     "t": "I do not ask of a bitter thing what it is for.",
-     "why": "Only 8.48 forbids the question. Its reason is under “If I doubt it”: nature throws nothing away. Marcus does not say how this fits with 8.17, where everything was made for something.",
-     "follows": "I should not go on to ask what such things are for."
+     "t": "I do not go on to ask why a bitter thing came to be in the universe at all.",
+     "why": "Only 8.48 forbids the question. Its reason is under “If I doubt it”: nature throws nothing away. Marcus does not say how this fits with 8.17, where each thing has come to be for something.",
+     "follows": "I should not go on to ask why such things came to be in the universe at all."
     },
     {
      "id": "7.4a",
      "ref": "7.4",
-     "quote": "in matter of\r\npurposes and actions, we must presently see what is the proper use and\r\nrelation of every one",
-     "at": 194,
-     "start": 194,
-     "end": 301,
+     "quote": "what is done impulse by impulse; and in the latter case see at once what aim it is directed at",
+     "at": 47,
+     "start": 47,
+     "end": 141,
      "in": "single",
      "label": "A practice",
-     "t": "Of each purpose and each action, taken one at a time, I see at once what its proper use is.",
-     "why": "Only 7.4 asks about use action by action. It speaks of what is said and done, not of what each thing is made for, so it backs no claim.",
-     "follows": "For every purpose and action, I should see at once what its proper use is."
+     "t": "I follow what is done impulse by impulse, and I see at once what aim each one is directed at.",
+     "why": "Only 7.4 asks about the aim of what is done, impulse by impulse. It speaks of what is said and done, not of what each thing has come to be for, so it backs no claim.",
+     "follows": "I should follow what is done impulse by impulse and see at once what aim it is directed at."
     }
    ],
    "members": [
@@ -8186,7 +8235,7 @@
      "words": 310,
      "used": false,
      "feeds": [],
-     "why": "What tragedy and comedy were instituted for. Purpose applied to drama, with nothing for a rule of life.",
+     "why": "What tragedy and comedy were brought on for. Purpose applied to drama, with nothing for a rule of life.",
      "text": "Tragedies were at first brought in and instituted, to put men in mind\r\nof worldly chances and casualties: that these things in the ordinary\r\ncourse of nature did so happen: that men that were much pleased and\r\ndelighted by such accidents upon this stage, would not by the same\r\nthings in a greater stage be grieved and afflicted: for here you see\r\nwhat is the end of all such things; and that even they that cry out\r\nso mournfully to Cithaeron, must bear them for all their cries and\r\nexclamations, as well as others. And in very truth many good things are\r\nspoken by these poets; as that (for example) is an excellent passage:\r\n'But if so be that I and my two children be neglected by the Gods, they\r\nhave some reason even for that,' &c. And again, 'It will but little\r\navail thee to storm and rage against the things themselves,' &c. Again,\r\n'To reap one's life, as a ripe ear of corn;' and whatsoever else is\r\nto be found in them, that is of the same kind. After the tragedy, the\r\nancient comedy was brought in, which had the liberty to inveigh against\r\npersonal vices; being therefore through this her freedom and liberty\r\nof speech of very good use and effect, to restrain men from pride\r\nand arrogancy. To which end it was, that Diogenes took also the same\r\nliberty. After these, what were either the Middle, or New Comedy\r\nadmitted for, but merely, (Or for the most part at least) for the\r\ndelight and pleasure of curious and excellent imitation? 'It will steal\r\naway; look to it,' &c. Why, no man denies, but that these also have some\r\ngood things whereof that may be one: but the whole drift and foundation\r\nof that kind of dramatical poetry, what is it else, but as we have said?",
      "standard": "11.6",
      "translation": "project-v1:11.6:9340c98f59365ca4",
@@ -8195,14 +8244,18 @@
     }
    ],
    "decisions": [
+    "Quotes the project’s own translation from the Greek instead of Casaubon. Passage numbers stay Casaubon’s. In modern editions 6.13 is 6.14, 8.17 is 8.19, 8.48 is 8.50, 9.8 is 9.10 and 11.5 is 11.6; 3.2 and 7.4 are the same.",
     "Uses 6.13 and 9.8 to answer the question that 8.17 asks and leaves open. The step is marked as the editor’s: “namely” in the statement, “but” in claim 2.",
-    "Fuses 8.17 with 9.8 only on what both say: the rule covers everything, the gods included. “Made for something” is 8.17’s and “bears fruit” is 9.8’s, and the claim keeps them apart.",
-    "Fuses 6.13 with 9.8 on reason turning by its nature toward other people (“naturally sociable”, “of a diffusive nature”).",
+    "Fuses 8.17 with 9.8 only on what both say: the gods are included. “Made for something” is 8.17’s and “bears fruit” is 9.8’s, and the claim keeps them apart. “Everything that exists” is 8.17’s “each thing”; 9.8 names a human being, god and the universe.",
+    "Fuses 6.13 with 9.8 on reason turning toward other people. The phrase is the editor’s for 6.13’s “civic” and “social” and for 9.8’s fruit “both shared and its own”.",
     "Fuses 8.48 with 3.2, the most central passage of the section, on the rotten and the old and on the person who knows nature. That nature reuses them is 8.48 alone; that they are pleasing is 3.2 alone.",
     "Keeps 7.4 as a said-once practice. It was a witness to claim 1 without backing any of its words.",
-    "8.17 says everything was made for something; 8.48 forbids asking what a bitter thing is for. Neither passage mentions the other, and the article keeps both without reconciling them."
+    "8.17 says each thing has come to be for something; 8.48 forbids asking why a bitter thing came to be at all. The translation has “come to be” in both because the Greek has one verb in both. Neither passage mentions the other, and the article keeps both without reconciling them.",
+    "Withdraws “by nature” from the statement and from claim 2, and “of its own kind” from claim 1. They rested on words Casaubon added: “naturally sociable” in 6.13, where the Greek has “civic”; “of a diffusive nature” and “every one in their kind” in 9.8, where the Greek has nothing.",
+    "Keeps “made for” in the title, the statement and the claims as plain English for 8.17’s “has come to be for”. The Greek names no maker.",
+    "Keeps “I was not made to please myself”, although 8.17 only asks “For pleasure?” and says “See whether the idea holds up.” Casaubon turned that into a verdict; the Greek leaves the verdict to the reader."
    ],
-   "limit": "This is the smallest and loosest section: seven passages, six used. Claims 1 and 3 rest on two passages and claim 2 on three, and in each claim only part of the sentence is said by two passages: the scope in claim 1, reason’s turn toward others in claim 2, the rotten and the old and the person who knows nature in claim 3. The rest of each claim is one passage’s. That what I was made for is reason is the editor’s step; no passage of this section says it."
+   "limit": "This is the smallest and loosest section: seven passages, six used. Claims 1 and 3 rest on two passages and claim 2 on three, and in each claim only part of the sentence is said by two passages: the gods in claim 1, reason’s turn toward others in claim 2 (the phrase is the editor’s), the rotten and the old and the person who knows nature in claim 3. The rest of each claim is one passage’s. That what I was made for is reason is the editor’s step; no passage of this section says it."
   },
   {
    "number": 6,

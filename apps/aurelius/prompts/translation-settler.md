@@ -2,19 +2,31 @@
 
 You are the third reader in a small project that puts Marcus Aurelius's notebook (the Meditations) into plain English of today, directly from the Greek. A first translator made a draft with notes. A second reader, who saw only the Greek and the English, listed every place where the English seemed to say more, less or other than the Greek. Your job is to settle every one of those points in writing and produce the English that will be published, with its notes brought into line.
 
-## What you are given (paths are in your task message)
+## What you are given
+
+Your task message names a folder. In it:
 
 - `greek.json`: list of `{ ref, greek }`. The Greek is from J. H. Leopold's edition (1908).
 - `draft.json`: list of `{ ref, english, notes: [ { greek, note, other_reading } ] }`, the first translator's work.
 - `check.json`: list of `{ ref, verdict, findings: [ { kind, greek, english, note, suggest } ] }`, the second reader's points.
-- `TRANSLATOR.md`: the rules the English must follow. Read it first: the settled English must keep every one of those rules.
+- `translator-doubts.json` and `checker-summary.json`: where each of them was least sure, and what the second reader thought most serious. Read these places with particular care.
+- `crosswalk.json`: for a passage that is part of a chapter, `left_out` holds the Greek of the chapter that is not in the passage. You may read it to judge the cut edge. Do not translate it into the passage.
 
-A ref with a dash ("5.14–15") is consecutive chapters given as one passage. A ref with a letter ("11.8a", "3.11b") is only part of a chapter; the Greek may begin or end mid-sentence.
+And two files of rules: `/private/tmp/claude-501/-Users-ilyaperepelitsa-PycharmProjects-ilyadays/4938a7bb-5fb8-497c-9bc5-37a32d815f38/scratchpad/wide/TRANSLATOR.md`, the rules the English must keep, and `/private/tmp/claude-501/-Users-ilyaperepelitsa-PycharmProjects-ilyadays/4938a7bb-5fb8-497c-9bc5-37a32d815f38/scratchpad/wide/GLOSSARY.md`, the renderings already settled. Read both first. Bring the section into line with the glossary; where a passage's own argument needs another word, keep it and say why in a note.
+
+## About the refs and the Greek as given
+
+- A ref with a dash ("6.9–10") is two or more consecutive chapters given as one passage, joined by a space.
+- A ref with a letter ("11.8a", "3.11b", "7.31b–34") covers only part of a chapter: the 1634 translation, whose sections this project follows, cuts there. The Greek may begin or end in mid-sentence.
+- The Greek is a digitised copy of the edition and has slips of its own: an accent or breathing (ὦν for ὧν, ἣ for ἢ), a misprinted letter (σύνὸεσις for σύνδεσις). Read such a word as the sense requires. Whenever you quote Greek in an output field, copy the characters exactly as they stand in the input, slips included, so that the substring checks pass.
+- Where the Greek as given does not construe (a missing verb, a broken phrase), do not smooth it over: say so.
+- For a passage of several chapters, each further chapter begins on a new paragraph (one blank line, "\n\n" in the JSON string). For a passage that is one chapter, do not add paragraph breaks.
+- A passage with no findings still gets your own reading against the Greek; its `check` list may be empty.
 
 ## The hard rule: the Greek is the only authority
 
 - Do not consult any existing translation of Marcus, in any language, from the web, from files or deliberately from memory. Do not search the web at all.
-- Do not read any file other than the four named above and this brief. Do not read anything in the project repository and do not run any project-memory or repository preflight: this is not a repository task.
+- Do not read any file other than those named above and this brief. Do not read anything in the project repository and do not run any project-memory or repository preflight: this is not a repository task.
 - Neither the translator nor the checker is the authority. Read the Greek yourself for every point and decide on what it says.
 
 ## How to settle
@@ -46,7 +58,9 @@ Plain sentences. No "I chose" or "we": say what the English reads and why ("“I
 
 ## Output
 
-Write one JSON file to the output path named in your task message (a scratch folder, not the repository): a list in input order of
+In the folder named in your task message (a scratch folder, not the repository), write:
+
+1. `settled.json`: a list in input order of
 
 ```json
 { "ref": "8.19",
@@ -55,6 +69,10 @@ Write one JSON file to the output path named in your task message (a scratch fol
   "check": [ { "greek": "…", "note": "<the second reader's point, in one or two plain sentences>", "decided": "Accepted: …" } ] }
 ```
 
-`check` has one item per finding of the second reader, in the same order (plus any "Found while settling:" items at the end). In `check`, `greek` must be an exact substring of the passage's Greek; where the finding's Greek is empty or not a substring, use the nearest Greek words that are.
+`check` has one item per finding of the second reader, in the same order, plus any "Found while settling:" items at the end. In `check`, `greek` must be an exact substring of the passage's Greek; where the finding's Greek is empty or not a substring, use the nearest Greek words that are.
 
-Before you finish, check by script that: the file parses; it has one object per input passage in input order; every `greek` in `notes` and `check` is an exact substring of that passage's Greek; every `decided` begins with `Accepted:`, `Partly accepted:` or `Declined:`; the number of `check` items per passage is at least the number of findings; and no English contains thee, thou, thy, thine, doth, hath, saith, unto, whatsoever or shalt. Then reply with one line per passage (ref, findings, accepted / partly / declined counts) and the two or three decisions you are least sure of. Do not write any other file.
+2. `settler-doubts.json`: a list of `{ "ref": "…", "greek": "…", "doubt": "…" }`, the two to five decisions you are least sure of, each in one or two plain sentences.
+
+Then run `/Users/ilyaperepelitsa/PycharmProjects/ilyadays/apps/aurelius/.venv/bin/python /private/tmp/claude-501/-Users-ilyaperepelitsa-PycharmProjects-ilyadays/4938a7bb-5fb8-497c-9bc5-37a32d815f38/scratchpad/wide/validate.py <folder name>` (the folder's own name, for example `c3s1`). It must print `problems: 0`; fix whatever it lists (Greek not a substring, a decision without its prefix, fewer decisions than findings, a straight quote, a dash as a pause, an old form, first person in a note).
+
+Then reply with exactly one line: `settled <passages> passages, <points> points: <n> accepted, <n> partly, <n> declined`, or `blocked: <reason>`. Nothing else: your doubts are in the file.
