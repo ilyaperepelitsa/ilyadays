@@ -6,12 +6,12 @@ Each figure is drawn three ways from the same data and the same visual language:
   square  1200 × 1200, the LinkedIn square image, and the figure on a wide screen where the drawing needs the height;
   phone   340 wide, a vertical layout for screens under 700 px.
 in English and in Russian. On the page the drawings are inline SVG that take the page's colours (light and dark); the
-share files are standalone SVG in the light colours and PNG made from them with Chromium.
+share files are standalone SVG in the light and in the dark colours (…-dark) and PNG made from them with Chromium.
 
 What it writes:
   public/apps/stoic-method.html            between <!-- figure:<id> --> and <!-- /figure:<id> --> in both languages,
                                            and the figures' styles between <!-- dg:style --> and <!-- /dg:style -->
-  public/apps/stoic-method/share/          <id>-<lang>-square.png|svg and <id>-<lang>-landscape.png|svg
+  public/apps/stoic-method/share/          <id>-<lang>-square[-dark].png|svg and <id>-<lang>-landscape[-dark].png|svg
   public/apps/stoic-method/diagrams.html   the gallery of all figures, for sharing
 
 What it reads: public/apps/stoic-constitution*.json and stoic-constitution/[ru/]c*.json (the record),
@@ -115,13 +115,20 @@ def themed_css() -> str:
 BLOCK_CSS = ('.dg .dg-svg{display:block;width:100%;height:auto;max-width:none;margin:0}.dg .dg-tall{display:none}'
              '@media(max-width:699px){.dg .dg-wide{display:none}.dg .dg-tall{display:block;max-width:440px;margin-inline:auto}}'
              '@media print{.dg .dg-wide{display:block!important}.dg .dg-tall,.dg .dg-dl{display:none!important}.dg{break-inside:avoid}}'
-             '.dg-dl{font:13.5px/1.5 var(--sans);color:var(--muted);margin-top:10px;display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center}'
+             '.dg-dl{font:13.5px/1.5 var(--sans);color:var(--muted);margin-top:10px;display:grid;grid-template-columns:auto 1fr;gap:0 14px;align-items:center}'
+             '.dg-dl>span:first-child,.dg-dl>a:last-child{grid-column:1/-1}'
              '.dg-dl a{color:var(--muted);text-underline-offset:3px;display:inline-flex;align-items:center;min-height:32px}'
-             '.dg-dl a:hover{color:var(--ink)}figure.fig:has(.dg){padding:12px}')
+             '.dg-dl a:hover{color:var(--ink)}.dg-g{display:flex;flex-wrap:wrap;gap:0 12px;align-items:center}'
+             '.dg-dl b{font-weight:650;color:var(--ink)}.dg-dl>a:last-child{justify-self:start}figure.fig:has(.dg){padding:12px}')
 
 
-def standalone_css() -> str:
-    return f'svg{{{var_block(LIGHT)};--dg-sans:{SANS_STACK};--dg-serif:{SERIF_STACK}}}' + RULES.replace('\n', '')
+# Share files come in both themes (owner, 24 Nov 2026: "figures need to be downloadable in dark mode too"); the dark one takes
+# the page's dark colours, exactly as the figure looks on the page in dark mode.
+THEMES = {'light': LIGHT, 'dark': {**LIGHT, **DARK, **DARK_FALLBACK}}
+
+
+def standalone_css(theme='light') -> str:
+    return f'svg{{{var_block(THEMES[theme])};--dg-sans:{SANS_STACK};--dg-serif:{SERIF_STACK}}}' + RULES.replace('\n', '')
 
 
 # ----------------------------------------------------------------------------------------------------- data
@@ -442,7 +449,7 @@ class Fig:
 
     def svg(self, uid: str, cls: str, mode='file') -> str:
         """mode 'file': the figure file, which is also what the page inlines (the page's colours, light and dark);
-        'share': a standalone image in the light colours, with its size."""
+        'share' / 'share-dark': a standalone image in the light or the dark colours, with its size."""
         Ctx.lang, was = self.lang, Ctx.lang
         try:
             return self._svg(uid, cls, mode)
@@ -454,9 +461,10 @@ class Fig:
         if h is None:   # phone: the height is what the body used
             h = math.ceil(self.used + 40)
         foot_y = h - (22 if self.layout == 'phone' else 30 if self.layout in ('wide', 'page') else 40)
-        size = f' width="{self.w}" height="{h}"' if mode == 'share' else ''
+        share = mode.startswith('share')
+        size = f' width="{self.w}" height="{h}"' if share else ''
         ns = ' xmlns="http://www.w3.org/2000/svg"'
-        style = f'<style>{standalone_css() if mode == "share" else themed_css()}</style>'
+        style = f'<style>{standalone_css("dark" if mode == "share-dark" else "light") if share else themed_css()}</style>'
         return (f'<svg{ns} class="dg-svg {cls}" viewBox="0 0 {self.w} {h}"{size} role="img" aria-labelledby="{uid}-t {uid}-d">'
                 f'<title id="{uid}-t">{esc(plain(self.title))}</title><desc id="{uid}-d">{esc(plain(self.desc))}</desc>{style}'
                 + (f'<defs>{"".join(self.defs)}</defs>' if self.defs else '')
@@ -2060,12 +2068,15 @@ def figure_block(figs, fid, lang):
     words = ({'dl': 'Download', 'sq': 'PNG square', 'ls': 'PNG landscape', 'svs': 'SVG square', 'svl': 'SVG landscape', 'all': 'All figures'}
              if lang == 'en' else
              {'dl': 'Скачать', 'sq': 'PNG квадрат', 'ls': 'PNG альбомный', 'svs': 'SVG квадрат', 'svl': 'SVG альбомный', 'all': 'Все рисунки'})
-    links = (f'<span>{words["dl"]}:</span>'
-             f'<a href="{files("square", "png")}" download>{words["sq"]}</a>'
-             f'<a href="{files("landscape", "png")}" download>{words["ls"]}</a>'
-             f'<a href="{files("square", "svg")}" download>{words["svs"]}</a>'
-             f'<a href="{files("landscape", "svg")}" download>{words["svl"]}</a>'
-             f'<a href="stoic-method/diagrams.html{"?lang=ru" if lang == "ru" else ""}">{words["all"]}</a>')
+    themes = {'light': 'Light', 'dark': 'Dark'} if lang == 'en' else {'light': 'Светлые', 'dark': 'Тёмные'}
+    links = (f'<span>{words["dl"]}</span>'
+             + ''.join(f'<b>{themes[theme]}</b><span class="dg-g">'
+                       f'<a href="{files("square" + tail, "png")}" download>{words["sq"]}</a>'
+                       f'<a href="{files("landscape" + tail, "png")}" download>{words["ls"]}</a>'
+                       f'<a href="{files("square" + tail, "svg")}" download>{words["svs"]}</a>'
+                       f'<a href="{files("landscape" + tail, "svg")}" download>{words["svl"]}</a></span>'
+                       for theme, tail in (('light', ''), ('dark', '-dark')))
+             + f'<a href="stoic-method/diagrams.html{"?lang=ru" if lang == "ru" else ""}">{words["all"]}</a>')
     return (f'<div class="dg" id="{prefix}dg-{fid}">\n<style>{BLOCK_CSS}</style>\n'
             + figure_file(figs, fid, lang, 'page') + '\n'
             + figure_file(figs, fid, lang, 'phone') + '\n'
@@ -2166,7 +2177,9 @@ def write_figures(figs):
                 path.write_text(figure_file(figs, fid, lang, which) + '\n')
             files[lang] = {'page': f'figures/{fid}.{lang}.svg', 'phone': f'figures/{fid}.{lang}.phone.svg',
                            'square_png': f'share/{fid}-{lang}-square.png', 'landscape_png': f'share/{fid}-{lang}-landscape.png',
-                           'square_svg': f'share/{fid}-{lang}-square.svg', 'landscape_svg': f'share/{fid}-{lang}-landscape.svg'}
+                           'square_svg': f'share/{fid}-{lang}-square.svg', 'landscape_svg': f'share/{fid}-{lang}-landscape.svg',
+                           'dark': {'square_png': f'share/{fid}-{lang}-square-dark.png', 'landscape_png': f'share/{fid}-{lang}-landscape-dark.png',
+                                    'square_svg': f'share/{fid}-{lang}-square-dark.svg', 'landscape_svg': f'share/{fid}-{lang}-landscape-dark.svg'}}
         title = {lang: plain_in(figs[(fid, lang, 'wide')].title, lang) for lang in ('en', 'ru')}
         entries.append({'id': fid, 'number': n, 'title': title,
                         'caption': {'en': f'Figure {n}. ' + caps[fid]['en'], 'ru': f'Рис. {n}. ' + caps[fid]['ru']},
@@ -2205,9 +2218,10 @@ def write_share(figs):
         if layout not in ('wide', 'square'):
             continue
         kind = 'landscape' if layout == 'wide' else 'square'
-        path = SHARE / f'{fid}-{lang}-{kind}.svg'
-        path.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + f.svg(f'{fid}-{lang}-{kind}', 'share', mode='share') + '\n')
-        made.append(path)
+        for mode, tail in (('share', ''), ('share-dark', '-dark')):
+            path = SHARE / f'{fid}-{lang}-{kind}{tail}.svg'
+            path.write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + f.svg(f'{fid}-{lang}-{kind}{tail}', 'share', mode=mode) + '\n')
+            made.append(path)
     return made
 
 
@@ -2239,18 +2253,21 @@ def write_gallery(figs):
             word = ({'sq': 'PNG square', 'ls': 'PNG landscape', 'svs': 'SVG square', 'svl': 'SVG landscape', 'page': 'On the page'} if lang == 'en' else
                     {'sq': 'PNG квадрат', 'ls': 'PNG альбомный', 'svs': 'SVG квадрат', 'svl': 'SVG альбомный', 'page': 'На странице'})
             label = f'Figure {n}' if lang == 'en' else f'Рис. {n}'
+            themes = {'light': 'Light', 'dark': 'Dark'} if lang == 'en' else {'light': 'Светлые', 'dark': 'Тёмные'}
             page_link = f'../stoic-method.html{"?lang=ru" if lang == "ru" else ""}#{prefix}fig-{fid}'
             cards[lang].append(
-                f'<li class="card" id="{prefix}g-{fid}"><a class="thumb" href="{name}-square.png"><img src="{name}-landscape.png" width="1200" height="627" loading="lazy" alt="{esc(plain(f.desc))}"></a>'
+                f'<li class="card" id="{prefix}g-{fid}"><a class="thumb" href="{name}-square.png"><picture><source media="(prefers-color-scheme: dark)" srcset="{name}-landscape-dark.png">'
+                f'<img src="{name}-landscape.png" width="1200" height="627" loading="lazy" alt="{esc(plain(f.desc))}"></picture></a>'
                 f'<p class="n">{label}</p><h2>{esc(plain(f.title))}</h2><p class="sub">{esc(plain(f.subtitle))}</p>'
-                f'<p class="dl"><a href="{name}-square.png" download>{word["sq"]}</a><a href="{name}-landscape.png" download>{word["ls"]}</a>'
-                f'<a href="{name}-square.svg" download>{word["svs"]}</a><a href="{name}-landscape.svg" download>{word["svl"]}</a>'
-                f'<a href="{page_link}">{word["page"]}</a></p></li>')
+                + ''.join(f'<p class="dl"><b>{themes[theme]}</b><a href="{name}-square{tail}.png" download>{word["sq"]}</a><a href="{name}-landscape{tail}.png" download>{word["ls"]}</a>'
+                          f'<a href="{name}-square{tail}.svg" download>{word["svs"]}</a><a href="{name}-landscape{tail}.svg" download>{word["svl"]}</a></p>'
+                          for theme, tail in (('light', ''), ('dark', '-dark')))
+                + f'<p class="dl"><a href="{page_link}">{word["page"]}</a></p></li>')
     head = {'en': ('The figures', 'How the Constitution was made · Figures',
-                   'The eight figures of the method paper, drawn from the published record. Each comes as a 1200 × 1200 and a 1200 × 627 image for sharing, and as SVG.',
+                   'The eight figures of the method paper, drawn from the published record. Each comes as a 1200 × 1200 and a 1200 × 627 image for sharing, and as SVG, in light and in dark.',
                    'Back to the method paper', '../stoic-method.html'),
             'ru': ('Рисунки', 'Как сделана конституция · Рисунки',
-                   'Восемь рисунков к описанию метода, построенных по опубликованным данным. Каждый — в виде картинок 1200 × 1200 и 1200 × 627 для публикации и в SVG.',
+                   'Восемь рисунков к описанию метода, построенных по опубликованным данным. Каждый — в виде картинок 1200 × 1200 и 1200 × 627 для публикации и в SVG, в светлом и в тёмном варианте.',
                    'Назад к описанию метода', '../stoic-method.html?lang=ru')}
     blocks = []
     for lang in ('en', 'ru'):
@@ -2299,6 +2316,7 @@ h2{{font:400 22px/1.25 Georgia,'Times New Roman',serif;margin-top:2px}}
 .sub{{color:var(--muted);font-size:14.5px;margin-top:4px}}
 .dl{{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:14px}}
 .dl a{{display:inline-flex;align-items:center;min-height:36px}}
+.dl b{{display:inline-flex;align-items:center;min-height:36px;font-weight:650;min-width:4.5em}}
 </style>
 </head>
 <body>

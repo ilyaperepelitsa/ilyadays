@@ -632,3 +632,5 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   to navigate clicking chapters” — my reading: a pinned contents rail on the left on wide screens, chapters as buttons
   that open the chapter, the chapter on screen highlighted with its articles and the article being read marked; narrow
   screens keep the Contents section and the bar's pickers. Done (see 36-finish-log.md).
+- “figures need to be downloadable in dark mode too” — my reading: every share file also in the page's dark colours,
+  offered beside the light ones on the method page and in the gallery. Done (see 36-finish-log.md).

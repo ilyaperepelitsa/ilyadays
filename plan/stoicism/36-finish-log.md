@@ -226,3 +226,7 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   and the current chapter's articles, marking the one being read; the page and the dock move over by 232 px and the
   in-page Contents section hides. The sides' column counts now follow the article's width (container queries), so 1440
   keeps 3 and 1920 keeps 5; at 1280 there are 2. Reduced motion now also stops CSS smooth scrolling. Check case N1.
+- **Dark share files (24 Nov):** `scripts/stoic-method-figures.py` writes each square and landscape share image in light
+  and dark (`…-dark.svg|png`, the page's dark colours on #191e26): 64 SVG and 64 PNG. The method page offers Light and
+  Dark rows under each figure; the gallery offers both and shows the dark thumbnail in dark mode; figures.json lists
+  them. The test checks size, background, single theme, identical drawing and links for every file.

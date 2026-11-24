@@ -193,32 +193,42 @@ test('every number drawn on the page is the published one, in both languages', (
   }
 });
 
-test('the share files exist for every figure and language, at LinkedIn sizes, and are linked from the page and the gallery', () => {
+test('the share files exist for every figure, language and theme, at LinkedIn sizes, and are linked from the page and the gallery', () => {
   const pngSize = (path) => {
     const b = fs.readFileSync(new URL(path, ROOT));
     assert.equal(b.toString('latin1', 1, 4), 'PNG', `${path} is a PNG`);
     return [b.readUInt32BE(16), b.readUInt32BE(20)];
   };
+  // The first pixel is the background: white in light, the page's dark card colour in dark (owner, 24 Nov 2026: "figures
+  // need to be downloadable in dark mode too").
+  const background = { '': '#ffffff', '-dark': '#191e26' };
   for (const lang of LANGS) {
     for (const id of FIGS) {
       for (const [kind, w, h] of [['square', 1200, 1200], ['landscape', 1200, 627]]) {
-        const base = `public/apps/stoic-method/share/${id}-${lang}-${kind}`;
-        assert.ok(exists(`${base}.png`) && exists(`${base}.svg`), `${base}.png and .svg`);
-        const [pw, ph] = pngSize(`${base}.png`);
-        assert.ok(pw % w === 0 && pw / w === ph / h, `${base}.png is ${pw} × ${ph}, a multiple of ${w} × ${h}`);
-        const svg = read(`${base}.svg`);
-        assert.match(svg, new RegExp(`viewBox="0 0 ${w} ${h}" width="${w}" height="${h}"`), `${base}.svg size`);
-        assert.match(svg, /ilyadays\.com · (Stoic Constitution|Стоическая конституция)/, `${base}.svg carries the credit`);
-        checkNumbers(svg, `${base}.svg`);
-        const href = `stoic-method/share/${id}-${lang}-${kind}`;
-        assert.ok(blocks[lang].includes(`href="${href}.png"`) && blocks[lang].includes(`href="${href}.svg"`), `${lang} page links ${href}`);
-        assert.ok(gallery.includes(`"share/${id}-${lang}-${kind}.png"`) && gallery.includes(`"share/${id}-${lang}-${kind}.svg"`), `gallery links ${href}`);
+        for (const tail of ['', '-dark']) {
+          const base = `public/apps/stoic-method/share/${id}-${lang}-${kind}${tail}`;
+          assert.ok(exists(`${base}.png`) && exists(`${base}.svg`), `${base}.png and .svg`);
+          const [pw, ph] = pngSize(`${base}.png`);
+          assert.ok(pw % w === 0 && pw / w === ph / h, `${base}.png is ${pw} × ${ph}, a multiple of ${w} × ${h}`);
+          const svg = read(`${base}.svg`);
+          assert.match(svg, new RegExp(`viewBox="0 0 ${w} ${h}" width="${w}" height="${h}"`), `${base}.svg size`);
+          assert.match(svg, /ilyadays\.com · (Stoic Constitution|Стоическая конституция)/, `${base}.svg carries the credit`);
+          assert.ok(svg.includes(`--dg-bg:${background[tail]}`), `${base}.svg is drawn on ${background[tail]}`);
+          assert.doesNotMatch(svg, /prefers-color-scheme/, `${base}.svg keeps one theme whatever the viewer's setting`);
+          checkNumbers(svg, `${base}.svg`);
+          const href = `stoic-method/share/${id}-${lang}-${kind}${tail}`;
+          assert.ok(blocks[lang].includes(`href="${href}.png"`) && blocks[lang].includes(`href="${href}.svg"`), `${lang} page links ${href}`);
+          assert.ok(gallery.includes(`"share/${id}-${lang}-${kind}${tail}.png"`) && gallery.includes(`"share/${id}-${lang}-${kind}${tail}.svg"`), `gallery links ${href}`);
+        }
+        // the light and dark versions are the same drawing in other colours
+        const shapes = (t) => read(`public/apps/stoic-method/share/${id}-${lang}-${kind}${t}.svg`).replace(/<style>[\s\S]*?<\/style>/, '').replace(/(id|aria-labelledby)="[^"]*"/g, '');
+        assert.equal(shapes('-dark'), shapes(''), `${id}-${lang}-${kind}: the dark file differs from the light one in more than colour`);
       }
     }
     assert.ok(blocks[lang].includes(`href="stoic-method/diagrams.html${lang === 'ru' ? '?lang=ru' : ''}"`), `${lang}: the page links the gallery`);
   }
   // nothing in the share folder that the page does not offer
-  const offered = new Set(FIGS.flatMap((id) => LANGS.flatMap((lang) => ['square', 'landscape'].flatMap((k) => ['png', 'svg'].map((e) => `${id}-${lang}-${k}.${e}`)))));
+  const offered = new Set(FIGS.flatMap((id) => LANGS.flatMap((lang) => ['square', 'landscape'].flatMap((k) => ['', '-dark'].flatMap((t) => ['png', 'svg'].map((e) => `${id}-${lang}-${k}${t}.${e}`))))));
   for (const name of fs.readdirSync(new URL('public/apps/stoic-method/share/', ROOT))) assert.ok(offered.has(name), `unexpected share file ${name}`);
 });
 
