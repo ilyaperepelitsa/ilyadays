@@ -16,7 +16,7 @@ import { fmtTime, pick, t2 } from "@/lib/fitness/i18n";
 import { exerciseById } from "@/lib/fitness/catalog.mjs";
 import { newGym, preferForSlot, setPreferred } from "@/lib/fitness/gyms-core.mjs";
 import {
-  activePlan, activeSession, adjustSet, dayOf, endSession, exerciseName, holdOf, inferSwaps, logPlannedSet, planSettings,
+  activePlan, activeSession, adjustSet, dayOf, endSession, exerciseName, holdOf, inferSwaps, isRecommendation, logPlannedSet, planSettings,
   plannedCounts, programOf, reopenSession, safetyInfo, sessionGym, sessionModel, setText, setsOfSession, type Row,
 } from "@/lib/fitness/tracker.mjs";
 import { useFitness } from "../Provider";
@@ -63,6 +63,9 @@ export function SessionTracker({ lang }: { lang: Lang }) {
       store.upsert("sessions", r.session);
       for (const state of r.states) store.upsert("exercise_state", state);
       for (const id of r.remove) store.remove("exercise_state", id);
+      // the recommendation of the first End no longer stands; ending again replaces it
+      const told = Object.values(snapshot.adjustments).find((a) => isRecommendation(a) && a.input.sessionId === r.session.id);
+      if (told) store.upsert("adjustments", { ...told, applied: false, updatedAt: new Date().toISOString() });
       setSummary(null);
       window.scrollTo({ top: 0, behavior: scrollBehavior() });
     };
@@ -82,10 +85,22 @@ const omit = <T,>(map: Record<string, T>, key: string) => {
   return next;
 };
 
+/** Drafts as stored on this device; anything malformed is dropped. */
+function validDrafts(raw: unknown): Record<string, Draft> {
+  if (typeof raw !== "object" || raw === null) return {};
+  const ok = (v: unknown): v is number => typeof v === "number" && Number.isFinite(v) && v >= 0;
+  return Object.fromEntries(
+    Object.entries(raw as Record<string, Partial<Draft> | null>).filter(([, d]) => d && ok(d.kg) && ok(d.reps) && (d.rir == null || ok(d.rir))),
+  ) as Record<string, Draft>;
+}
+
 function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; session: Session; program: Program; readOnly: boolean }) {
   const { snapshot, store } = useFitness();
   const ui = useSessionUi(session.id);
-  const [drafts, setDrafts] = useState<Record<string, Draft>>({});
+  // unlogged edits live with the session's device state: a phone that drops the tab keeps them
+  const drafts = useMemo(() => validDrafts(ui.drafts), [ui.drafts]);
+  const setDrafts = (change: (d: Record<string, Draft>) => Record<string, Draft>) =>
+    updateSessionUi(session.id, (u) => ({ ...u, drafts: change(validDrafts(u.drafts)) }));
   const [openRows, setOpenRows] = useState<Record<string, boolean>>({});
   const [techOpen, setTechOpen] = useState<Record<string, boolean>>({});
   const [swapSlot, setSwapSlot] = useState<string | null>(null);
@@ -127,7 +142,25 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
     if (!el) return;
     // next frame: the rest timer that appears with the same tap has grown the bottom bar by then
     const frame = requestAnimationFrame(() => revealRow(el));
-    return () => cancelAnimationFrame(frame);
+    // ...and once more when the smooth scroll has settled: a second tap or a panel folding on the way leaves it short,
+    // with Done behind the bar. A touch or a key means the reader is moving the page, so leave it alone.
+    const settle = window.setTimeout(() => {
+      release();
+      const r = el.getBoundingClientRect();
+      // off screen: the page was moved elsewhere on purpose (a scrollbar, a jump)
+      if (el.isConnected && r.top < window.innerHeight && r.bottom > 0) revealRow(el);
+    }, 700);
+    const stop = () => {
+      window.clearTimeout(settle);
+      release();
+    };
+    const events = ["pointerdown", "wheel", "touchmove", "keydown"] as const;
+    const release = () => events.forEach((e) => window.removeEventListener(e, stop));
+    events.forEach((e) => window.addEventListener(e, stop, { passive: true }));
+    return () => {
+      cancelAnimationFrame(frame);
+      stop();
+    };
   }, [currentKey, readOnly]);
 
   const exerciseOfSlot = (slotId: string) => model.blocks.flatMap((b) => b.exercises).find((e) => e.planned.slotId === slotId);
@@ -217,9 +250,11 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
     if (readOnly) return;
     // the working sets this screen planned per exercise: fewer logged than planned holds (master plan §16, rule 4)
     const result = endSession({ snapshot, session, sets: snapshot.sets, program, now: new Date(), plannedSets: plannedCounts(model) });
+    setDrafts(() => ({}));
     setSummary(result.summary);
     store.upsert("sessions", result.session);
     for (const state of result.changed) store.upsert("exercise_state", state);
+    if (result.recommendation) store.upsert("adjustments", result.recommendation);
     window.scrollTo({ top: 0, behavior: scrollBehavior() });
   };
 
@@ -248,8 +283,6 @@ function ActiveSession({ lang, session, program, readOnly }: { lang: Lang; sessi
     gym,
     arming: shield.holding,
     intro: model.completion.done === 0,
-    guideSlotId:
-      model.blocks.flatMap((b) => b.exercises).find((e) => e.planned.calibration && !e.skipped && !e.history.length && !e.working.some((r) => r.logged))?.planned.slotId ?? null,
     holds,
   };
   const minutes = Math.max(0, Math.round((Date.parse(model.lastSet?.doneAt ?? session.startedAt) - Date.parse(session.startedAt)) / 60_000));

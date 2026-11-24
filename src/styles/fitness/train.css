@@ -14,7 +14,10 @@
   background: var(--accent-soft); color: var(--ink); font: 600 .76rem var(--sans); vertical-align: middle;
 }
 .trk-tag.soft { background: var(--surface-2); color: var(--muted); }
-.trk-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+/* one line: the main muscle first, the helpers scroll sideways (a wrapped list took three lines at 360 px) */
+.trk-tags { display: flex; gap: 6px; margin: 6px 0; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.trk-tags::-webkit-scrollbar { display: none; }
+.trk-tags .trk-tag { flex: none; white-space: nowrap; }
 .trk-tags .trk-tag { margin-left: 0; }
 /* fitness.css (the shared .fit-* rules) is imported after this file: equal specificity would lose to it */
 .fit-button.trk-wide { width: 100%; min-height: 56px; font-size: 1.05rem; }
@@ -88,8 +91,11 @@
 /* ---------- running session */
 .trk-session-head h2 { margin: 2px 0; }
 .trk-session-head p { margin: 0; }
-.trk-safety { padding: 4px 14px 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.trk-safety { padding: 4px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.trk-safety[open] { padding-bottom: 10px; }
 
+/* min-width 0: the one-line tags scroll inside the card instead of widening the page */
+.trk-card, .trk-superset, .trk-card-head { min-width: 0; }
 .trk-card, .trk-superset {
   padding: 14px 16px 10px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow);
 }
@@ -108,7 +114,10 @@
 .trk-card-title h3 a:hover { color: var(--accent); text-decoration: underline; }
 .trk-count { flex: none; color: var(--muted); font-size: .9rem; font-weight: 600; }
 .trk-swapped { margin: 2px 0 0; font-size: .85rem; color: var(--cool); }
-.trk-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 6px; }
+.trk-actions { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 6px; }
+@media (max-width: 389px) { .trk-act-icon { display: none; } .trk-actions { gap: 4px; } }
+/* the four actions share one row from 360 px up */
+.trk-actions > .trk-act { flex: 1 1 auto; padding-inline: 5px; font-size: .82rem; white-space: nowrap; }
 .trk-act {
   min-height: 44px; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
   color: var(--ink); font: 600 .9rem var(--sans); cursor: pointer;
@@ -176,19 +185,18 @@ button.trk-row-body { cursor: pointer; }
 .trk-guide > summary, .trk-baseline > summary { min-height: 44px; padding: 10px 0; line-height: 24px; cursor: pointer; font-weight: 600; }
 .trk-guide { margin: 0; }
 .trk-guide > p, .trk-baseline > p { margin: 0 0 8px; }
-.fit-note.trk-baseline { margin: 8px 0; padding: 0 14px; }
-.fit-note.trk-baseline[open] { padding-bottom: 10px; }
+.trk-baseline { margin: 0; font-size: .92rem; color: var(--muted); }
 .trk-baseline > a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; }
 
 /* steppers (the shared .fit-stepper of fitness.css) and RIR chips */
 .trk-edit { display: grid; gap: 10px; padding: 2px 0 12px; }
 .trk-steppers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr)); gap: 10px; }
 .trk-rir { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-/* the label takes its own line, so the five chips share one row at 360 px (RU «В запасе» pushed «4+» onto a row alone) */
+/* the label takes its own line, so the six chips share one row at 360 px (RU «В запасе» pushed «4+» onto a row alone) */
 .trk-rir-label { flex: 1 0 100%; margin: 0; font-size: .8rem; color: var(--muted); }
 .trk-rir .trk-chip { flex: 1 1 0; }
 .trk-chip {
-  min-width: 44px; min-height: 44px; padding: 0 8px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+  min-width: 40px; min-height: 44px; padding: 0 4px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
   color: var(--ink); font: 700 1rem var(--sans); cursor: pointer;
 }
 .trk-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }

@@ -635,6 +635,11 @@ describe('planned working sets per exercise (plannedCounts, plannedOf; master pl
     assert.equal(deloadWeek(program, START).due, true, 'week 6 of a 5 + 1 week block');
     const prior = { exerciseId: 'machine-chest-press', workingKg: 40, targetReps: 8, repRange: [6, 10], rir: 2, e1rm: 52, lastOutcome: 'held', fails: 0, sessions: 3, lastAt: '2026-11-07T17:30:00.000Z', updatedAt: '2026-11-07T18:00:00.000Z' };
     let snap = add(add(base0, 'programs', program), 'exercise_state', prior);
+    // a deload week follows a block that was trained
+    for (let i = 0; i < 15; i++) {
+      const at = new Date(Date.UTC(2026, 9, 5 + Math.floor(i / 3) * 7 + (i % 3) * 2, 12)).toISOString();
+      snap = add(snap, 'sessions', { ...T.startSession({ program, dayKey: 'B', now: at }), id: `past-${i}`, status: 'finished', endedAt: at });
+    }
     const session = T.startSession({ program, dayKey: 'A', now: START });
     snap = add(snap, 'sessions', session);
     const { plan, model } = run(snap, session, program);

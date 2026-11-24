@@ -316,6 +316,9 @@ export function useCloseOuts() {
     if (!settled) return;
     const r = closeOuts(snapshot, Date.now());
     for (const s of r.abandon) store.upsert("sessions", s);
-    for (const a of r.apply) for (const st of a.changed) store.upsert("exercise_state", st);
+    for (const a of r.apply) {
+      for (const st of a.changed) store.upsert("exercise_state", st);
+      store.upsert("adjustments", a.recommendation);
+    }
   }, [settled, snapshot, store]);
 }

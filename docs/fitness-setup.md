@@ -26,7 +26,8 @@ creates the fitness tables. [`20261109135752_fitness_calibration.sql`](../supaba
 | `fitness_exercise_state` | Current working weight, provisional/confirmed baseline evidence, and progression state per exercise |
 | `fitness_bodyweight` | Dated bodyweight weigh-ins |
 | `fitness_measurements` | Dated circumference observations in cm, with separate left/right sites |
-| `fitness_adjustments` | Plan changes, including ones the AI adviser proposed and you accepted |
+| `fitness_adjustments` | Plan changes, including ones the AI adviser proposed and you accepted; and one `engine` row per finished workout with every recommendation made (targets before and after, outcome, reason) |
+| `fitness_recommendations` | Optional view ([migration](../supabase/migrations/20261124090000_fitness_recommendations.sql)): those recommendations, one row per exercise and workout. The app works without it |
 
 Access rules, enforced by Postgres Row Level Security:
 

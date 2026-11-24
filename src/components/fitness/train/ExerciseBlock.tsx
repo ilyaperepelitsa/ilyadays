@@ -35,8 +35,6 @@ export type BlockView = {
   arming: boolean;
   /** No working set is logged yet: the first one explains the effort chips (once per session) */
   intro: boolean;
-  /** The one exercise whose "Find your starting load" guide starts open: the first uncalibrated one with no work done */
-  guideSlotId: string | null;
   /** Weight holds (ExerciseState.holdUntil) of today's exercises, by exercise id */
   holds: Record<string, string>;
 };
@@ -133,14 +131,13 @@ function ExerciseCard({ lang, e, idx, inSuperset, view, actions }: {
             {tags.secondary.map((t) => <span key={t} className="trk-tag soft">{t}</span>)}
           </p>
         ) : null}
-        {p.calibration ? <details className="fit-note trk-baseline" data-testid="baseline-guide" open={p.slotId === view.guideSlotId}>
-          <summary>{pick(lang, "Find your starting load", "Подберите стартовый вес")}</summary>
-          <p>{pick(lang, "Calibrate each exercise separately. The suggested weight is a starting estimate, not a strength test. Warm up light, then adjust the weight before logging your first working set.", "Подбирайте вес отдельно для каждого упражнения. Предложенный вес — ориентир, а не тест силы. Начните с лёгкой разминки, затем измените вес перед записью первого рабочего подхода.")}</p>
-          <p>{pick(lang, "Aim for the bottom of the rep range with about 2–3 clean reps left. Too easy? Move up one small step after resting. Too hard? Move down. No maximum attempt is needed. Record actual reps and your reps-in-reserve estimate on the working sets.", "Ориентир — нижняя граница диапазона с запасом примерно 2–3 повторения с хорошей техникой. Слишком легко? После отдыха добавьте небольшой шаг. Тяжело? Уменьшите вес. Максимальная попытка не нужна. Записывайте фактические повторения и запас в рабочих подходах.")}</p>
+        {p.note ? <p className="trk-note">{t2(lang, p.note)}</p> : null}
+        {p.calibration ? <details className="trk-baseline" data-testid="baseline-guide">
+          <summary>{pick(lang, "About your starting load", "О стартовом весе")}</summary>
+          <p>{pick(lang, "Calibrate each exercise separately, warm up light, and follow the note on this card. The suggested weight is an estimate, not a strength test: no maximum attempt is needed. Record actual reps and your reps-in-reserve estimate on the working sets.", "Подбирайте вес отдельно для каждого упражнения, начните с лёгкой разминки и следуйте заметке на этой карточке. Предложенный вес — ориентир, а не тест силы: максимальная попытка не нужна. Записывайте фактические повторения и запас в рабочих подходах.")}</p>
           <p>{pick(lang, "The baseline stays provisional until you complete the planned work with repeated sets at one load and report your effort. It can take more than one visit.", "База остаётся предварительной, пока вы не выполните план с повторными подходами на одном весе и не укажете запас. На это может уйти несколько посещений.")}</p>
           <Link prefetch={false} href={localPath(lang, "/fitness/science")}>{pick(lang, "Evidence and how progression works →", "Исследования и правила прогрессии →")}</Link>
         </details> : null}
-        {p.note ? <p className="trk-note">{t2(lang, p.note)}</p> : null}
         {hold && !noteHasHold(p.note, hold, lang) ? <p className="trk-note trk-hold">{holdText(hold, lang)}</p> : null}
         {e.skipped ? <p className="trk-note">{pick(lang, "Skipped today: the targets stay as they are.", "Пропущено сегодня: цели не меняются.")}</p> : null}
         <div className="trk-actions">
@@ -150,10 +147,10 @@ function ExerciseCard({ lang, e, idx, inSuperset, view, actions }: {
           {!view.readOnly ? (
             <>
               <button type="button" className="trk-act" data-testid="swap-open" onClick={() => actions.openSwap(p.slotId)}>
-                ⇄ {pick(lang, "Swap", "Замена")}
+                <span className="trk-act-icon" aria-hidden="true">⇄ </span>{pick(lang, "Swap", "Замена")}
               </button>
               <button type="button" className="trk-act" aria-pressed={e.skipped} onClick={() => actions.skip(p.slotId, !e.skipped)}>
-                {e.skipped ? pick(lang, "Unskip", "Вернуть") : pick(lang, "Skip", "Пропустить")}
+                {e.skipped ? pick(lang, "Unskip", "Вернуть") : pick(lang, "Skip", "Пропуск")}
               </button>
               {!e.skipped ? (
                 <button type="button" className="trk-act" onClick={() => actions.addSet(p.slotId)}>

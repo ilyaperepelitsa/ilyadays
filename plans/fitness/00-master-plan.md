@@ -464,3 +464,34 @@ heavier working attempts. Implemented in progression/session/tracker, store mapp
 - Migration `20261109142245_fitness_profiles_self_service.sql` is applied to dedicated ilyadays only. Native SQL,
   store/core/browser evidence and the ten different critique perspectives are recorded in
   `docs/development-review-10-loops.md`. Publishing remains a separate owner-approved step.
+
+## 19. Findings of the simulated months (2026-11-24)
+
+Five plans were trained by tapping the real buttons over 17 simulated weeks (`tests/fitness/e2e/test_training_life.py`);
+the cases below are pinned in `tests/fitness/months-fixes.test.mjs`. State fields live in the spec JSONB.
+
+1. While a baseline is being learned, a complete log with a small miss keeps the load found: the hardest one whose every
+   set was made, else one step under the hardest that reached the bottom of the range. An established baseline still
+   never rises from failed off-plan work.
+2. The screen's own lighter suggestions (`prescription.reason = "reduce"`) do not outvote a planned load lifted within
+   the range. Reps made without the reserve cost reps before load where one step is over 10 %. A deload week keeps at
+   least 3 reps, the extra reserve following the reps taken off.
+3. A reported reserve speaks for the fresher sets before it and fades by one per set after it. Two complete sessions in a
+   row at target + 2 earn one step when the capacity guard carries it (`bigStep.easy`), whatever the place in the range.
+4. After a 15–35 day gap whose session met its targets, a gap of about that length (up to 7 days longer) is not cut
+   again (`afterGap`). After 29–90 days the load climbs back to the old one (`regain`): steps of up to 10 %, or ones the
+   capacity guard carries; a miss ends it. Another long break on the way is cut from the load before the first.
+5. A planned deload week needs 60 % of the block's sessions and one in the ten days before it (`deloadDue`); else it is
+   skipped. The started plan records `deload`, and the session is judged the same way.
+6. Edits of sets not logged yet are kept in the session's device state until Done, swap or End.
+7. A card gives one instruction: the break note after a break, the step-by-step protocol on a first visit.
+
+8. A test with a miss is not cut below a load the same session showed to be easy. The effort chips are 0 1 2 3 4–7 8+:
+   8+ on every set raises the load at once to what the weakest set carries (at most +25 %); when the machine's next step
+   is too big for that twice in a row, the card tells the lifter they may raise it themselves.
+9. Each finished session writes one `fitness_adjustments` row (source `engine`, `input.kind = "session"`) with what the
+   engine recommended for the next time and why; reopening the session marks it not applied. The optional view
+   `fitness_recommendations` lists them per user and exercise. The plan history in the app leaves these rows out.
+10. After each logged set the next row is scrolled into view, and checked again once the scroll has settled.
+
+The 60 %, 10-day, 35-day, +7-day and two-session figures are design defaults.

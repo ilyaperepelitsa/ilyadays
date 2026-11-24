@@ -9,7 +9,7 @@
 import safety from "../../../content/fitness/safety.json" with { type: "json" };
 import { groupById, muscleById } from "./catalog.mjs";
 import { DEFAULT_TEMPLATE_ID, RULES, buildProgram, newId, toIso, toMs, unitOf } from "./templates.mjs";
-import { incrementFor, initialState, isAssisted, isCompound, substituteState, warmupRamp } from "./progression.mjs";
+import { deloadDue, incrementFor, initialState, isAssisted, isCompound, substituteState, warmupRamp } from "./progression.mjs";
 import {
   AUTO_CLOSE_HOURS, DEFAULT_CATALOG, applySession, fallbackExercise, nextDayKey, planSession, resolveExercise, sessionStatus, summarize,
 } from "./session.mjs";
@@ -38,7 +38,7 @@ import { adherence, bodyweightLookup, dailyMean, effectiveLoad, ewma, prs } from
 /**
  * Per-device state of one running session (localStorage in the UI; never synced): today-only swaps, skipped
  * exercises and added sets, by slot id.
- * @typedef {{ swaps?: Record<string, string>, skipped?: Record<string, boolean>, extra?: Record<string, number> }} SessionUi
+ * @typedef {{ swaps?: Record<string, string>, skipped?: Record<string, boolean>, extra?: Record<string, number>, drafts?: Record<string, { kg: number, reps: number, rir: number | null, rirReported?: boolean }> }} SessionUi
  */
 /**
  * One set row on the session screen.
@@ -133,8 +133,10 @@ import { adherence, bodyweightLookup, dailyMean, effectiveLoad, ewma, prs } from
 const DAY_MS = 86_400_000;
 const HOUR_MS = 3_600_000;
 const DEFAULT_AT = "1970-01-01T00:00:00.000Z";
-/** RIR chips on a working set: 0 1 2 3 4+ ("4+" logs 4). */
-export const RIR_CHOICES = Object.freeze([0, 1, 2, 3, 4]);
+/** RIR chips on a working set: 0 1 2 3 4–7 8+ (a range logs its lower end). */
+export const RIR_CHOICES = Object.freeze([0, 1, 2, 3, 4, 8]);
+/** @param {number} rir the chip's label, also for a logged value between chips */
+export const rirLabel = (rir) => (rir >= 8 ? "8+" : rir >= 4 ? "4–7" : String(rir));
 /** The rest timer keeps counting past zero this long, then hides (research 08 §E). */
 export const REST_OVERRUN_SEC = 600;
 /** End tapped more than this after the last set: the session ends at the last set + END_GRACE_MS (a forgotten End). */
@@ -452,6 +454,7 @@ export function activePlan({ snapshot, session, program, swaps, catalog }) {
     settings: planSettings(snapshot, session.bodyweightKg),
     now: session.startedAt,
     catalog: catalog ?? DEFAULT_CATALOG,
+    deload: deloadDue(program, snapshot.sessions, session.startedAt).due,
   });
 }
 
@@ -521,7 +524,7 @@ export function swapInSession(planned, slotId, toExerciseId, states, catalog, ct
   if (ctx.program) {
     const dayKey = ctx.dayKey ?? (Array.isArray(planned) ? undefined : /** @type {PlannedSession} */ (planned).dayKey);
     const gym = withPreferences(ctx.gym ?? null, { ...(ctx.swaps ?? {}), [slotId]: toExerciseId });
-    const plan = planSession({ program: ctx.program, dayKey, states, gym, settings: ctx.settings ?? null, now: ctx.now, catalog: cat });
+    const plan = planSession({ program: ctx.program, dayKey, states, gym, settings: ctx.settings ?? null, now: ctx.now, catalog: cat, deload: Array.isArray(planned) ? undefined : /** @type {PlannedSession} */ (planned).deload });
     const hit = plan.exercises.find((p) => p.slotId === slotId);
     if (hit && hit.exerciseId === toExerciseId) next = hit;
   }
@@ -631,6 +634,11 @@ export function nextSetAdvice(planned, last, target, earlierSets = []) {
   const lo = planned.repRange?.[0] ?? ex?.repRange?.[0] ?? target.reps;
   const R = target.rir ?? 2;
   const step = planned.loadStep ?? (ex ? incrementFor(ex) : 0);
+  // the reps were made but the reserve was not: where one step is a big cut, take reps off instead of the load
+  if (ex && unitOf(ex) === "reps" && step > 0 && last.reps >= Math.max(lo, last.plannedReps ?? lo) && last.reps > lo
+    && last.rir != null && last.rir < Math.max(0, R - 1) && !isAssisted(ex) && step > last.kg * 0.1) {
+    return { suggest: { kg: last.kg, reps: Math.max(lo, last.reps - 2), rir: R }, reason: "repeat" };
+  }
   const tooHeavy = last.reps < lo || (last.rir != null && last.rir < Math.max(0, R - 1));
   if (tooHeavy && ex && step > 0 && ex.equipment !== "band") {
     const raw = isAssisted(ex) ? last.kg + step : Math.max(0, last.kg - step);
@@ -1015,13 +1023,47 @@ export function withPlannedSets(args, planned) {
 /** applySession with the planned working sets (withPlannedSets). @param {Parameters<typeof applySession>[0]} args @param {Record<string, number> | null | undefined} planned */
 export const applyWithPlan = (args, planned) => applySession(withPlannedSets(args, planned));
 
+/** Version of the recorded recommendation rows (`adjustments`, source "engine"). */
+export const RECOMMENDATION_VERSION = 1;
+
+/**
+ * The record of what the engine recommended after a session, per exercise: what the targets were, what they became and
+ * why. One `adjustments` row per session (source "engine", `input.kind` "session"), with the session's own id, so
+ * ending a reopened session again replaces it. `exercise_state` holds only the latest targets; these rows are the
+ * history behind them.
+ * @param {{ session: Session, outcomes: { exerciseId: string, slotId: string | null, outcome: Outcome, note: Text2 }[],
+ *   before: Record<string, ExerciseState>, after: Record<string, ExerciseState>, changed: ExerciseState[], now?: TimeLike, applied?: boolean }} p
+ * @returns {import("./types").Adjustment}
+ */
+export function recommendationRow({ session, outcomes, before, after, changed, now, applied = true }) {
+  const at = toIso(now);
+  const wrote = new Set(changed.map((c) => c.exerciseId));
+  /** @param {ExerciseState | undefined} s */
+  const target = (s) => (s ? { kg: s.workingKg, reps: s.targetReps, rir: s.rir, range: s.repRange } : null);
+  const items = outcomes.filter((o) => wrote.has(o.exerciseId)).map((o) => ({
+    exerciseId: o.exerciseId, slotId: o.slotId, outcome: o.outcome, from: target(before[o.exerciseId]), to: target(after[o.exerciseId]), note: o.note,
+  }));
+  return {
+    id: setIdFor(session.id, "recommendation", "session", 0),
+    at,
+    source: "engine",
+    input: { kind: "session", version: RECOMMENDATION_VERSION, sessionId: session.id, programId: session.programId, dayKey: session.dayKey, startedAt: session.startedAt, deload: session.plan?.prescription?.deload === true },
+    output: { recommendations: items },
+    applied,
+    updatedAt: at,
+  };
+}
+
+/** A recorded recommendation, as opposed to a plan change (AI or manual). @param {import("./types").Adjustment} a */
+export const isRecommendation = (a) => a.source === "engine" && a.input?.kind === "session";
+
 /**
  * End a session: `finished` with the progression applied (applySession → states for the next session), or
  * `abandoned` when no working set was logged (the rotation does not advance). The caller upserts `session` and every
  * row of `changed`. `summary` is what the end screen shows. `plannedSets` = plannedCounts of the screen (without it,
  * the counts of the session's plan as planned at its start).
  * @param {{ snapshot: Snapshot, session: Session, sets: LoggedSet[] | Record<string, LoggedSet>, program: Program, now?: TimeLike, catalog?: Catalog, plannedSets?: Record<string, number> | null }} p
- * @returns {{ session: Session, states: Record<string, ExerciseState>, changed: ExerciseState[], outcomes: { exerciseId: string, slotId: string | null, outcome: Outcome, note: Text2 }[], summary: SessionSummary }}
+ * @returns {{ session: Session, states: Record<string, ExerciseState>, changed: ExerciseState[], outcomes: { exerciseId: string, slotId: string | null, outcome: Outcome, note: Text2 }[], summary: SessionSummary, recommendation: import("./types").Adjustment | null }}
  */
 export function endSession({ snapshot, session, sets, program, now, catalog, plannedSets }) {
   program = session.plan?.program ?? program;
@@ -1053,13 +1095,13 @@ export function endSession({ snapshot, session, sets, program, now, catalog, pla
     next: null,
     reopen: { session, endedAt: /** @type {string} */ (finished.endedAt), states: [] },
   };
-  if (!work.length) return { session: finished, states: snapshot.exerciseState, changed: [], outcomes: [], summary };
+  if (!work.length) return { session: finished, states: snapshot.exerciseState, changed: [], outcomes: [], summary, recommendation: null };
 
   const gym = sessionGym(snapshot, session);
   const settings = planSettings(snapshot, session.bodyweightKg);
   const counts = plannedSets ?? plannedOf(snapshot, session, program, mine, cat);
   const prescription = activePlan({ snapshot: { ...snapshot, sets: { ...snapshot.sets, ...Object.fromEntries(mine.map((s) => [s.id, s])) } }, session, program, catalog: cat });
-  const applied = applyWithPlan({ program, session: finished, sets: mine, states: snapshot.exerciseState, catalog: cat, now: at, settings, gym, prescription }, counts);
+  const applied = applyWithPlan({ program, session: finished, sets: mine, states: snapshot.exerciseState, catalog: cat, now: at, settings, gym, prescription, deload: deloadDue(program, snapshot.sessions, session.startedAt).due }, counts);
   summary.reopen = {
     session,
     endedAt: /** @type {string} */ (finished.endedAt),
@@ -1098,7 +1140,8 @@ export function endSession({ snapshot, session, sets, program, now, catalog, pla
   /** @type {Snapshot} */
   const after = { ...snapshot, sessions: { ...snapshot.sessions, [finished.id]: finished }, sets: allSets, exerciseState: applied.states };
   summary.next = previewOf(nextAfter(after, program, at));
-  return { session: finished, states: applied.states, changed: applied.changed, outcomes: applied.outcomes, summary };
+  const recommendation = recommendationRow({ session: finished, outcomes: applied.outcomes, before: snapshot.exerciseState, after: applied.states, changed: applied.changed, now });
+  return { session: finished, states: applied.states, changed: applied.changed, outcomes: applied.outcomes, summary, recommendation };
 }
 
 /**
@@ -1153,7 +1196,7 @@ export function nextAfter(snapshot, program, now, opts = {}) {
   const rotationKey = nextDayKey(program, snapshot.sessions, now);
   const dayKey = opts.dayKey && dayOf(program, opts.dayKey) ? opts.dayKey : rotationKey;
   const gym = activeGym(snapshot);
-  const plan = planSession({ program, dayKey, states: snapshot.exerciseState, gym, settings: planSettings(snapshot, opts.bodyweightKg), now });
+  const plan = planSession({ program, dayKey, states: snapshot.exerciseState, gym, settings: planSettings(snapshot, opts.bodyweightKg), now, deload: deloadDue(program, snapshot.sessions, now).due });
   return { dayKey, rotationKey, plan, gym };
 }
 
@@ -1162,7 +1205,7 @@ export function nextAfter(snapshot, program, now, opts = {}) {
  * the others get their progression applied once (an exercise whose state already has `lastAt` ≥ the session start
  * counts as applied, and newer states are never overwritten). Sessions older than 30 days are left alone.
  * @param {Snapshot} snapshot @param {TimeLike} [now] @param {{ catalog?: Catalog }} [opts]
- * @returns {{ abandon: Session[], apply: { session: Session, changed: ExerciseState[] }[], states: Record<string, ExerciseState> }}
+ * @returns {{ abandon: Session[], apply: { session: Session, changed: ExerciseState[], recommendation: import("./types").Adjustment }[], states: Record<string, ExerciseState> }}
  */
 export function closeOuts(snapshot, now, opts = {}) {
   const cat = opts.catalog ?? DEFAULT_CATALOG;
@@ -1174,7 +1217,7 @@ export function closeOuts(snapshot, now, opts = {}) {
   let states = snapshot.exerciseState;
   /** @type {Session[]} */
   const abandon = [];
-  /** @type {{ session: Session, changed: ExerciseState[] }[]} */
+  /** @type {{ session: Session, changed: ExerciseState[], recommendation: import("./types").Adjustment }[]} */
   const apply = [];
   for (const s of candidates) {
     const sets = setsOfSession(snapshot.sets, s.id);
@@ -1193,13 +1236,14 @@ export function closeOuts(snapshot, now, opts = {}) {
     const program = snapshot.programs[s.programId] ?? (snapshot.activeProgramId ? snapshot.programs[snapshot.activeProgramId] : undefined);
     if (!program) continue;
     const planned = plannedOf({ ...snapshot, exerciseState: states }, s, program, sets, cat);
-    const r = applyWithPlan({ program, session: s, sets, states, catalog: cat, now: iso, settings: planSettings(snapshot, s.bodyweightKg), gym: sessionGym(snapshot, s) }, planned);
+    const r = applyWithPlan({ program, session: s, sets, states, catalog: cat, now: iso, settings: planSettings(snapshot, s.bodyweightKg), gym: sessionGym(snapshot, s), deload: deloadDue(program, snapshot.sessions, s.startedAt).due }, planned);
     const changed = r.changed.filter((c) => !newer(c.exerciseId));
     if (!changed.length) continue;
     const next = { ...states };
     for (const c of changed) next[c.exerciseId] = c;
+    const recommendation = recommendationRow({ session: s, outcomes: r.outcomes, before: states, after: next, changed, now: iso });
     states = next;
-    apply.push({ session: s, changed });
+    apply.push({ session: s, changed, recommendation });
   }
   return { abandon, apply, states };
 }

@@ -7,7 +7,7 @@
  */
 import { adherence, dayKey } from "./analytics.mjs";
 import { exerciseById as catalogExerciseById, isAvailable as catalogIsAvailable } from "./catalog.mjs";
-import { deloadWeek, holdActive, holdDay, incrementFor, initialState, isAssisted, plateauOf, roundLoad, startingLoad } from "./progression.mjs";
+import { deloadDue, holdActive, holdDay, incrementFor, initialState, isAssisted, plateauOf, roundLoad, startingLoad } from "./progression.mjs";
 import { DEFAULT_CATALOG, sessionStatus, summarize } from "./session.mjs";
 import { GOAL_MODES, RULES, clamp, newId, slotRole, toIso, toMs, unitOf } from "./templates.mjs";
 import {
@@ -139,7 +139,7 @@ How the engine works (work with it, do not re-implement it):
 - Double progression with RIR: a set is made when reps >= target and RIR >= target RIR - 1. All sets made below the top of the range -> +1 rep next time (more when the sets had reps in reserve beyond the target). All at the top -> weight + one step (the larger of the machine increment and stepPct) and back to the bottom of the range, but only when his weakest set says the new weight still allows the bottom of the range at the target RIR; until then the rep target keeps rising past the top (to 15 reps for compounds, 20 for isolation); at that ceiling the exercise is flagged for a variant with smaller steps, and two sessions in a row with every set at the ceiling earn one step anyway (only a step of at most 5 kg or +25 %), whose first session may fall short without counting as a miss. He usually logs sets with one tap and no RIR: an unreported RIR counts as the target RIR. Every set at the top with RIR >= target + 1, or a first set >= top + overshootReps -> a bigger jump (at most +10 %). Fewer working sets logged than planned -> hold. Missed target -> hold. Below the range -> failed; after failsBeforeDeload failed sessions in a row the weight drops deloadPct (on a coarse stack by one whole step, which can be more).
 - Plateau memory: after such a deload the engine remembers the weight that failed; it goes back to that weight only after 2 sessions in a row with every set at the top of the range whose sets carry that weight (3 after the second deload from it, with 2 more reps in hand that he earns by adding reps first), and until then takes a smaller step below it or holds at the top; a calibration session counts like any other but does not jump back to it either. states[].plateau = { failedKg, times } while that is pending, else null: explain a long hold at the top with it, and suggest smaller steps or a variant when times >= 2.
 - The first session of a new or swapped exercise, after a goal, rep-range or RIR change, and after a break of 15+ days is a calibration session: the best set re-anchors the working weight and misses do not count.
-- Breaks are handled automatically, in calendar days (one missed week, 14 days, is not a break): 15-28 days without an exercise -> 5-10 % lighter (to the nearest machine step; when the steps are too coarse for that, the same weight with 2 fewer reps); 29-90 days -> 20 % lighter, back to the bottom of the range; more than 90 days -> 30 % lighter and treated as a new exercise. Do not add a deload for a break unless he reports other problems.
+- Breaks are handled automatically, in calendar days (one missed week, 14 days, is not a break): 15-28 days without an exercise -> 5-10 % lighter (to the nearest machine step; when the steps are too coarse for that, the same weight with 2 fewer reps); 29-90 days -> 20 % lighter, back to the bottom of the range; more than 90 days -> 30 % lighter and treated as a new exercise. After a 15-35 day gap whose session met its targets, a gap of about the same length (up to 7 days longer, at most 35) is not cut again, and after a 29-90 day break the load climbs back to the old one a step at a time. Planned deload weeks are skipped when fewer than 60 % of the block's sessions were done. Do not add a deload for a break unless he reports other problems.
 - A planned deload week comes every deloadEveryWeeks weeks (40 % fewer sets, same weights, 2 more reps in reserve).
 - Days rotate in order (A -> B -> C -> A) whatever the calendar, so a missed day never skips a workout.
 - A swapped-in exercise starts at 85 % of the equivalent weight (60 % for another movement pattern; half of that again for a one-arm version of a two-arm exercise) and calibrates. A program swap keeps this link to the replaced exercise's history.
@@ -236,7 +236,7 @@ export function advisorContext({ program, states, sessions, sets, settings, body
   const birthYear = settings?.birthYear;
   const recentStates = Object.values(stateMap).filter((s) => ids.includes(s.exerciseId) || (s.lastAt && at - toMs(s.lastAt) < 60 * 86_400_000));
   const changes = listOf(adjustments)
-    .filter((a) => isObj(a) && typeof a.at === "string")
+    .filter((a) => isObj(a) && typeof a.at === "string" && !(a.source === "engine" && a.input?.kind === "session"))
     .sort((a, b) => toMs(b.at) - toMs(a.at))
     .slice(0, 5)
     .map((a) => {
@@ -254,7 +254,7 @@ export function advisorContext({ program, states, sessions, sets, settings, body
       .slice(0, 6)
       .map((c) => ({ id: c.id, name: enName(c.id, cat), equipment: cat.exerciseById(c.id)?.equipment ?? "" }));
   }
-  const block = deloadWeek(program, at);
+  const block = deloadDue(program, sessionRows, at);
   return {
     today: new Date(at).toISOString().slice(0, 10),
     pageLanguage: lang,

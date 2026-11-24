@@ -16,7 +16,7 @@ import { localPath } from "@/lib/i18n";
 import { pick, pluralRu, t2 } from "@/lib/fitness/i18n";
 import { GROUPS, exerciseById } from "@/lib/fitness/catalog.mjs";
 import { GOAL_MODES, newId } from "@/lib/fitness/templates.mjs";
-import { deloadWeek, weeklySets, weeklySetsTarget } from "@/lib/fitness/progression.mjs";
+import { deloadDue, weeklySets, weeklySetsTarget } from "@/lib/fitness/progression.mjs";
 import { nextDayKey, planSession } from "@/lib/fitness/session.mjs";
 import {
   addLegs, commitProgram, defaultProgram, isDefaultProgram, programDiff, removeLegs, setDays, setGoal, setHold,
@@ -128,17 +128,17 @@ export function ProgramEditor({ lang }: { lang: Lang }) {
     const fresh = isDefaultProgram(program) || program.createdAt === EPOCH;
     for (const day of program.days) {
       try {
-        out[day.key] = planSession({ program, dayKey: day.key, states, gym, settings, now, deload: fresh ? false : undefined });
+        out[day.key] = planSession({ program, dayKey: day.key, states, gym, settings, now, deload: fresh ? false : deloadDue(program, snapshot.sessions, now).due });
       } catch {
         /* one broken row must not take the page down: the day shows without targets */
       }
     }
     return out;
-  }, [program, states, gym, settings, now]);
+  }, [program, states, gym, settings, now, snapshot.sessions]);
 
   const nextKey = now == null ? null : nextDayKey(program, snapshot.sessions, now);
   const nextDay = nextKey ? program.days.find((d) => d.key === nextKey) : undefined;
-  const block = now != null && !isDefaultProgram(program) && program.createdAt !== EPOCH ? deloadWeek(program, now) : null;
+  const block = now != null && !isDefaultProgram(program) && program.createdAt !== EPOCH ? deloadDue(program, snapshot.sessions, now) : null;
 
   const edit: Edit = (fn) => {
     if (!editable) return;

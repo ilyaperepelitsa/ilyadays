@@ -4,6 +4,7 @@
  * Apply. The OpenAI key, model and effort are the trip planner's (same browser storage, same client). Also the list
  * of recent plan changes (advisor and manual saves), which everyone can read.
  */
+import { isRecommendation } from "@/lib/fitness/tracker.mjs";
 import { useState, useSyncExternalStore } from "react";
 import type {
   Adjustment, BodyweightEntry, ExerciseState, FitnessStore, Gym, Lang, LoggedSet, Program, Session, Settings, Text2,
@@ -357,7 +358,8 @@ function changeText(a: Adjustment, lang: Lang): string {
 
 export function PlanHistory({ lang, adjustments }: { lang: Lang; adjustments: Record<string, Adjustment> }) {
   const rows = Object.values(adjustments)
-    .filter((a) => a && typeof a.at === "string")
+    // what the engine recommended after each session is its own history, not a plan change
+    .filter((a) => a && typeof a.at === "string" && !isRecommendation(a))
     .sort((a, b) => (a.at < b.at ? 1 : -1))
     .slice(0, 8);
   if (!rows.length) return null;

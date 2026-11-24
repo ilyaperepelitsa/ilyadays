@@ -325,7 +325,7 @@ const where = (sim, r) => `${sim.name} ${iso(r.now).slice(0, 16)} ${r.dayKey}/${
 /** The smallest load step of a record's exercise at the gym it was done at. */
 const incOf = (r) => incrementFor(r.ex, r.gym);
 /** ≥ 14 days since the exercise was last done. */
-const gapped = (r) => (r.daysSince ?? 0) >= RULES.gap.keepBelowDays;
+const gapped = (r) => (r.daysSince ?? 0) >= RULES.gap.keepBelowDays && !(typeof r.before?.afterGap === 'number' && r.daysSince <= Math.min(35, r.before.afterGap + 7));
 /** A deload-week session the rules hold (no evaluation): not back from a break, not a first (test) session. */
 const held = (e) => e.deload && !gapped(e) && Boolean(e.before?.sessions);
 /** A calibration session (documented): the first time on the exercise, or back from a ≥ 14-day break. */
@@ -499,8 +499,26 @@ function checkSteps(sim) {
       const top = Math.max(hi, e.before.targetReps);
       const base = effective(ex, e.used);
       const delta = Math.abs(e.after.workingKg - e.used);
+      // two earlier ways up, one increment each, every set at the planned load and target with the reserve in hand: a
+      // second session in a row reported far too easy (the capacity guard below still applies), or a step back towards
+      // the load before a long break, never past it
+      const regains = /Building back/.test(e.note?.en ?? '');
+      const tooEasy = /Two sessions in a row with plenty/.test(e.note?.en ?? '');
+      const farTooLight = /^Far too light/.test(e.note?.en ?? '');
+      if (farTooLight) assert.ok(e.sets.every((s) => s.rir >= 8), `${at}: far too light without 8+ on every set`);
+      if (regains || tooEasy) {
+        assert.ok(e.sets.every((s) => s.kg === e.used && s.reps >= e.before.targetReps && (s.rir == null || s.rir >= R - RULES.rirTolerance)), `${at}: an early step without every set made`);
+        assert.ok(Math.abs(delta - inc) < 1e-9, `${at}: an early step of ${delta} kg`);
+        assert.ok(e.sets.length >= working(e.pe).length, `${at}: an early step with sets left out`);
+        assert.equal(e.after.targetReps, lo, `${at}: an early step starts from the bottom`);
+      }
+      if (regains) {
+        assert.ok(e.before.regain && !harder(ex, e.after.workingKg, e.before.regain.kg), `${at}: past the load before the break`);
+        return;
+      }
+      if (tooEasy) assert.ok(e.before.bigStep?.easy >= 1 && e.sets.every((s) => s.rir >= R + 2), `${at}: too easy without two reports`);
       // double progression: more load only after every working set reached the top (or the widened target)
-      assert.ok(e.sets.every((s) => s.kg === e.used && s.reps >= top && (s.rir == null || s.rir >= R - RULES.rirTolerance)), `${at}: load up without every set at ${top}`);
+      else assert.ok(e.sets.every((s) => s.kg === e.used && s.reps >= top && (s.rir == null || s.rir >= R - RULES.rirTolerance)), `${at}: load up without every set at ${top}`);
       if (bigStep(e)) {
         // the step at the rep ceiling: one increment, at most 5 kg or +25 %, after at least two sessions in a row with
         // every set at the ceiling and the target reps in reserve; the guard does not carry it (else it is no big step)
@@ -565,7 +583,8 @@ function checkAssisted(sim) {
     assert.ok(to >= 0, `${at}: assistance ${to}`);
     if (to < e.used) {
       const target = calibrating(e) ? lo : Math.max(hi, e.before.targetReps);
-      const hit = e.sets.filter((s) => s.kg === e.used).every((s) => s.reps >= target && (s.rir == null || s.rir >= e.params.rir - RULES.rirTolerance));
+      const early = /Building back|Two sessions in a row with plenty/.test(e.note?.en ?? ''); // checkSteps bounds these
+      const hit = early || e.sets.filter((s) => s.kg === e.used).every((s) => s.reps >= target && (s.rir == null || s.rir >= e.params.rir - RULES.rirTolerance));
       assert.ok(hit, `${at}: assistance ${e.used} → ${to} kg without hitting ${target} on every set`);
     }
     if (e.outcome === 'deloaded') assert.ok(to > e.used, `${at}: the deload must add assistance (${e.used} → ${to} kg)`);
@@ -1132,7 +1151,7 @@ describe('master plan §16 in the loop: planSession → logged sets → applySes
   };
 
   it('RIR 5 against a target of 2 climbs faster than a rep per session, then the load jumps (rule 3)', () => {
-    for (const [rir, expected] of [[5, ['40x6', '40x9', '40x10', '45x6']], [4, ['40x6', '40x8', '40x10', '45x6']], [2, ['40x6', '40x7', '40x8', '40x9']]]) {
+    for (const [rir, expected] of [[5, ['40x6', '40x9', '45x6', '45x9']], [4, ['40x6', '40x8', '40x10', '45x6']], [2, ['40x6', '40x7', '40x8', '40x9']]]) {
       let states = chest();
       const seen = [];
       for (let k = 0; k < 4; k++) {

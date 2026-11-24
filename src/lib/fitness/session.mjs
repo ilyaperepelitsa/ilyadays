@@ -18,7 +18,7 @@ import { enforcePlanPreferences, exerciseAllowed } from "./plan-preferences.mjs"
 import { effectiveLoad } from "./analytics.mjs";
 import { RULES, WARMUP, directGroups, finisherMinutes, slotParams, toIso, toMs, unitOf } from "./templates.mjs";
 import {
-  calendarDaysBetween, convertState, deloadSets, deloadWeek, e1rmOf, firstSessionTestProtocol, gapAdjust, holdActive, holdDay, incrementFor,
+  CADENCE_DAYS, calendarDaysBetween, convertState, deloadSets, deloadWeek, e1rmOf, gapAdjust, holdActive, holdDay, incrementFor,
   initialState, isAssisted, isCompound, joinText, nextState, roundLoad, substituteState, warmupRamp,
 } from "./progression.mjs";
 
@@ -444,8 +444,11 @@ export function planSession({ program, dayKey, states, gym = null, settings = nu
     let rir = slot.rir;
     if (deloadThis) {
       sets = deloadSets(sets);
-      reps = Math.max(uStepOf(exercise), reps - RULES.deload.repsMinus * uStepOf(exercise));
-      rir = Math.min(5, rir + RULES.deload.rirBonus);
+      const inReps = unitOf(exercise) === "reps";
+      const full = reps;
+      // never a token set of one or two: at least 3 reps (or the target when it is lower), the reserve following
+      reps = Math.max(inReps ? Math.min(full, 3) : uStepOf(exercise), reps - RULES.deload.repsMinus * uStepOf(exercise));
+      rir = Math.min(5, rir + (inReps ? Math.min(RULES.deload.rirBonus, full - reps) : RULES.deload.rirBonus));
     }
     let ramp = isCompound(exercise)
       ? warmupRamp(workingKg, exercise, state.e1rm, { gym, bodyweightKg, targetReps: reps, rir })
@@ -482,8 +485,7 @@ export function planSession({ program, dayKey, states, gym = null, settings = nu
     // a hold whose date has passed (cleared by the next session): the engine's "held until" note would be stale
     const passed = typeof state.holdUntil === "string" && !holdActive(state, at) ? state.holdUntil : null;
     const stale = Boolean(passed && state.note && (state.note.en.includes(holdDay(passed, "en")) || state.note.ru.includes(holdDay(passed, "ru"))));
-    if (gapReset) parts.push(firstSessionTestProtocol(exercise, { repRange: range, gym }));
-    else if (!notes.length && state.note) parts.push(stale && passed ? holdOverLine(passed) : state.note);
+    if (!notes.length && state.note) parts.push(stale && passed ? holdOverLine(passed) : state.note);
     // a weight hold still ahead (master plan §16): said once — the engine's note may already name its date
     const hold = holdActive(state, at) ? /** @type {string} */ (state.holdUntil) : null;
     if (hold && !parts.some((p) => p.en.includes(holdDay(hold, "en")) || p.ru.includes(holdDay(hold, "ru")))) parts.splice(deloadThis ? 1 : 0, 0, holdLine(hold));
@@ -516,6 +518,7 @@ export function planSession({ program, dayKey, states, gym = null, settings = nu
     dayKey: day.key,
     dayName: { en: day.name.en, ru: day.name.ru },
     exercises,
+    deload: isDeload,
     estimatedMinutes: plannedMinutes(exercises, day, cat),
     warmup: { en: WARMUP.general.en, ru: WARMUP.general.ru },
   };
@@ -623,7 +626,8 @@ export function applySession({ program, session, sets, states, catalog, now, set
   const outcomes = [];
   const bodyweightKg = session.plan ? session.bodyweightKg ?? null : session.bodyweightKg ?? settings?.bodyweightKg ?? null;
   const start = toMs(session.startedAt);
-  const isDeload = deload ?? deloadWeek(program, start).due;
+  // what the started session was planned as decides; legacy plans and direct callers fall back to the calendar
+  const isDeload = session.plan?.prescription?.deload ?? deload ?? deloadWeek(program, start).due;
   const work = setsOf(sets, session.id).filter((s) => s.kind !== "warmup");
 
   /** @type {Map<string, { sets: LoggedSet[], slotId: string | null }>} */
@@ -661,7 +665,8 @@ export function applySession({ program, session, sets, states, catalog, now, set
       prev = seedState({ slot, exercise, range: owner?.repRange ?? params.repRange, rir: owner?.rir ?? params.rir, states: prevStates, gym, bodyweightKg, goal: program.goal, now, catalog: cat });
     }
     const gapDays = prev.lastAt ? calendarDaysBetween(prev.lastAt, start) : 0;
-    const gap = gapDays >= RULES.gap.keepBelowDays;
+    const gap = gapDays >= RULES.gap.keepBelowDays && gapAdjust(prev, gapDays, now, { exercise, gym, bodyweightKg }).outcome != null;
+    const shortGap = gapDays >= RULES.gap.keepBelowDays && gapDays <= CADENCE_DAYS;
     // the state as stored (its own range), which a planned deload week and a slot that only borrows the exercise keep
     let stored = prev;
     let converted = false;
@@ -693,6 +698,8 @@ export function applySession({ program, session, sets, states, catalog, now, set
       const state = { ...kept, sessions: (kept.sessions ?? 0) + 1, lastAt: at, note, updatedAt };
       // a weight hold that has passed is cleared, as nextState clears it
       if (kept.holdUntil != null && !holdActive(kept, at)) state.holdUntil = null;
+      // a session that was not evaluated ends the cadence memory
+      if (state.afterGap != null) state.afterGap = null;
       next[exerciseId] = state;
       changed.push(state);
       outcomes.push({ exerciseId, slotId: group.slotId, outcome: "held", note });
@@ -720,11 +727,15 @@ export function applySession({ program, session, sets, states, catalog, now, set
       /** @type {ExerciseState} */
       const state = { ...stored, e1rm: Math.max(stored.e1rm || 0, r.state.e1rm || 0), sessions: (stored.sessions ?? 0) + 1, lastAt: at, updatedAt };
       if (stored.holdUntil != null && !holdActive(stored, at)) state.holdUntil = null;
+      // a session that was not evaluated ends the cadence memory
+      if (state.afterGap != null) state.afterGap = null;
       next[exerciseId] = state;
       changed.push(state);
       outcomes.push({ exerciseId, slotId: group.slotId, outcome: "held", note });
       continue;
     }
+    if (shortGap && r.outcome === "progressed") r.state.afterGap = gapDays;
+    else if (r.state.afterGap != null) r.state.afterGap = null;
     next[exerciseId] = r.state;
     changed.push(r.state);
     outcomes.push({ exerciseId, slotId: group.slotId, outcome: r.outcome, note: r.note });

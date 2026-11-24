@@ -570,6 +570,32 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
   /** effort as reported; a reserve nobody reported (one-tap logging: the pre-filled target) counts as the target @param {LoggedSet} s */
   const rirOf = (s) => (s.rir == null || s.prescription?.rirReported === false ? R : s.rir);
 
+  /** effort the lifter reported (legacy logs without prescription metadata keep their stored RIR) @param {LoggedSet} s */
+  const reportedRir = (s) => s.rir != null && s.prescription?.rirReported !== false;
+  // a reserve reported on a later set is evidence for the earlier ones (they were fresher); after the last report it
+  // fades by one rep a set. Never below the target, and nothing is inferred when nothing was reported
+  /** @type {Map<LoggedSet, number>} */
+  const inferred = new Map();
+  {
+    /** @type {number | null} */
+    let later = null;
+    for (const s of [...sets].reverse()) {
+      if (reportedRir(s)) later = /** @type {number} */ (s.rir);
+      inferred.set(s, reportedRir(s) ? /** @type {number} */ (s.rir) : Math.max(R, later ?? R));
+    }
+    let fade = R;
+    for (const s of sets) {
+      if (reportedRir(s)) fade = /** @type {number} */ (s.rir);
+      else {
+        fade = Math.max(R, fade - 1);
+        if (!sets.some((x) => reportedRir(x) && sets.indexOf(x) > sets.indexOf(s))) inferred.set(s, fade);
+      }
+    }
+  }
+  /** @param {LoggedSet} s */
+  const reserve = (s) => inferred.get(s) ?? rirOf(s);
+  const reports = sets.filter(reportedRir).length;
+
   // e1RM: best reliable set of this session (effective load), kept as the best seen; unrounded here, because the
   // 0.01 kg display rounding can tip the calibration below onto the next plate down (51.714 → 51.71 → 39.997 kg)
   let best = 0;
@@ -601,6 +627,12 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
     const good = sets.filter((s) => s.reps >= lo && (s.rir == null || s.prescription?.rirReported === false || s.rir >= R - tol));
     if (good.length) L = good.reduce((kg, s) => (isHarder(s.kg, kg, exercise) ? r2(s.kg) : kg), r2(good[0].kg));
   }
+  // one hard set is not a new baseline: the screen's own lighter suggestions after it do not outvote the planned load
+  // when that load was lifted within the range (a set below the range still counts as a miss)
+  const eased = sets.some((s) => s.prescription?.reason === "reduce" && isHarder(state.workingKg, s.kg, exercise))
+    && sets.some((s) => sameKg(s.kg, state.workingKg))
+    && sets.every((s) => (s.prescription?.reason === "reduce" && isHarder(state.workingKg, s.kg, exercise)) || (sameKg(s.kg, state.workingKg) && s.reps >= lo));
+  if (eased) L = r2(state.workingKg);
   const onPlan = sameKg(L, state.workingKg);
   const maxT = repCeiling(exercise, top);
   const T = clamp(state.targetReps ?? lo, lo, maxT);
@@ -624,12 +656,12 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
   // effort the lifter did not report (one-tap logging: no RIR chip) counts as the planned effort, in every session:
   // reps and the ordinary top-of-range step go on without it. Only the calibration re-anchor, which raises the load
   // FROM effort, needs it reported
-  const effortKnown = unit !== "reps" || sets.every((s) => s.rir != null && s.prescription?.rirReported !== false);
+  const effortKnown = unit !== "reps" || (reports > 0 && reports * 2 >= sets.length);
   const allMade = atLoad.every(made) && lighter.length === 0 && intendedMade;
   const allTop = allMade && atLoad.every((s) => s.reps >= topEff);
   const minR = Math.min(...atLoad.map((s) => s.reps));
   // rule 3: what the weakest set would have reached at the target RIR (6 reps with 5 in reserve at RIR 2 → 9)
-  const atTarget = unit === "reps" ? Math.min(...atLoad.map((s) => s.reps + Math.max(0, rirOf(s) - R))) : 0;
+  const atTarget = unit === "reps" ? Math.min(...atLoad.map((s) => s.reps + Math.max(0, reserve(s) - R))) : 0;
   const N = params.failsBeforeDeload;
   const planned = opts.plannedSets ?? 0;
   const incomplete = planned > 0 && sets.length < planned;
@@ -643,7 +675,7 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
   const bwRef = bw && bw > 0 ? bw : RULES.bodyweightRefKg;
   /** @param {number} kg */
   const effRef = (kg) => effectiveKg(kg, exercise, bwRef) ?? 0;
-  const weakest = unit === "reps" ? Math.min(...atLoad.map((s) => s.reps + rirOf(s))) : 0;
+  const weakest = unit === "reps" ? Math.min(...atLoad.map((s) => s.reps + reserve(s))) : 0;
   const reach = (30 + weakest) / (30 + lo + R);
   // rule 5: the load a deload came down from, until a complete session past it stays in the range (test sessions
   // too). The streak counts sessions in a row at the planned load with every set at the top whose sets carry that load
@@ -716,6 +748,13 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
     // test session: the best set re-anchors the working load (raise after an easy start, lower after a heavy one;
     // a hold blocks the raise)
     nextKg = allMade ? calibrated : (isHarder(calibrated, L, exercise) ? L : calibrated);
+    // not lighter than a load this session already showed to be easy enough (a range chip hides how easy)
+    if (!allMade) {
+      for (const kg of new Set(sets.map((s) => r2(s.kg)))) {
+        if (isHarder(kg, nextKg, exercise) && !isHarder(kg, L, exercise)
+          && sets.filter((s) => sameKg(s.kg, kg)).every((s) => s.reps >= lo && rirOf(s) >= R)) nextKg = kg;
+      }
+    }
     nextT = lo;
     fails = 0;
     outcome = isHarder(nextKg, L, exercise) ? "progressed" : "held";
@@ -834,7 +873,7 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
       if (overshoot) options.push({ kg: roundLoad(harder(L, Math.min(2 * step, cap), exercise), exercise, gym, "easier"), why: "overshoot" });
       const effNow = effRef(L);
       // rule 3: every set logged with RIR ≥ target + 1 → the load the weakest set implies for the bottom of the range
-      if (unit === "reps" && effNow > 0 && atLoad.every((s) => s.rir != null && rirOf(s) >= R + 1)) {
+      if (unit === "reps" && effNow > 0 && reports > 0 && atLoad.every((s) => reserve(s) >= R + 1)) {
         const want = Math.min(effNow * reach, effNow + cap);
         options.push({ kg: roundLoad(fromEffective(want, exercise, bwRef), exercise, gym, "easier"), why: "easy" });
       }
@@ -957,11 +996,87 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
   } else {
     fails = 0;
     outcome = "held";
-    nextT = clamp(Math.max(minR + uStep, atTarget), lo, Tref);
+    nextT = eased ? clamp(minR - uStep, lo, Tref) : clamp(Math.max(minR + uStep, atTarget), lo, Tref);
+    if (eased) keeps = true;
     const t = nextT;
     note = text2((l) => (l === "ru"
       ? `Повторите ${repeatRu(L, exercise)}, цель — ${amount(t, unit, l)}: не все подходы дошли до ${amount(Tref, unit, l)} с запасом ${num(R, l)}.`
       : `Repeat ${loadText(L, exercise, l)} and aim for ${amount(t, unit, l)}: not every set reached ${amount(Tref, unit, l)} with ${num(R, l)} in reserve.`));
+  }
+
+  // a step the double progression did not take, for a lifter whose reports say the load is far too light, or who is
+  // coming back to a load held before a break. One equipment step, at most +maxPct, never during a hold or a rule-5 wait
+  const upOne = roundLoad(harder(L, inc, exercise), exercise, gym, "nearest");
+  const stepUp = loadable && onPlan && !incomplete && !holding && allMade && !below && sameKg(nextKg, L) && isHarder(upOne, L, exercise)
+    && !waits(upOne) && margin(upOne) === 0 && !(assisted && L <= 0);
+  const modest = effRef(L) > 0 && effRef(upOne) <= effRef(L) * (1 + RULES.bigStep.maxPct / 100) + 1e-9;
+  let easy = 0;
+  if (unit === "reps" && onPlan && !incomplete && allMade && reportedRir(sets[sets.length - 1])
+    && atLoad.every((s) => reserve(s) >= R + 2) && !holding) {
+    easy = (Number.isFinite(bigStep?.easy) ? /** @type {number} */ (bigStep?.easy) : 0) + 1;
+    if (easy >= 2 && stepUp && modest && carries(upOne)) {
+      nextKg = upOne;
+      note = text2((l) => (l === "ru"
+        ? `Две тренировки подряд с большим запасом: в следующий раз ${loadText(upOne, exercise, l)} × ${amount(lo, unit, l)}.`
+        : `Two sessions in a row with plenty in reserve: ${loadText(upOne, exercise, l)} × ${amount(lo, unit, l)} next time.`));
+    }
+  }
+  // every set reported at FAR_TOO_LIGHT or more in reserve: no second session needed. The hardest load the weakest set
+  // carries, at most +maxPct in one go
+  if (unit === "reps" && loadable && onPlan && !incomplete && !holding && allMade && !below && !(assisted && L <= 0)
+    && effRef(L) > 0 && reportedRir(sets[sets.length - 1]) && atLoad.every((s) => reserve(s) >= FAR_TOO_LIGHT)) {
+    const want = roundLoad(fromEffective(effRef(L) * Math.min(reach, 1 + RULES.bigStep.maxPct / 100), exercise, bwRef), exercise, gym, "easier");
+    if (isHarder(want, nextKg, exercise) && isHarder(want, L, exercise) && !waits(want) && margin(want) === 0 && carries(want)) {
+      nextKg = want;
+      nextT = lo;
+      outcome = "progressed";
+      keeps = true;
+      ceilingStreak = 0;
+      easy = 0;
+      note = text2((l) => (l === "ru"
+        ? `Слишком легко: в следующий раз ${loadText(want, exercise, l)} × ${amount(lo, unit, l)}.`
+        : `Far too light: ${loadText(want, exercise, l)} × ${amount(lo, unit, l)} next time.`));
+    }
+  }
+  /** @type {ExerciseState["regain"]} */
+  let regain = state.regain && Number.isFinite(state.regain.kg) && isHarder(state.regain.kg, L, exercise) && !below ? state.regain : null;
+  // an incomplete log says nothing; a miss ends the way back
+  if (regain && !allMade && !incomplete) regain = null;
+  if (regain && allMade && !incomplete && onPlan) {
+    const made = (regain.made ?? 0) + 1;
+    const sure = unit === "reps" && reports > 0 && atLoad.every((s) => reserve(s) >= R + 1);
+    regain = { kg: regain.kg, made };
+    // nobody reported the effort: only a step small enough (the 10 % of a double step) to be safe without it
+    const small = effRef(L) > 0 && effRef(upOne) <= effRef(L) * (1 + RULES.doubleStepCapPct / 100) + 1e-9;
+    // a bigger step: the capacity guard, with the reps a range chip hides as credit, reported up to the last set (a load known
+    // from before the break, and reserve the chips cannot show)
+    const credit = unit === "reps" && reportedRir(sets[sets.length - 1]) && atLoad.every((s) => reserve(s) >= 4) ? 3 : 0;
+    const able = unit === "reps" && effRef(upOne) * (30 + lo + R) <= effRef(L) * (30 + weakest + credit) + 1e-9;
+    if (((sure || made >= 2) && small || able) && stepUp && !isHarder(upOne, regain.kg, exercise) && sameKg(nextKg, L)) {
+      nextKg = upOne;
+      regain = { kg: regain.kg, made: 0 };
+      note = text2((l) => (l === "ru"
+        ? `Возвращаемся к нагрузке до перерыва: в следующий раз ${loadText(upOne, exercise, l)} × ${amount(lo, unit, l)}.`
+        : `Building back to your load before the break: ${loadText(upOne, exercise, l)} × ${amount(lo, unit, l)} next time.`));
+    }
+  }
+  if (regain && !isHarder(regain.kg, nextKg, exercise)) regain = null;
+  if (stepUp && sameKg(nextKg, upOne)) {
+    outcome = "progressed";
+    nextT = lo;
+    keeps = true;
+    // the capacity guard does not vouch for a step back towards an earlier load: its first session may fall short
+    if (regain || !carries(upOne)) graceKg = upOne;
+    ceilingStreak = 0;
+    easy = 0;
+  }
+
+  // the next machine step is still too big for what the reports show: only the lifter can tell whether it is not
+  if (easy >= 2 && loadable && !(assisted && L <= 0) && atLoad.every((s) => reserve(s) >= FAR_TOO_LIGHT) && sameKg(nextKg, L)) {
+    const base = note;
+    note = text2((l) => `${base[l]} ${l === "ru"
+      ? "Если вес кажется слишком лёгким, прибавьте вес сами на шаг перед первым рабочим подходом: он станет новой отправной точкой."
+      : "If it still feels far too light, raise the weight yourself by a step before the first working set: what you complete becomes the new load."}`);
   }
 
   // the rpe rule: not in a test session (the re-anchor above already turns its e1RM into the load, with one more rep in
@@ -1007,8 +1122,26 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
   if ((!intendedOk || incomplete) && isHarder(nextKg, state.workingKg, exercise)) {
     nextKg = state.workingKg;
     if (outcome === "progressed") outcome = "held";
+    // … except the load a test found: the hardest one whose every set was made, else one step under the hardest that
+    // reached the bottom of the range. Needs a complete log of two sets or more
+    if (testing && !incomplete && !holding && loadable && sets.length > 1) {
+      const tried = [...new Set(sets.map((s) => r2(s.kg)))].filter((kg) => isHarder(kg, state.workingKg, exercise));
+      /** @param {number[]} list */
+      const hardest = (list) => list.reduce((/** @type {number | null} */ a, b) => (a == null || isHarder(b, a, exercise) ? b : a), null);
+      const clean = hardest(tried.filter((kg) => sets.filter((s) => sameKg(s.kg, kg)).every((s) => s.reps >= lo && rirOf(s) >= R - tol)));
+      const once = hardest(tried.filter((kg) => sets.some((s) => sameKg(s.kg, kg) && s.reps >= lo)));
+      const found = clean ?? (once == null ? null : roundLoad(easier(once, inc, exercise), exercise, gym, "easier"));
+      const allowed = found == null ? null : underPlateau(found);
+      if (allowed != null && isHarder(allowed, state.workingKg, exercise)) nextKg = allowed;
+    }
     const k = nextKg;
-    note = text2((l) => l === "ru"
+    const kept = isHarder(k, state.workingKg, exercise);
+    if (kept) nextT = lo;
+    note = text2((l) => kept
+      ? (l === "ru"
+        ? `Не все подходы удались, поэтому берём вес по удавшимся: ${loadText(k, exercise, l)} × ${amount(nextT, unit, l)} в следующий раз.`
+        : `Not every set was completed, so the load comes from the sets that were: ${loadText(k, exercise, l)} × ${amount(nextT, unit, l)} next time.`)
+      : l === "ru"
       ? `Исходный план не выполнен: в следующий раз ${loadText(k, exercise, l)} × ${amount(nextT, unit, l)}. Прибавки веса нет.`
       : `Original working targets were not completed: ${loadText(k, exercise, l)} × ${amount(nextT, unit, l)} next time. No load increase.`);
   }
@@ -1065,8 +1198,19 @@ export function nextState(state, loggedSets, params, exercise, now, opts = {}) {
   // rule 2, coarse steps: the streak at the ceiling, or the load whose first session may fall short; an incomplete
   // log leaves the memory, anything else uses it up (states without one do not grow the field)
   if (graceKg != null) out.bigStep = { graceKg };
-  else if (ceilingStreak > 0) out.bigStep = { streak: ceilingStreak };
-  else if (state.bigStep != null && !(incomplete && !below)) out.bigStep = null;
+  else if (ceilingStreak > 0 || (easy > 0 && sameKg(nextKg, L))) {
+    out.bigStep = { ...(ceilingStreak > 0 ? { streak: ceilingStreak } : {}), ...(easy > 0 && sameKg(nextKg, L) ? { easy } : {}) };
+  }
+  else if (state.bigStep != null) {
+    if (!(incomplete && !below)) out.bigStep = null;
+    else if (state.bigStep.easy != null) {
+      // the too-easy streak counts complete sessions in a row
+      const { easy: _easy, ...rest } = state.bigStep;
+      void _easy;
+      out.bigStep = Object.keys(rest).length ? rest : null;
+    }
+  }
+  if (state.regain != null) out.regain = regain;
   // a hold that has passed is cleared; states without one do not grow the field
   if (state.holdUntil != null) out.holdUntil = holding ? state.holdUntil : null;
   if (variant !== undefined) out.variant = variant;
@@ -1111,6 +1255,9 @@ export function gapAdjust(state, daysSince, now, { exercise, gym, bodyweightKg }
   const g = RULES.gap;
   if (!(daysSince >= g.keepBelowDays)) return { state, outcome: null, pct: 0, note: null };
   const reset = daysSince >= g.longFromDays;
+  // training this exercise every two to five weeks is a cadence, not a string of breaks: after a session that followed
+  // such a gap and met its targets, a gap of about the same length is not cut again
+  if (typeof state.afterGap === "number" && daysSince <= Math.min(CADENCE_DAYS, state.afterGap + 7)) return { state, outcome: null, pct: 0, note: null };
   const t = reset
     ? Math.min(1, (daysSince - g.longFromDays) / (g.longFullAtDays - g.longFromDays))
     : (daysSince - g.keepBelowDays) / (g.longFromDays - g.keepBelowDays);
@@ -1121,7 +1268,10 @@ export function gapAdjust(state, daysSince, now, { exercise, gym, bodyweightKg }
   const factor = 1 - pct / 100;
   const ex = exercise ?? catalogExerciseById(state.exerciseId);
   const L = state.workingKg;
-  let workingKg = ex ? scaleLoad(L, factor, ex, { gym, bodyweightKg }, "nearest") : r2(L * factor);
+  // beyond 90 days the pin below: rounding up turned −30 % into −20 % (25 → 20 kg), too heavy after four months
+  let workingKg = ex ? scaleLoad(L, factor, ex, { gym, bodyweightKg }, asNew ? "easier" : "nearest") : r2(L * factor);
+  // still on the way back from an earlier break: this one is cut from the load before that break, not from the cut load
+  if (ex && reset && state.regain && isHarder(state.regain.kg, L, ex)) workingKg = scaleLoad(state.regain.kg, factor, ex, { gym, bodyweightKg }, asNew ? "easier" : "nearest");
   if (ex && isHarder(workingKg, L, ex)) workingKg = L;
   // the cut applied, as a fraction: effective terms for assistance (one step per 10 % without a body weight)
   const bw = bodyweightKg && bodyweightKg > 0 ? bodyweightKg : null;
@@ -1172,6 +1322,9 @@ export function gapAdjust(state, daysSince, now, { exercise, gym, bodyweightKg }
   /** @type {ExerciseState} */
   const next = { ...state, workingKg, targetReps, fails: reset ? 0 : state.fails, lastOutcome: outcome, note, updatedAt: toIso(now) };
   if (asNew) next.baseline = { status: "learning" };
+  // the load to build back to after a long break
+  if (asNew) { if (state.regain != null) next.regain = null; }
+  else if (reset && ex && isHarder(L, workingKg, ex)) next.regain = { kg: state.regain && isHarder(state.regain.kg, L, ex) ? state.regain.kg : L };
   // a break ends the coarse-step memory (the streak at the rep ceiling counts sessions in a row)
   if (state.bigStep != null) next.bigStep = null;
   // rule 5: another load starts the streak over (a malformed memory becomes null; states without one do not grow it)
@@ -1244,6 +1397,7 @@ export function convertState(state, fromRange, toRange, { rir, exercise, gym, bo
     updatedAt: toIso(now ?? state.updatedAt),
   };
   if (state.plateau != null) out.plateau = null;
+  if (state.regain != null) out.regain = null;
   return out;
 }
 
@@ -1368,6 +1522,36 @@ export function deloadWeek(program, now) {
   const pos = w % cycle;
   return { due: pos === every, week: pos + 1, cycle };
 }
+
+/**
+ * The planned deload week, for a lifter who has been training: due by the calendar (`deloadWeek`), and only when at
+ * least `DELOAD_ATTENDANCE` of the block's planned sessions were done and the last one was less than 10 days before
+ * that Monday. Otherwise it is skipped until the next cycle: missed visits were the rest. Sessions of the week itself
+ * are not counted, so planning and judging a session agree.
+ * @param {Program} program @param {import("./types").Session[] | Record<string, import("./types").Session> | null | undefined} sessions
+ * @param {Date | string | number} [now] @returns {{ due: boolean, week: number, cycle: number }}
+ */
+export function deloadDue(program, sessions, now) {
+  const block = deloadWeek(program, now);
+  if (!block.due) return block;
+  const d = new Date(now == null ? Date.now() : toMs(now));
+  const monday = new Date(d.getFullYear(), d.getMonth(), d.getDate() - ((d.getDay() + 6) % 7));
+  const every = program.deloadEveryWeeks;
+  const from = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() - every * 7).getTime();
+  const done = (Array.isArray(sessions) ? sessions : Object.values(sessions ?? {}))
+    .filter((s) => s.status !== "abandoned" && s.status !== "active")
+    .map((s) => toMs(s.startedAt))
+    .filter((ms) => ms >= from && ms < monday.getTime());
+  const enough = done.length >= DELOAD_ATTENDANCE * every * program.daysPerWeek - 1e-9;
+  const recent = done.length > 0 && calendarDaysBetween(Math.max(...done), monday) < 10;
+  return { ...block, due: enough && recent };
+}
+/** Reps in reserve from which a load is far too light to wait for a second session (the "8+" chip). */
+const FAR_TOO_LIGHT = 8;
+/** The longest gap that can be a training cadence rather than a break (a design default). */
+export const CADENCE_DAYS = 35;
+/** Share of a block's planned sessions that earns its deload week (a design default). */
+const DELOAD_ATTENDANCE = 0.6;
 
 /**
  * Weekly fractional hard sets per coarse group (direct 1, synergist 0.5), scaled by sessions per week ÷ days in the

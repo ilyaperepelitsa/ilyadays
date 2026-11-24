@@ -217,7 +217,12 @@ export type ExerciseState = {
    *  sessions in a row at this load with every set at the rep ceiling and the target reps in reserve (two earn one
    *  step anyway); `graceKg` = the load reached by such a step, whose first session may fall below the range without
    *  counting as a miss. Null once used. Lives in the row's spec jsonb. Added 2026-11-12. */
-  bigStep?: { streak?: number; graceKg?: number } | null;
+  bigStep?: { streak?: number; graceKg?: number; easy?: number } | null;
+  /** The load before a 29–90 day break, and made sessions since the last step back towards it. In spec jsonb. */
+  regain?: { kg: number; made?: number } | null;
+  /** Days of the gap (15–35) the last session followed and met its targets after: a gap of about that length is not cut
+   *  again. In spec jsonb. */
+  afterGap?: number | null;
   /** Per-exercise observed baseline; never inferred from another muscle or exercise. In spec JSONB. */
   baseline?: { status: "learning" | "established"; kg?: number; reps?: number; rir?: number; at?: string; sessionId?: string; sets?: number };
   updatedAt: string;
@@ -255,6 +260,8 @@ export type PlannedSession = {
   dayKey: string;
   dayName: Text2;
   exercises: PlannedExercise[];
+  /** Planned as a deload week; the started session is judged the same way. */
+  deload?: boolean;
   /** Rough minutes */
   estimatedMinutes: number;
   warmup: Text2;

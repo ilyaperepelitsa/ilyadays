@@ -10,7 +10,7 @@
 import type { CSSProperties } from "react";
 import type { Exercise, Lang } from "@/lib/fitness/types";
 import { fmtKg, pick } from "@/lib/fitness/i18n";
-import { RIR_CHOICES, amountText, kgStepLabel, repsLabel, setEffortCoaching, setHint, setText, type Row } from "@/lib/fitness/tracker.mjs";
+import { RIR_CHOICES, amountText, kgStepLabel, repsLabel, rirLabel, setEffortCoaching, setHint, setText, type Row } from "@/lib/fitness/tracker.mjs";
 import { Stepper } from "./Stepper";
 
 export type Draft = { kg: number; reps: number; rir: number | null; rirReported?: boolean };
@@ -24,7 +24,7 @@ export type RowActions = {
 };
 
 const rirText = (lang: Lang, rir: number | null) =>
-  rir == null ? "" : pick(lang, `RIR ${rir >= 4 ? "4+" : rir}`, `в запасе ${rir >= 4 ? "4+" : rir}`);
+  rir == null ? "" : pick(lang, `RIR ${rirLabel(rir)}`, `в запасе ${rirLabel(rir)}`);
 
 export function SetRow({ lang, row, exercise, label, steps, current, arming = false, intro = false, open, draft, readOnly, actions, style }: {
   lang: Lang;
@@ -179,10 +179,10 @@ export function SetRow({ lang, row, exercise, label, steps, current, arming = fa
                   data-value={v}
                   type="button"
                   className="trk-chip fit-num"
-                  aria-pressed={(logged ? logged.prescription?.rirReported !== false : draft?.rirReported === true) && values.rir != null && (v === 4 ? values.rir >= 4 : values.rir === v)}
+                  aria-pressed={(logged ? logged.prescription?.rirReported !== false : draft?.rirReported === true) && values.rir != null && (v >= 4 ? rirLabel(values.rir) === rirLabel(v) : values.rir === v)}
                   onClick={() => actions.adjust(row, { rir: v })}
                 >
-                  {v === 4 ? "4+" : v}
+                  {rirLabel(v)}
                 </button>
               ))}
             </div>

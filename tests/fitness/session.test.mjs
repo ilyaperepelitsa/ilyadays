@@ -209,7 +209,7 @@ test('planSession: progression memory, substitutes, goal switches, gaps', () => 
   assert.match(a1.note?.en ?? '', /^20 days since last time/);
   a1 = planSession({ program: p, dayKey: 'A', states: at(40), settings, now: NOW, catalog: CATALOG }).exercises[0];
   assert.deepEqual([working(a1)[0].weightKg, working(a1)[0].reps], [50, 6]);
-  assert.match(a1.note?.en ?? '', /^40 days since you last did this.*First time on this exercise/);
+  assert.match(a1.note?.en ?? '', /^40 days since you last did this.*the first session counts as a test\.$/);
   // an unknown day key plans the first day
   assert.equal(planSession({ program: p, dayKey: 'Z', states, now: NOW, catalog: CATALOG }).dayKey, 'A');
 });
