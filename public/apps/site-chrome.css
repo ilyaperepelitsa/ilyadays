@@ -26,13 +26,13 @@
   }
 }
 
-/* The header scrolls away with the page: these pages keep their own sticky bar (chapters, articles) at the top, and two
-   sticky bars would take a seventh of a phone's screen. */
+/* The header stays at the top while the page scrolls (owner, 24 Nov 2026: "language switch and navigation have to be
+   there when you scroll too"); site-chrome.js puts its height in --chrome-h so each page's own sticky bar sits under it. */
 .site-header {
-  position: relative; z-index: 6;
+  position: sticky; top: 0; z-index: 6;
   display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px 24px;
   padding: 12px max(16px, calc((100vw - 1180px) / 2));
-  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  background: var(--surface);   /* opaque: it stays over the text while the page scrolls */
   border-bottom: 1px solid var(--line);
   color: var(--ink); font: 400 16px/1.6 var(--site-sans); letter-spacing: -.012em;
   -webkit-font-smoothing: antialiased;

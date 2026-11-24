@@ -397,8 +397,9 @@ def case_p12(page, base, port):
     if shown(page) != [1, 2, 3]:
         problems.append(f'a neighbour link into chapter 1 shows {shown(page)}')
     top = page.evaluate("document.getElementById('article-3') ? Math.round(document.getElementById('article-3').getBoundingClientRect().top) : null")
-    if top is None or not -5 <= top <= 120:
-        problems.append(f'Article 3 is not brought into view (top {top})')
+    under = page.evaluate("Math.round(document.querySelector('.bar').getBoundingClientRect().bottom)")   # the site header and the bar stay pinned
+    if top is None or not under - 5 <= top <= under + 60:
+        problems.append(f'Article 3 is not brought into view under the bar ending at {under}px (top {top})')
     if 'with=seneca' not in page.url or not page.locator('.sg.add').count():
         problems.append('Seneca was switched off by moving chapter')
     if 'at=' in page.url:
@@ -1053,50 +1054,63 @@ EDITORIAL = ['.hand', '.process', '.statement > .form', '.link.ed', '.vt', '.art
 READING = ['.statement .sent', 'li.claim .sent', '.trace .link.pair', 'li.claim .fused']
 
 
+SHOW_ALL = ("for (const k of ['stoic-constitution:editor', 'stoic-constitution:v1:tags']) "
+            "try { if (localStorage.getItem(k) === null) localStorage.setItem(k, 'on'); } catch {}")
+
+
 def case_h2(page, base, port):
-    """Hide the editor's decisions: off by default; on hides the apparatus and keeps the reading; kept across a reload; off again."""
+    """The bar's switches, Sources and Editor's decisions: both off by default on a fresh browser; Editor on shows the
+    apparatus, kept across a reload; off again hides it; Sources on puts passage numbers in the text; a link to the method
+    page sits next to them; in Russian and with storage blocked the switches still work for the visit."""
     problems = []
+    ctx = page.context.browser.new_context(viewport={'width': 1440, 'height': 1000}, defaults=True)
+    page = ctx.new_page()
     seen = lambda: {sel: page.evaluate(VISIBLE, sel) for sel in EDITORIAL + READING}
     page.goto(base, wait_until='networkidle')
     page.wait_for_selector('#article-1 .statement')
-    switch = page.locator('#hide-editor')
+    editor, sources = page.locator('#editor-sw'), page.locator('#sources-sw')
+    method = page.locator('.bar a.to-method')
+    if editor.get_attribute('aria-checked') != 'false' or sources.get_attribute('aria-checked') != 'false':
+        problems.append(f"fresh browser: editor {editor.get_attribute('aria-checked')}, sources {sources.get_attribute('aria-checked')} (both should be off)")
+    if not method.count() or 'stoic-method.html' not in (method.get_attribute('href') or ''):
+        problems.append('no link to the method page in the bar')
     show = page.locator('#article-1 li.claim .show').first
     show.evaluate("n => n.scrollIntoView({block: 'center', behavior: 'instant'})")
     show.click()
     page.wait_for_selector('#article-1 li.claim .trace')
-    before = seen()
-    if switch.get_attribute('aria-checked') != 'false' or not all(before.values()):
-        problems.append(f"off by default, everything shown: aria-checked {switch.get_attribute('aria-checked')}, visible {before}")
-    switch.click()
-    on = seen()
-    stored = page.evaluate("localStorage.getItem('stoic-constitution:hide-editor')")
-    if any(on[sel] for sel in EDITORIAL) or not all(on[sel] for sel in READING) or stored != '1':
-        problems.append(f'on: {on}, stored {stored!r}')
+    hidden = seen()
+    if any(hidden[sel] for sel in EDITORIAL) or not all(hidden[sel] for sel in READING):
+        problems.append(f'off by default should hide the apparatus and keep the reading: {hidden}')
+    if page.evaluate(VISIBLE, '#article-1 .statement sup, #article-1 .statement .tag'):
+        problems.append('Sources off, yet passage numbers show in the statement')
+    editor.click()
+    shown = seen()
+    if not all(shown[sel] for sel in ['.hand', '.process', '.vt', '.article > .verdict']) or page.evaluate("localStorage.getItem('stoic-constitution:editor')") != 'on':
+        problems.append(f'editor on: {shown}')
     page.reload(wait_until='networkidle')
     page.wait_for_selector('#article-1 .statement')
-    again = seen()
-    if switch.get_attribute('aria-checked') != 'true' or any(again[sel] for sel in EDITORIAL) or not again['.statement .sent']:
-        problems.append(f"after a reload: aria-checked {switch.get_attribute('aria-checked')}, {again}")
-    switch.click()
-    off = seen()
-    if page.evaluate("localStorage.getItem('stoic-constitution:hide-editor')") != '0' or not all(off[sel] for sel in ['.hand', '.process', '.vt', '.article > .verdict']):
-        problems.append(f'off again: {off}')
-    page.reload(wait_until='networkidle')
-    page.wait_for_selector('#article-1 .statement')
-    if switch.get_attribute('aria-checked') != 'false' or not page.evaluate(VISIBLE, '.hand'):
-        problems.append('after a reload it did not stay off')
-    # In Russian, and with storage blocked: the switch still works for the visit, without an error.
-    ctx = page.context.browser.new_context(viewport={'width': 390, 'height': 844})
+    if editor.get_attribute('aria-checked') != 'true' or not page.evaluate(VISIBLE, '.hand'):
+        problems.append('after a reload the editor switch did not stay on')
+    editor.click()
+    if page.evaluate("localStorage.getItem('stoic-constitution:editor')") != 'off' or page.evaluate(VISIBLE, '.hand'):
+        problems.append('editor off again did not hide the decisions')
+    sources.click()
+    if sources.get_attribute('aria-checked') != 'true' or page.evaluate("localStorage.getItem('stoic-constitution:v1:tags')") != 'on':
+        problems.append('Sources on did not switch or was not kept')
+    ctx.close()
+    # In Russian, and with storage blocked: the switches still work for the visit, without an error.
+    ctx = page.context.browser.new_context(viewport={'width': 390, 'height': 844}, defaults=True)
     ctx.add_init_script("Object.defineProperty(window, 'localStorage', {get() { throw new DOMException('blocked', 'SecurityError'); }});")
     blocked = ctx.new_page()
     errors: list[str] = []
     blocked.on('pageerror', lambda e: errors.append(str(e)))
     blocked.goto(base + '?lang=ru', wait_until='networkidle')
     blocked.wait_for_selector('#article-1 .statement')
-    label = blocked.locator('#hide-editor').inner_text().strip()
-    blocked.locator('#hide-editor').click()
-    if label != 'Скрыть решения редактора' or blocked.evaluate(VISIBLE, '.hand') or errors:
-        problems.append(f'Russian with storage blocked: label {label!r}, decisions visible {blocked.evaluate(VISIBLE, ".hand")}, errors {errors[:2]}')
+    label = blocked.locator('#editor-sw').get_attribute('aria-label')
+    before = blocked.evaluate(VISIBLE, '.hand')
+    blocked.locator('#editor-sw').click()
+    if not label.startswith('Показывать') or before or not blocked.evaluate(VISIBLE, '.hand') or errors:
+        problems.append(f'Russian with storage blocked: label {label!r}, hidden first {not before}, shown after {blocked.evaluate(VISIBLE, ".hand")}, errors {errors[:2]}')
     ctx.close()
     return problems
 
@@ -1164,7 +1178,7 @@ CASES = {
     'M1': ('map: an added author\'s marks by effect, one key entry per mark, tie opacity by similarity', case_m1, (1440, 1000)),
     'M2': ('map: no visible label overlaps another at 390 and 1440 px', case_m2, (390, 900)),
     'H1': ('site header on the Stoic pages: the React header\'s links, labels, boxes and colours, EN and RU, no shift', case_h1, (1440, 900), 'real'),
-    'H2': ('Hide the editor\'s decisions: off by default, hides the apparatus, kept across a reload, works with storage blocked', case_h2, (1440, 1000), 'real'),
+    'H2': ('Sources and Editor switches in the bar: off by default, kept across a reload, a method link, works with storage blocked', case_h2, (1440, 1000), 'real'),
     'H3': ('wide screens: sides in a row share heading, rule and first card within 2 px; the vectors start at the heading', case_h3, (1440, 1000), 'real'),
 }
 
@@ -1399,6 +1413,14 @@ def main() -> int:
     failures = 0
     with sync_playwright() as p:
         browser = p.chromium.launch()
+        # The page opens with Sources and Editor's decisions off. Every case below was written for both on, so each browser
+        # context starts with them on unless a case asks for the defaults (case H2 does).
+        plain_context = browser.new_context
+        def new_context(*args, defaults=False, **kwargs):
+            ctx = plain_context(*args, **kwargs)
+            if not defaults: ctx.add_init_script(SHOW_ALL)
+            return ctx
+        browser.new_context = new_context
         if args.cases:
             failures = run_cases(browser, base, args.port, [c.strip().upper() for c in args.cases.split(',')])
             browser.close()

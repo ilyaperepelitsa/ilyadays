@@ -79,5 +79,11 @@
       location.assign(switched(to));
     });
   }
+  // The header is sticky; pages pin their own bars below it at top: var(--chrome-h).
+  var header = document.querySelectorAll('.site-header')[0], root = document.documentElement;
+  var measure = function () { if (header && root) root.style.setProperty('--chrome-h', header.offsetHeight + 'px'); };
+  measure();
+  if (header && window.ResizeObserver) new ResizeObserver(measure).observe(header);
+  else if (window.addEventListener) window.addEventListener('resize', measure);
   window.siteChrome = {lang: lang};
 })();

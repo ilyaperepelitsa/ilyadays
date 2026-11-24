@@ -37,7 +37,7 @@ section{padding-block:28px;border-top:1px solid var(--line)}
 .step{font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
 /* jump bar */
-.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-block:1px solid var(--line)}
+.bar{position:sticky;top:var(--chrome-h,0px);z-index:5;background:var(--paper);border-block:1px solid var(--line)}
 .bar .wrap{display:flex;gap:6px;align-items:center;padding-block:7px;overflow-x:auto}
 .bar span{flex:none;font-size:13px;color:var(--muted);margin-right:2px}
 .bar a{flex:none;min-width:44px;min-height:40px;display:grid;place-items:center;padding:0 12px;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:var(--ink);font-weight:650;font-size:14px}
@@ -75,7 +75,7 @@ details.more>summary,.process>summary{cursor:pointer;color:var(--accent);font-si
 .compare p{color:var(--muted);font-size:13.5px}
 
 /* article */
-.article{padding-block:34px;border-top:1px solid var(--line);scroll-margin-top:58px}
+.article{padding-block:34px;border-top:1px solid var(--line);scroll-margin-top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 3px)}
 .article:first-child{border-top:0;padding-top:20px}
 .leaf{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ink);padding:20px 16px 18px}
 .leaf h3{font:400 clamp(26px,6.4vw,34px)/1.12 var(--serif);letter-spacing:-.02em;margin:4px 0 4px;text-wrap:balance}
@@ -117,8 +117,6 @@ sup.src{font:600 12px/0 var(--sans);color:var(--muted);margin-left:3px;white-spa
 .part{display:grid;gap:6px}
 .part-words{font:italic 17px/1.4 var(--serif);margin-top:4px}
 .part.hit .part-words{font-weight:650;color:var(--c)}
-.tagsw{min-height:40px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--muted);font-size:13.5px;font-weight:650;cursor:pointer}
-.tagsw[aria-pressed=true]{border-color:var(--ink);color:var(--ink);background:var(--hl)}
 .label.lead{margin-top:24px;color:var(--ink)}
 .claims{display:grid;gap:10px;margin-top:10px}
 /* Every bit is one card with one border: grey for Marcus, black for an added author. The corner names whose it is. */
@@ -164,7 +162,7 @@ svg.map .fresh{animation:arrive .5s ease-out both;transform-box:fill-box}
 .jump{min-height:40px;padding:1px 12px;border:1px solid var(--ink);border-radius:99px;background:transparent;color:var(--ink);font:600 13.5px var(--sans);cursor:pointer;font-variant-numeric:tabular-nums}
 
 /* Tabs for the five sides: shown while they are a list, hidden once they are columns. */
-.tabs{position:sticky;top:55px;z-index:4;display:flex;gap:6px;margin:22px -16px 0;padding:8px 16px;overflow-x:auto;background:var(--card);border-block:1px solid var(--line);scrollbar-width:none}
+.tabs{position:sticky;top:calc(var(--chrome-h,0px) + var(--bar-h,55px));z-index:4;display:flex;gap:6px;margin:22px -16px 0;padding:8px 16px;overflow-x:auto;background:var(--card);border-block:1px solid var(--line);scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{flex:none;min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:2px 12px;border:1px solid var(--line);border-radius:99px;background:transparent;color:var(--ink);font:600 13.5px var(--sans);cursor:pointer;white-space:nowrap}
 .tabs button small{font-size:12.5px;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
@@ -172,7 +170,7 @@ svg.map .fresh{animation:arrive .5s ease-out both;transform-box:fill-box}
 .tabs button[aria-current=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .tabs button[aria-current=true] small{color:var(--paper)}
 .tabs button[aria-current=true] .dot{background:var(--paper)}
-.tabs+.grps>.grp{scroll-margin-top:118px}
+.tabs+.grps>.grp{scroll-margin-top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 63px)}
 .tabs+.grps>.grp:first-child{margin-top:18px}
 .fused b.plus{margin-left:4px;color:var(--muted)}
 .sen-strip{margin-top:12px;padding:8px 12px 10px;border:1px solid var(--line);border-radius:8px}
@@ -282,7 +280,7 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .picked .show{margin:4px 0 0}
 .fused span .sr{position:absolute}
 .save-note{font-size:13px;color:var(--warn);margin-right:auto}
-#articles{scroll-margin-top:64px}
+#articles{scroll-margin-top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 9px)}
 .art-btn{display:none}
 .bar.compact #jump a.num,.bar.compact #jump .lab{display:none}
 .bar.compact .art-btn{flex:none;min-height:40px;display:inline-flex;align-items:center;gap:6px;padding:0 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink);font:650 14px var(--sans);cursor:pointer;white-space:nowrap}
@@ -370,7 +368,7 @@ svg.map .cos{font-size:12.5px;font-weight:650}
 .body>.lead-col{grid-column:1;grid-row:1;max-width:900px}
 .body>.tabs{grid-column:1;grid-row:2}
 .body>.grps{grid-column:1;grid-row:3}
-.body>.sci{grid-column:2;grid-row:1/span 3;margin-top:0;position:sticky;top:66px;max-height:calc(100vh - 78px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.body>.sci{grid-column:2;grid-row:1/span 3;margin-top:0;position:sticky;top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 11px);max-height:calc(100vh - 23px - var(--chrome-h,0px) - var(--bar-h,55px));overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
 .article>.hand,.article>.process,.article>.verdict{max-width:800px}
 /* The sides share two rows each, heading and body (subgrid): headings, their rules and the first cards line up across a row. */
 .grps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;row-gap:0;margin-top:28px}
@@ -433,15 +431,22 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 .mine li.sub{padding-left:14px;font-size:14px}
 .mine li.sub>span:first-child{color:var(--muted)}
 .mine li i{display:block;font-style:normal;font-size:14px;color:var(--ink)}
-/* "Hide the editor's decisions": a switch at the top of the page. */
-.ed-switch{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:16px;padding:6px 16px 6px 8px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:600 14px/1.3 var(--sans);text-align:left;cursor:pointer}
-.ed-switch:hover{border-color:var(--muted)}
-.ed-switch .track{position:relative;flex:none;width:34px;height:20px;border-radius:99px;background:color-mix(in srgb,var(--muted) 40%,transparent);transition:background .15s}
-.ed-switch .track::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
-.ed-switch[aria-checked=true]{border-color:var(--ink)}
-.ed-switch[aria-checked=true] .track{background:var(--ink)}
-.ed-switch[aria-checked=true] .track::after{transform:translateX(14px)}
-@media(prefers-reduced-motion:reduce){.ed-switch .track,.ed-switch .track::after{transition:none}}
+/* The bar's switches: Sources (passage numbers in the text) and Editor's decisions; both off by default, kept per browser. */
+.bar-sw{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 10px 0 8px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--muted);font:650 13.5px var(--sans);white-space:nowrap;cursor:pointer}
+.bar-sw:hover{border-color:var(--muted);color:var(--ink)}
+.bar-sw .track{position:relative;flex:none;width:28px;height:16px;border-radius:99px;background:color-mix(in srgb,var(--muted) 40%,transparent);transition:background .15s}
+.bar-sw .track::after{content:'';position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+.bar-sw[aria-checked=true]{border-color:var(--ink);color:var(--ink)}
+.bar-sw[aria-checked=true] .track{background:var(--ink)}
+.bar-sw[aria-checked=true] .track::after{transform:translateX(12px)}
+.bar-sw .brief,.bar.compact .bar-sw .long{display:none}
+.bar.compact .bar-sw .brief{display:inline}
+.bar a.to-method{font-weight:500}
+.bar a.to-method span{margin:0;font-size:inherit;color:inherit}
+.bar a.to-method .brief,.bar.compact a.to-method .long{display:none}
+.bar.compact a.to-method .brief{display:inline}
+.bar.compact .wrap{flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){.bar-sw .track,.bar-sw .track::after{transition:none}}
 .ed-note{display:none}
 html.no-editor .ed-note{display:block}
 /* While it is on, the reader gets the statement, the claims, the quotes and the passages; the editor's apparatus and the review
@@ -453,7 +458,6 @@ html.no-editor :is(.hand,.process,.statement>.form,.link.ed,.gives.ed,.picked.ed
 html.no-editor .picked.ed{padding-top:0;border-top:0}
 html.no-editor .sg.join{cursor:inherit}
 html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transparent;box-shadow:none}
-@media print{.ed-switch{display:none}}
 @media print{.vt,.vpick,.vnote,.review-tools,.filter-note{display:none}}
 @media print{.dock,.tabs,.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
 </style>
@@ -467,7 +471,6 @@ html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transpar
 <p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
 <p class="status"><a href="stoic-translation.html">Marcus’s passages translated from the Greek, beside the 1634 English →</a></p>
-<button class="ed-switch" id="hide-editor" type="button" role="switch" aria-checked="false"><span class="track" aria-hidden="true"></span><span class="ed-label">Hide the editor’s decisions</span></button>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
@@ -600,7 +603,6 @@ const RU_WORDS = {
 // The page's fixed words in Russian: [selector, text] sets the text, [selector, html, true] the markup (trusted, written here).
 const RU_STATIC = [
   ['.intro .title', 'Стоическая конституция'],
-  ['#hide-editor .ed-label', 'Скрыть решения редактора'],
   ['#ed-note', 'Решения редактора и кнопки «Оценка» скрыты на время чтения; включить их снова можно вверху страницы.'],
   ['.intro .eyebrow', 'Черновик · Марк Аврелий в новом переводе'],
   ['.intro h1', 'Статьи на сегодня'],
@@ -636,29 +638,24 @@ if (RU) {
   document.querySelector('nav.bar').setAttribute('aria-label', 'Переход');
   document.querySelector('nav.dock').setAttribute('aria-label', 'Голоса');
 }
-// "Hide the editor's decisions": a reading mode. The claims, the statement, the quotes and the passages stay; the editor's
-// apparatus (decision lists, notes on each claim, the section's record) and the review buttons go (CSS under html.no-editor).
-// Off by default; the choice is kept in this browser.
-const EDITOR_KEY = 'stoic-constitution:hide-editor';
-const editorSwitch = document.getElementById('hide-editor');
-function setEditorHidden(on, save) {
-  document.documentElement.classList.toggle('no-editor', on);
-  editorSwitch.setAttribute('aria-checked', String(on));
-  if (save) try { localStorage.setItem(EDITOR_KEY, on ? '1' : '0'); } catch { /* storage blocked: kept for this visit */ }
+// "Editor's decisions": a switch in the sticky bar, off by default (owner, 24 Nov 2026: a smoother read; review later). Off,
+// the claims, the statement, the quotes and the passages stay and the editor's apparatus (decision lists, notes on each claim,
+// the section's record) and the review buttons go (CSS under html.no-editor). The choice is kept in this browser.
+const EDITOR_KEY = 'stoic-constitution:editor';
+const editorShown = () => !document.documentElement.classList.contains('no-editor');
+function setEditorShown(on, save) {
+  document.documentElement.classList.toggle('no-editor', !on);
+  document.getElementById('editor-sw')?.setAttribute('aria-checked', String(on));
+  if (save) try { localStorage.setItem(EDITOR_KEY, on ? 'on' : 'off'); } catch { /* storage blocked: kept for this visit */ }
 }
-setEditorHidden((() => { try { return localStorage.getItem(EDITOR_KEY) === '1'; } catch { return false; } })(), false);
-editorSwitch.addEventListener('click', () => {
-  const on = editorSwitch.getAttribute('aria-checked') !== 'true';
-  setEditorHidden(on, true);
-  announce(RU ? (on ? 'Решения редактора скрыты.' : 'Решения редактора показаны.') : on ? 'The editor’s decisions are hidden.' : 'The editor’s decisions are shown.');
-});
+setEditorShown((() => { try { return localStorage.getItem(EDITOR_KEY) === 'on'; } catch { return false; } })(), false);
 const STORE = 'stoic-constitution:v1:verdicts';
 const VERDICTS = ['Keep', 'Revise', 'Drop'];
 let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
 const CHAPTERS = new Map();   // chapter id -> its full articles, once loaded
 const TAGS = 'stoic-constitution:v1:tags';
-const state = {chapter: null, pending: {}, sel: null, removed: {}, tags: true, voices: new Set(), fresh: null, reviewOpen: null, filter: false};   // reviewOpen: the review key whose Keep/Revise/Drop choices are open; filter: only what is not judged   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: numbers on statements; voices: added authors switched on; fresh: the voice just added, so its parts can arrive visibly
-try { state.tags = localStorage.getItem(TAGS) !== 'off'; } catch { /* private mode */ }
+const state = {chapter: null, pending: {}, sel: null, removed: {}, tags: false, voices: new Set(), fresh: null, reviewOpen: null, filter: false};   // reviewOpen: the review key whose Keep/Revise/Drop choices are open; filter: only what is not judged   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: numbers on statements; voices: added authors switched on; fresh: the voice just added, so its parts can arrive visibly
+try { state.tags = localStorage.getItem(TAGS) === 'on'; } catch { state.tags = false; }   // off unless switched on
 
 function el(tag, cls, text) {
   const node = document.createElement(tag);
@@ -2224,7 +2221,7 @@ function markTabs() {
     const rect = tabs.parentElement.getBoundingClientRect();
     if (rect.bottom < 0 || rect.top > innerHeight || !tabs.offsetParent) continue;
     let active = null;
-    for (const side of tabs.parentElement.querySelectorAll('.grp')) if (side.getBoundingClientRect().top < 170) active = side.dataset.g;
+    for (const side of tabs.parentElement.querySelectorAll('.grp')) if (side.getBoundingClientRect().top < 115 + document.querySelector('.bar').getBoundingClientRect().bottom) active = side.dataset.g;
     for (const tab of tabs.children) {
       const now = tab.dataset.g === active;
       if ((tab.getAttribute('aria-current') === 'true') !== now) {
@@ -2345,7 +2342,7 @@ function loadChapter(id) {
     return CHAPTERS.get(id);
   });
 }
-// The sticky bar: the chapter picker, the chapter's article numbers, Topics and the Sources switch.
+// The sticky bar: the chapter picker, the chapter's article numbers, Topics, the Sources and Editor switches, the method page.
 function renderBar() {
   const jump = document.getElementById('jump'), chapter = chapterById(state.chapter), stubs = D.all.filter(article => article.chapter === state.chapter);
   const pick = el('button', 'chap-btn');
@@ -2369,18 +2366,34 @@ function renderBar() {
   }
   const topics = el('a', 'to-topics', T('Topics'));
   topics.href = '#topics';
-  const tags = el('button', 'tagsw', T('Sources'));
-  tags.type = 'button';
-  tags.setAttribute('aria-pressed', String(state.tags));
-  tags.setAttribute('aria-label', T('Show passage numbers on each statement'));
+  const sw = (id, long, brief, on, label) => {
+    const b = el('button', 'bar-sw');
+    b.type = 'button'; b.id = id;
+    b.setAttribute('role', 'switch'); b.setAttribute('aria-checked', String(on)); b.setAttribute('aria-label', label);
+    const track = el('span', 'track'); track.setAttribute('aria-hidden', 'true');
+    b.append(track, el('span', 'long', long), el('span', 'brief', brief));
+    return b;
+  };
+  const tags = sw('sources-sw', T('Sources'), T('Sources'), state.tags, T('Show passage numbers on each statement'));
   tags.addEventListener('click', () => {
     state.tags = !state.tags;
     try { localStorage.setItem(TAGS, state.tags ? 'on' : 'off'); } catch { /* private mode */ }
-    tags.setAttribute('aria-pressed', String(state.tags));
+    tags.setAttribute('aria-checked', String(state.tags));
     for (const article of D.articles) renderArticle(article.number);
     announce(RU ? 'Номера фрагментов в тексте ' + (state.tags ? 'показаны.' : 'скрыты.') : 'Passage numbers in the text are ' + (state.tags ? 'shown.' : 'hidden.'));
   });
-  jump.append(topics, tags);
+  const editor = sw('editor-sw', RU ? 'Решения редактора' : 'Editor’s decisions', RU ? 'Редактор' : 'Editor', editorShown(),
+    RU ? 'Показывать решения и заметки редактора' : 'Show the editor’s decisions and notes');
+  editor.addEventListener('click', () => {
+    const on = !editorShown();
+    setEditorShown(on, true);
+    announce(RU ? (on ? 'Решения редактора показаны.' : 'Решения редактора скрыты.') : on ? 'The editor’s decisions are shown.' : 'The editor’s decisions are hidden.');
+  });
+  const method = el('a', 'to-method');
+  method.append(el('span', 'long', RU ? 'Как это сделано' : 'How it was made'), el('span', 'brief', RU ? 'Метод' : 'Method'));
+  method.setAttribute('aria-label', RU ? 'Как это сделано: метод' : 'How it was made: the method');
+  method.href = 'stoic-method.html?lang=' + (RU ? 'ru' : 'en');
+  jump.append(topics, tags, editor, method);
   // The chapter's articles with their titles, for the phone bar.
   const articles = el('ol');
   for (const article of stubs) {
@@ -2418,6 +2431,8 @@ function fitBar() {
   const bar = document.querySelector('.bar'), jump = document.getElementById('jump');
   bar.classList.remove('compact');
   if (jump.scrollWidth > jump.clientWidth + 1) bar.classList.add('compact');
+  // Its height (one row, or two when the compact bar wraps) sets where the page's other pinned parts and jumps stop.
+  document.documentElement.style.setProperty('--bar-h', bar.offsetHeight + 'px');
 }
 // Which article the reader is in, for the phone bar's button.
 function markArticle() {
