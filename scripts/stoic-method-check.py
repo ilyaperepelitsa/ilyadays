@@ -18,8 +18,9 @@ the system temp folder). Exits 1 if any check fails.
 
 Visual regression (criterion 14). The text of the paper is photographed unit by unit: the front matter (title, byline,
 abstract), the contents list, each section from its top to the next section's top (so 3 Methods is its opening only, and 3.1
-to 3.8 are their own units), and the footer; in English and Russian, light and dark, at 390 and 1440 px: 8 × 23 images in
-tests/aurelius/visual/stoic-method/. The figure slots are masked: every drawing is replaced by a striped box of fixed height,
+to 3.8 are their own units), and the footer; in English and Russian, light and dark, at 390 and 1440 px: 8 × 22 images in
+tests/aurelius/visual/stoic-method/. Each unit is nudged by less than a pixel to start on a whole pixel, so a change in one section
+fails that section only, not every section below it. The figure slots are masked: every drawing is replaced by a striped box of fixed height,
 so a change to a figure (st-diagrams' baselines cover those) never moves the text; the pinned header is set in the flow.
 A unit fails when its size changes, or when more than 100 of its pixels differ by more than 40 of 255 in any channel
 (two runs give 0 changed pixels; one changed comma gives several hundred, one changed word over a thousand). Failures write the new image and a diff (changed pixels in red)
@@ -54,32 +55,39 @@ figure.fig > :not(figcaption){display:none!important}
 figure.fig::before{content:"";display:block;height:96px;border-radius:6px;
   background:repeating-linear-gradient(45deg,rgba(128,128,128,.35) 0 8px,transparent 8px 16px)}
 """
-# Units in page coordinates: the front matter, the contents, each section up to the next one, the footer.
+# Units in page coordinates: the front matter, the contents, each section up to the next one, the footer. Each unit is
+# moved (position: relative) by less than a pixel so that it starts on a whole pixel: text is then drawn the same way
+# wherever earlier text left it, and a change in one section does not alter the anti-aliasing of every section after it.
 UNITS = """() => {
   const lang = document.documentElement.getAttribute('data-lang');
   const block = document.querySelector(lang === 'ru' ? 'main > .ru' : 'main > .en');
   const paper = block.querySelector('article.paper').getBoundingClientRect();
-  const box = (r, wide) => {
+  const list = [];
+  list.push(['front', block.querySelector('header .front') || block.querySelector('header'), true]);
+  const toc = block.querySelector('.toc');
+  if (toc) list.push(['contents', toc, true]);
+  const sections = [...block.querySelectorAll('section[data-sec]')];
+  sections.forEach((s) => list.push([s.dataset.sec, s, false]));
+  const foot = document.querySelector('body > footer');
+  if (foot) list.push(['footer', foot, true]);
+  // heights from the layout before any nudge: a section runs to the next section's top, or to its own bottom
+  const raw = list.map(([, el]) => el.getBoundingClientRect());
+  const heights = list.map(([name, el], i) => {
+    const s = sections.indexOf(el);
+    const next = s >= 0 && sections[s + 1] ? sections[s + 1].getBoundingClientRect().top : Infinity;
+    return Math.ceil(Math.min(raw[i].bottom, next) - raw[i].top);
+  });
+  for (const [, el] of list) {
+    const top = el.getBoundingClientRect().top + scrollY;
+    el.style.position = 'relative';
+    el.style.top = (Math.ceil(top - 0.001) - top) + 'px';
+  }
+  return list.map(([name, el, wide], i) => {
+    const r = el.getBoundingClientRect();
     const x = Math.max(0, Math.floor((wide ? r.left : Math.min(r.left, paper.left)) - 8));
     const right = Math.min(document.documentElement.clientWidth, Math.ceil((wide ? r.right : Math.max(r.right, paper.right)) + 8));
-    return {x, y: Math.floor(r.top + scrollY), width: right - x, height: Math.ceil(r.height)};
-  };
-  const out = [];
-  const front = block.querySelector('header .front') || block.querySelector('header');
-  out.push(['front', box(front.getBoundingClientRect(), true)]);
-  const toc = block.querySelector('.toc');
-  if (toc) out.push(['contents', box(toc.getBoundingClientRect(), true)]);
-  const sections = [...block.querySelectorAll('section[data-sec]')];
-  sections.forEach((s, i) => {
-    const r = s.getBoundingClientRect();
-    const next = sections[i + 1] ? sections[i + 1].getBoundingClientRect().top : Infinity;
-    const bottom = Math.min(r.bottom, next);
-    const b = box({left: r.left, right: r.right, top: r.top, height: bottom - r.top});
-    out.push([s.dataset.sec, b]);
+    return [name, {x, y: Math.round(r.top + scrollY), width: right - x, height: heights[i]}];
   });
-  const foot = document.querySelector('body > footer');
-  if (foot) out.push(['footer', box(foot.getBoundingClientRect(), true)]);
-  return out;
 }"""
 # Compares two PNGs inside the browser (no image library needed): size, share of changed pixels, and a diff picture.
 COMPARE = """async ([a, b, pixel]) => {
