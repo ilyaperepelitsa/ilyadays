@@ -251,12 +251,36 @@ test('diagram-data.json holds references and numbers only, and agrees with topic
   }
   assert.deepEqual(new Set(data.tree.top.flatMap((r) => r.slice(0, 2)).filter((x) => x.startsWith('c'))), new Set(topics.chapters.map((c) => c.id)));
   assert.equal(Object.values(data.gates.warnings_by_rule).reduce((a, b) => a + b, 0), data.gates.warnings);
-  // No passage text: every string is a reference, an id, or one of the few descriptions.
-  const strings = [];
-  const walk = (x) => (typeof x === 'string' ? strings.push(x) : x && typeof x === 'object' && Object.values(x).forEach(walk));
+  // No passage text: every string is a reference, an id, or a description under a describing key.
+  const DESCRIBING = new Set(['about', 'method', 'vectors', 'rule', 'note', 'command', 'made_by']);
+  const long = [];
+  const walk = (x, key, parent) => {
+    if (typeof x === 'string') { if (x.length > 40 && !DESCRIBING.has(key) && parent !== 'definitions' && !/^[0-9a-f]{64}$/.test(x)) long.push(`${key}: ${x.slice(0, 40)}`); }
+    else if (x && typeof x === 'object') for (const [k, v] of Object.entries(x)) walk(v, Array.isArray(x) ? key : k, key);
+  };
   walk(data);
-  assert.ok(strings.filter((s) => s.length > 40).length <= 6, 'only the descriptions are longer than an id');
+  assert.deepEqual(long, [], 'only descriptions are longer than an id');
   assert.ok(!read('public/apps/stoic-method/diagram-data.json').includes('.aurelius/'));
+});
+
+test('the validation numbers agree with the record and with each other', () => {
+  const v = data.validation;
+  const full = topics.chapters.flatMap((c) => json(`public/apps/stoic-constitution/${c.id}.json`).articles);
+  assert.equal(full.length, expected.articles);
+  const stayed = full.filter((a) => a.in_translation).reduce((n, a) => n + a.in_translation.stayed, 0);
+  assert.equal(v.stay.published_mixed, stayed, 'the published stay count is the record\'s in_translation.stayed, summed');
+  const seven = v.chapter_cut.by_k.find((row) => row.k === 7);
+  const sizes = topics.comparison_at_chapter_cut.ward.sizes;
+  assert.equal(seven.smallest, Math.min(...sizes));
+  assert.equal(seven.largest, Math.max(...sizes));
+  assert.equal(Math.round(seven.silhouette * 1000) / 1000, topics.comparison_at_chapter_cut.ward.cosine_silhouette);
+  assert.equal(v.silhouette.chapters.silhouette, seven.silhouette);
+  // The rule as the paper first stated it ("before a group of fewer than 20 passages appears") cannot give 7.
+  assert.equal(v.chapter_cut.any_threshold_gives_7, !v.chapter_cut.rule_by_threshold.every((x) => x.k !== 7));
+  for (const key of ['chapters', 'sections']) assert.ok(v.silhouette[key].silhouette > v.silhouette[key].shuffled_max, `${key}: above every shuffle`);
+  assert.equal(v.stay.of, expected.passages);
+  assert.equal(Object.keys(v.similarity.closeness_1634).length, v.similarity.sections);
+  assert.equal(Object.keys(v.similarity.closeness_1634).filter((s) => v.similarity.closeness_new[s] < v.similarity.closeness_1634[s]).length, v.similarity.sections_lower_on_new);
 });
 
 const manifest = json('public/apps/stoic-method/figures/figures.json');

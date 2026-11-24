@@ -12,6 +12,20 @@ public/apps/stoic-method/diagram-data.json, which holds passage references and n
   tree        the Ward tree as the method page draws it: the six top merges of the whole-book tree that join the seven
               chapters, and each chapter's own Ward tree (the one its sections were cut from), in SciPy's linkage form
               over the chapter's references, with the leaf order of its dendrogram.
+  validation  what a referee asked to see, recomputed here (seed 0; numbers only):
+              chapter_cut  for k = 2..15 the smallest and largest group and the cosine silhouette, and which k the rule
+                           "the largest k before a group of fewer than t passages appears" gives for every threshold t
+                           (none gives 7: the seven chapters are a fixed choice, CHAPTERS in scripts/aurelius-topics.py);
+              silhouette   chapters and sections, on the 1634 English and the new English, against the same group sizes
+                           shuffled over the passages 200 times (mean, spread, maximum);
+              stay         passages nearest their own section centre, five ways (the published mixed count, and same-text
+                           counts with and without the passage in its own centre, on each English);
+              similarity   median pairwise similarity of each whole text and each section's closeness on both, with how
+                           many sections are tighter on the new English relative to its own median;
+              stability    adjusted Rand index of Ward on the new English cut at 7 and 38 against the published chapters and
+                           sections (and of a flat 38-cut of the 1634 tree, for scale; and of shuffled labels);
+              length       correlation of passage length with similarity to its own section centre.
+  software    the library versions used.
 
 The script stops if the tree it rebuilds does not give exactly the chapters and sections of content/aurelius/topics.json.
 Run: apps/aurelius/.venv/bin/python scripts/stoic-method-diagram-data.py
@@ -113,6 +127,8 @@ def validation(vectors: np.ndarray, whole: np.ndarray, label: np.ndarray, sectio
         else:
             rule.append({'threshold_from': t, 'threshold_to': t, 'k': k})
     gives_seven = [x for x in rule if x['k'] == 7]
+    record_stayed = sum(a['in_translation']['stayed'] for c in sorted(set(chapters))
+                        for a in json.loads((ROOT / f'public/apps/stoic-constitution/c{c}.json').read_text())['articles'] if a.get('in_translation'))
 
     # 2. The new English: the same passages, the same model.
     translation = json.loads(TRANSLATION.read_text())
@@ -154,6 +170,8 @@ def validation(vectors: np.ndarray, whole: np.ndarray, label: np.ndarray, sectio
     old38 = fcluster(whole, 38, criterion='maxclust')
     ari_null = np.array([adjusted_rand_score(chapters, rng.permutation(chapters)) for _ in range(SHUFFLES)])
 
+    mixed = stay(new, sections, centres_from=vectors)
+    assert mixed == record_stayed, f'the mixed stay count {mixed} is not the record\'s {record_stayed}'
     return {
         'about': 'Validation of the grouping, recomputed from the cached vectors by this script. Silhouettes are cosine; shuffles keep '
                  f'the group sizes and use seed {SEED}. Stay counts: passages nearest (cosine) to their own section centre among all '
@@ -174,7 +192,7 @@ def validation(vectors: np.ndarray, whole: np.ndarray, label: np.ndarray, sectio
         },
         'stay': {
             'of': len(refs), 'sections': len(section_ids),
-            'published_mixed': stay(new, sections, centres_from=vectors),
+            'published_mixed': mixed,
             'old_self_included': stay(vectors, sections),
             'old_leave_one_out': stay(vectors, sections, leave_one_out=True),
             'new_self_included': stay(new, sections),
@@ -205,6 +223,8 @@ def validation(vectors: np.ndarray, whole: np.ndarray, label: np.ndarray, sectio
             '1634': length_effect(vectors, words),
             'new': length_effect(new, new_len),
             'chapter_median_words_1634': chapter_median_words,
+            # Article 29's section ("Short sayings"): the words of each of its passages, in book order
+            'c7.s3_words_1634': [int(words[i]) for i, sec in enumerate(sections) if sec == 'c7.s3'],
         },
     }
 

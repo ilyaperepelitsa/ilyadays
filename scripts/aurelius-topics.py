@@ -7,9 +7,10 @@ so it can be published. No network access and no new embeddings.
 
 The stored average and complete hierarchies in backup-map.json stay untouched. Average linkage
 puts 400 of 418 passages in one group at twelve groups, and complete linkage 267 of 418 at eight,
-so neither gives chapters of usable size. Ward on unit vectors gives balanced groups. All three
-have a cosine silhouette near zero: a group is a neighbourhood for finding passages, not a
-proven theme.
+so neither gives chapters of usable size. Ward on unit vectors gives balanced groups. Ward and complete
+linkage have a cosine silhouette near zero; average linkage scores higher only because six of its seven
+groups are single passages far from the one large group, so the silhouette does not favour it. A group is
+a neighbourhood for finding passages, not a proven theme.
 
 Run: apps/aurelius/.venv/bin/python scripts/aurelius-topics.py
 """
@@ -27,7 +28,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CORPUS = ROOT / '.aurelius/corpora/casaubon-gutenberg-2680-6977474f82a39dd8-numbered-text-v2-d436fea5'
 MAP = ROOT / 'content/aurelius/backup-map.json'
 OUT = ROOT / 'content/aurelius/topics.json'
-CHAPTERS = 7            # top cut: the largest count before a group of fewer than 20 passages appears
+CHAPTERS = 7            # top cut: a fixed, editorial number of chapters, not a rule (the smallest group is 23 passages at 7 and at 8;
+                        # 'the largest count before a group under 20' would give 9). See public/apps/stoic-method.html, Section 3.2.
 SECTION_TARGET = 11     # sections per chapter = max(2, round(size / SECTION_TARGET))
 
 

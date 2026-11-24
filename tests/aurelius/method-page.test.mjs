@@ -78,10 +78,38 @@ const expected = (() => {
     ...settlement(),
     ...measured(),
     // the checks figure (Figure 8): every quote of Marcus, and the passage revisions of the three translations
+    ...alignment(),
+    ...lengths(),
+    ...gateTests(),
+    'author-gap': (index.authors[0].median_similarity.marcus_to_marcus - index.authors[0].median_similarity.across).toFixed(3),
     'quotes-marcus': sum((a) => a.claims.reduce((n, c) => n + c.support.length, 0) + a.single.length),
     revisions: ['project-v1', 'seneca-v1', 'ru-v1'].reduce((n, name) => n + json(`content/aurelius/translation/${name}.json`).passages.length, 0),
   };
 })();
+
+// How the 1634 passages map onto the modern chapters of the Greek: joins (a span such as 7.44–48), cuts (a lettered part such as 6.13b), both.
+function alignment() {
+  const refs = json('content/aurelius/translation/project-v1.json').passages.map((p) => p.standard_ref);
+  const join = (r) => r.includes('–');
+  const cut = (r) => /\d[a-z]/.test(r);
+  return {'align-join': refs.filter(join).length, 'align-cut': refs.filter(cut).length, 'align-both': refs.filter((r) => join(r) && cut(r)).length};
+}
+
+// Passage lengths in words, from topics.json: the chapters' median lengths, and Article 29's section (c7.s3).
+function lengths() {
+  const topics = json('content/aurelius/topics.json');
+  const median = (xs) => { const s = [...xs].sort((a, b) => a - b); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+  const medians = topics.chapters.map((c) => median(c.sections.flatMap((s) => s.members.map((m) => m.words))));
+  const short = topics.chapters.flatMap((c) => c.sections).find((s) => s.id === 'c7.s3').members.map((m) => m.words);
+  return {'chapter-words-min': Math.min(...medians), 'chapter-words-max': Math.max(...medians), 'a29-shortest': Math.min(...short), 'a29-longest': Math.max(...short)};
+}
+
+// The acceptance gates' own tests: those named "…passes" run the real record, every other one plants a known fault.
+function gateTests() {
+  const names = [...read('apps/aurelius/tests/test_qa.py').matchAll(/^def (test_\w+)/gm)].map((m) => m[1]);
+  const pass = names.filter((name) => /passes$/.test(name)).length;
+  return {'qa-tests': names.length, 'qa-pass': pass, 'qa-faults': names.length - pass};
+}
 
 // Measurements quoted in the text: the clustering comparison, the similarity medians and Article 1's section.
 function measured() {
@@ -199,7 +227,7 @@ test('figures and tables are numbered in order, marked for the diagrams, and cro
       assert.ok(byId.has(target), `${lang}: cross-reference to ${target}`);
       assert.equal(Number(label.replace(/\D/g, '')), byId.get(target), `${lang}: “${label}” points to ${target}`);
     }
-    for (const i of items) assert.ok(xrefs.some((x) => x[1] === i.id) || i.id.endsWith('tab-files') || i.id.endsWith('tab-glossary'), `${lang}: ${i.id} is referred to in the text`);
+    for (const i of items) assert.ok(xrefs.some((x) => x[1] === i.id), `${lang}: ${i.id} is referred to in the text`);
   }
   assert.deepEqual(ids.ru, ids.en, 'the same figures and tables in both languages');
 });
@@ -272,9 +300,12 @@ test('every number marked on the method page is the published one, in both langu
   for (const [lang, block] of Object.entries(blocks)) {
     const marks = marked(block, 'data-n');
     assert.ok(marks.length > 40, `${lang}: ${marks.length} marked numbers`);
+    // The note on provenance counts the page's own marks: computed numbers (data-n) and numbers quoted from files (data-num).
+    const own = {'prov-computed': marks.length, 'prov-quoted': (block.match(/ data-num="/g) || []).length};
     for (const {value, inner} of marks) {
-      assert.ok(value in expected, `${lang}: unknown data-n="${value}"`);
-      assert.equal(text(inner).replace(/\D/g, ''), String(expected[value]).replace(/\D/g, ''), `${lang}: data-n="${value}" says ${text(inner)}`);
+      const want = value in own ? own[value] : expected[value];
+      assert.ok(want !== undefined, `${lang}: unknown data-n="${value}"`);
+      assert.equal(text(inner).replace(/\D/g, ''), String(want).replace(/\D/g, ''), `${lang}: data-n="${value}" says ${text(inner)}`);
     }
     for (const key of ['passages', 'chapters', 'sections', 'articles', 'claims', 'single', 'seneca-pieces', 'seneca-items', 'seneca-sections', 'letters', 'clauses']) {
       assert.ok(marks.some((m) => m.value === key), `${lang}: the page states ${key}`);
@@ -331,8 +362,10 @@ test('every number quoted from a project file is what that file says', () => {
     for (const [, path, ctx, shown] of quoted) {
       assert.ok(exists(path), `${lang}: ${path}`);
       assert.ok(ctx.includes('{n}'), `${lang}: context “${ctx}” names where the number stands`);
-      let n = shown.trim().replace(/^(\d{1,3})(?:[  ](\d{3}))+$/, (m) => m.replace(/[  ]/g, ','));
-      if (lang === 'ru') n = n.replace(/^(\d+),(\d+)$/, (m, a, b) => (b.length === 3 && a !== '0' ? m : `${a}.${b}`));
+      // The Russian writes 0,822 and groups thousands with a space (1 444); the files write 0.822 and 1,444. A minus is −.
+      let n = shown.trim().replace(/^−/, '-');
+      if (lang === 'ru') n = n.replace(',', '.');
+      n = n.replace(/^(-?\d{1,3})(?:[  ]\d{3})+/, (m) => m.replace(/[  ]/g, ','));
       const said = ctx.replace(/&quot;/g, '"').replace('{n}', n);
       assert.ok(read(path).includes(said), `${lang}: ${path} does not say “${said}”`);
     }
@@ -343,7 +376,7 @@ test('no number on the method page is left untagged', () => {
   // Quantities must carry data-n (computed from the published JSON) or data-num (quoted from a file). What is left out:
   // references to passages, sections, articles, claims, rules, figures and tables; years and dates; the drawings; code,
   // links, the bibliography and the file map; the example sentences and quotes, which other tests compare word for word.
-  const LABEL = String.raw`(?:Articles?|articles?|claims?|Claims?|rules?|Rule|Sections?|sections?|chapter|Chapter|Figure|Table|Letters?|Ep\.|Appendix|Version|version|Gutenberg|Статьи|статьи|статей|статья|статье|статьях|Статья|утверждени[еияю]|Утверждени[еияю]|утверждением|правил[оа]?|Правило|статью|раздел|разделы|разделе|разделах|глава|Глава|рис\.|Рис\.|табл\.|Таблица|письме|письмо|версия|Версия|приложение)`;
+  const LABEL = String.raw`(?:§§|§|Articles?|articles?|claims?|Claims?|rules?|Rule|Sections?|sections?|chapter|Chapter|Figure|Table|Letters?|Ep\.|Appendix|Version|version|Gutenberg|Статьи|статьи|статей|статья|статье|статьях|Статья|утверждени[еияю]|Утверждени[еияю]|утверждением|правил[оа]?|Правило|статью|раздел|разделы|разделе|разделах|глава|Глава|рис\.|Рис\.|табл\.|Таблица|письме|письмо|версия|Версия|приложение)`;
   for (const [lang, block] of Object.entries(blocks)) {
     let t = block
       .replace(/<!-- figure:(\w+) -->[\s\S]*?<!-- \/figure:\1 -->/g, ' ')
@@ -395,6 +428,11 @@ test('the abstract is at most 200 words, and the Russian has no untranslated Eng
     // language codes (GR · LA · EN · RU in a drawing) are not English words
   english.splice(0, english.length, ...english.filter((s) => !s.split(/\s+/).every((w) => /^[A-Z]{2,3}$/.test(w))));
   assert.deepEqual(english, [], 'English runs of three or more words in the Russian');
+  // The fixed glossary (Appendix C) holds in the whole Russian block, figure text included: one word per term.
+  const plainRu = blocks.ru.replace(/<[^>]+>/g, ' ');
+  for (const [bad, term] of [[/оговорк/i, 'приписка (clause)'], [/сводящ/i, 'решающий (settler)']]) {
+    assert.ok(!bad.test(plainRu), `Russian: use ${term}, not “${(plainRu.match(bad) || [''])[0]}”`);
+  }
 });
 
 test('the open questions are the decisions waiting on the owner, one for one', () => {

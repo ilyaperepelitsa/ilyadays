@@ -372,6 +372,11 @@ def ru_plural(n, one, few, many):
     return one if n == 1 else few if 2 <= n <= 4 else many
 
 
+def rp(key, one, few, many):
+    """The Russian noun form for the published number under `key`."""
+    return ru_plural(Ctx.data.values[key], one, few, many)
+
+
 def L(en, ru):
     return ru if Ctx.lang == 'ru' else en
 
@@ -418,7 +423,8 @@ class Fig:
             self.top = last2 + (36 if layout in ('wide', 'page') else 54)
         self.head = t_svg + s_svg
         self.lang = Ctx.lang
-        self.bottom = None if self.h is None else self.h - (54 if layout in ('wide', 'page') else 76)
+        # the drawing ends here; below it, clear space of at least half the credit's type size, then the credit
+        self.bottom = None if self.h is None else self.h - (60 if layout in ('wide', 'page') else 84)
 
     def add(self, svg: str):
         self.body.append(svg)
@@ -432,7 +438,7 @@ class Fig:
         left = T(m + s * 1.45, y, L('ilyadays.com · Stoic Constitution', 'ilyadays.com · Стоическая конституция'), s, 650, cls='mu')
         right = T(self.w - m, y, L(f'Figure {self.number} · How the Constitution was made', f'Рис. {self.number} · Как сделана конституция'),
                   s, 500, anchor='end', cls='mu') if self.layout != 'phone' else ''
-        return mark + left + right
+        return f'<g class="dg-foot">{mark}{left}{right}</g>'
 
     def svg(self, uid: str, cls: str, mode='file') -> str:
         """mode 'file': the figure file, which is also what the page inlines (the page's colours, light and dark);
@@ -708,16 +714,17 @@ def mini_grid(x, y, w, h, r):
 # ----------------------------------------------------------------------------------------------------- 1 pipeline
 def pipeline_stages():
     return [
-        ('grid', [N('passages')], L('passages', 'фрагментов'), L(['Marcus, in the 1634 English'], ['Марк в английском 1634 года'])),
-        ('map', [N('passages')], L('vectors', 'векторов'), L([N('dims'), ' numbers each, by meaning'], ['по ', N('dims'), ' числа, по смыслу'])),
+        ('grid', [N('passages')], L('passages', rp('passages', 'фрагмент', 'фрагмента', 'фрагментов')), L(['Marcus, in the 1634 English'], ['Марк в английском 1634 года'])),
+        ('map', [N('passages')], L('vectors', rp('passages', 'вектор', 'вектора', 'векторов')), L([N('dims'), ' numbers each, by meaning'], ['по ', N('dims'), ' числа, по смыслу'])),
         ('tree', ['1'], L('tree', 'дерево'), L(['Ward’s method joins them'], ['метод Уорда их объединяет'])),
-        ('chapters', [N('chapters')], L('chapters', 'глав'), [N('sections'), L(' sections, cut from the tree', ' разделов, срезанных с дерева')]),
-        ('articles', [N('articles')], L('articles', 'статей'),
-         L([N('claims'), ' fused claims, ', N('single'), ' said once'], [N('claims'), ' утверждений, ', N('single'), ' — сказано однажды'])),
-        ('waffle', [N('seneca-items')], L('Seneca items', 'вкладов Сенеки'),
+        ('chapters', [N('chapters')], L('chapters', rp('chapters', 'глава', 'главы', 'глав')),
+         [N('sections'), L(' sections, cut from the tree', rp('sections', ' раздел, срезанный', ' раздела, срезанных', ' разделов, срезанных') + ' с дерева')]),
+        ('articles', [N('articles')], L('articles', rp('articles', 'статья', 'статьи', 'статей')),
+         L([N('claims'), ' fused claims, ', N('single'), ' said once'], [N('claims'), rp('claims', ' утверждение, ', ' утверждения, ', ' утверждений, '), N('single'), ' — сказано однажды'])),
+        ('waffle', [N('seneca-items')], L('Seneca items', rp('seneca-items', 'вклад Сенеки', 'вклада Сенеки', 'вкладов Сенеки')),
          L(['Backs, Adds or Limits; ', N('seneca-pieces'), ' quotes from ', N('letters'), ' letters'],
-           ['Подкрепляет, Добавляет или Ограничивает; ', N('seneca-pieces'), ' цитата из ', N('letters'), ' писем'])),
-        ('scripts', [N('tr-ru')], L('passages in Russian', 'фрагмента по-русски'),
+           ['Подкрепляет, Добавляет или Ограничивает; ', N('seneca-pieces'), rp('seneca-pieces', ' цитата из ', ' цитаты из ', ' цитат из '), N('letters'), rp('letters', ' письма', ' писем', ' писем')])),
+        ('scripts', [N('tr-ru')], L('passages in Russian', rp('tr-ru', 'фрагмент', 'фрагмента', 'фрагментов') + ' по-русски'),
          L([N('tr-marcus'), ' from the Greek and ', N('tr-seneca'), ' from the Latin into English, then all into Russian'],
            [N('tr-marcus'), ' с греческого и ', N('tr-seneca'), ' с латыни на английский, затем все на русский'])),
     ]
@@ -755,7 +762,7 @@ def fig_pipeline(layout):
     sub = L('Marcus Aurelius’s Meditations, measured by meaning, grouped, fused, joined by Seneca and translated',
             '«Размышления» Марка Аврелия: измерены по смыслу, сгруппированы, слиты, дополнены Сенекой и переведены')
     desc = L(f"Seven stages: {v['passages']} passages; {v['passages']} vectors of {v['dims']} numbers; one Ward tree; {v['chapters']} chapters and {v['sections']} sections; {v['articles']} articles with {v['claims']} fused claims and {v['single']} said once; {v['seneca-items']} items of Seneca; {v['tr-ru']} passages translated into Russian.",
-             f"Семь этапов: {v['passages']} фрагментов; {v['passages']} векторов по {v['dims']} числа; одно дерево Уорда; {v['chapters']} глав и {v['sections']} разделов; {v['articles']} статей, {v['claims']} утверждений и {v['single']} — сказано однажды; {v['seneca-items']} вкладов Сенеки; {v['tr-ru']} фрагмента переведены на русский.")
+             f"Семь этапов: {v['passages']} {rp('passages', 'фрагмент', 'фрагмента', 'фрагментов')}; {v['passages']} {rp('passages', 'вектор', 'вектора', 'векторов')} по {v['dims']} {rp('dims', 'числу', 'числа', 'чисел')}; одно дерево Уорда; {v['chapters']} {rp('chapters', 'глава', 'главы', 'глав')} и {v['sections']} {rp('sections', 'раздел', 'раздела', 'разделов')}; {v['articles']} {rp('articles', 'статья', 'статьи', 'статей')}, {v['claims']} {rp('claims', 'утверждение', 'утверждения', 'утверждений')} и {v['single']} — сказано однажды; {v['seneca-items']} {rp('seneca-items', 'вклад', 'вклада', 'вкладов')} Сенеки; {v['tr-ru']} {rp('tr-ru', 'фрагмент переведён', 'фрагмента переведены', 'фрагментов переведены')} на русский.")
     f = Fig('pipeline', 1, layout, title, sub, desc)
     stages = pipeline_stages()
     if layout in ('wide', 'page'):
@@ -840,14 +847,16 @@ def map_panel(f, cid, x, y, w, h, r_bg, r_fg, numbers, num_size):
             mx, my = sum(p[0] for p in ps) / len(ps), sum(p[1] for p in ps) / len(ps)
             label = str(d.section_article[sec])
             labels.append([mx, my, tw(label, num_size, 750) + 7, num_size * 1.05, sec, label, mx, my])
-        # push overlapping labels apart, keep them in the panel
-        for _ in range(200):
+        # push labels apart until a clear gap separates them (a leader line then runs back to the true centre),
+        # and keep them in the panel
+        pad = num_size * 0.3
+        for _ in range(400):
             moved = False
             for i in range(len(labels)):
                 for j in range(i + 1, len(labels)):
                     a, b = labels[i], labels[j]
-                    ox = (a[2] + b[2]) / 2 - abs(a[0] - b[0])
-                    oy = (a[3] + b[3]) / 2 - abs(a[1] - b[1])
+                    ox = (a[2] + b[2]) / 2 + pad - abs(a[0] - b[0])
+                    oy = (a[3] + b[3]) / 2 + pad - abs(a[1] - b[1])
                     if ox > 0 and oy > 0:
                         moved = True
                         if ox < oy:
@@ -1195,16 +1204,18 @@ def fig_fusion(layout):
     art, art_en = article_one()
     colours = art_en['colors']
     title = L('Fusing a section into an article', 'Как раздел сливается в статью')
-    sub = L([f'Article 1, “{art["title"]}”: ', N('a1-members'), ' passages, ', N('a1-claims'), ' fused claims, ', N('a1-single'), ' said once, one statement. Each passage keeps its colour, from the claims it feeds to the words it backs.'],
-            [f'Статья 1 «{art["title"]}»: ', N('a1-members'), ' фрагментов, ', N('a1-claims'), ' утверждений, ', N('a1-single'), ' — сказано однажды, одно положение. Каждый фрагмент сохраняет свой цвет — от утверждений, которые он питает, до слов, которые он подкрепляет.'])
+    nc, nu = len(set(colours.values())), len(colours)
+    hue = L(f'{nc} colours for the {nu} quoted passages: two passages that back the same claim never share one, and the numbers tell the rest apart.',
+            f'{nc} цветов на {nu} цитируемых фрагментов: два фрагмента одного утверждения никогда не делят цвет, остальные различают номера.')
+    sub = L([f'Article 1, “{art["title"]}”: ', N('a1-members'), ' passages, ', N('a1-claims'), ' fused claims, ', N('a1-single'), ' said once, one statement. ' + hue],
+            [f'Статья 1 «{art["title"]}»: ', N('a1-members'), ' фрагментов, ', N('a1-claims'), ' утверждений, ', N('a1-single'), ' — сказано однажды, одно положение. ' + hue])
     if layout in ('wide', 'page'):
-        sub = L([f'Article 1, “{art["title"]}”: each passage keeps its colour, from the claims it feeds to the words it backs.'],
-                [f'Статья 1 «{art["title"]}»: у каждого фрагмента свой цвет — от утверждений до слов.'])
+        sub = L([f'Article 1, “{art["title"]}”. ' + hue], [f'Статья 1 «{art["title"]}». ' + hue])
     elif layout != 'phone':
-        sub = L([f'Article 1, “{art["title"]}”: ', N('a1-members'), ' passages, ', N('a1-claims'), ' fused claims, ', N('a1-single'), ' said once, one statement. Each passage keeps its colour.'],
-                [f'Статья 1 «{art["title"]}»: ', N('a1-members'), ' фрагментов, ', N('a1-claims'), ' утверждений, ', N('a1-single'), ' — сказано однажды, одно положение. У каждого фрагмента свой цвет.'])
-    desc = L(f"Article 1: {v['a1-members']} passages on the left feed {v['a1-claims']} fused claims; coloured lines under the words show which passages back them; two points said once by a single passage stand apart; the claims are gathered into the statement “{art['statement']['t']}” The word “because” in claim 5 is the editor's inference, in purple.",
-             f"Статья 1: {v['a1-members']} фрагментов слева питают {v['a1-claims']} утверждений; цветные линии под словами показывают, какие фрагменты их подкрепляют; два пункта сказаны однажды одним фрагментом; утверждения собраны в положение «{art['statement']['t']}» Слова «потому что» в утверждении 5 — вывод редактора, фиолетовым.")
+        sub = L([f'Article 1, “{art["title"]}”: ', N('a1-members'), ' passages, ', N('a1-claims'), ' fused claims, ', N('a1-single'), f' said once. {nc} colours for {nu} passages; two that back one claim never share one.'],
+                [f'Статья 1 «{art["title"]}»: ', N('a1-members'), ' фрагментов, ', N('a1-claims'), ' утверждений, ', N('a1-single'), f' — сказано однажды. {nc} цветов на {nu} фрагментов; у двух фрагментов одного утверждения цвета разные.'])
+    desc = L(f"Article 1: {v['a1-members']} passages on the left feed {v['a1-claims']} fused claims; coloured lines under the words show which passages back them ({nc} colours for {nu} quoted passages, never the same colour for two passages of one claim; the passage numbers tell them apart); two points said once by a single passage stand apart; the claims are gathered into the statement “{art['statement']['t']}” The word “because” in claim 5 is the editor's inference, in purple.",
+             f"Статья 1: {v['a1-members']} фрагментов слева питают {v['a1-claims']} утверждений; цветные линии под словами показывают, какие фрагменты их подкрепляют ({nc} цветов на {nu} цитируемых фрагментов, у двух фрагментов одного утверждения цвета всегда разные; различают их номера); два пункта сказаны однажды одним фрагментом; утверждения собраны в положение «{art['statement']['t']}» Слова «потому что» в утверждении 5 — вывод редактора, фиолетовым.")
     f = Fig('fusion', 4, layout, title, sub, desc)
     items = fusion_items()
     members = art['members']
@@ -1222,19 +1233,41 @@ def fig_fusion(layout):
         cx0 = f.m
         tx = f.m + chip_w + (150 if sq else 112)
         tw_max = (f.w - f.m - tx) if sq else 640
-        # items
-        y = f.top + (8 if sq else 4)
-        ports = {}
-        for kind, iid, header, text, spans, passages, inf in items:
-            f.add(T(tx, y + hs, header, hs, 650, cls='mu'))
-            body, last, nlines = traced_text(tx, y + hs + (10 if sq else 8) + cs, text, spans, cs, tw_max, lh, under=cs * 0.2, thick=2.6 if sq else 2.2, inference=inf)
-            f.add(body)
-            if inf:
-                f.add(T(tx + tw_max, y + hs, inf_label, hs, 650, anchor='end', cls='ef'))
-            top_y, bot_y = y + hs * 0.4, last + cs * 0.4
-            ports[iid] = (top_y, bot_y, passages, kind)
-            y = last + cs * 0.55 + (cs * 0.72 if sq else cs * 0.5)
-        items_bottom = y
+        art_single = art['single']
+        once = L('Said once, kept apart: ', 'Сказано однажды, отдельно: ') + '; '.join(f'{x["ref"]} ({x["label"].lower()})' for x in art_single)
+
+        def lay_items(cs, hs, lh, gap=0.72):
+            out, ports, y = [], {}, f.top + (8 if sq else 4)
+            for kind, iid, header, text, spans, passages, inf in items:
+                out.append(T(tx, y + hs, header, hs, 650, cls='mu'))
+                body, last, nlines = traced_text(tx, y + hs + (10 if sq else 8) + cs, text, spans, cs, tw_max, lh, under=cs * 0.2, thick=2.6 if sq else 2.2, inference=inf)
+                out.append(body)
+                if inf:
+                    out.append(T(tx + tw_max, y + hs, inf_label, hs, 650, anchor='end', cls='ef'))
+                ports[iid] = (y + hs * 0.4, last + cs * 0.4, passages, kind)
+                y = last + cs * 0.55 + (cs * gap if sq else cs * 0.5)
+            return out, ports, y
+
+        if sq:
+            # the items, then the statement box, all above the credit's clear space; the gaps close up only as far as they must
+            stmt_lines = len(wrap_offsets(stmt, 28, f.w - f.m - tx - 6))
+            stmt_h = 22 + 18 + 28 + (stmt_lines - 1) * 28 * 1.5 + 26
+            for lh_k, gap in ((1.56, 0.72), (1.52, 0.6), (1.48, 0.5), (1.44, 0.42)):
+                body_parts, ports, items_bottom = lay_items(cs, hs, cs * lh_k, gap)
+                if items_bottom + 4 - 8 + stmt_h <= f.bottom:
+                    break
+        else:
+            # the landscape image: the claims, then the said-once line on a row of its own, all clear of the credit;
+            # the type steps down only as far as it must
+            for cs in (16, 15.5, 15, 14.5, 14):
+                hs, lh = cs - 1, cs * 1.45
+                body_parts, ports, items_bottom = lay_items(cs, hs, lh)
+                once_lines = len(wrap(once, 15, tw_max, 600))
+                once_y = items_bottom + 4
+                if once_y + 15 + (once_lines - 1) * 19 <= f.bottom - 8:
+                    break
+        for part in body_parts:
+            f.add(part)
         # chips, spread over the items' height, in the record's order of closeness
         n = len(members)
         span_top, span_bot = f.top + 6, (items_bottom - cs * 0.8 if sq else f.bottom - chip_h)
@@ -1279,14 +1312,12 @@ def fig_fusion(layout):
             body, last, _ = traced_text(sx, f.top + 58, stmt, stmt_spans, ss, sw - 14, ss * 1.55, under=5, thick=2.4)
             f.add(body)
             f.add(T(sx, last + 36, L('gathers claims 1 and 2', 'собирает утв. 1 и 2'), 16, 600, cls='mu'))
-            art_single = article_one()[0]['single']
-            once = L('Said once, kept apart: ', 'Сказано однажды, отдельно: ') + '; '.join(f'{x["ref"]} ({x["label"].lower()})' for x in art_single)
-            f.add(para(tx, f.bottom + 4, once, 15, tw_max, 19, 600, cls='mu')[0])
+            f.add(para(tx, once_y + 15, once, 15, tw_max, 19, 600, cls='mu')[0])
             # key
             ky = f.top + box_h + 32
             f.add(T(sx, ky, L('How to read it', 'Как читать'), 16, 700))
-            key = L(['A coloured line under words: the passage that says them. Two lines: two passages say it.'],
-                    ['Цветная линия под словами — фрагмент, который их говорит. Две линии — говорят два фрагмента.'])
+            key = L(['A coloured line under words: a passage that says them; its curve leads to the number.'],
+                    ['Цветная линия под словами — фрагмент, который их говорит; кривая ведёт к номеру.'])
             f.add(para(sx, ky + 24, key, 16, sw - 4, 20, cls='mu')[0])
     else:
         # phone: chips on top, items under them, the statement at the end
@@ -1364,6 +1395,36 @@ def fig_sides(layout):
         return hover(tip, f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{rmax * 0.36:.1f}" class="nf km" stroke-width="1.2"/>')
 
     of = lambda key: L([N(f'fill-{key}'), ' of ', N('articles')], [N(f'fill-{key}'), ' из ', N('articles')])
+
+    def size_key(x, y, rmax, fs, cls='mu'):
+        """The key to the dots: area by the number of items, and the ring. y is the text baseline."""
+        out, cx = [], x
+        lead = L('Dot area: items in the side', 'Площадь точки — число пунктов')
+        out.append(T(cx, y, lead, fs, 600, cls=cls))
+        cx += tw(lead, fs, 600) + fs * 0.8
+        cy = y - fs * 0.36
+        for n in (1, biggest):
+            r = max(2.2, rmax * math.sqrt(n / biggest))
+            out.append(f'<circle cx="{cx + r:.1f}" cy="{cy:.1f}" r="{r:.1f}" class="ink"/>')
+            cx += 2 * r + fs * 0.3
+            out.append(T(cx, y, str(n), fs, 700, cls=cls))
+            cx += tw(str(n), fs, 700) + fs * 0.8
+        rr = rmax * 0.36
+        out.append(f'<circle cx="{cx + rr:.1f}" cy="{cy:.1f}" r="{rr:.1f}" class="nf km" stroke-width="1.2"/>')
+        cx += 2 * rr + fs * 0.3
+        ring = L('empty, with a reason', 'пусто, с объяснением')
+        out.append(T(cx, y, ring, fs, 600, cls=cls))
+        return ''.join(out), cx + tw(ring, fs, 600) - x
+
+    def fit_title(text, size, maxw):
+        """The title at one size; cut at a word with an ellipsis when it is too long."""
+        if tw(text, size, 500) <= maxw:
+            return text
+        words = text.split()
+        while words and tw(' '.join(words) + '…', size, 500) > maxw:
+            words.pop()
+        return ' '.join(words).rstrip(',;:') + '…'
+
     if layout in ('wide', 'page'):
         lx, lw = f.m, 372
         cw_x = f.m + lw + 18
@@ -1373,8 +1434,10 @@ def fig_sides(layout):
         col = (mx1 - cw_x - gapc * (len(chapters) - 1)) / v['articles']
         head_h = 44
         rows_top = f.top + head_h
-        rh = (f.bottom - rows_top) / 5
+        key_h = 40
+        rh = (f.bottom - key_h - rows_top) / 5
         rmax = min(col, rh) / 2 - 0.6
+        f.add(size_key(cw_x, f.bottom - 10, rmax, 21)[0])
         # chapter heads
         x = cw_x
         for c, arts in zip(chapters, groups):
@@ -1421,6 +1484,20 @@ def fig_sides(layout):
             for k, ln in enumerate(lines):
                 f.add(T(hx, base + k * 24 + 12, ln, 21, 750, anchor='middle'))
             f.add(T(hx, f.top + 76, of(key), 19, 600, anchor='middle', cls='mu'))
+        # the key, in the empty corner above the titles: two lines, so it never runs into the column heads
+        kfs = 19
+        lead = L('Dot area: items in the side', 'Площадь точки — число пунктов')
+        f.add(T(f.m, f.top + 40, lead, kfs, 600, cls='mu'))
+        kx, ky = f.m, f.top + 76
+        for n in (1, biggest):
+            r = max(2.2, rmax * math.sqrt(n / biggest))
+            f.add(f'<circle cx="{kx + r:.1f}" cy="{ky - kfs * 0.36:.1f}" r="{r:.1f}" class="ink"/>')
+            kx += 2 * r + 6
+            f.add(T(kx, ky, str(n), kfs, 700, cls='mu'))
+            kx += tw(str(n), kfs, 700) + 16
+        rr = rmax * 0.36
+        f.add(f'<circle cx="{kx + rr:.1f}" cy="{ky - kfs * 0.36:.1f}" r="{rr:.1f}" class="nf km" stroke-width="1.2"/>')
+        f.add(T(kx + 2 * rr + 6, ky, L('empty, with a reason', 'пусто, с объяснением'), kfs, 600, cls='mu'))
         y = top
         for c, arts in zip(chapters, groups):
             cls = chapter_cls(c['id'])
@@ -1429,10 +1506,7 @@ def fig_sides(layout):
                 art = next(a for a in articles if a['number'] == n_)
                 cy = y + rh / 2
                 f.add(T(f.m + num_w, cy + 6.5, str(n_), 18, 700, anchor='end'))
-                size = 18
-                while size > 14 and tw(art['title'], size, 500) > title_w:
-                    size -= 0.5
-                f.add(T(f.m + num_w + 12, cy + size * 0.36, art['title'], size, 500, cls='mu'))
+                f.add(T(f.m + num_w + 12, cy + 18 * 0.36, fit_title(art['title'], 18, title_w), 18, 500, cls='mu'))
                 for j, key in enumerate(SIDES):
                     f.add(dot(cw_x + j * cols_w + cols_w / 2, cy, counts[(n_, key)], rmax, n_, key))
                 y += rh
@@ -1462,10 +1536,21 @@ def fig_sides(layout):
                 y += rh
             y += gapr
         y += 10
-        s1, n1, last = para(f.m, y + 13, L(['Numbers under the names: articles that fill the side, of ', N('articles'), '.'],
-                                         ['Числа под названиями — сколько из ', N('articles'), ' статей заполняют сторону.']), 13, f.w - 2 * f.m, 17, cls='mu')
+        s1, n1, last = para(f.m, y + 13, L(['Numbers under the names: articles that fill the side, of ', N('articles'), '. Dot area: the number of items in the side.'],
+                                         ['Числа под названиями — сколько из ', N('articles'), ' статей заполняют сторону. Площадь точки — число пунктов на стороне.']), 13, f.w - 2 * f.m, 17, cls='mu')
         f.add(s1)
-        f.used = last + 8
+        y = last + 24
+        kx = f.m
+        for n in (1, biggest):
+            r = max(2.2, rmax * math.sqrt(n / biggest))
+            f.add(f'<circle cx="{kx + r:.1f}" cy="{y - 4.6:.1f}" r="{r:.1f}" class="ink"/>')
+            kx += 2 * r + 4
+            f.add(T(kx, y, L(f'{n} item' + ('s' if n > 1 else ''), f'{n} {ru_plural(n, "пункт", "пункта", "пунктов")}'), 13, 600, cls='mu'))
+            kx += tw(L(f'{n} items', f'{n} пунктов'), 13, 600) + 12
+        rr = rmax * 0.36
+        f.add(f'<circle cx="{kx + rr:.1f}" cy="{y - 4.6:.1f}" r="{rr:.1f}" class="nf km" stroke-width="1.2"/>')
+        f.add(T(kx + 2 * rr + 4, y, L('empty, with a reason', 'пусто, с объяснением'), 13, 600, cls='mu'))
+        f.used = y + 8
     return f
 
 
@@ -1546,8 +1631,8 @@ def seneca_steps():
            ['Письмо вокруг каждой цитаты прочитано; одно предложение говорит, о чём оно'])),
         (L('Placed', 'Размещение'),
          L([N('seneca-items'), ' items: each ', names['stronger'], ', ', names['wider'], ' or ', names['qualified'], '; ', N('seneca-pieces'), ' quotes from ', N('letters'), ' letters'],
-           [N('seneca-items'), ' вкладов: каждый ', names['stronger'].lower(), ', ', names['wider'].lower(), ' или ', names['qualified'].lower(), '; ', N('seneca-pieces'), ' цитата из ', N('letters'), ' писем'])),
-        (L('Clauses in the body', 'Оговорки в тексте'),
+           [N('seneca-items'), rp('seneca-items', ' вклад: каждый ', ' вклада: каждый ', ' вкладов: каждый '), names['stronger'].lower(), ', ', names['wider'].lower(), ' или ', names['qualified'].lower(), '; ', N('seneca-pieces'), ' цитата из ', N('letters'), ' писем'])),
+        (L('Clauses in the body', 'Приписки в тексте'),
          L([N('clauses'), ': ', N('clauses-adds'), ' add, ', N('clauses-limits'), ' limit, ', N('clauses-challenges'), ' challenge; Marcus’s words are never rewritten'],
            [N('clauses'), ': ', N('clauses-adds'), ' добавляют, ', N('clauses-limits'), ' ограничивают, ', N('clauses-challenges'), ' возражают; слова Марка не переписываются'])),
     ]
@@ -1573,9 +1658,9 @@ def fig_seneca(layout):
     d, v = Ctx.data, Ctx.data.values
     title = L('Seneca as a second voice', 'Сенека как второй голос')
     sub = L(['How his passages were found and placed: ', N('seneca-items'), ' items in ', N('articles'), ' articles, each one Backs, Adds or Limits Marcus.'],
-            ['Как его фрагменты найдены и размещены: ', N('seneca-items'), ' вкладов в ', N('articles'), ' статьях, каждый подкрепляет, добавляет или ограничивает Марка.'])
+            ['Как его фрагменты найдены и размещены: ', N('seneca-items'), rp('seneca-items', ' вклад в ', ' вклада в ', ' вкладов в '), N('articles'), ' статьях, каждый подкрепляет, добавляет или ограничивает Марка.'])
     desc = L(f"Five steps, from a search corpus of {v['seneca-corpus']} passages to {v['seneca-items']} placed items and {v['clauses']} clauses; a stacked column per article shows Backs ({v['seneca-backs']}), Adds ({v['seneca-adds']}) and Limits ({v['seneca-limits']}).",
-             f"Пять шагов: от корпуса из {v['seneca-corpus']} фрагментов к {v['seneca-items']} вкладам и {v['clauses']} оговоркам; столбик на статью показывает «Подкрепляет» ({v['seneca-backs']}), «Добавляет» ({v['seneca-adds']}) и «Ограничивает» ({v['seneca-limits']}).")
+             f"Пять шагов: от корпуса из {v['seneca-corpus']} фрагментов к {v['seneca-items']} вкладам и {v['clauses']} {ru_plural(v['clauses'], 'приписке', 'припискам', 'припискам')}; столбик на статью показывает «Подкрепляет» ({v['seneca-backs']}), «Добавляет» ({v['seneca-adds']}) и «Ограничивает» ({v['seneca-limits']}).")
     f = Fig('seneca', 6, layout, title, sub, desc)
     steps = seneca_steps()
     strip_title = L('Items per article', 'Вклады по статьям')
@@ -1587,7 +1672,7 @@ def fig_seneca(layout):
             step_list(f, f.m, f.top + 16, lw, 20, 17, 27, steps)
         sx = f.m + lw + 44
         f.add(T(sx, f.top + 18, strip_title, 22, 750))
-        seneca_strip(f, sx, f.top + 58, f.w - f.m - sx, f.bottom - f.top - 58 + 12, 21)
+        seneca_strip(f, sx, f.top + 58, f.w - f.m - sx, f.bottom - f.top - 58 + 8, 21)
     elif layout == 'square':
         y = step_list(f, f.m, f.top + 24, f.w - 2 * f.m, 26, 23, 44, steps)
         f.add(T(f.m, y + 4, strip_title, 25, 750))
@@ -1604,24 +1689,25 @@ def fig_seneca(layout):
 def lanes():
     return [
         ('marcus', L('Greek → English', 'Греческий → английский'),
-         L([N('tr-marcus'), ' passages of Marcus'], [N('tr-marcus'), ' фрагментов Марка']), 'Claude Fable 5.2',
+         L([N('tr-marcus'), ' passages of Marcus'], [N('tr-marcus'), ' ' + ru_plural(Ctx.data.values['tr-marcus'], 'фрагмент', 'фрагмента', 'фрагментов') + ' Марка']), 'Claude Fable 5.2',
          [(L('Translator', 'Переводчик'), L('sees the Greek', 'видит греческий')),
           (L('Checker', 'Проверяющий'), L('the Greek and the English', 'греческий и английский')),
           (L('Settler', 'Решающий'), L('Greek, draft and points', 'греческий, черновик, замечания'))],
-         L([N('dec-marcus-found'), ' more faults found while settling · ', N('notes-marcus'), ' notes on what the Greek leaves open'],
-           [N('dec-marcus-found'), ' ошибок найдено при решении · ', N('notes-marcus'), ' заметок о том, что греческий оставляет открытым'])),
+         L([N('dec-marcus-found'), ' of the accepted are faults the settler found itself · ', N('notes-marcus'), ' notes on what the Greek leaves open'],
+           [N('dec-marcus-found'), ' из принятых — ошибки, найденные самим решающим · ', N('notes-marcus'), ' заметок о том, что греческий оставляет открытым'])),
         ('seneca', L('Latin → English', 'Латынь → английский'),
-         L([N('tr-seneca'), ' sections of Seneca, ', N('tr-letters'), ' letters'], [N('tr-seneca'), ' разделов Сенеки, ', N('tr-letters'), ' письма']), 'Claude Fable 5.2',
+         L([N('tr-seneca'), ' sections of Seneca, ', N('tr-letters'), ' letters'],
+           [N('tr-seneca'), ' ' + ru_plural(Ctx.data.values['tr-seneca'], 'раздел', 'раздела', 'разделов') + ' Сенеки, ', N('tr-letters'), ' ' + ru_plural(Ctx.data.values['tr-letters'], 'письмо', 'письма', 'писем')]), 'Claude Fable 5.2',
          [(L('Translator', 'Переводчик'), L('sees the Latin', 'видит латынь')),
           (L('Checker', 'Проверяющий'), L('the Latin and the English', 'латынь и английский')),
           (L('Settler', 'Решающий'), L('Latin, draft and points', 'латынь, черновик, замечания'))],
-         L([N('dec-seneca-found'), ' more faults found while settling · ', N('notes-seneca'), ' notes on what the Latin leaves open'],
-           [N('dec-seneca-found'), ' ошибок найдено при решении · ', N('notes-seneca'), ' заметок о том, что латынь оставляет открытым'])),
+         L([N('dec-seneca-found'), ' of the accepted are faults the settler found itself · ', N('notes-seneca'), ' notes on what the Latin leaves open'],
+           [N('dec-seneca-found'), ' из принятых — ошибки, найденные самим решающим · ', N('notes-seneca'), ' заметок о том, что латынь оставляет открытым'])),
         ('ru', L('English → Russian', 'Английский → русский'),
-         L([N('tr-ru'), ' passages, Marcus and Seneca'], [N('tr-ru'), ' фрагмента, Марк и Сенека']), 'Claude Opus 5.5 · Sonnet 5.5',
+         L([N('tr-ru'), ' passages, Marcus and Seneca'], [N('tr-ru'), ' ' + ru_plural(Ctx.data.values['tr-ru'], 'фрагмент', 'фрагмента', 'фрагментов') + ', Марк и Сенека']), 'Claude Opus 5.5 · Sonnet 5.5',
          [(L('Translator', 'Переводчик'), L('Opus, sees the English', 'Opus, видит английский')),
-          (L('Second reader', 'Второй читатель'), L('Sonnet, English and Russian', 'Sonnet, английский и русский')),
-          (L('Translator settles', 'Переводчик решает'), L('each point in writing', 'каждое замечание письменно'))],
+          (L('Second reader', 'Второй читатель'), L('Sonnet, English and Russian', 'Sonnet, оба текста')),
+          (L('Translator settles', 'Переводчик'), L('each point in writing', 'решает письменно'))],
          L(['Every quote of the articles cut again from the Russian; a glossary fixes the page’s terms'],
            ['Каждая цитата статей вырезана заново из русского; глоссарий закрепляет термины страницы'])),
     ]
@@ -1668,10 +1754,10 @@ def dec_labels(f, x, y, w, size, name):
 def fig_translation(layout):
     d, v = Ctx.data, Ctx.data.values
     title = L('Three readings for every passage', 'Три прочтения для каждого фрагмента')
-    sub = L('Greek and Latin into today’s English, then English into Russian. Each reader works in a fresh context; every point the second reader raises is settled in writing.',
-            'Греческий и латынь — на современный английский, затем английский — на русский. Каждый читатель работает в новом контексте; каждое замечание второго читателя решается письменно.')
+    sub = L('Greek and Latin into today’s English, then into Russian. Every point of the second reader is settled in writing: by a third reader in a fresh context, or, for the Russian, by the translator.',
+            'Греческий и латынь — на современный английский, затем на русский. Каждое замечание второго читателя решается письменно: третьим читателем в новом контексте, а для русского — переводчиком.')
     desc = L(f"Three lanes. Greek to English: {v['tr-marcus']} passages, points settled {v['dec-marcus-accepted']} accepted, {v['dec-marcus-partly']} partly, {v['dec-marcus-declined']} declined. Latin to English: {v['tr-seneca']} sections, {v['dec-seneca-accepted']}, {v['dec-seneca-partly']}, {v['dec-seneca-declined']}. English to Russian: {v['tr-ru']} passages, {v['dec-ru-accepted']}, {v['dec-ru-partly']}, {v['dec-ru-declined']}.",
-             f"Три дорожки. С греческого на английский: {v['tr-marcus']} фрагментов, замечания: {v['dec-marcus-accepted']} принято, {v['dec-marcus-partly']} частично, {v['dec-marcus-declined']} отклонено. С латыни: {v['tr-seneca']} разделов, {v['dec-seneca-accepted']}, {v['dec-seneca-partly']}, {v['dec-seneca-declined']}. С английского на русский: {v['tr-ru']} фрагмента, {v['dec-ru-accepted']}, {v['dec-ru-partly']}, {v['dec-ru-declined']}.")
+             f"Три дорожки. С греческого на английский: {v['tr-marcus']} фрагментов, замечания: {v['dec-marcus-accepted']} принято, {v['dec-marcus-partly']} частично, {v['dec-marcus-declined']} отклонено. С латыни: {v['tr-seneca']} {ru_plural(v['tr-seneca'], 'раздел', 'раздела', 'разделов')}, {v['dec-seneca-accepted']}, {v['dec-seneca-partly']}, {v['dec-seneca-declined']}. С английского на русский: {v['tr-ru']} фрагмента, {v['dec-ru-accepted']}, {v['dec-ru-partly']}, {v['dec-ru-declined']}.")
     f = Fig('translation', 7, layout, title, sub, desc)
     peak = max(v[f'dec-{n}-total'] for n in ('marcus', 'seneca', 'ru'))
     if layout == 'square':
@@ -1688,11 +1774,18 @@ def fig_translation(layout):
             f.add(T(f.m + hw + 16, y + ls, units + [' · ' + model], ss, 500, cls='mu'))
             k = len(readers)
             gapn = 30
-            nw = (width - gapn * (k - 1)) / k
+            # each box as wide as its words need, the spare width shared out equally
+            need = [max(tw(f'{j + 1} · {who}', ss, 750), tw(sees, ss, 500)) + 30 for j, (who, sees) in enumerate(readers)]
+            spare = (width - gapn * (k - 1) - sum(need)) / k
+            widths = [n_ + spare for n_ in need] if spare >= 0 else [(width - gapn * (k - 1)) / k] * k
+            assert spare >= 0, f'translation lane {name}: the readers’ boxes do not fit ({-spare * k:.0f} too wide)'
             ny = y + ls + 18
             nh = ss * 3.1
+            nx = f.m
             for j, (who, sees) in enumerate(readers):
-                nx = f.m + j * (nw + gapn)
+                nw = widths[j]
+                if j:
+                    nx += widths[j - 1] + gapn
                 f.add(rrect(nx, ny, nw, nh, 8, 'soft'))
                 f.add(T(nx + 14, ny + ss * 1.35, f'{j + 1} · {who}', ss, 750))
                 f.add(T(nx + 14, ny + ss * 2.55, sees, ss, 500, cls='mu'))
@@ -1704,10 +1797,10 @@ def fig_translation(layout):
             f.add(para(f.m, yy + ss * 1.45, extra, ss, width, ss * 1.25, cls='mu')[0])
     elif layout in ('wide', 'page'):
         ls, ss = 21, 18
-        label_w = 232
+        label_w = 196
         lane_h = (f.bottom - f.top) / 3
         rx = f.m + label_w + 14
-        n_area = 500
+        n_area = 540
         res_x = rx + n_area + 40
         res_w = f.w - f.m - res_x
         scale = res_w / peak
@@ -1715,13 +1808,19 @@ def fig_translation(layout):
             y = f.top + i * lane_h
             if i:
                 f.add(f'<line x1="{f.m:.1f}" y1="{y - 8:.1f}" x2="{f.w - f.m:.1f}" y2="{y - 8:.1f}" class="kl" stroke-width="1"/>')
-            f.add(T(f.m, y + ls + 4, head, ls, 750))
-            f.add(para(f.m, y + ls + 4 + ss * 1.45, units, ss, label_w, ss * 1.25, cls='mu')[0])
+            h_svg, _, h_last = para(f.m, y + ls + 4, head, ls, label_w, ls * 1.15, 750)
+            f.add(h_svg)
+            f.add(para(f.m, h_last + ss * 1.45, units, ss, label_w, ss * 1.25, cls='mu')[0])
             k = len(readers)
             gapn = 22
             nw = (n_area - gapn * (k - 1)) / k
             ny = y + 2
-            nh = ss * 4.4
+            # every box as tall as the tallest content of all lanes, so the three lanes line up
+            def node_h(who, sees):
+                n1 = len(wrap(who, ss, nw - 16, 750))
+                n2 = len(wrap(sees, ss * 0.92, nw - 16, 500))
+                return ss * 1.3 + (n1 - 1) * ss * 1.12 + ss * 1.2 + (n2 - 1) * ss * 1.08 + ss * 0.7
+            nh = min(max(ss * 4.4, max(node_h(w_, s_) for lane in lanes() for w_, s_ in lane[4])), lane_h - 20)
             for j, (who, sees) in enumerate(readers):
                 nx = rx + j * (nw + gapn)
                 f.add(rrect(nx, ny, nw, nh, 8, 'soft'))
@@ -1771,7 +1870,8 @@ def check_cards():
          L(['blocking findings over all ', N('articles'), ' articles; ', N('qa-warnings'), ' warnings for a person to read'],
            ['блокирующих замечаний по всем ', N('articles'), ' статьям; ', N('qa-warnings'), ' предупреждения для человека'])),
         (reader, L('Independent review', 'Независимый рецензент'), [FACT('18'), L(' of ', ' из '), FACT('19')],
-         L(['first reviews sent the article back to its writer'], ['первых рецензий вернули статью автору'])),
+         L(['reviews through the API sent the article back; the one that accepted was Article 18’s second'],
+           ['рецензий через API вернули статью автору; принявшая — вторая рецензия статьи 18'])),
         (reader, L('Reading across', 'Чтение всех статей'), [FACT('79')],
          L(['findings: ', FACT('68'), ' overlaps, ', FACT('7'), ' contradictions, ', FACT('4'), ' labels'],
            ['замечаний: ', FACT('68'), ' пересечений, ', FACT('7'), ' противоречий, ', FACT('4'), ' ярлыка'])),
@@ -1811,6 +1911,8 @@ def vis_rules(f, x, y, w, h, size):
     peak = max(rules.values())
     rows = list(rules.items())
     rh = min(size * 1.55, h / len(rows))
+    if rh < size * 1.3:   # rows would touch: leave the bars out; the card's text carries the total
+        return
     label_w = max(tw(L(r, RULE_RU.get(r, r)), size, 500) for r, _ in rows) + 10
     num_w = tw('00', size, 700) + 8
     bw = w - label_w - num_w
@@ -1853,8 +1955,8 @@ def vis_ticks(f, x, y, w, items, size):
 def fig_checks(layout):
     d, v = Ctx.data, Ctx.data.values
     title = L('Six layers of checks', 'Шесть слоёв проверки')
-    sub = L(['An article reaches the page only through all of them: two scripts, two readers who did not write it, then tests and a browser.'],
-            ['Статья попадает на страницу, только пройдя их все: два скрипта, два читателя, которые её не писали, затем тесты и браузер.'])
+    sub = L(['Four before an article enters the record (two scripts, two readers who did not write it), then two on the page: tests and a browser.'],
+            ['Четыре — прежде чем статья войдёт в данные (два скрипта и два читателя, которые её не писали), затем ещё два на странице: тесты и браузер.'])
     cards = check_cards()
     desc = L('Six layers in order: ' + '; '.join(plain(c[1]) + ': ' + plain(c[2]) + ' ' + plain(c[3]) for c in cards) + '.',
              'Шесть слоёв по порядку: ' + '; '.join(plain(c[1]) + ': ' + plain(c[2]) + ' ' + plain(c[3]) for c in cards) + '.')
@@ -2032,20 +2134,20 @@ def captions():
             'en': f"Ward clustering of the {v['passages']} passage vectors into {v['chapters']} chapters and {v['sections']} sections. Leaves lie on the rim and the root at the centre; the radius encodes the Ward merge distance. The grey circle is the cut of the whole tree into chapters; each chapter was clustered again, and a dark arc marks its cut into max(2, round(n ÷ 11)) sections. The outer ring shows the sections with their article numbers; chapters are numbered in page order, which is an editorial choice.",
             'ru': f"Кластеризация Уорда {v['passages']} векторов фрагментов на {v['chapters']} глав и {v['sections']} разделов. Листья — по краю, корень — в центре; радиус передаёт расстояние слияния по Уорду. Серый круг — разрез всего дерева на главы; каждая глава кластеризована заново, и тёмная дуга отмечает её разрез на max(2, round(n ÷ 11)) разделов. Внешнее кольцо — разделы с номерами статей; главы пронумерованы в порядке страницы, это выбор редактора."},
         'fusion': {
-            'en': f"Fusion of one section into Article 1, “{art['title']}”. Each of the {v['a1-members']} passages keeps one colour: curves lead to the claims it feeds, and a line of its colour runs under the exact words it backs. The {v['a1-claims']} fused claims each rest on two or more passages; the {v['a1-single']} points made by one passage only are kept apart as “said once”; “because” in claim 5 is the editor’s inference (purple). The statement gathers claims 1 and 2. Passage 8.52 is set aside, with its reason recorded.",
-            'ru': f"Слияние одного раздела в статью 1 «{Ctx.data.rec['ru'][1][0]['title']}». Каждый из {v['a1-members']} фрагментов сохраняет один цвет: линии ведут к утверждениям, которые он питает, а черта его цвета проходит под точными словами, которые он подкрепляет. Каждое из {v['a1-claims']} утверждений опирается на два фрагмента или больше; {v['a1-single']} пункта, высказанные одним фрагментом, вынесены отдельно как «сказано однажды»; «потому что» в утверждении 5 — вывод редактора (фиолетовым). Положение собирает утверждения 1 и 2. Фрагмент 8.52 отложен, причина записана."},
+            'en': f"Fusion of one section into Article 1, “{art['title']}”. Curves lead from each passage to the claims it feeds, and a line of its colour runs under the exact words it backs. Colours repeat ({len(set(Ctx.data.articles[0]['colors'].values()))} for the {len(Ctx.data.articles[0]['colors'])} quoted passages), but two passages that back the same claim never share one; the passage numbers tell them apart. The {v['a1-claims']} fused claims each rest on two or more passages; the {v['a1-single']} points made by one passage only are kept apart as “said once”; “because” in claim 5 is the editor’s inference (purple). The statement gathers claims 1 and 2. Passage 8.52 is set aside, with its reason recorded.",
+            'ru': f"Слияние одного раздела в статью 1 «{Ctx.data.rec['ru'][1][0]['title']}». Линии ведут от каждого фрагмента к утверждениям, которые он питает, а черта его цвета проходит под точными словами, которые он подкрепляет. Цвета повторяются ({len(set(Ctx.data.articles[0]['colors'].values()))} на {len(Ctx.data.articles[0]['colors'])} цитируемых фрагментов), но у двух фрагментов одного утверждения цвета всегда разные; различают их номера. Каждое из {v['a1-claims']} утверждений опирается на два фрагмента или больше; {v['a1-single']} пункта, высказанные одним фрагментом, вынесены отдельно как «сказано однажды»; «потому что» в утверждении 5 — вывод редактора (фиолетовым). Положение собирает утверждения 1 и 2. Фрагмент 8.52 отложен, причина записана."},
         'sides': {
             'en': f"The five sides of all {v['articles']} articles. A dot is a side with at least one claim or said-once item, its area proportional to their number; a ring is a side left empty, which the article explains in one sentence. Why is filled in {v['fill-why']} articles, In action in {v['fill-action']}, Practice in {v['fill-practice']}, When it breaks in {v['fill-breaks']} and If I doubt it in {v['fill-doubt']}.",
             'ru': f"Пять сторон всех {v['articles']} статей. Точка — сторона, где есть хотя бы одно утверждение или пункт «сказано однажды», площадь точки пропорциональна их числу; кольцо — сторона, оставленная пустой, что статья объясняет одним предложением. «Почему» заполнено в {v['fill-why']} статьях, «На деле» — в {v['fill-action']}, «Упражнение» — в {v['fill-practice']}, «Когда не выходит» — в {v['fill-breaks']}, «Если я сомневаюсь» — в {v['fill-doubt']}."},
         'seneca': {
             'en': f"Seneca as a second voice. Left: how his passages were found, from a search corpus of {e(v['seneca-corpus'])} passages of all {v['seneca-letters-all']} letters ranked by vector similarity and by logged word searches, then read in context, and how they were placed. Right: the {v['seneca-items']} items per article, stacked as Backs ({v['seneca-backs']}), Adds ({v['seneca-adds']}) and Limits ({v['seneca-limits']}). {v['clauses']} clauses are appended to Marcus’s sentences without rewriting them ({v['clauses-adds']} add, {v['clauses-limits']} limit, {v['clauses-challenges']} challenge).",
-            'ru': f"Сенека как второй голос. Слева — как найдены его фрагменты (корпус для поиска из {r(v['seneca-corpus'])} фрагментов всех {v['seneca-letters-all']} писем, ранжированный по сходству векторов и по записанным поискам слов, затем чтение в контексте) и как они размещены. Справа — {v['seneca-items']} {ru_plural(v['seneca-items'], 'вклад', 'вклада', 'вкладов')} по статьям: «Подкрепляет» ({v['seneca-backs']}), «Добавляет» ({v['seneca-adds']}) и «Ограничивает» ({v['seneca-limits']}). {v['clauses']} оговорки дописаны к предложениям Марка, не переписывая их ({v['clauses-adds']} добавляют, {v['clauses-limits']} ограничивают, {v['clauses-challenges']} возражают)."},
+            'ru': f"Сенека как второй голос. Слева — как найдены его фрагменты (корпус для поиска из {r(v['seneca-corpus'])} фрагментов всех {v['seneca-letters-all']} писем, ранжированный по сходству векторов и по записанным поискам слов, затем чтение в контексте) и как они размещены. Справа — {v['seneca-items']} {ru_plural(v['seneca-items'], 'вклад', 'вклада', 'вкладов')} по статьям: «Подкрепляет» ({v['seneca-backs']}), «Добавляет» ({v['seneca-adds']}) и «Ограничивает» ({v['seneca-limits']}). {v['clauses']} {ru_plural(v['clauses'], 'приписка дописана', 'приписки дописаны', 'приписок дописаны')} к предложениям Марка, не переписывая их ({v['clauses-adds']} добавляют, {v['clauses-limits']} ограничивают, {v['clauses-challenges']} возражают)."},
         'translation': {
             'en': f"Three readings per passage. Greek into English ({v['tr-marcus']} passages of Marcus) and Latin into English ({v['tr-seneca']} sections of Seneca from {v['tr-letters']} letters): a translator, a checker and a settler, each Claude Fable 5.2 in a fresh context. English into Russian ({v['tr-ru']} passages): Claude Opus 5.5 translated, Claude Sonnet 5.5 checked, the translator settled. The bars, on one scale, show how the checker’s points were settled: Greek {e(v['dec-marcus-accepted'])} accepted, {v['dec-marcus-partly']} partly, {v['dec-marcus-declined']} declined and {v['dec-marcus-free']} in free form (the pilot); Latin {v['dec-seneca-accepted']}, {v['dec-seneca-partly']} and {v['dec-seneca-declined']}; Russian {v['dec-ru-accepted']}, {v['dec-ru-partly']} and {v['dec-ru-declined']}.",
             'ru': f"Три прочтения на фрагмент. С греческого на английский ({v['tr-marcus']} {ru_plural(v['tr-marcus'], 'фрагмент', 'фрагмента', 'фрагментов')} Марка) и с латыни на английский ({v['tr-seneca']} {ru_plural(v['tr-seneca'], 'раздел', 'раздела', 'разделов')} Сенеки из {v['tr-letters']} писем): переводчик, проверяющий и решающий, каждый — Claude Fable 5.2 в новом контексте. С английского на русский ({v['tr-ru']} фрагмента): переводил Claude Opus 5.5, проверял Claude Sonnet 5.5, решал переводчик. Полосы в одном масштабе показывают, как решены замечания проверяющего: греческий — {v['dec-marcus-accepted']} принято, {v['dec-marcus-partly']} частично, {v['dec-marcus-declined']} отклонено и {v['dec-marcus-free']} в свободной форме (пилот); латынь — {v['dec-seneca-accepted']}, {v['dec-seneca-partly']} и {v['dec-seneca-declined']}; русский — {v['dec-ru-accepted']}, {v['dec-ru-partly']} и {v['dec-ru-declined']}."},
         'checks': {
-            'en': f"Six layers of checks before an article reaches the page. Two scripts: the build, which requires each of the {v['quotes-marcus']} quotes of Marcus to be one exact span of its passage and checks {e(v['revisions'])} passage revisions against their hashes, and the acceptance gates ({v['qa-blocking']} blocking findings and {v['qa-warnings']} warnings over {v['articles']} articles). Two readers who did not write the article: an independent reviewer (18 of the first 19 reviews sent the article back) and a reading across all articles (79 findings: 68 overlaps, 7 contradictions, 4 labels). Then the tests and a browser check at 360, 390 and 1440 px.",
-            'ru': f"Шесть слоёв проверки, прежде чем статья попадёт на страницу. Два скрипта: сборка, которая требует, чтобы каждая из {v['quotes-marcus']} {ru_plural(v['quotes-marcus'], 'цитаты', 'цитат', 'цитат')} Марка была точным отрезком своего фрагмента, и сверяет {r(v['revisions'])} {ru_plural(v['revisions'], 'редакцию', 'редакции', 'редакций')} фрагментов с их хешами, и приёмочные проверки ({v['qa-blocking']} блокирующих замечаний и {v['qa-warnings']} {ru_plural(v['qa-warnings'], 'предупреждение', 'предупреждения', 'предупреждений')} по {v['articles']} статьям). Два читателя, которые не писали статью: независимый рецензент (18 из первых 19 рецензий вернули статью автору) и чтение всех статей подряд (79 замечаний: 68 пересечений, 7 противоречий, 4 ярлыка). Затем тесты и проверка в браузере при ширине 360, 390 и 1440 px."},
+            'en': f"Six layers of checks: four before an article enters the record, two on the published page. Two scripts: the build, which requires each of the {v['quotes-marcus']} quotes of Marcus to be one exact span of its passage and checks {e(v['revisions'])} passage revisions against their hashes, and the acceptance gates ({v['qa-blocking']} blocking findings and {v['qa-warnings']} warnings over {v['articles']} articles). Two readers who did not write the article: an independent reviewer (18 of the 19 reviews made through the API sent the article back; the one that accepted was Article 18’s second review) and a reading across all articles (79 findings: 68 overlaps, 7 contradictions, 4 labels). Then the tests and a browser check at 360, 390 and 1440 px.",
+            'ru': f"Шесть слоёв проверки: четыре — прежде чем статья войдёт в данные, два — на опубликованной странице. Два скрипта: сборка, которая требует, чтобы каждая из {v['quotes-marcus']} {ru_plural(v['quotes-marcus'], 'цитаты', 'цитат', 'цитат')} Марка была точным отрезком своего фрагмента, и сверяет {r(v['revisions'])} {ru_plural(v['revisions'], 'редакцию', 'редакции', 'редакций')} фрагментов с их хешами, и приёмочные проверки ({v['qa-blocking']} блокирующих замечаний и {v['qa-warnings']} {ru_plural(v['qa-warnings'], 'предупреждение', 'предупреждения', 'предупреждений')} по {v['articles']} статьям). Два читателя, которые не писали статью: независимый рецензент (18 из 19 рецензий, сделанных через API, вернули статью автору; принявшая — вторая рецензия статьи 18) и чтение всех статей подряд (79 замечаний: 68 пересечений, 7 противоречий, 4 ярлыка). Затем тесты и проверка в браузере при ширине 360, 390 и 1440 px."},
     }
 
 
