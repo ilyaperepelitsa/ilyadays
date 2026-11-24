@@ -230,3 +230,9 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   and dark (`…-dark.svg|png`, the page's dark colours on #191e26): 64 SVG and 64 PNG. The method page offers Light and
   Dark rows under each figure; the gallery offers both and shows the dark thumbnail in dark mode; figures.json lists
   them. The test checks size, background, single theme, identical drawing and links for every file.
+- **Vercel deployment storage (24 Nov):** owner: “just do whatever is needed to fix the problem” (10 GB full at ~183 MB
+  per deploy). Recipe pictures re-exported at 1000 px, q75 (`../recipes/build.py`; was 1200, q80): media 147 → 104 MB.
+  Pictures under manual review (nigiri anatomy, onigiri cutaways and process pictures, 67 files) keep their reviewed
+  bytes: `scripts/optimize-media.py` restores them from `art/media/reviewed/<sha256>.webp`. `vercel.json` ignoreCommand
+  (`scripts/vercel-ignore.sh`) skips deployments whose changes since the last deploy are only tests, plans, docs, art or
+  Python. Old q80 copies of the recipe web pictures were set aside in the session scratchpad.

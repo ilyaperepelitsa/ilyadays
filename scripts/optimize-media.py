@@ -20,11 +20,37 @@ def digest(path, algorithm="sha256"):
     return hashlib.new(algorithm, path.read_bytes()).hexdigest()
 
 
+# Pictures under manual review keep the exact bytes that were reviewed. Their manifests pin a sha256 (the tests check it),
+# and a re-encode by the exporter, however invisible, would void the review. The reviewed bytes are kept in
+# art/media/reviewed/<sha256>.webp (art/ is never deployed); after an export, any reviewed picture whose bytes differ is
+# put back. Added 24 Nov 2026 when the exporter moved to 1000 px at q75 to save Vercel deployment storage.
+REVIEWED = ROOT / "art/media/reviewed"
+REVIEW_MANIFESTS = (("art/nigiri/anatomy-review.json", "path"), ("art/onigiri/shop-cutaway-prompts.json", "published_path"),
+                    ("art/onigiri/shop-process-images.json", "published_path"))
+
+
+def restore_reviewed():
+    restored = 0
+    for manifest, key in REVIEW_MANIFESTS:
+        data = json.loads((ROOT / manifest).read_text())
+        for record in data["assets"] if isinstance(data, dict) else data:
+            sha, published = record.get("sha256"), record.get(key)
+            if not sha or not published or not (ROOT / published).is_file() or digest(ROOT / published) == sha:
+                continue
+            kept = REVIEWED / f"{sha}.webp"
+            if not kept.is_file():
+                raise SystemExit(f"{published} differs from its review ({manifest}) and art/media/reviewed has no copy of the reviewed bytes")
+            shutil.copyfile(kept, ROOT / published)
+            restored += 1
+    return restored
+
+
 def main():
     for command in ("cwebp", "webpinfo", "jpegtran"):
         if not shutil.which(command):
             raise SystemExit(f"{command} is required; install libwebp and jpeg-turbo before syncing")
     before = sum(p.stat().st_size for p in MEDIA.rglob("*") if p.is_file())
+    restored = restore_reviewed()
     thumbnails = 0
     jpeg_bytes_saved = 0
     for image in sorted(MEDIA.glob("share/*.jpg")):
@@ -104,7 +130,7 @@ def main():
     after = sum(p.stat().st_size for p in MEDIA.rglob("*") if p.is_file())
     print(json.dumps({"media_bytes_before": before, "media_bytes_after": after,
                       "legacy_duplicate_bytes_removed": legacy_bytes,
-                      "thumbnails_resized": thumbnails, "jpeg_bytes_saved": jpeg_bytes_saved, "duplicate_images_removed": removed}, indent=2))
+                      "thumbnails_resized": thumbnails, "reviewed_restored": restored, "jpeg_bytes_saved": jpeg_bytes_saved, "duplicate_images_removed": removed}, indent=2))
 
 
 if __name__ == "__main__":
