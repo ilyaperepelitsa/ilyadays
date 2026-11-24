@@ -261,6 +261,11 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .mine{margin-top:14px;display:grid;gap:4px;font-size:15px}
 .tr-note{margin-top:8px;font-size:13.5px;line-height:1.45;color:var(--muted)}
 .from-greek{margin-top:6px;font-size:14px;color:var(--muted);max-width:68ch}
+.flags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px;max-width:none}
+.flag{display:inline-flex;align-items:center;min-height:28px;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);font:600 13px/1.2 var(--sans);white-space:nowrap}
+a.flag.go{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line));text-decoration:none}
+a.flag.go:hover{background:color-mix(in srgb,var(--accent) 8%,var(--card))}
+.intro .legend .flag{margin:0 2px;cursor:default}
 .versions{margin-top:4px}
 .versions b{display:block;margin-top:8px;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .versions .ctx{margin-top:4px}
@@ -471,6 +476,7 @@ html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transpar
 <p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
 <p class="status" id="status"></p>
 <p class="status"><a href="stoic-translation.html">Marcus’s passages translated from the Greek, beside the 1634 English →</a></p>
+<p class="status legend">Under each article title: <span class="flag">Greek → our English</span> the quotes are this project’s own translation from the Greek; <span class="flag">Numbered as in 1634</span> passage numbers follow the 1634 translation, which grouped the sections, and each passage’s heading gives its modern number.</p>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
@@ -608,6 +614,7 @@ const RU_STATIC = [
   ['.intro h1', 'Статьи на сегодня'],
   ['.intro .lede', 'Все 418 фрагментов <i>«Размышлений»</i> сгруппированы по смыслу в главы и разделы. Здесь каждый раздел по порядку слит в статью, глава за главой. Статья высказывает одно положение, а затем рассматривает его с пяти постоянных сторон: почему, на деле, упражнение, когда не выходит и если я сомневаюсь. На широком экране пять сторон стоят рядом, столбцами. Под словами идёт по одной цветной линии на каждый фрагмент, который их говорит: две линии — два фрагмента. Один цвет — один и тот же фрагмент во фразе, в кнопках под ней и на карте векторов рядом с положением. Фиолетовым отмечена работа самого редактора. Других авторов можно добавить с панели «Голоса» внизу экрана и посмотреть, что получает каждая статья; первый из них — Сенека. Наведите курсор, чтобы увидеть точные цитаты. Нажмите или коснитесь, чтобы прочитать фрагменты рядом с тем, что следует из каждого. Русский текст переведён с английского текста этого проекта.', true],
   ['.intro .status a', 'Фрагменты Марка в переводе с греческого, рядом с английским переводом 1634 года (страница на английском) →'],
+  ['.intro .legend', 'Под заголовком каждой статьи: <span class="flag">Греч. → англ. → рус.</span> цитаты — в русском переводе с английского перевода этого проекта, сделанного с греческого; <span class="flag">Нумерация 1634 года</span> номера фрагментов — по переводу 1634 года, по которому сгруппированы разделы, а современный номер стоит в заголовке каждого фрагмента.', true],
   ['#topics .step', '1 · От всей книги к темам'],
   ['#t-head', 'Как были найдены темы'],
   ['#topics > .sub', 'Каждый фрагмент превращён в вектор чисел, который передаёт его смысл. Близкие друг к другу фрагменты шаг за шагом объединялись в дерево. Если срезать дерево высоко, получаются главы; если срезать каждую главу ещё раз — разделы. Названия дал редактор, после чтения.'],
@@ -2085,18 +2092,20 @@ function articleCard(article) {
   // The article's heading opens the text column, so on a wide screen the vectors beside it start level with the heading.
   const head = el('div', 'art-head');
   head.append(el('p', 'eyebrow', T('Article') + ' ' + article.number), el('h3', '', article.title));
-  if (RU) {
-    const note = el('p', 'from-greek', 'Цитаты — в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого). Номера фрагментов — по переводу 1634 года, по которому сгруппированы разделы; заголовок каждого фрагмента и список источников выбранных слов дают его номер в современных изданиях. ');
-    const link = el('a', '', 'Фрагменты по-гречески, в новом английском переводе и в переводе 1634 года (на английском)');
-    link.href = 'stoic-translation.html';
-    note.append(link);
-    head.append(note);
-  } else if (article.edition) {
-    const note = el('p', 'from-greek', 'Quoted from the Greek, in this project’s own English. Passage numbers are those of the 1634 translation, which grouped the sections; each passage’s heading, and the list of sources for picked words, give its number in modern editions. ');
-    const link = el('a', '', 'Read the passages in Greek, today’s English and 1634');
-    link.href = 'stoic-translation.html';
-    note.append(link);
-    head.append(note);
+  // Where the words come from, as a row of small flags; the sentence that explains them stands once, in the page's intro.
+  if (RU || article.edition) {
+    const flags = el('p', 'from-greek flags');
+    const flag = (text, title) => { const f = el('span', 'flag', text); f.title = title; return f; };
+    flags.append(
+      flag(RU ? 'Греч. → англ. → рус.' : 'Greek → our English',
+        RU ? 'Цитаты — в русском переводе с английского перевода этого проекта, сделанного с греческого' : 'Quoted from the Greek, in this project’s own English'),
+      flag(RU ? 'Нумерация 1634 года' : 'Numbered as in 1634',
+        RU ? 'Номера — по переводу 1634 года, по которому сгруппированы разделы; современный номер — в заголовке каждого фрагмента' : 'Passage numbers follow the 1634 translation, which grouped the sections; each passage’s heading gives its modern number'));
+    const go = el('a', 'flag go', RU ? 'Греческий · английский · 1634 →' : 'Greek · English · 1634 →');
+    go.href = 'stoic-translation.html' + (RU ? '?lang=ru' : '');
+    go.setAttribute('aria-label', RU ? 'Фрагменты по-гречески, в новом английском переводе и в переводе 1634 года' : 'Read the passages in Greek, today’s English and the 1634 translation');
+    flags.append(go);
+    head.append(flags);
   }
   const top = el('div', 'body'), lead = el('div', 'lead-col');
   lead.append(head, statementBlock(article));
