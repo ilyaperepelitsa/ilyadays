@@ -8,7 +8,7 @@
 // tests (tests/site/stoic-seo.test.mjs) share it.
 
 /** Same as SITE_URL and SITE_NAME in src/lib/metadata.ts (a test keeps them equal). */
-export const SITE_URL = "https://ilyadays.com";
+export const SITE_URL = "https://www.ilyadays.com";
 export const SITE_NAME = "ilyadays";
 
 /** @typedef {"en" | "ru"} StoicLang */

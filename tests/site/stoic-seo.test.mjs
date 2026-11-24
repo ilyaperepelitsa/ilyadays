@@ -116,7 +116,7 @@ describe("stoic-seo: localize() on the real pages", () => {
         assert.equal(og["og:locale:alternate"], both ? (lang === "ru" ? "en_US" : "ru_RU") : undefined);
         assert.ok(og["og:image"].startsWith(`${SITE_URL}/`), og["og:image"]);
         assert.match(tags, /<meta name="twitter:card" content="summary_large_image">/);
-        assert.match(tags, /<meta name="twitter:image" content="https:\/\/ilyadays\.com\/[^"]+">/);
+        assert.match(tags, /<meta name="twitter:image" content="https:\/\/www\.ilyadays\.com\/[^"]+">/);
         assert.doesNotMatch(tags, /href="data:,"/);
         assert.match(tags, /<link rel="icon" href="\/icons\/icon-32\.png"/);
       });
@@ -128,7 +128,7 @@ describe("stoic-seo: localize() on the real pages", () => {
         const expected = { method: "ScholarlyArticle", translation: "Book" };
         assert.equal(ld["@context"], "https://schema.org");
         assert.equal(ld["@type"], expected[page] ?? "CreativeWork");
-        assert.deepEqual(ld.publisher, { "@type": "WebSite", name: "ilyadays", url: "https://ilyadays.com" });
+        assert.deepEqual(ld.publisher, { "@type": "WebSite", name: "ilyadays", url: "https://www.ilyadays.com" });
         assert.equal(ld.url, stoicUrl(page, lang));
         assert.equal(ld.inLanguage, lang);
         if (page === "method") assert.ok(ld.headline && [...ld.headline].length <= 110, ld.headline);

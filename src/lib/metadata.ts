@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { type Lang, localPath } from "./i18n";
 
-export const SITE_URL = "https://ilyadays.com";
+// The host Vercel serves: the bare domain answers 308 to www, so canonicals and the sitemap name www.
+export const SITE_URL = "https://www.ilyadays.com";
 export const SITE_NAME = "ilyadays";
 
 type PageMeta = {
