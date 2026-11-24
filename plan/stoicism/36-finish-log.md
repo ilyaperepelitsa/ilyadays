@@ -241,3 +241,6 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   main script takes them through `early()`. Two article-shaped placeholders replace “Loading chapter…” (screen readers
   still hear it). Throttled phone: placeholders at ~0.4 s, articles at ~0.9 s locally. Under each chapter title, the
   chapter's summary replaces the order note (the method paper §3.2 has it); the rail highlights a new chapter at once.
+- **Loading card (24 Nov):** the placeholders take the article's card (left rule), width and, from 1000 px, the vectors
+  column; one shared sweep of light (fixed gradient) runs across every block; arriving articles fade and rise 10 px
+  (0.42 s, staggered), once. Reduced motion: no sweep, no rise.

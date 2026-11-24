@@ -638,3 +638,5 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   article loads” — my reading: the “Loading chapter…” line, after a wait caused by two downloads in a row. Done (see
   36-finish-log.md); the chapter note (the same order note on every chapter, a method point) gave way to each chapter's
   summary.
+- “can we have some sort of smooth loading card” — my reading: placeholders that look like the article card (and the
+  vectors column on a wide screen), a soft sweep of light instead of a pulse, and the articles rising in over them. Done.

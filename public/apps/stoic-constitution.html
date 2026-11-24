@@ -315,9 +315,14 @@ a.flag.go:hover{background:color-mix(in srgb,var(--accent) 8%,var(--card))}
 .chapters button:disabled{color:var(--muted);cursor:default}
 .loading{margin-top:22px;padding:14px 0;font-size:15px;color:var(--muted)}
 .loading .act{margin:0 0 0 12px}
-/* Placeholders while a chapter downloads, shaped like an article's head and statement so the page does not jump. */
-.skel{margin-top:22px;padding:34px 0 30px;border-top:1px solid var(--line)}
-.skel i{display:block;border-radius:8px;background:var(--hl);animation:skel 1.4s ease-in-out infinite}
+/* Placeholders while a chapter downloads (owner, 24 Nov 2026: "some sort of smooth loading card"): shaped like an article
+   (its card with the left rule, title, flags, statement, chips; on a wide screen the article's width and the vectors column),
+   with one soft sweep of light across every block at once. The articles then rise in over them (#list.arrive). */
+.skel{margin-top:22px;padding-block:34px;border-top:1px solid var(--line)}
+.sk-leaf{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--line);padding:20px 16px 18px}
+.sk-side{display:none}
+.skel i{display:block;border-radius:8px;background:linear-gradient(100deg,var(--hl) 42%,color-mix(in srgb,var(--hl) 30%,transparent) 50%,var(--hl) 58%) fixed;
+  background-size:200vw 100%;animation:sweep 1.5s linear infinite}
 .skel .sk-eyebrow{width:90px;height:12px}
 .skel .sk-title{width:min(420px,80%);height:34px;margin-top:12px}
 .skel .sk-flags{width:min(360px,70%);height:26px;margin-top:12px;border-radius:999px}
@@ -325,8 +330,22 @@ a.flag.go:hover{background:color-mix(in srgb,var(--accent) 8%,var(--card))}
 .skel .sk-chips{width:min(520px,90%);height:28px;margin-top:14px;border-radius:999px}
 .skel .sk-line{height:14px;margin-top:18px}
 .skel .sk-short{width:60%;margin-top:10px}
-@keyframes skel{50%{opacity:.45}}
-@media(prefers-reduced-motion:reduce){.skel i{animation:none}}
+.skel .sk-map{height:240px;border-radius:12px;margin-top:14px}
+.skel .sk-nums{height:44px;margin-top:12px}
+@keyframes sweep{from{background-position:100vw 0}to{background-position:-100vw 0}}
+@media(min-width:1000px){
+.skel{position:relative;left:50%;width:min(1720px,calc(100vw - var(--rail,0px) - 48px));margin-left:calc(min(1720px,100vw - var(--rail,0px) - 48px)/-2);
+  display:grid;grid-template-columns:minmax(0,1fr) 320px;column-gap:24px;align-items:start}
+.sk-leaf{padding:30px 34px 26px}
+.sk-side{display:block;grid-column:2;grid-row:1/span 3;border:1px solid var(--line);border-radius:8px;padding:12px 14px 14px;background:var(--card)}
+.skel>.sk-line{grid-column:1}
+}
+@media(min-width:1280px){.skel{grid-template-columns:minmax(0,1fr) 372px;column-gap:28px}}
+#list.arrive>.article{animation:arrive .42s cubic-bezier(.2,.7,.2,1) both}
+#list.arrive>.article:nth-child(2){animation-delay:.07s}
+#list.arrive>.article:nth-child(n+3){animation-delay:.12s}
+@keyframes arrive{from{opacity:0;transform:translateY(10px)}}
+@media(prefers-reduced-motion:reduce){.skel i{animation:none}#list.arrive>.article{animation:none}}
 .mine li{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line);padding-block:6px}
 .mine li span:last-child{font-weight:650;white-space:nowrap}
 .act{margin-top:12px;min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);font-weight:650;cursor:pointer}
@@ -587,7 +606,7 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <h2 id="a-head"></h2>
 <p class="sub" id="a-sub"></p>
 <p class="filter-note" id="filter-note" hidden><span>Only what you have not judged is shown.</span><button class="show" id="show-all" type="button">Show everything</button></p>
-<div id="list"><p class="sr" role="status">Loading chapter…</p><div class="skel" aria-hidden="true"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i><i class="sk-line"></i><i class="sk-line sk-short"></i></div><div class="skel" aria-hidden="true"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i><i class="sk-line"></i><i class="sk-line sk-short"></i></div></div>
+<div id="list"><p class="sr" role="status">Loading chapter…</p><div class="skel" aria-hidden="true"><div class="sk-leaf"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i></div><div class="sk-side"><i class="sk-eyebrow"></i><i class="sk-nums"></i><i class="sk-map"></i></div><i class="sk-line"></i><i class="sk-line sk-short"></i></div><div class="skel" aria-hidden="true"><div class="sk-leaf"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i></div><div class="sk-side"><i class="sk-eyebrow"></i><i class="sk-nums"></i><i class="sk-map"></i></div><i class="sk-line"></i><i class="sk-line sk-short"></i></div></div>
 <p class="sub more" id="more">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
 </section>
 
@@ -2646,9 +2665,11 @@ function skeleton() {
   const said = el('p', 'sr', T('Loading chapter…'));
   said.setAttribute('role', 'status');
   const card = () => {
-    const box = el('div', 'skel');
+    const box = el('div', 'skel'), leaf = el('div', 'sk-leaf'), side = el('div', 'sk-side');
     box.setAttribute('aria-hidden', 'true');
-    for (const kind of ['sk-eyebrow', 'sk-title', 'sk-flags', 'sk-statement', 'sk-chips', 'sk-line', 'sk-line sk-short']) box.append(el('i', kind));
+    for (const kind of ['sk-eyebrow', 'sk-title', 'sk-flags', 'sk-statement', 'sk-chips']) leaf.append(el('i', kind));
+    for (const kind of ['sk-eyebrow', 'sk-nums', 'sk-map']) side.append(el('i', kind));
+    box.append(leaf, side, el('i', 'sk-line'), el('i', 'sk-line sk-short'));
     return box;
   };
   return [said, card(), card()];
@@ -2671,7 +2692,13 @@ function openChapter(id, {initial = false, to = null, push = false} = {}) {
     D.articles = articles;
     if (initial) readSelection();
     applyPending();
+    const waited = !!list.querySelector('.skel');
     list.replaceChildren(...D.articles.map(drawCard));
+    // The articles rise in over the placeholders; once, then the class goes so nothing redrawn later animates.
+    if (waited) {
+      list.classList.add('arrive');
+      setTimeout(() => list.classList.remove('arrive'), 700);
+    }
     for (const article of D.articles) onMap(article, null);
     markTabs();
     markArticle();
