@@ -628,3 +628,7 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   topics were found”) — my reading: a real title and a one-line lede; the reading instructions folded into a key; the
   draft notice for the owner only; the grouping explanation and the linkage comparison left to the method paper (§3.2),
   linked from a section now called Contents. Done (see 36-finish-log.md).
+- “should contents be on the left? table of contents” and “also would be helpful to have chapters highlighted and be able
+  to navigate clicking chapters” — my reading: a pinned contents rail on the left on wide screens, chapters as buttons
+  that open the chapter, the chapter on screen highlighted with its articles and the article being read marked; narrow
+  screens keep the Contents section and the bar's pickers. Done (see 36-finish-log.md).

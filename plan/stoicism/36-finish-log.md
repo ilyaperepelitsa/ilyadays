@@ -222,3 +222,7 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   how-to paragraph is a folded “How to read an article” key (lines, purple, five sides, flags, Seneca); the draft status
   is owner-only; the topics section is “Contents” (summary row and tree) with a link to method §3.2, and the linkage
   comparison and grouping text moved out (the paper's Table 2 has them). Step labels “1 ·”/“2 ·” removed.
+- **Contents rail (24 Nov):** from 1280 px a pinned rail on the left lists the 7 chapters (buttons that open the chapter)
+  and the current chapter's articles, marking the one being read; the page and the dock move over by 232 px and the
+  in-page Contents section hides. The sides' column counts now follow the article's width (container queries), so 1440
+  keeps 3 and 1920 keeps 5; at 1280 there are 2. Reduced motion now also stops CSS smooth scrolling. Check case N1.

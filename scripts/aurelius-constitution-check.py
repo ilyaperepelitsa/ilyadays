@@ -317,7 +317,11 @@ def case_p9(page, base, port):
     sim(page, base, port)
     switch(page, 'The life within')
     open_ = page.evaluate("[...document.querySelectorAll('#tree details[open] .name')].map(n => n.textContent)")
-    return [] if open_ == ['The life within'] else [f'the topic tree has {open_} open while chapter 2 is on screen']
+    problems = [] if open_ == ['The life within'] else [f'the topic tree has {open_} open while chapter 2 is on screen']
+    rail = page.evaluate("[...document.querySelectorAll('#rail .rch.on .t')].map(n => n.textContent)")
+    if rail != ['The life within']:
+        problems.append(f'the contents rail highlights {rail} while chapter 2 is on screen')
+    return problems
 
 
 def case_p10(page, base, port):
@@ -1213,6 +1217,55 @@ def case_h3(page, base, port):
     return problems[:8]
 
 
+def case_n1(page, base, port):
+    """The contents rail (owner, 24 Nov 2026: "should contents be on the left? table of contents", "chapters highlighted and be
+    able to navigate clicking chapters"): from 1280 px every chapter stands on the left, the one on screen highlighted with its
+    articles listed and the one being read marked; a chapter button opens that chapter; an article link opens it; nothing sits
+    under the rail; the sides keep 3 columns at 1440 and 5 at 1920. Below 1280 px the rail gives way to the Contents section."""
+    problems = []
+    page.emulate_media(reduced_motion='reduce')
+    for width, cols in [(1280, None), (1440, 3), (1920, 5)]:
+        for lang in ['en', 'ru']:
+            where = f'{width}px {lang}'
+            page.set_viewport_size({'width': width, 'height': 950})
+            page.goto(f'{base}?lang={lang}', wait_until='networkidle')
+            page.wait_for_selector('article.article .statement')
+            page.evaluate("document.getElementById('article-3').scrollIntoView({behavior: 'instant'})")
+            page.wait_for_timeout(300)
+            got = page.evaluate("""() => ({chapters: document.querySelectorAll('#rail .rch-btn').length, on: [...document.querySelectorAll('#rail .rch.on')].map(n => n.dataset.chapter),
+              current: [...document.querySelectorAll('#rail a[aria-current=true]')].map(a => a.dataset.n), listed: [...document.querySelectorAll('#rail .rch')].filter(n => n.querySelector('ol').getClientRects().length).length,
+              rail: document.getElementById('rail').getBoundingClientRect().right, left: Math.min(...[...document.querySelectorAll('article.article, #a-head, .intro h1')].map(n => n.getBoundingClientRect().left)),
+              topics: document.getElementById('topics').getClientRects().length, side: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+              cols: getComputedStyle(document.querySelector('#article-3 .grps')).gridTemplateColumns.split(' ').length, chapter: new URLSearchParams(location.search).get('c') || ''})""")
+            if got['chapters'] != 7: problems.append(f'{where}: the rail lists {got["chapters"]} chapters')
+            if len(got['on']) != 1 or got['listed'] != 1: problems.append(f'{where}: highlighted {got["on"]}, {got["listed"]} chapter(s) listing articles')
+            if got['current'] != ['3']: problems.append(f'{where}: the rail marks {got["current"]} while Article 3 is read')
+            if got['left'] < got['rail'] + 8: problems.append(f'{where}: the page starts at {got["left"]:.0f}px, under the rail ending at {got["rail"]:.0f}px')
+            if got['topics'] or got['side']: problems.append(f'{where}: the Contents section shows, or the page scrolls sideways')
+            if cols and got['cols'] != cols: problems.append(f'{where}: the sides stand in {got["cols"]} columns, not {cols}')
+            target = page.locator('#rail .rch:not(.on) .rch-btn').nth(2)
+            wanted = target.evaluate('n => n.parentElement.dataset.chapter')
+            target.click()
+            page.wait_for_function(f"new URLSearchParams(location.search).get('c') === '{wanted}' && document.querySelector('#rail .rch.on')?.dataset.chapter === '{wanted}'", timeout=8000)
+            page.wait_for_timeout(1200)
+            head = page.evaluate("document.getElementById('a-head').getBoundingClientRect().top")
+            bar = page.evaluate("document.querySelector('.bar').getBoundingClientRect().bottom")
+            if head < bar - 1 or head > 400: problems.append(f'{where}: after a chapter click its heading stands at {head:.0f}px (bar ends {bar:.0f}px)')
+            link = page.locator('#rail .rch.on a[data-n]').last
+            number = link.get_attribute('data-n')
+            link.click()
+            page.wait_for_timeout(900)
+            top = page.evaluate(f"document.getElementById('article-{number}').getBoundingClientRect().top")
+            bar = page.evaluate("document.querySelector('.bar').getBoundingClientRect().bottom")
+            if not (bar - 2 <= top <= bar + 60): problems.append(f'{where}: Article {number} from the rail lands at {top:.0f}px')
+    page.set_viewport_size({'width': 1279, 'height': 900})
+    page.goto(base, wait_until='networkidle')
+    page.wait_for_selector('article.article .statement')
+    if page.evaluate("document.getElementById('rail').getClientRects().length") or not page.locator('#topics').is_visible():
+        problems.append('at 1279px the rail shows, or the Contents section is gone')
+    return problems[:10]
+
+
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
@@ -1244,6 +1297,7 @@ CASES = {
     'H1': ('site header on the Stoic pages: the React header\'s links, labels, boxes and colours, EN and RU, no shift', case_h1, (1440, 900), 'real'),
     'H2': ('Sources and Editor switches in the bar: off by default, kept across a reload, a method link, works with storage blocked', case_h2, (1440, 1000), 'real'),
     'H3': ('wide screens: sides in a row share heading, rule and first card within 2 px; the vectors start at the heading', case_h3, (1440, 1000), 'real'),
+    'N1': ('contents rail from 1280 px: chapters highlighted and clickable, article marked, nothing under it', case_n1, (1440, 950), 'real'),
     'O1': ('the review is the signed-in admin\'s only, folded into one row; readers keep the method link', case_o1, (390, 844), 'real'),
 }
 
