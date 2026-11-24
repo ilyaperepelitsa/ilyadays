@@ -603,3 +603,14 @@ Translation doubts in quoted passages (unchanged, listed only):
 > thing, I kind of just don't want to. I want a smoother experience basically
 
 Also: “phone is important part but not all of it” — test 390 and 1440 as equals.
+
+## Found by the methods referee (24 Nov 2026), for the owner
+
+- The build checks that each quote is an exact span and that each "gives" phrase stands in its claim; it does not check
+  that the quote supports the phrase (that is a model's and the editor's judgment, awaiting your review), and an inference
+  word the editor did not declare passes the build. Example: Article 1, claim 3, "So each thing I do…". A build rule for
+  undeclared connectives ("so", "therefore", "because", "thus") is proposed, not yet made.
+- The English of Marcus was checked against the Greek, but nothing checks it against copyrighted modern translations
+  (only Seneca is checked against Gummere). Worth a check before relying on the CC0 release.
+- Seven chapters is a fixed choice (scripts/aurelius-topics.py:30), not the result of a rule; cluster quality is weak
+  (silhouette barely above shuffled labels). The chapters stand as an editorial grouping, to be judged by reading.

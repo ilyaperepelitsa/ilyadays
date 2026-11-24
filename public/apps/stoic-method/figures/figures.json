@@ -1,0 +1,359 @@
+{
+ "about": "The figures of the method paper (public/apps/stoic-method.html), drawn from the published record. The page inlines files.<lang>.page (wide screens, print) and .phone (under 700 px) between <!-- figure:<id> --> markers.",
+ "made_by": "scripts/stoic-method-figures.py",
+ "palette": {
+  "note": "Validated with the dataviz palette validator: chapters on adjacent pairs (light on #ffffff and #f5f7fa, dark on #191e26 and #101318); effects on all pairs; decisions as an ordinal ramp. Seven chapter colours fail the all-pairs floors, so the map is drawn as small multiples.",
+  "light": {
+   "c1": "#2a62b8",
+   "c2": "#cf5a2e",
+   "c3": "#17998a",
+   "c4": "#c99412",
+   "c5": "#cc6593",
+   "c6": "#5e8c1f",
+   "c7": "#7656c9",
+   "fb": "#2a62b8",
+   "fa": "#17998a",
+   "fl": "#c64227",
+   "d3": "#8fb0e3",
+   "d2": "#4f7fc4",
+   "d1": "#1d3f73"
+  },
+  "dark": {
+   "c1": "#4a86e0",
+   "c2": "#e06a3a",
+   "c3": "#1a9f8f",
+   "c4": "#b98914",
+   "c5": "#d06898",
+   "c6": "#73a62c",
+   "c7": "#8c74e4",
+   "fb": "#4a86e0",
+   "fa": "#1a9f8f",
+   "fl": "#e0583a",
+   "d3": "#3f6fbf",
+   "d2": "#7fa7e6",
+   "d1": "#cfe0fa"
+  },
+  "groups": {
+   "chapters": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7"
+   ],
+   "effects": [
+    "fb",
+    "fa",
+    "fl"
+   ],
+   "decisions_ordinal": [
+    "d3",
+    "d2",
+    "d1"
+   ]
+  },
+  "surfaces": {
+   "light": [
+    "#ffffff",
+    "#f5f7fa"
+   ],
+   "dark": [
+    "#191e26",
+    "#101318"
+   ]
+  }
+ },
+ "figures": [
+  {
+   "id": "pipeline",
+   "number": 1,
+   "title": {
+    "en": "From 418 passages to 38 articles",
+    "ru": "От 418 фрагментов к 38 статьям"
+   },
+   "caption": {
+    "en": "Figure 1. The pipeline, with the published count at each stage. The 418 passages of the 1634 English are embedded as 3,072-dimensional vectors, joined into one Ward tree and cut into 7 chapters and 38 sections; each section is fused into one article (178 fused claims, 165 points said once); Seneca adds 332 typed items with 421 distinct quotes from 94 letters; 418 passages from the Greek and 304 from the Latin are translated into English, and all 722 into Russian.",
+    "ru": "Рис. 1. Конвейер и опубликованные числа на каждом этапе. 418 фрагментов английского текста 1634 года превращены в векторы из 3072 чисел, объединены в одно дерево Уорда и разрезаны на 7 глав и 38 разделов; каждый раздел слит в одну статью (178 утверждений, 165 — сказано однажды); Сенека добавляет 332 вклада с 421 разными цитатами из 94 писем; 418 фрагментов с греческого и 304 с латыни переведены на английский, а все 722 — на русский."
+   },
+   "drawing_on_wide_screens": "wide",
+   "sources": [
+    "public/apps/stoic-constitution.json",
+    "public/apps/stoic-constitution/c*.json",
+    "public/apps/stoic-method/diagram-data.json",
+    "content/aurelius/translation/project-v1.json",
+    "content/aurelius/translation/seneca-v1.json",
+    "content/aurelius/translation/ru-v1.json"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/pipeline.en.svg",
+     "phone": "figures/pipeline.en.phone.svg",
+     "square_png": "share/pipeline-en-square.png",
+     "landscape_png": "share/pipeline-en-landscape.png",
+     "square_svg": "share/pipeline-en-square.svg",
+     "landscape_svg": "share/pipeline-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/pipeline.ru.svg",
+     "phone": "figures/pipeline.ru.phone.svg",
+     "square_png": "share/pipeline-ru-square.png",
+     "landscape_png": "share/pipeline-ru-landscape.png",
+     "square_svg": "share/pipeline-ru-square.svg",
+     "landscape_svg": "share/pipeline-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "embedding",
+   "number": 2,
+   "title": {
+    "en": "418 passages, placed by meaning",
+    "ru": "418 фрагментов, расставленных по смыслу"
+   },
+   "caption": {
+    "en": "Figure 2. The 418 passages placed by their vectors: a t-SNE projection of the 3,072-dimensional embeddings (cosine distance, perplexity 50; trustworthiness 0.82 over 10 neighbours), drawn once per chapter. Coloured points are the chapter’s passages, grey points the rest of the book; numbers mark the centre of each section’s passages, by article. The projection keeps near neighbours but not large distances; chapters and sections were found on the full vectors, not on this picture.",
+    "ru": "Рис. 2. 418 фрагментов, расставленных по их векторам: проекция t-SNE векторов из 3072 чисел (косинусное расстояние, перплексия 50; достоверность 0,82 по 10 соседям), по одной панели на главу. Цветные точки — фрагменты главы, серые — остальная книга; числа стоят в центре фрагментов каждого раздела и обозначают статьи. Проекция сохраняет ближайших соседей, но не большие расстояния; главы и разделы найдены по полным векторам, а не по этому рисунку."
+   },
+   "drawing_on_wide_screens": "square",
+   "sources": [
+    "public/apps/stoic-method/diagram-data.json (projection)",
+    "content/aurelius/topics.json",
+    "public/apps/stoic-constitution.json"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/embedding.en.svg",
+     "phone": "figures/embedding.en.phone.svg",
+     "square_png": "share/embedding-en-square.png",
+     "landscape_png": "share/embedding-en-landscape.png",
+     "square_svg": "share/embedding-en-square.svg",
+     "landscape_svg": "share/embedding-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/embedding.ru.svg",
+     "phone": "figures/embedding.ru.phone.svg",
+     "square_png": "share/embedding-ru-square.png",
+     "landscape_png": "share/embedding-ru-landscape.png",
+     "square_svg": "share/embedding-ru-square.svg",
+     "landscape_svg": "share/embedding-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "dendrogram",
+   "number": 3,
+   "title": {
+    "en": "One tree, cut twice",
+    "ru": "Одно дерево, разрезанное дважды"
+   },
+   "caption": {
+    "en": "Figure 3. Ward clustering of the 418 passage vectors into 7 chapters and 38 sections. Leaves lie on the rim and the root at the centre; the radius encodes the Ward merge distance. The grey circle is the cut of the whole tree into chapters; each chapter was clustered again, and a dark arc marks its cut into max(2, round(n ÷ 11)) sections. The outer ring shows the sections with their article numbers; chapters are numbered in page order, which is an editorial choice.",
+    "ru": "Рис. 3. Кластеризация Уорда 418 векторов фрагментов на 7 глав и 38 разделов. Листья — по краю, корень — в центре; радиус передаёт расстояние слияния по Уорду. Серый круг — разрез всего дерева на главы; каждая глава кластеризована заново, и тёмная дуга отмечает её разрез на max(2, round(n ÷ 11)) разделов. Внешнее кольцо — разделы с номерами статей; главы пронумерованы в порядке страницы, это выбор редактора."
+   },
+   "drawing_on_wide_screens": "square",
+   "sources": [
+    "public/apps/stoic-method/diagram-data.json (tree)",
+    "content/aurelius/topics.json",
+    "public/apps/stoic-constitution.json"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/dendrogram.en.svg",
+     "phone": "figures/dendrogram.en.phone.svg",
+     "square_png": "share/dendrogram-en-square.png",
+     "landscape_png": "share/dendrogram-en-landscape.png",
+     "square_svg": "share/dendrogram-en-square.svg",
+     "landscape_svg": "share/dendrogram-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/dendrogram.ru.svg",
+     "phone": "figures/dendrogram.ru.phone.svg",
+     "square_png": "share/dendrogram-ru-square.png",
+     "landscape_png": "share/dendrogram-ru-landscape.png",
+     "square_svg": "share/dendrogram-ru-square.svg",
+     "landscape_svg": "share/dendrogram-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "fusion",
+   "number": 4,
+   "title": {
+    "en": "Fusing a section into an article",
+    "ru": "Как раздел сливается в статью"
+   },
+   "caption": {
+    "en": "Figure 4. Fusion of one section into Article 1, “A member of one body”. Each of the 10 passages keeps one colour: curves lead to the claims it feeds, and a line of its colour runs under the exact words it backs. The 5 fused claims each rest on two or more passages; the 2 points made by one passage only are kept apart as “said once”; “because” in claim 5 is the editor’s inference (purple). The statement gathers claims 1 and 2. Passage 8.52 is set aside, with its reason recorded.",
+    "ru": "Рис. 4. Слияние одного раздела в статью 1 «Член единого тела». Каждый из 10 фрагментов сохраняет один цвет: линии ведут к утверждениям, которые он питает, а черта его цвета проходит под точными словами, которые он подкрепляет. Каждое из 5 утверждений опирается на два фрагмента или больше; 2 пункта, высказанные одним фрагментом, вынесены отдельно как «сказано однажды»; «потому что» в утверждении 5 — вывод редактора (фиолетовым). Положение собирает утверждения 1 и 2. Фрагмент 8.52 отложен, причина записана."
+   },
+   "drawing_on_wide_screens": "square",
+   "sources": [
+    "public/apps/stoic-constitution/c6.json (Article 1)",
+    "public/apps/stoic-constitution/ru/c6.json"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/fusion.en.svg",
+     "phone": "figures/fusion.en.phone.svg",
+     "square_png": "share/fusion-en-square.png",
+     "landscape_png": "share/fusion-en-landscape.png",
+     "square_svg": "share/fusion-en-square.svg",
+     "landscape_svg": "share/fusion-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/fusion.ru.svg",
+     "phone": "figures/fusion.ru.phone.svg",
+     "square_png": "share/fusion-ru-square.png",
+     "landscape_png": "share/fusion-ru-landscape.png",
+     "square_svg": "share/fusion-ru-square.svg",
+     "landscape_svg": "share/fusion-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "sides",
+   "number": 5,
+   "title": {
+    "en": "One statement, five sides",
+    "ru": "Одно положение, пять сторон"
+   },
+   "caption": {
+    "en": "Figure 5. The five sides of all 38 articles. A dot is a side with at least one claim or said-once item, its area proportional to their number; a ring is a side left empty, which the article explains in one sentence. Why is filled in 37 articles, In action in 37, Practice in 35, When it breaks in 32 and If I doubt it in 19.",
+    "ru": "Рис. 5. Пять сторон всех 38 статей. Точка — сторона, где есть хотя бы одно утверждение или пункт «сказано однажды», площадь точки пропорциональна их числу; кольцо — сторона, оставленная пустой, что статья объясняет одним предложением. «Почему» заполнено в 37 статьях, «На деле» — в 37, «Упражнение» — в 35, «Когда не выходит» — в 32, «Если я сомневаюсь» — в 19."
+   },
+   "drawing_on_wide_screens": "page",
+   "sources": [
+    "public/apps/stoic-constitution.json",
+    "public/apps/stoic-constitution/c*.json (groups)"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/sides.en.svg",
+     "phone": "figures/sides.en.phone.svg",
+     "square_png": "share/sides-en-square.png",
+     "landscape_png": "share/sides-en-landscape.png",
+     "square_svg": "share/sides-en-square.svg",
+     "landscape_svg": "share/sides-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/sides.ru.svg",
+     "phone": "figures/sides.ru.phone.svg",
+     "square_png": "share/sides-ru-square.png",
+     "landscape_png": "share/sides-ru-landscape.png",
+     "square_svg": "share/sides-ru-square.svg",
+     "landscape_svg": "share/sides-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "seneca",
+   "number": 6,
+   "title": {
+    "en": "Seneca as a second voice",
+    "ru": "Сенека как второй голос"
+   },
+   "caption": {
+    "en": "Figure 6. Seneca as a second voice. Left: how his passages were found, from a search corpus of 2,140 passages of all 124 letters ranked by vector similarity and by logged word searches, then read in context, and how they were placed. Right: the 332 items per article, stacked as Backs (149), Adds (136) and Limits (47). 83 clauses are appended to Marcus’s sentences without rewriting them (36 add, 36 limit, 11 challenge).",
+    "ru": "Рис. 6. Сенека как второй голос. Слева — как найдены его фрагменты (корпус для поиска из 2140 фрагментов всех 124 писем, ранжированный по сходству векторов и по записанным поискам слов, затем чтение в контексте) и как они размещены. Справа — 332 вклада по статьям: «Подкрепляет» (149), «Добавляет» (136) и «Ограничивает» (47). 83 оговорки дописаны к предложениям Марка, не переписывая их (36 добавляют, 36 ограничивают, 11 возражают)."
+   },
+   "drawing_on_wide_screens": "page",
+   "sources": [
+    "public/apps/stoic-constitution.json (authors, effects)",
+    "public/apps/stoic-constitution/c*.json (voices.seneca)"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/seneca.en.svg",
+     "phone": "figures/seneca.en.phone.svg",
+     "square_png": "share/seneca-en-square.png",
+     "landscape_png": "share/seneca-en-landscape.png",
+     "square_svg": "share/seneca-en-square.svg",
+     "landscape_svg": "share/seneca-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/seneca.ru.svg",
+     "phone": "figures/seneca.ru.phone.svg",
+     "square_png": "share/seneca-ru-square.png",
+     "landscape_png": "share/seneca-ru-landscape.png",
+     "square_svg": "share/seneca-ru-square.svg",
+     "landscape_svg": "share/seneca-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "translation",
+   "number": 7,
+   "title": {
+    "en": "Three readings for every passage",
+    "ru": "Три прочтения для каждого фрагмента"
+   },
+   "caption": {
+    "en": "Figure 7. Three readings per passage. Greek into English (418 passages of Marcus) and Latin into English (304 sections of Seneca from 94 letters): a translator, a checker and a settler, each Claude Fable 5.2 in a fresh context. English into Russian (722 passages): Claude Opus 5.5 translated, Claude Sonnet 5.5 checked, the translator settled. The bars, on one scale, show how the checker’s points were settled: Greek 969 accepted, 465 partly, 189 declined and 18 in free form (the pilot); Latin 716, 349 and 86; Russian 150, 57 and 7.",
+    "ru": "Рис. 7. Три прочтения на фрагмент. С греческого на английский (418 фрагментов Марка) и с латыни на английский (304 раздела Сенеки из 94 писем): переводчик, проверяющий и решающий, каждый — Claude Fable 5.2 в новом контексте. С английского на русский (722 фрагмента): переводил Claude Opus 5.5, проверял Claude Sonnet 5.5, решал переводчик. Полосы в одном масштабе показывают, как решены замечания проверяющего: греческий — 969 принято, 465 частично, 189 отклонено и 18 в свободной форме (пилот); латынь — 716, 349 и 86; русский — 150, 57 и 7."
+   },
+   "drawing_on_wide_screens": "square",
+   "sources": [
+    "content/aurelius/translation/project-v1.json",
+    "content/aurelius/translation/seneca-v1.json",
+    "content/aurelius/translation/ru-v1.json"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/translation.en.svg",
+     "phone": "figures/translation.en.phone.svg",
+     "square_png": "share/translation-en-square.png",
+     "landscape_png": "share/translation-en-landscape.png",
+     "square_svg": "share/translation-en-square.svg",
+     "landscape_svg": "share/translation-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/translation.ru.svg",
+     "phone": "figures/translation.ru.phone.svg",
+     "square_png": "share/translation-ru-square.png",
+     "landscape_png": "share/translation-ru-landscape.png",
+     "square_svg": "share/translation-ru-square.svg",
+     "landscape_svg": "share/translation-ru-landscape.svg"
+    }
+   }
+  },
+  {
+   "id": "checks",
+   "number": 8,
+   "title": {
+    "en": "Six layers of checks",
+    "ru": "Шесть слоёв проверки"
+   },
+   "caption": {
+    "en": "Figure 8. Six layers of checks before an article reaches the page. Two scripts: the build, which requires each of the 961 quotes of Marcus to be one exact span of its passage and checks 1,444 passage revisions against their hashes, and the acceptance gates (0 blocking findings and 74 warnings over 38 articles). Two readers who did not write the article: an independent reviewer (18 of the first 19 reviews sent the article back) and a reading across all articles (79 findings: 68 overlaps, 7 contradictions, 4 labels). Then the tests and a browser check at 360, 390 and 1440 px.",
+    "ru": "Рис. 8. Шесть слоёв проверки, прежде чем статья попадёт на страницу. Два скрипта: сборка, которая требует, чтобы каждая из 961 цитаты Марка была точным отрезком своего фрагмента, и сверяет 1444 редакции фрагментов с их хешами, и приёмочные проверки (0 блокирующих замечаний и 74 предупреждения по 38 статьям). Два читателя, которые не писали статью: независимый рецензент (18 из первых 19 рецензий вернули статью автору) и чтение всех статей подряд (79 замечаний: 68 пересечений, 7 противоречий, 4 ярлыка). Затем тесты и проверка в браузере при ширине 360, 390 и 1440 px."
+   },
+   "drawing_on_wide_screens": "square",
+   "sources": [
+    "public/apps/stoic-constitution/c*.json",
+    "public/apps/stoic-method/diagram-data.json (gates: scripts/aurelius-qa.py --json articles)",
+    "the paper’s Table 10 (review record, from plan/stoicism/36-finish-log.md)",
+    "scripts/aurelius-constitution-check.py (widths)"
+   ],
+   "files": {
+    "en": {
+     "page": "figures/checks.en.svg",
+     "phone": "figures/checks.en.phone.svg",
+     "square_png": "share/checks-en-square.png",
+     "landscape_png": "share/checks-en-landscape.png",
+     "square_svg": "share/checks-en-square.svg",
+     "landscape_svg": "share/checks-en-landscape.svg"
+    },
+    "ru": {
+     "page": "figures/checks.ru.svg",
+     "phone": "figures/checks.ru.phone.svg",
+     "square_png": "share/checks-ru-square.png",
+     "landscape_png": "share/checks-ru-landscape.png",
+     "square_svg": "share/checks-ru-square.svg",
+     "landscape_svg": "share/checks-ru-landscape.svg"
+    }
+   }
+  }
+ ]
+}
