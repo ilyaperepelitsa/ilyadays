@@ -2,14 +2,15 @@
 
 *A new English translation from the Latin of the sections the Stoic Constitution quotes (seneca-v1)*
 
-Made 2026-11-23. Every section of Seneca’s Moral Letters that the Stoic Constitution quotes: 304 sections from 94 letters. Each was translated from the Latin alone by one model, checked against the Latin by a second, and each point was settled in writing by a third reading. None has been read by the owner or checked by a person who reads Latin.
+Made 2026-11-23. Every section of Seneca’s Moral Letters that the Stoic Constitution quotes: 304 sections from 94 letters. Each was translated from the Latin alone by a language model and checked against the Latin in a second reading; each point raised was settled in writing in a third. None has been read by the owner or checked by a person who reads Latin.
 
 How it was made:
-- A first translator (Claude Fable 5.2) worked from the Latin alone, with a short glossary that keeps shared Stoic terms in the same English as the project’s Marcus, and wrote notes where the Latin is open.
+- A first translator (Claude Fable 5.2) worked from the Latin alone, with a short glossary that keeps shared Stoic terms in the same English as the project’s translation of Marcus, and wrote notes where the Latin can be read more than one way.
 - A second reader saw only the Latin and the English and listed every place where the English says more, less or other than the Latin.
-- A third reading settled each point in writing (Accepted, Partly accepted or Declined, with the reason from the Latin) and gave the final English.
-- No reader saw any published translation of Seneca. Gummere’s 1917–25 English is kept privately and used only to measure similarity (as the 1634 English is for Marcus); none of its words are published.
+- A third reader settled each point in writing (accepted, partly accepted or declined, with the reason from the Latin) and gave the final English.
+- No reader saw any published translation of Seneca. Gummere’s 1917–25 English is kept privately and used only to measure similarity; none of its words are published. The 1634 English of the Meditations also serves to measure similarity, but its words are shown.
 - Letter titles are the project’s own, written from each letter’s Latin.
+- On 24 Nov 2026, in the same literary review, every section and every letter title was read again for clarity and taste by a reviewer and an independent second reader (both Claude Opus 5.5), with the Latin deciding the meaning; each objection was settled in writing. 191 edits changed the English of 130 sections, and the spelling is now British throughout.
 
 What it cannot promise:
 - The Latin is an unattributed older text, not a modern critical edition; doubtful readings are noted where a reader saw them.
@@ -28,7 +29,7 @@ On the web: https://ilyadays.vercel.app/apps/stoic-constitution.html
 
 ### 1.2
 
-Who will you give me who sets any price on time, who puts a value on a day, who understands that he is dying every day? For we are deceived in this, that we look ahead to death: a great part of it has already gone by; whatever of our lifetime lies behind us, death holds. So do, my Lucilius, what you write you are doing: take hold of every hour. In this way it will come about that you depend less on tomorrow, if you lay hands on today.
+Who will you give me who sets any price on time, who puts a value on a day, who understands that he is dying every day? For we are mistaken in looking ahead to death: a great part of it has already gone by; whatever of our lifetime lies behind us, death holds. So do, my Lucilius, what you write you are doing: take hold of every hour. In this way you will depend less on tomorrow, if you lay hands on today.
 
 <details><summary>Notes</summary>
 
@@ -46,7 +47,7 @@ Who will you give me who sets any price on time, who puts a value on a day, who 
 
 ### 4.5
 
-Practise this every day, so that you can leave life with an even mind: life, which many clasp and hold on to in the way that people being swept away by rushing water clasp thorns and jagged edges. Most people are tossed about, wretched, between the fear of death and the torments of life, and they do not want to live, they do not know how to die.
+Practise this every day, so that you can leave life with an even mind: life, which many clasp and hold on to as people swept away by rushing water clasp thorns and jagged edges. Most people are tossed about, wretched, between the fear of death and the torments of life, and they do not want to live, they do not know how to die.
 
 <details><summary>Notes</summary>
 
@@ -82,7 +83,7 @@ Rough dress, an uncut head of hair, a rather neglected beard, hatred declared on
 
 ### 5.3
 
-Let the toga not gleam, nor be dirty either. Let us not own silver with engraved work of solid gold sunk into it, but let us not think it a sign of frugality to have gone without gold and silver. Let us make it our aim to follow a better life than the crowd, not a contrary one: otherwise we drive from us and turn away the people we want to see reformed. We also bring it about that they want to imitate nothing of ours, for fear that everything has to be imitated.
+Let the toga not gleam, nor be dirty either. Let us not own silver with engraved work of solid gold sunk into it, but let us not think it a sign of frugality to have gone without gold and silver. Let us make it our aim to follow a better life than the crowd, not a contrary one: otherwise we drive from us and turn away the people we want to see reformed. We also make them unwilling to imitate anything of ours, for fear that everything has to be imitated.
 
 <details><summary>Notes</summary>
 
@@ -116,7 +117,7 @@ Just as it is a mark of luxury to long for refined things, so it is a mark of ma
 
 ### 5.9
 
-Wild animals run from the dangers they see, and when they have escaped they are free from care: we are tormented both by what is coming and by what is past. Many of our good things do us harm: for memory brings back the torment of fear, and foresight takes it ahead of time. No one is wretched from present things alone. Farewell.
+Wild animals run from the dangers they see, and when they have escaped they are free from care: we are tormented both by what is coming and by what is past. Many of our good things do us harm: for memory brings back the torment of fear, and foresight takes it ahead of time. No one is made wretched by present things alone. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -133,7 +134,7 @@ Wild animals run from the dangers they see, and when they have escaped they are 
 
 ### 6.5
 
-So I will send you the books themselves, and so that you do not spend much effort chasing here and there after what will be of use, I will put marks in them, so that you can go straight to the very things I approve of and admire. Yet both the living voice and a shared life will do you more good than a set discourse. You ought to come to the thing itself, on the spot, first because people trust their eyes more than their ears, and then because the road is long by way of precepts, short and effective by way of examples.
+So I will send you the books themselves, and to spare you much effort chasing here and there after what will be of use, I will put marks in them, so that you can go straight to the very things I approve of and admire. Yet both the living voice and a shared life will do you more good than a set discourse. You ought to come to the thing itself, on the spot, first because people trust their eyes more than their ears, and then because the road is long by way of precepts, short and effective by way of examples.
 
 <details><summary>Notes</summary>
 
@@ -152,7 +153,7 @@ So I will send you the books themselves, and so that you do not spend much effor
 
 ### 7.7
 
-A single example of luxury or of greed does a great deal of harm: a self-indulgent housemate little by little weakens and softens, a rich neighbour stirs up craving, a spiteful companion rubs his own rust off on a man however spotless and straightforward. What do you think happens to a character on which the attack has been made by the people as a body?
+A single example of luxury or of greed does a great deal of harm: a self-indulgent housemate little by little weakens and softens, a rich neighbour stirs up craving, a spiteful companion rubs his own rust off on a man however spotless and straightforward. What do you think happens to a character that has come under attack from the people as a body?
 
 <details><summary>Notes</summary>
 
@@ -213,7 +214,7 @@ These things, my Lucilius, are to be stored away in your mind, so that you may d
 - *ex plurium assensione*: The first word is a comparative, “of more people”: the greater number, the majority, or simply a good many. “The greater number” is kept so that it stays distinct from the “many” that follows, a different Latin word. The noun is assent or approval, including applause. Other reading: from the applause of the many
 - *ecquid habes cur placeas tibi*: The opening word marks an open question, “have you anything”, with a hint that the answer is no. The phrase “to please oneself” means to be satisfied with oneself. Other reading: what reason have you to be satisfied with yourself
 - *si is es quem intellegant multi*: The subjunctive describes a type: “the kind of man whom many understand”. Being understood by many is treated as a bad sign. Other reading: if you are a man the many can understand
-- *introrsus bona tua spectent*: “Your good things” is taken as the subject of the verb “face, look”, as a house is said to face a direction: they should be turned inward, not toward an audience. The words could also mean “let them look at your good things within”, with people as the subject. The input has a stray space before the question mark and a small letter after it; a new sentence is read here. Other reading: let them look at your good things on the inside
+- *introrsus bona tua spectent*: “Your good things” is taken as the subject of the verb “face, look”, as a house is said to face a direction: they should be turned inward, not towards an audience. The words could also mean “let them look at your good things within”, with people as the subject. The input has a stray space before the question mark and a small letter after it; a new sentence is read here. Other reading: let them look at your good things on the inside
 
 </details>
 
@@ -221,12 +222,12 @@ These things, my Lucilius, are to be stored away in your mind, so that you may d
 
 ### 9.13
 
-“The wise man is content with himself.” Most people, my dear Lucilius, interpret this wrongly: they push the wise man back on every side and force him inside his own skin. But a distinction must be drawn about what that saying promises and how far. The wise man is content with himself for living happily, not for living, since for living he has use for many things, and for living happily he has use only for a mind that is sound and held high and looks down on fortune.
+“The wise man is content with himself.” Most people, my Lucilius, interpret this wrongly: they push the wise man back on every side and force him inside his own skin. But a distinction must be drawn: what does that saying promise, and how far? The wise man is content with himself for living happily, not for living, since for living he has use for many things, and for living happily he has use only for a mind that is sound and held high and looks down on fortune.
 
 <details><summary>Notes</summary>
 
 - *Se contentus est sapiens*: The Stoic claim that the wise man is enough for himself. “Contentus” means both satisfied and contained within. “Content with himself” is kept so that the same words can return in the next two sections; it means that he is enough for himself, not that he is pleased with himself. Other reading: The wise man is self-sufficient.
-- *mi Lucili*: A plain affectionate address. The English uses the ordinary form of address in a letter of today, which adds “dear”. Other reading: my Lucilius
+- *mi Lucili*: A plain affectionate address. “My Lucilius” is kept, as elsewhere in these letters, though an English letter of today would add “dear”. Other reading: my dear Lucilius
 - *sapientem undique submovent*: “Submovere” is to make someone move back, as a crowd is cleared out of the way, and “undique” is from or on every side. The English has him pressed back from every direction, which the image of the skin then completes. The words can also be read as removing him from everything around him. Other reading: they cut the wise man off from everything
 - *quid et quatenus vox ista promittat*: “Vox” is a saying or phrase, and “promittat” is what it holds out or undertakes. “Promises” is kept. Other reading: what that phrase claims, and within what limits
 - *ad hoc enim multis illi rebus opus est, ad illud tantum*: “Hoc” points to the nearer term (simply living) and “illud” to the further one (living happily). The English names each instead of writing “the latter” and “the former”, and gives “enim” as “since”. Other reading: for the latter he has use for many things, for the former only for
@@ -285,13 +286,13 @@ So, although he is content with himself, he has use for friends. He desires to h
 
 ### 10.5
 
-But, to send this letter with some small gift as is my habit, what I found in Athenodorus is true: “Know that you are released from all desires at the point when you have come to ask god for nothing except what you can ask for openly.” For as things are, how great is the madness of people! They whisper the most shameful prayers to the gods; if anyone brings his ear close, they will fall silent, and what they do not want a human being to know they tell to god. See, then, whether this might not be a wholesome precept to give: live with people just as if god saw, speak with god just as if people heard. Farewell.
+But, to send this letter with some small gift as is my habit, here is something true that I found in Athenodorus: “Know that you are released from all desires at the point when you have come to ask god for nothing except what you can ask for openly.” For as things are, how great is the madness of people! They whisper the most shameful prayers to the gods; if anyone brings his ear close, they will fall silent, and what they do not want a human being to know they tell to god. See, then, whether this might not be a wholesome precept to give: live with people just as if god saw, speak with god just as if people heard. Farewell.
 
 <details><summary>Notes</summary>
 
 - *cum aliquo munusculo*: A diminutive: a little present. In these early letters Seneca usually closes with a saying borrowed from another writer, and that is the gift. Other reading: with some little present
 - *apud Athenodorum*: A Stoic philosopher. More than one Athenodorus of Tarsus is known, and which is meant is not clear (from memory, unchecked). Other reading: in the writings of Athenodorus
-- *verum est quod apud Athenodorum inveni*: The English keeps the literal statement that what was found in Athenodorus is true. It could be smoothed into an introduction of the saying. Other reading: here is a true saying that I found in Athenodorus
+- *verum est quod apud Athenodorum inveni*: The Latin states that what was found in Athenodorus is true. The English turns this into an introduction of the saying, since otherwise the purpose clause before it has nothing to attach to in English. Other reading: what I found in Athenodorus is true
 - *omnibus cupiditatibus solutum*: “Solutum” is loosed or untied, as from bonds. “Cupiditates” are desires or cravings. Other reading: set free from all cravings
 - *nihil deum roges*: The singular “deum” can be god or a god. The passage moves between the singular and the plural “dis”; each is kept as it stands, with “god” in lower case as the glossary has it. Other reading: you ask a god for nothing
 - *turpissima vota dis insusurrant*: “Vota” are vows or wishes addressed to a god, so prayers in the sense of requests. “Turpissima” is most shameful or most foul. Other reading: they whisper the foulest wishes into the gods’ ears
@@ -319,12 +320,12 @@ Now the letter calls for its close. Take one, and a useful and wholesome one at 
 
 ### 11.9
 
-This, my dear Lucilius, is Epicurus’s precept. He gave us a guardian and a minder, and not without reason: a great part of wrongdoing is removed if a witness stands beside those who are about to do wrong. Let the mind have someone to revere, by whose authority it may make even its privacy purer. How fortunate is the man who corrects not only when he is present but even when he is thought of! How fortunate is the man who can revere someone in such a way that he composes and orders himself even at the memory of him! One who can revere someone in this way will soon be someone to be revered.
+This, my Lucilius, is Epicurus’s precept. He gave us a guardian and a minder, and not without reason: a great part of wrongdoing is removed if a witness stands beside those who are about to do wrong. Let the mind have someone to revere, by whose authority it may make even its privacy purer. How fortunate is the man who corrects not only when he is present but even when he is thought of! How fortunate is the man who can revere someone in such a way that he composes and orders himself even at the memory of him! One who can revere someone in this way will soon be someone to be revered.
 
 <details><summary>Notes</summary>
 
 - *Epicurus praecepit*: Literally Epicurus prescribed this, or gave this as a precept. The verb is turned into a noun to match “precept” in Ep. 10.5. Other reading: This is what Epicurus taught
-- *mi Lucili*: A plain affectionate address, given in the ordinary English form, which adds “dear”, as at Ep. 9.13. Other reading: my Lucilius
+- *mi Lucili*: A plain affectionate address, kept as “my Lucilius”, as at Ep. 9.13. Other reading: my dear Lucilius
 - *custodem nobis et paedagogum dedit*: A “paedagogus” was the slave who escorted a boy to school and watched over his behaviour, not a teacher. “Tutor” would mislead, so the English has “minder”, the plain word for someone who looks after a child. Other reading: he gave us a guardian and a tutor
 - *magna pars peccatorum tollitur, si peccaturis testis assistit*: The same word appears twice (“peccatorum”, “peccaturis”), so “wrongdoing” and “do wrong” are kept. “Sins” would bring in a Christian tone. Other reading: a great share of sins is done away with if a witness stands by those about to sin
 - *quem vereatur*: “Vereri” is respect tinged with awe or fear, which is why a witness deters. The word comes four times and ends in “verendus”, so one English word, “revere”, is kept throughout. Other reading: someone to stand in awe of
@@ -372,7 +373,7 @@ I owe this to my country place near the city: my old age showed itself to me whe
 
 ### 12.8
 
-So every day must be ordered as if it were bringing up the rear of the column, and were completing and filling out life. Pacuvius, who made Syria his own by right of possession, whenever he had made the offerings for the dead to himself, with wine and those funeral feasts, used to be carried from dinner to his bedroom in such a way that, amid the applause of his kept men, this was sung to music: “Life has been lived, life has been lived.”
+So every day must be ordered as if it were bringing up the rear of the column, and were completing and filling out life. Whenever Pacuvius, who made Syria his own by right of possession, had made the offerings for the dead to himself with wine and those funeral feasts, he was carried from dinner to his bedroom in such a way that, amid the applause of his kept men, this was sung to music: “Life has been lived, life has been lived.”
 
 <details><summary>Notes</summary>
 
@@ -455,7 +456,7 @@ Do this for me: whenever people stand around you trying to persuade you that you
 
 ### 13.8
 
-“But it is to come.” First look carefully at whether there are sure proofs of an evil to come. For most of the time we are troubled by suspicions, and we are made fools of by rumour, the thing that so often finishes a war, but finishes individuals far more. That is how it is, my Lucilius: we are quick to side with opinion. We do not refute the things that lead us into fear, nor do we search them, but we panic, and turn and run like those whom dust raised by a herd in flight has driven from their camp, or whom some tale spread about with no source has terrified.
+“But it is to come.” First look carefully at whether there are sure proofs of an evil to come. For most of the time we are troubled by suspicions, and we are made fools of by rumour, which so often finishes a war but finishes individuals far more. That is how it is, my Lucilius: we are quick to side with opinion. We do not refute the things that lead us into fear, nor do we examine them, but we panic, and turn and run like those whom dust raised by a herd in flight has driven from their camp, or whom some tale spread about with no source has terrified.
 
 <details><summary>Notes</summary>
 
@@ -463,7 +464,7 @@ Do this for me: whenever people stand around you trying to persuade you that you
 - *certa argumenta*: The noun covers proofs, evidence and signs. The English takes “sure proofs”. Other reading: reliable signs; definite evidence
 - *conficere bellum solet fama, multo autem magis singulos conficit*: A play on one verb used twice: to finish (settle, decide) a war, and to finish off (wear out, destroy) a person. “Finishes” is used both times. “Far more” is a matter of degree in the Latin, not of frequency. Other reading: rumour, which often decides a war but much more surely destroys individuals
 - *cito accedimus opinioni*: The verb is to go over to a side, and so to assent. “Opinion” follows the glossary: it is what is supposed or believed as against the fact, and it could be a person’s own unexamined belief or what people are saying. Other reading: we are quick to agree with what is commonly believed
-- *non coarguimus illa quae nos in metum adducunt nec excutimus*: The first verb is a court word, to prove false or convict. The second is literally to shake out, as a garment is shaken out to see what is hidden in it, and so to search or examine; “search” gives the sense. Other reading: we do not show up as false the things that bring us into fear, nor shake them out
+- *non coarguimus illa quae nos in metum adducunt nec excutimus*: The first verb is a court word, to prove false or convict. The second is literally to shake out, as a garment is shaken out to see what is hidden in it, and so to search or examine; “examine” is the plain word for it. Other reading: we do not show up as false the things that bring us into fear, nor shake them out
 - *vertimus terga*: Literally to turn the back, the soldier’s phrase for running away. In English that phrase suggests ignoring something, so “turn and run” is used. Other reading: and turn our backs
 - *pulvis motus fuga pecorum exuit castris*: The last two words are a soldier’s phrase, literally “stripped of the camp”: troops are made to abandon their camp and lose it. The picture is of soldiers who take a dust cloud raised by fleeing animals for an enemy. Pecorum is any herd or flock, cattle or sheep. Other reading: whom dust raised by cattle in flight has stripped of their camp
 - *sine auctore*: Literally “without an author”: a story no one will answer for. “Source” is used here and for the same noun in Ep. 13.13. Other reading: with no one to vouch for it
@@ -511,7 +512,7 @@ I am ashamed to be talking with you like this, and to be reviving you with such 
 
 ### 14.1
 
-I admit that it is planted in us to hold our own body dear; I admit that we hold it in our guardianship. I do not deny that it should be indulged; I deny that we should be its slaves. For the man who is a slave to his body, who fears too much for it, who measures everything by it, will be a slave to many.
+I admit that holding our own body dear is planted in us; I admit that we act as its guardians. I do not deny that it should be indulged; I deny that we should be its slaves. For the man who is a slave to his body, who fears too much for it, who measures everything by it, will be a slave to many.
 
 <details><summary>Notes</summary>
 
@@ -526,7 +527,7 @@ I admit that it is planted in us to hold our own body dear; I admit that we hold
 
 ### 14.2
 
-This is how we ought to conduct ourselves: not as though we ought to live for the sake of the body, but as though we could not live without the body. Too great a love of it unsettles us with fears, loads us with anxieties, exposes us to insults. What is honourable is cheap to the man to whom his body is too dear. Let it be cared for with the greatest diligence, but in such a way that, when reason demands it, when dignity demands it, when good faith demands it, it must be thrown into the flames.
+This is how we ought to conduct ourselves: not as though we ought to live for the sake of the body, but as though we could not live without the body. Too great a love of it unsettles us with fears, loads us with anxieties, exposes us to insults. What is honourable is cheap to the man to whom his body is too dear. Let it be cared for with the greatest diligence, but on the understanding that, when reason demands it, when dignity demands it, when good faith demands it, it must be thrown into the flames.
 
 <details><summary>Notes</summary>
 
@@ -574,7 +575,7 @@ I know that this is clear to you, Lucilius: that no one can live happily, or eve
 
 ### 16.5
 
-Whichever of these is the case, Lucilius, or even if all of them are, one must do philosophy. Whether the fates bind us by an inexorable law, or god, the arbiter of the universe, has arranged everything, or chance drives and tosses human affairs about without order, philosophy ought to protect us. It will urge us to obey god willingly, and Fortune defiantly; it will teach you to follow god and bear chance.
+Whichever of these is the case, Lucilius, or even if all of them are, one must practise philosophy. Whether the fates bind us by an inexorable law, or god, the arbiter of the universe, has arranged everything, or chance drives and tosses human affairs about without order, philosophy ought to protect us. It will urge us to obey god willingly, and Fortune defiantly; it will teach you to follow god and bear chance.
 
 <details><summary>Notes</summary>
 
@@ -641,7 +642,7 @@ There is no reason for poverty to call us back from philosophy, or even destitut
 
 ### 18.5
 
-But I am so much in favour of testing the firmness of your mind that, following the precept of great men, I shall give a precept to you as well: set some days in between on which, content with the scantiest and cheapest food and with coarse and rough clothing, you say to yourself, “Is this what was feared?”
+But I am so much in favour of testing the firmness of your mind that, following the precept of great men, I shall give a precept to you as well: fit in some days on which, content with the scantiest and cheapest food and with coarse and rough clothing, you say to yourself, “Is this what was feared?”
 
 <details><summary>Notes</summary>
 
@@ -656,7 +657,7 @@ But I am so much in favour of testing the firmness of your mind that, following 
 
 ### 18.7
 
-There is no reason now for you to think that I mean dinners in the style of Timon and poor men’s rooms and whatever else there is by which luxury plays, out of boredom with riches: let that pallet be a real one, and the rough cloak, and the bread hard and coarse. Bear this for three or four days, sometimes for more days, so that it is not play but a test: then, believe me, Lucilius, you will leap for joy, filled for two coppers, and you will understand that for freedom from care there is no need of Fortune; for this, which is enough for necessity, she will give even when angry.
+There is no reason now for you to think that I mean dinners in the style of Timon and poor men’s rooms and all the other ways in which luxury plays, out of boredom with riches: let that pallet be a real one, and the rough cloak, and the bread hard and coarse. Bear this for three or four days, sometimes for more, so that it is not play but a test: then, believe me, Lucilius, you will leap for joy, filled for two coppers, and you will understand that for freedom from care there is no need of Fortune; for this, which is enough for necessity, she will give even when angry.
 
 <details><summary>Notes</summary>
 
@@ -702,7 +703,7 @@ Those who declaim and angle for the approval of a ring of listeners have one pur
 - *iuvenum et otiosorum*: Otiosi are people with leisure, with time on their hands. The word can carry blame but need not, so the English has “men of leisure”. Other reading: of young men and idlers
 - *disputatione varia aut volubili*: Varia is changing or wide ranging. Volubilis is rolling, rapid, and can be heard as praise (“fluent”) or as blame (“glib”); “rapid” leaves that open. Other reading: with wide ranging or glib argument
 - *ad legem suam quisque vivat*: Suam with quisque normally means “each his own”. The reflexive could instead point back to philosophy, the subject of “demands”. The English takes the first. Other reading: that each person live by its law (philosophy’s law)
-- *unus sit omnium actio[dissentio]num color [sit]*: The square brackets are an editor’s deletions carried into the copy; the English reads “unus sit omnium actionum color”. As given the words stand after a semicolon with no “that”, so they are translated as a fresh wish, though they could be one more thing that philosophy demands. The wording of this sentence is disturbed in the tradition and other editions print it differently (from memory, unchecked). Other reading: that all his actions be of one colour
+- *unus sit omnium actio[dissentio]num color [sit]*: The square brackets are an editor’s deletions carried into the copy; the English reads “unus sit omnium actionum colour”. As given the words stand after a semicolon with no “that”, so they are translated as a fresh wish, though they could be one more thing that philosophy demands. The wording of this sentence is disturbed in the tradition and other editions print it differently (from memory, unchecked). Other reading: that all his actions be of one colour
 - *officium sapientiae et indicium*: The two nouns nearly rhyme in Latin. Officium is duty, task or function; indicium is a sign or proof. Other reading: the greatest task of wisdom and the greatest proof of it
 - *par sibi idemque*: Par sibi is literally “equal to himself”, a match for himself, and idem is “the same”. The English gives the sense in current words. Other reading: equal to himself and the same
 - *Est enim difficile [hoc]*: The bracketed word is marked for deletion and is left out. “For” explains why only a few achieve it. Other reading: For this is difficult
@@ -731,7 +732,7 @@ Begrudge it if you like: even now Epicurus will gladly pay on my behalf. “Your
 
 ### 21.5
 
-A fathomless depth of time will come over us; few talents will lift their heads out and, though bound to go off some day into the same silence, will hold out against oblivion and will long assert their freedom. What Epicurus was able to promise his friend, this I promise you, Lucilius: I shall have favour with those who come after; I can bring out with me names that will last. Our Vergil promised everlasting memory to two men, and he is making it good: “Fortunate pair! If my songs have any power, no day shall ever take you out of time that remembers, so long as the house of Aeneas dwells beside the immovable rock of the Capitol and the Roman father holds the empire.”
+A fathomless depth of time will come over us; few talents will lift their heads out and, though bound to depart some day into the same silence, will hold out against oblivion and will long assert their freedom. What Epicurus was able to promise his friend, this I promise you, Lucilius: I shall have favour with those who come after; I can bring out with me names that will last. Our Vergil promised everlasting memory to two men, and he is making it good: “Fortunate pair! If my songs have any power, no day shall ever take you out of time that remembers, so long as the house of Aeneas dwells beside the immovable rock of the Capitol and the Roman father holds the empire.”
 
 <details><summary>Notes</summary>
 
@@ -751,7 +752,7 @@ A fathomless depth of time will come over us; few talents will lift their heads 
 
 ### 22.15
 
-“No one,” he says, “goes out of life otherwise than as he was born.” That is false: we die worse than we are born. That fault is ours, not nature’s. She ought to remonstrate with us and say: “What is this? I gave birth to you without desires, without fears, without superstition, without treachery and the other plagues: go out such as you came in.”
+“No one,” he says, “goes out of life otherwise than as he was born.” That is false: we die worse than we are born. That fault is ours, not nature’s. She ought to remonstrate with us and say: “What is this? I gave birth to you without desires, without fears, without superstition, without treachery and the other plagues: go out as you came in.”
 
 <details><summary>Notes</summary>
 
@@ -769,7 +770,7 @@ A fathomless depth of time will come over us; few talents will lift their heads 
 
 ### 23.3
 
-Do this before all else, my Lucilius: learn to feel joy. Do you now think that I am taking many pleasures away from you, I who clear away the things of chance, who think that hopes, the sweetest of delights, are to be avoided? No, on the contrary: I do not want gladness ever to be lacking to you. I want it to be born for you at home: it is born if only it comes about within yourself. The other kinds of cheerfulness do not fill the breast; they smooth the brow, they are slight, unless perhaps you judge that a man who laughs is feeling joy: the mind ought to be lively and confident and raised up above all things.
+Do this before all else, my Lucilius: learn to feel joy. Do you now think that I am taking many pleasures away from you, I who clear away the things of chance, who think that hopes, the sweetest of delights, are to be avoided? No, on the contrary: I do not want you ever to be without gladness. I want it to be born for you at home: it is born, provided it comes about within yourself. The other kinds of cheerfulness do not fill the breast; they smooth the brow, they are slight, unless perhaps you judge that a man who laughs is feeling joy: the mind ought to be lively and confident and raised up above all things.
 
 <details><summary>Notes</summary>
 
@@ -785,7 +786,7 @@ Do this before all else, my Lucilius: learn to feel joy. Do you now think that I
 
 ### 23.4
 
-Believe me, true joy is a stern thing. Or do you think that anyone with a relaxed and, as those pampered people say, “cheery little” face despises death, opens his house to poverty, holds pleasures under the bridle, rehearses the endurance of pains? The man who turns these things over within himself is in great joy, but a joy with little charm. It is this joy that I want you to be in possession of: it will never fail, once you have found where it is to be got from.
+Believe me, true joy is a stern thing. Or do you think that anyone with a relaxed and, as those pampered people say, “cheery little” face despises death, opens his house to poverty, holds pleasures under the bridle, rehearses the endurance of pains? The man who turns these things over within himself is in great joy, but a joy with little charm. This is the joy I want you to possess: it will never fail, once you have found where to get it.
 
 <details><summary>Notes</summary>
 
@@ -838,7 +839,7 @@ Do you ask what that is, or where it comes up from? I will tell you: from a good
 
 ### 23.11
 
-There is no reason for you to think that these are few: they are nearly everyone. Some, indeed, begin at the time when they must stop. If you judge this a wonder, I will add something for you to wonder at more: some have stopped living before they began. Farewell.
+There is no reason for you to think that these are few: they are nearly everyone. Some, indeed, begin just when they must stop. If you judge this a wonder, I will add something for you to wonder at more: some have stopped living before they began. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -854,7 +855,7 @@ There is no reason for you to think that these are few: they are nearly everyone
 
 ### 24.12
 
-So, free from care, listen to your enemy’s threats; and although your own conscience gives you confidence, still, because many things outside the case carry weight, hope for what is fairest and also prepare yourself for what is most unfair. But above all remember this, to take the uproar away from things and to see what is in each thing: you will find that there is nothing terrible in those things except the fear itself.
+So, free from care, listen to your enemy’s threats; and although your own conscience gives you confidence, still, because many things outside the case carry weight, hope for what is fairest and also prepare yourself for what is most unfair. But above all remember this: to take the uproar away from things and to see what is in each thing: you will find that there is nothing terrible in those things except the fear itself.
 
 <details><summary>Notes</summary>
 
@@ -885,7 +886,7 @@ What you see happen to children happens to us too, who are slightly bigger child
 
 ### 24.14
 
-Why do you show me swords and fires and a crowd of executioners roaring around you? Take away that parade you hide behind and frighten fools with: you are death, which a slave of mine recently scorned, which a slave girl scorned. And you in turn, why do you lay out whips and racks before me with great display? Why the separate devices fitted to separate joints to wrench them out, and a thousand other instruments for torturing a man piece by piece? Put away those things that stun us; order the groans to fall silent, and the cries, and the harshness of voices forced out while the body is being torn. You are pain, after all, which that man with gout scorns, which that man with a bad stomach endures in the very midst of his luxuries, which a girl endures to the end in childbirth. You are light if I can bear you; you are short if I cannot bear you.
+Why do you show me swords and fires and a crowd of executioners roaring around you? Take away that parade you hide behind and frighten fools with: you are death, which a slave of mine recently scorned, which a slave girl scorned. And you in turn, why do you lay out whips and racks before me with great display? Why the separate devices fitted to separate joints to wrench them out, and a thousand other instruments for torturing a man piece by piece? Put away those things that stun us; order the groans to fall silent, and the cries, and the harshness of voices forced out while the body is being torn. You are pain, after all, which that man with gout scorns, which that man with a bad stomach bears in the very midst of his luxuries, which a girl endures to the end in childbirth. You are light if I can bear you; you are short if I cannot bear you.
 
 <details><summary>Notes</summary>
 
@@ -905,7 +906,7 @@ Why do you show me swords and fires and a crowd of executioners roaring around y
 
 ### 24.15
 
-Turn over in your mind these things, which you have often heard and often said; but whether you have truly heard them, whether you have truly said them, prove in action. For this charge that is commonly thrown at us is a most shameful one: that we handle the words of philosophy, not its deeds. What? Have you learned now for the first time that death hangs over you, now exile, now pain? You were born to these things. Whatever can happen, let us think of it as going to happen.
+Turn these things over in your mind; you have often heard them and often said them, but whether you have truly heard them, whether you have truly said them, prove in action. For this charge that is commonly thrown at us is a most shameful one: that we handle the words of philosophy, not its deeds. What? Have you learned now for the first time that death hangs over you, now exile, now pain? You were born to these things. Whatever can happen, let us think of it as going to happen.
 
 <details><summary>Notes</summary>
 
@@ -956,7 +957,7 @@ I am not so silly as to go through the Epicurean refrain at this point and say t
 
 ### 24.20
 
-We die every day; for every day some part of life is taken away, and even at the time when we are growing, life is growing less. We have lost infancy, then childhood, then youth. Right up to yesterday, whatever time has passed has perished; this very day that we are living we share with death. Just as it is not the last drop that empties a water clock but whatever has run out before, so the last hour, in which we cease to be, does not alone make death but alone completes it. That is when we come to it, but we have been coming for a long time.
+We die every day; for every day some part of life is taken away, and even when we are growing, life is growing less. We have lost infancy, then childhood, then youth. Right up to yesterday, whatever time has passed has perished; this very day that we are living we share with death. Just as it is not the last drop that empties a water clock but whatever has run out before, so the last hour, in which we cease to be, does not alone make death but alone completes it. That is when we come to it, but we have been coming for a long time.
 
 <details><summary>Notes</summary>
 
@@ -990,7 +991,7 @@ I see what you are looking for: you are asking what I have packed into this lett
 
 ### 24.24
 
-Whichever of these you handle, you will strengthen your mind to endure either death or life; for we need to be warned and strengthened in both directions, both not to love life too much and not to hate it too much. Even when reason advises making an end of oneself, the leap is not to be taken rashly or at a run.
+Whichever of these you handle, you will strengthen your mind to endure either death or life; for we need to be warned and strengthened in both directions: not to love life too much and not to hate it too much. Even when reason advises making an end of oneself, the leap is not to be taken rashly or at a run.
 
 <details><summary>Notes</summary>
 
@@ -1005,7 +1006,7 @@ Whichever of these you handle, you will strengthen your mind to endure either de
 
 ### 24.25
 
-A brave and wise man ought not to flee from life but to go out of it. And above all, that passion too should be avoided which has taken hold of many: the lust for dying. For there is, my Lucilius, as towards other things, so also towards dying, an unconsidered leaning of the mind, which often seizes men who are noble and of the keenest character, and often the spiritless and the downcast. The former scorn life; the latter find it a burden.
+A brave and wise man ought not to flee from life but to go out of it. And above all, that passion too should be avoided which has taken hold of many: the lust for dying. For there is, my Lucilius, an unconsidered leaning of the mind towards dying too, as there is towards other things, and it often seizes men who are noble and of the keenest character, and often the spiritless and the downcast. The former scorn life; the latter find it a burden.
 
 <details><summary>Notes</summary>
 
@@ -1023,7 +1024,7 @@ A brave and wise man ought not to flee from life but to go out of it. And above 
 
 ### 24.26
 
-Some people are overcome by having had their fill of doing and seeing the same things, and by not hatred of life but distaste for it. We slide into this with philosophy itself pushing us, while we say: “How long the same things? Of course I will wake, I will sleep, I will be hungry, I will be cold, I will be hot. Nothing has an end, but all things are linked in a circle; they flee and they follow. Night presses on day, day on night; summer ends in autumn, winter bears down on autumn, and is checked by spring. All things pass in such a way that they come back. I do nothing new, I see nothing new: at some point there comes nausea at this too.” There are many who judge living to be not bitter but superfluous. Farewell.
+Some people are overcome by having had their fill of doing and seeing the same things, and not by hatred of life but by distaste for it. We slide into this with philosophy itself pushing us, while we say: “How long the same things? Of course I will wake, I will sleep, I will be hungry, I will be cold, I will be hot. Nothing has an end, but all things are linked in a circle; they flee and they follow. Night presses on day, day on night; summer ends in autumn, winter bears down on autumn, and is checked by spring. All things pass in such a way that they come back. I do nothing new, I see nothing new: at some point there comes nausea at this too.” There are many who judge living to be not bitter but superfluous. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -1044,7 +1045,7 @@ Some people are overcome by having had their fill of doing and seeing the same t
 
 ### 25.5
 
-“Do everything,” he says, “as though Epicurus were watching.” It is without doubt useful to have set a guard over oneself and to have someone you look to, someone you judge to be present at your thoughts. This is indeed far grander, to live as though under the eyes of some good man who is always present; but I am content even with this, that you do whatever you do as though someone were watching. Solitude persuades us to every evil.
+“Do everything,” he says, “as though Epicurus were watching.” It is without doubt useful to have set a guard over oneself and to have someone you look to, someone you judge to be present at your thoughts. This is indeed far grander, to live as though under the eyes of some good man who is always present; but I am content even with this, that you do whatever you do as though someone were watching. Solitude talks us into every evil.
 
 <details><summary>Notes</summary>
 
@@ -1060,7 +1061,7 @@ Some people are overcome by having had their fill of doing and seeing the same t
 
 ### 25.6
 
-When you have made so much progress that you have respect even for yourself, you may dismiss your minder. Meanwhile guard yourself by the authority of certain men: let it be the famous Cato, or Scipio, or Laelius, or another at whose coming even depraved men would suppress their vices, while you are making yourself the man in whose company you would not dare to do wrong. When you have made yourself that, and have begun to have some standing in your own eyes, I will begin to allow you what the same Epicurus advises: “Withdraw into yourself most of all at the time when you are forced to be in a crowd.”
+When you have made so much progress that you have respect even for yourself, you may dismiss your minder. Meanwhile guard yourself by the authority of certain men: let it be the famous Cato, or Scipio, or Laelius, or another at whose coming even depraved men would suppress their vices, while you are making yourself the man in whose company you would not dare to do wrong. When you have made yourself that, and have begun to have some standing in your own eyes, I will begin to allow you what the same Epicurus advises: “Withdraw into yourself most of all when you are forced to be in a crowd.”
 
 <details><summary>Notes</summary>
 
@@ -1078,7 +1079,7 @@ When you have made so much progress that you have respect even for yourself, you
 
 ### 25.7
 
-You need to become unlike the many, until it is safe for you to withdraw to yourself. Look around at people one by one: there is no one for whom it is not better to be with anyone at all than with himself. “Withdraw into yourself most of all at the time when you are forced to be in a crowd”: if you are a good man, if you are untroubled, if you are self-controlled. Otherwise you must withdraw from yourself into the crowd: there, with yourself, you are closer to a bad man. Farewell.
+You need to become unlike the many, until it is safe for you to withdraw to yourself. Look around at people one by one: there is no one for whom it is not better to be with anyone at all than with himself. “Withdraw into yourself most of all when you are forced to be in a crowd”: if you are a good man, if you are untroubled, if you are self-controlled. Otherwise you must withdraw from yourself into the crowd: there, with yourself, you are closer to a bad man. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -1093,7 +1094,7 @@ You need to become unlike the many, until it is safe for you to withdraw to your
 
 </details>
 
-## Letter 26: On old age and death as the test
+## Letter 26: On old age, and death as the test of progress
 
 ### 26.2
 
@@ -1183,7 +1184,7 @@ To someone who made this same complaint Socrates said: “Why do you wonder that
 
 ### 28.4
 
-But once you have removed that ill, every change of place will become pleasant. Though you are driven out to the farthest lands, though you are set down in whatever corner of barbarian country, that dwelling, whatever it is like, will be hospitable to you. Who you are when you come matters more than where you come to, and for that reason we ought not to sign our mind over to any place. One must live with this conviction: “I was not born for one corner; this whole world is my country.”
+But once you have removed that ill, every change of place will become pleasant. Though you are driven out to the farthest lands, though you are set down in any corner of barbarian country, that dwelling, whatever it is like, will be hospitable to you. Who you are when you come matters more than where you come to, and for that reason we ought not to sign our mind over to any place. One must live with this conviction: “I was not born for one corner; this whole world is my country.”
 
 <details><summary>Notes</summary>
 
@@ -1200,7 +1201,7 @@ But once you have removed that ill, every change of place will become pleasant. 
 
 ### 28.6
 
-Can anything be as turbulent as the forum? Even there one may live quietly, if it should be necessary. But if one might place oneself, I would flee far from even the sight and the neighbourhood of the forum; for just as oppressive places test even the strongest health, so for a good mind too, one that is not yet perfected and is recovering, there are some places that are not wholesome enough.
+Can anything be as turbulent as the forum? Even there one may live quietly, if it should be necessary. But if one might choose one’s own place, I would flee far from even the sight and the neighbourhood of the forum; for just as oppressive places test even the strongest health, so for a good mind too, one that is not yet perfected and is recovering, there are some places that are not wholesome enough.
 
 <details><summary>Notes</summary>
 
@@ -1218,7 +1219,7 @@ Can anything be as turbulent as the forum? Even there one may live quietly, if i
 
 ### 29.1
 
-You ask about our Marcellinus and want to know how he is doing. He seldom comes to us, for no other reason than that he is afraid to hear the truth; and that is a danger he is now clear of, for it should be spoken to no one unless he is going to hear it. That is why, about Diogenes and no less about the other Cynics who spoke freely to all alike and admonished whoever came their way, it is commonly doubted whether they ought to have done this. For what if someone were to rebuke the deaf, or those who are mute by nature or by illness?
+You ask about our Marcellinus and want to know how he is doing. He seldom comes to us, for no other reason than that he is afraid to hear the truth; and that is a danger he is now clear of, for it should be spoken to no one unless he is going to hear it. That is why it is commonly doubted whether Diogenes, and no less the other Cynics who spoke freely to all alike and admonished whoever came their way, ought to have done this. For what if someone were to rebuke the deaf, or those who are mute by nature or by illness?
 
 <details><summary>Notes</summary>
 
@@ -1290,11 +1291,11 @@ What, then, will that philosophy deliver, which is praised and is to be preferre
 
 </details>
 
-## Letter 30: On an old man's calm before death
+## Letter 30: On an old man’s calm before death
 
 ### 30.4
 
-This is a great thing, Lucilius, and one that has to be learned over a long time: to go away with an even mind when that hour which cannot be avoided draws near. Other kinds of death are mixed with hope: an illness comes to an end, a fire is put out, a falling building has set down the people it seemed about to crush; the sea has thrown out unharmed those it had swallowed, with the same force with which it was sucking them down; a soldier has drawn his sword back from the very neck of the man who was about to die. The man whom old age is leading to death has nothing to hope for; against this alone no one can step in. By no kind of death do people die more gently, but by none more slowly either.
+This is a great thing, Lucilius, and one that has to be learned over a long time: to go away with an even mind when that hour which cannot be avoided draws near. Other kinds of death are mixed with hope: an illness comes to an end, a fire is put out, a falling building has set down the people it seemed about to crush; the sea has thrown out unharmed those it had swallowed, with the same force that was sucking them down; a soldier has drawn his sword back from the very neck of the man who was about to die. The man whom old age is leading to death has nothing to hope for; against this alone no one can step in. By no kind of death do people die more gently, but by none more slowly either.
 
 <details><summary>Notes</summary>
 
@@ -1341,14 +1342,14 @@ Death has a necessity that is fair and cannot be overcome: who can complain of b
 
 ### 30.12
 
-And further, if it has been anyone’s lot that old age should let him go gently, not torn suddenly from life but drawn away little by little, oh, that man truly ought to give thanks to all the gods that, having had his fill, he has been brought through to a rest that is necessary for a human being and welcome to a tired one. You see some people wishing for death, and indeed more than life is usually begged for. I do not know which of the two I should think give us more courage, those who demand death or those who wait for it cheerful and quiet, since the first sometimes comes from frenzy and sudden indignation, while this calm comes from a settled judgment. Someone has come to death angry: no one has received death cheerfully when it came, except a man who had long made himself ready for it.
+And further, if it has been anyone’s lot that old age should let him go gently, not torn suddenly from life but drawn away little by little, oh, that man truly ought to give thanks to all the gods that, having had his fill, he has been brought through to a rest that is necessary for a human being and welcome to a tired one. You see some people wishing for death, and indeed wishing for it more than people usually beg for life. I do not know which of the two I should think give us more courage, those who demand death or those who wait for it cheerful and quiet, since the first sometimes comes from frenzy and sudden indignation, while this calm comes from a settled judgment. Someone has come to death angry: no one has received death cheerfully when it came, except a man who had long made himself ready for it.
 
 <details><summary>Notes</summary>
 
 - *leviter emitteret*: Emittere is to send out or release; it is also used of freeing a slave and of discharging a soldier. The plain “let go” is kept. Leviter is “lightly, gently”. Other reading: should release him gently; should discharge him gently
 - *o ne ille*: Ne here is the affirming particle (“truly, indeed”), not the negative. It is translated “truly”. Other reading: oh, he indeed
 - *satiatus*: Literally “sated, filled full”, as after a meal. The picture is of a guest who has had enough. Other reading: having had enough of life
-- *magis quam rogari solet vita*: Magis is simply “more”, and the English adds nothing to it. Rogari is to be asked or begged for, as a condemned man begs for his life. Other reading: more than people usually ask for life
+- *magis quam rogari solet vita*: Magis is simply “more”, and the English adds nothing to it; “wishing for it” repeats the verb the Latin leaves understood, and “people” is supplied for the passive. Rogari is to be asked or begged for, as a condemned man begs for his life. Other reading: and indeed more than life is usually begged for
 - *maiorem nobis animum dare*: Animus is “mind” in the glossary, but here the sense is courage or heart, which the glossary allows. Other reading: give us greater spirit; put more heart into us
 - *haec ex iudicio certo tranquillitas est*: The Latin sets a neuter “that” (the demanding of death) against “this calm”. “Calm” is the glossary’s word for tranquillitas and “judgment” for iudicium. Certo is “fixed, settled, sure”. Other reading: the latter is a calm that comes from firm judgment
 - *Venit aliquis ad mortem iratus*: Venit can be present (“comes”) or past (“has come”); the spelling does not show which. The English takes it as past, to match the past forms in the second half of the sentence. The sentence plays on the man coming to death and death coming to the man, kept by “come” and “came”. Other reading: Someone comes to death angry
@@ -1358,7 +1359,7 @@ And further, if it has been anyone’s lot that old age should let him go gently
 
 ### 30.16
 
-He used to say that this torment at least we feel by our own doing: that we tremble just when we believe death is near us. For who is there that it is not near, ready as it is in every place and at every moment? “But let us consider,” he said, “just when some cause of dying seems to be approaching, how much nearer other causes are that are not feared.”
+He used to say that this torment at least we feel by our own doing: that we tremble just when we believe death is near us. For whom is it not near, ready as it is in every place and at every moment? “But let us consider,” he said, “just when some cause of dying seems to be approaching, how much nearer the other causes are, the ones that are not feared.”
 
 <details><summary>Notes</summary>
 
@@ -1375,11 +1376,11 @@ He used to say that this torment at least we feel by our own doing: that we trem
 
 ### 31.5
 
-Hard work feeds noble minds. So there is no reason for you to pick out, from that old prayer of your parents, what you would want to come to you, what you would wish for; and altogether, for a man who has already passed through the greatest things, it is shameful still to be wearying the gods. What need is there of prayers? Make yourself fortunate, you yourself; and you will, if you understand that those things are good which have virtue mixed into them, and those shameful which have wickedness joined to them. Just as nothing is bright without a mixture of light, and nothing is black unless it has darkness in it or has drawn something dark into itself; just as nothing is hot without the help of fire, and nothing cold without air; so it is partnership with virtue and with wickedness that makes things honourable and shameful.
+Hard work feeds noble minds. So there is no reason for you to pick out, from that old prayer of your parents, what you would want to come to you, what you would wish for; and altogether, for a man who has already passed through the greatest things, it is shameful still to be wearying the gods. What need is there of prayers? Make yourself fortunate by your own doing; and you will, if you understand that those things are good which have virtue mixed into them, and those shameful which have wickedness joined to them. Just as nothing is bright without a mixture of light, and nothing is black unless it has darkness in it or has drawn something dark into itself; just as nothing is hot without the help of fire, and nothing cold without air; so it is partnership with virtue and with wickedness that makes things honourable and shameful.
 
 <details><summary>Notes</summary>
 
-- *Generosos animos labor nutrit*: Labor is toil, exertion, hardship; the section before has just said it is not itself a good. Generosus is “well-born” and so “noble”. “Minds” is kept for animos, though “spirits” is possible. Other reading: Toil nourishes spirits of good stock
+- *Generosos animos labor nutrit*: Labour is toil, exertion, hardship; the section before has just said it is not itself a good. Generosus is “well-born” and so “noble”. “Minds” is kept for animos, though “spirits” is possible. Other reading: Toil nourishes spirits of good stock
 - *ex illo vetere parentum tuorum*: As given, the Latin has no noun for illo vetere (“that old one of your parents”) to agree with. “Prayer” is supplied in the English because the next sentence asks what need there is of vota (“prayers”); printed texts are believed to read voto here (from memory, unchecked). Other reading: from that old (thing) of your parents
 - *iam per maxima acto viro*: Literally “for a man already driven through the greatest things”. Maxima may be the highest offices, a full public career, or great affairs and trials generally. The English leaves that open and turns the passive into the plainer “passed through”. Other reading: for a man who has already been taken through the highest offices
 - *etiam nunc*: The phrase is “even now” in the sense of “still”: he goes on doing it. The English says “still”. Other reading: even now
@@ -1395,7 +1396,7 @@ Hard work feeds noble minds. So there is no reason for you to pick out, from tha
 
 ### 32.3
 
-So hurry, dearest Lucilius, and think how much you would add to your speed if an enemy were bearing down on you from behind, if you suspected that cavalry were coming up and pressing on the tracks of those in flight. This is happening: you are being pressed. Speed up and get away, bring yourself through to safety, and consider again and again what a fine thing it is to complete one’s life before death, and then to wait free from care for the remaining part of one’s time, waiting for nothing for oneself, settled in possession of the happy life, which does not become happier if it is longer.
+So hurry, dearest Lucilius, and think how much you would add to your speed if an enemy were bearing down on you from behind, if you suspected that cavalry were coming up and pressing on the tracks of those in flight. This is happening: you are being pressed. Speed up and get away, bring yourself through to safety, and consider again and again what a fine thing it is to complete one’s life before death, and then to wait free from care for the remaining part of one’s time, expecting nothing for oneself, settled in possession of the happy life, which does not become happier if it is longer.
 
 <details><summary>Notes</summary>
 
@@ -1406,13 +1407,13 @@ So hurry, dearest Lucilius, and think how much you would add to your speed if an
 - *subinde*: Can mean “repeatedly”, “from time to time” or “immediately after”. The first is taken. Other reading: and from time to time consider; and then at once consider
 - *consummare vitam ante mortem*: Consummare is to bring to its full sum, to finish off or complete. The thought is of a life made whole before it ends. Other reading: to bring life to its full sum before death
 - *securum*: Glossary: securitas is freedom from care. The word describes the unnamed subject of “to wait”, a general “one”, which is kept. Other reading: to wait without anxiety
-- *nihil sibi*: As given, these two words have no verb or participle to govern them and do not construe. The English repeats “wait” from exspectare as a stopgap (“waiting for nothing for oneself”). A word has probably fallen out, and printed editions are believed to mark or mend the text here (from memory, unchecked). Other reading: (literally) nothing for oneself; (with a word supplied) promising oneself nothing, or relying on oneself
+- *nihil sibi*: As given, these two words have no verb or participle to govern them and do not construe. The English takes up exspectare again as a stopgap, in its other sense “expect” (“expecting nothing for oneself”). A word has probably fallen out, and printed editions are believed to mark or mend the text here (from memory, unchecked). Other reading: (literally) nothing for oneself; (with a word supplied) promising oneself nothing, or relying on oneself
 
 </details>
 
 ### 32.5
 
-I wish for you to have yourself at your own disposal: that your mind, driven about by wandering thoughts, may at last come to a stand and be settled; that it may be content with itself and, once it has understood the true goods, which are possessed the moment they are understood, may have no need of added years. That man alone has got beyond necessities, and is discharged from service and free, who lives with his life completed.
+I wish for you to have yourself at your own disposal: that your mind, driven about by wandering thoughts, may at last come to rest and be settled; that it may be content with itself and, once it has understood the true goods, which are possessed the moment they are understood, may have no need of added years. That man alone has got beyond necessities, and is discharged from service and free, who lives with his life completed.
 
 <details><summary>Notes</summary>
 
@@ -1431,7 +1432,7 @@ I wish for you to have yourself at your own disposal: that your mind, driven abo
 
 ### 35.4
 
-Hurry to me, but to yourself first. Make progress, and before all else take care of this: that you be consistent with yourself. Whenever you want to test whether anything has been achieved, watch whether you want the same things today as yesterday: a change in what one wants shows that the mind is adrift, turning up now in one place and now in another, as the wind has carried it. What is fixed and set on a foundation does not wander: that falls to the perfect wise man, and to some extent also to the one who is making progress and has advanced. What then is the difference? The latter is indeed shaken, yet he does not shift his ground, but sways in his own place; the former is not even shaken. Farewell.
+Hurry to me, but to yourself first. Make progress, and before all else take care of this: that you be consistent with yourself. Whenever you want to test whether anything has been achieved, watch whether you want the same things today as yesterday: a change in what one wants shows that the mind is adrift, turning up now in one place and now in another, as the wind has carried it. What is fixed and set on a foundation does not wander: that falls to the perfect wise man, and to some extent also to the one who is making progress and has advanced. What then is the difference? The one who is making progress is indeed shaken, yet he does not shift his ground, but sways in his own place; the wise man is not even shaken. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -1451,7 +1452,7 @@ Hurry to me, but to yourself first. Make progress, and before all else take care
 
 ### 36.10
 
-But if so great a desire for a longer life has hold of you, consider that none of the things that go out of sight and are put back into the nature of things, from which they came out and will soon come forth, is used up: these things stop, they do not perish, and death, which we dread and refuse, interrupts life, it does not snatch it away; a day will come again to put us back into the light, a day that many would refuse if it did not bring them back with their memory gone.
+But if so great a desire for a longer life has hold of you, consider that none of the things that go out of sight is used up: they are put back into the nature of things, from which they came out and will soon come forth. These things stop, they do not perish, and death, which we dread and refuse, interrupts life, it does not snatch it away; a day will come again to put us back into the light, a day that many would refuse if it did not bring them back with their memory gone.
 
 <details><summary>Notes</summary>
 
@@ -1468,7 +1469,7 @@ But if so great a desire for a longer life has hold of you, consider that none o
 
 ### 36.11
 
-But later I will show more carefully that all the things that seem to perish are changed. A man who is going to come back ought to go out with an even mind. Watch the circle of things as they return upon themselves: you will see that nothing in this world is extinguished, but that things go down and rise by turns. Summer has gone, but another year will bring it; winter has fallen away, its own months will bring it back; night has buried the sun, but day will at once drive night itself away. That running about of the stars comes back to whatever it has passed; one part of the sky is continually being lifted, one part is being sunk.
+But later I will show more carefully that all the things that seem to perish are changed. A man who is going to come back ought to go out with an even mind. Watch the circle of things as they return upon themselves: you will see that nothing in this world is extinguished, but that things go down and rise by turns. Summer has gone, but another year will bring it; winter has fallen away, its own months will bring it back; night has buried the sun, but day will at once drive night itself away. That running about of the stars comes back to whatever it has passed; one part of the sky is continually rising, another is sinking.
 
 <details><summary>Notes</summary>
 
@@ -1521,7 +1522,7 @@ You are doing a very good thing, and one that is healthy for you, if, as you wri
 
 ### 41.2
 
-This is what I say, Lucilius: a sacred spirit sits within us, the observer and guardian of the bad and the good that are ours. As it has been treated by us, so it treats us in its turn. And indeed no one is a good man without god: or can anyone rise above fortune unless helped by him? It is he who gives advice that is grand and lofty. In each and every good man (which god is uncertain) a god lives.
+This is what I say, Lucilius: a sacred spirit sits within us, the observer and guardian of the bad and the good that are ours. As it has been treated by us, so it treats us in its turn. And indeed no one is a good man without god: or can anyone rise above fortune unless helped by him? It is he who gives advice that is grand and lofty. In each and every good man a god (which god is uncertain) lives.
 
 <details><summary>Notes</summary>
 
@@ -1568,7 +1569,7 @@ And what is it that this reason demands of him? A very easy thing: to live accor
 
 ### 44.3
 
-Socrates was not a patrician. Cleanthes drew water and hired out his hands for watering a garden. Philosophy did not receive Plato as a noble; it made him one. What reason is there for you to despair of being able to become the equal of these men? All of these are your ancestors, if you conduct yourself in a way worthy of them; and you will, if you persuade yourself of this at once: that you are surpassed by no one in nobility.
+Socrates was not a patrician. Cleanthes drew water and hired out his hands for watering a garden. Philosophy did not receive Plato as a noble; it made him one. Why should you despair of being able to become the equal of these men? All of these are your ancestors, if you conduct yourself in a way worthy of them; and you will, if you persuade yourself of this at once: that you are surpassed by no one in nobility.
 
 <details><summary>Notes</summary>
 
@@ -1583,7 +1584,7 @@ Socrates was not a patrician. Cleanthes drew water and hired out his hands for w
 
 ### 44.5
 
-Who is well born? The man who is well made by nature for virtue. This is the one thing to look at. Otherwise, if you go back to ancient times, there is no one who does not come from that point before which there is nothing. From the first beginning of the world down to this time we have been led all the way by a line in which the splendid and the lowly alternate. A hall full of smoke-darkened images of ancestors does not make a man noble. No one has lived for our glory, and what was before us is not ours. It is the mind that makes a man noble, and the mind may rise above fortune from any station whatever.
+Who is well born? The man who is well made by nature for virtue. This is the one thing to look at. Otherwise, if you go back to ancient times, there is no one who does not come from that point before which there is nothing. From the first beginning of the world down to this time we have been led all the way by a line in which the splendid and the lowly alternate. A hall full of smoke-darkened images of ancestors does not make a man noble. No one has lived for our glory, and what was before us is not ours. It is the mind that makes a man noble, and from any station whatever the mind may rise above fortune.
 
 <details><summary>Notes</summary>
 
@@ -1625,7 +1626,7 @@ Who is well born? The man who is well made by nature for virtue. This is the one
 
 ### 48.2
 
-Am I talking like an Epicurean again? But in fact the same thing is in my interest as is in yours: or else I am no friend, if whatever matter concerns you is not mine. Friendship makes between us a partnership in all things. Nothing favourable and nothing adverse belongs to one alone; life is lived in common. And no one can live happily who looks only at himself, who turns everything to his own advantage: you must live for another, if you want to live for yourself.
+Am I talking like an Epicurean again? But in fact the same thing is in my interest as is in yours: or else I am no friend, if whatever matter concerns you is not mine. Friendship makes us partners in all things. Nothing favourable and nothing adverse belongs to one alone; life is lived in common. And no one can live happily who looks only at himself, who turns everything to his own advantage: you must live for another, if you want to live for yourself.
 
 <details><summary>Notes</summary>
 
@@ -1633,7 +1634,7 @@ Am I talking like an Epicurean again? But in fact the same thing is in my intere
 - *mihi vero*: Vero corrects the question just asked. The English reads “But in fact”. Other reading: No: in truth the same thing is in my interest
 - *expedit*: “Is expedient”, “is in the interest of”. It repeats the verb of the sentence before this section and is kept distinct from utilitates (“advantage”) later. Other reading: the same thing is expedient for me as for you
 - *aut non sum amicus, nisi quidquid agitur ad te pertinens meum est*: Aut is “or else” and nisi is “unless”, so the Latin states the condition twice. The English gives nisi as “if … not” to make one condition of it. Agitur can be “is being done” or “is at stake”, and “whatever matter” leaves that open. Other reading: or else I am not a friend, unless whatever is at stake that concerns you is mine
-- *Consortium rerum omnium*: Consortium is a legal word for holding property jointly and undivided, as heirs might (from memory, unchecked). The English reads “partnership”. Other reading: a joint ownership of everything
+- *Consortium rerum omnium*: Consortium is a legal word for holding property jointly and undivided, as heirs might (from memory, unchecked). The English reads “partners”. Other reading: a joint ownership of everything
 - *nec secundi quicquam singulis est nec adversi*: Literally “neither is anything favourable for individuals singly, nor anything adverse”. Singulis is plural, “each one separately”, given as “one alone”. Other reading: neither good fortune nor bad comes to each separately
 - *in commune vivitur*: An impersonal passive, “there is living in common”, kept impersonal. Other reading: we live in common
 - *alteri vivas oportet*: Alter is “the other” of two, or “another person”. The “you” is general, though it also falls on Lucilius. Other reading: you have to live for the other man
@@ -1731,7 +1732,7 @@ Freedom is what has been set as the goal; it is for this prize that the toil is 
 
 ### 52.3
 
-Epicurus says that some people have come out to the truth without anyone’s help, that they themselves have made their own road; these he praises most, the ones whose drive came from themselves, who brought themselves forward. Others, he says, need another’s aid: they will not go if no one has gone ahead, but they will follow well. Metrodorus, he says, is one of these; this too is an outstanding talent, but of the second rank. We are not of that first grade; we are well treated if we are admitted to the second. Do not look down even on the man who can be safe through another’s good service; this too is a great deal, to want to be saved.
+Epicurus says that some people have come out to the truth without anyone’s help, that they themselves have made their own road; these he praises most, the ones whose drive came from themselves, who brought themselves forward. Others, he says, need another’s aid: they will not go if no one has gone ahead, but they will follow well. Metrodorus, he says, is one of these; this too is an outstanding talent, but of the second rank. We are not of that first grade; we are well treated if we are admitted to the second. Do not look down even on the man who can be safe through another’s good offices; this too is a great deal, to want to be saved.
 
 <details><summary>Notes</summary>
 
@@ -1743,14 +1744,14 @@ Epicurus says that some people have come out to the truth without anyone’s hel
 - *secundae sortis ingenium*: “ingenium” is inborn ability or cast of mind; the English reads “talent” because the glossary keeps “mind” for animus. “sors” is literally a lot drawn, here a rank or class. Other reading: this too is an outstanding mind, but of the second lot
 - *ex illa prima nota*: “nota” is a mark or label, used of the grade marked on a wine jar, and so a class or quality. The English reads “grade”; the image of a stamped mark is lost. The same noun is understood with “the second”. Other reading: We do not bear that first stamp
 - *bene nobiscum agitur*: An idiom, literally “it is dealt well with us”. The English reads “well treated”: the luck lies in what is granted, not in a performance. Other reading: it goes well with us if we are let into the second
-- *alieno beneficio*: “beneficium” is a good service or favour actually done, not a kindly disposition. “Help” and “aid” already stand for adiutorio and ope above, so the English reads “good service”. Other reading: by another’s kindness
+- *alieno beneficio*: “beneficium” is a good service or favour actually done, not a kindly disposition. “Help” and “aid” already stand for adiutorio and ope above, so the English reads “good offices”. Other reading: by another’s kindness
 - *esse salvus potest*: “salvus esse” is to be safe or sound; “servari” in the next clause is to be saved or kept safe. The two different words are kept apart as “safe” and “saved”. Other reading: who can be saved
 
 </details>
 
 ### 52.9
 
-Nor would I, on that account, forbid you to listen also to those whose habit it is to admit the public and lecture, provided that they come out before the crowd with this purpose, to become better and to make others better, if they do not practise this to court popularity. For what is more shameful than philosophy hunting for shouts? Surely a sick man does not praise the doctor who is cutting him?
+Nor would I, on that account, forbid you to listen also to those whose habit it is to admit the public and lecture, provided that they come out before the crowd with this purpose, to become better and to make others better, and provided they do not practise this to court popularity. For what is more shameful than philosophy hunting for shouts? Surely a sick man does not praise the doctor who is cutting him?
 
 <details><summary>Notes</summary>
 
@@ -1766,7 +1767,7 @@ Nor would I, on that account, forbid you to listen also to those whose habit it 
 
 ### 52.11
 
-And how great is the madness of the man whom the shouts of the ignorant send away from the lecture hall cheerful! Why are you glad to have been praised by these people, whom you cannot yourself praise? Fabianus used to lecture to the public, but he was listened to with restraint; from time to time a great shout of praise would break out, but one that the greatness of what he was saying had called forth, not the sound of speech that had glided by without a stumble and softly.
+And how great is the madness of the man whom the shouts of the ignorant send away from the lecture hall cheerful! Why are you glad to have been praised by these people, whom you cannot yourself praise? Fabianus used to lecture to the public, but he was listened to with restraint; from time to time a great shout of praise would break out, but one that the greatness of what he was saying had called forth, not the sound of speech that had glided by softly and without a stumble.
 
 <details><summary>Notes</summary>
 
@@ -1819,7 +1820,7 @@ Why does no one confess his vices? Because he is still in them: to tell a dream 
 
 ### 53.9
 
-If you were ill, you would have set aside the care of your property, and your business in the forum would have dropped out of your mind, and you would not think anyone worth so much that you would go down as his advocate during a remission; with your whole mind you would work at this, to be freed from the illness as soon as possible. Well then? Will you not do the same now too? Let go of everything that hinders you and make yourself free for a sound mind: no one reaches it while he is busy. Philosophy exercises her own royal power; she gives out time, she does not accept it; she is not a thing for leftover hours; she is a thing for the regular hours, she is the mistress, she is present and gives orders.
+If you were ill, you would have set aside the care of your property, and your business in the forum would have dropped out of your mind, and you would not think anyone worth so much that you would go down as his advocate during a remission; with your whole mind you would work at this, to be freed from the illness as soon as possible. Well then? Will you not do the same now too? Let go of everything that hinders you and make yourself free for a sound mind: no one reaches it while he is busy. Philosophy exercises her own royal power; she gives out time, she does not accept it; she is not a thing for leftover hours; she belongs to the regular hours, she is the mistress, she is present and gives orders.
 
 <details><summary>Notes</summary>
 
@@ -1873,7 +1874,7 @@ Be assured of this about me: I shall not tremble at the end, I am already prepar
 
 ### 55.5
 
-For the man who has run away from affairs and from people, whom the ill success of his own desires has banished, who could not bear to see others more successful, who has gone into hiding out of fear like a timid and sluggish animal: that man does not live for himself but, which is the most shameful thing, for his belly, for sleep, for lust; a man who lives for no one does not, just by that, live for himself. Yet steadiness, and persistence in one’s purpose, is so great a thing that even stubborn sluggishness carries weight.
+For the man who has run away from affairs and from people, whom the ill success of his own desires has banished, who could not bear to see others more successful, who has gone into hiding out of fear like a timid and sluggish animal: that man does not live for himself but, most shameful of all, for his belly, for sleep, for lust; a man who lives for no one does not thereby live for himself. Yet steadiness, and persistence in one’s purpose, is so great a thing that even stubborn sluggishness carries weight.
 
 <details><summary>Notes</summary>
 
@@ -1916,7 +1917,7 @@ Besides, a sound that keeps breaking off is more of a nuisance to me than one th
 - *etiam nunc*: The section runs on from the list of noises before it. In Seneca these words often mean “furthermore” and not “even now”, and the English takes them so. The temporal sense is also possible, with “but by now” in the next sentence answering it. Other reading: Even now a sound that keeps breaking off is more of a nuisance to me
 - *pausarium*: The pausarius is the man on a galley who gives the rowers the time for the stroke. English has no exact word; “rowing-master” is used, though it may suggest a higher rank than the Latin intends. Other reading: the man who calls the stroke; the boatswain
 - *avocari*: The same verb runs through the section before, where a voice “calls away” more than a noise does, so “called away” is kept and “distracted” is not used. Other reading: and not to be distracted by things outside
-- *luxuriaque*: Luxuria is the vice of lavish living and spending, set here against avaritia, the vice of getting and keeping. “Extravagance” keeps the opposition clear, though it narrows the word toward spending. Other reading: greed and luxury; greed and self-indulgence
+- *luxuriaque*: Luxuria is the vice of lavish living and spending, set here against avaritia, the vice of getting and keeping. “Extravagance” keeps the opposition clear, though it narrows the word towards spending. Other reading: greed and luxury; greed and self-indulgence
 - *regionis*: Regio can be a quarter of a city or a whole stretch of country. The English reads “district”. Other reading: the silence of the whole neighbourhood; of a whole region
 - *affectus fremunt*: Affectus is the Stoic term for the passions. Fremere covers roaring, growling and a low angry murmur; the loud end is taken because it is set against silence. Other reading: if the passions are growling; if the feelings are in a roar
 
@@ -1924,7 +1925,7 @@ Besides, a sound that keeps breaking off is more of a nuisance to me than one th
 
 ### 56.12
 
-It is a lightweight character, and one that has not yet withdrawn into itself, that starts up at a voice and at whatever happens. It has something of anxiety inside, and it has something of a dread that has formed in it, which makes the man watchful, as our Vergil says: “And I, who a little while ago was moved by no weapons hurled at me, nor by Greeks crowding out of the opposing ranks, am now frightened by every breeze; every sound startles me, on edge and afraid alike for my companion and for my burden.”
+It is a lightweight character, and one that has not yet withdrawn into itself, that starts up at a voice and at whatever happens. It has some anxiety inside, and it has some dread that has formed in it, which makes the man watchful, as our Vergil says: “And I, who a little while ago was moved by no weapons hurled at me, nor by Greeks crowding out of the opposing ranks, am now frightened by every breeze; every sound startles me, on edge and afraid alike for my companion and for my burden.”
 
 <details><summary>Notes</summary>
 
@@ -1946,13 +1947,13 @@ It is a lightweight character, and one that has not yet withdrawn into itself, t
 
 ### 56.14
 
-Whichever you pick of those fortunate people, who drag much along and carry much, you will see him “fearing for both his companion and his load”. Know, then, that you are settled at the point when no shouting concerns you, when no voice shakes you out of yourself, not if it coaxes, not if it threatens, not if it is an empty voice making a din all round you with hollow sound.
+Whichever you pick of those fortunate people, who drag much along and carry much, you will see him “afraid for his companion and for his burden”. Know, then, that you are settled at the point when no shouting concerns you, when no voice shakes you out of yourself, not if it coaxes, not if it threatens, not if it is an empty voice making a din all round you with hollow sound.
 
 <details><summary>Notes</summary>
 
 - *felicibus*: Felix is “lucky, prosperous”. The English reads “fortunate” and keeps “happy” for beatus, as the glossary has it. The word is ironic here. Other reading: of those prosperous people; those lucky ones
 - *multa trahentibus, multa portantibus*: The two verbs answer the two halves of the Vergil line: Aeneas leads a companion along by the hand and carries a load on his shoulders. “Drag” and “carry” are kept so the match shows. Other reading: who have much in tow and much on their backs
-- *comitique onerique timentem*: Vergil, Aeneid 2.729 (from memory, unchecked): Aeneas afraid for the son he leads and the father he carries. The line is quoted in full in the section before, which is not among the passages given. Other reading: afraid alike for the one who walks with him and the one he bears
+- *comitique onerique timentem*: Vergil, Aeneid 2.729 (from memory, unchecked): Aeneas afraid for the son he leads and the father he carries. The line is quoted in full in Ep. 56.12, and the English here keeps the wording used there. Other reading: afraid alike for the one who walks with him and the one he bears
 - *compositum*: Literally “put in order, set at rest”; the English reads “settled”. The Latin has “then” and “when”, with no “only”, so none is added. Other reading: that you are composed; that you are at peace
 - *ad te nullus clamor pertinebit*: Pertinere ad is “to reach” and also “to concern, to matter to”. The second is taken: the noise is still heard but is none of the hearer’s business, which is the letter’s point about living among noise. Other reading: when no shouting reaches you
 - *te nulla vox tibi excutiet*: Literally “no voice will knock you away from yourself”. The image is kept as “shakes you out of yourself”. Other reading: when no voice robs you of yourself; makes you lose your self-possession
@@ -1979,7 +1980,7 @@ Whichever you pick of those fortunate people, who drag much along and carry much
 
 ### 57.3
 
-Still, that darkness gave me something to think about: I felt a kind of blow to the mind, and a change, without fear, which the newness and at the same time the foulness of an unfamiliar thing had brought about. I am not speaking to you now about myself, who am a long way from a tolerable man, let alone a perfect one, but about the man over whom Fortune has lost her authority: his mind too will be struck, his colour will change.
+Still, that darkness gave me something to think about: I felt a kind of blow to the mind, and a change, without fear, brought about by the newness, and at the same time the foulness, of an unfamiliar thing. I am not speaking to you now about myself, who am a long way from being a tolerable man, let alone a perfect one, but about the man over whom Fortune has lost her authority: his mind too will be struck, his colour will change.
 
 <details><summary>Notes</summary>
 
@@ -2008,11 +2009,11 @@ For there are some things, my Lucilius, that no virtue can escape; nature remind
 
 </details>
 
-## Letter 58: On being, Plato's ideas and old age
+## Letter 58: On what exists, Plato’s ideas and old age
 
 ### 58.22
 
-The fifth kind is of the things that exist in the common way; these begin to concern us; here are all things: people, cattle, objects. The sixth kind is of the things that, so to speak, exist, such as the void, such as time. Whatever we see or touch, Plato does not count among the things that he thinks exist in the proper sense; for they flow, and are in constant loss and gain. None of us is the same in old age as he was when young; none of us is the same in the morning as he was the day before. Our bodies are swept along in the manner of rivers. Whatever you see runs with time; nothing of the things we see remains; I myself, while I say that these things are changing, have changed.
+The fifth kind is of the things that exist in the common way; these begin to concern us; here are all things: people, cattle, objects. The sixth kind is of the things that, so to speak, exist, such as the void, such as time. Whatever we see or touch, Plato does not count among the things that he thinks exist in the proper sense; for they flow, and are in constant loss and gain. None of us is the same in old age as he was when young; none of us is the same in the morning as he was the day before. Our bodies are swept along like rivers. Whatever you see runs with time; none of the things we see remains; I myself, while I say that these things are changing, have changed.
 
 <details><summary>Notes</summary>
 
@@ -2028,7 +2029,7 @@ The fifth kind is of the things that exist in the common way; these begin to con
 
 ### 58.23
 
-This is what Heraclitus says: “Into the same river we go down twice and do not go down.” For the name of the river remains the same; the water has passed on. This is plainer in a river than in a human being; but a course no less swift carries us past too, and so I wonder at our madness, that we love so much a thing so quick to flee, the body, and fear that some day we may die, when every moment is the death of the state before it. Come, do not fear that what happens every day may happen once!
+This is what Heraclitus says: “Into the same river we go down twice and do not go down.” For the name of the river remains the same; the water has passed on. This is plainer in a river than in a human being; but a course no less swift carries us past too, and so I wonder at our madness, that we so dearly love the most fleeting of things, the body, and fear that some day we may die, when every moment is the death of the state before it. Come, do not fear that what happens every day may happen once!
 
 <details><summary>Notes</summary>
 
@@ -2075,7 +2076,7 @@ For all things remain, not because they are eternal, but because they are defend
 
 ### 58.35
 
-Do not listen to me unwillingly, as though this pronouncement already applied to you; and weigh what I am saying. I shall not leave old age, if it keeps the whole of me for myself, the whole, that is, as regards that better part. But if it begins to shake my mind, if it begins to tear its parts loose, if it leaves me not life but breath, I shall leap out of a building that is rotten and falling down.
+Do not listen to me unwillingly, as though this pronouncement already applied to you; and weigh what I am saying. I shall not leave old age, if it keeps the whole of me for myself, the whole, that is, as far as that better part goes. But if it begins to shake my mind, if it begins to tear its parts loose, if it leaves me not life but breath, I shall leap out of a building that is rotten and falling down.
 
 <details><summary>Notes</summary>
 
@@ -2093,7 +2094,7 @@ Do not listen to me unwillingly, as though this pronouncement already applied to
 
 ### 59.14
 
-I shall now show you how you may understand that you are not a wise man. The wise man is full of joy, cheerful and peaceful, unshaken; he lives with the gods as an equal. Now consult yourself: if you are never sad, if no hope makes your mind anxious with expectation of the future, if by day and by night the course of your mind, lifted up and pleased with itself, is even and level, you have reached the height of human good. But if you go after pleasures, from everywhere and all of them, know that you fall as far short of wisdom as you do of joy. This is what you long to reach, but you go wrong in hoping that you will get there among riches, among honours, that is, in looking for joy among anxieties: those things, which you go after as though they would give gladness and pleasure, are causes of pain.
+I shall now show you how you may understand that you are not a wise man. The wise man is full of joy, cheerful and peaceful, unshaken; he lives with the gods as an equal. Now consult yourself: if you are never sad, if no hope makes your mind anxious with expectation of the future, if by day and by night the course of your mind, lifted up and pleased with itself, is even and level, you have reached the height of human good. But if you go after all pleasures, from every side, know that you fall as far short of wisdom as you do of joy. This is what you long to reach, but you go wrong in hoping that you will get there among riches, among honours, that is, in looking for joy among anxieties: those things, which you go after as though they would give gladness and pleasure, are causes of pain.
 
 <details><summary>Notes</summary>
 
@@ -2167,7 +2168,7 @@ I write you this letter in this frame of mind: as though death were going to cal
 
 ### 61.3
 
-Take care that you never do anything unwillingly. Whatever is going to be necessary for one who resists is no necessity for one who wants it. This is what I mean: the man who takes orders willingly escapes the bitterest part of slavery: doing what he does not want to do. It is not the man who does something under orders who is wretched, but the man who does it unwillingly. So let us set our mind in order so that we want whatever the situation demands, and above all so that we think of our own end without sadness.
+Take care that you never do anything unwillingly. Whatever is going to be necessary for one who resists is no necessity for one who wants it. This is what I mean. The man who takes orders willingly escapes the bitterest part of slavery: doing what he does not want to do. It is not the man who does something under orders who is wretched, but the man who does it unwillingly. So let us set our mind in order so that we want whatever the situation demands, and above all so that we think of our own end without sadness.
 
 <details><summary>Notes</summary>
 
@@ -2201,7 +2202,7 @@ We must be prepared for death before we are prepared for life. Life is equipped 
 
 ### 62.1
 
-They are lying, those who want it to look as though a crowd of business stands between them and liberal studies: they feign occupations, they make more of them, and they are the ones who keep themselves occupied. I have time, Lucilius, I have time, and wherever I am, there I am my own. For I do not hand myself over to affairs but lend myself to them, and I do not go hunting for reasons to waste time. And in whatever place I have come to a stop, there I work over my own thoughts and turn something wholesome over in my mind.
+They are lying, those who want it to look as though the press of business stands between them and liberal studies: they feign occupations, they make more of them, and they are the ones who keep themselves occupied. I have time, Lucilius, I have time, and wherever I am, there I am my own. For I do not hand myself over to affairs but lend myself to them, and I do not go hunting for reasons to waste time. And in whatever place I have come to a stop, there I work on my own thoughts and turn something wholesome over in my mind.
 
 <details><summary>Notes</summary>
 
@@ -2287,7 +2288,7 @@ You ask what god’s purpose is? Goodness. So, at any rate, Plato says: “What 
 
 ### 65.12
 
-But what we are asking about now is the first and general cause. This must be simple, for matter too is simple. Are we asking what the cause is? Reason that makes, of course: that is, god. For all those things you people have listed are not many separate causes, but hang from one, from the one that makes.
+But what we are asking about now is the first and general cause. This must be simple, for matter too is simple. Are we asking what the cause is? Reason that makes, of course: that is, god. For all those things your side has listed are not many separate causes, but hang from one, from the one that makes.
 
 <details><summary>Notes</summary>
 
@@ -2295,14 +2296,14 @@ But what we are asking about now is the first and general cause. This must be si
 - *simplex*: “simplex” is simple in the sense of single and uncompounded, against the crowd of causes just listed. Other reading: This must be single; for matter too is single.
 - *Quaerimus quid sit causa?*: This can be a question or a statement, and “quid sit causa” can be “what the cause is” (which thing it is) or “what cause is” (a definition). The English follows the copy’s question mark and takes the first sense, because the answer names the one cause that is sought. “quaerimus” is also the verb of the first sentence, so “asking” is used in both places. Other reading: We are asking what cause is.
 - *ratio scilicet faciens*: Literally “reason making”, reason as the thing that makes; “scilicet” is “plainly, of course”. The verb “make” is kept to match “the one that makes” at the end. Other reading: Plainly, creative reason
-- *rettulistis*: The verb is second person plural: not Lucilius but those who put forward the many causes, Plato and Aristotle with their followers, or the friends arguing their side. The English reads “you people” so that the plural can be heard. Other reading: all those things you have listed
+- *rettulistis*: The verb is second person plural: not Lucilius but those who put forward the many causes, Plato and Aristotle with their followers, or the friends arguing their side. The English reads “your side” so that the plural can be heard and Lucilius is not taken for the one addressed. Other reading: all those things you have listed
 - *multae et singulae*: Literally “many and single”: many causes each standing on its own. The English reads “many separate causes”. Other reading: are not many causes, each one independent
 
 </details>
 
 ### 65.22
 
-Never will this flesh drive me to fear, never to a pretence unworthy of a good man; never will I lie to do honour to this little body. When it seems right, I shall break up my partnership with it. And even now, while we are stuck together, we shall still not be partners on equal shares: the mind will take all the rights for itself. Contempt for one’s own body is sure freedom.
+Never will this flesh drive me to fear, never to a pretence unworthy of a good man; never will I lie to do honour to this little body. When it seems right, I shall break up my partnership with it. And even now, while we are stuck together, we shall still not be partners with equal shares: the mind will take all the rights for itself. Contempt for one’s own body is sure freedom.
 
 <details><summary>Notes</summary>
 
@@ -2362,7 +2363,7 @@ On the first day this was the question asked: how can goods be equal, if their c
 
 ### 66.12
 
-Mortal things dwindle and fall, are worn away and grow, are drained and filled; and so, in a lot so uncertain, there is inequality among them. Divine things have one nature. Now reason is nothing other than a part of the divine breath sunk into a human body. If reason is divine, and no good is without reason, then every good is divine. Further, there is no difference between divine things; so there is none between goods either. So joy and the brave, unyielding endurance of torture are equal; for in both there is the same greatness of mind, in the one slackened and loose, in the other fighting and taut.
+Mortal things dwindle and fall, are worn away and grow, are drained and filled; and so, in a lot so uncertain, there is inequality among them. Divine things have one nature. Now reason is nothing other than a part of the divine breath sunk into a human body. If reason is divine, and no good is without reason, then every good is divine. Further, there is no difference between divine things; so there is none between goods either. Therefore joy and the brave, unyielding endurance of torture are equal; for in both there is the same greatness of mind, in the one slackened and loose, in the other fighting and taut.
 
 <details><summary>Notes</summary>
 
@@ -2402,7 +2403,7 @@ Draw distinctions among these things, my Lucilius, and you will understand that 
 
 ### 68.14
 
-“And when,” you say, “will what you are learning on your way out be of use to you, or for what purpose?” For this one: so that I may go out better. But you have no reason to think that any age is better suited to a good mind than the age that has tamed itself by many experiences, by long and frequent regret over what it has done, and has come, with its passions softened, to what heals. This is the time for this good: whoever has reached wisdom as an old man has reached it by his years. Farewell.
+“And when,” you say, “will what you are learning on your way out be of use to you, or for what purpose?” For this: so that I may go out better. But you have no reason to think that any age is better suited to a good mind than the age that has tamed itself by many experiences, by long and frequent regret over what it has done, and has come, with its passions softened, to what heals. This is the time for this good: whoever has reached wisdom as an old man has reached it by his years. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -2422,7 +2423,7 @@ Draw distinctions among these things, my Lucilius, and you will understand that 
 
 ### 70.3
 
-We think that end is a rock, utter madmen that we are: it is a harbour, sometimes to be steered for, never to be refused, and if anyone has been carried into it within his first years, he should no more complain than a man who has made a quick voyage. For, as you know, sluggish winds toy with one man and hold him back and tire him out with the tedium of a very slow calm, while a persistent breeze carries another through very quickly.
+We think of that end as a rock, utter madmen that we are: it is a harbour, sometimes to be steered for, never to be refused, and if anyone has been carried into it within his first years, he should no more complain than a man who has made a quick voyage. For, as you know, sluggish winds toy with one man and hold him back and tire him out with the tedium of a very slow calm, while a persistent breeze carries another through very quickly.
 
 <details><summary>Notes</summary>
 
@@ -2536,7 +2537,7 @@ All things move through fixed periods: they must be born, grow, be extinguished.
 
 ### 71.15
 
-And so, like Marcus Cato, when he has run through the ages in his mind, he will say: “The whole human race, both the part that is and the part that will be, is condemned to death. All the cities that anywhere hold supreme power, and all those that are the great ornaments of empires not their own: one day it will be asked where they were, and they will be done away with by one kind of destruction or another. Wars will pull some down; others will be eaten away by idleness and peace turned to sloth, and by a thing destructive to great wealth, luxury. All these fertile plains will be hidden by a sudden flood of the sea, or carried off into a sudden chasm by the slipping of the ground as it sinks. What reason is there, then, for me to be indignant or to grieve, if I go a brief moment ahead of the common fate?”
+And so, like Marcus Cato, when he has run through the ages in his mind, he will say: “The whole human race, both the part that is and the part that will be, is condemned to death. All the cities that anywhere hold supreme power, and all those that are the great ornaments of empires not their own: one day it will be asked where they were, and they will be done away with by one kind of destruction or another. Wars will pull some down; others will be eaten away by idleness and peace turned to sloth, and by a thing destructive to great wealth, luxury. All these fertile plains will be hidden by a sudden flood of the sea, or carried off into an unexpected chasm by the slipping of the ground as it sinks. Why, then, should I be indignant, or grieve, if I go a brief moment ahead of the common fate?”
 
 <details><summary>Notes</summary>
 
@@ -2572,7 +2573,7 @@ Let a great soul obey god and undergo without hesitation whatever the law of the
 
 ### 71.27
 
-I do not take the wise man out of the number of human beings, nor do I move pains away from him as from some rock that lets in no feeling. I remember that he is made up of two parts: one is without reason, and this part is bitten, burned, feels pain; the other has reason, and this part holds unshaken beliefs, is fearless and unconquered. In this part is placed that highest good of a human being. Before that good is brought to fullness, there is an unsure wavering of the mind; but when it has been made complete, the mind has a stability that does not move.
+I do not take the wise man out of the number of human beings, nor do I keep pains away from him as from some rock that lets in no feeling. I remember that he is made up of two parts: one is without reason, and this part is bitten, burned, feels pain; the other has reason, and this part holds unshaken beliefs, is fearless and unconquered. In this part is placed that highest good of a human being. Before that good is brought to fullness, there is an unsure wavering of the mind; but when it has been made complete, the mind has a stability that does not move.
 
 <details><summary>Notes</summary>
 
@@ -2590,11 +2591,11 @@ I do not take the wise man out of the number of human beings, nor do I move pain
 
 ### 71.28
 
-And so the man who is only begun and is moving toward the heights, one who cultivates virtue, even if he is coming near to the complete good but has not yet put the finishing touch to it, will from time to time go backward and relax something of the exertion of his mind; for he has not yet crossed over the unsure ground and is still on slippery footing. But the happy man, whose virtue is perfected, loves himself most when he has put himself to the test most bravely, and the things the rest fear, if they are the price of some honourable duty, he not only bears but embraces, and he much prefers to hear “so much the better man” than “so much the more fortunate”.
+And so the man who is still unfinished and is moving towards the heights, one who cultivates virtue, even if he is coming near to the complete good but has not yet put the finishing touch to it, will from time to time go backward and relax something of the exertion of his mind; for he has not yet crossed over the unsure ground and is still on slippery footing. But the happy man, whose virtue is perfected, loves himself most when he has put himself to the test most bravely, and the things the rest fear, if they are the price of some honourable duty, he not only bears but embraces, and he would much rather hear “so much the better man” than “so much the more fortunate”.
 
 <details><summary>Notes</summary>
 
-- *inchoatus*: Literally “the begun one”: a person who is himself begun but not finished, like a piece of work, set against the man of perfected virtue below. Other reading: the man who is still unfinished
+- *inchoatus*: Literally “the begun one”: a person who is himself begun but not finished, like a piece of work, set against the man of perfected virtue below. The English says “still unfinished” to keep that image in plain words. Other reading: the man who is only begun
 - *cultorque virtutis*: Cultor is one who tends or cultivates, and also a worshipper. Other reading: and a devotee of virtue
 - *summam manum imposuit*: An idiom from the workshop: literally “put the last hand to it”. Other reading: has not yet put the last hand to it
 - *ibit interim cessim*: Interim can mean “meanwhile, for the time being” or, in Seneca’s time, “sometimes”. The English takes “from time to time”. Cessim is backward, giving ground. Other reading: will for the time being go backward
@@ -2626,14 +2627,14 @@ I come now to the point to which your expectation calls me. So that our virtue m
 
 ### 71.30
 
-The wise man, it is true, conquers fortune by virtue, but many who have professed wisdom have at times been terrified by the slightest threats. Here the fault is ours, who demand the same thing of the wise man and of the man who is making progress. I am still urging on myself the things I praise; I have not yet convinced myself. Even if I had convinced myself, I would not yet have them so ready or so practised that they would run out to meet whatever happens.
+The wise man, it is true, conquers fortune by virtue, but many who have professed wisdom have at times been terrified by the slightest threats. Here the fault is ours, who demand the same thing of the wise man and of the man who is making progress. I am still urging the things I praise on myself; I have not yet convinced myself. Even if I had convinced myself, I would not yet have them so ready or so practised that they would run out to meet whatever happens.
 
 <details><summary>Notes</summary>
 
 - *vincit virtute fortunam*: Fortune is an opponent here, but it is not addressed or described as a person, so it has no capital. Other reading: defeats Fortune by virtue
 - *professi sapientiam*: Profiteri is to declare openly, and so to claim or to make a profession of something. These are people who announced themselves as philosophers. Other reading: many who have laid claim to wisdom
 - *nostrum vitium est*: The glossary gives “vice” for vitium, and “fault” where it is small. Here it is a mistake of judging, so “fault”. Other reading: On this point the vice is ours
-- *a proficiente*: The proficiens is the Stoic term for one who is advancing toward wisdom but is not yet wise. Other reading: and of the learner
+- *a proficiente*: The proficiens is the Stoic term for one who is advancing towards wisdom but is not yet wise. Other reading: and of the learner
 - *Suadeo adhuc mihi ista quae laudo, nondum persuadeo*: A play on suadeo (urge, advise) and persuadeo (urge with success, convince). English has no such pair on one root, so the English has “urging” and “convinced”. The Latin verb is a present, “do not yet convince”. Other reading: I am still recommending to myself what I praise; I do not yet persuade myself
 - *ad omnes casus procurrerent*: A military image: troops running forward to meet an attack. Casus is the word rendered “chance” in section 3; here, in the plural, it is the things that befall a person. Other reading: that they would run out to meet every chance
 
@@ -2641,7 +2642,7 @@ The wise man, it is true, conquers fortune by virtue, but many who have professe
 
 ### 71.31
 
-Just as wool takes on some colours in one go, and others it does not drink in fully unless it has been soaked and boiled again several times, so there are other branches of learning that intellects make good on at once, as soon as they have received them: this one, unless it has gone down deep and settled for a long time and dyed the mind rather than coloured it, makes good on nothing of what it had promised.
+Just as wool takes on some colours at a single dyeing, and others it does not drink in fully unless it has been soaked and boiled again several times, so there are other branches of learning that intellects put into practice at once, as soon as they have received them: this one, unless it has gone down deep and settled for a long time and dyed the mind rather than coloured it, makes good on nothing it had promised.
 
 <details><summary>Notes</summary>
 
@@ -2649,7 +2650,7 @@ Just as wool takes on some colours in one go, and others it does not drink in fu
 - *saepius macerata et recocta*: Saepius is “rather often, repeatedly”. It is taken with both participles. Other reading: steeped again and again and boiled a second time
 - *non perbibit*: The prefix per- means “through and through”, hence “drink in fully”. Other reading: does not soak up
 - *alias disciplinas ingenia*: Disciplinae are branches of learning; “alias” (other) is answered by “haec” (this one) after the colon. Ingenium is inborn ability, and “intellects” is used so that “mind” stays free for animus later in the sentence. Other reading: so there are some studies which natural talents
-- *protinus praestant*: Praestare is to make good, deliver or show in practice; it returns in “praestat” at the end, and “make good on” is kept for both. Other reading: can show at once
+- *protinus praestant*: Praestare is to make good, deliver or show in practice, and it returns in “praestat” at the end. The English reads “put into practice” here, where intellects are the subject, and “makes good on” there, where the branch of learning fails its own promise; the echo of one verb is lost. Other reading: can show at once
 - *haec*: “This one” is the branch of learning Seneca has been speaking of, philosophy or wisdom. It is not named in this section and the name is not added. Other reading: but this branch of learning, philosophy
 - *alte descendit et diu sedit*: Sedere is to sit or settle, as a dye sets. Other reading: has sunk deep and sat long
 - *animum non coloravit sed infecit*: The contrast is between colour on the surface and dye taken right through; literally “has not coloured the mind but dyed it”. Inficere is to dye or steep; it can also mean to stain, but there is no bad sense here. Other reading: has not tinted the mind but steeped it
@@ -2658,7 +2659,7 @@ Just as wool takes on some colours in one go, and others it does not drink in fu
 
 ### 71.35
 
-Things that are incomplete are bound to totter, and now go forward, now slip down or collapse. And they will slip down, unless they keep on going and striving; if they slacken anything of their zeal and faithful exertion, they have to go backward. No one finds his progress where he had left it.
+Things that are incomplete are bound to totter, and now go forward, now slip down or collapse. And they will slip down, unless they keep on going and striving; if they slacken any of their zeal and faithful exertion, they have to go backward. No one finds his progress where he had left it.
 
 <details><summary>Notes</summary>
 
@@ -2674,7 +2675,7 @@ Things that are incomplete are bound to totter, and now go forward, now slip dow
 
 ### 71.36
 
-So let us press on and persevere. More remains than we have got through, but a great part of progress is wanting to make progress. This I know of myself: I want to, and I want to with my whole mind. I see that you too have been roused and are hurrying with great force toward the finest things. Let us hurry: only so will life be a gift. Otherwise it is a delay, and a shameful one at that, for those who live among foul things. Let us see to it that all time is ours; but it will not be, unless we have first begun to be our own.
+So let us press on and persevere. More remains than we have got through, but a great part of progress is wanting to make progress. This I know of myself: I want to, and I want to with my whole mind. I see that you too have been roused and are hurrying with great force towards the finest things. Let us hurry: only so will life be a gift. Otherwise it is a delay, and a shameful one at that, for those who live among foul things. Let us see to it that all time is ours; but it will not be, unless we have first begun to be our own.
 
 <details><summary>Notes</summary>
 
@@ -2683,7 +2684,7 @@ So let us press on and persevere. More remains than we have got through, but a g
 - *Huius rei conscius mihi sum*: An ordinary Latin phrase for knowing something of oneself at first hand. The literal wording, “conscious to myself of this thing”, is stiff in English. Other reading: This I can vouch for in my own case
 - *mente tota*: Mens, not animus. “Mind” is used for both. Other reading: with all my heart
 - *instinctum*: Instinctus is goaded, fired, set in motion. Other reading: that you too have been spurred on
-- *ad pulcherrima*: Literally “toward the most beautiful things”, with a moral sense: the noblest aims. They are set against the “foul things” (foeda) below. Other reading: toward what is most beautiful
+- *ad pulcherrima*: Literally “towards the most beautiful things”, with a moral sense: the noblest aims. They are set against the “foul things” (foeda) below. Other reading: towards what is most beautiful
 - *ita demum vita beneficium erit*: Beneficium is a kindness or favour done to someone, a word Seneca uses with weight. Life will count as something given only on this condition; “gift” is used because “benefit” sounds like a mere advantage. Other reading: only so will life be a benefit
 - *alioquin mora est*: The subject can be life (“it is a delay”, a mere waiting) or nothing (“there is delay”). The English takes life. Other reading: otherwise there is delay
 - *inter foeda versantibus*: Versari is to move about in a place, to spend one’s days there. The participle has no pronoun: the English keeps the general “for those who”, though with “let us” on both sides it may well mean Seneca and Lucilius themselves. Other reading: for us who spend it among foul things
@@ -2751,7 +2752,7 @@ Whoever resolves to be happy should think that the only good is what is honourab
 
 ### 74.18
 
-Let all those things come to us as additions and not stick fast to us, so that, if they are led away, they may leave without tearing us at all. Let us use them, not boast of them, and let us use them sparingly, as things deposited with us that are going to leave. Whoever has possessed them without the use of reason has not kept them long; for good fortune itself, unless it is kept within measure, bears itself down. If he has trusted in goods that are the quickest to run away, he is soon deserted, and, in order to be deserted, he is struck down. Few have been allowed to lay their good fortune down gently: the rest fall together with the things among which they stood high, and the very things that had lifted them up weigh them down.
+Let all those things come to us as additions and not stick fast to us, so that, if they are led away, they may leave without tearing us at all. Let us use them, not boast of them, and let us use them sparingly, as things deposited with us that are going to leave. Whoever has possessed them without the use of reason has not kept them long; for good fortune itself, unless it is kept within measure, weighs itself down. If he has trusted in goods that are the quickest to run away, he is soon deserted, and, so that they can desert him, he is struck down. Few have been allowed to lay their good fortune down gently: the rest fall together with the things among which they stood high, and the very things that had lifted them up weigh them down.
 
 <details><summary>Notes</summary>
 
@@ -2763,7 +2764,7 @@ Let all those things come to us as additions and not stick fast to us, so that, 
 - *sine ratione*: Ratio is “reason” in the glossary, and the neighbouring sections speak of reason as what moderates wealth. “The use of” is added so that the phrase is not read as “for no reason”. The Latin can also mean simply “without method”. Other reading: Whoever has possessed them without a plan
 - *ipsa enim se felicitas, nisi temperatur, premit*: Felicitas is good fortune or prosperity; premere is to press hard on or weigh down. “Good fortune” is used here and in Ep. 75.15; in Ep. 72.4, where the word stands beside fortuna, it is “happiness”. Temperare is to keep in due measure. Other reading: for prosperity, unless it is moderated, crushes itself
 - *Si fugacissimis bonis credidit, cito deseritur*: The subject is not stated. By grammar it could be good fortune, the subject just before; by sense and tense (the same past form as “has possessed”) it is the person, and the English takes it so. “Goods” is used loosely here, of things Seneca has just said are goods only in name. Other reading: If it has trusted in the most fleeting goods, it is soon deserted
-- *ut deseratur, affligitur*: The clause is doubtful. The English takes ut as purpose: for the goods to leave him he is knocked down, which fits the next sentence about how few lay good fortune down gently. It can also be read as a concession. Other reading: and, even granted that he is deserted, he is struck down
+- *ut deseratur, affligitur*: The clause is doubtful. The English takes ut as purpose: for the goods to leave him he is knocked down, which fits the next sentence about how few lay good fortune down gently. The English supplies “they”, the goods, so that the purpose is not read as his own. It can also be read as a concession. Other reading: and, even granted that he is deserted, he is struck down
 - *cito deseritur, et, ut deseratur, affligitur*: As given, the second clause comes close to repeating the first, and the text may be at fault. A “not” (non) may have dropped out before deseratur; this is from memory, unchecked. The English follows the Latin as given. Other reading: he is soon deserted, and, even if he is not deserted, he is battered
 - *deponere felicitatem molliter*: Deponere is to lay or set down, like a load, and echoes the “deposited” things above. Molliter is softly, gently, without a crash. Other reading: to put off their prosperity without a shock
 
@@ -2808,11 +2809,11 @@ Let us give some thought to this rank: it will go well with us if we are admitte
 
 </details>
 
-## Letter 76: On learning in old age and the only good
+## Letter 76: On learning in old age, and virtue as the only good
 
 ### 76.4
 
-But I am ashamed of the human race every time I go into the school. As you know, anyone making for Metronax’s house has to pass right by the theatre of the Neapolitans. That place, to be sure, is packed, and with enormous eagerness judgment is passed on who is a good piper; a Greek trumpeter and a herald draw a crowd as well. But in the place where a good man is what is inquired into, where a good man is what is learned, very few sit, and to most people these seem to have no good business to be about; they are called silly and idle. May that mockery fall to me: the abuse of the ignorant must be heard with a calm mind, and one who is heading for what is honourable must hold contempt itself in contempt.
+But I am ashamed of the human race every time I go into the school. As you know, anyone making for Metronax’s house has to pass right by the theatre of the Neapolitans. That place, to be sure, is packed, and with enormous eagerness judgment is passed on who is a good piper; a Greek trumpeter and a herald draw a crowd as well. But in the place where a good man is the question, where a good man is the lesson, very few sit, and to most people these seem to have no good business to be about; they are called silly and idle. May that mockery fall to me: the abuse of the ignorant must be heard with a calm mind, and one who is heading for what is honourable must hold contempt itself in contempt.
 
 <details><summary>Notes</summary>
 
@@ -2820,7 +2821,7 @@ But I am ashamed of the human race every time I go into the school. As you know,
 - *pythaules*: A Greek word for a player of the pipe (aulos), by its make-up one who plays the Pythian piece; from memory, unchecked, it is also used of a solo piper in the theatre. The English narrows it to “piper”. Other reading: Pythian piper
 - *quis sit pythaules bonus iudicatur*: Impersonal passive, literally “it is judged who is a good piper”. Bonus is then repeated for the good man and for “good business”, so “good” is kept each time. Other reading: they decide who is a fine piper
 - *habet tubicen quoque Graecus et praeco concursum*: Graecus agrees with tubicen, but it may be meant to colour the herald too. The English leaves it with the trumpeter only. Other reading: a Greek trumpeter and a Greek herald also draw a crowd
-- *in quo vir bonus quaeritur, in quo vir bonus discitur*: Literally “where a good man is sought, where a good man is learned”. Quaeritur can mean “is looked for” or “is inquired into”; set against the theatre, where the question judged is who is a good piper, the English takes the second. Discitur leaves open whether what is learned is what a good man is or how to be one, and the English keeps that open and keeps the two clauses parallel. Other reading: where a good man is looked for, where one learns to be a good man
+- *in quo vir bonus quaeritur, in quo vir bonus discitur*: Literally “where a good man is sought, where a good man is learned”. Quaeritur can mean “is looked for” or “is inquired into”; set against the theatre, where the question judged is who is a good piper, the English takes the second and makes a good man “the question”. Discitur leaves open whether what is learned is what a good man is or how to be one, and “the lesson” keeps that open and keeps the two clauses parallel. Other reading: where a good man is looked for, where one learns to be a good man
 - *nihil boni negotii habere quod agant*: Literally “to have nothing of good business that they might do”. Boni carries on the play on “good”, so the word is kept. Other reading: to have nothing worthwhile to occupy them
 - *aequo animo*: An idiom for taking something calmly, literally “with a level mind”. “Mind” is kept for animus, as the glossary prefers, and “calm” stands for aequus; the same phrase is given the same way at 76.23. Other reading: calmly
 - *inperitorum convicia*: Inperitus is one without knowledge or skill. “The ignorant” fits here, where the point is that they do not know what the school is for; at 76.34 the same word is “the inexperienced”. Other reading: the jeers of the inexperienced
@@ -2830,7 +2831,7 @@ But I am ashamed of the human race every time I go into the school. As you know,
 
 ### 76.5
 
-Keep going, Lucilius, and hurry, so that what has happened to me does not happen to you: to be learning as an old man. Or rather, hurry all the more for this reason, that you have now taken on something you could hardly learn through to the end as an old man. “How much progress shall I make?” you say. As much as you attempt.
+Keep going, Lucilius, and hurry, so that what has happened to me does not happen to you: to be learning as an old man. Or rather, hurry all the more because you have now taken on something you could hardly learn in full as an old man. “How much progress shall I make?” you say. As much as you attempt.
 
 <details><summary>Notes</summary>
 
@@ -2843,7 +2844,7 @@ Keep going, Lucilius, and hurry, so that what has happened to me does not happen
 
 ### 76.8
 
-Every thing rests on its own good. What recommends the vine is its fruitfulness and the flavour of its wine; what recommends the stag is speed. Of pack animals, whose one use is this, to carry a load, you ask how strong they are in the back. In a dog the first thing is keenness of scent if it has to track wild animals, running if it has to catch them, boldness if it has to bite and attack. In each thing, what ought to be best is that for which it is born, that by which it is rated.
+Every thing rests on its own good. What recommends the vine is its fruitfulness and the flavour of its wine; what recommends the stag is speed. Of pack animals, whose one use is to carry a load, you ask how strong they are in the back. In a dog the first thing is keenness of scent if it has to track wild animals, running if it has to catch them, boldness if it has to bite and attack. In each thing, what ought to be best is that for which it is born, that by which it is rated.
 
 <details><summary>Notes</summary>
 
@@ -2874,12 +2875,12 @@ What is best in a human being? Reason: by this he goes ahead of the animals and 
 
 ### 76.10
 
-What is peculiar to a human being? Reason: when this is right and brought to its full measure, it has made a human being’s happiness complete. So if every thing, when it has perfected its own good, is praiseworthy and has reached the goal of its nature, and if a human being’s own good is reason, then if he has perfected this he is praiseworthy and has touched the goal of his nature. This perfected reason is called virtue, and it is also what is honourable.
+What is peculiar to a human being? Reason: when this is right and brought to its full measure, it makes a human being’s happiness complete. So if every thing, when it has perfected its own good, is praiseworthy and has reached the goal of its nature, and if a human being’s own good is reason, then if he has perfected this he is praiseworthy and has touched the goal of his nature. This perfected reason is called virtue, and it is also what is honourable.
 
 <details><summary>Notes</summary>
 
 - *recta et consummata*: Consummata is “brought to its sum”, finished off. It is kept distinct from perfecta, for which the English has “perfected”. Other reading: upright and consummate
-- *felicitatem hominis implevit*: Felicitas, not beata vita; “happiness” is used all the same, since “good fortune” would mislead here. The perfect implevit states a general truth; literally “has filled up”. Other reading: fills up the measure of human good fortune
+- *felicitatem hominis implevit*: Felicitas, not beata vita; “happiness” is used all the same, since “good fortune” would mislead here. The perfect implevit states a general truth, so the English has a present; literally “has filled up”. Other reading: fills up the measure of human good fortune
 - *cum bonum suum perfecit*: Perficere is to carry through to completion. “Perfect” is used for it each time (perfecit, perfecit, perfecta) so that the chain of the argument shows. Other reading: when it has brought its own good to completion
 - *si hanc perfecit*: The subject is not stated; it is taken to be the human being, with hanc as reason. Other reading: if it has perfected this
 - *finem naturae suae tetigit*: Finis is the end in the sense of goal, and “goal” is used both times so that it is not read as a stopping. Tetigit is literally “has touched”, and the image is kept. Other reading: has attained the end of his nature
@@ -2889,7 +2890,7 @@ What is peculiar to a human being? Reason: when this is right and brought to its
 
 ### 76.23
 
-You must grant that the good man is a man of the highest piety towards the gods. So whatever happens to him he will bear with a calm mind; for he will know that it has happened by the divine law by which all things go forward. If that is so, the one good for him will be what is honourable; for in this lies obeying the gods, and not flaring up at sudden events or bewailing his lot, but patiently accepting fate and doing what is commanded.
+You must grant that the good man is a man of the highest piety towards the gods. So whatever happens to him he will bear with a calm mind; for he will know that it has happened by the divine law by which all things go forward. If that is so, the only good for him will be what is honourable; for in this lies obeying the gods, and not flaring up at sudden events or bewailing his lot, but patiently accepting fate and doing what is commanded.
 
 <details><summary>Notes</summary>
 
@@ -2905,7 +2906,7 @@ You must grant that the good man is a man of the highest piety towards the gods.
 
 ### 76.29
 
-But even the man from whom this joy too is snatched away, the joy that the handling of his greatest and last work gives, will leap down into death without any hesitation, content to act rightly and dutifully. Go further and set against him many things to dissuade him; say: “Your deed will be followed by early oblivion and by a less than grateful verdict from your fellow citizens.” He will answer you: “All those things lie outside my work; I am looking at the work itself. I know that this is honourable; so wherever it leads and calls, I come.”
+But even the man from whom this joy too is snatched away, the joy that comes from handling his greatest and last work, will leap down into death without any hesitation, content to act rightly and dutifully. Go further and set against him many things to dissuade him; say: “Your deed will be followed by early oblivion and by a less than grateful verdict from your fellow citizens.” He will answer you: “All those things lie outside my work; I am looking at the work itself. I know that this is honourable; so wherever it leads and calls, I come.”
 
 <details><summary>Notes</summary>
 
@@ -2921,7 +2922,7 @@ But even the man from whom this joy too is snatched away, the joy that the handl
 
 ### 76.31
 
-None of those whom you see dressed in purple is happy, any more than any of those to whom the plays assign a sceptre and a cloak on the stage: when they have walked before the people with a broad swagger and in high boots, the moment they have gone off, their boots are taken off and they return to their own stature. None of those whom riches and offices set at a greater height is great. Why then does he seem great? You are measuring him together with his pedestal. A dwarf is not great though he has taken his stand on a mountain; a colossus will keep its greatness even if it stands in a well.
+None of those whom you see dressed in purple is happy, any more than any of those to whom the plays assign a sceptre and a cloak on the stage: when they have walked before the people with a broad swagger and in high boots, they have no sooner made their exit than their boots are taken off and they return to their own stature. None of those whom riches and offices set at a greater height is great. Why then does he seem great? You are measuring him together with his pedestal. A dwarf is not great though he has taken his stand on a mountain; a colossus will keep its greatness even if it stands in a well.
 
 <details><summary>Notes</summary>
 
@@ -2955,7 +2956,7 @@ This is the error we suffer from, this is how we are taken in: we value no one b
 
 ### 76.34
 
-When an evil has been thought out beforehand, its blow comes soft. But to fools and to those who trust fortune every face that events show seems new and unexpected; and for the inexperienced a great part of an evil is its newness. So that you may know this: the things they had thought harsh they bear more bravely once they have grown used to them.
+When an evil has been thought out beforehand, its blow comes soft. But to fools and to those who trust fortune every face that events show seems new and unexpected; and for the inexperienced a great part of an evil is its newness. You may know it from this: the things they had thought harsh they bear more bravely once they have grown used to them.
 
 <details><summary>Notes</summary>
 
@@ -2968,7 +2969,7 @@ When an evil has been thought out beforehand, its blow comes soft. But to fools 
 
 </details>
 
-## Letter 77: On a friend's calm chosen death
+## Letter 77: On a friend’s calm, chosen death
 
 ### 77.4
 
@@ -2986,7 +2987,7 @@ A journey will be incomplete if you stop in the middle of it or short of the pla
 
 ### 77.6
 
-Our Stoic friend, an outstanding person and, to praise him in the words in which he deserves to be praised, a brave and energetic man, seems to me to have urged him on best. For he began like this: “Do not torment yourself, my Marcellinus, as if you were deliberating about a great matter. Living is not a great matter: all your slaves live, all animals do. The great thing is to die honourably, sensibly, bravely. Think how long you have now been doing the same thing: food, sleep, lust. This is the circle one runs round. Not only a sensible man or a brave one or a wretched one can want to die, but also one who is fed up.”
+Our Stoic friend, an outstanding person and, to praise him in the words in which he deserves to be praised, a brave and energetic man, seems to me to have urged him on best. For he began like this: “Do not torment yourself, my Marcellinus, as if you were deliberating about a great matter. Living is not a great matter: all your slaves live, all animals do. The great thing is to die honourably, sensibly, bravely. Think how long you have now been doing the same thing: food, sleep, lust. This is the circle one runs round. Not only a sensible man or a brave one or a wretched one can want to die, but also one who is jaded.”
 
 <details><summary>Notes</summary>
 
@@ -2998,7 +2999,7 @@ Our Stoic friend, an outstanding person and, to praise him in the words in which
 - *prudenter*: With practical good sense and foresight. The English has “sensibly”, and “sensible” for prudens in the last sentence, since “prudent” now suggests caution. Other reading: prudently
 - *libido*: Sexual desire, given as “lust”. Other reading: sex
 - *per hunc circulum curritur*: Impersonal passive, literally “through this circle there is running”. It is kept impersonal with “one”. Other reading: this is the round we run
-- *fastidiosus*: One who has had too much and turns away in distaste; the word can also mean squeamish or hard to please. “Fed up” gives the first sense without supplying an object that the Latin leaves unsaid. Other reading: the fastidious man
+- *fastidiosus*: One who has had too much and turns away in distaste; the word can also mean squeamish or hard to please. “Jaded” gives the first sense without supplying an object that the Latin leaves unsaid. Other reading: the fastidious man
 
 </details>
 
@@ -3034,7 +3035,7 @@ I often had the impulse to break off my life: the old age of my most loving fath
 
 ### 78.7
 
-Now let us go back to that trouble which is illness’s own: illness has great torments, but intervals make them bearable. For the intensity of pain at its height finds an end; no one can be in pain both severely and for long; nature, who loves us most dearly, has so arranged us as to make pain either bearable or short.
+Now let us go back to that trouble which is illness’s own: illness has great torments, but intervals make them bearable. For the intensity of pain at its height finds an end. No one can be in pain both severely and for long; nature, who loves us most dearly, has so arranged us as to make pain either bearable or short.
 
 <details><summary>Notes</summary>
 
@@ -3048,7 +3049,7 @@ Now let us go back to that trouble which is illness’s own: illness has great t
 
 ### 78.10
 
-So this is the consolation for immense pain: that you are bound to stop feeling it if you feel it too much. But what troubles the untrained when the body is in distress is this: they have not become used to being content with the mind; they have had much to do with the body. That is why a great and prudent man draws his mind apart from the body and spends much time with the better and divine part; with this complaining and fragile one, as much as is necessary.
+So this is the consolation for immense pain: that you are bound to stop feeling it if you feel it too much. But what troubles the untrained when the body is in distress is this: they have not become used to being content with the mind; they have had much to do with the body. That is why a great and sensible man draws his mind apart from the body and spends much time with the better and divine part; with this complaining and fragile one, as much as is necessary.
 
 <details><summary>Notes</summary>
 
@@ -3057,7 +3058,7 @@ So this is the consolation for immense pain: that you are bound to stop feeling 
 - *male habet*: An idiom: to trouble or distress someone, to put someone in a bad way. Other reading: what puts the untrained in a bad way
 - *animo esse contenti*: Animus is “mind” by the glossary. It is set against the body here and called the better and divine part, but not as what survives death, so “soul” is not used. Other reading: to be satisfied with the soul alone
 - *multum illis cum corpore fuit*: Literally “there has been much for them with the body”, an idiom for having dealings with someone. The same multum cum returns for the great man and the better part, so “much” is kept both times. Other reading: their dealings have been mostly with the body
-- *prudens*: Prudens is a man of practical wisdom and foresight. “Prudent” is used, though the English word today leans toward caution; “wise” is kept for sapiens, which Seneca did not write here. Other reading: a great and wise man
+- *prudens*: Prudens is a man of practical wisdom and foresight. “Sensible” is used, as for prudens at 77.6 and 92.2, since the English “prudent” today leans towards caution; “wise” is kept for sapiens, which Seneca did not write here. Other reading: a great and wise man
 - *animum diducit a corpore*: Diducere is to draw apart, to separate. The texts may vary here between diducit and deducit (from memory, unchecked); the English follows what is given. Other reading: leads his mind away from the body
 - *quantum necesse est*: The Latin has no “only”; the limit is implied by the contrast with “much” and is left implied. Necesse est also stands in the first sentence, where it is “bound to”: there it is what is certain to happen, here what cannot be avoided. Other reading: only as far as he has to
 
@@ -3119,7 +3120,7 @@ Set in the very midst of difficulties, let him say, “Perhaps one day it will b
 
 ### 78.18
 
-This too will help: to turn the mind away to other thoughts and to step away from the pain. Think of what you have done honourably, what you have done bravely; go over the good parts of your life in your own mind; scatter your memory across the things you have most admired; then let all the bravest men, the conquerors of pain, come before you: the man who went on reading a book while he offered his varicose veins to be cut out, the man who did not stop laughing while the torturers, angered by that very thing, tried every instrument of their cruelty. Will pain not be conquered by reason, when it has been conquered by laughter?
+This too will help: to turn the mind aside to other thoughts and to step away from the pain. Think of what you have done honourably, what you have done bravely; go over the good parts of your life in your own mind; scatter your memory across the things you have most admired; then let all the bravest men, the conquerors of pain, come before you: the man who went on reading a book while he offered his varicose veins to be cut out, the man who did not stop laughing while the torturers, angered by that very thing, tried every instrument of their cruelty. Will pain not be conquered by reason, when it has been conquered by laughter?
 
 <details><summary>Notes</summary>
 
@@ -3136,7 +3137,7 @@ This too will help: to turn the mind away to other thoughts and to step away fro
 
 ### 78.20
 
-“But illness,” he says, “lets me do nothing; it has taken me away from all my duties.” Ill health holds your body, not your mind as well. So it slows the feet of a runner, it hampers the hands of a cobbler or a smith: if your mind is what you are used to using, you will advise and teach, listen and learn, inquire and remember. And another thing: do you believe you are doing nothing if you are self-controlled in your sickness? You will show that illness can be overcome, or at least borne.
+“But illness,” he says, “lets me do nothing; it has taken me away from all my duties.” Ill health holds your body, not your mind as well. So it slows the feet of a runner, it hampers the hands of a cobbler or a smith: if your mind is what you are in the habit of using, you will advise and teach, listen and learn, inquire and remember. And another thing: do you believe you are doing nothing if you are self-controlled in your sickness? You will show that illness can be overcome, or at least borne.
 
 <details><summary>Notes</summary>
 
@@ -3155,7 +3156,7 @@ This too will help: to turn the mind away to other thoughts and to step away fro
 
 ### 78.26
 
-For a life that is surveying so many varied, great, divine things cannot be overtaken by the sense of having had its fill of itself: what usually brings it to hatred of itself is sluggish leisure. To one who ranges through the nature of things the truth will never become distasteful: it is false things that he will have his fill of.
+For a life that is surveying so many varied, great, divine things cannot be overtaken by the sense of having had its fill of itself: what usually makes it hate itself is sluggish leisure. To one who ranges through the nature of things the truth will never become distasteful: he will have his fill of false things.
 
 <details><summary>Notes</summary>
 
@@ -3164,7 +3165,7 @@ For a life that is surveying so many varied, great, divine things cannot be over
 - *in odium illam sui adducere solet iners otium*: Otium is leisure, time free of business, and iners is sluggish, doing nothing. The Latin puts the phrase last for weight, and the English keeps that order. Other reading: it is idleness with nothing to do that makes life loathe itself
 - *Rerum naturam peragranti*: Peragrare is to travel all through a country. “The nature of things” is the glossary’s rendering, meaning the natural world as an object of study. Other reading: For one who travels through the whole of nature
 - *in fastidium*: Fastidium is the distaste of someone who has eaten too much. It carries on the image of having had one’s fill. Other reading: the truth will never come to disgust him
-- *falsa satiabunt*: Two words in the Latin, with no object: “false things will sate”. The English supplies “he”, the one who ranges through nature, and adds the emphasis of “it is” to bring out the contrast with truth. Other reading: false things will cloy
+- *falsa satiabunt*: Two words in the Latin, with no object: “false things will sate”. The English supplies “he”, the one who ranges through nature, and puts “false things” last to bring out the contrast with truth. Other reading: false things will cloy
 
 </details>
 
@@ -3206,7 +3207,7 @@ No virtue lies hidden, and to have lain hidden is not virtue’s own loss: a day
 
 ### 80.3
 
-What I turn over most in my own thoughts is this: if the body can be brought by training to this endurance, by which it bears the fists and equally the kicks of more than one man, by which someone holding out under the most blazing sun in the most scorching dust, and drenched in his own blood, lasts out the day, how much more easily the mind can be strengthened so that it takes the blows of Fortune unconquered, so that thrown down, so that trampled on, it rises up. For the body needs many things in order to be in good condition: the mind grows from itself, feeds itself, trains itself. Those men need much food, much drink, much oil, and long labour besides: virtue will come to you without equipment, without expense. Whatever can make you good is with you.
+What I turn over most in my own thoughts is this: if the body can be brought by training to this endurance, by which it bears the fists and equally the kicks of more than one man, by which someone lasts out the day, bearing up under the most blazing sun in the most scorching dust and drenched in his own blood, how much more easily the mind can be strengthened so that it takes the blows of Fortune unconquered, so that thrown down, so that trampled on, it rises up. For the body needs many things in order to be in good condition: the mind grows from itself, feeds itself, trains itself. Those men need much food, much drink, much oil, and long labour besides: virtue will come to you without equipment, without expense. Whatever can make you good is with you.
 
 <details><summary>Notes</summary>
 
@@ -3226,7 +3227,7 @@ What I turn over most in my own thoughts is this: if the body can be brought by 
 
 ### 80.10
 
-Do you see that king of Scythia or Sarmatia, adorned with the mark of rank on his head? If you want to value him and to know him whole, what he is like, undo the band: much that is bad lies hidden under it. Why do I speak of others? If you want to weigh yourself up, set aside money, house, standing; look at yourself within, for yourself: as it is, you take the word of others for what you are. Farewell.
+Do you see that king of Scythia or Sarmatia, adorned with the mark of rank on his head? If you want to value him and to know what he is like through and through, undo the band: much that is bad lies hidden under it. Why do I speak of others? If you want to weigh yourself up, set aside money, house, standing; look at yourself within, for yourself: as it is, you take the word of others for what you are. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -3263,7 +3264,7 @@ You complain that you have run into an ungrateful man. If this is now the first 
 
 ### 81.19
 
-We must do everything to be as grateful as we can. For this good is our own, in the same way that justice is not, as is commonly believed, something that has to do with others: a great part of it comes back to itself. There is no one who, when he does good to another, has not done good to himself. I do not say this for the reason that the man who has been helped will want to help and the man who has been defended will want to protect, or that a good example comes back round in a circle to the one who sets it (just as bad examples fall back on their authors, and no pity comes to those who suffer wrongs that they taught could be done, by doing them), but because the reward of all the virtues is in the virtues themselves. For they are not practised for a prize: the pay for a right deed is to have done it.
+We must do everything to be as grateful as we can. For this good is our own, in the same way that justice is not, as is commonly believed, something that has to do with others: a great part of it comes back to itself. There is no one who, when he does good to another, has not done good to himself. I do not say this because the man who has been helped will want to help and the man who has been defended will want to protect, or because a good example comes back round in a circle to the one who sets it (just as bad examples fall back on their authors, and no pity comes to those who suffer wrongs that they, by doing them, taught could be done), but because the reward of all the virtues is in the virtues themselves. For they are not practised for a prize: the pay for a right deed is to have done it.
 
 <details><summary>Notes</summary>
 
@@ -3271,7 +3272,7 @@ We must do everything to be as grateful as we can. For this good is our own, in 
 - *quemadmodum iustitia non est (ut vulgo creditur) ad alios pertinens*: The comparison is compressed: gratitude belongs to the grateful in the same way that justice is not, as people think, a matter concerning others. The Latin has no “only”, and none is added, though the next clause (“a great part”) shows that is meant. Other reading: just as justice does not, as is commonly believed, concern other people only
 - *in se redit*: Se can be justice itself or, loosely, the just person. The English keeps the literal “itself”. Other reading: a great part of it comes back to the one who is just
 - *Nemo non, cum alteri prodest, sibi profuit*: A double negative for “everyone”; the perfect profuit says the gain is already made at the moment of the act. Prodesse is given as “does good to”; it is a different word from bonum (“the good”) and beneficium (“benefit”). Other reading: Everyone who is useful to another has been useful to himself
-- *eo nomine*: A bookkeeping phrase, “under that heading”, continuing the language of accounts from the section before. The English gives the plain sense, “for the reason”. The Latin sets the two reasons side by side with no joining word; “or” is supplied. Other reading: under this heading
+- *eo nomine*: A bookkeeping phrase, “under that heading”, continuing the language of accounts from the section before. The English gives the plain sense, “because”. The Latin sets the two reasons side by side with no joining word; “or” is supplied. Other reading: under this heading
 - *circuitu*: Literally “by a circuit”: the example goes round and returns to its source. Other reading: comes back by a roundabout way
 - *virtutum omnium pretium in ipsis est*: Pretium can be price, worth or reward. With praemium (prize) and merces (pay) following, the English takes “reward” and gives each of the three its own word. Other reading: the worth of all the virtues is in themselves
 - *recte facti fecisse merces est*: Merces is wages or pay. The Latin is very compressed: “of a thing rightly done, to have done it is the pay”. Other reading: the wages of a good deed is having done it
@@ -3280,7 +3281,7 @@ We must do everything to be as grateful as we can. For this good is our own, in 
 
 ### 81.22
 
-So let us avoid being ungrateful, not for another’s sake but for our own. The smallest and lightest part of wickedness spills over onto others: what is worst in it and, so to speak, thickest stays at home and presses on the one who has it, as our Attalus used to say: “Vice itself drinks the greatest part of its own poison.” That poison which snakes bring out for another’s destruction, and hold without destruction to themselves, is not like this one: this one is worst for those who have it.
+So let us avoid being ungrateful, not for another’s sake but for our own. The smallest and lightest part of wickedness spills over onto others: what is worst in it and, so to speak, thickest stays at home and presses on the one who has it, as our Attalus used to say: “Vice itself drinks the greatest part of its own poison.” That poison which snakes bring out to destroy others, and hold without destroying themselves, is not like this one: this one is worst for those who have it.
 
 <details><summary>Notes</summary>
 
@@ -3289,7 +3290,7 @@ So let us avoid being ungrateful, not for another’s sake but for our own. The 
 - *spississimum*: “Thickest” or “densest”: the image is of a liquid whose light part spills over while the dregs stay in the vessel. Seneca marks the image with “so to speak”. Other reading: most concentrated
 - *redundat*: Literally “overflows”, of a liquid running over the rim. It belongs to the same image as “thickest”. Other reading: overflows onto others
 - *Attalus noster*: Attalus was a Stoic philosopher whose lectures Seneca attended when young (from memory, unchecked). Noster marks him as one of Seneca’s own school, or as his teacher. Other reading: Attalus of the Stoic school
-- *sine sua continent*: Elliptical: sua takes up perniciem, “without their own [destruction]”. The English supplies the noun again. Snakes hold their venom without harm to themselves. Other reading: and keep in without harm to themselves
+- *sine sua continent*: Elliptical: sua takes up perniciem, “without their own [destruction]”. The English supplies the idea again, as a verb. Snakes hold their venom without harm to themselves. Other reading: and keep in without harm to themselves
 - *premit habentem*: Premere is to press, weigh down or choke. The English keeps the plain “presses on”. Other reading: weighs down its owner
 
 </details>
@@ -3311,7 +3312,7 @@ Bad men have one pleasure, and that a short one, while they are receiving benefi
 
 ### 81.25
 
-He does not turn everything to the worse, nor does he look for someone to blame for an accident, and he puts men’s wrongdoings down to fortune instead. He does not put a bad meaning on words or looks; whatever happens, he lightens it by interpreting it kindly. He does not remember an offence rather than a service; as far as he can he keeps himself in the earlier and better memory, and his mind does not change toward those who have done well by him unless the bad deeds far outstrip the good and the difference is plain even to one who shuts his eyes; and even then only this far, that after the greater wrong he is such as he was before the benefit. For when the wrong is equal to the benefit, some goodwill remains in the mind.
+He does not turn everything to the worse, nor does he look for someone to blame for an accident, and he puts men’s wrongdoings down to fortune instead. He does not put a bad meaning on words or looks; whatever happens, he lightens it by interpreting it kindly. He does not remember an offence rather than a service. As far as he can he keeps to the earlier and better memory, and his mind does not change towards those who have done well by him unless the bad deeds far outstrip the good and the difference is plain even to one who shuts his eyes; and even then only this far, that after the greater wrong he is as he was before the benefit. For when the wrong is equal to the benefit, some goodwill remains in the mind.
 
 <details><summary>Notes</summary>
 
@@ -3320,7 +3321,7 @@ He does not turn everything to the worse, nor does he look for someone to blame 
 - *calumniatur*: Calumniari is to bring a false or quibbling charge. Here it means reading ill will into what was said or how someone looked; the Latin does not name what comes of it. Other reading: He does not find fault with words or looks
 - *offensae potius quam offici*: The two nouns are chosen for their like sound, which English cannot keep. Officium is a service or good turn. Other reading: a slight rather than a kindness
 - *in priore ac meliore se memoria detinet*: “Earlier” because the benefit came before the offence. Literally “he holds himself in the earlier and better memory”. Other reading: he dwells on the earlier and better recollection
-- *mutat animum*: Animus is “mind”, as in the glossary, and returns at the end of the passage. Here it is closer to attitude or feeling toward a person, so the English avoids the idiom of changing one’s mind, which means altering a decision. Other reading: he does not change his feeling toward
+- *mutat animum*: Animus is “mind”, as in the glossary, and returns at the end of the passage. Here it is closer to attitude or feeling towards a person, so the English avoids the idiom of changing one’s mind, which means altering a decision. Other reading: he does not change his feeling towards
 - *bene meritos*: Literally “those who have deserved well”, that is, who have earned thanks by what they did for him. “Service” is not used, because it already stands for officium in this sentence. Other reading: those who have done him good service
 - *multum male facta praecedunt*: Praecedunt is taken as “go ahead of, surpass”: the bad deeds far exceed the good, and “the good” is supplied as the thing surpassed. It can also mean “go before” in time, which fits the context less well. Other reading: unless many bad deeds have come first
 - *coniventi*: Conivere is to close the eyes, and so to overlook on purpose. The English keeps the image. Other reading: even to one willing to overlook it
@@ -3330,13 +3331,13 @@ He does not turn everything to the worse, nor does he look for someone to blame 
 
 ### 81.26
 
-Just as a defendant is acquitted when the votes are equal, and humane feeling always tips whatever is doubtful toward the better side, so the mind of the wise man, when the services are equal to the misdeeds, does indeed cease to owe, but does not cease to want to owe, and does what those do who pay after a cancellation of debts.
+Just as a defendant is acquitted when the votes are equal, and humane feeling always tips whatever is doubtful towards the better side, so the mind of the wise man, when the services are equal to the misdeeds, does indeed cease to owe, but does not cease to want to owe, and does what those do who pay after a cancellation of debts.
 
 <details><summary>Notes</summary>
 
 - *sententiis paribus*: Refers to the rule that a tied vote of the jurors acquits (from memory, unchecked). Sententiae are the jurors’ votes. Other reading: when the verdicts are evenly divided
 - *humanitas*: Humanitas ranges over human feeling, kindness and civilised decency. The English has “humane feeling”. Other reading: kindness
-- *in melius*: “Toward the better”, that is, toward the more favourable view. “Side” is supplied by the English. Other reading: toward the more lenient view
+- *in melius*: “Towards the better”, that is, towards the more favourable view. “Side” is supplied by the English. Other reading: towards the more lenient view
 - *paria maleficiis merita sunt*: Merita are the good services a person has done, maleficia the bad deeds. They answer to beneficium and iniuria in the section before, but the Latin words are different, so the English has “services” and “misdeeds”, not “benefit” and “wrong”. Other reading: when the good turns balance the ill turns
 - *tabulas novas*: Literally “new account books”, the Roman term for a general cancellation of debts (from memory, unchecked). The English gives the sense so that the comparison can be followed. Other reading: those who pay after new account books
 
@@ -3346,7 +3347,7 @@ Just as a defendant is acquitted when the votes are equal, and humane feeling al
 
 ### 82.5
 
-Philosophy must be set around us, a wall that cannot be stormed, which Fortune does not get past, though she has assailed it with many siege engines. The mind that has abandoned external things stands in a place that cannot be scaled, and claims its freedom in its own citadel; every missile falls below it. Fortune does not have the long hands we think she has: she seizes no one except the one who clings to her.
+Philosophy must be set around us, a wall that cannot be stormed, which Fortune, though she has assailed it with many siege engines, does not get past. The mind that has abandoned external things stands in a place that cannot be scaled, and claims its freedom in its own citadel; every missile falls below it. Fortune does not have the long hands we think she has: she seizes no one except the one who clings to her.
 
 <details><summary>Notes</summary>
 
@@ -3420,7 +3421,7 @@ You tell me to report to you each of my days, and the whole of each: you judge w
 
 ### 83.2
 
-So I will do what you tell me, and I will gladly write to you what I do and in what order. I will watch myself at once and, what is most useful, I will review my day. This is what makes us very bad, that no one looks back at his own life; we think about what we are going to do, and that rarely; we do not think about what we have done; and yet a plan for the future comes from the past.
+So I will do what you tell me, and I will gladly write to you what I do and in what order. I will watch myself at once and, what is most useful, I will review my day. What makes us very bad is that no one looks back at his own life. We think about what we are going to do, and that rarely; we do not think about what we have done; and yet a plan for the future comes from the past.
 
 <details><summary>Notes</summary>
 
@@ -3436,7 +3437,7 @@ So I will do what you tell me, and I will gladly write to you what I do and in w
 
 ### 84.11
 
-“How,” you say, “will it be possible to bring this about?” By constant attention: if we do nothing except at reason’s urging and avoid nothing except at reason’s urging. If you are willing to listen to reason, it will say to you: leave at once those things that people run about after; leave riches, either a danger or a burden to those who own them; leave the pleasures of body and of mind, they soften and weaken; leave ambition, it is a swollen thing, empty, windy, it has no limit, it is as anxious not to see anyone ahead of it as not to see anyone level with it, it suffers from envy, and a double envy at that. And you see how wretched a man is if he who is envied also envies.
+“How,” you say, “will it be possible to bring this about?” By constant attention: if we do nothing except at reason’s urging and avoid nothing except at reason’s urging. If you are willing to listen to reason, it will say to you: leave at once those things that people run about after; leave riches, either a danger or a burden to those who own them; leave the pleasures of body and of mind, they soften and weaken; leave ambition, it is a swollen thing, empty, windy, it has no limit, it is as anxious not to see anyone ahead of it as not to see anyone level with it, it suffers from envy, and a double envy at that. And you see how wretched a man is if he is envied and also envies.
 
 <details><summary>Notes</summary>
 
@@ -3456,7 +3457,7 @@ So I will do what you tell me, and I will gladly write to you what I do and in w
 
 ### 84.13
 
-Whatever things seem to stand high in human affairs, though they are tiny and stand out by comparison with the lowest, are still reached by hard and steep paths. The road to the peak of rank is rough; but if you care to climb this summit, the one before which Fortune has lowered herself, you will indeed see beneath you everything that is counted as loftiest, and yet you will come to the top over level ground. Farewell.
+Whatever things seem to rise high in human affairs, though they are tiny and stand out by comparison with the lowest, are still reached by hard and steep paths. The road to the peak of rank is rough; but if you care to climb this summit, the one before which Fortune has lowered herself, you will indeed see beneath you everything that is counted as loftiest, and yet you will come to the top over level ground. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -3521,7 +3522,7 @@ I judge that a different answer should be given: that neither the helmsman’s a
 
 ### 85.36
 
-Next, the helmsman’s art is a good that belongs to others: it is for those he carries, as the doctor’s is for those he treats. [The wise man’s] is a shared good: it is both the good of those he lives with and his own. And so the helmsman may perhaps be harmed, whose service, promised to others, is hindered by a storm.
+Next, the helmsman’s art is a good that belongs to others: it is for those he carries, as the doctor’s is for those he treats. [The wise man’s] is a shared good: it is both the good of those he lives with and his own. And so the helmsman, whose service, promised to others, is hindered by a storm, may perhaps be harmed.
 
 <details><summary>Notes</summary>
 
@@ -3542,7 +3543,7 @@ The wise man is not harmed by poverty, nor by pain, nor by the other storms of l
 
 <details><summary>Notes</summary>
 
-- *sapienti non nocetur*: This begins in lower case because it finishes the sentence of 85.36 (“the helmsman may perhaps be harmed:”). The English begins a new sentence with a capital. Other reading: no harm is done to the wise man
+- *sapienti non nocetur*: This begins in lower case because it finishes the sentence of 85.36, which ends “may perhaps be harmed”. The English begins a new sentence with a capital. Other reading: no harm is done to the wise man
 - *aliis tempestatibus vitae*: The image is kept: poverty and pain are “storms”, like the helmsman’s storm. Other reading: the other tempests of life
 - *prohibentur*: Prohibere recurs through 85.38. The English uses “prevent” for it every time, and “hinder” for inpedire. Other reading: are blocked
 - *opera eius omnia*: Opera is the plural of opus, “work”, the word used of the helmsman in 85.33 and of the wise man in 85.38. The English reads “all his work” in the singular, because “works” suggests finished products. Other reading: not all his works are prevented
@@ -3628,7 +3629,7 @@ The people is distributed into tribes, the army into centuries; whatever has gro
 
 ### 89.14
 
-So, since philosophy has three parts, let us begin by setting out its moral part first. It has been held that this in turn is divided into three: the first is the examination that assigns to each thing its own and assesses how much each is worth, useful in the highest degree (for what is so necessary as putting prices on things?); the second is about impulse, the third about actions. For the first thing is that you judge how much each thing is worth; the second, that you take up toward those things an impulse that is ordered and moderated; the third, that your impulse and your action fit together, so that in all of these you agree with yourself.
+So, since philosophy has three parts, let us begin by setting out its moral part first. It has been held that this in turn is divided into three: the first is the examination that assigns to each thing its own and assesses how much each is worth, and it is useful in the highest degree (for what is so necessary as putting prices on things?); the second is about impulse, the third about actions. For the first thing is that you judge how much each thing is worth; the second, that you take up an ordered and moderated impulse towards those things; the third, that your impulse and your action fit together, so that in all of these you agree with yourself.
 
 <details><summary>Notes</summary>
 
@@ -3638,7 +3639,7 @@ So, since philosophy has three parts, let us begin by setting out its moral part
 - *inspectio suum cuique distribuens*: Inspectio is a looking into, the examining part of ethics. Suum cuique echoes the formula of justice, “to each his own”; cuique can be “to each thing” or “to each person”. The English takes “each thing” because the next words are about what each thing is worth. Other reading: the examination that gives each person his due
 - *maxime utilis*: Agrees with inspectio. It can mean “extremely useful” or “the most useful of the three”; the English reads “useful in the highest degree”, which leaves the comparison with the other two unstated, as the Latin does. Other reading: the most useful of the three
 - *pretia rebus inponere*: Literally to put prices on things. The image of pricing is kept. Other reading: to set values on things
-- *de impetu*: Impetus is Seneca’s Latin for the Stoic term for the impulse toward action (Greek horme; from memory, unchecked). “Impulse” is used for it throughout 89.14 and 89.15. Other reading: about the drive to act
+- *de impetu*: Impetus is Seneca’s Latin for the Stoic term for the impulse towards action (Greek horme; from memory, unchecked). “Impulse” is used for it throughout 89.14 and 89.15. Other reading: about the drive to act
 - *ut in omnibus istis tibi ipse consentias*: This second ut may give the aim or result of all three points (“so that”) or restate the third (“that is, that”). The English reads “so that”, because “in all of these” looks back over all three. Tibi consentias is to be in agreement with yourself. Other reading: that is, that in all of these you are consistent with yourself
 
 </details>
@@ -3802,14 +3803,14 @@ I think you and I will agree that external things are acquired for the body, tha
 
 ### 92.2
 
-If we agree on this, it follows that we also agree on that: the happy life rests on this one thing, that reason in us should be perfect. For it alone does not let the mind sink; it stands against fortune; in whatever state things are, it keeps [the next word is corrupt in the Latin]. And that alone is good which is never broken off. That man, I say, is happy whom nothing makes smaller; he holds the heights, and leans on no one at all except himself; for a man who is held up by some support can fall. If it is otherwise, things that are not ours will begin to have great power in us. But who wants to owe his standing to fortune, or what sensible man admires himself for things that are not his own?
+If we agree on this, it follows that we also agree on that: the happy life rests on this one thing, that reason in us should be perfect. For it alone does not let the mind sink; it stands against fortune; in whatever state things are, it keeps [a word here is corrupt in the Latin]. And the only good is what is never broken off. That man, I say, is happy whom nothing makes smaller; he holds the heights, and leans on no one at all except himself; for a man who is held up by some support can fall. If it is otherwise, things that are not ours will begin to have great power in us. But who wants to owe his standing to fortune, or what sensible man admires himself for things that are not his own?
 
 <details><summary>Notes</summary>
 
 - *ut in nobis ratio perfecta sit*: “perfecta” is both “perfect” and “brought to completion”. “Perfect” is kept, as the description of reason at its full growth. Other reading: that reason in us should be brought to completion
 - *non summittit animum*: Literally “does not lower the mind”. The phrase is the usual one for losing heart, so “spirit” would also be right. “Mind” is kept with the glossary. Other reading: does not let the spirit droop
 - *in quolibet rerum habitu ~servitus~ servat*: The copy marks “servitus” (“slavery”) as corrupt, and the words as given do not construe: “servat” (“it keeps”) has no object. The English leaves the gap and says so in square brackets. From memory, unchecked: editors have proposed a word meaning “safe” or “free from care” here. Other reading: in whatever state things are, it keeps us free from care (a guess at the lost word)
-- *Id autem unum bonum est quod numquam defringitur*: This can be “that alone is good which …” or “the one good is that which …”. “defringitur” is “is broken off”, as a branch is. The image is kept. Other reading: But the one good is that which is never broken
+- *Id autem unum bonum est quod numquam defringitur*: This can be “the only good is what …”, as at 74.10, or “that alone is good which …”; the English takes the first. “defringitur” is “is broken off”, as a branch is. The image is kept. Other reading: But that alone is good which is never broken
 - *tenet summa*: Literally “he holds the highest things”: the top, the summit. Other reading: he occupies the highest place
 - *ne ulli quidem nisi sibi innixus*: “ulli” can be “anyone” or “anything”. The English takes “no one”, the commoner sense of the word standing alone and the one that matches “himself”; the “support” of the next clause would also suit “nothing”. Other reading: leaning on nothing at all except himself
 - *constare fortuna*: “constare” with the ablative can be “to stand firm by means of”, “to depend on” or “to consist of”. The English takes it as standing by fortune’s gift, which echoes “stands against fortune” earlier. Other reading: to be made up of what fortune gives
@@ -3819,7 +3820,7 @@ If we agree on this, it follows that we also agree on that: the happy life rests
 
 ### 92.11
 
-“What then?” he says. “If good health and rest and freedom from pains are not going to hinder virtue in any way, will you not seek them?” Why would I not seek them? Not because they are goods, but because they are according to nature, and because they will be taken by me with good judgment. What then will be good in them? This one thing: being well chosen. For when I take the kind of clothing that is fitting, when I walk as I ought, when I dine as I should, it is not the dinner or the walk or the clothing that is a good, but my purpose in them, the purpose of one who keeps, in each thing, the measure that agrees with reason.
+“What then?” he says. “If good health and rest and freedom from pains are not going to hinder virtue in any way, will you not seek them?” Why would I not seek them? Not because they are goods, but because they are according to nature, and because I will take them with good judgment. What then will be good in them? This one thing: being well chosen. For when I take the kind of clothing that is fitting, when I walk as I ought, when I dine as I should, it is not the dinner or the walk or the clothing that is a good, but my purpose in them, the purpose of one who keeps, in each thing, the measure that agrees with reason.
 
 <details><summary>Notes</summary>
 
@@ -3868,7 +3869,7 @@ In the same way, the things set in the way of virtue take nothing away from it: 
 
 ### 92.33
 
-When it has raised itself to this height, it is, towards the body too, as towards a necessary burden, not a lover but a manager, and it does not put itself under the thing it has been set over. No one is free who is a slave to the body; for, even if you pass over the other masters that too much anxiety on the body’s behalf finds, the body’s own rule is hard to please and fussy.
+When it has raised itself to this height, it is not the lover but the manager of the body too, as of a necessary burden, and it does not put itself under the thing it has been set over. No one is free who is a slave to the body; for, even if you pass over the other masters that too much anxiety on the body’s behalf finds, the body’s own rule is hard to please and fussy.
 
 <details><summary>Notes</summary>
 
@@ -3881,7 +3882,7 @@ When it has raised itself to this height, it is, towards the body too, as toward
 
 </details>
 
-## Letter 93: On the quality not length of life
+## Letter 93: On the quality, not the length, of life
 
 ### 93.2
 
@@ -3934,7 +3935,7 @@ Just as a person can be complete in a smaller build of body, so too a life can b
 
 ### 94.26
 
-You know that friendships are to be cultivated religiously, but you do not do it. You know that a man is shameless who demands chastity of his wife while he himself is a seducer of other men’s wives; you know that, just as she ought to have nothing to do with an adulterer, so you ought to have nothing to do with a mistress, and you do not do it. So you must be brought back to remembering again and again; for these things ought not to be stored away but at hand. Whatever is wholesome ought to be often stirred, often turned over, so that it is not only known to us but also ready. Add now that even plain things usually become plainer.
+You know that friendships are to be cultivated religiously, but you do not do it. You know that a man is shameless who demands chastity of his wife while he himself is a seducer of other men’s wives; you know that, just as she ought to have nothing to do with an adulterer, so you ought to have nothing to do with a mistress, and you do not do it. So you must be reminded again and again; for these things ought not to be stored away but at hand. Whatever is wholesome ought to be often stirred, often turned over, so that it is not only known to us but also ready. Add now that even plain things usually become plainer.
 
 <details><summary>Notes</summary>
 
@@ -3985,14 +3986,14 @@ Many are found who carry fire into cities, who lay low what the centuries could 
 
 ### 94.62
 
-Wretched Alexander was driven by a madness for laying waste what belonged to others, and it sent him off to unknown lands. Or do you think a man sane who begins first with the disasters of Greece, where he was educated? Who snatches from each the best thing it has: orders Sparta to be a slave, Athens to be silent? Not content with the overthrow of so many states, which Philip had either conquered or bought, he throws down others, some in one place and some in another, and carries his arms around the whole world; and his cruelty, like savage beasts that bite more than hunger demands, nowhere tires and comes to a halt.
+Wretched Alexander was driven by a madness for laying waste what belonged to others, and it sent him off to unknown lands. Or do you think a man sane who begins by bringing disasters first on Greece, where he was educated? Who snatches from each the best thing it has: orders Sparta to be a slave, Athens to be silent? Not content with the overthrow of so many states, which Philip had either conquered or bought, he throws down others, some in one place and some in another, and carries his arms around the whole world; and nowhere does his cruelty tire and come to a halt, like savage beasts that bite more than hunger demands.
 
 <details><summary>Notes</summary>
 
 - *Agebat*: The same verb as at the end of 94.61 (“agebantur”), so “driven” again. The Latin is active, “madness drove Alexander”; the English is passive to keep Alexander first and the two verbs close to their subject. Other reading: A madness for laying waste what belonged to others drove wretched Alexander
 - *infelicem*: The opposite of “felix”, the word the crowd uses of such men just before: not fortunate, and so wretched or ill-starred. “Wretched” is used because “unhappy” today reads as merely sad. Other reading: Unhappy Alexander
 - *furor aliena vastandi*: “Furor” is frenzy or madness. “Aliena” is what is another’s, which can also mean foreign lands. Other reading: a frenzy for devastating foreign lands
-- *a Graeciae primum cladibus, in qua eruditus est*: “Clades” are disasters or defeats, here those he inflicted on Greece; the plural is kept. “In qua” refers to Greece. The allusion is probably to the destruction of Thebes and to his schooling under Aristotle (from memory, unchecked). Other reading: who starts with the defeats of Greece, where he had his schooling
+- *a Graeciae primum cladibus, in qua eruditus est*: “Clades” are disasters or defeats, here those he inflicted on Greece, which the English makes plain with “bringing … on”; the plural is kept, and “first” renders primum. “In qua” refers to Greece. The allusion is probably to the destruction of Thebes and to his schooling under Aristotle (from memory, unchecked). Other reading: who starts with the defeats of Greece, where he had his schooling
 - *quod cuique optimum est eripit*: “Cuique” is “from each”, each city or people. The two examples follow with no linking word, so the English sets them after a colon: Sparta (in the Latin, Lacedaemon) loses its freedom, Athens its speech. Other reading: who robs each state of what it prizes most
 - *quas aut vicerat Philippus aut emerat*: Philip is Philip II of Macedon, Alexander’s father. “Bought” refers to his winning cities by bribery (from memory, unchecked). Other reading: which Philip had either defeated or purchased
 - *alias alio loco proicit*: Literally “he throws forth others in another place”, the idiom for “one in one place, another in another”. “Proicere” can be to throw down, to fling away or to cast out, and it is not certain which is meant. Other reading: he flings others aside, each in a different place
@@ -4002,7 +4003,7 @@ Wretched Alexander was driven by a madness for laying waste what belonged to oth
 
 ### 94.64
 
-Gnaeus Pompeius, too, was urged to wars abroad and at home not by virtue or reason but by an insane love of false greatness. Now he was going into Spain and against the arms of Sertorius, now to bind the pirates and pacify the seas: these were the causes held out as a cover, in order to keep his power going without a break.
+Gnaeus Pompeius, too, was urged to wars abroad and at home not by virtue or reason but by an insane love of false greatness. Now he was going into Spain and against the arms of Sertorius, now to bind the pirates and pacify the seas: these were the causes held out as a cover for keeping his power unbroken.
 
 <details><summary>Notes</summary>
 
@@ -4037,7 +4038,7 @@ What dragged him into Africa, what into the north, what against Mithridates and 
 
 ### 95.8
 
-All those arts are occupied with the equipment of life, not with the whole of life; and so many things check them from outside and hinder them: hope, desire, fear. But this one, which professes the art of life, cannot be prevented by anything from exercising itself, for it shatters hindrances and tosses aside what stands in its way. Do you want to know how unlike the condition of the other arts is to the condition of this one? In them it is more excusable to go wrong on purpose than by accident; in this one the greatest fault is to do wrong of one’s own accord.
+All those arts are occupied with the equipment of life, not with the whole of life; and so many things check them from outside and hinder them: hope, desire, fear. But this one, which professes the art of life, cannot be prevented by anything from exercising itself, for it shatters hindrances and tosses aside what stands in its way. Do you want to know how different the condition of the other arts is from that of this one? In them it is more excusable to go wrong on purpose than by accident; in this one the greatest fault is to do wrong of one’s own accord.
 
 <details><summary>Notes</summary>
 
@@ -4054,7 +4055,7 @@ All those arts are occupied with the equipment of life, not with the whole of li
 
 ### 95.9
 
-What I mean is this. A grammarian will not blush at a mistake in grammar if he made it knowingly; he will blush if he made it unknowingly. A doctor, if he does not realise that his patient is failing, goes wrong more, as far as his art is concerned, than if he pretends not to realise it. But in this art of living the fault of those who go wrong willingly is the more shameful. Add now the fact that most arts too, or rather the most liberal arts of them all, have their own doctrines, not only precepts, as medicine does; and so the school of Hippocrates is one, that of Asclepiades another, that of Themison another.
+What I mean is this. A grammarian will not blush at a mistake in grammar if he made it knowingly; he will blush if he made it unknowingly. If a doctor does not realise that his patient is failing, he goes wrong more, as far as his art is concerned, than if he pretends not to realise it. But in this art of living the fault of those who go wrong willingly is the more shameful. Add now that most arts too, or rather the most liberal arts of them all, have their own doctrines, not only precepts, as medicine does; and so there is one school of Hippocrates, another of Asclepiades, another of Themison.
 
 <details><summary>Notes</summary>
 
@@ -4086,14 +4087,14 @@ Marcus Brutus, in the book he titled “Peri kathekontos” (“On Duty”), giv
 
 ### 95.47
 
-It is usual to give precepts on how the gods are to be worshipped. Let us forbid anyone to light lamps on the sabbath, since the gods have no need of light and not even human beings take pleasure in soot. Let us forbid the performing of morning greetings and sitting at the doors of temples: it is human vanity that is won by such attentions; whoever knows god worships him. Let us forbid the bringing of towels and bath scrapers to Jupiter and the holding of a mirror for Juno: god does not look for servants. Why would he? He himself serves the human race; he is at hand everywhere and for everyone.
+It is usual to give precepts on how the gods are to be worshipped. Let us forbid anyone to light lamps on the sabbath, since the gods have no need of light and not even human beings take pleasure in soot. Let us forbid anyone to perform morning greetings and to sit at the doors of temples: it is human vanity that is won by such attentions; whoever knows god worships him. Let us forbid anyone to bring towels and bath scrapers to Jupiter and to hold a mirror for Juno: god does not look for servants. Why would he? He himself serves the human race; he is at hand everywhere and for everyone.
 
 <details><summary>Notes</summary>
 
 - *solet praecipi*: Impersonal passive, “it is usual for precepts to be given”. The English stays impersonal and keeps the word “precepts”, since the letter’s argument is about them. Other reading: People usually lay down rules on how the gods are to be worshipped.
 - *prohibeamus*: This verb form, and the two that follow (vetemus), can be an exhortation or a concession, with the point, made in the next section, that such bans are not enough without a right idea of god. The English takes the exhortation, which is the plainer reading of the form. Other reading: We may forbid anyone to light lamps on the sabbath
 - *sabbatis*: The Jewish sabbath, here in the plural (“on sabbaths”). Seneca is speaking of a foreign rite practised at Rome. Other reading: on sabbaths
-- *salutationibus matutinis fungi*: The salutatio, literally a greeting, was the morning call a Roman dependant had to pay at his patron’s house. Here the same attendance is paid to a god at his temple. Fungi is to carry out a duty, so “performing”. Other reading: Let us forbid the paying of morning calls
+- *salutationibus matutinis fungi*: The salutatio, literally a greeting, was the morning call a Roman dependant had to pay at his patron’s house. Here the same attendance is paid to a god at his temple. Fungi is to carry out a duty, so “perform”. Other reading: Let us forbid the paying of morning calls
 - *humana ambitio istis officiis capitur*: Ambitio here is the wish to be courted and honoured, not the wish to rise, so “vanity”. Capitur is “is caught, won over”. Officia are the dutiful attentions just listed. Other reading: it is human ambition that is caught by such services
 - *deum colit qui novit*: The second verb has no object in the Latin; “god” is understood from the first. The English order is turned round for clarity. Other reading: he worships god who knows him
 - *lintea et strigiles Iovi ferre et speculum tenere Iunoni*: Worshippers wait on the statues as slaves wait on a master at the bath and a mistress at her dressing. Lintea are linen towels, strigiles the scrapers used at the bath. Jupiter is the chief Roman god and Juno his wife. Other reading: to carry linen cloths and strigils to Jupiter and to hold up a mirror to Juno
@@ -4104,7 +4105,7 @@ It is usual to give precepts on how the gods are to be worshipped. Let us forbid
 
 ### 95.49
 
-What cause do the gods have for doing good? Nature. Anyone who thinks they are unwilling to do harm is mistaken: they are not able to. They can neither suffer a wrong nor do one, for to hurt and to be hurt are joined together. Those whom that nature, the highest and most beautiful of all, has taken out of danger it has not made dangerous either.
+What cause do the gods have for doing good? Nature. Anyone who thinks they are unwilling to do harm is mistaken: they are not able to. They can neither suffer a wrong nor do one, for to hurt and to be hurt are joined together. Those whom that nature, the highest and most beautiful of all, has taken out of danger, it has not made dangerous either.
 
 <details><summary>Notes</summary>
 
@@ -4120,7 +4121,7 @@ What cause do the gods have for doing good? Nature. Anyone who thinks they are u
 
 ### 95.50
 
-The first way to worship the gods is to believe in the gods; next, to give them the majesty that is theirs, to give them the goodness without which there is no majesty; to know that it is they who preside over the world, who govern all things by their power, who have the guardianship of the human race, sometimes without concern for individuals. They neither give evil nor have it; yet they chastise some people and restrain them and impose punishments, and sometimes they punish by what looks like a good. Do you want to win the favour of the gods? Be good. Whoever has imitated them has worshipped them enough.
+The first way to worship the gods is to believe in the gods; next, to give them the majesty that is theirs, to give them the goodness without which there is no majesty; to know that it is they who preside over the world, who govern all things by their power, who watch over the human race, sometimes without concern for individuals. They neither give evil nor have it; yet they chastise some people and restrain them and impose punishments, and sometimes they punish by what looks like a good. Do you want to win the favour of the gods? Be good. Whoever has imitated them has worshipped them enough.
 
 <details><summary>Notes</summary>
 
@@ -4154,13 +4155,13 @@ All this that you see, in which things divine and human are enclosed, is one; we
 
 ### 95.53
 
-Let that verse be both in the heart and on the lips: “I am human: I count nothing human foreign to me.” Let us have it in common: we have been born. Our fellowship is very like an arch of stones, which would fall if the stones did not block one another, and is held up by that very thing.
+Let that verse be both in the heart and on the lips: “I am human: I count nothing human foreign to me.” Let us hold it in common: we were born for the common good. Our fellowship is very like an arch of stones, which would fall if the stones did not block one another, and is held up by that very thing.
 
 <details><summary>Notes</summary>
 
 - *et in pectore et in ore*: Literally “both in the breast and in the mouth”. No possessive is expressed. The English uses the pair “heart” and “lips”. Other reading: both in the breast and in the mouth
 - *homo sum, humani nihil a me alienum puto*: A line of the comic poet Terence, from his play Heauton Timorumenos (line 77; from memory, unchecked). Homo is a human being, not specifically a male, and the line plays on homo and humani, so the English has “human” twice. Other reading: “I am a man: nothing that concerns man do I think foreign to me.”
-- *Habeamus in commune: nati sumus*: As given the Latin does not construe: the first verb has no object and the statement of being born stands bare, making no point. The English is word for word, with “it” supplied, which may point back to the verse or forward. Editors are thought to supply a second “in commune” or to repunctuate so that “in common” goes with “born” (from memory, unchecked). Other reading: Let us hold to this: we were born for the common good.
+- *Habeamus in commune: nati sumus*: As given the Latin does not construe: the first verb has no object and the statement of being born stands bare, making no point. Editors are thought to supply a second “in commune” or to repunctuate so that “in common” goes with “born” (from memory, unchecked); either way the point is that we were born for the common good. The English gives that probable sense, supplying “it”, which points back to the verse, and “for the common good”; word for word the Latin says only “we have been born”. Other reading: Let us have it in common: we have been born.
 - *Societas nostra*: Societas is partnership, the bond between associates. The English has “fellowship”, matching “fit for fellowship” in Ep. 95.52. Other reading: Our society
 - *lapidum fornicationi*: Fornicatio is an arching or vaulting, from fornix, an arch. It is an arch built of stones. Other reading: a vault of stones
 - *casura nisi in vicem obstarent*: The verb is plural, so its subject is the stones. Obstare is to stand against something: each stone blocks its neighbour’s fall. Other reading: which would collapse if the stones did not hold one another back
@@ -4187,7 +4188,7 @@ After gods and human beings, let us look into how things are to be used. We shal
 
 ### 96.1
 
-Yet you are indignant at something, or complain, and do not understand that there is nothing evil in these things except this one thing, that you are indignant and complain? If you ask me, I think nothing is wretched for a man except that there is anything in nature which he thinks wretched. I shall not put up with myself on the day when I am not able to put up with something. I am in poor health: it is part of fate. The slaves have taken to their beds, the interest has gone wrong, the house has cracked, losses, wounds, hardships, fears have come rushing in: it commonly happens. That says too little: it had to happen.
+Yet you are indignant at something, or complain, and do not understand that there is nothing evil in these things except this one thing, that you are indignant and complain? If you ask me, I think nothing is wretched for a man except that there is anything in nature which he thinks wretched. I shall not put up with myself on the day when I am not able to put up with something. I am in poor health: it is part of fate. The slaves have taken to their beds, the interest has gone wrong, the house has cracked; losses, wounds, hardships, fears have come rushing in: it commonly happens. That says too little: it had to happen.
 
 <details><summary>Notes</summary>
 
@@ -4205,7 +4206,7 @@ Yet you are indignant at something, or complain, and do not understand that ther
 
 ### 96.2
 
-These things are decreed; they are not accidents. If you trust me at all, I am at this very moment uncovering my inmost feelings to you: in all the things that seem adverse and hard, this is how I have been formed: I do not obey god but agree with him; I follow him from the heart, not because it is necessary. Nothing will ever befall me that I shall receive gloomily, that I shall receive with a sour face; I shall pay no tax unwillingly. And all the things at which we groan, at which we take fright, are the taxes of life: from these, my Lucilius, do not hope for exemption and do not ask for it.
+These things are decreed; they are not accidents. If you trust me at all, I am at this very moment uncovering my inmost feelings to you. In all the things that seem adverse and hard, this is how I have been formed: I do not obey god but agree with him; I follow him from the heart, not because it is necessary. Nothing will ever befall me that I shall receive gloomily, that I shall receive with a sour face; I shall pay no tax unwillingly. And all the things at which we groan, at which we take fright, are the taxes of life: from these, my Lucilius, do not hope for exemption and do not ask for it.
 
 <details><summary>Notes</summary>
 
@@ -4220,11 +4221,11 @@ These things are decreed; they are not accidents. If you trust me at all, I am a
 
 </details>
 
-## Letter 97: On vice in every age and guilty conscience
+## Letter 97: On vice in every age and the guilty conscience
 
 ### 97.11
 
-A helmsman does not rejoice when his ship has been overturned, a doctor does not rejoice when his patient has been carried out for burial, an orator does not rejoice if the defendant has lost through the advocate’s fault; but on the other hand to everyone his own offence is a pleasure. One man delights in an adultery to which he was provoked by its very difficulty; another delights in cheating and theft, and the fault does not displease him until the fault’s fortune does. This comes about through perverse habit.
+A helmsman does not rejoice when his ship has been overturned, a doctor does not rejoice when his patient has been carried out for burial, an orator does not rejoice if the defendant has lost through the advocate’s fault; but everyone, on the other hand, finds his own offence a pleasure. One man delights in an adultery to which he was provoked by its very difficulty; another delights in cheating and theft, and the fault does not displease him until the fault’s fortune does. This comes about through perverse habit.
 
 <details><summary>Notes</summary>
 
@@ -4241,12 +4242,12 @@ A helmsman does not rejoice when his ship has been overturned, a doctor does not
 
 ### 97.12
 
-Apart from that, so that you may know that a sense of the good lies underneath even in minds that have been drawn away into the worst things, and that what is shameful is not unknown but disregarded: all people conceal their wrongdoings and, however luckily these have turned out, enjoy the fruit of them while keeping the deeds themselves out of sight. But a good conscience wants to come forward and be seen; wickedness is afraid even of the darkness.
+Apart from that, here is how you may know that a sense of the good lies underneath even in minds drawn away into the worst things, and that what is shameful is not unknown but disregarded: all people conceal their wrongdoings and, however luckily these have turned out, enjoy the fruit of them while keeping the deeds themselves out of sight. But a good conscience wants to come forward and be seen; wickedness is afraid even of the darkness.
 
 <details><summary>Notes</summary>
 
 - *Alioquin*: “Otherwise, in other respects”, or more loosely “besides”. The section before ends by blaming perverse habit, and the English takes the word as “apart from that”. Other reading: Besides,
-- *ut scias*: A purpose clause hanging on the act of speaking: “(this is said) so that you may know”. The Latin shape is kept and the turn is marked with a colon. Other reading: As proof that
+- *ut scias*: A purpose clause hanging on the act of speaking: “(this is said) so that you may know”. The English gives its force as “here is how you may know”, and a colon marks the turn to the proof. Other reading: As proof that
 - *boni sensum*: Sensus is a perception or awareness; bonum is “the good”. Other reading: a feeling for what is good
 - *nec ignorari turpe sed neglegi*: Turpe is what is shameful or base, the opposite of what is honourable. Neglegi is to be disregarded, not merely overlooked. Other reading: and that the base is not unrecognised but ignored
 - *peccata*: The noun from peccare. In this letter the sense is moral, so “wrongdoings”, and “do wrong” in Ep. 97.14. Other reading: all people hide their sins
@@ -4273,7 +4274,7 @@ I do not judge that this conflicts with our school, if it is explained in this w
 
 </details>
 
-## Letter 98: On not depending on fortune's gifts
+## Letter 98: On not depending on fortune’s gifts
 
 ### 98.2
 
@@ -4294,7 +4295,7 @@ All the things that Fortune looks on become fruitful and pleasant on this condit
 
 ### 98.5
 
-Or rather, by Hercules, so that I may reach for a line that is braver and more just, one with which you may prop up your mind more, say this whenever something has turned out otherwise than you had reckoned: “The gods decided better.” Nothing will happen to one so settled. And he will be so settled if he has reckoned, before he has felt it, with what the changeableness of human affairs can do, if he has children and wife and property as one who will not necessarily have them always, and as one who will not be more wretched on that account if he stops having them.
+Or rather, by Hercules, let me reach for a line that is braver and more just, one with which you may prop up your mind more. Say this whenever something has turned out otherwise than you had reckoned: “The gods decided better.” Nothing will happen to one so settled. And he will be so settled if he has reckoned, before he has felt it, with what the changeableness of human affairs can do, if he has children and wife and property as one who will not necessarily have them always, and as one who will not be more wretched on that account if he stops having them.
 
 <details><summary>Notes</summary>
 
@@ -4331,7 +4332,7 @@ So I think Metrodorus put it excellently in the letter in which he consoles his 
 
 ### 98.10
 
-But they are so shameless, and so forgetful of where they are going, of where each single day is pushing them, that they are surprised to lose anything themselves, though on one day they are going to lose everything. Whatever it is that you are written down as owner of is in your keeping; it is not yours. Nothing is firm for one who is not firm, nothing eternal and unconquerable for one who is fragile. It is as necessary to perish as to lose, and this very fact, if we understand it, is a comfort. Lose with an even mind: one must perish.
+But they are so shameless, and so forgetful of where they are going, of where each single day is pushing them, that they are surprised to lose anything themselves, though on one day they are going to lose everything. Whatever you are written down as owning is in your keeping; it is not yours. Nothing is firm for one who is not firm, nothing eternal and unconquerable for one who is fragile. It is as necessary to perish as to lose, and this very fact, if we understand it, is a comfort. Lose with an even mind: one must perish.
 
 <details><summary>Notes</summary>
 
@@ -4349,7 +4350,7 @@ But they are so shameless, and so forgetful of where they are going, of where ea
 
 ### 98.11
 
-What help, then, do we find against these losses? This: that we hold in memory the things lost, and do not let the fruit we gathered from them drop away along with the things themselves. Having is snatched away; having had, never. It is a thoroughly ungrateful man who, when he has lost a thing, owes nothing for having received it. Chance snatches the thing from us; the use and the fruit of it chance leaves with us, and this we ourselves have lost by the unfairness of our longing.
+What help, then, do we find against these losses? This: that we hold in memory the things lost, and do not let the fruit we gathered from them drop away along with the things themselves. Having is snatched away; having had, never. It is a thoroughly ungrateful man who, when he has lost a thing, owes nothing for having received it. Chance snatches the thing from us but leaves its use and fruit with us, and this we ourselves have lost by the unfairness of our longing.
 
 <details><summary>Notes</summary>
 
@@ -4401,7 +4402,7 @@ This, my Lucilius, is learning philosophy in action and training on the real thi
 
 ### 99.4
 
-But most people do not reckon up how much they have received, how much they have rejoiced. Among its other evils that grief has this one: it is not only needless but ungrateful. So then, that you had such a friend: is it wasted effort? In so many years, in so close a sharing of life, in so intimate a partnership of pursuits, was nothing achieved? Do you carry the friendship out to burial along with the friend? And why do you grieve at having lost him, if having had him does you no good? Believe me, a great part of those we have loved stays with us, even though chance has taken the people themselves away. The time that has gone by is ours, and nothing is in a safer place than what has been.
+But most people do not reckon up how much they have received, how much they have rejoiced. That grief has, among its other evils, this one: it is not only needless but ungrateful. So then, you had such a friend: is the effort wasted? In so many years, in so close a sharing of life, in so intimate a partnership of pursuits, was nothing achieved? Do you carry the friendship out to burial along with the friend? And why do you grieve at having lost him, if having had him does you no good? Believe me, a great part of those we have loved stays with us, even though chance has taken the people themselves away. The time that has gone by is ours, and nothing is in a safer place than what has been.
 
 <details><summary>Notes</summary>
 
@@ -4438,7 +4439,7 @@ We are ungrateful for what we have received, out of hope for what is to come, as
 
 ### 99.6
 
-There are countless examples of men who carried out their children, young men, to burial without tears, who went back from the pyre to the senate or to some public duty and at once turned to other business. And not without reason. For first, it is needless to grieve if you gain nothing by grieving. Next, it is unfair to complain of a thing that has happened to one and is waiting for all. Next, the complaint that longing makes is foolish where very little lies between the one lost and the one who longs for him. So our mind ought to be all the more even, because we are following those we have lost.
+There are countless examples of men who carried their grown children out to burial without tears, who went back from the pyre to the senate or to some public duty and at once turned to other business. And not without reason. For first, it is needless to grieve if you gain nothing by grieving. Next, it is unfair to complain of a thing that has happened to one and is waiting for all. Next, the complaint that longing makes is foolish where very little lies between the one lost and the one who longs for him. So our mind ought to be all the more even, because we are following those we have lost.
 
 <details><summary>Notes</summary>
 
@@ -4473,7 +4474,7 @@ There are countless examples of men who carried out their children, young men, t
 
 ### 99.31
 
-Let us also say this to one who weeps and longs for someone snatched away in his earliest years: all of us, as far as shortness of lifetime goes, if you compare it with the whole of time, both young and old, are on a level. For less comes to us out of all time than what anyone would call the least, since the least is at any rate some part. This span that we live is next to nothing; and yet, oh our madness, it is planned out on a wide scale.
+Let us also say this to one who weeps and longs for someone snatched away in his earliest years: as far as shortness of lifetime goes, if you compare it with the whole of time, all of us, both young and old, are on a level. For less comes to us out of all time than what anyone would call the least, since the least is at any rate some part. This span that we live is next to nothing; and yet, oh our madness, it is planned out on a wide scale.
 
 <details><summary>Notes</summary>
 
@@ -4543,7 +4544,7 @@ So hurry to live, my Lucilius, and count each single day as a single life. The m
 
 </details>
 
-## Letter 102: On fame after death and the soul's immortality
+## Letter 102: On fame after death and the soul’s immortality
 
 ### 102.3
 
@@ -4819,7 +4820,7 @@ As for not being feared, both a middling fortune and a gentle disposition will s
 
 ### 107.2
 
-None of these things is unusual, none is unexpected. To be jolted by such things is as ridiculous as to complain that you are splashed in public or dirtied in the mud. The terms of life are the same as those of a bathhouse, a crowd, a journey: some things will be thrown at you, some will fall on you. Living is not a soft business. You have set out on a long road: you are bound to slip, and knock into things, and fall, and grow tired, and cry out “O death!”, that is, tell a lie. In one place you will leave a companion behind, in another you will carry one out for burial, in another you will be afraid of one. Through jolts of this kind this rough journey has to be travelled to its end.
+None of these things is unusual, none is unexpected. To be jolted by such things is as ridiculous as to complain that you are splashed in public or dirtied in the mud. The terms of life are the same as those of a bathhouse, a crowd, a journey: some things will be thrown at you, some will fall on you. Living is not a soft business. You have set out on a long road: you are bound to slip, and knock into things, and fall, and grow tired, and cry out “O death!”, that is, tell a lie. In one place you will leave a companion behind, in another you will carry one out for burial, in another you will be afraid of one. Through jolts like these, this rough journey has to be travelled to its end.
 
 <details><summary>Notes</summary>
 
@@ -4853,7 +4854,7 @@ There is no one who has not gone more bravely to meet what he had long braced hi
 
 ### 107.6
 
-Let us be surprised at none of the things we were born to; no one should complain of them, for this reason, that they are equal for all. I mean it: they are equal, for even what someone has escaped he could have suffered. And an even-handed law is not the one that all have come under but the one that has been passed for all. Let the mind be commanded to keep an even temper, and let us pay the taxes of mortality without complaint.
+Let us be surprised at none of the things we were born to; no one should complain of them, for the very reason that they are equal for all. I mean it: they are equal, for even what someone has escaped he could have suffered. And an even-handed law is not the one that all have come under but the one that has been passed for all. Let the mind be commanded to keep an even temper, and let us pay the taxes of mortality without complaint.
 
 <details><summary>Notes</summary>
 
@@ -4900,7 +4901,7 @@ Lead me, O father and ruler of the high heaven, wherever you have decided: there
 
 ### 107.12
 
-Let us live this way, let us speak this way; let fate find us ready and eager. This is a great spirit, the one that has handed itself over to fate; the small and ignoble one, on the other hand, is the one that struggles against it and thinks ill of the order of the world and would rather correct the gods than itself. Farewell.
+Let us live this way, let us speak this way; let fate find us ready and eager. This is a great spirit, the one that has handed itself over to fate; small and ignoble, on the other hand, is the one that struggles against it and thinks ill of the order of the world and would rather correct the gods than itself. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -4990,7 +4991,7 @@ A bad man harms a bad man and makes him worse, by stirring up his anger, by goin
 
 ### 110.1
 
-From my place at Nomentum I greet you and tell you to have a good mind, that is, all the gods well disposed; and whoever has made himself well disposed to himself has them appeased and favouring him. Set aside for now what some hold, that each one of us is given a god as a minder, not one of the regular rank, to be sure, but this one of a lower grade, from the number of those whom Ovid calls “gods from the common people”. Yet I want you to set this aside in such a way that you remember that our ancestors, who believed it, were Stoics; for to individuals, one by one, they gave both Genius and Juno.
+From my place at Nomentum I greet you and tell you to have a good mind, that is, all the gods well disposed; and whoever has made himself well disposed to himself has them appeased and favouring him. Set aside for now what some hold, that each one of us is given a god as a minder, not one of the regular rank, to be sure, but this one of a lower grade, among those whom Ovid calls “gods from the common people”. Yet I want you to set this aside in such a way that you remember that our ancestors, who believed it, were Stoics; for to individuals, one by one, they gave both Genius and Juno.
 
 <details><summary>Notes</summary>
 
@@ -5008,7 +5009,7 @@ From my place at Nomentum I greet you and tell you to have a good mind, that is,
 
 ### 110.2
 
-We shall see later whether the gods have so much leisure that they manage the affairs of private persons. For the present know this: whether we have been assigned or neglected and given over to fortune, you can call down on no one anything worse than if you call down on him that he should have himself angry with him. But there is no reason for you to wish on anyone you think deserving of punishment that he should have the gods hostile: he has them so, I say, even if he seems to be carried forward by their favour.
+We shall see later whether the gods have so much leisure that they manage the affairs of private persons. For the present know this: whether we have been assigned or neglected and given over to fortune, you can call down on no one anything worse than if you call down on him that he should have his own self angry with him. But there is no reason for you to wish on anyone you think deserving of punishment that he should have the gods hostile: he has them so, I say, even if he seems to be carried forward by their favour.
 
 <details><summary>Notes</summary>
 
@@ -5016,7 +5017,7 @@ We shall see later whether the gods have so much leisure that they manage the af
 - *privatorum negotia procurent*: “procurare” is to act as someone’s agent or steward. “privati” are individuals as opposed to the state or the world at large. Other reading: that they act as stewards of individuals’ business
 - *adsignati sumus*: “Assigned” means assigned to a guardian god, as in the section before. The Latin does not say to whom, and nothing is added. Other reading: whether each of us has been allotted to a god
 - *inprecari*: To pray something down on someone, usually a curse. The verb comes twice and the English reads “call down” both times. Other reading: you can curse no one with anything worse
-- *ut se habeat iratum*: Literally “that he may have himself angry”. It is modelled on the phrase for having the gods angry with one, and answers “made himself well disposed to himself” in the section before. The English keeps “have” and one “himself”, and supplies “with him” so that the phrase is not read as “make himself angry”. Other reading: that he should be at enmity with himself
+- *ut se habeat iratum*: Literally “that he may have himself angry”. It is modelled on the phrase for having the gods angry with one, and answers “made himself well disposed to himself” in the section before. The English keeps “have”, with “his own self” for “se”, and supplies “with him” so that the phrase is not read as “make himself angry”. Other reading: that he should be at enmity with himself
 - *habet, inquam*: The object, “the gods hostile”, is understood from the clause before, and the English supplies “them so”. Other reading: he does have them hostile, let it be said
 - *produci*: “produci” is to be led forward, and so to be advanced or promoted. Other reading: even if he seems to be advanced by their favour
 
@@ -5111,7 +5112,7 @@ Let him teach me how sacred a thing justice is, which looks to another’s good 
 
 ### 113.32
 
-Fix this in yourself as well, what I was saying a little earlier: that it is nothing to the point how many people know of your fairness. Anyone who wants his virtue made public is working not for virtue but for glory. Are you unwilling to be just without glory? But, by Hercules, you will often have to be just with a bad name, and then, if you are wise, let a bad reputation well won delight you. Farewell.
+Fix in yourself as well what I was saying a little earlier: that it is nothing to the point how many people know of your fairness. Anyone who wants his virtue made public is working not for virtue but for glory. Are you unwilling to be just without glory? But, by Hercules, you will often have to be just with a bad name, and then, if you are wise, let a bad reputation well won delight you. Farewell.
 
 <details><summary>Notes</summary>
 
@@ -5151,7 +5152,7 @@ Since I have used this comparison, I will keep to it. Our mind is at one time a 
 
 ### 115.9
 
-We marvel at walls coated with thin marble, though we know what sort of thing it is that is being hidden. We cheat our own eyes, and when we have flooded ceilings with gold, what else are we rejoicing in but a lie? For we know that under that gold ugly timber is lurking. Nor is it only over walls or panelled ceilings that a thin ornament is stretched: the good fortune of all those you see striding loftily along is overlaid with gold leaf. Look inside, and you will know how much evil lies under that thin skin of rank.
+We marvel at walls coated with thin marble, though we know what sort of thing is being hidden. We cheat our own eyes, and when we have flooded ceilings with gold, what else are we rejoicing in but a lie? For we know that under that gold ugly timber is lurking. Nor is it only over walls or panelled ceilings that a thin ornament is stretched: the good fortune of all those you see striding loftily along is overlaid with gold leaf. Look inside, and you will know how much evil lies under that thin skin of rank.
 
 <details><summary>Notes</summary>
 
@@ -5200,7 +5201,7 @@ Do you know why we cannot do those things? Because we do not believe that we can
 
 </details>
 
-## Letter 118: On seeking nothing from fortune and defining good
+## Letter 118: On seeking nothing from fortune and defining the good
 
 ### 118.7
 
@@ -5278,7 +5279,7 @@ Do you ask what this discussion now leads to, and what use it will be to your mi
 
 ### 124.22
 
-Why, I say, do you feed and exercise the strength of your body? Nature has granted that strength in greater measure to farm animals and wild beasts. Why do you cultivate your beauty? When you have done everything, you will be beaten in looks by the mute animals. Why do you dress your hair with enormous care? When you have let it flow in the manner of the Parthians, or tied it up in the way of the Germans, or, as is the habit of the Scythians, spread it loose, a thicker mane will toss on any horse you like, and a more beautiful one will bristle on the neck of lions. When you have trained yourself for speed, you will not be the equal of a little hare.
+Why, I say, do you feed and exercise the strength of your body? Nature has granted that strength in greater measure to farm animals and wild beasts. Why do you cultivate your beauty? When you have done everything, you will be beaten in looks by the mute animals. Why do you dress your hair with enormous care? When you have let it flow in the manner of the Parthians, or tied it up in the way of the Germans, or, as is the habit of the Scythians, spread it loose, a thicker mane will toss on any horse you like, and a more beautiful one will bristle on the necks of lions. When you have trained yourself for speed, you will not be the equal of a little hare.
 
 <details><summary>Notes</summary>
 

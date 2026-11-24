@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/metadata";
 import fs from "node:fs";
 import path from "node:path";
 import { EXERCISES } from "@/lib/fitness/catalog.mjs";
+import { STOIC_PAGES, stoicUrl } from "@/lib/stoic-seo.mjs";
 
 /** Science topics that have an English page (content/fitness/science/<slug>.en.md). */
 function scienceTopics(): string[] {
@@ -15,8 +16,17 @@ function scienceTopics(): string[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = ["/", "/food", "/food/sous-vide", ...recipeSlugs().map((s) => `/food/${s}`), "/travel", "/travel/turkey-yacht-food", "/travel/istanbul", "/travel/new", "/fitness", "/fitness/train", "/fitness/program", "/fitness/profile", "/fitness/exercises", "/fitness/gyms", "/fitness/progress", "/fitness/science", "/fitness/nutrition", "/fitness/tools",
     ...(EXERCISES as { id: string }[]).map((e) => `/fitness/exercises/${e.id}`), ...scienceTopics().map((t) => `/fitness/science/${t}`)];
-  return paths.map((p) => ({
-    url: `${SITE_URL}${localPath("en", p)}`,
-    alternates: { languages: { en: `${SITE_URL}${localPath("en", p)}`, ru: `${SITE_URL}${localPath("ru", p)}` } },
-  }));
+  return [
+    ...paths.map((p) => ({
+      url: `${SITE_URL}${localPath("en", p)}`,
+      alternates: { languages: { en: `${SITE_URL}${localPath("en", p)}`, ru: `${SITE_URL}${localPath("ru", p)}` } },
+    })),
+    // The static Stoic pages: one entry per language at its canonical ?lang= URL; English-only pages have one bare entry.
+    ...Object.entries(STOIC_PAGES).flatMap(([page, entry]) => entry.langs.length > 1
+      ? entry.langs.map((lang) => ({
+        url: stoicUrl(page, lang),
+        alternates: { languages: { en: stoicUrl(page, "en"), ru: stoicUrl(page, "ru") } },
+      }))
+      : [{ url: stoicUrl(page, "en") }]),
+  ];
 }

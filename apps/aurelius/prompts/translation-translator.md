@@ -25,6 +25,8 @@ The value of this translation is that it is independent. So:
 - Greek names and titles of gods stay as they are (Zeus, Asclepius), with a short note if a reader would not know them.
 - Sentences may be split where the Greek period is too long for English, but nothing may be dropped and the order of thought should stay.
 - Technical Stoic terms: choose one plain English word per term and keep to it within the passage (for example "the ruling part" for τὸ ἡγεμονικόν, "impulse" for ὁρμή, "impression" for φαντασία), and note the Greek term the first time it carries weight.
+- British spelling: towards, afterwards, colour, honour, labour, pretence, offence. *(24 Nov 2026, from the literary review the owner asked for: “every article, evey passage. needs to sound clear and tasteful”. American forms in about a hundred strings had to be changed by hand.)*
+- Read the finished English aloud once. A sentence that needs a second reading, a stiff word order kept from the Greek, or a cluster of abstract nouns is rewritten while the meaning stays exact. *(24 Nov 2026, same review: of its 412 passage edits, 299 were for clarity or taste.)*
 
 ## Notes
 

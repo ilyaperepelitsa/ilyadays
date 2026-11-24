@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>What changed · Stoic Constitution</title>
+<link rel="preload" href="/fonts/manrope/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/apps/site-chrome.css">
+<meta name="description" content="How the Stoic Constitution and its pages have changed, newest first: the articles, the translations from the Greek and the Latin, the Russian edition, the method paper and the page itself.">
+<script>
+/* The language follows the reader as on the method page: ?lang=en|ru, else the choice kept by the Stoic pages (the
+   Constitution page's key), else the site's own choice, else English. Set before paint so only one language shows. */
+(function () {
+  var asked = new URLSearchParams(location.search).get('lang'), lang = 'en', page = null, site = null;
+  try { page = localStorage.getItem('stoic-constitution:lang'); site = localStorage.getItem('site-lang'); } catch (e) { /* English */ }
+  if (asked === 'ru' || asked === 'en') lang = asked;
+  else if (page === 'ru' || page === 'en') lang = page;
+  else if (site === 'ru') lang = 'ru';
+  document.documentElement.lang = lang;
+  document.documentElement.setAttribute('data-lang', lang);
+})();
+</script>
+<style>
+/* The method page's look: the site's colours and fonts (site-chrome.css, light and dark) under that page's names, a serif
+   text column of 740 px, and the contents beside it on a wide screen. */
+:root{--paper:var(--bg);--card:var(--surface);--serif:Georgia,'Times New Roman',serif;--sans:var(--site-sans)}
+[data-lang=ru] .en,:root:not([data-lang=ru]) .ru{display:none!important}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans)}
+h1,h2,h3,p,ol,ul{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+
+/* front matter */
+.front{padding-block:26px 6px;max-width:740px}
+.kicker{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+h1{font:400 clamp(30px,7vw,46px)/1.1 var(--serif);letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.lede{font:18px/1.6 var(--serif)}
+.see{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:12px;font:600 15px/1.4 var(--sans)}
+.see a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.see a:hover{text-decoration:underline}
+
+/* contents: dates, and on a wide screen each date's entries */
+.toc{margin:18px 0 8px;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--card);font:15px/1.4 var(--sans)}
+.toc>p{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc ol ol{padding-left:1.1em;font-size:14px}
+.toc li{padding-block:3px;border-left:2px solid transparent;margin-left:-10px;padding-left:8px}
+.toc a{color:var(--ink);text-decoration:none;display:inline-block;padding-block:4px}
+.toc a:hover{text-decoration:underline}
+.toc a[aria-current]{color:var(--accent);font-weight:650}
+.toc a.in{color:var(--accent)}
+.toc li:has(>a[aria-current]){border-left-color:var(--accent)}
+@media(max-width:1099px){.toc ol ol{display:none}.toc li{padding-block:0}.toc a{min-height:44px;display:inline-flex;align-items:center;padding-block:0}}
+@media(min-width:1100px){
+  .layout{display:grid;grid-template-columns:230px minmax(0,740px);gap:56px;align-items:start}
+  .toc{position:sticky;top:calc(var(--chrome-h, 0px) + 16px);margin-top:28px;max-height:calc(100vh - var(--chrome-h, 0px) - 32px);overflow:auto}
+  .toc a{padding-block:1px}
+  .front{margin-left:286px}
+}
+
+/* the log: one section per date, newest first; each entry a short heading and a few plain sentences */
+.log{max-width:740px;padding-bottom:36px;hyphens:auto;-webkit-hyphens:auto}
+@media(min-width:700px){.log{hyphens:manual;-webkit-hyphens:manual}}
+.day{scroll-margin-top:calc(var(--chrome-h, 0px) + 12px)}
+.day>h2{font:600 clamp(23px,5vw,28px)/1.25 var(--serif);letter-spacing:-.01em;margin:36px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.day:first-child>h2{margin-top:22px}
+.entries{list-style:none;padding:0;margin:0}
+.entry{position:relative;margin-top:22px;padding-left:18px;scroll-margin-top:calc(var(--chrome-h, 0px) + 12px)}
+.entry::before{content:'';position:absolute;left:0;top:.55em;bottom:2px;width:2px;border-radius:1px;background:var(--line)}
+.entry h3{font:600 20px/1.3 var(--serif);text-wrap:balance}
+.entry h3 a.self{color:inherit;text-decoration:none}
+.entry h3 a.self:hover{text-decoration:underline;text-decoration-color:var(--muted)}
+.entry p{margin-top:6px;font:17.5px/1.6 var(--serif)}
+.entry:target::before{background:var(--accent)}
+.entry a.more{display:flex;width:fit-content;align-items:center;min-height:40px;margin-top:2px;font:600 15px/1.4 var(--sans);text-decoration:none}
+.entry a.more::after{content:'→';margin-left:6px}
+.entry a.more:hover{text-decoration:underline}
+.nw{white-space:nowrap}
+.note{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font:14.5px/1.55 var(--sans);color:var(--muted)}
+footer{padding-block:24px 40px;border-top:1px solid var(--line);font:14px/1.5 var(--sans);color:var(--muted)}
+footer a{display:inline-block;padding-block:6px}
+@media print{
+  .site-header,.toc{display:none!important}
+  html{scroll-behavior:auto}
+  body{background:#fff;color:#111}
+  .layout{display:block}.front{margin-left:0}
+  .entry{break-inside:avoid}
+  a{color:inherit}
+}
+</style>
+</head>
+<body>
+<script src="/apps/site-chrome.js"></script>
+<main id="main">
+<!-- ===================================================================== ENGLISH -->
+<div class="en" lang="en">
+<header class="wrap"><div class="front">
+<p class="kicker">Stoic Constitution · Changelog</p>
+<h1>What changed</h1>
+<p class="lede">How the Stoic Constitution and its pages have changed, newest first. Each entry says what changed for a reader and links to the place concerned.</p>
+<p class="see"><a href="stoic-constitution.html?lang=en">The Constitution</a><a href="stoic-method.html?lang=en">How it was made</a><a href="stoic-constitution.html?lang=en#downloads">Download the translations</a></p>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc" aria-label="Contents"><p>Contents</p><ol>
+<li><a href="#d-2026-11-24">24 November 2026</a><ol>
+<li><a href="#downloads">Download buttons for the translations</a></li>
+<li><a href="#changelog">This changelog</a></li>
+<li><a href="#previews">Better link previews and search listings</a></li>
+<li><a href="#literary-review">A literary review of every passage and article</a></li>
+<li><a href="#parts-of-the-body">In Russian, «части тела» for the limbs of a body</a></li>
+<li><a href="#loading">Articles arrive sooner</a></li>
+<li><a href="#dark-figures">Figures in dark colours</a></li>
+<li><a href="#rail">A contents list beside the articles</a></li>
+<li><a href="#opening">A clearer opening</a></li>
+<li><a href="#paper">How it was made, as a paper</a></li>
+<li><a href="#switches">Switches for a smoother read</a></li>
+<li><a href="#site">Part of the site</a></li>
+<li><a href="#russian">The Constitution in Russian</a></li>
+</ol></li>
+<li><a href="#d-2026-11-23">23 November 2026</a><ol>
+<li><a href="#russian-translation">Marcus and Seneca in Russian</a></li>
+<li><a href="#downloads-first">The translations as downloads</a></li>
+<li><a href="#seneca-latin">Seneca, from the Latin</a></li>
+<li><a href="#chapter-titles">Chapter titles that match their articles</a></li>
+<li><a href="#all-articles">All 38 articles</a></li>
+<li><a href="#greek">Marcus, from the Greek</a></li>
+<li><a href="#article-6">Article 6 rebuilt</a></li>
+<li><a href="#steadier">Steadier reading</a></li>
+<li><a href="#colours">Colours, vectors and a second voice</a></li>
+<li><a href="#first-five">The first five articles</a></li>
+</ol></li>
+<li><a href="#d-2026-11-11">11 November 2026</a><ol>
+<li><a href="#groundwork">The passages measured by meaning</a></li>
+</ol></li>
+</ol></nav>
+
+<div class="log">
+<section class="day" id="d-2026-11-24" aria-labelledby="h-2026-11-24">
+<h2 id="h-2026-11-24"><time datetime="2026-11-24">24 November 2026</time></h2>
+<ul class="entries">
+<li class="entry" id="downloads"><h3><a class="self" href="#downloads">Download buttons for the translations</a></h3>
+<p>The translations have a section of their own at the end of the <a href="stoic-constitution.html?lang=en#downloads">Constitution page</a>: a card for each of the four books, Marcus and Seneca in English and in Russian, with a button for each format: EPUB for <span class="nw">e-readers</span>, Markdown and plain text. On the Russian page the Russian books come first.</p></li>
+<li class="entry" id="changelog"><h3><a class="self" href="#changelog">This changelog</a></h3>
+<p>A page that lists what has changed, newest first, in English and in Russian. It is linked from the bar at the top of the <a href="stoic-constitution.html?lang=en">Constitution</a>, from the end of its articles and from the <a href="stoic-method.html?lang=en">method paper</a>.</p></li>
+<li class="entry" id="previews"><h3><a class="self" href="#previews">Better link previews and search listings</a></h3>
+<p>A link to one of the Stoic pages, shared in a message or a post, now shows that page’s own title, description and picture, in the language of the link. Search engines are pointed to the Russian version of each page that has one, and can read the Constitution’s 38 articles, each with its statement, without running the page’s script.</p></li>
+<li class="entry" id="literary-review"><h3><a class="self" href="#literary-review">A literary review of every passage and article</a></h3>
+<p>Every passage of both English translations and of the Russian, and every article in both languages, was read for clarity and taste by a reviewer, then by an independent checker who judged each edit, and every objection was settled in writing; the meaning stays exactly as the Greek, the Latin or the English has it. In English there were 221 edits in 161 passages of <a href="stoic-translation.html">Marcus</a>, 191 in 130 sections of Seneca and 1,073 in the articles, with British spelling throughout; in Russian, 613 in 387 passages and 1,712 in the articles. Two articles have new titles: <a href="stoic-constitution.html?lang=en#article-29">Article 29</a> is “Upright on my own, and not becoming like those I fight”, and <a href="stoic-constitution.html?lang=en#article-30">Article 30</a> “The sameness and foulness of things”.</p></li>
+<li class="entry" id="parts-of-the-body"><h3><a class="self" href="#parts-of-the-body">In Russian, <span lang="ru">«части тела»</span> for the limbs of a body</a></h3>
+<p>Where Marcus and Seneca speak of the limbs of a body, the Russian now says <span lang="ru">«части тела»</span> rather than <span lang="ru">«члены»</span>; <span lang="ru">«член сообщества»</span>, a member of a community, stays as it was. Five passages changed, and <a href="stoic-constitution.html?lang=ru#article-1">Article 1</a> is now titled <span lang="ru">«Часть единого тела»</span>.</p></li>
+<li class="entry" id="loading"><h3><a class="self" href="#loading">Articles arrive sooner</a></h3>
+<p>The <a href="stoic-constitution.html?lang=en">Constitution</a> now starts fetching the chapter it opens on at once, so its articles appear sooner. While they load, cards shaped like articles stand in their place under a soft sweep of light, and the articles rise in over them. Under each chapter’s title there is now the chapter’s own summary.</p></li>
+<li class="entry" id="dark-figures"><h3><a class="self" href="#dark-figures">Figures in dark colours</a></h3>
+<p>Every figure of the method paper can now be downloaded in dark colours as well as light, under the figure in the paper and in the <a href="stoic-method/diagrams.html?lang=en">gallery of figures</a>.</p></li>
+<li class="entry" id="rail"><h3><a class="self" href="#rail">A contents list beside the articles</a></h3>
+<p>On a wide screen, a contents list is pinned to the left of the <a href="stoic-constitution.html?lang=en">Constitution</a>: the seven chapters as buttons, the chapter on screen highlighted with its articles, and the article being read marked.</p></li>
+<li class="entry" id="opening"><h3><a class="self" href="#opening">A clearer opening</a></h3>
+<p>The <a href="stoic-constitution.html?lang=en">Constitution</a> now opens with its title and one sentence; how to read an article is a key that unfolds, and the list of chapters is called Contents. Under each article’s title, two small flags and a link to the passages in Greek, today’s English and the 1634 English replace a note that was repeated under every title. In each article the five sides now start on one line, and the vectors begin beside the article’s heading.</p></li>
+<li class="entry" id="paper"><h3><a class="self" href="#paper">How it was made, as a paper</a></h3>
+<p>The account of how the Constitution was made now has a page of its own, in English and in Russian, written as a <a href="stoic-method.html?lang=en">methods paper</a>: materials, embedding, clustering, fusion, the five sides, Seneca, translation, prompting, the checks and what they found, and the limits. Its eight figures are drawn from the published data, and each can be downloaded for sharing from the <a href="stoic-method/diagrams.html?lang=en">gallery</a>. Version 2.1 answers every point of a referee’s review: it states that the seven chapters were a fixed choice, and names among its <a href="stoic-method.html?lang=en#limitations">limits</a> the use of one family of models and the lack of a check against copyrighted translations.</p></li>
+<li class="entry" id="switches"><h3><a class="self" href="#switches">Switches for a smoother read</a></h3>
+<p>Two switches sit in the bar at the top of the <a href="stoic-constitution.html?lang=en">Constitution</a>: Sources shows the passage numbers in the text, and Editor’s decisions shows the editor’s notes and choices. Both start off, for a smoother read, and the page remembers what you choose. The Verdict buttons and the review list are now shown only to the editor, signed in.</p></li>
+<li class="entry" id="site"><h3><a class="self" href="#site">Part of the site</a></h3>
+<p>The Stoic pages now share the site’s header, colours and EN · RU switch, and the header stays at the top as you scroll. The Stoicism tab, the address /stoicism and the <a href="/">home page</a> open the Constitution in the site’s language, and the home page has a Stoicism card whose cover draws Marcus Aurelius’s profile as a network of gold points.</p></li>
+<li class="entry" id="russian"><h3><a class="self" href="#russian">The Constitution in Russian</a></h3>
+<p>All 38 articles are now <a href="stoic-constitution.html?lang=ru">in Russian</a>, built and checked under the same rules as the English, with every quote cut from the Russian translation of its passage. The articles’ own words were translated from the English and checked by a second model, and each of its points was settled in writing. The EN · RU switch at the top changes the language, and the page remembers the choice.</p></li>
+</ul>
+</section>
+
+<section class="day" id="d-2026-11-23" aria-labelledby="h-2026-11-23">
+<h2 id="h-2026-11-23"><time datetime="2026-11-23">23 November 2026</time></h2>
+<ul class="entries">
+<li class="entry" id="russian-translation"><h3><a class="self" href="#russian-translation">Marcus and Seneca in Russian</a></h3>
+<p>All 418 passages of Marcus and the 304 sections of Seneca were translated into Russian from the project’s English and checked against it by a second model, and every point was settled in writing. Marcus’s Russian has its own column on the <a href="stoic-translation.html">translation page</a>, and both books can be <a href="stoic-constitution.html?lang=ru#downloads">downloaded</a>.</p></li>
+<li class="entry" id="downloads-first"><h3><a class="self" href="#downloads-first">The translations as downloads</a></h3>
+<p>The new English translations of Marcus and of Seneca can be <a href="stoic-constitution.html?lang=en#downloads">downloaded</a> as EPUB, Markdown and plain text, dedicated to the public domain (CC0). Each file opens by saying how it was made and what no one has yet checked.</p></li>
+<li class="entry" id="seneca-latin"><h3><a class="self" href="#seneca-latin">Seneca, from the Latin</a></h3>
+<p>Seneca is now quoted in the project’s own translation from the Latin: 304 sections of 94 letters, each translated, checked against the Latin and settled point by point, with new titles for the letters written from the Latin. Every quote of his in the articles was cut again from the new English and reviewed, and Gummere’s translation of 1917–25 is no longer published. <a class="more" href="stoic-method.html?lang=en#m-seneca">How Seneca was added</a></p></li>
+<li class="entry" id="chapter-titles"><h3><a class="self" href="#chapter-titles">Chapter titles that match their articles</a></h3>
+<p>Each chapter’s title and summary was checked against its articles. Three summaries were rewritten in the first person, as the articles speak, and one chapter was renamed <a href="stoic-constitution.html?lang=en&amp;c=c7">“Praise, harm and the worth of things”</a>: its old title, “Other minds, fame and harm”, left out its article on the worth of things.</p></li>
+<li class="entry" id="all-articles"><h3><a class="self" href="#all-articles">All 38 articles</a></h3>
+<p>Every section now has its article, so every chapter is complete. Each article passed the automatic checks and an independent review, and was polished after all 38 had been read side by side: where two overlap, each names the other and says what it adds, and where two disagree, they say so. <a href="stoic-constitution.html?lang=en#article-29">Article 29</a> has no fused claim, because no two of its passages say the same thing; its sayings are kept side by side, each on its own.</p></li>
+<li class="entry" id="greek"><h3><a class="self" href="#greek">Marcus, from the Greek</a></h3>
+<p>All 418 passages of the <i>Meditations</i> were translated anew from the Greek in three readings: a first translator saw only the Greek, a second reader checked the English against it, and a third settled every point in writing. The <a href="stoic-translation.html">translation page</a> shows the Greek, today’s English and the 1634 English side by side, with the notes, and every article now quotes the new English. Where the Greek did not bear out the old wording, the articles changed: <a href="stoic-constitution.html?lang=en#article-5">Article 5</a> lost “by nature”, which came from the 1634 translation, not from Marcus.</p></li>
+<li class="entry" id="article-6"><h3><a class="self" href="#article-6">Article 6 rebuilt</a></h3>
+<p><a href="stoic-constitution.html?lang=en#article-6">Article 6</a>, “What the whole sends in its season”, completed the first chapter and was then rebuilt on the new English: only what two passages both say is fused into a claim, and the “so” in its statement is marked in purple as the editor’s own inference. Articles 1 to 5 were checked passage by passage, and reworded where a passage did not say what they claimed of it.</p></li>
+<li class="entry" id="steadier"><h3><a class="self" href="#steadier">Steadier reading</a></h3>
+<p>A link to an article in another chapter now opens that chapter, the counts stay honest when you take a passage out, and the words you picked stay picked. On a phone, the bar folds the article numbers into one button that opens the chapter’s list.</p></li>
+<li class="entry" id="colours"><h3><a class="self" href="#colours">Colours, vectors and a second voice</a></h3>
+<p>Each passage behind an article has its own colour, drawn as a line under the words it backs and repeated on its chip and on the map. Beside each article, a column of vectors shows how close its passages are in meaning, with a live readout as you point at words. Seneca’s <i>Letters</i> join as a second voice, switched on from the Voices bar at the bottom: what he backs and adds in each article, and the clauses he appends to Marcus’s sentences, each marked as his. <a class="more" href="stoic-constitution.html?lang=en&amp;with=seneca#article-1">Article 1 with Seneca</a></p></li>
+<li class="entry" id="first-five"><h3><a class="self" href="#first-five">The first five articles</a></h3>
+<p>The Constitution begins. The 418 passages of the <i>Meditations</i> are grouped by meaning into seven chapters and 38 sections, and the first five sections are fused into articles: one statement, looked at from five sides (why, in action, practice, when it breaks, if I doubt it), with each phrase traced to the exact words of the passages behind it. For now they quote Meric Casaubon’s English translation of 1634. <a class="more" href="stoic-method.html?lang=en#m-fusion">How a section is fused</a></p></li>
+</ul>
+</section>
+
+<section class="day" id="d-2026-11-11" aria-labelledby="h-2026-11-11">
+<h2 id="h-2026-11-11"><time datetime="2026-11-11">11 November 2026</time></h2>
+<ul class="entries">
+<li class="entry" id="groundwork"><h3><a class="self" href="#groundwork">The passages measured by meaning</a></h3>
+<p>Before any article, each of the 418 passages of Meric Casaubon’s 1634 translation was turned into a vector of 3,072 numbers that stands for its meaning, so that passages that say similar things lie close together. The chapters and sections of the Constitution were later cut from these vectors. <a class="more" href="stoic-method.html?lang=en#m-embedding">How the passages were embedded</a></p></li>
+</ul>
+</section>
+<p class="note">Dates are the days on which each change was made. The record behind every article, with the scripts and the prompts it was written with, is public: see Appendix B of the <a href="stoic-method.html?lang=en#appendix-b">method paper</a>.</p>
+</div>
+</div>
+</div>
+
+<!-- ===================================================================== RUSSIAN -->
+<div class="ru" lang="ru">
+<header class="wrap"><div class="front">
+<p class="kicker">Стоическая конституция · Журнал изменений</p>
+<h1>Что изменилось</h1>
+<p class="lede">Как менялись Стоическая конституция и её страницы, начиная с последних изменений. В каждой записи сказано, что изменилось для читателя, и дана ссылка на нужное место.</p>
+<p class="see"><a href="stoic-constitution.html?lang=ru">Конституция</a><a href="stoic-method.html?lang=ru">Как это сделано</a><a href="stoic-constitution.html?lang=ru#downloads">Скачать переводы</a></p>
+</div></header>
+
+<div class="wrap layout">
+<nav class="toc" aria-label="Содержание"><p>Содержание</p><ol>
+<li><a href="#ru-d-2026-11-24">24 ноября 2026</a><ol>
+<li><a href="#ru-downloads">Кнопки для скачивания переводов</a></li>
+<li><a href="#ru-changelog">Этот журнал изменений</a></li>
+<li><a href="#ru-previews">Превью ссылок и поисковая выдача</a></li>
+<li><a href="#ru-literary-review">Литературная редактура всех фрагментов и статей</a></li>
+<li><a href="#ru-parts-of-the-body">«Части тела» вместо «членов»</a></li>
+<li><a href="#ru-loading">Статьи появляются быстрее</a></li>
+<li><a href="#ru-dark-figures">Рисунки в тёмных цветах</a></li>
+<li><a href="#ru-rail">Содержание рядом со статьями</a></li>
+<li><a href="#ru-opening">Яснее с первого экрана</a></li>
+<li><a href="#ru-paper">Как это сделано — в виде научной статьи</a></li>
+<li><a href="#ru-switches">Переключатели для спокойного чтения</a></li>
+<li><a href="#ru-site">Часть сайта</a></li>
+<li><a href="#ru-russian">Конституция по-русски</a></li>
+</ol></li>
+<li><a href="#ru-d-2026-11-23">23 ноября 2026</a><ol>
+<li><a href="#ru-russian-translation">Марк и Сенека по-русски</a></li>
+<li><a href="#ru-downloads-first">Переводы для скачивания</a></li>
+<li><a href="#ru-seneca-latin">Сенека — с латыни</a></li>
+<li><a href="#ru-chapter-titles">Названия глав совпадают со статьями</a></li>
+<li><a href="#ru-all-articles">Все 38 статей</a></li>
+<li><a href="#ru-greek">Марк — с греческого</a></li>
+<li><a href="#ru-article-6">Статья 6 перестроена</a></li>
+<li><a href="#ru-steadier">Надёжнее при чтении</a></li>
+<li><a href="#ru-colours">Цвета, векторы и второй голос</a></li>
+<li><a href="#ru-first-five">Первые пять статей</a></li>
+</ol></li>
+<li><a href="#ru-d-2026-11-11">11 ноября 2026</a><ol>
+<li><a href="#ru-groundwork">Фрагменты, измеренные по смыслу</a></li>
+</ol></li>
+</ol></nav>
+
+<div class="log">
+<section class="day" id="ru-d-2026-11-24" aria-labelledby="ru-h-2026-11-24">
+<h2 id="ru-h-2026-11-24"><time datetime="2026-11-24">24 ноября 2026</time></h2>
+<ul class="entries">
+<li class="entry" id="ru-downloads"><h3><a class="self" href="#ru-downloads">Кнопки для скачивания переводов</a></h3>
+<p>У переводов теперь свой раздел в конце <a href="stoic-constitution.html?lang=ru#downloads">страницы конституции</a>: по карточке на каждую из четырёх книг — Марк и Сенека, по-английски и по-русски, — и по кнопке на каждый формат: EPUB для электронных книг, Markdown и простой текст. На русской странице русские книги идут первыми.</p></li>
+<li class="entry" id="ru-changelog"><h3><a class="self" href="#ru-changelog">Этот журнал изменений</a></h3>
+<p>Страница, где по-английски и по-русски перечислено, что менялось, начиная с последних изменений. Ссылки на неё есть в панели вверху <a href="stoic-constitution.html?lang=ru">конституции</a>, в конце её статей и в <a href="stoic-method.html?lang=ru">статье о методе</a>.</p></li>
+<li class="entry" id="ru-previews"><h3><a class="self" href="#ru-previews">Превью ссылок и поисковая выдача</a></h3>
+<p>Ссылка на любую из стоических страниц, отправленная в сообщении или в посте, теперь показывает название, описание и картинку самой страницы — на языке ссылки. Поисковикам указана русская версия каждой страницы, у которой она есть, а 38 статей конституции с их положениями они могут прочитать, не запуская скрипт страницы.</p></li>
+<li class="entry" id="ru-literary-review"><h3><a class="self" href="#ru-literary-review">Литературная редактура всех фрагментов и статей</a></h3>
+<p>Каждый фрагмент обоих английских переводов и русского и каждую статью на обоих языках прочитал рецензент — на ясность и вкус, затем независимый проверяющий оценил каждую его правку, и каждое возражение было решено письменно; смысл остался ровно таким, каким его даёт греческий, латинский или английский текст. По-английски — 221 правка в 161 фрагменте <a href="stoic-translation.html">Марка</a>, 191 — в 130 разделах Сенеки и 1073 — в статьях, и везде британское написание; по-русски — 613 правок в 387 фрагментах и 1712 — в статьях. У двух статей новые названия: <a href="stoic-constitution.html?lang=ru#article-29">статья 29</a> — «Стоять прямо самому и не становиться таким, как те, с кем я борюсь», <a href="stoic-constitution.html?lang=ru#article-30">статья 30</a> — «Однообразие и грязь вещей».</p></li>
+<li class="entry" id="ru-parts-of-the-body"><h3><a class="self" href="#ru-parts-of-the-body">«Части тела» вместо «членов»</a></h3>
+<p>Там, где Марк и Сенека говорят о частях тела, русский перевод теперь так и говорит — «части тела», а не «члены»; «член сообщества» остался как был. Изменились пять фрагментов, а <a href="stoic-constitution.html?lang=ru#article-1">статья 1</a> теперь называется «Часть единого тела».</p></li>
+<li class="entry" id="ru-loading"><h3><a class="self" href="#ru-loading">Статьи появляются быстрее</a></h3>
+<p><a href="stoic-constitution.html?lang=ru">Конституция</a> теперь сразу начинает загружать главу, с которой открывается, поэтому статьи появляются быстрее. Пока они загружаются, на их месте стоят карточки в форме статьи, по которым пробегает мягкий блик, а затем статьи поднимаются поверх них. Под названием каждой главы теперь её краткое содержание.</p></li>
+<li class="entry" id="ru-dark-figures"><h3><a class="self" href="#ru-dark-figures">Рисунки в тёмных цветах</a></h3>
+<p>Каждый рисунок статьи о методе теперь можно скачать не только в светлых, но и в тёмных цветах — под рисунком в самой статье и в <a href="stoic-method/diagrams.html?lang=ru">галерее рисунков</a>.</p></li>
+<li class="entry" id="ru-rail"><h3><a class="self" href="#ru-rail">Содержание рядом со статьями</a></h3>
+<p>На широком экране слева от <a href="stoic-constitution.html?lang=ru">конституции</a> закреплено содержание: семь глав в виде кнопок, глава на экране выделена вместе со своими статьями, а статья, которую читают, отмечена.</p></li>
+<li class="entry" id="ru-opening"><h3><a class="self" href="#ru-opening">Яснее с первого экрана</a></h3>
+<p><a href="stoic-constitution.html?lang=ru">Конституция</a> теперь открывается своим названием и одной фразой; как читать статью, объясняет пояснение, которое раскрывается по нажатию, а список глав называется «Содержание». Под названием каждой статьи вместо примечания, повторявшегося под каждым заголовком, — две маленькие метки и ссылка на фрагменты по-гречески, в новом английском переводе и в переводе 1634 года. Пять сторон каждой статьи теперь начинаются на одной линии, а векторы — рядом с её заголовком.</p></li>
+<li class="entry" id="ru-paper"><h3><a class="self" href="#ru-paper">Как это сделано — в виде научной статьи</a></h3>
+<p>Рассказ о том, как сделана конституция, вынесен на отдельную страницу на английском и на русском и написан как <a href="stoic-method.html?lang=ru">научная статья о методе</a>: материалы, векторы, кластеризация, слияние, пять сторон, Сенека, перевод, промпты, проверки и их результаты, ограничения. Восемь рисунков построены по опубликованным данным, и каждый можно скачать для публикации из <a href="stoic-method/diagrams.html?lang=ru">галереи</a>. Версия 2.1 отвечает на каждое замечание рецензента: в ней сказано, что семь глав — заранее заданный выбор, а среди <a href="stoic-method.html?lang=ru#ru-limitations">ограничений</a> названы одно семейство моделей и отсутствие сверки с переводами, охраняемыми авторским правом.</p></li>
+<li class="entry" id="ru-switches"><h3><a class="self" href="#ru-switches">Переключатели для спокойного чтения</a></h3>
+<p>В панели вверху <a href="stoic-constitution.html?lang=ru">конституции</a> два переключателя: «Источники» — номера фрагментов в тексте и «Решения редактора» — заметки и выбор редактора. Оба по умолчанию выключены, чтобы читать было спокойнее, и страница запоминает ваш выбор. Кнопки «Оценка» и список отзыва теперь видит только редактор, войдя на сайт.</p></li>
+<li class="entry" id="ru-site"><h3><a class="self" href="#ru-site">Часть сайта</a></h3>
+<p>У стоических страниц теперь общие с сайтом шапка, цвета и переключатель EN · RU, а шапка остаётся вверху при прокрутке. Вкладка «Стоицизм», адрес /stoicism и <a href="/ru">главная страница</a> открывают конституцию на языке сайта, а на главной появилась карточка «Стоицизм» с обложкой: профиль Марка Аврелия, нарисованный сетью золотых точек.</p></li>
+<li class="entry" id="ru-russian"><h3><a class="self" href="#ru-russian">Конституция по-русски</a></h3>
+<p>Все 38 статей теперь есть <a href="stoic-constitution.html?lang=ru">по-русски</a>; они собраны и проверены по тем же правилам, что и английские, а каждая цитата вырезана из русского перевода своего фрагмента. Слова самих статей переведены с английского и сверены другой моделью, а каждое её замечание решено письменно. Язык меняет переключатель EN · RU вверху, и страница запоминает выбор.</p></li>
+</ul>
+</section>
+
+<section class="day" id="ru-d-2026-11-23" aria-labelledby="ru-h-2026-11-23">
+<h2 id="ru-h-2026-11-23"><time datetime="2026-11-23">23 ноября 2026</time></h2>
+<ul class="entries">
+<li class="entry" id="ru-russian-translation"><h3><a class="self" href="#ru-russian-translation">Марк и Сенека по-русски</a></h3>
+<p>Все 418 фрагментов Марка и 304 раздела Сенеки переведены на русский с английского перевода проекта и сверены с ним другой моделью, а каждое замечание решено письменно. У русского текста Марка своя колонка на <a href="stoic-translation.html">странице перевода</a> (сама страница на английском), и обе книги можно <a href="stoic-constitution.html?lang=ru#downloads">скачать</a>.</p></li>
+<li class="entry" id="ru-downloads-first"><h3><a class="self" href="#ru-downloads-first">Переводы для скачивания</a></h3>
+<p>Новые английские переводы Марка и Сенеки можно <a href="stoic-constitution.html?lang=ru#downloads">скачать</a> в форматах EPUB и Markdown и простым текстом; они переданы в общественное достояние (CC0). Каждый файл начинается с того, как он сделан и чего ещё никто не проверил.</p></li>
+<li class="entry" id="ru-seneca-latin"><h3><a class="self" href="#ru-seneca-latin">Сенека — с латыни</a></h3>
+<p>Сенека теперь цитируется в собственном переводе проекта с латыни: 304 раздела из 94 писем, каждый переведён, сверен с латынью и решён по пунктам, а письма получили новые названия, написанные по латинскому тексту. Каждая его цитата в статьях заново вырезана из нового английского и прошла рецензию, а перевод Гаммера 1917–1925 годов больше не публикуется. <a class="more" href="stoic-method.html?lang=ru#ru-m-seneca">Как добавлен Сенека</a></p></li>
+<li class="entry" id="ru-chapter-titles"><h3><a class="self" href="#ru-chapter-titles">Названия глав совпадают со статьями</a></h3>
+<p>Название и краткое содержание каждой главы сверены с её статьями. Три кратких содержания переписаны от первого лица, как говорят сами статьи, а одна глава получила новое название — <a href="stoic-constitution.html?lang=ru&amp;c=c7">«Похвала, вред и ценность вещей»</a>: прежнее не упоминало её статью о ценности вещей.</p></li>
+<li class="entry" id="ru-all-articles"><h3><a class="self" href="#ru-all-articles">Все 38 статей</a></h3>
+<p>У каждого раздела теперь есть статья, и все главы закончены. Каждая статья прошла автоматические проверки и независимую рецензию, а затем была отшлифована после того, как все 38 прочитали рядом: где две статьи пересекаются, каждая называет другую и говорит, что добавляет сама, а где они расходятся, они говорят об этом прямо. В <a href="stoic-constitution.html?lang=ru#article-29">статье 29</a> нет слитого утверждения, потому что никакие два её фрагмента не говорят одного и того же; её изречения стоят рядом, каждое само по себе.</p></li>
+<li class="entry" id="ru-greek"><h3><a class="self" href="#ru-greek">Марк — с греческого</a></h3>
+<p>Все 418 фрагментов «Размышлений» заново переведены с греческого в три прочтения: первый переводчик видел только греческий, второй читатель сверил с ним английский, третий письменно решил каждое замечание. <a href="stoic-translation.html">Страница перевода</a> показывает рядом греческий, новый английский и английский 1634 года вместе с примечаниями, а все статьи теперь цитируют новый английский. Там, где греческий не подтверждал прежних слов, статьи изменились: из <a href="stoic-constitution.html?lang=ru#article-5">статьи 5</a> ушли слова «от природы» — их нет у Марка, они из перевода 1634 года.</p></li>
+<li class="entry" id="ru-article-6"><h3><a class="self" href="#ru-article-6">Статья 6 перестроена</a></h3>
+<p><a href="stoic-constitution.html?lang=ru#article-6">Статья 6</a> «Что целое посылает в свой срок» завершила первую главу, а затем была перестроена на новом английском: в утверждение слито только то, что говорят оба фрагмента, а «поэтому» в её положении отмечено фиолетовым как собственный вывод редактора. Статьи с 1-й по 5-ю проверены фрагмент за фрагментом и исправлены там, где фрагмент не говорил того, что статья ему приписывала.</p></li>
+<li class="entry" id="ru-steadier"><h3><a class="self" href="#ru-steadier">Надёжнее при чтении</a></h3>
+<p>Ссылка на статью из другой главы теперь открывает эту главу, счётчики остаются честными, когда убираешь фрагмент, а выбранные слова остаются выбранными. На телефоне панель сворачивает номера статей в одну кнопку, которая открывает список статей главы.</p></li>
+<li class="entry" id="ru-colours"><h3><a class="self" href="#ru-colours">Цвета, векторы и второй голос</a></h3>
+<p>У каждого фрагмента, на котором стоит статья, свой цвет: им проведена линия под словами, которые он подтверждает, и тот же цвет у его кнопки и на карте. Рядом с каждой статьёй — колонка векторов: насколько близки по смыслу её фрагменты, с показанием, которое меняется, когда наводишь на слова. Вторым голосом вошли «Письма» Сенеки; их включают на панели «Голоса» внизу экрана: что он подкрепляет и добавляет в каждой статье и какие приписки делает к фразам Марка, каждая помечена как его. <a class="more" href="stoic-constitution.html?lang=ru&amp;with=seneca#article-1">Статья 1 с Сенекой</a></p></li>
+<li class="entry" id="ru-first-five"><h3><a class="self" href="#ru-first-five">Первые пять статей</a></h3>
+<p>Начало конституции. 418 фрагментов «Размышлений» сгруппированы по смыслу в семь глав и 38 разделов, и первые пять разделов слиты в статьи: одно положение, рассмотренное с пяти сторон (почему, на деле, упражнение, когда не выходит, если я сомневаюсь), и каждая фраза прослежена до точных слов фрагментов, стоящих за ней. Пока статьи цитируют английский перевод Мерика Казобона 1634 года. <a class="more" href="stoic-method.html?lang=ru#ru-m-fusion">Как раздел сливается в статью</a></p></li>
+</ul>
+</section>
+
+<section class="day" id="ru-d-2026-11-11" aria-labelledby="ru-h-2026-11-11">
+<h2 id="ru-h-2026-11-11"><time datetime="2026-11-11">11 ноября 2026</time></h2>
+<ul class="entries">
+<li class="entry" id="ru-groundwork"><h3><a class="self" href="#ru-groundwork">Фрагменты, измеренные по смыслу</a></h3>
+<p>Ещё до первой статьи каждый из 418 фрагментов английского перевода Мерика Казобона 1634 года превращён в вектор из 3072 чисел, выражающий его смысл, так что фрагменты, говорящие похожее, оказываются рядом. Позже из этих векторов нарезаны главы и разделы конституции. <a class="more" href="stoic-method.html?lang=ru#ru-m-embedding">Как фрагменты превращены в векторы</a></p></li>
+</ul>
+</section>
+<p class="note">Даты — дни, когда было сделано каждое изменение. Данные, на которых стоит каждая статья, вместе со скриптами и промптами, с которыми она написана, открыты: см. приложение B к <a href="stoic-method.html?lang=ru#ru-appendix-b">статье о методе</a>.</p>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="wrap">
+<p class="en">Back to <a href="stoic-constitution.html?lang=en">the Stoic Constitution</a> · <a href="stoic-method.html?lang=en">how it was made</a> · <a href="stoic-translation.html">Marcus from the Greek</a> · <a href="stoic-composition.html">the composition study</a>.</p>
+<p class="ru">Назад к <a href="stoic-constitution.html?lang=ru">Стоической конституции</a> · <a href="stoic-method.html?lang=ru">как это сделано</a> · <a href="stoic-translation.html">Марк с греческого</a> (на английском) · <a href="stoic-composition.html">исследование композиции</a> (на английском).</p>
+</footer>
+
+<script>
+'use strict';
+/* The shared header (site-chrome.js) owns the EN · RU switch, as on the method page: it remembers the choice and reopens this
+   page with ?lang. Here: show the language it settled on, and keep a link to an entry in that language (#literary-review in
+   English is #ru-literary-review in Russian). */
+(() => {
+  const root = document.documentElement;
+  const TITLE = {en: 'What changed · Stoic Constitution', ru: 'Что изменилось · Стоическая конституция'};
+  const lang = (window.siteChrome && window.siteChrome.lang) || (root.getAttribute('data-lang') === 'ru' ? 'ru' : 'en');
+  root.lang = lang;
+  root.setAttribute('data-lang', lang);
+  document.title = TITLE[lang];
+  const follow = () => {
+    const asked = decodeURIComponent(location.hash.slice(1));
+    if (!asked) return;
+    const id = (lang === 'ru' ? 'ru-' : '') + asked.replace(/^ru-/, '');
+    const target = document.getElementById(id);
+    if (!target || id === asked) return;
+    history.replaceState(null, '', location.pathname + location.search + '#' + id);
+    requestAnimationFrame(() => target.scrollIntoView());
+  };
+  follow();
+  addEventListener('hashchange', follow);
+})();
+
+/* The contents follow the reader: the last date or entry whose top has passed under the pinned header is the current one. */
+(() => {
+  const block = document.querySelector(document.documentElement.getAttribute('data-lang') === 'ru' ? 'main > .ru' : 'main > .en');
+  const toc = block && block.querySelector('.toc');
+  if (!toc) return;
+  const links = new Map([...toc.querySelectorAll('a[href^="#"]')].map((a) => [a.getAttribute('href').slice(1), a]));
+  const marks = [...links.keys()].map((id) => document.getElementById(id)).filter(Boolean)
+    .sort((a, b) => a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1);
+  let shown = null, queued = false;
+  const update = () => {
+    queued = false;
+    const line = (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--chrome-h')) || 0) + innerHeight * 0.25;
+    let at = marks[0];
+    for (const el of marks) if (el.getBoundingClientRect().top <= line) at = el;
+    if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) at = marks[marks.length - 1];
+    if (at === shown) return;
+    shown = at;
+    for (const a of links.values()) { a.removeAttribute('aria-current'); a.classList.remove('in'); }
+    const a = links.get(at.id);
+    a.setAttribute('aria-current', 'location');
+    const day = a.closest('ol ol') && a.closest('ol ol').parentElement.querySelector(':scope > a');
+    if (day) day.classList.add('in');
+    if (matchMedia('(min-width:1100px)').matches) {
+      const box = toc.getBoundingClientRect(), r = a.getBoundingClientRect();
+      if (r.top < box.top || r.bottom > box.bottom) toc.scrollTop += r.top - box.top - box.height / 3;
+    }
+  };
+  const ask = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+  addEventListener('scroll', ask, {passive: true});
+  addEventListener('resize', ask);
+  update();
+})();
+</script>
+</body>
+</html>

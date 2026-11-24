@@ -272,4 +272,22 @@ Each rule is followed by the feedback it came from.
     сообщества»). «Часть» is feminine, so what agrees with it changes too («созданная», not
     «созданный»), and in 7.13 the limb against the part (μέλος / μέρος) is «часть тела» against
     «часть».
+26. **Every line is read for clarity and taste, by two readers, before it ships.** *(24 Nov 2026,
+    the owner: “do thorough literary review of articles and translation. every article, evey
+    passage. needs to sound clear and tasteful”.)* Every passage of each translation and every string
+    of every article, in each language, goes through a reviewer, then an independent checker who owes
+    the reviewer nothing, then a written settlement of each objection. A sideways change is rejected.
+    What that review found again and again, so write it right the first time:
+    - No method words in a line the reader meets: no “item”, “backed”, “witness”, “cluster” in an
+      article, a `follows` or a `context`. Say what the passage says.
+    - A `follows` says no more than its quote. It never adds an “only”, “all”, “always” or “never”
+      that the passage lacks.
+    - A `context` names its letter or book and what is going on, in one sentence of its own (rule 22),
+      within the build's length.
+    - One rendering for one source word across the whole book (in Russian: “self-control”
+      «самообладание», “self-controlled” «владеющий собой», “a great part” «немалая часть», “the All”
+      «Всё», Seneca's tax «подати»; «тельце» only where its case cannot be read as «телец»).
+    - British spelling in English: towards, afterwards, colour, honour, labour, pretence, offence.
+    - When a passage's English changes, re-cut every quote of it, check that no article line still
+      quotes the old wording, and bring the other languages' passage and quotes into line.
 

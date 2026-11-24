@@ -2,22 +2,23 @@
 
 *A new English translation from the Greek (project-v1)*
 
-Made 2026-11-23. All 418 passages of the Meditations, in the 38 sections of the Stoic Constitution. Every passage was translated from the Greek alone by one model, checked against the Greek by a second, and each point was settled in writing by a third reading. The owner read the first six on 23 November 2026 and said “looks good”; the other 412 have not been read by the owner. None has been checked by a person who reads Greek.
+Made 2026-11-23. All 418 passages of the Meditations, in the 38 sections of the Stoic Constitution. Every passage was translated from the Greek alone by a language model and checked against the Greek in a second reading; each point raised was settled in writing in a third. The owner read the first six on 23 November 2026 and said “looks good”; the other 412 have not been read by the owner. None has been checked by a person who reads Greek.
 
 How it was made:
-- A first translator was given the Greek of a section’s passages and nothing else: no earlier translation, no article. It was asked for plain English of today that keeps the speaker, the person addressed, every “all” and “not”, and each image, and to translate one reading and note the other wherever the Greek is open.
+- A first translator was given the Greek of a section’s passages and nothing else: no earlier translation, no article. It was asked for plain modern English that keeps the speaker, the person addressed, every “all” and “not”, and each image. Wherever the Greek can be read two ways, it was asked to translate one reading and note the other.
 - A second reader was given only the Greek and that English, without the first translator’s notes, and asked to list every place where the English says more, less or other than the Greek. Across the book it raised 1,458 points; it called 132 passages sound, 275 open to minor fixes, and 5 wrong in a way that changed what Marcus says.
-- Each point was then settled in writing: accepted (969), partly accepted (465) or declined (189), with the reason. For the first six passages the editor of this project settled them; for the rest a third reader did, given the Greek, the draft and the points, and it also fixed 137 faults neither earlier reader had caught (marked “Found while settling”). The result is the English shown here. Under each passage you can open both lists: what the Greek leaves open (3,201 notes), and what the second reader questioned.
-- All three readers were the same model, Claude Fable 5.2, each in a fresh context that saw only what its brief allowed. Most sections were read in Claude Code; in eleven sections at least one reading was made through the Anthropic API with the same briefs. The briefs are kept in the project (translation-translator.md, translation-checker.md, translation-settler.md).
+- Each point was then settled in writing: accepted (969), partly accepted (465) or declined (189), with the reason. For the first six passages the editor of this project settled the points; for the rest a third reader did, given the Greek, the draft and the points. The third reader also fixed 137 faults that neither earlier reader had caught (marked “Found while settling”). The result is the English shown here. Under each passage you can open both lists: what the Greek leaves open (3,201 notes), and what the second reader questioned.
+- All three readers were the same model, Claude Fable 5.2, each starting afresh and seeing only what its brief allowed. Most sections were read in Claude Code; in eleven sections at least one reading was made through the Anthropic API with the same briefs. The briefs are kept in the project (translation-translator.md, translation-checker.md, translation-settler.md).
 - So that a Greek word does not become a different English word from one passage to the next, the settled renderings of the first six passages were given to every reader as preferences (for example “the universe” for κόσμος, “the nature of the whole”, “the ruling part”); where a passage’s own argument needed another word, a note says so.
-- The 1634 translation numbers and cuts its sections differently from modern editions. Each of its passages was matched to the Greek by reading the openings and endings side by side, after a whole-book alignment had proposed the matches; together the 418 passages cover every chapter of the Greek exactly once. Where a passage joins two or more modern chapters (58 passages), they are shown as one with the chapter breaks kept (6.9–10). Where it cuts inside a chapter (63 passages), the passage carries a letter (11.8a is the first part, 3.11b a later part) and says which Greek it leaves out.
-- Before a section was stored, its files were checked by script: every quoted Greek word is an exact part of the passage, every point has its decision, the typography is plain, no archaic forms. Where a reader had typed a Latin letter inside a quoted Greek word, or another Unicode form of the same accented letter, the quotation was corrected to the exact characters of the source; no wording was changed that way.
+- The 1634 translation numbers and cuts its sections differently from modern editions. Each of its passages was matched to the Greek by reading the openings and endings side by side, after a whole-book alignment had proposed the matches; together the 418 passages cover every chapter of the Greek exactly once. Where a passage joins two or more modern chapters (58 passages), they are shown as one, with the chapter breaks kept (as in 6.9–10). Where a passage covers only part of a chapter (63 passages), it carries a letter (11.8a is the first part, 3.11b a later part) and says which Greek it leaves out.
+- Before a section was stored, its files were checked by a script: every quoted Greek word is an exact part of the passage, every point has its decision, the typography is plain and there are no archaic forms. Where a reader had typed a Latin letter inside a quoted Greek word, or another Unicode form of the same accented letter, the quotation was corrected to the exact characters of the source; no wording was changed that way.
+- On 24 Nov 2026 the owner asked for a literary review of every article and every passage, so that each would “sound clear and tasteful”. Every passage was read again for clarity and taste by a reviewer, with the Greek beside the English; an independent second reader judged each proposed edit and listed what had been missed, and every objection was settled in writing, the Greek deciding the meaning. 221 edits changed the English of 161 passages. Each changed passage has a new revision, the old one kept under “superseded”, and the spelling is now British throughout. Both readers were Claude Opus 5.5.
 
 What it cannot promise:
 - All three readers are language models. A model’s Greek can be confidently wrong; the Greek is shown beside the English so that anyone who reads Greek can object.
-- The Greek is a digitised copy of Leopold’s edition and has slips of its own (an accent, a breathing, a misprinted letter). Where a slip was read through, a note says so. Where the text itself does not construe (for example 8.35, 9.28a, 7.31b), the English marks the place and does not smooth it over.
-- Notes that rely on memory of the manuscripts or of an editor’s conjecture say “from memory, unchecked” (205 notes). None was checked against a critical edition. In 5.8 the source prints ἐκεῖ σε (“you there”) where the text may be the one word ἐκεῖσε (“to that place”); the printed edition was not consulted. Two scraps of the source are outside every passage: the note at the end of Book 1 (Τὰ ἐν Κουάδοις πρὸς τῷ Γρανούᾳ) and a stray chapter numeral inside 12.17.
-- The passage numbers are those of modern editions; the 1634 number is given beside each. The sections were grouped on the 1634 English, not on this translation. On the new English, 352 of the 418 passages are still nearest their own section; the table above lists the rest by section. No passage was moved.
+- The Greek is a digitised copy of Leopold’s edition and has slips of its own (an accent, a breathing mark, a misprinted letter). Where the English follows the intended word despite such a slip, a note says so. Where the Greek itself does not make grammatical sense (for example 8.35, 9.28a, 7.31b), the English marks the place and does not smooth it over.
+- Notes that rely on a model’s memory of the manuscripts or of an editor’s conjecture say “from memory, unchecked” (205 notes). None was checked against a critical edition. In 5.8 the source prints ἐκεῖ σε (“you there”) where the text may be the one word ἐκεῖσε (“to that place”); the printed edition was not consulted. Two scraps of the source belong to no passage: the note at the end of Book 1 (Τὰ ἐν Κουάδοις πρὸς τῷ Γρανούᾳ, “among the Quadi, at the Granua”) and a stray chapter numeral inside 12.17.
+- The passage numbers are those of modern editions; the 1634 number is given beside each. The passages were grouped into sections by the similarity of their 1634 English, not of this translation. Measured on the new English, 352 of the 418 passages are still closest to their own section; the table above lists the rest by section. No passage was moved.
 - A translated passage is never edited in place. A correction is a new revision with a new id; the old one is kept in the record.
 
 Source text: M. Antoninus Imperator ad se ipsum, edited by Jan Hendrik Leopold, 1908. Digitised text from the Perseus Digital Library (CC BY-SA); the Greek is not included in this file.
@@ -36,7 +37,7 @@ From my grandfather Verus: good character and freedom from anger.
 
 From the reputation and memory of the man who fathered me: modesty and manliness.
 
-From my mother: reverence for the gods, and readiness to share, and holding back not only from doing wrong but even from coming to such a thought; and also plainness in the way of living, far from the way the rich live.
+From my mother: reverence for the gods, and readiness to share, and holding back not only from doing wrong but even from coming to such a thought; and also plain living, far from the way the rich live.
 
 From my great-grandfather: not going to public lecture rooms, and having good teachers at home, and learning that on such things one must spend unsparingly.
 
@@ -92,7 +93,7 @@ From Diognetus: not being busy over empty things; and disbelieving what is said 
 
 ### 1.7
 
-From Rusticus: getting the impression that my character needed correcting and treatment; and not being turned aside into emulating the sophists, nor writing about the doctrines, or delivering little speeches of exhortation, or making a show, to strike the imagination, of the man of discipline or the man of action; and keeping away from rhetoric and poetry and clever talk; and not walking about at home in formal dress, nor doing things of that kind; and writing short letters plainly, like the one he himself wrote to my mother from Sinuessa; and, towards those who have been angry and have done wrong, being easy to win back and easy to reconcile, as soon as they themselves are willing to come back; and reading with care, and not being content with a rough grasp of the whole, nor quickly assenting to glib talkers; and getting to read the notes of Epictetus’s teaching, which he shared with me from his own copy.
+From Rusticus: getting the impression that my character needed correcting and treatment; and not being turned aside into emulating the sophists, nor writing about the doctrines, or delivering little speeches of exhortation, or, to strike the imagination, making a show of being the man of discipline or the man of action; and keeping away from rhetoric and poetry and clever talk; and not walking about at home in formal dress, nor doing things of that kind; and writing short letters plainly, like the one he himself wrote to my mother from Sinuessa; and, towards those who have been angry and have done wrong, being easy to win back and easy to reconcile, as soon as they themselves are willing to come back; and reading with care, and not being content with a rough grasp of the whole, nor quickly assenting to glib talkers; and getting to read the notes of Epictetus’s teaching, which he shared with me from his own copy.
 
 <details><summary>Notes</summary>
 
@@ -137,7 +138,7 @@ From Apollonius: freedom, and unmistakably leaving nothing to the dice, and look
 
 ### 1.9
 
-From Sextus: kindliness; and the example of a household governed by its father; and the idea of living according to nature; and dignity without pretence; and skill in reading his friends, with care for them; and patience with lay people and with those who hold unexamined opinions; and adapting himself readily to everyone, so that his company was more pleasant than any flattery, and yet at that very moment those same people held him in the greatest respect; and finding out and setting in order, with a sure grasp and by method, the principles necessary for life; and never giving so much as a sign of anger or of any other passion, but being at once most free of passion and most affectionate; and praise given quietly, and wide learning without display.
+From Sextus: kindness; and the example of a household governed by its father; and the idea of living according to nature; and dignity without pretence; and skill in reading his friends, with care for them; and patience with lay people and with those who hold unexamined opinions; and adapting himself readily to everyone, so that his company was more pleasant than any flattery, and yet at that very moment those same people held him in the greatest respect; and finding out and setting in order, with a sure grasp and by method, the principles necessary for life; and never giving so much as a sign of anger or of any other passion, but being at once most free of passion and most affectionate; and praise given quietly, and wide learning without display.
 
 <details><summary>Notes</summary>
 
@@ -189,7 +190,7 @@ From Fronto: to have taken note of what a tyrant’s envy, shiftiness and play-a
 
 ### 1.12
 
-From Alexander the Platonist: not often or without need to say to anyone, or write in a letter, “I am busy”; and not to keep excusing oneself in this way from the duties that relations with those one lives among call for, by pleading the business that surrounds one.
+From Alexander the Platonist: not to say “I am busy” to anyone, or write it in a letter, often or without need; and not to keep excusing oneself in this way from the duties that come with one’s relations to those one lives among, by pleading the business that surrounds one.
 
 <details><summary>Notes</summary>
 
@@ -203,7 +204,7 @@ From Alexander the Platonist: not often or without need to say to anyone, or wri
 
 ### 1.13
 
-From Catulus: not making light of a friend who finds some fault, even if they happen to be finding fault without reason, but trying actually to bring them back to their usual self; and speaking well of one’s teachers wholeheartedly, as in what is recorded about Domitius and Athenodotus; and true love for one’s children.
+From Catulus: not making light of a friend who finds some fault, even if they happen to be finding fault without reason, but trying even to bring them back to their usual self; and speaking well of one’s teachers wholeheartedly, as in what is recorded about Domitius and Athenodotus; and true love for one’s children.
 
 <details><summary>Notes</summary>
 
@@ -218,7 +219,7 @@ From Catulus: not making light of a friend who finds some fault, even if they ha
 
 ### 1.14
 
-From my brother Severus: love of family, love of truth and love of justice; and through him coming to know Thrasea, Helvidius, Cato, Dio, Brutus, and getting an impression of a state with equal laws, governed on the basis of equality and an equal right to speak, and of a kingship that honours above all things the freedom of those it rules; and also from the same man: evenness and steadiness in the honour paid to […]; and doing good and sharing readily, unsparingly; and hopefulness, and trust that he was loved by his friends; and being open with those who met with his censure; and that his friends had no need to guess about what he wanted or did not want, but that it was plain.
+From my brother Severus: love of family, love of truth and love of justice; and through him coming to know Thrasea, Helvidius, Cato, Dio, Brutus, and getting an impression of a state with equal laws, governed by equality and an equal right to speak, and of a kingship that honours above all things the freedom of those it rules; and also from the same man: evenness and steadiness in the honour paid to […]; and doing good and sharing readily, unsparingly; and hopefulness, and trust that he was loved by his friends; and being open with those who met with his censure; and that his friends had no need to guess what he wanted or did not want, but that it was plain.
 
 <details><summary>Notes</summary>
 
@@ -239,7 +240,7 @@ From my brother Severus: love of family, love of truth and love of justice; and 
 
 ### 1.15
 
-From Maximus: self-mastery and being carried off course in nothing; and good spirits in illness as in other hard circumstances; and a character well blended, mild and dignified; and getting through what lay before him without complaining; and that everyone believed of him that whatever he said was what he thought, and that whatever he did he was not acting badly. And not being amazed, and not being startled, and never hurrying or hanging back or at a loss or downcast or putting on a grin, or again angry or suspicious; and doing good, and forgiving, and not lying; and giving the impression of one not bent rather than of one being straightened; and that no one would ever have thought they were looked down on by him, nor have gone so far as to suppose themselves better than him; and being pleasantly witty.
+From Maximus: self-mastery and being carried off course in nothing; and good spirits in illness as in other hard circumstances; and a character well blended, mild and dignified; and getting through what lay before him without complaining; and that everyone believed of him that whatever he said was what he thought, and that in whatever he did he was not acting badly. And not being amazed, and not being startled, and never hurrying or hanging back or at a loss or downcast or putting on a grin, or again angry or suspicious; and doing good, and forgiving, and not lying; and giving the impression of one not bent rather than of one being straightened; and that no one would ever have thought they were looked down on by him, nor have gone so far as to suppose themselves better than him; and being pleasantly witty.
 
 <details><summary>Notes</summary>
 
@@ -258,7 +259,7 @@ From Maximus: self-mastery and being carried off course in nothing; and good spi
 
 ### 1.16
 
-From my father: gentleness, and holding firm, unshaken, to what had been decided after examination; and no empty pride in what are counted as honours; and love of work, and perseverance; and listening to those who had something to bring to the common good; and giving each person what they deserved, without being turned aside; and knowing from experience where there is need to tighten and where to slacken; and putting a stop to love affairs with youths; and his sense of being one among others, and that his friends were not bound to dine with him every time, nor obliged to travel with him, and that those who had been kept away by some need always found him the same; and careful inquiry in council, and persistence, and not “he gave up the search too soon, content with the impressions that lay to hand”; and keeping his friends, never tiring of them quickly nor being infatuated with them; and self-sufficiency in everything, and cheerfulness; and foresight from far off, and arranging the smallest things in advance without making a drama of it; and that acclamations and all flattery were held in check under him; and always watching over what the empire needed, and managing its spending thriftily, and putting up with the blame that came for some things of this kind; and being neither superstitious about the gods, nor, with people, a courter of the public or eager to please or fond of the crowd, but sober in everything and firm, and never lacking in taste, and no lover of novelty; and using the things that add to the ease of life, of which fortune gave him plenty, without conceit and at the same time without apology, so that when they were there he took them without affectation, and when they were not he did not need them; and that no one could have said he was a sophist, or a home-bred buffoon, or a pedant, but a ripe man, complete, beyond flattery, able to take charge of his own affairs and other people’s. Besides these: honouring those who truly practise philosophy, and not reproaching the others, nor yet being easily led by them; and again, being good company and gracious, but not to excess; and taking care of his own body in due measure, not as someone in love with life would, nor for the sake of looks, nor yet carelessly, but so that through his own attention he needed very little from medicine, or from drugs and external dressings; and above all, giving way without envy to those who had some ability, such as ability in speaking, or the ability that comes from the study of laws or customs or some other matters, and joining eagerly in their efforts, so that each should be well thought of according to their own strengths; and doing everything by the ancestral ways, without setting out to be seen doing even this, keeping the ancestral ways. And again: not being easily shifted and restless, but staying long in the same places and at the same business; and after his attacks of headache, coming straight back fresh and at full strength to his usual work; and that he did not have many secrets, but very few and very rarely, and those only about public matters; and good sense and measure in putting on shows, in building works, in handouts and things of that kind, which is the way of a person who looks to the thing itself that has to be done, not to the good name that comes of having done it. Not one to bathe at odd hours, not fond of building, not one to be inventive about food, nor about the weave and colours of clothes, nor about the beauty of bodies. The formal dress from Lorium, coming up from the villa below; a tunic at Lanuvium for the most part; how he dealt with the cloak at Tusculum that was asking to be excused; and all that way of behaving. Nothing harsh, nor yet relentless, nor violent, nor such that one could ever have said “to the point of sweat”; but everything reasoned out, each part taken separately, as if at leisure, without disturbance, in order, with strength, in agreement with itself. What is recorded of Socrates would fit him: that he was able both to go without and to enjoy those things which most people are weak at going without and give way in enjoying. To be strong, and to hold out and stay sober in each of the two, is the mark of a man who has a soul that is sound and unbeaten, as in the illness of Maximus.
+From my father: gentleness, and holding firm, unshaken, to what had been decided after examination; and no empty pride in what are counted as honours; and love of work, and perseverance; and listening to those who had something to bring to the common good; and giving each person what they deserved, without being turned aside; and knowing from experience where there is need to tighten and where to slacken; and putting a stop to love affairs with youths; and his sense of being one among others, and that his friends were not bound to dine with him every time, nor obliged to travel with him, and that those who had been kept away by some need always found him the same; and careful inquiry in council, and persistence, and not “he gave up the search too soon, content with the impressions that lay to hand”; and keeping his friends, never tiring of them quickly nor being infatuated with them; and self-sufficiency in everything, and cheerfulness; and foresight from far off, and arranging the smallest things in advance without making a drama of it; and that acclamations and all flattery were held in check under him; and always watching over what the empire needed, and managing its spending thriftily, and putting up with the blame that came for some things of this kind; and being neither superstitious about the gods, nor, with people, courting the public or eager to please or fond of the crowd, but sober in everything and firm, and never lacking in taste, and no lover of novelty; and using the things that add to the ease of life, of which fortune gave him plenty, without conceit and at the same time without apology, so that when they were there he took them without affectation, and when they were not he did not need them; and that no one could have said he was a sophist, or a home-bred buffoon, or a pedant, but a ripe man, complete, beyond flattery, able to take charge of his own affairs and other people’s. Besides these: honouring those who truly practise philosophy, and not reproaching the others, nor yet being easily led by them; and again, being good company and gracious, but not to excess; and taking care of his own body in due measure, not as someone in love with life would, nor for the sake of looks, nor yet carelessly, but so that through his own attention he needed very little from medicine, or from drugs and external dressings; and above all, giving way without envy to those who had some ability, such as ability in speaking, or the ability that comes from the study of laws or customs or some other matters, and joining eagerly in their efforts, so that each should be well thought of according to their own strengths; and doing everything by the ancestral ways, without setting out to be seen doing even this: keeping the ancestral ways. And again: not being easily shifted and restless, but staying long in the same places and at the same business; and after his attacks of headache, coming straight back fresh and at full strength to his usual work; and that he did not have many secrets, but very few and very rarely, and those only about public matters; and good sense and measure in putting on shows, in building works, in handouts and things of that kind, which is the way of a person who looks to the thing itself that has to be done, not to the good name that comes of having done it. Not one to bathe at odd hours, not fond of building, not one to be inventive about food, nor about the weave and colours of clothes, nor about the beauty of bodies. The formal dress from Lorium, coming up from the villa below; a tunic at Lanuvium for the most part; how he dealt with the cloak at Tusculum that was asking to be excused; and all that way of behaving. Nothing harsh, nor yet relentless, nor violent, nor such that one could ever have said “to the point of sweat”; but everything reasoned out, each part taken separately, as if at leisure, without disturbance, in order, with strength, in agreement with itself. What is recorded of Socrates would fit him: that he was able both to go without and to enjoy those things which most people are weak at going without and give way in enjoying. To be strong, and to hold out and stay sober in each of the two, is the mark of a man who has a soul that is sound and unbeaten, as in the illness of Maximus.
 
 <details><summary>Notes</summary>
 
@@ -311,7 +312,7 @@ From my father: gentleness, and holding firm, unshaken, to what had been decided
 
 ### 1.17a
 
-From the gods: that I had good grandfathers, good parents, a good sister, good teachers, good people close to me, relatives, friends, nearly all of them; and that I was not carried away into any offence against any of them, although I had a disposition from which, if it had so happened, I might well have done something of the kind; but it is the gods’ kindness that no combination of circumstances came about that would have shown me up. And that I was not brought up for longer with my grandfather’s concubine; and that I preserved the bloom of my youth; and that I was not made a man before the season, but even took some time more. That I was placed under a ruler and father who was to take all the conceit out of me and bring me to the thought that it is possible to live at a court and need neither bodyguards, nor clothes that mark one out, nor torches and statues of this sort and similar show; but that one may draw oneself in until one is very nearly a private person and not, on that account, be more lowly or more slack in what has to be done as a leader for the common good. That I happened to have such a brother, able by his character to rouse me to take care of myself, and at the same time gladdening me with his respect and affection. That my children were not born lacking in natural gifts, nor deformed in their little bodies. That I did not make more progress in rhetoric, in poetry and in the other pursuits, in which I might perhaps have been held fast, if I had felt myself getting on easily. That I was quick to set those who brought me up in the rank they seemed to me to desire, and did not put it off with the hope that, since they were still young, I would do it later. That I came to know Apollonius, Rusticus, Maximus. That I had an impression, clearly and often, of the life according to nature, of what kind of life it is, so that, as far as it rests with the gods and with the gifts, help and inspirations that come from there, nothing prevents me from living according to nature already, and that I still fall short of this is by my own fault and by not keeping to the reminders from the gods, which are all but teachings. That my body has held out so long in a life like this. That I touched neither Benedicta nor Theodotus, but that later too, when I fell into the passions of love, I recovered. That, though I was often angry with Rusticus, I did nothing more that I would have regretted. That my mother, who was to die young, still lived with me in her last years. That whenever I wanted to help someone who was poor or in need of something else, I was never told that I had no money to do it with; and that no similar need befell me myself, so as to take from another. That my wife is as she is, so compliant, so warmly affectionate, so unaffected. That I had no lack of suitable people to bring up my children. That remedies were given me through dreams, among others against spitting blood and against dizziness; and of this, at Caieta, as you will use. That, when I set my heart on philosophy, I did not fall into the hands of some sophist, nor sit down to writing, or to resolving syllogisms, or to busying myself with the things in the sky. For all these things “need the gods’ help and fortune.”
+From the gods: that I had good grandfathers, good parents, a good sister, good teachers, good people close to me, relatives, friends, nearly all of them; and that I was not carried away into any offence against any of them, although I had a disposition from which, if it had so happened, I might well have done something of the kind; but it is the gods’ kindness that no combination of circumstances came about that would have shown me up. And that I was not brought up for longer with my grandfather’s concubine; and that I preserved the bloom of my youth; and that I was not made a man before the season, but even took some time more. That I was placed under a ruler and father who was to take all the conceit out of me and bring me to the thought that it is possible to live at a court and need neither bodyguards, nor clothes that mark one out, nor torches and statues of this sort and other such display; but that one may draw oneself in until one is very nearly a private person and not, on that account, be more lowly or more slack in what has to be done as a leader for the common good. That I happened to have such a brother, able by his character to rouse me to take care of myself, and at the same time gladdening me with his respect and affection. That my children were not born lacking in natural gifts, nor deformed in their little bodies. That I did not make more progress in rhetoric, in poetry and in the other pursuits, in which I might perhaps have been held fast, if I had felt myself getting on easily. That I was quick to set those who brought me up in the rank they seemed to me to desire, and did not put it off with the hope that, since they were still young, I would do it later. That I came to know Apollonius, Rusticus, Maximus. That I had an impression, clearly and often, of the life according to nature, of what kind of life it is, so that, as far as it rests with the gods and with the gifts, help and inspirations that come from there, nothing prevents me from living according to nature already, and my still falling short of this is through my own fault and through not keeping to the reminders from the gods, which are all but teachings. That my body has held out so long in a life like this. That I touched neither Benedicta nor Theodotus, but that later too, when I fell into the passions of love, I recovered. That, though I was often angry with Rusticus, I did nothing more that I would have regretted. That my mother, who was to die young, still lived with me in her last years. That whenever I wanted to help someone who was poor or in need of something else, I was never told that I had no money to do it with; and that no similar need befell me myself, so as to receive from another. That my wife is as she is, so compliant, so warmly affectionate, so unaffected. That I had no lack of suitable people to bring up my children. That remedies were given me through dreams, among others against spitting blood and against dizziness; and of this, at Caieta, as you will use. That, when I set my heart on philosophy, I did not fall into the hands of some sophist, nor sit down to writing, or to resolving syllogisms, or to busying myself with the things in the sky. For all these things “need the gods’ help and fortune.”
 
 <details><summary>Notes</summary>
 
@@ -349,7 +350,7 @@ From the gods: that I had good grandfathers, good parents, a good sister, good t
 
 ### 2.1
 
-At dawn, say to yourself beforehand: I shall meet a meddler, an ungrateful person, an insolent one, a deceitful one, an envious one, an unsocial one. All these things have come upon them through ignorance of what is good and bad. But I, who have seen the nature of the good, that it is honourable, and of the bad, that it is shameful, and the nature of the very person who does wrong, that they are akin to me, sharing not the same blood or seed but mind and a portion of the divine, can neither be harmed by any of them, for no one will wrap me in what is shameful, nor be angry with one who is akin to me, nor hate them. For we have come into being to work together, like feet, like hands, like eyelids, like the rows of the upper and lower teeth. So to work against one another is against nature; and to be indignant and to turn away is working against.
+At dawn, say to yourself beforehand: I shall meet a meddler, an ungrateful person, an insolent one, a deceitful one, an envious one, an unsocial one. All these things have come upon them through ignorance of what is good and bad. But I, who have seen the nature of the good, that it is honourable, and of the bad, that it is shameful, and the nature of the very person who does wrong, that they are akin to me, sharing not the same blood or seed but mind and a portion of the divine, can neither be harmed by any of them, for no one will wrap me in what is shameful, nor be angry with one who is akin to me, nor hate them. For we have come into being to work together, like feet, like hands, like eyelids, like the rows of the upper and lower teeth. So to work against one another is against nature; and to be indignant and to turn away is to work against one another.
 
 <details><summary>Notes</summary>
 
@@ -361,13 +362,13 @@ At dawn, say to yourself beforehand: I shall meet a meddler, an ungrateful perso
 - *θείας ἀπομοίρας*: ἀπόμοιρα is a share portioned off from something larger: a portion of what is divine. Other reading: a fragment of the divine
 - *περιβαλεῖ*: The image is of throwing something around a person, as a garment or a net. It is kept as “wrap”. Other reading: involve in what is shameful
 - *ἀπέχθεσθαι αὐτῷ*: The verb usually means to be hated by someone; with this dative it is to be at enmity with them. The English reads “hate”. Other reading: nor be at enmity with them
-- *ἀντιπρακτικὸν*: The same root as ἀντιπράσσειν just before, and set against συνεργίαν (working together). “Work” is kept in all three. Other reading: and indignation and turning away are forms of opposition
+- *ἀντιπρακτικὸν*: The same root as ἀντιπράσσειν just before, and set against συνεργίαν (working together). “Work” is kept in all three. The adjective has no object of its own; “one another” is carried over from the sentence before. Other reading: and indignation and turning away are forms of opposition
 
 </details>
 
 ### 2.2
 
-Whatever this is that I am, it is bits of flesh, a little breath, and the ruling part. Let the books go. Be pulled no longer. It is not allowed. Instead, as one already dying, despise the bits of flesh: gore, little bones, a web, a small plaiting of sinews, little veins and arteries. Look too at what kind of thing the breath is: wind, and not even always the same, but at every moment vomited out and gulped in again. Third, then, is the ruling part. Think of it this way: you are old. No longer let this be a slave, no longer let it be pulled about on strings by unsocial impulse, no longer let it be discontented with what is fated now or look with suspicion on what is fated to come.
+Whatever this is that I am, it is bits of flesh, a little breath, and the ruling part. Let the books go. Be pulled no longer. It is not allowed. Instead, as one already dying, despise the bits of flesh: gore, little bones, a web, a small plaiting made of sinews, little veins and arteries. Look too at what kind of thing the breath is: wind, and not even always the same, but at every moment vomited out and gulped in again. Third, then, is the ruling part. Think of it this way: you are old. No longer let this be a slave, no longer let it be pulled about on strings by unsocial impulse, no longer let it be discontented with what is fated now or look with suspicion on what is fated to come.
 
 <details><summary>Notes</summary>
 
@@ -384,7 +385,7 @@ Whatever this is that I am, it is bits of flesh, a little breath, and the ruling
 
 ### 2.3
 
-What comes from the gods is full of providence. What comes from chance is not without nature, or without the spinning together and interweaving of the things that providence governs. Everything flows from there. And there is besides what is necessary, and what benefits the whole universe, of which you are a part. And what the nature of the whole brings is good for every part of nature, and so is what preserves that nature. And the universe is preserved by changes: those of the elements and, in the same way, those of compound things. Let this be enough for you, and let these be your principles. As for your thirst for books, throw it away, so that you do not die grumbling, but truly gracious, and thankful to the gods from your heart.
+What comes from the gods is full of providence. What comes from chance is not without nature, or without the spinning together and interweaving of the things that providence governs. Everything flows from there. And there is besides what is necessary, and what benefits the whole universe, of which you are a part. And what the nature of the whole brings is good for every part of nature, and so is what preserves that nature. The universe is preserved by changes: those of the elements and, in the same way, those of compound things. Let this be enough for you, and let these be your principles. As for your thirst for books, throw it away, so that you do not die grumbling, but truly gracious, and thankful to the gods from your heart.
 
 <details><summary>Notes</summary>
 
@@ -402,12 +403,12 @@ What comes from the gods is full of providence. What comes from chance is not wi
 
 ### 2.4
 
-Remember how long you have been putting these things off, and how many times you have been given a set time by the gods and make no use of it. Now at last you must perceive what universe you are a part of, and from what governor of the universe you came into being as an outflow, and that a limit of time has been marked out for you. If you do not use it to clear away the clouds, it will be gone, you will be gone, and it will not be possible again.
+Remember how long you have been putting these things off, and how many times you have been given a set time by the gods and have made no use of it. Now at last you must perceive what universe you are a part of, and from what governor of the universe you came into being as an outflow, and that a limit of time has been marked out for you. If you do not use it to clear away the clouds, it will be gone, you will be gone, and it will not be possible again.
 
 <details><summary>Notes</summary>
 
 - *προθεσμίας*: A legal word: the day fixed in advance by which something must be done, or the period allowed. The Greek is plural, one term after another being granted; the English reads “a set time” in the singular after “how many times”. Other reading: how many times you have been given deadlines by the gods and make no use of them
-- *τίνος κόσμου*: τίνος asks “which” or “what”, and in such a phrase can lean toward “what kind of”. Other reading: what kind of universe you are a part of
+- *τίνος κόσμου*: τίνος asks “which” or “what”, and in such a phrase can lean towards “what kind of”. Other reading: what kind of universe you are a part of
 - *ἀπόρροια ὑπέστης*: ἀπόρροια is a flowing off, a stream that runs out from a source. ὑπέστης is “you came to exist”. Literally “of what governor of the universe you came to exist as an outflow”. Other reading: and from what governor of the universe you exist as an emanation
 - *ἀπαιθριάσαι*: The verb is made from the word for a cloudless sky: to bring fair weather, to drive off the clouds. No object is given, and the weather stands for clearing one’s own mind; the English keeps the image and does not add “your mind”. The verb can also be taken as “to become clear”. Other reading: if you do not use it to become clear, as the sky does
 - *οἰχήσεται οἰχήσῃ*: The two verbs stand side by side with no connecting word in the Greek as given: “it will be gone” (the time) and “you will be gone”. From memory, unchecked: editions print a καὶ between them, and its absence may be a slip of the digitised copy. The English keeps the two without “and”. Other reading: it will be gone and you will be gone
@@ -450,7 +451,7 @@ Do violence, do violence to yourself, soul; but you will have no chance left to 
 
 ### 2.7
 
-Do the things that fall on you from outside distract you at all? Then give yourself leisure to learn some further good thing, and stop wandering. But now there is the other kind of drifting to guard against as well. For people play the fool through their actions too, those who are worn out by life and have no target at which to direct every impulse and, in general, every impression.
+Do the things that fall on you from outside distract you at all? Then give yourself leisure to learn some further good thing, and stop wandering. But now there is the other kind of drifting to guard against as well. For people play the fool through their actions too: those who are worn out by life and have no target at which to direct every impulse and, in general, every impression.
 
 <details><summary>Notes</summary>
 
@@ -527,7 +528,7 @@ To do and say and think each thing in the knowledge that it is possible to leave
 - *πεφυρμένως*: From a verb for kneading or mixing up: without sorting, all in a mess. Other reading: indiscriminately
 - *θάνατος δέ γε καὶ ζωή*: The small words bring in the next step of the argument, as “Now” does in English. They do not object to what was just said. Other reading: But death and life
 - *πόνος καὶ ἡδονή*: πόνος is both hard toil and pain. Set against pleasure, it is taken as “pain”. Other reading: toil and pleasure
-- *οὔτε καλὰ ὄντα οὔτε αἰσχρά*: καλόν and αἰσχρόν are the morally fine and the morally ugly, a different pair from good and bad; the last sentence draws the conclusion from them. The participle may give a reason (“since they are”); the English has a plain “and”. Other reading: since they are neither honorable nor shameful
+- *οὔτε καλὰ ὄντα οὔτε αἰσχρά*: καλόν and αἰσχρόν are the morally fine and the morally ugly, a different pair from good and bad; the last sentence draws the conclusion from them. The participle may give a reason (“since they are”); the English has a plain “and”. Other reading: since they are neither honourable nor shameful
 
 </details>
 
@@ -581,7 +582,7 @@ Nothing is more wretched than a person who goes round everything in a circle and
 
 ### 2.14
 
-Even if you are going to live three thousand years, or even three times ten thousand, still remember that no one loses any life other than this one they are living, and no one lives any life other than the one they are losing. So the longest comes to the same thing as the shortest. For the present is equal for everyone, so what perishes is equal too, and in this way what is lost shows itself to be an instant. For no one could lose either the past or the future, for how could anyone take from a person what that person does not have? So these two things must be remembered. One is that all things from eternity are of the same kind and come round in a circle, and that it makes no difference whether a person will see the same things for a hundred years, or for two hundred, or for time without limit. The other is that the one who lives longest and the one who will die soonest lose an equal amount. For the present is the only thing a person is going to be deprived of, if indeed this is the only thing they have, and a person does not lose what they do not have.
+Even if you are going to live three thousand years, or even three times ten thousand, still remember that no one loses any life other than this one they are living, and no one lives any life other than the one they are losing. So the longest comes to the same thing as the shortest. For the present is equal for everyone, so what perishes is equal too, and in this way what is lost shows itself to be an instant. For no one could lose either the past or the future: how could anyone take from a person what that person does not have? So these two things must be remembered. One is that all things from eternity are of the same kind and come round in a circle, and that it makes no difference whether a person will see the same things for a hundred years, or for two hundred, or for time without limit. The other is that the one who lives longest and the one who will die soonest lose an equal amount. For the present is the only thing a person is going to be deprived of, if indeed this is the only thing they have, and a person does not lose what they do not have.
 
 <details><summary>Notes</summary>
 
@@ -612,7 +613,7 @@ That everything is judgment. For what is said in answer to Monimus the Cynic is 
 
 ### 2.16
 
-The human soul does violence to itself most of all when it becomes, so far as it lies with it, an abscess, a thing standing apart, and a kind of growth on the universe. For to be vexed at anything that happens is a standing apart from nature, in some part of which the nature of each of the other things is contained. Next, when it turns away from some person, or even moves against them with the aim of doing harm, as the souls of angry people do. Third, it does violence to itself when it is beaten by pleasure or by pain. Fourth, when it plays a part and does or says something in a feigned and untrue way. Fifth, when it lets some action or impulse of its own fly at no target, but does anything whatever at random and without attention, when even the smallest things ought to be done with reference to the end. And the end of rational living beings is to follow the reason and law of the oldest city and constitution.
+The human soul does violence to itself most of all when it becomes, so far as it lies with it, an abscess, a thing standing apart, and a kind of growth on the universe. For to be vexed at anything that happens is a standing apart from nature, in some part of which the nature of each of the other things is contained. Next, when it turns away from some person, or even moves against them with the aim of doing harm, as the souls of angry people do. Third, it does violence to itself when it is beaten by pleasure or by pain. Fourth, when it plays a part and does or says something in a feigned and untrue way. Fifth, when it lets some action or impulse of its own fly at no target, but does anything whatever at random and without attention, though even the smallest things ought to be done with reference to the end. And the end of rational living beings is to follow the reason and law of the oldest city and constitution.
 
 <details><summary>Notes</summary>
 
@@ -630,14 +631,14 @@ The human soul does violence to itself most of all when it becomes, so far as it
 
 ### 2.17
 
-In human life, the time is a point, the substance is in flux, perception is dim, the compound of the whole body is ready to rot, the soul is a whirl, fortune is hard to make out, fame is undiscerning. To put it briefly: everything of the body is a river, everything of the soul is a dream and smoke, life is a war and a stranger’s stay abroad, and fame after death is forgetting. What, then, can escort a person through? One thing and only one: philosophy. And this lies in keeping the spirit within free from abuse and unharmed, stronger than pleasures and pains, doing nothing at random, nothing falsely or with pretense, not needing another person to do something or not do it; and further, accepting what happens and what is allotted as coming from that same place, wherever it is, from which it came itself; and, on top of all this, waiting for death with a cheerful mind, as nothing other than a dissolving of the elements of which every living thing is put together. And if for the elements themselves there is nothing terrible in each one continually changing into another, why should anyone look with suspicion on the change and dissolution of all? For it is according to nature, and nothing that is according to nature is bad. At Carnuntum.
+In human life, the time is a point, the substance is in flux, perception is dim, the compound of the whole body is ready to rot, the soul is a whirl, fortune is hard to make out, fame is undiscerning. To put it briefly: everything of the body is a river, everything of the soul is a dream and smoke, life is a war and a stranger’s stay abroad, and fame after death is forgetting. What, then, can escort a person through? One thing and only one: philosophy. And this lies in keeping the spirit within free from abuse and unharmed, stronger than pleasures and pains, doing nothing at random, nothing falsely or with pretence, not needing another person to do something or not do it; and further, accepting what happens and what is allotted as coming from that same place, wherever it is, from which the spirit itself came; and, on top of all this, waiting for death with a cheerful mind, as nothing other than a dissolving of the elements of which every living thing is put together. And if for the elements themselves there is nothing terrible in each one continually changing into another, why should anyone look with suspicion on the change and dissolution of all? For it is according to nature, and nothing that is according to nature is bad. At Carnuntum.
 
 <details><summary>Notes</summary>
 
 - *ἡ δὲ οὐσία ῥέουσα*: οὐσία is the stuff a human being is made of. “In flux” prepares the river in the next sentence. Other reading: its matter is flowing
 - *ῥόμβος*: A thing that is whirled round (a top, or a bull-roarer spun on a cord) or the whirling motion itself. “A whirl” covers both. Other reading: the soul is a spinning top
 - *ἡ δὲ φήμη ἄκριτον*: ἄκριτος can be active, “not judging”, “undiscerning”, or passive, “not decided”, “not to be judged”. The English takes the first: what people say is said without discernment. Other reading: fame is an uncertain thing
-- *ὄνειρος καὶ τῦφος*: τῦφος is literally smoke or vapor, and by extension delusion and empty pride. The image is kept beside “dream”; the same word is “puffed-up pride” in 12.24. Other reading: a dream and a delusion
+- *ὄνειρος καὶ τῦφος*: τῦφος is literally smoke or vapour, and by extension delusion and empty pride. The image is kept beside “dream”; the same word is “puffed-up pride” in 12.24. Other reading: a dream and a delusion
 - *ξένου ἐπιδημία*: A foreigner’s stay in a town that is not his own. Other reading: a visit to a strange land
 - *τὸ παραπέμψαι δυνάμενον*: The verb is used of escorting or convoying a traveler. The Greek names no object; “a person” and “through” are supplied. Other reading: What, then, can guide one on the way?
 - *τὸν ἔνδον δαίμονα*: δαίμων is a divine being of lower rank than a god; here the divine part allotted to each person. “Spirit” stands for it, as in 5.10b. Other reading: the divinity within
@@ -654,15 +655,15 @@ In human life, the time is a point, the substance is in flux, perception is dim,
 
 ### 3.1
 
-It is not only this that has to be reckoned with, that life is being used up day by day and a smaller part of it is left. This too has to be reckoned with: if a person were to live longer, this at least is unclear, whether their mind will later on be equal, unchanged, to the understanding of things and of the study that is directed toward close acquaintance with divine and human things. For if a person begins to lose their wits, there will be no lack of breathing, of taking nourishment, of having impressions and impulses, and of everything else of that kind. But making use of oneself, getting every point of duty exact, setting out clearly what appears before one, stopping to consider this very question, whether it is now time to lead oneself out of life, and everything of that kind that needs thoroughly trained reasoning: this is extinguished first. So one must hurry, not only because one comes nearer to death at every moment, but also because the grasp of things and the power to follow them give out first.
+It is not only this that has to be reckoned with, that life is being used up day by day and a smaller part of it is left. This too has to be reckoned with: if a person were to live longer, it is at least unclear whether their mind will later on be equal, unchanged, to the understanding of things and of the study that is directed towards close acquaintance with divine and human things. For if a person begins to lose their wits, there will be no lack of breathing, of taking nourishment, of having impressions and impulses, and of everything else of that kind. But making use of oneself, getting every point of duty exact, setting out clearly what appears before one, stopping to consider this very question, whether it is now time to lead oneself out of life, and everything of that kind that needs thoroughly trained reasoning: this is extinguished first. So one must hurry, not only because one comes nearer to death at every moment, but also because the grasp of things and the power to follow them give out first.
 
 <details><summary>Notes</summary>
 
 - *λογίζεσθαι*: λογίζεσθαι, then λογιστέον, and further on the noun λογισμοῦ are one family of words (to reckon, to reason). The English reads “reckoned with” for the two verbs and “reasoning” for the noun, so the link is only half kept. Other reading: It is not only this that one must reason about
 - *ὁμοία αὖθις*: αὖθις is “later on” or “again”, and ὁμοία is “the same, alike”, said of the mind. The English reads “later on” and “unchanged”. Other reading: whether their mind will again be equal to it in the same way
 - *ἡ διάνοια*: The glossary gives “thought” for διάνοια and allows “mind” where the faculty is meant. Here it is the faculty that may fail with age, so the English reads “mind”. Other reading: whether their thought will later on be equal
-- *πρὸς τὴν σύνεσιν τῶν πραγμάτων καὶ τῆς θεωρίας*: τῆς θεωρίας is in the genitive, so as the Greek stands it depends on σύνεσιν together with τῶν πραγμάτων: understanding of things and of the study. An accusative would make the study a second thing the mind must be equal to, and editors have doubted the case (from memory, unchecked). The English keeps the genitive as given. Other reading: equal to understanding things and to the study that is directed toward close acquaintance with divine and human things
-- *ἐμπειρίαν*: ἐμπειρία is familiarity won by experience and practice, not knowledge in the abstract. The English reads “close acquaintance”. Other reading: toward experience of divine and human things
+- *πρὸς τὴν σύνεσιν τῶν πραγμάτων καὶ τῆς θεωρίας*: τῆς θεωρίας is in the genitive, so as the Greek stands it depends on σύνεσιν together with τῶν πραγμάτων: understanding of things and of the study. An accusative would make the study a second thing the mind must be equal to, and editors have doubted the case (from memory, unchecked). The English keeps the genitive as given. Other reading: equal to understanding things and to the study that is directed towards close acquaintance with divine and human things
+- *ἐμπειρίαν*: ἐμπειρία is familiarity won by experience and practice, not knowledge in the abstract. The English reads “close acquaintance”. Other reading: towards experience of divine and human things
 - *παραληρεῖν ἄρξηται*: παραληρεῖν is to talk beside the point, as in delirium or senility; the English gives the sense, “lose their wits”. The subject is not stated: it can be the person, as the English has it, or the mind, the nearest noun. Other reading: For if it begins to wander
 - *διαπνεῖσθαι*: Literally “to be breathed through”. It can mean plain breathing or the wider passing of air and vapour through the body and its skin. The English keeps the plain word. Other reading: transpiring
 - *τοὺς τοῦ καθήκοντος ἀριθμοὺς ἀκριβοῦν*: Literally “to make exact the numbers of duty”. In Stoic speech a duty (τὸ καθῆκον, what is fitting to do) has “numbers”, the separate points that must all be met for the act to be complete. The English reads “every point” for “the numbers”. Other reading: getting the numbers of duty exact
@@ -675,7 +676,7 @@ It is not only this that has to be reckoned with, that life is being used up day
 
 ### 3.2
 
-One should also take note of things like this: that even what comes about on top of the things that come about by nature has something graceful and attractive about it. For example, when bread is baking, some parts of it break open at the side; and so these parts too, which stand open like this and are in a way contrary to what the baker’s craft sets out to do, somehow look right and stir up an eagerness for the food in a way of their own. Again, figs gape open when they are at their ripest; and in olives ripened on the tree, the very nearness to rotting adds a certain beauty of its own to the fruit. And ears of grain bending down, and the frown on the lion’s brow, and the foam running from the mouths of wild boars, and many other things are far from good-looking if one looks at them by themselves; and yet, because they come as consequences of the things that come about by nature, they help to adorn them and they charm the mind. So if someone has a deeper feeling for, and understanding of, the things that come about in the whole, there is almost nothing, even among the things that happen as consequences, that will not seem to that person to be put together in a way that somehow gives pleasure. And that person will look even at the real gaping jaws of wild animals with no less pleasure than at all those that painters and sculptors show in imitation; and will be able to see a kind of prime and ripeness in an old woman and an old man, and to see with their own chaste eyes the seductive charm of the young. And many such things, which will not convince everyone, will strike only the one who has become truly at home with nature and its works.
+One should also take note of things like this: that even what comes about on top of the things that come about by nature has something graceful and attractive about it. For example, when bread is baking, some parts of it break open at the side; and so these parts too, which stand open like this and are in a way contrary to what the baker’s craft sets out to do, somehow look right and stir up a special eagerness for the food. Again, figs gape open when they are at their ripest; and in olives ripened on the tree, the very nearness to rotting adds a certain beauty of its own to the fruit. And ears of grain bending down, and the frown on the lion’s brow, and the foam running from the mouths of wild boars, and many other things are far from good-looking if one looks at them by themselves; and yet, because they come as consequences of the things that come about by nature, they help to adorn them and they charm the mind. So if someone has a deeper feeling for, and understanding of, the things that come about in the whole, there is almost nothing, even among the things that happen as consequences, that will not seem to that person to be put together in a way that somehow gives pleasure. And that person will look even at the real gaping jaws of wild animals with no less pleasure than at all those that painters and sculptors show in imitation; and will be able to see a kind of prime and ripeness in an old woman and an old man, and to see with their own chaste eyes the seductive charm of the young. And many such things, which will not convince everyone, will strike only the one who has become truly at home with nature and its works.
 
 <details><summary>Notes</summary>
 
@@ -698,7 +699,7 @@ One should also take note of things like this: that even what comes about on top
 
 ### 3.3
 
-Hippocrates, after curing many illnesses, fell ill himself and died. The Chaldaeans foretold the deaths of many, and then what was fated caught up with them too. Alexander and Pompey and Gaius Caesar, after so many times wiping out whole cities completely and cutting down in battle many tens of thousands of horsemen and foot soldiers, one day went out of life themselves as well. Heraclitus, after saying so much as a student of nature about the burning up of the universe, was filled inside with water and died smeared with cow dung. Lice killed Democritus, and other lice killed Socrates. What of this? You went on board, you sailed, you came to harbour: get off. If to another life, nothing is empty of gods there either. And if in a state without sensation, you will stop putting up with pains and pleasures and being a slave to a vessel that is so much worse than the thing that serves it: for the one that serves is mind and divine spirit, the other earth and gore.
+Hippocrates, after curing many illnesses, fell ill himself and died. The Chaldaeans foretold the deaths of many, and then what was fated caught up with them too. Alexander and Pompey and Gaius Caesar, after so often wiping out whole cities completely and cutting down in battle many tens of thousands of horsemen and foot soldiers, one day went out of life themselves as well. Heraclitus, after saying so much as a student of nature about the burning up of the universe, was filled inside with water and died smeared with cow dung. Lice killed Democritus, and other lice killed Socrates. What of this? You went on board, you sailed, you came to harbour: get off. If to another life, nothing is empty of gods there either. And if in a state without sensation, you will stop putting up with pains and pleasures and being a slave to a vessel that is so much worse than the thing that serves it: for the one that serves is mind and divine spirit, the other earth and gore.
 
 <details><summary>Notes</summary>
 
@@ -720,7 +721,7 @@ Hippocrates, after curing many illnesses, fell ill himself and died. The Chaldae
 
 ### 3.4
 
-Do not wear away the part of your life that is left in impressions about other people, when you are not referring them to something of common benefit (for in truth you are deprived of other work). That is, forming impressions of what so-and-so is doing, and for what purpose, and what they are saying, and what they have in mind, and what they are contriving, and all such things as make you wander away from watching over your own ruling part. So you must avoid, in the chain of your impressions, even what is random and to no purpose, but far the most what is meddling and malicious. And you must accustom yourself to form only those impressions about which, if someone suddenly asked, “What are you thinking now?”, you would answer at once and frankly, “This, and this”; so that from them it would be plain straight away that everything is simple and kindly and belongs to a social animal, one that cares nothing for imaginings of pleasure or of enjoyment in general, or for any rivalry, or envy and suspicion, or anything else that you would blush to explain you had in your mind. For a man of this kind, who no longer puts off being, so to speak, among the best already, is a kind of priest and servant of the gods. He also makes use of what is enshrined within him, which makes the person unstained by pleasures, unwounded by any pain, untouched by any insult, insensible to any wickedness, an athlete in the greatest contest, the contest not to be thrown by any passion, dyed deep in justice, welcoming with his whole soul everything that happens and is dealt out, and not often, nor without a great need that serves the common benefit, forming an impression of what another person is saying or doing or thinking. For it is only what is his own that he has for his activity, and what is spun for him out of the whole he thinks of without a break; and the first he makes fine, and the second he is convinced are good. For the lot dealt to each person is carried along with them and carries them along with it. He remembers too that everything rational is kin, and that to care for all human beings is in keeping with the nature of a human being, but that the good opinion to hold on to is not that of everyone, but only of those who live in agreement with nature. As for those who do not live so, he keeps in mind all the time what sort of people they are at home and outside the house, by night and by day, and what they are like and with what kind of people they are mixed up. So he sets no store either by praise that comes from such people, who are not even pleased with themselves.
+Do not wear away what is left of your life in impressions about other people, when you are not referring them to something of common benefit (for in truth you are deprived of other work). That is, forming impressions of what so-and-so is doing, and for what purpose, and what they are saying, and what they have in mind, and what they are contriving, and all such things as make you wander away from watching over your own ruling part. So you must avoid, in the chain of your impressions, even what is random and to no purpose, but far the most what is meddling and malicious. And you must accustom yourself to form only those impressions about which, if someone suddenly asked, “What are you thinking now?”, you would answer at once and frankly, “This, and this”; so that from them it would be plain straight away that everything is simple and kindly and belongs to a social animal, one that cares nothing for imaginings of pleasure or of enjoyment in general, or for any rivalry, or envy and suspicion, or anything else that you would blush to explain you had in your mind. For a man of this kind, who no longer puts off being, so to speak, among the best already, is a kind of priest and servant of the gods. He also uses what is enshrined within him, which makes the person unstained by pleasures, unwounded by any pain, untouched by any insult, insensible to any wickedness, an athlete in the greatest contest, the contest not to be thrown by any passion, dyed deep in justice, welcoming with his whole soul everything that happens and is allotted, and not often, nor without a great need that serves the common benefit, forming an impression of what another person is saying or doing or thinking. For it is only what is his own that he has for his activity, and what is spun for him out of the whole he thinks of without a break; and the former he makes fine, and the latter he is convinced are good. For the lot dealt to each person is carried along with them and carries them along with it. He remembers too that everything rational is kin, and that to care for all human beings is in keeping with the nature of a human being, but that the good opinion to hold on to is not that of everyone, but only of those who live in agreement with nature. As for those who do not live so, he keeps in mind all the time what sort of people they are at home and outside the house, by night and by day, and what they are like and with what kind of people they are mixed up. So he sets no store either by praise that comes from such people, who are not even pleased with themselves.
 
 <details><summary>Notes</summary>
 
@@ -778,7 +779,7 @@ And let there be cheerfulness within, and no need of service from outside, and n
 
 ### 3.6
 
-If you find in human life anything better than justice, truth, self-control, courage, and, in a word, than your thought being content with itself in the things where it has you acting according to right reason, and in fate, in the things that are allotted without your choosing; if, I say, you see anything better than this, turn to it with your whole soul and enjoy what is found to be best. But if nothing appears better than the spirit itself that is seated in you, which has put its own impulses under itself, which examines the impressions, which has pulled itself away, as Socrates used to say, from the feelings of the senses, and has put itself under the gods, and cares for human beings; if you find everything else smaller and cheaper than this, give room to nothing else. Once you have tipped and turned aside toward anything else, you will no longer be able, without being pulled about, to honor above all else that good which is proper to you and is yours. For it is not permitted that anything whatever of a different kind, such as praise from the many, or offices, or wealth, or the enjoyment of pleasures, should take up a position against the rational and civic good. All these, even if for a little while they seem to fit, suddenly take control and carry you off course. But you, I say, simply and freely choose the better and hold on to it. “But the better is what benefits.” If it benefits you as a rational being, keep to that. But if as an animal, say so, and guard your verdict without conceit. Only see that you make the examination without slipping.
+If you find in human life anything better than justice, truth, self-control, courage, and, in a word, than your thought being content with itself in the things where it has you acting according to right reason, and in fate, in the things that are allotted without your choosing; if, I say, you see anything better than this, turn to it with your whole soul and enjoy what is found to be best. But if nothing appears better than the spirit itself that is seated in you, which has put its own impulses under itself, which examines the impressions, which has pulled itself away, as Socrates used to say, from the feelings of the senses, and has put itself under the gods, and cares for human beings; if you find everything else smaller and cheaper than this, give room to nothing else. Once you have tipped and turned aside towards anything else, you will no longer be able, without being pulled about, to honour above all else that good which is proper to you and is yours. For it is not permitted that anything whatever of a different kind, such as praise from the many, or offices, or wealth, or the enjoyment of pleasures, should take up a position against the rational and civic good. All these, even if for a little while they seem to fit, suddenly take control and carry you off course. But you, I say, simply and freely choose the better and hold on to it. “But the better is what benefits.” If it benefits you as a rational being, keep to that. But if as an animal, say so, and guard your verdict without conceit. Only see that you make the examination without slipping.
 
 <details><summary>Notes</summary>
 
@@ -787,8 +788,8 @@ If you find in human life anything better than justice, truth, self-control, cou
 - *τοῦ ἀρίστου εὑρισκομένου ἀπόλαυε*: εὑρισκομένου is a present participle, “being found”, and answers “if you find” at the start, so the English keeps the finding open. It can also be heard as a finished event. Other reading: enjoy the best thing, now that it is found
 - *αὐτοῦ τοῦ ἐνιδρυμένου ἐν σοὶ δαίμονος*: δαίμων is a divine being; here it is the divine part housed in each person, which Marcus elsewhere equates with mind and reason. “Spirit” is used for it throughout this section. ἐνιδρυμένου is the word for a god’s statue or shrine set up in a place, so “seated” is weaker than the Greek. Other reading: the god itself that has its shrine in you
 - *τῶν αἰσθητικῶν πείσεων*: πεῖσις here is from πάσχω, “what is undergone”, not from πείθω, “persuasion”: what the senses are made to feel. From memory, unchecked: the saying of Socrates is a loose recollection of Plato’s Phaedo, where the soul is told to withdraw from the senses, and not an exact quotation. Other reading: from the affections of the senses; or, on the other derivation, from the persuasions of the senses
-- *πρὸς ὃ ῥέψας ἅπαξ καὶ ἀποκλίνας*: ῥέπω is the tipping of a scale pan and ἀποκλίνω a leaning off to one side; the image is a balance, and both verbs go with “toward which”. The Greek is a relative clause on “nothing else”; the English begins a new sentence and writes “anything else” for the relative. Other reading: toward which, once you have inclined and turned aside, you will no longer be able
-- *ἀπερισπάστως*: Literally “without being dragged around”, that is, without distraction. It can go with “be able” or with “honor above all”; the sense is the same. Other reading: to honor undistracted
+- *πρὸς ὃ ῥέψας ἅπαξ καὶ ἀποκλίνας*: ῥέπω is the tipping of a scale pan and ἀποκλίνω a leaning off to one side; the image is a balance, and both verbs go with “towards which”. The Greek is a relative clause on “nothing else”; the English begins a new sentence and writes “anything else” for the relative. Other reading: towards which, once you have inclined and turned aside, you will no longer be able
+- *ἀπερισπάστως*: Literally “without being dragged around”, that is, without distraction. It can go with “be able” or with “honour above all”; the sense is the same. Other reading: to honour undistracted
 - *τὸ ἴδιον καὶ τὸ σόν*: Two words for one thought: ἴδιον is what belongs to a being as its own and no other’s, σόν is simply “yours”. The English reads “proper to you” for the first so that the pair does not say the same thing twice. Other reading: that good which is your own and yours
 - *ἀντικαθῆσθαι γὰρ τῷ λογικῷ καὶ πολιτικῷ ἀγαθῷ οὐ θέμις*: ἀντικαθῆσθαι is to sit over against, used of an army encamped opposite another. θέμις is what divine law allows, so “not permitted” is still weaker than the Greek. Other reading: For it is not lawful that anything of another kind should sit encamped against the good of a rational being and a citizen
 - *πολιτικῷ*: πολιτικός means “of a citizen, made for life in a city”. “Civic” is used for it throughout this section to keep it apart from κοινωνικός, “social”. Other reading: the good of a rational being and a citizen
@@ -803,7 +804,7 @@ If you find in human life anything better than justice, truth, self-control, cou
 
 ### 3.7
 
-Never value as a benefit to yourself anything that will one day force you to break faith, to abandon your self-respect, to hate someone, to suspect, to curse, to play a part, to desire something that needs walls and curtains. For whoever has preferred their own mind and spirit, and the rites of its virtue, does not make a tragedy of things, does not groan, will need neither solitude nor a crowd. Greatest of all, they will live neither pursuing nor fleeing. Whether they will have the use of the soul, enclosed in the body, for a longer stretch of time or a shorter one matters to them not at all. For even if they have to depart this moment, they will go as free of ties as if they were about to do any other of the things that can be done with self-respect and in good order, on their guard through their whole life against this one thing only: that their thought should take any turn foreign to a living being that has mind and is civic.
+Never value as a benefit to yourself anything that will one day force you to break faith, to abandon your self-respect, to hate someone, to suspect, to curse, to play a part, to desire something that needs walls and curtains. For whoever has preferred their own mind and spirit, and the rites of its virtue, does not make a tragedy of things, does not groan, will need neither solitude nor a crowd. Greatest of all, they will live neither pursuing nor fleeing. Whether they will have the use of the soul, enclosed in the body, for a longer stretch of time or a shorter one matters to them not at all. For even if they have to depart this moment, they will go as free of ties as if they were about to do anything else that can be done with self-respect and in good order, on their guard through their whole life against this one thing only: that their thought should take any turn foreign to a living being that has mind and is civic.
 
 <details><summary>Notes</summary>
 
@@ -823,7 +824,7 @@ Never value as a benefit to yourself anything that will one day force you to bre
 
 ### 3.8
 
-In the mind of someone who has been disciplined and thoroughly cleansed you would find nothing full of pus, nor indeed anything stained, nor anything festering under the skin. Nor does fate overtake their life while it is unfinished, as one might say of a tragic actor who leaves before finishing and playing the play through. And further, nothing slavish, nothing affected, nothing tied to anything, nothing split off, nothing liable to be called to account, nothing lurking in a hole.
+In the mind of someone who has been disciplined and thoroughly cleansed you would find nothing full of pus, nor indeed anything stained, nor anything festering under the skin. Nor does fate overtake their life while it is unfinished, as one might say of a tragic actor who leaves before finishing and playing the drama through. And further, nothing slavish, nothing affected, nothing tied to anything, nothing split off, nothing liable to be called to account, nothing lurking in a hole.
 
 <details><summary>Notes</summary>
 
@@ -842,7 +843,7 @@ In the mind of someone who has been disciplined and thoroughly cleansed you woul
 
 Revere the power of forming judgments. Everything lies in this, that there should no longer arise in your ruling part a judgment that does not follow nature and the constitution of the rational animal. And this promises freedom from haste, affinity with human beings, and following the gods.
 
-So throw everything away and hold on to only these few things; and remember as well that each person lives only this present, an instant. The rest has either been lived or is uncertain. Small, then, is what each person lives, and small the little corner of the earth where they live; small too is even the longest fame after death, and even that is handed down a line of little human beings who will die very soon and who do not know even themselves, let alone someone who died long ago.
+So throw everything away and hold on to only these few things; and remember as well that each person lives only this present, an instant. The rest has either been lived or is uncertain. Small, then, is what each person lives, and small the little corner of the earth where they live; small too is even the longest fame after death, and even that is handed down through a line of little human beings who will die very soon and who do not know even themselves, let alone someone who died long ago.
 
 <details><summary>Notes</summary>
 
@@ -861,7 +862,7 @@ So throw everything away and hold on to only these few things; and remember as w
 
 ### 3.11a
 
-To the precepts already named let one more be added: always to make a definition or outline of the thing that comes up in an impression, so as to see it as it is in its substance, bare, whole and entire, and taken apart, and to say to oneself its own name and the names of the things it was put together from and into which it will be broken up. For nothing so produces greatness of mind as being able to test methodically and truly each of the things that come up in life, and always to look into them in such a way as to take in at the same time what kind of use this thing supplies to what kind of universe, what worth it has in relation to the whole, and what in relation to the human being, who is a citizen of the highest city, of which the other cities are like houses.
+To the precepts already named let one more be added: always to make a definition or outline of the thing that comes up in an impression, so as to see it as it is in its substance, bare, whole and entire, and taken apart, and to say to oneself its own name and the names of the things from which it was put together and into which it will be broken up. For nothing so produces greatness of mind as being able to test methodically and truly each of the things that come up in life, and always looking into them in such a way as to take in at the same time what kind of use this thing supplies to what kind of universe, what it is worth to the whole, and what to the human being, who is a citizen of the highest city, of which the other cities are like houses.
 
 <details><summary>Notes</summary>
 
@@ -879,7 +880,7 @@ To the precepts already named let one more be added: always to make a definition
 
 ### 3.11b
 
-What is it, and what is it compounded of, and how long is it in its nature to last, this thing that is now making the impression on me? And what virtue is needed for it: gentleness, for example, courage, good faith, simplicity, self-sufficiency, and the rest? So in each case one must say: this comes from god; this comes by the shared lot, and the spinning and winding together, and this kind of coincidence and chance; and this comes from one of my own tribe, a kinsman and partner, who does not know, however, what is in accordance with nature for them. But I do know. That is why I treat them according to the natural law of partnership, with good will and justly; and yet at the same time, in things that are neither good nor bad, I aim at what accords with worth.
+What is it, and what is it compounded of, and how long is it in its nature to last, this thing that is now making the impression on me? And what virtue is needed for it: for example, gentleness, courage, good faith, simplicity, self-sufficiency, and the rest? So in each case one must say: this comes from god; this comes by the shared lot, and the spinning and winding together, and this kind of coincidence and chance; and this comes from one of my own tribe, a kinsman and partner, who does not know, however, what is in accordance with nature for them. But I do know. That is why I treat them according to the natural law of partnership, with good will and with justice; and yet at the same time, in things that are neither good nor bad, I aim at what accords with worth.
 
 <details><summary>Notes</summary>
 
@@ -930,7 +931,7 @@ As doctors always have their instruments and blades at hand for emergency treatm
 
 ### 3.14
 
-Stop wandering. For you are not going to read either your little notebooks or the deeds of the ancient Romans and Greeks and the extracts from the writings, which you were putting away for yourself for old age. So hurry to the end, and letting go of empty hopes, come to your own rescue, if you care at all about yourself, while it is possible.
+Stop wandering. For you are not going to read either your little notebooks or the deeds of the ancient Romans and Greeks and the extracts from the writings, which you were putting away for your own old age. So hurry to the end, and letting go of empty hopes, come to your own rescue, if you care at all about yourself, while it is possible.
 
 <details><summary>Notes</summary>
 
@@ -1018,7 +1019,7 @@ Let no act be done at random, or otherwise than according to a rule that goes to
 
 ### 4.3
 
-People look for retreats for themselves: country places, seashores, mountains. You too are in the habit of longing very much for such things. But all of this is the mark of someone with no training at all, when you are free, at whatever hour you wish, to retreat into yourself. For nowhere that a person retreats to is quieter or freer from business than their own soul, above all for someone who has such things within that, on bending to look into them, they are at once in complete ease; and by ease I mean nothing other than good order. So give yourself this retreat continually, and renew yourself. And let the things be short and elementary which, as soon as they meet you, will be enough to wash away all distress and to send you back without resentment at the things you are returning to. For what will you resent? The badness of people? Think over the conclusion: that rational animals have come to be for the sake of one another, and that forbearance is a part of justice, and that they go wrong against their will, and how many before now, after feuding, suspecting, hating, fighting with spears, have been laid out and turned to ash; and then stop at last. Or will you also resent what is dealt out from the whole? Renew for yourself the either-or, “either providence or atoms”, and all the grounds on which it was proved that the universe is, as it were, a city. Or will the things of the body still touch you? Consider that the mind does not mix with the breath, whether that moves smoothly or roughly, once the mind has taken itself back and come to know its own power; and, for the rest, all that you have heard and agreed to about pain and pleasure. Or will petty fame distract you? Look at how fast everything is forgotten, and at the gulf of endless time on either side, and the emptiness of the echo, and how changeable and undiscerning those are who seem to give praise, and the narrowness of the place in which that petty fame is confined. For the whole earth is a point, and how small a corner of it is this dwelling place? And here, how many are there, and what sort of people, who will give the praise? For the rest, then, remember the withdrawal into this little country place of your own; and before everything do not be torn about and do not strain, but be free, and look at things as a man, as a human being, as a citizen, as a mortal animal. And among the things readiest to hand, which you will bend to look into, let there be these two. One, that things do not touch the soul but stand outside it, unmoving, and disturbances come only from the judgment within. The other, that all these things you see will change in almost no time and will no longer be; and keep thinking of how many things you have yourself already seen change. The universe is alteration; life is judgment.
+People look for retreats for themselves: country places, seashores, mountains. You too are in the habit of longing very much for such things. But all of this is the mark of someone with no training at all, when you are free, at whatever hour you wish, to retreat into yourself. For nowhere that a person retreats to is quieter or freer from business than their own soul, above all for someone who has such things within that, on bending to look into them, they are at once in complete ease; and by ease I mean nothing other than good order. So give yourself this retreat continually, and renew yourself. And let the things be short and elementary which, as soon as they meet you, will be enough to wash away all distress and to send you back without resentment at the things you are returning to. For what will you resent? The badness of people? Think over the conclusion: that rational animals have come to be for the sake of one another, and that forbearance is a part of justice, and that they go wrong against their will, and how many before now, after feuding, suspecting, hating, fighting with spears, have been laid out and turned to ash; and then stop at last. Or will you also resent what is allotted from the whole? Renew for yourself the either-or, “either providence or atoms”, and all the grounds on which it was proved that the universe is, as it were, a city. Or will the things of the body still touch you? Consider that the mind does not mix with the breath, whether that moves smoothly or roughly, once the mind has taken itself back and come to know its own power; and, for the rest, all that you have heard and agreed to about pain and pleasure. Or will petty fame distract you? Look at how fast everything is forgotten, and at the gulf of endless time on either side, and the emptiness of the echo, and how changeable and undiscerning those are who seem to give praise, and the narrowness of the place in which that petty fame is confined. For the whole earth is a point, and how small a corner of it is this dwelling place? And here, how many are there, and what sort of people, who will give the praise? For the rest, then, remember the withdrawal into this little country place of your own; and before everything do not be torn about and do not strain, but be free, and look at things as a man, as a human being, as a citizen, as a mortal animal. And among the things readiest to hand, which you will bend to look into, let there be these two. One, that things do not touch the soul but stand outside it, unmoving, and disturbances come only from the judgment within. The other, that all these things you see will change in almost no time and will no longer be; and keep thinking of how many things you have yourself already seen change. The universe is alteration; life is judgment.
 
 <details><summary>Notes</summary>
 
@@ -1091,7 +1092,7 @@ It is the nature of these things to be done in this way by people of this kind, 
 
 Take away the judgment, and “I have been harmed” is taken away. Take away “I have been harmed”, and the harm is taken away.
 
-What does not make a human being worse than they were does not make their life worse either, and does not harm them either from outside or from within.
+What does not make a human being worse than they were does not make their life worse either, and does not harm them from outside or from within.
 
 The nature of what is beneficial is bound by necessity to do this.
 
@@ -1287,14 +1288,14 @@ Universe, everything that fits well with you fits well with me. Nothing that is 
 
 <details><summary>Notes</summary>
 
-- *Πᾶν μοι συναρμόζει ὃ σοὶ εὐάρμοστόν ἐστιν*: Both words come from the root for fitting together, which covers a carpenter's joint and a musical tuning. I chose 'fits'. Other reading: Everything that is in tune with you is in tune with me
+- *Πᾶν μοι συναρμόζει ὃ σοὶ εὐάρμοστόν ἐστιν*: Both words come from the root for fitting together, which covers a carpenter’s joint and a musical tuning. The English uses “fits”. Other reading: Everything that is in tune with you is in tune with me
 - *κόσμε*: Universe, or world, or the ordered whole; the same choice as in 10.21. Other reading: world
 - *οὐδέν μοι πρόωρον οὐδὲ ὄψιμον ὃ σοὶ εὔκαιρον*: The words for “too early” and “too late” are also used of crops that come before or after their season, which leads into the fruit of the next sentence. Other reading: Nothing that is timely for you is unripe or overdue for me
-- *αἱ σαὶ ὧραι*: The word means seasons and also hours or times in general. 'Seasons' goes with the fruit. Other reading: your hours
+- *αἱ σαὶ ὧραι*: The word means seasons and also hours or times in general. “Seasons” goes with the fruit. Other reading: your hours
 - *ἐκ σοῦ πάντα, ἐν σοὶ πάντα, εἰς σὲ πάντα*: The Greek has no verbs, only “out of you”, “in you”, “into you”. None is supplied. Other reading: All things come from you, exist in you and go back into you
-- *ἐκεῖνος μέν φησιν*: The speaker is not named, only pointed to as 'that one'; the words quoted look like a line of verse. Cecrops was the legendary first king of Athens, so his city is Athens. Other reading: The poet says
-- *ὦ πόλι φίλη Κέκροπος*: 'Dear' can go with 'city' (dear city, belonging to Cecrops) or with the name (city dear to Cecrops). The same holds for the phrase about Zeus that copies it. Other reading: O city dear to Cecrops ... O city dear to Zeus
-- *σὺ δὲ οὐκ ἐρεῖς*: Up to here 'you' was the universe and then nature. This 'you' is set against 'that man' and is most naturally Marcus speaking to himself; the Greek does not say so, and does not say what the city of Zeus is. The question expects the answer yes.
+- *ἐκεῖνος μέν φησιν*: The speaker is not named, only pointed to as “that one”; the words quoted look like a line of verse. Cecrops was the legendary first king of Athens, so his city is Athens. Other reading: The poet says
+- *ὦ πόλι φίλη Κέκροπος*: “Dear” can go with “city” (dear city, belonging to Cecrops) or with the name (city dear to Cecrops). The same holds for the phrase about Zeus that copies it. Other reading: O city dear to Cecrops ... O city dear to Zeus
+- *σὺ δὲ οὐκ ἐρεῖς*: Up to here “you” was the universe and then nature. This “you” is set against “that man” and is most naturally Marcus speaking to himself; the Greek does not say so, and does not say what the city of Zeus is. The question expects the answer yes.
 
 </details>
 
@@ -1337,7 +1338,7 @@ You have seen those things; look at these too. Do not disturb yourself: make you
 
 ### 4.27
 
-Either an arranged order, or a stirred brew jumbled together. But in fact an order. Or can a kind of order exist in you, and disorder in the all? And this when all things are, as they are, separated out and spread out, and feel with one another.
+Either an arranged order, or a stirred brew jumbled together. But in fact an order. Or can a kind of order exist in you, and disorder in the All? And this when all things are separated out and spread out as they are, and feel with one another.
 
 <details><summary>Notes</summary>
 
@@ -1421,7 +1422,7 @@ Love the little trade you have learned, and rest in it; and go through what is l
 
 ### 4.32
 
-Think, for the sake of an example, of the times of Vespasian, and you will see all the same things: people marrying, raising children, falling ill, dying, making war, keeping festivals, trading, farming, flattering, insisting on their own way, suspecting, plotting, praying for certain people to die, grumbling at how things are, falling in love, hoarding treasure, wanting consulships, wanting kingships. Well then, that life of theirs is no longer anywhere. Pass on again to the times of Trajan: again all the same things. That life too is dead. In the same way look over the other inscriptions of times and of whole nations, and see how many people strained with all their strength and a little later fell and were broken up into the elements. But above all one should go back over those whom you yourself knew being dragged after empty things, people who neglected to do what fits their own constitution, to hold on tight to that and to be content with that. And here it is necessary to remember that the attention given to each action also has its own worth and proportion. For in this way you will not give up in frustration, if you do not occupy yourself with the lesser things more than is fitting.
+Think, for example, of the times of Vespasian, and you will see all the same things: people marrying, raising children, falling ill, dying, making war, keeping festivals, trading, farming, flattering, insisting on their own way, suspecting, plotting, praying for certain people to die, grumbling at how things are, falling in love, hoarding treasure, wanting consulships, wanting kingships. Well then, that life of theirs is no longer anywhere. Pass on again to the times of Trajan: again all the same things. That life too is dead. In the same way look over the other inscriptions of times and of whole nations, and see how many people strained with all their strength and a little later fell and were broken up into the elements. But above all one should go back over those whom you yourself knew, who were dragged after empty things and neglected to do what fits their own constitution, to hold on tight to that and to be content with that. And here it is necessary to remember that the attention given to each action also has its own worth and proportion. For in this way you will not give up in frustration, if you do not occupy yourself with the lesser things more than is fitting.
 
 <details><summary>Notes</summary>
 
@@ -1505,7 +1506,7 @@ Look closely into their ruling parts, and at the wise as well: what sort of thin
 
 ### 4.39
 
-What is bad for you does not have its existence in another’s ruling part, nor yet in any turn and alteration of what surrounds you. Where, then? In the place where you have that which judges about bad things. So let that not judge, and all is well. Even if what is nearest to it, the little body, is cut, is burned, festers, rots, still let the part that judges about these things keep quiet. That is, let it decide that nothing is either bad or good which can happen equally to a bad man and a good one. For what happens equally to the one who lives against nature and to the one who lives in accordance with nature is neither in accordance with nature nor against nature.
+What is bad for you does not have its existence in another’s ruling part, nor yet in any turn and alteration of what surrounds you. Where, then? In the place where you have what judges about bad things. So let that not judge, and all is well. Even if what is nearest to it, the little body, is cut, is burned, festers, rots, still let the part that judges about these things keep quiet. That is, let it decide that what can happen equally to a bad man and a good one is neither bad nor good. For what happens equally to the one who lives against nature and to the one who lives in accordance with nature is neither in accordance with nature nor against nature.
 
 <details><summary>Notes</summary>
 
@@ -1584,7 +1585,7 @@ What comes next always follows what went before as kin to it. For it is not like
 
 ### 4.46
 
-Always remember the saying of Heraclitus, that the death of earth is to become water, and the death of water is to become air, and of air, fire, and back again. And remember too the one who forgets where the road leads; and that people are at odds with the very thing they are most constantly in company with, the reason that governs the whole; and that the things they run into every day seem foreign to them; and that we must not act and speak like people asleep, for then too we think we are acting and speaking; and that we must not act and speak like children of their parents, that is, simply as we have had it handed down.
+Always remember the saying of Heraclitus, that the death of earth is to become water, and the death of water is to become air, and of air, fire, and back again. And remember too the one who forgets where the road leads; and that people are at odds with the very thing they keep company with most constantly, the reason that governs the whole; and that the things they run into every day seem foreign to them; and that we must not act and speak like people asleep, for then too we think we are acting and speaking; and that we must not act and speak like children of their parents, that is, simply as we have had it handed down.
 
 <details><summary>Notes</summary>
 
@@ -1601,7 +1602,7 @@ Always remember the saying of Heraclitus, that the death of earth is to become w
 
 ### 4.47
 
-Just as, if one of the gods told you that you will die tomorrow or at any rate the day after, you would no longer count it a great thing that it should be the day after rather than tomorrow, unless you are utterly abject (for how much is the gap between?), so too think it nothing great that it should be many years from now rather than tomorrow.
+Just as, if one of the gods told you that you will die tomorrow or at any rate the day after, you would no longer count it a great thing that it should be the day after rather than tomorrow, unless you are utterly abject (for how much lies between?), so too think it nothing great that it should be many years from now rather than tomorrow.
 
 <details><summary>Notes</summary>
 
@@ -1615,7 +1616,7 @@ Just as, if one of the gods told you that you will die tomorrow or at any rate t
 
 ### 4.48
 
-Keep in mind continually how many doctors have died, after many times knitting their brows over the sick; how many astrologers, after foretelling other people’s deaths as if that were something great; how many philosophers, after insisting on countless things about death or immortality; how many champions, after killing many; how many tyrants, after using their power over lives with terrible arrogance, as if they were immortal; and how many whole cities have, so to speak, died: Helice and Pompeii and Herculaneum and countless others. Go over as well all those you know, one after another. One buried this person and was then laid out, another buried that one, and all of it in a short time. For the sum of it is this: always see human things as lasting a day and cheap, yesterday a little slime, tomorrow a mummy or ash. So pass through this instant of time in accord with nature and come to rest with good grace, as an olive might fall when it has grown ripe, speaking well of the earth that bore it and grateful to the tree that grew it.
+Keep in mind continually how many doctors have died, after knitting their brows time and again over the sick; how many astrologers, after foretelling other people’s deaths as if that were something great; how many philosophers, after insisting on countless things about death or immortality; how many champions, after killing many; how many tyrants, after using their power over lives with terrible arrogance, as if they were immortal; and how many whole cities have, so to speak, died: Helice and Pompeii and Herculaneum and countless others. Go over as well all those you know, one after another. One buried this person and was then laid out, another buried that one, and all of it in a short time. For the sum of it is this: always see human things as lasting a day and cheap, yesterday a little slime, tomorrow a mummy or ash. So pass through this instant of time in accord with nature and come to rest with good grace, as an olive might fall when it has grown ripe, speaking well of the earth that bore it and grateful to the tree that grew it.
 
 <details><summary>Notes</summary>
 
@@ -1670,7 +1671,7 @@ To be like the headland against which the waves break without pause; but it stan
 
 ### 4.50
 
-A layman’s help toward contempt of death, but an effective one all the same, is to call back to mind those who clung on and lingered in life. What more do they have, then, than those who died before their time? In any case they lie somewhere or other, Cadicianus, Fabius, Julianus, Lepidus or anyone else of that kind, who carried many out to burial and then were carried out themselves. Altogether, the interval is small, and even this, through how many things, in what company and in what a little body it is drained out! So do not treat it as something that matters. For look behind at the yawning expanse of eternity, and ahead at another that has no limit. In this, then, what difference is there between a child three days old and a Nestor of three generations?
+A layman’s help towards contempt of death, but an effective one all the same, is to call back to mind those who clung on and lingered in life. What more do they have, then, than those who died before their time? In any case they lie somewhere or other, Cadicianus, Fabius, Julianus, Lepidus or anyone else of that kind, who carried many out to burial and then were carried out themselves. Altogether, the interval is small, and even this is drained out through how many things, in what company and in what a little body! So do not treat it as something that matters. For look behind at the yawning expanse of eternity, and ahead at another that has no limit. In this, then, what difference is there between a child three days old and a Nestor of three generations?
 
 <details><summary>Notes</summary>
 
@@ -1680,7 +1681,7 @@ A layman’s help toward contempt of death, but an effective one all the same, i
 - *Καδικιανός*: The name is transliterated as it is given. From memory, unchecked: other editions print Καιδικιανός, Caedicianus. The four men are not explained in the text; the context makes them people known for living long. Other reading: Caedicianus
 - *ἐξήνεγκαν, εἶτα ἐξηνέχθησαν*: ἐκφέρειν, “to carry out”, is the set word for carrying a body out to its funeral. “To burial” is added once so that the sense is clear. Other reading: who carried out many, then were carried out
 - *ὅλον, μικρόν ἐστι τὸ διάστημα*: With the comma as given, ὅλον is an adverb, “on the whole, in sum”. Without it the words would say “the whole interval is small”. Other reading: The whole interval is small
-- *καὶ τοῦτο δι’ ὅσων καὶ μεθ’ οἵων ἐξαντλούμενον καὶ ἐν οἵῳ σωματίῳ;*: The Greek as given ends this sentence with a question mark, but its words (“through how many”, “with what sort”, “in what a”) are those of an exclamation, not of a question. There is also no finite verb after “and even this”, only a participle. The English makes it an exclamation and supplies “it is”. Other reading: Altogether, is the interval not small, and even this drained out through how many things, in what company and in what a little body?
+- *καὶ τοῦτο δι’ ὅσων καὶ μεθ’ οἵων ἐξαντλούμενον καὶ ἐν οἵῳ σωματίῳ;*: The Greek as given ends this sentence with a question mark, but its words (“through how many”, “with what sort”, “in what a”) are those of an exclamation, not of a question. There is also no finite verb after “and even this”, only a participle. The English makes it an exclamation and supplies “is”. Other reading: Altogether, is the interval not small, and even this drained out through how many things, in what company and in what a little body?
 - *ἐξαντλούμενον*: The image is of baling or draining water out to the last, used for toiling through something. “Through how many” and “with what sort” do not say whether things or people are meant: the English reads the first as things, most likely troubles, and the second as people, “in what company”. σωματίῳ is a diminutive that belittles the body. Other reading: and even this is toiled through amid how many troubles, with what sort of things and in what a poor little body
 - *μὴ οὖν ὡς πρᾶγμα*: There is no verb: literally “not, then, as a matter”, with πρᾶγμα in the sense of something that counts. The English supplies “treat it” and gives πρᾶγμα as “something that matters”. Other reading: So, not as though it were something
 - *τὸ ἀχανὲς τοῦ αἰῶνος*: τὸ ἀχανές is “the yawning”, an adjective used as a noun, so English must supply a noun: “expanse”. αἰών is the whole of time, given as “eternity”. Other reading: the gaping gulf of time
@@ -1707,7 +1708,7 @@ Always run to the short road. And the short road is the one according to nature,
 
 ### 5.1
 
-At dawn, when you are reluctant to get up, have this ready to hand: “I am getting up to do a human being’s work. Why then am I discontented, if I am on my way to do the things I was born for, the things for whose sake I was brought into the universe? Or was I made for this, to lie under the blankets and keep myself warm?” “But this is more pleasant.” So were you born to feel pleasure? And in general, were you born to be acted on or to act? Do you not see the little plants, the little birds, the ants, the spiders, the bees doing what is their own to do and, for their part, putting the universe together? And then you are not willing to do what belongs to a human being? You do not run to what is according to your nature? “But one must rest too.” I say so too. Nature, though, has given measures for this as well; it has given them for eating and drinking as well; and yet you go beyond the measures, beyond what is enough. But in your actions it is not so: there you stop short of what you can do. For you do not love yourself, since otherwise you would love your nature too, and what it wills. But those who love their own crafts wear themselves away at the works of those crafts, unwashed and unfed. Do you honour your own nature less than the engraver honours engraving, or the dancer dancing, or the money-lover money, or the lover of empty fame their scrap of fame? These people too, when the passion takes them, would sooner advance the things they care about than eat or sleep. But to you do social actions seem cheaper and worth less effort?
+At dawn, when you are reluctant to get up, have this ready to hand: “I am getting up to do a human being’s work. Why then am I discontented, if I am on my way to do the things I was born for, the things for whose sake I was brought into the universe? Or was I made for this, to lie under the blankets and keep myself warm?” “But this is more pleasant.” So were you born to feel pleasure? And in general, were you born to be acted on or to act? Do you not see the little plants, the little birds, the ants, the spiders, the bees doing what is their own to do and, for their part, putting the universe together? And then you are not willing to do what belongs to a human being? You do not run to what is according to your nature? “But one must rest too.” I say so too. Nature, though, has given measures for this as well; it has given them for eating and drinking as well; and yet you go beyond the measures, beyond what is enough. But in your actions it is not so: there you stop short of what you can do. For you do not love yourself, since otherwise you would love your nature too, and what it wills. But those who love their own crafts wear themselves away at the works of those crafts, unwashed and unfed. Do you honour your own nature less than the engraver honours engraving, or the dancer dancing, or the money-lover money, or the lover of empty fame their scrap of fame? These people too, when the passion takes them, would sooner advance the things they care about than eat or sleep. But do social actions seem cheaper to you, and worth less effort?
 
 <details><summary>Notes</summary>
 
@@ -1742,7 +1743,7 @@ How easy it is to push away and wipe out every impression that is troublesome or
 
 ### 5.3
 
-Judge yourself worthy of every word and deed that accords with nature, and do not let the blame or the talk that comes afterward from some people pull you away; but if it is a fine thing to have been done or said, do not judge yourself unworthy of it. For those people have a ruling part of their own and act on an impulse of their own. You, for your part, do not look round at those things, but go the straight road right through, following your own nature and the common nature; and the road of these two is one.
+Judge yourself worthy of every word and deed that accords with nature, and do not let the blame or the talk that comes afterwards from some people pull you away; but if it is a fine thing to have been done or said, do not judge yourself unworthy of it. For those people have a ruling part of their own and act on an impulse of their own. You, for your part, do not look round at those things, but go the straight road right through, following your own nature and the common nature; and the road of these two is one.
 
 <details><summary>Notes</summary>
 
@@ -1750,7 +1751,7 @@ Judge yourself worthy of every word and deed that accords with nature, and do no
 - *τοῦ κατὰ φύσιν*: The article is singular and stands next to “deed”. The English takes it with both “word” and “deed”. Other reading: of every word, and of every deed that accords with nature
 - *ἡ ἐπακολουθοῦσά τινων μέμψις ἢ λόγος*: Here the word that elsewhere means “reason” is plainly what people say, so “talk”. The participle is “following upon”, that is, coming after the word or deed; it could also be heard as blame that dogs a person. Other reading: the blame or the talk of certain people that dogs you
 - *περισπάτω*: Literally to draw off to one side, so to distract. The English keeps the pull, since the passage goes on to a straight road. Other reading: distract you
-- *εἰ καλὸν πεπρᾶχθαι ἢ εἰρῆσθαι*: The word for “fine” covers right, honorable and beautiful. The two verbs are passive and look back on a finished act, “to have been done or said”, and the English keeps them so. Other reading: if it is right that it should have been done or said
+- *εἰ καλὸν πεπρᾶχθαι ἢ εἰρῆσθαι*: The word for “fine” covers right, honourable and beautiful. The two verbs are passive and look back on a finished act, “to have been done or said”, and the English keeps them so. Other reading: if it is right that it should have been done or said
 - *ἰδίᾳ ὁρμῇ χρῶνται*: Literally “use an impulse of their own”. “Their own” here means private to them, set against “your own nature” below, where the same adjective returns. Other reading: use an impulse of their own
 - *ἃ σὺ μὴ περιβλέπου*: The relative is neuter plural, so it points to their ruling part and their impulse, not to the people: “those things”. The Greek stresses “you” against “those people”, which the English gives as “You, for your part”. “Look round at” is the literal sense of the verb. Other reading: But you, do not gaze about at them
 - *εὐθεῖαν πέραινε*: “Straight” is feminine with “road” understood, the road named in the last words, so the English says “road” in both places. The verb is the glossary’s “carry through”, which English does not say of a road; “go right through” keeps its sense of going on to the finish. Other reading: carry your course straight through
@@ -1777,7 +1778,7 @@ I make my way through the things that accord with nature until I fall and rest, 
 
 ### 5.5
 
-They cannot admire your sharpness of mind. So be it. But there are many other things of which you cannot say, “Because I am not made for it by nature.” Offer those, then, which are wholly in your power: being genuine, dignity, bearing hard work, not loving pleasure, not complaining of your lot, needing little, kindness, freedom, plainness, no idle talk, greatness. Do you not see how many things you are already able to offer, for which there is no excuse of want of natural gift or of unfitness, and yet you still stay down below of your own will? Or are you actually forced to grumble, to be stingy, to flatter, to blame your poor body, to try to please, to show off and to be tossed about so much in your soul, because you were built without natural gift? No, by the gods. Rather, you could have been rid of these long ago, and be faulted only, if at all, for being rather slow and finding things rather hard to follow. And this too you must work on, not disregarding it and not taking pleasure in your dullness.
+They cannot admire your sharpness of mind. So be it. But there are many other things of which you cannot say, “Because I am not made for it by nature.” Offer those, then, which are wholly in your power: being genuine, dignity, bearing hard work, not loving pleasure, not complaining of your lot, needing little, kindness, freedom, plainness, no idle talk, greatness. Do you not see how many things you are already able to offer, for which lack of natural gift or unfitness is no excuse, and yet you still stay down below of your own will? Or are you actually forced to grumble, to be stingy, to flatter, to blame your poor body, to try to please, to show off and to be tossed about so much in your soul, because you were built without natural gift? No, by the gods. Rather, you could have been rid of these long ago, and be faulted only, if at all, for being rather slow and finding things rather hard to follow. And this too you must work on, not disregarding it and not taking pleasure in your dullness.
 
 <details><summary>Notes</summary>
 
@@ -1823,7 +1824,7 @@ A prayer of the Athenians: “Rain, rain, dear Zeus, down on the ploughland of t
 
 <details><summary>Notes</summary>
 
-- *Εὐχὴ Ἀθηναίων*: The Greek has no quotation marks; I take the prayer to run from 'Rain, rain' to 'the plains', with Marcus's comment after it. There is no article, so it could also be 'An Athenian prayer'. Other reading: An Athenian prayer
+- *Εὐχὴ Ἀθηναίων*: The Greek has no quotation marks; The prayer is taken to run from “Rain, rain” to “the plains”, with Marcus’s comment after it. There is no article, so it could also be “An Athenian prayer”. Other reading: An Athenian prayer
 - *ὗσον, ὗσον*: A command to Zeus himself, “rain!”, said twice. Other reading: Send rain, send rain
 - *κατὰ τῆς ἀρούρας τῆς Ἀθηναίων καὶ τῶν πεδίων*: ἄρουρα is ploughed or sown land. One preposition governs both nouns, so the plains may be the Athenians’ own or simply “the plains”; the English leaves that open. Other reading: on the ploughland and plains of the Athenians
 - *ἤτοι οὐ δεῖ εὔχεσθαι ἢ οὕτως*: The second half has no verb; “one should pray” is supplied from the first. δεῖ can be “should” or “must”. Other reading: Either one must not pray, or only like this
@@ -1833,7 +1834,7 @@ A prayer of the Athenians: “Rain, rain, dear Zeus, down on the ploughland of t
 
 ### 5.8
 
-When people say, “Asclepius ordered horse-riding for this person, or cold baths, or going barefoot”, it is the same kind of thing as saying, “The nature of the whole ordered an illness for this person, or a maiming, or a loss, or something else of that kind.” For in the first case “ordered” means something like this: he set this in order for this person as suited to health. And in the second, what falls to each person has in some way been set in order for them as suited to fate. For we say that these things “fall” to us in just the way that builders say the squared stones in walls or in pyramids “fall” into place, fitting with one another in a particular arrangement. For in general there is one fitting-together; and just as the universe is made complete, as the body it is, out of all bodies, so fate is made complete, as the cause it is, out of all causes. Even people with no training at all understand what I mean, for they say, “It brought him this.” So then, this was brought to this person, and this was ordered for this person. Let us accept these things, then, as we accept the things Asclepius orders. After all, many of those too are rough, but we welcome them in the hope of health. Let the carrying out and completion of what seems good to the common nature seem to you the same kind of thing as your own health, and so welcome everything that comes about, even if it seems rather harsh, because it leads you there: to the health of the universe, and to the good progress and success of Zeus. For it would not bring this to anyone if it did not bring good to the whole. For not even any ordinary nature brings anything that is not suited to what it governs. So you should hold dear what falls to you, for two reasons. One is that it came about for you, and was ordered for you, and stood in some relation to you, spun together from far back out of the oldest causes. The other is that what comes to each person individually is also a cause, for the one that governs the whole, of good progress and of completion and, by Zeus, of continuance itself. For the complete whole is maimed if you cut through the connection and continuity at any point at all, of its causes just as of its parts. And you do cut through it, as far as it lies with you, whenever you are discontented, and in a way you destroy it.
+When people say, “Asclepius ordered horse-riding for this person, or cold baths, or going barefoot”, it is the same kind of thing as saying, “The nature of the whole ordered an illness for this person, or a maiming, or a loss, or something else of that kind.” For in the first case “ordered” means something like this: he set this in order for this person as suited to health. And in the second, what falls to each person has in some way been set in order for them as suited to fate. For we say that these things “fall” to us in just the way that builders say the squared stones in walls or in pyramids “fall” into place, fitting with one another in a particular arrangement. For in general there is one fitting-together; and just as the universe is made complete, as the body it is, out of all bodies, so fate is made complete, as the cause it is, out of all causes. Even people with no training at all understand what I mean, for they say, “It brought him this.” So then, this was brought to this person, and this was ordered for this person. Let us accept these things, then, as we accept the things Asclepius orders. After all, many of those too are rough, but we welcome them in the hope of health. Let the carrying out and completion of what seems good to the common nature seem to you the same kind of thing as your own health, and so welcome everything that comes about, even if it seems rather harsh, because it leads you there: to the health of the universe, and to the good progress and success of Zeus. For it would not bring this to anyone if it did not bring good to the whole. For not even any ordinary nature brings anything that is not suited to what it governs. So you should hold dear what falls to you, for two reasons. One is that it came about for you, and was ordered for you, and stood in some relation to you, spun together from far back out of the oldest causes. The other is that what comes to each person individually is also, for the one that governs the whole, a cause of good progress and of completion and, by Zeus, of continuance itself. For the complete whole is maimed if you cut through the connection and continuity at any point at all: of its parts, and so too of its causes. And you do cut through it, as far as it lies with you, whenever you are discontented, and in a way you destroy it.
 
 <details><summary>Notes</summary>
 
@@ -1864,9 +1865,9 @@ When people say, “Asclepius ordered horse-riding for this person, or cold bath
 
 ### 5.9–10a
 
-Do not be disgusted, do not give up, do not lose patience, if doing each thing from right principles does not come to you time after time; but when you have been knocked aside, come back again, and be glad if most of what you do is more in keeping with a human being, and love what you are coming back to. And do not come back to philosophy as to a schoolboy’s minder, but as people with sore eyes go to the little sponge and the egg, as another goes to a poultice, as to a medicinal wash. For in this way you will make no show of obeying reason, but will find rest in it. Remember that philosophy wants only what your nature wants; but you were wanting something else, not in accord with nature. For what is more agreeable than these things? For is it not through this that pleasure trips us up? But look whether greatness of soul, freedom, simplicity, fairness of mind, reverence are more agreeable. For what is more agreeable than wisdom itself, when you think of how the power of understanding and knowledge never stumbles and flows smoothly in everything?
+Do not be disgusted, do not give up, do not lose patience, if doing each thing from right principles does not come to you time after time; but when you have been knocked aside, come back again, and be glad if most of what you do is more in keeping with a human being, and love what you are coming back to. And do not come back to philosophy as to a schoolboy’s minder, but as people with sore eyes go to the little sponge and the egg, as another goes to a poultice, as to a medicinal wash. For in this way you will make no show of obeying reason, but will find rest in it. Remember that philosophy wants only what your nature wants; but you were wanting something else, not in accord with nature. For what is more agreeable than these things? For is it not through this that pleasure trips us up? But look whether greatness of soul, freedom, simplicity, fairness of mind, piety are more agreeable. For what is more agreeable than wisdom itself, when you think of how the power of understanding and knowledge never stumbles and flows smoothly in everything?
 
-Things are, in a way, so veiled that to not a few philosophers, and not ordinary ones, they have seemed altogether impossible to grasp; except that to the Stoics themselves, at least, they seem hard to grasp. And every assent of ours can shift: for where is the person who does not shift? Pass on, then, to the objects themselves: how short-lived they are, how cheap, how they can be in the possession of a catamite, a prostitute or a robber. After that go on to the characters of the people you live with: one can hardly put up with even the most charming of them, not to say that a person can hardly bear even themselves. In such gloom and filth, then, and in so great a flow of substance and of time, of movement and of the things moved, what there is that can be highly valued, or pursued in earnest at all, I cannot even imagine. For on the contrary …
+Things are, in a way, so veiled that to not a few philosophers, and not ordinary ones, they have seemed altogether impossible to grasp; except that to the Stoics themselves, at least, they seem hard to grasp. And every assent of ours can shift: for where is the person who does not shift? Pass on, then, to the objects themselves: how short-lived they are, how cheap, how they can be in the possession of a catamite, a prostitute or a robber. After that go on to the characters of the people you live with: one can hardly put up with even the most charming of them, not to mention that a person can hardly bear even themselves. In such gloom and filth, then, and in so great a flow of substance and of time, of movement and of the things moved, what there is that can be highly valued, or pursued in earnest at all, I cannot even imagine. For on the contrary …
 
 <details><summary>Notes</summary>
 
@@ -1922,7 +1923,7 @@ One must comfort oneself and wait for the natural dissolution, and not chafe at 
 
 ### 5.12
 
-What kind of things they are that seem good to most people, you can gather from this as well. For if a person had in mind certain things that truly are good, such as wisdom, self-control, justice, courage, then with these in mind first they could not listen to the words “because of the good things”, for it will not fit. But a person who has first in mind the things that appear good to most people will listen, and will readily accept what the comic poet said as a fitting thing to add. So even most people have an impression of the difference. For otherwise this line would not jar and be refused in the one case, while when it is said of wealth and of the pieces of good luck that make for luxury or reputation we accept it as aptly and wittily said. Go on, then, and ask whether one should honour and judge to be good the kind of things which, when they have first been brought to mind, can fittingly be followed by the line that their owner, because of the plenty, “has nowhere to shit”.
+What kind of things they are that seem good to most people, you can gather from this as well. For if a person had in mind certain things that truly are good, such as wisdom, self-control, justice, courage, then, with these first in mind, they could not listen to the words “because of the good things”, for it will not fit. But a person who has first in mind the things that appear good to most people will listen, and will readily accept what the comic poet said as a fitting thing to add. So even most people have an impression of the difference. For otherwise this line would not jar and be refused in the one case, while, when it is said of wealth and of the pieces of good luck that make for luxury or reputation, we accept it as aptly and wittily said. Go on, then, and ask whether one should honour and judge to be good the kind of things which, when they have first been brought to mind, can fittingly be followed by the line that their owner, because of the plenty, “has nowhere to shit”.
 
 <details><summary>Notes</summary>
 
@@ -1943,7 +1944,7 @@ What kind of things they are that seem good to most people, you can gather from 
 
 ### 5.13
 
-I am made up of what is causal and what is material, and neither of these will perish into what is not, just as neither came to be out of what is not. So every part of me will be assigned, through change, to some part of the universe, and that in turn will change into another part of the universe, and so on to infinity. It was through a change of this kind that I too came to be, and my parents, and, for one who goes back, into another infinity. For nothing prevents one from saying so, even if the universe is governed in finite cycles.
+I am made up of what is causal and what is material, and neither of these will perish into what is not, just as neither came to be out of what is not. So every part of me will be assigned, through change, to some part of the universe, and that in turn will change into another part of the universe, and so on to infinity. It was through a change of this kind that I too came to be, and my parents; and for anyone who goes back, the line runs on into another infinity. For nothing prevents one from saying so, even if the universe is governed in finite cycles.
 
 <details><summary>Notes</summary>
 
@@ -1953,7 +1954,7 @@ I am made up of what is causal and what is material, and neither of these will p
 - *καταταχθήσεται*: A word of ordering and posting: to be assigned to a place in a rank. “Assigned” keeps that. Other reading: will be distributed into; will be reduced to
 - *καὶ ἤδη εἰς ἄπειρον*: ἄπειρον is “the unlimited”, and the last sentence answers it with πεπερασμένας, “limited”, from the same root. “Infinity” here and “finite” there let the English show the link. Other reading: and so on without limit
 - *οἱ ἐμὲ γεννήσαντες*: Literally “those who produced me”, from the verb used of a father or a mother having a child. In the plural it is an ordinary Greek way of saying “parents”, and the English uses that noun. Other reading: and those who brought me into being
-- *ἐπανιόντι εἰς ἄλλο ἄπειρον*: The dative participle means “for someone going back up”, that is, tracing the line of ancestors backwards. The Greek then says only “into another unlimited”, with no noun and no word for “on”; “another infinity” adds neither. Other reading: and so, tracing the line upwards, into another series without limit
+- *ἐπανιόντι εἰς ἄλλο ἄπειρον*: The dative participle means “for someone going back up”, that is, tracing the line of ancestors backwards. The Greek then says only “into another unlimited”, with no noun and no verb; the English supplies “the line runs on” so that the clause can stand, and “another infinity” adds no noun. Other reading: and so, tracing the line upwards, into another series without limit
 - *κατὰ περιόδους πεπερασμένας*: περίοδος is a circuit or recurring period, and the preposition is “in” or “by”: the governing goes cycle by cycle. This is taken as the Stoic teaching of world cycles, each with an end (from memory, unchecked). διοικῆται is the same verb of governing as in 6.5. Other reading: even if the universe is administered by periods that have a limit
 
 </details>
@@ -1980,7 +1981,7 @@ None of the things that do not fall to a human being, as a human being, should b
 
 ### 5.16
 
-Whatever kind of impressions you often form, your thought will be of that kind; for the soul is dyed by its impressions. So dye it with an unbroken run of impressions such as these. For example: where it is possible to live, there it is also possible to live well; but it is possible to live at court; therefore it is also possible to live well at court. And again: each thing is carried toward that for the sake of which it was built; and what it is carried toward, in that lies its goal; and where its goal is, there also is the benefit and the good of each thing; therefore the good of a rational animal is community. For that we were born for community has long since been shown. Or was it not plain that the worse things are for the sake of the better, and the better for the sake of one another? And things with a soul are better than things without one, and rational things better than things with a soul.
+Whatever kind of impressions you often form, your thought will be of that kind; for the soul is dyed by its impressions. So dye it with an unbroken run of impressions such as these. For example: where it is possible to live, there it is also possible to live well; but it is possible to live at court; therefore it is also possible to live well at court. And again: each thing is carried towards that for the sake of which it was built; and what it is carried towards, in that lies its goal; and where its goal is, there also is the benefit and the good of each thing; therefore the good of a rational animal is community. For it has long since been shown that we were born for community. Or was it not plain that the worse things are for the sake of the better, and the better for the sake of one another? And things with a soul are better than things without one, and rational things better than things with a soul.
 
 <details><summary>Notes</summary>
 
@@ -1989,7 +1990,7 @@ Whatever kind of impressions you often form, your thought will be of that kind; 
 - *βάπτεται*: Literally “is dipped”, the dyer’s word; the same verb is the command in the next sentence, and “dye” is kept for both. Other reading: is steeped
 - *τῇ συνεχείᾳ*: Literally “by the continuity of such impressions”, made concrete as “an unbroken run”. Other reading: by having such impressions continually
 - *ἐν αὐλῇ*: αὐλή is a courtyard and then a ruler’s court: his household and the life lived around him. Marcus means his own. The building is not the point. Other reading: in a palace
-- *πρὸς τοῦτο φέρεται*: The form can be passive (“is carried”) or middle (“moves, tends”). “Is carried” is kept both times; it need not imply an outside force. Other reading: each thing tends toward that for the sake of which it was built
+- *πρὸς τοῦτο φέρεται*: The form can be passive (“is carried”) or middle (“moves, tends”). “Is carried” is kept both times; it need not imply an outside force. Other reading: each thing tends towards that for the sake of which it was built
 - *τὸ συμφέρον*: “What is good for a thing”, built on the same verb as “is carried” just before; the echo cannot be kept in English. “Benefit” is used here because “the good” follows at once as a separate word. Other reading: what is good for each thing
 - *κοινωνία*: The word covers “sharing, partnership, fellowship, community”. “Community” is used here and in the next sentence. It is the noun behind the adjective given as “social” elsewhere in this translation. Other reading: fellowship
 - *πάλαι δέδεικται*: “Has been shown long ago”: the Greek does not say whether earlier in his own notes or in the teaching of his school is meant. The English leaves it open. Other reading: was proved long ago
@@ -2004,7 +2005,7 @@ To chase after impossible things is madness. And it is impossible that bad peopl
 
 Nothing happens to anyone that they are not fitted by nature to bear. The same things happen to someone else, and either because they do not know that it has happened, or because they are showing off greatness of mind, they stand firm and remain unhurt. It is a terrible thing, then, that ignorance and the wish to please should be stronger than wisdom.
 
-Things themselves do not touch the soul in any way at all, nor do they have a way in to the soul, nor can they turn or move the soul. But it alone turns and moves itself, and whatever verdicts it thinks itself worthy to pass, it makes the things that stand before it to be of that kind for itself.
+Things themselves do not touch the soul in any way at all, nor do they have a way in to the soul, nor can they turn or move the soul. But it alone turns and moves itself, and whatever kind of verdicts it thinks itself worthy to pass, of that kind it makes for itself the things that stand before it.
 
 <details><summary>Notes</summary>
 
@@ -2053,11 +2054,11 @@ Of the things in the universe, honour what is supreme: this is what uses all thi
 
 ### 5.22–25
 
-What is not harmful to the city does not harm the citizen either. At every impression of having been harmed, apply this rule: if the city is not harmed by this, I have not been harmed either. And if the city is harmed, one should not be angry, but should show the one who harms the city what it is that is being overlooked.
+What is not harmful to the city does not harm the citizen either. At every impression of having been harmed, apply this rule: if the city is not harmed by this, I have not been harmed either. And if the city is harmed, one should not be angry, but should show the one who harms the city what is being overlooked.
 
-Think often of the speed with which the things that are and the things that come to be are carried past and drawn away. For the substance of things is like a river in unbroken flow, the activities are in continual changes, the causes in countless turns, and almost nothing stands still, even what is close at hand. And the boundlessness of the past and of the future is a yawning gulf in which all things vanish. How then is a person not a fool who, among these things, is puffed up, or torn about, or complains bitterly, as though at something that troubled them for a time, and a long one?
+Think often of the speed with which the things that are and the things that come to be are carried past and drawn away. For the substance of things is like a river in unbroken flow, the activities are in continual change, the causes in countless turns, and almost nothing stands still, even what is close at hand. And the boundlessness of the past and of the future is a yawning gulf in which all things vanish. How then is a person not a fool who, among these things, is puffed up, or torn about, or complains bitterly, as though at something that troubled them for a time, and a long one?
 
-Remember the whole substance of things, of which you have the smallest share; and the whole of time, of which a brief, momentary interval has been marked off for you; and fate, of which you are how small a part?
+Remember the whole substance of things, of which you have the smallest share; and the whole of time, of which a brief, momentary interval has been marked off for you; and fate: how small a part of it are you?
 
 Someone else does me some wrong? That is for them to see to: they have their own disposition, their own activity. I now have what the common nature wants me to have now, and I do what my own nature wants me to do now.
 
@@ -2081,7 +2082,7 @@ Someone else does me some wrong? That is for them to see to: they have their own
 
 ### 5.26
 
-Let the ruling and governing part of your soul not be turned by the smooth or rough motion in the flesh, and let it not be blended in, but let it draw a line around itself and confine those feelings within the parts of the body. But when they pass up into the mind by the other shared feeling, as in a body that is one, then one should not try to go against the sensation, which is natural; but let the ruling part not add, from itself, the judgment that it is something good or bad.
+Let the ruling and governing part of your soul not be turned by the smooth or rough motion in the flesh, and let it not be blended in, but let it draw a line around itself and confine those feelings within the parts of the body. But when they pass up into the mind by the other shared feeling, as in a unified body, then one should not try to go against the sensation, which is natural; but let the ruling part not add, from itself, the judgment that it is something good or bad.
 
 <details><summary>Notes</summary>
 
@@ -2118,7 +2119,7 @@ Let the ruling and governing part of your soul not be turned by the smooth or ro
 
 ### 5.28a
 
-Surely you are not angry with the person who stinks like a goat? Surely you are not angry with the one whose breath smells? What do you want them to do? The person has that kind of mouth, has that kind of armpits; from such things such a smell must come. “But a human being has reason,” someone says, “and can work out, by stopping to think, where they are at fault.” Good for you! Well then, you have reason too: stir a rational disposition with a rational disposition; show them, remind them. For if they listen, you will cure them, and there is no need of anger.
+Surely you are not angry with the person who reeks of goat? Surely you are not angry with the one whose breath smells? What do you want them to do? The person has that kind of mouth, has that kind of armpits; from such things such a smell must come. “But a human being has reason,” someone says, “and can work out, by stopping to think, where they are at fault.” Good for you! Well then, you have reason too: stir a rational disposition with a rational disposition; show them, remind them. For if they listen, you will cure them, and there is no need of anger.
 
 <details><summary>Notes</summary>
 
@@ -2138,7 +2139,7 @@ Surely you are not angry with the person who stinks like a goat? Surely you are 
 
 Neither a tragic actor nor a prostitute.
 
-The way you have in mind to live once you have gone out, you can live that way here. But if they do not allow it, then go out of life as well, yet as one who is suffering nothing bad. There is smoke, and I leave. Why do you think it anything much? But as long as nothing of that kind leads me out, I stay, free, and no one will prevent me from doing what I want. And I want what accords with the nature of the rational and social living creature.
+As you have in mind to live once you have gone out, so you can live here. But if they do not allow it, then go out of life as well, yet as one who is suffering nothing bad. There is smoke, and I leave. Why do you think it anything much? But as long as nothing of that kind leads me out, I stay, free, and no one will prevent me from doing what I want. And I want what accords with the nature of the rational and social living being.
 
 <details><summary>Notes</summary>
 
@@ -2149,7 +2150,7 @@ The way you have in mind to live once you have gone out, you can live that way h
 - *καπνὸς καὶ ἀπέρχομαι*: Literally “smoke, and I go away”: the Greek leaves “there is” to be understood. From memory, unchecked, this is the image of the smoky room found in Epictetus: if the room smokes too much, one leaves it. Other reading: The room is full of smoke and I leave it
 - *τί αὐτὸ πρᾶγμα δοκεῖς;*: πρᾶγμα here is “a matter of weight, a trouble”, which “anything much” gives. The words could also be read as a question about what the thing is. Other reading: What do you think the thing itself is?
 - *μένω ἐλεύθερος*: μένω answers “leads me out”, so “I stay”, with “free” added to it. It could also be read as one phrase, “I remain free”. Other reading: I remain free
-- *θέλω δὲ κατὰ φύσιν τοῦ λογικοῦ καὶ κοινωνικοῦ ζῴου*: The Greek repeats “I want” and gives it no object: “and I want in accordance with the nature of the rational and social living creature”. “What accords with” supplies the object. Other reading: and my wanting follows the nature of a rational and social animal
+- *θέλω δὲ κατὰ φύσιν τοῦ λογικοῦ καὶ κοινωνικοῦ ζῴου*: The Greek repeats “I want” and gives it no object: “and I want in accordance with the nature of the rational and social living being”. “What accords with” supplies the object. Other reading: and my wanting follows the nature of a rational and social animal
 
 </details>
 
@@ -2172,15 +2173,15 @@ The mind of the whole is social. At any rate it has made the worse things for th
 
 ### 5.31
 
-How have you behaved up to now toward the gods, your parents, your brothers, your wife, your children, your teachers, those who brought you up, your friends, those close to you, your household slaves? Does this hold of you up to now, toward all of them: “to have done nothing wrong to anyone, nor said anything wrong”? Call to mind, too, what things you have passed through and what things you have been strong enough to endure; and that the story of your life is now full and your service complete; and how many fine things you have seen; and how many pleasures and pains you have looked down on, how many honours you have looked past, and to how many inconsiderate people you have been considerate.
+How have you behaved up to now towards the gods, your parents, your brothers, your wife, your children, your teachers, those who brought you up, your friends, those close to you, your household slaves? Does this hold of you up to now, towards all of them: “to have done nothing wrong to anyone, nor said anything wrong”? Call to mind, too, what things you have passed through and what things you have been strong enough to endure; and that the story of your life is now full and your service complete; and how many fine things you have seen; and how many pleasures and pains you have looked down on, how many honours you have looked past, and to how many inconsiderate people you have been considerate.
 
 <details><summary>Notes</summary>
 
-- *Πῶς προσενήνεξαι*: The Greek gives no question mark. The opening is read as a question put to oneself; it could depend on an unspoken “consider”. Other reading: Consider how you have behaved up to now toward the gods
+- *Πῶς προσενήνεξαι*: The Greek gives no question mark. The opening is read as a question put to oneself; it could depend on an unspoken “consider”. Other reading: Consider how you have behaved up to now towards the gods
 - *ἀδελφοῖς*: The plural is “brothers”, and can cover brothers and sisters together. “Brothers” is kept. Other reading: your brothers and sisters
 - *τροφεῦσι*: Those who rear a child: nurses, foster-carers, the tutor who has charge of a boy. The English reads “those who brought you up”. Other reading: your tutors
 - *οἰκείοις*: People who belong to one’s house or circle: kin, household, intimates. The English reads “those close to you”, and the same in 1.17a, where the word stands beside a separate word for relatives. Other reading: your relatives
-- *εἰ πρὸς πάντας σοι μέχρι νῦν ἐστι τό*: Literally “whether toward all of them there is for you up to now the (saying)”. The “whether” has no verb to depend on, so the English makes a direct question; it could hang on the first sentence or on an unspoken “consider”. Other reading: and whether up to now it holds of you toward all of them
+- *εἰ πρὸς πάντας σοι μέχρι νῦν ἐστι τό*: Literally “whether towards all of them there is for you up to now the (saying)”. The “whether” has no verb to depend on, so the English makes a direct question; it could hang on the first sentence or on an unspoken “consider”. Other reading: and whether up to now it holds of you towards all of them
 - *μήτε τινὰ ῥέξαι ἐξαίσιον μήτε τι εἰπεῖν*: A line of Homer, from the Odyssey, said of Odysseus as king and adapted to fit the sentence (from memory, unchecked). The adjective means “beyond what is right or due” and stands once in the Greek; the English repeats “wrong” to make the second half clear. Other reading: neither to have done anything out of bounds to anyone, nor to have said it
 - *ἡ ἱστορία τοῦ βίου*: The noun can be a story or record, or an inquiry and what is learned by it. The English reads “the story of your life”. Other reading: that your acquaintance with life is now complete
 - *λειτουργία*: A public service or duty performed for the community. The English reads “service”. Other reading: your public duty is finished
@@ -2208,7 +2209,7 @@ Why do unskilled and ignorant souls throw into confusion one that has skill and 
 
 ### 5.33
 
-Any moment now, ash or a skeleton, and either a name or not even a name; and the name is a noise and an echo. The things highly prized in life are empty and rotten and small, little dogs biting one another, quarrelsome children laughing and then at once crying. But good faith, a sense of shame, justice and truth: “to Olympus from the earth of the wide ways.” What is there, then, that still holds one here, seeing that the things the senses perceive change easily and do not stand still, the organs of sense are dim and easily take false imprints, the little soul itself is a vapor rising from blood, and a good name among such people is empty? What then? You wait cheerfully for what is either an extinguishing or a move elsewhere. And until the right time for that is at hand, what is enough? What else but to revere the gods and speak well of them, to do good to human beings, to bear with them and to hold back; and, as for everything inside the limits of the bit of flesh and the little breath, to remember that it is neither yours nor up to you.
+Any moment now, ash or a skeleton, and either a name or not even a name; and the name is a noise and an echo. The things highly prized in life are empty and rotten and small, little dogs biting one another, quarrelsome children laughing and then at once crying. But good faith, a sense of shame, justice and truth: “to Olympus from the earth of the wide ways.” What is there, then, that still holds one here, seeing that the things the senses perceive change easily and do not stand still, the organs of sense are dim and easily take false imprints, the little soul itself is a vapour rising from blood, and a good name among such people is empty? What then? You wait cheerfully for what is either an extinguishing or a move elsewhere. And until the right time for that is at hand, what is enough? What else but to revere the gods and speak well of them, to do good to human beings, to bear with them and to hold back; and, as for everything inside the limits of the bit of flesh and the little breath, to remember that it is neither yours nor up to you.
 
 <details><summary>Notes</summary>
 
@@ -2244,7 +2245,7 @@ You can always have your life flow well, if indeed you can also travel a good ro
 
 If this is neither badness of mine nor an activity that comes from badness of mine, and the community is not harmed, why am I upset over it? And what harm is there to the community?
 
-Do not be swept off wholesale by the impression, but help as far as you are able and as far as is deserved, even if it is in the middle things that they are coming off worse; do not, however, form the impression that it is a harm, for that is a bad habit. But as the old man, on leaving, asked for his foster-child’s top, remembering that it was a top, so too in this case. Otherwise you become someone calling out on the Rostra. Man, have you forgotten what these things were? “Yes, but they are much sought after by these people.” And is that a reason for you to become a fool as well? I once was,
+Do not be swept off wholesale by the impression, but help as far as you are able and as far as is deserved, even if they are coming off worse in the middle things; do not, however, form the impression that it is a harm, for that is a bad habit. But as the old man, on leaving, asked for his foster-child’s top, remembering that it was a top, so too in this case. Otherwise you become someone calling out on the Rostra. Man, have you forgotten what these things were? “Yes, but they are much sought after by these people.” And is that a reason for you to become a fool as well? I once was,
 
 <details><summary>Notes</summary>
 
@@ -2276,7 +2277,7 @@ Do not be swept off wholesale by the impression, but help as far as you are able
 - *τὸ δὲ εὔμοιρος*: The article quotes the word just used and there is no verb; “means” is supplied. Other reading: And “fortunate” is: having assigned a good fortune to yourself
 - *σεαυτῷ ἀπονείμας*: Second person: “to yourself”, with the participle in the nominative. ἀπονέμω is “assign” or “deal out” and is not formed from μοῖρα, so the English does not echo “lot” in it. Other reading: having dealt yourself a good portion
 - *ἀγαθαὶ τροπαὶ ψυχῆς*: τροπαί are turns or changes of direction, and ψυχῆς has no article. “Turnings” is written because “good turns” in English means favours. Other reading: good dispositions of the soul; good changes of the soul
-- *ἀγαθαὶ ὁρμαί*: ὁρμή, “impulse”: the movement of the soul toward an action, the Stoic term. Other reading: good strivings
+- *ἀγαθαὶ ὁρμαί*: ὁρμή, “impulse”: the movement of the soul towards an action, the Stoic term. Other reading: good strivings
 
 </details>
 
@@ -2301,7 +2302,7 @@ The substance of the whole is obedient and ready, and the reason that governs it
 
 ### 6.2
 
-Let it make no difference to you whether you do what is fitting shivering or warm, and whether drowsy or having slept enough, and whether spoken ill of or praised, and whether dying or doing some other kind of act. For this too is one of the acts of life, the one in which we die. So in this too it is enough to manage well what is at hand.
+Let it make no difference to you whether you do what is fitting while shivering or warm, and whether drowsy or having slept enough, and whether spoken ill of or praised, and whether dying or doing some other kind of act. For this too is one of the acts of life, the one in which we die. So in this too it is enough to manage well what is at hand.
 
 <details><summary>Notes</summary>
 
@@ -2421,7 +2422,7 @@ When circumstances force you to be, as it were, thrown into confusion, go back q
 
 ### 6.12
 
-If you had a stepmother and a mother at the same time, you would wait on the stepmother, and still you would be continually going back to your mother. That is what the court and philosophy are to you now. Go back here often and rest in philosophy, because of which the things there seem bearable to you, and you seem bearable among them.
+If you had a stepmother and a mother at the same time, you would wait on the stepmother, and still you would be continually going back to your mother. That is what the court and philosophy are to you now. Go back here often and rest in philosophy. Because of it, the things there seem bearable to you, and you seem bearable among them.
 
 <details><summary>Notes</summary>
 
@@ -2467,7 +2468,7 @@ See, at any rate, what Crates says about Xenocrates himself.
 
 ### 6.14
 
-Most of the things the crowd admires come down to the most general kind, the things held together by cohesion or by natural growth: stones, timber, fig trees, vines, olive trees. The things admired by people of a slightly better sort come down to the things held together by soul, such as flocks and herds. The things admired by people more refined still come down to the things held together by rational soul; not, however, rational soul as such, but in so far as it is skilled in a craft or adept in some other way, or merely in terms of owning a great number of slaves. But whoever honours rational soul as such, and as civic, no longer pays attention to any of the other things, but before everything else preserves their own soul rational and social in its condition and its movement, and works together with whoever is of the same kind toward this.
+Most of the things the crowd admires come down to the most general kind, the things held together by cohesion or by natural growth: stones, timber, fig trees, vines, olive trees. The things admired by people of a slightly better sort come down to the things held together by soul, such as flocks and herds. The things admired by people more refined still come down to the things held together by rational soul; not, however, rational soul as such, but in so far as it is skilled in a craft or adept in some other way, or merely in owning a great number of slaves. But whoever honours rational soul as such, and as civic, no longer pays attention to any of the other things, but before everything else keeps their own soul rational and social, both in its condition and in its movement, and works together towards this with whoever is of the same kind.
 
 <details><summary>Notes</summary>
 
@@ -2479,8 +2480,8 @@ Most of the things the crowd admires come down to the most general kind, the thi
 - *οὐ μέντοι καθολικῆς*: καθολικός is “general, universal”. It is set against καθό, “in so far as”: rational soul valued in general, simply as rational soul, as against rational soul valued in one respect. “As such” is used both times the word occurs. It can also be taken as “universal”, the reason that all rational beings share. Other reading: though not rational soul as universal; and below, rational soul that is universal and civic
 - *ἢ κατὰ ψιλὸν τὸ πλῆθος ἀνδραπόδων κεκτῆσθαι*: A compressed clause, taken as a third way of valuing rational souls: not for any skill but for the bare fact of owning many of them, as slaves. ψιλόν (“bare, mere”) is read with the owning; it could go with the number instead. πλῆθος is a great number, a mass. Other reading: or in terms of owning a bare quantity of slaves
 - *πολιτικὴν*: “Belonging to a city, fit for life as a citizen”. The English reads “civic” here and “social” for the different word κοινωνικῶς in the next clause. Other reading: rational soul as such, and as political
-- *οὐδὲν ἔτι τῶν ἄλλων ἐπιστρέφεται*: The verb is literally “turns toward”; with this case it means “pays heed to, cares about”. Other reading: no longer turns to look at any of the other things
-- *τῷ ὁμογενεῖ εἰς τοῦτο συνεργεῖ*: τῷ ὁμογενεῖ is singular and can be masculine (“the one who is of the same kind”) or neuter (“what is of the same kind”). With a verb of working together the English takes it as a person. “Toward this” most likely means toward keeping the soul rational and social, so the sense is helping one’s fellow to do the same. Other reading: and works together with what is of the same kind toward this
+- *οὐδὲν ἔτι τῶν ἄλλων ἐπιστρέφεται*: The verb is literally “turns towards”; with this case it means “pays heed to, cares about”. Other reading: no longer turns to look at any of the other things
+- *τῷ ὁμογενεῖ εἰς τοῦτο συνεργεῖ*: τῷ ὁμογενεῖ is singular and can be masculine (“the one who is of the same kind”) or neuter (“what is of the same kind”). With a verb of working together the English takes it as a person. “Towards this” most likely means towards keeping the soul rational and social, so the sense is helping one’s fellow to do the same. Other reading: and works together with what is of the same kind towards this
 
 </details>
 
@@ -2504,7 +2505,7 @@ Some things are hurrying to come to be, others are hurrying to have come to be, 
 
 ### 6.16
 
-It is not breathing through the surface as plants do that is of value, nor breathing as cattle and wild beasts do, nor being stamped by an impression, nor being pulled on strings by impulse, nor herding together, nor taking in food; for this last is like passing out the waste from the food. What then is of value? Being clapped? No. Then not being clapped by tongues either; for the praises of the many are a clapping of tongues. So you have let petty fame go as well. What is left that is of value? I think it is this: to move and to hold back in keeping with the way one is oneself made, which is also where tending and the crafts lead. For every craft aims at this, that the thing made should be fit for the work it was made for. The planter and the one who tends the vine, the breaker of colts and the one who tends the dog are after this. And the upbringing of children, and teaching: what are they pressing towards? Here, then, is what is of value. And if this is in a good state, you will not be acquiring any of the other things for yourself. Will you not stop valuing many other things as well? Then you will be neither free nor sufficient to yourself nor without passion. For you are bound to envy, to be jealous, to look with suspicion on those who can take those things away, to plot against those who have what you value. In short, anyone who is in need of any of those things is bound to be in confusion, and what is more to find much fault even with the gods. But respect for your own mind, and the value you set on it, will make you pleasing to yourself, well fitted to your fellows and in tune with the gods, that is, praising all that they deal out and have arranged.
+It is not breathing through the surface as plants do that is of value, nor breathing as cattle and wild beasts do, nor being stamped by an impression, nor being pulled on strings by impulse, nor herding together, nor taking in food; for this last is like passing out the waste from the food. What then is of value? Being clapped? No. Then not being clapped by tongues either; for the praises of the many are a clapping of tongues. So you have let petty fame go as well. What is left that is of value? I think it is this: to move and to hold back in keeping with the way one is oneself made, which is also where tending and the crafts lead. For every craft aims at this, that the thing made should be fit for the work it was made for. The planter and the one who tends the vine, the breaker of colts and the one who tends the dog are after this. And the upbringing of children, and teaching: what are they pressing towards? Here, then, is what is of value. And if this is in a good state, you will not be acquiring any of the other things for yourself. Will you not stop valuing many other things as well? Then you will be neither free nor sufficient to yourself nor without passion. For you are bound to envy, to be jealous, to look with suspicion on those who can take those things away, to plot against those who have what you value. In short, anyone who is in need of any of those things is bound to be in confusion, and, what is more, to find much fault even with the gods. But respect for your own mind, and the value you set on it, will make you pleasing to yourself, well fitted to your fellows and in tune with the gods, that is, praising all that they deal out and have arranged.
 
 <details><summary>Notes</summary>
 
@@ -2525,7 +2526,7 @@ It is not breathing through the surface as plants do that is of value, nor breat
 
 ### 6.17
 
-Up, down, round in a circle: such are the motions of the elements. The movement of virtue, though, is in none of these, but is something more divine, and going forward by a road hard to make out it travels well.
+Up, down, round in a circle: such are the motions of the elements. The movement of virtue, though, is in none of these, but is something more divine, and, going forward by a road hard to make out, it fares well on its way.
 
 <details><summary>Notes</summary>
 
@@ -2539,21 +2540,21 @@ Up, down, round in a circle: such are the motions of the elements. The movement 
 
 ### 6.18
 
-What a thing it is that they do. The people who live at the same time as them and alongside them they are unwilling to speak well of, yet they set great store by being spoken well of themselves by those who come after, whom they have never seen and never will see. This is close to what it would be to be pained that those who came before did not also speak well of you.
+What a thing they do. They are unwilling to speak well of the people who live at the same time as them and alongside them, yet they set great store by being spoken well of themselves by those who come after, whom they have never seen and never will see. This is almost as if you were pained that those who came before did not also speak well of you.
 
 <details><summary>Notes</summary>
 
 - *Οἷόν ἐστιν ὃ ποιοῦσι*: Literally “what sort of thing it is that they do”, an exclamation of surprise. “They” are not named. Other reading: How strange is what they do.
 - *εὐφημεῖν*: The same word comes three times, as a verb active and passive and then in the phrase “well-speaking words”. “Speak well of” is kept each time. Other reading: to praise
 - *μεθ’ ἑαυτῶν*: Literally “with themselves”: in their own company. Other reading: and in their own company
-- *τῷ λυπηθῆναι ἄν*: The particle makes the infinitive hypothetical: it is close to how it would be if one were pained. Other reading: This is close to being pained
+- *τῷ λυπηθῆναι ἄν*: The particle makes the infinitive hypothetical: it is close to how it would be if one were pained. The Greek does not say who is pained; the English says “you”, since the one pained is the “you” spoken of in the same clause. Other reading: This is close to being pained
 - *οὐχὶ καὶ οἱ προγενέστεροι περὶ σοῦ*: The passage turns to “you” here, after “they” throughout. The Greek “also” goes with those who came before: they as well as those who come after. Other reading: that the earlier generations as well did not speak well of you
 
 </details>
 
 ### 6.19
 
-Do not, if something is hard for you yourself to carry out, judge it impossible for a human being; but if something is possible for a human being and proper to them, consider it within your own reach too.
+If something is hard for you yourself to carry out, do not judge it impossible for a human being; but if something is possible for a human being and proper to them, consider it within your own reach too.
 
 <details><summary>Notes</summary>
 
@@ -2596,7 +2597,7 @@ If anyone can refute me and make it plain to me that I am not judging or acting 
 
 I do my own duty; the other things do not distract me. For they are either without life, or without reason, or have gone astray and do not know the road.
 
-Animals without reason, and in general things and objects, treat with a large mind and freely, as one who has reason treats what has none. Human beings, since they have reason, treat socially. And in everything call on the gods. And do not trouble yourself about how long you will be doing this: for even three hours of this kind are enough.
+Treat animals without reason, and things and objects in general, with a large mind and freely, as one who has reason treats what has none. Treat human beings socially, since they have reason. And in everything call on the gods. And do not trouble yourself about how long you will be doing this: for even three hours of this kind are enough.
 
 <details><summary>Notes</summary>
 
@@ -2642,7 +2643,7 @@ Consider how many things come about at once in each of us in the same instant of
 
 ### 6.26
 
-If someone sets you the question how the name Antoninus is written, surely you will not strain as you bring out each of its letters? What then if they get angry: surely you will not get angry back? Will you not gently go on counting off each of the letters? So here too, remember that every duty is made complete out of certain counted parts. These you must keep to, and, without being thrown into confusion and without answering those who are annoyed with annoyance of your own, carry through step by step what lies before you.
+If someone sets you the question how the name Antoninus is written, surely you will not strain as you bring out each of its letters? What then if they get angry: surely you will not get angry back? Will you not gently go on counting off each of the letters? So here too, remember that every duty is made complete out of certain counted parts. These you must keep to, and, without being thrown into confusion and without being annoyed in turn at those who are annoyed, carry through step by step what lies before you.
 
 <details><summary>Notes</summary>
 
@@ -2659,11 +2660,11 @@ If someone sets you the question how the name Antoninus is written, surely you w
 
 ### 6.27
 
-How cruel it is not to let people go after the things that appear to them to suit them and to be good for them. And yet in a way you do not allow them to do this, whenever you are indignant that they do wrong. For they are certainly being carried toward things as suiting them and good for them. “But it is not so.” Then teach them and show them, without being indignant.
+How cruel it is not to let people go after the things that appear to them to suit them and to be good for them. And yet in a way you do not allow them to do this, whenever you are indignant that they do wrong. For they are certainly being carried towards things they take to suit them and to be good for them. “But it is not so.” Then teach them and show them, without being indignant.
 
 <details><summary>Notes</summary>
 
-- *ὁρμᾶν*: The verb belonging to ὁρμή, “impulse” in the settled list: to set out after a thing. “To have impulses toward” would be stiff, so the English reads “go after”. Other reading: not to allow people their impulse toward
+- *ὁρμᾶν*: The verb belonging to ὁρμή, “impulse” in the settled list: to set out after a thing. “To have impulses towards” would be stiff, so the English reads “go after”. Other reading: not to allow people their impulse towards
 - *οἰκεῖα καὶ συμφέροντα*: οἰκεῖα are things that belong to one, are proper to one’s nature. The English reads “suit them”; συμφέροντα is “good for them” as settled. Other reading: what appears to them to be their own and to their advantage
 - *πάντως*: “In every case” or “certainly”. The second is taken. Other reading: For in every case they are carried
 - *οὐκ ἔχει οὕτως*: The edition sets these words between dashes as an objection by another voice: the things are not really good for them. The English uses quotation marks. Other reading: “But they are mistaken.”
@@ -2688,7 +2689,7 @@ Death is a rest from the impacts on the senses, from the tugging of impulse on t
 
 It is shameful that, in a life in which your body does not give out, your soul should give out first.
 
-Take care that you are not turned into a Caesar, that you are not dyed: for it happens. So keep yourself simple, good, unspoiled, dignified, unpretentious, a friend of what is just, reverent toward the gods, kindly, warmly affectionate, strong for the work that is fitting. Struggle to remain the kind of person philosophy wanted to make you. Stand in awe of the gods, keep people safe. Life is short. There is one fruit of living on earth: a pious disposition and social actions.
+Take care that you are not turned into a Caesar, that you are not dyed: for it happens. So keep yourself simple, good, unspoiled, dignified, unpretentious, a friend of what is just, reverent towards the gods, kindly, warmly affectionate, strong for the work that is fitting. Struggle to remain the kind of person philosophy wanted to make you. Stand in awe of the gods, keep people safe. Life is short. There is one fruit of living on earth: a pious disposition and social actions.
 
 <details><summary>Notes</summary>
 
@@ -2697,7 +2698,7 @@ Take care that you are not turned into a Caesar, that you are not dyed: for it h
 - *μὴ βαφῇς*: Literally “that you are not dipped, dyed”. The dye in mind is probably the imperial purple, but the Greek does not name it and the English does not add it. Other reading: that you are not stained with the purple
 - *ἀκέραιον*: The word means unmixed, undamaged, pure. The English reads “unspoiled”. Other reading: pure
 - *ἄκομψον*: Literally “without elegance, without polish”: no fine airs. It is the opposite of the “elegance” warned against in 3.5a. The English reads “unpretentious”. Other reading: plain
-- *αἰδοῦ θεούς*: The verb is to feel awe or shame before someone. “Stand in awe of” is used so that it is not taken for the same word as “reverent toward the gods” earlier in the list, which is a different Greek word. Other reading: Revere the gods
+- *αἰδοῦ θεούς*: The verb is to feel awe or shame before someone. “Stand in awe of” is used so that it is not taken for the same word as “reverent towards the gods” earlier in the list, which is a different Greek word. Other reading: Revere the gods
 - *σῷζε ἀνθρώπους*: The verb is “save, keep safe, preserve”. The English reads “keep people safe”. Other reading: save people
 - *εἶς καρπὸς τῆς ἐπιγείου ζωῆς*: The first word as given is a slip of the digitised text for the word “one”, and is read so; the verb “is” is supplied. The Greek uses two words for life in these two sentences, a life as it is lived and the state of being alive, and the English reads “life” and “living”. Other reading: one fruit of earthly life
 - *πράξεις κοινωνικαί*: “Social” follows the glossary. The sense is actions done as a member of the community and for it, not sociable ones. Other reading: acts that serve the common good
@@ -2706,7 +2707,7 @@ Take care that you are not turned into a Caesar, that you are not dyed: for it h
 
 ### 6.30b
 
-Everything as a pupil of Antoninus: his vigour on behalf of what is done according to reason, his evenness everywhere, his piety, the calm of his face, his gentleness, his freedom from vanity, and his ambition to grasp matters; and how he would not let anything at all go by without first looking into it very well and understanding it clearly; and how he bore with those who blamed him unjustly, without blaming them in return; and how he hurried toward nothing; and how he did not accept slanders; and how exact an examiner he was of characters and actions, and not one to reproach, not one to jump at a noise, not suspicious, not a sophist; and how he was content with little, for example in housing, bedding, clothing, food and service; and how hard-working he was and how patient; and that he was the kind of man who could stay at the same thing until evening, not even needing, because of his plain diet, to pass his waste except at the usual hour; and his being firm and always the same in his friendships; and his putting up with those who openly opposed his opinions, and being glad if anyone showed him something better; and how he was reverent toward the gods without superstition; so that your last hour may come upon you with a conscience as good as his.
+Everything as a pupil of Antoninus: his vigour on behalf of what is done according to reason, his evenness everywhere, his piety, the calm of his face, his gentleness, his freedom from vanity, and his ambition to grasp matters; and how he would not let anything at all go by without first looking into it very well and understanding it clearly; and how he bore with those who blamed him unjustly, without blaming them in return; and how he hurried towards nothing; and how he did not accept slanders; and how exact an examiner he was of characters and actions, and not one to reproach, not one to jump at a noise, not suspicious, not a sophist; and how he was content with little, for example in housing, bedding, clothing, food and service; and how hard-working he was and how patient; and that he was the kind of man who could stay at the same thing until evening, not even needing, because of his plain diet, to pass his waste except at the usual hour; and his being firm and always the same in his friendships; and his putting up with those who openly opposed his opinions, and being glad if anyone showed him something better; and how he was reverent towards the gods without superstition; so that your last hour may come upon you with a conscience as good as his.
 
 <details><summary>Notes</summary>
 
@@ -2722,7 +2723,7 @@ Everything as a pupil of Antoninus: his vigour on behalf of what is done accordi
 - *σοφιστής*: A professional teacher of clever speaking, and so anyone who shows off cleverness. “Sophist” is kept, as in 1.17a. Other reading: not a clever talker
 - *ὑπηρεσίᾳ*: The word is “service”, here the servants who wait on a person. Other reading: attendants
 - *ἐν τῷ αὐτῷ*: Literally “in the same”. It can be the same task or the same place, and the remark about not needing to leave except at the usual hour suits either. The English takes the task. Other reading: who could stay in the same place until evening
-- *τὸ βέβαιον καὶ ὅμοιον*: Literally “the firm and the alike” in his friendships: he was steady toward his friends and did not change toward them. Other reading: his constancy and evenness in his friendships
+- *τὸ βέβαιον καὶ ὅμοιον*: Literally “the firm and the alike” in his friendships: he was steady towards his friends and did not change towards them. Other reading: his constancy and evenness in his friendships
 - *εὐσυνειδήτῳ*: “With a good conscience”, said of “you”, with “as him” at the end: the last hour is to find you as it found him. Other reading: so that the last hour may find you with as clear a conscience as it found him
 
 </details>
@@ -2835,7 +2836,7 @@ Reflect often on the linking together of all things in the universe and their re
 
 Fit yourself to the things your lot has joined you to, and love the people your lot has put you among, but truly.
 
-Every instrument, tool or utensil is as it should be if it does what it was made for; and yet in that case the one who made it is away. But in things held together by nature, the power that made them is inside and stays there. For that reason you should respect it all the more, and consider that if you keep to its will and live by it, everything is as your mind would have it. And in the same way, for the All too, what is its own is as its mind would have it.
+Every instrument, tool or utensil is as it should be if it does what it was made for; and yet in that case the one who made it is away. But in things held together by nature, the power that made them is inside and stays there. For that reason you should respect it all the more, and consider that if you keep to its will and live by it, everything is as your mind would have it. And in the same way, for the All too, its own affairs are as its mind would have them.
 
 <details><summary>Notes</summary>
 
@@ -2862,7 +2863,7 @@ Whatever you set up for yourself as good or bad among the things that are not yo
 - *ὑποστήσῃ σαυτῷ*: The verb is to lay something down as a basis, to posit. “For yourself” can go with the verb, as the English takes it, or with “good or bad”. Other reading: Whatever you suppose to be good or bad for you
 - *κατὰ τὴν περίπτωσιν τοῦ τοιούτου κακοῦ ἢ τὴν ἀπότευξιν τοῦ τοιούτου ἀγαθοῦ*: Two nouns of the Stoic school: περίπτωσις is falling into what one wanted to avoid, ἀπότευξις is failing to get what one wanted. The Greek has nouns; the English turns them into verbs with “you” as subject. Other reading: upon the falling into such a bad thing or the failure to obtain such a good thing
 - *ὑποπτευομένους ἔσεσθαι*: A passive with a future infinitive: “suspected that they will be (the cause)”. The Greek does not say who suspects, and the English keeps the passive. Other reading: or whom you suspect will be the cause
-- *διὰ τὴν πρὸς ταῦτα διαφοράν*: Literally “because of the difference toward these things”. The English takes it as the opposite of Stoic indifference: these things are allowed to make a difference. The noun can also mean a quarrel or disagreement; the verb of the same idiom is at 9.40. Other reading: because of our quarrels over these things
+- *διὰ τὴν πρὸς ταῦτα διαφοράν*: Literally “because of the difference towards these things”. The English takes it as the opposite of Stoic indifference: these things are allowed to make a difference. The noun can also mean a quarrel or disagreement; the verb of the same idiom is at 9.40. Other reading: because of our quarrels over these things
 - *οὐδεμία αἰτία καταλείπεται*: αἰτία is a cause and also a ground for a charge. It answers “those who are the cause” (τοὺς αἰτίους) above, so the English says “cause” in both places. Other reading: no ground is left
 - *στῆναι στάσιν πολεμίου*: Verb and noun are from one root: “to stand the stand of an enemy”. The noun στάσις is also the ordinary word for faction and civil strife, which may be heard here. Other reading: to take up an enemy’s position against a person
 
@@ -2870,7 +2871,7 @@ Whatever you set up for yourself as good or bad among the things that are not yo
 
 ### 6.42
 
-We are all working together towards one finished result, some of us knowingly and with awareness, others without attending to it, just as Heraclitus, I think, says that even those who are asleep are workers and fellow workers in the things that happen in the universe. One works together in one way, another in another, and, into the bargain, so does even the one who finds fault and the one who tries to stand against the things that happen and do away with them, for the universe had need of such a person too. What remains, then, is for you to understand among which of them you are placing yourself. For the one who governs the whole will in any case use you well, and will take you in as some part of the fellow workers and of those who help the work along. But you, do not become the kind of part that the cheap and ridiculous line is in the play, the one Chrysippus mentions.
+We are all working together towards one finished result, some of us knowingly and with awareness, others without attending to it, just as Heraclitus, I think, says that even those who are asleep are workers and fellow workers in the things that happen in the universe. One works together in one way, another in another, and, into the bargain, so does even the one who finds fault and the one who tries to stand against the things that happen and do away with them, for the universe had need of such a person too. What remains, then, is for you to understand among which of them you are placing yourself. For the one who governs the whole will in any case use you well, and will take you in as some part of the fellow workers and of those who help the work along. But you, do not become a part like the cheap and ridiculous line in the play, the one Chrysippus mentions.
 
 <details><summary>Notes</summary>
 
@@ -2887,7 +2888,7 @@ We are all working together towards one finished result, some of us knowingly an
 
 ### 6.43
 
-Surely the sun does not think it should do the rain’s part? Or Asclepius the part of the fruit-bearing goddess? And what of each of the stars? Are they not different, yet working together toward the same thing?
+Surely the sun does not think it should do the rain’s part? Or Asclepius the part of the fruit-bearing goddess? And what of each of the stars? Are they not different, yet working together towards the same thing?
 
 <details><summary>Notes</summary>
 
@@ -2895,21 +2896,21 @@ Surely the sun does not think it should do the rain’s part? Or Asclepius the p
 - *ἀξιοῖ*: The verb ranges from “thinks it right” and “sees fit” to “claims” and “demands”. Other reading: Surely the sun does not claim the rain’s part?
 - *τὰ τοῦ ὑετοῦ*: Literally “the things of the rain”: what belongs to the rain to do. Other reading: the rain’s work
 - *τῆς Καρποφόρου*: “The Fruit-Bearer” (feminine) is a title of a goddess of crops, usually Demeter, sometimes Earth. Asclepius is the god of healing. Other reading: the part of Demeter, bringer of crops
-- *τί δὲ τῶν ἄστρων ἕκαστον;*: The question has no verb: literally 'and what each of the stars?' Other reading: And what does each of the stars do?
-- *οὐχὶ διάφορα μέν, συνεργὰ δὲ πρὸς ταὐτόν;*: The adjectives are neuter plural and may describe the stars alone or everything just named (sun, rain, the two gods, the stars). The Greek also does not say what 'the same thing' is. Other reading: Are all these not different, yet working together toward the same end?
+- *τί δὲ τῶν ἄστρων ἕκαστον;*: The question has no verb: literally “and what each of the stars?” Other reading: And what does each of the stars do?
+- *οὐχὶ διάφορα μέν, συνεργὰ δὲ πρὸς ταὐτόν;*: The adjectives are neuter plural and may describe the stars alone or everything just named (sun, rain, the two gods, the stars). The Greek also does not say what “the same thing” is. Other reading: Are all these not different, yet working together towards the same end?
 
 </details>
 
 ### 6.44
 
-If, then, the gods deliberated about me and about the things that had to happen to me, they deliberated well. For a god without deliberation is not easy even to imagine; and for what cause would they have had an impulse to do me harm? For what would they, or the community, which is what they take most thought for, have gained from it? But if they did not deliberate about me individually, they certainly did deliberate about the affairs of the community, at least, and these things too, which happen as a consequence of those, I ought to welcome and hold dear. But if in fact they deliberate about nothing (to believe that is not pious; or else let us not sacrifice, or pray, or swear oaths, or do the other things that we do at every turn towards the gods as present and living with us), if in fact they deliberate about nothing that concerns us, then I am free to deliberate about myself, and my inquiry is into what is of benefit. What benefits each is what accords with its own make-up and nature, and my nature is rational and civic. My city and fatherland, as Antoninus, is Rome; as a human being, the universe. So the things that are useful to these cities are the only things that are good for me.
+If, then, the gods deliberated about me and about the things that had to happen to me, they deliberated well. For a god without deliberation is not easy even to imagine; and for what cause would they have had an impulse to do me harm? For what would it have gained them, or the community, which is what they take most thought for? But if they did not deliberate about me individually, they certainly did deliberate about the affairs of the community, at least, and these things too, which happen as a consequence of those, I ought to welcome and hold dear. But if in fact they deliberate about nothing (to believe that is not pious; or else let us not sacrifice, or pray, or swear oaths, or do the other things that we do at every turn towards the gods as present and living with us), if in fact they deliberate about nothing that concerns us, then I am free to deliberate about myself, and my inquiry is into what is of benefit. What benefits each is what accords with its own make-up and nature, and my nature is rational and civic. My city and fatherland, as Antoninus, is Rome; as a human being, the universe. So the things that are useful to these cities are the only things that are good for me.
 
 <details><summary>Notes</summary>
 
 - *ἐβουλεύσαντο*: The verb is “to take counsel” and so both “to deliberate” and “to decide”. It comes seven times and “deliberate” is kept throughout. Other reading: If the gods made a decision about me
 - *ἄβουλον*: From the same root: “without counsel”, which can mean one who does not deliberate or one who deliberates badly. Other reading: an ill-advised god
 - *ἔμελλον ὁρμᾶν*: Literally “were they going to set themselves moving”. “Impulse” is used for the verb, as for the Stoic term ὁρμή. Other reading: why would they have set out to do me harm?
-- *περιεγένετο*: Literally “what was left over as a gain”. The Greek is a plain past tense, “what did they gain”; the English reads “would have gained”, since the harm is only supposed. Other reading: what did they, or the community, gain from that?
+- *περιεγένετο*: Literally “what was left over as a gain”. The Greek is a plain past tense, “what did they gain”; the English reads “would it have gained them”, since the harm is only supposed. Other reading: what did they, or the community, gain from that?
 - *τῷ κοινῷ*: “The common thing”, singular: the body to which all belong, an ordinary word for a community or commonwealth. In the next sentence the plural τῶν κοινῶν, “the common things”, is given as “the affairs of the community”, so that the one word is heard in both places. Other reading: the common good ... what is common to all
 - *προνοοῦνται*: The verb behind πρόνοια, “providence”: to think ahead on behalf of something. Other reading: for which above all they exercise providence
 - *ἐπακολούθησιν καὶ ταῦτα συμβαίνοντα*: Literally “these things too, happening by way of following on from those”. “These things” are what happens to me. Other reading: and what happens to me as a by-product of those decisions
@@ -2937,7 +2938,7 @@ Whatever happens to each is good for the whole. That would be enough. But if you
 
 ### 6.46
 
-Just as what goes on in the amphitheatre and places of that kind repels you, since the same things are always being seen, and the sameness makes the spectacle cloying, feel the same about the whole of life too. For all things, up and down, are the same and from the same. How long, then?
+Just as what goes on in the amphitheatre and places of that kind repels you, since the same things are always being seen, and the sameness makes the spectacle cloying, feel this way about the whole of life too. For all things, up and down, are the same and from the same. How long, then?
 
 <details><summary>Notes</summary>
 
@@ -2953,7 +2954,7 @@ Just as what goes on in the amphitheatre and places of that kind repels you, sin
 
 ### 6.47
 
-Keep in mind continually that people of every kind, of every kind of occupation and from every sort of nation, are dead, so that this thought comes down as far as Philistion and Phoebus and Origanion. Now pass on to the other classes. That is the place we must move to, where there are so many formidable orators, so many grave philosophers, Heraclitus, Pythagoras, Socrates, so many heroes earlier, so many generals and tyrants later; and besides these Eudoxus, Hipparchus, Archimedes, other natures that were sharp, great-minded, hard-working, unscrupulous, self-willed, mockers of human life itself, perishable and lasting a day, such as Menippus and all of his kind. About all of these, keep in mind that they have long been lying dead. What, then, is terrible in this for them? And what for those who are not even named at all? One thing here is worth a great deal: to live life through with truth and justice, kindly towards the liars and the unjust.
+Keep in mind continually that people of every kind, of every kind of occupation and from every sort of nation, are dead, so that this thought comes down as far as Philistion and Phoebus and Origanion. Now pass on to the other classes. That is the place we must move to, where there are so many formidable orators, so many grave philosophers, Heraclitus, Pythagoras, Socrates, so many heroes earlier, so many generals and tyrants later; and besides these Eudoxus, Hipparchus, Archimedes, other natures that were sharp, great-minded, hard-working, unscrupulous, self-willed, mockers of human life itself, which is perishable and lasts a day, such as Menippus and all of his kind. About all of these, keep in mind that they have long been lying dead. What, then, is terrible in this for them? And what for those who are not even named at all? One thing here is worth a great deal: to live life through with truth and justice, kindly towards the liars and the unjust.
 
 <details><summary>Notes</summary>
 
@@ -2971,7 +2972,7 @@ Keep in mind continually that people of every kind, of every kind of occupation 
 
 ### 6.48
 
-When you want to cheer yourself, think of the strong points of the people you live with: the energy of one, for example, the modesty of another, the generosity of a third, and something else in someone else. For nothing cheers so much as the likenesses of the virtues showing in the characters of the people you live with, and coming together, as many at once as possible. And so they must be kept ready to hand.
+When you want to cheer yourself, think of the strong points of the people you live with: for example, the energy of one, the modesty of another, the generosity of a third, and something else in someone else. For nothing cheers so much as the likenesses of the virtues showing in the characters of the people you live with, and coming together, as many at once as possible. And so they must be kept ready to hand.
 
 <details><summary>Notes</summary>
 
@@ -3189,7 +3190,7 @@ The empty seriousness of a procession, plays on a stage, flocks, herds, spear fi
 - *ψωμίον εἰς τὰς τῶν ἰχθύων δεξαμενάς*: No verb of its own: “thrown” is understood from the bone before it and is not repeated. The last word is a tank or pond. Other reading: a crumb tossed into the fish ponds
 - *μυιδίων*: A diminutive. It is taken from the word for mouse; the form is close to the word for a fly. Other reading: the darting about of startled little flies
 - *σιγιλλάρια νευροσπαστούμενα*: The first word is Latin (sigillaria, small figures or dolls) in Greek letters; the second is the verb for working puppets by strings. Other reading: little dolls jerked about on strings
-- *καταφρυαττόμενον*: From the snorting of a proud horse: to behave with insolent contempt toward something. The snort is kept. Other reading: without looking down one’s nose at them
+- *καταφρυαττόμενον*: From the snorting of a proud horse: to behave with insolent contempt towards something. The snort is kept. Other reading: without looking down one’s nose at them
 
 </details>
 
@@ -3199,7 +3200,7 @@ One must follow what is said word by word, and what is done impulse by impulse; 
 
 <details><summary>Notes</summary>
 
-- *κατὰ λέξιν*: “Word by word” or “phrase by phrase”: λέξις is a single expression. It is matched by “at each impulse” for actions; ὁρμή, “impulse”, is the Stoic term for the movement of the mind toward doing something. Other reading: follow what is said expression by expression
+- *κατὰ λέξιν*: “Word by word” or “phrase by phrase”: λέξις is a single expression. It is matched by “at each impulse” for actions; ὁρμή, “impulse”, is the Stoic term for the movement of the mind towards doing something. Other reading: follow what is said expression by expression
 - *τοῖς γινομένοις*: Literally “the things that happen” or “come about”. Paired with “impulse” and set against “what is said”, it is taken as “what is done”. Other reading: and what happens, at each impulse
 - *ἐπὶ μὲν τοῦ ἑτέρου*: The Greek says only “in the one case, in the other”, without saying which is which. The sense shows that the order is crossed: the aim belongs to what is done, and what is meant belongs to what is said. The English says “latter” and “former” so that a reader does not pair them the wrong way. Other reading: and in the one case see at once what aim it is directed at, and in the other watch closely for what is meant
 - *ἡ ἀναφορά*: “The reference”: what the action is referred to as its goal. There is no verb; the English supplies “is directed”. Other reading: to what target the reference is
@@ -3208,7 +3209,7 @@ One must follow what is said word by word, and what is done impulse by impulse; 
 
 ### 7.5–7
 
-Is my mind enough for this or not? If it is enough, I use it for the work as a tool given by the nature of the whole. If it is not enough, either I step back from the work in favour of someone who can carry it out better, unless for some other reason it is my duty, or I do it as best I can, taking on to help me someone who, by making use of my ruling part as well, can do what is timely and useful for the community now. For whatever I do, by myself or with another, must be directed to this alone: what is useful to the community and fits well with it.
+Is my mind enough for this or not? If it is enough, I use it for the work as a tool given by the nature of the whole. If it is not enough, either I step back from the work in favour of someone who can carry it out better, unless for some other reason it is my duty, or I do it as best I can, taking on as a helper someone who, by making use of my ruling part as well, can do what is timely and useful for the community now. For whatever I do, by myself or with another, must be directed to this alone: what is useful to the community and fits well with it.
 
 How many who were much sung of have already been handed over to forgetting, and how many who sang of them are long since out of the way.
 
@@ -3285,7 +3286,7 @@ Upright, not held upright.
 
 ### 7.13
 
-The relation that the limbs of the body have in things that are united is the relation that rational beings have in things that stand apart, being built to do some one work together. The thought of this will strike you more if you often say to yourself: “I am a limb [melos] of the whole made up of rational beings.” But if, by using the letter rho, you say that you are a part [meros], you do not yet love people from the heart; doing good does not yet delight you fully; you still do it as no more than the proper thing, not yet as doing good to yourself.
+The relation that the limbs of the body have in things that are united is the relation that rational beings have in things that stand apart, being built to do a single task together. The thought of this will strike you more if you often say to yourself: “I am a limb [melos] of the whole made up of rational beings.” But if, by using the letter rho, you say that you are a part [meros], you do not yet love people from the heart; doing good does not yet delight you fully; you still do it as no more than the proper thing, not yet as doing good to yourself.
 
 <details><summary>Notes</summary>
 
@@ -3303,7 +3304,7 @@ The relation that the limbs of the body have in things that are united is the re
 
 ### 7.14
 
-Let whatever likes fall from outside on the things that are able to be affected by this falling. For those things, once affected, will complain if they like. But I, unless I judge that what has happened is bad, have not yet been harmed. And it is possible for me not to judge so.
+Let whatever likes fall from outside on the things that can be affected by this falling. For those things, once affected, will complain if they like. But I, unless I judge that what has happened is bad, have not yet been harmed. And it is possible for me not to judge so.
 
 <details><summary>Notes</summary>
 
@@ -3318,14 +3319,14 @@ Let whatever likes fall from outside on the things that are able to be affected 
 
 ### 7.15
 
-Whatever anyone does or says, I must be good; just as if gold or emerald or purple were always saying this: “Whatever anyone does or says, I must be emerald and have my own color.”
+Whatever anyone does or says, I must be good; just as if gold or emerald or purple were always saying this: “Whatever anyone does or says, I must be emerald and have my own colour.”
 
 <details><summary>Notes</summary>
 
-- *ἡ πορφύρα*: The word covers the purple dye and cloth dyed with it. The English keeps the bare color word, since the point is a thing that has its own color. Other reading: the purple dye
+- *ἡ πορφύρα*: The word covers the purple dye and cloth dyed with it. The English keeps the bare colour word, since the point is a thing that has its own colour. Other reading: the purple dye
 - *ἐμὲ δεῖ σμάραγδον εἶναι*: Three things are named, but in the speech only the emerald speaks, and the English does not even this out. The Greek word is a green stone and may not be exactly the emerald of today. Other reading: I must be an emerald
 - *ὡς ἂν εἰ*: An unreal comparison. The verb is in the past tense of an unreal case, so “were always saying”. Other reading: as though gold or emerald or purple kept saying
-- *τὸ ἐμαυτοῦ χρῶμα ἔχειν*: The verb is the plain “have”. “Keep”, which the setting suggests, would add the idea of holding on under pressure. Other reading: and keep my own color
+- *τὸ ἐμαυτοῦ χρῶμα ἔχειν*: The verb is the plain “have”. “Keep”, which the setting suggests, would add the idea of holding on under pressure. Other reading: and keep my own colour
 
 </details>
 
@@ -3352,7 +3353,7 @@ The ruling part does not make trouble for itself; I mean, for example, it does n
 
 ### 7.17
 
-Happiness is a good spirit, or a good ruling part. So what are you doing here, impression? Go away, by the gods, as you came: for I do not need you. But you have come out of old habit. I am not angry with you. Only go away.
+Happiness is a good spirit, or a good ruling part. So what are you doing here, impression? Go away, by the gods, as you came, for I do not need you. But you have come out of old habit. I am not angry with you. Only go away.
 
 <details><summary>Notes</summary>
 
@@ -3400,7 +3401,7 @@ It is proper to a human being to love even those who stumble. This happens if it
 - *περισπᾷ*: Literally “pulls away”, “distracts”, the sense it has in 6.22. With the clause of fear that follows, it comes to “troubles”. Other reading: Only one thing distracts me
 - *ἡ κατασκευὴ τοῦ ἀνθρώπου*: κατασκευή is how a thing is built or equipped. “Constitution” in the sense of makeup. Other reading: the way a human being is made
 - *ἡ πάντων περὶ σοῦ λήθη*: “All” in both halves can be all things or all people. In the first half it is what you forget; in the second it is most naturally everyone who forgets you. “All” is kept bare in both. Other reading: Your forgetting of all things is near, and near is everyone’s forgetting of you
-- *συμπροσπίπτῃ*: The same verb as “strike you” in 7.19 with a prefix added, “together with”: the thought must come at the very moment of the offense. Other reading: if it also occurs to you
+- *συμπροσπίπτῃ*: The same verb as “strike you” in 7.19 with a prefix added, “together with”: the thought must come at the very moment of the offence. Other reading: if it also occurs to you
 - *ἄκοντες*: “Unwilling”: they do not mean to go wrong. The Stoic view is that nobody errs on purpose. Other reading: and without meaning to
 - *οὐκ ἔβλαψέ σε*: The Greek moves from the plural (“they go wrong”) to a singular with no subject named: the one person in front of you. The English has “the person” and “that person”, since the Greek does not say “he”. Other reading: that he has not harmed you, for he has not made your ruling part worse
 
@@ -3474,7 +3475,7 @@ Draw in upon yourself. It is the nature of the rational ruling part to be conten
 
 ### 7.29–31a
 
-Wipe out the impression. Stop the pulling of the puppet strings. Draw a line around the present time. Recognise what is happening, whether to you or to another. Take the thing before you apart and divide it into what causes and what is matter. Think of the last hour. The wrong that person did, leave it there, where the wrong came to be.
+Wipe out the impression. Stop the pulling of the puppet strings. Draw a line around the present time. Recognise what is happening, whether to you or to another. Take the thing before you apart and divide it into what is cause and what is material. Think of the last hour. The wrong that person did, leave it there, where the wrong came to be.
 
 To stretch thinking out alongside what is being said. To have the mind get inside the things that come about and the things that act.
 
@@ -3529,7 +3530,7 @@ On fame: look at their minds, what they are like, and what kind of things they r
 
 ### 7.35
 
-“‘So, a mind that has greatness and a view of all time and of all being: do you think human life seems anything great to the one who has it?’ ‘Impossible,’ he said. ‘Then such a person will count death, too, as nothing terrible?’ ‘Not in the least.’”
+“‘So, a mind that has greatness and a view of all time and of all being: do you think human life seems anything great to the one who has it?’ ‘Impossible,’ he said. ‘Then such a person will not count death a terrible thing either?’ ‘Not in the least.’”
 
 <details><summary>Notes</summary>
 
@@ -3592,7 +3593,7 @@ No joining in the wailing, no racing pulse.
 
 “For this is how it truly is, men of Athens. Wherever a person has taken up a post, judging it to be best, or has been posted by a commander, there, as it seems to me, they must stay and run the risk, taking nothing into account, neither death nor anything else, ahead of disgrace.”
 
-“But, my dear man, see whether what is noble and what is good may not be something other than saving and being saved. For perhaps this, living for whatever length of time, is what one who is truly a man must let go, and he must not cling to life, but, leaving these matters to god and trusting the women who say that not even one person could escape what is fated, must consider what comes next: in what way he might live the time he is going to live as well as possible.”
+“But, my dear man, see whether what is noble and what is good may not be something other than saving and being saved. For perhaps this, living for whatever length of time, is what one who is truly a man must let go, and he must not cling to life. Instead, leaving these matters to god and trusting the women who say that not even one person could escape what is fated, he must consider what comes next: how he might best live the time he is going to live.”
 
 Look round at the courses of the stars as if running round with them, and think continually of the changes of the elements into one another. For the impressions of these things wash away the dirt of life on the ground.
 
@@ -3651,7 +3652,7 @@ And: “Turning the channel aside with food and drink and spells, so as not to d
 
 ### 7.52
 
-Better at throwing an opponent, but not more social, nor more modest, nor better disciplined in the face of what happens, nor kinder toward the oversights of those nearby.
+Better at throwing an opponent, but not more social, nor more modest, nor better disciplined in the face of what happens, nor kinder towards the oversights of those nearby.
 
 <details><summary>Notes</summary>
 
@@ -3685,7 +3686,7 @@ Everywhere and without a break it is in your power to be well content, in revere
 
 ### 7.55
 
-Do not look around at other people’s ruling parts, but look straight ahead to where nature is leading you, both the nature of the whole, through the things that happen to you, and your own nature, through the things you have to do. What each being has to do is what follows from its make-up. Now everything else has been made for the sake of the rational beings, just as in every other case the inferior things are for the sake of the superior, and the rational beings have been made for the sake of one another. So what comes first in the human make-up is being social. Second is not giving way to what the body undergoes; for it is proper to movement that is rational and of mind to draw a boundary around itself and never to be beaten by the movement of the senses or the movement of impulse. For both of those are of the animal kind, while the movement of mind wants to hold first place and not to be overpowered by them. And rightly so, for it is by nature fitted to make use of all of those. Third in the rational make-up is not being hasty and not being deceived. So let the ruling part hold to these and carry its straight road through, and it has what is its own.
+Do not look around at other people’s ruling parts, but look straight ahead to where nature is leading you, both the nature of the whole, through the things that happen to you, and your own nature, through the things you have to do. What each being has to do is what follows from its make-up. Now everything else has been made for the sake of the rational beings, just as in every other case the worse things are for the sake of the better, and the rational beings have been made for the sake of one another. So what comes first in the human make-up is being social. Second is not giving way to what the body undergoes; for it is proper to movement that is rational and of mind to draw a boundary around itself and never to be beaten by the movement of the senses or the movement of impulse. For both of those are of the animal kind, while the movement of mind wants to hold first place and not to be overpowered by them. And rightly so, for it is by nature fitted to make use of all of those. Third in the rational make-up is not being hasty and not being deceived. So let the ruling part hold to these and carry its straight road through, and it has what is its own.
 
 <details><summary>Notes</summary>
 
@@ -3704,24 +3705,24 @@ Do not look around at other people’s ruling parts, but look straight ahead to 
 
 ### 7.56–59
 
-As someone who has died and whose life has been lived up to now, one must live what is left, as a surplus, according to nature.
+As someone who has died and has lived out their life up to now, one must live what is left, as a surplus, according to nature.
 
 To love only what happens to oneself and is spun into one’s own thread. For what fits better?
 
-At each thing that happens, to keep before one’s eyes the people to whom the same things happened, and who then were vexed, found it strange, complained. So where are they now? Nowhere. Well then, do you too want to be like them? Do you not rather want to leave the turns that belong to others to those who turn and are turned, and yourself be wholly taken up with how to use the things that happen? For you will use them well, and they will be material for you. Only pay attention, and want to be honorable in your own eyes in everything you do; and remember both things, for what the action is done on also makes a difference.
+At each thing that happens, to keep before one’s eyes the people to whom the same things happened, and who then were vexed, found it strange, complained. So where are they now? Nowhere. Well then, do you too want to be like them? Do you not rather want to leave the turns that belong to others to those who turn and are turned, and yourself to be wholly taken up with how to use the things that happen? For you will use them well, and they will be material for you. Only pay attention, and want to be honourable in your own eyes in everything you do; and remember both things, for what the action is done on also makes a difference.
 
 Dig within. Within is the spring of the good, and it can always well up, if you always dig.
 
 <details><summary>Notes</summary>
 
-- *μέχρι νῦν βεβιωκότα*: The Greek tense marks the living as finished: the life is counted as over at this moment. “Whose life has been lived up to now” is meant in that sense. Other reading: and has lived up to now
+- *μέχρι νῦν βεβιωκότα*: The Greek tense marks the living as finished: the life is counted as over at this moment. “Has lived out their life up to now” is meant in that sense. Other reading: and has lived up to now
 - *ἐκ τοῦ περιόντος*: Literally “out of what is left over”: the rest of life treated as an extra, beyond a life already counted as finished. Other reading: live the rest as a bonus
 - *Μόνως*: An adverb, “solely”. The English takes it with the object: love that and nothing else. It could also limit the verb: do nothing but love it. Other reading: To do nothing but love what happens to oneself
 - *συγκλωθόμενον*: “Spun together with” one: the image of the Fates spinning a person’s thread. “Thread” is supplied to make the image readable. Other reading: what happens to oneself and is spun together with one
 - *ἐξενίζοντο*: From the word for a stranger: they treated what happened as something foreign. Other reading: were astonished
 - *τὰς μὲν ἀλλοτρίας τροπὰς καταλιπεῖν τοῖς τρέπουσι καὶ τρεπομένοις*: Three forms of one word, “turn”, all kept. What turns are meant is not said: other people’s changes of mood or direction, or changes that are not one’s own affair. Other reading: leave other people’s changes to those who cause them and those who undergo them
 - *περὶ τὸ πῶς χρῆσθαι αὐτοῖς*: The Greek says only “them”. It cannot be the turns (the Greek gender is wrong for that). It is most likely the things that happen, named at the start of the chapter and called “material” in the next sentence, and the English says so. It could be the people who turn and are turned. Other reading: with how to deal with those people
-- *σεαυτῷ καλὸς εἶναι*: καλός (fine, honorable) echoes καλῶς (“well”) just before. English could keep the echo only with “good”, which this passage needs for another Greek word in “the spring of the good”. “To yourself” is taken as “in your own eyes”. Other reading: want to be fine toward yourself
+- *σεαυτῷ καλὸς εἶναι*: καλός (fine, honourable) echoes καλῶς (“well”) just before. English could keep the echo only with “good”, which this passage needs for another Greek word in “the spring of the good”. “To yourself” is taken as “in your own eyes”. Other reading: want to be fine towards yourself
 - *καὶ μέμνησο ἀμφοτέρων, ὅτι καὶ διάφορον ἐφ’ οὗ ἡ πρᾶξις*: Obscure as it stands, and the English is left as obscure. “Both” has no clear pair: it may be the two commands just given, or the use and the material. The last clause may give a reason (“for”) or the content (“that”), and its main word can mean “makes a difference” or “different”; from memory, unchecked, some editors change it to the Stoic term “indifferent”. Other reading: and remember both things, and that what the action is done on is indifferent
 - *Ἔνδον σκάπτε*: The Greek as given says “dig”. From memory, unchecked, the manuscripts have “look” here and “dig” is an editor’s correction. Other reading: Look within
 
@@ -3762,7 +3763,7 @@ The art of living is more like the art of wrestling than the art of dancing, in 
 
 Keep turning your attention to who these people are whose testimony in your favour you want, and what ruling parts they have. For you will neither blame those who stumble against their will nor need their testimony, if you look into the springs of their judgment and impulse.
 
-“Every soul,” he says, “is deprived of truth against its will.” So too, then, of justice and self-control and kindness and everything of that kind. It is most necessary to remember this continually, for you will be gentler toward everyone.
+“Every soul,” he says, “is deprived of truth against its will.” So too, then, of justice and self-control and kindness and everything of that kind. It is most necessary to remember this continually, for you will be gentler towards everyone.
 
 <details><summary>Notes</summary>
 
@@ -3777,7 +3778,7 @@ Keep turning your attention to who these people are whose testimony in your favo
 
 ### 7.64
 
-At every pain, have this ready to hand: that it is not shameful and does not make the mind at the helm any worse, for it does not ruin it either in so far as it is rational or in so far as it is social. With most pains, though, let Epicurus’s saying help you as well: that it is neither unbearable nor everlasting, if you remember the limits and do not add to it by opinion. And remember this too: that many things that are the same as pain go unnoticed as such, though we resent them, such as being drowsy, being overheated and having no appetite. So when you are displeased at any of these, say to yourself: “You are giving in to pain.”
+At every pain, have this ready to hand: that it is not shameful and does not make the mind at the helm any worse, for it does not ruin the mind either in so far as it is rational or in so far as it is social. With most pains, though, let Epicurus’s saying help you as well: that it is neither unbearable nor everlasting, if you remember the limits and do not add to it by opinion. And remember this too: that many things that are the same as pain go unnoticed as such, though we resent them, such as being drowsy, being overheated and having no appetite. So when you are displeased at any of these, say to yourself: “You are giving in to pain.”
 
 <details><summary>Notes</summary>
 
@@ -3795,12 +3796,12 @@ At every pain, have this ready to hand: that it is not shameful and does not mak
 
 ### 7.65
 
-See that you never come to feel toward the inhuman anything like what the inhuman feel toward human beings.
+See that you never come to feel towards the inhuman anything like what the inhuman feel towards human beings.
 
 <details><summary>Notes</summary>
 
-- *πάθῃς*: πάσχω is to undergo or be affected: here, to come to be in a certain state of feeling toward someone. Other reading: See that you are never affected toward the inhuman as
-- *οἷον οἱ ἀπάνθρωποι πρὸς τοὺς ἀνθρώπους*: The text is translated as given. Some editors are believed to change the second “the inhuman” to “human beings”, giving “as human beings feel toward human beings” (from memory, unchecked). Other reading: what human beings feel toward human beings
+- *πάθῃς*: πάσχω is to undergo or be affected: here, to come to be in a certain state of feeling towards someone. Other reading: See that you are never affected towards the inhuman as
+- *οἷον οἱ ἀπάνθρωποι πρὸς τοὺς ἀνθρώπους*: The text is translated as given. Some editors are believed to change the second “the inhuman” to “human beings”, giving “as human beings feel towards human beings” (from memory, unchecked). Other reading: what human beings feel towards human beings
 
 </details>
 
@@ -3832,7 +3833,7 @@ Nature did not blend the mind with the compound in such a way that it is not all
 
 ### 7.67b
 
-For it is very possible to become a godlike man and to be recognised by no one. Remember this always, and this as well: that living happily lies in very few things. And do not, because you have given up hope of being a logician and a student of nature, for that reason give up on being free, modest, social and obedient to god.
+For it is very possible to become a godlike man and to be recognised by no one. Remember this always, and this as well: that living happily lies in very few things. And because you have given up hope of being a logician and a student of nature, do not for that reason give up on being free, modest, social and obedient to god.
 
 <details><summary>Notes</summary>
 
@@ -3883,7 +3884,7 @@ Perfection of character has this: to live through every day as the last, and nei
 
 ### 7.70–71
 
-The gods, who are immortal, are not vexed that through so long a time they will certainly always have to put up with bad people, such as they are and so many. More than that, they care for them in every kind of way. But you, who are about to come to an end any moment now, do you give up, and that when you are one of the bad ones?
+The gods, who are immortal, are not vexed that through so long a time they will certainly always have to put up with bad people of such a kind and in such numbers. More than that, they care for them in every kind of way. But you, who are about to come to an end any moment now, do you give up, and that when you are one of the bad ones?
 
 It is ridiculous not to flee one’s own vice, which is in fact possible, but to flee that of others, which is impossible.
 
@@ -3932,11 +3933,11 @@ The nature of the whole set out by impulse to make the universe. But now either 
 
 <details><summary>Notes</summary>
 
-- *ὥρμησε*: This is the verb of the noun ὁρμή, “impulse”, which comes back later in the passage. On its own it means “set out for, started on”. The English gives both, “set out by impulse”, so that the act is clear and the repetition can be heard. Other reading: The nature of the whole had an impulse toward making the universe
-- *κοσμοποιίαν*: Literally “universe-making”. The word for the universe, κόσμος, also means order, so the making of an ordered arrangement is in the word. Other reading: toward the making of an ordered universe
+- *ὥρμησε*: This is the verb of the noun ὁρμή, “impulse”, which comes back later in the passage. On its own it means “set out for, started on”. The English gives both, “set out by impulse”, so that the act is clear and the repetition can be heard. Other reading: The nature of the whole had an impulse towards making the universe
+- *κοσμοποιίαν*: Literally “universe-making”. The word for the universe, κόσμος, also means order, so the making of an ordered arrangement is in the word. Other reading: towards the making of an ordered universe
 - *νῦν δὲ*: This can be temporal (“but now”, after that first impulse) or logical (“but as things are”). The plain “but now” allows both. Other reading: But as things are
 - *ἐπακολούθησιν*: Literally “following after”. Things come about as a sequel to something earlier, here presumably the first impulse, though the Greek does not say to what, and the English does not supply it. The same phrase has the same English in 6.36. Other reading: comes about by following on from that
-- *ἢ ἀλόγιστα καὶ τὰ κυριώτατά ἐστιν*: This is the hardest place in the passage. As printed, the second alternative says that even the chief things are “unreasoned”, a conclusion nobody could accept, which pushes toward the first alternative; the word could also be taken with the verb before it, leaving the rest as a separate statement. Editors have doubted or altered the text here (from memory, unchecked), and the English follows the printed words. Other reading: or it comes about without reasoning; and the most important things are those at which the ruling part of the universe directs a particular impulse
+- *ἢ ἀλόγιστα καὶ τὰ κυριώτατά ἐστιν*: This is the hardest place in the passage. As printed, the second alternative says that even the chief things are “unreasoned”, a conclusion nobody could accept, which pushes towards the first alternative; the word could also be taken with the verb before it, leaving the rest as a separate statement. Editors have doubted or altered the text here (from memory, unchecked), and the English follows the printed words. Other reading: or it comes about without reasoning; and the most important things are those at which the ruling part of the universe directs a particular impulse
 - *ἀλόγιστα*: The word means not reasoned out, not thought through. “Irrational” is used, since “without reason” in English would mean “for no cause”. Other reading: are unreasoned
 - *ἰδίαν ὁρμὴν*: The adjective means “its own” or “particular, separate”. The English takes the second sense: after one general impulse at the start, a particular impulse aimed at particular things, as against things that merely follow. Other reading: directs an impulse of its own
 - *τὸ τοῦ κόσμου ἡγεμονικόν*: The Stoic term for the commanding part of a soul, here said of the universe. “The ruling part” is its English in every passage of this set. Other reading: the commanding faculty of the universe
@@ -3948,7 +3949,7 @@ The nature of the whole set out by impulse to make the universe. But now either 
 
 ### 8.1
 
-This too helps you not to care for empty reputation: that you can no longer have lived your whole life, or at least your life since youth, as a philosopher, but to many others, and to you yourself, it has become plain that you are far from philosophy. So you are muddied, so that winning the reputation of a philosopher is no longer easy for you; and your situation fights against it too. If, then, you have truly seen where the matter lies, let go of what reputation you will have, and be content if you live at least the rest of your life, however much it may be, as your nature wants. So understand what it wants, and let nothing else pull you away. For you have learned by trial how many things you wandered among and nowhere found the good life: not in syllogisms, not in wealth, not in reputation, not in enjoyment, nowhere. Where is it, then? In doing what human nature asks for. How, then, will you do these things? If you have principles from which your impulses and actions come. What principles? Those about good things and bad: that nothing is a good thing for a human being which does not make them just, self-controlled, brave, free, and nothing is a bad thing which does not make them the opposite of these.
+This too helps you not to care for empty reputation: that you can no longer have lived your whole life, or at least your life since youth, as a philosopher, but to many others, and to you yourself, it has become plain that you are far from philosophy. You are muddied, then, so that winning the reputation of a philosopher is no longer easy for you; and your situation fights against it too. If, then, you have truly seen where the matter lies, let go of what reputation you will have, and be content if you live at least the rest of your life, however much it may be, as your nature wants. So understand what it wants, and let nothing else pull you away. For you have learned by trial how many things you wandered among and nowhere found the good life: not in syllogisms, not in wealth, not in reputation, not in enjoyment, nowhere. Where is it, then? In doing what human nature asks for. How, then, will you do these things? If you have principles from which your impulses and actions come. What principles? Those about good things and bad: that nothing is a good thing for a human being which does not make them just, self-controlled, brave, free, and nothing is a bad thing which does not make them the opposite of these.
 
 <details><summary>Notes</summary>
 
@@ -3996,7 +3997,7 @@ And Alexander, Gaius and Pompey: what are they beside Diogenes, Heraclitus and S
 
 That they will do the same things none the less, even if you burst.
 
-First, do not be disturbed: for all things are according to the nature of the whole, and in a little while you will be no one and nowhere, just as Hadrian is not, nor Augustus. Next, fix your eyes on the matter and see it; and, remembering as well that you must be a good human being and what the nature of a human being demands, do that without turning aside, and speak as seems to you most just: only kindly, modestly and without pretense.
+First, do not be disturbed: for all things are according to the nature of the whole, and in a little while you will be no one and nowhere, just as Hadrian is not, nor Augustus. Next, fix your eyes on the matter and see it; and, remembering as well that you must be a good human being and what the nature of a human being demands, do that without turning aside, and speak as seems to you most just: only kindly, modestly and without pretence.
 
 <details><summary>Notes</summary>
 
@@ -4011,7 +4012,7 @@ First, do not be disturbed: for all things are according to the nature of the wh
 
 ### 8.6
 
-The nature of the whole has this as its work: to move what is here over to there, to change it, to lift it from here and carry it there. All things are transformations, not so that one need fear something new. All things are familiar, and what is more, the allotments are equal.
+The nature of the whole has this as its work: to move what is here over there, to change it, to lift it from here and carry it there. All things are transformations, not so that one need fear something new. All things are familiar, and what is more, the allotments are equal.
 
 <details><summary>Notes</summary>
 
@@ -4099,7 +4100,7 @@ This thing, what is it in itself, in its own make-up? What in it is substance an
 
 ### 8.12
 
-When you find it hard to wake from sleep, remind yourself that to render social actions is according to the way you are made and according to human nature, whereas sleeping is shared with the animals without reason as well. And what is according to each one’s nature is more its own, more closely grown to it, and indeed more agreeable too.
+When you find it hard to wake from sleep, remind yourself that rendering social actions accords with the way you are made and with human nature, whereas sleeping is shared with the animals without reason as well. And what accords with each one’s nature is more its own, more closely grown to it, and indeed more agreeable too.
 
 <details><summary>Notes</summary>
 
@@ -4168,14 +4169,14 @@ If it is up to you, why do you do it? If it is up to another, whom or what do yo
 - *ταῖς ἀτόμοις ἢ τοῖς θεοῖς*: The two rival accounts of how things happen: the atoms of Epicurus, moving by chance, or the gods. The pair is often set side by side in this book. Other reading: Chance or providence?
 - *ἀμφότερα μανιώδη*: Neuter plural: both things, that is, both kinds of blaming, are like madness. Other reading: Either would be insane.
 - *διόρθωσον*: The command “set right” has no object in the Greek. The contrast with “the thing itself” in the next clause shows that the first object is whoever is responsible; “the other” is supplied, taken from “another” two sentences before. Other reading: For if you can, set the person right
-- *πρὸς τί ἔτι σοι φέρει*: Literally “toward what does it still carry for you”: what does it lead to, what does it serve. Other reading: what good does blaming still do you?
+- *πρὸς τί ἔτι σοι φέρει*: Literally “towards what does it still carry for you”: what does it lead to, what does it serve. Other reading: what good does blaming still do you?
 - *εἰκῇ*: The adverb means at random, with no purpose in view. Other reading: For nothing should be done at random.
 
 </details>
 
 ### 8.18
 
-What has died does not fall outside the universe. If it stays here, it also changes here, and is dissolved into what is its own, which are the elements of the universe and of you. And these too change, and do not grumble.
+What has died does not fall outside the universe. If it stays here, it also changes here, and is dissolved into the things that are its own, which are the elements of the universe and of you. And these too change, and do not grumble.
 
 <details><summary>Notes</summary>
 
@@ -4203,7 +4204,7 @@ Each thing has come to be for something: a horse, a vine. Why are you surprised?
 
 ### 8.20a
 
-Nature has aimed at the ending of each thing not a bit less than at its beginning and its course.
+Nature has aimed at the ending of each thing no less than at its beginning and its course.
 
 <details><summary>Notes</summary>
 
@@ -4369,7 +4370,7 @@ To speak, both in the senate and to anyone at all, with decorum, not over-distin
 
 ### 8.31
 
-The court of Augustus: wife, daughter, grandchildren, stepsons, sister, Agrippa, relatives, intimates, friends, Areius, Maecenas, doctors, sacrificers. The death of a whole court. Then go on to the others . . . not the death of a single person: as, for example, that of the Pompeys. And that line that is written on tombs, “the last of his own family”: reckon up how much those before them were racked so as to leave some successor, and then someone has to be the last. Here again the death of a whole family.
+The court of Augustus: wife, daughter, grandchildren, stepsons, sister, Agrippa, relatives, intimates, friends, Areius, Maecenas, doctors, sacrificers. The death of a whole court. Then go on to the others . . . not the death of a single person: as, for example, that of the Pompeys. And that line written on tombs, “the last of his own family”: reckon up how much those before them were racked so as to leave some successor, and then someone has to be the last. Here again the death of a whole family.
 
 <details><summary>Notes</summary>
 
@@ -4388,7 +4389,7 @@ The court of Augustus: wife, daughter, grandchildren, stepsons, sister, Agrippa,
 
 ### 8.32
 
-You must put your life together one action at a time, and if each action does its own part as far as it can, be content. And no one at all can prevent you from having it do its own part. “But something from outside will stand in the way.” Nothing will, at least not in the way of acting justly, with self-control and with good sense. Some other kind of activity will perhaps be prevented; but through being well pleased with the very thing that prevents it, and through moving over with good grace to what is given, another action at once takes its place, one that will fit into the putting together of which we are speaking.
+You must put your life together one action at a time, and if each action does its own part as far as it can, be content. And no one at all can prevent you from making sure that it does its own part. “But something from outside will stand in the way.” Nothing will, at least not in the way of acting justly, with self-control and with good sense. Some other kind of activity will perhaps be prevented; but through being well pleased with the very thing that prevents it, and through moving over with good grace to what is given, another action at once takes its place, one that will fit into the putting together of which we are speaking.
 
 <details><summary>Notes</summary>
 
@@ -4439,7 +4440,7 @@ If you have ever seen a hand cut off, or a foot, or a severed head, lying somewh
 
 ### 8.35
 
-Just as the nature of rational beings [has given] each of the rational beings its other powers […], so we have received this one too from it. For in the way that that nature turns round everything that stands in its way and goes against it, gives it a place in what is fated, and makes it a part of itself, so too the rational animal can make every obstacle into material for itself and use it for whatever its impulse was set on.
+Just as the nature of rational beings [has given] each of the rational beings its other powers […], so we have received this one too from it. For just as that nature turns round everything that stands in its way and goes against it, gives it a place in what is fated, and makes it a part of itself, so too the rational animal can make every obstacle into material for itself and use it for whatever its impulse was set on.
 
 <details><summary>Notes</summary>
 
@@ -4455,7 +4456,7 @@ Just as the nature of rational beings [has given] each of the rational beings it
 
 ### 8.36
 
-Do not let the impression of your whole life confound you. Do not take in, in one sweep of thought, what hardships and how many are likely to have come on you. Instead, at each of the things present, ask yourself: “What is there in this task that is unbearable and not to be endured?” For you will be ashamed to admit it. Then remind yourself that it is neither the future nor the past that weighs on you, but always the present; and this shrinks if you mark it off by itself alone and convict your mind if it cannot hold out against this, stripped bare.
+Do not let the impression of your whole life confound you. Do not take in at one sweep of thought what hardships and how many are likely to have come on you. Instead, at each of the things present, ask yourself: “What is there in this task that is unbearable and not to be endured?” For you will be ashamed to admit it. Then remind yourself that it is neither the future nor the past that weighs on you, but always the present; and this shrinks if you mark it off by itself alone and show your mind up if it cannot hold out against the present stripped bare.
 
 <details><summary>Notes</summary>
 
@@ -4466,7 +4467,7 @@ Do not let the impression of your whole life confound you. Do not take in, in on
 - *τοῦ ἔργου*: “The task” or “the business in hand”; it can also be loosely “the matter”. Other reading: What is there in this that is unbearable
 - *αἰσχυνθήσῃ γὰρ ὁμολογῆσαι*: The Greek does not say what would be admitted: either what the unbearable thing is, or that there is one. Other reading: For you will be ashamed to confess what it is
 - *κατασμικρύνεται*: “Is made small”, passive. The English has “shrinks”. Other reading: and this is cut down to size
-- *ἀπελέγχῃς τὴν διάνοιαν*: ἀπελέγχω is to refute or convict by cross-examination. διάνοια here is the faculty, “mind”. Other reading: and put your mind to shame
+- *ἀπελέγχῃς τὴν διάνοιαν*: ἀπελέγχω is to refute or convict by cross-examination, and so to expose. “Show up” keeps both the exposure and the shame, and is the English for the same root (ἐλέγξειν) in 1.17a. διάνοια here is the faculty, “mind”. Other reading: and convict your mind; or: and put your mind to shame
 - *ψιλὸν*: “Bare, stripped”: the present on its own, without the past and future added. It is a different word from “alone” (μόνον) just before. Other reading: against this alone
 
 </details>
@@ -4489,7 +4490,7 @@ Surely Pantheia or Pergamus is not sitting by Verus’s coffin now? Or Chabrias 
 
 ### 8.38
 
-If you can look keenly, look, judging, he says, with the wisest.
+If you can look keenly, he says, look, judging with the wisest.
 
 <details><summary>Notes</summary>
 
@@ -4566,7 +4567,7 @@ once it has become a “rounded sphere, in stillness”.
 
 I do not deserve to cause myself distress, for I have never yet willingly distressed anyone else.
 
-One thing gladdens one person, another another. What gladdens me is if I have my ruling part sound: not turning away from any human being or from any of the things that happen to human beings, but looking at everything with kindly eyes, accepting it, and using each thing according to its worth.
+One thing gladdens one person, another another. I am gladdened if I have my ruling part sound: not turning away from any human being or from any of the things that happen to human beings, but looking at everything with kindly eyes, accepting it, and using each thing according to its worth.
 
 <details><summary>Notes</summary>
 
@@ -4574,14 +4575,14 @@ One thing gladdens one person, another another. What gladdens me is if I have my
 - *ἑκὼν*: “Willingly, on purpose.” Other reading: I have never intentionally distressed another
 - *ἐὰν ὑγιὲς ἔχω τὸ ἡγεμονικόν*: A conditional clause, and the “if” is kept. ὑγιές is “healthy, sound”. Other reading: but me, to keep my ruling part healthy
 - *ἀποστρεφόμενον*: The participles that follow (turning away, looking, accepting, using) all describe the ruling part, not the speaker. Other reading: a ruling part that does not turn away
-- *εὐμενέσιν ὀφθαλμοῖς*: “With well-meaning eyes”; the same word as “in a kindly spirit” in 8.47. Other reading: with friendly eyes
+- *εὐμενέσιν ὀφθαλμοῖς*: “With well-meaning eyes”; the same word as “kindly disposed” in 8.47. Other reading: with friendly eyes
 - *χρώμενον ἑκάστῳ κατ’ ἀξίαν*: “Using each according to worth”: ἑκάστῳ can be each thing or each person, and the worth is the worth of that thing or person. Other reading: and dealing with each as it deserves
 
 </details>
 
 ### 8.44
 
-Look: make a gift of this present time to yourself. People who chase fame after death instead do not take into account that those people will be others of the same kind as these whom they find hard to bear; and those people too are mortal. And what is it to you at all, if those people echo with sounds of such a kind, or hold a judgment of such a kind about you?
+Look: make a gift of this present time to yourself. People who instead chase fame after death do not take into account that those people will be others of the same kind as these whom they find hard to bear; and those people too are mortal. And what is it to you at all, if those people echo with sounds of such a kind, or hold a judgment of such a kind about you?
 
 <details><summary>Notes</summary>
 
@@ -4629,7 +4630,7 @@ Is this worth it, that because of it my soul should be in a bad way and be worse
 
 Nothing can happen to any human being that is not a human occurrence, nor to an ox that is not of the ox kind, nor to a vine that is not of the vine kind, nor to a stone that is not proper to a stone. So if what happens to each is what is both usual and natural, why would you resent it? For the common nature was bringing you nothing that could not be borne.
 
-If you are distressed because of something outside you, it is not that thing that troubles you but your own verdict about it, and to wipe that out at once is in your power. But if what distresses you is something in your own disposition, who prevents you from putting your principle right? In the same way, if you are distressed because you are not doing some particular thing that seems sound to you, why not do it rather than be distressed? “But something stronger stands in the way.” Then do not be distressed, for the cause of its not being done does not lie with you. “But life is not worth living if this is not done.” Then leave life in a kindly spirit, just as the one who is doing it dies too, and at the same time gracious towards the things that stand in the way.
+If you are distressed because of something outside you, it is not that thing that troubles you but your own verdict about it, and it is in your power to wipe that out at once. But if what distresses you is something in your own disposition, who prevents you from putting your principle right? In the same way, if you are distressed because you are not doing some particular thing that seems sound to you, why not do it rather than be distressed? “But something stronger stands in the way.” Then do not be distressed, for the cause of its not being done does not lie with you. “But life is not worth living if this is not done.” Then leave life kindly disposed, just as the one who is doing it dies too, and at the same time gracious towards the things that stand in the way.
 
 <details><summary>Notes</summary>
 
@@ -4683,7 +4684,7 @@ Say nothing more to yourself than what the impressions that lead the way report.
 
 ### 8.50
 
-A bitter cucumber? Leave it. Brambles in the path? Turn aside. That is enough. Do not go on to say, “And why did these things come to be in the universe at all?” Because you will be laughed at by a person who studies nature, just as you would be laughed at by a carpenter and a shoemaker if you blamed them because you see, in the workshop, shavings and trimmings from the things being made. And yet they, at least, have somewhere to throw these, whereas the nature of the whole has nothing outside it. But the wonderful thing about this craft is that nature, having drawn a boundary around itself, changes into itself everything inside that seems to be decaying and growing old and to be useless, and that it makes other, fresh things again out of these very things, so that it neither needs substance from outside nor has any further need of a place to throw out what is too rotten. So its own space is enough for it, and its own material, and its own craft.
+A bitter cucumber? Leave it. Brambles in the path? Turn aside. That is enough. Do not go on to say, “And why did these things come to be in the universe at all?” For you will be laughed at by a person who studies nature, just as you would be laughed at by a carpenter and a shoemaker if you blamed them because you see, in the workshop, shavings and trimmings from the things being made. And yet they, at least, have somewhere to throw these, whereas the nature of the whole has nothing outside it. But the wonderful thing about this craft is that nature, having drawn a boundary around itself, changes into itself everything inside that seems to be decaying and growing old and to be useless, and that it makes other, fresh things again out of these very things, so that it neither needs substance from outside nor has any further need of a place to throw out what is too rotten. So its own space is enough for it, and its own material, and its own craft.
 
 <details><summary>Notes</summary>
 
@@ -4736,7 +4737,7 @@ They kill, they cut up like meat, they hound with curses. What, then, is that to
 
 ### 8.52–53
 
-Whoever does not know what the universe is does not know where they are. Whoever does not know what it is by nature for does not know who they are, nor what the universe is. And whoever is missing any one of these could not even say what they themselves are by nature for. What, then, does a person seem to you to be who runs from the praise of those who clap, or chases it, people who know neither where they are nor who they are?
+Whoever does not know what the universe is does not know where they are. Whoever does not know what it is by nature for does not know who they are, nor what the universe is. And whoever is missing any one of these could not even say what they themselves are by nature for. What, then, does a person seem to you to be who runs from or chases the praise of those who clap, people who know neither where they are nor who they are?
 
 Do you want to be praised by a person who curses themselves three times an hour? Do you want to please a person who is not pleased with themselves? Is a person pleased with themselves who regrets nearly everything they do?
 
@@ -4774,7 +4775,7 @@ No longer only to breathe together with the surrounding air, but from now on als
 
 Wickedness in general does no harm to the universe, and wickedness in the particular case does no harm to the other person. It is harmful only to the one who has also been given the power to be rid of it, as soon as they wish to.
 
-To my faculty of choice, my neighbour’s faculty of choice is just as much a matter of indifference as their bit of breath and their bit of flesh. For however true it is that we have come to be for one another’s sake, still each of our ruling parts has its own authority. For otherwise my neighbour’s wickedness would be an evil for me, which god decided against, so that my being unfortunate should not depend on someone else.
+To my faculty of choice, my neighbour’s faculty of choice is just as much a matter of indifference as their bit of breath and their bit of flesh. For however true it is that we have come to be for one another’s sake, still each of our ruling parts has its own authority. Otherwise my neighbour’s wickedness would be an evil for me, which god decided against, so that my being unfortunate should not depend on someone else.
 
 <details><summary>Notes</summary>
 
@@ -4793,18 +4794,18 @@ To my faculty of choice, my neighbour’s faculty of choice is just as much a ma
 
 ### 8.57
 
-The sun seems to be poured down, and indeed it is poured in every direction, yet it is not poured out. For this pouring is an extension; its beams, at any rate, are called aktines (“rays”) from ekteinesthai (“to be extended”). You could see what a ray is if you watched the sun’s light coming through something narrow into a shaded room. For it extends in a straight line and leans, so to speak, against whatever solid thing it meets that shuts off the air beyond; there it stands, and it does not slip down or fall. So the pouring and spreading of thought should be like that: in no way a pouring out, but an extension. It should not lean on the obstacles it meets with force or like a torrent, nor fall down, but stand and light up whatever receives it. For whatever does not give the beam passage will deprive itself of the beam.
+The sun seems to be poured down, and indeed it is poured in every direction, yet it is not poured out. For this pouring is an extension; its beams, at any rate, are called aktines (“rays”) from ekteinesthai (“to be extended”). You could see what a ray is if you watched the sun’s light coming through something narrow into a shaded room. For it extends in a straight line and leans, so to speak, against whatever solid thing it meets that shuts off the air beyond; there it stands, and it does not slip down or fall. So the pouring and spreading of thought should be like that: in no way a pouring out, but an extension. It should not lean with force, or like a torrent, on the obstacles it meets, nor fall down, but stand and light up whatever receives it. For whatever does not give the beam passage will deprive itself of the beam.
 
 <details><summary>Notes</summary>
 
-- *Ὁ ἥλιος κατακεχύσθαι δοκεῖ*: 'The sun' stands for its light. The verb form can be passive ('be poured down') or reflexive ('pour itself down'), and δοκεῖ can be 'seems' or 'is thought'. Other reading: The sun is thought to pour itself down
-- *οὐ μὴν ἐκκέχυται*: 'Poured out' in the sense of spilled away and used up. I kept the same verb 'pour' so the three forms (down, everywhere, out) stay visible. Other reading: yet it does not run out
+- *Ὁ ἥλιος κατακεχύσθαι δοκεῖ*: “The sun” stands for its light. The verb form can be passive (“be poured down”) or reflexive (“pour itself down”), and δοκεῖ can be “seems” or “is thought”. Other reading: The sun is thought to pour itself down
+- *οὐ μὴν ἐκκέχυται*: “Poured out” in the sense of spilled away and used up. The English keeps the same verb “pour” so the three forms (down, everywhere, out) stay visible. Other reading: yet it does not run out
 - *ἡ γὰρ χύσις αὕτη τάσις ἐστίν*: τάσις is stretching, extension or tension, a term of Stoic physics. “Extension” is used because the next clause derives “ray” from the verb “to be extended”. Other reading: For this pouring is a stretching
 - *ἀκτῖνες γοῦν αἱ αὐγαὶ αὐτοῦ ἀπὸ τοῦ ἐκτείνεσθαι λέγονται*: Marcus derives the word for rays (aktines) from the verb “to be extended” (ekteinesthai) because they sound alike. The Greek words are given in Latin letters so the claim still makes sense in English.
 - *ἐσκιασμένον οἶκον*: Literally a “shaded” house or room. Other reading: a darkened house
 - *ὥσπερ διερείδεται*: The verb means to lean on or brace oneself against something; ὥσπερ (“so to speak”) marks it as a figure. The text of this word has been doubted, and another reading gives “is divided”; that doubt was not checked against a critical edition’s notes. Other reading: and presses, so to speak, against
 - *διεῖργον τὸν ἐπέκεινα ἀέρα*: The participle goes with the solid thing: it bars the way to the air on the far side. It could also be taken as the solid thing marking off the air beyond. Other reading: that separates off the air beyond
-- *ἐνταῦθα δὲ ἔστη καὶ οὐ κατώλισθεν οὐδὲ ἔπεσε*: The Greek verbs are past tense, either a general truth or the moment of watching. I used the English present. Other reading: there it has stopped, and it did not slip down or fall
+- *ἐνταῦθα δὲ ἔστη καὶ οὐ κατώλισθεν οὐδὲ ἔπεσε*: The Greek verbs are past tense, either a general truth or the moment of watching. The English uses the present. Other reading: there it has stopped, and it did not slip down or fall
 - *τῆς διανοίας*: The word covers thought, thinking and the mind. Other reading: of the mind
 - *μὴ βίαιον μηδὲ ῥαγδαίαν τὴν ἐπέρεισιν ποιεῖσθαι*: The noun for leaning picks up the verb used of the sunbeam; the second adjective is the one used of a driving storm. No subject is stated: it may be thought or a general “one”. Other reading: one should not make the contact forced or violent
 - *αὐτὸ γὰρ ἑαυτὸ στερήσει τῆς αὐγῆς τὸ μὴ παραπέμπον αὐτήν*: The last verb means to escort, convey or let pass. The sense is open: the thing that does not let the beam through, or the thing that does not take it in, as against “whatever receives it” just before. Other reading: For whatever does not take the beam in will deprive itself of it
@@ -4837,7 +4838,7 @@ Human beings have come into being for one another’s sake. So either teach them
 
 ### 8.60
 
-An arrow travels in one way, the mind in another. Yet the mind, both when it is being cautious and when it turns about in considering something, travels straight none the less, and toward what is set before it.
+An arrow travels in one way, the mind in another. Yet the mind, both when it is being cautious and when it turns about in considering something, travels straight none the less, and towards what is set before it.
 
 <details><summary>Notes</summary>
 
@@ -4890,7 +4891,7 @@ Whoever does injustice is impious. For since the nature of the whole has made ra
 
 ### 9.2
 
-It would have been the mark of a finer man to go from among people without having tasted lying, or any pretence or luxury or vanity. But at any rate to breathe one’s last having at least grown sick of these things is the next best course. Or have you chosen to stay sitting beside vice, and does not even experience yet persuade you to flee from the plague? For the corruption of the mind is a plague, far more so than any such unhealthy mixture and change of this air that is poured around. For the latter is a plague of living creatures, in so far as they are living creatures; the former is a plague of human beings, in so far as they are human beings.
+It would have been the mark of a finer man to go from among people without having tasted lying, or any pretence or luxury or vanity. But at any rate to breathe one’s last having at least grown sick of these things is the next best course. Or have you chosen to stay sitting beside vice, and does not even experience yet persuade you to flee from the plague? For the corruption of the mind is a plague, far more so than any such unhealthy mixture and change of this air that is poured around. For the latter is a plague of living beings, insofar as they are living beings; the former is a plague of human beings, insofar as they are human beings.
 
 <details><summary>Notes</summary>
 
@@ -4908,13 +4909,13 @@ It would have been the mark of a finer man to go from among people without havin
 
 ### 9.3
 
-Do not despise death, but be well pleased with it, since this too is one of the things nature wills. For as it is with being young and growing old, with growing and reaching one’s prime, with getting teeth and a beard and grey hair, with begetting and carrying a child and giving birth, and with all the other natural activities that the seasons of life bring, so it is with being dissolved. This, then, is what fits a human being who has reasoned it out: not to be offhand toward death, nor violent, nor disdainful, but to wait for it as one of the natural activities; and, as you now wait for the time when the unborn child will come out of your wife’s womb, in the same way to await the hour in which your little soul will drop out of this husk. But if you also want a layman’s rule that touches the heart, what will most put you at ease about death is to stop and look at the things you are about to leave, and [at what kind of] characters [your soul] will no longer be mixed up with. For there must be no taking offence at them at all; rather one must even care for them and bear with them gently, yet remember that the release will not be from people who hold the same principles as you. For this alone, if anything at all, would pull one back and hold one in life: if one were allowed to live together with those who have made the same principles their own. But as it is you see how much weariness there is in the discord of living together, so that one says: “Come sooner, death, in case I too should perhaps forget myself.”
+Do not despise death, but be well pleased with it, since this too is one of the things nature wills. For as it is with being young and growing old, with growing and reaching one’s prime, with getting teeth and a beard and grey hair, with begetting and carrying a child and giving birth, and with all the other natural activities that the seasons of life bring, so it is with being dissolved. This, then, is what fits a human being who has reasoned it out: not to be offhand towards death, nor violent, nor disdainful, but to wait for it as one of the natural activities; and, as you now wait for the time when the unborn child will come out of your wife’s womb, in the same way to await the hour in which your little soul will drop out of this husk. But if you also want a layman’s rule that touches the heart, what will most put you at ease about death is to stop and look at the things you are about to leave, and [at what kind of] characters [your soul] will no longer be mixed up with. For there must be no taking offence at them at all; rather one must even care for them and bear with them gently, yet remember that the release will not be from people who hold the same principles as you. For this alone, if anything at all, would pull one back and hold one in life: if one were allowed to live together with those who have made the same principles their own. But as it is, you see how much weariness there is in the discord of living together, so that one says: “Come sooner, death, in case I too should perhaps forget myself.”
 
 <details><summary>Notes</summary>
 
 - *Μὴ καταφρόνει θανάτου*: καταφρονεῖν runs from “despise” to “think little of, make light of”. In 12.34 the same attitude is spoken of with approval, so “despise” is used in both places and the tension is left visible. Other reading: Do not make light of death
 - *κατὰ ἄνθρωπόν ἐστι λελογισμένον*: λελογισμένον can agree with ἄνθρωπον (“a human being who has reasoned”) or be neuter with τοῦτο (“this is a thing reasoned out”). The English takes it with the human being; “it” is added. Other reading: This, then, is the considered course that fits a human being
-- *μὴ ὁλοσχερῶς μηδὲ ὠστικῶς μηδὲ ὑπερηφάνως*: Three adverbs with a range. ὁλοσχερῶς is “in the gross, summarily”, so carelessly; ὠστικῶς is “in a pushing way”, which could mean pushing toward death or shoving it away, and “violent” leaves that open; ὑπερηφάνως is “haughtily”. Other reading: not carelessly, nor impatiently, nor arrogantly
+- *μὴ ὁλοσχερῶς μηδὲ ὠστικῶς μηδὲ ὑπερηφάνως*: Three adverbs with a range. ὁλοσχερῶς is “in the gross, summarily”, so carelessly; ὠστικῶς is “in a pushing way”, which could mean pushing towards death or shoving it away, and “violent” leaves that open; ὑπερηφάνως is “haughtily”. Other reading: not carelessly, nor impatiently, nor arrogantly
 - *πότε ἔμβρυον ἐκ τῆς γαστρὸς τῆς γυναικός σου ἐξέλθῃ*: γυνή is “woman” or “wife”; with σου the English reads “your wife”. The words “as you now wait” read like a real circumstance of the writer, but they could be a general illustration. Other reading: when the child will come out of your woman’s belly
 - *τοῦ ἐλύτρου τούτου*: ἔλυτρον is any case or covering (a pod, a shell, a sheath). After the comparison with birth it may suggest the membrane round an unborn child; the English reads “husk”. ψυχάριον just before is a diminutive, kept as “little soul”. Other reading: out of this sheath
 - *ἰδιωτικὸν παράπηγμα ἁψικάρδιον*: παράπηγμα is literally a peg-board calendar or table, and so a rule to steer by. ἰδιωτικόν is “of the layman”, that is, not a philosopher’s argument. ἁψικάρδιον is “that takes hold of the heart”. Other reading: an unphilosophical maxim that grips the heart
@@ -4973,16 +4974,16 @@ To wipe out an impression. To stop an impulse. To quench desire. To keep the rul
 
 One soul has been divided among the animals without reason, and one soul that has mind has been portioned out among the rational ones, just as there is one earth for all earthy things, and we see by one light and breathe one air, all of us that have sight and a soul.
 
-All things that share in something common hurry toward what is of their own kind. Everything earthy tends toward earth. Everything wet flows together. What is airy does the same, so that it takes things to hold them apart, and force. Fire is carried upward because of the elemental fire, yet it is so ready to be kindled together with every fire here that even everything material that is a little drier is easy to kindle, because less of what hinders kindling is mixed into it. So too, then, everything that shares in a common nature of mind hurries toward its kin in the same way, or even more. For the better it is compared with the rest, the readier it is to mix with what is its own and to be poured together with it. At any rate, right from the start, among the animals without reason there were found swarms and herds and the rearing of nestlings and what one might call loves; for here there were already souls, and the thing that draws together was found growing stronger in what is better, of a kind that did not exist in plants, or in stones or timber. Among the rational animals there were states and friendships and households and gatherings, and in wars treaties and truces. Among those better still, even out of things that stand apart there came to be, in a way, a union, such as there is among the stars. In this way the climb toward the better was able to produce a shared feeling even in things that stand apart. See, then, what is happening now. For only the beings that have mind have now forgotten their hurrying toward one another and their leaning together, and only here is the flowing together not to be seen. And yet, though they run away, they are overtaken and hemmed in all the same; for nature prevails. You will see what I mean if you watch closely. At any rate, one would sooner find something earthy touching nothing earthy than a human being split off from a human being.
+All things that share in something common hurry towards what is of their own kind. Everything earthy tends towards earth. Everything wet flows together. What is airy does the same, so that there is need of things to hold them apart, and of force. Fire is carried upward because of the elemental fire, yet it is so ready to be kindled together with every fire here that even everything material that is a little drier is easy to kindle, because less of what hinders kindling is mixed into it. So too, then, everything that shares in a common nature of mind hurries towards its kin in the same way, or even more. For the better it is compared with the rest, the readier it is to mix with what is its own and to be poured together with it. At any rate, right from the start, among the animals without reason there were found swarms and herds and the rearing of nestlings and what one might call loves; for here there were already souls, and the thing that draws together was found growing stronger in what is better, of a kind that did not exist in plants, or in stones or timber. Among the rational animals there were states and friendships and households and gatherings, and in wars treaties and truces. Among those better still, even out of things that stand apart there came to be, in a way, a union, such as there is among the stars. In this way the climb towards the better was able to produce a shared feeling even in things that stand apart. See, then, what is happening now. For only the beings that have mind have now forgotten their hurrying towards one another and their leaning together, and only here is the flowing together not to be seen. And yet, though they run away, they are overtaken and hemmed in all the same; for nature prevails. You will see what I mean if you watch closely. At any rate, one would sooner find something earthy touching nothing earthy than a human being split off from a human being.
 
 <details><summary>Notes</summary>
 
 - *μία νοερὰ ψυχὴ μεμέρισται*: νοερός is “of mind, able to think”. “Mind” is kept as the one word for it through the passage (“one soul that has mind”, “a common nature of mind”, “the beings that have mind”) so the chain can be followed. The verb differs from “divided” in the first clause and has a different English verb. Other reading: one thinking soul has been shared out
 - *ὅσα ὁρατικὰ καὶ ἔμψυχα*: A neuter plural (“whatever things can see and have soul in them”) attached to verbs in “we”. ἔμψυχα is literally “ensouled”, in ordinary Greek simply “alive”; “soul” is kept because the sentence is about soul. Other reading: all of us creatures that can see and are alive
-- *πρὸς τὸ ὁμογενὲς σπεύδει*: σπεύδω is “hurry, press eagerly toward”, and also “strive”. “Hurry” is used for the verb both times and “hurrying” for the noun σπουδή near the end, since the argument turns on the repetition. Other reading: strive toward what is of their own kind
-- *ῥέπει*: The word for a scale pan going down: to incline, to tend. “Tends” is used so that “leaning” can be kept for a different word near the end. Other reading: Everything earthy sinks toward earth
+- *πρὸς τὸ ὁμογενὲς σπεύδει*: σπεύδω is “hurry, press eagerly towards”, and also “strive”. “Hurry” is used for the verb both times and “hurrying” for the noun σπουδή near the end, since the argument turns on the repetition. Other reading: strive towards what is of their own kind
+- *ῥέπει*: The word for a scale pan going down: to incline, to tend. “Tends” is used so that “leaning” can be kept for a different word near the end. Other reading: Everything earthy sinks towards earth
 - *ὥστε χρῄζειν τῶν διειργόντων καὶ βίας*: The Greek has no subject: “so that there is need of things that keep apart, and of force”. The clause may cover the wet as well as the airy. Other reading: so that barriers and force are needed
-- *διὰ τὸ στοιχειῶδες πῦρ*: Literally “because of the elemental fire”. It is taken as the pure fire of the upper region, toward which fire down here rises; the words could also name the fiery element within the flame itself. Other reading: because of the element of fire in it
+- *διὰ τὸ στοιχειῶδες πῦρ*: Literally “because of the elemental fire”. It is taken as the pure fire of the upper region, towards which fire down here rises; the words could also name the fiery element within the flame itself. Other reading: because of the element of fire in it
 - *συνεξάπτεσθαι*: Three words in this sentence are made from one verb for setting alight. “Kindle” is used for all three. Other reading: to catch light together
 - *πᾶν τὸ ὑλικὸν*: ὑλικός is “material, made of matter”, but ὕλη is also the ordinary word for wood and fuel, and that sense is close to the surface here. “Even” is taken with the whole phrase: not only fire itself but anything material. Other reading: even all fuel that is a little drier
 - *ὅσῳ γάρ ἐστι κρεῖττον παρὰ τὰ ἄλλα*: κρείττων is “better”, also “stronger” or “superior”. The word returns four times as the rungs of a ladder; “better” is kept each time and not “higher”, since the Greek has no image of height until the “climb” later on. Other reading: For the higher it stands above the rest
@@ -4997,7 +4998,7 @@ All things that share in something common hurry toward what is of their own kind
 
 ### 9.10
 
-A human being bears fruit, and so does god, and so does the universe; each bears it in its own seasons. But if usage has made the phrase well worn, in its strict sense, for the vine and things like it, that makes no difference. And reason has fruit, both shared and its own, and from it come other things of much the same kind as reason itself.
+A human being bears fruit, and so does god, and so does the universe; each bears it in its own seasons. But if, through usage, the phrase in its strict sense has become well worn for the vine and things like it, that makes no difference. And reason has fruit, both shared and its own, and from it come other things of much the same kind as reason itself.
 
 <details><summary>Notes</summary>
 
@@ -5012,7 +5013,7 @@ A human being bears fruit, and so does god, and so does the universe; each bears
 
 ### 9.11
 
-If you can, teach them otherwise; and if not, remember that kindness has been given to you for this. The gods too are kind to such people, and toward some things they even work with them, toward health, toward wealth, toward reputation: so good are they. You may be so too; or tell me, who is stopping you?
+If you can, teach them otherwise; and if not, remember that kindness has been given to you for this. The gods too are kind to such people, and towards some things they even work with them, towards health, towards wealth, towards reputation: so good are they. You may be so too; or tell me, who is stopping you?
 
 <details><summary>Notes</summary>
 
@@ -5170,7 +5171,7 @@ Run to your own ruling part, and to that of the whole, and to this person’s. T
 
 ### 9.23
 
-Just as you yourself help to complete a civic whole, so too let every action of yours help to complete a civic life. So any action of yours that does not refer, whether directly or at a distance, to the social goal tears your life apart and does not let it be one, and it is seditious, like the person in a citizen body who, for their own part, stands apart from such harmony.
+Just as you yourself help to complete a civic whole, so too let every action of yours help to complete a civic life. So any action of yours that does not look, whether directly or at a distance, to the social goal tears your life apart and does not let it be one, and it is seditious, like the person in a citizen body who, for their own part, stands apart from such harmony.
 
 <details><summary>Notes</summary>
 
@@ -5232,7 +5233,7 @@ You have endured countless things because you were not content with your ruling 
 
 ### 9.27
 
-When someone else blames you or hates you, or people voice things of that kind, go to their little souls, pass inside and see what sort of people they are. You will see that you need not be torn apart so that these people may think this or that of you. You must wish them well, however; for by nature they are friends, and the gods too help them in every kind of way, through dreams, through oracles, yet toward the things those people care about.
+When someone else blames you or hates you, or people voice things of that kind, go to their little souls, pass inside and see what sort of people they are. You will see that you need not be torn apart so that these people may think this or that of you. You must wish them well, however; for by nature they are friends, and the gods too help them in every kind of way, through dreams, through oracles, yet towards the things those people care about.
 
 <details><summary>Notes</summary>
 
@@ -5241,7 +5242,7 @@ When someone else blames you or hates you, or people voice things of that kind, 
 - *σπᾶσθαι*: To be pulled, wrenched or convulsed: the torment of anxiety over their opinion. The words οὐ δεῖ before it are taken as “need not”, following “you will see”; they can also mean “must not”. Other reading: that you must not be racked
 - *τί ποτε περὶ σοῦ δοκῇ*: Literally “that some particular thing may seem to them about you”: that they should hold one opinion of you or another. Other reading: so that these people may have any opinion of you whatever
 - *φύσει γὰρ φίλοι*: No verb and no “your”: by nature they are friends, which is taken as friends to you. φίλοι can also mean “dear”. Other reading: for by nature they are dear to you
-- *πρὸς ἃ ἐκεῖνοι διαφέρονται*: διαφέρομαι usually means to differ or quarrel. The English takes a sense found in later Greek, to be concerned about something, to set store by it (from memory, unchecked). The point is that the gods help them even toward things that are not truly good. Other reading: yet toward the things those people quarrel over
+- *πρὸς ἃ ἐκεῖνοι διαφέρονται*: διαφέρομαι usually means to differ or quarrel. The English takes a sense found in later Greek, to be concerned about something, to set store by it (from memory, unchecked). The point is that the gods help them even towards things that are not truly good. Other reading: yet towards the things those people quarrel over
 
 </details>
 
@@ -5363,13 +5364,13 @@ Everything you see will very quickly perish, and those who have looked on as it 
 
 ### 9.34
 
-What the ruling parts of these people are, what sort of things they are in earnest about, and for what sort of things they love and honour. Think of yourself as looking at their little souls naked. When they suppose that they do harm by blaming or do good by singing praises, how much conceit.
+What the ruling parts of these people are, what sort of things they are in earnest about, and what sort of things win their love and honour. Think of yourself as looking at their little souls naked. When they suppose that they do harm by blaming or do good by singing praises, how much conceit.
 
 <details><summary>Notes</summary>
 
 - *Τίνα τὰ ἡγεμονικὰ τούτων*: There is no verb. It can be a direct question or the heading of something to consider; the English keeps it as a thing to consider, running on into the two clauses that follow. τὸ ἡγεμονικόν is the Stoic term for the part of the soul that directs the rest, “the ruling part”. Other reading: What are the ruling parts of these people?
 - *ἐσπουδάκασι*: A perfect with present force: what they are busy about and take seriously now. English has to choose between effort and seriousness. Other reading: what sort of things they have put their effort into
-- *δι’ οἷα φιλοῦσι καὶ τιμῶσι*: The two verbs have no object in the Greek and the English gives them none. The sense is the kind of reasons for which these people give their love and honour. Other reading: and what sort of things make them love and honour a person
+- *δι’ οἷα φιλοῦσι καὶ τιμῶσι*: The two verbs have no object in the Greek: δι’ οἷα asks on what grounds these people give their love and honour. The English turns the verbs into nouns, “win their love and honour”, so as not to supply an object. Other reading: and what sort of things make them love and honour a person
 - *γυμνὰ νόμιζε βλέπειν*: The imperative can mean “consider that you see” or “make it your practice to see”. The English takes the first. Other reading: Make it your habit to look at their little souls naked.
 - *ψυχάρια*: A diminutive of the word for soul, belittling in tone. Other reading: their souls
 - *δοκοῦσι*: The verb can mean “they think” or “they seem”. The English takes it as what they themselves think, which fits the word for conceit that follows. Other reading: When they seem to do harm by blaming or good by singing praises
@@ -5394,7 +5395,7 @@ Loss is nothing other than change. And in this the nature of the whole delights,
 
 ### 9.36
 
-The rottenness of the matter that underlies each thing: water, dust, little bones, a goatish reek. Or again: marble is calluses of the earth, gold and silver are sediment, clothing is little hairs, and purple dye is blood, and all the rest is of this kind. And the little breath too is another thing of this kind, changing out of these things and into these.
+The rottenness of the matter that underlies each thing: water, dust, little bones, a goatish reek. Or again: marble is the earth’s callus, gold and silver are sediment, clothing is little hairs, and purple dye is blood, and all the rest is of this kind. And the little breath too is another thing of this kind, changing out of these things and into these.
 
 <details><summary>Notes</summary>
 
@@ -5402,7 +5403,7 @@ The rottenness of the matter that underlies each thing: water, dust, little bone
 - *τῆς ἑκάστῳ ὑποκειμένης ὕλης*: The dative “each” can be neuter (each thing) or masculine (each person). The English reads “each thing”, because the list goes on to marble, gold and clothing. Other reading: of the matter that underlies each person
 - *γράσος*: The word names the smell of a goat and is used of the rank smell of the unwashed body. The English keeps the goat. Other reading: the rank smell of sweat
 - *ἢ πάλιν*: As punctuated, “or again” closes the first list and opens a second. It could also be run on into the next clause. Other reading: or, to take it another way,
-- *πῶροι γῆς*: The noun means a porous stone (tufa) and also a callus or hard lump formed in the body. The English takes the bodily sense, which keeps the image in one word. Other reading: marble is hardened lumps of earth
+- *πῶροι γῆς*: The noun means a porous stone (tufa) and also a callus or hard lump formed in the body. The English takes the bodily sense, which keeps the image in one word. As with “sediment” below, the Greek plural is taken as a mass noun. Other reading: marble is hardened lumps of earth
 - *ὑποστάθμαι*: What settles at the bottom of a liquid: sediment, dregs. The plural is kept as a mass noun in English. Other reading: gold and silver are dregs
 - *αἷμα ἡ πορφύρα*: The noun is the purple dye, or cloth dyed with it, and not the colour, so the English says “purple dye”. The blood is that of the shellfish the dye came from, which the Greek does not mention and the English does not add. Other reading: the purple robe is blood
 - *τὸ πνευμάτιον*: The diminutive of pneuma, the breath that for the Stoics is the stuff of life and soul. The English keeps the diminutive and the image of breath, as in 9.24 of this section. Other reading: the little soul; the bit of breath that is our life
@@ -5412,7 +5413,7 @@ The rottenness of the matter that underlies each thing: water, dust, little bone
 
 ### 9.37a
 
-Enough of the wretched life, the grumbling, the aping. Why are you troubled? What in this is new? What puts you beside yourself? The cause? Look at it. Or the material? Look at it. Beyond these there is nothing. But toward the gods too, now at last, become simpler and better.
+Enough of the wretched life, the grumbling, the aping. Why are you troubled? What in this is new? What puts you beside yourself? The cause? Look at it. Or the material? Look at it. Beyond these there is nothing. But towards the gods too, now at last, become simpler and better.
 
 <details><summary>Notes</summary>
 
@@ -5420,7 +5421,7 @@ Enough of the wretched life, the grumbling, the aping. Why are you troubled? Wha
 - *τί σε ἐξίστησι*: The verb is to put someone out of their place, and so out of their wits. “Beside yourself” is the English idiom with the same picture. Other reading: What is upsetting you?
 - *τὸ αἴτιον*: “The cause” and “the material” (ἡ ὕλη) are the usual two-part analysis of any thing in this book: the active principle that makes it what it is, and the stuff it is made of. The questions ask which of the two is the trouble. Other reading: Is it the form of the thing?
 - *ἀλλ’ ἡ ὕλη*: ἀλλά here brings in the second of two alternatives, so the English says “or”. ὕλη is the stuff a thing is made of, often rendered “matter”; “material” avoids the other sense of “the matter”. Other reading: But the matter?
-- *ἀλλὰ καὶ πρὸς τοὺς θεοὺς ἤδη ποτὲ*: “But also toward the gods”: the turn is abrupt in the Greek, and no link is added. ἤδη ποτέ is “now at last”, with a note of impatience. Other reading: And in your dealings with the gods as well, it is high time
+- *ἀλλὰ καὶ πρὸς τοὺς θεοὺς ἤδη ποτὲ*: “But also towards the gods”: the turn is abrupt in the Greek, and no link is added. ἤδη ποτέ is “now at last”, with a note of impatience. Other reading: And in your dealings with the gods as well, it is high time
 - *ἁπλούστερος καὶ χρηστότερος*: ἁπλοῦς is single, without doubleness: simple, straightforward. χρηστός is good in the sense of decent, honest, kind; “better” matches “very good” for the same word at 12.5. Other reading: more straightforward and kinder
 
 </details>
@@ -5451,7 +5452,7 @@ If the person did wrong, the evil is there. But perhaps they did not do wrong.
 
 ### 9.39a
 
-Either everything happens, one thing upon another, as to one body, from one source that has mind, and the part must not find fault with what comes about for the sake of the whole; or there are atoms, and nothing else but a stirred brew and a scattering. Why, then, are you troubled?
+Either everything happens from one source that has mind, one thing upon another, as to one body, and the part must not find fault with what comes about for the sake of the whole; or there are atoms, and nothing else but a stirred brew and a scattering. Why, then, are you troubled?
 
 <details><summary>Notes</summary>
 
@@ -5479,7 +5480,7 @@ Do you say to the ruling part: “You are dead, you are ruined, you have turned 
 
 ### 9.40
 
-Either the gods can do nothing or they can. Now if they cannot, why do you pray? But if they can, why do you not rather pray that they grant you not to fear any of these things, not to desire any of them, not to be pained at any of them, rather than that any of them be absent or be present? For certainly, if they can work with people, they can work with them toward these things too. But perhaps you will say: “The gods have left these things up to me.” Then is it not better to use what is up to you in freedom than to let what is not up to you make a difference to you, in slavery and degradation? And who told you that the gods do not also lend a hand with the things that are up to us? Begin, at any rate, to pray about these, and you will see. This man prays: “How may I sleep with that woman?” You: “How may I not desire to sleep with that woman?” Another: “How may I be rid of that one?” You: “How may I not want to be rid of that one?” Another: “How may I not lose my little child?” You: “How may I not be afraid of losing it?” In short, turn your prayers round like this and watch what happens.
+Either the gods can do nothing or they can. Now if they cannot, why do you pray? But if they can, why do you not rather pray that they grant you not to fear any of these things, not to desire any of them, not to be pained at any of them, rather than that any of them be absent or be present? For certainly, if they can work with people, they can work with them towards these things too. But perhaps you will say: “The gods have left these things up to me.” Then is it not better to use what is up to you in freedom than to let what is not up to you make a difference to you, in slavery and degradation? And who told you that the gods do not also lend a hand with the things that are up to us? Begin, at any rate, to pray about these, and you will see. This man prays: “How may I sleep with that woman?” You: “How may I not desire to sleep with that woman?” Another: “How may I be rid of that one?” You: “How may I not want to be rid of that one?” Another: “How may I not lose my little child?” You: “How may I not be afraid of losing it?” In short, turn your prayers round like this and watch what happens.
 
 <details><summary>Notes</summary>
 
@@ -5536,7 +5537,7 @@ Epicurus says: “In my illness my conversations were not about the sufferings o
 
 ### 9.42
 
-Whenever you take offence at someone’s shamelessness, ask yourself at once: “Is it possible, then, for there to be no shameless people in the universe?” It is not possible. Then do not demand the impossible. For this person too is one of those shameless people who must exist in the universe. Have the same thought ready to hand for the scoundrel, and for the faithless person, and for everyone who does wrong in any way whatever. For as soon as you are reminded that it is impossible for this kind of people not to exist, you will be kinder toward each one of them. It is useful too to think at once of this: what virtue nature has given to a human being to meet this wrong. For it has given, as an antidote, gentleness against the unfeeling person, and against another some other power. And in general you are free to teach the one who has gone astray to think otherwise; for everyone who does wrong misses what they were aiming at and has gone astray. And what harm have you in fact suffered? For you will find that none of those you are provoked at has done anything of a kind that was going to make your mind worse; and it is there that what is bad for you, and what harms you, has its whole existence. And what new or strange thing has happened, if the untaught person does what an untaught person does? See whether you ought not rather to blame yourself, because you did not expect that this person would do this wrong. For you did have from reason the means to reflect that this person was likely to do this wrong, and yet you forgot it and are surprised that they have done wrong. Above all, whenever you blame someone as faithless or ungrateful, turn to yourself. For plainly the wrong is yours, whether you trusted that a person with such a disposition would keep faith, or whether, in doing a favour, you did not do it as something finished in itself, nor so as to have received the whole fruit at once from the act itself. For what more do you want when you have done good to a person? Is it not enough that you have done something in accord with your own nature, but you look for a wage for it? As if the eye demanded a return because it sees, or the feet because they walk. For just as these have come into being for one particular thing, and in doing it according to their own build they receive in full what is their own, so too a human being, who is by nature a doer of good, whenever they do some good, or in some other way work together toward things of the middle kind, has done what they were built for, and has what is their own.
+Whenever you take offence at someone’s shamelessness, ask yourself at once: “Is it possible, then, for there to be no shameless people in the universe?” It is not possible. Then do not demand the impossible. For this person too is one of those shameless people who must exist in the universe. Have the same thought ready to hand for the scoundrel, and for the faithless person, and for everyone who does wrong in any way whatever. For as soon as you are reminded that it is impossible for people of this kind not to exist, you will be kinder towards each one of them. It is useful too to think at once of this: what virtue nature has given to a human being to meet this wrong. For it has given, as an antidote, gentleness against the unfeeling person, and against another some other power. And in general you are free to teach the one who has gone astray to think otherwise; for everyone who does wrong misses what they were aiming at and has gone astray. And what harm have you in fact suffered? For you will find that none of those you are provoked at has done anything of a kind that was going to make your mind worse; and it is there that what is bad for you, and what harms you, has its whole existence. And what new or strange thing has happened, if the untaught person does what an untaught person does? See whether you ought not rather to blame yourself, because you did not expect that this person would do this wrong. For you did have from reason the means to reflect that this person was likely to do this wrong, and yet you forgot it and are surprised that they have done wrong. Above all, whenever you blame someone as faithless or ungrateful, turn to yourself. For plainly the wrong is yours, whether you trusted that a person with such a disposition would keep faith, or whether, in doing a favour, you did not do it as something that ended there, nor so as to have received the whole fruit at once from the act itself. For what more do you want when you have done good to a person? Is it not enough that you have done something in accord with your own nature, but you look for a wage for it? As if the eye demanded a return because it sees, or the feet because they walk. For just as these have come into being for one particular thing, and in doing it according to their own build they receive in full what is their own, so too a human being, who is by nature a doer of good, whenever they do some good, or in some other way work together towards things of the middle kind, has done what they were built for, and has what is their own.
 
 <details><summary>Notes</summary>
 
@@ -5552,7 +5553,7 @@ Whenever you take offence at someone’s shamelessness, ask yourself at once: �
 - *τὴν χάριν διδοὺς μὴ καταληκτικῶς ἔδωκας*: χάρις (a favour) is the root of ἀχάριστος (ungrateful: one who returns no favour). καταληκτικῶς is a rare adverb, from the verb “to come to an end”; it is taken as giving in a way that ends with the giving and looks for nothing further. Other reading: in bestowing the kindness you did not bestow it once and for all
 - *ἀπέχει τὸ ἴδιον*: ἀπέχω is the word used on receipts: to have received payment in full. It answers the “wage” and “return” just before, so the English reads “receive in full what is their own”. Other reading: they have their own payment in full
 - *εὐεργετικὸς πεφυκώς*: εὐεργετικός, apt to do good to others, comes twice in the sentence. The English has “a doer of good” and “do some good”, so that the one word is heard both times. Other reading: who is by nature beneficent, whenever they do something beneficent
-- *εἰς τὰ μέσα συνεργητικὸν*: τὰ μέσα, “the middle things”, is taken as the Stoic name for things that are neither good nor bad in themselves, such as health and wealth, toward which people can work together. It could instead mean what lies in the middle between people, the common interest. Other reading: or in some other way contribute to the common good
+- *εἰς τὰ μέσα συνεργητικὸν*: τὰ μέσα, “the middle things”, is taken as the Stoic name for things that are neither good nor bad in themselves, such as health and wealth, towards which people can work together. It could instead mean what lies in the middle between people, the common interest. Other reading: or in some other way contribute to the common good
 - *κατὰ τὴν ἰδίαν κατασκευὴν*: κατασκευή (how a thing is constructed) and κατεσκεύασται at the end are the same word; the English has “build” and “built”. The usual philosophical English is “constitution”. Other reading: acting according to their own constitution … what they were constituted for
 
 </details>
@@ -5582,7 +5583,7 @@ Will you ever, soul, be good and simple and one and bare, plainer to see than th
 
 ### 10.2
 
-Watch what your nature asks for, taking yourself as something governed by nature only. Then do it and accept it, unless your nature as an animal is going to be put in a worse state. Next you must watch what your nature as an animal asks for, and all of this is to be taken up, unless your nature as a rational animal is going to be put in a worse state. And what is rational is by that very fact also civic. Using these rules, then, do not busy yourself with anything further.
+Watch what your nature asks for, taking yourself as something governed by nature only. Then do it and accept it, unless your nature as an animal is going to be put in a worse state. Next you must watch what your nature as an animal asks for, and take up all of this, unless your nature as a rational animal is going to be put in a worse state. And what is rational is by that very fact also civic. Using these rules, then, do not busy yourself with anything further.
 
 <details><summary>Notes</summary>
 
@@ -5638,7 +5639,7 @@ Whatever happens to you was being made ready for you beforehand, from all time, 
 
 ### 10.6
 
-Whether it is atoms or nature, let this first be laid down: that I am a part of the whole, which is governed by nature. Next, that I stand in a kind of kinship to the parts that are of the same kind as I am. For if I remember these things, then insofar as I am a part, I will not be displeased with anything that is allotted from the whole. For nothing that is good for the whole is harmful to the part. For the whole has nothing that is not good for itself. All natures have this in common, but the nature of the universe has this in addition, that it is not even forced by any cause from outside to produce anything harmful to itself. So by remembering that I am a part of a whole of this kind, I will be well pleased with everything that comes about. And insofar as I stand in a kind of kinship to the parts of the same kind, I will do nothing unsocial. Rather I will make those of my own kind my aim, and I will lead my every impulse toward what is good for all in common and lead it away from the opposite. When these things are carried through in this way, life must flow well, just as you would think that a citizen’s life flows well when that citizen goes forward through actions that profit the citizens, and welcomes whatever the city allots.
+Whether it is atoms or nature, let this first be laid down: that I am a part of the whole, which is governed by nature. Next, that I have a certain kinship with the parts that are of the same kind as I am. For if I remember these things, then insofar as I am a part, I will not be displeased with anything that is allotted from the whole. For nothing that is good for the whole is harmful to the part. For the whole has nothing that is not good for itself. All natures have this in common, but the nature of the universe has this in addition, that it is not even forced by any cause from outside to produce anything harmful to itself. So by remembering that I am a part of a whole of this kind, I will be well pleased with everything that comes about. And insofar as I have a certain kinship with the parts of the same kind, I will do nothing unsocial. Rather I will make those of my own kind my aim, and I will lead my every impulse towards what is good for all in common and lead it away from the opposite. When these things are carried through in this way, life must flow well, just as you would think that a citizen’s life flows well when that citizen goes forward through actions that profit the citizens, and welcomes whatever the city allots.
 
 <details><summary>Notes</summary>
 
@@ -5657,7 +5658,7 @@ Whether it is atoms or nature, let this first be laid down: that I am a part of 
 
 ### 10.7
 
-The parts of the whole, all that are by nature contained by the universe, must perish; but let “perish” be said in the sense of “be altered”. Now if this is by nature both bad and necessary for them, the whole would not be well managed, with its parts going into alteration and built in various ways for perishing. For did nature itself set out to treat its own parts badly, and to make them both liable to fall into what is bad and bound by necessity to fall into what is bad, or did such things come about without nature noticing? For both are unbelievable. And if someone were to leave nature out of it and explain these things by the way they naturally are, even so it would be ridiculous to say that the parts of the whole are naturally such as to change, and at the same time to be surprised or annoyed as though at something happening against nature, especially when the dissolution is into the things out of which each is put together. For it is either a scattering of the elements out of which it was compounded, or a turning of the solid into the earthy and of the breath-like into the airy, so that these too are taken back up into the reason of the whole, whether the whole is burned up in fire at each cycle or renewed by everlasting exchanges. And do not picture the solid and the breath-like as the ones that date from the first birth. For all of this took its inflow yesterday and the day before, from food and from the air drawn in. So what changes is this that it took in, not what your mother bore. But suppose that this binds you very closely to that individually qualified thing, which, I think, has no bearing on what is being said now.
+The parts of the whole, all that are by nature contained by the universe, must perish; but let “perish” be said in the sense of “be altered”. Now if this is by nature both bad and necessary for them, the whole would not be well managed, with its parts going into alteration and built in various ways for perishing. For did nature itself set out to treat its own parts badly, and to make them both liable to fall into what is bad and bound by necessity to fall into what is bad, or did such things come about without nature noticing? For both are unbelievable. And if someone were to leave nature out of it and explain these things by the way they naturally are, even so it would be ridiculous to say that the parts of the whole are naturally such as to change, and at the same time to be surprised or annoyed as though at something happening against nature, especially when the dissolution is into the things out of which each is put together. For it is either a scattering of the elements out of which it was compounded, or a turning of the solid into the earthy and of the breath-like into the airy, so that these too are taken back up into the reason of the whole, whether the whole is burned up in fire at each cycle or renewed by everlasting exchanges. And do not picture the solid and the breath-like as the ones that date from the first birth. For all of this took its inflow yesterday and the day before, from food and from the air drawn in. So what changes is what it took in, not what your mother bore. But suppose that this binds you very closely to that individually qualified thing, which, I think, has no bearing on what is being said now.
 
 <details><summary>Notes</summary>
 
@@ -5676,7 +5677,7 @@ The parts of the whole, all that are by nature contained by the universe, must p
 
 ### 10.8
 
-Having given yourself these names: good, modest, truthful, clear-minded, like-minded, high-minded, take care that you never come to bear other names; and if you do lose these names, go back to them quickly. Remember that “clear-minded” was to mean for you a discerning attention to each thing, and not letting things go unheeded; “like-minded”, the willing acceptance of what the common nature assigns; and “high-minded”, the lifting high of the part that has mind, above the smooth or rough movement of the flesh, above petty reputation, above death and everything of that kind. So if you keep yourself in these names, without craving to have others call you by them, you will be a different person and will enter a different life. For to go on being such as you have been up to now, and to be torn and soiled in a life like this, is the mark of someone thoroughly senseless and clinging to life, someone like the half-eaten beast-fighters who, full of wounds and gore, still beg to be kept until tomorrow, to be thrown, just as they are, to the same claws and bites. So put yourself aboard these few names, and if you can stay on them, stay, like someone who has moved to some Islands of the Blessed. But if you sense that you are falling away and are not prevailing, go away with a good heart to some corner where you will prevail, or even leave life altogether, not in anger, but simply, freely and modestly, having at least done this one thing, and only this, in your life: to leave it in this way. Toward remembering the names, though, it will help you greatly to remember the gods, and that what they want is not to be flattered, but for all rational beings to become like them, and for the fig tree to do the work of a fig tree, the dog the work of a dog, the bee the work of a bee, and the human being the work of a human being.
+Having given yourself these names: good, modest, truthful, clear-minded, like-minded, high-minded, take care that you never come to bear other names; and if you do lose these names, go back to them quickly. Remember that “clear-minded” was to mean for you a discerning attention to each thing, and not letting things go unheeded; “like-minded”, the willing acceptance of what the common nature assigns; and “high-minded”, the lifting high of the part that has mind, above the smooth or rough movement of the flesh, above petty reputation, above death and everything of that kind. So if you keep yourself in these names, without craving to have others call you by them, you will be a different person and will enter a different life. For to go on being what you have been up to now, and to be torn and soiled in a life like this, is the mark of someone thoroughly senseless and clinging to life, someone like the half-eaten beast-fighters who, full of wounds and gore, still beg to be kept until tomorrow, to be thrown, just as they are, to the same claws and bites. So put yourself aboard these few names, and if you can stay on them, stay, like someone who has moved to some Islands of the Blessed. But if you sense that you are falling away and are not prevailing, go away with a good heart to some corner where you will prevail, or even leave life altogether, not in anger, but simply, freely and modestly, having at least done this one thing, and only this, in your life: to leave it in this way. For remembering the names, though, it will help you greatly to remember the gods, and that what they want is not to be flattered, but for all rational beings to become like them, and for the fig tree to do the work of a fig tree, the dog the work of a dog, the bee the work of a bee, and the human being the work of a human being.
 
 <details><summary>Notes</summary>
 
@@ -5796,7 +5797,7 @@ Someone who follows reason in everything is something at once unhurried and quic
 
 ### 10.13
 
-Ask yourself as soon as you come out of sleep: will it make any difference to you if what is just and right is blamed by someone else? It will not. Have you forgotten that these people who snort and prance in their praise and blame of others are like this in bed and like this at table, and what things they do, what they run from, what they chase, what they steal, what they seize, not with hands and feet but with the most precious part of themselves, the part that becomes, when it wants to, good faith, a sense of shame, truth, law, a good spirit?
+Ask yourself as soon as you come out of sleep: will it make any difference to you if what is just and right is blamed by someone else? It will not. Have you forgotten that these people who snort and prance in their praise and blame of others are like this in bed and like this at table, and what they do, what they run from, what they chase, what they steal, what they seize, not with hands and feet but with the most precious part of themselves, the part that becomes, when it wants to, good faith, a sense of shame, truth, law, a good spirit?
 
 <details><summary>Notes</summary>
 
@@ -5813,7 +5814,7 @@ Ask yourself as soon as you come out of sleep: will it make any difference to yo
 
 ### 10.14
 
-To nature, which gives everything and takes everything back, the person who is educated and modest says: “Give what you want. Take back what you want.” And that person says this not in bold defiance, but only in obedience to it and good will toward it.
+To nature, which gives everything and takes everything back, the person who is educated and modest says: “Give what you want. Take back what you want.” And that person says this not in bold defiance, but only in obedience to it and good will towards it.
 
 <details><summary>Notes</summary>
 
@@ -5821,7 +5822,7 @@ To nature, which gives everything and takes everything back, the person who is e
 - *ἀπολαμβανούσῃ*: ἀπολαμβάνω is to take back or receive back what one is owed, as a lender does. The same verb returns in ἀπόλαβε, so “take back” is used both times. Other reading: which gives all things and receives them again
 - *δὸς ὃ θέλεις*: θέλεις is “want”, “wish” or “will”. “Want” is kept, as for ὅπου θέλεις in 8.45a in this section. Other reading: Give what you will; take back what you will
 - *καταθρασυνόμενος*: A rare verb built on the word for over-boldness, with a prefix that means “against”: making oneself bold against someone. It can be resistance or mere show. The English reads “bold defiance”, which the sentence sets against obeying; no object is expressed. Other reading: not out of bravado; not as a show of boldness
-- *πειθαρχῶν μόνον*: μόνον stands after “obeying” and can limit that word alone or both participles, or mean “simply”. The English keeps “only” and puts it before both. Other reading: but simply obeying it, and with good will toward it
+- *πειθαρχῶν μόνον*: μόνον stands after “obeying” and can limit that word alone or both participles, or mean “simply”. The English keeps “only” and puts it before both. Other reading: but simply obeying it, and with good will towards it
 - *εὐνοῶν αὐτῇ*: εὐνοέω is to be well disposed or loyal to someone. αὐτῇ is nature, a feminine noun in Greek, and goes with both participles. “It” is written because “her” would add a personification the grammar alone does not require, though nature is here spoken to as “you”. Other reading: obeying her and loyal to her
 
 </details>
@@ -5844,7 +5845,7 @@ What is left now is little. Live as on a mountain. For it makes no difference wh
 
 ### 10.16
 
-No longer to discuss at all what kind of man the good man is, but to be such a man.
+No longer to discuss at all what the good man is like, but to be one.
 
 <details><summary>Notes</summary>
 
@@ -5897,7 +5898,7 @@ What the nature of the whole brings to each is good for each, and it is good at 
 - *Συμφέρει ἑκάστῳ ὃ φέρει ἑκάστῳ*: A play on words: “brings” (φέρει) and “is good for”, literally “brings together” (συμφέρει), which means to benefit or be to the advantage of. English cannot keep the echo, so the sense is kept. Other reading: What the nature of the whole brings to each benefits each
 - *ἑκάστῳ*: The form can be masculine or neuter: each person or each thing. “Each” leaves it open. Other reading: to each thing
 - *ἡ τῶν ὅλων φύσις*: Literally “the nature of the wholes”, a set phrase for the nature of the universe taken as a whole. Other reading: the nature of all things
-- *καὶ τότε συμφέρει ὅτε ἐκείνη φέρει*: 'Then ... when': the benefit is tied to the moment of the bringing. The Greek does not add 'only' or 'exactly'; a stronger wording would be an interpretation. Other reading: and it is good for them exactly when nature brings it
+- *καὶ τότε συμφέρει ὅτε ἐκείνη φέρει*: “Then ... when”: the benefit is tied to the moment of the bringing. The Greek does not add “only” or “exactly”; a stronger wording would be an interpretation. Other reading: and it is good for them exactly when nature brings it
 
 </details>
 
@@ -5910,7 +5911,7 @@ What the nature of the whole brings to each is good for each, and it is good at 
 - *ἐρᾷ δὲ ὁ σεμνὸς αἰθήρ*: The quoted line of verse stops here without saying what the sky loves. The English leaves it just as bare. Other reading: and the holy sky loves it too
 - *σεμνὸς αἰθήρ*: αἰθήρ is the bright upper air or heaven; σεμνός is “revered”, “holy”, “majestic”. Other reading: the majestic heaven
 - *ἐρᾷ δὲ ὁ κόσμος ποιῆσαι*: The poet’s words end before this; from here Marcus speaks, reusing the poet’s verb. It is the verb of being in love and of strong desire. “Loves” is used for it throughout so that the last sentence can be heard. Other reading: and the universe longs to bring about
-- *κόσμος*: The word means both the universe and its order. 'Universe' is used here and in 4.23. Other reading: the world
+- *κόσμος*: The word means both the universe and its order. “Universe” is used here and in 4.23. Other reading: the world
 - *ὃ ἂν μέλλῃ γίνεσθαι*: The verb can mean simply “is about to” or “is destined to”. The plain future sense is translated. Other reading: whatever is destined to happen
 - *σοὶ συνερῶ*: One compound verb, “I love together with you”; no object is given, so what is loved is left to the context. Other reading: I long along with you
 - *μήτι δὲ οὕτω κἀκεῖνο λέγεται*: The particle μήτι usually opens a question expecting “no” (as in 6.43), but it can also float a tentative suggestion. It is taken as a suggestion here, since the sentence completes the thought. Other reading: Surely that, too, is not said in this sense: “this loves to happen”?
@@ -5920,7 +5921,7 @@ What the nature of the whole brings to each is good for each, and it is good at 
 
 ### 10.22
 
-Either you live here, and by now you are used to it; or you are going out from here, and that is what you wanted; or you are dying, and you have completed your service. Besides these there is nothing. So be of good heart.
+Either you live here, and by now you are used to it; or you are going out from here, and that is what you wanted; or you are dying, and you have completed your service. Besides these there is nothing. So be cheerful.
 
 <details><summary>Notes</summary>
 
@@ -5928,7 +5929,7 @@ Either you live here, and by now you are used to it; or you are going out from h
 - *ἔξω ὑπάγεις*: Literally “you are going off outside”: ἔξω answers “here”, and “from here” is added to bring that out. The Greek does not say where “here” or “outside” is. It is not death, which is the third case. Other reading: you are withdrawing elsewhere
 - *τοῦτο ἤθελες*: An imperfect: “this is what you were wanting”. Other reading: and that was your own wish
 - *ἀπελειτούργησας*: From λειτουργία, a public service a citizen carried out for his city. The verb is “to finish one’s service, to be discharged”. Other reading: your duty is done
-- *εὐθύμει*: “Be in good spirits, be cheerful.” Other reading: be cheerful
+- *εὐθύμει*: “Be in good spirits, be cheerful.” Other reading: be of good heart
 
 </details>
 
@@ -5952,13 +5953,13 @@ What is my ruling part to me, and what kind of thing am I making it now, and wha
 
 ### 10.25
 
-Whoever flees from their master is a runaway slave. And the law is master, so whoever breaks the law is a runaway slave too. But whoever is distressed or angry or afraid, too, does not want one of the things appointed by the one who governs all things to have happened, or to be happening, or to be going to happen; and the one who governs all things is law, as the one who deals out all that falls to each. So whoever is afraid or distressed or angry is a runaway slave.
+Whoever flees from their master is a runaway slave. And the law is master, so whoever breaks the law is a runaway slave too. But whoever is distressed or angry or afraid also does not want one of the things appointed by the one who governs all things to have happened, or to be happening, or to be going to happen; and the one who governs all things is law, as the one who deals out all that falls to each. So whoever is afraid or distressed or angry is a runaway slave.
 
 <details><summary>Notes</summary>
 
 - *δραπέτης*: The word means specifically a slave who has run away from a master, not any fugitive. “Runaway slave” is written each time so that the conclusion of the argument uses the same words as its first step. Other reading: a runaway
 - *κύριος δὲ ὁ νόμος*: κύριος is the master of a slave, and more widely one who has authority, a lord. “The law” has the article and is the subject; “master” has none, and the English reads “is master”. The small word δέ adds the second step of the argument, so it is “and”, not “but”. Other reading: and our master is the law
-- *καὶ ὁ παρανομῶν οὖν δραπέτης*: καί can be “also” (the lawbreaker too is a runaway) or a plain “and” joining the two clauses. “Too” is read: the closing step of the argument has its “so” without καί, and the next sentence goes on with “but” and another “too”. Other reading: and so whoever breaks the law is a runaway slave
+- *καὶ ὁ παρανομῶν οὖν δραπέτης*: καί can be “also” (the lawbreaker too is a runaway) or a plain “and” joining the two clauses. “Too” is read: the closing step of the argument has its “so” without καί, and the next sentence goes on with “but” and an “also” for its καί. Other reading: and so whoever breaks the law is a runaway slave
 - *ὁ λυπούμενος*: λύπη covers pain, grief and distress; in Stoic lists it is the name for one of the main passions. “Distressed” is the widest plain word. Other reading: whoever grieves, or: whoever is in pain
 - *οὐ βούλεταί τι γεγονέναι ἢ γίνεσθαι ἢ γενήσεσθαι*: Literally “does not want something to have happened or to be happening or to be going to happen”: one “not” governs the three tenses, which answer distress (past), anger (present) and fear (future) only loosely. Greek “does not want” regularly means “wants it not to be so”. In the Greek “of the things appointed” comes after the three tenses; the English brings it forward as “one of the things appointed”. Other reading: wishes that one of the things appointed had not happened, or were not happening, or would not happen
 - *τεταγμένων*: The verb is to set in order, to station, to assign. “Appointed” keeps the sense of things set in their place by an authority. Other reading: the things arranged, or ordered
@@ -5969,13 +5970,13 @@ Whoever flees from their master is a runaway slave. And the law is master, so wh
 
 ### 10.26
 
-A man lets seed go into a womb and goes away, and from then on another cause takes it over, works on it and brings a baby to completion. From what a thing, what a thing! Again: he lets food go down through the throat, and from then on another cause takes it over and makes perception and impulse and, in sum, life and strength and other things (how many, and what things!). So: to look at these things that come about under such a veil, and to see the power just as we see the power that presses downward and the power that rises upward, not with the eyes, but no less clearly.
+A man lets seed go into a womb and goes away, and from then on another cause takes it over, works on it and brings a baby to completion. From what a seed, what a baby! Again: he lets food go down through the throat, and from then on another cause takes it over and makes perception and impulse and, in sum, life and strength and other things (how many, and what things!). So: to look at these things that come about under such a veil, and to see the power just as we see the power that presses downward and the power that rises upward, not with the eyes, but no less clearly.
 
 <details><summary>Notes</summary>
 
 - *ἀφεὶς ἀπεχώρησε*: The Greek names no subject. The participle is masculine and the act is a man’s, and the tense is a past used for what generally happens. The English is “A man” and the present tense. Other reading: He let seed go into a womb and went away
 - *ἄλλη αἰτία παραλαβοῦσα*: Literally “another cause, having received it”, as one takes over a thing handed on. The same phrase is repeated word for word in the second half, and the English repeats too. Other reading: a different cause takes charge of it
-- *ἐξ οἵου οἷον*: Three words: “out of what sort of thing, what sort of thing”. The edition prints a question mark, but the words read as an exclamation of wonder and are punctuated so. The same word of wonder returns in the bracket below, “what things!”. Other reading: From what kind of beginning, what kind of result?
+- *ἐξ οἵου οἷον*: Three words: “out of what sort of thing, what sort of thing”. Both forms can be neuter, like “seed” and “baby” in the Greek sentence before, so the English names those two; the words could also be quite general. The edition prints a question mark, but the words read as an exclamation of wonder and are punctuated so. The same word of wonder returns in the bracket below, “what things!”. Other reading: From what a thing, what a thing!
 - *ἀφῆκε*: The same verb as for the seed, “let go, released”, and “lets … go” is kept so the parallel shows. The subject is again unstated: “he” carries on from “a man”, since the Greek names no new subject, though anyone who eats is meant. Other reading: a person lets food go down through the throat
 - *τὸ ὅλον*: Used as an adverb: “on the whole, in general”, summing up the list. The English is “in sum”. Other reading: and, altogether, life and strength
 - *ἐγκαλύψει*: A noun meaning a veiling or wrapping up. It is kept as an image: a veil under which the work goes on unseen. Other reading: that come about in such concealment
@@ -6001,7 +6002,7 @@ Think continually how all things of the kind that happen now happened before as 
 
 ### 10.28
 
-Picture everyone who is pained or displeased at anything whatever as like the piglet that is being sacrificed and kicks and squeals. Like it too is the one who laments on their little bed, alone, in silence. Picture also how we are bound, and that to the rational living creature alone it has been given to follow willingly what happens, while simply to follow is a necessity for all.
+Picture everyone who is pained or displeased at anything whatever as like the piglet that is being sacrificed and kicks and squeals. Like it too is the one who laments on their little bed, alone, in silence. Picture also how we are bound, and that to the rational living being alone it has been given to follow willingly what happens, while simply to follow is a necessity for all.
 
 <details><summary>Notes</summary>
 
@@ -6059,7 +6060,7 @@ When you see Satyrion, picture Socraticus or Eutyches or Hymen; and when you see
 
 ### 10.31b
 
-What material, what a subject, you are running away from! For what are all these things but exercises for a reason that has looked exactly, and as a student of nature, at the things in life? Stay, then, until you have made these things too your own, as a strong stomach makes everything its own, as a bright fire makes flame and light out of whatever you throw into it.
+What material, what a subject, you are running away from! For what are all these things but exercises for a reason that has seen the things in life accurately and as a student of nature? Stay, then, until you have made these things too your own, as a strong stomach makes everything its own, as a bright fire makes flame and light out of whatever you throw into it.
 
 <details><summary>Notes</summary>
 
@@ -6073,9 +6074,9 @@ What material, what a subject, you are running away from! For what are all these
 
 ### 10.32–33
 
-Let it not be possible for anyone to say truthfully of you that you are not straightforward or that you are not good, but let anyone who is going to judge any of these things about you be mistaken. All of this is in your power: for who prevents you from being good and straightforward? You have only to decide not to go on living unless you are going to be such a person, for reason does not require you to live either, if you are not such.
+Let it not be possible for anyone to say truthfully of you that you are not straightforward or that you are not good, but let anyone who is going to judge any of these things about you be mistaken. All of this is in your power: for who prevents you from being good and straightforward? You have only to decide not to go on living unless you are going to be such a person, for reason does not require you to live either, if you are not such a person.
 
-With this material, what is it that can be done or said in the soundest way? For whatever it is, it is possible to do it or say it, and do not make the excuse that you are being prevented. You will not stop groaning until this has come over you: that what luxury is to those who live for pleasure, that is what it is for you to do, with the material that is supplied and comes to hand, the things that belong to the way a human being is made. For one must judge everything that it is possible to do in accordance with one’s own nature to be an enjoyment. And it is possible everywhere. Now a cylinder is not granted everywhere to be carried along in its own motion, nor is water, nor fire, nor the other things that are governed by nature or by a soul without reason: for the things that bar them and stand in their way are many. But mind and reason can make their way through everything that falls against them, in the way their nature is and in the way they wish. Set this ease before your eyes, the ease with which reason will be carried through all things as fire is carried up, as a stone down, as a cylinder down a slope, and look for nothing more. For the remaining obstacles either belong to the little body, the dead thing, or, without a judgment and the giving in of reason itself, they break no one and do nothing bad at all. Otherwise the one affected would themselves at once become bad. At any rate with all other made things, whatever bad thing happens to any of them, the thing affected itself becomes worse because of it. But here, if it must be said, the human being becomes both better and more praiseworthy by using rightly the things that befall them. In general, remember that nothing harms one who is by nature a citizen that does not harm the city, and nothing harms the city that does not harm the law. And of these so-called strokes of bad luck not one harms the law. So what does not harm the law harms neither city nor citizen.
+With this material, what can be done or said in the soundest way? For whatever it is, it is possible to do it or say it, and do not make the excuse that you are being prevented. You will not stop groaning until this has come over you: that what luxury is to those who live for pleasure, that, for you, is doing the things that belong to the way a human being is made, with the material that is supplied and comes to hand. For one must judge to be an enjoyment everything that it is possible to do in accordance with one’s own nature. And it is possible everywhere. Now a cylinder is not granted everywhere to be carried along in its own motion, nor is water, nor fire, nor the other things that are governed by nature or by a soul without reason: for the things that bar them and stand in their way are many. But mind and reason can make their way through everything that falls against them, as is their nature and as they wish. Set this ease before your eyes, the ease with which reason will be carried through all things as fire is carried up, as a stone down, as a cylinder down a slope, and look for nothing more. For the remaining obstacles either belong to the little body, the dead thing, or, without a judgment and the giving in of reason itself, they break no one and do nothing bad at all. Otherwise the one affected would themselves at once become bad. At any rate with all other made things, whatever bad thing happens to any of them, the thing affected itself becomes worse because of it. But here, if it must be said, the human being becomes both better and more praiseworthy by using rightly the things that befall them. In general, remember that nothing harms one who is by nature a citizen that does not harm the city, and nothing harms the city that does not harm the law. And of these so-called strokes of bad luck not one harms the law. So what does not harm the law harms neither city nor citizen.
 
 <details><summary>Notes</summary>
 
@@ -6118,14 +6119,14 @@ For someone who has been steeped in the true principles, even the shortest sayin
 
 ### 10.35
 
-The healthy eye must see everything that can be seen, and not say, “I want the green things”; for that belongs to someone whose eyes are diseased. And healthy hearing and healthy smell must be ready for everything that can be heard and smelled, and the healthy stomach must be the same toward all foods, as a mill is toward everything it was built to grind. So too the healthy mind must be ready for everything that happens. But the mind that says, “Let the little ones be kept safe,” and “Let everyone praise whatever I do,” is an eye that looks for the green things, or teeth that look for the soft things.
+The healthy eye must see everything that can be seen, and not say, “I want the green things”; for that belongs to someone whose eyes are diseased. And healthy hearing and healthy smell must be ready for everything that can be heard and smelled, and the healthy stomach must be the same towards all foods, as a mill is towards everything it was built to grind. So too the healthy mind must be ready for everything that happens. But the mind that says, “Let the little ones be kept safe,” and “Let everyone praise whatever I do,” is an eye that looks for the green things, or teeth that look for the soft things.
 
 <details><summary>Notes</summary>
 
-- *τὰ χλωρὰ*: The color word runs from pale green to yellowish; here it is green as the color that is easy on sore eyes. Other reading: pale things
+- *τὰ χλωρὰ*: The colour word runs from pale green to yellowish; here it is green as the colour that is easy on sore eyes. Other reading: pale things
 - *ὀφθαλμιῶντός*: A participle: “of one who is suffering from ophthalmia”, a soreness of the eyes. The English gives it plainly. Other reading: that is what a person with sore eyes does
 - *στόμαχον*: The word can mean the gullet or the stomach. With food and a mill, “stomach”. Other reading: gullet
-- *ὁμοίως ἔχειν ὡς μύλην*: “To be disposed alike” toward all foods, as a mill or millstone is. “Alike” can go with “all foods” (the same toward each) or with the comparison (in the same way as a mill); the English is worded so that both are heard. Other reading: must take all foods just as a millstone takes all that it was made to grind
+- *ὁμοίως ἔχειν ὡς μύλην*: “To be disposed alike” towards all foods, as a mill or millstone is. “Alike” can go with “all foods” (the same towards each) or with the comparison (in the same way as a mill); the English is worded so that both are heard. Other reading: must take all foods just as a millstone takes all that it was made to grind
 - *διάνοιαν*: The faculty, set beside eye, hearing and stomach, so “mind” and not the glossary’s first choice “thought”. Other reading: thought
 - *τὰ τεκνία σῳζέσθω*: A diminutive, “little children”, and a verb that is both “be kept safe” and “survive”. The Greek has “the”, not a possessive, and the English follows it. Other reading: “Let my little ones live”
 - *ἡ δὲ λέγουσα*: Literally “but the one that says”, feminine, picking up “mind”. The English repeats the noun. Other reading: But the one that says
@@ -6134,12 +6135,12 @@ The healthy eye must see everything that can be seen, and not say, “I want the
 
 ### 10.36
 
-No one is so fortunate that, as they die, there will not be some people standing by who welcome the bad thing that is happening. Say the person was good and wise: may there not, at the very last, be someone who says to themselves: “Shall we at last get a breathing space from this minder? He was not hard on any of us, but I could feel that he was quietly condemning us.” That, then, in the case of the good person. But in our case how many other things there are on account of which many a person is longing to be rid of us! So you will think of this as you die, and you will go out more easily, reasoning: “I am leaving a life of this kind, in which my very partners, for whom I struggled so much, prayed, took thought, those very people want me to go, hoping perhaps to get some other relief out of it. Why, then, would anyone hold on to a longer stay here?” Still, do not for that reason go away less kindly toward them, but keeping to your own habit: friendly, well-disposed and gracious. And, on the other hand, not as one being torn away; rather, just as in a person who dies an easy death the little soul slips easily out of the body, such too must the withdrawal from these people be. For nature tied you to these people too and put you together with them, but now it unties. I am being untied, as from my own people, it is true, yet not pulled back but without force; for this too is one of the things that accord with nature.
+No one is so fortunate that, as they die, there will not be some people standing by who welcome the bad thing that is happening. Say the person was good and wise: might there not, at the very last, be someone who says this to themselves? “Shall we at last get a breathing space from this minder? He was not hard on any of us, but I could feel that he was quietly condemning us.” That, then, in the case of the good person. But in our case how many other things there are that make many a person long to be rid of us! So you will think of this as you die, and you will go out more easily, reasoning: “I am leaving a life of this kind, in which my very partners, for whom I struggled so much, prayed, cared, those very people want me to go, hoping perhaps to get some other relief out of it. Why, then, would anyone hold on to a longer stay here?” Still, do not for that reason go away less kindly towards them, but keeping to your own habit: friendly, well-disposed and gracious. And, on the other hand, not as one being torn away; rather, just as in a person who dies an easy death the little soul slips easily out of the body, so too must the withdrawal from these people take place. For nature tied you to these people too and put you together with them, but now it unties. I am being untied, as from my own people, it is true, yet not pulled back but without force; for this too is one of the things that accord with nature.
 
 <details><summary>Notes</summary>
 
 - *ἀσπαζόμενοι τὸ συμβαῖνον κακόν*: ἀσπάζεσθαι is “to greet gladly, to welcome”. κακόν, “bad thing”, is said from the ordinary point of view, not as Marcus’s own verdict on death. Other reading: who are glad of the misfortune that is befalling him
-- *μὴ τὸ πανύστατον ἔσται τις*: The Greek before this is a bare statement (“was good and wise”) used as a supposition; “Say the person” is added. A question with μή is hesitant and often expects the answer no, but the argument needs such a person to exist, so it is read as a tentative “may there not be”. σπουδαῖος is the Stoic word for the good, serious person. Other reading: The person was earnest and wise. Surely at the very end there will not be someone who says to themselves …?
+- *μὴ τὸ πανύστατον ἔσται τις*: The Greek before this is a bare statement (“was good and wise”) used as a supposition; “Say the person” is added. A question with μή is hesitant and often expects the answer no, but the argument needs such a person to exist, so it is read as a tentative “might there not be”. σπουδαῖος is the Stoic word for the good, serious person. Other reading: The person was earnest and wise. Surely at the very end there will not be someone who says to themselves …?
 - *ἀναπνεύσομέν ποτε ἀπὸ τούτου τοῦ παιδαγωγοῦ*: The edition punctuates this as a question; it could be an exclamation. A παιδαγωγός was the slave who escorted, supervised and corrected a boy, not a teacher, and “minder” gives that status. The verb is literally “breathe again from”. Other reading: At last there will be room to breathe, away from this tutor!
 - *πολὺς ὁ ἀπαλλακτιῶν ἡμῶν*: ἀπαλλακτιάω is “to long to be rid of”. ἡμῶν is a first-person plural: Marcus means himself and people like him as against the truly good person, and the plural is kept. Other reading: many a one wants to be rid of me
 - *αὐτοὶ οἱ κοινωνοί*: κοινωνοί are sharers or partners, from the same root as κοινωνικός (“social” in this project). The possessive is supplied. Other reading: the very companions
@@ -6167,7 +6168,7 @@ Train yourself, as far as you can, with everything that anyone does, to ask in y
 
 ### 10.38
 
-Remember that what pulls the strings is that thing hidden inside. That is oratory, that is life, that, if one must say it, is the human being. Never picture along with it the vessel-like thing that surrounds it and these little tools moulded around it. For they are like a carpenter’s axe, differing only in being grown on. For without the cause that moves them and holds them in check these parts are in fact of no more use than the weaver’s shuttle, the writer’s pen and the charioteer’s little whip.
+Remember that what pulls the strings is that thing hidden inside. That is oratory, that is life, that, if one must say it, is the human being. Never picture along with it the vessel-like thing that surrounds it and these little tools moulded around it. For they are like a carpenter’s axe, differing only in being grown on. For without the cause that moves them and holds them in check, these parts are in fact of no more use than the weaver’s shuttle, the writer’s pen and the charioteer’s little whip.
 
 <details><summary>Notes</summary>
 
@@ -6188,7 +6189,7 @@ Remember that what pulls the strings is that thing hidden inside. That is orator
 
 ### 11.1
 
-What is the rational soul’s own: it sees itself, it analyses itself, it makes itself whatever it wishes, it gathers for itself the fruit it bears (for the fruits of plants, and what corresponds to them in animals, are gathered by others), and it reaches its own end wherever the limit of life comes upon it. It is not as with dancing and acting and things of that kind, where the whole action falls short of its end if something cuts in, but at every part, and wherever it is overtaken, it makes what was set before it full and in need of nothing more, for itself, so that it can say: “I have what is mine in full.” Further, it goes round the whole universe and the void around it and its shape, and it stretches out into the boundlessness of time, and it takes in the periodic rebirth of the whole and considers it from every side, and it observes that those after us will see nothing newer and that those before us saw nothing more remarkable, but that in a way a person of forty, if they have any mind at all, has seen all that has been and all that will be, in that it is all of one kind. Also the rational soul’s own are love of those near it, and truthfulness, and a sense of shame, and valuing nothing above itself, which is law’s own too. In this way, then, right reason and the reason of justice turn out not to differ at all.
+What is the rational soul’s own: it sees itself, it analyses itself, it makes itself whatever it wishes, it gathers for itself the fruit it bears (for the fruits of plants, and what corresponds to them in animals, are gathered by others), and it reaches its own end wherever the limit of life comes upon it. It is not as with dancing and acting and things of that kind, where the whole action falls short of its end if something cuts in, but at every part, and wherever it is overtaken, it makes what was set before it full and in need of nothing more, for itself, so that it can say: “I have what is mine in full.” Further, it goes round the whole universe and the void around it and its shape, and it stretches out into the boundlessness of time, and it takes in the periodic rebirth of the whole and considers it from every side, and it observes that those after us will see nothing newer and that those before us saw nothing more remarkable, but that in a way a person of forty, if they have any mind at all, has seen all that has been and all that will be, in that it is all of one kind. The rational soul’s own are also love of those near it, and truthfulness, and a sense of shame, and valuing nothing above itself, which is law’s own too. In this way, then, right reason and the reason of justice turn out not to differ at all.
 
 <details><summary>Notes</summary>
 
@@ -6229,7 +6230,7 @@ You will look down on delightful singing, on dancing and on the pankration, if y
 
 ### 11.3
 
-What a soul it is that is ready, if it must this moment be released from the body, and either be extinguished or be scattered or hold together. But this readiness should come from a judgment of one’s own, not by way of bare opposition, as with the Christians, but in a reasoned and dignified way, and in a way that could convince someone else too, without theatrics.
+What a soul it is that is ready, if it must this moment be released from the body, and either be extinguished or be scattered or hold together. But this readiness should come from a judgment of one’s own, not by way of bare opposition, as with the Christians, but in a reasoned and dignified way, and so as to convince someone else too, without theatrics.
 
 <details><summary>Notes</summary>
 
@@ -6247,7 +6248,7 @@ What a soul it is that is ready, if it must this moment be released from the bod
 
 I have done something as a social being: then I have been benefited. See that this always comes to hand, and never stop.
 
-What is your craft? To be good. And how does that come about well, except from points of theory, some about the nature of the whole, others about the make-up proper to the human being?
+What is your craft? To be good. And how does that come about well, except from points of theory, some about the nature of the whole, others about the constitution proper to the human being?
 
 <details><summary>Notes</summary>
 
@@ -6263,7 +6264,7 @@ What is your craft? To be good. And how does that come about well, except from p
 
 ### 11.6
 
-First, tragedies were brought on as reminders of the things that happen, and that it is in the nature of these things to happen this way, and that what charms you on the stage should not weigh on you on the larger stage. For you see that these things have to be carried through this way, and that even those who cry out “O Cithaeron!” bear them. And some things are said usefully by those who write the plays. This above all, for example: “But if I and my two children have been neglected by the gods, this too has its reason.” And again: “For one should not be angry with events.” And: “To reap life like a fruitful ear of grain.” And everything of that kind. After tragedy, the Old Comedy was brought on. It had a tutor’s frankness and, by its very plainness of speech, reminded people, not uselessly, of freedom from conceit. It was for some such purpose that Diogenes too took these things up. As for the Middle Comedy after it, and lastly the New, which little by little slipped down into cleverness at imitation, consider just what it has been taken up for. For it is not unknown that some useful things are said by these writers too; but the whole undertaking of this kind of poetry and play-making, just what aim did it look to?
+First, tragedies were brought on as reminders of the things that happen, and that it is in the nature of these things to happen this way, and that what charms you on the stage should not weigh on you on the larger stage. For you see that these things have to be carried through this way, and that even those who cry out “O Cithaeron!” bear them. And some things are said usefully by those who write the plays. This above all, for example: “But if I and my two children have been neglected by the gods, this too has its reason.” And again: “For one should not be angry with events.” And: “To reap life like a fruitful ear of grain.” And everything of that kind. After tragedy, the Old Comedy was brought on. It had a tutor’s frankness and, by its very plainness of speech, reminded people, not uselessly, of freedom from conceit. For some such purpose Diogenes too took these things up. As for the Middle Comedy after it, and lastly the New, which little by little slipped down into cleverness at imitation, consider just what it has been taken up for. For it is not unknown that some useful things are said by these writers too; but the whole undertaking of this kind of poetry and play-making, just what aim did it look to?
 
 <details><summary>Notes</summary>
 
@@ -6321,7 +6322,7 @@ A branch cut off from the branch next to it cannot help being cut off from the w
 
 To grow on the same stem, but not to hold the same principles.
 
-Just as those who stand in your way as you go forward in accord with right reason will not be able to turn you aside from sound action, so let them not knock you out of your kindness toward them either; but keep watch over yourself on both counts alike: not only in steady judgment and action, but also in gentleness toward those who try to hinder you or are otherwise annoyed. For this too is weakness, to be harsh with them, just as it is to abandon the action and give in from fright. For both are equally deserters from their post: the one who has flinched, and the one who has become estranged from a person who is by nature kin and friend.
+Just as those who stand in your way as you go forward in accord with right reason will not be able to turn you aside from sound action, so let them not knock you out of your kindness towards them either; but keep watch over yourself on both counts alike: not only in steady judgment and action, but also in gentleness towards those who try to hinder you or are otherwise annoyed. For this too is weakness, to be harsh with them, just as it is to abandon the action and give in from fright. For both are equally deserters from their post: the one who has flinched, and the one who has become estranged from a person who is by nature kin and friend.
 
 <details><summary>Notes</summary>
 
@@ -6353,7 +6354,7 @@ Just as those who stand in your way as you go forward in accord with right reaso
 
 ### 11.11
 
-The things whose pursuit and avoidance throw you into turmoil do not come to you, but in a way you yourself go to them. At least let your judgment about them be quiet, and they will stay unmoving, and you will be seen neither pursuing nor avoiding.
+The things whose pursuit and avoidance throw you into turmoil do not come to you, but in a way you yourself go to them. At least let your judgment about them be quiet, and they will stay still, and you will be seen neither pursuing nor avoiding.
 
 <details><summary>Notes</summary>
 
@@ -6361,18 +6362,18 @@ The things whose pursuit and avoidance throw you into turmoil do not come to you
 - *αἱ διώξεις καὶ φυγαὶ*: Literally “pursuits and flights”: chasing some things and running from others. The same pair returns as verbs at the end, so “pursue” and “avoid” are kept in both places. Other reading: the things you are thrown into turmoil chasing and running from
 - *θορυβοῦσί σε*: The verb is from θόρυβος, the noise of a crowd, and is also used of one person being disturbed or confused. “Let your judgment be quiet” answers it. Other reading: raise a clamour in you
 - *τὸ γοῦν κρῖμα*: κρῖμα is a ruling or decision, a different word from ὑπόληψις, which is “judgment” in the glossary. “Judgment” is used here as the plainer word, and nothing in the passage depends on the difference. Other reading: at least let your verdict on them keep still
-- *ἀτρεμοῦντα*: “Not trembling”, at rest. Other reading: and they will stay quite still
+- *ἀτρεμοῦντα*: “Not trembling”, at rest. Other reading: and they will not tremble
 
 </details>
 
 ### 11.12
 
-The sphere of the soul is true to its own form when it neither stretches out toward anything nor runs together inward, neither coils up nor sinks in on itself, but shines with a light by which it sees the truth, the truth of all things and the truth within itself.
+The sphere of the soul is true to its own form when it neither stretches out towards anything nor runs together inward, neither coils up nor sinks in on itself, but shines with a light by which it sees the truth, the truth of all things and the truth within itself.
 
 <details><summary>Notes</summary>
 
 - *Σφαῖρα ψυχῆς αὐτοειδής*: A sentence without a verb. αὐτοειδής is a very rare word, apparently “having its own form”; it is taken as the predicate and “is true to” is supplied. The text here is thought to have been doubted and emended (from memory, unchecked). Other reading: The soul is a sphere of its own form when
-- *ἐκτείνηται ἐπί τι*: The verbs describe ways the sphere loses its shape; the first pair is outward and inward. ἐπί τι is “toward something”, which may suggest reaching after an object of desire. Other reading: reaches out after anything
+- *ἐκτείνηται ἐπί τι*: The verbs describe ways the sphere loses its shape; the first pair is outward and inward. ἐπί τι is “towards something”, which may suggest reaching after an object of desire. Other reading: reaches out after anything
 - *σπειρᾶται*: As printed this is from σπειράομαι, “to be coiled” (σπεῖρα, a coil). Another reading, σπείρηται, “is scattered”, would make an opposite to the next verb (from memory, unchecked). The English translates the text as given. Other reading: nor is scattered
 - *συνιζάνῃ*: To settle together, to collapse on itself; the prefix means “together”. Other reading: nor collapses
 - *φωτὶ λάμπηται*: The verb is middle: the sphere shines with a light. A passive sense, “is lit by a light”, would make the light come from outside. Other reading: is lit by a light
@@ -6382,7 +6383,7 @@ The sphere of the soul is true to its own form when it neither stretches out tow
 
 ### 11.13
 
-Will someone despise me? That is for them to see to. But I will see to it that I am not found doing or saying anything that deserves to be despised. Will they hate me? That is for them to see to. But I am kind and well-disposed to everyone, and ready to show this very person what they are failing to see, not with reproach, nor as if making a show of putting up with them, but genuinely and good-heartedly, like the famous Phocion, if indeed he was not pretending. For what is within must be like this, and a human being must be seen by the gods to be one who is not disposed to be indignant at anything and makes a grievance of nothing. For what is bad for you, if you yourself are now doing what is proper to your nature, and are accepting what is now in season for the nature of the whole, a human being straining toward this: that what is good for all in common should come about, by whatever means?
+Will someone despise me? That is for them to see to. But I will see to it that I am not found doing or saying anything that deserves to be despised. Will they hate me? That is for them to see to. But I am kind and well-disposed to everyone, and ready to show this very person what they are failing to see, not with reproach, nor as if making a show of putting up with them, but genuinely and good-heartedly, like the famous Phocion, if indeed he was not pretending. For what is within must be like this, and a human being must be seen by the gods to be one who is not disposed to be indignant at anything and makes a grievance of nothing. For what is bad for you, if you yourself are now doing what is proper to your nature, and are accepting what is now in season for the nature of the whole, a human being straining towards this: that what is good for all in common should come about, by whatever means?
 
 <details><summary>Notes</summary>
 
@@ -6393,7 +6394,7 @@ Will someone despise me? That is for them to see to. But I will see to it that I
 - *ὑπὸ τῶν θεῶν βλέπεσθαι ἄνθρωπον*: The “must” of the sentence governs both halves: what is within must be like this, and a human being must be seen by the gods to be of this kind. The obligation lies on the person. Other reading: and the gods must see a human being who is not disposed to be indignant at anything
 - *δεινοπαθοῦντα*: To complain loudly of what one suffers, to treat it as an outrage. “At nothing” earlier in the clause is taken with this word too. Other reading: and does not cry out at hard treatment
 - *τί γάρ σοι κακόν*: The passage begins in the first person and here turns to the second; the change is kept. κακόν is “bad”, as elsewhere in this section. Other reading: For what harm is there to you
-- *τεταμένος*: “Stretched”, that is, pulled taut toward something; “straining” keeps the image. Some editors are believed to print a word meaning “stationed” here instead (from memory, unchecked); the text as given is translated. Other reading: a human being posted to see that the common good is brought about
+- *τεταμένος*: “Stretched”, that is, pulled taut towards something; “straining” keeps the image. Some editors are believed to print a word meaning “stationed” here instead (from memory, unchecked); the text as given is translated. Other reading: a human being posted to see that the common good is brought about
 - *ὅτου δὴ τὸ κοινῇ συμφέρον*: The phrase is “through whatever”, and the form can also mean “through whomever”. συμφέρον is rendered “what is good for” as settled. Other reading: that the common benefit should come about through whoever it may be
 
 </details>
@@ -6412,7 +6413,7 @@ Despising one another, they fawn on one another; and wanting to be above one ano
 
 ### 11.15
 
-How rotten and counterfeit is the person who says: “I have chosen to be straightforward with you.” What are you doing, man? This is not a thing to announce beforehand. It will show of itself. It ought to be written on the forehead. At once the voice has that ring, at once it stands out in the eyes, just as the one who is loved at once knows everything in the look of the lovers. In short, the straightforward and good person must be like someone who stinks like a goat, so that whoever stands near notices as soon as they come up, whether they want to or not. But a studied straightforwardness is a dagger. Nothing is more shameful than a wolf’s friendship: shun this above all things. The good and straightforward and kind person has these things in the eyes, and it does not escape notice.
+How rotten and counterfeit is the person who says: “I have chosen to be straightforward with you.” What are you doing, man? This is not a thing to announce beforehand. It will show of itself. It ought to be written on the forehead. At once the voice has that ring, at once it stands out in the eyes, just as the one who is loved at once knows everything in the look of the lovers. In short, the straightforward and good person must be like someone who reeks of goat, so that whoever stands near notices as soon as they come up, whether they want to or not. But a studied straightforwardness is a dagger. Nothing is more shameful than a wolf’s friendship: shun this above all things. The good and straightforward and kind person has these things in their eyes, and does not escape notice.
 
 <details><summary>Notes</summary>
 
@@ -6430,12 +6431,12 @@ How rotten and counterfeit is the person who says: “I have chosen to be straig
 
 ### 11.16
 
-To live life through in the finest way: this power is in the soul, if a person is indifferent toward the things that are indifferent. And a person will be indifferent if they look at each of these things taken apart and as a whole, and remember that none of them puts a judgment about itself into us, nor comes to us, but the things stay still, and it is we who produce the verdicts about them and, as it were, write them in ourselves, when it is in our power not to write them, and in our power, even if one somehow escapes notice, to wipe it out at once; and remember that this kind of attention will be for a short time, and after that life will be over. But what is hard in it, if these things are otherwise? For if they are according to nature, rejoice in them and let them be easy for you. And if they are contrary to nature, look for what there is for you that is according to your own nature and hurry toward that, even if it brings no reputation. For there is pardon for everyone who looks for their own good.
+To live life through in the finest way: this power is in the soul, if a person is indifferent towards the things that are indifferent. And a person will be indifferent if they look at each of these things taken apart and as a whole, and remember that none of them puts a judgment about itself into us, nor comes to us, but the things stay still, and it is we who produce the verdicts about them and, as it were, write them in ourselves, when it is in our power not to write them, and in our power, even if one of them somehow escapes our notice, to wipe it out at once; and remember that this kind of attention will be for a short time, and after that life will be over. But what is hard about these things being otherwise? For if they are according to nature, rejoice in them and let them be easy for you. And if they are contrary to nature, look for what there is for you that is according to your own nature and hurry towards that, even if it brings no reputation. For there is pardon for everyone who looks for their own good.
 
 <details><summary>Notes</summary>
 
 - *Κάλλιστα διαζῆν, δύναμις αὕτη ἐν τῇ ψυχῇ*: The opening is loose: an infinitive phrase, then “this power [is] in the soul”. The English keeps the looseness with a colon. κάλλιστα is “most finely, most nobly”. Other reading: The power to live life through in the noblest way is in the soul
-- *πρὸς τὰ ἀδιάφορά τις ἀδιαφορῇ*: A play on one word. τὰ ἀδιάφορα is the Stoic term for things neither good nor bad in themselves, such as health, wealth, reputation and death; the verb says to be toward them as they are. Other reading: if one makes no difference of the things that make no difference
+- *πρὸς τὰ ἀδιάφορά τις ἀδιαφορῇ*: A play on one word. τὰ ἀδιάφορα is the Stoic term for things neither good nor bad in themselves, such as health, wealth, reputation and death; the verb says to be towards them as they are. Other reading: if one makes no difference of the things that make no difference
 - *διῃρημένως καὶ ὁλικῶς*: Two adverbs: “dividedly and wholly”, that is, looking at the thing split into its parts and also as one whole. Other reading: by analysis and as a whole
 - *ὑπόληψιν περὶ αὐτοῦ ἡμῖν ἐμποιεῖ*: ὑπόληψις is “judgment” by the glossary; κρίσεις in the next clause is “verdicts” to keep the two words apart, though Marcus seems to mean much the same by both. Other reading: none of them produces in us an opinion about itself
 - *κἄν που λάθῃ*: No subject is given: “even if perhaps it escapes notice”. The English takes the subject to be a verdict that got written without being noticed. που is “somehow, perhaps” and need not mean a place. Other reading: and, even if one has been written unawares
@@ -6450,7 +6451,7 @@ To live life through in the finest way: this power is in the soul, if a person i
 
 Where each thing has come from, and what underlying materials each is made of, and what it is changing into, and what it will be like when it has changed, and that it will suffer nothing bad.
 
-And first: what my relation to them is, and that we have come into being for one another’s sake; and that, on another account, I have come into being to stand at their head, as a ram stands at the head of a flock or a bull of a herd. But go back further and start from this: if not atoms, then nature is what governs the whole; if that is so, the worse things are for the sake of the better, and the better for the sake of one another. Second: what sort of people they are at table, in bed, and so on; and above all, what compulsions their principles have laid on them; and these very things, with what conceit they do them. Third: that if they do these things rightly, one should not be annoyed; and if not rightly, then plainly they do them against their will and in ignorance. For every soul is deprived against its will, as of the truth, so too of dealing with each person as they deserve. At any rate they are aggrieved to hear themselves called unjust and unfeeling and greedy and, in a word, prone to do wrong to their neighbours. Fourth: that you yourself also do many wrongs and are another of the same kind; and if you do hold back from certain wrongs, you still have the disposition that brings them on, even if it is through cowardice or hunger for reputation or some such bad thing that you hold back from wrongs like theirs. Fifth: that you have not even grasped for certain whether they are doing wrong; for many things are done with some further purpose in view, and in general one must first learn many things in order to pronounce on another’s action with a sure grasp. Sixth: that, whenever you are extremely indignant or even take it hard, human life is a moment long, and in a little while we are all laid out. Seventh: that it is not their actions that trouble us, for those are in their ruling parts, but our own judgments. At any rate, take away the verdict that this is something terrible, and be willing to let it go, and the anger is gone. How, then, will you take it away? By reasoning that it is not shameful. For if what is shameful is not the only bad thing, you too must do many wrongs and become a robber and anything at all. Eighth: how much harder are the things that our fits of anger and distress over such things bring on than the things themselves are at which we are angry and distressed. Ninth: that kindness is unbeatable, if it is genuine and not a grin or play-acting. For what will the most insolent person do to you, if you go on being kind to them and, if the chance comes, gently advise them and teach them otherwise, at your ease, at the very moment when they are trying to do you harm: “No, child. We are made by nature for something else. I shall certainly not be harmed; it is you who are being harmed, child.” And show, with a light touch and in general terms, that this is so: that not even bees do it, nor any of the creatures that are by nature herd animals. And it must be done neither with irony nor with reproach, but with affection and with no bite in your soul; and not as in a lecture room, nor so that someone else standing by may admire, but to that person alone, even if some others are standing around. Remember these nine headings as gifts you have received from the Muses, and begin at last to be a human being, while you live. One must guard against flattering them just as much as against being angry with them, for both are unsocial and lead to harm. And in your fits of anger have this ready to hand: that it is not flying into a rage that is manly, but that what is gentle and mild, as it is more human, is also more masculine; and that it is this that has a share of strength and sinew and manly courage, not the one who is indignant and discontented. For the closer this is to freedom from passion, the closer it is to power. And just as distress belongs to a weak person, so does anger; for both have been wounded and have given in. And if you like, take a tenth gift too, from the Leader of the Muses: that to require bad people not to do wrong is madness, for it aims at the impossible. And to allow them to be such to others, but to require that they not do wrong to you, is unfeeling and tyrannical.
+And first: what my relation to them is, and that we have come into being for one another’s sake; and that, on another account, I have come into being to stand at their head, as a ram stands at the head of a flock or a bull of a herd. But go back further and start from this: if not atoms, then nature is what governs the whole; if that is so, the worse things are for the sake of the better, and the better for the sake of one another. Second: what sort of people they are at table, in bed, and so on; and above all, what compulsions their principles have laid on them; and these very things, with what conceit they do them. Third: that if they do these things rightly, one should not be annoyed; and if not rightly, then plainly they do them against their will and in ignorance. For every soul is deprived against its will, as of the truth, so too of dealing with each person as they deserve. At any rate they are aggrieved to hear themselves called unjust and unfeeling and greedy and, in a word, prone to do wrong to their neighbours. Fourth: that you yourself also do many wrongs and are another of the same kind; and if you do hold back from certain wrongs, you still have the disposition that brings them on, even if it is through cowardice or hunger for reputation or some such bad thing that you hold back from wrongs like theirs. Fifth: that you have not even grasped for certain whether they are doing wrong; for many things are done with some further purpose in view, and in general one must first learn many things in order to pronounce on another’s action with a sure grasp. Sixth: that, whenever you are extremely indignant or even take it hard, human life is a moment long, and in a little while we are all laid out. Seventh: that it is not their actions that trouble us, for those are in their ruling parts, but our own judgments. At any rate, take away the verdict that this is something terrible, and be willing to let it go, and the anger is gone. How, then, will you take it away? By reasoning that it is not shameful. For if what is shameful is not the only bad thing, you too must do many wrongs and become a robber and anything at all. Eighth: how much harder are the things that our fits of anger and distress over such matters bring on than the very things that anger and distress us. Ninth: that kindness is unbeatable, if it is genuine and not a grin or play-acting. For what will the most insolent person do to you, if you go on being kind to them and, if the chance comes, gently advise them and teach them otherwise, at your ease, at the very moment when they are trying to do you harm: “No, child. We are made by nature for something else. I shall certainly not be harmed; it is you who are being harmed, child.” And show, with a light touch and in general terms, that this is so: that not even bees do it, nor any of the creatures that are by nature herd animals. And it must be done neither with irony nor with reproach, but with affection and with no bite in your soul; and not as in a lecture room, nor so that someone else standing by may admire, but to that person alone, even if some others are standing around. Remember these nine headings as gifts you have received from the Muses, and begin at last to be a human being, while you live. One must guard against flattering them just as much as against being angry with them, for both are unsocial and lead to harm. And in your fits of anger have this ready to hand: that it is not flying into a rage that is manly, but that what is gentle and mild, as it is more human, is also more masculine; and that it is this that has a share of strength and sinew and manly courage, not the one who is indignant and discontented. For the closer this is to freedom from passion, the closer it is to power. And just as distress belongs to a weak person, so does anger; for both have been wounded and have given in. And if you like, take a tenth gift too, from the Leader of the Muses: that to require bad people not to do wrong is madness, for it aims at the impossible. And to allow them to be such to others, but to require that they not do wrong to you, is unfeeling and tyrannical.
 
 <details><summary>Notes</summary>
 
@@ -6482,14 +6483,14 @@ And first: what my relation to them is, and that we have come into being for one
 - *τούτῳ μέτεστιν*: “This” points back to what is gentle and mild, and the same pronoun returns in the next clause. The form could also be masculine, the person who has that quality, set against “the one who is indignant”. Other reading: strength and sinew and manly courage belong to the gentle person
 - *ἀπαθείᾳ*: ἀπάθεια is the Stoic term for being free of the passions, not for dullness or indifference. Other reading: the nearer this is to being unmoved
 - *τὸ μὴ ἀξιοῦν ἁμαρτάνειν τοὺς φαύλους*: ἀξιόω is to think something right and so to claim or require it of others; the English has “require” both times it occurs. The negative goes with the infinitive in sense. Other reading: to expect bad people not to do wrong
-- *ἄλλοις μὲν εἶναι τοιούτους*: The dative “to others” is taken with “be such”: to accept that they behave like this toward other people. Other reading: to grant others that such people exist
+- *ἄλλοις μὲν εἶναι τοιούτους*: The dative “to others” is taken with “be such”: to accept that they behave like this towards other people. Other reading: to grant others that such people exist
 - *ἄγνωμον καὶ τυραννικόν*: The same word as ἀγνώμονες earlier in the passage, so “unfeeling” is kept: it is unfeeling to accept that others are wronged and claim exemption only for yourself. Beside “madness” in the sentence before it could also mean senseless. Other reading: is unreasonable and tyrannical
 
 </details>
 
 ### 11.19
 
-Four turns that the ruling part takes must above all be guarded against without a break and, whenever you catch them, wiped away, saying over each one as follows: “This imagining is not necessary.” “This one dissolves community.” “This that you are about to say is not from yourself.” For count it among the most absurd things not to speak from yourself. The fourth is the one for which you will reproach yourself: that this is the mark of the more divine part in you being beaten and lying down under the less worthy and mortal portion, that of the body, and under its rough or smooth movements.
+Four turns that the ruling part takes must above all be guarded against without a break and, whenever you catch them, wiped away, saying over each one as follows: “This imagining is not necessary.” “This one dissolves community.” “This thing you are about to say is not from yourself.” For count it among the most absurd things not to speak from yourself. The fourth is the one for which you will reproach yourself: that this is the mark of the more divine part in you being beaten and lying down under the less worthy and mortal portion, that of the body, and under its rough or smooth movements.
 
 <details><summary>Notes</summary>
 
@@ -6530,7 +6531,7 @@ Your bit of breath and all the fiery part that is mixed into you, though by natu
 
 ### 11.21
 
-“A person who does not always have one and the same aim in life cannot be one and the same through the whole of life.” The saying is not enough unless you also add what kind of aim this must be. For just as judgment is not alike about all the things that in one way or another seem good to the majority, but is alike about those of a certain kind, that is, the common goods, so too the aim to be set up must be the social and civic one. For whoever directs all their private impulses toward this aim will make all their actions alike, and in this way will always be the same.
+“A person who does not always have one and the same aim in life cannot be one and the same through the whole of life.” The saying is not enough unless you also add what kind of aim this must be. For just as judgment is not alike about all the things that in one way or another seem good to the majority, but is alike about those of a certain kind, that is, the common goods, so too the aim to be set up must be the social and civic one. For whoever directs all their private impulses towards this aim will make all their actions alike, and in this way will always be the same.
 
 <details><summary>Notes</summary>
 
@@ -6542,7 +6543,7 @@ Your bit of breath and all the fiery part that is mixed into you, though by natu
 - *τουτέστι τῶν κοινῶν*: “The common ones”: goods that are shared, or that concern everyone; the Greek does not say which more exactly. “Goods” is supplied from the clause before, so that “common” is not heard as “ordinary”. Other reading: that is, the shared ones
 - *τὸν κοινωνικὸν καὶ πολιτικὸν*: Two adjectives, “social” and “of citizens (of the city)”. In Greek the first is made from the word “common” just used, a link that “social” does not show; “social” is kept because it is the word for κοινωνικός throughout this translation. Other reading: the communal and civic one
 - *ὑποστήσασθαι*: “To set under oneself”: to lay down as a basis. Other reading: must be laid down as one’s foundation
-- *πάσας τὰς ἰδίας ὁρμὰς*: ἴδιος is “one’s own”, and also “private” as against “common” above; “private” is used so that the contrast can be heard. ὁρμή is the Stoic “impulse”, the movement toward an action. Other reading: all their own impulses
+- *πάσας τὰς ἰδίας ὁρμὰς*: ἴδιος is “one’s own”, and also “private” as against “common” above; “private” is used so that the contrast can be heard. ὁρμή is the Stoic “impulse”, the movement towards an action. Other reading: all their own impulses
 - *κατὰ τοῦτο*: “In accordance with this”: either “in this way, by this means” or “in this respect”. The first is taken, as the result of aiming everything at one mark. Other reading: and in this respect will always be the same
 
 </details>
@@ -6693,7 +6694,7 @@ To ask for a fig in winter is the act of someone mad. Such is the person who ask
 
 ### 11.34–35
 
-A person kissing their small child, Epictetus used to say, should add inwardly: “Tomorrow, perhaps, you will die.” “Those are words of ill omen.” “Nothing is of ill omen,” he said, “that points to some work of nature. Otherwise the ears of grain being reaped is of ill omen too.”
+A person kissing their small child, Epictetus used to say, should add inwardly: “Tomorrow, perhaps, you will die.” “Those are words of ill omen.” “Nothing is of ill omen,” he said, “that points to some work of nature. Otherwise reaping the ears of grain is of ill omen too.”
 
 Unripe grape, ripe grape, raisin: all changes, not into what is not, but into what is not now.
 
@@ -6749,19 +6750,19 @@ Socrates used to say: “What do you want? To have the souls of rational beings 
 
 ### 12.1
 
-All those things you pray to reach by a roundabout road you can have already, if you do not begrudge yourself. That is: if you leave all the past behind, hand the future over to providence, and steer only the present toward piety and justice. Piety, so that you love what is allotted, for nature brought it to you and you to it. Justice, so that, freely and without winding about, you speak the truth and do what accords with law and with what each deserves. And do not be hindered by another person’s badness, or judgment, or voice, or even by the sensation of the bit of flesh that has grown up around you, for the part that suffers will see to that. So if, whenever it is that you come close to your exit, you leave everything else behind and honor only your ruling part and what is divine in you, and if what you fear is not that you will some day stop living but rather never beginning to live according to nature, then you will be a human being worthy of the universe that gave you birth. You will stop being a stranger in your own country, stop wondering at what happens every day as if it were unexpected, and stop hanging on this and that.
+All those things you pray to reach by a roundabout road you can have already, if you do not begrudge yourself. That is: if you leave all the past behind, hand the future over to providence, and steer only the present towards piety and justice. Piety, so that you love what is allotted, for nature brought it to you and you to it. Justice, so that, freely and without winding about, you speak the truth and do what accords with law and with what each deserves. And do not be hindered by another person’s badness, or judgment, or voice, or even by the sensation of the bit of flesh that has grown up around you, for the part that suffers will see to that. So if, whenever it is that you come close to your exit, you leave everything else behind and honour only your ruling part and what is divine in you, and if what you fear is not some day ceasing to live but rather never beginning to live according to nature, then you will be a human being worthy of the universe that gave you birth. You will stop being a stranger in your own country, stop wondering at what happens every day as if it were unexpected, and stop hanging on this and that.
 
 <details><summary>Notes</summary>
 
 - *διὰ περιόδου*: Literally “by way of a circuit”. The English takes it of a roundabout route; it can also be taken of time, a cycle or period that has to pass first. Other reading: that you pray to reach in the course of time
-- *ὁσιότητα καὶ δικαιοσύνην*: ὁσιότης is right dealing toward the divine, as justice is toward people. “Piety” is the nearest plain word; the next sentence defines it as loving what is allotted. Other reading: holiness and justice
+- *ὁσιότητα καὶ δικαιοσύνην*: ὁσιότης is right dealing towards the divine, as justice is towards people. “Piety” is the nearest plain word; the next sentence defines it as loving what is allotted. Other reading: holiness and justice
 - *χωρὶς περιπλοκῆς*: Literally “without entwining”: without twisting or winding, said of speech that goes round about and of dealings that are not straight. “Without winding about” keeps the image and covers both the speaking and the doing. Other reading: without evasion
 - *κατ’ ἀξίαν*: “According to worth”: in proportion to what is deserved. The Greek does not say whose worth, a person’s or a thing’s, and “each” leaves that open. Other reading: and do what accords with law and with the worth of each thing
 - *μὴ ἐμποδίζῃ δέ σε*: A subjunctive as given. The English reads it as standing on its own, as a command; it may still depend on the “so that” before it. The Greek is active, “let neither … hinder you”; the English is passive to carry the list. Other reading: and so that nothing may hinder you, neither …
 - *μήτε κακία ἀλλοτρία μήτε ὑπόληψις μήτε φωνὴ*: “Another person’s” stands with “badness” and can carry over to the two nouns after it, so that these are what others think and say; or the judgment may be one’s own. The English is built so that the words can carry over in the same way. “Judgment” is this translation’s word for ὑπόληψις. Other reading: by another person’s badness, or by your own judgment, or by anything said
 - *ὄψεται γὰρ τὸ πάσχον*: An idiom: “it will see”, meaning “that is its own business”. The part that suffers is the flesh, as against the ruling part. Other reading: for that is the business of the part that is affected
 - *ὅτε δήποτε πρὸς ἐξόδῳ γένῃ*: “At whatever time you come to be near the exit.” It may be general (whenever that turns out to be) or pointed (now that you are at last near it). The English keeps it general. Other reading: now that you are at last close to your exit
-- *ἀλλὰ τό γε μηδέποτε ἄρξασθαι κατὰ φύσιν ζῆν*: The Greek verb form here carries no time: “never beginning” covers both never having begun so far and never coming to begin. The fear of stopping, by contrast, is put in the future. Other reading: but that you never began to live according to nature
+- *ἀλλὰ τό γε μηδέποτε ἄρξασθαι κατὰ φύσιν ζῆν*: The Greek verb form here carries no time: “never beginning” covers both never having begun so far and never coming to begin. The fear of ceasing, by contrast, is put in the future; its verb comes back at the end of the passage as “stop”. Other reading: but that you never began to live according to nature
 - *κρεμάμενος ἐκ τοῦδε καὶ τοῦδε*: Literally “hanging from this and this”. The image is of depending on one thing after another, or one person after another: the Greek form can be either, and “this and that” leaves it open. Other reading: depending on this person and that
 
 </details>
@@ -6770,7 +6771,7 @@ All those things you pray to reach by a roundabout road you can have already, if
 
 God sees all ruling parts bare of their material vessels and husks and refuse. For with only the part of himself that is of mind he touches only what has flowed out of himself into these and been channelled off. If you too make a habit of doing this, you will strip away most of your distraction. For someone who does not look at the surrounding scraps of flesh is hardly likely to busy themselves with gazing at clothing and a house and reputation and that kind of wrapping and stage scenery.
 
-There are three things of which you are made up: a little body, a little breath, mind. Of these the other two are yours so far as you must take care of them, but only the third is properly yours. So if you separate from yourself, that is, from your thought, all that others do or say, or all that you yourself have done or said, and all that troubles you as something to come, and all that belongs to you, without your choosing it, from the little body that surrounds you or the little breath born with you, and all that the whirl streaming round outside sets spinning, so that the power of mind, lifted clear of what is bound up with it by fate, and clean, lives set loose by itself, doing what is just and willing what happens and saying what is true; if, I say, you separate from this ruling part the things fastened onto it by attachment, and what of time lies ahead or has gone by, and make yourself like the sphere of Empedocles, “rounded, rejoicing in its encircling solitude”, and practise living only what you are living, that is, the present: then what is left until you die, at least, you will be able to live through untroubled, kindly, and gracious toward your own guardian spirit.
+There are three things of which you are made up: a little body, a little breath, mind. Of these the other two are yours so far as you must take care of them, but only the third is properly yours. So if you separate from yourself, that is, from your thought, all that others do or say, or all that you yourself have done or said, and all that troubles you as something to come, and all that attaches to you, without your choosing it, from the little body that surrounds you or the little breath born with you, and all that the whirl streaming round outside sets spinning, so that the power of mind, lifted clear of what is bound up with it by fate, and clean, lives set loose by itself, doing what is just and willing what happens and saying what is true; if, I say, you separate from this ruling part the things fastened onto it by attachment, and what of time lies ahead or has gone by, and make yourself like the sphere of Empedocles, “rounded, rejoicing in its encircling solitude”, and practise living only what you are living, that is, the present: then what is left until you die, at least, you will be able to live through untroubled, kindly, and gracious towards your own guardian spirit.
 
 <details><summary>Notes</summary>
 
@@ -6786,7 +6787,7 @@ There are three things of which you are made up: a little body, a little breath,
 - *τῶν συνειμαρμένων*: A rare word built on εἱμαρμένη, fate: the things fated together with it, bound up with it by fate. The English spells the sense out. Other reading: lifted clear of the things that share its fate
 - *προσπαθείας*: προσπάθεια is passionate attachment to something, a clinging. The English has “attachment”. Other reading: the things that hang on it through its passions
 - *κυκλοτερὴς μονίῃ περιηγέι γαίων*: The epic forms show these words are a line of verse quoted from Empedocles, so they are set in quotation marks, which the Greek as given does not have; the line may begin at σφαῖρος. μονίη can be “solitude” (from μόνος) or “rest”, “staying still” (from μένω), and περιηγής is “circular” or “encircling”. The English has “its encircling solitude”. Other reading: rounded, rejoicing in its circular stillness
-- *ἵλεως τῷ σαυτοῦ δαίμονι*: ἵλεως is “gracious”, the word for a god who is well disposed; here it is you who are so toward your δαίμων, the divine being assigned to each person, which Marcus identifies with the mind. “Guardian” is supplied in the English so that “spirit” is not heard as your own soul or mood. The dative may go with all three words or only with the last. Other reading: untroubled, and kindly and gracious toward the god within you
+- *ἵλεως τῷ σαυτοῦ δαίμονι*: ἵλεως is “gracious”, the word for a god who is well disposed; here it is you who are so towards your δαίμων, the divine being assigned to each person, which Marcus identifies with the mind. “Guardian” is supplied in the English so that “spirit” is not heard as your own soul or mood. The dative may go with all three words or only with the last. Other reading: untroubled, and kindly and gracious towards the god within you
 
 </details>
 
@@ -6809,12 +6810,12 @@ I have often wondered how it is that each person loves themselves more than ever
 
 ### 12.5
 
-How can it be that the gods, who arranged all things well and with love for humankind, overlooked this one thing only: that some people, and very good ones, who had made a great many contracts, so to speak, with the divine, and who through holy deeds and sacred rites had come to be on the closest terms with the divine, once they have died, do not come to be again any more, but are completely extinguished? But if this really is so, be sure that if it ought to have been otherwise, they would have made it otherwise. For if it were just, it would also be possible, and if it were in accord with nature, nature would have brought it about. So from its not being so, if indeed it is not so, be assured that it ought not to have come about so. For you see for yourself that in prying into this you are arguing a case of justice with god. And we would not be reasoning with the gods like this unless they are best and most just. And if that is so, they would not have let anything in the order of things be neglected unjustly and against reason.
+How can it be that the gods, who arranged all things well and with love for humankind, overlooked this one thing only: that some people, and very good ones, who have made a great many contracts, so to speak, with the divine, and who through holy deeds and sacred rites have come to be on the closest terms with the divine, once they have died, never come to be again, but are completely extinguished? But if this really is so, be sure that if it ought to have been otherwise, they would have made it otherwise. For if it were just, it would also be possible, and if it were in accord with nature, nature would have brought it about. So from its not being so, if indeed it is not so, be assured that it ought not to have come about so. For you see for yourself that in prying into this you are arguing a case of justice with god. And we would not be reasoning with the gods like this unless they are best and most just. And if that is so, they would not have let anything in the order of things be neglected unjustly and against reason.
 
 <details><summary>Notes</summary>
 
 - *ὥσπερ συμβόλαια θεμένους*: συμβόλαια are contracts or business dealings between parties; “so to speak” (ὥσπερ) marks it as a figure. The English keeps the commercial image. Other reading: who had had, as it were, the most dealings with the divine
-- *μηκέτι αὖθις γίνεσθαι*: Literally “no longer come to be again”. The verb is the general one for coming into being, so it does not decide between being born again and existing again in some other way. Other reading: are never born again
+- *μηκέτι αὖθις γίνεσθαι*: Literally “no longer come to be again”: after death that amounts to “never again”, which is how the English puts it. The verb is the general one for coming into being, so it does not decide between being born again and existing again in some other way. Other reading: are never born again
 - *ἀπεσβηκέναι*: The verb is used of a flame or lamp that has gone out. “Extinguished” keeps the image. Other reading: have gone out completely
 - *ἐκ δὴ τοῦ μὴ οὕτως ἔχειν, εἴπερ οὐχ οὕτως ἔχει*: The same word “so” (οὕτως) changes what it points to: earlier, “if this really is so” meant that the good are completely extinguished, and here “its not being so” means its not being the other way, that they come to be again. The English keeps “so” each time, as the Greek does. Other reading: So from the fact that it is not that other way, if indeed it is not
 - *πιστούσθω σοι τὸ μὴ δεῆσαι οὕτως γίνεσθαι*: A third-person command: “let it be made sure for you”. The infinitive δεῆσαι is a past form and answers “ought” (ἔδει) above, so the English says “ought not to have”. The sense is that the other arrangement was not called for; the word can also mean bare need. Other reading: let it be your assurance that there was no need for it to come about so
@@ -6922,7 +6923,7 @@ How ridiculous, and what a stranger, is the person who is surprised at anything 
 
 ### 12.14–15
 
-Either a necessity of fate and an order that cannot be overstepped, or a providence that can be appeased, or a jumble of randomness with no one in charge. If, then, it is a necessity that cannot be overstepped, why do you strain against it? If it is a providence that allows itself to be appeased, make yourself worthy of the help that comes from the divine. And if it is a jumble with nothing ruling it, be glad that in such a rough sea you yourself have in yourself a mind that rules. And if the sea carries you away, let it carry away the poor flesh, the bit of breath, the rest; for the mind it will not carry away.
+Either a necessity of fate and an order that cannot be overstepped, or a providence that can be appeased, or a jumble of randomness with no one in charge. If, then, it is a necessity that cannot be overstepped, why do you strain against it? If it is a providence that allows itself to be appeased, make yourself worthy of the help that comes from the divine. And if it is a jumble with nothing ruling it, be glad that in such a rough sea you yourself have within you a mind that rules. And if the sea carries you away, let it carry away the poor flesh, the bit of breath, the rest; for the mind it will not carry away.
 
 Or does the light of a lamp shine until it goes out, and not lose its brightness, while the truth and justice and self-control in you will go out first?
 
@@ -6943,7 +6944,7 @@ Or does the light of a lamp shine until it goes out, and not lose its brightness
 
 ### 12.16
 
-In the case of someone who has given the impression of having done wrong: “But how do I know whether this is a wrong?” And if they did do wrong, that they have condemned themselves, and so this is like tearing one’s own face. That whoever does not want the bad person to do wrong is like someone who does not want the fig tree to bear sap in its figs, or babies to cry, or the horse to neigh, or any of the other things that have to be. For what are they to do, having a disposition like that? So if you are vigorous, cure that disposition.
+In the case of someone who has given the impression of having done wrong: “But how do I know whether this is a wrong?” And if they did do wrong, that they have condemned themselves, and so this is like tearing at one’s own face. That whoever does not want the bad person to do wrong is like someone who does not want the fig tree to bear sap in its figs, or babies to cry, or the horse to neigh, or any of the other things that have to be. For what are they to do, having a disposition like that? So if you are vigorous, cure that disposition.
 
 <details><summary>Notes</summary>
 
@@ -6971,7 +6972,7 @@ If it is not fitting, do not do it; if it is not true, do not say it. For let yo
 
 ### 12.17b
 
-Always see in full what that thing itself is which produces the impression in you, and open it out, dividing it into the cause, into the material, into the purpose, into the time within which it will have to be over.
+Always see in full what that very thing is that produces the impression in you, and open it out, dividing it into the cause, into the material, into the purpose, into the time within which it will have to be over.
 
 <details><summary>Notes</summary>
 
@@ -6992,7 +6993,7 @@ Notice at last that you have in yourself something stronger and more divine than
 
 First, not at random and not without a point of reference. Second, to take as the point of reference nothing other than the social end.
 
-That before long you will be no one and nowhere, nor will any of the things you now see be, nor any of the people now living. For it is the nature of all things to change, to turn and to perish, so that other things may come to be after them.
+That before long you will be no one and nowhere, and neither will any of the things you now see, nor any of the people now living. For it is the nature of all things to change, to turn and to perish, so that other things may come to be after them.
 
 <details><summary>Notes</summary>
 
@@ -7023,7 +7024,7 @@ That all things are judgment, and this judgment is up to you. So take the judgme
 
 ### 12.23
 
-Any single activity, whichever it is, that stops at the right time suffers nothing bad in that it has stopped; nor has the one who did this action suffered anything bad just in this respect, that it has stopped. In the same way, then, the sum made up of all the actions, which is a life, if it stops at the right time, suffers nothing bad just in this respect, that it has stopped; nor has the one who brought this chain to a stop at the right time been put in a bad state. The right time and the limit are given by nature: sometimes by one’s own nature too, when the stopping comes in old age, but in every case by the nature of the whole, with the changing of whose parts the entire universe stays always young and in its prime. And everything that benefits the whole is always fine and in season. So for each person the stopping of life is not a bad thing, since it is not a shameful thing either, if indeed it is both outside one’s choice and not unsocial; and it is a good thing, if indeed it comes at the right time for the whole, benefits the whole and is carried along with the whole. For in this way a person is also carried by god: the one who is carried in the same way as god and is carried, in their purpose, toward the same things.
+Any single activity, whichever it is, that stops at the right time suffers nothing bad in that it has stopped; nor has the one who did this action suffered anything bad just in this respect, that it has stopped. In the same way, then, the sum made up of all the actions, which is a life, if it stops at the right time, suffers nothing bad just in this respect, that it has stopped; nor has the one who brought this chain to a stop at the right time been put in a bad state. The right time and the limit are given by nature: sometimes by one’s own nature too, when the stopping comes in old age, but in every case by the nature of the whole, with the changing of whose parts the entire universe stays always young and in its prime. And everything that benefits the whole is always fine and in season. So for each person the stopping of life is not a bad thing, since it is not a shameful thing either, if indeed it is both outside one’s choice and not unsocial; and it is a good thing, if indeed it comes at the right time for the whole, benefits the whole and is carried along with the whole. For in this way a person is also carried by god: the one who is carried in the same way as god and is carried, in their purpose, towards the same things.
 
 <details><summary>Notes</summary>
 
@@ -7035,13 +7036,13 @@ Any single activity, whichever it is, that stops at the right time suffers nothi
 - *καλὸν δὲ ἀεὶ πᾶν καὶ ὡραῖον*: καλόν is “fine, beautiful, noble”. ὡραῖον is “in season, in bloom”, which picks up both the theme of timing and “young and in its prime” just before. Other reading: always beautiful and in bloom
 - *εἴπερ καὶ ἀπροαίρετον καὶ οὐκ ἀκοινώνητον*: ἀπροαίρετον is “not within one’s choice” (προαίρεσις). οὐκ ἀκοινώνητον is “not unsocial”, that is, not against the common interest. The step “not bad, since not shameful” rests on the Stoic view that only the shameful is bad. Other reading: since it is not chosen and does not go against the community
 - *συμφέρον καὶ συμφερόμενον*: A play on φέρω, “carry”: συμφέρον (literally “bearing together”), συμφερόμενον (“carried along with”), θεοφόρητος (“god-carried”, normally “inspired”) and φερόμενος twice; “carried” is kept for all but the first. συμφέρον is “benefits” here, not the glossary’s “is good for”, so that it is not confused with ἀγαθόν (“a good thing”) in the same sentence. “The whole” is repeated three times where the Greek has it once. Other reading: is good for it and in step with it. For in this way a person is inspired by god
-- *τῇ γνώμῃ φερόμενος*: γνώμη is “judgment, mind, intention”. The English reads “purpose”, which fits being carried toward something and keeps “judgment” for ὑπόληψις and “mind” for νοῦς in this project. κατὰ ταὐτά just before is “in the same way” or “along the same lines”. Other reading: carried in judgment toward the same things
+- *τῇ γνώμῃ φερόμενος*: γνώμη is “judgment, mind, intention”. The English reads “purpose”, which fits being carried towards something and keeps “judgment” for ὑπόληψις and “mind” for νοῦς in this project. κατὰ ταὐτά just before is “in the same way” or “along the same lines”. Other reading: carried in judgment towards the same things
 
 </details>
 
 ### 12.24
 
-These three things must be kept ready to hand. About what you do: whether it is neither at random nor otherwise than Justice herself would have acted. About what happens from outside: that it comes either by chance or by providence, and that one must neither blame chance nor bring a charge against providence. Second: what each thing is like from seed to the receiving of a soul, and from the receiving of a soul to the giving back of the soul; and out of what kind of things it is put together and into what kind of things it is dissolved. Third: that if you were suddenly lifted high into the air and looked down on human affairs and their many turns, you will despise them, seeing at the same time how much there is that dwells all around, in the air and in the ether; and that however often you are lifted up, you will see the same things: how alike in kind, how short-lived. And over these things, the puffed-up pride.
+These three things must be kept ready to hand. About what you do: whether it is done neither at random nor otherwise than Justice herself would have acted. About what happens from outside: that it comes either by chance or by providence, and that one must neither blame chance nor bring a charge against providence. Second: what each thing is like from seed to the receiving of a soul, and from the receiving of a soul to the giving back of the soul; and out of what kind of things it is put together and into what kind of things it is dissolved. Third: that if you were suddenly lifted high into the air and looked down on human affairs and their many turns, you will despise them, seeing at the same time how much there is that dwells all around, in the air and in the ether; and that however often you are lifted up, you will see the same things: how alike in kind, how short-lived. And over these things, the puffed-up pride.
 
 <details><summary>Notes</summary>
 
@@ -7053,7 +7054,7 @@ These three things must be kept ready to hand. About what you do: whether it is 
 - *ὅτι καταφρονήσεις*: The grammar is loose: “if you were to look” (a supposed case) is followed by “that you will despise” (a plain future). The mismatch is kept. Other reading: that you would despise them
 - *ὅσον τὸ περιοικοῦν ἐναερίων καὶ ἐναιθερίων*: Literally “how great is what dwells around, of those in the air and those in the ether”. The ether is the bright upper air above the air that is breathed. It can be the number of those living there or the extent of the region so lived in, and whether these are living beings or simply everything up there is not said; the word “dwells” points to beings. Other reading: how great is the company that dwells all around, of beings in the air and in the ether
 - *τὸ ὁμοειδές, τὸ ὀλιγοχρόνιον*: Two adjectives used as nouns, said of the things seen: that they are of one kind and that they last a short time. Other reading: the sameness, the shortness of their time
-- *ἐπὶ τούτοις ὁ τῦφος*: No verb: “over these, the τῦφος”. The word is literally smoke (so translated in 2.17), and so empty pride or delusion. Here it is taken as people’s pride in such things, and “puffed-up” keeps something of the smoke. Other reading: And these are what people are puffed up about.
+- *ἐπὶ τούτοις ὁ τῦφος*: No verb: “over these, the τῦφος”. The word is literally smoke (so translated in 2.17), and so empty pride or delusion. Here it is taken as people’s pride in such things, and “puffed-up” keeps something of the smoke. ἐπί could also mean “on top of these”. Other reading: And on top of these, the delusion.
 
 </details>
 
@@ -7078,7 +7079,7 @@ Whenever you take something hard, you have forgotten that all things come about 
 
 ### 12.27
 
-Go back continually over those who were exceedingly indignant at something, those who were at their height in the greatest fame or disasters or enmities or fortunes of whatever kind. Then stop and consider: where is all that now? Smoke and ash and a tale, or not even a tale. And let everything of this kind come to you along with it, for example: Fabius Catullinus in the country, and Lusius Lupus in the gardens, and Stertinius at Baiae, and Tiberius on Capri, and Velius Rufus, and in general the setting store by anything whatever, together with self-importance; and how cheap everything is that people strain after, and how much more philosophical it is, in the material one has been given, to show oneself just, self-controlled, following the gods, without affectation. For the vanity that smoulders under a cover of having none is the most troublesome of all.
+Go back continually over those who were exceedingly indignant at something, those who were at their height in the greatest fame or disasters or enmities or fortunes of whatever kind. Then stop and consider: where is all that now? Smoke and ash and a tale, or not even a tale. And let everything of this kind come to you along with it, for example: Fabius Catullinus in the country, and Lusius Lupus in the gardens, and Stertinius at Baiae, and Tiberius on Capri, and Velius Rufus, and in general setting store by anything whatever, together with self-importance; and how cheap everything is that people strain after, and how much more philosophical it is, in the material one has been given, to show oneself just, self-controlled, following the gods, without affectation. For the vanity that smoulders under a cover of having none is the most troublesome of all.
 
 <details><summary>Notes</summary>
 
@@ -7128,7 +7129,7 @@ What keeps a life safe: to see each thing through and through, what it is in its
 
 ### 12.30
 
-One light of the sun, even if it is divided by walls, by mountains, by countless other things. One common substance, even if it is divided by countless bodies, each with its own quality. One soul, even if it is divided by countless natures and individual outlines. One soul that has mind, even if it seems to be separated. Now the other parts of the things just named, such as breaths and the matter that underlies things, are without sensation and have no attachment to one another; and yet even those are held together by what makes them one and by the weight that bears toward the same place. But thought, in a way of its own, stretches toward what is of the same kind and joins with it, and the social feeling is not divided.
+One light of the sun, even if it is divided by walls, by mountains, by countless other things. One common substance, even if it is divided by countless bodies, each with its own quality. One soul, even if it is divided by countless natures and individual outlines. One soul that has mind, even if it seems to be separated. Now the other parts of the things just named, such as breaths and the matter that underlies things, are without sensation and have no attachment to one another; and yet even those are held together by what makes them one and by the weight that bears towards the same place. But thought, in a way of its own, stretches towards what is of the same kind and joins with it, and the social feeling is not divided.
 
 <details><summary>Notes</summary>
 
@@ -7142,7 +7143,7 @@ One light of the sun, even if it is divided by walls, by mountains, by countless
 - *ἀναίσθητα*: “Without perception or feeling.” “Sensation” is used so that “feeling” can be kept for a different word in the last sentence. Other reading: without feeling
 - *ἀνοικείωτα*: A negative made from the Stoic word for treating something as one’s own (οἰκείωσις): “not made one another’s own, with no sense of belonging to one another”. Other reading: and have no kinship with one another
 - *τὸ ἑνοῦν*: “That which makes one”, from the word “one” that opens each of the first four sentences. This is a correction, and the manuscripts have τὸ νοοῦν, “that which thinks” (from memory, unchecked). The English translates the text given. Other reading: by what thinks
-- *τὸ ἐπὶ τὰ αὐτὰ βρῖθον*: Literally “that which weighs down toward the same things”: a pull like weight toward a common point. Other reading: and by what presses toward the same things
+- *τὸ ἐπὶ τὰ αὐτὰ βρῖθον*: Literally “that which weighs down towards the same things”: a pull like weight towards a common point. Other reading: and by what presses towards the same things
 - *διάνοια δὲ ἰδίως*: διάνοια is “thought, understanding, mind”. ἰδίως, “in a way peculiar to itself”, picks up the words given above as “its own quality” and “individual outlines”, used there of what divides. Other reading: But mind, in a special way,
 - *συνίσταται*: “Combines, joins, holds together” with its own kind; the parts of the word are “stand” and “together”. Other reading: and stands together with it
 - *οὐ διείργεται τὸ κοινωνικὸν πάθος*: “The social feeling” is taken as the subject. It could instead be an accusative of respect, with thought still the subject. πάθος is something undergone, a feeling; κοινωνικόν, “social”, is the adjective of the word for community. Other reading: and is not divided in its social feeling
@@ -7159,7 +7160,7 @@ What are you looking for? To breathe? Or to have sensation? To have impulse? To 
 - *ἀλλὰ τὸ αἰσθάνεσθαι*: “But” in a string of questions: “or, if not that, then”. Other reading: Well then, to have sensation?
 - *τὸ λήγειν αὖθις*: “To cease in turn”, set against “to grow”: to stop growing, or to decline. The Greek does not say what stops. Other reading: And then to stop growing?
 - *ἐπὶ τελευταῖον*: “To the last”: the one thing left when the others have been set aside. Other reading: go on to what remains at the end
-- *ἀλλὰ μάχεται τὸ τιμᾶν ταῦτα, τὸ ἄχθεσθαι*: “But it fights”: the Greek does not say with what, and “with that”, meaning following reason and god, is supplied. “These things” are taken as the functions listed, and being vexed as what valuing them comes to. The words can also be read as two things set against each other, with “these” as reason and god, though for that the Greek would regularly put “being vexed” in another case. Other reading: But honoring these conflicts with being vexed that by being dead a person will be deprived of the others
+- *ἀλλὰ μάχεται τὸ τιμᾶν ταῦτα, τὸ ἄχθεσθαι*: “But it fights”: the Greek does not say with what, and “with that”, meaning following reason and god, is supplied. “These things” are taken as the functions listed, and being vexed as what valuing them comes to. The words can also be read as two things set against each other, with “these” as reason and god, though for that the Greek would regularly put “being vexed” in another case. Other reading: But honouring these conflicts with being vexed that by being dead a person will be deprived of the others
 - *διὰ τοῦ τεθνηκέναι*: “Through having died”, the state of being dead and not the act of dying. Other reading: to be vexed that death will take them from one
 
 </details>

@@ -644,3 +644,8 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   «член сообщества» (member of a community) stays. Done: 5 passages (7.13, 7.19–22, 7.68, Ep. 90.29, Ep. 95.52) with
   recorded decisions and new revisions, Articles 1 (now «Часть единого тела») and 8 re-cut, the paper's Russian and
   figures, downloads; rule 25 of the article prompt now fixes the term.
+- “do thorough literary review of articles and translation. every article, evey passage. needs to sound clear and
+  tasteful” (24 Nov 2026) — my reading: every passage of both English translations and of the Russian, and every string
+  of every article in both languages, read by a reviewer, then by an independent checker, then settled point by point in
+  writing; meaning stays exactly as the Greek, the Latin or the English has it. See 36-finish-log.md; rule 26 of the
+  article prompt carries the lessons forward.

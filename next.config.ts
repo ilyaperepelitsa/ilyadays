@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 import mediaAliases from "./art/media/aliases.json";
 import { ONIGIRI_RECIPES, ONIGIRI_METHODS, integratedDestination } from "./src/lib/food/integrated-recipes.mjs";
 import { fileVersion } from "./scripts/file-version.mjs";
+import { STOIC_PAGES, stoicPath } from "./src/lib/stoic-seo.mjs";
 
 // The Istanbul bundle keeps its file names; each URL carries its content hash so browsers can keep it for a year
 // (scripts/write-offline-catalog.mjs saves the same URLs for offline use).
@@ -56,9 +57,21 @@ const nextConfig: NextConfig = {
   },
 
   async rewrites() {
-    // Explicit loopback development mode only; private text can never be proxied by a production build.
-    return process.env.NODE_ENV === "development" && process.env.AURELIUS_LOCAL_SERVICE === "1"
-      ? [{ source: "/api/aurelius/:path*", destination: `http://127.0.0.1:${Number(process.env.AURELIUS_API_PORT || 8766)}/:path*` }] : [];
+    // The static Stoic pages are served with a head for their language (title, description, canonical, hreflang, link
+    // preview, JSON-LD; src/lib/stoic-seo.mjs), built by src/app/stoic-html/[lang]/[page]. Checked before the public files;
+    // the URL in the browser stays /apps/…. ?lang=ru goes to the Russian copy, listed first; any other request to English.
+    const stoic = Object.entries(STOIC_PAGES).flatMap(([page, entry]) => [
+      ...(entry.langs.includes("ru")
+        ? [{ source: stoicPath(page), has: [{ type: "query" as const, key: "lang", value: "ru" }], destination: `/stoic-html/ru/${page}` }] : []),
+      { source: stoicPath(page), destination: `/stoic-html/en/${page}` },
+    ]);
+    return {
+      beforeFiles: stoic,
+      // Explicit loopback development mode only; private text can never be proxied by a production build.
+      afterFiles: process.env.NODE_ENV === "development" && process.env.AURELIUS_LOCAL_SERVICE === "1"
+        ? [{ source: "/api/aurelius/:path*", destination: `http://127.0.0.1:${Number(process.env.AURELIUS_API_PORT || 8766)}/:path*` }] : [],
+      fallback: [],
+    };
   },
 
   async redirects() {

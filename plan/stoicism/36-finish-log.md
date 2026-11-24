@@ -244,3 +244,16 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
 - **Loading card (24 Nov):** the placeholders take the article's card (left rule), width and, from 1000 px, the vectors
   column; one shared sweep of light (fixed gradient) runs across every block; arriving articles fade and rise 10 px
   (0.42 s, staggered), once. Reduced motion: no sweep, no rise.
+- **Literary review (24 Nov):** the owner: “do thorough literary review of articles and translation. every article, evey
+  passage. needs to sound clear and tasteful”. Every unit went to a reviewer (Claude Opus 5.5), then to an independent
+  checker who judged each edit and listed what was missed, then back for a written settlement of each objection; the
+  source decided meaning (Greek or Latin for the English, English for the Russian). Counts: English of Marcus: 221 edits
+  in 161 passages; English of Seneca: 191 edits in 130 sections; English articles: 1,073 edits; Russian passages: 613 edits
+  in 387 passages; Russian articles: 1,712 edits, in 11 article units and one consistency pass over the whole page.
+  Every quote of a changed passage was re-cut by script and read by a reviewer; notes that still quoted old wording were
+  found by script (0 left), and lines whose English repeats across articles now have one Russian rendering. British
+  spelling throughout; settled terms (rule 26 of the article prompt): «маленькая душа», «самообладание» /
+  «владеющий собой», «немалая часть», «Всё», «подати», «срыв», «Лион». Titles changed: Article 29 “Upright on my own,
+  and not becoming like those I fight”, Article 30 “The sameness and foulness of things”. Open for the owner: project-v1
+  method/2 counts 1,623 decisions, but its own figures give 1,595 and the record holds 1,641 check points; Articles 6, 16
+  and 35–38 mark as backed some words that their notes call the editor's summary.

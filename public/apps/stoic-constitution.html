@@ -518,10 +518,10 @@ body.only-open .article[data-art-judged]:not([data-just])>.judged-stub{display:b
 .bar-sw[aria-checked=true] .track::after{transform:translateX(12px)}
 .bar-sw .brief,.bar.compact .bar-sw .long{display:none}
 .bar.compact .bar-sw .brief{display:inline}
-.bar a.to-method{font-weight:500}
-.bar a.to-method span{margin:0;font-size:inherit;color:inherit}
-.bar a.to-method .brief,.bar.compact a.to-method .long{display:none}
-.bar.compact a.to-method .brief{display:inline}
+.bar :is(a.to-method,a.to-changes){font-weight:500}
+.bar :is(a.to-method,a.to-changes) span{margin:0;font-size:inherit;color:inherit}
+.bar :is(a.to-method,a.to-changes) .brief,.bar.compact :is(a.to-method,a.to-changes) .long{display:none}
+.bar.compact :is(a.to-method,a.to-changes) .brief{display:inline}
 .bar.compact .wrap{flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){.bar-sw .track,.bar-sw .track::after{transition:none}}
 .ed-note{display:none}
@@ -540,6 +540,33 @@ html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transpar
    a display gate, not a lock: verdicts and notes never leave this browser. For the owner it folds into one row at the end. */
 html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verdict,.filter-note,.judged-stub){display:none !important}
 #more{margin-top:22px}
+/* The translations to download (owner, 24 Nov 2026: "better buttons for downloading translations in different formats"):
+   one card per book, its language and source on top, then a button per format; EPUB first and filled. Side by side from
+   760 px (each row has the same labels, so the buttons line up); below that the text stands above the buttons, EPUB across
+   the card and the other two in a row. */
+#downloads{scroll-margin-top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 3px)}
+.books{display:grid;gap:10px;margin-top:16px}
+.nw{white-space:nowrap}
+.book{display:grid;gap:12px 16px;padding:14px 16px 16px;background:var(--card);border:1px solid var(--line);border-radius:6px}
+.book-lang{font:650 12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.book-title{font:600 18px/1.3 var(--serif);margin-top:4px;text-wrap:pretty}
+.book-note{font-size:14px;color:var(--muted);margin-top:2px}
+.book-get{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.book-get .epub{grid-column:1/-1}
+.get{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:5px 14px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);font:650 15px/1.2 var(--sans);text-decoration:none;white-space:nowrap}
+.get svg{flex:none;width:16px;height:16px}
+.get .two{display:grid;text-align:left}
+.get small{font:500 12.5px/1.25 var(--sans)}
+.get.epub{background:var(--accent);color:var(--paper)}
+.get:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.get.epub:hover{background:color-mix(in srgb,var(--accent) 86%,var(--ink))}
+.get:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.books-note{margin-top:12px}
+@media(min-width:760px){
+  .book{grid-template-columns:minmax(0,1fr) auto;align-items:center}
+  .book-get{display:flex;justify-content:flex-end}
+}
+@media print{.book-get{display:none}}
 #yours{border-top:1px solid var(--line);margin-top:8px;padding-block:10px 18px}
 #yours>summary{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;cursor:pointer;list-style:none;padding-block:6px;min-height:44px;align-content:center}
 #yours>summary::-webkit-details-marker{display:none}
@@ -607,7 +634,20 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <p class="sub" id="a-sub"></p>
 <p class="filter-note" id="filter-note" hidden><span>Only what you have not judged is shown.</span><button class="show" id="show-all" type="button">Show everything</button></p>
 <div id="list"><p class="sr" role="status">Loading chapter…</p><div class="skel" aria-hidden="true"><div class="sk-leaf"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i></div><div class="sk-side"><i class="sk-eyebrow"></i><i class="sk-nums"></i><i class="sk-map"></i></div><i class="sk-line"></i><i class="sk-line sk-short"></i></div><div class="skel" aria-hidden="true"><div class="sk-leaf"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i></div><div class="sk-side"><i class="sk-eyebrow"></i><i class="sk-nums"></i><i class="sk-map"></i></div><i class="sk-line"></i><i class="sk-line sk-short"></i></div></div>
-<p class="sub more" id="more">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
+<p class="sub more" id="more">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>. What has changed, and when, is in <a href="stoic-changelog.html?lang=en">the changelog</a>.</p>
+</section>
+
+<!-- The translations to download, one card per book; in Russian (RU_STATIC) the Russian books come first. -->
+<section id="downloads" aria-labelledby="d-head">
+<h2 id="d-head">Download the translations</h2>
+<p class="sub" id="d-sub">This project’s own translations, as books for <span class="nw">e-readers</span> and as plain files. They are dedicated to the public domain (CC0): free to use for anything.</p>
+<ul class="books" id="books">
+<li class="book"><div class="book-about"><p class="book-lang">English · from the Greek</p><h3 class="book-title">Marcus Aurelius, <i>Meditations</i></h3><p class="book-note">All 418 passages.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-project-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Marcus Aurelius, Meditations, in English</span></a><a class="get md" href="/downloads/marcus-meditations-project-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Marcus Aurelius, Meditations, in English</span></a><a class="get txt" href="/downloads/marcus-meditations-project-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Marcus Aurelius, Meditations, in English</span></a></p></li>
+<li class="book"><div class="book-about"><p class="book-lang">English · from the Latin</p><h3 class="book-title">Seneca, <i>Moral Letters to Lucilius</i>: a selection</h3><p class="book-note">304 sections from 94 letters.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Seneca, Moral Letters, in English</span></a><a class="get md" href="/downloads/seneca-letters-selection-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Seneca, Moral Letters, in English</span></a><a class="get txt" href="/downloads/seneca-letters-selection-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Seneca, Moral Letters, in English</span></a></p></li>
+<li class="book"><div class="book-about"><p class="book-lang">Russian · from our English</p><h3 class="book-title">Marcus Aurelius, <i>Meditations</i></h3><p class="book-note">All 418 passages.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Marcus Aurelius, Meditations, in Russian</span></a><a class="get md" href="/downloads/marcus-meditations-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Marcus Aurelius, Meditations, in Russian</span></a><a class="get txt" href="/downloads/marcus-meditations-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Marcus Aurelius, Meditations, in Russian</span></a></p></li>
+<li class="book"><div class="book-about"><p class="book-lang">Russian · from our English</p><h3 class="book-title">Seneca, <i>Moral Letters to Lucilius</i>: a selection</h3><p class="book-note">The same 304 sections.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Seneca, Moral Letters, in Russian</span></a><a class="get md" href="/downloads/seneca-letters-selection-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Seneca, Moral Letters, in Russian</span></a><a class="get txt" href="/downloads/seneca-letters-selection-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Seneca, Moral Letters, in Russian</span></a></p></li>
+</ul>
+<p class="sub books-note" id="books-note">Each file opens by saying how it was made and what no one has yet checked. The Russian was translated from this project’s English by Claude Opus 5.5 and checked against it by another model; no person has read it yet.</p>
 </section>
 
 <!-- The owner's review: drawn only for the site's admin signed in on this browser (html.owner), folded by default. -->
@@ -623,7 +663,7 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <ul class="mine" id="mine"></ul>
 </details>
 </main>
-<footer class="wrap">Marcus is quoted in this project’s own translation from the Greek; Meric Casaubon’s 1634 translation (Project Gutenberg 2680) is shown beside it for comparison. Seneca is quoted in the project’s own translation from the Latin. Topic names, selections and article wordings are editorial drafts.<br>Download the translations, free to use for anything (CC0): Marcus, <i>Meditations</i>: <a href="/downloads/marcus-meditations-project-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-project-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-project-v1.txt" download>text</a>. Seneca, a selection of the <i>Letters</i>: <a href="/downloads/seneca-letters-selection-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-v1.txt" download>text</a>.<br><span lang="ru">По-русски (переведено с английского этого проекта моделью Claude Opus 5.5 и сверено другой моделью; человеком пока не проверено): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>text</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>text</a>.</span></footer>
+<footer class="wrap">Marcus is quoted in this project’s own translation from the Greek; Meric Casaubon’s 1634 translation (Project Gutenberg 2680) is shown beside it for comparison. Seneca is quoted in the project’s own translation from the Latin. Topic names, selections and article wordings are editorial drafts.</footer>
 
 <script>
 'use strict';
@@ -650,8 +690,13 @@ const ruForm = (n, one, few, many) => { const t = n % 10, h = n % 100; return t 
 const pl = (n, one, few, many) => n + ' ' + ruForm(n, one, few, many);
 const PASSAGES = n => pl(n, 'фрагмент', 'фрагмента', 'фрагментов');
 const OF_PASSAGES = n => n + ' ' + ruForm(n, 'фрагмента', 'фрагментов', 'фрагментов');   // after «из»
-// Quotation marks: “…” in English, «…» in Russian.
-const quoted = text => RU ? '«' + text + '»' : '“' + text + '”';
+// Quotation marks: “…” in English, «…» in Russian. Marks inside the quoted text become the inner pair (‘…’, „…“), and
+// an inner quotation the cut leaves open, or begins inside, is closed or opened so that the pairs balance.
+const quoted = text => {
+  const s = String(text), [lo, lc, io, ic] = RU ? ['«', '»', '„', '“'] : ['“', '”', '‘', '’'];
+  const opens = s.split(lo).length - 1, closes = s.split(lc).length - 1;
+  return lo + io.repeat(Math.max(0, closes - opens)) + s.split(lo).join(io).split(lc).join(ic) + ic.repeat(Math.max(0, opens - closes)) + lc;
+};
 // An added author's name in another case (only Seneca so far); an unknown name stays as it is.
 const RU_CASES = {'Сенека': {gen: 'Сенеки', acc: 'Сенеку', ins: 'Сенекой'}};
 const inCase = (name, c) => (RU_CASES[name] || {})[c] || name;
@@ -737,8 +782,9 @@ const RU_STATIC = [
   ['#copy', 'Скопировать мой отзыв'],
   ['#download', 'Скачать файлом'],
   ['#only-open', 'Только неоценённое'],
-  ['#more','Как всё это сделано, шаг за шагом (векторы, кластеры, слияние, пять сторон, промпты, проверки, Сенека и переводы): <a href="stoic-method.html?lang=ru">метод</a>. Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).', true],
-  ['footer', 'Марк цитируется в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого); Сенека — в русском переводе с английского перевода проекта (а тот — с латыни). Русский текст сделан моделью Claude Opus 5.5, сверен другой моделью и человеком пока не проверен. Названия тем, отбор фрагментов и формулировки статей — редакторские черновики.<br>Скачать переводы, свободные для любого использования (CC0): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>текст</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>текст</a>. Английские переводы — на английской версии этой страницы.', true],
+  ['#more','Как всё это сделано, шаг за шагом (векторы, кластеры, слияние, пять сторон, промпты, проверки, Сенека и переводы): <a href="stoic-method.html?lang=ru">метод</a>. Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском). Что и когда менялось — в <a href="stoic-changelog.html?lang=ru">журнале изменений</a>.', true],
+  ['#downloads', '<h2 id="d-head">Скачать переводы</h2><p class="sub" id="d-sub">Собственные переводы проекта — книгами для электронных читалок и простыми файлами. Они переданы в общественное достояние (CC0): их можно использовать для чего угодно.</p><ul class="books" id="books"><li class="book"><div class="book-about"><p class="book-lang">Русский · с нашего английского</p><h3 class="book-title">Марк Аврелий, «Размышления»</h3><p class="book-note">Все 418 фрагментов.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Марк Аврелий, «Размышления», по-русски</span></a><a class="get md" href="/downloads/marcus-meditations-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Марк Аврелий, «Размышления», по-русски</span></a><a class="get txt" href="/downloads/marcus-meditations-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Марк Аврелий, «Размышления», по-русски</span></a></p></li><li class="book"><div class="book-about"><p class="book-lang">Русский · с нашего английского</p><h3 class="book-title">Сенека, «Нравственные письма к Луцилию»: избранное</h3><p class="book-note">304 раздела из 94 писем.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Сенека, «Нравственные письма», по-русски</span></a><a class="get md" href="/downloads/seneca-letters-selection-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Сенека, «Нравственные письма», по-русски</span></a><a class="get txt" href="/downloads/seneca-letters-selection-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Сенека, «Нравственные письма», по-русски</span></a></p></li><li class="book"><div class="book-about"><p class="book-lang">Английский · с греческого</p><h3 class="book-title">Марк Аврелий, «Размышления»</h3><p class="book-note">Все 418 фрагментов.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-project-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Марк Аврелий, «Размышления», по-английски</span></a><a class="get md" href="/downloads/marcus-meditations-project-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Марк Аврелий, «Размышления», по-английски</span></a><a class="get txt" href="/downloads/marcus-meditations-project-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Марк Аврелий, «Размышления», по-английски</span></a></p></li><li class="book"><div class="book-about"><p class="book-lang">Английский · с латыни</p><h3 class="book-title">Сенека, «Нравственные письма к Луцилию»: избранное</h3><p class="book-note">Те же 304 раздела.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Сенека, «Нравственные письма», по-английски</span></a><a class="get md" href="/downloads/seneca-letters-selection-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Сенека, «Нравственные письма», по-английски</span></a><a class="get txt" href="/downloads/seneca-letters-selection-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Сенека, «Нравственные письма», по-английски</span></a></p></li></ul><p class="sub books-note" id="books-note">Каждый файл начинается с того, как он сделан и чего ещё никто не проверил.</p>', true],
+  ['footer', 'Марк цитируется в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого); Сенека — в русском переводе с английского перевода проекта (а тот — с латыни). Русский текст сделан моделью Claude Opus 5.5, сверен другой моделью и человеком пока не проверен. Названия тем, отбор фрагментов и формулировки статей — редакторские черновики.', true],
   ['.dock-label', 'Голоса'],
 ];
 // The EN · RU switch is the site header's (site-chrome.js): choosing the other language reopens this page with the same query
@@ -1666,7 +1712,7 @@ function breakdown(article, segs, index) {
   const box = el('div'), seg = segs[index];
   if (seg.ids.length) {
     const refs = refsOf(article, seg.ids);
-    box.append(el('p', 'tip-head', RU ? quoted(seg.text.trim()) + ' · из ' + OF_PASSAGES(refs.length) : '“' + seg.text.trim() + '” · from ' + plural(refs.length, 'passage')));
+    box.append(el('p', 'tip-head', RU ? quoted(seg.text.trim()) + ' · из ' + OF_PASSAGES(refs.length) : quoted(seg.text.trim()) + ' · from ' + plural(refs.length, 'passage')));
     for (const id of seg.ids) box.append(tipQuote(article, pieceOf(article, id)));
   } else {
     box.append(el('p', 'tip-head', T('Joining words')), el('p', 'tip-note', T('These words are the editor’s. No passage is quoted for them.')));
@@ -1785,7 +1831,7 @@ function pickedBlock(article, key, segs) {
     const inference = ((where && where.inferences) || []).find(item => new RegExp('(^|[^\\p{L}])' + item.words.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '($|[^\\p{L}])', 'u').test(seg.text));
     box.append(el('p', 'picked-head', T(inference ? 'The editor’s inference' : 'The editor’s connection')));
     box.append(el('p', 'picked-note', RU ? quoted(seg.text.trim()) + ' — слова редактора' + (before && after ? ': они соединяют ' + quoted(short(before.text.trim(), 44)) + ' и ' + quoted(short(after.text.trim(), 44)) : '') + '. Ни один фрагмент этих слов не говорит.'
-      : '“' + seg.text.trim() + '” is the editor’s' + (before && after ? ': it joins “' + short(before.text.trim(), 44) + '” to “' + short(after.text.trim(), 44) + '”' : '') + '. No passage says these words.'));
+      : quoted(seg.text.trim()) + ' is the editor’s' + (before && after ? ': it joins ' + quoted(short(before.text.trim(), 44)) + ' to ' + quoted(short(after.text.trim(), 44)) : '') + '. No passage says these words.'));
     if (inference) box.append(el('p', 'picked-note why', inference.why));
   }
   return box;
@@ -2581,7 +2627,12 @@ function renderBar() {
   method.append(el('span', 'long', RU ? 'Как это сделано' : 'How it was made'), el('span', 'brief', RU ? 'Метод' : 'Method'));
   method.setAttribute('aria-label', RU ? 'Как это сделано: метод' : 'How it was made: the method');
   method.href = 'stoic-method.html?lang=' + (RU ? 'ru' : 'en');
-  jump.append(topics, tags, editor, method);
+  // The changelog beside the method (owner, 24 Nov 2026: "changelogs … in the same spot as methodology").
+  const changes = el('a', 'to-changes');
+  changes.append(el('span', 'long', RU ? 'Что изменилось' : 'What changed'), el('span', 'brief', RU ? 'Изменения' : 'Changes'));
+  changes.setAttribute('aria-label', RU ? 'Что изменилось: изменения конституции, сначала новые' : 'What changed: changes to the Constitution, newest first');
+  changes.href = 'stoic-changelog.html?lang=' + (RU ? 'ru' : 'en');
+  jump.append(topics, tags, editor, method, changes);
   // The chapter's articles with their titles, for the phone bar.
   const articles = el('ol');
   for (const article of stubs) {
