@@ -21,8 +21,8 @@ const text = (fragment) => fragment.replace(/<[^>]+>/g, ' ')
   .replace(/\s+/g, ' ').trim();
 const days = (block) => [...block.matchAll(/<section class="day" id="([^"]+)"[^>]*>\s*<h2 id="[^"]+"><time datetime="(\d{4}-\d\d-\d\d)">([^<]+)<\/time><\/h2>([\s\S]*?)<\/section>/g)]
   .map((m) => ({id: m[1], date: m[2], label: m[3], body: m[4]}));
-const entries = (body) => [...body.matchAll(/<li class="entry" id="([^"]+)"><h3>([\s\S]*?)<\/h3>([\s\S]*?)<\/li>/g)]
-  .map((m) => ({id: m[1], title: text(m[2]), body: m[3]}));
+const entries = (body) => [...body.matchAll(/<li class="entry" id="([^"]+)" data-kind="([^"]+)"><h3>([\s\S]*?)<\/h3>([\s\S]*?)<\/li>/g)]
+  .map((m) => ({id: m[1], kinds: m[2].split(' '), title: text(m[3]), body: m[4]}));
 
 test('the changelog is a Stoic page in English and Russian, with the shared header and one h1 per language', () => {
   assert.ok(EN_START > 0 && RU_START > EN_START && MAIN_END > RU_START, 'an English block, then a Russian block, inside <main>');
@@ -96,8 +96,8 @@ test('the English and the Russian state the same numbers', () => {
 test('the counts of the literary review are those of the finish log', () => {
   const log = read('plan/stoicism/36-finish-log.md');
   const review = log.slice(log.lastIndexOf('**Literary review'));
-  const entry = entries(days(blocks.en)[0].body).find((e) => e.id === 'literary-review');
-  assert.ok(entry, 'today’s literary review has an entry');
+  const entry = days(blocks.en).flatMap((d) => entries(d.body)).find((e) => e.id === 'literary-review');
+  assert.ok(entry, 'the literary review has an entry');
   const said = text(entry.body);
   for (const [count, where] of [['221', '161'], ['191', '130'], ['1,073', null], ['613', '387'], ['1,712', null]]) {
     assert.match(review, new RegExp(`${count} edits${where ? `\\s+in ${where}` : ''}`), `the log says ${count} edits${where ? ` in ${where}` : ''}`);
@@ -116,6 +116,7 @@ test('every link on the changelog resolves, and stays in the reader’s language
       assert.ok(!/^[a-z]+:/i.test(href), `${lang}: stays on the site: ${href}`);
       const [path, hash] = href.split('#'), file = path.split('?')[0];
       if (file === '/' || file === '/ru') continue;
+      if (file.startsWith('/downloads/')) { assert.ok(exists(`public${file}`), `${lang}: ${href}`); continue; }
       assert.ok(exists(`public/apps/${file}`), `${lang}: ${href}`);
       const query = new URLSearchParams(path.split('?')[1] || '');
       // The two-language pages open in the reader's language; an English entry about the Russian may point to the Russian.
@@ -176,4 +177,83 @@ test('the Constitution offers every translation as EPUB, Markdown and text, Russ
   assert.equal((section.match(/<span class="sr">, /g) || []).length, 12);
   assert.doesNotMatch(page.match(/<footer[\s\S]*?<\/footer>/)[0], /\/downloads\//);
   assert.doesNotMatch(page.match(/\['footer', '([^\n]*)'/)[1], /\/downloads\//);
+});
+
+// The page's pictures (24 Nov 2026, owner: "changelog should have good visuals"): each change carries a kind, named in words
+// beside its colour; one card per date; the kinds above the log are a legend and a filter with honest counts; every image is
+// published; and every line a picture quotes is word for word in the published texts.
+const KINDS = {en: {articles: 'Articles', translations: 'Translations', reading: 'Reading', method: 'Method', site: 'Site'},
+  ru: {articles: 'Статьи', translations: 'Переводы', reading: 'Чтение', method: 'Метод', site: 'Сайт'}};
+
+test('every change has a kind, named beside its colour, the same in both languages', () => {
+  const kindsOf = {};
+  for (const [lang, block] of Object.entries(blocks)) {
+    for (const day of days(block)) {
+      for (const entry of entries(day.body)) {
+        const id = entry.id.replace(/^ru-/, '');
+        for (const k of entry.kinds) assert.ok(KINDS[lang][k], `${lang} ${id}: kind ${k}`);
+        const shown = [...entry.body.match(/<span class="kinds">([\s\S]*?)<\/span><\/span>\n/)[1].matchAll(/<span class="k-([a-z]+)">[\s\S]*?<\/svg>([^<]+)/g)];
+        assert.deepEqual(shown.map((m) => [m[1], m[2]]), entry.kinds.map((k) => [k, KINDS[lang][k]]), `${lang} ${id}: the kinds are named`);
+        if (lang === 'en') kindsOf[id] = entry.kinds.join(' '); else assert.equal(entry.kinds.join(' '), kindsOf[id], `${id}: same kinds`);
+      }
+    }
+    // The legend counts each kind's changes, and starts hidden until the script can filter.
+    const bar = block.match(/<div class="kinds-bar"[^>]*hidden>([\s\S]*?)<\/div>/);
+    assert.ok(bar, `${lang}: the kinds bar`);
+    const counts = Object.fromEntries([...bar[1].matchAll(/data-kind="([a-z]+)"[^>]*>(?:<i[^>]*><\/i>)?[^<]*<span class="c">(\d+)<\/span>/g)].map((m) => [m[1], Number(m[2])]));
+    const all = days(block).flatMap((d) => entries(d.body));
+    for (const k of Object.keys(KINDS.en)) assert.equal(counts[k], all.filter((e) => e.kinds.includes(k)).length, `${lang}: ${k} count`);
+  }
+});
+
+test('one card per date at the top, linking to its day, with its number of changes', () => {
+  for (const [lang, block] of Object.entries(blocks)) {
+    const cards = [...block.match(/<ol class="releases"[^>]*>([\s\S]*?)<\/ol>/)[1].matchAll(/<a href="#([^"]+)">([\s\S]*?)<\/a>/g)];
+    const list = days(block);
+    assert.deepEqual(cards.map((m) => m[1]), list.map((d) => d.id), `${lang}: a card for each date, newest first`);
+    cards.forEach((m, i) => {
+      const n = entries(list[i].body).length;
+      assert.match(text(m[2]), new RegExp(`(?:^|\\s)${n} (?:changes?|изменени[еяй])(?!\\p{L})`, 'u'), `${lang} ${list[i].date}: ${n} changes`);
+      assert.ok(m[2].includes(`<span class="yr">${list[i].date.slice(0, 4)}</span>`), `${lang} ${list[i].date}: the year`);
+    });
+  }
+});
+
+test('every picture on the changelog is published, sized, and described', () => {
+  for (const [lang, block] of Object.entries(blocks)) {
+    for (const m of block.matchAll(/<img ([^>]+)>/g)) {
+      const src = m[1].match(/src="([^"]+)"/)[1];
+      assert.ok(exists(src.startsWith('/') ? `public${src}` : `public/apps/${src}`), `${lang}: ${src}`);
+      assert.match(m[1], /width="\d+" height="\d+"/, `${lang}: ${src} is sized`);
+      assert.match(m[1], /alt="[^"]{10,}"/, `${lang}: ${src} is described`);
+      assert.ok(src.includes(`-${lang}-`) || src.startsWith('/share/'), `${lang}: ${src} is in the reader's language`);
+    }
+    for (const m of block.matchAll(/srcset="([^"]+)"/g)) assert.ok(exists(`public/apps/${m[1]}`), `${lang}: ${m[1]}`);
+  }
+});
+
+test('every line a picture quotes is word for word in the published texts', () => {
+  const tr = JSON.parse(read('public/apps/stoic-translation.json')).passages;
+  const seneca = JSON.parse(read('content/aurelius/translation/seneca-v1.json')).passages;
+  const ru = JSON.parse(read('content/aurelius/translation/ru-v1.json')).passages;
+  const statements = ['public/apps/stoic-constitution/c*.json', 'public/apps/stoic-constitution/ru/c*.json'].flatMap((glob) => {
+    const dir = glob.slice(0, glob.lastIndexOf('/'));
+    return fs.readdirSync(new URL(dir + '/', ROOT)).filter((f) => /^c\d\.json$/.test(f))
+      .flatMap((f) => JSON.parse(read(`${dir}/${f}`)).articles.map((a) => a.statement.t));
+  });
+  const corpus = [...tr.flatMap((p) => [p.greek, p.english, p.casaubon]), ...seneca.flatMap((p) => [p.latin, p.english]), ...ru.map((p) => p.russian), ...statements]
+    .filter((t) => typeof t === 'string');
+  const found = (line) => corpus.some((t) => t.includes(line));
+  let n = 0;
+  for (const [lang, block] of Object.entries(blocks)) {
+    for (const m of block.matchAll(/<span class="(?:txt|st)" lang="[a-z]+">([\s\S]*?)<\/span>/g)) {
+      const line = m[1];
+      // A changed word shows the new one underlined and the old struck out: the new reading is the published one.
+      const now = text(line.replace(/<del>[\s\S]*?<\/del>\s*/g, '')).replace(/…$/, '');
+      assert.ok(found(now), `${lang}: “${now}” is not in the published texts`);
+      n++;
+    }
+    for (const m of block.matchAll(/<span class="st">([\s\S]*?)<\/span>/g)) { assert.ok(found(text(m[1])), `${lang}: ${text(m[1])}`); n++; }
+  }
+  assert.ok(n >= 16, `${n} quoted lines`);
 });
