@@ -266,5 +266,10 @@ Each rule is followed by the feedback it came from.
     are fixed in one glossary before translators start, because eleven translators chose four sets of
     side names when they were not. When an article translator finds the settled passage wrong (8.3
     «вещей» decided what the Greek leaves open), the passage is corrected with a recorded decision
-    and every quote of it re-cut.
+    and every quote of it re-cut. Settled Russian terms (owner, 24 Nov 2026: “can we use «части
+    тела» instead of «члены»?”): a limb of a body (μέλος, membrum, English “limb”) is «часть тела»,
+    plural «части тела», never «член»; «член» stays only for a member of a community («член
+    сообщества»). «Часть» is feminine, so what agrees with it changes too («созданная», not
+    «созданный»), and in 7.13 the limb against the part (μέλος / μέρος) is «часть тела» against
+    «часть».
 

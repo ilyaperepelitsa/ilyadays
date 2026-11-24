@@ -640,3 +640,7 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   summary.
 - “can we have some sort of smooth loading card” — my reading: placeholders that look like the article card (and the
   vectors column on a wide screen), a soft sweep of light instead of a pulse, and the articles rising in over them. Done.
+- “can we use "части тела" instead of "члены"?” — my reading: in the body sense only (μέλος, membrum, “limb”);
+  «член сообщества» (member of a community) stays. Done: 5 passages (7.13, 7.19–22, 7.68, Ep. 90.29, Ep. 95.52) with
+  recorded decisions and new revisions, Articles 1 (now «Часть единого тела») and 8 re-cut, the paper's Russian and
+  figures, downloads; rule 25 of the article prompt now fixes the term.
