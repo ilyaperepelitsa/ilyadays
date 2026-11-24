@@ -490,7 +490,7 @@ the cases below are pinned in `tests/fitness/months-fixes.test.mjs`. State field
    8+ on every set raises the load at once to what the weakest set carries (at most +25 %); when the machine's next step
    is too big for that twice in a row, the card tells the lifter they may raise it themselves.
 9. Each finished session writes one `fitness_adjustments` row (source `engine`, `input.kind = "session"`) with what the
-   engine recommended for the next time and why; reopening the session marks it not applied. The optional view
+   engine recommended for the next time and why; reopening the session marks it not applied. The view
    `fitness_recommendations` lists them per user and exercise. The plan history in the app leaves these rows out.
 10. After each logged set the next row is scrolled into view, and checked again once the scroll has settled.
 

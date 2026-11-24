@@ -27,7 +27,7 @@ creates the fitness tables. [`20261109135752_fitness_calibration.sql`](../supaba
 | `fitness_bodyweight` | Dated bodyweight weigh-ins |
 | `fitness_measurements` | Dated circumference observations in cm, with separate left/right sites |
 | `fitness_adjustments` | Plan changes, including ones the AI adviser proposed and you accepted; and one `engine` row per finished workout with every recommendation made (targets before and after, outcome, reason) |
-| `fitness_recommendations` | Optional view ([migration](../supabase/migrations/20261124090000_fitness_recommendations.sql)): those recommendations, one row per exercise and workout. The app works without it |
+| `fitness_recommendations` | View ([migration](../supabase/migrations/20261124090000_fitness_recommendations.sql)): those recommendations, one row per exercise and workout |
 
 Access rules, enforced by Postgres Row Level Security:
 
@@ -45,12 +45,15 @@ Do this together with the Supabase move described in [the cutover guide](supabas
 adds two steps.
 
 1. **Create the dedicated Supabase project** and the Google sign-in, following sections 2 and 3 of the cutover guide.
-2. **Run five migrations in the SQL Editor, in this order:**
+2. **Apply every migration (Codex Supabase connector, or the SQL Editor), in this order:**
    1. [`20261006110000_ilyadays_admin.sql`](../supabase/migrations/20261006110000_ilyadays_admin.sql)
    2. [`20261006120000_trip_state.sql`](../supabase/migrations/20261006120000_trip_state.sql)
    3. [`20261108120000_fitness.sql`](../supabase/migrations/20261108120000_fitness.sql)
    4. [`20261109135752_fitness_calibration.sql`](../supabase/migrations/20261109135752_fitness_calibration.sql)
    5. [`20261109142245_fitness_profiles_self_service.sql`](../supabase/migrations/20261109142245_fitness_profiles_self_service.sql)
+   6. [`20261109172530_fitness_reference_catalog.sql`](../supabase/migrations/20261109172530_fitness_reference_catalog.sql)
+   7. [`20261109174108_fitness_set_session_owner_index.sql`](../supabase/migrations/20261109174108_fitness_set_session_owner_index.sql)
+   8. [`20261124090000_fitness_recommendations.sql`](../supabase/migrations/20261124090000_fitness_recommendations.sql)
 
    The fitness migration stops with an error, and creates nothing, if the admin migration has not run in that project.
    That keeps it out of a shared project whose `is_admin()` belongs to another app.

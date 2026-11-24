@@ -29,3 +29,12 @@ Use Project Memory as the default context layer for this repository.
 - Use the `sequential-critic` skill for high-risk or low-confidence tasks.
 <!-- codex-project-memory:end -->
 
+## Database migrations in Vercel projects
+
+- A migration is never optional. Work that adds SQL is not finished until the migration is applied to the hosted database.
+- Apply it with the Codex Supabase connector (`apply_migration`), after checking that the project ref is the one in the
+  project's environment. Check the SQL on a throwaway local Postgres first.
+- Apply additive migrations before pushing the code that uses them, since Vercel deploys every push to `main`.
+- Afterwards verify it: the migration is listed, the objects exist, and the security advisors show nothing new.
+- If the connector asks for approval, get it from the owner. Do not bypass it, and report the migration as not applied.
+- Destructive SQL (dropping or rewriting data) needs the owner's explicit word each time.
