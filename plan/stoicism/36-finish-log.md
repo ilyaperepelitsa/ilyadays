@@ -205,3 +205,16 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   switch; `/stoicism` redirects to the Constitution; a home-page card. Cover: first round (bust in the cover style)
   rejected (“looks like shit”); second round on the owner's “his profile in a mix of constellation / neural net
   visualization style”, draft F chosen. Images $0.49 in all.
+- **Flags (24 Nov):** the note repeated under every article title became two flags (“Greek → our English”, “Numbered as in
+  1634”) and a link to the side-by-side page; the intro explains the flags once. Pushed adcea8c.
+- **Methods paper v2.1 (24 Nov):** all 22 referee points settled in writing (14 accepted, 8 partly, 0 declined):
+  7 chapters stated as a fixed choice; same-space stay counts (315 and 248 of 418); shuffle baselines, ARI and length
+  correlation reported in `diagram-data.json` "validation"; “testable” narrowed to tracing; one model family and the
+  missing copyright scan stated as limits. Figures: the overlap check now covers all 32 share images and caught crowding
+  in seven; Figure 4/8 wording corrected. Baselines were re-approved after a late R8 paragraph shifted the 390 px layout
+  (figures unchanged by eye).
+- **Owner-only review (24 Nov):** `AuthProvider.tsx` keeps `ilyadays-admin` = the admin's user id after `rpc is_admin`;
+  the Constitution page draws the review, Verdict buttons and filter only while that id matches the stored supabase-js
+  session, as one folded, remembered row at the end. A display gate, not a lock: verdicts never leave the browser.
+  Check case O1 (reader, other account, signed-out owner, EN/RU; owner at 390 and 1440).
+- Usage check (02:07–02:22 UTC): calls −20%, output −43% as both workers finished · action: none · evidence: 92 calls.

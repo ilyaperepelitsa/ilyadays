@@ -1054,8 +1054,72 @@ EDITORIAL = ['.hand', '.process', '.statement > .form', '.link.ed', '.vt', '.art
 READING = ['.statement .sent', 'li.claim .sent', '.trace .link.pair', 'li.claim .fused']
 
 
-SHOW_ALL = ("for (const k of ['stoic-constitution:editor', 'stoic-constitution:v1:tags']) "
+SHOW_ALL = ("for (const k of ['stoic-constitution:editor', 'stoic-constitution:v1:tags', 'stoic-constitution:review-open']) "
             "try { if (localStorage.getItem(k) === null) localStorage.setItem(k, 'on'); } catch {}")
+# The review is drawn only for the site's admin signed in on this browser: the marker AuthProvider.tsx keeps, matching a
+# supabase-js session. Contexts get this stand-in owner unless a case asks for a reader (owner=False). No real token.
+OWNER_ID = 'check-owner'
+AS_OWNER = ("try { if (localStorage.getItem('ilyadays-admin') === null) { localStorage.setItem('ilyadays-admin', '%s'); "
+            "localStorage.setItem('ilyadays-auth:check.local', JSON.stringify({access_token: 'x', refresh_token: 'y', expires_at: 1, user: {id: '%s'}})); } } catch {}"
+            % (OWNER_ID, OWNER_ID))
+
+
+def case_o1(page, base, port):
+    """The review is the owner's (owner, 24 Nov 2026): a reader, an account that is not the admin, or a signed-out owner sees
+    no review section, no Verdict buttons and no filter, even with Editor's decisions on, but keeps the method link; the
+    signed-in admin gets one folded row at the end that opens, and stays open across a reload."""
+    problems = []
+    browser = page.context.browser
+    shown = "sel => [...document.querySelectorAll(sel)].filter(n => n.getClientRects().length > 0).length"
+    readers = {
+        'a reader': "",
+        'another account': "localStorage.setItem('ilyadays-admin', 'someone'); localStorage.setItem('ilyadays-auth:x', JSON.stringify({refresh_token: 'y', user: {id: 'other'}}));",
+        'the owner signed out': "localStorage.setItem('ilyadays-admin', 'someone');",
+    }
+    for who, setup in readers.items():
+        for lang in ['en', 'ru']:
+            ctx = browser.new_context(viewport={'width': 390, 'height': 844}, owner=False)
+            ctx.add_init_script("try { %s localStorage.setItem('stoic-constitution:v2:only-open', 'on'); } catch {}" % setup)
+            p = ctx.new_page()
+            p.goto(f'{base}?lang={lang}', wait_until='networkidle')
+            p.wait_for_selector('article.article .statement')
+            for sel in ['#yours', '#copy', '.vt', '.article > .verdict', '#filter-note']:
+                if p.evaluate(shown, sel):
+                    problems.append(f'{who} ({lang}) sees {sel}')
+            if p.evaluate("document.body.classList.contains('only-open')"):
+                problems.append(f'{who} ({lang}): a stored “only what I have not judged” still filters the page')
+            if not p.locator('#more a[href^="stoic-method.html"]').is_visible():
+                problems.append(f'{who} ({lang}): the link to the method is gone with the review')
+            ctx.close()
+    for width in [390, 1440]:
+        ctx = browser.new_context(viewport={'width': width, 'height': 900}, defaults=True)
+        p = ctx.new_page()
+        p.goto(base, wait_until='networkidle')
+        p.wait_for_selector('article.article .statement')
+        box = p.locator('#yours')
+        summary = box.locator('summary')
+        summary.scroll_into_view_if_needed()
+        if box.evaluate('n => n.open'):
+            problems.append(f'{width}px: the owner\'s review starts open')
+        height = summary.bounding_box()['height']
+        if not summary.is_visible() or height > 64:
+            problems.append(f'{width}px: the folded review is {height:.0f}px tall, or hidden')
+        if 'Nothing judged yet' not in summary.inner_text():
+            problems.append(f'{width}px: the folded row does not say how much is judged: “{summary.inner_text()}”')
+        summary.click()
+        if not p.locator('#copy').is_visible():
+            problems.append(f'{width}px: opening the review does not show its tools')
+        p.wait_for_function("localStorage.getItem('stoic-constitution:review-open') === 'on'", timeout=3000)   # toggle fires a task later
+        p.reload(wait_until='networkidle')
+        if not p.locator('#yours').evaluate('n => n.open'):
+            problems.append(f'{width}px: the review closes again after a reload')
+        p.locator('#editor-sw').click()
+        if not p.evaluate(shown, '.vt'):
+            problems.append(f'{width}px: the owner gets no Verdict buttons with Editor\'s decisions on')
+        if p.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth'):
+            problems.append(f'{width}px: the page scrolls sideways')
+        ctx.close()
+    return problems
 
 
 def case_h2(page, base, port):
@@ -1180,6 +1244,7 @@ CASES = {
     'H1': ('site header on the Stoic pages: the React header\'s links, labels, boxes and colours, EN and RU, no shift', case_h1, (1440, 900), 'real'),
     'H2': ('Sources and Editor switches in the bar: off by default, kept across a reload, a method link, works with storage blocked', case_h2, (1440, 1000), 'real'),
     'H3': ('wide screens: sides in a row share heading, rule and first card within 2 px; the vectors start at the heading', case_h3, (1440, 1000), 'real'),
+    'O1': ('the review is the signed-in admin\'s only, folded into one row; readers keep the method link', case_o1, (390, 844), 'real'),
 }
 
 
@@ -1416,9 +1481,10 @@ def main() -> int:
         # The page opens with Sources and Editor's decisions off. Every case below was written for both on, so each browser
         # context starts with them on unless a case asks for the defaults (case H2 does).
         plain_context = browser.new_context
-        def new_context(*args, defaults=False, **kwargs):
+        def new_context(*args, defaults=False, owner=True, **kwargs):
             ctx = plain_context(*args, **kwargs)
             if not defaults: ctx.add_init_script(SHOW_ALL)
+            if owner: ctx.add_init_script(AS_OWNER)
             return ctx
         browser.new_context = new_context
         if args.cases:

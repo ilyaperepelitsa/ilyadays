@@ -26,6 +26,21 @@ const AuthContext = createContext<Auth>({
 
 export const useAuth = () => useContext(AuthContext);
 
+/** Key of the admin marker the static pages read (public/apps/stoic-constitution.html shows the owner's review only while
+ *  it matches the stored session's user). A display hint for pages without supabase-js, never a permission: the database
+ *  still decides every write. */
+export const ADMIN_MARKER = "ilyadays-admin";
+
+/** Keeps the marker in step with the database's answer: the admin's user id, or nothing. */
+export function markAdmin(userId: string | null) {
+  try {
+    if (userId) window.localStorage.setItem(ADMIN_MARKER, userId);
+    else window.localStorage.removeItem(ADMIN_MARKER);
+  } catch {
+    // storage blocked: the static pages then show the reader's view
+  }
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -46,6 +61,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const request = ++latest.current;
         setUser(next);
         if (!next) {
+          markAdmin(null);
           setIsAdmin(false);
           setLoading(false);
           return;
@@ -58,6 +74,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           admin = false;
         }
         if (request !== latest.current) return; // a newer auth event owns the state
+        markAdmin(admin ? next.id : null);
         setIsAdmin(admin);
         setLoading(false);
       };

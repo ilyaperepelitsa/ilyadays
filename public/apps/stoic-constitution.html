@@ -464,6 +464,18 @@ html.no-editor .picked.ed{padding-top:0;border-top:0}
 html.no-editor .sg.join{cursor:inherit}
 html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transparent;box-shadow:none}
 @media print{.vt,.vpick,.vnote,.review-tools,.filter-note{display:none}}
+/* The review is the owner's: hidden unless html.owner (the site's admin, signed in on this browser; see OWNER below). It is
+   a display gate, not a lock: verdicts and notes never leave this browser. For the owner it folds into one row at the end. */
+html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verdict,.filter-note,.judged-stub){display:none !important}
+#more{margin-top:22px}
+#yours{border-top:1px solid var(--line);margin-top:8px;padding-block:10px 18px}
+#yours>summary{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;cursor:pointer;list-style:none;padding-block:6px;min-height:44px;align-content:center}
+#yours>summary::-webkit-details-marker{display:none}
+#yours>summary::before{content:'▸';color:var(--muted);font-size:13px;transition:transform .15s}
+#yours[open]>summary::before{transform:rotate(90deg)}
+#yours>summary h2{font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0}
+#yours>summary .count{font-size:13px;color:var(--muted)}
+#yours>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 @media print{.dock,.tabs,.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
 </style>
 </head>
@@ -499,11 +511,12 @@ html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transpar
 <p class="sub" id="a-sub"></p>
 <p class="filter-note" id="filter-note" hidden><span>Only what you have not judged is shown.</span><button class="show" id="show-all" type="button">Show everything</button></p>
 <div id="list"></div>
+<p class="sub more" id="more">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
 </section>
 
-<section id="yours" aria-labelledby="y-head">
-<p class="step">3 · Your call</p>
-<h2 id="y-head">Your review</h2>
+<!-- The owner's review: drawn only for the site's admin signed in on this browser (html.owner), folded by default. -->
+<details id="yours" class="owner-only">
+<summary><h2 id="y-head">Your review</h2><span class="count" id="review-count" role="status"></span></summary>
 <p class="sub">Every part of an article has a small Verdict button in its corner: the statement, each claim, each quote’s conclusion, each thing an added author brings, and each clause an added author appends to a sentence (tap the clause to see its button). The whole article is judged under its card. Revise and Drop take a note. Everything is saved in this browser only, so copy it into a chat or download it when you are done.</p>
 <div class="review-tools">
 <button class="act" id="copy" type="button">Copy my review</button>
@@ -511,10 +524,8 @@ html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transpar
 <button class="act" id="only-open" type="button" aria-pressed="false">Only what I have not judged</button>
 </div>
 <p class="sub ed-note" id="ed-note">The editor’s decisions and the Verdict buttons are hidden while you read; switch them back on at the top of the page.</p>
-<p class="sub" id="review-count" role="status"></p>
 <ul class="mine" id="mine"></ul>
-<p class="sub" style="margin-top:16px">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
-</section>
+</details>
 </main>
 <footer class="wrap">Marcus is quoted in this project’s own translation from the Greek; Meric Casaubon’s 1634 translation (Project Gutenberg 2680) is shown beside it for comparison. Seneca is quoted in the project’s own translation from the Latin. Topic names, selections and article wordings are editorial drafts.<br>Download the translations, free to use for anything (CC0): Marcus, <i>Meditations</i>: <a href="/downloads/marcus-meditations-project-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-project-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-project-v1.txt" download>text</a>. Seneca, a selection of the <i>Letters</i>: <a href="/downloads/seneca-letters-selection-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-v1.txt" download>text</a>.<br><span lang="ru">По-русски (переведено с английского этого проекта моделью Claude Opus 5.5 и сверено другой моделью; человеком пока не проверено): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>text</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>text</a>.</span></footer>
 
@@ -622,13 +633,12 @@ const RU_STATIC = [
   ['#articles .step', '2 · От многих фрагментов к одному положению'],
   ['#filter-note > span', 'Показано только то, что вы ещё не оценили.'],
   ['#show-all', 'Показать всё'],
-  ['#yours .step', '3 · Ваше решение'],
   ['#y-head', 'Ваш отзыв'],
   ['#yours > .sub', 'У каждой части статьи в углу есть маленькая кнопка «Оценка»: у положения, у каждого утверждения, у вывода из каждой цитаты, у всего, что приносит добавленный автор, и у каждой приписки, которую добавленный автор делает к фразе (коснитесь приписки, чтобы увидеть её кнопку). Статья целиком оценивается под своей карточкой. «Исправить» и «Отбросить» принимают заметку. Всё сохраняется только в этом браузере, поэтому, закончив, скопируйте отзыв в чат или скачайте его файлом.'],
   ['#copy', 'Скопировать мой отзыв'],
   ['#download', 'Скачать файлом'],
   ['#only-open', 'Только неоценённое'],
-  ['#yours > .sub[style]', 'Как всё это сделано, шаг за шагом (векторы, кластеры, слияние, пять сторон, промпты, проверки, Сенека и переводы): <a href="stoic-method.html?lang=ru">метод</a>. Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).', true],
+  ['#more','Как всё это сделано, шаг за шагом (векторы, кластеры, слияние, пять сторон, промпты, проверки, Сенека и переводы): <a href="stoic-method.html?lang=ru">метод</a>. Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском).', true],
   ['footer', 'Марк цитируется в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого); Сенека — в русском переводе с английского перевода проекта (а тот — с латыни). Русский текст сделан моделью Claude Opus 5.5, сверен другой моделью и человеком пока не проверен. Названия тем, отбор фрагментов и формулировки статей — редакторские черновики.<br>Скачать переводы, свободные для любого использования (CC0): Марк Аврелий, «Размышления»: <a href="/downloads/marcus-meditations-ru-v1.epub" download>EPUB</a> · <a href="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a> · <a href="/downloads/marcus-meditations-ru-v1.txt" download>текст</a>. Сенека, избранные письма: <a href="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB</a> · <a href="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a> · <a href="/downloads/seneca-letters-selection-ru-v1.txt" download>текст</a>. Английские переводы — на английской версии этой страницы.', true],
   ['.dock-label', 'Голоса'],
 ];
@@ -656,6 +666,32 @@ function setEditorShown(on, save) {
   if (save) try { localStorage.setItem(EDITOR_KEY, on ? 'on' : 'off'); } catch { /* storage blocked: kept for this visit */ }
 }
 setEditorShown((() => { try { return localStorage.getItem(EDITOR_KEY) === 'on'; } catch { return false; } })(), false);
+// The owner's review (owner, 24 Nov 2026: "review at the bottom of the page should only be admin view for me logged in and
+// compactly hidden somewhere"). The site's React pages ask the database whether the signed-in user is the admin
+// (rpc is_admin, src/components/site/AuthProvider.tsx) and keep the answer as ilyadays-admin = that user's id. Here the
+// review shows only while that id matches the session supabase-js keeps in this browser (ilyadays-auth:<project>), so
+// signing out, or another account, hides it again. It gates what is drawn; the review itself never leaves this browser.
+const OWNER = (() => {
+  try {
+    const id = localStorage.getItem('ilyadays-admin');
+    if (!id) return false;
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (!key || !key.startsWith('ilyadays-auth:')) continue;
+      const session = JSON.parse(localStorage.getItem(key) || 'null');
+      if (session && session.refresh_token && session.user && session.user.id === id) return true;
+    }
+  } catch { /* storage blocked or unreadable: a reader's view */ }
+  return false;
+})();
+document.documentElement.classList.toggle('owner', OWNER);
+{
+  const box = document.getElementById('yours'), OPEN = 'stoic-constitution:review-open';
+  if (OWNER) {   // for readers it stays in the markup, undrawn (CSS above), so the code that fills it needs no guards
+    try { box.open = localStorage.getItem(OPEN) === 'on'; } catch { /* folded */ }
+    box.addEventListener('toggle', () => { try { localStorage.setItem(OPEN, box.open ? 'on' : 'off'); } catch { /* for this visit */ } });
+  }
+}
 const STORE = 'stoic-constitution:v1:verdicts';
 const VERDICTS = ['Keep', 'Revise', 'Drop'];
 let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
@@ -2594,7 +2630,7 @@ document.getElementById('download').addEventListener('click', event => {
 document.getElementById('only-open').addEventListener('click', event => setFilter(!state.filter, event.currentTarget));
 document.getElementById('show-all').addEventListener('click', () => setFilter(false, document.getElementById('list')));
 loadReview();
-try { if (localStorage.getItem(FILTER) === 'on') setFilter(true, null, true); } catch { /* starts with everything shown */ }
+try { if (OWNER && localStorage.getItem(FILTER) === 'on') setFilter(true, null, true); } catch { /* starts with everything shown */ }
 
 fetch(RU ? 'stoic-constitution.ru.json' : 'stoic-constitution.json').then(response => {
   if (!response.ok) throw new Error(RU ? 'русская версия не загрузилась (' + response.status + ')' : 'the record could not be loaded (' + response.status + ')');

@@ -614,3 +614,12 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   (only Seneca is checked against Gummere). Worth a check before relying on the CC0 release.
 - Seven chapters is a fixed choice (scripts/aurelius-topics.py:30), not the result of a rule; cluster quality is weak
   (silhouette barely above shuffled labels). The chapters stand as an editorial grouping, to be judged by reading.
+
+## Later on 24 Nov 2026 (verbatim)
+
+- “stuff like this looks too repetitive Quoted from the Greek, in this project's own English. Passage numbers are those of
+  the 1634 translation… Read the passages in Greek, today's English and 1634 / good frontend an do flags with buttons and
+  links etc” — my reading: say it once, show small flags and a link under each title. Done (adcea8c).
+- “also revie at the bottom of the page should only be admin view for me logged in and compactly hidden somewhere” — my
+  reading: the review section, the Verdict buttons and the not-judged filter only for the site's admin signed in on that
+  browser; for the admin, one folded row at the end. Done (see 36-finish-log.md).
