@@ -315,6 +315,18 @@ a.flag.go:hover{background:color-mix(in srgb,var(--accent) 8%,var(--card))}
 .chapters button:disabled{color:var(--muted);cursor:default}
 .loading{margin-top:22px;padding:14px 0;font-size:15px;color:var(--muted)}
 .loading .act{margin:0 0 0 12px}
+/* Placeholders while a chapter downloads, shaped like an article's head and statement so the page does not jump. */
+.skel{margin-top:22px;padding:34px 0 30px;border-top:1px solid var(--line)}
+.skel i{display:block;border-radius:8px;background:var(--hl);animation:skel 1.4s ease-in-out infinite}
+.skel .sk-eyebrow{width:90px;height:12px}
+.skel .sk-title{width:min(420px,80%);height:34px;margin-top:12px}
+.skel .sk-flags{width:min(360px,70%);height:26px;margin-top:12px;border-radius:999px}
+.skel .sk-statement{height:96px;margin-top:22px;border-radius:12px}
+.skel .sk-chips{width:min(520px,90%);height:28px;margin-top:14px;border-radius:999px}
+.skel .sk-line{height:14px;margin-top:18px}
+.skel .sk-short{width:60%;margin-top:10px}
+@keyframes skel{50%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){.skel i{animation:none}}
 .mine li{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line);padding-block:6px}
 .mine li span:last-child{font-weight:650;white-space:nowrap}
 .act{margin-top:12px;min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);font-weight:650;cursor:pointer}
@@ -519,6 +531,24 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 #yours>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 @media print{.dock,.tabs,.bar,.verdict,.x,.act,.sources>p{display:none}.article{break-inside:avoid}*{print-color-adjust:exact}}
 </style>
+<script>
+// Start the page's two downloads, the index and the chapter on screen, while the page is still being read (owner, 24 Nov
+// 2026: "loading of articles isn't great": the chapter waited for the index, which waited for the end of the page). The
+// main script takes these responses through early() when they are the ones it needs, and fetches anything else itself.
+(() => {
+  const FIRST_CHAPTER = 'c6';   // the chapter of Article 1, opened when the link names none; a test keeps it equal to the index
+  const q = new URLSearchParams(location.search), stored = key => { try { return localStorage.getItem(key); } catch { return null; } };
+  const asked = q.get('lang'), lang = asked === 'ru' || asked === 'en' ? asked : stored('stoic-constitution:lang') || stored('site-lang');
+  const ru = lang === 'ru', chapter = q.get('c') || (!q.get('at') && !/^#article-/.test(location.hash) ? FIRST_CHAPTER : null);
+  const early = window.__early = {};
+  early[ru ? 'stoic-constitution.ru.json' : 'stoic-constitution.json'] = fetch(ru ? 'stoic-constitution.ru.json' : 'stoic-constitution.json');
+  if (/^c\d+$/.test(chapter || '')) {
+    const url = 'stoic-constitution/' + (ru ? 'ru/' : '') + chapter + '.json';
+    early[url] = fetch(url, {cache: 'no-cache'});
+  }
+  for (const key in early) early[key].catch(() => { /* the main script fetches again */ });
+})();
+</script>
 </head>
 <body>
 <script src="/apps/site-chrome.js"></script>
@@ -557,7 +587,7 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <h2 id="a-head"></h2>
 <p class="sub" id="a-sub"></p>
 <p class="filter-note" id="filter-note" hidden><span>Only what you have not judged is shown.</span><button class="show" id="show-all" type="button">Show everything</button></p>
-<div id="list"></div>
+<div id="list"><p class="sr" role="status">Loading chapter…</p><div class="skel" aria-hidden="true"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i><i class="sk-line"></i><i class="sk-line sk-short"></i></div><div class="skel" aria-hidden="true"><i class="sk-eyebrow"></i><i class="sk-title"></i><i class="sk-flags"></i><i class="sk-statement"></i><i class="sk-chips"></i><i class="sk-line"></i><i class="sk-line sk-short"></i></div></div>
 <p class="sub more" id="more">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>.</p>
 </section>
 
@@ -679,6 +709,7 @@ const RU_STATIC = [
     + '<li><span class="kx"><span class="flag">+ Сенека</span></span><span>Добавьте второй голос с панели внизу экрана и посмотрите, что получает каждая статья.</span></li>', true],
   ['#howto > .sub', 'Наведите на подчёркнутые слова, чтобы увидеть точные цитаты; нажмите или коснитесь, чтобы прочитать фрагменты рядом.'],
   ['#t-head', 'Содержание'],
+  ['#list > .sr', 'Глава загружается…'],
   ['#t-method', 'Как фрагменты были сгруппированы и насколько этому можно доверять: <a href="stoic-method.html?lang=ru#m-clustering">метод, раздел 3.2</a>.', true],
   ['#filter-note > span', 'Показано только то, что вы ещё не оценили.'],
   ['#show-all', 'Показать всё'],
@@ -2452,9 +2483,16 @@ function decorate(articles) {
   }
   return articles;
 }
+// A download the page's head started early (see the script in <head>), used once; anything else, or a failed early one, is fetched now.
+function early(url, init) {
+  const started = window.__early && window.__early[url];
+  if (!started) return fetch(url, init);
+  delete window.__early[url];
+  return started.catch(() => fetch(url, init));
+}
 function loadChapter(id) {
   if (CHAPTERS.has(id)) return Promise.resolve(CHAPTERS.get(id));
-  return fetch('stoic-constitution/' + (RU ? 'ru/' : '') + id + '.json', {cache: 'no-cache'}).then(response => {
+  return early('stoic-constitution/' + (RU ? 'ru/' : '') + id + '.json', {cache: 'no-cache'}).then(response => {
     if (!response.ok) throw new Error((RU ? 'сервер ответил ' : 'the server answered ') + response.status);
     return response.json();
   }).then(data => {
@@ -2603,6 +2641,18 @@ function toggleChapters(open) {
   if (now) { const list = document.getElementById('article-list'); list.hidden = true; document.querySelector('.art-btn')?.setAttribute('aria-expanded', 'false'); }
   if (now) (panel.querySelector('[aria-current=true]') || panel.querySelector('button:not(:disabled)'))?.focus({preventScroll: true});
 }
+// While a chapter downloads: two article-shaped placeholders where its articles will stand, and the words for a screen reader.
+function skeleton() {
+  const said = el('p', 'sr', T('Loading chapter…'));
+  said.setAttribute('role', 'status');
+  const card = () => {
+    const box = el('div', 'skel');
+    box.setAttribute('aria-hidden', 'true');
+    for (const kind of ['sk-eyebrow', 'sk-title', 'sk-flags', 'sk-statement', 'sk-chips', 'sk-line', 'sk-line sk-short']) box.append(el('i', kind));
+    return box;
+  };
+  return [said, card(), card()];
+}
 // Open a chapter: draw its heading and bar at once, its articles when they have arrived.
 function openChapter(id, {initial = false, to = null, push = false} = {}) {
   hideTip();
@@ -2610,10 +2660,12 @@ function openChapter(id, {initial = false, to = null, push = false} = {}) {
   state.chapter = id;
   const chapter = chapterById(id), list = document.getElementById('list');
   document.getElementById('a-head').textContent = (RU ? 'Глава ' : 'Chapter ') + chapter.order + ' · ' + chapter.title;
-  document.getElementById('a-sub').textContent = D.chapter_order_note;
+  // The chapter's own summary under its title; why the chapters stand in this order is the method paper's (§3.2).
+  document.getElementById('a-sub').textContent = chapter.summary || '';
   renderBar();
+  markRail(0);   // the chapter highlighted in the rail at once; its article is marked when the articles are in
   for (const box of document.querySelectorAll('#tree details[data-chapter]')) box.open = box.dataset.chapter === id;
-  if (!CHAPTERS.has(id)) list.replaceChildren(el('p', 'loading', T('Loading chapter…')));
+  if (!CHAPTERS.has(id)) list.replaceChildren(...skeleton());
   return loadChapter(id).then(articles => {
     if (state.chapter !== id) return;
     D.articles = articles;
@@ -2719,7 +2771,7 @@ document.getElementById('show-all').addEventListener('click', () => setFilter(fa
 loadReview();
 try { if (OWNER && localStorage.getItem(FILTER) === 'on') setFilter(true, null, true); } catch { /* starts with everything shown */ }
 
-fetch(RU ? 'stoic-constitution.ru.json' : 'stoic-constitution.json').then(response => {
+early(RU ? 'stoic-constitution.ru.json' : 'stoic-constitution.json').then(response => {
   if (!response.ok) throw new Error(RU ? 'русская версия не загрузилась (' + response.status + ')' : 'the record could not be loaded (' + response.status + ')');
   return response.json();
 }).then(data => {

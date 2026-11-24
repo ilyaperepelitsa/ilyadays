@@ -634,3 +634,7 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
   screens keep the Contents section and the bar's pickers. Done (see 36-finish-log.md).
 - “figures need to be downloadable in dark mode too” — my reading: every share file also in the page's dark colours,
   offered beside the light ones on the method page and in the gallery. Done (see 36-finish-log.md).
+- “loading of articles isn't great. there is some bit of text after this thing [the chapter heading and its note] and then
+  article loads” — my reading: the “Loading chapter…” line, after a wait caused by two downloads in a row. Done (see
+  36-finish-log.md); the chapter note (the same order note on every chapter, a method point) gave way to each chapter's
+  summary.

@@ -550,3 +550,15 @@ test('the published English record is exactly what the build writes now', {skip:
     fs.rmSync(out, {recursive: true, force: true});
   }
 });
+
+test('the page head starts downloading the chapter the page opens first', () => {
+  // public/apps/stoic-constitution.html fetches the index and Article 1's chapter from <head> so the articles are not
+  // delayed by the page's length (24 Nov 2026). The chapter it guesses must be the one the page opens when the link names
+  // none: the chapter of the first article, in both languages.
+  const html = fs.readFileSync(new URL('../../public/apps/stoic-constitution.html', import.meta.url), 'utf8');
+  const guessed = (html.match(/const FIRST_CHAPTER = '(c\d+)'/) || [])[1];
+  assert.ok(guessed, 'the head script names FIRST_CHAPTER');
+  for (const name of ['stoic-constitution.json', 'stoic-constitution.ru.json']) assert.equal(published(name).articles[0].chapter, guessed, name);
+  assert.match(html, /early\(RU \? 'stoic-constitution\.ru\.json' : 'stoic-constitution\.json'\)/, 'the index is taken from the early download');
+  assert.match(html, /return early\('stoic-constitution\/'/, 'chapters are taken from the early download');
+});

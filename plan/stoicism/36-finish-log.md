@@ -236,3 +236,8 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   bytes: `scripts/optimize-media.py` restores them from `art/media/reviewed/<sha256>.webp`. `vercel.json` ignoreCommand
   (`scripts/vercel-ignore.sh`) skips deployments whose changes since the last deploy are only tests, plans, docs, art or
   Python. Old q80 copies of the recipe web pictures were set aside in the session scratchpad.
+- **Article loading (24 Nov):** a script in `<head>` starts the index and the chapter the page opens (from `?c=`, or
+  Article 1's chapter, `FIRST_CHAPTER`, kept equal to the index by a test) in parallel before the page is parsed; the
+  main script takes them through `early()`. Two article-shaped placeholders replace “Loading chapter…” (screen readers
+  still hear it). Throttled phone: placeholders at ~0.4 s, articles at ~0.9 s locally. Under each chapter title, the
+  chapter's summary replaces the order note (the method paper §3.2 has it); the rail highlights a new chapter at once.
