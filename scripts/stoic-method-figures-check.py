@@ -157,8 +157,10 @@ def main() -> int:
                         # The figure's top depends on the paper's text above it and is rarely a whole pixel; its fraction
                         # would shift every glyph's antialiasing. Snap the figure to whole pixels so that the screenshot
                         # depends on the figure alone.
-                        loc.evaluate('''(el) => { el.style.transform = ''; const r = el.getBoundingClientRect();
-                          el.style.transform = `translate(${Math.ceil(r.left) - r.left}px, ${Math.ceil(r.top) - r.top}px)`; }''')
+                        # (a margin, not a transform: Chrome snaps the layout position first and would add a transform's
+                        # fraction back inside the drawing)
+                        loc.evaluate('''(el) => { el.style.marginTop = ''; const r = el.getBoundingClientRect();
+                          el.style.marginTop = `${Math.ceil(r.top) - r.top}px`; }''')
                         name = f'{fid}-{lang}-{width}-{theme}.png'
                         shot = args.out / name
                         loc.screenshot(path=str(shot))
