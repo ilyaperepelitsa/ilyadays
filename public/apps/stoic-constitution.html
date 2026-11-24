@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:,">
-<title>The first five articles · Stoic Constitution</title>
+<title>The Stoic Constitution · ilyadays</title>
 <link rel="preload" href="/fonts/manrope/manrope-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/apps/site-chrome.css">
 <style>
@@ -25,7 +25,6 @@ button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{max-width:820px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
 .intro{padding-block:22px 20px}
-.intro .title{font:600 17px/1.3 var(--serif);margin-bottom:12px}
 .eyebrow{font:650 12px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
 h1{font:400 clamp(32px,8vw,52px)/1.06 var(--serif);letter-spacing:-.025em;margin:8px 0 14px;text-wrap:balance}
 h2{font:400 clamp(24px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-wrap:balance}
@@ -34,7 +33,6 @@ h2{font:400 clamp(24px,5.6vw,32px)/1.18 var(--serif);letter-spacing:-.02em;text-
 .sub{color:var(--muted);font-size:15px;margin-top:6px}
 section{padding-block:28px;border-top:1px solid var(--line)}
 #main>section:first-child{border-top:0}   /* the sticky bar's own rule is right above it */
-.step{font:650 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
 
 /* jump bar */
 .bar{position:sticky;top:var(--chrome-h,0px);z-index:5;background:var(--paper);border-block:1px solid var(--line)}
@@ -66,13 +64,22 @@ section{padding-block:28px;border-top:1px solid var(--line)}
 .sections small{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
 .sections .n{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .sections a{font-weight:650}
-details.more{margin-top:14px}
-details.more>summary,.process>summary{cursor:pointer;color:var(--accent);font-size:14.5px;padding-block:8px}
-.compare{margin-top:6px;display:grid;gap:10px;font-size:14px}
-.compare .row b{display:block;font-weight:650}
-.stack{display:flex;height:12px;border-radius:3px;overflow:hidden;margin:3px 0;gap:1px}
-.stack i{display:block;background:var(--muted);min-width:1px}
-.compare p{color:var(--muted);font-size:13.5px}
+.process>summary{cursor:pointer;color:var(--accent);font-size:14.5px;padding-block:8px}
+
+/* How to read: one folded key under the lede (owner, 24 Nov 2026: the intro's long paragraph was too much). */
+.howto{margin-top:14px;max-width:62ch}
+.howto>summary{cursor:pointer;color:var(--accent);font:600 14.5px/1.3 var(--sans);padding-block:10px;min-height:44px;display:flex;align-items:center;gap:8px;list-style:none}
+.howto>summary::-webkit-details-marker{display:none}
+.howto>summary::before{content:'▸';font-size:12px;color:var(--muted);transition:transform .15s}
+.howto[open]>summary::before{transform:rotate(90deg)}
+.keys{display:grid;grid-template-columns:auto 1fr;gap:12px 16px;align-items:baseline;margin:4px 0 10px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--card);font-size:14.5px;line-height:1.45}
+.keys li{display:contents}
+.keys li>span:last-child{color:var(--muted)}
+.kx{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.kx .flag{min-height:24px;padding:1px 8px;font-size:12.5px}
+.k1{font:400 17px/1.3 var(--serif);text-decoration:none;box-shadow:inset 0 -2px 0 var(--p1),inset 0 -5px 0 var(--card),inset 0 -7px 0 var(--p2);padding-bottom:6px}
+.k-ed{font:400 17px/1.3 var(--serif);color:var(--e);background:var(--et);border-radius:3px;padding:0 3px}
+@media(max-width:520px){.keys{grid-template-columns:1fr;gap:4px}.keys li>span:last-child{margin-bottom:8px}}
 
 /* article */
 .article{padding-block:34px;border-top:1px solid var(--line);scroll-margin-top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 3px)}
@@ -265,7 +272,6 @@ mark sup{font:650 12px/0 var(--sans);margin-left:2px}
 .flag{display:inline-flex;align-items:center;min-height:28px;padding:2px 10px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--muted);font:600 13px/1.2 var(--sans);white-space:nowrap}
 a.flag.go{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,var(--line));text-decoration:none}
 a.flag.go:hover{background:color-mix(in srgb,var(--accent) 8%,var(--card))}
-.intro .legend .flag{margin:0 2px;cursor:default}
 .versions{margin-top:4px}
 .versions b{display:block;margin-top:8px;font:650 12px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .versions .ctx{margin-top:4px}
@@ -482,13 +488,21 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <body>
 <script src="/apps/site-chrome.js"></script>
 <header class="wrap intro">
-<p class="title">Stoic Constitution</p>
-<p class="eyebrow">Draft · Marcus Aurelius, in a new translation from the Greek</p>
-<h1>The articles so far</h1>
-<p class="lede">All 418 passages of the <i>Meditations</i> were grouped by meaning into chapters and sections. Here each section, in order, is fused into an article, one chapter at a time. An article makes one statement, then looks at it from five fixed sides: why, in action, practice, when it breaks, and if I doubt it. On a wide screen the five sides stand next to one another as columns. Under the words runs one coloured line for each passage that says them: two lines, two passages. A colour is the same passage in the sentence, in the chips below it and on the map of vectors beside the statement. Purple marks the editor’s own work. Other authors can be added from the Voices bar at the bottom of the screen, to see what each article gains; the first is Seneca. Hover for the exact quotes. Click or tap to read the passages next to what follows from each.</p>
-<p class="status" id="status"></p>
-<p class="status"><a href="stoic-translation.html">Marcus’s passages translated from the Greek, beside the 1634 English →</a></p>
-<p class="status legend">Under each article title: <span class="flag">Greek → our English</span> the quotes are this project’s own translation from the Greek; <span class="flag">Numbered as in 1634</span> passage numbers follow the 1634 translation, which grouped the sections, and each passage’s heading gives its modern number.</p>
+<p class="eyebrow">Marcus Aurelius · <i>Meditations</i> · draft</p>
+<h1>The Stoic Constitution</h1>
+<p class="lede" id="lede">Thirty-eight articles to live by, fused from all 418 passages of the <i>Meditations</i>, every phrase traced to the words Marcus wrote.</p>
+<details class="howto" id="howto"><summary>How to read an article</summary>
+<ul class="keys">
+<li><span class="kx"><u class="k1">one body</u></span><span>A coloured line under words is one passage that says them. Two lines, two passages; the colour is the same in the chips and on the map.</span></li>
+<li><span class="kx"><span class="k-ed">because</span></span><span>Purple is the editor’s word, not Marcus’s.</span></li>
+<li><span class="kx"><span class="flag">Why</span><span class="flag">Practice</span></span><span>Each article makes one statement, then looks at it from five sides: why, in action, practice, when it breaks, if I doubt it.</span></li>
+<li><span class="kx"><span class="flag">Greek → our English</span></span><span>The quotes are this project’s own translation from the Greek.</span></li>
+<li><span class="kx"><span class="flag">Numbered as in 1634</span></span><span>Passage numbers follow the 1634 translation, which grouped the sections; each quote also gives its modern number.</span></li>
+<li><span class="kx"><span class="flag">+ Seneca</span></span><span>Add a second voice from the bar at the bottom of the screen to see what each article gains.</span></li>
+</ul>
+<p class="sub">Point at underlined words for the exact quotes; click or tap to read the passages beside them.</p>
+</details>
+<p class="status owner-only" id="status"></p>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
 <p id="announce" class="sr" role="status"></p>
@@ -497,16 +511,13 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <noscript><p class="wrap err">This page needs JavaScript to draw the topics and articles.</p></noscript>
 <main class="wrap" id="main">
 <section id="topics" aria-labelledby="t-head">
-<p class="step">1 · From the whole book to topics</p>
-<h2 id="t-head">How the topics were found</h2>
-<p class="sub">Each passage was turned into a vector of numbers that stands for its meaning. Passages close to one another were merged step by step into a tree. Cutting the tree high gives chapters; cutting each chapter again gives sections. The names are the editor’s, written after reading.</p>
+<h2 id="t-head">Contents</h2>
 <p class="funnel" id="funnel"></p>
 <div class="tree" id="tree"></div>
-<details class="more"><summary>Why this way of grouping, and how far to trust it</summary><div class="compare" id="compare"></div></details>
+<p class="sub" id="t-method">How the passages were grouped, and how far to trust it: <a href="stoic-method.html#m-clustering">the method, section 3.2</a>.</p>
 </section>
 
 <section id="articles" aria-labelledby="a-head">
-<p class="step">2 · From many passages to one statement</p>
 <h2 id="a-head"></h2>
 <p class="sub" id="a-sub"></p>
 <p class="filter-note" id="filter-note" hidden><span>Only what you have not judged is shown.</span><button class="show" id="show-all" type="button">Show everything</button></p>
@@ -619,18 +630,20 @@ const RU_WORDS = {
 };
 // The page's fixed words in Russian: [selector, text] sets the text, [selector, html, true] the markup (trusted, written here).
 const RU_STATIC = [
-  ['.intro .title', 'Стоическая конституция'],
   ['#ed-note', 'Решения редактора и кнопки «Оценка» скрыты на время чтения; включить их снова можно вверху страницы.'],
-  ['.intro .eyebrow', 'Черновик · Марк Аврелий в новом переводе'],
-  ['.intro h1', 'Статьи на сегодня'],
-  ['.intro .lede', 'Все 418 фрагментов <i>«Размышлений»</i> сгруппированы по смыслу в главы и разделы. Здесь каждый раздел по порядку слит в статью, глава за главой. Статья высказывает одно положение, а затем рассматривает его с пяти постоянных сторон: почему, на деле, упражнение, когда не выходит и если я сомневаюсь. На широком экране пять сторон стоят рядом, столбцами. Под словами идёт по одной цветной линии на каждый фрагмент, который их говорит: две линии — два фрагмента. Один цвет — один и тот же фрагмент во фразе, в кнопках под ней и на карте векторов рядом с положением. Фиолетовым отмечена работа самого редактора. Других авторов можно добавить с панели «Голоса» внизу экрана и посмотреть, что получает каждая статья; первый из них — Сенека. Наведите курсор, чтобы увидеть точные цитаты. Нажмите или коснитесь, чтобы прочитать фрагменты рядом с тем, что следует из каждого. Русский текст переведён с английского текста этого проекта.', true],
-  ['.intro .status a', 'Фрагменты Марка в переводе с греческого, рядом с английским переводом 1634 года (страница на английском) →'],
-  ['.intro .legend', 'Под заголовком каждой статьи: <span class="flag">Греч. → англ. → рус.</span> цитаты — в русском переводе с английского перевода этого проекта, сделанного с греческого; <span class="flag">Нумерация 1634 года</span> номера фрагментов — по переводу 1634 года, по которому сгруппированы разделы, а современный номер стоит в заголовке каждого фрагмента.', true],
-  ['#topics .step', '1 · От всей книги к темам'],
-  ['#t-head', 'Как были найдены темы'],
-  ['#topics > .sub', 'Каждый фрагмент превращён в вектор чисел, который передаёт его смысл. Близкие друг к другу фрагменты шаг за шагом объединялись в дерево. Если срезать дерево высоко, получаются главы; если срезать каждую главу ещё раз — разделы. Названия дал редактор, после чтения.'],
-  ['#topics details.more > summary', 'Почему такая группировка и насколько ей можно доверять'],
-  ['#articles .step', '2 · От многих фрагментов к одному положению'],
+  ['.intro .eyebrow', 'Марк Аврелий · <i>«Размышления»</i> · черновик', true],
+  ['.intro h1', 'Стоическая конституция'],
+  ['#lede', 'Тридцать восемь статей для жизни, слитых из всех 418 фрагментов <i>«Размышлений»</i>; каждая фраза прослежена до слов, которые написал Марк.', true],
+  ['#howto > summary', 'Как читать статью'],
+  ['#howto .keys', '<li><span class="kx"><u class="k1">одно тело</u></span><span>Цветная линия под словами — это фрагмент, который их говорит. Две линии — два фрагмента; цвет тот же в кнопках и на карте.</span></li>'
+    + '<li><span class="kx"><span class="k-ed">потому что</span></span><span>Фиолетовым — слово редактора, а не Марка.</span></li>'
+    + '<li><span class="kx"><span class="flag">Почему</span><span class="flag">Упражнение</span></span><span>Статья высказывает одно положение и рассматривает его с пяти сторон: почему, на деле, упражнение, когда не выходит, если я сомневаюсь.</span></li>'
+    + '<li><span class="kx"><span class="flag">Греч. → англ. → рус.</span></span><span>Цитаты — русский перевод с английского перевода этого проекта, сделанного с греческого.</span></li>'
+    + '<li><span class="kx"><span class="flag">Нумерация 1634 года</span></span><span>Номера фрагментов — по переводу 1634 года, по которому сгруппированы разделы; у каждой цитаты есть и современный номер.</span></li>'
+    + '<li><span class="kx"><span class="flag">+ Сенека</span></span><span>Добавьте второй голос с панели внизу экрана и посмотрите, что получает каждая статья.</span></li>', true],
+  ['#howto > .sub', 'Наведите на подчёркнутые слова, чтобы увидеть точные цитаты; нажмите или коснитесь, чтобы прочитать фрагменты рядом.'],
+  ['#t-head', 'Содержание'],
+  ['#t-method', 'Как фрагменты были сгруппированы и насколько этому можно доверять: <a href="stoic-method.html?lang=ru#m-clustering">метод, раздел 3.2</a>.', true],
   ['#filter-note > span', 'Показано только то, что вы ещё не оценили.'],
   ['#show-all', 'Показать всё'],
   ['#y-head', 'Ваш отзыв'],
@@ -646,7 +659,7 @@ const RU_STATIC = [
 // and hash, so the chapter, the voices and what was open stay.
 if (RU) {
   document.documentElement.lang = 'ru';
-  document.title = 'Статьи · Стоическая конституция';
+  document.title = 'Стоическая конституция · ilyadays';
   for (const [selector, text, html] of RU_STATIC) {
     const node = document.querySelector(selector);
     if (!node) { MISSING_RU.add('static ' + selector); continue; }
@@ -998,8 +1011,8 @@ function renderTopics() {
   const method = D.method, sections = D.chapters.reduce((sum, chapter) => sum + chapter.sections.length, 0);
   document.getElementById('status').textContent = D.status + (RU ? ' Вы здесь пока ничего не проверяли.' : ' Nothing here has been reviewed by you yet.');
   const funnel = document.getElementById('funnel');
-  (RU ? [[PASSAGES(method.passage_count)], ['→'], [pl(D.chapters.length, 'глава', 'главы', 'глав')], ['→'], [pl(sections, 'раздел', 'раздела', 'разделов')], ['→'], [pl(D.all.length, 'статья', 'статьи', 'статей') + ' на сегодня']]
-    : [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.all.length + ' articles so far']])
+  (RU ? [[PASSAGES(method.passage_count)], ['→'], [pl(D.chapters.length, 'глава', 'главы', 'глав')], ['→'], [pl(sections, 'раздел', 'раздела', 'разделов')], ['→'], [pl(D.all.length, 'статья', 'статьи', 'статей')]]
+    : [[method.passage_count + ' passages'], ['→'], [D.chapters.length + ' chapters'], ['→'], [sections + ' sections'], ['→'], [D.all.length + ' articles']])
     .forEach(([text]) => funnel.append(el(text === '→' ? 'i' : 'b', '', text)));
   const largest = Math.max(...D.chapters.map(chapter => chapter.size));
   const next = D.chapters.flatMap(chapter => chapter.sections).find(section => !section.article);
@@ -1035,23 +1048,6 @@ function renderTopics() {
     box.append(head, body);
     return box;
   }));
-  const names = RU ? {ward: 'Метод Уорда (используется здесь)', complete: 'Полная связь (сохранено раньше)', average: 'Средняя связь (сохранено раньше)'}
-    : {ward: 'Ward linkage (used here)', complete: 'Complete linkage (stored earlier)', average: 'Average linkage (stored earlier)'};
-  const compare = document.getElementById('compare');
-  compare.append(el('p', '', RU ? 'Три способа объединить одни и те же векторы, каждый разрезан на ' + D.chapters.length + ' ' + ruForm(D.chapters.length, 'группу', 'группы', 'групп') + '. Каждая полоса — вся книга, каждый блок — одна группа.'
-    : 'Three ways of merging the same vectors, each cut into ' + D.chapters.length + ' groups. Each bar is the whole book and each block is one group.'));
-  for (const [key, label] of Object.entries(names)) {
-    const item = method.comparison[key], row = el('div', 'row');
-    const stack = el('div', 'stack');
-    stack.setAttribute('role', 'img');
-    stack.setAttribute('aria-label', (RU ? 'Размеры групп: ' : 'Group sizes ') + item.sizes.join(', '));
-    for (const size of item.sizes) { const block = el('i'); block.style.flex = size + ' 0 0'; stack.append(block); }
-    row.append(el('b', '', label), stack, el('p', '', RU ? 'Размеры: ' + item.sizes.join(', ') + '. В самой большой группе ' + item.largest_fraction.toLocaleString('ru-RU', {style: 'percent', maximumFractionDigits: 0}) + ' книги.'
-      : 'Sizes ' + item.sizes.join(', ') + '. Largest group holds ' + Math.round(item.largest_fraction * 100) + '% of the book.'));
-    compare.append(row);
-  }
-  if (RU) compare.append(el('p', '', 'Две сохранённые иерархии помещают бо́льшую часть книги в одну группу, и глав из этого не получается. Метод Уорда держит группы соразмерными. Ни один из трёх способов не разделяет группы резко: фрагменты — это заметки одного человека о немногих повторяющихся заботах, и они перекрываются. Поэтому раздел — место, где искать фрагменты на определённую тему. Он не доказывает, что эта тема отдельна, и фрагмент, подходящий к двум темам, всё равно стоит только в одном разделе. Векторы: ' + method.vectors + '. Они были посчитаны один раз, раньше, и не менялись.'));
-  else compare.append(el('p', '', 'The two stored hierarchies put most of the book in one group, which gives no chapters to work with. Ward linkage keeps groups balanced. None of the three separates the groups sharply: the passages are one man’s notes on a few recurring concerns, and they overlap. So a section is a place to look for passages on a subject. It is not proof that the subject is a distinct theme, and a passage that fits two subjects still sits in one section only. The vectors are ' + method.vectors + '. They were computed once, earlier, and were not changed.'));
 }
 
 /* ---------- article ---------- */

@@ -261,7 +261,7 @@ def case_p6(page, base, port):
     sim(page, base, port)
     switch(page, 'The life within')
     bar = page.evaluate("document.querySelector('.bar').getBoundingClientRect().bottom")
-    head = page.evaluate("document.querySelector('#articles .step').getBoundingClientRect().top")
+    head = page.evaluate("document.querySelector('#a-head').getBoundingClientRect().top")
     return [] if head >= bar - 1 else [f'after a chapter switch the chapter heading starts at {head:.0f}px, under the bar ending at {bar:.0f}px']
 
 
@@ -1361,7 +1361,7 @@ def ru_checks(browser, base: str, ru_dir: Path | None, shots: Path | None, quick
                 articles: document.querySelectorAll('article.article').length})""")
             if state['lang'] != 'ru' or state['current'] != 'RU' or state['stored'] != 'ru':
                 problems.append(f"after the switch: lang {state['lang']}, current {state['current']}, stored {state['stored']}")
-            if not state['head'].startswith('Глава') or 'Статьи' not in state['h1']:
+            if not state['head'].startswith('Глава') or state['h1'] != 'Стоическая конституция':
                 problems.append(f"headings not in Russian: {state['head'][:40]!r}, {state['h1']!r}")
             if state['articles'] != len(by_chapter[first]):
                 problems.append(f"{state['articles']} articles drawn, expected {len(by_chapter[first])}")

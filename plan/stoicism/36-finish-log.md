@@ -218,3 +218,7 @@ Notes stay in English. Hard cap $45 (estimate $22–40), pilot of two units firs
   session, as one folded, remembered row at the end. A display gate, not a lock: verdicts never leave the browser.
   Check case O1 (reader, other account, signed-out owner, EN/RU; owner at 390 and 1440).
 - Usage check (02:07–02:22 UTC): calls −20%, output −43% as both workers finished · action: none · evidence: 92 calls.
+- **Intro and contents (24 Nov):** the Constitution opens with “The Stoic Constitution” and one sentence; the long
+  how-to paragraph is a folded “How to read an article” key (lines, purple, five sides, flags, Seneca); the draft status
+  is owner-only; the topics section is “Contents” (summary row and tree) with a link to method §3.2, and the linkage
+  comparison and grouping text moved out (the paper's Table 2 has them). Step labels “1 ·”/“2 ·” removed.

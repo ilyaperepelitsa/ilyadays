@@ -623,3 +623,8 @@ Also: “phone is important part but not all of it” — test 390 and 1440 as e
 - “also revie at the bottom of the page should only be admin view for me logged in and compactly hidden somewhere” — my
   reading: the review section, the Verdict buttons and the not-judged filter only for the site's admin signed in on that
   browser; for the admin, one folded row at the end. Done (see 36-finish-log.md).
+- “do we need this block of text where articles are located? and with such weak title” (the intro: “The articles so far”
+  and its paragraph) and “also this kinda should belong to methodology” (“1 · From the whole book to topics / How the
+  topics were found”) — my reading: a real title and a one-line lede; the reading instructions folded into a key; the
+  draft notice for the owner only; the grouping explanation and the linkage comparison left to the method paper (§3.2),
+  linked from a section now called Contents. Done (see 36-finish-log.md).
