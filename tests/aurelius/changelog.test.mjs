@@ -153,30 +153,26 @@ test('the Constitution and the method paper link to the changelog in both langua
   assert.match(fronts[1], /<a href="stoic-changelog\.html\?lang=ru">/);
 });
 
-test('the Constitution offers every translation as EPUB, Markdown and text, Russian first in Russian', () => {
+test('the introduction offers two books, each with a language choice and all three formats', () => {
   const page = read('public/apps/stoic-constitution.html');
-  const books = ['marcus-meditations-project-v1', 'seneca-letters-selection-v1', 'marcus-meditations-ru-v1', 'seneca-letters-selection-ru-v1'];
-  const links = (fragment) => [...fragment.matchAll(/<a class="get (epub|md|txt)" href="\/downloads\/([^"]+)\.(epub|md|txt)" download>/g)].map((m) => {
-    assert.equal({epub: 'epub', md: 'md', txt: 'txt'}[m[1]], m[3], `${m[2]}: the ${m[1]} button gets the .${m[3]}`);
-    return `${m[2]}.${m[3]}`;
-  });
-  const order = (list) => [...new Set(list.map((f) => f.replace(/\.\w+$/, '')))];
-  const section = page.match(/<section id="downloads"[\s\S]*?<\/section>/)[0];
-  const en = links(section);
-  assert.deepEqual(en, books.flatMap((b) => [`${b}.epub`, `${b}.md`, `${b}.txt`]), 'English: each book, EPUB · Markdown · Text');
-  for (const file of en) assert.ok(exists(`public/downloads/${file}`), `${file} is published`);
+  const intro = page.match(/<header class="wrap intro">([\s\S]*?)<\/header>/)[1];
+  const section = intro.match(/<details class="howto" id="downloads">([\s\S]*?)<\/details>/)[1];
   assert.match(section, /CC0/);
-  assert.equal((section.match(/<small>for e-readers<\/small>/g) || []).length, books.length);
-  const ru = page.match(/\['#downloads', '([^\n]*)', true\]/);
-  assert.ok(ru, 'the section has its Russian words');
-  assert.deepEqual([...links(ru[1])].sort(), [...en].sort(), 'Russian: the same twelve files');
-  assert.deepEqual(order(links(ru[1])), [books[2], books[3], books[0], books[1]], 'Russian: the Russian books first');
-  assert.match(ru[1], /CC0/);
-  assert.equal((ru[1].match(/<small>для электронных книг<\/small>/g) || []).length, books.length);
-  // Each button names its book for a screen reader, and the footer no longer carries the links.
-  assert.equal((section.match(/<span class="sr">, /g) || []).length, 12);
-  assert.doesNotMatch(page.match(/<footer[\s\S]*?<\/footer>/)[0], /\/downloads\//);
-  assert.doesNotMatch(page.match(/\['footer', '([^\n]*)'/)[1], /\/downloads\//);
+  const books = [...section.matchAll(/<li class="book" id="book-(\w+)">([\s\S]*?)<\/li>/g)];
+  assert.deepEqual(books.map(match => match[1]), ['marcus', 'seneca']);
+  for (const [, key, row] of books) {
+    const options = [...row.matchAll(/type="radio" name="([^"]+)" value="([^"]+)"/g)];
+    assert.deepEqual(options.map(match => [match[1], match[2]]), [[key + '-edition', 'en'], [key + '-edition', 'ru']]);
+    const en = key === 'marcus' ? 'marcus-meditations-project-v1' : 'seneca-letters-selection-v1';
+    const ru = key === 'marcus' ? 'marcus-meditations-ru-v1' : 'seneca-letters-selection-ru-v1';
+    const links = [...row.matchAll(/<a class="get (\w+)" href="([^"]+)" data-ru="([^"]+)" download>/g)];
+    assert.deepEqual(links.map(match => match[1]), ['epub', 'md', 'txt']);
+    for (const [, format, english, russian] of links) {
+      assert.equal(english, '/downloads/' + en + '.' + format);
+      assert.equal(russian, '/downloads/' + ru + '.' + format);
+      for (const path of [english, russian]) assert.ok(exists('public' + path), path);
+    }
+  }
 });
 
 // The page's pictures (24 Nov 2026, owner: "changelog should have good visuals"): each change carries a kind, named in words

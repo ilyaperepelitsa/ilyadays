@@ -97,6 +97,14 @@ section{padding-block:28px;border-top:1px solid var(--line)}
 #tip{position:absolute;z-index:20;width:min(380px,calc(100vw - 16px));padding:10px 12px;background:var(--card);border:1px solid var(--ink);border-radius:6px;box-shadow:0 6px 22px rgba(0,0,0,.22);pointer-events:none;font-size:14px}
 .tip-head{font:650 12.5px/1.4 var(--sans);color:var(--ink);margin-bottom:4px}
 .tip-q{font:15px/1.45 var(--serif);margin-top:5px}
+.quote-grid{display:grid;gap:4px}
+.quote-grid .tip-q{grid-column:1;margin:0}
+.tip-variants{display:grid}
+.tip-variants>*{grid-area:1 / 1}
+.tip-q.tinted{border-inline-start:2px solid var(--source);background:color-mix(in srgb,var(--source) 24%,rgb(43 47 54 / 88%));color:white;padding:4px 8px;border-radius:3px}
+#tip.study{pointer-events:auto;max-height:50vh;overflow:auto;overscroll-behavior:contain}
+.hybrid .sg{border-radius:0}
+.sg.source-lit{background-color:color-mix(in srgb,var(--source) 22%,transparent)}
 .tip-q b{font:650 13px var(--sans);margin-right:6px;font-variant-numeric:tabular-nums}
 .tip-note{margin-top:6px;font-size:13px;color:var(--muted)}
 .link.hit{box-shadow:inset 0 0 0 2px var(--ink)}
@@ -540,32 +548,24 @@ html.no-editor .sg.join:is(:hover,[aria-pressed=true]){background-color:transpar
    a display gate, not a lock: verdicts and notes never leave this browser. For the owner it folds into one row at the end. */
 html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verdict,.filter-note,.judged-stub){display:none !important}
 #more{margin-top:22px}
-/* The translations to download (owner, 24 Nov 2026: "better buttons for downloading translations in different formats"):
-   one card per book, its language and source on top, then a button per format; EPUB first and filled. Side by side from
-   760 px (each row has the same labels, so the buttons line up); below that the text stands above the buttons, EPUB across
-   the card and the other two in a row. */
-#downloads{scroll-margin-top:calc(var(--chrome-h,0px) + var(--bar-h,55px) + 3px)}
-.books{display:grid;gap:10px;margin-top:16px}
-.nw{white-space:nowrap}
-.book{display:grid;gap:12px 16px;padding:14px 16px 16px;background:var(--card);border:1px solid var(--line);border-radius:6px}
-.book-lang{font:650 12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.book-title{font:600 18px/1.3 var(--serif);margin-top:4px;text-wrap:pretty}
-.book-note{font-size:14px;color:var(--muted);margin-top:2px}
-.book-get{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.book-get .epub{grid-column:1/-1}
-.get{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:5px 14px;border:1px solid var(--accent);border-radius:6px;background:transparent;color:var(--accent);font:650 15px/1.2 var(--sans);text-decoration:none;white-space:nowrap}
-.get svg{flex:none;width:16px;height:16px}
-.get .two{display:grid;text-align:left}
-.get small{font:500 12.5px/1.25 var(--sans)}
-.get.epub{background:var(--accent);color:var(--paper)}
-.get:hover{background:color-mix(in srgb,var(--accent) 10%,transparent)}
-.get.epub:hover{background:color-mix(in srgb,var(--accent) 86%,var(--ink))}
-.get:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.books-note{margin-top:12px}
-@media(min-width:760px){
-  .book{grid-template-columns:minmax(0,1fr) auto;align-items:center}
-  .book-get{display:flex;justify-content:flex-end}
-}
+#downloads{max-width:none;margin-top:0;scroll-margin-top:var(--chrome-h,0px)}
+.books{display:grid;list-style:none;border-top:1px solid var(--line)}
+.book{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+@media(min-width:700px){.book{display:grid;grid-template-columns:minmax(0,1fr) auto}}
+.book-title{font:600 17px/1.35 var(--serif);margin:0}
+.book-note,.books-note{font-size:13px;color:var(--muted)}
+.book-get{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.edition{display:flex;border:1px solid var(--line);border-radius:6px;margin:0;padding:2px;min-inline-size:0}
+.edition label{position:relative;cursor:pointer}
+.edition input{position:absolute;opacity:0}
+.edition span{display:grid;place-items:center;min-width:35px;min-height:36px;font:600 13px var(--sans);border-radius:4px}
+.edition input:checked+span{background:var(--ink);color:var(--paper)}
+.edition input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.get{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;font:600 14px/1.2 var(--sans);text-decoration:none}
+.get.epub{flex-direction:column;background:var(--accent);color:var(--paper);border-color:var(--accent)}
+.get small{font:400 12px/1.2 var(--sans)}
+.get:hover{text-decoration:underline}
+@media(max-width:480px){.book-get{gap:4px}.get{padding-inline:7px}.edition span{min-width:32px}}
 @media print{.book-get{display:none}}
 #yours{border-top:1px solid var(--line);margin-top:8px;padding-block:10px 18px}
 #yours>summary{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;cursor:pointer;list-style:none;padding-block:6px;min-height:44px;align-content:center}
@@ -613,6 +613,32 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 </ul>
 <p class="sub">Point at underlined words for the exact quotes; click or tap to read the passages beside them.</p>
 </details>
+<details class="howto" id="downloads">
+<summary>Download the translations</summary>
+<ul class="books">
+<li class="book" id="book-marcus">
+<div><h2 class="book-title">Marcus Aurelius, <i>Meditations</i></h2><p class="book-note">All 418 passages.</p></div>
+<div class="book-get">
+<fieldset class="edition"><legend class="sr">Translation language for Marcus Aurelius, Meditations</legend>
+<label><input type="radio" name="marcus-edition" value="en" checked><span lang="en">EN</span></label>
+<label><input type="radio" name="marcus-edition" value="ru"><span lang="ru">РУ</span></label></fieldset>
+<a class="get epub" href="/downloads/marcus-meditations-project-v1.epub" data-ru="/downloads/marcus-meditations-ru-v1.epub" download>EPUB<small>for e-readers</small></a>
+<a class="get md" href="/downloads/marcus-meditations-project-v1.md" data-ru="/downloads/marcus-meditations-ru-v1.md" download>Markdown</a>
+<a class="get txt" href="/downloads/marcus-meditations-project-v1.txt" data-ru="/downloads/marcus-meditations-ru-v1.txt" download>Text</a>
+</div></li>
+<li class="book" id="book-seneca">
+<div><h2 class="book-title">Seneca, <i>Moral Letters to Lucilius</i>: a selection</h2><p class="book-note">304 sections from 94 letters.</p></div>
+<div class="book-get">
+<fieldset class="edition"><legend class="sr">Translation language for Seneca, Moral Letters to Lucilius: a selection</legend>
+<label><input type="radio" name="seneca-edition" value="en" checked><span lang="en">EN</span></label>
+<label><input type="radio" name="seneca-edition" value="ru"><span lang="ru">РУ</span></label></fieldset>
+<a class="get epub" href="/downloads/seneca-letters-selection-v1.epub" data-ru="/downloads/seneca-letters-selection-ru-v1.epub" download>EPUB<small>for e-readers</small></a>
+<a class="get md" href="/downloads/seneca-letters-selection-v1.md" data-ru="/downloads/seneca-letters-selection-ru-v1.md" download>Markdown</a>
+<a class="get txt" href="/downloads/seneca-letters-selection-v1.txt" data-ru="/downloads/seneca-letters-selection-ru-v1.txt" download>Text</a>
+</div></li>
+</ul>
+<p class="sub books-note" id="d-sub">Both translations are public domain (CC0). The English was translated from the Greek and Latin. The Russian was translated from the project’s English by Claude Opus 5.5 and checked by another model. It still awaits human review. Each file describes its review history.</p>
+</details>
 <p class="status owner-only" id="status"></p>
 </header>
 <nav class="bar" aria-label="Jump to"><div class="wrap" id="jump"></div><div class="chapters" id="chapters" hidden></div><div class="chapters" id="article-list" hidden></div></nav>
@@ -637,18 +663,7 @@ html:not(.owner) :is(.owner-only,.vt,.vpick,.vnote,.save-note.row,.article>.verd
 <p class="sub more" id="more">How all of this was made, step by step (embeddings, clusters, fusion, the five sides, the prompts, the checks, Seneca and the translations): <a href="stoic-method.html">the method</a>. For a closer look at how two passages are joined, and three ways of doing it, see the <a href="stoic-composition.html">composition study</a>. What has changed, and when, is in <a href="stoic-changelog.html?lang=en">the changelog</a>.</p>
 </section>
 
-<!-- The translations to download, one card per book; in Russian (RU_STATIC) the Russian books come first. -->
-<section id="downloads" aria-labelledby="d-head">
-<h2 id="d-head">Download the translations</h2>
-<p class="sub" id="d-sub">This project’s own translations, as books for <span class="nw">e-readers</span> and as plain files. They are dedicated to the public domain (CC0): free to use for anything.</p>
-<ul class="books" id="books">
-<li class="book"><div class="book-about"><p class="book-lang">English · from the Greek</p><h3 class="book-title">Marcus Aurelius, <i>Meditations</i></h3><p class="book-note">All 418 passages.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-project-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Marcus Aurelius, Meditations, in English</span></a><a class="get md" href="/downloads/marcus-meditations-project-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Marcus Aurelius, Meditations, in English</span></a><a class="get txt" href="/downloads/marcus-meditations-project-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Marcus Aurelius, Meditations, in English</span></a></p></li>
-<li class="book"><div class="book-about"><p class="book-lang">English · from the Latin</p><h3 class="book-title">Seneca, <i>Moral Letters to Lucilius</i>: a selection</h3><p class="book-note">304 sections from 94 letters.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Seneca, Moral Letters, in English</span></a><a class="get md" href="/downloads/seneca-letters-selection-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Seneca, Moral Letters, in English</span></a><a class="get txt" href="/downloads/seneca-letters-selection-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Seneca, Moral Letters, in English</span></a></p></li>
-<li class="book"><div class="book-about"><p class="book-lang">Russian · from our English</p><h3 class="book-title">Marcus Aurelius, <i>Meditations</i></h3><p class="book-note">All 418 passages.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Marcus Aurelius, Meditations, in Russian</span></a><a class="get md" href="/downloads/marcus-meditations-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Marcus Aurelius, Meditations, in Russian</span></a><a class="get txt" href="/downloads/marcus-meditations-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Marcus Aurelius, Meditations, in Russian</span></a></p></li>
-<li class="book"><div class="book-about"><p class="book-lang">Russian · from our English</p><h3 class="book-title">Seneca, <i>Moral Letters to Lucilius</i>: a selection</h3><p class="book-note">The same 304 sections.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>for e-readers</small></span><span class="sr">, Seneca, Moral Letters, in Russian</span></a><a class="get md" href="/downloads/seneca-letters-selection-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Seneca, Moral Letters, in Russian</span></a><a class="get txt" href="/downloads/seneca-letters-selection-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Text<span class="sr">, Seneca, Moral Letters, in Russian</span></a></p></li>
-</ul>
-<p class="sub books-note" id="books-note">Each file opens by saying how it was made and what no one has yet checked. The Russian was translated from this project’s English by Claude Opus 5.5 and checked against it by another model; no person has read it yet.</p>
-</section>
+
 
 <!-- The owner's review: drawn only for the site's admin signed in on this browser (html.owner), folded by default. -->
 <details id="yours" class="owner-only">
@@ -783,7 +798,12 @@ const RU_STATIC = [
   ['#download', 'Скачать файлом'],
   ['#only-open', 'Только неоценённое'],
   ['#more','Как всё это сделано, шаг за шагом (векторы, кластеры, слияние, пять сторон, промпты, проверки, Сенека и переводы): <a href="stoic-method.html?lang=ru">метод</a>. Как именно соединяются два фрагмента и три способа это сделать — в <a href="stoic-composition.html">исследовании композиции</a> (на английском). Что и когда менялось — в <a href="stoic-changelog.html?lang=ru">журнале изменений</a>.', true],
-  ['#downloads', '<h2 id="d-head">Скачать переводы</h2><p class="sub" id="d-sub">Собственные переводы проекта — книгами для электронных читалок и простыми файлами. Они переданы в общественное достояние (CC0): их можно использовать для чего угодно.</p><ul class="books" id="books"><li class="book"><div class="book-about"><p class="book-lang">Русский · с нашего английского</p><h3 class="book-title">Марк Аврелий, «Размышления»</h3><p class="book-note">Все 418 фрагментов.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Марк Аврелий, «Размышления», по-русски</span></a><a class="get md" href="/downloads/marcus-meditations-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Марк Аврелий, «Размышления», по-русски</span></a><a class="get txt" href="/downloads/marcus-meditations-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Марк Аврелий, «Размышления», по-русски</span></a></p></li><li class="book"><div class="book-about"><p class="book-lang">Русский · с нашего английского</p><h3 class="book-title">Сенека, «Нравственные письма к Луцилию»: избранное</h3><p class="book-note">304 раздела из 94 писем.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-ru-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Сенека, «Нравственные письма», по-русски</span></a><a class="get md" href="/downloads/seneca-letters-selection-ru-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Сенека, «Нравственные письма», по-русски</span></a><a class="get txt" href="/downloads/seneca-letters-selection-ru-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Сенека, «Нравственные письма», по-русски</span></a></p></li><li class="book"><div class="book-about"><p class="book-lang">Английский · с греческого</p><h3 class="book-title">Марк Аврелий, «Размышления»</h3><p class="book-note">Все 418 фрагментов.</p></div><p class="book-get"><a class="get epub" href="/downloads/marcus-meditations-project-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Марк Аврелий, «Размышления», по-английски</span></a><a class="get md" href="/downloads/marcus-meditations-project-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Марк Аврелий, «Размышления», по-английски</span></a><a class="get txt" href="/downloads/marcus-meditations-project-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Марк Аврелий, «Размышления», по-английски</span></a></p></li><li class="book"><div class="book-about"><p class="book-lang">Английский · с латыни</p><h3 class="book-title">Сенека, «Нравственные письма к Луцилию»: избранное</h3><p class="book-note">Те же 304 раздела.</p></div><p class="book-get"><a class="get epub" href="/downloads/seneca-letters-selection-v1.epub" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="two"><span>EPUB</span><small>для электронных книг</small></span><span class="sr">, Сенека, «Нравственные письма», по-английски</span></a><a class="get md" href="/downloads/seneca-letters-selection-v1.md" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Markdown<span class="sr">, Сенека, «Нравственные письма», по-английски</span></a><a class="get txt" href="/downloads/seneca-letters-selection-v1.txt" download><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2.5v8m-3.5-3.5L8 10.5l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Текст<span class="sr">, Сенека, «Нравственные письма», по-английски</span></a></p></li></ul><p class="sub books-note" id="books-note">Каждый файл начинается с того, как он сделан и чего ещё никто не проверил.</p>', true],
+  ['#downloads > summary', 'Скачать переводы'],
+  ['#book-marcus .book-title', 'Марк Аврелий, <i>«Размышления»</i>', true],
+  ['#book-seneca .book-title', 'Сенека, <i>«Нравственные письма к Луцилию»</i>: избранное', true],
+  ['#book-marcus .book-note', 'Все 418 фрагментов.'],
+  ['#book-seneca .book-note', '304 раздела из 94 писем.'],
+  ['#d-sub', 'Переводы переданы в общественное достояние (CC0). Английский перевод сделан с греческого и латыни. Русский перевод сделан с английского перевода проекта моделью Claude Opus 5.5 и сверен другой моделью. Человек его пока не проверял. В каждом файле описано, какие проверки он прошёл.'],
   ['footer', 'Марк цитируется в русском переводе, сделанном с английского перевода этого проекта (а тот — с греческого); Сенека — в русском переводе с английского перевода проекта (а тот — с латыни). Русский текст сделан моделью Claude Opus 5.5, сверен другой моделью и человеком пока не проверен. Названия тем, отбор фрагментов и формулировки статей — редакторские черновики.', true],
   ['.dock-label', 'Голоса'],
 ];
@@ -799,6 +819,37 @@ if (RU) {
   }
   document.querySelector('nav.bar').setAttribute('aria-label', 'Переход');
   document.querySelector('nav.dock').setAttribute('aria-label', 'Голоса');
+}
+const downloads = document.getElementById('downloads');
+function openLinkedDownloads() {
+  if (location.hash === '#downloads') downloads.open = true;
+}
+openLinkedDownloads();
+addEventListener('hashchange', openLinkedDownloads);
+for (const book of downloads.querySelectorAll('.book')) {
+  const title = book.querySelector('.book-title').textContent;
+  const language = book.querySelector('.edition');
+  language.querySelector('legend').textContent = (RU ? 'Язык перевода — ' : 'Translation language for ') + title;
+  for (const option of language.querySelectorAll('input')) {
+    option.setAttribute('aria-label', option.value === 'ru' ? (RU ? 'Русский' : 'Russian') : (RU ? 'Английский' : 'English'));
+    option.checked = option.value === (RU ? 'ru' : 'en');
+  }
+  if (RU) {
+    book.querySelector('.epub small').textContent = 'для читалок';
+    book.querySelector('.txt').textContent = 'Текст';
+  }
+  const links = book.querySelectorAll('a[download]');
+  for (const link of links) link.dataset.en = link.getAttribute('href');
+  function selectEdition() {
+    const edition = language.querySelector(':checked').value;
+    for (const link of links) {
+      link.href = link.dataset[edition];
+      link.hreflang = edition;
+      link.setAttribute('aria-label', [link.firstChild.textContent, title, edition.toUpperCase()].join(', '));
+    }
+  }
+  language.addEventListener('change', selectEdition);
+  selectEdition();
 }
 // "Editor's decisions": a switch in the sticky bar, off by default (owner, 24 Nov 2026: a smoother read; review later). Off,
 // the claims, the statement, the quotes and the passages stay and the editor's apparatus (decision lists, notes on each claim,
@@ -1304,17 +1355,29 @@ function dot(article, ref) {
   return mark;
 }
 // A passage number with its colour. Pointing at it picks that passage out in the text and on the map.
-function refChip(article, ref, out) {
+function passagePreview(article, ref, pieces) {
+  const box = el('div', 'quote-grid'), seen = new Set();
+  for (const piece of pieces) {
+    if (piece.ref !== ref || seen.has(piece.id)) continue;
+    seen.add(piece.id);
+    box.append(tintedQuote(article, piece));
+  }
+  return box;
+}
+function refChip(article, ref, out, pieces) {
   const chip = el('span', out ? 'out' : '');
   chip.append(dot(article, ref), document.createTextNode(ref));
   if (out) { chip.append(el('span', 'sr', RU ? ' убран' : ' removed')); chip.title = RU ? ref + ' пока убран' : ref + ' is removed for now'; }
-  chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
-  chip.addEventListener('mouseleave', () => spotlight(article, null));
+  const show = studyTip(chip, chip, () => passagePreview(article, ref, pieces));
+  press(chip, (RU ? 'Цитаты из ' : 'Quotes from ') + cite(ref) + (out ? ' · ' + T('removed') : ''), show);
+  for (const on of ['mouseenter', 'focus']) chip.addEventListener(on, () => spotlight(article, [ref]));
+  for (const off of ['mouseleave', 'blur']) chip.addEventListener(off, () => spotlight(article, null));
+  chip.addEventListener('mouseleave', leaveStudy);
   return chip;
 }
 // Coloured lines under words: one line for each passage that says them.
 // Marcus's passages draw solid lines in their colours; what only one passage says is dashed; an added author's lines are black, in that author's own pattern.
-function lines(span, specs) {
+function lines(span, specs, depth = specs.length) {
   if (!specs.length) return;
   const colours = specs, layer = spec => spec.kind === 'dash' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 7px,transparent 7px 11px)'
     : spec.kind === 'dot' ? 'repeating-linear-gradient(90deg,' + spec.c + ' 0 2px,transparent 2px 5px)'
@@ -1322,8 +1385,8 @@ function lines(span, specs) {
   span.style.backgroundImage = colours.map(layer).join(',');
   span.style.backgroundSize = '100% 1px';
   span.style.backgroundRepeat = 'no-repeat';
-  span.style.backgroundPosition = colours.map((_, index) => '0 calc(100% - ' + (colours.length - 1 - index) * 3 + 'px)').join(',');   // first source on top
-  span.style.paddingBottom = (2 + (colours.length - 1) * 3) + 'px';   // the top line still clears the descenders by 2 px
+  span.style.backgroundPosition = colours.map((spec, index) => '0 calc(100% - ' + (depth - 1 - (spec.slot ?? index)) * 3 + 'px)').join(',');   // first source on top
+  span.style.paddingBottom = (2 + (depth - 1) * 3) + 'px';   // the top line still clears the descenders by 2 px
 }
 // Which passages the map should pick out when nothing is under the pointer: those of the open sentence or picked words.
 function selectionRefs(article) {
@@ -1415,7 +1478,10 @@ function readout(article, focus) {
 function spotlight(article, refs) {
   const root = document.getElementById('article-' + article.number);
   for (const span of root.querySelectorAll('.sg')) {
-    span.classList.toggle('dim', Boolean(refs) && !(span.dataset.refs || '').split('|').some(ref => refs.includes(ref)));
+    const match = refs?.find(ref => (span.dataset.refs || '').split('|').includes(ref));
+    span.classList.toggle('dim', Boolean(refs) && !match);
+    span.classList.toggle('source-lit', Boolean(match));
+    if (match) span.style.setProperty('--source', hue(article, match));
   }
   onMap(article, refs);
 }
@@ -1550,17 +1616,20 @@ function mapBlock(article) {
       : {cx: at.x, cy: at.y, r: 5, fill: 'var(--card)', stroke: member.used ? hue(article, member.ref) : 'var(--muted)', 'stroke-width': 1.5}));
     point.append(name);
     labels.push({point, text: name, at, ref: member.ref, rank: member.similarity, added: false});
-    tip(point, () => {
-      const card = el('div'), claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
+    point.addEventListener('mouseleave', leaveStudy);
+    studyTip(point, point, () => {
+      const card = el('div'), excerpts = passagePreview(article, member.ref, piecesOf(article)), claims = member.feeds.filter(key => key !== 'single').map(key => claimOf(article, key).number).sort((x, y) => x - y);
       if (RU) {
         card.append(el('p', 'tip-head', '«Размышления» ' + member.ref + ' · ' + pl(member.words, 'слово', 'слова', 'слов')));
         card.append(el('p', 'tip-row', 'Сходство с центром раздела: ' + fx(member.similarity)));
         card.append(el('p', 'tip-note', member.used ? feedsRu(claims, member.feeds.includes('single')) + (gone.has(member.ref) ? ' Пока убран.' : '') : 'Отложен. ' + member.why));
+        card.append(excerpts);
         return card;
       }
       card.append(el('p', 'tip-head', 'Meditations ' + member.ref + ' · ' + member.words + ' words'));
       card.append(el('p', 'tip-row', 'Similarity to the centre of the section: ' + member.similarity.toFixed(2)));
       card.append(el('p', 'tip-note', member.used ? (claims.length ? 'Feeds claim' + (claims.length > 1 ? 's ' : ' ') + claims.join(', ') + (member.feeds.includes('single') ? ', and is quoted alone' : '') + '.' : 'Quoted alone, under “said once”.') + (gone.has(member.ref) ? ' Removed for now.' : '') : 'Set aside. ' + member.why));
+      card.append(excerpts);
       return card;
     });
     for (const [on, off] of [['mouseenter', 'mouseleave'], ['focus', 'blur']]) {
@@ -1581,7 +1650,8 @@ function mapBlock(article) {
       const name = svg('text', {}, passage.ref);
       point.append(addedMark(voice.author.mark, effect, at.x, at.y), name);
       labels.push({point, text: name, at, ref: passage.ref, rank: passage.to_centre, added: true});
-      tip(point, () => {
+      point.addEventListener('mouseleave', leaveStudy);
+      studyTip(point, point, () => {
         const card = el('div');
         if (RU) card.append(el('p', 'tip-head', cite(passage.ref) + ' · ' + passage.title),
           el('p', 'tip-row', 'В этой статье он ' + DOES[effect] + '.'),
@@ -1593,6 +1663,7 @@ function mapBlock(article) {
           el('p', 'tip-row', 'Nearest passage here: ' + passage.nearest.ref + ' (' + passage.nearest.similarity.toFixed(2) + ')'),
           el('p', 'tip-row', 'Closeness to this section: number ' + passage.rank.toLocaleString('en') + ' of ' + voice.total.toLocaleString('en') + ' passages of ' + voice.author.name),
           el('p', 'tip-note', passage.rank > 200 ? 'Found by reading, not by the vectors.' : 'The vectors point to it.'));
+        card.append(passagePreview(article, passage.ref, piecesOf(article)));
         return card;
       });
       for (const [on, off] of [['mouseenter', 'mouseleave'], ['focus', 'blur']]) {
@@ -1685,10 +1756,65 @@ function phrases(text, parts) {
 
 /* A small card that follows the pointer or keyboard focus and says where the words come from. */
 const tipBox = document.getElementById('tip');
-function hideTip() { tipBox.hidden = true; }
+let tipAnchor = null, tipTrigger = null, leaveTimer;
+function hideTip() {
+  clearTimeout(leaveTimer);
+  tipBox.hidden = true;
+  tipBox.classList.remove('study');
+  tipTrigger?.removeAttribute('aria-describedby');
+  tipTrigger = tipAnchor = null;
+}
+function leaveStudy(event) {
+  if (tipAnchor?.contains(event.relatedTarget) || tipBox.contains(event.relatedTarget)) return;
+  clearTimeout(leaveTimer);
+  leaveTimer = setTimeout(hideTip, 140);
+}
+tipBox.addEventListener('mouseenter', () => clearTimeout(leaveTimer));
+tipBox.addEventListener('mouseleave', leaveStudy);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') hideTip(); });
+document.addEventListener('pointerdown', e => {
+  if (tipAnchor && !tipAnchor.contains(e.target) && !tipBox.contains(e.target)) hideTip();
+});
+function positionTip(node) {
+  const rect = node.getBoundingClientRect(), width = tipBox.offsetWidth, height = tipBox.offsetHeight;
+  const left = Math.min(Math.max(8, rect.left), document.documentElement.clientWidth - width - 8);
+  // Keep the sentence and its passage numbers available while a reader compares sources.
+  const card = node.closest('.statement, .claim');
+  const sources = card?.querySelector('.fused, .picked');
+  const top = Math.min(rect.top, card?.querySelector('.sent')?.getBoundingClientRect().top ?? rect.top);
+  const bottom = Math.max(rect.bottom, sources?.getBoundingClientRect().bottom ?? rect.bottom);
+  const below = innerHeight - bottom >= height + 8 || innerHeight - bottom >= top;
+  tipBox.style.left = (left + scrollX) + 'px';
+  tipBox.style.top = ((below ? bottom + 8 : top - height - 8) + scrollY) + 'px';
+}
+// A shared anchor keeps the card mounted while focus or the pointer crosses its phrases.
+function studyTip(node, anchor, build, update) {
+  const show = () => {
+    clearTimeout(leaveTimer);
+    if (node.matches('.sg[aria-pressed=true]')) { hideTip(); return; }
+    const entering = tipAnchor !== anchor;
+    if (entering) {
+      hideTip();
+      tipAnchor = anchor;
+      tipBox.replaceChildren(build());
+      tipBox.classList.add('study');
+      tipBox.hidden = false;
+    }
+    tipTrigger?.removeAttribute('aria-describedby');
+    tipTrigger = node;
+    node.setAttribute('aria-describedby', 'tip');
+    if (update) update();
+    if (entering) positionTip(anchor);
+  };
+  node.addEventListener('mouseenter', show);
+  node.addEventListener('focus', show);
+  node.addEventListener('blur', leaveStudy);
+  return show;
+}
 function tip(node, build) {
   const show = () => {
     if (node.getAttribute('aria-pressed') === 'true') return;   // its quotes are already open just below
+    hideTip();
     tipBox.replaceChildren(build());
     tipBox.hidden = false;
     const rects = node.getClientRects().length ? node.getClientRects() : [node.getBoundingClientRect()], rect = rects[rects.length - 1], width = tipBox.offsetWidth, height = tipBox.offsetHeight;
@@ -1702,30 +1828,90 @@ function tip(node, build) {
   node.addEventListener('focus', show);
   node.addEventListener('blur', hideTip);
 }
-function tipQuote(article, piece) {
-  const row = el('p', 'tip-q');
+function tintedQuote(article, piece) {
+  const row = el('p', 'tip-q tinted');
   row.append(el('b', '', piece.ref + (removedOf(article).has(piece.ref) ? (RU ? ' (убран)' : ' (removed)') : '')), document.createTextNode(quoted(flat(piece.quote))));
+  row.style.setProperty('--source', hue(article, piece.ref));
   return row;
 }
-// The hover card: the exact quotes behind the words under the pointer, then every other component of the sentence with its passages.
-function breakdown(article, segs, index) {
+// Concurrent excerpts occupy separate rows. Excerpts that replace one another can share a row.
+function studySlots(sets) {
+  const slots = new Map();
+  for (const key of new Set(sets.flat())) {
+    const neighbors = sets.filter(keys => keys.includes(key)).flat();
+    const taken = new Set(neighbors.map(other => slots.get(other)));
+    let slot = 0;
+    while (taken.has(slot)) slot++;
+    slots.set(key, slot);
+  }
+  return slots;
+}
+function hybridRuns(article, segs) {
+  const runs = new Map();
+  let last = -1, run;
+  for (const [i, seg] of segs.entries()) {
+    if (!seg.ids.length && !seg.text.trim()) continue;
+    const prev = segs[last];
+    const shared = prev && seg.ids.filter(id => prev.ids.includes(id));
+    if (shared?.length && (shared.length < seg.ids.length || shared.length < prev.ids.length) && !seg.amend && !prev.amend) {
+      if (!run) run = {indices: [last], node: el('span', 'hybrid'), bridges: new Map()};
+      run.indices.push(i);
+      for (let j = last; j <= i; j++) runs.set(j, run);
+      const refs = refsOf(article, shared).filter(ref => !removedOf(article).has(ref));
+      run.bridges.set(last, refs);
+    } else run = null;
+    last = i;
+  }
+  for (const group of new Set(runs.values())) {
+    const sets = group.indices.map(i => segs[i].ids);
+    group.quotes = studySlots(sets);
+    group.lanes = studySlots(sets.map(ids => refsOf(article, ids).filter(ref => !removedOf(article).has(ref))));
+    group.node.addEventListener('mouseleave', leaveStudy);
+  }
+  return runs;
+}
+// Stack alternative headings and context lists in one cell so wrapped text reserves its space.
+function tipVariants(indices, build) {
+  const stack = el('div', 'tip-variants');
+  for (const index of indices) {
+    const node = build(index);
+    node.dataset.segment = index;
+    stack.append(node);
+  }
+  return stack;
+}
+function breakdown(article, segs, index, group) {
   const box = el('div'), seg = segs[index];
+  const heading = i => {
+    const phrase = segs[i], count = refsOf(article, phrase.ids).length;
+    return el('p', 'tip-head', quoted(phrase.text.trim()) + (RU ? ' · из ' + OF_PASSAGES(count) : ' · from ' + plural(count, 'passage')));
+  };
   if (seg.ids.length) {
-    const refs = refsOf(article, seg.ids);
-    box.append(el('p', 'tip-head', RU ? quoted(seg.text.trim()) + ' · из ' + OF_PASSAGES(refs.length) : quoted(seg.text.trim()) + ' · from ' + plural(refs.length, 'passage')));
-    for (const id of seg.ids) box.append(tipQuote(article, pieceOf(article, id)));
+    box.append(group ? tipVariants(group.indices, heading) : heading(index));
+    const grid = el('div', 'quote-grid');
+    const slots = group?.quotes ?? seg.ids.map((id, slot) => [id, slot]);
+    for (const [id, slot] of slots) {
+      const row = tintedQuote(article, pieceOf(article, id));
+      row.dataset.quote = id;
+      row.style.gridRow = slot + 1;
+      grid.append(row);
+    }
+    box.append(grid);
   } else {
     box.append(el('p', 'tip-head', T('Joining words')), el('p', 'tip-note', T('These words are the editor’s. No passage is quoted for them.')));
   }
-  const others = segs.filter((other, i) => i !== index && other.ids.length);
-  if (others.length) {
-    box.append(el('p', 'tip-head rest', T('The rest of the sentence')));
-    for (const other of others) {
+  const rest = current => {
+    const list = el('div');
+    for (const [i, other] of segs.entries()) {
+      if (i === current || !other.ids.length) continue;
+      if (!list.firstChild) list.append(el('p', 'tip-head rest', T('The rest of the sentence')));
       const row = el('p', 'tip-row');
       row.append(el('span', '', short(other.text.trim(), 36)), el('b', '', refsOf(article, other.ids).join(' · ')));
-      box.append(row);
+      list.append(row);
     }
-  }
+    return list;
+  };
+  box.append(group ? tipVariants(group.indices, rest) : rest(index));
   box.append(el('p', 'tip-note', T('Click for the full passages and what follows from each.')));
   return box;
 }
@@ -1758,23 +1944,51 @@ function sentenceNode(article, o) {
   }
   const sourced = segs.map(seg => refsOf(article, seg.ids));
   const alive = sourced.some(refs => refs.length && !refs.every(ref => gone.has(ref)));
+  const runs = hybridRuns(article, segs);
   segs.forEach((seg, index) => {
+    const run = runs.get(index), parent = run?.node || sentence;
+    if (run && !parent.parentNode) sentence.append(parent);
+    const pos = run?.indices.indexOf(index);
+    const before = run?.bridges.get(run.indices[pos - 1]) || [];
+    const after = run?.bridges.get(index) || [];
+    const draw = (node, refs) => lines(node, refs.map(ref => ({
+      slot: run.lanes.get(ref), c: hue(article, ref),
+      kind: authorOfRef(ref)?.line || 'solid'
+    })), Math.max(0, ...run.lanes.values()) + 1);
+    const appendGap = (text, refs) => {
+      if (!text) return;
+      if (!refs.length) { parent.append(text); return; }
+      const gap = el('span');
+      gap.append(text);
+      draw(gap, refs);
+      parent.append(gap);
+    };
     const {lead, tail, body} = shape(seg);
-    if (!/[\p{L}\p{N}]/u.test(body)) { sentence.append(seg.text); return; }
+    if (!/[\p{L}\p{N}]/u.test(body)) {
+      const prior = run?.indices.findLast(i => i < index);
+      appendGap(seg.text, run?.bridges.get(prior) || []);
+      return;
+    }
     // Words are struck only when every passage behind them is removed; the editor's words only when nothing in the sentence survives.
     const refs = sourced[index], dead = refs.length ? refs.every(ref => gone.has(ref)) : !alive && sourced.some(r => r.length);
     const span = el('span', 'sg' + (refs.length ? '' : ' join') + (dead ? ' gone' : '') + (seg.amend ? ' add' + (state.fresh === seg.amend.author ? ' fresh' : '') : ''), body);
     span.dataset.k = o.base + '-' + index;
     span.setAttribute('aria-pressed', String(open && state.sel.p === index));
     press(span, (seg.amend ? authorByKey(seg.amend.author).name + ' ' + VERB[seg.amend.kind] + ': ' : '') + body + ': ' + (refs.length ? (RU ? 'из ' : 'from ') + refs.join(', ') : RU ? 'связующие слова редактора' : 'joining words by the editor'), () => toggle(article, o.key, span.dataset.k, index, {text: body}));
-    tip(span, () => breakdown(article, segs, index));
+    if (run) {
+      studyTip(span, parent, () => breakdown(article, segs, index, run), () => {
+        for (const variant of tipBox.querySelectorAll('[data-segment]')) variant.style.visibility = Number(variant.dataset.segment) === index ? 'visible' : 'hidden';
+        for (const row of tipBox.querySelectorAll('[data-quote]')) row.style.visibility = seg.ids.includes(row.dataset.quote) ? 'visible' : 'hidden';
+      });
+    } else tip(span, () => breakdown(article, segs, index));
     if (refs.length) {
       span.dataset.refs = refs.join('|');
-      lines(span, refs.filter(ref => !gone.has(ref)).map(ref => ({c: hue(article, ref), kind: authorOfRef(ref) ? authorOfRef(ref).line : 'solid'})));
+      if (run) draw(span, refs.filter(ref => !gone.has(ref)));
+      else lines(span, refs.filter(ref => !gone.has(ref)).map(ref => ({c: hue(article, ref), kind: authorOfRef(ref) ? authorOfRef(ref).line : 'solid'})));
       span.addEventListener('mouseenter', () => onMap(article, refs));
       span.addEventListener('mouseleave', () => onMap(article, null));
     }
-    sentence.append(lead);
+    appendGap(lead, before);
     if (seg.amend) {
       // The clause's verdict is given where its sources are listed (tap the clause); the tag says it once given.
       const author = authorByKey(seg.amend.author), tag = el('span', 'who inl'), key = 'a' + article.number + ':' + seg.amend.author + ':amend:' + seg.amend.target;
@@ -1783,13 +1997,13 @@ function sentenceNode(article, o) {
       judged(span, key);
       sentence.append(tag);
     }
-    sentence.append(span);
+    parent.append(span);
     if (o.numbers && state.tags && refs.length) {
       const tag = el('sup', 'src', refs.join(' · '));
       tag.setAttribute('aria-hidden', 'true');
-      sentence.append(tag);
+      appendGap(tag, after);
     }
-    sentence.append(tail);
+    appendGap(tail, after);
   });
   return {sentence, segs};
 }
@@ -1952,12 +2166,13 @@ function statementBlock(article) {
   else from.append(el('b', '', now === refs.length ? 'Gathered from ' + plural(refs.length, 'passage')
     : now ? now + ' of ' + refs.length + ' passages remain for this statement'
     : others.length ? 'Marcus’s passages for this statement are removed; what remains is ' + others.join(' and ') : 'No passage left'));
-  for (const ref of refs) from.append(refChip(article, ref, gone.has(ref)));
+  const pieces = [...new Set(segs.flatMap(seg => seg.ids))].map(id => pieceOf(article, id));
+  for (const ref of refs) from.append(refChip(article, ref, gone.has(ref), pieces));
   for (const voice of voicesOn(article)) {
     const extra = [...new Set((voice.amend || []).filter(clause => clause.target === 'statement').flatMap(clause => clause.ids.map(id => pieceOf(article, id).ref)))];
     if (!extra.length) continue;
     from.append(el('b', 'plus' + (state.fresh === voice.key ? ' fresh' : ''), '+ ' + voice.author.name));
-    for (const ref of extra) from.append(refChip(article, ref, false));
+    for (const ref of extra) from.append(refChip(article, ref, false, pieces));
   }
   from.append(showButton(article, key, open, 'Show part by part', 'Hide the parts'));
   if (pick) { pick.append(showButton(article, key, open, 'Show part by part', 'Hide the parts')); box.append(pick); } else box.append(from);
@@ -2007,12 +2222,13 @@ function claimBlock(article, claim) {
     : now + ' of ' + all + ' passages remain for this claim';
   const from = el('p', 'fused' + (thin || lost ? ' warn' : ''));
   from.append(el('b', '', headline));
-  for (const ref of claim.passages) from.append(refChip(article, ref, gone.has(ref)));
+  const pieces = supportOf(article, claim);
+  for (const ref of claim.passages) from.append(refChip(article, ref, gone.has(ref), pieces));
   for (const {voice, refs} of extra) {
     const plus = el('b', 'plus' + (state.fresh === voice.key ? ' fresh' : ''), '+ ' + voice.author.name);
     from.append(plus);
     for (const ref of refs) {
-      const chip = refChip(article, ref, false);
+      const chip = refChip(article, ref, false, pieces);
       if (state.fresh === voice.key) chip.classList.add('fresh');
       from.append(chip);
     }
@@ -2022,7 +2238,7 @@ function claimBlock(article, claim) {
   if (open) {
     const panel = el('div', 'trace M');
     panel.append(el('p', 'panel-head', T('The passages, and what follows from each')), columns(article));
-    for (const piece of supportOf(article, claim)) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
+    for (const piece of pieces) panel.append(passageRow(article, piece, Boolean(chosen && chosen.ids.includes(piece.id)), 'claim'));
     const shared = el('div', 'link induce ed');
     shared.append(el('b', '', T('Taken together')), document.createTextNode(claim.shared));
     panel.append(shared);
@@ -2060,7 +2276,7 @@ function widerBlock(article, item) {
   const chosen = openKey(article) === key && state.sel.p != null ? segs[state.sel.p] : null;
   const from = el('p', 'fused'), refs = [...new Set(item.support.map(piece => piece.ref))];
   from.append(el('b', '', RU ? (refs.length > 1 ? 'Слито из ' + OF_PASSAGES(refs.length) + ' ' + inCase(name, 'gen') : 'Один фрагмент ' + inCase(name, 'gen')) : refs.length > 1 ? 'Fused from ' + refs.length + ' passages of ' + name : 'One passage of ' + name));
-  for (const ref of refs) from.append(refChip(article, ref, false));
+  for (const ref of refs) from.append(refChip(article, ref, false, item.support));
   from.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
   if (pick) pick.append(showButton(article, key, open, 'Show the quotes', 'Hide the quotes'));
   block.append(sentence, pick || from);
@@ -2193,12 +2409,12 @@ function singleBlock(article, item) {
   press(span, (RU ? 'Сказано однажды, в ' : 'Said once, in ') + item.ref + ': ' + item.t, () => toggle(article, key, span.dataset.k));
   tip(span, () => {
     const box = el('div');
-    box.append(el('p', 'tip-head', (RU ? 'Сказано однажды, в «Размышлениях» ' : 'Said once, in Meditations ') + item.ref), tipQuote(article, item), el('p', 'tip-note', T('Click for the passage and what follows from it.')));
+    box.append(el('p', 'tip-head', (RU ? 'Сказано однажды, в «Размышлениях» ' : 'Said once, in Meditations ') + item.ref), tintedQuote(article, item), el('p', 'tip-note', T('Click for the passage and what follows from it.')));
     return box;
   });
   sentence.append(span);
   const from = el('p', 'fused');
-  from.append(el('b', '', T('One passage')), refChip(article, item.ref, lost));
+  from.append(el('b', '', T('One passage')), refChip(article, item.ref, lost, [item]));
   block.append(sentence, from);
   if (open) {
     const panel = el('div', 'trace S');
@@ -2226,6 +2442,8 @@ function sourcesBlock(article) {
     chip.setAttribute('aria-label', (RU ? (gone.has(ref) ? 'Вернуть фрагмент ' : 'Убрать фрагмент ') : gone.has(ref) ? 'Restore passage ' : 'Remove passage ') + ref);
     const name = el('b');
     name.append(dot(article, ref), document.createTextNode(ref));
+    studyTip(chip, chip, () => passagePreview(article, ref, piecesOf(article)));
+    chip.addEventListener('mouseleave', leaveStudy);
     chip.addEventListener('mouseenter', () => spotlight(article, [ref]));
     chip.addEventListener('mouseleave', () => spotlight(article, null));
     chip.append(name, el('small', '', RU ? (feeds.length ? (feeds.length > 1 ? 'утверждения ' : 'утверждение ') + feeds.join(', ') : T('said once')) : feeds.length ? 'claim' + (feeds.length > 1 ? 's ' : ' ') + feeds.join(', ') : 'said once'));
