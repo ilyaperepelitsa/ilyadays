@@ -1853,7 +1853,759 @@
     "Leaves out four further parallels to keep the article to six claims: being tight and slack in turn (1.5 and 1.13 use the same image of a string), saying plainly what I think (1.11, 1.12, 1.13), making no show of learning or virtue (1.4, 1.6, 1.13), and valuing my teachers (1.1, 1.10).",
     "Reads the anger in 1.4 (“those who have been angry”) and the fault-finding in 1.10 (“a friend who finds some fault”) as aimed at Marcus himself; neither passage says at whom. Claim 3 quotes 1.13’s “he gave up the search too soon, content with the impressions that lay to hand”, whose text the translators call doubtful; the claim’s second sentence also rests on 1.4."
    ],
-   "limit": "Book 1 gives thanks and does not argue, so the article is mostly a list of qualities with little ground: only 1.13 gives a reason, and only for needing little. Four parallels and many lessons said once by a single teacher are left out. Other articles argue what this one lists: Article 2 that I do not judge in a hurry and Article 21 that I keep a sure grasp of each impression (claim 3), Article 19 that anger is weakness and that I bear with those who wrong me (claims 1 and 6), Article 8 that pain is the body’s to see to (claim 2), and Article 18 that I take without conceit and let go readily (claim 5). What this article adds is the person each lesson was learned from, and the occasions: slander and glib talk, a friend’s complaint, grief and long illness, comforts present or absent."
+   "limit": "Book 1 gives thanks and does not argue, so the article is mostly a list of qualities with little ground: only 1.13 gives a reason, and only for needing little. Four parallels and many lessons said once by a single teacher are left out. Other articles argue what this one lists: Article 2 that I do not judge in a hurry and Article 21 that I keep a sure grasp of each impression (claim 3), Article 19 that anger is weakness and that I bear with those who wrong me (claims 1 and 6), Article 8 that pain is the body’s to see to (claim 2), and Article 18 that I take without conceit and let go readily (claim 5). What this article adds is the person each lesson was learned from, and the occasions: slander and glib talk, a friend’s complaint, grief and long illness, comforts present or absent.",
+   "marcus_revision": {
+    "statement": {
+     "t": "I live as the people who brought me up showed me: even-tempered, careful in what I believe, and needing little.",
+     "parts": [
+      {
+       "words": "I live as the people who brought me up showed me",
+       "ids": [
+        "1.2c",
+        "1.1c",
+        "1.1b"
+       ],
+       "refs": [
+        "1.2",
+        "1.1"
+       ]
+      },
+      {
+       "words": "even-tempered",
+       "ids": [
+        "1.1b",
+        "1.6b",
+        "1.12b"
+       ],
+       "refs": [
+        "1.1",
+        "1.6",
+        "1.12"
+       ]
+      },
+      {
+       "words": "careful in what I believe",
+       "ids": [
+        "1.2b",
+        "1.4b",
+        "1.13b"
+       ],
+       "refs": [
+        "1.2",
+        "1.4",
+        "1.13"
+       ]
+      },
+      {
+       "words": "needing little",
+       "ids": [
+        "1.2c",
+        "1.13c",
+        "1.1d"
+       ],
+       "refs": [
+        "1.2",
+        "1.13",
+        "1.1"
+       ]
+      }
+     ],
+     "kind": "Lessons from many people aligned into one",
+     "form": "Kept close to the existing opening. “And taught me” is dropped because the anchored quotes name family and the man who brought him up, not teachers as such. The three traits are the ones the claims develop."
+    },
+    "colors": {
+     "1.1": 1,
+     "1.12": 2,
+     "1.13": 3,
+     "1.4": 4,
+     "1.6": 5,
+     "1.2": 2,
+     "1.5": 4,
+     "1.3": 5,
+     "1.11": 3,
+     "1.10": 1
+    },
+    "map": {
+     "points": [
+      [
+       -0.0603,
+       0.1431
+      ],
+      [
+       0.0223,
+       -0.2727
+      ],
+      [
+       0.5808,
+       -0.3891
+      ],
+      [
+       -0.6092,
+       -0.3962
+      ],
+      [
+       -0.8207,
+       -0.1043
+      ],
+      [
+       -0.7054,
+       0.3999
+      ],
+      [
+       0.5596,
+       0.5072
+      ],
+      [
+       0.078,
+       -0.835
+      ],
+      [
+       -0.0452,
+       0.928
+      ],
+      [
+       1.0,
+       0.019
+      ]
+     ],
+     "stress": 0.23,
+     "sim": [
+      [
+       1.0,
+       0.733,
+       0.728,
+       0.748,
+       0.718,
+       0.696,
+       0.662,
+       0.674,
+       0.663,
+       0.689
+      ],
+      [
+       0.733,
+       1.0,
+       0.73,
+       0.703,
+       0.68,
+       0.683,
+       0.68,
+       0.714,
+       0.682,
+       0.619
+      ],
+      [
+       0.728,
+       0.73,
+       1.0,
+       0.653,
+       0.635,
+       0.588,
+       0.673,
+       0.667,
+       0.581,
+       0.731
+      ],
+      [
+       0.748,
+       0.703,
+       0.653,
+       1.0,
+       0.758,
+       0.71,
+       0.597,
+       0.597,
+       0.613,
+       0.578
+      ],
+      [
+       0.718,
+       0.68,
+       0.635,
+       0.758,
+       1.0,
+       0.762,
+       0.592,
+       0.657,
+       0.562,
+       0.528
+      ],
+      [
+       0.696,
+       0.683,
+       0.588,
+       0.71,
+       0.762,
+       1.0,
+       0.637,
+       0.629,
+       0.636,
+       0.526
+      ],
+      [
+       0.662,
+       0.68,
+       0.673,
+       0.597,
+       0.592,
+       0.637,
+       1.0,
+       0.664,
+       0.655,
+       0.694
+      ],
+      [
+       0.674,
+       0.714,
+       0.667,
+       0.597,
+       0.657,
+       0.629,
+       0.664,
+       1.0,
+       0.621,
+       0.586
+      ],
+      [
+       0.663,
+       0.682,
+       0.581,
+       0.613,
+       0.562,
+       0.636,
+       0.655,
+       0.621,
+       1.0,
+       0.553
+      ],
+      [
+       0.689,
+       0.619,
+       0.731,
+       0.578,
+       0.528,
+       0.526,
+       0.694,
+       0.586,
+       0.553,
+       1.0
+      ]
+     ],
+     "lowest": 0.526,
+     "highest": 0.762,
+     "refs": [
+      "1.5",
+      "1.11",
+      "1.4",
+      "1.6",
+      "1.13",
+      "1.12",
+      "1.2",
+      "1.1",
+      "1.10",
+      "1.3"
+     ],
+     "around": {
+      "near": [
+       {
+        "id": "c3.s3",
+        "title": "Keeping the few names I have given myself",
+        "chapter": "The life within",
+        "size": 8,
+        "provisional": false,
+        "article": 9,
+        "similarity": 0.836
+       },
+       {
+        "id": "c1.s2",
+        "title": "Socrates, Plato and other models",
+        "chapter": "Teachers and examples",
+        "size": 14,
+        "provisional": false,
+        "article": 38,
+        "similarity": 0.778
+       },
+       {
+        "id": "c3.s5",
+        "title": "Coming back to my principles and keeping them ready",
+        "chapter": "The life within",
+        "size": 16,
+        "provisional": false,
+        "article": 11,
+        "similarity": 0.758
+       },
+       {
+        "id": "c2.s4",
+        "title": "Good whatever others say, and open to being set right",
+        "chapter": "Daily conduct",
+        "size": 17,
+        "provisional": false,
+        "article": 22,
+        "similarity": 0.745
+       }
+      ],
+      "lowest": 0.429,
+      "highest": 0.836,
+      "farthest": "Short sayings",
+      "border": [],
+      "weakest_member": 0.783,
+      "outside": [
+       {
+        "ref": "1.14",
+        "similarity": 0.784,
+        "section": "Keeping the few names I have given myself"
+       },
+       {
+        "ref": "6.28",
+        "similarity": 0.734,
+        "section": "Keeping the few names I have given myself"
+       },
+       {
+        "ref": "5.9",
+        "similarity": 0.73,
+        "section": "Coming back to my principles and keeping them ready"
+       }
+      ],
+      "outside_closer": 1
+     }
+    },
+    "claims": [
+     {
+      "id": "c1",
+      "number": 1,
+      "role": "Keeping free of anger",
+      "t": "I keep free of anger and give no sign of it. I am not irritable when I explain, and I am at once most free of passion and most affectionate.",
+      "shared": "Freedom from anger is shared by 1.1, 1.6 and 1.12. The pairing of calm with affection is Sextus alone (1.6) and is kept so that calm is not read as coldness. Patience in explaining is Apollonius alone (1.5). Semicolon removed.",
+      "passages": [
+       "1.1",
+       "1.6",
+       "1.12",
+       "1.5"
+      ],
+      "closeness": 0.676,
+      "closeness_new": 0.634,
+      "support": [
+       {
+        "id": "1.1b",
+        "ref": "1.1",
+        "quote": "From my grandfather Verus: good character and freedom from anger.",
+        "at": 0,
+        "start": 0,
+        "end": 65,
+        "in": "c1",
+        "follows": "Marcus took good character and freedom from anger from his grandfather Verus.",
+        "gives": [
+         "free of anger"
+        ]
+       },
+       {
+        "id": "1.6b",
+        "ref": "1.6",
+        "quote": "never giving so much as a sign of anger or of any other passion, but being at once most free of passion and most affectionate",
+        "at": 569,
+        "start": 569,
+        "end": 694,
+        "in": "c1",
+        "follows": "From Sextus, Marcus took this: never to show even a sign of anger or other passion, and to be both free of passion and most affectionate.",
+        "gives": [
+         "free of anger",
+         "give no sign of it",
+         "at once most free of passion and most affectionate"
+        ]
+       },
+       {
+        "id": "1.12b",
+        "ref": "1.12",
+        "quote": "never hurrying or hanging back or at a loss or downcast or putting on a grin, or again angry or suspicious",
+        "at": 419,
+        "start": 419,
+        "end": 525,
+        "in": "c1",
+        "follows": "Maximus, as Marcus saw him, was never in a hurry or hanging back, never downcast, and never angry or suspicious.",
+        "gives": [
+         "free of anger"
+        ]
+       },
+       {
+        "id": "1.5c",
+        "ref": "1.5",
+        "quote": "and not being irritable when explaining",
+        "at": 328,
+        "start": 328,
+        "end": 367,
+        "in": "c1",
+        "follows": "From Apollonius, Marcus took this: not to be irritable when explaining things to others.",
+        "gives": [
+         "not irritable when I explain"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c2",
+      "number": 2,
+      "role": "Steady in pain and illness",
+      "t": "I stay the same in sharp pain, at the loss of a child and in long illness, and I keep good spirits in illness as in other hardship. After an attack of headache I go straight back to my usual work at full strength.",
+      "shared": "Steadiness is shared by 1.5 and 1.12. The three trials are restored from Apollonius (1.5) in place of the vaguer “grief”. The headache detail is the father’s alone (1.13) and is now named, so “attack” has a clear referent.",
+      "passages": [
+       "1.5",
+       "1.12",
+       "1.13"
+      ],
+      "closeness": 0.725,
+      "closeness_new": 0.695,
+      "support": [
+       {
+        "id": "1.5b",
+        "ref": "1.5",
+        "quote": "being always the same, in sharp pains, at the loss of a child, in long illnesses",
+        "at": 147,
+        "start": 147,
+        "end": 227,
+        "in": "c2",
+        "follows": "From Apollonius, Marcus took this: to be always the same, whether in sharp pain, at the loss of a child or in long illness.",
+        "gives": [
+         "I stay the same",
+         "in sharp pain, at the loss of a child and in long illness"
+        ]
+       },
+       {
+        "id": "1.12a",
+        "ref": "1.12",
+        "quote": "From Maximus: self-mastery and being carried off course in nothing; and good spirits in illness as in other hard circumstances",
+        "at": 0,
+        "start": 0,
+        "end": 126,
+        "in": "c2",
+        "follows": "From Maximus, Marcus took self-mastery, and good spirits in illness as in any other hardship.",
+        "gives": [
+         "I stay the same",
+         "good spirits in illness as in other hardship"
+        ]
+       },
+       {
+        "id": "1.13a",
+        "ref": "1.13",
+        "quote": "after his attacks of headache, coming straight back fresh and at full strength to his usual work",
+        "at": 2897,
+        "start": 2897,
+        "end": 2993,
+        "in": "c2",
+        "follows": "Marcus’s father, after attacks of headache, went straight back to his usual work, fresh and at full strength.",
+        "gives": [
+         "After an attack of headache I go straight back to my usual work at full strength"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c3",
+      "number": 3,
+      "role": "Slow to believe",
+      "t": "I am slow to accept slander and slow to assent to glib talk, and I disbelieve tales of spells. I do not rest content with a rough grasp of a matter or with the impressions that lie to hand.",
+      "shared": "Refusing to be content too soon is shared by 1.4 (reading) and 1.13 (inquiry in council). Slander is 1.2 alone, and “slow” is not “never”. Disbelief is aimed at sorcerers’ claims about spells (1.3 alone), not at religion.",
+      "passages": [
+       "1.2",
+       "1.4",
+       "1.3",
+       "1.13"
+      ],
+      "closeness": 0.642,
+      "closeness_new": 0.532,
+      "support": [
+       {
+        "id": "1.2b",
+        "ref": "1.2",
+        "quote": "and being slow to accept slander",
+        "at": 206,
+        "start": 206,
+        "end": 238,
+        "in": "c3",
+        "follows": "From the man who brought him up, Marcus learned to be slow to accept slander.",
+        "gives": [
+         "slow to accept slander"
+        ]
+       },
+       {
+        "id": "1.4b",
+        "ref": "1.4",
+        "quote": "and reading with care, and not being content with a rough grasp of the whole, nor quickly assenting to glib talkers",
+        "at": 711,
+        "start": 711,
+        "end": 826,
+        "in": "c3",
+        "follows": "From Rusticus, Marcus took this: to read with care, not to rest content with a rough grasp, and not to agree quickly with glib talkers.",
+        "gives": [
+         "slow to assent to glib talk",
+         "do not rest content",
+         "a rough grasp of a matter"
+        ]
+       },
+       {
+        "id": "1.3a",
+        "ref": "1.3",
+        "quote": "and disbelieving what is said by those who deal in marvels and by sorcerers about spells and about the driving out of spirits and things of that kind",
+        "at": 50,
+        "start": 50,
+        "end": 199,
+        "in": "c3",
+        "follows": "From Diognetus, Marcus took this: not to believe what marvel-mongers and sorcerers say about spells and driving out spirits.",
+        "gives": [
+         "disbelieve tales of spells"
+        ]
+       },
+       {
+        "id": "1.13b",
+        "ref": "1.13",
+        "quote": "and careful inquiry in council, and persistence, and not “he gave up the search too soon, content with the impressions that lay to hand”",
+        "at": 673,
+        "start": 673,
+        "end": 809,
+        "in": "c3",
+        "follows": "Marcus’s father inquired with care in council and kept at it; no one could say he stopped too soon, content with first impressions.",
+        "gives": [
+         "do not rest content",
+         "the impressions that lie to hand"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c4",
+      "number": 4,
+      "role": "Doing good and sharing",
+      "t": "I do good, and I share readily and unsparingly.",
+      "shared": "Doing good is shared by 1.11 and 1.12, and readiness to share by 1.1 and 1.11. “Unsparingly” is Severus alone (1.11). “What I have” is dropped as an unsupported addition.",
+      "passages": [
+       "1.1",
+       "1.11",
+       "1.12"
+      ],
+      "closeness": 0.676,
+      "closeness_new": 0.603,
+      "support": [
+       {
+        "id": "1.1c",
+        "ref": "1.1",
+        "quote": "From my mother: reverence for the gods, and readiness to share",
+        "at": 150,
+        "start": 150,
+        "end": 212,
+        "in": "c4",
+        "follows": "From his mother, Marcus took reverence for the gods and a readiness to share.",
+        "gives": [
+         "share readily"
+        ]
+       },
+       {
+        "id": "1.11a",
+        "ref": "1.11",
+        "quote": "and doing good and sharing readily, unsparingly",
+        "at": 408,
+        "start": 408,
+        "end": 455,
+        "in": "c4",
+        "follows": "From his brother Severus, Marcus took this: doing good, and sharing readily and unsparingly.",
+        "gives": [
+         "I do good",
+         "share readily",
+         "unsparingly"
+        ]
+       },
+       {
+        "id": "1.12c",
+        "ref": "1.12",
+        "quote": "and doing good",
+        "at": 527,
+        "start": 527,
+        "end": 541,
+        "in": "c4",
+        "follows": "Among the things Marcus took from Maximus is doing good.",
+        "gives": [
+         "I do good"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c5",
+      "number": 6,
+      "role": "Training to need little",
+      "t": "I train myself to live plainly, far from the way the rich live, and to need little. When comforts are there I take them without affectation, and when they are not I do not need them.",
+      "shared": "Plain living and few needs are shared across 1.1, 1.2, 1.3 and 1.13. The second sentence is the father’s alone (1.13) and keeps simplicity from hardening into asceticism. “Without affectation” replaces “without fuss” as the source’s own wording.",
+      "passages": [
+       "1.1",
+       "1.2",
+       "1.3",
+       "1.13"
+      ],
+      "closeness": 0.62,
+      "closeness_new": 0.533,
+      "support": [
+       {
+        "id": "1.1d",
+        "ref": "1.1",
+        "quote": "and also plain living, far from the way the rich live",
+        "at": 297,
+        "start": 297,
+        "end": 350,
+        "in": "c5",
+        "follows": "From his mother, Marcus took a plain way of living, far from the way the rich live.",
+        "gives": [
+         "train myself to live plainly",
+         "far from the way the rich live"
+        ]
+       },
+       {
+        "id": "1.2c",
+        "ref": "1.2",
+        "quote": "From the man who brought me up: becoming neither a Green nor a Blue, nor a Small-Shield or a Big-Shield man; and bearing hard work, and needing little",
+        "at": 0,
+        "start": 0,
+        "end": 150,
+        "in": "c5",
+        "follows": "From the man who brought him up, Marcus learned to bear hard work and to need little.",
+        "gives": [
+         "to need little"
+        ]
+       },
+       {
+        "id": "1.3c",
+        "ref": "1.3",
+        "quote": "and wanting a pallet bed and an animal skin, and everything of that kind that belongs to the Greek training",
+        "at": 444,
+        "start": 444,
+        "end": 551,
+        "in": "c5",
+        "follows": "From Diognetus, Marcus took the wish for a pallet bed, an animal skin and the rest of the Greek training.",
+        "gives": [
+         "train myself to live plainly"
+        ]
+       },
+       {
+        "id": "1.13c",
+        "ref": "1.13",
+        "quote": "using the things that add to the ease of life, of which fortune gave him plenty, without conceit and at the same time without apology, so that when they were there he took them without affectation, and when they were not he did not need them",
+        "at": 1497,
+        "start": 1497,
+        "end": 1738,
+        "in": "c5",
+        "follows": "Marcus’s father used the comforts fortune gave him without conceit or apology, and did not need them when they were not there.",
+        "gives": [
+         "to need little",
+         "When comforts are there I take them without affectation",
+         "when they are not I do not need them"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c6",
+      "number": 5,
+      "role": "Making it up again",
+      "t": "When a friend finds fault with me, even without reason, I do not make light of it, and I try to bring my friend back to their usual self. I am easy to reconcile with those who were angry and did wrong, as soon as they are willing to come back, and I forgive.",
+      "shared": "Wording unchanged and anchors corrected. Forgiving is the jointly held phrase: 1.12 names it outright, and 1.4 shows it as being won back by those who did wrong. Ease of reconciliation and the condition of the other person’s willingness are Rusticus alone (1.4). The fault-finder is a friend, and the attempt to restore them is Catulus alone (1.10). No promise is made that the other person returns.",
+      "passages": [
+       "1.4",
+       "1.10",
+       "1.12"
+      ],
+      "closeness": 0.602,
+      "closeness_new": 0.558,
+      "support": [
+       {
+        "id": "1.4d",
+        "ref": "1.4",
+        "quote": "and, towards those who have been angry and have done wrong, being easy to win back and easy to reconcile, as soon as they themselves are willing to come back",
+        "at": 552,
+        "start": 552,
+        "end": 709,
+        "in": "c6",
+        "follows": "From Rusticus, Marcus took this: to be easily won back and reconciled with those who were angry and did wrong, once they want to return.",
+        "gives": [
+         "easy to reconcile",
+         "those who were angry and did wrong",
+         "as soon as they are willing to come back",
+         "I forgive"
+        ]
+       },
+       {
+        "id": "1.10a",
+        "ref": "1.10",
+        "quote": "not making light of a friend who finds some fault, even if they happen to be finding fault without reason, but trying even to bring them back to their usual self",
+        "at": 14,
+        "start": 14,
+        "end": 175,
+        "in": "c6",
+        "follows": "From Catulus, Marcus took this: not to brush off a friend’s complaint, even an unfounded one, but to try to bring the friend back to their usual self.",
+        "gives": [
+         "When a friend finds fault with me, even without reason, I do not make light of it",
+         "bring my friend back to their usual self"
+        ]
+       },
+       {
+        "id": "1.12d",
+        "ref": "1.12",
+        "quote": "and forgiving",
+        "at": 543,
+        "start": 543,
+        "end": 556,
+        "in": "c6",
+        "follows": "Among the things Marcus took from Maximus is forgiving.",
+        "gives": [
+         "I forgive"
+        ]
+       }
+      ]
+     }
+    ],
+    "single": [
+     {
+      "id": "1.5a",
+      "ref": "1.5",
+      "quote": "and looking to nothing other than reason, not even for a little while",
+      "at": 72,
+      "start": 72,
+      "end": 141,
+      "in": "single",
+      "label": "Reason alone",
+      "t": "I look to nothing other than reason, not even for a little while.",
+      "why": "Single source: Apollonius (1.5), “and looking to nothing other than reason, not even for a little while”. Existing line stands verbatim. It is not presented as joint doctrine.",
+      "follows": "From Apollonius, Marcus took this: to look to nothing but reason, not even for a short time."
+     },
+     {
+      "id": "1.13d",
+      "ref": "1.13",
+      "quote": "What is recorded of Socrates would fit him: that he was able both to go without and to enjoy those things which most people are weak at going without and give way in enjoying. To be strong, and to hold out and stay sober in each of the two, is the mark of a man who has a soul that is sound and unbeaten",
+      "at": 3962,
+      "start": 3962,
+      "end": 4265,
+      "in": "single",
+      "label": "The mark of a sound soul",
+      "t": "To be strong, to hold out and stay sober both in going without and in enjoying, is the mark of a soul that is sound and unbeaten.",
+      "why": "Single source: the father, with the Socrates comparison (1.13), “To be strong, and to hold out and stay sober in each of the two, is the mark of a man who has a soul that is sound and unbeaten”. The existing line split holding out and sobriety between the two cases, but the source applies both to each. Left in the third person as the speaker framed it.",
+      "follows": "Being able both to go without and to enjoy, holding out in the one and staying sober in the other, is the mark of a sound and unbeaten soul."
+     },
+     {
+      "id": "1.4a",
+      "ref": "1.4",
+      "quote": "From Rusticus: getting the impression that my character needed correcting and treatment",
+      "at": 0,
+      "start": 0,
+      "end": 87,
+      "in": "single",
+      "label": "Needing correction",
+      "t": "I accept that my character needs correcting and treatment.",
+      "why": "Single source: Rusticus (1.4), “getting the impression that my character needed correcting and treatment”. The source records an impression received, so “I keep in mind” is replaced by acceptance, which is not a vow.",
+      "follows": "From Rusticus, Marcus got the impression that his character needed correcting and treatment."
+     }
+    ],
+    "decisions": [
+     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. In modern editions 1.1 is 1.1–4, 1.2 is 1.5, 1.3 is 1.6, 1.4 is 1.7, 1.5 is 1.8, 1.6 is 1.9, 1.10 is 1.13, 1.11 is 1.14, 1.12 is 1.15 and 1.13 is 1.16.",
+     "Kept close to the existing opening. “And taught me” is dropped because the anchored quotes name family and the man who brought him up, not teachers as such. The three traits are the ones the claims develop."
+    ],
+    "limit": "These passages are a list of debts to particular people, mostly observed example, not a system. Marcus does not claim to possess the qualities, and 1.4 says his character needed correction. The first-person present is therefore an editorial framing of what he records learning. Calm is always paired with affection, simplicity with unapologetic use of comforts, and scepticism about sorcerers with reverence for the gods. Reconciliation is conditional on the other person’s willingness. “Reason alone” appears only in 1.5 and is not a programme for the whole article."
+   }
   },
   {
    "number": 38,
@@ -4762,7 +5514,912 @@
     "Places 6.22 under “If I doubt it”, as what holds whether the world is governed by reason or is only atoms. It does not say what holds if a person is not to be measured by the soul.",
     "Sets aside three anecdotes that give neither a saying nor a reason: Socrates in the sheepskin (11.26), Crates on Xenocrates (6.12) and the Spartans’ benches (11.22). Socrates and Perdiccas (11.23) is kept because Socrates gives his reason in his own words, and Fronto’s lesson (1.8) because Marcus names it as one."
    ],
-   "limit": "The section is a collection of sayings and examples, not one argument, and the article leans on two passages: 7.26 feeds three claims and 7.37 four, and claims 1 and 5 rest on the same pair, 7.26 and 7.23, both copied from Plato. Much of it is said in other articles: that I accept what the whole allots (Article 3), that the body’s feelings do not rule me (Article 2), that dying is nothing much and how long I live does not matter (Articles 17 and 35), that my one fear is of living against nature, not of ceasing to live (Article 10, claim 6, near claim 1 here), that being just is the one thing worth my effort (Articles 10 and 34), that I keep free of anger (Article 37), that I take the wide view, looking down on human affairs from high above and keeping all of eternity and all that exists in mind (Article 10, claim 5, and Article 32, claim 4, the same as claim 5 here; also Article 31), that I look into people’s ruling parts to see what they are (Article 27, claim 1, the same act as claim 2 here), that fame is nothing to me (Article 27), and that the dead are taken back or scattered alike (Articles 32 and 33). What this article adds is the measure of a person, the soul and not fame or power, with the judgment that dying is not the worst thing set beside it."
+   "limit": "The section is a collection of sayings and examples, not one argument, and the article leans on two passages: 7.26 feeds three claims and 7.37 four, and claims 1 and 5 rest on the same pair, 7.26 and 7.23, both copied from Plato. Much of it is said in other articles: that I accept what the whole allots (Article 3), that the body’s feelings do not rule me (Article 2), that dying is nothing much and how long I live does not matter (Articles 17 and 35), that my one fear is of living against nature, not of ceasing to live (Article 10, claim 6, near claim 1 here), that being just is the one thing worth my effort (Articles 10 and 34), that I keep free of anger (Article 37), that I take the wide view, looking down on human affairs from high above and keeping all of eternity and all that exists in mind (Article 10, claim 5, and Article 32, claim 4, the same as claim 5 here; also Article 31), that I look into people’s ruling parts to see what they are (Article 27, claim 1, the same act as claim 2 here), that fame is nothing to me (Article 27), and that the dead are taken back or scattered alike (Articles 32 and 33). What this article adds is the measure of a person, the soul and not fame or power, with the judgment that dying is not the worst thing set beside it.",
+   "marcus_revision": {
+    "statement": {
+     "t": "I measure a person by the soul and by just action, not by fame or power, and I do not count death the worst thing.",
+     "parts": [
+      {
+       "words": "I measure a person by the soul",
+       "ids": [
+        "7.37c",
+        "8.3b"
+       ],
+       "refs": [
+        "7.37",
+        "8.3"
+       ]
+      },
+      {
+       "words": "by just action",
+       "ids": [
+        "7.26a",
+        "7.37d"
+       ],
+       "refs": [
+        "7.26",
+        "7.37"
+       ]
+      },
+      {
+       "words": "not by fame or power",
+       "ids": [
+        "7.37b",
+        "8.3a"
+       ],
+       "refs": [
+        "7.37",
+        "8.3"
+       ]
+      },
+      {
+       "words": "I do not count death the worst thing",
+       "ids": [
+        "7.26b",
+        "7.23a"
+       ],
+       "refs": [
+        "7.26",
+        "7.23"
+       ]
+      }
+     ],
+     "kind": "A measure and its two tests",
+     "form": "Keeps the existing opening’s measure but drops its colon gloss. Each phrase rests on two passages. “Fame” is from 7.37 and “power” is our reading of the three commanders in 8.3. The death clause joins 7.26’s ranking of disgrace with 7.23, which speaks only of a great mind."
+    },
+    "map": {
+     "points": [
+      [
+       -0.1603,
+       -0.2742
+      ],
+      [
+       0.1549,
+       -0.256
+      ],
+      [
+       -0.4205,
+       -0.49
+      ],
+      [
+       0.1724,
+       0.1278
+      ],
+      [
+       -0.0182,
+       -0.8487
+      ],
+      [
+       -0.7251,
+       0.0449
+      ],
+      [
+       -0.646,
+       0.527
+      ],
+      [
+       0.7901,
+       -0.3254
+      ],
+      [
+       0.4671,
+       -0.7942
+      ],
+      [
+       0.5741,
+       0.5937
+      ],
+      [
+       -0.9386,
+       -0.3451
+      ],
+      [
+       -0.4046,
+       0.8296
+      ],
+      [
+       0.1547,
+       0.9307
+      ],
+      [
+       1.0,
+       0.2801
+      ]
+     ],
+     "stress": 0.282,
+     "sim": [
+      [
+       1.0,
+       0.695,
+       0.768,
+       0.621,
+       0.586,
+       0.478,
+       0.492,
+       0.466,
+       0.495,
+       0.468,
+       0.476,
+       0.44,
+       0.432,
+       0.398
+      ],
+      [
+       0.695,
+       1.0,
+       0.618,
+       0.635,
+       0.582,
+       0.512,
+       0.456,
+       0.565,
+       0.52,
+       0.5,
+       0.458,
+       0.426,
+       0.419,
+       0.412
+      ],
+      [
+       0.768,
+       0.618,
+       1.0,
+       0.521,
+       0.485,
+       0.506,
+       0.478,
+       0.375,
+       0.447,
+       0.406,
+       0.504,
+       0.361,
+       0.377,
+       0.343
+      ],
+      [
+       0.621,
+       0.635,
+       0.521,
+       1.0,
+       0.496,
+       0.4,
+       0.493,
+       0.51,
+       0.448,
+       0.446,
+       0.383,
+       0.441,
+       0.425,
+       0.37
+      ],
+      [
+       0.586,
+       0.582,
+       0.485,
+       0.496,
+       1.0,
+       0.476,
+       0.339,
+       0.46,
+       0.536,
+       0.364,
+       0.402,
+       0.348,
+       0.394,
+       0.337
+      ],
+      [
+       0.478,
+       0.512,
+       0.506,
+       0.4,
+       0.476,
+       1.0,
+       0.456,
+       0.362,
+       0.452,
+       0.415,
+       0.507,
+       0.417,
+       0.415,
+       0.382
+      ],
+      [
+       0.492,
+       0.456,
+       0.478,
+       0.493,
+       0.339,
+       0.456,
+       1.0,
+       0.352,
+       0.329,
+       0.42,
+       0.426,
+       0.557,
+       0.327,
+       0.395
+      ],
+      [
+       0.466,
+       0.565,
+       0.375,
+       0.51,
+       0.46,
+       0.362,
+       0.352,
+       1.0,
+       0.478,
+       0.382,
+       0.36,
+       0.356,
+       0.428,
+       0.413
+      ],
+      [
+       0.495,
+       0.52,
+       0.447,
+       0.448,
+       0.536,
+       0.452,
+       0.329,
+       0.478,
+       1.0,
+       0.378,
+       0.337,
+       0.359,
+       0.354,
+       0.364
+      ],
+      [
+       0.468,
+       0.5,
+       0.406,
+       0.446,
+       0.364,
+       0.415,
+       0.42,
+       0.382,
+       0.378,
+       1.0,
+       0.35,
+       0.373,
+       0.356,
+       0.421
+      ],
+      [
+       0.476,
+       0.458,
+       0.504,
+       0.383,
+       0.402,
+       0.507,
+       0.426,
+       0.36,
+       0.337,
+       0.35,
+       1.0,
+       0.395,
+       0.374,
+       0.302
+      ],
+      [
+       0.44,
+       0.426,
+       0.361,
+       0.441,
+       0.348,
+       0.417,
+       0.557,
+       0.356,
+       0.359,
+       0.373,
+       0.395,
+       1.0,
+       0.401,
+       0.384
+      ],
+      [
+       0.432,
+       0.419,
+       0.377,
+       0.425,
+       0.394,
+       0.415,
+       0.327,
+       0.428,
+       0.354,
+       0.356,
+       0.374,
+       0.401,
+       1.0,
+       0.327
+      ],
+      [
+       0.398,
+       0.412,
+       0.343,
+       0.37,
+       0.337,
+       0.382,
+       0.395,
+       0.413,
+       0.364,
+       0.421,
+       0.302,
+       0.384,
+       0.327,
+       1.0
+      ]
+     ],
+     "lowest": 0.302,
+     "highest": 0.768,
+     "refs": [
+      "7.26",
+      "7.37",
+      "7.23",
+      "11.23",
+      "11.32",
+      "8.3",
+      "1.9",
+      "11.26",
+      "11.21",
+      "1.8",
+      "6.22",
+      "1.7",
+      "6.12",
+      "11.22"
+     ],
+     "around": {
+      "near": [
+       {
+        "id": "c5.s1",
+        "title": "The dead and the forgotten",
+        "chapter": "Death and time",
+        "size": 17,
+        "provisional": false,
+        "article": 34,
+        "similarity": 0.792
+       },
+       {
+        "id": "c3.s5",
+        "title": "Coming back to my principles and keeping them ready",
+        "chapter": "The life within",
+        "size": 16,
+        "provisional": false,
+        "article": 11,
+        "similarity": 0.778
+       },
+       {
+        "id": "c1.s1",
+        "title": "What I learned, and from whom",
+        "chapter": "Teachers and examples",
+        "size": 10,
+        "provisional": false,
+        "article": 37,
+        "similarity": 0.778
+       },
+       {
+        "id": "c7.s1",
+        "title": "Whose praise do I want?",
+        "chapter": "Praise, harm and the worth of things",
+        "size": 13,
+        "provisional": false,
+        "article": 27,
+        "similarity": 0.767
+       }
+      ],
+      "lowest": 0.478,
+      "highest": 0.792,
+      "farthest": "Short sayings",
+      "border": [
+       {
+        "ref": "7.26",
+        "own": 0.807,
+        "other": 0.802,
+        "section": "Living now as one about to die"
+       },
+       {
+        "ref": "6.22",
+        "own": 0.648,
+        "other": 0.642,
+        "section": "The same matter, reshaped"
+       },
+       {
+        "ref": "1.7",
+        "own": 0.646,
+        "other": 0.649,
+        "section": "What I learned, and from whom"
+       }
+      ],
+      "weakest_member": 0.604,
+      "outside": [
+       {
+        "ref": "9.28",
+        "similarity": 0.749,
+        "section": "Coming back to my principles and keeping them ready"
+       },
+       {
+        "ref": "1.5",
+        "similarity": 0.728,
+        "section": "What I learned, and from whom"
+       },
+       {
+        "ref": "6.42",
+        "similarity": 0.724,
+        "section": "The dead and the forgotten"
+       }
+      ],
+      "outside_closer": 125
+     }
+    },
+    "claims": [
+     {
+      "id": "c1",
+      "number": 2,
+      "role": "Life and death weighed",
+      "t": "Staying alive is not the great thing, and I do not cling to life or count death terrible. Where I have taken up a post, judging it best, or been posted there, I stay and run the risk. I take nothing into account ahead of disgrace, not even death.",
+      "shared": "Restores the post “judged best” or assigned, and the source’s “ahead of disgrace” in place of “shameful”. The post is a single-source detail from 7.26. Limit: 7.26 hedges with “perhaps” and 7.23 is conditional on a great mind.",
+      "passages": [
+       "7.26",
+       "7.23"
+      ],
+      "closeness": 0.768,
+      "closeness_new": 0.58,
+      "support": [
+       {
+        "id": "7.26c",
+        "ref": "7.26",
+        "quote": "see whether what is noble and what is good may not be something other than saving and being saved. For perhaps this, living for whatever length of time, is what one who is truly a man must let go, and he must not cling to life",
+        "at": 634,
+        "start": 634,
+        "end": 860,
+        "in": "c1",
+        "follows": "What is noble and good may be something other than staying alive, and perhaps a true man must let go of how long he lives.",
+        "gives": [
+         "Staying alive is not the great thing",
+         "I do not cling to life"
+        ]
+       },
+       {
+        "id": "7.23b",
+        "ref": "7.23",
+        "quote": "do you think human life seems anything great to the one who has it?’ ‘Impossible,’ he said.",
+        "at": 73,
+        "start": 73,
+        "end": 164,
+        "in": "c1",
+        "follows": "To a mind with a view of all time and of all being, human life cannot seem anything great.",
+        "gives": [
+         "Staying alive is not the great thing"
+        ]
+       },
+       {
+        "id": "7.26b",
+        "ref": "7.26",
+        "quote": "Wherever a person has taken up a post, judging it to be best, or has been posted by a commander, there, as it seems to me, they must stay and run the risk, taking nothing into account, neither death nor anything else, ahead of disgrace",
+        "at": 376,
+        "start": 376,
+        "end": 611,
+        "in": "c1",
+        "follows": "Whoever has taken up a post, or been posted there, must stay and run the risk, counting nothing, death included, ahead of disgrace.",
+        "gives": [
+         "Where I have taken up a post, judging it best, or been posted there, I stay and run the risk",
+         "I take nothing into account ahead of disgrace, not even death"
+        ]
+       },
+       {
+        "id": "7.23a",
+        "ref": "7.23",
+        "quote": "such a person will not count death a terrible thing either",
+        "at": 171,
+        "start": 171,
+        "end": 229,
+        "in": "c1",
+        "follows": "Whoever has a view of all time and of all being will not count death a terrible thing.",
+        "gives": [
+         "count death terrible"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c2",
+      "number": 1,
+      "role": "The measure of a person",
+      "t": "I look at what kind of soul a person has. I ask what Alexander, Gaius and Pompey are beside Diogenes, Heraclitus and Socrates, who saw things, their causes and their matter. A more glorious death and nimbler argument do not prove that Socrates was better than Telauges.",
+      "shared": "Removes the unsupported “hardly anyone has heard of him” and the verdict “little”. Both comparisons stay as the questions the sources ask. The Telauges question is from 7.37 alone and is not a verdict against Socrates.",
+      "passages": [
+       "7.37",
+       "8.3"
+      ],
+      "closeness": 0.512,
+      "closeness_new": 0.496,
+      "support": [
+       {
+        "id": "7.37c",
+        "ref": "7.37",
+        "quote": "what has to be looked at is this: what kind of soul Socrates had",
+        "at": 458,
+        "start": 458,
+        "end": 522,
+        "in": "c2",
+        "follows": "The thing to look at in Socrates is what kind of soul he had.",
+        "gives": [
+         "I look at what kind of soul a person has"
+        ]
+       },
+       {
+        "id": "8.3b",
+        "ref": "8.3",
+        "quote": "For the latter saw things and their causes and their matter, and their ruling parts were the same.",
+        "at": 89,
+        "start": 89,
+        "end": 187,
+        "in": "c2",
+        "follows": "The reason given for setting the philosophers higher is what they saw and the state of their ruling parts.",
+        "gives": [
+         "I look at what kind of soul a person has",
+         "who saw things, their causes and their matter"
+        ]
+       },
+       {
+        "id": "8.3a",
+        "ref": "8.3",
+        "quote": "Alexander, Gaius and Pompey: what are they beside Diogenes, Heraclitus and Socrates?",
+        "at": 4,
+        "start": 4,
+        "end": 88,
+        "in": "c2",
+        "follows": "Alexander, Gaius and Pompey amount to little when set beside Diogenes, Heraclitus and Socrates.",
+        "gives": [
+         "what Alexander, Gaius and Pompey are beside Diogenes, Heraclitus and Socrates"
+        ]
+       },
+       {
+        "id": "7.37b",
+        "ref": "7.37",
+        "quote": "it is not enough that Socrates died a more glorious death, and argued more nimbly with the sophists",
+        "at": 82,
+        "start": 82,
+        "end": 181,
+        "in": "c2",
+        "follows": "A more glorious death and more skill in argument are not enough to show that Socrates was the better man.",
+        "gives": [
+         "A more glorious death and nimbler argument do not prove"
+        ]
+       },
+       {
+        "id": "7.37a",
+        "ref": "7.37",
+        "quote": "How do we know that Telauges was not better than Socrates in his disposition?",
+        "at": 0,
+        "start": 0,
+        "end": 77,
+        "in": "c2",
+        "follows": "We do not know that Telauges was not the better man in his inner disposition.",
+        "gives": [
+         "that Socrates was better than Telauges"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c3",
+      "number": 3,
+      "role": "One test when I act",
+      "t": "When I act I look at this alone: whether I am doing what is just or unjust, the deeds of a good person or of a bad one. I find it enough to be just in my dealings with people and devout in my dealings with the gods.",
+      "shared": "Keeps the source wording and restores the good and bad deeds. Limit: in 7.37 “enough” is a test put to Socrates’ soul, adopted here as my own standard. Devotion to the gods is from 7.37 alone.",
+      "passages": [
+       "7.26",
+       "7.37"
+      ],
+      "closeness": 0.695,
+      "closeness_new": 0.601,
+      "support": [
+       {
+        "id": "7.26a",
+        "ref": "7.26",
+        "quote": "look at this alone whenever he acts: whether he is doing what is just or unjust, and the deeds of a good man or of a bad one",
+        "at": 202,
+        "start": 202,
+        "end": 326,
+        "in": "c3",
+        "follows": "Whenever a man acts he should look at one thing only: whether what he is doing is just or unjust.",
+        "gives": [
+         "When I act I look at this alone",
+         "whether I am doing what is just or unjust, the deeds of a good person or of a bad one",
+         "I find it enough to be just in my dealings with people"
+        ]
+       },
+       {
+        "id": "7.37d",
+        "ref": "7.37",
+        "quote": "whether he could find it enough to be just in his dealings with human beings and devout in his dealings with the gods",
+        "at": 528,
+        "start": 528,
+        "end": 645,
+        "in": "c3",
+        "follows": "The question about Socrates is whether being just to people and devout to the gods was enough for him.",
+        "gives": [
+         "I find it enough to be just in my dealings with people",
+         "devout in my dealings with the gods"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c4",
+      "number": 4,
+      "role": "Other people’s faults",
+      "t": "I do not turn on people for what they get wrong. I do not get idly angry at vice, and I do not pounce reproachfully on a wrong word or a slip of grammar. If we say we have sound souls, I ask why we fight and fall out.",
+      "shared": "The existing line vowed not to quarrel, but 11.32 ends on a question, so the question stands. “Souls” is supplied from the fuller exchange in 11.32. 1.7 covers errors of language only and is named as such.",
+      "passages": [
+       "7.37",
+       "1.7",
+       "11.32"
+      ],
+      "closeness": 0.452,
+      "closeness_new": 0.41,
+      "support": [
+       {
+        "id": "7.37e",
+        "ref": "7.37",
+        "quote": "neither getting idly angry at vice",
+        "at": 647,
+        "start": 647,
+        "end": 681,
+        "in": "c4",
+        "follows": "The soul this passage asks about does not get angry at vice to no purpose.",
+        "gives": [
+         "I do not turn on people for what they get wrong",
+         "I do not get idly angry at vice"
+        ]
+       },
+       {
+        "id": "1.7a",
+        "ref": "1.7",
+        "quote": "not to find fault, and not to pounce reproachfully on people who have come out with a wrong form of a word, a mistake in grammar or a jarring sound",
+        "at": 31,
+        "start": 31,
+        "end": 178,
+        "in": "c4",
+        "follows": "From Alexander the grammarian: not to find fault with people or pounce on them for a slip in their speech.",
+        "gives": [
+         "I do not turn on people for what they get wrong",
+         "I do not pounce reproachfully on a wrong word or a slip of grammar"
+        ]
+       },
+       {
+        "id": "11.32a",
+        "ref": "11.32",
+        "quote": "“Sound ones.” “Then why do you not look for them?” “Because we have them.” “Then why do you fight and fall out?”",
+        "at": 176,
+        "start": 176,
+        "end": 288,
+        "in": "c4",
+        "follows": "Socrates asks people who say they already have sound souls why, then, they fight and fall out.",
+        "gives": [
+         "If we say we have sound souls, I ask why we fight and fall out"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c5",
+      "number": 5,
+      "role": "Taking the wide view",
+      "t": "I take the wide view of all time and all being. When I speak of human beings, I look down at the things on earth as if from somewhere above. I look round at the courses of the stars as if running round with them, and I think continually of the elements changing into one another. These impressions wash away the dirt of life on the ground.",
+      "shared": "Removes the semicolon and restores “running round with them” and the condition about speaking of human beings. The star and dirt images are from 7.26 alone. The view cleanses and does not express contempt.",
+      "passages": [
+       "7.23",
+       "7.26"
+      ],
+      "closeness": 0.768,
+      "closeness_new": 0.58,
+      "support": [
+       {
+        "id": "7.23c",
+        "ref": "7.23",
+        "quote": "a mind that has greatness and a view of all time and of all being",
+        "at": 6,
+        "start": 6,
+        "end": 71,
+        "in": "c5",
+        "follows": "There is a mind that has greatness and a view of all time and of everything that exists.",
+        "gives": [
+         "I take the wide view",
+         "of all time and all being"
+        ]
+       },
+       {
+        "id": "7.26e",
+        "ref": "7.26",
+        "quote": "whoever is talking about human beings must also look down at the things on earth as if from somewhere above",
+        "at": 1330,
+        "start": 1330,
+        "end": 1437,
+        "in": "c5",
+        "follows": "Anyone who talks about human beings should also look down at earthly things as if from above.",
+        "gives": [
+         "I take the wide view",
+         "When I speak of human beings, I look down at the things on earth as if from somewhere above"
+        ]
+       },
+       {
+        "id": "7.26d",
+        "ref": "7.26",
+        "quote": "Look round at the courses of the stars as if running round with them, and think continually of the changes of the elements into one another. For the impressions of these things wash away the dirt of life on the ground.",
+        "at": 1073,
+        "start": 1073,
+        "end": 1291,
+        "in": "c5",
+        "follows": "Picturing the stars’ courses and the elements changing into one another washes away the dirt of life on earth.",
+        "gives": [
+         "I look round at the courses of the stars as if running round with them",
+         "I think continually of the elements changing into one another",
+         "These impressions wash away the dirt of life on the ground"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c6",
+      "number": 6,
+      "role": "What slavery looks like",
+      "t": "I guard against slavery of two kinds. One is to be a slave to anyone’s ignorance. The other is to have many things to take thought for and to be a slave to many.",
+      "shared": "The existing vow named the three commanders, but this claim’s quote from 8.3 says only “the others”, so the names stay in c2. The observation is kept as a guard, not a vow. Each kind of slavery has one witness.",
+      "passages": [
+       "7.37",
+       "8.3"
+      ],
+      "closeness": 0.512,
+      "closeness_new": 0.496,
+      "support": [
+       {
+        "id": "7.37f",
+        "ref": "7.37",
+        "quote": "nor yet being a slave to anyone’s ignorance",
+        "at": 682,
+        "start": 682,
+        "end": 725,
+        "in": "c6",
+        "follows": "The soul this passage asks about is not a slave to anyone’s ignorance.",
+        "gives": [
+         "I guard against slavery",
+         "a slave to anyone’s ignorance"
+        ]
+       },
+       {
+        "id": "8.3c",
+        "ref": "8.3",
+        "quote": "But with the others, how many things to take thought for, and slavery to how many!",
+        "at": 188,
+        "start": 188,
+        "end": 270,
+        "in": "c6",
+        "follows": "The others, the three conquerors, had a great many things to take thought for and were slaves to a great many.",
+        "gives": [
+         "I guard against slavery",
+         "to have many things to take thought for and to be a slave to many"
+        ]
+       }
+      ]
+     }
+    ],
+    "single": [
+     {
+      "id": "7.37g",
+      "ref": "7.37",
+      "quote": "Nature did not blend the mind with the compound in such a way that it is not allowed to draw a boundary round itself and to bring what is its own under its own control.",
+      "at": 911,
+      "start": 911,
+      "end": 1079,
+      "in": "single",
+      "label": "The mind’s own boundary",
+      "t": "Nature did not blend my mind with my body in such a way that my mind is not allowed to draw a boundary round itself and bring what is its own under its own control.",
+      "why": "Single source 7.37. “In such a way that” follows the source and prevents hearing a purpose clause that would reverse the sense. The permission “not allowed” is kept, and “my mind” is repeated so the referent is clear. “Body” renders the source’s “compound”.",
+      "follows": "The mind is not so mixed with the compound it lives in that it cannot mark itself off and take charge of what is its own."
+     },
+     {
+      "id": "11.21a",
+      "ref": "11.21",
+      "quote": "Socrates used to call the principles of the many, too, “Lamias”, things to frighten children.",
+      "at": 0,
+      "start": 0,
+      "end": 93,
+      "in": "single",
+      "label": "Bogeys",
+      "t": "Socrates used to call the principles of the many “Lamias”, things to frighten children.",
+      "why": "Single source 11.21, left as the speaker framed it. The existing “when they frighten me” and “live by” were additions. The source does not say which principles.",
+      "follows": "Socrates called what most people hold and live by “Lamias”, things that frighten children."
+     },
+     {
+      "id": "7.26g",
+      "ref": "7.26",
+      "quote": "leaving these matters to god and trusting the women who say that not even one person could escape what is fated, he must consider what comes next: how he might best live the time he is going to live",
+      "at": 871,
+      "start": 871,
+      "end": 1069,
+      "in": "single",
+      "label": "The next question",
+      "t": "How long I live I leave to god, trusting the saying that no one escapes what is fated. I consider what comes next: how I might best live the time I am going to live.",
+      "why": "Single source 7.26, an unattributed speech. Restores the trust in the saying about fate that the existing line dropped. “How long I live” is our reading of “these matters”.",
+      "follows": "Perhaps a true man must leave the length of his life to god and ask how to live the time he has as well as possible."
+     },
+     {
+      "id": "1.9a",
+      "ref": "1.9",
+      "quote": "not to say “I am busy” to anyone, or write it in a letter, often or without need; and not to keep excusing oneself in this way from the duties that come with one’s relations to those one lives among, by pleading the business that surrounds one",
+      "at": 30,
+      "start": 30,
+      "end": 273,
+      "in": "single",
+      "label": "“I am busy”",
+      "t": "I do not say “I am busy” to anyone, or write it in a letter, often or without need. I do not keep pleading the business around me to excuse myself from what I owe the people I live among.",
+      "why": "Single source 1.9, Alexander the Platonist. Keeps “often or without need”, so only the habitual or needless plea is ruled out.",
+      "follows": "From Alexander the Platonist: seldom to say “I am busy”, and not to plead business to get out of duties to those one lives among."
+     },
+     {
+      "id": "11.23a",
+      "ref": "11.23",
+      "quote": "Socrates to Perdiccas, on not going to him: “So that I may not die the worst of deaths,” he said, that is, so that I may not, after receiving a kindness, be unable to do one in return.",
+      "at": 0,
+      "start": 0,
+      "end": 184,
+      "in": "single",
+      "label": "A kindness I cannot return",
+      "t": "Socrates would not go to Perdiccas. “So that I may not die the worst of deaths,” he said, that is, so that he would not, after receiving a kindness, be unable to do one in return.",
+      "why": "Single source 11.23. The spoken “he said” marks the quoted “I” as Socrates when the line is read aloud, and the gloss moves to the third person. It concerns a kindness he could not return and does not refuse all kindness. The unsupported “King” stays out.",
+      "follows": "Socrates would not go to Perdiccas, so as not to receive a kindness he could not return, which he called the worst of deaths."
+     },
+     {
+      "id": "1.7b",
+      "ref": "1.7",
+      "quote": "deftly to come out with just the very thing that should have been said, by way of an answer, or of backing them up, or of a joint discussion about the matter itself, not about the expression",
+      "at": 184,
+      "start": 184,
+      "end": 374,
+      "in": "single",
+      "label": "Correcting without reproach",
+      "t": "When someone says a thing wrongly, I deftly come out with just what should have been said: in my answer, in backing them up, or in discussing with them the matter itself, not the expression.",
+      "why": "Single source 1.7, Alexander the grammarian. Restores “deftly”. The scope is errors of language, and correction still happens indirectly.",
+      "follows": "From Alexander the grammarian: to correct a slip by deftly using the right form oneself, in an answer or in discussing the matter."
+     },
+     {
+      "id": "1.8a",
+      "ref": "1.8",
+      "quote": "to have taken note of what a tyrant’s envy, shiftiness and play-acting are like, and that on the whole these people we call patricians are somehow rather lacking in affection",
+      "at": 13,
+      "start": 13,
+      "end": 187,
+      "in": "single",
+      "label": "What a tyrant is like",
+      "t": "I have taken note of what a tyrant’s envy, shiftiness and play-acting are like, and that the people we call patricians are, on the whole, somehow rather lacking in affection.",
+      "why": "Single source 1.8, Fronto. Restores both hedges, “on the whole” and “somehow rather”. It is a social observation and is not joined to either strand.",
+      "follows": "From Fronto: to have noticed what a tyrant’s envy, shiftiness and play-acting are like, and that patricians are on the whole rather lacking in affection."
+     },
+     {
+      "id": "6.22a",
+      "ref": "6.22",
+      "quote": "Alexander of Macedon and his mule driver, once dead, came to the same state: for either they were taken back into the same seed-reasons of the universe, or they were scattered alike into atoms.",
+      "at": 0,
+      "start": 0,
+      "end": 193,
+      "in": "single",
+      "label": "The king and the mule driver",
+      "t": "Alexander of Macedon and his mule driver came to the same state once they were dead. Either both were taken back into the same seed-reasons of the universe, or both were scattered alike into atoms.",
+      "why": "Single source 6.22. Removes the editorial opening and the gloss on seed-reasons, and splits the overlong sentence. The either/or stays open. This is not the Alexander of 1.7 or 1.9.",
+      "follows": "Once dead, the king and the man who drove his mules were in the same state, whether the universe took them back or they were scattered into atoms."
+     }
+    ],
+    "decisions": [
+     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. In modern editions 7.26 is 7.44–48, 7.37 is 7.66–67a, 7.23 is 7.35, 11.23 is 11.25, 11.32 is 11.39, 1.9 is 1.12, 11.26 is 11.28, 11.21 is 11.23, 1.8 is 1.11, 6.22 is 6.24, 1.7 is 1.10, 6.12 is 6.13b and 11.22 is 11.24; 8.3 is the same.",
+     "Keeps the existing opening’s measure but drops its colon gloss. Each phrase rests on two passages. “Fame” is from 7.37 and “power” is our reading of the three commanders in 8.3. The death clause joins 7.26’s ranking of disgrace with 7.23, which speaks only of a great mind."
+    ],
+    "limit": "This is not a single portrait of Socrates. He is named only in 7.37, 8.3, 11.21, 11.23, 11.26 and 11.32. The speeches in 7.23 and 7.26 are unattributed here, and 7.37 asks an open question about his worth without ruling against him. 7.23 is conditional on a great mind and 7.26 hedges with “perhaps”, so the first-person lines on death are our adoption of those views. 11.32 ends on a question, and c4 keeps it as a question. The tests of the soul in 7.37 are put to Socrates, and the first-person lines in c3, c4 and c6 adopt them as a standard. “Body” in 7.37g renders the source’s “compound”. The three Alexanders are different people. Fronto’s remark in 1.8 stands alone and joins neither strand. 11.26 and 6.12 supply no content and support nothing, and 11.22 is kept only in the margin."
+   }
   }
  ]
 }

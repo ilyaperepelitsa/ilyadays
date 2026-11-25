@@ -2067,7 +2067,816 @@
     "Applies to me what the passages say of others: 4.16 of beautiful things (“what is praised becomes neither worse nor better”), and 12.3, 11.13 and 6.17 of “each person” and “they”. In claim 4, all three are mapped to “I go against myself”, the editor’s own name for the contradiction each shows.",
     "Sets aside 10.10, the spider proud of its fly. It is about pride in a capture, not about anyone’s praise or judgment."
    ],
-   "limit": "Article 22 already says that I fail when I want to be approved of, Article 10 that being remembered is of no account, Article 13 that praise from the many pulls me about, and Article 9 that I need no one as witness. Article 34 already says that those who remember me will soon follow me and that even remembrance lasting for ever would be empty; claim 3 and the item under “If I doubt it” say this again, here as reasons not to chase fame after death. What this article adds is the reason from the side of the people who give praise: I look into them and find poor judges, even of themselves; praise and blame do not change what they fall on; and those who would remember me will be people like the ones I find hard to bear now (8.42). 4.16 carries much of it: it is quoted in claims 3 and 5 and in the item under “If I doubt it”, and two parts of the statement rest on it."
+   "limit": "Article 22 already says that I fail when I want to be approved of, Article 10 that being remembered is of no account, Article 13 that praise from the many pulls me about, and Article 9 that I need no one as witness. Article 34 already says that those who remember me will soon follow me and that even remembrance lasting for ever would be empty; claim 3 and the item under “If I doubt it” say this again, here as reasons not to chase fame after death. What this article adds is the reason from the side of the people who give praise: I look into them and find poor judges, even of themselves; praise and blame do not change what they fall on; and those who would remember me will be people like the ones I find hard to bear now (8.42). 4.16 carries much of it: it is quoted in claims 3 and 5 and in the item under “If I doubt it”, and two parts of the statement rest on it.",
+   "marcus_revision": {
+    "statement": {
+     "t": "I look into the minds that judge me. Praise makes nothing better, blame ruins nothing, and fame after death is nothing to me.",
+     "parts": [
+      {
+       "words": "I look into the minds that judge me",
+       "ids": [
+        "9.16a",
+        "9.32a",
+        "4.31a"
+       ],
+       "refs": [
+        "9.16",
+        "9.32",
+        "4.31"
+       ]
+      },
+      {
+       "words": "Praise makes nothing better",
+       "ids": [
+        "4.16c",
+        "9.32c"
+       ],
+       "refs": [
+        "4.16",
+        "9.32"
+       ]
+      },
+      {
+       "words": "blame ruins nothing",
+       "ids": [
+        "4.16d",
+        "9.32c"
+       ],
+       "refs": [
+        "4.16",
+        "9.32"
+       ]
+      },
+      {
+       "words": "fame after death is nothing to me",
+       "ids": [
+        "8.42b",
+        "8.42c",
+        "4.16a",
+        "4.16e"
+       ],
+       "refs": [
+        "8.42",
+        "4.16"
+       ]
+      }
+     ],
+     "kind": "One question answered from three sides",
+     "form": "Semicolon removed and blame added, since 9.32 deflates praise and blame equally. “Want” and “fear” are left to the claims because each has only one witness. The three arguments stand side by side without being merged. “Ruins nothing” rests on 4.16, which speaks of beautiful things, and on 9.32."
+    },
+    "colors": {
+     "9.32": 1,
+     "9.16": 2,
+     "4.31": 3,
+     "4.16": 4,
+     "6.54": 4,
+     "10.20": 5,
+     "8.42": 5,
+     "12.3": 1,
+     "11.13": 2,
+     "6.17": 3,
+     "6.46": 2,
+     "8.51": 1
+    },
+    "map": {
+     "points": [
+      [
+       -0.3096,
+       0.2574
+      ],
+      [
+       0.1598,
+       -0.3903
+      ],
+      [
+       -0.2923,
+       -0.1557
+      ],
+      [
+       0.5764,
+       -0.4694
+      ],
+      [
+       0.4159,
+       0.0442
+      ],
+      [
+       0.2195,
+       -0.801
+      ],
+      [
+       -0.3849,
+       0.6404
+      ],
+      [
+       -0.3073,
+       -0.8347
+      ],
+      [
+       -0.8621,
+       0.2836
+      ],
+      [
+       -0.9095,
+       -0.2441
+      ],
+      [
+       0.0343,
+       0.9167
+      ],
+      [
+       1.0,
+       0.0256
+      ],
+      [
+       0.6599,
+       0.7273
+      ]
+     ],
+     "stress": 0.271,
+     "sim": [
+      [
+       1.0,
+       0.556,
+       0.597,
+       0.546,
+       0.6,
+       0.566,
+       0.629,
+       0.585,
+       0.648,
+       0.647,
+       0.598,
+       0.51,
+       0.523
+      ],
+      [
+       0.556,
+       1.0,
+       0.663,
+       0.737,
+       0.653,
+       0.617,
+       0.598,
+       0.602,
+       0.493,
+       0.541,
+       0.455,
+       0.499,
+       0.51
+      ],
+      [
+       0.597,
+       0.663,
+       1.0,
+       0.596,
+       0.604,
+       0.567,
+       0.637,
+       0.5,
+       0.561,
+       0.551,
+       0.549,
+       0.466,
+       0.476
+      ],
+      [
+       0.546,
+       0.737,
+       0.596,
+       1.0,
+       0.647,
+       0.636,
+       0.529,
+       0.567,
+       0.448,
+       0.43,
+       0.473,
+       0.548,
+       0.499
+      ],
+      [
+       0.6,
+       0.653,
+       0.604,
+       0.647,
+       1.0,
+       0.545,
+       0.527,
+       0.571,
+       0.474,
+       0.477,
+       0.525,
+       0.517,
+       0.484
+      ],
+      [
+       0.566,
+       0.617,
+       0.567,
+       0.636,
+       0.545,
+       1.0,
+       0.477,
+       0.61,
+       0.521,
+       0.508,
+       0.484,
+       0.583,
+       0.457
+      ],
+      [
+       0.629,
+       0.598,
+       0.637,
+       0.529,
+       0.527,
+       0.477,
+       1.0,
+       0.469,
+       0.572,
+       0.555,
+       0.565,
+       0.443,
+       0.529
+      ],
+      [
+       0.585,
+       0.602,
+       0.5,
+       0.567,
+       0.571,
+       0.61,
+       0.469,
+       1.0,
+       0.457,
+       0.533,
+       0.486,
+       0.472,
+       0.442
+      ],
+      [
+       0.648,
+       0.493,
+       0.561,
+       0.448,
+       0.474,
+       0.521,
+       0.572,
+       0.457,
+       1.0,
+       0.629,
+       0.46,
+       0.489,
+       0.479
+      ],
+      [
+       0.647,
+       0.541,
+       0.551,
+       0.43,
+       0.477,
+       0.508,
+       0.555,
+       0.533,
+       0.629,
+       1.0,
+       0.462,
+       0.389,
+       0.427
+      ],
+      [
+       0.598,
+       0.455,
+       0.549,
+       0.473,
+       0.525,
+       0.484,
+       0.565,
+       0.486,
+       0.46,
+       0.462,
+       1.0,
+       0.482,
+       0.467
+      ],
+      [
+       0.51,
+       0.499,
+       0.466,
+       0.548,
+       0.517,
+       0.583,
+       0.443,
+       0.472,
+       0.489,
+       0.389,
+       0.482,
+       1.0,
+       0.51
+      ],
+      [
+       0.523,
+       0.51,
+       0.476,
+       0.499,
+       0.484,
+       0.457,
+       0.529,
+       0.442,
+       0.479,
+       0.427,
+       0.467,
+       0.51,
+       1.0
+      ]
+     ],
+     "lowest": 0.389,
+     "highest": 0.737,
+     "refs": [
+      "9.32",
+      "8.42",
+      "6.54",
+      "4.16",
+      "6.17",
+      "8.51",
+      "10.20",
+      "12.3",
+      "4.31",
+      "9.16",
+      "11.13",
+      "6.46",
+      "10.10"
+     ],
+     "around": {
+      "near": [
+       {
+        "id": "c5.s1",
+        "title": "The dead and the forgotten",
+        "chapter": "Death and time",
+        "size": 17,
+        "provisional": false,
+        "article": 34,
+        "similarity": 0.821
+       },
+       {
+        "id": "c3.s6",
+        "title": "The retreat within",
+        "chapter": "The life within",
+        "size": 12,
+        "provisional": false,
+        "article": 12,
+        "similarity": 0.81
+       },
+       {
+        "id": "c3.s5",
+        "title": "Coming back to my principles and keeping them ready",
+        "chapter": "The life within",
+        "size": 16,
+        "provisional": false,
+        "article": 11,
+        "similarity": 0.81
+       },
+       {
+        "id": "c2.s8",
+        "title": "The morning, and the question before each action",
+        "chapter": "Daily conduct",
+        "size": 12,
+        "provisional": false,
+        "article": 26,
+        "similarity": 0.809
+       }
+      ],
+      "lowest": 0.515,
+      "highest": 0.821,
+      "farthest": "Short sayings",
+      "border": [],
+      "weakest_member": 0.693,
+      "outside": [
+       {
+        "ref": "12.20",
+        "similarity": 0.78,
+        "section": "The dead and the forgotten"
+       },
+       {
+        "ref": "10.15",
+        "similarity": 0.775,
+        "section": "The morning, and the question before each action"
+       },
+       {
+        "ref": "9.29",
+        "similarity": 0.762,
+        "section": "Living now as one about to die"
+       }
+      ],
+      "outside_closer": 35
+     }
+    },
+    "claims": [
+     {
+      "id": "c1",
+      "number": 4,
+      "role": "Looking at the judges",
+      "t": "Before I fear people as judges, I pass right inside their ruling parts and picture their little souls naked. I see what they chase and what they run from, whom they want to please, and what they are like when they eat and sleep. I look at the wise as well.",
+      "shared": "The looking is joint across 9.16, 9.32 and 4.31. Fear of judges is 9.16 only. “Want to please” is now their wish, as 6.54 has it, not mine. The naked souls are 9.32 only and the wise are 4.31 only. Eating and sleeping come from 10.20, which never mentions praise, so the link to judges is editorial. No verdict is stated, because the sources leave it to the looking.",
+      "passages": [
+       "9.32",
+       "9.16",
+       "4.31",
+       "6.54",
+       "10.20"
+      ],
+      "closeness": 0.603,
+      "closeness_new": 0.459,
+      "support": [
+       {
+        "id": "9.32a",
+        "ref": "9.32",
+        "quote": "What the ruling parts of these people are, what sort of things they are in earnest about, and what sort of things win their love and honour.",
+        "at": 0,
+        "start": 0,
+        "end": 140,
+        "in": "c1",
+        "follows": "I should consider what rules in these people, what they take seriously, and what they give their love and honour for.",
+        "gives": [
+         "pass right inside their ruling parts"
+        ]
+       },
+       {
+        "id": "9.32b",
+        "ref": "9.32",
+        "quote": "Think of yourself as looking at their little souls naked.",
+        "at": 141,
+        "start": 141,
+        "end": 198,
+        "in": "c1",
+        "follows": "I should picture their small souls stripped bare, as they really are.",
+        "gives": [
+         "picture their little souls naked"
+        ]
+       },
+       {
+        "id": "9.16a",
+        "ref": "9.16",
+        "quote": "Pass inside, right inside, into their ruling parts, and you will see what judges you are afraid of",
+        "at": 0,
+        "start": 0,
+        "end": 98,
+        "in": "c1",
+        "follows": "If I go deep into these people’s ruling parts, I will see what kind of judges I am afraid of.",
+        "gives": [
+         "Before I fear people as judges",
+         "pass right inside their ruling parts"
+        ]
+       },
+       {
+        "id": "4.31a",
+        "ref": "4.31",
+        "quote": "Look closely into their ruling parts, and at the wise as well: what sort of things they run from, and what sort of things they chase.",
+        "at": 0,
+        "start": 0,
+        "end": 133,
+        "in": "c1",
+        "follows": "I should look closely into people’s ruling parts, and at the wise too, and see what they run from and what they chase.",
+        "gives": [
+         "pass right inside their ruling parts",
+         "what they chase and what they run from",
+         "I look at the wise as well"
+        ]
+       },
+       {
+        "id": "6.54a",
+        "ref": "6.54",
+        "quote": "What sort of people those are whom they want to please, and for what sort of gains, and through what sort of activities.",
+        "at": 0,
+        "start": 0,
+        "end": 120,
+        "in": "c1",
+        "follows": "Anyone who wants to please people should consider what those people are like, what is gained, and what has to be done for it.",
+        "gives": [
+         "whom they want to please"
+        ]
+       },
+       {
+        "id": "10.20a",
+        "ref": "10.20",
+        "quote": "What they are like when eating, sleeping, mating, emptying their bowels, and the rest.",
+        "at": 0,
+        "start": 0,
+        "end": 86,
+        "in": "c1",
+        "follows": "I should picture these people as they are when they eat, sleep, mate and empty their bowels.",
+        "gives": [
+         "what they are like when they eat and sleep"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c2",
+      "number": 1,
+      "role": "Poor judges, even of themselves",
+      "t": "I ask how the people who judge me judge themselves. Do I want praise from a person who curses themselves three times an hour? Do I want to please a person who is not pleased with themselves? Do I want praise from people who know neither where they are nor who they are?",
+      "shared": "The unclear “it” in the last question is replaced by “praise”. The questions stay questions, since 8.51 asks and issues no blanket verdict. Only the self-judgment phrase is joint, in 9.16 and 8.51. The details are 8.51 alone. The quoted span 8.51b describes the people only, and its link to praise is carried by 8.51a and by the margin quote from the same passage.",
+      "passages": [
+       "9.16",
+       "8.51"
+      ],
+      "closeness": 0.508,
+      "closeness_new": 0.297,
+      "support": [
+       {
+        "id": "9.16b",
+        "ref": "9.16",
+        "quote": "and what sort of judges they are of themselves as well.",
+        "at": 100,
+        "start": 100,
+        "end": 155,
+        "in": "c2",
+        "follows": "Looking into these people also shows what kind of judges they are of themselves.",
+        "gives": [
+         "how the people who judge me judge themselves"
+        ]
+       },
+       {
+        "id": "8.51a",
+        "ref": "8.51",
+        "quote": "Do you want to be praised by a person who curses themselves three times an hour? Do you want to please a person who is not pleased with themselves?",
+        "at": 429,
+        "start": 429,
+        "end": 576,
+        "in": "c2",
+        "follows": "It makes no sense to want praise from someone who curses themselves, or to want to please someone who is not pleased with themselves.",
+        "gives": [
+         "how the people who judge me judge themselves",
+         "praise from a person who curses themselves three times an hour",
+         "please a person who is not pleased with themselves"
+        ]
+       },
+       {
+        "id": "8.51b",
+        "ref": "8.51",
+        "quote": "people who know neither where they are nor who they are",
+        "at": 371,
+        "start": 371,
+        "end": 426,
+        "in": "c2",
+        "follows": "The people who clap know neither where they are nor who they are.",
+        "gives": [
+         "people who know neither where they are nor who they are"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c3",
+      "number": 3,
+      "role": "Fame after death",
+      "t": "I make a gift of the present time to myself instead of chasing fame after death. Those who would remember me will be like the people I find hard to bear now, and they too are mortal. Each will very soon die, and then the one who takes over, until the whole memory goes out. What they say or think of me is nothing to me.",
+      "shared": "Wording unchanged. One anchor is added so that the rememberers are tied to 4.16a. Fame after death and mortality are joint in 8.42 and 4.16. The gift of the present, the hard-to-bear people and the closing judgment are 8.42 only. The succession of rememberers is 4.16 only. The image of lights going out lies outside the quoted span and is kept in the margin.",
+      "passages": [
+       "8.42",
+       "4.16"
+      ],
+      "closeness": 0.737,
+      "closeness_new": 0.634,
+      "support": [
+       {
+        "id": "8.42a",
+        "ref": "8.42",
+        "quote": "Look: make a gift of this present time to yourself.",
+        "at": 0,
+        "start": 0,
+        "end": 51,
+        "in": "c3",
+        "follows": "I should give the time that is here now to myself.",
+        "gives": [
+         "make a gift of the present time to myself"
+        ]
+       },
+       {
+        "id": "8.42b",
+        "ref": "8.42",
+        "quote": "People who instead chase fame after death do not take into account that those people will be others of the same kind as these whom they find hard to bear; and those people too are mortal.",
+        "at": 52,
+        "start": 52,
+        "end": 239,
+        "in": "c3",
+        "follows": "Those who would praise me later will be like the people I find hard to bear now, and they will die too.",
+        "gives": [
+         "chasing fame after death",
+         "like the people I find hard to bear now",
+         "they too are mortal"
+        ]
+       },
+       {
+        "id": "4.16a",
+        "ref": "4.16",
+        "quote": "Whoever is worked up about fame after death does not picture that each of those who remember them will very soon die too; then in turn the one who takes over from that one, until the whole memory also goes out",
+        "at": 0,
+        "start": 0,
+        "end": 209,
+        "in": "c3",
+        "follows": "Everyone who remembers me will soon die, and the one after them too, until all memory of me is gone.",
+        "gives": [
+         "chasing fame after death",
+         "Those who would remember me",
+         "they too are mortal",
+         "Each will very soon die, and then the one who takes over",
+         "until the whole memory goes out"
+        ]
+       },
+       {
+        "id": "8.42c",
+        "ref": "8.42",
+        "quote": "And what is it to you at all, if those people echo with sounds of such a kind, or hold a judgment of such a kind about you?",
+        "at": 240,
+        "start": 240,
+        "end": 363,
+        "in": "c3",
+        "follows": "What later people say about me, or what they think of me, is nothing to me.",
+        "gives": [
+         "What they say or think of me is nothing to me"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c4",
+      "number": 5,
+      "role": "Going against myself",
+      "t": "I see how the wish for other people’s good opinion goes against itself. We love ourselves more than everyone else, yet we value other people’s judgment of us above our own. People despise one another yet fawn on one another, and wanting to be above one another they take the lower place. They will not speak well of those who live beside them, yet they prize the good word of those who come after, whom they will never see.",
+      "shared": "The sources’ own persons are restored: “we” for 12.3 and “they” for 11.13 and 6.17, so I do not confess to things the text says of others. The self-contradiction is joint in 12.3 and 6.17. The fawning paradox is 11.13 only and never mentions fame. No duty to praise contemporaries is stated.",
+      "passages": [
+       "12.3",
+       "11.13",
+       "6.17"
+      ],
+      "closeness": 0.527,
+      "closeness_new": 0.425,
+      "support": [
+       {
+        "id": "12.3a",
+        "ref": "12.3",
+        "quote": "each person loves themselves more than everyone else, yet sets less value on their own judgment about themselves than on that of others",
+        "at": 37,
+        "start": 37,
+        "end": 172,
+        "in": "c4",
+        "follows": "People love themselves more than anyone, yet they value others’ judgment of them more than their own.",
+        "gives": [
+         "the wish for other people’s good opinion goes against itself",
+         "We love ourselves more than everyone else, yet we value other people’s judgment of us above our own"
+        ]
+       },
+       {
+        "id": "11.13a",
+        "ref": "11.13",
+        "quote": "Despising one another, they fawn on one another; and wanting to be above one another, they take the lower place beneath one another.",
+        "at": 0,
+        "start": 0,
+        "end": 132,
+        "in": "c4",
+        "follows": "People who despise one another fawn on one another, and in wanting to be above one another they put themselves beneath.",
+        "gives": [
+         "People despise one another yet fawn on one another",
+         "wanting to be above one another they take the lower place"
+        ]
+       },
+       {
+        "id": "6.17a",
+        "ref": "6.17",
+        "quote": "They are unwilling to speak well of the people who live at the same time as them and alongside them, yet they set great store by being spoken well of themselves by those who come after, whom they have never seen and never will see.",
+        "at": 22,
+        "start": 22,
+        "end": 253,
+        "in": "c4",
+        "follows": "It is odd to refuse to speak well of those who live beside me and yet care so much that people I will never see speak well of me.",
+        "gives": [
+         "the wish for other people’s good opinion goes against itself",
+         "They will not speak well of those who live beside them",
+         "they prize the good word of those who come after, whom they will never see"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c5",
+      "number": 2,
+      "role": "What praise cannot do",
+      "t": "What is praised becomes neither worse nor better, and it is conceit to suppose that blame does harm. Whatever is beautiful is beautiful of itself and does not have praise as a part of itself. Nothing beautiful is ruined when it is blamed. I take my own good to be my own action, not another person’s activity.",
+      "shared": "Semicolon removed. The first phrase is joint in 4.16 and 9.32, and the conceit is 9.32 only. The claim about blame is narrowed to the beautiful, as 4.16 frames it. The good as my own action is 6.46 only, and it names action, not self-approval.",
+      "passages": [
+       "4.16",
+       "9.32",
+       "6.46"
+      ],
+      "closeness": 0.535,
+      "closeness_new": 0.454,
+      "support": [
+       {
+        "id": "4.16c",
+        "ref": "4.16",
+        "quote": "At any rate, what is praised becomes neither worse nor better.",
+        "at": 764,
+        "start": 764,
+        "end": 826,
+        "in": "c5",
+        "follows": "Being praised makes a thing neither worse nor better.",
+        "gives": [
+         "What is praised becomes neither worse nor better"
+        ]
+       },
+       {
+        "id": "4.16d",
+        "ref": "4.16",
+        "quote": "Which of these is beautiful because it is praised, or is ruined when it is blamed?",
+        "at": 1077,
+        "start": 1077,
+        "end": 1159,
+        "in": "c5",
+        "follows": "Nothing is beautiful because it is praised, and nothing is ruined because it is blamed.",
+        "gives": [
+         "Nothing beautiful is ruined when it is blamed"
+        ]
+       },
+       {
+        "id": "9.32c",
+        "ref": "9.32",
+        "quote": "When they suppose that they do harm by blaming or do good by singing praises, how much conceit.",
+        "at": 199,
+        "start": 199,
+        "end": 294,
+        "in": "c5",
+        "follows": "People who think their blame does harm, or their praise does good, think far too much of themselves.",
+        "gives": [
+         "What is praised becomes neither worse nor better",
+         "conceit to suppose that blame does harm"
+        ]
+       },
+       {
+        "id": "4.16b",
+        "ref": "4.16",
+        "quote": "Everything that is beautiful in any way at all is beautiful of itself and ends in itself, and does not have praise as a part of itself.",
+        "at": 628,
+        "start": 628,
+        "end": 763,
+        "in": "c5",
+        "follows": "Whatever is beautiful is beautiful of itself, and praise is no part of its beauty.",
+        "gives": [
+         "beautiful of itself and does not have praise as a part of itself"
+        ]
+       },
+       {
+        "id": "6.46a",
+        "ref": "6.46",
+        "quote": "The lover of fame takes their own good to be another person’s activity; the lover of pleasure, their own feeling; the person who has sense, their own action.",
+        "at": 0,
+        "start": 0,
+        "end": 157,
+        "in": "c5",
+        "follows": "Whoever loves fame puts their good in what someone else does; a sensible person puts it in their own action.",
+        "gives": [
+         "my own good to be my own action, not another person’s activity"
+        ]
+       }
+      ]
+     }
+    ],
+    "single": [
+     {
+      "id": "10.20b",
+      "ref": "10.20",
+      "quote": "Then what they are like when lording it and giving themselves airs, or getting angry and scolding from a position of superiority. Yet a little while ago they were slaves, to how many, and for what sort of things. And in a little while they will be in the same sort of case.",
+      "at": 87,
+      "start": 87,
+      "end": 360,
+      "in": "single",
+      "label": "Slaves a little while ago",
+      "t": "When people lord it, give themselves airs and scold from above, I remember that a little while ago they were slaves, to how many and for what things. In a little while they will be in the same sort of case.",
+      "why": "Single source, 10.20. It never mentions praise or fame, and “the same sort of case” is not specified as death, so the line leaves it open.",
+      "follows": "Those who give themselves airs and scold from above were slaves to many not long ago, and soon they will be in the same case."
+     },
+     {
+      "id": "4.16e",
+      "ref": "4.16",
+      "quote": "But suppose even that those who will remember are immortal, and the memory immortal: what then is that to you? And I do not speak of its being nothing to the dead; but to the living, what is praise, except perhaps for the sake of managing some matter?",
+      "at": 266,
+      "start": 266,
+      "end": 517,
+      "in": "single",
+      "label": "Even if memory lasted",
+      "t": "Even if those who remember me were immortal, and the memory immortal, what would that be to me? To the living, what is praise, except perhaps for the sake of managing some matter?",
+      "why": "Single source, 4.16. Its question form and its “perhaps” are kept, so the practical use of praise stays a concession and becomes neither a rule nor a denial.",
+      "follows": "Even an undying memory would be nothing to me; to the living, praise is at most useful for managing some matter."
+     }
+    ],
+    "decisions": [
+     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. In modern editions 9.32 is 9.34, 8.42 is 8.44, 6.54 is 6.59, 4.16 is 4.19–20, 6.17 is 6.18, 8.51 is 8.52–53, 10.20 is 10.19, 12.3 is 12.4, 4.31 is 4.38, 9.16 is 9.18, 11.13 is 11.14 and 6.46 is 6.51; 10.10 is the same.",
+     "Semicolon removed and blame added, since 9.32 deflates praise and blame equally. “Want” and “fear” are left to the claims because each has only one witness. The three arguments stand side by side without being merged. “Ruins nothing” rests on 4.16, which speaks of beautiful things, and on 9.32."
+    ],
+    "limit": "Three separate arguments stand side by side: the quality of the judges, the transience of memory, and the self-sufficiency of the beautiful. The sources do not merge them. They do not tell me to despise people, withdraw from them, withhold praise or make self-approval my standard. 6.46 names my own action as my good, and 12.3 only observes, in the first person plural, that one’s own judgment is undervalued. 8.51 asks questions and faults fleeing praise as much as chasing it. 4.31 includes the wise. 4.16 leaves praise a possible practical use and sets the gift of nature aside. Passages 10.20, 11.13 and 10.10 never mention praise or fame, so their place in this article is editorial inference, and “the same sort of case” in 10.20 is not specified as death."
+   }
   },
   {
    "number": 28,
@@ -3091,7 +3900,412 @@
     "Reads “there” in 9.18 and 9.37 as “with the one who did the wrong”, as the translators’ notes do. The Greek says only “there”.",
     "Keeps 2.7 as a said-once item under “When it breaks”. It reports Theophrastus’s ranking of wrongs with Marcus’s approval, and Marcus says that such a comparison is an everyday way of speaking."
    ],
-   "limit": "Article 19’s claim 2 is this article’s claim 1, and both articles mark Ep. 81.22 as a challenge to it, because Seneca lets the least part of a wrong reach the one wronged; Article 19’s claim 8 is the said-once 9.37b. What this article adds is leaving the wrong with the one who did it, which Article 21 says once (7.21b) and which here rests on 8.53 and 9.18, with the reason that another’s wrong is no evil for me. The articles disagree about the wrongdoer: Article 19’s claim 1 says that with their disposition they can do nothing else, while claim 1 here says they can be rid of the wrong as soon as they wish, as Article 15’s claim 4 says of my own wrong, and 2.7 calls a wrong done from desire an impulse of one’s own. The two claims rest on four passages, two of them one-line sayings; Article 1 (cutting myself off by wrongdoing) and Article 3 (nothing is unusual) come near."
+   "limit": "Article 19’s claim 2 is this article’s claim 1, and both articles mark Ep. 81.22 as a challenge to it, because Seneca lets the least part of a wrong reach the one wronged; Article 19’s claim 8 is the said-once 9.37b. What this article adds is leaving the wrong with the one who did it, which Article 21 says once (7.21b) and which here rests on 8.53 and 9.18, with the reason that another’s wrong is no evil for me. The articles disagree about the wrongdoer: Article 19’s claim 1 says that with their disposition they can do nothing else, while claim 1 here says they can be rid of the wrong as soon as they wish, as Article 15’s claim 4 says of my own wrong, and 2.7 calls a wrong done from desire an impulse of one’s own. The two claims rest on four passages, two of them one-line sayings; Article 1 (cutting myself off by wrongdoing) and Article 3 (nothing is unusual) come near.",
+   "marcus_revision": {
+    "statement": {
+     "t": "A wrong harms the one who does it, and I leave another person’s wrong where it is.",
+     "parts": [
+      {
+       "words": "A wrong harms the one who does it",
+       "ids": [
+        "8.53b",
+        "9.4a",
+        "9.4b"
+       ],
+       "refs": [
+        "8.53",
+        "9.4"
+       ]
+      },
+      {
+       "words": "I leave another person’s wrong where it is",
+       "ids": [
+        "9.18a",
+        "9.37a"
+       ],
+       "refs": [
+        "9.18",
+        "9.37"
+       ]
+      }
+     ],
+     "kind": "A ground and the response it allows",
+     "form": "Both halves rest on two passages each. “Not the one it is done to” was dropped from the opening because only 8.53 says it, and it now sits in c1. The leaving comes from 9.18, and 9.37 supports only where the evil lies."
+    },
+    "map": {
+     "points": [
+      [
+       -0.1554,
+       0.4125
+      ],
+      [
+       0.3564,
+       -0.5293
+      ],
+      [
+       -0.214,
+       -0.7956
+      ],
+      [
+       0.7179,
+       0.6
+      ],
+      [
+       1.0,
+       -0.1497
+      ],
+      [
+       -0.9987,
+       -0.4366
+      ],
+      [
+       -0.7063,
+       0.8986
+      ]
+     ],
+     "stress": 0.184,
+     "sim": [
+      [
+       1.0,
+       0.581,
+       0.53,
+       0.525,
+       0.543,
+       0.479,
+       0.617
+      ],
+      [
+       0.581,
+       1.0,
+       0.615,
+       0.525,
+       0.597,
+       0.482,
+       0.433
+      ],
+      [
+       0.53,
+       0.615,
+       1.0,
+       0.485,
+       0.472,
+       0.537,
+       0.442
+      ],
+      [
+       0.525,
+       0.525,
+       0.485,
+       1.0,
+       0.613,
+       0.399,
+       0.426
+      ],
+      [
+       0.543,
+       0.597,
+       0.472,
+       0.613,
+       1.0,
+       0.384,
+       0.309
+      ],
+      [
+       0.479,
+       0.482,
+       0.537,
+       0.399,
+       0.384,
+       1.0,
+       0.41
+      ],
+      [
+       0.617,
+       0.433,
+       0.442,
+       0.426,
+       0.309,
+       0.41,
+       1.0
+      ]
+     ],
+     "lowest": 0.309,
+     "highest": 0.617,
+     "refs": [
+      "8.53",
+      "9.4",
+      "2.7",
+      "9.18",
+      "9.37",
+      "8.9",
+      "7.1"
+     ],
+     "around": {
+      "near": [
+       {
+        "id": "c2.s1",
+        "title": "When someone offends me",
+        "chapter": "Daily conduct",
+        "size": 20,
+        "provisional": false,
+        "article": 19,
+        "similarity": 0.786
+       },
+       {
+        "id": "c3.s2",
+        "title": "What happens can be borne and does not harm me",
+        "chapter": "The life within",
+        "size": 19,
+        "provisional": false,
+        "article": 8,
+        "similarity": 0.761
+       },
+       {
+        "id": "c6.s2",
+        "title": "The work that belongs to me",
+        "chapter": "The whole and my place in it",
+        "size": 15,
+        "provisional": false,
+        "article": 2,
+        "similarity": 0.733
+       },
+       {
+        "id": "c3.s9",
+        "title": "Blaming no one for what is not up to me",
+        "chapter": "The life within",
+        "size": 8,
+        "provisional": false,
+        "article": 15,
+        "similarity": 0.724
+       }
+      ],
+      "lowest": 0.532,
+      "highest": 0.786,
+      "farthest": "Taking a thing apart: material, cause, purpose and time",
+      "border": [],
+      "weakest_member": 0.69,
+      "outside": [
+       {
+        "ref": "12.12",
+        "similarity": 0.784,
+        "section": "When someone offends me"
+       },
+       {
+        "ref": "7.19",
+        "similarity": 0.724,
+        "section": "When someone offends me"
+       },
+       {
+        "ref": "5.29",
+        "similarity": 0.708,
+        "section": "What happens can be borne and does not harm me"
+       }
+      ],
+      "outside_closer": 4
+     }
+    },
+    "claims": [
+     {
+      "id": "c1",
+      "number": 1,
+      "role": "Where the harm of a wrong lies",
+      "t": "The evil of a wrong lies with the one who does it. It harms them and makes them bad, and they have the power to be rid of it as soon as they wish. The wrong does no harm to the universe or to the other person.",
+      "shared": "The first two phrases are joint across 8.53, 9.4 and 9.37. The power to be rid of the wrong and the absence of harm to the universe or the other person are 8.53 alone. The universe is restored from the source.",
+      "passages": [
+       "8.53",
+       "9.4",
+       "9.37"
+      ],
+      "closeness": 0.573,
+      "closeness_new": 0.467,
+      "support": [
+       {
+        "id": "8.53b",
+        "ref": "8.53",
+        "quote": "It is harmful only to the one who has also been given the power to be rid of it, as soon as they wish to.",
+        "at": 124,
+        "start": 124,
+        "end": 229,
+        "in": "c1",
+        "follows": "Wickedness harms only the one who has it, and that one can be rid of it as soon as they wish.",
+        "gives": [
+         "The evil of a wrong lies with the one who does it",
+         "It harms them and makes them bad",
+         "they have the power to be rid of it as soon as they wish"
+        ]
+       },
+       {
+        "id": "9.4a",
+        "ref": "9.4",
+        "quote": "Whoever does wrong does wrong at their own cost.",
+        "at": 0,
+        "start": 0,
+        "end": 48,
+        "in": "c1",
+        "follows": "The cost of a wrong falls on the one who does it.",
+        "gives": [
+         "The evil of a wrong lies with the one who does it"
+        ]
+       },
+       {
+        "id": "9.4b",
+        "ref": "9.4",
+        "quote": "Whoever acts unjustly does injustice to themselves, making themselves bad.",
+        "at": 49,
+        "start": 49,
+        "end": 123,
+        "in": "c1",
+        "follows": "Whoever acts unjustly wrongs themselves, by making themselves bad.",
+        "gives": [
+         "It harms them and makes them bad"
+        ]
+       },
+       {
+        "id": "9.37a",
+        "ref": "9.37",
+        "quote": "If the person did wrong, the evil is there.",
+        "at": 0,
+        "start": 0,
+        "end": 43,
+        "in": "c1",
+        "follows": "If someone did wrong, the evil is there, with the one who did it.",
+        "gives": [
+         "The evil of a wrong lies with the one who does it"
+        ]
+       },
+       {
+        "id": "8.53a",
+        "ref": "8.53",
+        "quote": "Wickedness in general does no harm to the universe, and wickedness in the particular case does no harm to the other person.",
+        "at": 0,
+        "start": 0,
+        "end": 123,
+        "in": "c1",
+        "follows": "Wickedness does no harm to the universe, and a particular wicked act does no harm to the person on the receiving end.",
+        "gives": [
+         "The wrong does no harm to the universe or to the other person"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c2",
+      "number": 2,
+      "role": "Leaving another’s wrong with them",
+      "t": "Another person’s wrong is not an evil for me, and my being unfortunate does not depend on someone else. I leave that wrong where it is.",
+      "shared": "The two passages share only the subject, another person’s wrong. The reasoning is 8.53 alone and the leaving is 9.18 alone. 9.18 gives no reason and no instruction about the wrongdoer, so none is added.",
+      "passages": [
+       "8.53",
+       "9.18"
+      ],
+      "closeness": 0.525,
+      "closeness_new": 0.416,
+      "support": [
+       {
+        "id": "8.53c",
+        "ref": "8.53",
+        "quote": "Otherwise my neighbour’s wickedness would be an evil for me, which god decided against, so that my being unfortunate should not depend on someone else.",
+        "at": 502,
+        "start": 502,
+        "end": 653,
+        "in": "c2",
+        "follows": "My neighbour’s wickedness is not an evil for me: god decided that my being unfortunate should not depend on anyone else.",
+        "gives": [
+         "Another person’s wrong",
+         "is not an evil for me",
+         "my being unfortunate does not depend on someone else"
+        ]
+       },
+       {
+        "id": "9.18a",
+        "ref": "9.18",
+        "quote": "Another person’s wrongdoing must be left there.",
+        "at": 0,
+        "start": 0,
+        "end": 47,
+        "in": "c2",
+        "follows": "Someone else’s wrongdoing is to be left where it is, with them.",
+        "gives": [
+         "Another person’s wrong",
+         "I leave that wrong where it is"
+        ]
+       }
+      ]
+     }
+    ],
+    "single": [
+     {
+      "id": "8.53d",
+      "ref": "8.53",
+      "quote": "To my faculty of choice, my neighbour’s faculty of choice is just as much a matter of indifference as their bit of breath and their bit of flesh. For however true it is that we have come to be for one another’s sake, still each of our ruling parts has its own authority.",
+      "at": 231,
+      "start": 231,
+      "end": 501,
+      "in": "single",
+      "label": "Each mind rules itself",
+      "t": "Another person’s power of choice is neither good nor bad for mine, any more than their bit of breath or their bit of flesh. We have come to be for one another’s sake, but each of us has a ruling part with its own authority.",
+      "why": "Single source, 8.53. The image of breath and flesh is kept, as is the concession that we exist for one another’s sake, so the line does not license indifference to people. “Neither good nor bad” is our rendering of “a matter of indifference”.",
+      "follows": "My neighbour’s power of choice is neither good nor bad for mine; though we exist for one another, each mind has its own authority."
+     },
+     {
+      "id": "9.37b",
+      "ref": "9.37",
+      "quote": "But perhaps they did not do wrong.",
+      "at": 44,
+      "start": 44,
+      "end": 78,
+      "in": "single",
+      "label": "Perhaps no wrong",
+      "t": "When I think someone has done wrong, I also allow that perhaps they did not.",
+      "why": "Single source, 9.37. The existing wording stands. It is a caution about my own judgement of the act and does not deny that something happened.",
+      "follows": "It may be that the person did not do wrong at all."
+     },
+     {
+      "id": "7.1a",
+      "ref": "7.1",
+      "quote": "What is wickedness? This is what you have often seen. And with everything that happens, keep this at hand: this is what you have often seen.",
+      "at": 0,
+      "start": 0,
+      "end": 140,
+      "in": "single",
+      "label": "Nothing new",
+      "t": "When I meet wickedness, and with everything else that happens, I keep this at hand: this is what I have often seen.",
+      "why": "Single source, 7.1. The line speaks of familiarity only. It does not say wickedness is harmless or acceptable.",
+      "follows": "Wickedness is what one has often seen, and the same thought is to be kept at hand for whatever happens."
+     },
+     {
+      "id": "2.7a",
+      "ref": "2.7",
+      "quote": "the wrong done with pleasure is open to a greater charge than the wrong done with pain. And in general the one is more like a person who has first been treated unjustly and has been forced by pain into anger; the other is moved to do injustice by an impulse of their own, carried towards doing something from desire.",
+      "at": 555,
+      "start": 555,
+      "end": 871,
+      "in": "single",
+      "label": "Wrong done for pleasure",
+      "t": "A wrong done with pleasure is open to a greater charge than a wrong done with pain. The angry person is more like someone first treated unjustly and forced by pain into anger. The person who does wrong from desire is moved by an impulse of their own.",
+      "why": "Single source, 2.7, where Marcus endorses a comparison by Theophrastus. It is kept in the third person, with “more like” as a comparison. Both remain wrongs and anger is not excused.",
+      "follows": "Theophrastus, whom Marcus approves, holds that a wrong done with pleasure deserves a greater charge than a wrong done in the pain of anger."
+     },
+     {
+      "id": "9.4c",
+      "ref": "9.4",
+      "quote": "Often the one who does not do something acts unjustly, not only the one who does something.",
+      "at": 125,
+      "start": 125,
+      "end": 216,
+      "in": "single",
+      "label": "Wrong by not acting",
+      "t": "Injustice often lies in not doing something, and not only in doing something.",
+      "why": "Single source, 9.4. “Often” is restored from the source. It stops “I leave another person’s wrong where it is” from being read as a rule of inaction.",
+      "follows": "Leaving something undone can be unjust, as well as doing something."
+     }
+    ],
+    "decisions": [
+     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. In modern editions 8.53 is 8.55–56, 9.4 is 9.4–5, 2.7 is 2.10, 9.18 is 9.20, 9.37 is 9.38 and 8.9 is 8.10; 7.1 is the same.",
+     "Both halves rest on two passages each. “Not the one it is done to” was dropped from the opening because only 8.53 says it, and it now sits in c1. The leaving comes from 9.18, and 9.37 supports only where the evil lies."
+    ],
+    "limit": "The article says where the evil of a wrong falls. It does not say how to treat the wrongdoer, and “left there” in 9.18 is not expanded into ignoring, forgiving or declining to correct. The opening’s “I leave” rests on 9.18 alone, with 9.37 supporting only where the evil lies. In c2 the two passages share only the subject, and the reasoning is 8.53 alone. 8.9 concerns pleasure and regret and stays aside."
+   }
   },
   {
    "number": 29,
@@ -3821,7 +5035,93 @@
     "Reads “not held upright” in 7.9 as not held upright by someone else, and writes “on my own”. The “not” itself is uncertain: according to the translators’ note it is a correction by an editor of the Greek text, and the manuscripts read “or”, a report the note marks as from memory and unchecked.",
     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. 9.15 is 9.17 in modern editions, 7.9 is 7.12, 6.49 is 6.54, 6.5 is 6.6, and 8.40 is the end of 8.41."
    ],
-   "limit": "This section has no common topic, and the article states two separate rules without arguing for either. Both are said elsewhere: Article 22’s claim 2 says my mind must stand upright by itself, not set upright by anything else, and Article 19’s said-once 7.36a, never to feel towards inhuman people what they feel towards human beings, is near not becoming like those I fight. The stone of 9.15 is near Article 34’s claim 4, that having fallen no more harms a ball, and the hive of 6.49 neighbours Article 3’s claim 2 and Article 8’s claim 5, that if the city is not harmed, I am not harmed. Seneca’s advice in Ep. 7.8 not to hate the crowd is already in Article 1; here only the clause on not copying the bad is used."
+   "limit": "This section has no common topic, and the article states two separate rules without arguing for either. Both are said elsewhere: Article 22’s claim 2 says my mind must stand upright by itself, not set upright by anything else, and Article 19’s said-once 7.36a, never to feel towards inhuman people what they feel towards human beings, is near not becoming like those I fight. The stone of 9.15 is near Article 34’s claim 4, that having fallen no more harms a ball, and the hive of 6.49 neighbours Article 3’s claim 2 and Article 8’s claim 5, that if the city is not harmed, I am not harmed. Seneca’s advice in Ep. 7.8 not to hate the crowd is already in Article 1; here only the clause on not copying the bad is used.",
+   "marcus_revision": {
+    "statement": {
+     "t": "I am to be upright, not held upright, and my best way to fight back is not to become like those I fight.",
+     "parts": [
+      {
+       "words": "I am to be upright, not held upright",
+       "ids": [
+        "7.9a"
+       ],
+       "refs": [
+        "7.9"
+       ]
+      },
+      {
+       "words": "my best way to fight back is not to become like those I fight",
+       "ids": [
+        "6.5a"
+       ],
+       "refs": [
+        "6.5"
+       ]
+      }
+     ],
+     "kind": "Separate sayings kept side by side",
+     "form": "Unfused opening that sets two separate sayings side by side, each with one witness (7.9 and 6.5). “On my own” is dropped because 7.9 does not reject help or name who would do the holding. “Those I fight” gives the source’s unspecified “them” a referent taken only from “fight back”."
+    },
+    "single": [
+     {
+      "id": "9.15a",
+      "ref": "9.15",
+      "quote": "For a stone that has been thrown upward, it is nothing bad to be carried down, and nothing good to be carried up.",
+      "at": 0,
+      "start": 0,
+      "end": 113,
+      "in": "single",
+      "label": "Up or down",
+      "t": "For a stone thrown upward, it is nothing bad to be carried down and nothing good to be carried up.",
+      "why": "Single source 9.15, kept as the speaker’s third-person image. Supplied quote: “For a stone that has been thrown upward, it is nothing bad to be carried down, and nothing good to be carried up.” “Carried” is kept because the motion comes from outside the stone. No application to fortune, fate or death is added.",
+      "follows": "For a thrown stone, falling is not bad and rising is not good."
+     },
+     {
+      "id": "6.49a",
+      "ref": "6.49",
+      "quote": "What is not good for the hive is not good for the bee either.",
+      "at": 0,
+      "start": 0,
+      "end": 61,
+      "in": "single",
+      "label": "Hive and bee",
+      "t": "What is not good for the hive is not good for the bee either.",
+      "why": "Single source 6.49, kept verbatim. Supplied quote: “What is not good for the hive is not good for the bee either.” The claim is negative and runs one way only, so no rule that the hive’s good is the bee’s good is stated. The existing “in it” is dropped as an addition.",
+      "follows": "A bee cannot gain from what does not benefit its hive."
+     },
+     {
+      "id": "7.9a",
+      "ref": "7.9",
+      "quote": "Upright, not held upright.",
+      "at": 0,
+      "start": 0,
+      "end": 26,
+      "in": "single",
+      "label": "Upright on my own",
+      "t": "Upright, not held upright.",
+      "why": "Single source 7.9, kept verbatim in its own terse form. Supplied quote: “Upright, not held upright.” The existing “by someone else” is removed because the saying does not say who or what would do the holding.",
+      "follows": "Uprightness should be one’s own, not something that another keeps in place."
+     },
+     {
+      "id": "6.5a",
+      "ref": "6.5",
+      "quote": "The best way to fight back is to not become like them.",
+      "at": 0,
+      "start": 0,
+      "end": 54,
+      "in": "single",
+      "label": "Fighting back",
+      "t": "When I fight back against people, the best way is not to become like them.",
+      "why": "Single source 6.5. Supplied quote: “The best way to fight back is to not become like them.” The frame of fighting back is kept, so this is resistance and not passivity. “People” is added only to give “them” a referent. Nothing is said about forgiving or correcting them.",
+      "follows": "The best way to fight back against someone is to not become like them."
+     }
+    ],
+    "decisions": [
+     "The editor recommended that this section get no article, since no two of its passages share a claim. It stands instead as four said-once items, so that the article numbers stay as planned; whether the section keeps an article is the owner’s decision.",
+     "Unfused opening that sets two separate sayings side by side, each with one witness (7.9 and 6.5). “On my own” is dropped because 7.9 does not reject help or name who would do the holding. “Those I fight” gives the source’s unspecified “them” a referent taken only from “fight back”."
+    ],
+    "limit": "Nothing in this article is fused. It keeps four separate sayings side by side, each on its single witness. The opening only juxtaposes two of them (7.9 and 6.5), so the lines 7.9a and 6.5a restate those sayings in the speaker’s own frame and do not add new doctrine. “Those I fight” and “people” are editorial referents for the source’s unspecified “them”, drawn only from “fight back”. “Them” is not identified with members of the hive. The thrown stone is passively carried while uprightness is precisely not held, so the images must not be merged. The hive saying is negative and runs one way only. Reading it as a limit on self-possession is our interpretation, not the source’s wording. The 8.40 fragment stays in the margin without a subject or a consequence. Fate, death, nature, reason and the gods appear in none of the passages."
+   }
   },
   {
    "number": 30,
@@ -5481,7 +6781,340 @@
     "Reads the “little breaths carrying corpses” of 9.22 as the life in a person, as 9.34 uses “little breath”. 9.22 is a list with no verb and does not say what it is describing.",
     "Follows the project English of 6.41, “feel this way about the whole of life too”, for claim 3’s “I should feel”. The Greek has a bare infinitive with no verb to govern it, and it can also be read as a statement: this is what happens to you with the whole of life too."
    ],
-   "limit": "Article 3 already says that nothing that happens is unusual, and Article 34, claim 8, that the same things happen in every age, only with other people; what this article adds is the ground, that things are always the same and foul in their matter, and that being surprised at what happens shows I am a stranger to the universe. It pulls against Article 5, claim 3, where what looks rotten looks different, even pleasing, to someone who knows nature well: both are Marcus’s, and in the editor’s reading that one looks at matter with nature’s eye so as to accept it, while this one strips things down to their matter so as to stop prizing them. The article states a way of seeing and does not argue for it, gives no action beyond a feeling and a warning, and sets aside three of the twelve passages."
+   "limit": "Article 3 already says that nothing that happens is unusual, and Article 34, claim 8, that the same things happen in every age, only with other people; what this article adds is the ground, that things are always the same and foul in their matter, and that being surprised at what happens shows I am a stranger to the universe. It pulls against Article 5, claim 3, where what looks rotten looks different, even pleasing, to someone who knows nature well: both are Marcus’s, and in the editor’s reading that one looks at matter with nature’s eye so as to accept it, while this one strips things down to their matter so as to stop prizing them. The article states a way of seeing and does not argue for it, gives no action beyond a feeling and a warning, and sets aside three of the twelve passages.",
+   "marcus_revision": {
+    "statement": {
+     "t": "I see the same things recur in life, all made of dirt and rot. I am a stranger to the world if I fail to recognise what happens in it.",
+     "parts": [
+      {
+       "words": "the same things recur in life",
+       "ids": [
+        "6.41a",
+        "6.41b",
+        "9.12b"
+       ],
+       "refs": [
+        "6.41",
+        "9.12"
+       ]
+      },
+      {
+       "words": "all made of dirt and rot",
+       "ids": [
+        "9.12a",
+        "9.34a",
+        "8.23a"
+       ],
+       "refs": [
+        "9.12",
+        "9.34",
+        "8.23"
+       ]
+      },
+      {
+       "words": "I am a stranger to the world",
+       "ids": [
+        "4.23a",
+        "12.10a"
+       ],
+       "refs": [
+        "4.23",
+        "12.10"
+       ]
+      },
+      {
+       "words": "if I fail to recognise what happens in it",
+       "ids": [
+        "4.23a",
+        "12.10a"
+       ],
+       "refs": [
+        "4.23",
+        "12.10"
+       ]
+      }
+     ],
+     "kind": "Two grounds, an exercise and a warning",
+     "form": "Two short sentences keep sameness and material foulness as separate judgements, then state the warning. ‘Dirt and rot’ says plainly what looking at the materials shows: filth in 9.12, rottenness in 9.34, dirt in 8.23. ‘Fail to recognise’ covers both not knowing what happens (4.23) and being surprised by it (12.10). It stays a warning, not a vow, and gives no reason for the lack of surprise because 12.10 gives none. ‘World’ stands for ‘universe’ in 4.23 and ‘life’ in 12.10. The marble, gold and bath images stay in c2 and c3. 134 characters."
+    },
+    "colors": {
+     "6.41": 1,
+     "9.12": 2,
+     "9.34": 3,
+     "8.23": 4,
+     "4.23": 5,
+     "12.10": 1,
+     "9.36": 3,
+     "9.22": 1,
+     "11.29": 1
+    },
+    "claims": [
+     {
+      "id": "c1",
+      "number": 1,
+      "role": "Always the same",
+      "t": "All things are the same and come from the same. Everything now is as it was in the time of those we have buried, and to watch it for a hundred years or for three comes to the same.",
+      "shared": "Adds the buried and the hundred years to the opening’s sameness. Limit: 9.36 says only ‘these things’, so reading ‘it’ as everything is our interpretation. No verdict on the worth or length of life is drawn.",
+      "passages": [
+       "6.41",
+       "9.12",
+       "9.36"
+      ],
+      "closeness": 0.52,
+      "closeness_new": 0.436,
+      "support": [
+       {
+        "id": "6.41b",
+        "ref": "6.41",
+        "quote": "For all things, up and down, are the same and from the same.",
+        "at": 211,
+        "start": 211,
+        "end": 271,
+        "in": "c1",
+        "follows": "All things, wherever one looks, are the same and come from the same.",
+        "gives": [
+         "All things are the same",
+         "come from the same"
+        ]
+       },
+       {
+        "id": "9.12b",
+        "ref": "9.12",
+        "quote": "Everything now is as it was in the time of those we have buried.",
+        "at": 96,
+        "start": 96,
+        "end": 160,
+        "in": "c1",
+        "follows": "Nothing is different now from how it was when the people we have buried were alive.",
+        "gives": [
+         "All things are the same",
+         "Everything now is as it was in the time of those we have buried"
+        ]
+       },
+       {
+        "id": "9.36a",
+        "ref": "9.36",
+        "quote": "To have observed these things for a hundred years or for three comes to the same.",
+        "at": 0,
+        "start": 0,
+        "end": 81,
+        "in": "c1",
+        "follows": "Observing these things for a hundred years gives no more than observing them for three.",
+        "gives": [
+         "to watch it for a hundred years or for three comes to the same"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c2",
+      "number": 2,
+      "role": "Foul in its matter",
+      "t": "The matter under each thing is rotten: water, dust, little bones, a goatish reek. Marble is the earth’s callus, gold and silver are sediment, clothing is little hairs and purple dye is blood.",
+      "shared": "The images are kept nearly verbatim because they carry the idea. The inventory of materials is from 9.34 alone. Only the ‘filthy in their matter’ count of 9.12 is used here. The claim concerns underlying matter and draws no practical conclusion.",
+      "passages": [
+       "9.12",
+       "9.34"
+      ],
+      "closeness": 0.635,
+      "closeness_new": 0.501,
+      "support": [
+       {
+        "id": "9.12a",
+        "ref": "9.12",
+        "quote": "All these things are familiar in experience, lasting a day in time, and filthy in their matter.",
+        "at": 0,
+        "start": 0,
+        "end": 95,
+        "in": "c2",
+        "follows": "These things are well known, short-lived and dirty in what they are made of.",
+        "gives": [
+         "The matter under each thing is rotten"
+        ]
+       },
+       {
+        "id": "9.34a",
+        "ref": "9.34",
+        "quote": "The rottenness of the matter that underlies each thing: water, dust, little bones, a goatish reek.",
+        "at": 0,
+        "start": 0,
+        "end": 98,
+        "in": "c2",
+        "follows": "The matter under each thing is rotten: water, dust, little bones and a goatish smell.",
+        "gives": [
+         "The matter under each thing is rotten",
+         "water, dust, little bones, a goatish reek"
+        ]
+       },
+       {
+        "id": "9.34b",
+        "ref": "9.34",
+        "quote": "Or again: marble is the earth’s callus, gold and silver are sediment, clothing is little hairs, and purple dye is blood, and all the rest is of this kind.",
+        "at": 99,
+        "start": 99,
+        "end": 253,
+        "in": "c2",
+        "follows": "Even costly things are made of lowly stuff: marble is hardened earth, gold and silver are sediment, and the rest is the same.",
+        "gives": [
+         "Marble is the earth’s callus, gold and silver are sediment, clothing is little hairs and purple dye is blood"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c3",
+      "number": 4,
+      "role": "Carrying one distaste to all of life",
+      "t": "The amphitheatre repels me because the same things are always seen there, and I am to feel that way about the whole of life. Bathing appears to me as oil, sweat, dirt and slimy water, all of it disgusting, and such is every part of life and every object.",
+      "shared": "Two exercises kept in separate sentences. The amphitheatre repels by sameness (6.41 only) and the bath by its matter (8.23 only). Both extend the feeling to all of life, which is the joint phrase.",
+      "passages": [
+       "6.41",
+       "8.23"
+      ],
+      "closeness": 0.46,
+      "closeness_new": 0.452,
+      "support": [
+       {
+        "id": "6.41a",
+        "ref": "6.41",
+        "quote": "Just as what goes on in the amphitheatre and places of that kind repels you, since the same things are always being seen, and the sameness makes the spectacle cloying, feel this way about the whole of life too.",
+        "at": 0,
+        "start": 0,
+        "end": 210,
+        "in": "c3",
+        "follows": "The weariness I feel at a show where the same things keep coming round, I should feel towards the whole of life.",
+        "gives": [
+         "The amphitheatre repels me because the same things are always seen there",
+         "I am to feel that way about",
+         "the whole of life"
+        ]
+       },
+       {
+        "id": "8.23a",
+        "ref": "8.23",
+        "quote": "As bathing appears to you (oil, sweat, dirt, slimy water, all of it disgusting), such is every part of life and every object.",
+        "at": 0,
+        "start": 0,
+        "end": 125,
+        "in": "c3",
+        "follows": "Every part of life and every object is as disgusting as the oil, sweat and dirty water of the baths.",
+        "gives": [
+         "the whole of life",
+         "Bathing appears to me as oil, sweat, dirt and slimy water, all of it disgusting",
+         "every part of life and every object"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c4",
+      "number": 5,
+      "role": "A stranger to the universe",
+      "t": "I am a stranger to the universe if I do not know the things that happen, and ridiculous as well if anything that happens in life surprises me.",
+      "shared": "Only ‘stranger’ is common to both. Ignorance is the ground in 4.23 and surprise in 12.10. ‘Ridiculous’ is from 12.10 alone. Stated as a warning, not a vow.",
+      "passages": [
+       "4.23",
+       "12.10"
+      ],
+      "closeness": 0.463,
+      "closeness_new": 0.445,
+      "support": [
+       {
+        "id": "4.23a",
+        "ref": "4.23",
+        "quote": "If the one who does not know the things that are in the universe is a stranger to the universe, no less a stranger too is the one who does not know the things that happen.",
+        "at": 167,
+        "start": 167,
+        "end": 338,
+        "in": "c4",
+        "follows": "Not knowing what happens makes a person as much a stranger to the universe as not knowing what is in it.",
+        "gives": [
+         "I am a stranger",
+         "to the universe if I do not know the things that happen"
+        ]
+       },
+       {
+        "id": "12.10a",
+        "ref": "12.10",
+        "quote": "How ridiculous, and what a stranger, is the person who is surprised at anything at all that happens in life.",
+        "at": 0,
+        "start": 0,
+        "end": 108,
+        "in": "c4",
+        "follows": "Whoever is surprised by anything that happens in life is ridiculous and a stranger.",
+        "gives": [
+         "I am a stranger",
+         "ridiculous as well if anything that happens in life surprises me"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c5",
+      "number": 3,
+      "role": "The life in me is matter too",
+      "t": "The little breath is one more thing of the same kind as other matter. The breath changes out of that matter and into that matter. The saying goes: “little breaths carrying corpses”.",
+      "shared": "Breath is not exempted from the judgement on matter. The change out of and into matter is from 9.34 alone. The corpse image is from 9.22 alone and stands as a quoted saying in the third person, with no command added, because 9.22 does not name what the saying describes. The nouns are repeated so that no pronoun has two referents.",
+      "passages": [
+       "9.34",
+       "9.22"
+      ],
+      "closeness": 0.437,
+      "closeness_new": 0.369,
+      "support": [
+       {
+        "id": "9.34c",
+        "ref": "9.34",
+        "quote": "And the little breath too is another thing of this kind, changing out of these things and into these.",
+        "at": 254,
+        "start": 254,
+        "end": 355,
+        "in": "c5",
+        "follows": "Even the little breath of life is made of the same lowly stuff, and changes out of it and into it.",
+        "gives": [
+         "The little breath",
+         "one more thing of the same kind as other matter",
+         "The breath changes out of that matter and into that matter"
+        ]
+       },
+       {
+        "id": "9.22a",
+        "ref": "9.22",
+        "quote": "Children’s tantrums and toys, and “little breaths carrying corpses”, so that the scene of the Calling Up of the Dead strikes home more vividly.",
+        "at": 0,
+        "start": 0,
+        "end": 143,
+        "in": "c5",
+        "follows": "Children’s tantrums and toys, and little breaths carrying corpses, make the scene of the dead called up strike home more vividly.",
+        "gives": [
+         "The little breath",
+         "The saying goes: “little breaths carrying corpses”"
+        ]
+       }
+      ]
+     }
+    ],
+    "single": [
+     {
+      "id": "11.29a",
+      "ref": "11.29",
+      "quote": "To ask for a fig in winter is the act of someone mad. Such is the person who asks for their child when it is no longer given.",
+      "at": 0,
+      "start": 0,
+      "end": 125,
+      "in": "single",
+      "label": "Out of season",
+      "t": "To ask for a fig in winter is mad. I am as mad if I ask for my child when my child is no longer given.",
+      "why": "Single source, resting on the supplied quote 11.29a and turned to the first person. The fault is demanding what is no longer given. Love of the child is not faulted, and the saying is about loss, not sameness or filth.",
+      "follows": "Asking for a child who is no longer given is as mad as asking for a fig in winter."
+     }
+    ],
+    "decisions": [
+     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. In modern editions 9.12 is 9.14, 9.34 is 9.36, 6.41 is 6.46, 8.23 is 8.24, 4.23 is 4.28–29 (the sentence quoted opens 4.29), 9.22 is 9.24, 12.10 is 12.13, 9.36 is 9.37 and 11.29 is 11.33.",
+     "Two short sentences keep sameness and material foulness as separate judgements, then state the warning. ‘Dirt and rot’ says plainly what looking at the materials shows: filth in 9.12, rottenness in 9.34, dirt in 8.23. ‘Fail to recognise’ covers both not knowing what happens (4.23) and being surprised by it (12.10). It stays a warning, not a vow, and gives no reason for the lack of surprise because 12.10 gives none. ‘World’ stands for ‘universe’ in 4.23 and ‘life’ in 12.10. The marble, gold and bath images stay in c2 and c3. 134 characters."
+    ],
+    "limit": "Sameness and material foulness are separate grounds. The opening states them as two judgements in one sentence, and c3 sets them side by side, each sentence with its own witness. ‘These things’ in 9.12 and 9.36 has no stated referent, so reading it as the things of life is editorial. ‘Stranger’ rests on ignorance in 4.23 and on surprise in 12.10. The opening’s ‘fail to recognise’ gathers both, and c4 keeps them apart. The opening’s ‘world’ stands for ‘universe’ in 4.23 and ‘life’ in 12.10. C4 states the result of 4.23’s conditional directly, with the premise kept in the margin. The corpse saying is from 9.22 alone, and what it describes is not named. 11.29 is a single-source saying about asking for what is no longer given, not about sameness or filth. No passage says what should be valued instead, and none concludes for withdrawal or death. The fragments 11.28, 11.20 and 6.51 and the character list of 4.23 are left outside the doctrine."
+   }
   },
   {
    "number": 31,
@@ -7892,7 +9525,1201 @@
     "Uses 9.39 only for its list of what the ruling part can become, since its grammar can be read more than one way, and reads 6.16’s “movement of virtue” as the right movement of the mind.",
     "Keeps six claims, more than usual, because the section has eighteen passages and each claim has words that at least two passages say."
    ],
-   "limit": "Other articles say parts of this one: Article 4 that what rules in me moves itself, Article 2 that reason should lead, Article 1 and Article 21’s claim 5 that every act has an aim, Article 12 that I ask what I am using my mind for (claim 3 here), that I go straight towards a target (claim 6) and that my mind pronounces on things (9.13), Article 13 that nothing is better than the spirit within me (claim 4), and Articles 10 and 34 what death may turn out to be (claim 5). What this article adds is the use the soul makes of itself: everything lies in it, and it can do violence to itself. The article reads that violence as giving in to pleasure or pain, or as pretending, so Article 8’s “nothing from outside touches my mind” still stands. Claim 5 says without condition what Article 17’s claim 2 says only of a disciplined mind, and Article 35, like 2.3 here, warns that time can run out. 11.1 feeds three claims and a said-once item, so the article leans on one long passage, and the claim under “If I doubt it” answers a doubt about the soul’s survival, not about the statement itself."
+   "limit": "Other articles say parts of this one: Article 4 that what rules in me moves itself, Article 2 that reason should lead, Article 1 and Article 21’s claim 5 that every act has an aim, Article 12 that I ask what I am using my mind for (claim 3 here), that I go straight towards a target (claim 6) and that my mind pronounces on things (9.13), Article 13 that nothing is better than the spirit within me (claim 4), and Articles 10 and 34 what death may turn out to be (claim 5). What this article adds is the use the soul makes of itself: everything lies in it, and it can do violence to itself. The article reads that violence as giving in to pleasure or pain, or as pretending, so Article 8’s “nothing from outside touches my mind” still stands. Claim 5 says without condition what Article 17’s claim 2 says only of a disciplined mind, and Article 35, like 2.3 here, warns that time can run out. 11.1 feeds three claims and a said-once item, so the article leans on one long passage, and the claim under “If I doubt it” answers a doubt about the soul’s survival, not about the statement itself.",
+   "marcus_revision": {
+    "statement": {
+     "t": "Everything lies in what I use my soul for. It can see the truth of all things and of itself, or do violence to itself by pretending.",
+     "parts": [
+      {
+       "words": "Everything lies in what I use my soul for",
+       "ids": [
+        "12.26a",
+        "12.26b",
+        "5.11a"
+       ],
+       "refs": [
+        "12.26",
+        "5.11"
+       ]
+      },
+      {
+       "words": "see the truth of all things and of itself",
+       "ids": [
+        "11.11a",
+        "11.1a",
+        "5.26a"
+       ],
+       "refs": [
+        "11.11",
+        "11.1",
+        "5.26"
+       ]
+      },
+      {
+       "words": "do violence to itself",
+       "ids": [
+        "2.14a",
+        "2.3a"
+       ],
+       "refs": [
+        "2.14",
+        "2.3"
+       ]
+      },
+      {
+       "words": "by pretending",
+       "ids": [
+        "2.14c",
+        "9.39a"
+       ],
+       "refs": [
+        "2.14",
+        "9.39"
+       ]
+      }
+     ],
+     "kind": "One power and its two uses",
+     "form": "“What I use my soul for” takes the plain question of 5.11 and joins it to 12.26, where everything lies in how the ruling part uses itself. Treating soul and ruling part as one here is our interpretation. The truth of all things and of itself is 11.11’s wording, with self-sight shared by 11.1 and knowledge of the whole by 5.26. Self-violence is joint (2.14, 2.3). Pretence is named because it alone among the harms has two witnesses (2.14, 9.39) and it is the direct opposite of seeing the truth. It is one example, not the whole list. “Can” keeps both sight and harm as possibilities, not achievements. 132 characters."
+    },
+    "colors": {
+     "11.1": 1,
+     "2.14": 2,
+     "12.26": 3,
+     "2.3": 4,
+     "11.11": 5,
+     "5.26": 3,
+     "5.11": 2,
+     "9.39": 1,
+     "8.44": 3,
+     "6.30": 1,
+     "4.34": 2,
+     "11.3": 2,
+     "4.17": 3,
+     "8.57": 1,
+     "6.16": 3,
+     "9.13": 1,
+     "10.14": 1
+    },
+    "map": {
+     "points": [
+      [
+       -0.0053,
+       0.1358
+      ],
+      [
+       -0.3796,
+       0.4276
+      ],
+      [
+       -0.5098,
+       -0.0353
+      ],
+      [
+       -0.2433,
+       0.773
+      ],
+      [
+       0.1139,
+       0.5466
+      ],
+      [
+       -0.0568,
+       -0.3478
+      ],
+      [
+       -0.8303,
+       0.0812
+      ],
+      [
+       0.5819,
+       0.0049
+      ],
+      [
+       -0.637,
+       -0.6055
+      ],
+      [
+       0.6234,
+       -0.443
+      ],
+      [
+       -0.1964,
+       -0.8421
+      ],
+      [
+       -0.8065,
+       0.591
+      ],
+      [
+       -0.9719,
+       -0.2493
+      ],
+      [
+       0.162,
+       -0.9427
+      ],
+      [
+       1.0,
+       0.1954
+      ],
+      [
+       0.8392,
+       0.6081
+      ],
+      [
+       0.4715,
+       0.9751
+      ],
+      [
+       0.845,
+       -0.8729
+      ]
+     ],
+     "stress": 0.297,
+     "sim": [
+      [
+       1.0,
+       0.674,
+       0.606,
+       0.547,
+       0.596,
+       0.56,
+       0.52,
+       0.541,
+       0.47,
+       0.513,
+       0.533,
+       0.517,
+       0.474,
+       0.472,
+       0.453,
+       0.447,
+       0.451,
+       0.385
+      ],
+      [
+       0.674,
+       1.0,
+       0.609,
+       0.553,
+       0.579,
+       0.511,
+       0.505,
+       0.49,
+       0.466,
+       0.507,
+       0.489,
+       0.641,
+       0.567,
+       0.402,
+       0.451,
+       0.448,
+       0.422,
+       0.348
+      ],
+      [
+       0.606,
+       0.609,
+       1.0,
+       0.526,
+       0.506,
+       0.519,
+       0.569,
+       0.481,
+       0.54,
+       0.472,
+       0.522,
+       0.593,
+       0.561,
+       0.497,
+       0.364,
+       0.407,
+       0.444,
+       0.313
+      ],
+      [
+       0.547,
+       0.553,
+       0.526,
+       1.0,
+       0.539,
+       0.608,
+       0.512,
+       0.479,
+       0.465,
+       0.442,
+       0.506,
+       0.507,
+       0.472,
+       0.454,
+       0.455,
+       0.461,
+       0.419,
+       0.311
+      ],
+      [
+       0.596,
+       0.579,
+       0.506,
+       0.539,
+       1.0,
+       0.546,
+       0.535,
+       0.522,
+       0.449,
+       0.468,
+       0.494,
+       0.474,
+       0.446,
+       0.418,
+       0.453,
+       0.493,
+       0.406,
+       0.321
+      ],
+      [
+       0.56,
+       0.511,
+       0.519,
+       0.608,
+       0.546,
+       1.0,
+       0.515,
+       0.491,
+       0.604,
+       0.51,
+       0.46,
+       0.452,
+       0.417,
+       0.456,
+       0.418,
+       0.382,
+       0.388,
+       0.386
+      ],
+      [
+       0.52,
+       0.505,
+       0.569,
+       0.512,
+       0.535,
+       0.515,
+       1.0,
+       0.454,
+       0.595,
+       0.423,
+       0.492,
+       0.526,
+       0.526,
+       0.451,
+       0.43,
+       0.351,
+       0.411,
+       0.325
+      ],
+      [
+       0.541,
+       0.49,
+       0.481,
+       0.479,
+       0.522,
+       0.491,
+       0.454,
+       1.0,
+       0.456,
+       0.488,
+       0.441,
+       0.403,
+       0.441,
+       0.421,
+       0.483,
+       0.435,
+       0.491,
+       0.465
+      ],
+      [
+       0.47,
+       0.466,
+       0.54,
+       0.465,
+       0.449,
+       0.604,
+       0.595,
+       0.456,
+       1.0,
+       0.462,
+       0.397,
+       0.491,
+       0.459,
+       0.448,
+       0.354,
+       0.353,
+       0.421,
+       0.382
+      ],
+      [
+       0.513,
+       0.507,
+       0.472,
+       0.442,
+       0.468,
+       0.51,
+       0.423,
+       0.488,
+       0.462,
+       1.0,
+       0.44,
+       0.402,
+       0.371,
+       0.491,
+       0.456,
+       0.444,
+       0.41,
+       0.488
+      ],
+      [
+       0.533,
+       0.489,
+       0.522,
+       0.506,
+       0.494,
+       0.46,
+       0.492,
+       0.441,
+       0.397,
+       0.44,
+       1.0,
+       0.413,
+       0.45,
+       0.548,
+       0.383,
+       0.442,
+       0.34,
+       0.424
+      ],
+      [
+       0.517,
+       0.641,
+       0.593,
+       0.507,
+       0.474,
+       0.452,
+       0.526,
+       0.403,
+       0.491,
+       0.402,
+       0.413,
+       1.0,
+       0.516,
+       0.387,
+       0.352,
+       0.339,
+       0.398,
+       0.294
+      ],
+      [
+       0.474,
+       0.567,
+       0.561,
+       0.472,
+       0.446,
+       0.417,
+       0.526,
+       0.441,
+       0.459,
+       0.371,
+       0.45,
+       0.516,
+       1.0,
+       0.459,
+       0.401,
+       0.366,
+       0.367,
+       0.344
+      ],
+      [
+       0.472,
+       0.402,
+       0.497,
+       0.454,
+       0.418,
+       0.456,
+       0.451,
+       0.421,
+       0.448,
+       0.491,
+       0.548,
+       0.387,
+       0.459,
+       1.0,
+       0.407,
+       0.383,
+       0.364,
+       0.482
+      ],
+      [
+       0.453,
+       0.451,
+       0.364,
+       0.455,
+       0.453,
+       0.418,
+       0.43,
+       0.483,
+       0.354,
+       0.456,
+       0.383,
+       0.352,
+       0.401,
+       0.407,
+       1.0,
+       0.568,
+       0.479,
+       0.402
+      ],
+      [
+       0.447,
+       0.448,
+       0.407,
+       0.461,
+       0.493,
+       0.382,
+       0.351,
+       0.435,
+       0.353,
+       0.444,
+       0.442,
+       0.339,
+       0.366,
+       0.383,
+       0.568,
+       1.0,
+       0.516,
+       0.362
+      ],
+      [
+       0.451,
+       0.422,
+       0.444,
+       0.419,
+       0.406,
+       0.388,
+       0.411,
+       0.491,
+       0.421,
+       0.41,
+       0.34,
+       0.398,
+       0.367,
+       0.364,
+       0.479,
+       0.516,
+       1.0,
+       0.348
+      ],
+      [
+       0.385,
+       0.348,
+       0.313,
+       0.311,
+       0.321,
+       0.386,
+       0.325,
+       0.465,
+       0.382,
+       0.488,
+       0.424,
+       0.294,
+       0.344,
+       0.482,
+       0.402,
+       0.362,
+       0.348,
+       1.0
+      ]
+     ],
+     "lowest": 0.294,
+     "highest": 0.674,
+     "refs": [
+      "11.1",
+      "2.14",
+      "5.11",
+      "11.3",
+      "11.11",
+      "4.17",
+      "4.34",
+      "5.26",
+      "9.39",
+      "3.16",
+      "6.30",
+      "2.3",
+      "8.44",
+      "12.26",
+      "6.16",
+      "8.57",
+      "10.14",
+      "9.13"
+     ],
+     "around": {
+      "near": [
+       {
+        "id": "c3.s6",
+        "title": "The retreat within",
+        "chapter": "The life within",
+        "size": 12,
+        "provisional": false,
+        "article": 12,
+        "similarity": 0.844
+       },
+       {
+        "id": "c6.s2",
+        "title": "The work that belongs to me",
+        "chapter": "The whole and my place in it",
+        "size": 15,
+        "provisional": false,
+        "article": 2,
+        "similarity": 0.838
+       },
+       {
+        "id": "c3.s4",
+        "title": "Living now as one about to die",
+        "chapter": "The life within",
+        "size": 18,
+        "provisional": false,
+        "article": 10,
+        "similarity": 0.833
+       },
+       {
+        "id": "c3.s5",
+        "title": "Coming back to my principles and keeping them ready",
+        "chapter": "The life within",
+        "size": 16,
+        "provisional": false,
+        "article": 11,
+        "similarity": 0.828
+       }
+      ],
+      "lowest": 0.554,
+      "highest": 0.844,
+      "farthest": "Short sayings",
+      "border": [
+       {
+        "ref": "11.3",
+        "own": 0.734,
+        "other": 0.724,
+        "section": "Ready to leave"
+       },
+       {
+        "ref": "4.17",
+        "own": 0.731,
+        "other": 0.722,
+        "section": "The same matter, reshaped"
+       },
+       {
+        "ref": "2.3",
+        "own": 0.69,
+        "other": 0.705,
+        "section": "Living now as one about to die"
+       }
+      ],
+      "weakest_member": 0.585,
+      "outside": [
+       {
+        "ref": "1.16",
+        "similarity": 0.796,
+        "section": "Living now as one about to die"
+       },
+       {
+        "ref": "2.11",
+        "similarity": 0.778,
+        "section": "The retreat within"
+       },
+       {
+        "ref": "12.2",
+        "similarity": 0.777,
+        "section": "The retreat within"
+       }
+      ],
+      "outside_closer": 278
+     }
+    },
+    "claims": [
+     {
+      "id": "c1",
+      "number": 1,
+      "role": "What my soul sees",
+      "t": "My soul can see itself and analyse itself. It can shine with a light by which it sees the truth of all things and the truth within itself. It can go round the whole universe, and it can know beginning and end and the reason that runs through the whole of substance.",
+      "shared": "Self-sight is joint (11.1, 11.11). The light is 11.11 alone, and “can” marks it as a capacity because the source grants it only when the sphere is true to its form. That condition is quoted in the margin. Knowledge of beginning and end is 5.26 alone, where it defines the skilled soul, so it too stays a capacity.",
+      "passages": [
+       "11.1",
+       "11.11",
+       "5.26"
+      ],
+      "closeness": 0.553,
+      "closeness_new": 0.466,
+      "support": [
+       {
+        "id": "11.1a",
+        "ref": "11.1",
+        "quote": "it sees itself, it analyses itself",
+        "at": 33,
+        "start": 33,
+        "end": 67,
+        "in": "c1",
+        "follows": "The reasoning soul sees itself and analyses itself.",
+        "gives": [
+         "can see itself",
+         "analyse itself"
+        ]
+       },
+       {
+        "id": "11.11a",
+        "ref": "11.11",
+        "quote": "shines with a light by which it sees the truth, the truth of all things and the truth within itself",
+        "at": 165,
+        "start": 165,
+        "end": 264,
+        "in": "c1",
+        "follows": "When the soul keeps its own form, it sees by its own light the truth of all things and the truth within itself.",
+        "gives": [
+         "can see itself",
+         "shine with a light by which it sees the truth of all things and the truth within itself"
+        ]
+       },
+       {
+        "id": "11.1b",
+        "ref": "11.1",
+        "quote": "it goes round the whole universe and the void around it and its shape",
+        "at": 625,
+        "start": 625,
+        "end": 694,
+        "in": "c1",
+        "follows": "The reasoning soul takes in the whole universe, the void around it and its shape.",
+        "gives": [
+         "go round the whole universe"
+        ]
+       },
+       {
+        "id": "5.26a",
+        "ref": "5.26",
+        "quote": "The one that knows beginning and end, and the reason that runs through the whole of substance",
+        "at": 142,
+        "start": 142,
+        "end": 235,
+        "in": "c1",
+        "follows": "The soul that has skill and understanding knows beginning and end, and the reason that runs through all substance.",
+        "gives": [
+         "know beginning and end and the reason that runs through the whole of substance"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c2",
+      "number": 2,
+      "role": "What is mine and what is not",
+      "t": "I am made of a little body and a soul, a little soul carrying a corpse, as Epictetus used to say. Whatever is not my mind’s own activity is indifferent to it, and all of its own activity is in its power. Everything lies in that activity. The rest, whether within choice or outside it, is dead things and smoke.",
+      "shared": "Body and soul are joint (6.30, 4.34). The corpse image keeps its attribution to Epictetus and is 4.34 alone. Indifference is 6.30 alone. Reading the “that” of 12.26 as the mind’s own activity is our interpretation, since 12.26 speaks of the ruling part using itself. The line keeps 12.26’s point that things within choice also belong to the rest.",
+      "passages": [
+       "6.30",
+       "4.34",
+       "12.26"
+      ],
+      "closeness": 0.497,
+      "closeness_new": 0.376,
+      "support": [
+       {
+        "id": "6.30a",
+        "ref": "6.30",
+        "quote": "I am made of a little body and a soul.",
+        "at": 0,
+        "start": 0,
+        "end": 38,
+        "in": "c2",
+        "follows": "I am made of a small body and a soul.",
+        "gives": [
+         "I am made of a little body and a soul"
+        ]
+       },
+       {
+        "id": "4.34a",
+        "ref": "4.34",
+        "quote": "You are a little soul carrying a corpse, as Epictetus used to say.",
+        "at": 0,
+        "start": 0,
+        "end": 66,
+        "in": "c2",
+        "follows": "As Epictetus used to say, I am a small soul carrying a dead body.",
+        "gives": [
+         "I am made of a little body and a soul",
+         "a little soul carrying a corpse, as Epictetus used to say"
+        ]
+       },
+       {
+        "id": "6.30b",
+        "ref": "6.30",
+        "quote": "To the mind, whatever is not its own activity is indifferent; and whatever is its own activity, all of that is in its power.",
+        "at": 123,
+        "start": 123,
+        "end": 247,
+        "in": "c2",
+        "follows": "Only the mind’s own activity makes a difference to it, and all of that activity is in its power.",
+        "gives": [
+         "Whatever is not my mind’s own activity is indifferent to it",
+         "all of its own activity is in its power"
+        ]
+       },
+       {
+        "id": "12.26c",
+        "ref": "12.26",
+        "quote": "As for the rest, it is either within choice or outside it: dead things and smoke.",
+        "at": 66,
+        "start": 66,
+        "end": 147,
+        "in": "c2",
+        "follows": "Everything other than how the ruling part uses itself, whether within choice or outside it, is dead things and smoke.",
+        "gives": [
+         "The rest, whether within choice or outside it, is dead things and smoke"
+        ]
+       },
+       {
+        "id": "12.26b",
+        "ref": "12.26",
+        "quote": "For everything lies in that.",
+        "at": 37,
+        "start": 37,
+        "end": 65,
+        "in": "c2",
+        "follows": "Everything lies in how the ruling part uses itself.",
+        "gives": [
+         "Everything lies in that activity"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c3",
+      "number": 4,
+      "role": "The question I keep asking",
+      "t": "At every turn I ask what I am using my soul for now, and how my ruling part is using itself. I ask whose soul I have now: not a small child’s, surely, nor a tyrant’s, nor a farm animal’s, nor a wild beast’s. I ask whether my ruling part is playing a part or running with the herd.",
+      "shared": "The question about use is joint (5.11, 12.26) and the wild beast is joint (5.11, 9.39). The claim stays a set of questions, as the sources are. The herd and the acted part are 9.39 alone, whose question form is kept as a self-check. The youth and the “silly woman” of 5.11 are left out as comparisons that add nothing to the test.",
+      "passages": [
+       "5.11",
+       "12.26",
+       "9.39"
+      ],
+      "closeness": 0.495,
+      "closeness_new": 0.426,
+      "support": [
+       {
+        "id": "5.11a",
+        "ref": "5.11",
+        "quote": "“Just what, then, am I using my own soul for now?” Ask yourself this at every turn",
+        "at": 0,
+        "start": 0,
+        "end": 82,
+        "in": "c3",
+        "follows": "At every turn I should ask myself what I am using my soul for now.",
+        "gives": [
+         "At every turn I ask what I am using my soul for now",
+         "how my ruling part is using itself"
+        ]
+       },
+       {
+        "id": "12.26a",
+        "ref": "12.26",
+        "quote": "How is the ruling part using itself?",
+        "at": 0,
+        "start": 0,
+        "end": 36,
+        "in": "c3",
+        "follows": "The question to ask is how the ruling part is using itself.",
+        "gives": [
+         "how my ruling part is using itself"
+        ]
+       },
+       {
+        "id": "5.11b",
+        "ref": "5.11",
+        "quote": "And whose soul, then, do I have now? Not a small child’s, surely? Not a youth’s? Not a silly woman’s? Not a tyrant’s? Not a farm animal’s? Not a wild beast’s?",
+        "at": 166,
+        "start": 166,
+        "end": 324,
+        "in": "c3",
+        "follows": "I should ask whose soul I have now, and hope it is not a child’s, a tyrant’s, a farm animal’s or a wild beast’s.",
+        "gives": [
+         "whose soul I have now",
+         "not a small child’s, surely, nor a tyrant’s, nor a farm animal’s",
+         "nor a wild beast’s"
+        ]
+       },
+       {
+        "id": "9.39a",
+        "ref": "9.39",
+        "quote": "Do you say to the ruling part: “You are dead, you are ruined, you have turned into a wild beast, you are playing a part, you are running with the herd, you are grazing”?",
+        "at": 0,
+        "start": 0,
+        "end": 169,
+        "in": "c3",
+        "follows": "Marcus asks whether he tells his ruling part that it is dead, ruined, a wild beast, an actor, one of a herd, a grazing animal.",
+        "gives": [
+         "nor a wild beast’s",
+         "playing a part or running with the herd"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c4",
+      "number": 5,
+      "role": "How my soul harms itself",
+      "t": "My soul does violence to itself when it is beaten by pleasure or by pain, and when it plays a part and says or does something feigned and untrue. It does the same when I do not respect myself but place my good fortune in the souls of others. It is my soul’s own to value nothing above itself. What will I find that is worth my soul being worse than itself: brought low, craving, shrinking in, taking fright?",
+      "shared": "Self-violence is joint (2.14, 2.3). The reproach of 2.3 stays a named fault and is not turned into a vow. The test of 8.44 stays a question and is not turned into a verdict. Valuing nothing above itself is 11.1 alone.",
+      "passages": [
+       "2.14",
+       "2.3",
+       "8.44",
+       "11.1"
+      ],
+      "closeness": 0.565,
+      "closeness_new": 0.476,
+      "support": [
+       {
+        "id": "2.14a",
+        "ref": "2.14",
+        "quote": "The human soul does violence to itself most of all",
+        "at": 0,
+        "start": 0,
+        "end": 50,
+        "in": "c4",
+        "follows": "The human soul can do violence to itself, and in some ways more than in others.",
+        "gives": [
+         "My soul does violence to itself"
+        ]
+       },
+       {
+        "id": "2.3a",
+        "ref": "2.3",
+        "quote": "Do violence, do violence to yourself, soul",
+        "at": 0,
+        "start": 0,
+        "end": 42,
+        "in": "c4",
+        "follows": "In bitter irony, Marcus tells his soul to do violence to itself.",
+        "gives": [
+         "My soul does violence to itself",
+         "It does the same"
+        ]
+       },
+       {
+        "id": "8.44a",
+        "ref": "8.44",
+        "quote": "my soul should be in a bad way and be worse than itself: brought low, craving, shrinking in, taking fright",
+        "at": 37,
+        "start": 37,
+        "end": 143,
+        "in": "c4",
+        "follows": "Something can put my soul in a bad way and make it worse than itself: brought low, craving, shrinking in, afraid.",
+        "gives": [
+         "my soul being worse than itself: brought low, craving, shrinking in, taking fright"
+        ]
+       },
+       {
+        "id": "2.14b",
+        "ref": "2.14",
+        "quote": "Third, it does violence to itself when it is beaten by pleasure or by pain.",
+        "at": 449,
+        "start": 449,
+        "end": 524,
+        "in": "c4",
+        "follows": "The soul does violence to itself when pleasure or pain beats it.",
+        "gives": [
+         "when it is beaten by pleasure or by pain"
+        ]
+       },
+       {
+        "id": "2.14c",
+        "ref": "2.14",
+        "quote": "Fourth, when it plays a part and does or says something in a feigned and untrue way.",
+        "at": 525,
+        "start": 525,
+        "end": 609,
+        "in": "c4",
+        "follows": "The soul does violence to itself when it pretends, doing or saying something feigned and untrue.",
+        "gives": [
+         "when it plays a part and says or does something feigned and untrue"
+        ]
+       },
+       {
+        "id": "8.44b",
+        "ref": "8.44",
+        "quote": "And what will you find that is worth that?",
+        "at": 145,
+        "start": 145,
+        "end": 187,
+        "in": "c4",
+        "follows": "Nothing I could find would be worth making my soul worse than itself.",
+        "gives": [
+         "What will I find that is worth"
+        ]
+       },
+       {
+        "id": "11.1d",
+        "ref": "11.1",
+        "quote": "valuing nothing above itself",
+        "at": 1193,
+        "start": 1193,
+        "end": 1221,
+        "in": "c4",
+        "follows": "It belongs to the reasoning soul to value nothing above itself.",
+        "gives": [
+         "value nothing above itself"
+        ]
+       },
+       {
+        "id": "2.3b",
+        "ref": "2.3",
+        "quote": "you do not respect yourself but place your good fortune in the souls of others",
+        "at": 163,
+        "start": 163,
+        "end": 241,
+        "in": "c4",
+        "follows": "Marcus reproaches his soul for not respecting itself and for placing its good fortune in other people’s souls.",
+        "gives": [
+         "I do not respect myself but place my good fortune in the souls of others"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c5",
+      "number": 6,
+      "role": "Ready whenever it ends",
+      "t": "My soul reaches its own goal wherever the limit of life comes upon it. Wherever it is overtaken, it makes what was set before it full and in need of nothing more, for itself. My soul can be ready, if it must this moment be released from the body, to be extinguished, to be scattered or to hold together. It may be that souls pass over into the air, hold together for a while, then change, are poured out and are set alight.",
+      "shared": "Holding together is joint (11.3, 4.17). “Goal” renders the source’s “end” so that the line is not heard as the soul ceasing. Completeness “for itself” is 11.1 alone. The three outcomes stay open. “It may be” marks that 4.17 argues only on a supposition and gives no doctrine of survival.",
+      "passages": [
+       "11.1",
+       "11.3",
+       "4.17"
+      ],
+      "closeness": 0.571,
+      "closeness_new": 0.468,
+      "support": [
+       {
+        "id": "11.1c",
+        "ref": "11.1",
+        "quote": "it reaches its own end wherever the limit of life comes upon it",
+        "at": 243,
+        "start": 243,
+        "end": 306,
+        "in": "c5",
+        "follows": "Wherever the reasoning soul’s life is cut off, it has already reached its own goal.",
+        "gives": [
+         "reaches its own goal wherever the limit of life comes upon it"
+        ]
+       },
+       {
+        "id": "11.1f",
+        "ref": "11.1",
+        "quote": "wherever it is overtaken, it makes what was set before it full and in need of nothing more, for itself",
+        "at": 461,
+        "start": 461,
+        "end": 563,
+        "in": "c5",
+        "follows": "Wherever death overtakes the reasoning soul, it has made what was set before it full, needing nothing more.",
+        "gives": [
+         "Wherever it is overtaken, it makes what was set before it full and in need of nothing more, for itself"
+        ]
+       },
+       {
+        "id": "11.3a",
+        "ref": "11.3",
+        "quote": "What a soul it is that is ready, if it must this moment be released from the body",
+        "at": 0,
+        "start": 0,
+        "end": 81,
+        "in": "c5",
+        "follows": "Marcus admires a soul that is ready to be released from the body this very moment.",
+        "gives": [
+         "ready, if it must this moment be released from the body"
+        ]
+       },
+       {
+        "id": "11.3b",
+        "ref": "11.3",
+        "quote": "either be extinguished or be scattered or hold together",
+        "at": 87,
+        "start": 87,
+        "end": 142,
+        "in": "c5",
+        "follows": "Released from the body, a soul may be put out, be scattered, or hold together.",
+        "gives": [
+         "to be extinguished, to be scattered or to hold together",
+         "hold together for a while"
+        ]
+       },
+       {
+        "id": "4.17a",
+        "ref": "4.17",
+        "quote": "the souls that pass over into the air, after holding together for a while, change and are poured out and are set alight",
+        "at": 320,
+        "start": 320,
+        "end": 439,
+        "in": "c5",
+        "follows": "If souls go on existing, they hold together in the air for a while, and then change and are taken back into the whole.",
+        "gives": [
+         "souls pass over into the air",
+         "hold together for a while",
+         "then change, are poured out and are set alight"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "c6",
+      "number": 3,
+      "role": "Going straight to its goal",
+      "t": "An arrow travels in one way, my mind in another. When my mind is cautious, and when it turns about in considering something, it travels straight none the less, towards what is set before it. My soul fails when it lets an action or impulse fly at no target, at random and without attention. Even the smallest things ought to be done with reference to the end. The movement of virtue is not up, down or round in a circle, as the motions of the elements are.",
+      "shared": "Aim at what is set before the mind is joint (8.57, 2.14). The aimless act stays a warning with the source’s “ought” and is not made a vow. The elements belong to 6.16 alone, whose subject is virtue, so the line no longer transfers that motion to the mind.",
+      "passages": [
+       "2.14",
+       "8.57",
+       "6.16"
+      ],
+      "closeness": 0.489,
+      "closeness_new": 0.423,
+      "support": [
+       {
+        "id": "2.14d",
+        "ref": "2.14",
+        "quote": "Fifth, when it lets some action or impulse of its own fly at no target, but does anything whatever at random and without attention, though even the smallest things ought to be done with reference to the end.",
+        "at": 610,
+        "start": 610,
+        "end": 817,
+        "in": "c6",
+        "follows": "The soul harms itself when it acts at random; even the smallest things should be done with reference to the end.",
+        "gives": [
+         "towards what is set before it",
+         "My soul fails when it lets an action or impulse fly at no target, at random and without attention",
+         "Even the smallest things ought to be done with reference to the end"
+        ]
+       },
+       {
+        "id": "8.57b",
+        "ref": "8.57",
+        "quote": "Yet the mind, both when it is being cautious and when it turns about in considering something, travels straight none the less, and towards what is set before it.",
+        "at": 50,
+        "start": 50,
+        "end": 211,
+        "in": "c6",
+        "follows": "Even when it is cautious or turning a question about, the mind still travels straight towards what is set before it.",
+        "gives": [
+         "When my mind is cautious, and when it turns about in considering something, it travels straight none the less",
+         "towards what is set before it"
+        ]
+       },
+       {
+        "id": "8.57a",
+        "ref": "8.57",
+        "quote": "An arrow travels in one way, the mind in another.",
+        "at": 0,
+        "start": 0,
+        "end": 49,
+        "in": "c6",
+        "follows": "The mind does not travel in the way an arrow travels.",
+        "gives": [
+         "An arrow travels in one way, my mind in another"
+        ]
+       },
+       {
+        "id": "6.16a",
+        "ref": "6.16",
+        "quote": "Up, down, round in a circle: such are the motions of the elements. The movement of virtue, though, is in none of these",
+        "at": 0,
+        "start": 0,
+        "end": 118,
+        "in": "c6",
+        "follows": "Virtue does not move as the elements move, up, down or round in a circle.",
+        "gives": [
+         "The movement of virtue is not up, down or round in a circle, as the motions of the elements are"
+        ]
+       }
+      ]
+     }
+    ],
+    "single": [
+     {
+      "id": "9.13a",
+      "ref": "9.13",
+      "quote": "Things stand outside the doors, themselves by themselves, knowing nothing about themselves and pronouncing nothing. What, then, pronounces on them? The ruling part.",
+      "at": 0,
+      "start": 0,
+      "end": 164,
+      "in": "single",
+      "label": "Things say nothing",
+      "t": "Things stand outside the doors, themselves by themselves. They know nothing about themselves and pronounce nothing. My ruling part pronounces on them.",
+      "why": "Single source 9.13, kept close to its image. It says things are silent and judgement is mine. It does not say things are unreal or that any judgement will do.",
+      "follows": "Things say nothing about themselves; whatever is said about them is said by the ruling part."
+     },
+     {
+      "id": "11.1e",
+      "ref": "11.1",
+      "quote": "The rational soul’s own are also love of those near it, and truthfulness, and a sense of shame",
+      "at": 1093,
+      "start": 1093,
+      "end": 1187,
+      "in": "single",
+      "label": "Its own virtues",
+      "t": "Love of those near me, truthfulness and a sense of shame are my rational soul’s own.",
+      "why": "Single source 11.1. “My rational soul’s own” keeps the source’s framing of what belongs to the rational soul. The link to law and justice is left to the margin.",
+      "follows": "Love of those near it, truthfulness and a sense of shame belong to the reasoning soul."
+     },
+     {
+      "id": "10.14a",
+      "ref": "10.14",
+      "quote": "Someone who follows reason in everything is something at once unhurried and quick to move, at once cheerful and composed.",
+      "at": 0,
+      "start": 0,
+      "end": 121,
+      "in": "single",
+      "label": "Following reason",
+      "t": "If I follow reason in everything, I am at once unhurried and quick to move, at once cheerful and composed.",
+      "why": "Single source 10.14. The conditional keeps the dependence on “in everything”, and both pairs of opposites are held together as the source holds them.",
+      "follows": "Whoever follows reason in everything is unhurried yet quick to move, cheerful yet composed."
+     },
+     {
+      "id": "11.3c",
+      "ref": "11.3",
+      "quote": "this readiness should come from a judgment of one’s own, not by way of bare opposition, as with the Christians, but in a reasoned and dignified way, and so as to convince someone else too, without theatrics",
+      "at": 148,
+      "start": 148,
+      "end": 354,
+      "in": "single",
+      "label": "A reasoned readiness",
+      "t": "My readiness to be released from the body should come from a judgment of my own, not from bare opposition. It should be reasoned and dignified, able to convince someone else too, and without theatrics.",
+      "why": "Single source 11.3. The criticism concerns the ground and manner of readiness, not readiness itself. The example of the Christians is kept in the margin only.",
+      "follows": "Readiness to die should rest on one’s own reasoned judgment, not on bare defiance or on show."
+     },
+     {
+      "id": "2.3c",
+      "ref": "2.3",
+      "quote": "you will have no chance left to honour yourself. For each person has one life, and yours is almost finished",
+      "at": 48,
+      "start": 48,
+      "end": 155,
+      "in": "single",
+      "label": "Time is short",
+      "t": "Each person has one life, and mine is almost finished. Soon I will have no chance left to honour myself.",
+      "why": "Single source 2.3, limited to its supplied quote. “Soon” rests on “almost finished”. The ironic command to do violence to the soul is left to c4, where its quote belongs. The urgency is personal and tied to the speaker’s age, not a general rule.",
+      "follows": "Each person has one life; Marcus’s is almost over, and soon he will have no chance left to honour himself."
+     }
+    ],
+    "decisions": [
+     "Quotes the project’s own translation from the Greek. Passage numbers are those of Casaubon’s 1634 translation. In modern editions 2.14 is 2.16, 2.3 is 2.6, 11.11 is 11.12, 4.17 is 4.21, 4.34 is 4.41, 5.26 is 5.32, 9.39 is 9.39b, 6.30 is 6.32, 8.44 is 8.45b, 12.26 is 12.33, 6.16 is 6.17, 8.57 is 8.60, 10.14 is 10.12b, 9.13 is 9.15 and 3.16 is 3.15–16a; 11.1, 5.11 and 11.3 are the same.",
+     "“What I use my soul for” takes the plain question of 5.11 and joins it to 12.26, where everything lies in how the ruling part uses itself. Treating soul and ruling part as one here is our interpretation. The truth of all things and of itself is 11.11’s wording, with self-sight shared by 11.1 and knowledge of the whole by 5.26. Self-violence is joint (2.14, 2.3). Pretence is named because it alone among the harms has two witnesses (2.14, 9.39) and it is the direct opposite of seeing the truth. It is one example, not the whole list. “Can” keeps both sight and harm as possibilities, not achievements. 132 characters."
+    ],
+    "limit": "The sources do not use “soul”, “mind” and “ruling part” as one settled term. The article’s treatment of them as near neighbours is our interpretation, as are the opening’s joining of 5.11’s question to 12.26’s “everything lies in that” and c2’s reading of that “that” as the mind’s own activity. The opening names pretence as one way the soul does violence to itself because two passages witness it. It is an example, not the full list. Of the five forms of self-violence in 2.14, vexation at what happens and hostility to a person appear only in the margin. What follows death is left open, and 4.17 speaks only on a supposition. Many of the sources are questions or ironic self-address, so the lines state capacities, tests and warnings, not achievements or vows, and they claim no immunity from disturbance. The images of sphere, arrow, road and circuit each make a separate point and do not form one geometry."
+   }
   }
  ]
 }

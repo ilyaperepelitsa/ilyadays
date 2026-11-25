@@ -25,6 +25,9 @@ import copy
 import hashlib
 import json
 import re
+import subprocess
+import sys
+import tempfile
 import warnings
 from pathlib import Path
 
@@ -34,6 +37,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CORPUS = ROOT / '.aurelius/corpora/casaubon-gutenberg-2680-6977474f82a39dd8-numbered-text-v2-d436fea5/corpus.json'
 TOPICS = ROOT / 'content/aurelius/topics.json'
 AUTHORED = ROOT / 'content/aurelius/constitution.json'
+MARCUS_REVISION = ROOT / 'content/aurelius/constitution-marcus-revised.json'
 OUT = ROOT / 'public/apps/stoic-constitution.json'          # the index: everything but full articles
 CHAPTER_DIR = ROOT / 'public/apps/stoic-constitution'        # one file per chapter that has articles
 SENECA = ROOT / '.aurelius/corpora/seneca-gummere-wikisource'   # private: Gummere's English, used only for the vectors
@@ -275,6 +279,34 @@ def span(text: str, quote: str, where: str) -> tuple[int, int]:
     return found[0].start(), found[0].end()
 
 
+def recover_five_colours(used, meets, position):
+    """Reassign earlier colours when the greedy pass exhausts all five at one passage."""
+    colours = {}
+    def assign():
+        if len(colours) == len(used):
+            return True
+        # Most constrained first. Source order breaks ties independently of set iteration.
+        remaining = (ref for ref in used if ref not in colours)
+        def saturation(ref):
+            return len({colours[r] for r in meets[ref] if r in colours}), len(meets[ref])
+        ref = max(remaining, key=saturation)
+        excluded = {colours[r] for r in meets[ref] if r in colours}
+        # Unused colours are interchangeable. Try one new colour at each level.
+        choices = [i for i in range(1, min(5, 1 + max(colours.values(), default=0)) + 1) if i not in excluded]
+        if ref in position:
+            def nearest_same_colour(i):
+                distances = (abs(position[r] - position[ref]) for r in position if colours.get(r) == i)
+                return min(distances, default=float('inf'))
+            choices.sort(key=nearest_same_colour, reverse=True)
+        for i in choices:
+            colours[ref] = i
+            if assign():
+                return True
+            del colours[ref]
+        return False
+    return colours if assign() else {}
+
+
 def shared_components(claims: list[dict]) -> tuple[int, int]:
     """Claim components (runs of words backed by the same set of passages) and how many rest on two or more."""
     components = shared = 0
@@ -309,6 +341,26 @@ def check_inferences(where: str, sentence: str, backed: list[str], inferences: l
 
 def scalar(text: str, index: int) -> int:
     return len(text[:index].encode('utf-32-le')) // 4
+
+
+def compiled_marcus_revision():
+    """Compile the Marcus-only text separately from claims with Seneca annotations."""
+    with tempfile.TemporaryDirectory() as folder:
+        subprocess.run([sys.executable, str(Path(__file__).resolve()), '--authored', str(MARCUS_REVISION),
+                        '--out-dir', folder], check=True, stdout=subprocess.DEVNULL)
+        return {article['number']: article
+                for file in (Path(folder) / CHAPTER_DIR.name).glob('*.json')
+                for article in json.loads(file.read_text())['articles']}
+
+
+def attach_marcus_revision(articles, revised):
+    assert set(revised) == {article['number'] for article in articles}, 'Marcus revision must cover the same articles'
+    for article in articles:
+        revision = revised[article['number']]
+        assert article['section'] == revision['section'] and article['title'] == revision['title'], article['number']
+        assert not revision['voices'], 'Seneca belongs to the English wording on which its annotation was edited'
+        article['marcus_revision'] = {key: value for key, value in revision.items()
+                                      if key != 'voices' and article.get(key) != value}
 
 
 def main() -> None:
@@ -616,13 +668,19 @@ def main() -> None:
         for ref in sorted(used, key=lambda r: (-len(meets[r] | near[r]), used.index(r))):
             hard = {colors.get(other) for other in meets[ref]}
             free = [slot for slot in range(1, 6) if slot not in hard]
-            assert free, f'{where}: needs more than five passage colours; the palette has five'
+            if not free:
+                colors = recover_five_colours(used, meets, position)
+                assert colors, f'{where}: needs more than five passage colours; the palette has five'
+                break
             clear = [slot for slot in free if slot not in {colors.get(other) for other in near[ref]}]
             if clear:
                 colors[ref] = clear[0]
             else:
-                # Share with the statement passage whose words are farthest from this one's.
-                holder = {colors[o]: o for o in near[ref] if o in colors}
+                # Keep reused colours as far apart as possible, with ties in statement order.
+                holder = {}
+                for other in sorted(near[ref], key=lambda r: (-abs(position[r] - position[ref]), -sentence_order.index(r))):
+                    if other in colors:
+                        holder[colors[other]] = other
                 colors[ref] = max(free, key=lambda slot: abs(position[holder[slot]] - position[ref]) if slot in holder else 10**6)
                 print(f"  note: {where}: {ref} shares a colour with {holder.get(colors[ref])} in the statement; five colours cannot keep all apart")
         second = None
@@ -792,6 +850,8 @@ def main() -> None:
         'counts': {'claims': len(a['claims']), 'single': len(a['single']), 'sources': len(a['sources']), 'section_size': a['section_size']},
         'voices': {key: {'becomes': voice['becomes'], 'counts': voice['counts']} for key, voice in a['voices'].items()},
     } for a in articles]
+    if not ru and args.authored.resolve() == AUTHORED and MARCUS_REVISION.is_file():
+        attach_marcus_revision(articles, compiled_marcus_revision())
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(record, ensure_ascii=False, indent=1) + '\n')
     print('wrote', out, f'{out.stat().st_size // 1024} KB')

@@ -892,6 +892,10 @@ const STORE = 'stoic-constitution:v1:verdicts';
 const VERDICTS = ['Keep', 'Revise', 'Drop'];
 let D = null;   // the index; D.all = every written article as a stub, D.articles = the full articles of the chapter on screen
 const CHAPTERS = new Map();   // chapter id -> its full articles, once loaded
+// Seneca's annotations belong to the earlier English text. Choose the coherent article on each toggle.
+const MARCUS_REVISIONS = new WeakMap();
+const articleEdition = article => state.voices.has('seneca') ? article : MARCUS_REVISIONS.get(article) || article;
+const chapterEdition = articles => articles.map(articleEdition);
 const TAGS = 'stoic-constitution:v1:tags';
 const state = {chapter: null, pending: {}, sel: null, removed: {}, tags: false, voices: new Set(), fresh: null, reviewOpen: null, filter: false};   // reviewOpen: the review key whose Keep/Revise/Drop choices are open; filter: only what is not judged   // sel: {a, k, p} the open sentence and picked component; removed: {articleNumber: Set(refs)}; tags: numbers on statements; voices: added authors switched on; fresh: the voice just added, so its parts can arrive visibly
 try { state.tags = localStorage.getItem(TAGS) === 'on'; } catch { state.tags = false; }   // off unless switched on
@@ -1126,7 +1130,7 @@ function keysByArticle() {
   }
   return by;
 }
-const loadedArticle = number => { for (const list of CHAPTERS.values()) { const found = list.find(article => article.number === number); if (found) return found; } return null; };
+const loadedArticle = number => { for (const list of CHAPTERS.values()) { const found = list.find(article => article.number === number); if (found) return articleEdition(found); } return null; };
 // The judged items of one article other than the article itself, in reading order.
 function judgedRows(number) {
   const article = loadedArticle(number), items = article ? reviewItems(article) : [], at = key => { const i = items.findIndex(item => item.key === key); return i < 0 ? 1e6 : i; };
@@ -1146,7 +1150,7 @@ function reviewText() {
   for (const number of [...by.keys()].sort((x, y) => x - y)) {
     const stub = D.all.find(article => article.number === number), key = 'a' + number;
     out.push('', RU ? (stub ? 'Статья ' + number + ' · ' + stub.title : 'Статья ' + number + ' (больше нет в записи)') : stub ? 'Article ' + number + ' · ' + stub.title : 'Article ' + number + ' (no longer in the record)');
-    if (verdictOf(key)) { out.push(line(T('The whole article'), verdictOf(key), stub && stub.statement ? flat(stub.statement.t) : '', noteOf(key), key)); count++; }
+    if (verdictOf(key)) { out.push(line(T('The whole article'), verdictOf(key), loadedArticle(number)?.statement.t || stub?.statement?.t || '', noteOf(key), key)); count++; }
     for (const row of judgedRows(number)) { out.push(line(row.label, row.value, row.text, row.note, row.key)); count++; }
   }
   if (!count) out.push('', T('Nothing judged yet.'));
@@ -2299,6 +2303,9 @@ function voiceStrip(article, voice) {
   const tag = el('span', 'who added');
   tag.append(el('i', 'dot ' + author.mark), document.createTextNode(RU ? (on ? 'С ' + inCase(author.name, 'ins') : 'Если добавить ' + inCase(author.name, 'acc')) : on ? 'With ' + author.name : 'If you add ' + author.name));
   box.append(tag, el('p', 'becomes', on ? voice.statement : voice.becomes));
+  if (!RU && (article.marcus_revision || MARCUS_REVISIONS.has(article))) {
+    box.append(el('p', 'fused', 'The Seneca view uses the earlier English wording of Marcus.'));
+  }
   const row = el('p', 'fused');
   for (const effect of D.effects) {
     const count = voice.counts[effect.key];
@@ -2352,7 +2359,14 @@ function anchorNow() {
 function setVoice(key, on, focusKey) {
   const anchor = anchorNow(), author = authorByKey(key);
   if (on) state.voices.add(key); else state.voices.delete(key);
-  if (!on && state.sel && state.sel.k.startsWith('w:' + key + ':')) state.sel = null;
+  if (state.sel) {
+    const selection = state.sel;
+    const prior = articleOf(selection.a);
+    const base = CHAPTERS.get(state.chapter)?.find(article => article.number === selection.a);
+    if ((base && prior !== articleEdition(base)) || (!on && selection.k.startsWith('w:' + key + ':'))) state.sel = null;
+  }
+  if (CHAPTERS.has(state.chapter)) D.articles = chapterEdition(CHAPTERS.get(state.chapter));
+  renderVerdicts();
   state.fresh = on ? key : null;
   for (const article of D.articles) renderArticle(article.number);
   state.fresh = null;
@@ -2790,7 +2804,11 @@ function loadChapter(id) {
     }
     const broken = data.articles.find(article => !Array.isArray(article.claims) || !article.statement || !Array.isArray(article.members));
     if (broken) throw new Error(RU ? 'статья ' + broken.number + ' в файле неполна' : 'Article ' + broken.number + ' is incomplete in the file');
-    CHAPTERS.set(id, decorate(data.articles));
+    const articles = decorate(data.articles);
+    for (const article of articles) {
+      if (article.marcus_revision) MARCUS_REVISIONS.set(article, {...article, ...article.marcus_revision});
+    }
+    CHAPTERS.set(id, articles);
     return CHAPTERS.get(id);
   });
 }
@@ -2958,7 +2976,7 @@ function openChapter(id, {initial = false, to = null, push = false} = {}) {
   if (!CHAPTERS.has(id)) list.replaceChildren(...skeleton());
   return loadChapter(id).then(articles => {
     if (state.chapter !== id) return;
-    D.articles = articles;
+    D.articles = chapterEdition(articles);
     if (initial) readSelection();
     applyPending();
     const waited = !!list.querySelector('.skel');
