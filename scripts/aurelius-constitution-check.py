@@ -178,6 +178,33 @@ def case_p1(page, base, port):
     return problems
 
 
+def case_edition_selection(page, base, port):
+    """Keep an unchanged selection across editions and clear a saying that disappears."""
+    problems = []
+    page.goto(base + '?lang=en#article-1')
+    page.wait_for_selector('#article-1 .statement')
+    card = page.locator('#article-1')
+    for phrase, expected in [('a member', {'7.10', '9.21'}), ('of one body', {'7.10', '11.7'})]:
+        part = span(page, 1, phrase)
+        if part.count() != 1:
+            return [f'the revised opening is missing the separate “{phrase}” span']
+        refs = set((part.get_attribute('data-refs') or '').split('|'))
+        if refs != expected:
+            problems.append(f'“{phrase}” has {refs} instead of {expected}')
+    span(page, 1, 'a member').click()
+    for _ in range(2):
+        voice(page)
+        if picked(page, 1) != ['a member']:
+            problems.append('switching editions cleared or moved “a member”')
+        problems.extend(agree(page, 1))
+    new_saying = card.locator('.sg[data-k="single-1-11.7i"]')
+    new_saying.click()
+    voice(page)
+    if new_saying.count() or page.evaluate('state.sel !== null'):
+        problems.append('switching editions left the selection on a saying absent from that edition')
+    return problems
+
+
 def case_p2(page, base, port):
     problems = []
     card = lambda: page.locator('#article-6 li.claim').filter(has_text='Every part of the world').first
@@ -1268,6 +1295,7 @@ def case_n1(page, base, port):
 
 CASES = {
     'P1': ('selection stays on its words across a voice switch', case_p1, (1440, 1000)),
+    'ED1': ('Article 1 keeps separate quote links and valid picks across editions', case_edition_selection, (1440, 1000), 'real'),
     'P2': ('counts and strikes after removing passages', case_p2, (1440, 1000)),
     'P3': ('a verdict the browser refuses to save', case_p3, (390, 844)),
     'P4': ('Back and Forward across chapters', case_p4, (390, 844)),

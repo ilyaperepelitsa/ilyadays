@@ -2359,13 +2359,12 @@ function anchorNow() {
 function setVoice(key, on, focusKey) {
   const anchor = anchorNow(), author = authorByKey(key);
   if (on) state.voices.add(key); else state.voices.delete(key);
-  if (state.sel) {
-    const selection = state.sel;
-    const prior = articleOf(selection.a);
-    const base = CHAPTERS.get(state.chapter)?.find(article => article.number === selection.a);
-    if ((base && prior !== articleEdition(base)) || (!on && selection.k.startsWith('w:' + key + ':'))) state.sel = null;
-  }
   if (CHAPTERS.has(state.chapter)) D.articles = chapterEdition(CHAPTERS.get(state.chapter));
+  if (state.sel) {
+    const {a, k} = state.sel, article = articleOf(a);
+    const missingSaying = k.startsWith('s:') && !article?.single.some(item => item.id === k.slice(2));
+    if (missingSaying || (!on && k.startsWith('w:' + key + ':'))) state.sel = null;
+  }
   renderVerdicts();
   state.fresh = on ? key : null;
   for (const article of D.articles) renderArticle(article.number);
