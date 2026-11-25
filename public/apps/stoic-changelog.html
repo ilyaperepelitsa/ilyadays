@@ -152,6 +152,20 @@ h1{font:400 clamp(34px,8vw,52px)/1.05 var(--serif);letter-spacing:-.025em;margin
 .vis img{display:block;width:100%;height:auto}
 .vis .img:hover img{filter:brightness(1.02)}
 
+/* The two captures use the same phrase selection so a reader can follow one transition on both sides. */
+.comparison{container-type:inline-size}
+.comparison fieldset{margin:0;padding:12px 14px;border:0}
+.comparison legend{float:left;margin:7px 12px 0 0;font-weight:600}
+.comparison label{display:inline-flex;align-items:center;gap:4px;padding:7px 8px;cursor:pointer}
+.comparison input{accent-color:var(--accent)}
+.comparison .captures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}
+.comparison .capture{min-width:0;padding:10px;background:var(--card)}
+.comparison .capture strong{display:block;margin-bottom:8px;font:650 14px/1.4 var(--sans)}
+.comparison .capture a{display:block}
+.comparison .frame-next,.comparison:has(input[value=next]:checked) .frame-first{display:none}
+.comparison:has(input[value=next]:checked) .frame-next{display:block}
+@container(max-width:600px){.comparison .captures{grid-template-columns:1fr}}
+
 /* the four books, with their buttons */
 .books .bk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:12px}
 .bk{position:relative;display:flex;flex-direction:column;gap:3px;padding:12px 12px 12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
@@ -355,9 +369,35 @@ footer a{display:inline-block;padding-block:6px}
 <p class="day-sum">Shared quotes stay in place, translation downloads move to the introduction, and the changelog gains pictures.</p>
 <ul class="entries">
 <li class="entry" id="shared-quotes" data-kind="reading"><h3><a class="self" href="#shared-quotes">Shared quotes stay in place</a></h3><span class="kinds"><span class="k-reading"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-reading"/></svg>Reading</span></span>
-<p>In <a href="stoic-constitution.html?lang=en#article-1">Article 1</a>, move from “a member” to “of one body”: the underline for 7.10 continues across both phrases, and its two quotes stay in place while 9.21 gives way to 11.7. The card still shows the passage count and the rest of the sentence. Hover or focus a passage number to see its exact quotes and the words it supports.</p></li>
+<p>In <a href="stoic-constitution.html?lang=en#article-1">Article 1</a>, move from “a member” to “of one body”: the underline for 7.10 continues across both phrases, and its two quotes stay in place while 9.21 gives way to 11.7. The card still shows the passage count and the rest of the sentence. Hover or focus a passage number to see its exact quotes and the words it supports.</p>
+<figure class="vis comparison">
+<fieldset><legend>Choose a phrase</legend>
+<label><input type="radio" name="shared-quotes-phrase" value="first" checked>a member</label>
+<label><input type="radio" name="shared-quotes-phrase" value="next">of one body</label>
+</fieldset>
+<div class="captures">
+<div class="capture"><strong>Before</strong>
+<div class="frame-first"><a href="stoic-changelog/quotes-en-before-0.webp"><img src="stoic-changelog/quotes-en-before-0.webp" width="702" height="517" alt="“a member”. Two quotes from 7.10 and one from 9.21. The card is anchored to this phrase." loading="lazy"></a></div>
+<div class="frame-next"><a href="stoic-changelog/quotes-en-before-1.webp"><img src="stoic-changelog/quotes-en-before-1.webp" width="702" height="517" alt="“of one body”. Two quotes from 7.10 and one from 11.7. The card is anchored to this phrase." loading="lazy"></a></div>
+</div>
+<div class="capture"><strong>After</strong>
+<div class="frame-first"><a href="stoic-changelog/quotes-en-after-0.webp"><img src="stoic-changelog/quotes-en-after-0.webp" width="556" height="650" alt="“a member”. Two quotes from 7.10 and one from 9.21. The shared quotes keep their shaded rows in the same position." loading="lazy"></a></div>
+<div class="frame-next"><a href="stoic-changelog/quotes-en-after-1.webp"><img src="stoic-changelog/quotes-en-after-1.webp" width="556" height="650" alt="“of one body”. Two quotes from 7.10 and one from 11.7. The shared quotes keep their shaded rows in the same position." loading="lazy"></a></div>
+</div>
+</div>
+<figcaption>Switch phrases. Previously the card reopened under the pointer. Now the two quotes from 7.10 stay put while the third row changes from 9.21 to 11.7.</figcaption></figure></li>
 <li class="entry" id="download-languages" data-kind="translations"><h3><a class="self" href="#download-languages">Choose a download language for each book</a></h3><span class="kinds"><span class="k-translations"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-translations"/></svg>Translations</span></span>
-<p>Open <a href="stoic-constitution.html?lang=en#downloads">Download the translations</a> below “How to read an article”. Marcus and Seneca each have an English or Russian language switch beside the EPUB, Markdown and plain text links.</p></li>
+<p>Open <a href="stoic-constitution.html?lang=en#downloads">Download the translations</a> below “How to read an article”. Marcus and Seneca each have an English or Russian language switch beside the EPUB, Markdown and plain text links.</p>
+<figure class="vis comparison">
+<div class="captures">
+<div class="capture"><strong>Before</strong>
+<div><a href="stoic-changelog/books-en-before.webp"><img src="stoic-changelog/books-en-before.webp" width="945" height="596" alt="Four book cards at the foot of the page, one for each author and language." loading="lazy"></a></div>
+</div>
+<div class="capture"><strong>After</strong>
+<div><a href="stoic-changelog/books-en-after.webp"><img src="stoic-changelog/books-en-after.webp" width="945" height="173" alt="Two rows in the introduction show Russian selected for Marcus and English for Seneca." loading="lazy"></a></div>
+</div>
+</div>
+<figcaption>To download Marcus in Russian and Seneca in English, you used to find the matching two cards among four. Now each book has its own language switch.</figcaption></figure></li>
 <li class="entry" id="pictures" data-kind="site"><h3><a class="self" href="#pictures">A changelog with pictures</a></h3><span class="kinds"><span class="k-site"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-site"/></svg>Site</span></span>
 <p>Each change on this page is now tagged with its kind and, where it helps, shown with a picture: the download buttons themselves, the review’s edits as a chart, one passage in Greek, English and Russian, and the paper’s figures in light and dark. The dates sit as cards at the top, and the kinds above the log filter it.</p></li>
 </ul>
@@ -494,9 +534,35 @@ footer a{display:inline-block;padding-block:6px}
 <p class="day-sum">Общие цитаты остаются на месте, переводы можно скачать во введении, а в журнале изменений появились иллюстрации.</p>
 <ul class="entries">
 <li class="entry" id="ru-shared-quotes" data-kind="reading"><h3><a class="self" href="#ru-shared-quotes">Общие цитаты остаются на месте</a></h3><span class="kinds"><span class="k-reading"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-reading"/></svg>Чтение</span></span>
-<p>В <a href="stoic-constitution.html?lang=ru#article-1">статье 1</a> переведите указатель со слов «часть» на «единого тела»: линия фрагмента 7.10 идёт под обеими фразами, две цитаты из него остаются на месте, а цитата из 9.21 сменяется цитатой из 11.7. В карточке по-прежнему видны число фрагментов и остальные части предложения. Наведите указатель на номер фрагмента или выберите его с клавиатуры, чтобы увидеть точные цитаты и слова, которые на них опираются.</p></li>
+<p>В <a href="stoic-constitution.html?lang=ru#article-1">статье 1</a> переведите указатель со слов «часть» на «единого тела»: линия фрагмента 7.10 идёт под обеими фразами, две цитаты из него остаются на месте, а цитата из 9.21 сменяется цитатой из 11.7. В карточке по-прежнему видны число фрагментов и остальные части предложения. Наведите указатель на номер фрагмента или выберите его с клавиатуры, чтобы увидеть точные цитаты и слова, которые на них опираются.</p>
+<figure class="vis comparison">
+<fieldset><legend>Выберите фразу</legend>
+<label><input type="radio" name="ru-shared-quotes-phrase" value="first" checked>часть</label>
+<label><input type="radio" name="ru-shared-quotes-phrase" value="next">единого тела</label>
+</fieldset>
+<div class="captures">
+<div class="capture"><strong>До</strong>
+<div class="frame-first"><a href="stoic-changelog/quotes-ru-before-0.webp"><img src="stoic-changelog/quotes-ru-before-0.webp" width="600" height="542" alt="«часть». Две цитаты из 7.10 и одна из 9.21. Карточка привязана к выбранной фразе." loading="lazy"></a></div>
+<div class="frame-next"><a href="stoic-changelog/quotes-ru-before-1.webp"><img src="stoic-changelog/quotes-ru-before-1.webp" width="600" height="542" alt="«единого тела». Две цитаты из 7.10 и одна из 11.7. Карточка привязана к выбранной фразе." loading="lazy"></a></div>
+</div>
+<div class="capture"><strong>После</strong>
+<div class="frame-first"><a href="stoic-changelog/quotes-ru-after-0.webp"><img src="stoic-changelog/quotes-ru-after-0.webp" width="515" height="739" alt="«часть». Две цитаты из 7.10 и одна из 9.21. У общих цитат одинаковый фон и постоянное место в карточке." loading="lazy"></a></div>
+<div class="frame-next"><a href="stoic-changelog/quotes-ru-after-1.webp"><img src="stoic-changelog/quotes-ru-after-1.webp" width="515" height="739" alt="«единого тела». Две цитаты из 7.10 и одна из 11.7. У общих цитат одинаковый фон и постоянное место в карточке." loading="lazy"></a></div>
+</div>
+</div>
+<figcaption>Выберите другую фразу. Раньше карточка открывалась заново под указателем. Теперь две цитаты из 7.10 остаются на месте, а в третьей строке 9.21 сменяется на 11.7.</figcaption></figure></li>
 <li class="entry" id="ru-download-languages" data-kind="translations"><h3><a class="self" href="#ru-download-languages">Язык скачивания можно выбрать для каждой книги</a></h3><span class="kinds"><span class="k-translations"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-translations"/></svg>Переводы</span></span>
-<p>Откройте <a href="stoic-constitution.html?lang=ru#downloads">«Скачать переводы»</a> под строкой «Как читать статью». Для книг Марка и Сенеки можно отдельно выбрать английский или русский язык рядом со ссылками на EPUB, Markdown и простой текст.</p></li>
+<p>Откройте <a href="stoic-constitution.html?lang=ru#downloads">«Скачать переводы»</a> под строкой «Как читать статью». Для книг Марка и Сенеки можно отдельно выбрать английский или русский язык рядом со ссылками на EPUB, Markdown и простой текст.</p>
+<figure class="vis comparison">
+<div class="captures">
+<div class="capture"><strong>До</strong>
+<div><a href="stoic-changelog/books-ru-before.webp"><img src="stoic-changelog/books-ru-before.webp" width="945" height="714" alt="Внизу страницы четыре карточки книг, по одной на язык и автора." loading="lazy"></a></div>
+</div>
+<div class="capture"><strong>После</strong>
+<div><a href="stoic-changelog/books-ru-after.webp"><img src="stoic-changelog/books-ru-after.webp" width="945" height="201" alt="Во введении две строки. Для Марка Аврелия выбран русский, для Сенеки — английский." loading="lazy"></a></div>
+</div>
+</div>
+<figcaption>Чтобы скачать Марка Аврелия по-русски, а Сенеку по-английски, раньше приходилось искать две карточки среди четырёх. Теперь язык выбирается отдельно в строке каждой книги.</figcaption></figure></li>
 <li class="entry" id="ru-pictures" data-kind="site"><h3><a class="self" href="#ru-pictures">Журнал изменений с картинками</a></h3><span class="kinds"><span class="k-site"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-site"/></svg>Сайт</span></span>
 <p>Каждое изменение на этой странице теперь помечено своей темой и, где это помогает, показано картинкой: сами кнопки скачивания, правки редактуры в виде диаграммы, один фрагмент по-гречески, по-английски и по-русски и рисунки статьи о методе в светлых и тёмных цветах. Даты стоят карточками вверху, а темы над журналом служат фильтром.</p></li>
 </ul>
